@@ -39,7 +39,11 @@ public sealed class AssetPipelineTests
 
         Assert.HasCount(0, issues, string.Join(Environment.NewLine, issues));
         CollectionAssert.AreEqual(
-            new[] { "idle_breathe", "click", "walk", "click_huff", "turn", "drag_dangle", "drop_land", "turn_to_idle", "fall" },
+            new[]
+            {
+                "idle_breathe", "click", "walk", "click_huff", "turn", "drag_held_idle",
+                "drag_pulled", "spawn_in", "despawn_out", "drop_land", "turn_to_idle", "fall"
+            },
             pack.Clips.Select(clip => clip.Id).ToArray());
     }
 
@@ -111,7 +115,10 @@ public sealed class AssetPipelineTests
         Assert.HasCount(4, catalog.GetClip("click_huff").Frames);
         Assert.HasCount(4, catalog.GetClip("walk").Frames);
         Assert.HasCount(4, catalog.GetClip("turn").Frames);
-        Assert.HasCount(8, catalog.GetClip("drag_dangle").Frames);
+        Assert.HasCount(6, catalog.GetClip("drag_held_idle").Frames);
+        Assert.HasCount(6, catalog.GetClip("drag_pulled").Frames);
+        Assert.HasCount(6, catalog.GetClip("spawn_in").Frames);
+        Assert.HasCount(6, catalog.GetClip("despawn_out").Frames);
         Assert.HasCount(4, catalog.GetClip("drop_land").Frames);
         Assert.HasCount(4, catalog.GetClip("turn_to_idle").Frames);
         Assert.HasCount(1, catalog.GetClip("fall").Frames);
@@ -148,12 +155,22 @@ public sealed class AssetPipelineTests
 
         var packPath = Path.Combine(RepositoryRoot, "asset", "bolttagu", "derived", "animations", "pack.json");
         var pack = AnimationPackLoader.Load(packPath);
-        var drag = pack.Clips.Single(clip => clip.Id == "drag_dangle");
-        foreach (var frame in drag.Frames)
+        foreach (var dragId in new[] { "drag_held_idle", "drag_pulled" })
         {
-            Assert.IsGreaterThanOrEqualTo(100, frame.DurationMs);
+            var drag = pack.Clips.Single(clip => clip.Id == dragId);
+            foreach (var frame in drag.Frames)
+            {
+                Assert.IsGreaterThanOrEqualTo(100, frame.DurationMs);
+                Assert.AreEqual(104, frame.Pivot.Y);
+            }
+            Assert.HasCount(6, drag.Frames);
         }
-        Assert.HasCount(8, drag.Frames);
+        var spawn = pack.Clips.Single(clip => clip.Id == "spawn_in");
+        var despawn = pack.Clips.Single(clip => clip.Id == "despawn_out");
+        Assert.IsFalse(spawn.Loop);
+        Assert.IsFalse(despawn.Loop);
+        Assert.IsGreaterThanOrEqualTo(800, spawn.Frames.Sum(frame => frame.DurationMs));
+        Assert.IsGreaterThanOrEqualTo(800, despawn.Frames.Sum(frame => frame.DurationMs));
         var huff = pack.Clips.Single(clip => clip.Id == "click_huff");
         Assert.IsGreaterThanOrEqualTo(800, huff.Frames.Sum(frame => frame.DurationMs));
         var landing = pack.Clips.Single(clip => clip.Id == "drop_land");
@@ -184,7 +201,10 @@ public sealed class AssetPipelineTests
             Assert.HasCount(1, catalog.GetClip("click_huff").Frames);
             Assert.HasCount(1, catalog.GetClip("walk").Frames);
             Assert.HasCount(1, catalog.GetClip("turn").Frames);
-            Assert.HasCount(1, catalog.GetClip("drag_dangle").Frames);
+            Assert.HasCount(1, catalog.GetClip("drag_held_idle").Frames);
+            Assert.HasCount(1, catalog.GetClip("drag_pulled").Frames);
+            Assert.HasCount(1, catalog.GetClip("spawn_in").Frames);
+            Assert.HasCount(1, catalog.GetClip("despawn_out").Frames);
             Assert.HasCount(1, catalog.GetClip("drop_land").Frames);
             Assert.HasCount(1, catalog.GetClip("turn_to_idle").Frames);
             Assert.HasCount(1, catalog.GetClip("fall").Frames);

@@ -4,7 +4,20 @@ public readonly record struct PixelRect(int X, int Y, int Width, int Height);
 public readonly record struct PixelPoint(int X, int Y);
 
 public enum FacingDirection { Left, Right }
-public enum PetAction { Idle, Click, ClickHuff, Turn, Walk, DragDangle, Fall, DropLand }
+public enum PetAction
+{
+    Idle,
+    Click,
+    ClickHuff,
+    Turn,
+    Walk,
+    DragHeldIdle,
+    DragPulled,
+    SpawnIn,
+    DespawnOut,
+    Fall,
+    DropLand,
+}
 
 public static class PetActionClips
 {
@@ -13,7 +26,10 @@ public static class PetActionClips
     public const string ClickHuff = "click_huff";
     public const string Turn = "turn";
     public const string Walk = "walk";
-    public const string DragDangle = "drag_dangle";
+    public const string DragHeldIdle = "drag_held_idle";
+    public const string DragPulled = "drag_pulled";
+    public const string SpawnIn = "spawn_in";
+    public const string DespawnOut = "despawn_out";
     public const string Fall = "fall";
     public const string DropLand = "drop_land";
     public const string TurnToIdle = "turn_to_idle";
@@ -26,7 +42,10 @@ public static class PetActionClips
             [PetAction.ClickHuff] = ClickHuff,
             [PetAction.Turn] = Turn,
             [PetAction.Walk] = Walk,
-            [PetAction.DragDangle] = DragDangle,
+            [PetAction.DragHeldIdle] = DragHeldIdle,
+            [PetAction.DragPulled] = DragPulled,
+            [PetAction.SpawnIn] = SpawnIn,
+            [PetAction.DespawnOut] = DespawnOut,
             [PetAction.Fall] = Fall,
             [PetAction.DropLand] = DropLand,
         };

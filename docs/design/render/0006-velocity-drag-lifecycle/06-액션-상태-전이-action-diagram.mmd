@@ -1,0 +1,14 @@
+stateDiagram-v2
+  [*] --> Idle
+  [*] --> Launching
+  Launching --> Idle: spawn complete
+  Idle --> DraggingIdle: drag start
+  DraggingIdle --> DraggingPulled: abs(v) >= 80
+  DraggingPulled --> DraggingIdle: abs(v) <= 40 for 180ms
+  DraggingIdle --> Falling: release
+  DraggingPulled --> Falling: release
+  Idle --> Exiting: exit request
+  Launching --> Exiting: exit request
+  DraggingIdle --> Exiting: exit request
+  DraggingPulled --> Exiting: exit request
+  Exiting --> Closed: clip complete or timeout

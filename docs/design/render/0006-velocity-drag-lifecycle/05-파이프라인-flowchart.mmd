@@ -1,0 +1,10 @@
+flowchart TD
+  Tick["33ms Tick"] --> Delta["window position delta / dt"]
+  Delta --> Filter["exponential velocity filter"]
+  Filter --> Fast{"abs(v) >= 80?"}
+  Fast -->|yes| Pulled["drag_pulled + mirror"]
+  Fast -->|no| Slow{"abs(v) <= 40 for 180ms?"}
+  Slow -->|yes| Held["drag_held_idle"]
+  Slow -->|no| Keep["current drag clip 유지"]
+  Exit["Exit 요청"] --> Play["despawn_out"]
+  Play --> Done{"completion or 1500ms"} --> Close["ExitReady once"]

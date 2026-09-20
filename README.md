@@ -1,7 +1,7 @@
 # Bolttagu Desktop Pet
 
 독립 실행되는 Windows용 볼따구 데스크톱 펫이다. Engram은 필수 구성 요소가 아니며,
-현재 투명 창에서 atlas 기반 idle·walk·turn·click/huff·drag/fall/land 애니메이션을 재생하고,
+현재 투명 창에서 atlas 기반 등장·idle·walk·turn·click/huff·drag/fall/land·퇴장 애니메이션을 재생하고,
 지지 창의 닫힘·가림·이동과 보행 중 가장자리 이탈에 즉시 반응한다. 자산 손상 시 정적 또는
 벡터 fallback으로 복구한다.
 
@@ -22,11 +22,14 @@ $dotnetExe = Join-Path $PWD '.dotnet\dotnet.exe'
 ## 조작
 
 - 왼쪽 버튼으로 캐릭터 창을 드래그한다.
+- 드래그 중 멈추면 정면 버둥 루프, 빠르게 움직이면 이동 반대쪽으로 팔다리와 몸 전체가
+  쏠리는 루프가 재생된다.
 - 짧게 클릭하면 `click` impact 뒤 `click_huff`가 재생되고 `idle_breathe`로 돌아간다.
 - 드래그로 창을 옮길 때는 클릭 반응을 실행하지 않는다.
 - 캐릭터가 선 창이 닫히거나 다른 창 뒤로 가려지면 다음 노출 표면까지 낙하한다.
 - 자율 보행 중 현재 표면의 가장자리를 벗어나도 같은 낙하·착지 흐름을 사용한다.
 - 오른쪽 메뉴 또는 트레이에서 숨김·표시·종료를 선택한다.
+- 실행 시 `spawn_in` 뒤 idle로 진입하고, 정상 종료 시 `despawn_out`을 마친 뒤 창을 닫는다.
 - 캐릭터 아래의 표시는 현재 WPF DPI scale이다.
 
 ## 아트 파이프라인
@@ -47,3 +50,4 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 - `docs/design/0003-desktop-pet-implementation-roadmap.md`
 - `docs/design/0004-animation-surface-polish.md`
 - `docs/design/0005-live-surface-reactions.md`
+- `docs/design/0006-velocity-drag-lifecycle.md`

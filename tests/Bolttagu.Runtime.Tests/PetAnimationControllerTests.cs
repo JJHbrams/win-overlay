@@ -7,10 +7,26 @@ namespace Bolttagu.Runtime.Tests;
 public sealed class PetAnimationControllerTests
 {
     [TestMethod]
+    public void Start_PlaysSpawnBeforeEnteringIdle()
+    {
+        using var fixture = new Fixture(2000, 2000);
+
+        fixture.Controller.Start();
+
+        Assert.AreEqual(PetRuntimeState.Launching, fixture.Controller.State);
+        CollectionAssert.AreEqual(new[] { PetActionClips.SpawnIn }, fixture.Player.PlayedClips.ToArray());
+        fixture.Player.Complete(PetActionClips.SpawnIn);
+        Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+        CollectionAssert.AreEqual(
+            new[] { PetActionClips.SpawnIn, PetActionClips.Idle },
+            fixture.Player.PlayedClips.ToArray());
+    }
+
+    [TestMethod]
     public void ClickCompletion_PlaysHuffBeforeReturningToIdle()
     {
         using var fixture = new Fixture(2000, 2000);
-        fixture.Controller.Start();
+        fixture.StartToIdle();
         fixture.Controller.ReactToClick();
         fixture.Player.Complete(PetActionClips.Click);
         Assert.AreEqual(PetRuntimeState.Huffing, fixture.Controller.State);
@@ -24,7 +40,7 @@ public sealed class PetAnimationControllerTests
     public void ScheduledTurn_CompletesIntoWalkAndMovesWindow()
     {
         using var fixture = new Fixture(2000, 1, 120, 2000);
-        fixture.Controller.Start();
+        fixture.StartToIdle();
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.Turning, fixture.Controller.State);
@@ -41,7 +57,7 @@ public sealed class PetAnimationControllerTests
     public void ScheduledDirectionChange_PlaysTurnBeforeWalk()
     {
         using var fixture = new Fixture(2000, 0, 120, 2000);
-        fixture.Controller.Start();
+        fixture.StartToIdle();
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.Turning, fixture.Controller.State);
@@ -56,7 +72,7 @@ public sealed class PetAnimationControllerTests
     public void WalkCompletion_ReversesTurnBeforeIdle()
     {
         using var fixture = new Fixture(2000, 1, 120, 2000);
-        fixture.Controller.Start();
+        fixture.StartToIdle();
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
         fixture.Player.Complete(PetActionClips.Turn);
@@ -86,13 +102,13 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
-    public void DragRelease_PlaysDangleThenLandingThenIdle()
+    public void DragRelease_PlaysHeldThenLandingThenIdle()
     {
         using var fixture = new Fixture(2000, 2000);
-        fixture.Controller.Start();
+        fixture.StartToIdle();
         fixture.Window.MoveTo(new(100, 100));
         fixture.Controller.BeginDrag();
-        Assert.AreEqual(PetRuntimeState.Dragging, fixture.Controller.State);
+        Assert.AreEqual(PetRuntimeState.DraggingIdle, fixture.Controller.State);
         fixture.Controller.CompleteDrag();
         Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
@@ -101,7 +117,7 @@ public sealed class PetAnimationControllerTests
         fixture.Player.Complete(PetActionClips.DropLand);
         Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
         CollectionAssert.AreEqual(
-            new[] { PetActionClips.Idle, PetActionClips.DragDangle, PetActionClips.Fall, PetActionClips.DropLand, PetActionClips.Idle },
+            new[] { PetActionClips.Idle, PetActionClips.DragHeldIdle, PetActionClips.Fall, PetActionClips.DropLand, PetActionClips.Idle },
             fixture.Player.PlayedClips.ToArray());
     }
 
@@ -109,12 +125,12 @@ public sealed class PetAnimationControllerTests
     public void CaptureLoss_DuringDragReturnsDirectlyToIdle()
     {
         using var fixture = new Fixture(2000, 2000);
-        fixture.Controller.Start();
+        fixture.StartToIdle();
         fixture.Controller.BeginDrag();
         fixture.Controller.CancelDrag();
         Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
         CollectionAssert.AreEqual(
-            new[] { PetActionClips.Idle, PetActionClips.DragDangle, PetActionClips.Idle },
+            new[] { PetActionClips.Idle, PetActionClips.DragHeldIdle, PetActionClips.Idle },
             fixture.Player.PlayedClips.ToArray());
     }
 
@@ -122,7 +138,7 @@ public sealed class PetAnimationControllerTests
     public void GroundedWindowBecomingUnavailable_StartsFallOnNextTick()
     {
         using var fixture = new Fixture(2000, 2000);
-        fixture.Controller.Start();
+        fixture.StartToIdle();
         fixture.Surfaces.SupportValid = false;
 
         fixture.Controller.Tick();
@@ -148,7 +164,7 @@ public sealed class PetAnimationControllerTests
         foreach (var target in groundedStates)
         {
             using var fixture = new Fixture(2000, 1, 320, 2000);
-            fixture.Controller.Start();
+            fixture.StartToIdle();
             EnterState(fixture, target);
             Assert.AreEqual(target, fixture.Controller.State, $"Failed to arrange {target}.");
             fixture.Surfaces.SupportValid = false;
@@ -166,7 +182,7 @@ public sealed class PetAnimationControllerTests
         using var fixture = new Fixture(2000, 1, 320, 2000);
         fixture.Surfaces.Current = new(
             new(new(0, 720), new(260, 300)), DesktopSurfaceKind.Window, 1);
-        fixture.Controller.Start();
+        fixture.StartToIdle();
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
         fixture.Player.Complete(PetActionClips.Turn);
@@ -184,7 +200,7 @@ public sealed class PetAnimationControllerTests
     public void FallingRetargetsWhenDestinationSurfaceDisappears()
     {
         using var fixture = new Fixture(2000, 2000);
-        fixture.Controller.Start();
+        fixture.StartToIdle();
         fixture.Window.MoveTo(new(100, 100));
         fixture.Controller.BeginDrag();
         fixture.Controller.CompleteDrag();
@@ -201,6 +217,99 @@ public sealed class PetAnimationControllerTests
 
         Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
         Assert.AreEqual(680, fixture.Window.Position.Y);
+    }
+
+    [TestMethod]
+    public void MovingDrag_PlaysPulledAndFacesMovementSoArtTrailsBehind()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        fixture.Controller.BeginDrag();
+
+        fixture.Window.MoveTo(new(180, 500));
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(100);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.DraggingPulled, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.DragPulled, fixture.Player.CurrentClipId);
+        Assert.AreEqual(FacingDirection.Right, fixture.Player.Facing);
+    }
+
+    [TestMethod]
+    public void MovingDragLeft_MirrorsPulledArtSoLimbsTrailRight()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        fixture.Controller.BeginDrag();
+
+        fixture.Window.MoveTo(new(20, 500));
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(100);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.DraggingPulled, fixture.Controller.State);
+        Assert.AreEqual(FacingDirection.Left, fixture.Player.Facing);
+    }
+
+    [TestMethod]
+    public void PulledDrag_ReturnsToHeldOnlyAfterSettling()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        fixture.Controller.BeginDrag();
+        fixture.Window.MoveTo(new(180, 500));
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(100);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.DraggingPulled, fixture.Controller.State);
+
+        foreach (var milliseconds in new[] { 200, 300, 400, 550 })
+        {
+            fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(milliseconds);
+            fixture.Controller.Tick();
+        }
+        Assert.AreEqual(PetRuntimeState.DraggingPulled, fixture.Controller.State);
+
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(600);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.DraggingIdle, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.DragHeldIdle, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void ExitCompletion_RaisesExitReadyExactlyOnce()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        var readyCount = 0;
+        fixture.Controller.ExitReady += (_, _) => readyCount++;
+
+        fixture.Controller.RequestExit();
+        fixture.Controller.RequestExit();
+        fixture.Player.Complete(PetActionClips.DespawnOut);
+        fixture.Player.Complete(PetActionClips.DespawnOut);
+
+        Assert.AreEqual(PetRuntimeState.Exiting, fixture.Controller.State);
+        Assert.AreEqual(1, readyCount);
+        Assert.AreEqual(PetActionClips.DespawnOut, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void ExitTimeout_RaisesExitReadyExactlyOnce()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        var readyCount = 0;
+        fixture.Controller.ExitReady += (_, _) => readyCount++;
+        fixture.Controller.RequestExit();
+
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(1499);
+        fixture.Controller.Tick();
+        Assert.AreEqual(0, readyCount);
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(1500);
+        fixture.Controller.Tick();
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(1, readyCount);
     }
 
     private static void EnterState(Fixture fixture, PetRuntimeState target)
@@ -240,6 +349,13 @@ public sealed class PetAnimationControllerTests
         public FakeClock Clock { get; } = new();
         public FakeSurfaceProvider Surfaces { get; } = new();
         public PetAnimationController Controller { get; }
+        public void StartToIdle()
+        {
+            Controller.Start();
+            Player.Complete(PetActionClips.SpawnIn);
+            Player.PlayedClips.Clear();
+            Player.PlayedClips.Add(PetActionClips.Idle);
+        }
         public void Dispose() => Controller.Dispose();
     }
 

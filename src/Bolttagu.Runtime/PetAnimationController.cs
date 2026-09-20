@@ -3,10 +3,29 @@ using Bolttagu.Core;
 
 namespace Bolttagu.Runtime;
 
-public enum PetRuntimeState { Idle, Turning, Walking, TurningToIdle, Reacting, Huffing, Dragging, Falling, Landing }
+public enum PetRuntimeState
+{
+    Launching,
+    Idle,
+    Turning,
+    Walking,
+    TurningToIdle,
+    Reacting,
+    Huffing,
+    DraggingIdle,
+    DraggingPulled,
+    Falling,
+    Landing,
+    Exiting,
+}
 
 public sealed class PetAnimationController : IDisposable
 {
+    private static readonly TimeSpan DragSettleDuration = TimeSpan.FromMilliseconds(180);
+    private static readonly TimeSpan ExitTimeout = TimeSpan.FromMilliseconds(1500);
+    private const double DragPulledThreshold = 80;
+    private const double DragHeldThreshold = 40;
+    private const double DragFilterSeconds = 0.08;
     private readonly IAnimationPlayer _player;
     private readonly IOverlayWindow _window;
     private readonly BehaviorPlanner _planner;
@@ -17,8 +36,15 @@ public sealed class PetAnimationController : IDisposable
     private TimeSpan _walkStartedAt;
     private TimeSpan _nextActionAt;
     private DesktopSurface? _support;
+    private ScreenPoint _dragLastPosition;
+    private TimeSpan _dragLastSampleAt;
+    private TimeSpan? _dragSettledAt;
+    private double _dragVelocityX;
+    private double _dragVelocityY;
     private ScreenPoint _fallOrigin;
     private TimeSpan _fallStartedAt;
+    private TimeSpan _exitDeadline;
+    private bool _exitReadyRaised;
     private bool _disposed;
 
     public PetAnimationController(
@@ -37,18 +63,25 @@ public sealed class PetAnimationController : IDisposable
     }
 
     public PetRuntimeState State { get; private set; }
+    public event EventHandler? ExitReady;
 
     public void Start()
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
         SnapToSurface();
-        EnterIdle(_clock.Elapsed);
+        State = PetRuntimeState.Launching;
+        _player.Play(PetActionClips.SpawnIn);
     }
 
     public void Tick()
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
         var now = _clock.Elapsed;
+        if (State == PetRuntimeState.Exiting)
+        {
+            if (now >= _exitDeadline) SignalExitReady();
+            return;
+        }
         if (IsGrounded(State) && !RefreshSupport())
         {
             StartFalling(now);
@@ -72,11 +105,16 @@ public sealed class PetAnimationController : IDisposable
         {
             AdvanceFall(now);
         }
+        else if (State is PetRuntimeState.DraggingIdle or PetRuntimeState.DraggingPulled)
+        {
+            AdvanceDrag(now);
+        }
     }
 
     public void ReactToClick()
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
+        if (State == PetRuntimeState.Exiting) return;
         _walk = null;
         State = PetRuntimeState.Reacting;
         _player.Play(PetActionClips.Click);
@@ -85,15 +123,21 @@ public sealed class PetAnimationController : IDisposable
     public void BeginDrag()
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
+        if (State == PetRuntimeState.Exiting) return;
         _walk = null;
-        State = PetRuntimeState.Dragging;
-        _player.Play(PetActionClips.DragDangle);
+        _dragLastPosition = _window.Position;
+        _dragLastSampleAt = _clock.Elapsed;
+        _dragSettledAt = null;
+        _dragVelocityX = 0;
+        _dragVelocityY = 0;
+        State = PetRuntimeState.DraggingIdle;
+        _player.Play(PetActionClips.DragHeldIdle);
     }
 
     public void CompleteDrag()
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
-        if (State != PetRuntimeState.Dragging) return;
+        if (State is not (PetRuntimeState.DraggingIdle or PetRuntimeState.DraggingPulled)) return;
         var position = _window.Position;
         var footY = position.Y + _window.Size.Height;
         var destination = CurrentSurface();
@@ -108,10 +152,21 @@ public sealed class PetAnimationController : IDisposable
     public void CancelDrag()
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
-        if (State is PetRuntimeState.Dragging or PetRuntimeState.Falling or PetRuntimeState.Landing)
+        if (State is PetRuntimeState.DraggingIdle or PetRuntimeState.DraggingPulled or
+            PetRuntimeState.Falling or PetRuntimeState.Landing)
         {
             EnterIdle(_clock.Elapsed);
         }
+    }
+
+    public void RequestExit()
+    {
+        ObjectDisposedException.ThrowIf(_disposed, this);
+        if (State == PetRuntimeState.Exiting || _exitReadyRaised) return;
+        _walk = null;
+        State = PetRuntimeState.Exiting;
+        _exitDeadline = _clock.Elapsed + ExitTimeout;
+        _player.Play(PetActionClips.DespawnOut);
     }
 
     public void Dispose()
@@ -153,6 +208,50 @@ public sealed class PetAnimationController : IDisposable
             _walk = null;
             State = PetRuntimeState.TurningToIdle;
             _player.Play(PetActionClips.TurnToIdle);
+        }
+    }
+
+    private void AdvanceDrag(TimeSpan now)
+    {
+        var position = _window.Position;
+        var elapsedSeconds = (now - _dragLastSampleAt).TotalSeconds;
+        if (elapsedSeconds <= 0) return;
+
+        var instantX = (position.X - _dragLastPosition.X) / elapsedSeconds;
+        var instantY = (position.Y - _dragLastPosition.Y) / elapsedSeconds;
+        var alpha = 1 - Math.Exp(-elapsedSeconds / DragFilterSeconds);
+        _dragVelocityX += alpha * (instantX - _dragVelocityX);
+        _dragVelocityY += alpha * (instantY - _dragVelocityY);
+        _dragLastPosition = position;
+        _dragLastSampleAt = now;
+
+        var speed = Math.Sqrt((_dragVelocityX * _dragVelocityX) + (_dragVelocityY * _dragVelocityY));
+        if (speed >= DragPulledThreshold)
+        {
+            _dragSettledAt = null;
+            if (Math.Abs(_dragVelocityX) >= 10)
+            {
+                _player.SetFacing(_dragVelocityX >= 0 ? FacingDirection.Right : FacingDirection.Left);
+            }
+            if (State != PetRuntimeState.DraggingPulled)
+            {
+                State = PetRuntimeState.DraggingPulled;
+                _player.Play(PetActionClips.DragPulled);
+            }
+            return;
+        }
+
+        if (speed > DragHeldThreshold)
+        {
+            _dragSettledAt = null;
+            return;
+        }
+
+        _dragSettledAt ??= now;
+        if (State == PetRuntimeState.DraggingPulled && now - _dragSettledAt >= DragSettleDuration)
+        {
+            State = PetRuntimeState.DraggingIdle;
+            _player.Play(PetActionClips.DragHeldIdle);
         }
     }
 
@@ -243,10 +342,25 @@ public sealed class PetAnimationController : IDisposable
         _player.Play(PetActionClips.Idle);
     }
 
+    private void SignalExitReady()
+    {
+        if (_exitReadyRaised) return;
+        _exitReadyRaised = true;
+        ExitReady?.Invoke(this, EventArgs.Empty);
+    }
+
     private void OnPlaybackCompleted(object? sender, AnimationPlaybackCompletedEventArgs e)
     {
         if (_disposed) return;
-        if (State == PetRuntimeState.Turning && e.ClipId == PetActionClips.Turn)
+        if (State == PetRuntimeState.Launching && e.ClipId == PetActionClips.SpawnIn)
+        {
+            EnterIdle(_clock.Elapsed);
+        }
+        else if (State == PetRuntimeState.Exiting && e.ClipId == PetActionClips.DespawnOut)
+        {
+            SignalExitReady();
+        }
+        else if (State == PetRuntimeState.Turning && e.ClipId == PetActionClips.Turn)
         {
             StartWalk(_clock.Elapsed);
         }

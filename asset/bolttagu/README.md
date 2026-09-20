@@ -38,9 +38,9 @@ not begin from a `candidate` model.
 - Grounded clips use a 420px reference silhouette height and ground anchor `Y=480` on the
   512×512 canvas. One reference-frame scale is shared by the whole clip so pose compression and
   rebound remain visible without cross-clip size jumps.
-- `drag_dangle` uses a top-aligned grab anchor at `Y=104`; it is reviewed separately from the
-  grounded foot pivot. Its eight-frame loop keeps the scruff anchor fixed while the arms move
-  through alternating intermediate phases.
+- `drag_held_idle` and `drag_pulled` use a top-aligned scruff anchor at `Y=104`; they are reviewed
+  separately from the grounded foot pivot. The held loop keeps the body centered, while the pulled
+  loop sends the body and every limb in the same trailing direction and mirrors at runtime.
 - Every build writes `build/review/contact-sheet.png` and `frame-metrics.json`. Review these before
   promoting generated strips from `candidate` to `approved`.
 

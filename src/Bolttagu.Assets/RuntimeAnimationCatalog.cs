@@ -103,7 +103,8 @@ public sealed class RuntimeAnimationCatalog : IAnimationCatalog
                 clipId => clipId,
                 clipId => new SpriteClip(
                     clipId,
-                    clipId is PetActionClips.Idle or PetActionClips.Walk or PetActionClips.DragDangle or PetActionClips.Fall,
+                    clipId is PetActionClips.Idle or PetActionClips.Walk or
+                        PetActionClips.DragHeldIdle or PetActionClips.DragPulled or PetActionClips.Fall,
                     [frame]),
                 StringComparer.Ordinal);
             return new(clips, true, $"Runtime pack failed validation; static fallback active: {exception.Message}");

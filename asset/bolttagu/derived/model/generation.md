@@ -173,3 +173,69 @@ after a click: tense >_< with clenched fists, stronger puff, cute >3< with inwar
 an easing >3< pout. Preserve identity, front-facing scale, outfit, halo, bow and shared foot line.
 Use a transparent background and no impact stars, injury, tears, crop, UI or watermark.
 ```
+
+## Drag held idle strip v1
+
+- Generator: built-in image generation tool
+- Output: `drag-held-idle-strip-v1.png`
+- Status: candidate pending human animation review
+- SHA-256: `251B6B23D0303B71A13A814C31584C1182E1227AB285AAED6464B65FF1D5C443`
+
+```text
+Create exactly six frames of canonical Bolttagu held stationary by a fixed gathered hoodie scruff
+point. Keep torso and anchor centered while arms and feet alternate small frustrated waves and
+kicks. Preserve identity and transparent background; avoid directional lean and missing limbs.
+```
+
+## Drag pulled strip v1
+
+- Generator: built-in image generation tool
+- Output: `drag-pulled-strip-v1.png`
+- Status: candidate pending human animation review
+- SHA-256: `3B93FC266C638FA0ACA6AC5ED7381BC48867DAD02102CE1F6E076B5630B55158`
+
+```text
+Create exactly six frames of canonical Bolttagu pulled toward screen-right from a fixed scruff
+anchor while the complete body and limbs trail toward screen-left. Make a smooth struggle loop
+that can be mirrored at runtime. Preserve identity, scale and transparent background.
+```
+
+## Drag pulled strip v3
+
+- Generator: built-in image generation tool
+- Output: `drag-pulled-strip-v3.png`
+- Status: candidate pending human animation review
+- SHA-256: `03E7B8C3C2B32728AD24F833B663A0FCD017BE1AE8F29FDC2F277F09E7AEFD79`
+
+```text
+Draw exactly six cells with the scruff anchor at top-center and the head, torso, both arms, both
+hands, hips, legs and shoes all trailing diagonally down-left from it. Keep hands and shoes on the
+same side of the anchor in every phase, changing only bend and stretch. Preserve canonical identity,
+large transparent cell gaps and a mirrorable loop; avoid opposing limb directions and upright poses.
+```
+
+## Spawn in strip v1
+
+- Generator: built-in image generation tool
+- Output: `spawn-in-strip-v1.png`
+- Status: candidate pending human animation review
+- SHA-256: `6DAC05173BBF0F8458744A6B9ACCC6E37A150FFFD29E8E52E9F5400F28BF2BD2`
+
+```text
+Create exactly six startup frames: glowing halo and sparks, faint head, head and shoulders, full
+body materializing above ground, soft landing squash, then cheerful settled pose. Preserve the
+canonical identity and shared final ground baseline on a transparent background.
+```
+
+## Despawn out strip v1
+
+- Generator: built-in image generation tool
+- Output: `despawn-out-strip-v1.png`
+- Status: candidate pending human animation review
+- SHA-256: `DD09CEDFE3427DFA02FADCD6647DBFB48A91C5F225EF91970E302C066FCDDF7A`
+
+```text
+Create exactly six friendly shutdown frames: small wave, backward glance and crouch, body
+dissolving downward, head and halo remaining, fading halo with sparks, final faint glint. Preserve
+canonical identity and transparent background; avoid injury, death imagery, text and UI.
+```

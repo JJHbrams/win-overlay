@@ -44,6 +44,7 @@ public partial class App : System.Windows.Application
         tray.ShowRequested += (_, _) => overlay.ShowOverlay();
         tray.HideRequested += (_, _) => overlay.HideOverlay();
         tray.ExitRequested += (_, _) => ExitApplication();
+        animationController.ExitReady += (_, _) => CompleteShutdown();
 
         _overlay = overlay;
         _tray = tray;
@@ -66,6 +67,12 @@ public partial class App : System.Windows.Application
     }
 
     private void ExitApplication()
+    {
+        if (_overlay is { IsVisible: false }) _overlay.ShowOverlay();
+        _animationController?.RequestExit();
+    }
+
+    private void CompleteShutdown()
     {
         _overlay?.CloseOverlay();
         Shutdown();

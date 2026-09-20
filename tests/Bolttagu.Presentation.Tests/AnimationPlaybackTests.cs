@@ -168,6 +168,58 @@ public sealed class AnimationPlaybackTests
         }
     }
 
+    [TestMethod]
+    public void RealSpawnPlayback_CompletesAndEntersIdle()
+    {
+        Exception? failure = null;
+        var thread = new Thread(() =>
+        {
+            try
+            {
+                var root = FindRepositoryRoot();
+                var catalog = RuntimeAnimationCatalog.Load(Path.Combine(root, "asset", "bolttagu", "build"));
+                using var view = new PetSpriteView(catalog);
+                using var controller = new PetAnimationController(
+                    view,
+                    new TestWindow(),
+                    new BehaviorPlanner(new FixedRandom()),
+                    new FixedClock(),
+                    new FixedSurfaceProvider());
+                controller.Start();
+                Assert.AreEqual(PetRuntimeState.Launching, controller.State);
+
+                var frame = new DispatcherFrame();
+                var timeout = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(1200) };
+                timeout.Tick += (_, _) =>
+                {
+                    timeout.Stop();
+                    frame.Continue = false;
+                };
+                timeout.Start();
+                Dispatcher.PushFrame(frame);
+
+                Assert.AreEqual(PetRuntimeState.Idle, controller.State);
+                Assert.AreEqual("idle_breathe", view.CurrentClipId);
+            }
+            catch (Exception exception)
+            {
+                failure = exception;
+            }
+            finally
+            {
+                Dispatcher.CurrentDispatcher.InvokeShutdown();
+            }
+        });
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+
+        Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(5)), "Spawn playback thread did not exit.");
+        if (failure is not null)
+        {
+            Assert.Fail(failure.ToString());
+        }
+    }
+
     private static string FindRepositoryRoot()
     {
         var current = new DirectoryInfo(AppContext.BaseDirectory);
