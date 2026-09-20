@@ -10,7 +10,11 @@ public readonly record struct ScreenArea(ScreenPoint Origin, ScreenSize Size)
 
 public enum DesktopSurfaceKind { Window, Taskbar, WorkAreaFallback }
 
-public readonly record struct DesktopSurface(ScreenArea Bounds, DesktopSurfaceKind Kind)
+public readonly record struct DesktopSurface(
+    ScreenArea Bounds,
+    DesktopSurfaceKind Kind,
+    long Id = 0,
+    int ZOrder = int.MaxValue)
 {
     public double Top => Bounds.Origin.Y;
     public double Left => Bounds.Origin.X;
@@ -20,6 +24,12 @@ public readonly record struct DesktopSurface(ScreenArea Bounds, DesktopSurfaceKi
 public interface IDesktopSurfaceProvider
 {
     DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea);
+    bool TryRefreshSupport(
+        DesktopSurface expected,
+        double centerX,
+        double footY,
+        ScreenArea workArea,
+        out DesktopSurface current);
 }
 
 public interface IOverlayWindow

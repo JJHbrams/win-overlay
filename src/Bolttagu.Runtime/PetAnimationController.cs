@@ -3,7 +3,7 @@ using Bolttagu.Core;
 
 namespace Bolttagu.Runtime;
 
-public enum PetRuntimeState { Idle, Turning, Walking, TurningToIdle, Reacting, Dragging, Falling, Landing }
+public enum PetRuntimeState { Idle, Turning, Walking, TurningToIdle, Reacting, Huffing, Dragging, Falling, Landing }
 
 public sealed class PetAnimationController : IDisposable
 {
@@ -16,8 +16,8 @@ public sealed class PetAnimationController : IDisposable
     private ScreenPoint _walkOrigin;
     private TimeSpan _walkStartedAt;
     private TimeSpan _nextActionAt;
+    private DesktopSurface? _support;
     private ScreenPoint _fallOrigin;
-    private double _fallTargetY;
     private TimeSpan _fallStartedAt;
     private bool _disposed;
 
@@ -49,15 +49,17 @@ public sealed class PetAnimationController : IDisposable
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
         var now = _clock.Elapsed;
+        if (IsGrounded(State) && !RefreshSupport())
+        {
+            StartFalling(now);
+            return;
+        }
         if (State == PetRuntimeState.Idle && now >= _nextActionAt)
         {
-            var surface = CurrentSurface();
+            var surface = _support ?? CurrentSurface();
             var standingPosition = new ScreenPoint(_window.Position.X, surface.Top - _window.Size.Height);
             _window.MoveTo(standingPosition);
-            var movementArea = new ScreenArea(
-                new(surface.Left, _window.WorkArea.Origin.Y),
-                new(surface.Bounds.Size.Width, _window.WorkArea.Size.Height));
-            _walk = _planner.PlanWalk(standingPosition, _window.Size, movementArea, _player.Facing);
+            _walk = _planner.PlanWalk(standingPosition, _window.Size, _window.WorkArea, _player.Facing);
             _player.SetFacing(_walk.Facing);
             State = PetRuntimeState.Turning;
             _player.Play(PetActionClips.Turn);
@@ -92,16 +94,15 @@ public sealed class PetAnimationController : IDisposable
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
         if (State != PetRuntimeState.Dragging) return;
-        _fallOrigin = _window.Position;
-        _fallTargetY = Math.Max(_fallOrigin.Y, CurrentSurface().Top - _window.Size.Height);
-        _fallStartedAt = _clock.Elapsed;
-        if (_fallTargetY - _fallOrigin.Y <= 1)
+        var position = _window.Position;
+        var footY = position.Y + _window.Size.Height;
+        var destination = CurrentSurface();
+        if (Math.Abs(destination.Top - footY) <= 3)
         {
-            StartLanding();
+            StartLanding(destination);
             return;
         }
-        State = PetRuntimeState.Falling;
-        _player.Play(PetActionClips.Fall);
+        StartFalling(_clock.Elapsed);
     }
 
     public void CancelDrag()
@@ -158,20 +159,42 @@ public sealed class PetAnimationController : IDisposable
     private void AdvanceFall(TimeSpan now)
     {
         const double gravity = 1200;
+        var destination = FindLandingSurface();
+        var targetY = Math.Max(_window.Position.Y, destination.Top - _window.Size.Height);
         var elapsed = Math.Max(0, (now - _fallStartedAt).TotalSeconds);
-        var nextY = Math.Min(_fallTargetY, _fallOrigin.Y + (0.5 * gravity * elapsed * elapsed));
+        var nextY = Math.Min(targetY, _fallOrigin.Y + (0.5 * gravity * elapsed * elapsed));
         _window.MoveTo(new(_fallOrigin.X, nextY));
-        if (nextY >= _fallTargetY)
+        if (nextY >= targetY)
         {
-            StartLanding();
+            StartLanding(destination);
         }
     }
 
-    private void StartLanding()
+    private void StartFalling(TimeSpan now)
     {
-        _window.MoveTo(new(_window.Position.X, _fallTargetY));
+        _walk = null;
+        _support = null;
+        _fallOrigin = _window.Position;
+        _fallStartedAt = now;
+        State = PetRuntimeState.Falling;
+        _player.Play(PetActionClips.Fall);
+    }
+
+    private void StartLanding(DesktopSurface surface)
+    {
+        _support = surface;
+        _window.MoveTo(new(_window.Position.X, surface.Top - _window.Size.Height));
         State = PetRuntimeState.Landing;
         _player.Play(PetActionClips.DropLand);
+    }
+
+    private DesktopSurface FindLandingSurface()
+    {
+        var position = _window.Position;
+        return _surfaces.FindFirstBelow(
+            position.X + (_window.Size.Width / 2d),
+            position.Y + _window.Size.Height + 4,
+            _window.WorkArea);
     }
 
     private DesktopSurface CurrentSurface()
@@ -186,8 +209,32 @@ public sealed class PetAnimationController : IDisposable
     private void SnapToSurface()
     {
         var surface = CurrentSurface();
+        _support = surface;
         _window.MoveTo(new(_window.Position.X, surface.Top - _window.Size.Height));
     }
+
+    private bool RefreshSupport()
+    {
+        if (_support is not { } expected) return false;
+        var position = _window.Position;
+        var valid = _surfaces.TryRefreshSupport(
+            expected,
+            position.X + (_window.Size.Width / 2d),
+            position.Y + _window.Size.Height,
+            _window.WorkArea,
+            out var current);
+        if (valid) _support = current;
+        return valid;
+    }
+
+    private static bool IsGrounded(PetRuntimeState state) => state is
+        PetRuntimeState.Idle or
+        PetRuntimeState.Turning or
+        PetRuntimeState.Walking or
+        PetRuntimeState.TurningToIdle or
+        PetRuntimeState.Reacting or
+        PetRuntimeState.Huffing or
+        PetRuntimeState.Landing;
 
     private void EnterIdle(TimeSpan now)
     {
@@ -204,6 +251,11 @@ public sealed class PetAnimationController : IDisposable
             StartWalk(_clock.Elapsed);
         }
         else if (State == PetRuntimeState.Reacting && e.ClipId == PetActionClips.Click)
+        {
+            State = PetRuntimeState.Huffing;
+            _player.Play(PetActionClips.ClickHuff);
+        }
+        else if (State == PetRuntimeState.Huffing && e.ClipId == PetActionClips.ClickHuff)
         {
             EnterIdle(_clock.Elapsed);
         }

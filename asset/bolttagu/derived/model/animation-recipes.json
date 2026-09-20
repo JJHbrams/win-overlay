@@ -47,6 +47,22 @@
       ]
     },
     {
+      "id": "click_huff",
+      "source": "click-huff-strip-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 520, "height": 756 },
+        { "x": 520, "y": 0, "width": 520, "height": 756 },
+        { "x": 1040, "y": 0, "width": 520, "height": 756 },
+        { "x": 1560, "y": 0, "width": 519, "height": 756 }
+      ],
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
       "id": "turn",
       "source": "turn-strip-v1.png",
       "sourceRects": [
@@ -64,17 +80,25 @@
     },
     {
       "id": "drag_dangle",
-      "source": "drag-dangle-strip-v3.png",
+      "source": "drag-dangle-strip-v4.png",
       "sourceRects": [
-        { "x": 0, "y": 0, "width": 443, "height": 887 },
-        { "x": 443, "y": 0, "width": 444, "height": 887 },
-        { "x": 887, "y": 0, "width": 443, "height": 887 },
-        { "x": 1330, "y": 0, "width": 444, "height": 887 }
+        { "x": 0, "y": 0, "width": 272, "height": 724 },
+        { "x": 272, "y": 0, "width": 271, "height": 724 },
+        { "x": 543, "y": 0, "width": 272, "height": 724 },
+        { "x": 815, "y": 0, "width": 271, "height": 724 },
+        { "x": 1086, "y": 0, "width": 272, "height": 724 },
+        { "x": 1358, "y": 0, "width": 271, "height": 724 },
+        { "x": 1629, "y": 0, "width": 272, "height": 724 },
+        { "x": 1901, "y": 0, "width": 271, "height": 724 }
       ],
       "targetVisibleHeight": 376,
       "anchorY": 104,
       "align": "top",
       "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },

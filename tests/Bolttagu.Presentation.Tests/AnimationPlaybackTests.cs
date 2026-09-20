@@ -138,7 +138,7 @@ public sealed class AnimationPlaybackTests
                 controller.ReactToClick();
 
                 var frame = new DispatcherFrame();
-                var timeout = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(700) };
+                var timeout = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(1800) };
                 timeout.Tick += (_, _) =>
                 {
                     timeout.Stop();
@@ -215,5 +215,16 @@ public sealed class AnimationPlaybackTests
     {
         public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea) =>
             new(new(new(0, workArea.Bottom), new(workArea.Size.Width, 1)), DesktopSurfaceKind.Taskbar);
+
+        public bool TryRefreshSupport(
+            DesktopSurface expected,
+            double centerX,
+            double footY,
+            ScreenArea workArea,
+            out DesktopSurface current)
+        {
+            current = FindFirstBelow(centerX, footY, workArea);
+            return Math.Abs(current.Top - footY) <= 3;
+        }
     }
 }

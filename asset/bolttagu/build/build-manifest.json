@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildHash": "772140946C1B378B3C85F0025ECAB625987B1B0EE457674ED2697211E73F774F",
+  "buildHash": "1ED81D7AB16B15411D1D506195D15675FE4CD2D88D65D07485FE765C33BE66A0",
   "inputs": [
     {
       "path": "asset/bolttagu/derived/animations/click/frames/000.png",
@@ -23,24 +23,64 @@
       "sha256": "4E9B504CFCA9E702BF97A0349D2D6A16C1853204D9F80A39A44E4A0CF901A3C6"
     },
     {
+      "path": "asset/bolttagu/derived/animations/click_huff/frames/000.png",
+      "bytes": 165116,
+      "sha256": "374782C19A87D6848ACC58515985566C49110390E19ED85F75654D7C0747548A"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/click_huff/frames/001.png",
+      "bytes": 166564,
+      "sha256": "6858BD8850E21724C4C21D7C2C8A673EA0B78459634B1E57E4DDC57A97B489ED"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/click_huff/frames/002.png",
+      "bytes": 157908,
+      "sha256": "E5ABDFCF49AF91899273FDB15CFA3905C1136F4E2FBB8E9B634079826062E872"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/click_huff/frames/003.png",
+      "bytes": 160345,
+      "sha256": "39201C5FC10F5A0197492E3B10BAD32583D7E85F083C125E03FC241298500C7C"
+    },
+    {
       "path": "asset/bolttagu/derived/animations/drag_dangle/frames/000.png",
-      "bytes": 133011,
-      "sha256": "8E6A4F30ECE9A9927FADF2F3CD927CE4FE38C7C8FBA1A80EA36AEE1A925EB6D4"
+      "bytes": 129462,
+      "sha256": "FE6A9F1FC61D9E7C3E8DC793B35591AEFE3B83AA103099483AEC8B27AA4D903A"
     },
     {
       "path": "asset/bolttagu/derived/animations/drag_dangle/frames/001.png",
-      "bytes": 125298,
-      "sha256": "F9E9EA81B6E5AE11507E70E3F68CDD002AC31DE53489E02E08284B70C0A0F4AA"
+      "bytes": 128820,
+      "sha256": "4AEAB87FCAE828E5705E8E35E0609DE2CF218DE89828235A64BC9B85B82C5620"
     },
     {
       "path": "asset/bolttagu/derived/animations/drag_dangle/frames/002.png",
-      "bytes": 130581,
-      "sha256": "75E658D3FAF2510F4D1E4082C507BE2A02BB26A1B2748E76C8CA3208024FADCF"
+      "bytes": 132149,
+      "sha256": "4CCF9995E45DB1D8149D62E9DF3722B70E679FABF04DE7A778804649B34D87CD"
     },
     {
       "path": "asset/bolttagu/derived/animations/drag_dangle/frames/003.png",
-      "bytes": 126172,
-      "sha256": "E19600D8EEEA8A28B9EB1C5A49848D0D18376D89CB015B9A62196B7246865605"
+      "bytes": 127548,
+      "sha256": "295F08E85E4BEC843F795AD419C81547A5056BFD2BF3985F9AD7987151360B7D"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/drag_dangle/frames/004.png",
+      "bytes": 129629,
+      "sha256": "6E19DAA904510ECAAB90D13C2833E85E3582BECD2F8EAE2CFC293B09B65EF7BE"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/drag_dangle/frames/005.png",
+      "bytes": 129916,
+      "sha256": "EC2893BB4A22E6524D65770AAC9820BF1D9C7AC2E94BECAF152DD08C7C43E8E0"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/drag_dangle/frames/006.png",
+      "bytes": 130449,
+      "sha256": "26049F4EFBB35493E42231D68F406D46C4379AE5FB7F0FDC042972FFF6F51A92"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/drag_dangle/frames/007.png",
+      "bytes": 127926,
+      "sha256": "3819421BA7B139155D813F143A3EEAE28734B3F4D2078FA40B93802227F81424"
     },
     {
       "path": "asset/bolttagu/derived/animations/drop_land/frames/000.png",
@@ -84,8 +124,8 @@
     },
     {
       "path": "asset/bolttagu/derived/animations/pack.json",
-      "bytes": 3611,
-      "sha256": "CC8667C5C7C1D368FC46D3B1D882104BFD80C81C12365E762D680189A5EC19A5"
+      "bytes": 4508,
+      "sha256": "E105C03E062E6299EF5B17A215CEB77FE95720A63D9F0C9C25B2A8C62C3770FD"
     },
     {
       "path": "asset/bolttagu/derived/animations/turn/frames/000.png",
@@ -129,13 +169,18 @@
     },
     {
       "path": "asset/bolttagu/derived/model/animation-recipes.json",
-      "bytes": 3871,
-      "sha256": "E6D16A7E319279A3C81DF009F7DCCEE1A739942DE8F4D67DB240928B36F6A6DE"
+      "bytes": 5044,
+      "sha256": "03C9E3A2DF47E608E9C59063DD0E140B70B80A44F4D172A447E3CACA98D0AD54"
     },
     {
       "path": "asset/bolttagu/derived/model/click-hit-strip-v1.png",
       "bytes": 1583105,
       "sha256": "81A5E56A699BAD55E8FEF1DC8AFAB2B0CF76A25B78DB05225AF2935ED99BA6BD"
+    },
+    {
+      "path": "asset/bolttagu/derived/model/click-huff-strip-v1.png",
+      "bytes": 1561577,
+      "sha256": "5274ED70F861D07214619B4E3BCC65084BAFAFE9108B40CF032D834F361DE89F"
     },
     {
       "path": "asset/bolttagu/derived/model/drag-dangle-strip-v1.png",
@@ -151,6 +196,11 @@
       "path": "asset/bolttagu/derived/model/drag-dangle-strip-v3.png",
       "bytes": 1443276,
       "sha256": "404C9689E5B338A42EAE8AA4345C79D1F8E5DEB54DD483B3DE103AFB6D3EDC62"
+    },
+    {
+      "path": "asset/bolttagu/derived/model/drag-dangle-strip-v4.png",
+      "bytes": 1495098,
+      "sha256": "B479153F78B08EDD64BE55800CFC9E05722CB074C5799590785BE983F64114F0"
     },
     {
       "path": "asset/bolttagu/derived/model/drop-land-strip-v1.png",
@@ -181,23 +231,23 @@
   "outputs": [
     {
       "path": "asset/bolttagu/build/atlas.png",
-      "bytes": 3916383,
-      "sha256": "1FDE049ABF8FCAA2D1B4ED98412A3F311680D010E4222F4F6A9C07288587CBAA"
+      "bytes": 5077424,
+      "sha256": "D6B9698A173D547C8883A649F07E61F1105672AD6BA9F1A21A252BCB659A71CC"
     },
     {
       "path": "asset/bolttagu/build/catalog.json",
-      "bytes": 8332,
-      "sha256": "6E1A3C5EA050AE8FCDFEFB882F58D88837A872AF976B851AE9DD60BBCB5FEFFE"
+      "bytes": 10535,
+      "sha256": "86D1C35D4AE0BF6A8712F55826B3C934CCF201189B3DF64055DF4D9554D46BA5"
     },
     {
       "path": "asset/bolttagu/build/review/contact-sheet.png",
-      "bytes": 1144625,
-      "sha256": "1AA728241A9C5B089E0327F67FF883D96E5E97740A70A1EE78C57DDE362E0007"
+      "bytes": 1461806,
+      "sha256": "1D6A0EBE7FABF73722B02FE20D96A604670EAACEBCD485B8FB48FA51D49020E4"
     },
     {
       "path": "asset/bolttagu/build/review/frame-metrics.json",
-      "bytes": 4753,
-      "sha256": "E4D4835A80D3C0E2C74E5A42F76BD3D6E01557882168C738FE492E2930BEBB78"
+      "bytes": 6057,
+      "sha256": "B8A1D055851E3C7E806BB731842DD04FBBEA0B54EAE76EEAE922EDF0626D5E3A"
     }
   ]
 }

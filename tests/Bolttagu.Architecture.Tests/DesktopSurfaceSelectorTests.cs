@@ -50,4 +50,33 @@ public sealed class DesktopSurfaceSelectorTests
         Assert.AreEqual(-1920, selected.Left);
         Assert.AreEqual(DesktopSurfaceKind.WorkAreaFallback, selected.Kind);
     }
+
+    [TestMethod]
+    public void CoveredWindowTop_IsNotAValidLandingSurface()
+    {
+        var workArea = new ScreenArea(new(0, 0), new(1920, 1040));
+        DesktopSurface[] candidates =
+        [
+            new(new(new(500, 400), new(700, 500)), DesktopSurfaceKind.Window, 10, 0),
+            new(new(new(400, 700), new(900, 300)), DesktopSurfaceKind.Window, 20, 1),
+            new(new(new(0, 1040), new(1920, 1)), DesktopSurfaceKind.Taskbar, -1),
+        ];
+
+        var selected = DesktopSurfaceSelector.FindFirstBelow(candidates, 800, 600, workArea);
+
+        Assert.AreEqual(1040, selected.Top);
+        Assert.AreEqual(DesktopSurfaceKind.Taskbar, selected.Kind);
+    }
+
+    [TestMethod]
+    public void WindowTop_RemainsExposedWhenFrontWindowDoesNotCoverProbe()
+    {
+        DesktopSurface[] candidates =
+        [
+            new(new(new(0, 400), new(200, 500)), DesktopSurfaceKind.Window, 10, 0),
+            new(new(new(400, 700), new(900, 300)), DesktopSurfaceKind.Window, 20, 1),
+        ];
+
+        Assert.IsTrue(DesktopSurfaceSelector.IsTopExposed(candidates, candidates[1], 800));
+    }
 }

@@ -36,6 +36,12 @@ public sealed class OverlayWindowSmokeTests
                     overlay.Position.Y + overlay.Size.Height - 11,
                     surface.Top,
                     "Desktop surface must be at or below the pet's foot probe.");
+                _ = surfaces.TryRefreshSupport(
+                    surface,
+                    overlay.Position.X + (overlay.Size.Width / 2d),
+                    surface.Top,
+                    overlay.WorkArea,
+                    out _);
 
                 window.Close();
             }

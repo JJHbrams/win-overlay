@@ -1,0 +1,20 @@
+stateDiagram-v2
+  [*] --> Idle
+  Idle --> Turning: scheduled walk
+  Turning --> Walking: turn complete
+  Walking --> TurningToIdle: target reached
+  TurningToIdle --> Idle: reverse turn complete
+  Idle --> Reacting: click
+  Reacting --> Huffing: impact complete
+  Huffing --> Idle: huff complete
+  Idle --> Dragging: pointer drag
+  Dragging --> Falling: release
+  Idle --> Falling: support invalid
+  Turning --> Falling: support invalid
+  Walking --> Falling: support invalid or edge exit
+  TurningToIdle --> Falling: support invalid
+  Reacting --> Falling: support invalid
+  Huffing --> Falling: support invalid
+  Landing --> Falling: support invalid
+  Falling --> Landing: surface contact
+  Landing --> Idle: landing complete

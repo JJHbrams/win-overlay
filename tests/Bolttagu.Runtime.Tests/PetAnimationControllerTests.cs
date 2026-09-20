@@ -7,14 +7,16 @@ namespace Bolttagu.Runtime.Tests;
 public sealed class PetAnimationControllerTests
 {
     [TestMethod]
-    public void ClickCompletion_ReturnsToIdle()
+    public void ClickCompletion_PlaysHuffBeforeReturningToIdle()
     {
         using var fixture = new Fixture(2000, 2000);
         fixture.Controller.Start();
         fixture.Controller.ReactToClick();
         fixture.Player.Complete(PetActionClips.Click);
+        Assert.AreEqual(PetRuntimeState.Huffing, fixture.Controller.State);
+        fixture.Player.Complete(PetActionClips.ClickHuff);
         CollectionAssert.AreEqual(
-            new[] { PetActionClips.Idle, PetActionClips.Click, PetActionClips.Idle },
+            new[] { PetActionClips.Idle, PetActionClips.Click, PetActionClips.ClickHuff, PetActionClips.Idle },
             fixture.Player.PlayedClips.ToArray());
     }
 
@@ -116,6 +118,119 @@ public sealed class PetAnimationControllerTests
             fixture.Player.PlayedClips.ToArray());
     }
 
+    [TestMethod]
+    public void GroundedWindowBecomingUnavailable_StartsFallOnNextTick()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.Controller.Start();
+        fixture.Surfaces.SupportValid = false;
+
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Fall, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void EveryGroundedRuntimeState_RevalidatesItsSupport()
+    {
+        var groundedStates = new[]
+        {
+            PetRuntimeState.Idle,
+            PetRuntimeState.Turning,
+            PetRuntimeState.Walking,
+            PetRuntimeState.TurningToIdle,
+            PetRuntimeState.Reacting,
+            PetRuntimeState.Huffing,
+            PetRuntimeState.Landing,
+        };
+
+        foreach (var target in groundedStates)
+        {
+            using var fixture = new Fixture(2000, 1, 320, 2000);
+            fixture.Controller.Start();
+            EnterState(fixture, target);
+            Assert.AreEqual(target, fixture.Controller.State, $"Failed to arrange {target}.");
+            fixture.Surfaces.SupportValid = false;
+
+            fixture.Controller.Tick();
+
+            Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State, $"{target} did not fall.");
+            Assert.AreEqual(PetActionClips.Fall, fixture.Player.CurrentClipId);
+        }
+    }
+
+    [TestMethod]
+    public void WalkLeavingSupportBounds_StartsFall()
+    {
+        using var fixture = new Fixture(2000, 1, 320, 2000);
+        fixture.Surfaces.Current = new(
+            new(new(0, 720), new(260, 300)), DesktopSurfaceKind.Window, 1);
+        fixture.Controller.Start();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        fixture.Player.Complete(PetActionClips.Turn);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(4);
+        fixture.Controller.Tick();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(4.01);
+
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Fall, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void FallingRetargetsWhenDestinationSurfaceDisappears()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.Controller.Start();
+        fixture.Window.MoveTo(new(100, 100));
+        fixture.Controller.BeginDrag();
+        fixture.Controller.CompleteDrag();
+        fixture.Surfaces.Below = new(
+            new(new(0, 500), new(1200, 300)), DesktopSurfaceKind.Window, 2);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(0.3);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+
+        fixture.Surfaces.Below = new(
+            new(new(0, 900), new(1200, 200)), DesktopSurfaceKind.Window, 3);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1.2);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
+        Assert.AreEqual(680, fixture.Window.Position.Y);
+    }
+
+    private static void EnterState(Fixture fixture, PetRuntimeState target)
+    {
+        if (target == PetRuntimeState.Idle) return;
+        if (target is PetRuntimeState.Reacting or PetRuntimeState.Huffing)
+        {
+            fixture.Controller.ReactToClick();
+            if (target == PetRuntimeState.Huffing) fixture.Player.Complete(PetActionClips.Click);
+            return;
+        }
+        if (target == PetRuntimeState.Landing)
+        {
+            fixture.Window.MoveTo(new(100, 100));
+            fixture.Controller.BeginDrag();
+            fixture.Controller.CompleteDrag();
+            fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+            fixture.Controller.Tick();
+            return;
+        }
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        if (target == PetRuntimeState.Turning) return;
+        fixture.Player.Complete(PetActionClips.Turn);
+        if (target == PetRuntimeState.Walking) return;
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(20);
+        fixture.Controller.Tick();
+    }
+
     private sealed class Fixture : IDisposable
     {
         public Fixture(params int[] randomValues) =>
@@ -177,7 +292,25 @@ public sealed class PetAnimationControllerTests
 
     private sealed class FakeSurfaceProvider : IDesktopSurfaceProvider
     {
+        public DesktopSurface Current { get; set; } =
+            new(new(new(0, 720), new(1200, 400)), DesktopSurfaceKind.Window, 1);
+        public DesktopSurface? Below { get; set; }
+        public bool SupportValid { get; set; } = true;
+
         public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea) =>
-            new(new(new(0, 720), new(1200, 400)), DesktopSurfaceKind.Window);
+            Below ?? Current;
+
+        public bool TryRefreshSupport(
+            DesktopSurface expected,
+            double centerX,
+            double footY,
+            ScreenArea workArea,
+            out DesktopSurface current)
+        {
+            current = Current;
+            return SupportValid && expected.Id == current.Id &&
+                   centerX >= current.Left && centerX <= current.Right &&
+                   Math.Abs(current.Top - footY) <= 3;
+        }
     }
 }

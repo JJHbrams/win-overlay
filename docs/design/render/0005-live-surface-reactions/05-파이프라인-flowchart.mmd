@@ -1,0 +1,9 @@
+flowchart TD
+  Tick["runtime Tick"] --> Grounded{"grounded state?"}
+  Grounded -->|yes| Validate["support identity·bounds·z-order 검증"]
+  Validate -->|valid| Continue["현재 행동 계속"]
+  Validate -->|invalid| Fall["fall clip 시작"]
+  Grounded -->|Falling| Retarget["현재 foot 아래 표면 재조회"]
+  Retarget --> Move["중력 이동"]
+  Move -->|접촉| Land["drop_land"]
+  Click["click"] --> Impact["click impact"] --> Huff["click_huff"] --> Idle["idle"]

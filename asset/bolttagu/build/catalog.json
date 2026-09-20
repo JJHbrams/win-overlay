@@ -4,7 +4,7 @@
   "atlas": "atlas.png",
   "atlasSize": {
     "width": 2048,
-    "height": 4096
+    "height": 5120
   },
   "clips": [
     {
@@ -18,6 +18,10 @@
     {
       "id": "walk",
       "loop": true
+    },
+    {
+      "id": "click_huff",
+      "loop": false
     },
     {
       "id": "turn",
@@ -222,11 +226,71 @@
       }
     },
     {
-      "clipId": "turn",
+      "clipId": "click_huff",
       "index": 0,
       "rect": {
         "x": 0,
         "y": 1536,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 240,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "click_huff",
+      "index": 1,
+      "rect": {
+        "x": 512,
+        "y": 1536,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 260,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "click_huff",
+      "index": 2,
+      "rect": {
+        "x": 1024,
+        "y": 1536,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 260,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "click_huff",
+      "index": 3,
+      "rect": {
+        "x": 1536,
+        "y": 1536,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 300,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "turn",
+      "index": 0,
+      "rect": {
+        "x": 0,
+        "y": 2048,
         "width": 512,
         "height": 512
       },
@@ -241,7 +305,7 @@
       "index": 1,
       "rect": {
         "x": 512,
-        "y": 1536,
+        "y": 2048,
         "width": 512,
         "height": 512
       },
@@ -256,7 +320,7 @@
       "index": 2,
       "rect": {
         "x": 1024,
-        "y": 1536,
+        "y": 2048,
         "width": 512,
         "height": 512
       },
@@ -271,7 +335,7 @@
       "index": 3,
       "rect": {
         "x": 1536,
-        "y": 1536,
+        "y": 2048,
         "width": 512,
         "height": 512
       },
@@ -286,11 +350,11 @@
       "index": 0,
       "rect": {
         "x": 0,
-        "y": 2048,
+        "y": 2560,
         "width": 512,
         "height": 512
       },
-      "durationMs": 190,
+      "durationMs": 120,
       "pivot": {
         "x": 256,
         "y": 104
@@ -301,11 +365,11 @@
       "index": 1,
       "rect": {
         "x": 512,
-        "y": 2048,
+        "y": 2560,
         "width": 512,
         "height": 512
       },
-      "durationMs": 180,
+      "durationMs": 115,
       "pivot": {
         "x": 256,
         "y": 104
@@ -316,11 +380,11 @@
       "index": 2,
       "rect": {
         "x": 1024,
-        "y": 2048,
+        "y": 2560,
         "width": 512,
         "height": 512
       },
-      "durationMs": 190,
+      "durationMs": 115,
       "pivot": {
         "x": 256,
         "y": 104
@@ -331,11 +395,71 @@
       "index": 3,
       "rect": {
         "x": 1536,
-        "y": 2048,
+        "y": 2560,
         "width": 512,
         "height": 512
       },
-      "durationMs": 180,
+      "durationMs": 120,
+      "pivot": {
+        "x": 256,
+        "y": 104
+      }
+    },
+    {
+      "clipId": "drag_dangle",
+      "index": 4,
+      "rect": {
+        "x": 0,
+        "y": 3072,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 120,
+      "pivot": {
+        "x": 256,
+        "y": 104
+      }
+    },
+    {
+      "clipId": "drag_dangle",
+      "index": 5,
+      "rect": {
+        "x": 512,
+        "y": 3072,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 115,
+      "pivot": {
+        "x": 256,
+        "y": 104
+      }
+    },
+    {
+      "clipId": "drag_dangle",
+      "index": 6,
+      "rect": {
+        "x": 1024,
+        "y": 3072,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 115,
+      "pivot": {
+        "x": 256,
+        "y": 104
+      }
+    },
+    {
+      "clipId": "drag_dangle",
+      "index": 7,
+      "rect": {
+        "x": 1536,
+        "y": 3072,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 120,
       "pivot": {
         "x": 256,
         "y": 104
@@ -346,7 +470,7 @@
       "index": 0,
       "rect": {
         "x": 0,
-        "y": 2560,
+        "y": 3584,
         "width": 512,
         "height": 512
       },
@@ -361,7 +485,7 @@
       "index": 1,
       "rect": {
         "x": 512,
-        "y": 2560,
+        "y": 3584,
         "width": 512,
         "height": 512
       },
@@ -376,7 +500,7 @@
       "index": 2,
       "rect": {
         "x": 1024,
-        "y": 2560,
+        "y": 3584,
         "width": 512,
         "height": 512
       },
@@ -391,7 +515,7 @@
       "index": 3,
       "rect": {
         "x": 1536,
-        "y": 2560,
+        "y": 3584,
         "width": 512,
         "height": 512
       },
@@ -406,7 +530,7 @@
       "index": 0,
       "rect": {
         "x": 0,
-        "y": 3072,
+        "y": 4096,
         "width": 512,
         "height": 512
       },
@@ -421,7 +545,7 @@
       "index": 1,
       "rect": {
         "x": 512,
-        "y": 3072,
+        "y": 4096,
         "width": 512,
         "height": 512
       },
@@ -436,7 +560,7 @@
       "index": 2,
       "rect": {
         "x": 1024,
-        "y": 3072,
+        "y": 4096,
         "width": 512,
         "height": 512
       },
@@ -451,7 +575,7 @@
       "index": 3,
       "rect": {
         "x": 1536,
-        "y": 3072,
+        "y": 4096,
         "width": 512,
         "height": 512
       },
@@ -466,7 +590,7 @@
       "index": 0,
       "rect": {
         "x": 0,
-        "y": 3584,
+        "y": 4608,
         "width": 512,
         "height": 512
       },

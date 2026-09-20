@@ -39,7 +39,7 @@ public sealed class AssetPipelineTests
 
         Assert.HasCount(0, issues, string.Join(Environment.NewLine, issues));
         CollectionAssert.AreEqual(
-            new[] { "idle_breathe", "click", "walk", "turn", "drag_dangle", "drop_land", "turn_to_idle", "fall" },
+            new[] { "idle_breathe", "click", "walk", "click_huff", "turn", "drag_dangle", "drop_land", "turn_to_idle", "fall" },
             pack.Clips.Select(clip => clip.Id).ToArray());
     }
 
@@ -108,9 +108,10 @@ public sealed class AssetPipelineTests
         Assert.IsFalse(catalog.IsFallback);
         Assert.HasCount(4, catalog.GetClip("idle_breathe").Frames);
         Assert.HasCount(4, catalog.GetClip("click").Frames);
+        Assert.HasCount(4, catalog.GetClip("click_huff").Frames);
         Assert.HasCount(4, catalog.GetClip("walk").Frames);
         Assert.HasCount(4, catalog.GetClip("turn").Frames);
-        Assert.HasCount(4, catalog.GetClip("drag_dangle").Frames);
+        Assert.HasCount(8, catalog.GetClip("drag_dangle").Frames);
         Assert.HasCount(4, catalog.GetClip("drop_land").Frames);
         Assert.HasCount(4, catalog.GetClip("turn_to_idle").Frames);
         Assert.HasCount(1, catalog.GetClip("fall").Frames);
@@ -134,7 +135,7 @@ public sealed class AssetPipelineTests
 
         using var metrics = JsonDocument.Parse(File.ReadAllText(
             Path.Combine(buildRoot, "review", "frame-metrics.json")));
-        var grounded = new[] { "idle_breathe", "click", "walk", "turn" };
+        var grounded = new[] { "idle_breathe", "click", "click_huff", "walk", "turn" };
         foreach (var clipId in grounded)
         {
             var reference = metrics.RootElement.GetProperty("frames")
@@ -150,8 +151,11 @@ public sealed class AssetPipelineTests
         var drag = pack.Clips.Single(clip => clip.Id == "drag_dangle");
         foreach (var frame in drag.Frames)
         {
-            Assert.IsGreaterThanOrEqualTo(160, frame.DurationMs);
+            Assert.IsGreaterThanOrEqualTo(100, frame.DurationMs);
         }
+        Assert.HasCount(8, drag.Frames);
+        var huff = pack.Clips.Single(clip => clip.Id == "click_huff");
+        Assert.IsGreaterThanOrEqualTo(800, huff.Frames.Sum(frame => frame.DurationMs));
         var landing = pack.Clips.Single(clip => clip.Id == "drop_land");
         Assert.IsGreaterThanOrEqualTo(600, landing.Frames.Sum(frame => frame.DurationMs));
     }
@@ -177,6 +181,7 @@ public sealed class AssetPipelineTests
             Assert.IsTrue(catalog.IsFallback);
             Assert.HasCount(1, catalog.GetClip("idle_breathe").Frames);
             Assert.HasCount(1, catalog.GetClip("click").Frames);
+            Assert.HasCount(1, catalog.GetClip("click_huff").Frames);
             Assert.HasCount(1, catalog.GetClip("walk").Frames);
             Assert.HasCount(1, catalog.GetClip("turn").Frames);
             Assert.HasCount(1, catalog.GetClip("drag_dangle").Frames);

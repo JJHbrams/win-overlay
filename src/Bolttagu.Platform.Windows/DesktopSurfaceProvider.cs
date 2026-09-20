@@ -9,33 +9,14 @@ namespace Bolttagu.Platform.Windows;
 public sealed class DesktopSurfaceProvider(Window owner) : IDesktopSurfaceProvider
 {
     private const int DwmExtendedFrameBounds = 9;
+    private const long TaskbarId = long.MinValue;
+    private const long WorkAreaFallbackId = long.MinValue + 1;
 
     public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea)
     {
         try
         {
-            var ownerHandle = new WindowInteropHelper(owner).Handle;
-            var dpi = VisualTreeHelper.GetDpi(owner);
-            var candidates = new List<DesktopSurface>();
-            EnumWindows((handle, _) =>
-            {
-                if (handle == ownerHandle || !IsWindowVisible(handle) || IsIconic(handle)) return true;
-                if (!TryGetBounds(handle, out var rect)) return true;
-                var left = rect.Left / dpi.DpiScaleX;
-                var right = rect.Right / dpi.DpiScaleX;
-                var top = rect.Top / dpi.DpiScaleY;
-                var bottom = rect.Bottom / dpi.DpiScaleY;
-                if (right - left < 48 || bottom - top < 24) return true;
-                if (centerX < left || centerX > right || top < fromY - 3) return true;
-                candidates.Add(new(
-                    new(new(left, top), new(right - left, bottom - top)),
-                    DesktopSurfaceKind.Window));
-                return true;
-            }, IntPtr.Zero);
-
-            candidates.Add(new(
-                new(new(workArea.Origin.X, workArea.Bottom), new(workArea.Size.Width, 1)),
-                DesktopSurfaceKind.Taskbar));
+            var candidates = Snapshot(workArea);
             return DesktopSurfaceSelector.FindFirstBelow(candidates, centerX, fromY, workArea);
         }
         catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
@@ -44,9 +25,72 @@ public sealed class DesktopSurfaceProvider(Window owner) : IDesktopSurfaceProvid
         }
     }
 
+    public bool TryRefreshSupport(
+        DesktopSurface expected,
+        double centerX,
+        double footY,
+        ScreenArea workArea,
+        out DesktopSurface current)
+    {
+        try
+        {
+            var candidates = Snapshot(workArea);
+            if (expected.Kind is DesktopSurfaceKind.Taskbar or DesktopSurfaceKind.WorkAreaFallback)
+            {
+                current = candidates.First(candidate => candidate.Kind == DesktopSurfaceKind.Taskbar);
+                return centerX >= current.Left && centerX <= current.Right &&
+                       Math.Abs(current.Top - footY) <= 3;
+            }
+
+            current = candidates.FirstOrDefault(candidate =>
+                candidate.Kind == DesktopSurfaceKind.Window && candidate.Id == expected.Id);
+            return current.Bounds.Size.Width > 0 &&
+                   centerX >= current.Left && centerX <= current.Right &&
+                   Math.Abs(current.Top - footY) <= 3 &&
+                   DesktopSurfaceSelector.IsTopExposed(candidates, current, centerX);
+        }
+        catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
+        {
+            current = default;
+            return false;
+        }
+    }
+
+    private IReadOnlyList<DesktopSurface> Snapshot(ScreenArea workArea)
+    {
+        var ownerHandle = new WindowInteropHelper(owner).Handle;
+        var dpi = VisualTreeHelper.GetDpi(owner);
+        var candidates = new List<DesktopSurface>();
+        var zOrder = 0;
+        EnumWindows((handle, _) =>
+        {
+            var currentZOrder = zOrder++;
+            if (handle == ownerHandle || !IsWindowVisible(handle) || IsIconic(handle)) return true;
+            if (!TryGetBounds(handle, out var rect)) return true;
+            var left = rect.Left / dpi.DpiScaleX;
+            var right = rect.Right / dpi.DpiScaleX;
+            var top = rect.Top / dpi.DpiScaleY;
+            var bottom = rect.Bottom / dpi.DpiScaleY;
+            if (right - left < 48 || bottom - top < 24) return true;
+            candidates.Add(new(
+                new(new(left, top), new(right - left, bottom - top)),
+                DesktopSurfaceKind.Window,
+                handle.ToInt64(),
+                currentZOrder));
+            return true;
+        }, IntPtr.Zero);
+
+        candidates.Add(new(
+            new(new(workArea.Origin.X, workArea.Bottom), new(workArea.Size.Width, 1)),
+            DesktopSurfaceKind.Taskbar,
+            TaskbarId));
+        return candidates;
+    }
+
     private static DesktopSurface WorkAreaFallback(ScreenArea workArea) => new(
         new(new(workArea.Origin.X, workArea.Bottom), new(workArea.Size.Width, 1)),
-        DesktopSurfaceKind.WorkAreaFallback);
+        DesktopSurfaceKind.WorkAreaFallback,
+        WorkAreaFallbackId);
 
     private static bool TryGetBounds(IntPtr handle, out NativeRect rect)
     {
@@ -107,6 +151,7 @@ public static class DesktopSurfaceSelector
         var surface = candidates
             .Where(candidate => centerX >= candidate.Left && centerX <= candidate.Right)
             .Where(candidate => candidate.Top >= fromY - 3)
+            .Where(candidate => IsTopExposed(candidates, candidate, centerX))
             .OrderBy(candidate => candidate.Top)
             .FirstOrDefault();
         return surface.Bounds.Size.Width > 0
@@ -114,5 +159,20 @@ public static class DesktopSurfaceSelector
             : new(
                 new(new(workArea.Origin.X, workArea.Bottom), new(workArea.Size.Width, 1)),
                 DesktopSurfaceKind.WorkAreaFallback);
+    }
+
+    public static bool IsTopExposed(
+        IEnumerable<DesktopSurface> candidates,
+        DesktopSurface candidate,
+        double centerX)
+    {
+        if (candidate.Kind != DesktopSurfaceKind.Window) return true;
+        var probeY = candidate.Top + 1;
+        return !candidates.Any(front =>
+            front.Kind == DesktopSurfaceKind.Window &&
+            front.Id != candidate.Id &&
+            front.ZOrder < candidate.ZOrder &&
+            centerX >= front.Left && centerX <= front.Right &&
+            probeY >= front.Top && probeY <= front.Bounds.Bottom);
     }
 }

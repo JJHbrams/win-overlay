@@ -144,3 +144,32 @@ Let the body and legs trail below the fixed collar point with a slow weighty pen
 Preserve identity, outfit, palette, scale and transparent background; avoid missing or duplicate
 limbs, overhead gripping, crop, labels, UI, motion marks and watermark.
 ```
+
+## Drag dangle strip v4
+
+- Generator: built-in image generation tool
+- Output: `drag-dangle-strip-v4.png`
+- Status: candidate pending human animation review
+- SHA-256: `B479153F78B08EDD64BE55800CFC9E05722CB074C5799590785BE983F64114F0`
+
+```text
+Expand the canonical scruff-held dangling loop into exactly eight distinct ordered full-body
+frames: left extreme, left return, center crossing right, right approach, right extreme, right
+return, center crossing left, left approach. Keep one identical top-center gathered hoodie anchor,
+both hands away from it, and both complete arms visible. Preserve identity, outfit, palette,
+scale and transparent background; avoid missing limbs, overhead gripping, crop, UI and watermark.
+```
+
+## Click huff strip v1
+
+- Generator: built-in image generation tool
+- Output: `click-huff-strip-v1.png`
+- Status: candidate pending human animation review
+- SHA-256: `5274ED70F861D07214619B4E3BCC65084BAFAFE9108B40CF032D834F361DE89F`
+
+```text
+Create exactly four ordered full-body aftermath frames of the canonical Bolttagu briefly huffing
+after a click: tense >_< with clenched fists, stronger puff, cute >3< with inward fist shake, then
+an easing >3< pout. Preserve identity, front-facing scale, outfit, halo, bow and shared foot line.
+Use a transparent background and no impact stars, injury, tears, crop, UI or watermark.
+```

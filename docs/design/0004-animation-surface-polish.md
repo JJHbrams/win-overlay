@@ -29,7 +29,7 @@ created: 2026-09-20
 |---|---|---|
 | AC-1 | grounded clip의 가시 실루엣 높이는 canonical capture box 기준 ±2%이고 발 기준선 편차는 2px 이하이며 clip 전환 시 전체 크기 점프가 없다. | asset build가 alpha bounds metrics와 동일 512×512 contact sheet를 생성하고 validator/test가 편차를 검사한다. |
 | AC-2 | idle은 비균일 squash 없이 재생되고, walk는 contact→down→passing→up 순서와 반대 팔 스윙을 가지며 idle↔walk 사이에 turn-in/turn-out 전환이 존재한다. | recipe/clip 순서 테스트와 contact sheet 및 실제 재생 육안 검수. |
-| AC-3 | drag_dangle은 덜미의 단일 grab anchor 아래에서 양손이 고정점과 분리된 채 서로 반대 위상으로 휘적이고, 양팔이 모든 프레임에 보이며 frame duration이 160ms 이상이다. drop_land 접지 후 회복은 600ms 이상 재생된다. | pack metadata 테스트, alpha/contact sheet 육안 검수, 실제 drag/drop 확인. |
+| AC-3 | drag_dangle은 덜미의 단일 grab anchor 아래에서 양손이 고정점과 분리된 채 서로 반대 위상으로 휘적이고, 양팔이 모든 프레임에 보인다. drop_land 접지 후 회복은 600ms 이상 재생된다. 이후 8-frame timing 개정은 `0005-live-surface-reactions.md`를 따른다. | pack metadata 테스트, alpha/contact sheet 육안 검수, 실제 drag/drop 확인. |
 | AC-4 | drag release와 자율 보행은 현재 X에서 아래로 처음 만나는 visible top-level window 상단 또는 taskbar 상단을 지면으로 사용하며 앱 자신의 HWND는 제외한다. | 합성 surface fixture 단위 테스트와 Windows adapter smoke/manual test. |
 | AC-5 | surface가 없거나 Win32 조회가 실패해도 work area 하단을 지면으로 사용하고 capture/runtime 상태가 남지 않는다. | provider fault fixture와 capture-lost 상태 전이 테스트. |
 
@@ -42,7 +42,7 @@ created: 2026-09-20
 | 프레임 생성 | AssetBuild는 source cell 전체를 512×512에 aspect-fit하고 alpha bounds를 정규화하지 않는다. `RenderFrame` 직접 확인. | alpha trim 후 canonical visible height와 anchor에 맞춰 렌더한다. |
 | idle | idle_breathe는 같은 정면 원화에 ScaleY 0.975~1.0을 적용한다. recipe 직접 확인. | 비균일 scale을 제거하고 미세한 정수 Y offset만 사용한다. |
 | walk 전환 | Runtime은 방향이 같으면 front idle에서 side walk로 즉시 전환하고, walk 종료도 즉시 front idle로 바뀐다. controller 직접 확인. | 모든 walk 앞에 turn, 뒤에 reverse turn clip을 재생한다. |
-| drag/drop timing | drag는 90~110ms, drop_land 전체는 390ms다. pack 직접 확인. | drag는 180ms 내외, 접지 반응은 700ms 내외로 늦춘다. |
+| drag/drop timing | drag는 90~110ms, drop_land 전체는 390ms다. pack 직접 확인. | 이 단계에서는 drag를 180ms 내외로 늦추고, 후속 `0005`에서 8-frame 115~120ms 보간 루프로 개정한다. 접지 반응은 700ms 내외다. |
 | Y축 이동 | autonomous walk는 시작 Y를 그대로 보간하며 drag release도 수직 낙하가 없다. controller 직접 확인. | `IDesktopSurfaceProvider`를 주입해 surface 범위 안에서 걷고 release 후 중력 낙하한다. |
 
 ## 4. 유스케이스 / 시나리오
