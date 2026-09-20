@@ -14,11 +14,14 @@ public readonly record struct DesktopSurface(
     ScreenArea Bounds,
     DesktopSurfaceKind Kind,
     long Id = 0,
-    int ZOrder = int.MaxValue)
+    int ZOrder = int.MaxValue,
+    bool IsForeground = false,
+    bool IsMaximized = false)
 {
     public double Top => Bounds.Origin.Y;
     public double Left => Bounds.Origin.X;
     public double Right => Bounds.Right;
+    public double Bottom => Bounds.Bottom;
 }
 
 public interface IDesktopSurfaceProvider
@@ -30,6 +33,36 @@ public interface IDesktopSurfaceProvider
         double footY,
         ScreenArea workArea,
         out DesktopSurface current);
+
+    bool TryFindRopeClimbObstacle(
+        DesktopSurface support,
+        double footY,
+        double currentLeadingX,
+        double nextLeadingX,
+        FacingDirection facing,
+        ScreenSize petSize,
+        ScreenArea workArea,
+        out DesktopSurface obstacle)
+    {
+        obstacle = default;
+        return false;
+    }
+
+    DesktopSurface? FindClimbIntercept(
+        double centerX,
+        double fromFootY,
+        double targetFootY,
+        ScreenArea workArea) => null;
+
+    bool TryRefreshClimbAnchor(
+        DesktopSurface expected,
+        double edgeX,
+        ScreenArea workArea,
+        out DesktopSurface current)
+    {
+        current = default;
+        return false;
+    }
 }
 
 public interface IOverlayWindow

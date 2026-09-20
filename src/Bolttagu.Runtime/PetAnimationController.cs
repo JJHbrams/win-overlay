@@ -18,6 +18,11 @@ public enum PetRuntimeState
     Landing,
     Recovering,
     Dozing,
+    RopeClimbPreparing,
+    RopeClimbing,
+    FreeClimbPreparing,
+    FreeClimbing,
+    ClimbFinishing,
     Exiting,
 }
 
@@ -48,6 +53,13 @@ public sealed class PetAnimationController : IDisposable
     private ScreenPoint _fallOrigin;
     private TimeSpan _fallStartedAt;
     private TimeSpan _exitDeadline;
+    private DesktopSurface? _climbAnchor;
+    private ScreenPoint _climbOrigin;
+    private double _climbTargetY;
+    private double _climbFixedX;
+    private TimeSpan _climbStartedAt;
+    private double _climbSpeedPixelsPerSecond;
+    private bool _climbIsRope;
     private bool _exitReadyRaised;
     private bool _disposed;
 
@@ -76,6 +88,9 @@ public sealed class PetAnimationController : IDisposable
         PetRuntimeState.DraggingIdle or PetRuntimeState.DraggingPulled => PetPose.Hanging,
         PetRuntimeState.Falling => PetPose.Airborne,
         PetRuntimeState.Landing => PetPose.GroundedCompressed,
+        PetRuntimeState.RopeClimbPreparing or PetRuntimeState.RopeClimbing or
+            PetRuntimeState.FreeClimbPreparing or PetRuntimeState.FreeClimbing or
+            PetRuntimeState.ClimbFinishing => PetPose.Climbing,
         PetRuntimeState.Dozing => PetPose.Seated,
         _ => PetPose.Standing,
     };
@@ -112,6 +127,11 @@ public sealed class PetAnimationController : IDisposable
                 _nextActionAt = now + _planner.NextIdleDelay();
                 return;
             }
+            if (behavior.Id == BehaviorDefinitions.FreeClimb)
+            {
+                StartFreeClimb(now);
+                return;
+            }
             if (behavior.Id != BehaviorDefinitions.Walk)
             {
                 StartAutonomousBehavior(behavior);
@@ -131,6 +151,11 @@ public sealed class PetAnimationController : IDisposable
         else if (State == PetRuntimeState.Falling)
         {
             AdvanceFall(now);
+        }
+        else if (State is PetRuntimeState.RopeClimbPreparing or PetRuntimeState.RopeClimbing or
+                 PetRuntimeState.FreeClimbPreparing or PetRuntimeState.FreeClimbing)
+        {
+            AdvanceClimb(now);
         }
         else if (State is PetRuntimeState.DraggingIdle or PetRuntimeState.DraggingPulled)
         {
@@ -152,6 +177,7 @@ public sealed class PetAnimationController : IDisposable
         }
         if (Pose != PetPose.Standing) return;
         _walk = null;
+        ClearClimb();
         _sequence.Cancel();
         State = PetRuntimeState.Reacting;
         _player.Play(PetActionClips.Click);
@@ -163,6 +189,7 @@ public sealed class PetAnimationController : IDisposable
         if (State == PetRuntimeState.Exiting) return;
         _planner.RecordUserInput(_clock.Elapsed);
         _walk = null;
+        ClearClimb();
         _sequence.Cancel();
         _dragLastPosition = _window.Position;
         _dragLastSampleAt = _clock.Elapsed;
@@ -195,6 +222,7 @@ public sealed class PetAnimationController : IDisposable
         ObjectDisposedException.ThrowIf(_disposed, this);
         if (State == PetRuntimeState.Exiting || _exitReadyRaised) return;
         _walk = null;
+        ClearClimb();
         _sequence.Cancel();
         State = PetRuntimeState.Exiting;
         _exitDeadline = _clock.Elapsed + ExitTimeout;
@@ -237,7 +265,13 @@ public sealed class PetAnimationController : IDisposable
         var durationSeconds = Math.Abs(distance) / walk.SpeedPixelsPerSecond;
         var elapsedSeconds = Math.Max(0, (now - _walkStartedAt).TotalSeconds);
         var progress = durationSeconds <= 0 ? 1 : Math.Min(1, elapsedSeconds / durationSeconds);
-        _window.MoveTo(new(_walkOrigin.X + (distance * progress), _walkOrigin.Y));
+        var nextPosition = new ScreenPoint(_walkOrigin.X + (distance * progress), _walkOrigin.Y);
+        var support = _support;
+        if (support is { } currentSupport && TryStartRopeClimb(currentSupport, _window.Position, nextPosition, walk.Facing, now))
+        {
+            return;
+        }
+        _window.MoveTo(nextPosition);
         if (progress >= 1)
         {
             _walk = null;
@@ -310,6 +344,7 @@ public sealed class PetAnimationController : IDisposable
     private void StartFalling(TimeSpan now)
     {
         _walk = null;
+        ClearClimb();
         _sequence.Cancel();
         _support = null;
         _fallOrigin = _window.Position;
@@ -333,6 +368,121 @@ public sealed class PetAnimationController : IDisposable
             State = PetRuntimeState.Landing;
             _player.Play(PetActionClips.DropLand);
         }
+    }
+
+    private bool TryStartRopeClimb(
+        DesktopSurface support,
+        ScreenPoint currentPosition,
+        ScreenPoint nextPosition,
+        FacingDirection facing,
+        TimeSpan now)
+    {
+        var currentLeadingX = facing == FacingDirection.Right
+            ? currentPosition.X + _window.Size.Width
+            : currentPosition.X;
+        var nextLeadingX = facing == FacingDirection.Right
+            ? nextPosition.X + _window.Size.Width
+            : nextPosition.X;
+        if (!_surfaces.TryFindRopeClimbObstacle(
+                support,
+                currentPosition.Y + _window.Size.Height,
+                currentLeadingX,
+                nextLeadingX,
+                facing,
+                _window.Size,
+                _window.WorkArea,
+                out var obstacle))
+        {
+            return false;
+        }
+
+        _walk = null;
+        _sequence.Cancel();
+        _climbAnchor = obstacle;
+        _climbIsRope = true;
+        _climbFixedX = facing == FacingDirection.Right ? obstacle.Left - _window.Size.Width : obstacle.Right;
+        _climbOrigin = new ScreenPoint(_climbFixedX, currentPosition.Y);
+        _climbTargetY = obstacle.Top - _window.Size.Height;
+        _climbStartedAt = now;
+        _climbSpeedPixelsPerSecond = 84;
+        _window.MoveTo(_climbOrigin);
+        State = PetRuntimeState.RopeClimbPreparing;
+        _player.Play(PetActionClips.RopeClimbPrepare);
+        return true;
+    }
+
+    private void StartFreeClimb(TimeSpan now)
+    {
+        var plan = _planner.PlanFreeClimb(_window.Size);
+        _walk = null;
+        _sequence.Cancel();
+        _climbAnchor = null;
+        _climbIsRope = false;
+        _climbFixedX = _window.Position.X;
+        _climbOrigin = _window.Position;
+        _climbTargetY = _climbOrigin.Y - plan.TargetHeight;
+        _climbStartedAt = now;
+        _climbSpeedPixelsPerSecond = plan.SpeedPixelsPerSecond;
+        State = PetRuntimeState.FreeClimbPreparing;
+        _player.Play(PetActionClips.FreeClimbPrepare);
+    }
+
+    private void AdvanceClimb(TimeSpan now)
+    {
+        if (_climbIsRope)
+        {
+            if (_climbAnchor is not { } climbAnchor || !_surfaces.TryRefreshClimbAnchor(climbAnchor, _climbFixedX, _window.WorkArea, out var refreshed))
+            {
+                StartFalling(now);
+                return;
+            }
+            _climbAnchor = refreshed;
+        }
+
+        if (State is PetRuntimeState.RopeClimbPreparing or PetRuntimeState.FreeClimbPreparing) return;
+
+        var fromFootY = _window.Position.Y + _window.Size.Height;
+        if (!_climbIsRope)
+        {
+            var targetFootY = _climbTargetY + _window.Size.Height;
+            var intercept = _surfaces.FindClimbIntercept(
+                _climbFixedX + (_window.Size.Width / 2d), fromFootY, targetFootY, _window.WorkArea);
+            if (intercept is { } surface)
+            {
+                StartClimbFinish(surface);
+                return;
+            }
+        }
+
+        var elapsedSeconds = Math.Max(0, (now - _climbStartedAt).TotalSeconds);
+        var nextY = Math.Max(_climbTargetY, _climbOrigin.Y - (_climbSpeedPixelsPerSecond * elapsedSeconds));
+        _window.MoveTo(new(_climbFixedX, nextY));
+        if (nextY > _climbTargetY) return;
+        if (_climbIsRope && _climbAnchor is { } anchor)
+        {
+            StartClimbFinish(anchor);
+            return;
+        }
+        StartFalling(now);
+    }
+
+    private void StartClimbFinish(DesktopSurface surface)
+    {
+        _support = surface;
+        _window.MoveTo(new(_climbFixedX, surface.Top - _window.Size.Height));
+        State = PetRuntimeState.ClimbFinishing;
+        _player.Play(_climbIsRope ? PetActionClips.RopeClimbFinish : PetActionClips.FreeClimbFinish);
+    }
+
+    private void ClearClimb()
+    {
+        _climbAnchor = null;
+        _climbOrigin = default;
+        _climbTargetY = 0;
+        _climbFixedX = 0;
+        _climbStartedAt = default;
+        _climbSpeedPixelsPerSecond = 0;
+        _climbIsRope = false;
     }
 
     private DesktopSurface FindLandingSurface()
@@ -383,10 +533,12 @@ public sealed class PetAnimationController : IDisposable
         PetRuntimeState.Huffing or
         PetRuntimeState.Landing or
         PetRuntimeState.Recovering or
+        PetRuntimeState.ClimbFinishing or
         PetRuntimeState.Dozing;
 
     private void EnterIdle(TimeSpan now)
     {
+        ClearClimb();
         State = PetRuntimeState.Idle;
         _planner.EnterIdleHub(now);
         _nextActionAt = now + _planner.NextIdleDelay();
@@ -437,6 +589,23 @@ public sealed class PetAnimationController : IDisposable
         {
             EnterIdle(_clock.Elapsed);
         }
+        else if (State == PetRuntimeState.RopeClimbPreparing && e.ClipId == PetActionClips.RopeClimbPrepare)
+        {
+            State = PetRuntimeState.RopeClimbing;
+            _climbStartedAt = _clock.Elapsed;
+            _player.Play(PetActionClips.RopeClimbLoop);
+        }
+        else if (State == PetRuntimeState.FreeClimbPreparing && e.ClipId == PetActionClips.FreeClimbPrepare)
+        {
+            State = PetRuntimeState.FreeClimbing;
+            _climbStartedAt = _clock.Elapsed;
+            _player.Play(PetActionClips.FreeClimbLoop);
+        }
+        else if (State == PetRuntimeState.ClimbFinishing &&
+                 e.ClipId is PetActionClips.RopeClimbFinish or PetActionClips.FreeClimbFinish)
+        {
+            EnterIdle(_clock.Elapsed);
+        }
         else if (State == PetRuntimeState.Dozing && e.ClipId == PetActionClips.DozeStartle)
         {
             _player.Play(PetActionClips.StandUp);
@@ -451,6 +620,11 @@ public sealed class PetAnimationController : IDisposable
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
         if (State != PetRuntimeState.Idle || definition.InterruptPolicy != BehaviorInterruptPolicy.AutonomousOnly) return false;
+        if (definition.Id == BehaviorDefinitions.FreeClimb)
+        {
+            StartFreeClimb(_clock.Elapsed);
+            return true;
+        }
         _walk = null;
         _sequence.Start(definition, _clock.Elapsed);
         State = definition.ExitPose == PetPose.Seated ? PetRuntimeState.Dozing : PetRuntimeState.Reacting;
