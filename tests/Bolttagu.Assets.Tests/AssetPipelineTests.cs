@@ -1,4 +1,5 @@
 using Bolttagu.Assets;
+using Bolttagu.AssetBuild;
 using Bolttagu.Contracts;
 using Bolttagu.Core;
 using System.IO;
@@ -68,6 +69,85 @@ public sealed class AssetPipelineTests
         Assert.AreEqual(1774, metadata.Width);
         Assert.AreEqual(887, metadata.Height);
         Assert.IsTrue(metadata.HasAlpha);
+    }
+
+    [TestMethod]
+    public void RecipeCalibration_ValidatesCanonicalIdleAndControlsEmissionWithoutScaleDrift()
+    {
+        var root = Path.Combine(Path.GetTempPath(), $"bolttagu-calibration-{Guid.NewGuid():N}");
+        var modelRoot = Path.Combine(root, "asset", "bolttagu", "derived", "model");
+        Directory.CreateDirectory(modelRoot);
+        File.WriteAllText(Path.Combine(root, "Bolttagu.slnx"), "<Solution />");
+        File.Copy(
+            Path.Combine(RepositoryRoot, "asset", "bolttagu", "derived", "model", "turnaround-v1.png"),
+            Path.Combine(modelRoot, "turnaround-v1.png"));
+        var recipePath = Path.Combine(modelRoot, "animation-recipes.json");
+        File.WriteAllText(recipePath, """
+            {
+              "schemaVersion": 1,
+              "source": "turnaround-v1.png",
+              "sourceRect": { "x": 0, "y": 0, "width": 443, "height": 887 },
+              "canvas": { "width": 512, "height": 512 },
+              "padding": 32,
+              "clips": [
+                {
+                  "id": "legacy",
+                  "frames": [{ "scaleX": 1, "scaleY": 1, "offsetX": 0, "offsetY": 0 }]
+                },
+                {
+                  "id": "calibrated_hidden",
+                  "calibration": { "sourceRect": { "x": 0, "y": 0, "width": 443, "height": 887 } },
+                  "frames": [{ "scaleX": 1, "scaleY": 1, "offsetX": 0, "offsetY": 0 }]
+                },
+                {
+                  "id": "calibrated_terminal",
+                  "calibration": {
+                    "sourceRect": { "x": 0, "y": 0, "width": 443, "height": 887 },
+                    "emit": true
+                  },
+                  "frames": [{ "scaleX": 1, "scaleY": 1, "offsetX": 0, "offsetY": 0 }]
+                }
+              ]
+            }
+            """);
+        try
+        {
+            Assert.AreEqual(0, Program.Main(["generate", root]));
+
+            var animationRoot = Path.Combine(root, "asset", "bolttagu", "derived", "animations");
+            Assert.HasCount(1, Directory.EnumerateFiles(Path.Combine(animationRoot, "legacy", "frames"), "*.png"));
+            Assert.HasCount(1, Directory.EnumerateFiles(Path.Combine(animationRoot, "calibrated_hidden", "frames"), "*.png"),
+                "A calibration frame is metadata unless explicitly emitted.");
+            Assert.HasCount(2, Directory.EnumerateFiles(Path.Combine(animationRoot, "calibrated_terminal", "frames"), "*.png"),
+                "Terminal idle-return clips may opt in to emit their calibration frame.");
+
+            var legacy = GetAlphaBounds(LoadBgra32(Path.Combine(animationRoot, "legacy", "frames", "000.png")));
+            var calibrated = GetAlphaBounds(LoadBgra32(Path.Combine(animationRoot, "calibrated_hidden", "frames", "000.png")));
+            var terminal = GetAlphaBounds(LoadBgra32(Path.Combine(animationRoot, "calibrated_terminal", "frames", "001.png")));
+            Assert.AreEqual(legacy, calibrated, "Explicit calibration preserves legacy reference-frame output.");
+            Assert.AreEqual(legacy, terminal, "The emitted canonical idle has the same shared scale and ground baseline.");
+            Assert.IsInRange(477, 480, calibrated.Bottom, "Grounded calibration must use the common bottom baseline.");
+
+            File.WriteAllText(recipePath, """
+                {
+                  "schemaVersion": 1,
+                  "source": "turnaround-v1.png",
+                  "sourceRect": { "x": 0, "y": 0, "width": 443, "height": 887 },
+                  "canvas": { "width": 512, "height": 512 },
+                  "padding": 32,
+                  "clips": [{
+                    "id": "invalid_calibration",
+                    "calibration": { "sourceRect": { "x": 1774, "y": 0, "width": 1, "height": 887 } },
+                    "frames": [{ "scaleX": 1, "scaleY": 1, "offsetX": 0, "offsetY": 0 }]
+                  }]
+                }
+                """);
+            Assert.AreEqual(1, Program.Main(["generate", root]), "Out-of-bounds calibration rectangles must be rejected.");
+        }
+        finally
+        {
+            Directory.Delete(root, recursive: true);
+        }
     }
 
     [TestMethod]
@@ -386,5 +466,30 @@ public sealed class AssetPipelineTests
         return count;
 
         bool IsVisible(int x, int y) => pixels[(y * stride) + (x * 4) + 3] > 8;
+    }
+
+    private static (int Width, int Height, int Bottom) GetAlphaBounds(BitmapSource bitmap)
+    {
+        var stride = bitmap.PixelWidth * 4;
+        var pixels = new byte[stride * bitmap.PixelHeight];
+        bitmap.CopyPixels(pixels, stride, 0);
+        var minX = bitmap.PixelWidth;
+        var minY = bitmap.PixelHeight;
+        var maxX = -1;
+        var maxY = -1;
+        for (var y = 0; y < bitmap.PixelHeight; y++)
+        {
+            for (var x = 0; x < bitmap.PixelWidth; x++)
+            {
+                if (pixels[(y * stride) + (x * 4) + 3] <= 8) continue;
+                minX = Math.Min(minX, x);
+                minY = Math.Min(minY, y);
+                maxX = Math.Max(maxX, x);
+                maxY = Math.Max(maxY, y);
+            }
+        }
+
+        Assert.IsGreaterThanOrEqualTo(minX, maxX);
+        return (maxX - minX + 1, maxY - minY + 1, maxY);
     }
 }

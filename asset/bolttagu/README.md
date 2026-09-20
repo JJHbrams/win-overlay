@@ -35,9 +35,14 @@ not begin from a `candidate` model.
 
 ### Canonical capture boxes
 
-- Grounded clips use a 420px reference silhouette height and ground anchor `Y=480` on the
-  512×512 canvas. One reference-frame scale is shared by the whole clip so pose compression and
-  rebound remain visible without cross-clip size jumps.
+- Grounded clips use a 420px canonical-idle silhouette height and ground anchor `Y=480` on the
+  512×512 canvas. Each `animation-recipes.json` clip declares a `calibration` source rectangle;
+  the compiler takes its alpha bounds to derive that clip's common scale and bottom baseline.
+  The calibration cell is metadata and is not emitted unless `calibration.emit` is explicitly
+  `true` for a terminal idle-return clip (and that extra frame is also declared in `pack.json`).
+  New source sheets should place their canonical idle pose in the final cell. Legacy sheets may
+  use the shared `turnaround-v1.png` idle rectangle as a compatibility bridge; this does not mean
+  the legacy sheet itself contains an idle cell.
 - `drag_held_idle` and `drag_pulled` use a top-aligned scruff anchor at `Y=104`; they are reviewed
   separately from the grounded foot pivot. The held loop keeps the body centered, while the pulled
   loop sends the body and every limb in the same trailing direction and mirrors at runtime.
