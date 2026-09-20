@@ -25,4 +25,12 @@ jobs:
           if ($first -ne $second) { throw "Asset build is not deterministic: $first != $second" }
       - run: dotnet build Bolttagu.slnx --no-restore -c Release
       - run: dotnet test Bolttagu.slnx --no-build --no-restore -c Release
-      - run: dotnet publish src/Bolttagu.App/Bolttagu.App.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:DebugType=None -o artifacts/p0/win-x64
+      - name: Publish Windows x64 release
+        shell: pwsh
+        run: ./scripts/Publish-WinX64.ps1
+      - name: Upload Windows x64 release
+        uses: actions/upload-artifact@v4
+        with:
+          name: Bolttagu-win-x64
+          path: artifacts/publish/win-x64
+          if-no-files-found: error
