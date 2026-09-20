@@ -16,6 +16,8 @@ public enum PetRuntimeState
     DraggingPulled,
     Falling,
     Landing,
+    Recovering,
+    Dozing,
     Exiting,
 }
 
@@ -31,6 +33,7 @@ public sealed class PetAnimationController : IDisposable
     private readonly BehaviorPlanner _planner;
     private readonly IMonotonicClock _clock;
     private readonly IDesktopSurfaceProvider _surfaces;
+    private readonly BehaviorSequenceRunner _sequence;
     private PlannedWalk? _walk;
     private ScreenPoint _walkOrigin;
     private TimeSpan _walkStartedAt;
@@ -59,10 +62,22 @@ public sealed class PetAnimationController : IDisposable
         _planner = planner ?? throw new ArgumentNullException(nameof(planner));
         _clock = clock ?? throw new ArgumentNullException(nameof(clock));
         _surfaces = surfaces ?? throw new ArgumentNullException(nameof(surfaces));
+        _sequence = new BehaviorSequenceRunner(_player);
+        _sequence.Completed += OnSequenceCompleted;
+        _sequence.StepStarted += OnSequenceStepStarted;
         _player.PlaybackCompleted += OnPlaybackCompleted;
     }
 
     public PetRuntimeState State { get; private set; }
+    public bool HasActiveBehavior => _sequence.IsRunning;
+    public PetPose Pose => _sequence.IsRunning ? _sequence.Pose : State switch
+    {
+        PetRuntimeState.DraggingIdle or PetRuntimeState.DraggingPulled => PetPose.Hanging,
+        PetRuntimeState.Falling => PetPose.Airborne,
+        PetRuntimeState.Landing => PetPose.GroundedCompressed,
+        PetRuntimeState.Dozing => PetPose.Seated,
+        _ => PetPose.Standing,
+    };
     public event EventHandler? ExitReady;
 
     public void Start()
@@ -87,15 +102,26 @@ public sealed class PetAnimationController : IDisposable
             StartFalling(now);
             return;
         }
+        if (_sequence.Tick(now)) return;
         if (State == PetRuntimeState.Idle && now >= _nextActionAt)
         {
+            var behavior = _planner.ChooseAutonomousBehavior(now);
+            if (behavior is null)
+            {
+                _nextActionAt = now + _planner.NextIdleDelay();
+                return;
+            }
+            if (behavior.Id != BehaviorDefinitions.Walk)
+            {
+                StartAutonomousBehavior(behavior);
+                return;
+            }
             var surface = _support ?? CurrentSurface();
             var standingPosition = new ScreenPoint(_window.Position.X, surface.Top - _window.Size.Height);
             _window.MoveTo(standingPosition);
             _walk = _planner.PlanWalk(standingPosition, _window.Size, _window.WorkArea, _player.Facing);
             _player.SetFacing(_walk.Facing);
-            State = PetRuntimeState.Turning;
-            _player.Play(PetActionClips.Turn);
+            _sequence.Start(BehaviorDefinitions.CreateWalk(_walk.RequiresTurn), now);
         }
         else if (State == PetRuntimeState.Walking)
         {
@@ -114,8 +140,18 @@ public sealed class PetAnimationController : IDisposable
     public void ReactToClick()
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
-        if (State == PetRuntimeState.Exiting) return;
+        if (State == PetRuntimeState.Exiting || Pose is PetPose.Hanging or PetPose.Airborne or PetPose.GroundedCompressed) return;
+        _planner.RecordUserInput(_clock.Elapsed);
+        if (Pose == PetPose.Seated)
+        {
+            _sequence.Cancel();
+            State = PetRuntimeState.Dozing;
+            _player.Play(PetActionClips.DozeStartle);
+            return;
+        }
+        if (Pose != PetPose.Standing) return;
         _walk = null;
+        _sequence.Cancel();
         State = PetRuntimeState.Reacting;
         _player.Play(PetActionClips.Click);
     }
@@ -124,7 +160,9 @@ public sealed class PetAnimationController : IDisposable
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
         if (State == PetRuntimeState.Exiting) return;
+        _planner.RecordUserInput(_clock.Elapsed);
         _walk = null;
+        _sequence.Cancel();
         _dragLastPosition = _window.Position;
         _dragLastSampleAt = _clock.Elapsed;
         _dragSettledAt = null;
@@ -138,14 +176,6 @@ public sealed class PetAnimationController : IDisposable
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
         if (State is not (PetRuntimeState.DraggingIdle or PetRuntimeState.DraggingPulled)) return;
-        var position = _window.Position;
-        var footY = position.Y + _window.Size.Height;
-        var destination = CurrentSurface();
-        if (Math.Abs(destination.Top - footY) <= 3)
-        {
-            StartLanding(destination);
-            return;
-        }
         StartFalling(_clock.Elapsed);
     }
 
@@ -164,6 +194,7 @@ public sealed class PetAnimationController : IDisposable
         ObjectDisposedException.ThrowIf(_disposed, this);
         if (State == PetRuntimeState.Exiting || _exitReadyRaised) return;
         _walk = null;
+        _sequence.Cancel();
         State = PetRuntimeState.Exiting;
         _exitDeadline = _clock.Elapsed + ExitTimeout;
         _player.Play(PetActionClips.DespawnOut);
@@ -174,6 +205,8 @@ public sealed class PetAnimationController : IDisposable
         if (_disposed) return;
         _disposed = true;
         _player.PlaybackCompleted -= OnPlaybackCompleted;
+        _sequence.Completed -= OnSequenceCompleted;
+        _sequence.StepStarted -= OnSequenceStepStarted;
         _player.Stop();
     }
 
@@ -186,6 +219,7 @@ public sealed class PetAnimationController : IDisposable
         }
         _walkOrigin = _window.Position;
         _walkStartedAt = now;
+        _planner.RecordLocomotion(now);
         State = PetRuntimeState.Walking;
         _player.Play(PetActionClips.Walk);
     }
@@ -206,8 +240,11 @@ public sealed class PetAnimationController : IDisposable
         if (progress >= 1)
         {
             _walk = null;
-            State = PetRuntimeState.TurningToIdle;
-            _player.Play(PetActionClips.TurnToIdle);
+            if (!_sequence.AdvanceExternal(now))
+            {
+                State = PetRuntimeState.TurningToIdle;
+                _player.Play(PetActionClips.TurnToIdle);
+            }
         }
     }
 
@@ -272,6 +309,7 @@ public sealed class PetAnimationController : IDisposable
     private void StartFalling(TimeSpan now)
     {
         _walk = null;
+        _sequence.Cancel();
         _support = null;
         _fallOrigin = _window.Position;
         _fallStartedAt = now;
@@ -333,11 +371,14 @@ public sealed class PetAnimationController : IDisposable
         PetRuntimeState.TurningToIdle or
         PetRuntimeState.Reacting or
         PetRuntimeState.Huffing or
-        PetRuntimeState.Landing;
+        PetRuntimeState.Landing or
+        PetRuntimeState.Recovering or
+        PetRuntimeState.Dozing;
 
     private void EnterIdle(TimeSpan now)
     {
         State = PetRuntimeState.Idle;
+        _planner.EnterIdleHub(now);
         _nextActionAt = now + _planner.NextIdleDelay();
         _player.Play(PetActionClips.Idle);
     }
@@ -352,6 +393,7 @@ public sealed class PetAnimationController : IDisposable
     private void OnPlaybackCompleted(object? sender, AnimationPlaybackCompletedEventArgs e)
     {
         if (_disposed) return;
+        if (_sequence.HandleCompletion(e.ClipId, _clock.Elapsed)) return;
         if (State == PetRuntimeState.Launching && e.ClipId == PetActionClips.SpawnIn)
         {
             EnterIdle(_clock.Elapsed);
@@ -379,7 +421,51 @@ public sealed class PetAnimationController : IDisposable
         }
         else if (State == PetRuntimeState.Landing && e.ClipId == PetActionClips.DropLand)
         {
+            State = PetRuntimeState.Recovering;
+            _player.Play(PetActionClips.LandRecover);
+        }
+        else if (State == PetRuntimeState.Recovering && e.ClipId == PetActionClips.LandRecover)
+        {
+            EnterIdle(_clock.Elapsed);
+        }
+        else if (State == PetRuntimeState.Dozing && e.ClipId == PetActionClips.DozeStartle)
+        {
+            _player.Play(PetActionClips.StandUp);
+        }
+        else if (State == PetRuntimeState.Dozing && e.ClipId == PetActionClips.StandUp)
+        {
             EnterIdle(_clock.Elapsed);
         }
     }
+
+    public bool StartAutonomousBehavior(BehaviorDefinition definition)
+    {
+        ObjectDisposedException.ThrowIf(_disposed, this);
+        if (State != PetRuntimeState.Idle || definition.InterruptPolicy != BehaviorInterruptPolicy.AutonomousOnly) return false;
+        _walk = null;
+        _sequence.Start(definition, _clock.Elapsed);
+        State = definition.ExitPose == PetPose.Seated ? PetRuntimeState.Dozing : PetRuntimeState.Reacting;
+        return true;
+    }
+
+    private void OnSequenceCompleted(object? sender, BehaviorDefinition definition)
+    {
+        if (_disposed) return;
+        EnterIdle(_clock.Elapsed);
+    }
+
+    private void OnSequenceStepStarted(object? sender, string clipId)
+    {
+        if (_sequence.Current?.Id != BehaviorDefinitions.Walk) return;
+        if (clipId == PetActionClips.Turn) State = PetRuntimeState.Turning;
+        else if (clipId == PetActionClips.Walk)
+        {
+            _walkOrigin = _window.Position;
+            _walkStartedAt = _clock.Elapsed;
+            _planner.RecordLocomotion(_walkStartedAt);
+            State = PetRuntimeState.Walking;
+        }
+        else if (clipId == PetActionClips.TurnToIdle) State = PetRuntimeState.TurningToIdle;
+    }
+
 }

@@ -32,6 +32,12 @@ public sealed record PlannedWalk(
 
 public sealed class BehaviorPlanner(IRandomSource random)
 {
+    private readonly Queue<string> _recent = new();
+    private readonly Dictionary<string, TimeSpan> _lastSelected = new(StringComparer.Ordinal);
+    private TimeSpan _idleHubEnteredAt;
+    private TimeSpan? _lastLocomotionAt;
+    private TimeSpan? _lastUserInputAt;
+
     public TimeSpan NextIdleDelay() =>
         TimeSpan.FromMilliseconds(random.NextInt(2000, 5001));
 
@@ -56,5 +62,41 @@ public sealed class BehaviorPlanner(IRandomSource random)
         }
 
         return new(facing, targetX, 72, facing != currentFacing);
+    }
+
+    public void EnterIdleHub(TimeSpan now) => _idleHubEnteredAt = now;
+    public void RecordLocomotion(TimeSpan now) => _lastLocomotionAt = now;
+    public void RecordUserInput(TimeSpan now) => _lastUserInputAt = now;
+
+    public BehaviorDefinition? ChooseAutonomousBehavior(TimeSpan now, IEnumerable<BehaviorDefinition>? definitions = null)
+    {
+        if (now - _idleHubEnteredAt < TimeSpan.FromMilliseconds(1500)) return null;
+        var candidates = (definitions ?? BehaviorDefinitions.Autonomous)
+            .Where(definition => IsEligible(definition, now))
+            .ToArray();
+        if (candidates.Length == 0) return null;
+        var totalWeight = candidates.Sum(definition => Math.Max(0, definition.Weight));
+        if (totalWeight <= 0) return null;
+        var pick = random.NextInt(0, totalWeight);
+        BehaviorDefinition selected = candidates[^1];
+        foreach (var candidate in candidates)
+        {
+            pick -= Math.Max(0, candidate.Weight);
+            if (pick < 0) { selected = candidate; break; }
+        }
+        _lastSelected[selected.Id] = now;
+        _recent.Enqueue(selected.Id);
+        while (_recent.Count > 2) _recent.Dequeue();
+        return selected;
+    }
+
+    private bool IsEligible(BehaviorDefinition definition, TimeSpan now)
+    {
+        if (_recent.Contains(definition.Id, StringComparer.Ordinal)) return false;
+        if (_lastSelected.TryGetValue(definition.Id, out var last) && definition.Cooldown is { } cooldown && now - last < cooldown) return false;
+        if (definition.Id == BehaviorDefinitions.SitDoze &&
+            ((_lastLocomotionAt is { } locomotion && now - locomotion < TimeSpan.FromSeconds(8)) ||
+             (_lastUserInputAt is { } input && now - input < TimeSpan.FromSeconds(10)))) return false;
+        return true;
     }
 }

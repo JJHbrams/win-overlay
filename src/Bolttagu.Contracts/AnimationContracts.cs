@@ -17,6 +17,16 @@ public enum PetAction
     DespawnOut,
     Fall,
     DropLand,
+    SitDown,
+    SitSettle,
+    DozeEnter,
+    DozeLoop,
+    WakeUp,
+    StandUp,
+    DozeStartle,
+    LookAround,
+    Stretch,
+    LandRecover,
 }
 
 public static class PetActionClips
@@ -33,6 +43,16 @@ public static class PetActionClips
     public const string Fall = "fall";
     public const string DropLand = "drop_land";
     public const string TurnToIdle = "turn_to_idle";
+    public const string SitDown = "sit_down";
+    public const string SitSettle = "sit_settle";
+    public const string DozeEnter = "doze_enter";
+    public const string DozeLoop = "doze_loop";
+    public const string WakeUp = "wake_up";
+    public const string StandUp = "stand_up";
+    public const string DozeStartle = "doze_startle";
+    public const string LookAround = "look_around";
+    public const string Stretch = "stretch";
+    public const string LandRecover = "land_recover";
 
     public static IReadOnlyDictionary<PetAction, string> All { get; } =
         new Dictionary<PetAction, string>
@@ -48,6 +68,16 @@ public static class PetActionClips
             [PetAction.DespawnOut] = DespawnOut,
             [PetAction.Fall] = Fall,
             [PetAction.DropLand] = DropLand,
+            [PetAction.SitDown] = SitDown,
+            [PetAction.SitSettle] = SitSettle,
+            [PetAction.DozeEnter] = DozeEnter,
+            [PetAction.DozeLoop] = DozeLoop,
+            [PetAction.WakeUp] = WakeUp,
+            [PetAction.StandUp] = StandUp,
+            [PetAction.DozeStartle] = DozeStartle,
+            [PetAction.LookAround] = LookAround,
+            [PetAction.Stretch] = Stretch,
+            [PetAction.LandRecover] = LandRecover,
         };
 }
 

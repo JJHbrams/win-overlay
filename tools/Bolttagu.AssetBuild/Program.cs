@@ -374,6 +374,12 @@ internal static class Program
             ("despawn_out", 0),
             ("fall", 0),
             ("drop_land", 3),
+            ("sit_down", 5),
+            ("doze_loop", 0),
+            ("wake_up", 5),
+            ("look_around", 0),
+            ("stretch", 3),
+            ("land_recover", 0),
         };
         var selected = requested.Select(key => frames.Single(
             item => item.ClipId == key.ClipId && item.FrameIndex == key.Index)).ToArray();

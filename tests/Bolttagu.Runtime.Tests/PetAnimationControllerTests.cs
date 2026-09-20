@@ -39,7 +39,7 @@ public sealed class PetAnimationControllerTests
     [TestMethod]
     public void ScheduledTurn_CompletesIntoWalkAndMovesWindow()
     {
-        using var fixture = new Fixture(2000, 1, 120, 2000);
+        using var fixture = new Fixture(2000, 0, 0, 120, 2000);
         fixture.StartToIdle();
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
@@ -47,7 +47,7 @@ public sealed class PetAnimationControllerTests
         fixture.Player.Complete(PetActionClips.Turn);
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(3);
         fixture.Controller.Tick();
-        Assert.IsGreaterThan(100, fixture.Window.Position.X);
+        Assert.IsLessThan(100, fixture.Window.Position.X);
         CollectionAssert.AreEqual(
             new[] { PetActionClips.Idle, PetActionClips.Turn, PetActionClips.Walk },
             fixture.Player.PlayedClips.ToArray());
@@ -56,7 +56,7 @@ public sealed class PetAnimationControllerTests
     [TestMethod]
     public void ScheduledDirectionChange_PlaysTurnBeforeWalk()
     {
-        using var fixture = new Fixture(2000, 0, 120, 2000);
+        using var fixture = new Fixture(2000, 0, 0, 120, 2000);
         fixture.StartToIdle();
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
@@ -71,7 +71,7 @@ public sealed class PetAnimationControllerTests
     [TestMethod]
     public void WalkCompletion_ReversesTurnBeforeIdle()
     {
-        using var fixture = new Fixture(2000, 1, 120, 2000);
+        using var fixture = new Fixture(2000, 0, 0, 120, 2000);
         fixture.StartToIdle();
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
@@ -115,9 +115,11 @@ public sealed class PetAnimationControllerTests
         fixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
         fixture.Player.Complete(PetActionClips.DropLand);
+        Assert.AreEqual(PetRuntimeState.Recovering, fixture.Controller.State);
+        fixture.Player.Complete(PetActionClips.LandRecover);
         Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
         CollectionAssert.AreEqual(
-            new[] { PetActionClips.Idle, PetActionClips.DragHeldIdle, PetActionClips.Fall, PetActionClips.DropLand, PetActionClips.Idle },
+            new[] { PetActionClips.Idle, PetActionClips.DragHeldIdle, PetActionClips.Fall, PetActionClips.DropLand, PetActionClips.LandRecover, PetActionClips.Idle },
             fixture.Player.PlayedClips.ToArray());
     }
 
@@ -132,6 +134,49 @@ public sealed class PetAnimationControllerTests
         CollectionAssert.AreEqual(
             new[] { PetActionClips.Idle, PetActionClips.DragHeldIdle, PetActionClips.Idle },
             fixture.Player.PlayedClips.ToArray());
+    }
+
+    [TestMethod]
+    public void ClickTransitionTable_DoesNotUseStandingClickForCompressedLanding()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        fixture.Window.MoveTo(new(100, 100));
+        fixture.Controller.BeginDrag();
+        fixture.Controller.CompleteDrag();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
+
+        fixture.Controller.ReactToClick();
+        Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.DropLand, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void DozeBehavior_UsesProductionControllerTraceAndTwoPackCycles()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        Assert.IsTrue(fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.SitDoze)));
+        fixture.Player.Complete(PetActionClips.SitDown);
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(750);
+        fixture.Controller.Tick();
+        fixture.Player.Complete(PetActionClips.DozeEnter);
+        Assert.AreEqual(PetActionClips.DozeLoop, fixture.Player.CurrentClipId);
+
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(3230);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetActionClips.WakeUp, fixture.Player.CurrentClipId);
+        fixture.Player.Complete(PetActionClips.WakeUp);
+        fixture.Player.Complete(PetActionClips.StandUp);
+        CollectionAssert.AreEqual(new[]
+        {
+            PetActionClips.Idle, PetActionClips.SitDown, PetActionClips.SitSettle,
+            PetActionClips.DozeEnter, PetActionClips.DozeLoop, PetActionClips.WakeUp,
+            PetActionClips.StandUp, PetActionClips.Idle,
+        }, fixture.Player.PlayedClips.ToArray());
     }
 
     [TestMethod]
@@ -163,7 +208,7 @@ public sealed class PetAnimationControllerTests
 
         foreach (var target in groundedStates)
         {
-            using var fixture = new Fixture(2000, 1, 320, 2000);
+            using var fixture = new Fixture(2000, 0, 0, 320, 2000);
             fixture.StartToIdle();
             EnterState(fixture, target);
             Assert.AreEqual(target, fixture.Controller.State, $"Failed to arrange {target}.");
@@ -179,7 +224,7 @@ public sealed class PetAnimationControllerTests
     [TestMethod]
     public void WalkLeavingSupportBounds_StartsFall()
     {
-        using var fixture = new Fixture(2000, 1, 320, 2000);
+        using var fixture = new Fixture(2000, 0, 0, 320, 2000);
         fixture.Surfaces.Current = new(
             new(new(0, 720), new(260, 300)), DesktopSurfaceKind.Window, 1);
         fixture.StartToIdle();
@@ -189,6 +234,7 @@ public sealed class PetAnimationControllerTests
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(4);
         fixture.Controller.Tick();
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(4.01);
+        fixture.Surfaces.SupportValid = false;
 
         fixture.Controller.Tick();
 
@@ -310,6 +356,45 @@ public sealed class PetAnimationControllerTests
         fixture.Controller.Tick();
 
         Assert.AreEqual(1, readyCount);
+    }
+
+    [TestMethod]
+    public void PriorityTable_ExitBeatsDragAndClick()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        fixture.Controller.RequestExit();
+        fixture.Controller.BeginDrag();
+        fixture.Controller.ReactToClick();
+        fixture.Surfaces.SupportValid = false;
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Exiting, fixture.Controller.State);
+        CollectionAssert.AreEqual(new[] { PetActionClips.Idle, PetActionClips.DespawnOut }, fixture.Player.PlayedClips.ToArray());
+    }
+
+    [TestMethod]
+    public void PriorityTable_DragAndSupportLossPreemptPendingBehavior()
+    {
+        using var fixture = new Fixture(2000, 0, 0, 120);
+        fixture.StartToIdle();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Turning, fixture.Controller.State);
+
+        fixture.Controller.BeginDrag();
+        fixture.Player.Complete(PetActionClips.Turn);
+        Assert.AreEqual(PetRuntimeState.DraggingIdle, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.DragHeldIdle, fixture.Player.CurrentClipId);
+        Assert.IsFalse(fixture.Controller.HasActiveBehavior, "Drag must clear pending turn/walk sequence state.");
+
+        fixture.Controller.CancelDrag();
+        fixture.Controller.ReactToClick();
+        fixture.Surfaces.SupportValid = false;
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Fall, fixture.Player.CurrentClipId);
+        Assert.IsFalse(fixture.Controller.HasActiveBehavior, "Support loss must clear the interrupted click sequence.");
     }
 
     private static void EnterState(Fixture fixture, PetRuntimeState target)

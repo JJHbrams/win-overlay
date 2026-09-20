@@ -81,6 +81,13 @@ public sealed class RuntimeAnimationCatalog : IAnimationCatalog
                 frames.Select(frame => ToFrame(atlasPath, atlas, frame)).ToArray()));
         }
 
+        var required = PetActionClips.All.Values.Append(PetActionClips.TurnToIdle).Distinct(StringComparer.Ordinal);
+        var missing = required.Where(id => !clips.ContainsKey(id)).ToArray();
+        if (missing.Length != 0)
+        {
+            throw new InvalidDataException($"Runtime catalog is missing required clips: {string.Join(", ", missing)}.");
+        }
+
         return new(clips, false, $"Loaded {clips.Count} clips from {Path.GetFileName(catalogPath)}.");
     }
 
@@ -104,7 +111,8 @@ public sealed class RuntimeAnimationCatalog : IAnimationCatalog
                 clipId => new SpriteClip(
                     clipId,
                     clipId is PetActionClips.Idle or PetActionClips.Walk or
-                        PetActionClips.DragHeldIdle or PetActionClips.DragPulled or PetActionClips.Fall,
+                        PetActionClips.DragHeldIdle or PetActionClips.DragPulled or PetActionClips.Fall or
+                        PetActionClips.DozeLoop,
                     [frame]),
                 StringComparer.Ordinal);
             return new(clips, true, $"Runtime pack failed validation; static fallback active: {exception.Message}");

@@ -30,6 +30,35 @@ public sealed class AnimationPlaybackTests
     }
 
     [TestMethod]
+    public void RealSpriteView_LoopingDozeAdvancesByRunnerDeadlineWithoutCompletionEvent()
+    {
+        Exception? failure = null;
+        var thread = new Thread(() =>
+        {
+            try
+            {
+                var catalog = RuntimeAnimationCatalog.Load(Path.Combine(FindRepositoryRoot(), "asset", "bolttagu", "build"));
+                using var view = new PetSpriteView(catalog);
+                var runner = new BehaviorSequenceRunner(view);
+                runner.Start(BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.SitDoze), TimeSpan.Zero);
+                runner.HandleCompletion(PetActionClips.SitDown, TimeSpan.Zero);
+                runner.Tick(TimeSpan.FromMilliseconds(750));
+                runner.HandleCompletion(PetActionClips.DozeEnter, TimeSpan.FromMilliseconds(750));
+                Assert.AreEqual(PetActionClips.DozeLoop, view.CurrentClipId);
+
+                runner.Tick(TimeSpan.FromMilliseconds(3230));
+                Assert.AreEqual(PetActionClips.WakeUp, view.CurrentClipId);
+            }
+            catch (Exception exception) { failure = exception; }
+            finally { Dispatcher.CurrentDispatcher.InvokeShutdown(); }
+        });
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+        Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(5)), "Looping sprite playback thread did not exit.");
+        if (failure is not null) Assert.Fail(failure.ToString());
+    }
+
+    [TestMethod]
     public void SpriteView_LoadsAtlasAndStartsBothClips()
     {
         Exception? failure = null;

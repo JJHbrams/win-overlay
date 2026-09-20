@@ -1,5 +1,6 @@
 using Bolttagu.Assets;
 using Bolttagu.Contracts;
+using Bolttagu.Core;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -44,7 +45,9 @@ public sealed class AssetPipelineTests
             new[]
             {
                 "idle_breathe", "click", "walk", "click_huff", "turn", "drag_held_idle",
-                "drag_pulled", "spawn_in", "despawn_out", "drop_land", "turn_to_idle", "fall"
+                "drag_pulled", "spawn_in", "despawn_out", "drop_land", "turn_to_idle", "fall",
+                "sit_down", "sit_settle", "doze_enter", "doze_loop", "wake_up", "stand_up",
+                "doze_startle", "look_around", "stretch", "land_recover"
             },
             pack.Clips.Select(clip => clip.Id).ToArray());
     }
@@ -147,6 +150,16 @@ public sealed class AssetPipelineTests
         Assert.HasCount(4, catalog.GetClip("drop_land").Frames);
         Assert.HasCount(4, catalog.GetClip("turn_to_idle").Frames);
         Assert.HasCount(1, catalog.GetClip("fall").Frames);
+        Assert.HasCount(6, catalog.GetClip("sit_down").Frames);
+        Assert.HasCount(3, catalog.GetClip("sit_settle").Frames);
+        Assert.HasCount(3, catalog.GetClip("doze_enter").Frames);
+        Assert.HasCount(4, catalog.GetClip("doze_loop").Frames);
+        Assert.HasCount(6, catalog.GetClip("wake_up").Frames);
+        Assert.HasCount(3, catalog.GetClip("stand_up").Frames);
+        Assert.HasCount(3, catalog.GetClip("doze_startle").Frames);
+        Assert.HasCount(6, catalog.GetClip("look_around").Frames);
+        Assert.HasCount(6, catalog.GetClip("stretch").Frames);
+        Assert.HasCount(6, catalog.GetClip("land_recover").Frames);
         CollectionAssert.AreEquivalent(
             Enum.GetValues<PetAction>(),
             PetActionClips.All.Keys.ToArray(),
@@ -158,6 +171,26 @@ public sealed class AssetPipelineTests
     }
 
     [TestMethod]
+    public void BehaviorDefinitions_ReferenceBuiltCatalogClipsAndDozeCycleTiming()
+    {
+        var catalog = RuntimeAnimationCatalog.Load(Path.Combine(RepositoryRoot, "asset", "bolttagu", "build"));
+        var known = BehaviorDefinitions.Autonomous
+            .SelectMany(definition => definition.Steps)
+            .Select(step => step.ClipId)
+            .ToHashSet(StringComparer.Ordinal);
+
+        BehaviorDefinitionValidator.ValidateAll(BehaviorDefinitions.Autonomous, known);
+        foreach (var clipId in known)
+        {
+            Assert.IsGreaterThan(0, catalog.GetClip(clipId).Frames.Count, $"Behavior clip '{clipId}' is absent from the built catalog.");
+        }
+
+        var actualCycle = catalog.GetClip(PetActionClips.DozeLoop).Frames.Aggregate(
+            TimeSpan.Zero, (total, frame) => total + frame.Duration);
+        Assert.AreEqual(BehaviorDefinitions.DozeLoopCycleDuration, actualCycle, "Doze loop contract drifted from pack frame timing.");
+    }
+
+    [TestMethod]
     public void ReviewArtifacts_UseCanonicalCaptureBoxAndReadableTiming()
     {
         var buildRoot = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build");
@@ -166,7 +199,7 @@ public sealed class AssetPipelineTests
         Assert.IsGreaterThan(1000, sheet.Height);
         var scaleAudit = PngInspector.Read(Path.Combine(buildRoot, "review", "scale-audit-sheet.png"));
         Assert.AreEqual(1024, scaleAudit.Width);
-        Assert.AreEqual(876, scaleAudit.Height);
+        Assert.AreEqual(1460, scaleAudit.Height);
 
         using var metrics = JsonDocument.Parse(File.ReadAllText(
             Path.Combine(buildRoot, "review", "frame-metrics.json")));
@@ -218,6 +251,17 @@ public sealed class AssetPipelineTests
         Assert.IsInRange(390, 400, fall.GetProperty("height").GetInt32(), "Fall pose is oversized.");
         Assert.IsLessThan(idle.GetProperty("height").GetInt32(), held.GetProperty("height").GetInt32());
         Assert.IsLessThan(idle.GetProperty("height").GetInt32(), fall.GetProperty("height").GetInt32());
+        foreach (var clipId in new[] { "look_around", "stretch" })
+        {
+            var frame = representativeFrames.Single(item =>
+                item.GetProperty("clipId").GetString() == clipId && item.GetProperty("index").GetInt32() == 0);
+            Assert.IsInRange(411, 429, frame.GetProperty("height").GetInt32(), $"{clipId} scale drifted.");
+            Assert.IsInRange(477, 480, frame.GetProperty("bottom").GetInt32(), $"{clipId} ground anchor drifted.");
+        }
+        var doze = representativeFrames.Single(frame =>
+            frame.GetProperty("clipId").GetString() == "doze_loop" && frame.GetProperty("index").GetInt32() == 0);
+        Assert.IsInRange(320, 340, doze.GetProperty("height").GetInt32(), "Doze scale drifted.");
+        Assert.IsInRange(477, 480, doze.GetProperty("bottom").GetInt32(), "Doze ground anchor drifted.");
     }
 
     [TestMethod]
@@ -251,6 +295,14 @@ public sealed class AssetPipelineTests
             Assert.HasCount(1, catalog.GetClip("drop_land").Frames);
             Assert.HasCount(1, catalog.GetClip("turn_to_idle").Frames);
             Assert.HasCount(1, catalog.GetClip("fall").Frames);
+            foreach (var clipId in new[]
+                     {
+                         "sit_down", "sit_settle", "doze_enter", "doze_loop", "wake_up", "stand_up",
+                         "doze_startle", "look_around", "stretch", "land_recover"
+                     })
+            {
+                Assert.HasCount(1, catalog.GetClip(clipId).Frames);
+            }
         }
         finally
         {

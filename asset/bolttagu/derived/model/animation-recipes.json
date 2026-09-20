@@ -191,6 +191,194 @@
       "frames": [
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": -52 }
       ]
+    },
+    {
+      "id": "sit_down",
+      "source": "sit-down-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 },
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
+      ],
+      "targetVisibleHeight": 420,
+      "referenceFrame": 0,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "sit_settle",
+      "source": "sit-down-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
+      ],
+      "targetVisibleHeight": 330,
+      "referenceFrame": 2,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "doze_enter",
+      "source": "doze-loop-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 }
+      ],
+      "targetVisibleHeight": 330,
+      "referenceFrame": 2,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "doze_loop",
+      "source": "doze-loop-grid-v1.png",
+      "sourceRects": [
+        { "x": 1024, "y": 0, "width": 512, "height": 512 },
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
+      ],
+      "targetVisibleHeight": 330,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "wake_up",
+      "source": "wake-up-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 },
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
+      ],
+      "targetVisibleHeight": 420,
+      "referenceFrame": 5,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "stand_up",
+      "source": "wake-up-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
+      ],
+      "targetVisibleHeight": 420,
+      "referenceFrame": 2,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "doze_startle",
+      "source": "wake-up-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 }
+      ],
+      "targetVisibleHeight": 330,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "look_around",
+      "source": "look-around-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 },
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
+      ],
+      "targetVisibleHeight": 420,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "stretch",
+      "source": "stretch-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 },
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
+      ],
+      "targetVisibleHeight": 420,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "land_recover",
+      "source": "land-recover-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 },
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
+      ],
+      "targetVisibleHeight": 420,
+      "referenceFrame": 5,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
     }
   ]
 }

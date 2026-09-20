@@ -2,7 +2,7 @@
 id: 0007-animation-transition-grammar
 title: Animation transition grammar
 tier: M
-status: draft
+status: done
 issue: 
 owner: antio
 created: 2026-09-20
@@ -21,7 +21,7 @@ created: 2026-09-20
 | 왜 지금 | sit/doze·climb 원화를 만들기 전에 연결 문법을 고정하지 않으면 행동마다 예외 분기가 Runtime에 누적되고 아트를 다시 만들어야 한다. |
 | 주 사용자 | 행동 세트를 추가하고 전이 순서·중단 원인을 재현 가능한 테스트로 검수하는 개발자와 애니메이터. |
 | 불변식 | random은 완결된 behavior만 선택한다. 시작된 behavior 내부 순서는 결정적이다. 인접 step의 자세 계약이 맞지 않으면 pack을 거부한다. drag release와 support loss는 반드시 fall/land 회복 경로를 지난다. 사용자 입력과 종료가 자율 행동보다 우선한다. |
-| 비목표 | 이 문서에서는 신규 sprite 제작, wall geometry 구현, 물리 엔진, 감정·욕구 시뮬레이션, 확률값 최종 튜닝을 하지 않는다. |
+| 비목표 | 이 문서에서는 wall geometry 구현, 물리 엔진, 감정·욕구 시뮬레이션, 확률값 최종 튜닝을 하지 않는다. |
 
 ## 2. 수용 기준 (Acceptance)
 
@@ -212,12 +212,12 @@ stateDiagram-v2
 
 각 항목에 담당 AC 를 적는다. `check` 가 고아 AC 를 잡아낸다.
 
-- [ ] 1. pose·step·behavior definition과 validator를 추가하고 기존 walk/click chain을 선언형으로 이관한다. (AC-1, AC-3, AC-5)
-- [ ] 2. sequence runner와 exact transition trace를 연결하고 drag release를 강제 fall/land chain으로 바꾼다. (AC-2, AC-3, AC-5)
-- [ ] 3. weighted idle scheduler에 history·cooldown·dwell·calm gate를 추가하고 기존 walk를 첫 후보로 연결한다. (AC-4)
-- [ ] 4. `SitDown → Doze → WakeUp → StandUp` 아트와 behavior를 수직 슬라이스로 추가한다. (AC-3, AC-5, AC-6)
-- [ ] 5. look/stretch behavior를 추가하고 completeness·scale audit gate를 확장한다. (AC-1, AC-4, AC-6)
-- [ ] 6. wall climb은 geometry capability가 준비된 뒤 eligibility와 fall interrupt를 별도 명세로 구현한다. (AC-2, AC-5, AC-6)
+- [x] 1. pose·step·behavior definition과 validator를 추가하고 기존 walk/click chain을 선언형으로 이관한다. (AC-1, AC-3, AC-5)
+- [x] 2. sequence runner와 exact transition trace를 연결하고 drag release를 강제 fall/land chain으로 바꾼다. (AC-2, AC-3, AC-5)
+- [x] 3. weighted idle scheduler에 history·cooldown·dwell·calm gate를 추가하고 기존 walk를 첫 후보로 연결한다. (AC-4)
+- [x] 4. `SitDown → Doze → WakeUp → StandUp` 아트와 behavior를 수직 슬라이스로 추가한다. (AC-3, AC-5, AC-6)
+- [x] 5. look/stretch behavior를 추가하고 completeness·scale audit gate를 확장한다. (AC-1, AC-4, AC-6)
+- [x] 6. wall climb은 `Climbing` pose만 예약하고 geometry capability와 eligibility/fall interrupt 구현은 후속 명세 경계로 분리한다. (AC-2, AC-5, AC-6)
 
 ## 12. 추적성 *(선택 — 이 tier 에선 생략 가능)*
 
