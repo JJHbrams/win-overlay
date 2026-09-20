@@ -381,6 +381,96 @@
         { "scaleX": 0.96, "scaleY": 0.96, "offsetX": 0, "offsetY": 0 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
       ]
+    },
+    {
+      "id": "rope_climb_prepare",
+      "source": "rope-climb-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 443, "height": 443 },
+        { "x": 443, "y": 0, "width": 444, "height": 443 }
+      ],
+      "calibration": { "source": "canonical-idle-calibration-v1.png", "sourceRect": { "x": 0, "y": 0, "width": 512, "height": 512 } },
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "rope_climb_loop",
+      "source": "rope-climb-grid-v1.png",
+      "sourceRects": [
+        { "x": 887, "y": 0, "width": 443, "height": 443 },
+        { "x": 1330, "y": 0, "width": 444, "height": 443 },
+        { "x": 0, "y": 443, "width": 443, "height": 444 },
+        { "x": 443, "y": 443, "width": 444, "height": 444 }
+      ],
+      "calibration": { "source": "canonical-idle-calibration-v1.png", "sourceRect": { "x": 0, "y": 0, "width": 512, "height": 512 } },
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "rope_climb_finish",
+      "source": "rope-climb-grid-v1.png",
+      "sourceRects": [
+        { "x": 887, "y": 443, "width": 443, "height": 444 }
+      ],
+      "calibration": {
+        "source": "canonical-idle-calibration-v1.png",
+        "sourceRect": { "x": 0, "y": 0, "width": 512, "height": 512 },
+        "emit": true
+      },
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "free_climb_prepare",
+      "source": "free-climb-grid-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 443, "height": 443 }
+      ],
+      "calibration": { "source": "canonical-idle-calibration-v1.png", "sourceRect": { "x": 0, "y": 0, "width": 512, "height": 512 } },
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "free_climb_loop",
+      "source": "free-climb-grid-v1.png",
+      "sourceRects": [
+        { "x": 443, "y": 0, "width": 444, "height": 443 },
+        { "x": 887, "y": 0, "width": 443, "height": 443 },
+        { "x": 1330, "y": 0, "width": 444, "height": 443 },
+        { "x": 0, "y": 443, "width": 443, "height": 444 },
+        { "x": 443, "y": 443, "width": 444, "height": 444 }
+      ],
+      "calibration": { "source": "canonical-idle-calibration-v1.png", "sourceRect": { "x": 0, "y": 0, "width": 512, "height": 512 } },
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "free_climb_finish",
+      "source": "free-climb-grid-v1.png",
+      "sourceRects": [
+        { "x": 887, "y": 443, "width": 443, "height": 444 }
+      ],
+      "calibration": {
+        "source": "canonical-idle-calibration-v1.png",
+        "sourceRect": { "x": 0, "y": 0, "width": 512, "height": 512 },
+        "emit": true
+      },
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
     }
   ]
 }

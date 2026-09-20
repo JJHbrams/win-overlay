@@ -233,6 +233,58 @@
         { "path": "land_recover/frames/004.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
         { "path": "land_recover/frames/005.png", "durationMs": 200, "pivot": { "x": 256, "y": 480 } }
       ]
+    },
+    {
+      "id": "rope_climb_prepare",
+      "loop": false,
+      "frames": [
+        { "path": "rope_climb_prepare/frames/000.png", "durationMs": 160, "pivot": { "x": 256, "y": 480 } },
+        { "path": "rope_climb_prepare/frames/001.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "rope_climb_loop",
+      "loop": true,
+      "frames": [
+        { "path": "rope_climb_loop/frames/000.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
+        { "path": "rope_climb_loop/frames/001.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
+        { "path": "rope_climb_loop/frames/002.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
+        { "path": "rope_climb_loop/frames/003.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "rope_climb_finish",
+      "loop": false,
+      "frames": [
+        { "path": "rope_climb_finish/frames/000.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } },
+        { "path": "rope_climb_finish/frames/001.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "free_climb_prepare",
+      "loop": false,
+      "frames": [
+        { "path": "free_climb_prepare/frames/000.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "free_climb_loop",
+      "loop": true,
+      "frames": [
+        { "path": "free_climb_loop/frames/000.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
+        { "path": "free_climb_loop/frames/001.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
+        { "path": "free_climb_loop/frames/002.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
+        { "path": "free_climb_loop/frames/003.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
+        { "path": "free_climb_loop/frames/004.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "free_climb_finish",
+      "loop": false,
+      "frames": [
+        { "path": "free_climb_finish/frames/000.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } },
+        { "path": "free_climb_finish/frames/001.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } }
+      ]
     }
   ]
 }

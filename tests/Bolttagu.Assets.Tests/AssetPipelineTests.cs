@@ -48,7 +48,9 @@ public sealed class AssetPipelineTests
                 "idle_breathe", "click", "walk", "click_huff", "turn", "drag_held_idle",
                 "drag_pulled", "spawn_in", "despawn_out", "drop_land", "turn_to_idle", "fall",
                 "sit_down", "sit_settle", "doze_enter", "doze_loop", "wake_up", "stand_up",
-                "doze_startle", "look_around", "stretch", "land_recover"
+                "doze_startle", "look_around", "stretch", "land_recover",
+                "rope_climb_prepare", "rope_climb_loop", "rope_climb_finish",
+                "free_climb_prepare", "free_climb_loop", "free_climb_finish"
             },
             pack.Clips.Select(clip => clip.Id).ToArray());
     }
@@ -171,6 +173,14 @@ public sealed class AssetPipelineTests
             Assert.AreEqual(0, CountVisibleGutterPixels(bitmap, gutterWidth: 4),
                 $"{source} contains visible pixels on a 512x512 cell boundary.");
         }
+
+        foreach (var source in new[] { "rope-climb-grid-v1.png", "free-climb-grid-v1.png" })
+        {
+            var path = Path.Combine(modelRoot, source);
+            var bitmap = LoadBgra32(path);
+            Assert.AreEqual(1774, bitmap.PixelWidth, source);
+            Assert.AreEqual(887, bitmap.PixelHeight, source);
+        }
     }
 
     [TestMethod]
@@ -240,6 +250,12 @@ public sealed class AssetPipelineTests
         Assert.HasCount(6, catalog.GetClip("look_around").Frames);
         Assert.HasCount(6, catalog.GetClip("stretch").Frames);
         Assert.HasCount(6, catalog.GetClip("land_recover").Frames);
+        Assert.HasCount(2, catalog.GetClip("rope_climb_prepare").Frames);
+        Assert.HasCount(4, catalog.GetClip("rope_climb_loop").Frames);
+        Assert.HasCount(2, catalog.GetClip("rope_climb_finish").Frames);
+        Assert.HasCount(1, catalog.GetClip("free_climb_prepare").Frames);
+        Assert.HasCount(5, catalog.GetClip("free_climb_loop").Frames);
+        Assert.HasCount(2, catalog.GetClip("free_climb_finish").Frames);
         CollectionAssert.AreEquivalent(
             Enum.GetValues<PetAction>(),
             PetActionClips.All.Keys.ToArray(),
@@ -279,7 +295,7 @@ public sealed class AssetPipelineTests
         Assert.IsGreaterThan(1000, sheet.Height);
         var scaleAudit = PngInspector.Read(Path.Combine(buildRoot, "review", "scale-audit-sheet.png"));
         Assert.AreEqual(1024, scaleAudit.Width);
-        Assert.AreEqual(1460, scaleAudit.Height);
+        Assert.AreEqual(1752, scaleAudit.Height);
 
         using var metrics = JsonDocument.Parse(File.ReadAllText(
             Path.Combine(buildRoot, "review", "frame-metrics.json")));
@@ -367,6 +383,24 @@ public sealed class AssetPipelineTests
             Assert.IsGreaterThanOrEqualTo(100, frame.GetProperty("y").GetInt32(),
                 $"{clipId}/{index} contains pixels above the seated character; check for adjacent-cell bleed.");
         }
+
+        foreach (var clipId in new[]
+                 {
+                     "rope_climb_prepare", "rope_climb_loop", "rope_climb_finish",
+                     "free_climb_prepare", "free_climb_loop", "free_climb_finish"
+                 })
+        {
+            foreach (var frame in representativeFrames.Where(item =>
+                         item.GetProperty("clipId").GetString() == clipId))
+            {
+                Assert.IsGreaterThanOrEqualTo(24, frame.GetProperty("x").GetInt32(),
+                    $"{clipId} touches the capture-box edge; check for adjacent-cell bleed.");
+                Assert.IsGreaterThanOrEqualTo(20, frame.GetProperty("y").GetInt32(),
+                    $"{clipId} touches the capture-box edge; check for adjacent-cell bleed.");
+                Assert.IsLessThanOrEqualTo(480, frame.GetProperty("bottom").GetInt32(),
+                    $"{clipId} exceeds the canonical foot baseline.");
+            }
+        }
     }
 
     [TestMethod]
@@ -403,7 +437,9 @@ public sealed class AssetPipelineTests
             foreach (var clipId in new[]
                      {
                          "sit_down", "sit_settle", "doze_enter", "doze_loop", "wake_up", "stand_up",
-                         "doze_startle", "look_around", "stretch", "land_recover"
+                         "doze_startle", "look_around", "stretch", "land_recover",
+                         "rope_climb_prepare", "rope_climb_loop", "rope_climb_finish",
+                         "free_climb_prepare", "free_climb_loop", "free_climb_finish"
                      })
             {
                 Assert.HasCount(1, catalog.GetClip(clipId).Frames);
@@ -492,4 +528,5 @@ public sealed class AssetPipelineTests
         Assert.IsGreaterThanOrEqualTo(minX, maxX);
         return (maxX - minX + 1, maxY - minY + 1, maxY);
     }
+
 }

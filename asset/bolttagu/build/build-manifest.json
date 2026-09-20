@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildHash": "8DB40A85E7AADC0FEBA6AA50BAC3982B465ABF9FA514380EBEE4EAA40C180D13",
+  "buildHash": "DEFB801D5301D001CF69531A7F46F30964C2DD10A34B6FBB3C5DCE130C2CBBE1",
   "inputs": [
     {
       "path": "asset/bolttagu/derived/animations/click/frames/000.png",
@@ -208,6 +208,46 @@
       "sha256": "25A0E00C9B754AFB568A0C572A12EF02C8BB1A9326DBED416EF5518C7B145971"
     },
     {
+      "path": "asset/bolttagu/derived/animations/free_climb_finish/frames/000.png",
+      "bytes": 181691,
+      "sha256": "3BD59725A692F0DA135094644F6ED76BDD79C0A14F95003428D5165580C338A1"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/free_climb_finish/frames/001.png",
+      "bytes": 157289,
+      "sha256": "95C95CF6A76CB03B60C5C1F0714EDEB02C2A0B7B5545D9E05DBEC314F1FDE49D"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/free_climb_loop/frames/000.png",
+      "bytes": 176101,
+      "sha256": "B3963E5BF3C0F3E8ACEF43DE235B40CAC65EF5118282632B6B6B9DB70DBFD334"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/free_climb_loop/frames/001.png",
+      "bytes": 183204,
+      "sha256": "698DE4CB4BE131E0F3F4B657D1F5FE22FEE353F01F5764404D4FC7BDF4DE2B64"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/free_climb_loop/frames/002.png",
+      "bytes": 180403,
+      "sha256": "917CA7252E9936BD6CAC2F501F2D421562971B84086A849DD3BCA3B58AB9357A"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/free_climb_loop/frames/003.png",
+      "bytes": 178747,
+      "sha256": "8280643FEEB2B0BCAD975678F38C7F887C465A24241FFEA7702A0FCE4D19EA46"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/free_climb_loop/frames/004.png",
+      "bytes": 179756,
+      "sha256": "156D4F3B5E234141A7C5C439007CC476B63027964BDE436968D756C16F8549AB"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/free_climb_prepare/frames/000.png",
+      "bytes": 184624,
+      "sha256": "14A72F819D0552AF0B9666D071D08CF1A55185A360062D1352158E409837A33E"
+    },
+    {
       "path": "asset/bolttagu/derived/animations/idle_breathe/frames/000.png",
       "bytes": 157916,
       "sha256": "D9373C791CBC48CDA629A8B30B6A69D1349B8946F1C51AC49CFFE90045D737A9"
@@ -289,8 +329,48 @@
     },
     {
       "path": "asset/bolttagu/derived/animations/pack.json",
-      "bytes": 11847,
-      "sha256": "259DA6C77FA8F8EA11FD763D18438FEF582D244739C9BFC503B479B568C08FF3"
+      "bytes": 14108,
+      "sha256": "97A4570C27CC0D439F12DF425C0E60B2A851D03FEF3DCFE25A6232ECAA434B72"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/rope_climb_finish/frames/000.png",
+      "bytes": 163906,
+      "sha256": "874DF28D40FC4FF6C88CBE99A5FBE353ACD72531F52520E5E2F5ACBE9F2EADBB"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/rope_climb_finish/frames/001.png",
+      "bytes": 157289,
+      "sha256": "95C95CF6A76CB03B60C5C1F0714EDEB02C2A0B7B5545D9E05DBEC314F1FDE49D"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/rope_climb_loop/frames/000.png",
+      "bytes": 169272,
+      "sha256": "A70B2D8EAB61A1A5A79C3BBC595123166AF3067C774B09B4D5CD87F7117AE6D8"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/rope_climb_loop/frames/001.png",
+      "bytes": 165456,
+      "sha256": "791C50BB30ED0B8C11330676D7F6C69FCDB02B11D47C6736A73632C79DC9B9AC"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/rope_climb_loop/frames/002.png",
+      "bytes": 162882,
+      "sha256": "6FBEA3323AAECC5195778A841DC7F3BED31CBE008B19B392336D2632AE91F53A"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/rope_climb_loop/frames/003.png",
+      "bytes": 161734,
+      "sha256": "2387711F4DF3E367D68573568E239F33AC47AA4038994448AFAEFFC1BCEB88F8"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/rope_climb_prepare/frames/000.png",
+      "bytes": 179193,
+      "sha256": "5BE769916E1842730EDEA00B8B316ECB3177EDDCABBDCCCE24591D4FE9B7212E"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/rope_climb_prepare/frames/001.png",
+      "bytes": 171632,
+      "sha256": "95D57160217D38850038E3686EEFCBC7A98229842A2C19E1102934113F49E158"
     },
     {
       "path": "asset/bolttagu/derived/animations/sit_down/frames/000.png",
@@ -484,8 +564,13 @@
     },
     {
       "path": "asset/bolttagu/derived/model/animation-recipes.json",
-      "bytes": 15923,
-      "sha256": "C1F6EC792464BE87750B83513736ABE585E5D44A4808E65AF05B555DC731248C"
+      "bytes": 19495,
+      "sha256": "B7C7833A8E789177273CA0A358C8CFE25806CF71C5A2CF46418A96F5C8B85FBE"
+    },
+    {
+      "path": "asset/bolttagu/derived/model/canonical-idle-calibration-v1.png",
+      "bytes": 157916,
+      "sha256": "D9373C791CBC48CDA629A8B30B6A69D1349B8946F1C51AC49CFFE90045D737A9"
     },
     {
       "path": "asset/bolttagu/derived/model/click-hit-strip-v1.png",
@@ -568,6 +653,11 @@
       "sha256": "C41043A86FBFE6A5933B9A922E8ABABA8CA18BCF2DF730A9F8D07F3C0EA32BD4"
     },
     {
+      "path": "asset/bolttagu/derived/model/free-climb-grid-v1.png",
+      "bytes": 1450511,
+      "sha256": "C83CFB55E6BB82D72230FB565FAD809E81B44448D500D807F0D42ADDC53A71F5"
+    },
+    {
       "path": "asset/bolttagu/derived/model/land-recover-grid-v1.png",
       "bytes": 2040427,
       "sha256": "958CC01B8B9C0ADA39EF299B39028A709CDC2EEE2F628F009B965E0D9B7AB89A"
@@ -586,6 +676,11 @@
       "path": "asset/bolttagu/derived/model/look-around-grid-v2.png",
       "bytes": 1967187,
       "sha256": "582A66EC9F781AD1DE93CF9EAA6EE8F3950389DB9D600D58A8079E59AD5CD42B"
+    },
+    {
+      "path": "asset/bolttagu/derived/model/rope-climb-grid-v1.png",
+      "bytes": 1323654,
+      "sha256": "19A367A82CC98F5A4E64C13CD45781278224DCF19633B882EDBFF744193A416D"
     },
     {
       "path": "asset/bolttagu/derived/model/sit-down-grid-v1.png",
@@ -651,28 +746,28 @@
   "outputs": [
     {
       "path": "asset/bolttagu/build/atlas.png",
-      "bytes": 14819937,
-      "sha256": "211EF9A687F096C3F95D2139B57EF1B416108C8C7DF6C5377C376AC2C322BEA6"
+      "bytes": 17582689,
+      "sha256": "E35583546B21E740BBEEC61CA5E6A715B185743A1733473A52C2E04CA9DDCF69"
     },
     {
       "path": "asset/bolttagu/build/catalog.json",
-      "bytes": 27906,
-      "sha256": "0D4581D32A69447D5CD873F9D7F90606E6A7209DA895BB2772C0CB50FEE0D0C3"
+      "bytes": 32707,
+      "sha256": "82848D24072B177FD64C1CBF2CB778F0DAAB174D44EA1043C4CB40937870289D"
     },
     {
       "path": "asset/bolttagu/build/review/contact-sheet.png",
-      "bytes": 4182263,
-      "sha256": "EABD96D3CC8000E3EB823E8A63320398B9AC731C266EFBE221FBC048841F8DCE"
+      "bytes": 4944038,
+      "sha256": "C185114F8F893608217E4389F6EB3119BE5F6020744EF00A769C3F6898246005"
     },
     {
       "path": "asset/bolttagu/build/review/frame-metrics.json",
-      "bytes": 16104,
-      "sha256": "DDBAA34D2398E9BFE08E8D13B1B2555C631E4D2BD3F4210688572A577BBF5A26"
+      "bytes": 18793,
+      "sha256": "E0558D77AA413E108F79B085EF214CED43E443663621FFE8713764189B1D464D"
     },
     {
       "path": "asset/bolttagu/build/review/scale-audit-sheet.png",
-      "bytes": 780470,
-      "sha256": "722B7783758B1C4940C233264035169BBBB7BB24BA00FDE237C1326E35DB65DB"
+      "bytes": 1071086,
+      "sha256": "F44648B3C29923A47966E6559C3C2D7493E08D349788BE39CBCFD0569FB02576"
     }
   ]
 }

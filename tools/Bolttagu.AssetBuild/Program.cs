@@ -436,6 +436,12 @@ public static class Program
             ("look_around", 0),
             ("stretch", 3),
             ("land_recover", 0),
+            ("rope_climb_prepare", 0),
+            ("rope_climb_loop", 0),
+            ("rope_climb_finish", 1),
+            ("free_climb_prepare", 0),
+            ("free_climb_loop", 0),
+            ("free_climb_finish", 1),
         };
         var selected = requested.Select(key => frames.Single(
             item => item.ClipId == key.ClipId && item.FrameIndex == key.Index)).ToArray();

@@ -40,9 +40,11 @@ not begin from a `candidate` model.
   the compiler takes its alpha bounds to derive that clip's common scale and bottom baseline.
   The calibration cell is metadata and is not emitted unless `calibration.emit` is explicitly
   `true` for a terminal idle-return clip (and that extra frame is also declared in `pack.json`).
-  New source sheets should place their canonical idle pose in the final cell. Legacy sheets may
-  use the shared `turnaround-v1.png` idle rectangle as a compatibility bridge; this does not mean
-  the legacy sheet itself contains an idle cell.
+  New source sheets should place their canonical idle pose in the final cell for visual review.
+  Production recipes should point `calibration.source` at the shared pixel-identical
+  `canonical-idle-calibration-v1.png`, so separate sheets cannot quietly redefine head/body scale.
+  Legacy sheets may use the shared `turnaround-v1.png` idle rectangle as a compatibility bridge;
+  this does not mean the legacy sheet itself contains an idle cell.
 - `drag_held_idle` and `drag_pulled` use a top-aligned scruff anchor at `Y=104`; they are reviewed
   separately from the grounded foot pivot. The held loop keeps the body centered, while the pulled
   loop sends the body and every limb in the same trailing direction and mirrors at runtime.

@@ -4,7 +4,7 @@
   "atlas": "atlas.png",
   "atlasSize": {
     "width": 2048,
-    "height": 12800
+    "height": 14848
   },
   "clips": [
     {
@@ -93,6 +93,30 @@
     },
     {
       "id": "land_recover",
+      "loop": false
+    },
+    {
+      "id": "rope_climb_prepare",
+      "loop": false
+    },
+    {
+      "id": "rope_climb_loop",
+      "loop": true
+    },
+    {
+      "id": "rope_climb_finish",
+      "loop": false
+    },
+    {
+      "id": "free_climb_prepare",
+      "loop": false
+    },
+    {
+      "id": "free_climb_loop",
+      "loop": true
+    },
+    {
+      "id": "free_climb_finish",
       "loop": false
     }
   ],
@@ -1577,6 +1601,246 @@
         "height": 512
       },
       "durationMs": 200,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "rope_climb_prepare",
+      "index": 0,
+      "rect": {
+        "x": 1536,
+        "y": 12288,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 160,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "rope_climb_prepare",
+      "index": 1,
+      "rect": {
+        "x": 0,
+        "y": 12800,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 180,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "rope_climb_loop",
+      "index": 0,
+      "rect": {
+        "x": 512,
+        "y": 12800,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 150,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "rope_climb_loop",
+      "index": 1,
+      "rect": {
+        "x": 1024,
+        "y": 12800,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 150,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "rope_climb_loop",
+      "index": 2,
+      "rect": {
+        "x": 1536,
+        "y": 12800,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 150,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "rope_climb_loop",
+      "index": 3,
+      "rect": {
+        "x": 0,
+        "y": 13312,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 150,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "rope_climb_finish",
+      "index": 0,
+      "rect": {
+        "x": 512,
+        "y": 13312,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 180,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "rope_climb_finish",
+      "index": 1,
+      "rect": {
+        "x": 1024,
+        "y": 13312,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 180,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "free_climb_prepare",
+      "index": 0,
+      "rect": {
+        "x": 1536,
+        "y": 13312,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 180,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "free_climb_loop",
+      "index": 0,
+      "rect": {
+        "x": 0,
+        "y": 13824,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 150,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "free_climb_loop",
+      "index": 1,
+      "rect": {
+        "x": 512,
+        "y": 13824,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 150,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "free_climb_loop",
+      "index": 2,
+      "rect": {
+        "x": 1024,
+        "y": 13824,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 150,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "free_climb_loop",
+      "index": 3,
+      "rect": {
+        "x": 1536,
+        "y": 13824,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 150,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "free_climb_loop",
+      "index": 4,
+      "rect": {
+        "x": 0,
+        "y": 14336,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 150,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "free_climb_finish",
+      "index": 0,
+      "rect": {
+        "x": 512,
+        "y": 14336,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 180,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "free_climb_finish",
+      "index": 1,
+      "rect": {
+        "x": 1024,
+        "y": 14336,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 180,
       "pivot": {
         "x": 256,
         "y": 480
