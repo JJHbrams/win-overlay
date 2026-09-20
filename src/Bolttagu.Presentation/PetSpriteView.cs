@@ -14,6 +14,7 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer
     private readonly Image _image;
     private readonly TextBlock _diagnosticText;
     private readonly DispatcherTimer _timer;
+    private readonly ScaleTransform _facingTransform = new(1, 1);
     private readonly Dictionary<string, BitmapSource> _atlases = new(StringComparer.OrdinalIgnoreCase);
     private AnimationPlaybackCursor? _cursor;
     private bool _disposed;
@@ -33,10 +34,12 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer
             SnapsToDevicePixels = true
         };
         RenderOptions.SetBitmapScalingMode(_image, BitmapScalingMode.HighQuality);
+        _image.RenderTransformOrigin = new Point(0.5, 0.5);
+        _image.RenderTransform = _facingTransform;
 
         _diagnosticText = new TextBlock
         {
-            Text = catalog.IsFallback ? "Static fallback" : "P2 · 100% DPI",
+            Text = catalog.IsFallback ? "Static fallback" : "P3 · 100% DPI",
             FontSize = 11,
             Foreground = Brushes.White,
             Background = new SolidColorBrush(Color.FromArgb(145, 30, 22, 38)),
@@ -55,6 +58,7 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer
     }
 
     public string? CurrentClipId => _cursor?.Clip.Id;
+    public FacingDirection Facing { get; private set; } = FacingDirection.Right;
     public int CurrentFrameIndex => _cursor?.FrameIndex ?? -1;
     public event EventHandler<AnimationPlaybackCompletedEventArgs>? PlaybackCompleted;
 
@@ -74,9 +78,15 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer
         _image.Source = null;
     }
 
+    public void SetFacing(FacingDirection facing)
+    {
+        Facing = facing;
+        _facingTransform.ScaleX = facing == FacingDirection.Left ? -1 : 1;
+    }
+
     public void SetDpiScale(double scale)
     {
-        var prefix = _catalog.IsFallback ? "Static fallback" : "P2";
+        var prefix = _catalog.IsFallback ? "Static fallback" : "P3";
         _diagnosticText.Text = $"{prefix} · {scale:P0} DPI";
     }
 

@@ -21,6 +21,26 @@
         { "path": "click/frames/001.png", "durationMs": 100, "pivot": { "x": 256, "y": 480 } },
         { "path": "click/frames/002.png", "durationMs": 120, "pivot": { "x": 256, "y": 480 } }
       ]
+    },
+    {
+      "id": "walk",
+      "loop": true,
+      "frames": [
+        { "path": "walk/frames/000.png", "durationMs": 120, "pivot": { "x": 256, "y": 480 } },
+        { "path": "walk/frames/001.png", "durationMs": 120, "pivot": { "x": 256, "y": 480 } },
+        { "path": "walk/frames/002.png", "durationMs": 120, "pivot": { "x": 256, "y": 480 } },
+        { "path": "walk/frames/003.png", "durationMs": 120, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "turn",
+      "loop": false,
+      "frames": [
+        { "path": "turn/frames/000.png", "durationMs": 90, "pivot": { "x": 256, "y": 480 } },
+        { "path": "turn/frames/001.png", "durationMs": 90, "pivot": { "x": 256, "y": 480 } },
+        { "path": "turn/frames/002.png", "durationMs": 90, "pivot": { "x": 256, "y": 480 } },
+        { "path": "turn/frames/003.png", "durationMs": 120, "pivot": { "x": 256, "y": 480 } }
+      ]
     }
   ]
 }

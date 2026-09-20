@@ -13,12 +13,14 @@ public interface IOverlayWindow
     bool IsVisible { get; }
     ScreenPoint Position { get; }
     ScreenSize Size { get; }
+    ScreenArea WorkArea { get; }
     event EventHandler? ClickObserved;
     event EventHandler? ExitRequested;
     event EventHandler<double>? DpiScaleChanged;
     void ShowOverlay();
     void HideOverlay();
     void PlaceAtBottomRight(double margin);
+    void MoveTo(ScreenPoint position);
     void CloseOverlay();
 }
 
@@ -29,4 +31,3 @@ public interface ITrayController : IDisposable
     event EventHandler? ExitRequested;
     void SetStatus(string status);
 }
-

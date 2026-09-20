@@ -3,6 +3,26 @@ namespace Bolttagu.Contracts;
 public readonly record struct PixelRect(int X, int Y, int Width, int Height);
 public readonly record struct PixelPoint(int X, int Y);
 
+public enum FacingDirection { Left, Right }
+public enum PetAction { Idle, Click, Turn, Walk }
+
+public static class PetActionClips
+{
+    public const string Idle = "idle_breathe";
+    public const string Click = "click";
+    public const string Turn = "turn";
+    public const string Walk = "walk";
+
+    public static IReadOnlyDictionary<PetAction, string> All { get; } =
+        new Dictionary<PetAction, string>
+        {
+            [PetAction.Idle] = Idle,
+            [PetAction.Click] = Click,
+            [PetAction.Turn] = Turn,
+            [PetAction.Walk] = Walk,
+        };
+}
+
 public sealed record SpriteFrame(
     string AtlasPath,
     PixelRect SourceRect,
@@ -29,7 +49,9 @@ public sealed class AnimationPlaybackCompletedEventArgs(string clipId) : EventAr
 public interface IAnimationPlayer : IDisposable
 {
     string? CurrentClipId { get; }
+    FacingDirection Facing { get; }
     event EventHandler<AnimationPlaybackCompletedEventArgs>? PlaybackCompleted;
     void Play(string clipId);
+    void SetFacing(FacingDirection facing);
     void Stop();
 }

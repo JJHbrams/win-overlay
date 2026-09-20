@@ -1,4 +1,5 @@
 using Bolttagu.Assets;
+using Bolttagu.Contracts;
 using System.IO;
 using System.Linq;
 
@@ -37,7 +38,7 @@ public sealed class AssetPipelineTests
 
         Assert.HasCount(0, issues, string.Join(Environment.NewLine, issues));
         CollectionAssert.AreEqual(
-            new[] { "idle_breathe", "click" },
+            new[] { "idle_breathe", "click", "walk", "turn" },
             pack.Clips.Select(clip => clip.Id).ToArray());
     }
 
@@ -97,7 +98,7 @@ public sealed class AssetPipelineTests
     }
 
     [TestMethod]
-    public void RuntimeCatalog_LoadsIdleAndClickClips()
+    public void RuntimeCatalog_ContainsArtForEveryImplementedAction()
     {
         var buildRoot = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build");
 
@@ -106,6 +107,16 @@ public sealed class AssetPipelineTests
         Assert.IsFalse(catalog.IsFallback);
         Assert.HasCount(4, catalog.GetClip("idle_breathe").Frames);
         Assert.HasCount(3, catalog.GetClip("click").Frames);
+        Assert.HasCount(4, catalog.GetClip("walk").Frames);
+        Assert.HasCount(4, catalog.GetClip("turn").Frames);
+        CollectionAssert.AreEquivalent(
+            Enum.GetValues<PetAction>(),
+            PetActionClips.All.Keys.ToArray(),
+            "Every implemented action must declare a corresponding art clip.");
+        foreach (var clipId in PetActionClips.All.Values)
+        {
+            Assert.IsGreaterThan(0, catalog.GetClip(clipId).Frames.Count, $"Missing art for {clipId}.");
+        }
     }
 
     [TestMethod]
@@ -129,6 +140,8 @@ public sealed class AssetPipelineTests
             Assert.IsTrue(catalog.IsFallback);
             Assert.HasCount(1, catalog.GetClip("idle_breathe").Frames);
             Assert.HasCount(1, catalog.GetClip("click").Frames);
+            Assert.HasCount(1, catalog.GetClip("walk").Frames);
+            Assert.HasCount(1, catalog.GetClip("turn").Frames);
         }
         finally
         {

@@ -12,5 +12,19 @@
     "profile": { "x": 887, "y": 0, "width": 443, "height": 887 },
     "back": { "x": 1330, "y": 0, "width": 444, "height": 887 }
   },
-  "review": "Approved by the user as the P1 animation guide on 2026-09-20."
+  "review": "Approved by the user as the P1 animation guide on 2026-09-20.",
+  "actionSources": {
+    "walk": {
+      "asset": "walk-strip-v1.png",
+      "status": "candidate",
+      "frames": 4,
+      "sha256": "78EB77823BBC34B4FE629E19E59C7D8A43039DD683AAA3C3C278E8502DBD9A58"
+    },
+    "turn": {
+      "asset": "turn-strip-v1.png",
+      "status": "candidate",
+      "frames": 4,
+      "sha256": "84B791060AFCC4338A12CF096046C4A4118348916BAB10CDEA78416E36395023"
+    }
+  }
 }

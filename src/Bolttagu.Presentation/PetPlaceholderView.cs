@@ -70,6 +70,7 @@ public sealed class PetPlaceholderView : UserControl, IAnimationPlayer
     }
 
     public string? CurrentClipId { get; private set; }
+    public FacingDirection Facing { get; private set; } = FacingDirection.Right;
     public event EventHandler<AnimationPlaybackCompletedEventArgs>? PlaybackCompleted;
 
     public void Play(string clipId)
@@ -101,6 +102,8 @@ public sealed class PetPlaceholderView : UserControl, IAnimationPlayer
         _scale.BeginAnimation(ScaleTransform.ScaleYProperty, null);
         CurrentClipId = null;
     }
+
+    public void SetFacing(FacingDirection facing) => Facing = facing;
 
     public void Dispose() => Stop();
 

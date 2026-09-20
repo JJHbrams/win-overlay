@@ -81,16 +81,8 @@ internal static class Program
             throw new InvalidDataException($"Unsupported recipe schema {recipe.SchemaVersion}.");
         }
 
-        var sourcePath = ResolveContained(modelRoot, recipe.Source);
-        var source = LoadBitmap(sourcePath);
-        ValidateRect(recipe.SourceRect, source.PixelWidth, source.PixelHeight);
-        var crop = new CroppedBitmap(source, new Int32Rect(
-            recipe.SourceRect.X,
-            recipe.SourceRect.Y,
-            recipe.SourceRect.Width,
-            recipe.SourceRect.Height));
-
         var animationRoot = Path.Combine(root, "asset", "bolttagu", "derived", "animations");
+        var sourceCache = new Dictionary<string, BitmapSource>(StringComparer.OrdinalIgnoreCase);
         var written = 0;
         foreach (var clip in recipe.Clips.OrderBy(clip => clip.Id, StringComparer.Ordinal))
         {
@@ -101,15 +93,37 @@ internal static class Program
 
             var outputDirectory = Path.Combine(animationRoot, clip.Id, "frames");
             Directory.CreateDirectory(outputDirectory);
+            var sourceName = clip.Source ?? recipe.Source;
+            var sourcePath = ResolveContained(modelRoot, sourceName);
+            if (!sourceCache.TryGetValue(sourcePath, out var source))
+            {
+                source = LoadBitmap(sourcePath);
+                sourceCache.Add(sourcePath, source);
+            }
+            var sourceRects = clip.SourceRects ?? [recipe.SourceRect];
+            if (sourceRects.Count != 1 && sourceRects.Count != clip.Frames.Count)
+            {
+                throw new InvalidDataException($"Clip '{clip.Id}' must declare one source rect or one per frame.");
+            }
             for (var index = 0; index < clip.Frames.Count; index++)
             {
+                var sourceRect = sourceRects.Count == 1 ? sourceRects[0] : sourceRects[index];
+                ValidateRect(sourceRect, source.PixelWidth, source.PixelHeight);
+                var crop = new CroppedBitmap(source, new Int32Rect(
+                    sourceRect.X,
+                    sourceRect.Y,
+                    sourceRect.Width,
+                    sourceRect.Height));
                 var outputPath = Path.Combine(outputDirectory, $"{index:D3}.png");
                 RenderFrame(crop, recipe.Canvas, recipe.Padding, clip.Frames[index], outputPath);
                 written++;
             }
         }
 
-        Console.WriteLine($"generated {written} deterministic preview frames from {recipe.Source}");
+        var sourceCount = recipe.Clips.Select(clip => clip.Source ?? recipe.Source)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .Count();
+        Console.WriteLine($"generated {written} deterministic preview frames from {sourceCount} model sources");
         return 0;
     }
 
@@ -177,12 +191,12 @@ internal static class Program
         var catalogPath = Path.Combine(buildRoot, "catalog.json");
         WriteJson(catalogPath, catalog);
 
-        var inputs = new List<BuildArtifact>
-        {
-            HashArtifact(root, Path.Combine(root, "asset", "bolttagu", "derived", "model", "turnaround-v1.png")),
-            HashArtifact(root, Path.Combine(root, "asset", "bolttagu", "derived", "model", "animation-recipes.json")),
-            HashArtifact(root, packPath)
-        };
+        var modelRoot = Path.Combine(root, "asset", "bolttagu", "derived", "model");
+        var inputs = Directory.EnumerateFiles(modelRoot, "*.png", SearchOption.TopDirectoryOnly)
+            .Select(path => HashArtifact(root, path))
+            .ToList();
+        inputs.Add(HashArtifact(root, Path.Combine(modelRoot, "animation-recipes.json")));
+        inputs.Add(HashArtifact(root, packPath));
         inputs.AddRange(orderedFrames.Select(item => HashArtifact(root, ResolveContained(animationRoot, item.Frame.Path))));
         inputs = inputs.DistinctBy(item => item.Path, StringComparer.Ordinal).OrderBy(item => item.Path, StringComparer.Ordinal).ToList();
         var outputs = new[] { HashArtifact(root, atlasPath), HashArtifact(root, catalogPath) };
@@ -317,7 +331,11 @@ internal sealed record ModelRecipe(
     IReadOnlyList<ClipRecipe> Clips);
 
 internal sealed record SourceRect(int X, int Y, int Width, int Height);
-internal sealed record ClipRecipe(string Id, IReadOnlyList<FrameTransform> Frames);
+internal sealed record ClipRecipe(
+    string Id,
+    IReadOnlyList<FrameTransform> Frames,
+    string? Source = null,
+    IReadOnlyList<SourceRect>? SourceRects = null);
 internal sealed record FrameTransform(double ScaleX, double ScaleY, int OffsetX, int OffsetY);
 internal sealed record FrameWorkItem(string ClipId, int FrameIndex, AnimationFrame Frame);
 internal sealed record AtlasRect(int X, int Y, int Width, int Height);

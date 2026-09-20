@@ -29,6 +29,14 @@ public sealed class OverlayWindow : Window, IOverlayWindow
 
     public ScreenPoint Position => new(Left, Top);
     ScreenSize IOverlayWindow.Size => new(ActualWidth, ActualHeight);
+    public ScreenArea WorkArea
+    {
+        get
+        {
+            var area = SystemParameters.WorkArea;
+            return new(new(area.Left, area.Top), new(area.Width, area.Height));
+        }
+    }
     public event EventHandler? ClickObserved;
     public event EventHandler? ExitRequested;
     public event EventHandler<double>? DpiScaleChanged;
@@ -41,6 +49,13 @@ public sealed class OverlayWindow : Window, IOverlayWindow
         var area = SystemParameters.WorkArea;
         Left = Math.Max(area.Left, area.Right - Width - margin);
         Top = Math.Max(area.Top, area.Bottom - Height - margin);
+    }
+
+    public void MoveTo(ScreenPoint position)
+    {
+        var area = WorkArea;
+        Left = Math.Clamp(position.X, area.Origin.X, Math.Max(area.Origin.X, area.Right - ActualWidth));
+        Top = Math.Clamp(position.Y, area.Origin.Y, Math.Max(area.Origin.Y, area.Bottom - ActualHeight));
     }
 
     private System.Windows.Controls.ContextMenu BuildContextMenu()

@@ -99,11 +99,10 @@ public sealed class RuntimeAnimationCatalog : IAnimationCatalog
                 new(0, 0, image.Width, image.Height),
                 TimeSpan.FromMilliseconds(500),
                 new(image.Width / 2, image.Height));
-            var clips = new Dictionary<string, SpriteClip>(StringComparer.Ordinal)
-            {
-                ["idle_breathe"] = new("idle_breathe", true, [frame]),
-                ["click"] = new("click", false, [frame])
-            };
+            var clips = PetActionClips.All.Values.ToDictionary(
+                clipId => clipId,
+                clipId => new SpriteClip(clipId, clipId is "idle_breathe" or "walk", [frame]),
+                StringComparer.Ordinal);
             return new(clips, true, $"Runtime pack failed validation; static fallback active: {exception.Message}");
         }
     }

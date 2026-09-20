@@ -33,6 +33,18 @@ Animation frames must keep the pivot fixed unless locomotion metadata explicitly
 Generated art is a draft until its model metadata says `approved`; bulk animation production must
 not begin from a `candidate` model.
 
+## Action completeness gate
+
+An action is implemented only when all four parts land together:
+
+1. the semantic action and clip mapping in `PetActionClips`;
+2. a distinct source strip and generated RGBA frames (static reuse is allowed only for fallback);
+3. timing and pivot metadata in `derived/animations/pack.json`;
+4. catalog validation plus an action-to-art completeness test.
+
+Adding code behavior without its art makes the asset test fail. Generated strips remain
+`candidate` until a human animation review promotes them to `approved`.
+
 ## Build
 
 From the repository root:
@@ -41,6 +53,6 @@ From the repository root:
 .\.dotnet\dotnet.exe run --project .\tools\Bolttagu.AssetBuild -- all
 ```
 
-The command verifies the immutable snapshot, creates the two P1 preview clips from the canonical
-front view, validates frame dimensions/alpha/timing/pivots, and packs `build/atlas.png`. Re-running
+The command verifies the immutable snapshot, creates every declared clip from its model source,
+validates frame dimensions/alpha/timing/pivots, and packs `build/atlas.png`. Re-running
 it with unchanged inputs must preserve the `buildHash` in `build/build-manifest.json`.

@@ -186,7 +186,7 @@ stateDiagram-v2
 - [x] 2. Engram 원본 에셋 snapshot·inventory와 derived/build 디렉터리를 만들고 asset validator의 재현성을 검증한다. (AC-2)
 - [x] 3. 전신 모델 시트와 `idle_breathe`·`click` frame을 승인하고 atlas를 생성한다. (AC-2, AC-3)
 - [x] 4. 투명 창에서 idle·click·fallback이 동작하는 첫 수직 슬라이스를 완성한다. (AC-1, AC-4, AC-8)
-- [ ] 5. 순수 Core scheduler와 `walk`·`turn`을 구현하고 deterministic replay를 통과한다. (AC-4, AC-5)
+- [x] 5. 순수 Core scheduler와 `walk`·`turn`을 구현하고 deterministic replay를 통과한다. (AC-4, AC-5)
 - [ ] 6. drag/drop/land/sit/sleep과 tray lifecycle을 구현해 모든 cancel·capture-lost 경로를 검증한다. (AC-3, AC-4)
 - [ ] 7. multi-monitor·DPI·work-area·session 변화와 adapter fault 복구를 구현한다. (AC-4, AC-6)
 - [ ] 8. bounded trace·snapshot·replay export·debug HUD·settings persistence를 구현한다. (AC-5, AC-7, AC-8)

@@ -1,5 +1,6 @@
 using Bolttagu.Assets;
 using Bolttagu.Contracts;
+using Bolttagu.Core;
 using Bolttagu.Runtime;
 using System.IO;
 using System.Threading;
@@ -127,7 +128,8 @@ public sealed class AnimationPlaybackTests
                 var root = FindRepositoryRoot();
                 var catalog = RuntimeAnimationCatalog.Load(Path.Combine(root, "asset", "bolttagu", "build"));
                 using var view = new PetSpriteView(catalog);
-                using var controller = new PetAnimationController(view);
+                using var controller = new PetAnimationController(
+                    view, new TestWindow(), new BehaviorPlanner(new FixedRandom()), new FixedClock());
                 controller.Start();
                 controller.ReactToClick();
 
@@ -174,5 +176,31 @@ public sealed class AnimationPlaybackTests
             current = current.Parent;
         }
         throw new DirectoryNotFoundException("Could not locate repository root.");
+    }
+
+    private sealed class FixedRandom : IRandomSource
+    {
+        public int NextInt(int minimumInclusive, int maximumExclusive) => minimumInclusive;
+    }
+
+    private sealed class FixedClock : IMonotonicClock
+    {
+        public TimeSpan Elapsed => TimeSpan.Zero;
+    }
+
+    private sealed class TestWindow : IOverlayWindow
+    {
+        public bool IsVisible => true;
+        public ScreenPoint Position { get; private set; }
+        public ScreenSize Size => new(220, 220);
+        public ScreenArea WorkArea => new(new(0, 0), new(1920, 1080));
+        public event EventHandler? ClickObserved { add { } remove { } }
+        public event EventHandler? ExitRequested { add { } remove { } }
+        public event EventHandler<double>? DpiScaleChanged { add { } remove { } }
+        public void ShowOverlay() { }
+        public void HideOverlay() { }
+        public void PlaceAtBottomRight(double margin) { }
+        public void MoveTo(ScreenPoint position) => Position = position;
+        public void CloseOverlay() { }
     }
 }

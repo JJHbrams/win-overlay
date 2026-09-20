@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildHash": "B2A2DE706985FAEBAA0A97089C5A03C5A21081982B1E3350F4CA86699B9FF31D",
+  "buildHash": "2C3C66075C047F3D924FA7995CEA944F50219ECB0B20C8F41F3555E1B2066E6F",
   "inputs": [
     {
       "path": "asset/bolttagu/derived/animations/click/frames/000.png",
@@ -39,30 +39,80 @@
     },
     {
       "path": "asset/bolttagu/derived/animations/pack.json",
-      "bytes": 983,
-      "sha256": "58E083B24FFE100912DEB698A3C32338C96DFA8494FDB3CF1226FF3800432358"
+      "bytes": 1897,
+      "sha256": "36168FD6DE02B1B5384DE37875DB12375C5CFFFDF304DE086550AAA4F461F7E7"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/turn/frames/000.png",
+      "bytes": 130274,
+      "sha256": "DF1169DD6898A6E5C528B637873B86A3A9FD13B17ADC3F5612FFD3D4B9D1B3EC"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/turn/frames/001.png",
+      "bytes": 130375,
+      "sha256": "CF62DA0F995DFFEDAA51230B30919A0E157EFC2720725F39E48ED2665CA84AAB"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/turn/frames/002.png",
+      "bytes": 109730,
+      "sha256": "43009F7836C982F87E8ED63661992456621E438141DD46C000C4BDA4989A4E01"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/turn/frames/003.png",
+      "bytes": 99018,
+      "sha256": "4FA7C0B52A53956C0AB663EF1C82A73C46EB5B72D486C393820D7C3771753648"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/walk/frames/000.png",
+      "bytes": 154955,
+      "sha256": "95B0285675B24CD3C4ED340E2D9CCA3B7063E30927A0E99CC7BD4B4662BD8861"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/walk/frames/001.png",
+      "bytes": 153815,
+      "sha256": "910556BC72B1996EBFAD15708A69876A890D897155CFEB61B570FED5CE1B1517"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/walk/frames/002.png",
+      "bytes": 156712,
+      "sha256": "FBE667DA4B1876434A1D24D1EAA684DF4E63962F8E31A794A16CE901707F5E22"
+    },
+    {
+      "path": "asset/bolttagu/derived/animations/walk/frames/003.png",
+      "bytes": 150438,
+      "sha256": "473F81B8282162DAE287A6E2C137131069D400EB227BBB1AFE3AAF17A7CA5EE8"
     },
     {
       "path": "asset/bolttagu/derived/model/animation-recipes.json",
-      "bytes": 830,
-      "sha256": "D873E3166EFB7759A9D07521ECA7AE4661324FFFF0A58E7E5917270CB8D868D7"
+      "bytes": 2113,
+      "sha256": "818847C9A119D5C844DF72256C572020F5CAC85620CDF4BE913F4C64810E7AD3"
+    },
+    {
+      "path": "asset/bolttagu/derived/model/turn-strip-v1.png",
+      "bytes": 1418556,
+      "sha256": "84B791060AFCC4338A12CF096046C4A4118348916BAB10CDEA78416E36395023"
     },
     {
       "path": "asset/bolttagu/derived/model/turnaround-v1.png",
       "bytes": 1412066,
       "sha256": "B840B3737A55FC0A0F4B5701BA0CD1191922EFCE0F64A53ED128C080C86E2AFD"
+    },
+    {
+      "path": "asset/bolttagu/derived/model/walk-strip-v1.png",
+      "bytes": 1473126,
+      "sha256": "78EB77823BBC34B4FE629E19E59C7D8A43039DD683AAA3C3C278E8502DBD9A58"
     }
   ],
   "outputs": [
     {
       "path": "asset/bolttagu/build/atlas.png",
-      "bytes": 912506,
-      "sha256": "D06F60FFDE21DA1F70956B7D6F6DFE00D8DA1E959B0C2F2DB3325A5279724001"
+      "bytes": 1991294,
+      "sha256": "31F9F3D94D6DE8CC97FC0314839F953FFB60FC2D23CC396E0DA9BF3B075D8B63"
     },
     {
       "path": "asset/bolttagu/build/catalog.json",
-      "bytes": 2159,
-      "sha256": "E95D095986BF24D5860D4C2C85EFE91083429C3A70C8A4E1A34C1E6C9C21E05C"
+      "bytes": 4356,
+      "sha256": "9F0BAC6550ACC176C363EC808637BB01502E1DC42A30FBB65E86EED235C8D6E6"
     }
   ]
 }

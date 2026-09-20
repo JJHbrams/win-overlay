@@ -20,6 +20,7 @@ public sealed class DependencyRulesTests
             [
                 "Bolttagu.Assets",
                 "Bolttagu.Contracts",
+                "Bolttagu.Core",
                 "Bolttagu.Diagnostics",
                 "Bolttagu.Platform.Windows",
                 "Bolttagu.Presentation",

@@ -3,6 +3,7 @@ using Bolttagu.Assets;
 using Bolttagu.Platform.Windows;
 using Bolttagu.Presentation;
 using Bolttagu.Runtime;
+using Bolttagu.Core;
 using System.IO;
 using System.Windows;
 
@@ -14,6 +15,7 @@ public partial class App : System.Windows.Application
     private ITrayController? _tray;
     private IAnimationPlayer? _animationPlayer;
     private PetAnimationController? _animationController;
+    private WpfRuntimeLoop? _runtimeLoop;
 
     protected override void OnStartup(StartupEventArgs e)
     {
@@ -21,13 +23,18 @@ public partial class App : System.Windows.Application
         var tray = new TrayController();
         var (view, player, setDpiScale, assetStatus) = CreatePetView();
         var overlay = new OverlayWindow(view);
-        var animationController = new PetAnimationController(player);
+        var animationController = new PetAnimationController(
+            player,
+            overlay,
+            new BehaviorPlanner(new SystemRandomSource(Random.Shared)),
+            new StopwatchClock());
+        var runtimeLoop = new WpfRuntimeLoop(Dispatcher, animationController.Tick);
 
         overlay.ClickObserved += (_, _) => animationController.ReactToClick();
         overlay.DpiScaleChanged += (_, scale) =>
         {
             setDpiScale(scale);
-            tray.SetStatus($"Bolttagu P2 · {scale:P0} DPI · {assetStatus}");
+            tray.SetStatus($"Bolttagu P3 · {scale:P0} DPI · {assetStatus}");
         };
         overlay.ExitRequested += (_, _) => ExitApplication();
         tray.ShowRequested += (_, _) => overlay.ShowOverlay();
@@ -38,13 +45,16 @@ public partial class App : System.Windows.Application
         _tray = tray;
         _animationPlayer = player;
         _animationController = animationController;
+        _runtimeLoop = runtimeLoop;
         overlay.PlaceAtBottomRight(24);
         overlay.ShowOverlay();
         animationController.Start();
+        runtimeLoop.Start();
     }
 
     protected override void OnExit(ExitEventArgs e)
     {
+        _runtimeLoop?.Dispose();
         _animationController?.Dispose();
         _animationPlayer?.Dispose();
         _tray?.Dispose();
