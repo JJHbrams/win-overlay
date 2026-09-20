@@ -51,3 +51,4 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 - `docs/design/0004-animation-surface-polish.md`
 - `docs/design/0005-live-surface-reactions.md`
 - `docs/design/0006-velocity-drag-lifecycle.md`
+- `docs/design/0007-animation-transition-grammar.md`

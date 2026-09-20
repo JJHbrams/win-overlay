@@ -1,0 +1,29 @@
+stateDiagram-v2
+  [*] --> Launching
+  Launching --> IdleHub: spawn complete
+  IdleHub --> Turning: walk selected
+  Turning --> Walking: turn complete
+  Walking --> TurnToIdle: motion complete
+  TurnToIdle --> IdleHub: clip complete
+  IdleHub --> SitDown: doze selected
+  SitDown --> SitSettle: clip complete
+  SitSettle --> DozeEnter: planned loops complete
+  DozeEnter --> DozeLoop: clip complete
+  DozeLoop --> WakeUp: planned loops complete
+  WakeUp --> StandUp: clip complete
+  StandUp --> IdleHub: clip complete
+  IdleHub --> ShortIdle: look / stretch selected
+  ShortIdle --> IdleHub: clip complete
+  IdleHub --> Dragging: drag start
+  Turning --> Dragging: drag preempt
+  Walking --> Dragging: drag preempt
+  DozeLoop --> Dragging: drag preempt
+  Dragging --> Falling: release, always
+  Falling --> Landing: motion complete
+  Landing --> Recovering: impact complete
+  Recovering --> IdleHub: stand pose restored
+  Walking --> Falling: support lost
+  SitSettle --> Falling: support lost
+  IdleHub --> Exiting: exit
+  Dragging --> Exiting: exit
+  Falling --> Exiting: exit

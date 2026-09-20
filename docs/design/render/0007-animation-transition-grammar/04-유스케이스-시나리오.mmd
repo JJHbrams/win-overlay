@@ -1,0 +1,12 @@
+flowchart LR
+  Clock["deadline"] --> Pick["IdleHub에서 behavior 선택"]
+  Pick --> Walk["walk sequence"]
+  Pick --> Short["look / stretch sequence"]
+  Pick --> Doze["sit / doze / wake sequence"]
+  Pointer["click / drag"] --> Preempt["우선순위 interrupt"]
+  Surface["support loss"] --> Fall["fall / land / recover"]
+  Walk --> Hub["IdleHub"]
+  Short --> Hub
+  Doze --> Hub
+  Preempt --> Hub
+  Fall --> Hub

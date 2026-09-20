@@ -1,0 +1,17 @@
+flowchart TD
+  Event["tick / input / surface event"] --> Priority{"우선 이벤트?"}
+  Priority -->|exit| Exit["현재 sequence 취소 → Exiting"]
+  Priority -->|drag| Drag["취소 → Dragging"]
+  Priority -->|support lost| Fall["취소 → Falling"]
+  Priority -->|posture click| React["pose별 reaction bridge"]
+  Priority -->|none| Hub{"IdleHub deadline?"}
+  Hub -->|no| Keep["현재 step 유지"]
+  Hub -->|yes| Eligible["pose · cooldown · calm · surface 필터"]
+  Eligible --> Weighted["가중 선택 + loop count 고정"]
+  Weighted --> Validate["인접 pose 계약 검증"]
+  Validate --> Runner["ordered step 실행"]
+  Runner --> Complete{"step 완료 원인"}
+  Complete -->|one-shot| Runner
+  Complete -->|planned loops| Runner
+  Complete -->|motion complete| Runner
+  Complete -->|last step| Dwell["IdleHub + 최소 dwell"]
