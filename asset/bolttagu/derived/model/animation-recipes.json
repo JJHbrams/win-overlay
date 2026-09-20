@@ -89,7 +89,7 @@
         { "x": 512, "y": 512, "width": 512, "height": 512 },
         { "x": 1024, "y": 512, "width": 512, "height": 512 }
       ],
-      "targetVisibleHeight": 376,
+      "targetVisibleHeight": 404,
       "anchorY": 104,
       "align": "top",
       "frames": [
@@ -179,6 +179,17 @@
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": -18 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "fall",
+      "source": "drop-land-strip-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 520, "height": 756 }
+      ],
+      "targetVisibleHeight": 396,
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": -52 }
       ]
     }
   ]

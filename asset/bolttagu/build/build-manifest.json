@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "buildHash": "2F0EF7E109758F3FECB9D69FAAAD1372982CD96038B5389B31BE7EAF5EAD9520",
+  "buildHash": "8814B743186605C0EFF368DC56F058DC43328CE4267E4176F074CFD41A988545",
   "inputs": [
     {
       "path": "asset/bolttagu/derived/animations/click/frames/000.png",
@@ -74,33 +74,33 @@
     },
     {
       "path": "asset/bolttagu/derived/animations/drag_held_idle/frames/000.png",
-      "bytes": 131926,
-      "sha256": "C3BC383F092023CBE80134BD1553805D0E874E57B569BBAE3D50C5677A973521"
+      "bytes": 148341,
+      "sha256": "7911090BF048D82B34AB1E9DFC930A79A8390DE08D23A522782F870E2825E962"
     },
     {
       "path": "asset/bolttagu/derived/animations/drag_held_idle/frames/001.png",
-      "bytes": 127304,
-      "sha256": "2E01963C7D5B87CC2055E1EF66F52524A47EF23ABA9EA52A6F251DEC5D4F4D5C"
+      "bytes": 142850,
+      "sha256": "65049556713F2B7EC514F6AA63C0B4C2758E2C0B9D34B4A9ADF7381B7CC21395"
     },
     {
       "path": "asset/bolttagu/derived/animations/drag_held_idle/frames/002.png",
-      "bytes": 131521,
-      "sha256": "1D8F7B04F9C9AF590B42307EEE5B676BEE1BD3FB562153F7D77FC4E03D5338EB"
+      "bytes": 147886,
+      "sha256": "43C6726CEBDFBDDE0207F6776FAD17C577CDAFD4E72BBCDAFA5037357CA06F4A"
     },
     {
       "path": "asset/bolttagu/derived/animations/drag_held_idle/frames/003.png",
-      "bytes": 134804,
-      "sha256": "CC7FA12B4E30E88B8F8557798FF53D912766D246E5225832A054ADA0D25A267E"
+      "bytes": 151342,
+      "sha256": "414A3AD42652F60259335D81669713280C87FB299DCACAE1930385C76BD04016"
     },
     {
       "path": "asset/bolttagu/derived/animations/drag_held_idle/frames/004.png",
-      "bytes": 127630,
-      "sha256": "0DF5A5B7708A8C0079D7C6BD94106B55C8D5913547CBA92BAAEAB2BC7120B2E9"
+      "bytes": 143167,
+      "sha256": "B28684EBE1102BF5225D7FFBD3AD0D717B7B9660CA444ECDDFCB2B53D2F732CB"
     },
     {
       "path": "asset/bolttagu/derived/animations/drag_held_idle/frames/005.png",
-      "bytes": 127517,
-      "sha256": "236257186F864E2174D04563B6135FA6F1446ECA9487C2AF225D292CE8B8419A"
+      "bytes": 143287,
+      "sha256": "CB736880E079422433E48DE27496EC7E044AA748D9CF0A98602A484D2CABBB8A"
     },
     {
       "path": "asset/bolttagu/derived/animations/drag_pulled/frames/000.png",
@@ -153,6 +153,11 @@
       "sha256": "C39A40A439EC063FDF5F79522F1B6C128FAB07FB6C92F81239A905C4E4CC75C0"
     },
     {
+      "path": "asset/bolttagu/derived/animations/fall/frames/000.png",
+      "bytes": 159915,
+      "sha256": "E9885B8FB59E3DBFA3F9E3B6ABC66377A4AA6C8CA3EF00901CE3B68E9BC2482F"
+    },
+    {
       "path": "asset/bolttagu/derived/animations/idle_breathe/frames/000.png",
       "bytes": 157916,
       "sha256": "D9373C791CBC48CDA629A8B30B6A69D1349B8946F1C51AC49CFFE90045D737A9"
@@ -174,8 +179,8 @@
     },
     {
       "path": "asset/bolttagu/derived/animations/pack.json",
-      "bytes": 6397,
-      "sha256": "12EBBEC21D2E8D9C11E18C6B524D4732514A9E4FEE47E31B184CB5732F95F67B"
+      "bytes": 6392,
+      "sha256": "1725BCAD42920015CF536D8CADCAA9CDBF1F220DED0308CD798EE1A551450897"
     },
     {
       "path": "asset/bolttagu/derived/animations/spawn_in/frames/000.png",
@@ -249,8 +254,8 @@
     },
     {
       "path": "asset/bolttagu/derived/model/animation-recipes.json",
-      "bytes": 7645,
-      "sha256": "C41DB0F258F769D76273D2E3F84B71A89A18742D0471DEC09E7936E462A01FD3"
+      "bytes": 7939,
+      "sha256": "837979121977306B167B6494308628A8FC493E7D389EB1382CA0D852DCAAEE3E"
     },
     {
       "path": "asset/bolttagu/derived/model/click-hit-strip-v1.png",
@@ -356,8 +361,8 @@
   "outputs": [
     {
       "path": "asset/bolttagu/build/atlas.png",
-      "bytes": 7977553,
-      "sha256": "CDE074C3051A45C145D9F157A677B97BAB6F131ADE2A2B3818A256F3EEA4BFCE"
+      "bytes": 8059765,
+      "sha256": "A5CEB77BAE6445E17E1F620B63EE917100429C823E13350356C861417CA72185"
     },
     {
       "path": "asset/bolttagu/build/catalog.json",
@@ -366,13 +371,18 @@
     },
     {
       "path": "asset/bolttagu/build/review/contact-sheet.png",
-      "bytes": 2228362,
-      "sha256": "5E4D87A9863D643F052B18FB76B57FCE2617895385D8A793312DE7D92F05FD6A"
+      "bytes": 2250828,
+      "sha256": "024B55DC54AD436DD4ECC31B85A7AD3DD6B8BEC4958A707F8EA36278AD6C05F2"
     },
     {
       "path": "asset/bolttagu/build/review/frame-metrics.json",
       "bytes": 8668,
-      "sha256": "7B2313CFB00A5DF0FD738A09C6E4B41D523C2A9CF5220CAA2C27FCB48CCF4223"
+      "sha256": "7BAA6A302C86019EDB93E99FA8956BAD13EE4186150FB1FA7866DF36C71F0592"
+    },
+    {
+      "path": "asset/bolttagu/build/review/scale-audit-sheet.png",
+      "bytes": 526076,
+      "sha256": "218953E8071377A8DCB4158C52BE66DBB50C4B78F96709C000BB327DF6308068"
     }
   ]
 }

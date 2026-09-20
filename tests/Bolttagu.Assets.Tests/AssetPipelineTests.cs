@@ -164,6 +164,9 @@ public sealed class AssetPipelineTests
         var sheet = PngInspector.Read(Path.Combine(buildRoot, "review", "contact-sheet.png"));
         Assert.AreEqual(1024, sheet.Width);
         Assert.IsGreaterThan(1000, sheet.Height);
+        var scaleAudit = PngInspector.Read(Path.Combine(buildRoot, "review", "scale-audit-sheet.png"));
+        Assert.AreEqual(1024, scaleAudit.Width);
+        Assert.AreEqual(876, scaleAudit.Height);
 
         using var metrics = JsonDocument.Parse(File.ReadAllText(
             Path.Combine(buildRoot, "review", "frame-metrics.json")));
@@ -200,6 +203,21 @@ public sealed class AssetPipelineTests
         Assert.IsGreaterThanOrEqualTo(800, huff.Frames.Sum(frame => frame.DurationMs));
         var landing = pack.Clips.Single(clip => clip.Id == "drop_land");
         Assert.IsGreaterThanOrEqualTo(600, landing.Frames.Sum(frame => frame.DurationMs));
+
+        var representativeFrames = metrics.RootElement.GetProperty("frames").EnumerateArray().ToArray();
+        var idle = representativeFrames.Single(frame =>
+            frame.GetProperty("clipId").GetString() == "idle_breathe" && frame.GetProperty("index").GetInt32() == 0);
+        var held = representativeFrames.Single(frame =>
+            frame.GetProperty("clipId").GetString() == "drag_held_idle" && frame.GetProperty("index").GetInt32() == 0);
+        var pulled = representativeFrames.Single(frame =>
+            frame.GetProperty("clipId").GetString() == "drag_pulled" && frame.GetProperty("index").GetInt32() == 0);
+        var fall = representativeFrames.Single(frame =>
+            frame.GetProperty("clipId").GetString() == "fall" && frame.GetProperty("index").GetInt32() == 0);
+        Assert.IsInRange(400, 408, held.GetProperty("height").GetInt32(), "Held drag is undersized.");
+        Assert.IsInRange(372, 380, pulled.GetProperty("height").GetInt32(), "Pulled drag scale drifted.");
+        Assert.IsInRange(390, 400, fall.GetProperty("height").GetInt32(), "Fall pose is oversized.");
+        Assert.IsLessThan(idle.GetProperty("height").GetInt32(), held.GetProperty("height").GetInt32());
+        Assert.IsLessThan(idle.GetProperty("height").GetInt32(), fall.GetProperty("height").GetInt32());
     }
 
     [TestMethod]

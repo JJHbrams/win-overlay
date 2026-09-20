@@ -44,8 +44,12 @@ not begin from a `candidate` model.
 - Six-frame generated sources use isolated 512×512 cells in a 3×2 grid. Every cell keeps a
   four-pixel transparent gutter; the asset test rejects visible pixels on a cell boundary before
   neighboring art can leak into a compiled frame.
-- Every build writes `build/review/contact-sheet.png` and `frame-metrics.json`. Review these before
-  promoting generated strips from `candidate` to `approved`.
+- Every build writes `build/review/contact-sheet.png`, `scale-audit-sheet.png`, and
+  `frame-metrics.json`. The scale audit samples one representative frame per semantic action on
+  the same 512×512 capture box with center/pivot guides and visible-bound dimensions.
+- The grounded standing reference is about 420px tall. Held drag uses a 404px top-aligned
+  silhouette, directional drag keeps its 376px diagonal silhouette, and fall uses a separate
+  centered 396px frame so compact poses are not perceptually enlarged.
 
 ## Action completeness gate
 

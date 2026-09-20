@@ -349,9 +349,83 @@ internal static class Program
         Directory.CreateDirectory(reviewRoot);
         var sheetPath = Path.Combine(reviewRoot, "contact-sheet.png");
         var metricsPath = Path.Combine(reviewRoot, "frame-metrics.json");
+        var scaleAuditPath = Path.Combine(reviewRoot, "scale-audit-sheet.png");
         SavePng(target, sheetPath);
         WriteJson(metricsPath, new ReviewMetrics(1, pack.Canvas, metrics));
-        return [sheetPath, metricsPath];
+        WriteScaleAuditSheet(scaleAuditPath, animationRoot, frames);
+        return [sheetPath, metricsPath, scaleAuditPath];
+    }
+
+    private static void WriteScaleAuditSheet(
+        string outputPath,
+        string animationRoot,
+        IReadOnlyList<FrameWorkItem> frames)
+    {
+        var requested = new (string ClipId, int Index)[]
+        {
+            ("idle_breathe", 0),
+            ("walk", 0),
+            ("click", 0),
+            ("click_huff", 0),
+            ("turn", 0),
+            ("drag_held_idle", 0),
+            ("drag_pulled", 0),
+            ("spawn_in", 5),
+            ("despawn_out", 0),
+            ("fall", 0),
+            ("drop_land", 3),
+        };
+        var selected = requested.Select(key => frames.Single(
+            item => item.ClipId == key.ClipId && item.FrameIndex == key.Index)).ToArray();
+        const int preview = 256;
+        const int labelHeight = 36;
+        const int columns = 4;
+        var rows = (int)Math.Ceiling(selected.Length / (double)columns);
+        var target = new RenderTargetBitmap(
+            columns * preview,
+            rows * (preview + labelHeight),
+            96,
+            96,
+            PixelFormats.Pbgra32);
+        var visual = new DrawingVisual();
+        using (var context = visual.RenderOpen())
+        {
+            for (var index = 0; index < selected.Length; index++)
+            {
+                var item = selected[index];
+                var column = index % columns;
+                var row = index / columns;
+                var x = column * preview;
+                var y = row * (preview + labelHeight);
+                context.DrawRectangle(
+                    new SolidColorBrush(Color.FromRgb(34, 31, 42)),
+                    null,
+                    new Rect(x, y, preview, preview));
+                var frame = LoadBitmap(ResolveContained(animationRoot, item.Frame.Path));
+                var bounds = GetAlphaBounds(frame);
+                context.DrawImage(frame, new Rect(x, y, preview, preview));
+                var guide = new Pen(new SolidColorBrush(Color.FromArgb(110, 78, 142, 136)), 1)
+                {
+                    DashStyle = DashStyles.Dash
+                };
+                context.DrawLine(guide, new Point(x + 128, y), new Point(x + 128, y + preview));
+                context.DrawLine(
+                    guide,
+                    new Point(x, y + (item.Frame.Pivot.Y / 2d)),
+                    new Point(x + preview, y + (item.Frame.Pivot.Y / 2d)));
+                var label = new FormattedText(
+                    $"{item.ClipId}/{item.FrameIndex:D3}\n{bounds.Width}x{bounds.Height} px",
+                    CultureInfo.InvariantCulture,
+                    FlowDirection.LeftToRight,
+                    new Typeface("Consolas"),
+                    11,
+                    Brushes.White,
+                    1);
+                context.DrawText(label, new Point(x + 4, y + preview + 2));
+            }
+        }
+        target.Render(visual);
+        SavePng(target, outputPath);
     }
 
     private static BitmapSource LoadBitmap(string path)
