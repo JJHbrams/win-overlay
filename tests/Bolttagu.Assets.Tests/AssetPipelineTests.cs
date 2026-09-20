@@ -74,6 +74,36 @@ public sealed class AssetPipelineTests
     }
 
     [TestMethod]
+    public void BrandingAssets_HaveWideBannerAndMultiResolutionWindowsIcon()
+    {
+        var brandingRoot = Path.Combine(RepositoryRoot, "asset", "bolttagu", "derived", "branding");
+        var banner = PngInspector.Read(Path.Combine(brandingRoot, "readme-banner.png"));
+        var iconMaster = PngInspector.Read(Path.Combine(brandingRoot, "bolttagu-icon-master.png"));
+
+        Assert.AreEqual(2172, banner.Width);
+        Assert.AreEqual(724, banner.Height);
+        Assert.AreEqual(iconMaster.Width, iconMaster.Height);
+        Assert.IsTrue(iconMaster.HasAlpha);
+
+        using var stream = File.OpenRead(Path.Combine(brandingRoot, "bolttagu.ico"));
+        using var reader = new BinaryReader(stream);
+        Assert.AreEqual((ushort)0, reader.ReadUInt16());
+        Assert.AreEqual((ushort)1, reader.ReadUInt16());
+        var count = reader.ReadUInt16();
+        Assert.AreEqual((ushort)7, count);
+        var sizes = new List<int>();
+        for (var index = 0; index < count; index++)
+        {
+            var width = reader.ReadByte();
+            var height = reader.ReadByte();
+            sizes.Add(width == 0 ? 256 : width);
+            Assert.AreEqual(width, height);
+            reader.ReadBytes(14);
+        }
+        CollectionAssert.AreEqual(new[] { 16, 24, 32, 48, 64, 128, 256 }, sizes);
+    }
+
+    [TestMethod]
     public void RecipeCalibration_ValidatesCanonicalIdleAndControlsEmissionWithoutScaleDrift()
     {
         var root = Path.Combine(Path.GetTempPath(), $"bolttagu-calibration-{Guid.NewGuid():N}");
