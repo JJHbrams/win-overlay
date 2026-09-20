@@ -1,6 +1,9 @@
 using Bolttagu.Contracts;
+using Bolttagu.Assets;
 using Bolttagu.Platform.Windows;
 using Bolttagu.Presentation;
+using Bolttagu.Runtime;
+using System.IO;
 using System.Windows;
 
 namespace Bolttagu.App;
@@ -9,19 +12,22 @@ public partial class App : System.Windows.Application
 {
     private IOverlayWindow? _overlay;
     private ITrayController? _tray;
+    private IAnimationPlayer? _animationPlayer;
+    private PetAnimationController? _animationController;
 
     protected override void OnStartup(StartupEventArgs e)
     {
         base.OnStartup(e);
-        var view = new PetPlaceholderView();
-        var overlay = new OverlayWindow(view);
         var tray = new TrayController();
+        var (view, player, setDpiScale, assetStatus) = CreatePetView();
+        var overlay = new OverlayWindow(view);
+        var animationController = new PetAnimationController(player);
 
-        overlay.ClickObserved += (_, _) => view.ReactToClick();
+        overlay.ClickObserved += (_, _) => animationController.ReactToClick();
         overlay.DpiScaleChanged += (_, scale) =>
         {
-            view.SetDpiScale(scale);
-            tray.SetStatus($"Bolttagu P0 · {scale:P0} DPI");
+            setDpiScale(scale);
+            tray.SetStatus($"Bolttagu P2 · {scale:P0} DPI · {assetStatus}");
         };
         overlay.ExitRequested += (_, _) => ExitApplication();
         tray.ShowRequested += (_, _) => overlay.ShowOverlay();
@@ -30,12 +36,17 @@ public partial class App : System.Windows.Application
 
         _overlay = overlay;
         _tray = tray;
+        _animationPlayer = player;
+        _animationController = animationController;
         overlay.PlaceAtBottomRight(24);
         overlay.ShowOverlay();
+        animationController.Start();
     }
 
     protected override void OnExit(ExitEventArgs e)
     {
+        _animationController?.Dispose();
+        _animationPlayer?.Dispose();
         _tray?.Dispose();
         base.OnExit(e);
     }
@@ -44,5 +55,23 @@ public partial class App : System.Windows.Application
     {
         _overlay?.CloseOverlay();
         Shutdown();
+    }
+
+    private static (FrameworkElement View, IAnimationPlayer Player, Action<double> SetDpiScale, string Status) CreatePetView()
+    {
+        try
+        {
+            var assetRoot = Path.Combine(AppContext.BaseDirectory, "Assets", "Bolttagu");
+            var catalog = RuntimeAnimationCatalog.LoadOrFallback(
+                Path.Combine(assetRoot, "build"),
+                Path.Combine(assetRoot, "fallback", "character.png"));
+            var view = new PetSpriteView(catalog);
+            return (view, view, view.SetDpiScale, catalog.IsFallback ? "fallback" : "atlas");
+        }
+        catch (Exception)
+        {
+            var fallback = new PetPlaceholderView();
+            return (fallback, fallback, fallback.SetDpiScale, "vector fallback");
+        }
     }
 }

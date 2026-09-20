@@ -23,7 +23,6 @@ public sealed class OverlayWindow : Window, IOverlayWindow
         ShowInTaskbar = false;
         Content = content;
         PreviewMouseLeftButtonDown += OnPreviewMouseLeftButtonDown;
-        PreviewMouseLeftButtonUp += (_, _) => ClickObserved?.Invoke(this, EventArgs.Empty);
         ContextMenu = BuildContextMenu();
         SourceInitialized += OnSourceInitialized;
     }
@@ -56,7 +55,19 @@ public sealed class OverlayWindow : Window, IOverlayWindow
     private void OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
     {
         if (e.ButtonState != MouseButtonState.Pressed) return;
-        try { DragMove(); }
+        var startLeft = Left;
+        var startTop = Top;
+        try
+        {
+            DragMove();
+            var movedX = Math.Abs(Left - startLeft);
+            var movedY = Math.Abs(Top - startTop);
+            if (movedX <= SystemParameters.MinimumHorizontalDragDistance &&
+                movedY <= SystemParameters.MinimumVerticalDragDistance)
+            {
+                ClickObserved?.Invoke(this, EventArgs.Empty);
+            }
+        }
         catch (InvalidOperationException) { }
     }
 

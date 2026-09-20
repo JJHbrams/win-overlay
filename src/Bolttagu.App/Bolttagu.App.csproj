@@ -20,4 +20,17 @@
     <ProjectReference Include="..\Bolttagu.Runtime\Bolttagu.Runtime.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="..\..\asset\bolttagu\build\**\*">
+      <Link>Assets\Bolttagu\build\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="..\..\asset\bolttagu\upstream\engram\character.png">
+      <Link>Assets\Bolttagu\fallback\character.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

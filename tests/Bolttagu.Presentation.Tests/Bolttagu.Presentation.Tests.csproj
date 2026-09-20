@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MSTest" Version="4.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Bolttagu.Assets\Bolttagu.Assets.csproj" />
+    <ProjectReference Include="..\..\src\Bolttagu.Contracts\Bolttagu.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\Bolttagu.Presentation\Bolttagu.Presentation.csproj" />
+    <ProjectReference Include="..\..\src\Bolttagu.Runtime\Bolttagu.Runtime.csproj" />
+  </ItemGroup>
+</Project>

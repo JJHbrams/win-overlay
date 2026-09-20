@@ -40,7 +40,7 @@ created: 2026-09-20
 
 | 항목 | 확인된 사실 | 설계 반영 |
 |---|---|---|
-| 프로젝트 상태 | 현재 저장소에는 설계 문서 외 런타임 코드와 확정된 기술 스택이 없다. 파일 목록과 Git 상태로 확인했다. | 코어 경계를 언어·프레임워크 중립적으로 정의하고 기술 선택은 별도 ADR로 남긴다. |
+| 프로젝트 상태 | .NET 10/WPF 모듈 solution, 투명 Windows overlay, deterministic asset pack과 P2 atlas playback이 구현되어 있다. Release build·15개 test·실제 HWND 기동으로 확인했다. (직접 측정, 2026-09-20) | Core/Runtime의 플랫폼 중립성을 유지하며 Assets→Contracts←Presentation 경계로 idle/click을 연결한다. |
 | 제품 목표 | 사용자는 Engram 외장 오버레이가 아니라 「데스크탑 버터」와 유사한 독립형 볼따구 데스크톱 펫을 원한다. Engram 연동은 성공 이후의 선택 사항이다. | 기본 실행 경로와 도메인 모델에서 Engram 개념을 제거하고 외부 입력을 port 뒤로 격리한다. |
 | 아트 기준 | 기본 캐릭터 606×606, 6×4 상태 시트 2604×1632, idle/click 효과와 두 manifest가 존재한다. 원본 파일과 manifest를 직접 확인했다. | Asset 모듈이 원본 포맷을 읽고 논리적 animation clip으로 정규화한다. Core는 셀 번호나 이미지 경로를 알지 않는다. |
 | 상태 시트 의미 | 기존 manifest에는 default, idle, hover, click, input, generating, search, thought, memory, success, provider_error, error 상태와 프레임 정책이 있다. | 초기 앱은 범용 상태만 사용하고 나머지는 animation tag로 보존한다. 행동 상태와 아트 상태를 1:1로 결합하지 않는다. |
@@ -165,21 +165,21 @@ stateDiagram-v2
 |---|---|
 | `docs/architecture/module-boundaries.md` | 모듈 책임, 공개 계약, 금지 의존성과 dependency rule을 구현 언어에 맞게 확정한다. |
 | `docs/adr/0001-runtime-stack.md` | Windows 창·렌더·패키징 요구를 기준으로 구현 언어와 UI 프레임워크를 선택한다. |
-| `src/core/README.md` (신규) | 순수 도메인 상태·행동·전이와 결정론 규칙을 정의한다. |
-| `src/contracts/README.md` (신규) | 모듈 간 이벤트·명령·snapshot·port schema를 정의한다. |
-| `src/runtime/README.md` (신규) | 이벤트 큐, 행동 lifecycle, tick, dispatch, 오류 격리 책임을 정의한다. |
-| `src/assets/README.md` (신규) | 아트 팩 로딩·검증·fallback 및 logical animation catalog를 정의한다. |
-| `src/presentation/README.md` (신규) | sprite/VFX 합성과 RenderPlan 소비 계약을 정의한다. |
-| `src/platform/windows/README.md` (신규) | 투명 창, 모니터/DPI, pointer, tray의 Windows adapter 경계를 정의한다. |
-| `src/diagnostics/README.md` (신규) | snapshot, bounded trace, deterministic replay, debug HUD를 정의한다. |
-| `src/app/README.md` (신규) | composition root와 설정·lifecycle만 소유하도록 제한한다. |
-| `tests/architecture/README.md` (신규) | 금지 의존성, adapter 격리, 외부 SDK 누수 방지 검사를 정의한다. |
+| `src/Bolttagu.Core/` | 순수 도메인 상태·행동·전이와 결정론 규칙을 소유한다. |
+| `src/Bolttagu.Contracts/` | 모듈 간 이벤트·명령·animation port·snapshot schema를 소유한다. |
+| `src/Bolttagu.Runtime/` | 행동 lifecycle, animation dispatch, 향후 event queue를 소유한다. |
+| `src/Bolttagu.Assets/` | 아트 팩 로딩·검증·fallback 및 logical animation catalog를 소유한다. |
+| `src/Bolttagu.Presentation/` | sprite/VFX 합성과 animation playback을 소유한다. |
+| `src/Bolttagu.Platform.Windows/` | 투명 창, 모니터/DPI, pointer, tray의 Windows adapter 경계를 소유한다. |
+| `src/Bolttagu.Diagnostics/` | 향후 snapshot, bounded trace, deterministic replay, debug HUD를 소유한다. |
+| `src/Bolttagu.App/` | composition root와 설정·lifecycle만 소유한다. |
+| `tests/` | dependency rule, asset, runtime, presentation, Windows smoke 검사를 분리한다. |
 
 ## 10. 잠재 문제 & 대응
 
 | 문제 | 대응 |
 |---|---|
-| 구현 언어와 UI 프레임워크가 아직 정해지지 않았다. | 첫 구현 전에 Windows 투명도·DPI·pointer capture·배포·테스트성 spike를 수행하고 ADR로 확정한다. 모듈 계약은 프레임워크 타입을 포함하지 않는다. |
+| WPF layered window의 성능 한계가 아직 전체 8개 clip에서 측정되지 않았다. | P7 성능 gate 전까지 WPF를 유지하고, 실패한 렌더 요구만 Presentation adapter 내부에서 교체한다. 모듈 계약은 WPF 타입을 포함하지 않는다. |
 | 상태와 animation tag를 동일 enum으로 만들 유혹이 있다. | Core는 의미적 `AnimationIntent`만 출력하고 Asset Catalog가 실제 clip으로 매핑한다. 새 아트가 행동 코드를 바꾸지 않게 한다. |
 | 이벤트 버스를 남용하면 흐름 추적이 어려워진다. | Runtime 하나만 큐를 소유하고 이벤트마다 monotonic sequence와 correlation id를 부여한다. 모듈 간 숨은 전역 publish를 금지한다. |
 | 지나친 인터페이스 분리는 구현과 디버깅을 오히려 어렵게 한다. | 교체 가능성보다 **효과 격리와 모듈 경계**를 기준으로 port를 만들며 모듈 내부 클래스에는 기본적으로 인터페이스를 만들지 않는다. |
@@ -193,8 +193,8 @@ stateDiagram-v2
 
 - [x] 1. stack spike와 ADR을 작성하고 모듈 프로젝트·architecture test 골격을 만든다. (AC-1)
 - [ ] 2. 고정 clock·seed와 `SafeIdle → Reacting → SafeIdle` 순수 Core 전이를 구현해 replay로 검증한다. (AC-2, AC-3)
-- [ ] 3. Asset Catalog가 볼따구 기준 팩을 검증하고 logical idle/click clip과 fallback을 제공하게 한다. (AC-4)
-- [ ] 4. 투명 창 하나에 idle·click을 표시하는 수직 슬라이스를 Runtime·Presentation·Windows adapter로 연결한다. (AC-1, AC-3)
+- [x] 3. Asset Catalog가 볼따구 기준 팩을 검증하고 logical idle/click clip과 fallback을 제공하게 한다. (AC-4)
+- [x] 4. 투명 창 하나에 idle·click을 표시하는 수직 슬라이스를 Runtime·Presentation·Windows adapter로 연결한다. (AC-1, AC-3)
 - [ ] 5. drag/capture-lost·hide·display-change 경로와 오류 정리를 구현한다. (AC-3, AC-4)
 - [ ] 6. snapshot·bounded trace·record/replay·debug HUD 최소 기능을 추가한다. (AC-2, AC-5)
 - [ ] 7. 가짜 외부 Input Adapter로 Core 무변경 확장성을 증명한다. (AC-6)

@@ -96,6 +96,46 @@ public sealed class AssetPipelineTests
         }
     }
 
+    [TestMethod]
+    public void RuntimeCatalog_LoadsIdleAndClickClips()
+    {
+        var buildRoot = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build");
+
+        var catalog = RuntimeAnimationCatalog.Load(buildRoot);
+
+        Assert.IsFalse(catalog.IsFallback);
+        Assert.HasCount(4, catalog.GetClip("idle_breathe").Frames);
+        Assert.HasCount(3, catalog.GetClip("click").Frames);
+    }
+
+    [TestMethod]
+    public void RuntimeCatalog_UsesStaticFallbackForInvalidCatalog()
+    {
+        var temporaryRoot = Path.Combine(Path.GetTempPath(), $"bolttagu-catalog-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(temporaryRoot);
+        try
+        {
+            File.WriteAllText(Path.Combine(temporaryRoot, "catalog.json"), "not-json");
+            var fallback = Path.Combine(
+                RepositoryRoot,
+                "asset",
+                "bolttagu",
+                "upstream",
+                "engram",
+                "character.png");
+
+            var catalog = RuntimeAnimationCatalog.LoadOrFallback(temporaryRoot, fallback);
+
+            Assert.IsTrue(catalog.IsFallback);
+            Assert.HasCount(1, catalog.GetClip("idle_breathe").Frames);
+            Assert.HasCount(1, catalog.GetClip("click").Frames);
+        }
+        finally
+        {
+            Directory.Delete(temporaryRoot, recursive: true);
+        }
+    }
+
     private static string FindRepositoryRoot()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);

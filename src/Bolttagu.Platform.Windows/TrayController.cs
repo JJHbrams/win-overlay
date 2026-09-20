@@ -18,7 +18,7 @@ public sealed class TrayController : ITrayController
         _notifyIcon = new Forms.NotifyIcon
         {
             Icon = SystemIcons.Application,
-            Text = "Bolttagu P0",
+            Text = "Bolttagu P2",
             Visible = true,
             ContextMenuStrip = menu,
         };
@@ -31,4 +31,3 @@ public sealed class TrayController : ITrayController
     public void SetStatus(string status) => _notifyIcon.Text = status.Length <= 63 ? status : status[..63];
     public void Dispose() { _notifyIcon.Visible = false; _notifyIcon.Dispose(); }
 }
-

@@ -1,7 +1,8 @@
 # Bolttagu Desktop Pet
 
 독립 실행되는 Windows용 볼따구 데스크톱 펫이다. Engram은 필수 구성 요소가 아니며,
-현재 P0에서는 투명 창·드래그·DPI·트레이와 모듈 경계를 검증한다.
+현재 P2에서는 투명 창에서 실제 atlas 기반 `idle_breathe`·`click` 애니메이션을 재생하고,
+자산 손상 시 정적 또는 벡터 fallback으로 복구한다.
 
 ## 개발 환경
 
@@ -17,10 +18,11 @@ $dotnetExe = Join-Path $PWD '.dotnet\dotnet.exe'
 & $dotnetExe run --project src\Bolttagu.App\Bolttagu.App.csproj
 ```
 
-## P0 조작
+## P2 조작
 
 - 왼쪽 버튼으로 캐릭터 창을 드래그한다.
-- 클릭을 놓으면 squash 반응이 재생된다.
+- 짧게 클릭하면 `click` clip이 한 번 재생된 뒤 `idle_breathe`로 돌아간다.
+- 드래그로 창을 옮길 때는 클릭 반응을 실행하지 않는다.
 - 오른쪽 메뉴 또는 트레이에서 숨김·표시·종료를 선택한다.
 - 캐릭터 아래의 표시는 현재 WPF DPI scale이다.
 

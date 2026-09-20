@@ -1,3 +1,4 @@
+using Bolttagu.Contracts;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -6,7 +7,7 @@ using System.Windows.Shapes;
 
 namespace Bolttagu.Presentation;
 
-public sealed class PetPlaceholderView : UserControl
+public sealed class PetPlaceholderView : UserControl, IAnimationPlayer
 {
     private readonly ScaleTransform _scale = new(1, 1);
     private readonly TextBlock _diagnosticText;
@@ -68,8 +69,17 @@ public sealed class PetPlaceholderView : UserControl
         Content = canvas;
     }
 
-    public void ReactToClick()
+    public string? CurrentClipId { get; private set; }
+    public event EventHandler<AnimationPlaybackCompletedEventArgs>? PlaybackCompleted;
+
+    public void Play(string clipId)
     {
+        CurrentClipId = clipId;
+        if (!clipId.Equals("click", StringComparison.Ordinal))
+        {
+            return;
+        }
+
         var animation = new DoubleAnimation
         {
             From = 1,
@@ -78,11 +88,23 @@ public sealed class PetPlaceholderView : UserControl
             AutoReverse = true,
             EasingFunction = new QuadraticEase(),
         };
+        animation.Completed += (_, _) => PlaybackCompleted?.Invoke(
+            this,
+            new AnimationPlaybackCompletedEventArgs(clipId));
         _scale.BeginAnimation(ScaleTransform.ScaleXProperty, animation);
         _scale.BeginAnimation(ScaleTransform.ScaleYProperty, animation);
     }
 
-    public void SetDpiScale(double scale) => _diagnosticText.Text = $"P0 · {scale:P0} DPI";
+    public void Stop()
+    {
+        _scale.BeginAnimation(ScaleTransform.ScaleXProperty, null);
+        _scale.BeginAnimation(ScaleTransform.ScaleYProperty, null);
+        CurrentClipId = null;
+    }
+
+    public void Dispose() => Stop();
+
+    public void SetDpiScale(double scale) => _diagnosticText.Text = $"Fallback · {scale:P0} DPI";
 
     private static Polygon CreateEar(double left, double top, double angle)
     {
@@ -108,4 +130,3 @@ public sealed class PetPlaceholderView : UserControl
         return eye;
     }
 }
-
