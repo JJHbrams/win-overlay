@@ -239,3 +239,25 @@ Create exactly six friendly shutdown frames: small wave, backward glance and cro
 dissolving downward, head and halo remaining, fading halo with sparks, final faint glint. Preserve
 canonical identity and transparent background; avoid injury, death imagery, text and UI.
 ```
+
+## Cell-isolated animation grids v2
+
+- Generator: built-in image generation tool
+- Layout: 1536×1024, 3×2 grid, six isolated 512×512 cells
+- Status: candidate pending human animation review
+
+| Action | Output | SHA-256 |
+|---|---|---|
+| drag held idle | `drag-held-idle-grid-v2.png` | `3092FB43250B85FC478F4AD8021D0D83B4CA60E8E4097F8E6D1B2DF7E7FA527E` |
+| drag pulled | `drag-pulled-grid-v5.png` | `AEA116821ADCC78F0EDCB821488B3D838D684C285D394FCF6DD70B2BA64D3DF6` |
+| spawn in | `spawn-in-grid-v3.png` | `945CE2882EA706FA959995223A4312E6A710592D1F24F106FC0ED0A38389E1FC` |
+| despawn out | `despawn-out-grid-v2.png` | `D4BDC2C7ED2A2D2B7954EC64C36FFE206087D45520D2C9D09F4984E20CE69F8B` |
+
+```text
+Rebuild each six-frame animation in reading order on a transparent 3×2 grid with exact 512×512
+cells and generous empty margins. Keep every character part, halo, effect and particle inside its
+own cell so no neighboring sprite can be cropped into a frame. Preserve the canonical identity,
+scale and anchor. For drag-pulled, keep all limbs trailing in the same direction. For despawn,
+keep every character pose front-facing: wave, lower hand and bend, then dissolve from the feet
+upward without a turn-around pose.
+```

@@ -3,6 +3,8 @@ using Bolttagu.Contracts;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace Bolttagu.Assets.Tests;
 
@@ -63,6 +65,29 @@ public sealed class AssetPipelineTests
         Assert.AreEqual(1774, metadata.Width);
         Assert.AreEqual(887, metadata.Height);
         Assert.IsTrue(metadata.HasAlpha);
+    }
+
+    [TestMethod]
+    public void CellIsolatedAnimationSources_HaveTransparentGutters()
+    {
+        var modelRoot = Path.Combine(RepositoryRoot, "asset", "bolttagu", "derived", "model");
+        var sources = new[]
+        {
+            "drag-held-idle-grid-v2.png",
+            "drag-pulled-grid-v5.png",
+            "spawn-in-grid-v3.png",
+            "despawn-out-grid-v2.png",
+        };
+
+        foreach (var source in sources)
+        {
+            var path = Path.Combine(modelRoot, source);
+            var bitmap = LoadBgra32(path);
+            Assert.AreEqual(1536, bitmap.PixelWidth, source);
+            Assert.AreEqual(1024, bitmap.PixelHeight, source);
+            Assert.AreEqual(0, CountVisibleGutterPixels(bitmap, gutterWidth: 4),
+                $"{source} contains visible pixels on a 512x512 cell boundary.");
+        }
     }
 
     [TestMethod]
@@ -228,5 +253,43 @@ public sealed class AssetPipelineTests
         }
 
         throw new DirectoryNotFoundException("Could not find repository root.");
+    }
+
+    private static BitmapSource LoadBgra32(string path)
+    {
+        using var stream = File.OpenRead(path);
+        var source = BitmapDecoder.Create(
+            stream,
+            BitmapCreateOptions.PreservePixelFormat,
+            BitmapCacheOption.OnLoad).Frames[0];
+        var converted = new FormatConvertedBitmap(source, PixelFormats.Bgra32, null, 0);
+        converted.Freeze();
+        return converted;
+    }
+
+    private static int CountVisibleGutterPixels(BitmapSource bitmap, int gutterWidth)
+    {
+        var stride = bitmap.PixelWidth * 4;
+        var pixels = new byte[stride * bitmap.PixelHeight];
+        bitmap.CopyPixels(pixels, stride, 0);
+        var count = 0;
+        for (var cell = 0; cell < 6; cell++)
+        {
+            var originX = (cell % 3) * 512;
+            var originY = (cell / 3) * 512;
+            for (var inset = 0; inset < gutterWidth; inset++)
+            {
+                for (var offset = 0; offset < 512; offset++)
+                {
+                    count += IsVisible(originX + offset, originY + inset) ? 1 : 0;
+                    count += IsVisible(originX + offset, originY + 511 - inset) ? 1 : 0;
+                    count += IsVisible(originX + inset, originY + offset) ? 1 : 0;
+                    count += IsVisible(originX + 511 - inset, originY + offset) ? 1 : 0;
+                }
+            }
+        }
+        return count;
+
+        bool IsVisible(int x, int y) => pixels[(y * stride) + (x * 4) + 3] > 8;
     }
 }

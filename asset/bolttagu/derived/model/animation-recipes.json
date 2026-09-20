@@ -80,14 +80,14 @@
     },
     {
       "id": "drag_held_idle",
-      "source": "drag-held-idle-strip-v1.png",
+      "source": "drag-held-idle-grid-v2.png",
       "sourceRects": [
-        { "x": 0, "y": 0, "width": 362, "height": 724 },
-        { "x": 362, "y": 0, "width": 362, "height": 724 },
-        { "x": 724, "y": 0, "width": 362, "height": 724 },
-        { "x": 1086, "y": 0, "width": 362, "height": 724 },
-        { "x": 1448, "y": 0, "width": 362, "height": 724 },
-        { "x": 1810, "y": 0, "width": 362, "height": 724 }
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 },
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
       ],
       "targetVisibleHeight": 376,
       "anchorY": 104,
@@ -103,14 +103,14 @@
     },
     {
       "id": "drag_pulled",
-      "source": "drag-pulled-strip-v3.png",
+      "source": "drag-pulled-grid-v5.png",
       "sourceRects": [
-        { "x": 0, "y": 0, "width": 362, "height": 724 },
-        { "x": 362, "y": 0, "width": 362, "height": 724 },
-        { "x": 724, "y": 0, "width": 362, "height": 724 },
-        { "x": 1086, "y": 0, "width": 362, "height": 724 },
-        { "x": 1448, "y": 0, "width": 362, "height": 724 },
-        { "x": 1810, "y": 0, "width": 362, "height": 724 }
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 },
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
       ],
       "targetVisibleHeight": 376,
       "anchorY": 104,
@@ -126,14 +126,14 @@
     },
     {
       "id": "spawn_in",
-      "source": "spawn-in-strip-v1.png",
+      "source": "spawn-in-grid-v3.png",
       "sourceRects": [
-        { "x": 0, "y": 0, "width": 362, "height": 724 },
-        { "x": 362, "y": 0, "width": 362, "height": 724 },
-        { "x": 724, "y": 0, "width": 362, "height": 724 },
-        { "x": 1086, "y": 0, "width": 362, "height": 724 },
-        { "x": 1448, "y": 0, "width": 362, "height": 724 },
-        { "x": 1810, "y": 0, "width": 362, "height": 724 }
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 },
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
       ],
       "referenceFrame": 5,
       "frames": [
@@ -147,14 +147,14 @@
     },
     {
       "id": "despawn_out",
-      "source": "despawn-out-strip-v1.png",
+      "source": "despawn-out-grid-v2.png",
       "sourceRects": [
-        { "x": 0, "y": 0, "width": 362, "height": 724 },
-        { "x": 362, "y": 0, "width": 362, "height": 724 },
-        { "x": 724, "y": 0, "width": 362, "height": 724 },
-        { "x": 1086, "y": 0, "width": 362, "height": 724 },
-        { "x": 1448, "y": 0, "width": 362, "height": 724 },
-        { "x": 1810, "y": 0, "width": 362, "height": 724 }
+        { "x": 0, "y": 0, "width": 512, "height": 512 },
+        { "x": 512, "y": 0, "width": 512, "height": 512 },
+        { "x": 1024, "y": 0, "width": 512, "height": 512 },
+        { "x": 0, "y": 512, "width": 512, "height": 512 },
+        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 1024, "y": 512, "width": 512, "height": 512 }
       ],
       "frames": [
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },

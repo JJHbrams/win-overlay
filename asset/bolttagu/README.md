@@ -41,6 +41,9 @@ not begin from a `candidate` model.
 - `drag_held_idle` and `drag_pulled` use a top-aligned scruff anchor at `Y=104`; they are reviewed
   separately from the grounded foot pivot. The held loop keeps the body centered, while the pulled
   loop sends the body and every limb in the same trailing direction and mirrors at runtime.
+- Six-frame generated sources use isolated 512×512 cells in a 3×2 grid. Every cell keeps a
+  four-pixel transparent gutter; the asset test rejects visible pixels on a cell boundary before
+  neighboring art can leak into a compiled frame.
 - Every build writes `build/review/contact-sheet.png` and `frame-metrics.json`. Review these before
   promoting generated strips from `candidate` to `approved`.
 
