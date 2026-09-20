@@ -31,6 +31,9 @@ public partial class App : System.Windows.Application
         var runtimeLoop = new WpfRuntimeLoop(Dispatcher, animationController.Tick);
 
         overlay.ClickObserved += (_, _) => animationController.ReactToClick();
+        overlay.DragStarted += (_, _) => animationController.BeginDrag();
+        overlay.DragCompleted += (_, _) => animationController.CompleteDrag();
+        overlay.DragCanceled += (_, _) => animationController.CancelDrag();
         overlay.DpiScaleChanged += (_, scale) =>
         {
             setDpiScale(scale);

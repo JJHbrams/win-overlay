@@ -29,7 +29,7 @@ created: 2026-09-20
 |---|---|---|
 | AC-1 | 지원되는 Windows 환경에서 Engram이나 다른 외부 서비스 없이 앱을 실행·종료할 수 있고, 기본 볼따구가 투명 topmost 창에 표시된다. | 깨끗한 사용자 프로필에서 패키지 설치 후 launch/show/hide/exit smoke test를 실행한다. |
 | AC-2 | 아트 소스는 개별 RGBA frame과 clip metadata로 관리되고, validator가 canvas·alpha·pivot·frame 참조를 검사한 뒤 runtime atlas와 manifest를 재현 가능하게 생성한다. | 동일 입력으로 두 번 build하여 산출물 SHA-256이 일치하고 손상 fixture가 명확한 validation error를 반환하는지 검사한다. |
-| AC-3 | MVP clip `idle_breathe`, `walk`, `turn`, `click`, `drag`, `drop_land`, `sit`, `sleep`가 존재하며 모든 loop clip은 발 기준점의 비의도성 흔들림이 2px 이하이고 텍스트·녹색 배경이 없다. | 자동 pivot/canvas 검사와 animation contact sheet·실제 재생 육안 검수를 함께 수행한다. |
+| AC-3 | MVP clip `idle_breathe`, `walk`, `turn`, `click`, `drag_dangle`, `drop_land`, `sit`, `sleep`가 존재하며 모든 loop clip은 기준점의 비의도성 흔들림이 2px 이하이고 텍스트·녹색 배경이 없다. | 자동 pivot/canvas 검사와 animation contact sheet·실제 재생 육안 검수를 함께 수행한다. |
 | AC-4 | 클릭·드래그·놓기·숨김·표시·자율 이동이 상태 전이 규칙대로 동작하고 capture lost·display change·오류 후 포인터 캡처와 임시 transform이 남지 않는다. | 각 정상·취소·실패 경로의 상태 전이 테스트와 실제 창 상호작용 테스트를 실행한다. |
 | AC-5 | 동일한 초기 상태·입력 log·clock·난수 seed의 replay가 동일한 `BehaviorDecision`과 `RuntimeCommand` 스트림을 생성한다. | 동일 fixture를 두 번 replay하고 정규화한 출력의 byte-for-byte 동일성을 검사한다. |
 | AC-6 | 모니터 이동, DPI 변경, 작업 영역 변경, session lock/unlock 후 캐릭터가 유효 work area 안에 있고 화면 밖에 고립되지 않는다. | 서로 다른 DPI의 2개 모니터와 합성 ScreenModel fixture에서 geometry·clamp 테스트를 수행한다. |
@@ -103,7 +103,7 @@ flowchart TD
 | **P1 아트 기반** | upstream 복사·hash inventory, 전신 모델 시트, palette·outline·pivot 규칙, animation compiler | `asset/bolttagu/upstream`, `derived/model`, validator, atlas builder | 동일 입력 build hash 일치. 전신 정면·측면 기준 승인. AC-2 |
 | **P2 첫 수직 슬라이스** | `idle_breathe`, `click`, Assets→Runtime→Presentation→Windows 연결 | 실행 가능한 앱, clip playback, fallback asset | 앱 실행·표시·클릭 반응·숨김·종료 smoke 통과. AC-1 일부, AC-3 일부 |
 | **P3 행동과 이동** | 순수 Core 상태, scheduler, injected clock/RNG, `walk`, `turn`, 화면 안 이동 | deterministic Core와 locomotion | replay 동일성 및 걷기·전환 loop 육안 검수. AC-4·5 |
-| **P4 직접 상호작용** | drag threshold, pointer capture, drop/land, sit/sleep, tray 명령 | `drag`, `drop_land`, `sit`, `sleep` clip과 interaction tests | capture lost·hide·exit 모든 경로에서 잔여 상태 0건. AC-3·4 |
+| **P4 직접 상호작용** | drag threshold, pointer capture, drop/land, sit/sleep, tray 명령 | `drag_dangle`, `drop_land`, `sit`, `sleep` clip과 interaction tests | capture lost·hide·exit 모든 경로에서 잔여 상태 0건. AC-3·4 |
 | **P5 Windows 견고성** | multi-monitor/DPI/work-area/session lock, crash/fallback 정책 | ScreenModel fixture, geometry clamp, adapter fault injection | 화면 밖 고립 0건, 오류 후 SafeIdle/Hidden 복구. AC-4·6 |
 | **P6 관측·설정** | bounded trace, snapshot, replay export, debug HUD, 사용자 설정 저장 | diagnostics panel/HUD, settings schema, replay CLI/test | 단일 오류를 입력→결정→clip→geometry까지 추적 가능. AC-5·7·8 |
 | **P7 콘텐츠·polish** | 8개 MVP clip 완성, idle variation, sound toggle, hitbox·anchor 미세조정 | 승인 contact sheet, animation pack v1 | 아트 consistency·loop·pivot gate와 사용성 점검 통과. AC-3·9 |

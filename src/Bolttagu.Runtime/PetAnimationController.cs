@@ -3,7 +3,7 @@ using Bolttagu.Core;
 
 namespace Bolttagu.Runtime;
 
-public enum PetRuntimeState { Idle, Turning, Walking, Reacting }
+public enum PetRuntimeState { Idle, Turning, Walking, Reacting, Dragging, Landing }
 
 public sealed class PetAnimationController : IDisposable
 {
@@ -70,6 +70,31 @@ public sealed class PetAnimationController : IDisposable
         _player.Play(PetActionClips.Click);
     }
 
+    public void BeginDrag()
+    {
+        ObjectDisposedException.ThrowIf(_disposed, this);
+        _walk = null;
+        State = PetRuntimeState.Dragging;
+        _player.Play(PetActionClips.DragDangle);
+    }
+
+    public void CompleteDrag()
+    {
+        ObjectDisposedException.ThrowIf(_disposed, this);
+        if (State != PetRuntimeState.Dragging) return;
+        State = PetRuntimeState.Landing;
+        _player.Play(PetActionClips.DropLand);
+    }
+
+    public void CancelDrag()
+    {
+        ObjectDisposedException.ThrowIf(_disposed, this);
+        if (State is PetRuntimeState.Dragging or PetRuntimeState.Landing)
+        {
+            EnterIdle(_clock.Elapsed);
+        }
+    }
+
     public void Dispose()
     {
         if (_disposed) return;
@@ -126,6 +151,10 @@ public sealed class PetAnimationController : IDisposable
             StartWalk(_clock.Elapsed);
         }
         else if (State == PetRuntimeState.Reacting && e.ClipId == PetActionClips.Click)
+        {
+            EnterIdle(_clock.Elapsed);
+        }
+        else if (State == PetRuntimeState.Landing && e.ClipId == PetActionClips.DropLand)
         {
             EnterIdle(_clock.Elapsed);
         }

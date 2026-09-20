@@ -15,6 +15,9 @@ public interface IOverlayWindow
     ScreenSize Size { get; }
     ScreenArea WorkArea { get; }
     event EventHandler? ClickObserved;
+    event EventHandler? DragStarted;
+    event EventHandler? DragCompleted;
+    event EventHandler? DragCanceled;
     event EventHandler? ExitRequested;
     event EventHandler<double>? DpiScaleChanged;
     void ShowOverlay();

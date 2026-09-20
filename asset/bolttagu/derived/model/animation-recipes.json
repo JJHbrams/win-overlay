@@ -16,10 +16,18 @@
     },
     {
       "id": "click",
+      "source": "click-hit-strip-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 520, "height": 756 },
+        { "x": 520, "y": 0, "width": 520, "height": 756 },
+        { "x": 1040, "y": 0, "width": 520, "height": 756 },
+        { "x": 1560, "y": 0, "width": 519, "height": 756 }
+      ],
       "frames": [
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 1.08, "scaleY": 0.90, "offsetX": 0, "offsetY": 4 },
-        { "scaleX": 0.97, "scaleY": 1.04, "offsetX": 0, "offsetY": -2 }
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
       ]
     },
     {
@@ -46,6 +54,38 @@
         { "x": 443, "y": 0, "width": 444, "height": 887 },
         { "x": 887, "y": 0, "width": 443, "height": 887 },
         { "x": 1330, "y": 0, "width": 444, "height": 887 }
+      ],
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "drag_dangle",
+      "source": "drag-dangle-strip-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 443, "height": 887 },
+        { "x": 443, "y": 0, "width": 444, "height": 887 },
+        { "x": 887, "y": 0, "width": 443, "height": 887 },
+        { "x": 1330, "y": 0, "width": 444, "height": 887 }
+      ],
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+      ]
+    },
+    {
+      "id": "drop_land",
+      "source": "drop-land-strip-v1.png",
+      "sourceRects": [
+        { "x": 0, "y": 0, "width": 520, "height": 756 },
+        { "x": 520, "y": 0, "width": 520, "height": 756 },
+        { "x": 1040, "y": 0, "width": 520, "height": 756 },
+        { "x": 1560, "y": 0, "width": 519, "height": 756 }
       ],
       "frames": [
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },

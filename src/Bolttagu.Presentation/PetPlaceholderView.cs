@@ -76,7 +76,7 @@ public sealed class PetPlaceholderView : UserControl, IAnimationPlayer
     public void Play(string clipId)
     {
         CurrentClipId = clipId;
-        if (!clipId.Equals("click", StringComparison.Ordinal))
+        if (clipId is not (PetActionClips.Click or PetActionClips.DropLand))
         {
             return;
         }
@@ -84,7 +84,7 @@ public sealed class PetPlaceholderView : UserControl, IAnimationPlayer
         var animation = new DoubleAnimation
         {
             From = 1,
-            To = 0.86,
+            To = clipId == PetActionClips.Click ? 0.86 : 0.78,
             Duration = TimeSpan.FromMilliseconds(90),
             AutoReverse = true,
             EasingFunction = new QuadraticEase(),

@@ -9,6 +9,9 @@ namespace Bolttagu.Platform.Windows;
 public sealed class OverlayWindow : Window, IOverlayWindow
 {
     private const int WmDpiChanged = 0x02E0;
+    private readonly DragGestureTracker _dragGesture = new();
+    private bool _releasingCapture;
+    private ScreenPoint _dragAnchorCorrection;
 
     public OverlayWindow(UIElement content)
     {
@@ -23,6 +26,9 @@ public sealed class OverlayWindow : Window, IOverlayWindow
         ShowInTaskbar = false;
         Content = content;
         PreviewMouseLeftButtonDown += OnPreviewMouseLeftButtonDown;
+        PreviewMouseMove += OnPreviewMouseMove;
+        PreviewMouseLeftButtonUp += OnPreviewMouseLeftButtonUp;
+        LostMouseCapture += OnLostMouseCapture;
         ContextMenu = BuildContextMenu();
         SourceInitialized += OnSourceInitialized;
     }
@@ -38,11 +44,14 @@ public sealed class OverlayWindow : Window, IOverlayWindow
         }
     }
     public event EventHandler? ClickObserved;
+    public event EventHandler? DragStarted;
+    public event EventHandler? DragCompleted;
+    public event EventHandler? DragCanceled;
     public event EventHandler? ExitRequested;
     public event EventHandler<double>? DpiScaleChanged;
     public void ShowOverlay() { Show(); Activate(); }
-    public void HideOverlay() => Hide();
-    public void CloseOverlay() => Close();
+    public void HideOverlay() { CancelPointerInteraction(); Hide(); }
+    public void CloseOverlay() { CancelPointerInteraction(); Close(); }
 
     public void PlaceAtBottomRight(double margin)
     {
@@ -69,21 +78,74 @@ public sealed class OverlayWindow : Window, IOverlayWindow
 
     private void OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
     {
-        if (e.ButtonState != MouseButtonState.Pressed) return;
-        var startLeft = Left;
-        var startTop = Top;
-        try
+        if (e.ChangedButton != MouseButton.Left || e.ButtonState != MouseButtonState.Pressed) return;
+        var pointer = PointToScreen(e.GetPosition(this));
+        var local = e.GetPosition(this);
+        _dragAnchorCorrection = new(
+            local.X - (ActualWidth / 2d),
+            local.Y - (ActualHeight * 104d / 512d));
+        _dragGesture.Begin(new(pointer.X, pointer.Y), Position);
+        if (!CaptureMouse())
         {
-            DragMove();
-            var movedX = Math.Abs(Left - startLeft);
-            var movedY = Math.Abs(Top - startTop);
-            if (movedX <= SystemParameters.MinimumHorizontalDragDistance &&
-                movedY <= SystemParameters.MinimumVerticalDragDistance)
-            {
-                ClickObserved?.Invoke(this, EventArgs.Empty);
-            }
+            _dragGesture.Cancel();
+            return;
         }
-        catch (InvalidOperationException) { }
+        e.Handled = true;
+    }
+
+    private void OnPreviewMouseMove(object sender, System.Windows.Input.MouseEventArgs e)
+    {
+        if (!_dragGesture.IsActive || e.LeftButton != MouseButtonState.Pressed) return;
+        var pointer = PointToScreen(e.GetPosition(this));
+        var dpi = VisualTreeHelper.GetDpi(this);
+        var update = _dragGesture.Move(
+            new(pointer.X, pointer.Y),
+            dpi.DpiScaleX,
+            dpi.DpiScaleY,
+            SystemParameters.MinimumHorizontalDragDistance,
+            SystemParameters.MinimumVerticalDragDistance);
+        if (update.Result == DragGestureResult.None) return;
+        if (update.Result == DragGestureResult.DragStarted)
+        {
+            DragStarted?.Invoke(this, EventArgs.Empty);
+        }
+        MoveTo(new(
+            update.WindowPosition.X + _dragAnchorCorrection.X,
+            update.WindowPosition.Y + _dragAnchorCorrection.Y));
+        e.Handled = true;
+    }
+
+    private void OnPreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+    {
+        if (!_dragGesture.IsActive || e.ChangedButton != MouseButton.Left) return;
+        var result = _dragGesture.Complete();
+        ReleasePointerCapture();
+        if (result == DragGestureResult.DragCompleted) DragCompleted?.Invoke(this, EventArgs.Empty);
+        else if (result == DragGestureResult.Click) ClickObserved?.Invoke(this, EventArgs.Empty);
+        e.Handled = true;
+    }
+
+    private void OnLostMouseCapture(object sender, System.Windows.Input.MouseEventArgs e)
+    {
+        if (_releasingCapture || !_dragGesture.IsActive) return;
+        if (_dragGesture.Cancel() == DragGestureResult.DragCanceled)
+            DragCanceled?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void CancelPointerInteraction()
+    {
+        if (!_dragGesture.IsActive) return;
+        var result = _dragGesture.Cancel();
+        ReleasePointerCapture();
+        if (result == DragGestureResult.DragCanceled) DragCanceled?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void ReleasePointerCapture()
+    {
+        if (!IsMouseCaptured) return;
+        _releasingCapture = true;
+        ReleaseMouseCapture();
+        _releasingCapture = false;
     }
 
     private void OnSourceInitialized(object? sender, EventArgs e)

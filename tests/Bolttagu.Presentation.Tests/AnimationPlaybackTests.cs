@@ -195,6 +195,9 @@ public sealed class AnimationPlaybackTests
         public ScreenSize Size => new(220, 220);
         public ScreenArea WorkArea => new(new(0, 0), new(1920, 1080));
         public event EventHandler? ClickObserved { add { } remove { } }
+        public event EventHandler? DragStarted { add { } remove { } }
+        public event EventHandler? DragCompleted { add { } remove { } }
+        public event EventHandler? DragCanceled { add { } remove { } }
         public event EventHandler? ExitRequested { add { } remove { } }
         public event EventHandler<double>? DpiScaleChanged { add { } remove { } }
         public void ShowOverlay() { }

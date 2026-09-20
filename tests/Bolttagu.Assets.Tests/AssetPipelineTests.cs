@@ -38,7 +38,7 @@ public sealed class AssetPipelineTests
 
         Assert.HasCount(0, issues, string.Join(Environment.NewLine, issues));
         CollectionAssert.AreEqual(
-            new[] { "idle_breathe", "click", "walk", "turn" },
+            new[] { "idle_breathe", "click", "walk", "turn", "drag_dangle", "drop_land" },
             pack.Clips.Select(clip => clip.Id).ToArray());
     }
 
@@ -106,9 +106,11 @@ public sealed class AssetPipelineTests
 
         Assert.IsFalse(catalog.IsFallback);
         Assert.HasCount(4, catalog.GetClip("idle_breathe").Frames);
-        Assert.HasCount(3, catalog.GetClip("click").Frames);
+        Assert.HasCount(4, catalog.GetClip("click").Frames);
         Assert.HasCount(4, catalog.GetClip("walk").Frames);
         Assert.HasCount(4, catalog.GetClip("turn").Frames);
+        Assert.HasCount(4, catalog.GetClip("drag_dangle").Frames);
+        Assert.HasCount(4, catalog.GetClip("drop_land").Frames);
         CollectionAssert.AreEquivalent(
             Enum.GetValues<PetAction>(),
             PetActionClips.All.Keys.ToArray(),
@@ -142,6 +144,8 @@ public sealed class AssetPipelineTests
             Assert.HasCount(1, catalog.GetClip("click").Frames);
             Assert.HasCount(1, catalog.GetClip("walk").Frames);
             Assert.HasCount(1, catalog.GetClip("turn").Frames);
+            Assert.HasCount(1, catalog.GetClip("drag_dangle").Frames);
+            Assert.HasCount(1, catalog.GetClip("drop_land").Frames);
         }
         finally
         {

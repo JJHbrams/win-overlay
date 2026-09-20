@@ -52,3 +52,48 @@ three-quarter right, right profile. Keep feet on one baseline and keep the same 
 halo, hair, ribbon/ear silhouette, palette, outline weight, and cel shading in every frame.
 No locomotion, no crop, no text, no UI, no effects, no extra characters, true transparent alpha.
 ```
+
+## Click hit strip v1
+
+- Generator: built-in image generation tool
+- Output: `click-hit-strip-v1.png`
+- Status: candidate pending human animation review
+- SHA-256: `81A5E56A699BAD55E8FEF1DC8AFAB2B0CF76A25B78DB05225AF2935ED99BA6BD`
+
+```text
+Create exactly four transparent, evenly spaced, front-facing full-body frames of the canonical
+Bolttagu receiving a cute light bonk: neutral anticipation, slightly compressed head, peak
+reaction with clearly readable > < eyes and a small w mouth, then soft rebound. Preserve the
+approved character, outfit, palette, outline, scale, baseline, halo and ribbon silhouette.
+Keep everything visible; no hand, cursor, labels, UI, watermark, background or extra character.
+```
+
+## Drag dangle strip v1
+
+- Generator: built-in image generation tool
+- Output: `drag-dangle-strip-v1.png`
+- Status: candidate pending human animation review
+- SHA-256: `95A9CAA88C5E3DB4C42517D8680DA5692AB23D7ECCDAD48C192C7D3CB5129C9A`
+
+```text
+Create exactly four transparent, evenly spaced full-body loop frames of the canonical Bolttagu
+dangling from one fixed invisible grab anchor above the head/hood and cutely struggling in air:
+body swung left with a right-leg kick, center stretch, body swung right with a left-leg kick,
+center recoil. Preserve identity, outfit, palette, outline and scale. Feet never touch ground;
+no visible hand, cursor, rope, hook, labels, UI, watermark, background or extra character.
+```
+
+## Drop land strip v1
+
+- Generator: built-in image generation tool
+- Output: `drop-land-strip-v1.png`
+- Status: candidate pending human animation review
+- SHA-256: `C41043A86FBFE6A5933B9A922E8ABABA8CA18BCF2DF730A9F8D07F3C0EA32BD4`
+
+```text
+Create exactly four transparent, evenly spaced, front-facing full-body frames of the canonical
+Bolttagu released from a drag: short airborne drop, soft squashed impact, small upward rebound,
+settled crouch recovering toward idle. Preserve identity, outfit, palette, outline and scale;
+use a shared landing baseline and readable squash-and-stretch. No hand, cursor, rope, labels,
+UI, effects, watermark, background, debris or extra character.
+```

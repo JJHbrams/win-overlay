@@ -64,6 +64,35 @@ public sealed class PetAnimationControllerTests
         Assert.AreEqual(Replay(), Replay());
     }
 
+    [TestMethod]
+    public void DragRelease_PlaysDangleThenLandingThenIdle()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.Controller.Start();
+        fixture.Controller.BeginDrag();
+        Assert.AreEqual(PetRuntimeState.Dragging, fixture.Controller.State);
+        fixture.Controller.CompleteDrag();
+        Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
+        fixture.Player.Complete(PetActionClips.DropLand);
+        Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+        CollectionAssert.AreEqual(
+            new[] { PetActionClips.Idle, PetActionClips.DragDangle, PetActionClips.DropLand, PetActionClips.Idle },
+            fixture.Player.PlayedClips.ToArray());
+    }
+
+    [TestMethod]
+    public void CaptureLoss_DuringDragReturnsDirectlyToIdle()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.Controller.Start();
+        fixture.Controller.BeginDrag();
+        fixture.Controller.CancelDrag();
+        Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+        CollectionAssert.AreEqual(
+            new[] { PetActionClips.Idle, PetActionClips.DragDangle, PetActionClips.Idle },
+            fixture.Player.PlayedClips.ToArray());
+    }
+
     private sealed class Fixture : IDisposable
     {
         public Fixture(params int[] randomValues) =>
@@ -110,6 +139,9 @@ public sealed class PetAnimationControllerTests
         public ScreenSize Size => new(220, 220);
         public ScreenArea WorkArea => new(new(0, 0), new(1920, 1080));
         public event EventHandler? ClickObserved { add { } remove { } }
+        public event EventHandler? DragStarted { add { } remove { } }
+        public event EventHandler? DragCompleted { add { } remove { } }
+        public event EventHandler? DragCanceled { add { } remove { } }
         public event EventHandler? ExitRequested { add { } remove { } }
         public event EventHandler<double>? DpiScaleChanged { add { } remove { } }
         public void MoveTo(ScreenPoint position) => Position = position;

@@ -4,7 +4,7 @@ public readonly record struct PixelRect(int X, int Y, int Width, int Height);
 public readonly record struct PixelPoint(int X, int Y);
 
 public enum FacingDirection { Left, Right }
-public enum PetAction { Idle, Click, Turn, Walk }
+public enum PetAction { Idle, Click, Turn, Walk, DragDangle, DropLand }
 
 public static class PetActionClips
 {
@@ -12,6 +12,8 @@ public static class PetActionClips
     public const string Click = "click";
     public const string Turn = "turn";
     public const string Walk = "walk";
+    public const string DragDangle = "drag_dangle";
+    public const string DropLand = "drop_land";
 
     public static IReadOnlyDictionary<PetAction, string> All { get; } =
         new Dictionary<PetAction, string>
@@ -20,6 +22,8 @@ public static class PetActionClips
             [PetAction.Click] = Click,
             [PetAction.Turn] = Turn,
             [PetAction.Walk] = Walk,
+            [PetAction.DragDangle] = DragDangle,
+            [PetAction.DropLand] = DropLand,
         };
 }
 
