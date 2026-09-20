@@ -29,7 +29,7 @@ created: 2026-09-20
 |---|---|---|
 | AC-1 | grounded clip의 가시 실루엣 높이는 canonical capture box 기준 ±2%이고 발 기준선 편차는 2px 이하이며 clip 전환 시 전체 크기 점프가 없다. | asset build가 alpha bounds metrics와 동일 512×512 contact sheet를 생성하고 validator/test가 편차를 검사한다. |
 | AC-2 | idle은 비균일 squash 없이 재생되고, walk는 contact→down→passing→up 순서와 반대 팔 스윙을 가지며 idle↔walk 사이에 turn-in/turn-out 전환이 존재한다. | recipe/clip 순서 테스트와 contact sheet 및 실제 재생 육안 검수. |
-| AC-3 | drag_dangle은 양팔이 모든 프레임에 보이고 frame duration이 160ms 이상이며, drop_land 접지 후 회복은 600ms 이상 재생된다. | pack metadata 테스트, alpha/contact sheet 육안 검수, 실제 drag/drop 확인. |
+| AC-3 | drag_dangle은 덜미의 단일 grab anchor 아래에서 양손이 고정점과 분리된 채 서로 반대 위상으로 휘적이고, 양팔이 모든 프레임에 보이며 frame duration이 160ms 이상이다. drop_land 접지 후 회복은 600ms 이상 재생된다. | pack metadata 테스트, alpha/contact sheet 육안 검수, 실제 drag/drop 확인. |
 | AC-4 | drag release와 자율 보행은 현재 X에서 아래로 처음 만나는 visible top-level window 상단 또는 taskbar 상단을 지면으로 사용하며 앱 자신의 HWND는 제외한다. | 합성 surface fixture 단위 테스트와 Windows adapter smoke/manual test. |
 | AC-5 | surface가 없거나 Win32 조회가 실패해도 work area 하단을 지면으로 사용하고 capture/runtime 상태가 남지 않는다. | provider fault fixture와 capture-lost 상태 전이 테스트. |
 

@@ -127,3 +127,20 @@ to hand, with both hands gripping the gathered hood above the head. Sequence slo
 center stretch, slow right swing and center recoil. Preserve identity, outfit, palette and scale;
 no cursor, external hand, rope, missing limbs, motion marks, background, UI or watermark.
 ```
+
+## Drag dangle strip v3
+
+- Generator: built-in image generation tool
+- Output: `drag-dangle-strip-v3.png`
+- Status: candidate pending human animation review
+- SHA-256: `404C9689E5B338A42EAE8AA4345C79D1F8E5DEB54DD483B3DE103AFB6D3EDC62`
+
+```text
+Redesign the canonical Bolttagu dangling loop into exactly four ordered full-body frames. Hold
+the character from one fixed point at the back of the hoodie collar/scruff, with a small gathered
+fabric fold but no visible hand, cursor, hook or rope. Keep both complete arms and hands away from
+the anchor: left arm up/right arm down, center pass, right arm up/left arm down, center recovery.
+Let the body and legs trail below the fixed collar point with a slow weighty pendulum motion.
+Preserve identity, outfit, palette, scale and transparent background; avoid missing or duplicate
+limbs, overhead gripping, crop, labels, UI, motion marks and watermark.
+```
