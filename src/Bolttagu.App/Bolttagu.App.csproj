@@ -9,6 +9,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <AssemblyName>Bolttagu</AssemblyName>
+    <ApplicationIcon Condition="Exists('..\\..\\asset\\bolttagu\\derived\\branding\\bolttagu.ico')">..\\..\\asset\\bolttagu\\derived\\branding\\bolttagu.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
