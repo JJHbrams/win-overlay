@@ -11,7 +11,7 @@ using Bolttagu.Assets;
 
 namespace Bolttagu.AssetBuild;
 
-internal static class Program
+public static class Program
 {
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
@@ -119,8 +119,16 @@ internal static class Program
                 frameSources.Add((crop, GetAlphaBounds(crop)));
             }
 
-            var referenceIndex = Math.Clamp(clip.ReferenceFrame, 0, frameSources.Count - 1);
-            var referenceBounds = frameSources[referenceIndex].Bounds;
+            // A calibration frame is deliberately independent from the emitted animation frames.
+            // New sheets should reserve their final cell for a canonical idle pose; legacy sheets
+            // may instead point at the shared turnaround idle through Calibration.Source.
+            var calibration = LoadCalibrationFrame(
+                clip,
+                sourceName,
+                frameSources,
+                modelRoot,
+                sourceCache);
+            var referenceBounds = calibration.Bounds;
             var targetHeight = clip.TargetVisibleHeight > 0
                 ? clip.TargetVisibleHeight
                 : recipe.Canvas.Height - (recipe.Padding * 2);
@@ -142,6 +150,21 @@ internal static class Program
                     clip.AnchorY,
                     clip.Align,
                     clip.Frames[index],
+                    outputPath);
+                written++;
+            }
+
+            if (clip.Calibration?.Emit == true)
+            {
+                var outputPath = Path.Combine(outputDirectory, $"{clip.Frames.Count:D3}.png");
+                RenderFrame(
+                    calibration.Source,
+                    calibration.Bounds,
+                    recipe.Canvas,
+                    commonScale,
+                    clip.AnchorY,
+                    clip.Align,
+                    clip.Calibration.Transform ?? FrameTransform.Identity,
                     outputPath);
                 written++;
             }
@@ -263,6 +286,39 @@ internal static class Program
         }
         target.Render(visual);
         SavePng(target, outputPath);
+    }
+
+    private static (BitmapSource Source, Int32Rect Bounds) LoadCalibrationFrame(
+        ClipRecipe clip,
+        string clipSourceName,
+        IReadOnlyList<(BitmapSource Source, Int32Rect Bounds)> frameSources,
+        string modelRoot,
+        IDictionary<string, BitmapSource> sourceCache)
+    {
+        if (clip.Calibration is null)
+        {
+            var referenceIndex = Math.Clamp(clip.ReferenceFrame, 0, frameSources.Count - 1);
+            return frameSources[referenceIndex];
+        }
+
+        var calibrationSourceName = clip.Calibration.Source ?? clipSourceName;
+        var calibrationSourcePath = ResolveContained(modelRoot, calibrationSourceName);
+        if (!sourceCache.TryGetValue(calibrationSourcePath, out var calibrationSource))
+        {
+            calibrationSource = LoadBitmap(calibrationSourcePath);
+            sourceCache.Add(calibrationSourcePath, calibrationSource);
+        }
+
+        ValidateRect(
+            clip.Calibration.SourceRect,
+            calibrationSource.PixelWidth,
+            calibrationSource.PixelHeight);
+        var crop = new CroppedBitmap(calibrationSource, new Int32Rect(
+            clip.Calibration.SourceRect.X,
+            clip.Calibration.SourceRect.Y,
+            clip.Calibration.SourceRect.Width,
+            clip.Calibration.SourceRect.Height));
+        return (crop, GetAlphaBounds(crop));
     }
 
     private static Int32Rect GetAlphaBounds(BitmapSource source)
@@ -537,8 +593,17 @@ internal sealed record ClipRecipe(
     int MaxVisibleWidth = 480,
     int AnchorY = 480,
     string Align = "bottom",
-    int ReferenceFrame = 0);
-internal sealed record FrameTransform(double ScaleX, double ScaleY, int OffsetX, int OffsetY);
+    int ReferenceFrame = 0,
+    CalibrationFrame? Calibration = null);
+internal sealed record CalibrationFrame(
+    SourceRect SourceRect,
+    string? Source = null,
+    bool Emit = false,
+    FrameTransform? Transform = null);
+internal sealed record FrameTransform(double ScaleX, double ScaleY, int OffsetX, int OffsetY)
+{
+    public static FrameTransform Identity { get; } = new(1.0, 1.0, 0, 0);
+}
 internal sealed record FrameWorkItem(string ClipId, int FrameIndex, AnimationFrame Frame);
 internal sealed record FrameMetric(string ClipId, int Index, int X, int Y, int Width, int Height, int Bottom);
 internal sealed record ReviewMetrics(int SchemaVersion, CanvasSize Canvas, IReadOnlyList<FrameMetric> Frames);
