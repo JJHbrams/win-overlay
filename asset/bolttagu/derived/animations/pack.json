@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "bolttagu-preview-v1",
+  "canvas": { "width": 512, "height": 512 },
+  "clips": [
+    {
+      "id": "idle_breathe",
+      "loop": true,
+      "frames": [
+        { "path": "idle_breathe/frames/000.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } },
+        { "path": "idle_breathe/frames/001.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } },
+        { "path": "idle_breathe/frames/002.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } },
+        { "path": "idle_breathe/frames/003.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "click",
+      "loop": false,
+      "frames": [
+        { "path": "click/frames/000.png", "durationMs": 80, "pivot": { "x": 256, "y": 480 } },
+        { "path": "click/frames/001.png", "durationMs": 100, "pivot": { "x": 256, "y": 480 } },
+        { "path": "click/frames/002.png", "durationMs": 120, "pivot": { "x": 256, "y": 480 } }
+      ]
+    }
+  ]
+}

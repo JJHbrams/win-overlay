@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "packId": "bolttagu-preview-v1",
+  "atlas": "atlas.png",
+  "atlasSize": {
+    "width": 2048,
+    "height": 1024
+  },
+  "clips": [
+    {
+      "id": "idle_breathe",
+      "loop": true
+    },
+    {
+      "id": "click",
+      "loop": false
+    }
+  ],
+  "frames": [
+    {
+      "clipId": "idle_breathe",
+      "index": 0,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 180,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "idle_breathe",
+      "index": 1,
+      "rect": {
+        "x": 512,
+        "y": 0,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 180,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "idle_breathe",
+      "index": 2,
+      "rect": {
+        "x": 1024,
+        "y": 0,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 180,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "idle_breathe",
+      "index": 3,
+      "rect": {
+        "x": 1536,
+        "y": 0,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 180,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "click",
+      "index": 0,
+      "rect": {
+        "x": 0,
+        "y": 512,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 80,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "click",
+      "index": 1,
+      "rect": {
+        "x": 512,
+        "y": 512,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 100,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    },
+    {
+      "clipId": "click",
+      "index": 2,
+      "rect": {
+        "x": 1024,
+        "y": 512,
+        "width": 512,
+        "height": 512
+      },
+      "durationMs": 120,
+      "pivot": {
+        "x": 256,
+        "y": 480
+      }
+    }
+  ]
+}

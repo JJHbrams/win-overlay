@@ -24,6 +24,17 @@ $dotnetExe = Join-Path $PWD '.dotnet\dotnet.exe'
 - 오른쪽 메뉴 또는 트레이에서 숨김·표시·종료를 선택한다.
 - 캐릭터 아래의 표시는 현재 WPF DPI scale이다.
 
+## 아트 파이프라인
+
+Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snapshot이며 앱은 Engram
+설치 경로를 읽지 않는다. P1 preview frame과 atlas를 다시 만들려면 다음을 실행한다.
+
+```powershell
+.\.dotnet\dotnet.exe run --project .\tools\Bolttagu.AssetBuild -- all
+```
+
+세부 규칙과 라이선스 주의사항은 `asset/bolttagu/README.md`를 참고한다.
+
 ## 설계 정본
 
 - `docs/design/0001-bolttagu-art-pack.md`

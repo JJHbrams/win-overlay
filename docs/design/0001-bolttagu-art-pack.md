@@ -2,7 +2,7 @@
 id: 0001-bolttagu-art-pack
 title: 볼따구 아트팩 기반
 tier: S
-status: approved
+status: done
 issue: 
 owner: antio
 created: 2026-09-20
@@ -37,7 +37,7 @@ created: 2026-09-20
 
 | 항목 | 확인된 사실 | 설계 반영 |
 |---|---|---|
-| 대상 저장소 | `win-overlay` 작업 디렉터리는 현재 비어 있고 Git 저장소가 아니다. `Get-ChildItem -Force`와 `git status`로 확인했다. | 기존 구조와 충돌하지 않도록 `asset/bolttagu`를 첫 프로젝트 자산 루트로 사용한다. Git 초기화는 별도 결정으로 남긴다. |
+| 대상 저장소 | `win-overlay`는 .NET 10/WPF solution과 모듈 경계를 갖춘 Git 저장소이며 P1 작업은 `feat/p1-asset-pipeline` 브랜치에서 수행한다. `git status`, `Bolttagu.slnx`, 프로젝트 참조를 확인했다. | 자산은 코드와 분리된 `asset/bolttagu`를 루트로 사용하고 compiler만 `Bolttagu.Assets`를 참조한다. |
 | 기본 캐릭터 | 원본 `engram.png`는 606×606, 32bpp ARGB이며 SHA-256은 `83C950A36F8A7DAD8FDE944F6FE19A1E4104140189B273F18E138C427121EA3A`다. | `upstream/engram/character.png`로 이름을 정규화하고 inventory에 원래 경로를 보존한다. |
 | 상태 시트 | `reactions/engram/states.png`는 2604×1632, 32bpp ARGB이고 6열×4행, 셀 434×408, 상단 crop 32px 규약을 manifest가 선언한다. SHA-256은 `D80C3522B40B3F095CF80BD15925DE1C7B1B45074682178A4BF93B8D43CF82D8`다. | 시트와 원본 manifest를 함께 복사해 프레임 의미와 crop 정보를 잃지 않는다. |
 | 효과 자산 | idle/click 효과는 각각 1254×1254, 24bpp RGB이며 세트 manifest가 상대 경로와 thickness를 선언한다. | 효과 파일과 세트 manifest를 같은 상대 구조로 보존한다. |
@@ -49,15 +49,15 @@ created: 2026-09-20
 
 | 파일 | 변경 |
 |---|---|
-| `asset/bolttagu/README.md` (신규) | 기준본 불변 규칙, 파생 아트 배치·명명 규약, 독립형 데스크톱 펫용 후속 제작 가이드를 기록한다. |
-| `asset/bolttagu/inventory.json` (신규) | 출처, 원본 상대 경로, 대상 경로, 크기, SHA-256을 기록한다. |
-| `asset/bolttagu/upstream/engram/character.png` (신규) | Engram 기본 볼따구 기준 이미지를 복사한다. |
-| `asset/bolttagu/upstream/engram/reactions/manifest.yaml` (신규) | 상태·프레임 매핑 기준 manifest를 복사한다. |
-| `asset/bolttagu/upstream/engram/reactions/states.png` (신규) | 24셀 상태 시트를 복사한다. |
-| `asset/bolttagu/upstream/engram/set/manifest.yaml` (신규) | 기본 세트와 효과 경로 manifest를 복사한다. |
-| `asset/bolttagu/upstream/engram/set/effects/idle.png` (신규) | idle 효과 기준본을 복사한다. |
-| `asset/bolttagu/upstream/engram/set/effects/click.png` (신규) | click 효과 기준본을 복사한다. |
-| `asset/bolttagu/derived/.gitkeep` (신규) | 파생 아트 전용 작업 영역을 생성한다. |
+| `asset/bolttagu/README.md` | 기준본 불변 규칙, 파생 아트 배치·명명 규약, 독립형 데스크톱 펫용 후속 제작 가이드를 기록한다. |
+| `asset/bolttagu/inventory.json` | 출처, 원본 상대 경로, 대상 경로, 크기, SHA-256을 기록한다. |
+| `asset/bolttagu/upstream/engram/character.png` | Engram 기본 볼따구 기준 이미지를 복사한다. |
+| `asset/bolttagu/upstream/engram/reactions/manifest.yaml` | 상태·프레임 매핑 기준 manifest를 복사한다. |
+| `asset/bolttagu/upstream/engram/reactions/states.png` | 24셀 상태 시트를 복사한다. |
+| `asset/bolttagu/upstream/engram/set/manifest.yaml` | 기본 세트와 효과 경로 manifest를 복사한다. |
+| `asset/bolttagu/upstream/engram/set/effects/idle.png` | idle 효과 기준본을 복사한다. |
+| `asset/bolttagu/upstream/engram/set/effects/click.png` | click 효과 기준본을 복사한다. |
+| `asset/bolttagu/derived/` | 파생 아트 전용 작업 영역을 생성한다. |
 
 ## 10. 잠재 문제 & 대응
 
@@ -71,6 +71,6 @@ created: 2026-09-20
 
 각 항목에 담당 AC 를 적는다. `check` 가 고아 AC 를 잡아낸다.
 
-- [ ] 1. 지정한 Engram 기준 자산 6개를 원본 변경 없이 복사하고 해시를 대조한다. (AC-1)
-- [ ] 2. inventory를 작성하고 실제 파일 메타데이터와 검증한다. (AC-3)
-- [ ] 3. derived 작업 영역과 아트 확장 규칙을 작성한다. (AC-2)
+- [x] 1. 지정한 Engram 기준 자산 6개를 원본 변경 없이 복사하고 해시를 대조한다. (AC-1)
+- [x] 2. inventory를 작성하고 실제 파일 메타데이터와 검증한다. (AC-3)
+- [x] 3. derived 작업 영역과 아트 확장 규칙을 작성한다. (AC-2)

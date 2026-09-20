@@ -49,6 +49,7 @@ created: 2026-09-20
 | 에셋 기준 | 기존 상태 시트는 6×4의 24셀이고 대부분 동일한 상반신 포즈와 문구·표정 변형이다. 원본 시트를 직접 시각 검사했다. | 기존 시트는 참고·반응 자산으로 보존하되, 전신 모델과 연속 동작용 frame을 새로 제작한다. |
 | 기존 파일 규격 | 기본 캐릭터는 606×606 RGBA, 상태 시트는 2604×1632 RGBA이며 idle/click 효과와 manifest가 있다. 파일 metadata와 manifest를 직접 확인했다. | upstream snapshot과 inventory를 먼저 만들고, 새 아트는 derived source에서 별도로 관리한다. |
 | 기술 스택 | 프로젝트 로컬 .NET 10.0.401 SDK와 WPF로 Release build, 실제 HWND, 투명·topmost 속성, tray 생성·해제, self-contained win-x64 publish와 실제 프로세스 기동을 확인했다. (직접 측정, 2026-09-20) | LTS .NET 10 + WPF를 채택하고 Presentation 성능이 목표를 넘을 때만 renderer adapter 교체를 검토한다. |
+| P1 아트 파이프라인 | Engram 원본 6개를 SHA-256 inventory로 고정했고, 1774×887 RGBA 전신 turnaround 후보와 512×512 `idle_breathe`·`click` preview 7프레임을 생성했다. validator와 atlas compiler를 동일 입력으로 두 번 실행해 build hash `B2A2DE706985FAEBAA0A97089C5A03C5A21081982B1E3350F4CA86699B9FF31D`가 일치함을 확인했다. | 모델 시트는 `candidate`로 유지해 사람 승인 전 대량 animation 제작을 막고, 승인 후 P1 gate를 닫는다. |
 | 연동 범위 | Engram은 현재 제품의 실행 요구가 아니며 향후 연결 가능성만 있다. | Integrations는 출시 후 선택 단계이며 v1 일정과 dependency graph에서 제외한다. |
 
 ## 4. 유스케이스 / 시나리오
@@ -148,11 +149,11 @@ stateDiagram-v2
 | `README.md` | 제품 범위, 개발·검증·실행 진입점을 제공한다. |
 | `docs/adr/0001-runtime-stack.md` | stack spike 결과와 선택·기각 근거를 기록한다. |
 | `docs/architecture/module-boundaries.md` | `0002`의 모듈 책임과 실제 프로젝트 참조 규칙을 고정한다. |
-| `asset/bolttagu/README.md` (신규) | upstream/derived/build 규칙과 아트 제작 가이드를 제공한다. |
-| `asset/bolttagu/inventory.json` (신규) | 원본 경로·크기·hash를 기록한다. |
-| `asset/bolttagu/derived/model/` (신규) | 전신 기준 모델·palette·turnaround를 보관한다. |
-| `asset/bolttagu/derived/animations/` (신규) | clip별 개별 RGBA frame과 metadata를 보관한다. |
-| `tools/asset-build/` (신규) | validator, trim, atlas packing, manifest 생성을 담당한다. |
+| `asset/bolttagu/README.md` | upstream/derived/build 규칙과 아트 제작 가이드를 제공한다. |
+| `asset/bolttagu/inventory.json` | 원본 경로·크기·hash를 기록한다. |
+| `asset/bolttagu/derived/model/` | 전신 기준 모델·palette·turnaround를 보관한다. |
+| `asset/bolttagu/derived/animations/` | clip별 개별 RGBA frame과 metadata를 보관한다. |
+| `tools/Bolttagu.AssetBuild/` | validator, preview frame 생성, atlas packing, manifest 생성을 담당한다. |
 | `src/Bolttagu.Contracts/` | 모듈 경계 event·command·port·snapshot 계약을 소유한다. |
 | `src/Bolttagu.Core/` | 순수 상태·행동·scheduler·motion intent를 소유한다. |
 | `src/Bolttagu.Runtime/` | 단일 이벤트 큐와 behavior lifecycle·dispatch를 소유한다. |

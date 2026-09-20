@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "source": "turnaround-v1.png",
+  "sourceRect": { "x": 0, "y": 0, "width": 443, "height": 887 },
+  "canvas": { "width": 512, "height": 512 },
+  "padding": 32,
+  "clips": [
+    {
+      "id": "idle_breathe",
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.01, "scaleY": 0.985, "offsetX": 0, "offsetY": 1 },
+        { "scaleX": 1.0, "scaleY": 0.975, "offsetX": 0, "offsetY": 2 },
+        { "scaleX": 0.995, "scaleY": 0.99, "offsetX": 0, "offsetY": 1 }
+      ]
+    },
+    {
+      "id": "click",
+      "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.08, "scaleY": 0.90, "offsetX": 0, "offsetY": 4 },
+        { "scaleX": 0.97, "scaleY": 1.04, "offsetX": 0, "offsetY": -2 }
+      ]
+    }
+  ]
+}
