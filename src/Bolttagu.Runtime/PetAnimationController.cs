@@ -28,6 +28,7 @@ public sealed class PetAnimationController : IDisposable
     private const double DragPulledThreshold = 80;
     private const double DragHeldThreshold = 40;
     private const double DragFilterSeconds = 0.08;
+    private const double DizzyRecoveryFallHeight = 260;
     private readonly IAnimationPlayer _player;
     private readonly IOverlayWindow _window;
     private readonly BehaviorPlanner _planner;
@@ -46,6 +47,7 @@ public sealed class PetAnimationController : IDisposable
     private double _dragVelocityY;
     private ScreenPoint _fallOrigin;
     private TimeSpan _fallStartedAt;
+    private bool _requiresDizzyRecovery;
     private TimeSpan _exitDeadline;
     private bool _exitReadyRaised;
     private bool _disposed;
@@ -313,6 +315,7 @@ public sealed class PetAnimationController : IDisposable
         _support = null;
         _fallOrigin = _window.Position;
         _fallStartedAt = now;
+        _requiresDizzyRecovery = false;
         State = PetRuntimeState.Falling;
         _player.Play(PetActionClips.Fall);
     }
@@ -320,7 +323,9 @@ public sealed class PetAnimationController : IDisposable
     private void StartLanding(DesktopSurface surface)
     {
         _support = surface;
-        _window.MoveTo(new(_window.Position.X, surface.Top - _window.Size.Height));
+        var landingY = surface.Top - _window.Size.Height;
+        _requiresDizzyRecovery = landingY - _fallOrigin.Y >= DizzyRecoveryFallHeight;
+        _window.MoveTo(new(_window.Position.X, landingY));
         State = PetRuntimeState.Landing;
         _player.Play(PetActionClips.DropLand);
     }
@@ -421,8 +426,15 @@ public sealed class PetAnimationController : IDisposable
         }
         else if (State == PetRuntimeState.Landing && e.ClipId == PetActionClips.DropLand)
         {
-            State = PetRuntimeState.Recovering;
-            _player.Play(PetActionClips.LandRecover);
+            if (_requiresDizzyRecovery)
+            {
+                State = PetRuntimeState.Recovering;
+                _player.Play(PetActionClips.LandRecover);
+            }
+            else
+            {
+                EnterIdle(_clock.Elapsed);
+            }
         }
         else if (State == PetRuntimeState.Recovering && e.ClipId == PetActionClips.LandRecover)
         {

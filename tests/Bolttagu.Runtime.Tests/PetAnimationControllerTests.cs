@@ -102,7 +102,7 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
-    public void DragRelease_PlaysHeldThenLandingThenIdle()
+    public void HighDragRelease_AddsDizzyRecoveryAfterLanding()
     {
         using var fixture = new Fixture(2000, 2000);
         fixture.StartToIdle();
@@ -120,6 +120,26 @@ public sealed class PetAnimationControllerTests
         Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
         CollectionAssert.AreEqual(
             new[] { PetActionClips.Idle, PetActionClips.DragHeldIdle, PetActionClips.Fall, PetActionClips.DropLand, PetActionClips.LandRecover, PetActionClips.Idle },
+            fixture.Player.PlayedClips.ToArray());
+    }
+
+    [TestMethod]
+    public void LowDragRelease_UsesExistingFallAndLandingWithoutDizzyRecovery()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        fixture.Controller.BeginDrag();
+        fixture.Controller.CompleteDrag();
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(10);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
+        fixture.Player.Complete(PetActionClips.DropLand);
+
+        Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+        CollectionAssert.AreEqual(
+            new[] { PetActionClips.Idle, PetActionClips.DragHeldIdle, PetActionClips.Fall, PetActionClips.DropLand, PetActionClips.Idle },
             fixture.Player.PlayedClips.ToArray());
     }
 
@@ -166,7 +186,7 @@ public sealed class PetAnimationControllerTests
         fixture.Player.Complete(PetActionClips.DozeEnter);
         Assert.AreEqual(PetActionClips.DozeLoop, fixture.Player.CurrentClipId);
 
-        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(3230);
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(5550);
         fixture.Controller.Tick();
         Assert.AreEqual(PetActionClips.WakeUp, fixture.Player.CurrentClipId);
         fixture.Player.Complete(PetActionClips.WakeUp);

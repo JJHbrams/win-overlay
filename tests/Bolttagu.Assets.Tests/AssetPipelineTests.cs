@@ -255,6 +255,7 @@ public sealed class AssetPipelineTests
         {
             var frame = representativeFrames.Single(item =>
                 item.GetProperty("clipId").GetString() == clipId && item.GetProperty("index").GetInt32() == 0);
+            Assert.IsInRange(220, 240, frame.GetProperty("width").GetInt32(), $"{clipId} head/body scale drifted.");
             Assert.IsInRange(411, 429, frame.GetProperty("height").GetInt32(), $"{clipId} scale drifted.");
             Assert.IsInRange(477, 480, frame.GetProperty("bottom").GetInt32(), $"{clipId} ground anchor drifted.");
         }
@@ -262,6 +263,15 @@ public sealed class AssetPipelineTests
             frame.GetProperty("clipId").GetString() == "doze_loop" && frame.GetProperty("index").GetInt32() == 0);
         Assert.IsInRange(320, 340, doze.GetProperty("height").GetInt32(), "Doze scale drifted.");
         Assert.IsInRange(477, 480, doze.GetProperty("bottom").GetInt32(), "Doze ground anchor drifted.");
+        var wake = representativeFrames.Single(frame =>
+            frame.GetProperty("clipId").GetString() == "wake_up" && frame.GetProperty("index").GetInt32() == 5);
+        Assert.IsInRange(228, 240, wake.GetProperty("width").GetInt32(), "Wake-up head/body scale drifted.");
+        Assert.IsInRange(411, 429, wake.GetProperty("height").GetInt32(), "Wake-up scale drifted.");
+        var seated = representativeFrames.Single(frame =>
+            frame.GetProperty("clipId").GetString() == "sit_down" && frame.GetProperty("index").GetInt32() == 5);
+        Assert.IsInRange(228, 242, seated.GetProperty("width").GetInt32(), "Seated head/body scale drifted.");
+        Assert.IsGreaterThanOrEqualTo(100, seated.GetProperty("y").GetInt32(),
+            "Sit-down final frame contains pixels above the expected character bounds; check for adjacent-cell bleed.");
     }
 
     [TestMethod]

@@ -46,7 +46,7 @@ public sealed class AnimationPlaybackTests
                 runner.HandleCompletion(PetActionClips.DozeEnter, TimeSpan.FromMilliseconds(750));
                 Assert.AreEqual(PetActionClips.DozeLoop, view.CurrentClipId);
 
-                runner.Tick(TimeSpan.FromMilliseconds(3230));
+                runner.Tick(TimeSpan.FromMilliseconds(5550));
                 Assert.AreEqual(PetActionClips.WakeUp, view.CurrentClipId);
             }
             catch (Exception exception) { failure = exception; }

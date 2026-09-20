@@ -144,28 +144,28 @@
       "id": "sit_settle",
       "loop": false,
       "frames": [
-        { "path": "sit_settle/frames/000.png", "durationMs": 120, "pivot": { "x": 256, "y": 480 } },
-        { "path": "sit_settle/frames/001.png", "durationMs": 140, "pivot": { "x": 256, "y": 480 } },
-        { "path": "sit_settle/frames/002.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } }
+        { "path": "sit_settle/frames/000.png", "durationMs": 250, "pivot": { "x": 256, "y": 480 } },
+        { "path": "sit_settle/frames/001.png", "durationMs": 250, "pivot": { "x": 256, "y": 480 } },
+        { "path": "sit_settle/frames/002.png", "durationMs": 250, "pivot": { "x": 256, "y": 480 } }
       ]
     },
     {
       "id": "doze_enter",
       "loop": false,
       "frames": [
-        { "path": "doze_enter/frames/000.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } },
-        { "path": "doze_enter/frames/001.png", "durationMs": 220, "pivot": { "x": 256, "y": 480 } },
-        { "path": "doze_enter/frames/002.png", "durationMs": 280, "pivot": { "x": 256, "y": 480 } }
+        { "path": "doze_enter/frames/000.png", "durationMs": 350, "pivot": { "x": 256, "y": 480 } },
+        { "path": "doze_enter/frames/001.png", "durationMs": 450, "pivot": { "x": 256, "y": 480 } },
+        { "path": "doze_enter/frames/002.png", "durationMs": 650, "pivot": { "x": 256, "y": 480 } }
       ]
     },
     {
       "id": "doze_loop",
       "loop": true,
       "frames": [
-        { "path": "doze_loop/frames/000.png", "durationMs": 300, "pivot": { "x": 256, "y": 480 } },
-        { "path": "doze_loop/frames/001.png", "durationMs": 320, "pivot": { "x": 256, "y": 480 } },
-        { "path": "doze_loop/frames/002.png", "durationMs": 320, "pivot": { "x": 256, "y": 480 } },
-        { "path": "doze_loop/frames/003.png", "durationMs": 300, "pivot": { "x": 256, "y": 480 } }
+        { "path": "doze_loop/frames/000.png", "durationMs": 550, "pivot": { "x": 256, "y": 480 } },
+        { "path": "doze_loop/frames/001.png", "durationMs": 650, "pivot": { "x": 256, "y": 480 } },
+        { "path": "doze_loop/frames/002.png", "durationMs": 650, "pivot": { "x": 256, "y": 480 } },
+        { "path": "doze_loop/frames/003.png", "durationMs": 550, "pivot": { "x": 256, "y": 480 } }
       ]
     },
     {

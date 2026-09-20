@@ -66,7 +66,7 @@ public static class BehaviorDefinitionValidator
 
 public static class BehaviorDefinitions
 {
-    public static readonly TimeSpan DozeLoopCycleDuration = TimeSpan.FromMilliseconds(1240);
+    public static readonly TimeSpan DozeLoopCycleDuration = TimeSpan.FromMilliseconds(2400);
     public const string Walk = "walk";
     public const string LookAround = "look-around";
     public const string Stretch = "stretch";

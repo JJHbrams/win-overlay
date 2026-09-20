@@ -40,9 +40,9 @@ public sealed class BehaviorGrammarTests
         Assert.IsTrue(runner.HandleCompletion(PetActionClips.SitDown, TimeSpan.Zero));
         Assert.IsTrue(runner.Tick(TimeSpan.FromMilliseconds(750)));
         Assert.IsTrue(runner.HandleCompletion(PetActionClips.DozeEnter, TimeSpan.FromMilliseconds(750)));
-        Assert.IsTrue(runner.Tick(TimeSpan.FromMilliseconds(3230)));
-        Assert.IsTrue(runner.HandleCompletion(PetActionClips.WakeUp, TimeSpan.FromMilliseconds(3230)));
-        Assert.IsTrue(runner.HandleCompletion(PetActionClips.StandUp, TimeSpan.FromMilliseconds(3230)));
+        Assert.IsTrue(runner.Tick(TimeSpan.FromMilliseconds(5550)));
+        Assert.IsTrue(runner.HandleCompletion(PetActionClips.WakeUp, TimeSpan.FromMilliseconds(5550)));
+        Assert.IsTrue(runner.HandleCompletion(PetActionClips.StandUp, TimeSpan.FromMilliseconds(5550)));
         CollectionAssert.AreEqual(new[] { PetActionClips.SitDown, PetActionClips.SitSettle, PetActionClips.DozeEnter,
             PetActionClips.DozeLoop, PetActionClips.WakeUp, PetActionClips.StandUp }, player.Played);
         Assert.IsFalse(runner.IsRunning);
