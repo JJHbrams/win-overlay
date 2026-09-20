@@ -27,7 +27,8 @@ public partial class App : System.Windows.Application
             player,
             overlay,
             new BehaviorPlanner(new SystemRandomSource(Random.Shared)),
-            new StopwatchClock());
+            new StopwatchClock(),
+            new DesktopSurfaceProvider(overlay));
         var runtimeLoop = new WpfRuntimeLoop(Dispatcher, animationController.Tick);
 
         overlay.ClickObserved += (_, _) => animationController.ReactToClick();

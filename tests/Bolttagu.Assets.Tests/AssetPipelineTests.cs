@@ -2,6 +2,7 @@ using Bolttagu.Assets;
 using Bolttagu.Contracts;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 
 namespace Bolttagu.Assets.Tests;
 
@@ -38,7 +39,7 @@ public sealed class AssetPipelineTests
 
         Assert.HasCount(0, issues, string.Join(Environment.NewLine, issues));
         CollectionAssert.AreEqual(
-            new[] { "idle_breathe", "click", "walk", "turn", "drag_dangle", "drop_land" },
+            new[] { "idle_breathe", "click", "walk", "turn", "drag_dangle", "drop_land", "turn_to_idle", "fall" },
             pack.Clips.Select(clip => clip.Id).ToArray());
     }
 
@@ -111,6 +112,8 @@ public sealed class AssetPipelineTests
         Assert.HasCount(4, catalog.GetClip("turn").Frames);
         Assert.HasCount(4, catalog.GetClip("drag_dangle").Frames);
         Assert.HasCount(4, catalog.GetClip("drop_land").Frames);
+        Assert.HasCount(4, catalog.GetClip("turn_to_idle").Frames);
+        Assert.HasCount(1, catalog.GetClip("fall").Frames);
         CollectionAssert.AreEquivalent(
             Enum.GetValues<PetAction>(),
             PetActionClips.All.Keys.ToArray(),
@@ -119,6 +122,38 @@ public sealed class AssetPipelineTests
         {
             Assert.IsGreaterThan(0, catalog.GetClip(clipId).Frames.Count, $"Missing art for {clipId}.");
         }
+    }
+
+    [TestMethod]
+    public void ReviewArtifacts_UseCanonicalCaptureBoxAndReadableTiming()
+    {
+        var buildRoot = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build");
+        var sheet = PngInspector.Read(Path.Combine(buildRoot, "review", "contact-sheet.png"));
+        Assert.AreEqual(1024, sheet.Width);
+        Assert.IsGreaterThan(1000, sheet.Height);
+
+        using var metrics = JsonDocument.Parse(File.ReadAllText(
+            Path.Combine(buildRoot, "review", "frame-metrics.json")));
+        var grounded = new[] { "idle_breathe", "click", "walk", "turn" };
+        foreach (var clipId in grounded)
+        {
+            var reference = metrics.RootElement.GetProperty("frames")
+                .EnumerateArray()
+                .Single(frame => frame.GetProperty("clipId").GetString() == clipId &&
+                                 frame.GetProperty("index").GetInt32() == 0);
+            Assert.IsInRange(411, 429, reference.GetProperty("height").GetInt32(), $"{clipId} scale drifted.");
+            Assert.IsInRange(477, 480, reference.GetProperty("bottom").GetInt32(), $"{clipId} ground anchor drifted.");
+        }
+
+        var packPath = Path.Combine(RepositoryRoot, "asset", "bolttagu", "derived", "animations", "pack.json");
+        var pack = AnimationPackLoader.Load(packPath);
+        var drag = pack.Clips.Single(clip => clip.Id == "drag_dangle");
+        foreach (var frame in drag.Frames)
+        {
+            Assert.IsGreaterThanOrEqualTo(160, frame.DurationMs);
+        }
+        var landing = pack.Clips.Single(clip => clip.Id == "drop_land");
+        Assert.IsGreaterThanOrEqualTo(600, landing.Frames.Sum(frame => frame.DurationMs));
     }
 
     [TestMethod]
@@ -146,6 +181,8 @@ public sealed class AssetPipelineTests
             Assert.HasCount(1, catalog.GetClip("turn").Frames);
             Assert.HasCount(1, catalog.GetClip("drag_dangle").Frames);
             Assert.HasCount(1, catalog.GetClip("drop_land").Frames);
+            Assert.HasCount(1, catalog.GetClip("turn_to_idle").Frames);
+            Assert.HasCount(1, catalog.GetClip("fall").Frames);
         }
         finally
         {

@@ -1,0 +1,7 @@
+flowchart LR
+  Artist["아트 작업자"] --> Build["동일 캡처박스 build"]
+  Build --> Review["contact sheet·metrics 검수"]
+  User["사용자"] --> Drag["드래그 후 놓기"]
+  User --> Auto["자율 보행 관찰"]
+  Drag --> Surface["첫 window/taskbar 표면"]
+  Auto --> Surface

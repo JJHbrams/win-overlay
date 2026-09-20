@@ -26,6 +26,17 @@ public sealed class OverlayWindowSmokeTests
                 Assert.IsTrue(window.Topmost);
                 Assert.IsFalse(window.ShowInTaskbar);
 
+                var overlay = (Bolttagu.Contracts.IOverlayWindow)window;
+                var surfaces = new DesktopSurfaceProvider(window);
+                var surface = surfaces.FindFirstBelow(
+                    overlay.Position.X + (overlay.Size.Width / 2d),
+                    overlay.Position.Y + overlay.Size.Height - 8,
+                    overlay.WorkArea);
+                Assert.IsGreaterThanOrEqualTo(
+                    overlay.Position.Y + overlay.Size.Height - 11,
+                    surface.Top,
+                    "Desktop surface must be at or below the pet's foot probe.");
+
                 window.Close();
             }
             catch (Exception exception)

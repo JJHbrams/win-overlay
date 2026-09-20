@@ -33,6 +33,16 @@ Animation frames must keep the pivot fixed unless locomotion metadata explicitly
 Generated art is a draft until its model metadata says `approved`; bulk animation production must
 not begin from a `candidate` model.
 
+### Canonical capture boxes
+
+- Grounded clips use a 420px reference silhouette height and ground anchor `Y=480` on the
+  512×512 canvas. One reference-frame scale is shared by the whole clip so pose compression and
+  rebound remain visible without cross-clip size jumps.
+- `drag_dangle` uses a top-aligned grab anchor at `Y=104`; it is reviewed separately from the
+  grounded foot pivot.
+- Every build writes `build/review/contact-sheet.png` and `frame-metrics.json`. Review these before
+  promoting generated strips from `candidate` to `approved`.
+
 ## Action completeness gate
 
 An action is implemented only when all four parts land together:

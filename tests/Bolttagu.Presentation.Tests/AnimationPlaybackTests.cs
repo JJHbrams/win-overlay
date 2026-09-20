@@ -129,7 +129,11 @@ public sealed class AnimationPlaybackTests
                 var catalog = RuntimeAnimationCatalog.Load(Path.Combine(root, "asset", "bolttagu", "build"));
                 using var view = new PetSpriteView(catalog);
                 using var controller = new PetAnimationController(
-                    view, new TestWindow(), new BehaviorPlanner(new FixedRandom()), new FixedClock());
+                    view,
+                    new TestWindow(),
+                    new BehaviorPlanner(new FixedRandom()),
+                    new FixedClock(),
+                    new FixedSurfaceProvider());
                 controller.Start();
                 controller.ReactToClick();
 
@@ -205,5 +209,11 @@ public sealed class AnimationPlaybackTests
         public void PlaceAtBottomRight(double margin) { }
         public void MoveTo(ScreenPoint position) => Position = position;
         public void CloseOverlay() { }
+    }
+
+    private sealed class FixedSurfaceProvider : IDesktopSurfaceProvider
+    {
+        public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea) =>
+            new(new(new(0, workArea.Bottom), new(workArea.Size.Width, 1)), DesktopSurfaceKind.Taskbar);
     }
 }

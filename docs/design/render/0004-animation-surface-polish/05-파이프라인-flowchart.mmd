@@ -1,0 +1,8 @@
+flowchart TD
+  Source["candidate strips"] --> Trim["alpha bounds 측정"]
+  Trim --> Normalize["capture box·anchor 정규화"]
+  Normalize --> Metrics["metrics + contact sheet"]
+  Metrics --> Atlas["atlas/catalog"]
+  Pointer["drag release / walk plan"] --> Query["surface provider"]
+  Query -->|window/taskbar| Move["surface 범위·top 사용"]
+  Query -->|없음/오류| Fallback["work area bottom"]

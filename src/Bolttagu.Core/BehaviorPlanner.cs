@@ -55,6 +55,6 @@ public sealed class BehaviorPlanner(IRandomSource random)
             targetX = Math.Clamp(position.X + signedDistance, minimumX, maximumX);
         }
 
-        return new(facing, targetX, 90, facing != currentFacing);
+        return new(facing, targetX, 72, facing != currentFacing);
     }
 }

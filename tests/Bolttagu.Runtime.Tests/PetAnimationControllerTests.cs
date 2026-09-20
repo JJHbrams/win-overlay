@@ -25,12 +25,13 @@ public sealed class PetAnimationControllerTests
         fixture.Controller.Start();
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
-        Assert.AreEqual(PetRuntimeState.Walking, fixture.Controller.State);
+        Assert.AreEqual(PetRuntimeState.Turning, fixture.Controller.State);
+        fixture.Player.Complete(PetActionClips.Turn);
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(3);
         fixture.Controller.Tick();
         Assert.IsGreaterThan(100, fixture.Window.Position.X);
         CollectionAssert.AreEqual(
-            new[] { PetActionClips.Idle, PetActionClips.Walk },
+            new[] { PetActionClips.Idle, PetActionClips.Turn, PetActionClips.Walk },
             fixture.Player.PlayedClips.ToArray());
     }
 
@@ -46,6 +47,24 @@ public sealed class PetAnimationControllerTests
         Assert.AreEqual(PetRuntimeState.Walking, fixture.Controller.State);
         CollectionAssert.AreEqual(
             new[] { PetActionClips.Idle, PetActionClips.Turn, PetActionClips.Walk },
+            fixture.Player.PlayedClips.ToArray());
+    }
+
+    [TestMethod]
+    public void WalkCompletion_ReversesTurnBeforeIdle()
+    {
+        using var fixture = new Fixture(2000, 1, 120, 2000);
+        fixture.Controller.Start();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        fixture.Player.Complete(PetActionClips.Turn);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(4);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.TurningToIdle, fixture.Controller.State);
+        fixture.Player.Complete(PetActionClips.TurnToIdle);
+        Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+        CollectionAssert.AreEqual(
+            new[] { PetActionClips.Idle, PetActionClips.Turn, PetActionClips.Walk, PetActionClips.TurnToIdle, PetActionClips.Idle },
             fixture.Player.PlayedClips.ToArray());
     }
 
@@ -69,14 +88,18 @@ public sealed class PetAnimationControllerTests
     {
         using var fixture = new Fixture(2000, 2000);
         fixture.Controller.Start();
+        fixture.Window.MoveTo(new(100, 100));
         fixture.Controller.BeginDrag();
         Assert.AreEqual(PetRuntimeState.Dragging, fixture.Controller.State);
         fixture.Controller.CompleteDrag();
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
         fixture.Player.Complete(PetActionClips.DropLand);
         Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
         CollectionAssert.AreEqual(
-            new[] { PetActionClips.Idle, PetActionClips.DragDangle, PetActionClips.DropLand, PetActionClips.Idle },
+            new[] { PetActionClips.Idle, PetActionClips.DragDangle, PetActionClips.Fall, PetActionClips.DropLand, PetActionClips.Idle },
             fixture.Player.PlayedClips.ToArray());
     }
 
@@ -96,10 +119,11 @@ public sealed class PetAnimationControllerTests
     private sealed class Fixture : IDisposable
     {
         public Fixture(params int[] randomValues) =>
-            Controller = new(Player, Window, new(new SequenceRandom(randomValues)), Clock);
+            Controller = new(Player, Window, new(new SequenceRandom(randomValues)), Clock, Surfaces);
         public FakeAnimationPlayer Player { get; } = new();
         public FakeWindow Window { get; } = new();
         public FakeClock Clock { get; } = new();
+        public FakeSurfaceProvider Surfaces { get; } = new();
         public PetAnimationController Controller { get; }
         public void Dispose() => Controller.Dispose();
     }
@@ -149,5 +173,11 @@ public sealed class PetAnimationControllerTests
         public void HideOverlay() { }
         public void PlaceAtBottomRight(double margin) { }
         public void CloseOverlay() { }
+    }
+
+    private sealed class FakeSurfaceProvider : IDesktopSurfaceProvider
+    {
+        public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea) =>
+            new(new(new(0, 720), new(1200, 400)), DesktopSurfaceKind.Window);
     }
 }

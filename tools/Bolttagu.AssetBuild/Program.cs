@@ -1,4 +1,5 @@
 using System.IO;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -105,6 +106,7 @@ internal static class Program
             {
                 throw new InvalidDataException($"Clip '{clip.Id}' must declare one source rect or one per frame.");
             }
+            var frameSources = new List<(BitmapSource Source, Int32Rect Bounds)>();
             for (var index = 0; index < clip.Frames.Count; index++)
             {
                 var sourceRect = sourceRects.Count == 1 ? sourceRects[0] : sourceRects[index];
@@ -114,8 +116,33 @@ internal static class Program
                     sourceRect.Y,
                     sourceRect.Width,
                     sourceRect.Height));
+                frameSources.Add((crop, GetAlphaBounds(crop)));
+            }
+
+            var referenceIndex = Math.Clamp(clip.ReferenceFrame, 0, frameSources.Count - 1);
+            var referenceBounds = frameSources[referenceIndex].Bounds;
+            var targetHeight = clip.TargetVisibleHeight > 0
+                ? clip.TargetVisibleHeight
+                : recipe.Canvas.Height - (recipe.Padding * 2);
+            var maxWidth = clip.MaxVisibleWidth > 0
+                ? clip.MaxVisibleWidth
+                : recipe.Canvas.Width - (recipe.Padding * 2);
+            var commonScale = Math.Min(
+                targetHeight / (double)referenceBounds.Height,
+                maxWidth / (double)referenceBounds.Width);
+
+            for (var index = 0; index < clip.Frames.Count; index++)
+            {
                 var outputPath = Path.Combine(outputDirectory, $"{index:D3}.png");
-                RenderFrame(crop, recipe.Canvas, recipe.Padding, clip.Frames[index], outputPath);
+                RenderFrame(
+                    frameSources[index].Source,
+                    frameSources[index].Bounds,
+                    recipe.Canvas,
+                    commonScale,
+                    clip.AnchorY,
+                    clip.Align,
+                    clip.Frames[index],
+                    outputPath);
                 written++;
             }
         }
@@ -190,6 +217,7 @@ internal static class Program
             catalogFrames);
         var catalogPath = Path.Combine(buildRoot, "catalog.json");
         WriteJson(catalogPath, catalog);
+        var reviewOutputs = WriteReviewArtifacts(buildRoot, animationRoot, pack, orderedFrames);
 
         var modelRoot = Path.Combine(root, "asset", "bolttagu", "derived", "model");
         var inputs = Directory.EnumerateFiles(modelRoot, "*.png", SearchOption.TopDirectoryOnly)
@@ -199,7 +227,9 @@ internal static class Program
         inputs.Add(HashArtifact(root, packPath));
         inputs.AddRange(orderedFrames.Select(item => HashArtifact(root, ResolveContained(animationRoot, item.Frame.Path))));
         inputs = inputs.DistinctBy(item => item.Path, StringComparer.Ordinal).OrderBy(item => item.Path, StringComparer.Ordinal).ToList();
-        var outputs = new[] { HashArtifact(root, atlasPath), HashArtifact(root, catalogPath) };
+        var outputs = new[] { HashArtifact(root, atlasPath), HashArtifact(root, catalogPath) }
+            .Concat(reviewOutputs.Select(path => HashArtifact(root, path)))
+            .ToArray();
         var buildHash = ComputeBuildHash(inputs.Concat(outputs));
         WriteJson(Path.Combine(buildRoot, "build-manifest.json"), new BuildManifest(1, buildHash, inputs, outputs));
 
@@ -209,32 +239,119 @@ internal static class Program
 
     private static void RenderFrame(
         BitmapSource source,
+        Int32Rect alphaBounds,
         CanvasSize canvas,
-        int padding,
+        double commonScale,
+        int anchorY,
+        string align,
         FrameTransform transform,
         string outputPath)
     {
-        var availableWidth = canvas.Width - (padding * 2);
-        var availableHeight = canvas.Height - (padding * 2);
-        if (availableWidth <= 0 || availableHeight <= 0)
-        {
-            throw new InvalidDataException("Padding leaves no drawable canvas.");
-        }
-
-        var fit = Math.Min(availableWidth / (double)source.PixelWidth, availableHeight / (double)source.PixelHeight);
-        var width = Math.Round(source.PixelWidth * fit * transform.ScaleX);
-        var height = Math.Round(source.PixelHeight * fit * transform.ScaleY);
+        var trimmed = new CroppedBitmap(source, alphaBounds);
+        var width = Math.Round(alphaBounds.Width * commonScale * transform.ScaleX);
+        var height = Math.Round(alphaBounds.Height * commonScale * transform.ScaleY);
         var x = Math.Round((canvas.Width - width) / 2d + transform.OffsetX);
-        var y = Math.Round(canvas.Height - padding - height + transform.OffsetY);
+        var y = align.Equals("top", StringComparison.OrdinalIgnoreCase)
+            ? anchorY + transform.OffsetY
+            : anchorY - height + transform.OffsetY;
 
         var target = new RenderTargetBitmap(canvas.Width, canvas.Height, 96, 96, PixelFormats.Pbgra32);
         var visual = new DrawingVisual();
         using (var context = visual.RenderOpen())
         {
-            context.DrawImage(source, new Rect(x, y, width, height));
+            context.DrawImage(trimmed, new Rect(x, y, width, height));
         }
         target.Render(visual);
         SavePng(target, outputPath);
+    }
+
+    private static Int32Rect GetAlphaBounds(BitmapSource source)
+    {
+        var converted = new FormatConvertedBitmap(source, PixelFormats.Bgra32, null, 0);
+        var stride = converted.PixelWidth * 4;
+        var pixels = new byte[stride * converted.PixelHeight];
+        converted.CopyPixels(pixels, stride, 0);
+        var minX = converted.PixelWidth;
+        var minY = converted.PixelHeight;
+        var maxX = -1;
+        var maxY = -1;
+        for (var y = 0; y < converted.PixelHeight; y++)
+        {
+            for (var x = 0; x < converted.PixelWidth; x++)
+            {
+                if (pixels[(y * stride) + (x * 4) + 3] <= 8) continue;
+                minX = Math.Min(minX, x);
+                minY = Math.Min(minY, y);
+                maxX = Math.Max(maxX, x);
+                maxY = Math.Max(maxY, y);
+            }
+        }
+        if (maxX < minX || maxY < minY)
+            throw new InvalidDataException("Sprite source contains no visible pixels.");
+        return new(minX, minY, maxX - minX + 1, maxY - minY + 1);
+    }
+
+    private static string[] WriteReviewArtifacts(
+        string buildRoot,
+        string animationRoot,
+        AnimationPack pack,
+        IReadOnlyList<FrameWorkItem> frames)
+    {
+        const int preview = 256;
+        const int labelHeight = 24;
+        const int columns = 4;
+        var rows = (int)Math.Ceiling(frames.Count / (double)columns);
+        var target = new RenderTargetBitmap(
+            columns * preview,
+            rows * (preview + labelHeight),
+            96,
+            96,
+            PixelFormats.Pbgra32);
+        var visual = new DrawingVisual();
+        var metrics = new List<FrameMetric>();
+        using (var context = visual.RenderOpen())
+        {
+            for (var index = 0; index < frames.Count; index++)
+            {
+                var item = frames[index];
+                var column = index % columns;
+                var row = index / columns;
+                var x = column * preview;
+                var y = row * (preview + labelHeight);
+                context.DrawRectangle(
+                    new SolidColorBrush(Color.FromRgb(34, 31, 42)),
+                    null,
+                    new Rect(x, y, preview, preview));
+                var frame = LoadBitmap(ResolveContained(animationRoot, item.Frame.Path));
+                context.DrawImage(frame, new Rect(x, y, preview, preview));
+                var bounds = GetAlphaBounds(frame);
+                metrics.Add(new(
+                    item.ClipId,
+                    item.FrameIndex,
+                    bounds.X,
+                    bounds.Y,
+                    bounds.Width,
+                    bounds.Height,
+                    bounds.Y + bounds.Height - 1));
+                var label = new FormattedText(
+                    $"{item.ClipId}/{item.FrameIndex:D3}",
+                    CultureInfo.InvariantCulture,
+                    FlowDirection.LeftToRight,
+                    new Typeface("Consolas"),
+                    12,
+                    Brushes.White,
+                    1);
+                context.DrawText(label, new Point(x + 4, y + preview + 4));
+            }
+        }
+        target.Render(visual);
+        var reviewRoot = Path.Combine(buildRoot, "review");
+        Directory.CreateDirectory(reviewRoot);
+        var sheetPath = Path.Combine(reviewRoot, "contact-sheet.png");
+        var metricsPath = Path.Combine(reviewRoot, "frame-metrics.json");
+        SavePng(target, sheetPath);
+        WriteJson(metricsPath, new ReviewMetrics(1, pack.Canvas, metrics));
+        return [sheetPath, metricsPath];
     }
 
     private static BitmapSource LoadBitmap(string path)
@@ -335,9 +452,16 @@ internal sealed record ClipRecipe(
     string Id,
     IReadOnlyList<FrameTransform> Frames,
     string? Source = null,
-    IReadOnlyList<SourceRect>? SourceRects = null);
+    IReadOnlyList<SourceRect>? SourceRects = null,
+    int TargetVisibleHeight = 420,
+    int MaxVisibleWidth = 480,
+    int AnchorY = 480,
+    string Align = "bottom",
+    int ReferenceFrame = 0);
 internal sealed record FrameTransform(double ScaleX, double ScaleY, int OffsetX, int OffsetY);
 internal sealed record FrameWorkItem(string ClipId, int FrameIndex, AnimationFrame Frame);
+internal sealed record FrameMetric(string ClipId, int Index, int X, int Y, int Width, int Height, int Bottom);
+internal sealed record ReviewMetrics(int SchemaVersion, CanvasSize Canvas, IReadOnlyList<FrameMetric> Frames);
 internal sealed record AtlasRect(int X, int Y, int Width, int Height);
 internal sealed record CatalogFrame(string ClipId, int Index, AtlasRect Rect, int DurationMs, PivotPoint Pivot);
 internal sealed record CatalogClip(string Id, bool Loop);

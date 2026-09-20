@@ -97,3 +97,33 @@ settled crouch recovering toward idle. Preserve identity, outfit, palette, outli
 use a shared landing baseline and readable squash-and-stretch. No hand, cursor, rope, labels,
 UI, effects, watermark, background, debris or extra character.
 ```
+
+## Walk strip v2
+
+- Generator: built-in image generation tool
+- Output: `walk-strip-v2.png`
+- Status: candidate pending human animation review
+- SHA-256: `17FD1917725AD0BF3DAFD249ADD8E581F39A819AD703DA75666D70D2427E985E`
+
+```text
+Correct the canonical Bolttagu right-facing walk into exactly four ordered phases: contact,
+down, passing and up. Keep head and torso scale fixed, one sole planted on the shared baseline,
+and swing both clearly visible arms opposite the legs. Preserve the approved identity, outfit,
+palette and sprite rendering. Avoid repeated leg poses, crossed-leg ambiguity, sliding feet,
+missing arms, crop, motion marks, background, UI and watermark.
+```
+
+## Drag dangle strip v2
+
+- Generator: built-in image generation tool
+- Output: `drag-dangle-strip-v2.png`
+- Status: candidate pending human animation review
+- SHA-256: `E8EB378FA265EF402FC84275A6E4C83A6366E28AB2DBD300ACC1BDADC0EE1012`
+
+```text
+Correct the canonical Bolttagu dangling loop into exactly four slow, weighty poses around one
+fixed invisible grab anchor. Both complete arms must remain visible from shoulder through sleeve
+to hand, with both hands gripping the gathered hood above the head. Sequence slow left swing,
+center stretch, slow right swing and center recoil. Preserve identity, outfit, palette and scale;
+no cursor, external hand, rope, missing limbs, motion marks, background, UI or watermark.
+```

@@ -8,6 +8,20 @@ public readonly record struct ScreenArea(ScreenPoint Origin, ScreenSize Size)
     public double Bottom => Origin.Y + Size.Height;
 }
 
+public enum DesktopSurfaceKind { Window, Taskbar, WorkAreaFallback }
+
+public readonly record struct DesktopSurface(ScreenArea Bounds, DesktopSurfaceKind Kind)
+{
+    public double Top => Bounds.Origin.Y;
+    public double Left => Bounds.Origin.X;
+    public double Right => Bounds.Right;
+}
+
+public interface IDesktopSurfaceProvider
+{
+    DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea);
+}
+
 public interface IOverlayWindow
 {
     bool IsVisible { get; }

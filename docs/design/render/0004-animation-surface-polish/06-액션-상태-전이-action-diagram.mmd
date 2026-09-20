@@ -1,0 +1,11 @@
+stateDiagram-v2
+  [*] --> Idle
+  Idle --> TurningOut: walk 계획
+  TurningOut --> Walking: turn 완료
+  Walking --> TurningIn: surface 범위 내 목표 도달
+  TurningIn --> Idle: reverse turn 완료
+  Idle --> Dragging: drag threshold
+  Dragging --> Falling: 정상 release
+  Falling --> Landing: 첫 surface 접촉
+  Landing --> Idle: drop_land 완료
+  Dragging --> Idle: capture lost

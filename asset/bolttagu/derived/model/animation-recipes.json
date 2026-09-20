@@ -9,9 +9,9 @@
       "id": "idle_breathe",
       "frames": [
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 1.01, "scaleY": 0.985, "offsetX": 0, "offsetY": 1 },
-        { "scaleX": 1.0, "scaleY": 0.975, "offsetX": 0, "offsetY": 2 },
-        { "scaleX": 0.995, "scaleY": 0.99, "offsetX": 0, "offsetY": 1 }
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": -1 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": -2 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": -1 }
       ]
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "id": "walk",
-      "source": "walk-strip-v1.png",
+      "source": "walk-strip-v2.png",
       "sourceRects": [
         { "x": 0, "y": 0, "width": 520, "height": 756 },
         { "x": 520, "y": 0, "width": 520, "height": 756 },
@@ -64,13 +64,16 @@
     },
     {
       "id": "drag_dangle",
-      "source": "drag-dangle-strip-v1.png",
+      "source": "drag-dangle-strip-v2.png",
       "sourceRects": [
         { "x": 0, "y": 0, "width": 443, "height": 887 },
         { "x": 443, "y": 0, "width": 444, "height": 887 },
         { "x": 887, "y": 0, "width": 443, "height": 887 },
         { "x": 1330, "y": 0, "width": 444, "height": 887 }
       ],
+      "targetVisibleHeight": 376,
+      "anchorY": 104,
+      "align": "top",
       "frames": [
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
@@ -88,9 +91,9 @@
         { "x": 1560, "y": 0, "width": 519, "height": 756 }
       ],
       "frames": [
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": -40 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": -18 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
       ]
     }
