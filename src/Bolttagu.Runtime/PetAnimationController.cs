@@ -60,6 +60,7 @@ public sealed class PetAnimationController : IDisposable
     private TimeSpan _climbStartedAt;
     private double _climbSpeedPixelsPerSecond;
     private bool _climbIsRope;
+    private RopeEdgeEncounter? _lastRopeEdgeEncounter;
     private bool _exitReadyRaised;
     private bool _disposed;
 
@@ -393,8 +394,14 @@ public sealed class PetAnimationController : IDisposable
                 _window.WorkArea,
                 out var obstacle))
         {
+            _lastRopeEdgeEncounter = null;
             return false;
         }
+
+        var encounter = new RopeEdgeEncounter(obstacle.Id, facing);
+        if (_lastRopeEdgeEncounter == encounter) return false;
+        _lastRopeEdgeEncounter = encounter;
+        if (!_planner.ShouldStartRopeClimb()) return false;
 
         _walk = null;
         _sequence.Cancel();
@@ -483,7 +490,10 @@ public sealed class PetAnimationController : IDisposable
         _climbStartedAt = default;
         _climbSpeedPixelsPerSecond = 0;
         _climbIsRope = false;
+        _lastRopeEdgeEncounter = null;
     }
+
+    private readonly record struct RopeEdgeEncounter(long WindowId, FacingDirection ApproachedFrom);
 
     private DesktopSurface FindLandingSurface()
     {

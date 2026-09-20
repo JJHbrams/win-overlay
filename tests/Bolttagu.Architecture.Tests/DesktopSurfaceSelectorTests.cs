@@ -98,6 +98,21 @@ public sealed class DesktopSurfaceSelectorTests
     }
 
     [TestMethod]
+    public void RopeObstacle_UsesForegroundWindowEdgeExtensionWithoutVerticalBodyOverlap()
+    {
+        var support = new DesktopSurface(new(new(0, 720), new(1200, 300)), DesktopSurfaceKind.Window, 1, 2);
+        var floatingForeground = new DesktopSurface(
+            new(new(400, 100), new(500, 180)), DesktopSurfaceKind.Window, 2, 0, true, false);
+
+        var found = DesktopSurfaceSelector.TryFindRopeClimbObstacle(
+            [support, floatingForeground], support, 720, 320, 500,
+            FacingDirection.Right, new(220, 220), out var obstacle);
+
+        Assert.IsTrue(found, "The vertical extension of the foreground window edge must remain climbable.");
+        Assert.AreEqual(2L, obstacle.Id);
+    }
+
+    [TestMethod]
     public void RopeObstacle_RejectsMaximizedTaskbarNoClearanceAndNonFrontWindows()
     {
         var support = new DesktopSurface(new(new(0, 720), new(1200, 300)), DesktopSurfaceKind.Window, 1, 3);
@@ -127,5 +142,16 @@ public sealed class DesktopSurfaceSelectorTests
 
         Assert.IsNotNull(intercept);
         Assert.AreEqual(600, intercept.Value.Top);
+    }
+
+    [TestMethod]
+    public void ClimbIntercept_RejectsTopmostExposedWindowWhenItIsNotForeground()
+    {
+        DesktopSurface[] candidates =
+        [
+            new(new(new(0, 600), new(1000, 300)), DesktopSurfaceKind.Window, 1, 0, false, false),
+        ];
+
+        Assert.IsNull(DesktopSurfaceSelector.FindClimbIntercept(candidates, 300, 720, 300));
     }
 }

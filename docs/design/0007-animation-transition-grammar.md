@@ -172,7 +172,7 @@ stateDiagram-v2
 | LookAround | 25 | Standing | `LookAround` |
 | Stretch | 20 | Standing | `Stretch` |
 | SitDoze | 15 | locomotion 후 8초, 사용자 입력 후 10초 경과 | `SitDown → SitSettle[1..2] → DozeEnter → DozeLoop[2..5] → WakeUp → StandUp` |
-| RopeClimb | 별도 튜닝 | 보행 중 더 높은 전면 비최대화 창의 좌/우 변과 충돌 | `Walk → RopeClimbPrepare → RopeClimbLoop[n] → RopeClimbFinish → IdleHub` |
+| RopeClimb | 별도 튜닝 | 보행 중 더 높은 foreground 비최대화 창의 좌/우 변 연장선 최초 접촉에서 35% 성공 | `Walk → RopeClimbPrepare → RopeClimbLoop[n] → RopeClimbFinish → IdleHub` |
 | FreeClimb | 별도 튜닝 | IdleHub random 선택과 1.25~3.0 pet-height 목표 | `IdleHub → FreeClimbPrepare → FreeClimbLoop[n] → (ClimbFinish → IdleHub | Falling)` |
 
 ## 7. 타이밍 (sequence) *(선택 — 이 tier 에선 생략 가능)*

@@ -36,6 +36,7 @@ public sealed record PlannedClimb(
 
 public sealed class BehaviorPlanner(IRandomSource random)
 {
+    public const int RopeClimbChancePercent = 35;
     private readonly Queue<string> _recent = new();
     private readonly Dictionary<string, TimeSpan> _lastSelected = new(StringComparer.Ordinal);
     private TimeSpan _idleHubEnteredAt;
@@ -73,6 +74,9 @@ public sealed class BehaviorPlanner(IRandomSource random)
         var hundredthsOfPetHeight = random.NextInt(125, 301);
         return new(petSize.Height * hundredthsOfPetHeight / 100d, 84);
     }
+
+    public bool ShouldStartRopeClimb() =>
+        random.NextInt(0, 100) < RopeClimbChancePercent;
 
     public void EnterIdleHub(TimeSpan now) => _idleHubEnteredAt = now;
     public void RecordLocomotion(TimeSpan now) => _lastLocomotionAt = now;

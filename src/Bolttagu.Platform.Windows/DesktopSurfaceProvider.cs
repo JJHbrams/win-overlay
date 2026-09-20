@@ -252,15 +252,9 @@ public static class DesktopSurfaceSelector
 
     public static bool IsClimbEligible(IEnumerable<DesktopSurface> candidates, DesktopSurface candidate)
     {
-        if (candidate.Kind != DesktopSurfaceKind.Window || candidate.IsMaximized) return false;
+        if (candidate.Kind != DesktopSurfaceKind.Window || candidate.IsMaximized || !candidate.IsForeground) return false;
         if (!IsTopExposed(candidates, candidate, (candidate.Left + candidate.Right) / 2d)) return false;
-        var topmostExposed = candidates
-            .Where(surface => surface.Kind == DesktopSurfaceKind.Window)
-            .Where(surface => !surface.IsMaximized)
-            .Where(surface => IsTopExposed(candidates, surface, (surface.Left + surface.Right) / 2d))
-            .OrderBy(surface => surface.ZOrder)
-            .FirstOrDefault();
-        return candidate.IsForeground || candidate.Id == topmostExposed.Id;
+        return true;
     }
 
     public static bool TryFindRopeClimbObstacle(
@@ -279,7 +273,6 @@ public static class DesktopSurfaceSelector
             .Where(candidate => candidate.Id != support.Id)
             .Where(candidate => IsClimbEligible(all, candidate))
             .Where(candidate => candidate.Top <= support.Top - petSize.Height)
-            .Where(candidate => candidate.Bottom >= footY - petSize.Height + 3)
             .Where(candidate => ascending
                 ? candidate.Left >= currentLeadingX - 3 && candidate.Left <= nextLeadingX + 3
                 : candidate.Right <= currentLeadingX + 3 && candidate.Right >= nextLeadingX - 3)

@@ -102,6 +102,13 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
+    public void BehaviorPlanner_RopeClimbChanceUsesThirtyFivePercentBoundary()
+    {
+        Assert.IsTrue(new BehaviorPlanner(new SequenceRandom(34)).ShouldStartRopeClimb());
+        Assert.IsFalse(new BehaviorPlanner(new SequenceRandom(35)).ShouldStartRopeClimb());
+    }
+
+    [TestMethod]
     public void HighDragRelease_UsesSingleDizzyRecoveryInsteadOfStandingTwice()
     {
         using var fixture = new Fixture(2000, 2000);
@@ -469,6 +476,47 @@ public sealed class PetAnimationControllerTests
         fixture.Controller.Tick();
         Assert.AreEqual(300, fixture.Window.Position.X);
         Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
+    }
+
+    [TestMethod]
+    public void RopeClimb_FailedChanceRollsOnlyOnceForTheSameEdgeEncounter()
+    {
+        using var fixture = new Fixture(0, 1, 220, 220, 99, 0);
+        fixture.Surfaces.Obstacle = new(
+            new(new(400, 100), new(500, 180)), DesktopSurfaceKind.Window, 2);
+        fixture.StartToIdle();
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(3.08);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Walking, fixture.Controller.State);
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(3.10);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Walking, fixture.Controller.State,
+            "The same edge contact must not reroll after its first failed chance.");
+        Assert.AreEqual(PetActionClips.Walk, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void RopeClimb_ForegroundEdgeExtensionStartsBeforeWalkingOffSupportCanFall()
+    {
+        using var fixture = new Fixture(0, 1, 220, 220, 0);
+        fixture.Surfaces.Current = new(
+            new(new(0, 720), new(400, 300)), DesktopSurfaceKind.Window, 1);
+        fixture.Surfaces.Obstacle = new(
+            new(new(400, 100), new(500, 180)), DesktopSurfaceKind.Window, 2);
+        fixture.StartToIdle();
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.RopeClimbPreparing, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.RopeClimbPrepare, fixture.Player.CurrentClipId);
     }
 
     [TestMethod]
