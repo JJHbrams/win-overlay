@@ -102,7 +102,7 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
-    public void HighDragRelease_AddsDizzyRecoveryAfterLanding()
+    public void HighDragRelease_UsesSingleDizzyRecoveryInsteadOfStandingTwice()
     {
         using var fixture = new Fixture(2000, 2000);
         fixture.StartToIdle();
@@ -113,13 +113,12 @@ public sealed class PetAnimationControllerTests
         Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
         fixture.Controller.Tick();
-        Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
-        fixture.Player.Complete(PetActionClips.DropLand);
         Assert.AreEqual(PetRuntimeState.Recovering, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.LandRecover, fixture.Player.CurrentClipId);
         fixture.Player.Complete(PetActionClips.LandRecover);
         Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
         CollectionAssert.AreEqual(
-            new[] { PetActionClips.Idle, PetActionClips.DragHeldIdle, PetActionClips.Fall, PetActionClips.DropLand, PetActionClips.LandRecover, PetActionClips.Idle },
+            new[] { PetActionClips.Idle, PetActionClips.DragHeldIdle, PetActionClips.Fall, PetActionClips.LandRecover, PetActionClips.Idle },
             fixture.Player.PlayedClips.ToArray());
     }
 
@@ -161,10 +160,9 @@ public sealed class PetAnimationControllerTests
     {
         using var fixture = new Fixture(2000, 2000);
         fixture.StartToIdle();
-        fixture.Window.MoveTo(new(100, 100));
         fixture.Controller.BeginDrag();
         fixture.Controller.CompleteDrag();
-        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(10);
         fixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
 
@@ -224,6 +222,7 @@ public sealed class PetAnimationControllerTests
             PetRuntimeState.Reacting,
             PetRuntimeState.Huffing,
             PetRuntimeState.Landing,
+            PetRuntimeState.Recovering,
         };
 
         foreach (var target in groundedStates)
@@ -281,7 +280,8 @@ public sealed class PetAnimationControllerTests
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(1.2);
         fixture.Controller.Tick();
 
-        Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
+        Assert.AreEqual(PetRuntimeState.Recovering, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.LandRecover, fixture.Player.CurrentClipId);
         Assert.AreEqual(680, fixture.Window.Position.Y);
     }
 
@@ -426,12 +426,14 @@ public sealed class PetAnimationControllerTests
             if (target == PetRuntimeState.Huffing) fixture.Player.Complete(PetActionClips.Click);
             return;
         }
-        if (target == PetRuntimeState.Landing)
+        if (target is PetRuntimeState.Landing or PetRuntimeState.Recovering)
         {
-            fixture.Window.MoveTo(new(100, 100));
+            if (target == PetRuntimeState.Recovering) fixture.Window.MoveTo(new(100, 100));
             fixture.Controller.BeginDrag();
             fixture.Controller.CompleteDrag();
-            fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+            fixture.Clock.Elapsed = target == PetRuntimeState.Landing
+                ? TimeSpan.FromMilliseconds(10)
+                : TimeSpan.FromSeconds(1);
             fixture.Controller.Tick();
             return;
         }

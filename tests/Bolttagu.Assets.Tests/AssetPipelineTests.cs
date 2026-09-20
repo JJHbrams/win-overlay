@@ -248,20 +248,24 @@ public sealed class AssetPipelineTests
             frame.GetProperty("clipId").GetString() == "fall" && frame.GetProperty("index").GetInt32() == 0);
         Assert.IsInRange(400, 408, held.GetProperty("height").GetInt32(), "Held drag is undersized.");
         Assert.IsInRange(372, 380, pulled.GetProperty("height").GetInt32(), "Pulled drag scale drifted.");
-        Assert.IsInRange(390, 400, fall.GetProperty("height").GetInt32(), "Fall pose is oversized.");
+        Assert.IsInRange(345, 355, fall.GetProperty("height").GetInt32(), "Fall pose scale drifted.");
+        Assert.IsInRange(238, 252, fall.GetProperty("width").GetInt32(), "Fall head/body scale drifted.");
         Assert.IsLessThan(idle.GetProperty("height").GetInt32(), held.GetProperty("height").GetInt32());
         Assert.IsLessThan(idle.GetProperty("height").GetInt32(), fall.GetProperty("height").GetInt32());
-        foreach (var clipId in new[] { "look_around", "stretch" })
-        {
-            var frame = representativeFrames.Single(item =>
-                item.GetProperty("clipId").GetString() == clipId && item.GetProperty("index").GetInt32() == 0);
-            Assert.IsInRange(220, 240, frame.GetProperty("width").GetInt32(), $"{clipId} head/body scale drifted.");
-            Assert.IsInRange(411, 429, frame.GetProperty("height").GetInt32(), $"{clipId} scale drifted.");
-            Assert.IsInRange(477, 480, frame.GetProperty("bottom").GetInt32(), $"{clipId} ground anchor drifted.");
-        }
+        var look = representativeFrames.Single(item =>
+            item.GetProperty("clipId").GetString() == "look_around" && item.GetProperty("index").GetInt32() == 0);
+        Assert.IsInRange(228, 240, look.GetProperty("width").GetInt32(), "Look-around head/body scale drifted.");
+        Assert.IsInRange(411, 429, look.GetProperty("height").GetInt32(), "Look-around scale drifted.");
+        Assert.IsInRange(477, 480, look.GetProperty("bottom").GetInt32(), "Look-around ground anchor drifted.");
+        var stretch = representativeFrames.Single(item =>
+            item.GetProperty("clipId").GetString() == "stretch" && item.GetProperty("index").GetInt32() == 0);
+        Assert.IsInRange(262, 278, stretch.GetProperty("width").GetInt32(), "Stretch head/body scale drifted.");
+        Assert.IsInRange(446, 460, stretch.GetProperty("height").GetInt32(), "Stretch scale drifted.");
+        Assert.IsInRange(477, 480, stretch.GetProperty("bottom").GetInt32(), "Stretch ground anchor drifted.");
         var doze = representativeFrames.Single(frame =>
             frame.GetProperty("clipId").GetString() == "doze_loop" && frame.GetProperty("index").GetInt32() == 0);
-        Assert.IsInRange(320, 340, doze.GetProperty("height").GetInt32(), "Doze scale drifted.");
+        Assert.IsInRange(350, 365, doze.GetProperty("height").GetInt32(), "Doze scale drifted.");
+        Assert.IsInRange(240, 260, doze.GetProperty("width").GetInt32(), "Doze head/body scale drifted.");
         Assert.IsInRange(477, 480, doze.GetProperty("bottom").GetInt32(), "Doze ground anchor drifted.");
         var wake = representativeFrames.Single(frame =>
             frame.GetProperty("clipId").GetString() == "wake_up" && frame.GetProperty("index").GetInt32() == 5);
@@ -272,6 +276,17 @@ public sealed class AssetPipelineTests
         Assert.IsInRange(228, 242, seated.GetProperty("width").GetInt32(), "Seated head/body scale drifted.");
         Assert.IsGreaterThanOrEqualTo(100, seated.GetProperty("y").GetInt32(),
             "Sit-down final frame contains pixels above the expected character bounds; check for adjacent-cell bleed.");
+        foreach (var (clipId, index) in new[]
+                 {
+                     ("sit_down", 3), ("sit_down", 4), ("sit_down", 5),
+                     ("sit_settle", 0), ("sit_settle", 1), ("sit_settle", 2),
+                 })
+        {
+            var frame = representativeFrames.Single(item =>
+                item.GetProperty("clipId").GetString() == clipId && item.GetProperty("index").GetInt32() == index);
+            Assert.IsGreaterThanOrEqualTo(100, frame.GetProperty("y").GetInt32(),
+                $"{clipId}/{index} contains pixels above the seated character; check for adjacent-cell bleed.");
+        }
     }
 
     [TestMethod]

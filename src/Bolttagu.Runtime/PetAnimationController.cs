@@ -47,7 +47,6 @@ public sealed class PetAnimationController : IDisposable
     private double _dragVelocityY;
     private ScreenPoint _fallOrigin;
     private TimeSpan _fallStartedAt;
-    private bool _requiresDizzyRecovery;
     private TimeSpan _exitDeadline;
     private bool _exitReadyRaised;
     private bool _disposed;
@@ -315,7 +314,6 @@ public sealed class PetAnimationController : IDisposable
         _support = null;
         _fallOrigin = _window.Position;
         _fallStartedAt = now;
-        _requiresDizzyRecovery = false;
         State = PetRuntimeState.Falling;
         _player.Play(PetActionClips.Fall);
     }
@@ -324,10 +322,17 @@ public sealed class PetAnimationController : IDisposable
     {
         _support = surface;
         var landingY = surface.Top - _window.Size.Height;
-        _requiresDizzyRecovery = landingY - _fallOrigin.Y >= DizzyRecoveryFallHeight;
         _window.MoveTo(new(_window.Position.X, landingY));
-        State = PetRuntimeState.Landing;
-        _player.Play(PetActionClips.DropLand);
+        if (landingY - _fallOrigin.Y >= DizzyRecoveryFallHeight)
+        {
+            State = PetRuntimeState.Recovering;
+            _player.Play(PetActionClips.LandRecover);
+        }
+        else
+        {
+            State = PetRuntimeState.Landing;
+            _player.Play(PetActionClips.DropLand);
+        }
     }
 
     private DesktopSurface FindLandingSurface()
@@ -426,15 +431,7 @@ public sealed class PetAnimationController : IDisposable
         }
         else if (State == PetRuntimeState.Landing && e.ClipId == PetActionClips.DropLand)
         {
-            if (_requiresDizzyRecovery)
-            {
-                State = PetRuntimeState.Recovering;
-                _player.Play(PetActionClips.LandRecover);
-            }
-            else
-            {
-                EnterIdle(_clock.Elapsed);
-            }
+            EnterIdle(_clock.Elapsed);
         }
         else if (State == PetRuntimeState.Recovering && e.ClipId == PetActionClips.LandRecover)
         {

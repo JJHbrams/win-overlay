@@ -168,6 +168,7 @@
     {
       "id": "drop_land",
       "source": "drop-land-strip-v1.png",
+      "targetVisibleHeight": 370,
       "sourceRects": [
         { "x": 0, "y": 0, "width": 520, "height": 756 },
         { "x": 520, "y": 0, "width": 520, "height": 756 },
@@ -187,7 +188,7 @@
       "sourceRects": [
         { "x": 0, "y": 0, "width": 520, "height": 756 }
       ],
-      "targetVisibleHeight": 396,
+      "targetVisibleHeight": 350,
       "frames": [
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": -52 }
       ]
@@ -199,8 +200,8 @@
         { "x": 0, "y": 0, "width": 512, "height": 512 },
         { "x": 512, "y": 0, "width": 512, "height": 512 },
         { "x": 1024, "y": 0, "width": 512, "height": 512 },
-        { "x": 0, "y": 512, "width": 512, "height": 512 },
-        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 0, "y": 544, "width": 512, "height": 480 },
+        { "x": 512, "y": 544, "width": 512, "height": 480 },
         { "x": 1024, "y": 544, "width": 512, "height": 480 }
       ],
       "targetVisibleHeight": 420,
@@ -218,11 +219,11 @@
       "id": "sit_settle",
       "source": "sit-down-grid-v2.png",
       "sourceRects": [
-        { "x": 0, "y": 512, "width": 512, "height": 512 },
-        { "x": 512, "y": 512, "width": 512, "height": 512 },
+        { "x": 0, "y": 544, "width": 512, "height": 480 },
+        { "x": 512, "y": 544, "width": 512, "height": 480 },
         { "x": 1024, "y": 544, "width": 512, "height": 480 }
       ],
-      "targetVisibleHeight": 330,
+      "targetVisibleHeight": 360,
       "referenceFrame": 2,
       "frames": [
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
@@ -238,7 +239,7 @@
         { "x": 512, "y": 0, "width": 512, "height": 512 },
         { "x": 1024, "y": 0, "width": 512, "height": 512 }
       ],
-      "targetVisibleHeight": 330,
+      "targetVisibleHeight": 360,
       "referenceFrame": 2,
       "frames": [
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
@@ -255,7 +256,7 @@
         { "x": 512, "y": 512, "width": 512, "height": 512 },
         { "x": 1024, "y": 512, "width": 512, "height": 512 }
       ],
-      "targetVisibleHeight": 330,
+      "targetVisibleHeight": 360,
       "frames": [
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
@@ -350,17 +351,17 @@
       ],
       "targetVisibleHeight": 420,
       "frames": [
-        { "scaleX": 0.90, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 0.90, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 0.90, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 0.90, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 0.90, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 0.90, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
+        { "scaleX": 1.08, "scaleY": 1.08, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.08, "scaleY": 1.08, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.08, "scaleY": 1.08, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.08, "scaleY": 1.08, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.08, "scaleY": 1.08, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 1.08, "scaleY": 1.08, "offsetX": 0, "offsetY": 0 }
       ]
     },
     {
       "id": "land_recover",
-      "source": "land-recover-grid-v1.png",
+      "source": "land-recover-grid-v2.png",
       "sourceRects": [
         { "x": 0, "y": 0, "width": 512, "height": 512 },
         { "x": 512, "y": 0, "width": 512, "height": 512 },
@@ -372,11 +373,11 @@
       "targetVisibleHeight": 420,
       "referenceFrame": 5,
       "frames": [
-        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
-        { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 0.82, "scaleY": 0.82, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 0.84, "scaleY": 0.84, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 0.88, "scaleY": 0.88, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 0.92, "scaleY": 0.92, "offsetX": 0, "offsetY": 0 },
+        { "scaleX": 0.96, "scaleY": 0.96, "offsetX": 0, "offsetY": 0 },
         { "scaleX": 1.0, "scaleY": 1.0, "offsetX": 0, "offsetY": 0 }
       ]
     }

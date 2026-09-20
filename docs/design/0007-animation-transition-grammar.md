@@ -20,7 +20,7 @@ created: 2026-09-20
 | 문제 | 행동 수가 늘 때 clip 완료 콜백마다 다음 clip을 직접 고르면 `걷기 → 졸기`, `드래그 해제 → idle`처럼 자세와 인과가 끊기는 전이가 생긴다. |
 | 왜 지금 | sit/doze·climb 원화를 만들기 전에 연결 문법을 고정하지 않으면 행동마다 예외 분기가 Runtime에 누적되고 아트를 다시 만들어야 한다. |
 | 주 사용자 | 행동 세트를 추가하고 전이 순서·중단 원인을 재현 가능한 테스트로 검수하는 개발자와 애니메이터. |
-| 불변식 | random은 완결된 behavior만 선택한다. 시작된 behavior 내부 순서는 결정적이다. 인접 step의 자세 계약이 맞지 않으면 pack을 거부한다. drag release와 support loss는 반드시 fall/land 경로를 지나고 실제 낙하 높이가 260px 이상일 때만 어지럼 회복을 추가한다. 사용자 입력과 종료가 자율 행동보다 우선한다. |
+| 불변식 | random은 완결된 behavior만 선택한다. 시작된 behavior 내부 순서는 결정적이다. 인접 step의 자세 계약이 맞지 않으면 pack을 거부한다. drag release와 support loss는 반드시 fall/impact 경로를 지나고 실제 낙하 높이가 260px 이상일 때만 단일 어지럼 착지·회복을 사용한다. 사용자 입력과 종료가 자율 행동보다 우선한다. |
 | 비목표 | 이 문서에서는 wall geometry 구현, 물리 엔진, 감정·욕구 시뮬레이션, 확률값 최종 튜닝을 하지 않는다. |
 
 ## 2. 수용 기준 (Acceptance)
@@ -28,7 +28,7 @@ created: 2026-09-20
 | ID | 수용 기준 | 검증 방법 |
 |---|---|---|
 | AC-1 | 모든 자율 행동은 `entryPose`, ordered step, `exitPose`, interrupt policy를 가진 `BehaviorDefinition`으로 선언하며 random 선택은 `IdleHub`에서만 일어난다. | definition validator 단위 테스트에서 pose 불일치·고아 step·loop 종료조건 누락을 각각 거부한다. |
-| AC-2 | drag release와 support loss는 위치와 무관하게 `Falling → Landing`을 거친다. 실제 낙하 높이가 260px 미만이면 기존 landing 뒤 IdleHub로, 260px 이상이면 `Recovering`의 어지럼 clip을 추가한 뒤 IdleHub로 복귀한다. | fake clock/surface runtime 테스트에서 낮은 낙하와 높은 낙하의 상태·clip trace를 각각 exact sequence로 비교한다. |
+| AC-2 | drag release와 support loss는 위치와 무관하게 Falling을 거친다. 실제 낙하 높이가 260px 미만이면 `Landing → IdleHub`, 260px 이상이면 일어서기를 중복하지 않는 단일 `Recovering → IdleHub` 어지럼 착지 경로로 복귀한다. | fake clock/surface runtime 테스트에서 낮은 낙하와 높은 낙하의 상태·clip trace를 각각 exact sequence로 비교한다. |
 | AC-3 | walk는 `Turn? → Walk → TurnToIdle → IdleHub`, doze는 `SitDown → SitSettle → DozeEnter → DozeLoop[n] → WakeUp → StandUp → IdleHub`의 필연 전이를 따른다. | one-shot completion과 계획된 loop count를 주입해 전체 trace를 비교한다. |
 | AC-4 | scheduler는 동일 seed·clock·eligibility에서 동일 행동열을 만들고, 최근 2개 behavior 반복 금지·behavior cooldown·최소 1500ms IdleHub dwell을 지킨다. Doze는 마지막 locomotion 후 8초, 마지막 사용자 입력 후 10초 전에는 선택되지 않는다. | `BehaviorPlanner` 결정론·cooldown·calm gate 단위 테스트. |
 | AC-5 | 우선순위는 `Exit > Drag > SupportLost > Click > Autonomous`이며, preempt된 behavior의 motion·loop count·pending step이 모두 제거된다. 자세가 다른 click은 posture별 bridge를 사용하고 bridge가 없으면 standing click을 직접 재생하지 않는다. | 각 상태×입력의 transition table parameterized test와 cleanup assertion. |
@@ -118,9 +118,9 @@ stateDiagram-v2
   Walking --> Dragging: drag preempt
   DozeLoop --> Dragging: drag preempt
   Dragging --> Falling: release, always
-  Falling --> Landing: motion complete
-  Landing --> IdleHub: impact complete, fall < 260px
-  Landing --> Recovering: impact complete, fall >= 260px
+  Falling --> Landing: motion complete, fall < 260px
+  Landing --> IdleHub: impact complete
+  Falling --> Recovering: hard impact, fall >= 260px
   Recovering --> IdleHub: stand pose restored
   Walking --> Falling: support lost
   SitSettle --> Falling: support lost
@@ -136,7 +136,7 @@ stateDiagram-v2
 | Seated/Dozing | pose=Seated, support id, remaining doze loops | sit/doze 전용 clip; standing clip 직접 재생 금지. |
 | Dragging | pose=Hanging, velocity filter | release는 surface 거리와 무관하게 Falling으로 전이. |
 | Falling | pose=Airborne, fall origin, landing target | fall loop; motion 완료가 Landing을 발생시킴. |
-| Landing/Recovering | pose=GroundedCompressed → Standing | impact clip은 항상 끝낸다. 260px 이상 낙하만 어지럼 회복 clip을 추가한 뒤 IdleHub로 간다. |
+| Landing/Recovering | pose=GroundedCompressed → Standing | 낮은 낙하는 impact clip, 260px 이상 낙하는 착석·어지럼·한 번의 기상을 포함한 단일 recovery clip을 끝낸 뒤 IdleHub로 간다. |
 | Climbing *(후속)* | pose=Climbing, wall/top surface, progress | wall 상실 시 Falling; 정상 완료 시 top landing/recover. |
 | Exiting | 모든 behavior 임시 상태 제거, exit deadline | despawn 외 입력 무시, 완료/timeout 후 종료. |
 
