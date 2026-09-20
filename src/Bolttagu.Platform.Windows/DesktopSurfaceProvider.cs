@@ -56,12 +56,77 @@ public sealed class DesktopSurfaceProvider(Window owner) : IDesktopSurfaceProvid
         }
     }
 
+    public bool TryFindRopeClimbObstacle(
+        DesktopSurface support,
+        double footY,
+        double currentLeadingX,
+        double nextLeadingX,
+        FacingDirection facing,
+        ScreenSize petSize,
+        ScreenArea workArea,
+        out DesktopSurface obstacle)
+    {
+        try
+        {
+            var candidates = Snapshot(workArea);
+            return DesktopSurfaceSelector.TryFindRopeClimbObstacle(
+                candidates, support, footY, currentLeadingX, nextLeadingX, facing, petSize, out obstacle);
+        }
+        catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
+        {
+            obstacle = default;
+            return false;
+        }
+    }
+
+    public DesktopSurface? FindClimbIntercept(
+        double centerX,
+        double fromFootY,
+        double targetFootY,
+        ScreenArea workArea)
+    {
+        try
+        {
+            return DesktopSurfaceSelector.FindClimbIntercept(
+                Snapshot(workArea), centerX, fromFootY, targetFootY);
+        }
+        catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
+        {
+            return null;
+        }
+    }
+
+    public bool TryRefreshClimbAnchor(
+        DesktopSurface expected,
+        double edgeX,
+        ScreenArea workArea,
+        out DesktopSurface current)
+    {
+        try
+        {
+            var candidates = Snapshot(workArea);
+            current = candidates.FirstOrDefault(candidate =>
+                candidate.Kind == DesktopSurfaceKind.Window && candidate.Id == expected.Id);
+            return current.Bounds.Size.Width > 0 &&
+                   Math.Abs(current.Left - expected.Left) <= 3 &&
+                   Math.Abs(current.Right - expected.Right) <= 3 &&
+                   DesktopSurfaceSelector.IsClimbEligible(candidates, current) &&
+                   edgeX >= current.Left - 3 && edgeX <= current.Right + 3;
+        }
+        catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
+        {
+            current = default;
+            return false;
+        }
+    }
+
     private IReadOnlyList<DesktopSurface> Snapshot(ScreenArea workArea)
     {
         var ownerHandle = new WindowInteropHelper(owner).Handle;
         var dpi = VisualTreeHelper.GetDpi(owner);
         var candidates = new List<DesktopSurface>();
         var zOrder = 0;
+        var foregroundHandle = GetForegroundWindow();
         EnumWindows((handle, _) =>
         {
             var currentZOrder = zOrder++;
@@ -76,7 +141,9 @@ public sealed class DesktopSurfaceProvider(Window owner) : IDesktopSurfaceProvid
                 new(new(left, top), new(right - left, bottom - top)),
                 DesktopSurfaceKind.Window,
                 handle.ToInt64(),
-                currentZOrder));
+                currentZOrder,
+                handle == foregroundHandle,
+                IsZoomed(handle)));
             return true;
         }, IntPtr.Zero);
 
@@ -118,6 +185,13 @@ public sealed class DesktopSurfaceProvider(Window owner) : IDesktopSurfaceProvid
     [DllImport("user32.dll")]
     [return: MarshalAs(UnmanagedType.Bool)]
     private static extern bool IsIconic(IntPtr handle);
+
+    [DllImport("user32.dll")]
+    private static extern IntPtr GetForegroundWindow();
+
+    [DllImport("user32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static extern bool IsZoomed(IntPtr handle);
 
     [DllImport("user32.dll")]
     [return: MarshalAs(UnmanagedType.Bool)]
@@ -174,5 +248,59 @@ public static class DesktopSurfaceSelector
             front.ZOrder < candidate.ZOrder &&
             centerX >= front.Left && centerX <= front.Right &&
             probeY >= front.Top && probeY <= front.Bounds.Bottom);
+    }
+
+    public static bool IsClimbEligible(IEnumerable<DesktopSurface> candidates, DesktopSurface candidate)
+    {
+        if (candidate.Kind != DesktopSurfaceKind.Window || candidate.IsMaximized) return false;
+        if (!IsTopExposed(candidates, candidate, (candidate.Left + candidate.Right) / 2d)) return false;
+        var topmostExposed = candidates
+            .Where(surface => surface.Kind == DesktopSurfaceKind.Window)
+            .Where(surface => !surface.IsMaximized)
+            .Where(surface => IsTopExposed(candidates, surface, (surface.Left + surface.Right) / 2d))
+            .OrderBy(surface => surface.ZOrder)
+            .FirstOrDefault();
+        return candidate.IsForeground || candidate.Id == topmostExposed.Id;
+    }
+
+    public static bool TryFindRopeClimbObstacle(
+        IEnumerable<DesktopSurface> candidates,
+        DesktopSurface support,
+        double footY,
+        double currentLeadingX,
+        double nextLeadingX,
+        FacingDirection facing,
+        ScreenSize petSize,
+        out DesktopSurface obstacle)
+    {
+        var all = candidates.ToArray();
+        var ascending = facing == FacingDirection.Right;
+        obstacle = all
+            .Where(candidate => candidate.Id != support.Id)
+            .Where(candidate => IsClimbEligible(all, candidate))
+            .Where(candidate => candidate.Top <= support.Top - petSize.Height)
+            .Where(candidate => candidate.Bottom >= footY - petSize.Height + 3)
+            .Where(candidate => ascending
+                ? candidate.Left >= currentLeadingX - 3 && candidate.Left <= nextLeadingX + 3
+                : candidate.Right <= currentLeadingX + 3 && candidate.Right >= nextLeadingX - 3)
+            .OrderBy(candidate => ascending ? candidate.Left : -candidate.Right)
+            .FirstOrDefault();
+        return obstacle.Bounds.Size.Width > 0;
+    }
+
+    public static DesktopSurface? FindClimbIntercept(
+        IEnumerable<DesktopSurface> candidates,
+        double centerX,
+        double fromFootY,
+        double targetFootY)
+    {
+        var all = candidates.ToArray();
+        var intercept = all
+            .Where(candidate => IsClimbEligible(all, candidate))
+            .Where(candidate => centerX >= candidate.Left && centerX <= candidate.Right)
+            .Where(candidate => candidate.Top < fromFootY - 3 && candidate.Top >= targetFootY - 3)
+            .OrderByDescending(candidate => candidate.Top)
+            .FirstOrDefault();
+        return intercept.Bounds.Size.Width > 0 ? intercept : null;
     }
 }

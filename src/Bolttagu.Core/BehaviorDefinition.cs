@@ -71,6 +71,7 @@ public static class BehaviorDefinitions
     public const string LookAround = "look-around";
     public const string Stretch = "stretch";
     public const string SitDoze = "sit-doze";
+    public const string FreeClimb = "free-climb";
 
     public static IReadOnlyList<BehaviorDefinition> Autonomous { get; } =
     [
@@ -86,6 +87,9 @@ public static class BehaviorDefinitions
         new(SitDoze, PetPose.Standing,
             [new(PetActionClips.SitDown, PetPose.Standing, PetPose.Seated), new(PetActionClips.SitSettle, PetPose.Seated, PetPose.Seated, BehaviorCompletionPolicy.TimedLoop, 1, TimeSpan.FromMilliseconds(750)), new(PetActionClips.DozeEnter, PetPose.Seated, PetPose.Seated), new(PetActionClips.DozeLoop, PetPose.Seated, PetPose.Seated, BehaviorCompletionPolicy.TimedLoop, 2, DozeLoopCycleDuration), new(PetActionClips.WakeUp, PetPose.Seated, PetPose.Seated), new(PetActionClips.StandUp, PetPose.Seated, PetPose.Standing)],
             PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 15, TimeSpan.FromSeconds(10)),
+        new(FreeClimb, PetPose.Standing,
+            [new(PetActionClips.FreeClimbPrepare, PetPose.Standing, PetPose.Climbing)],
+            PetPose.Climbing, BehaviorInterruptPolicy.AutonomousOnly, 10, TimeSpan.FromSeconds(8)),
     ];
 
     public static BehaviorDefinition CreateWalk(bool requiresTurn)

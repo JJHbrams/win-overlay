@@ -79,4 +79,53 @@ public sealed class DesktopSurfaceSelectorTests
 
         Assert.IsTrue(DesktopSurfaceSelector.IsTopExposed(candidates, candidates[1], 800));
     }
+
+    [TestMethod]
+    public void RopeObstacle_RequiresHigherNonMaximizedFrontExposedWindowAtLeadingEdge()
+    {
+        var support = new DesktopSurface(new(new(0, 720), new(1200, 300)), DesktopSurfaceKind.Window, 1, 2);
+        DesktopSurface[] candidates =
+        [
+            support,
+            new(new(new(400, 300), new(500, 600)), DesktopSurfaceKind.Window, 2, 0, true, false),
+        ];
+
+        var found = DesktopSurfaceSelector.TryFindRopeClimbObstacle(
+            candidates, support, 720, 320, 500, FacingDirection.Right, new(220, 220), out var obstacle);
+
+        Assert.IsTrue(found);
+        Assert.AreEqual(2L, obstacle.Id);
+    }
+
+    [TestMethod]
+    public void RopeObstacle_RejectsMaximizedTaskbarNoClearanceAndNonFrontWindows()
+    {
+        var support = new DesktopSurface(new(new(0, 720), new(1200, 300)), DesktopSurfaceKind.Window, 1, 3);
+        var taskbar = new DesktopSurface(new(new(400, 300), new(500, 600)), DesktopSurfaceKind.Taskbar, 2, 0);
+        var maximized = new DesktopSurface(new(new(400, 300), new(500, 600)), DesktopSurfaceKind.Window, 3, 0, true, true);
+        var low = new DesktopSurface(new(new(400, 550), new(500, 450)), DesktopSurfaceKind.Window, 4, 0, true, false);
+        var nonFront = new DesktopSurface(new(new(400, 300), new(500, 600)), DesktopSurfaceKind.Window, 5, 3, false, false);
+
+        foreach (var rejected in new[] { taskbar, maximized, low, nonFront })
+        {
+            var found = DesktopSurfaceSelector.TryFindRopeClimbObstacle(
+                [support, rejected], support, 720, 320, 500, FacingDirection.Right, new(220, 220), out _);
+            Assert.IsFalse(found, $"{rejected.Kind}/{rejected.Id} unexpectedly qualified.");
+        }
+    }
+
+    [TestMethod]
+    public void ClimbIntercept_SelectsFirstTopEncounteredOnUpwardPath()
+    {
+        DesktopSurface[] candidates =
+        [
+            new(new(new(0, 600), new(1000, 400)), DesktopSurfaceKind.Window, 1, 0, true, false),
+            new(new(new(0, 450), new(1000, 400)), DesktopSurfaceKind.Window, 2, 1, false, false),
+        ];
+
+        var intercept = DesktopSurfaceSelector.FindClimbIntercept(candidates, 300, 720, 300);
+
+        Assert.IsNotNull(intercept);
+        Assert.AreEqual(600, intercept.Value.Top);
+    }
 }

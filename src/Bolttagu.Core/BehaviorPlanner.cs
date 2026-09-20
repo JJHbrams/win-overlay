@@ -30,6 +30,10 @@ public sealed record PlannedWalk(
     double SpeedPixelsPerSecond,
     bool RequiresTurn);
 
+public sealed record PlannedClimb(
+    double TargetHeight,
+    double SpeedPixelsPerSecond);
+
 public sealed class BehaviorPlanner(IRandomSource random)
 {
     private readonly Queue<string> _recent = new();
@@ -62,6 +66,12 @@ public sealed class BehaviorPlanner(IRandomSource random)
         }
 
         return new(facing, targetX, 72, facing != currentFacing);
+    }
+
+    public PlannedClimb PlanFreeClimb(ScreenSize petSize)
+    {
+        var hundredthsOfPetHeight = random.NextInt(125, 301);
+        return new(petSize.Height * hundredthsOfPetHeight / 100d, 84);
     }
 
     public void EnterIdleHub(TimeSpan now) => _idleHubEnteredAt = now;

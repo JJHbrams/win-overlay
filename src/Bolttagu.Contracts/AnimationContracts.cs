@@ -27,6 +27,12 @@ public enum PetAction
     LookAround,
     Stretch,
     LandRecover,
+    RopeClimbPrepare,
+    RopeClimbLoop,
+    RopeClimbFinish,
+    FreeClimbPrepare,
+    FreeClimbLoop,
+    FreeClimbFinish,
 }
 
 public static class PetActionClips
@@ -53,6 +59,12 @@ public static class PetActionClips
     public const string LookAround = "look_around";
     public const string Stretch = "stretch";
     public const string LandRecover = "land_recover";
+    public const string RopeClimbPrepare = "rope_climb_prepare";
+    public const string RopeClimbLoop = "rope_climb_loop";
+    public const string RopeClimbFinish = "rope_climb_finish";
+    public const string FreeClimbPrepare = "free_climb_prepare";
+    public const string FreeClimbLoop = "free_climb_loop";
+    public const string FreeClimbFinish = "free_climb_finish";
 
     public static IReadOnlyDictionary<PetAction, string> All { get; } =
         new Dictionary<PetAction, string>
@@ -78,6 +90,12 @@ public static class PetActionClips
             [PetAction.LookAround] = LookAround,
             [PetAction.Stretch] = Stretch,
             [PetAction.LandRecover] = LandRecover,
+            [PetAction.RopeClimbPrepare] = RopeClimbPrepare,
+            [PetAction.RopeClimbLoop] = RopeClimbLoop,
+            [PetAction.RopeClimbFinish] = RopeClimbFinish,
+            [PetAction.FreeClimbPrepare] = FreeClimbPrepare,
+            [PetAction.FreeClimbLoop] = FreeClimbLoop,
+            [PetAction.FreeClimbFinish] = FreeClimbFinish,
         };
 }
 
