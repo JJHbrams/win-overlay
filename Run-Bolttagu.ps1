@@ -13,6 +13,18 @@ $solution = Join-Path $repositoryRoot 'Bolttagu.slnx'
 $appProject = Join-Path $repositoryRoot 'src\Bolttagu.App\Bolttagu.App.csproj'
 $appExecutable = Join-Path $repositoryRoot 'src\Bolttagu.App\bin\Debug\net10.0-windows\Bolttagu.exe'
 
+$runningProcess = Get-Process -Name Bolttagu -ErrorAction SilentlyContinue |
+    Where-Object {
+        try { $_.Path -eq $appExecutable }
+        catch { $false }
+    } |
+    Select-Object -First 1
+
+if ($null -ne $runningProcess) {
+    Write-Host "Bolttagu is already running (PID $($runningProcess.Id)). Exit it from the tray before rebuilding."
+    exit 0
+}
+
 if (-not (Test-Path -LiteralPath $dotnetExecutable)) {
     Write-Host 'Installing the repository-local .NET SDK...'
     & (Join-Path $repositoryRoot 'scripts\bootstrap.ps1')
