@@ -137,7 +137,7 @@ stateDiagram-v2
 | Dragging | pose=Hanging, velocity filter | release는 surface 거리와 무관하게 Falling으로 전이. |
 | Falling | pose=Airborne, fall origin, landing target | fall loop; motion 완료가 Landing을 발생시킴. |
 | Landing/Recovering | pose=GroundedCompressed → Standing | 낮은 낙하는 impact clip, 260px 이상 낙하는 착석·어지럼·한 번의 기상을 포함한 단일 recovery clip을 끝낸 뒤 IdleHub로 간다. |
-| Climbing *(후속)* | pose=Climbing, wall/top surface, progress | wall 상실 시 Falling; 정상 완료 시 top landing/recover. |
+| Climbing | pose=Climbing, wall/top surface, progress | wall 상실 시 Falling; 정상 완료 시 후면 top-out과 canonical idle을 거쳐 IdleHub. |
 | Exiting | 모든 behavior 임시 상태 제거, exit deadline | despawn 외 입력 무시, 완료/timeout 후 종료. |
 
 ### 자세 계약
@@ -149,7 +149,7 @@ stateDiagram-v2
 | Hanging | drag_held_idle, drag_pulled | Airborne만 허용 |
 | Airborne | fall | GroundedCompressed만 허용 |
 | GroundedCompressed | drop_land, land_recover | Standing |
-| Climbing | climb_prepare, climb_loop, climb_finish | top landing 또는 Airborne |
+| Climbing | rope/free climb_prepare, climb_loop, climb_finish | top landing의 Standing 또는 Airborne |
 
 ### 우선순위와 중단
 
@@ -172,7 +172,8 @@ stateDiagram-v2
 | LookAround | 25 | Standing | `LookAround` |
 | Stretch | 20 | Standing | `Stretch` |
 | SitDoze | 15 | locomotion 후 8초, 사용자 입력 후 10초 경과 | `SitDown → SitSettle[1..2] → DozeEnter → DozeLoop[2..5] → WakeUp → StandUp` |
-| WallClimb *(후속)* | 별도 튜닝 | 도달 가능한 수직면·상단 surface 존재 | `WalkToWall → ClimbPrepare → ClimbLoop[n] → ClimbFinish → LandRecover` |
+| RopeClimb | 별도 튜닝 | 보행 중 더 높은 전면 비최대화 창의 좌/우 변과 충돌 | `Walk → RopeClimbPrepare → RopeClimbLoop[n] → RopeClimbFinish → IdleHub` |
+| FreeClimb | 별도 튜닝 | IdleHub random 선택과 1.25~3.0 pet-height 목표 | `IdleHub → FreeClimbPrepare → FreeClimbLoop[n] → (ClimbFinish → IdleHub | Falling)` |
 
 ## 7. 타이밍 (sequence) *(선택 — 이 tier 에선 생략 가능)*
 
@@ -207,7 +208,7 @@ stateDiagram-v2
 | click 자세별 reaction을 전부 만들면 아트 비용이 커진다. | 첫 버전은 Standing click과 DozeStartle만 만들고, 전용 bridge가 없는 posture에서는 pose를 깨는 fallback clip을 재생하지 않는다. |
 | drag release 직후 실제 낙하 거리가 0px일 수 있다. | Falling을 최소 한 Tick 유지한 뒤 같은 surface에 landing해도 fall→land 인과 trace와 최소 anticipation frame을 보장한다. 낙하 시작 top과 착지 top의 차이가 260px 이상일 때만 어지럼 회복을 추가한다. |
 | 최근 2개 반복 금지로 후보가 모두 제거될 수 있다. | IdleBreathe를 행동이 아닌 안전 fallback으로 두고 다음 deadline에 다시 선택한다. |
-| wall climb은 occlusion·수직면 탐색이 아직 없다. | grammar에는 pose와 중단 계약만 예약하고, geometry가 구현될 때까지 eligibility가 항상 false인 후속 behavior로 둔다. |
+| climb 중 앵커 창이 닫히거나 가려질 수 있다. | Tick마다 앵커를 재검증하고 유효하지 않으면 transient climb state를 지운 뒤 Falling으로 전이한다. |
 
 ## 11. 착수 순서
 

@@ -45,6 +45,9 @@ not begin from a `candidate` model.
   `canonical-idle-calibration-v1.png`, so separate sheets cannot quietly redefine head/body scale.
   Legacy sheets may use the shared `turnaround-v1.png` idle rectangle as a compatibility bridge;
   this does not mean the legacy sheet itself contains an idle cell.
+- Rope/free climbing prepare and loop cells use a rear view so hands, feet, rope, and implied wall
+  share one contact direction. The final action cell may use a rear three-quarter top-out pose;
+  only the emitted canonical idle calibration frame faces front.
 - `drag_held_idle` and `drag_pulled` use a top-aligned scruff anchor at `Y=104`; they are reviewed
   separately from the grounded foot pivot. The held loop keeps the body centered, while the pulled
   loop sends the body and every limb in the same trailing direction and mirrors at runtime.
