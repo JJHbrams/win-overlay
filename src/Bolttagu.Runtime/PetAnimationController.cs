@@ -116,6 +116,10 @@ public sealed class PetAnimationController : IDisposable
         }
         if (IsGrounded(State) && !RefreshSupport())
         {
+            // At a walking edge, the support can disappear in the same tick that
+            // the leading edge reaches a climbable foreground window. Preserve the
+            // previous support long enough to give that encounter its one chance.
+            if (State == PetRuntimeState.Walking && TryStartRopeClimbBeforeFalling(now)) return;
             StartFalling(now);
             return;
         }
@@ -262,11 +266,7 @@ public sealed class PetAnimationController : IDisposable
             EnterIdle(now);
             return;
         }
-        var distance = walk.TargetX - _walkOrigin.X;
-        var durationSeconds = Math.Abs(distance) / walk.SpeedPixelsPerSecond;
-        var elapsedSeconds = Math.Max(0, (now - _walkStartedAt).TotalSeconds);
-        var progress = durationSeconds <= 0 ? 1 : Math.Min(1, elapsedSeconds / durationSeconds);
-        var nextPosition = new ScreenPoint(_walkOrigin.X + (distance * progress), _walkOrigin.Y);
+        var (nextPosition, progress) = GetWalkPosition(walk, now);
         var support = _support;
         if (support is { } currentSupport && TryStartRopeClimb(currentSupport, _window.Position, nextPosition, walk.Facing, now))
         {
@@ -282,6 +282,25 @@ public sealed class PetAnimationController : IDisposable
                 _player.Play(PetActionClips.TurnToIdle);
             }
         }
+    }
+
+    private bool TryStartRopeClimbBeforeFalling(TimeSpan now)
+    {
+        var walk = _walk;
+        var support = _support;
+        if (walk is null || support is not { } currentSupport) return false;
+
+        var (nextPosition, _) = GetWalkPosition(walk, now);
+        return TryStartRopeClimb(currentSupport, _window.Position, nextPosition, walk.Facing, now);
+    }
+
+    private (ScreenPoint Position, double Progress) GetWalkPosition(PlannedWalk walk, TimeSpan now)
+    {
+        var distance = walk.TargetX - _walkOrigin.X;
+        var durationSeconds = Math.Abs(distance) / walk.SpeedPixelsPerSecond;
+        var elapsedSeconds = Math.Max(0, (now - _walkStartedAt).TotalSeconds);
+        var progress = durationSeconds <= 0 ? 1 : Math.Min(1, elapsedSeconds / durationSeconds);
+        return (new ScreenPoint(_walkOrigin.X + (distance * progress), _walkOrigin.Y), progress);
     }
 
     private void AdvanceDrag(TimeSpan now)

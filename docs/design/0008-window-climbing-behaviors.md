@@ -42,6 +42,8 @@ created: 2026-09-20
 | 런타임 | `PetAnimationController`가 animation completion과 Tick 기반 이동을 함께 소유한다. | prepare/finish는 completion, loop 이동은 Tick으로 분리한다. |
 | 랜덤성 | `BehaviorPlanner`는 주입된 `IRandomSource`를 쓴다. | free-climb 높이와 rope 경계의 35% 판정도 동일 random source를 사용한다. `(windowId, edge)` encounter latch로 같은 접촉 구간의 재추첨을 막는다. |
 | 낙하 선행 원인 | 기존 selector는 후보 창 본체가 캐릭터 높이 구간과 세로로 겹쳐야 한다는 조건을 두어, 위에 떨어진 창의 변 연장선을 후보에서 제외한다. | rope 후보는 창 본체와의 세로 겹침을 요구하지 않고 `candidate.Top <= support.Top - petHeight`만 검사한다. |
+| edge tick 순서 | 보행 지지면이 같은 Tick에 끊기면 기존에는 낙하가 rope 후보 조회보다 먼저 실행됐다. | Walking에서는 직전 support와 다음 leading edge로 rope를 먼저 한 번 판정하고, 후보가 없거나 확률이 실패하면 낙하한다. |
+| 오버레이 focus | 오버레이가 `Activate()`하면 foreground 조회 결과가 pet 자신이 되어 다른 창의 `IsForeground` 후보가 사라진다. | overlay는 `ShowActivated=false`와 `WS_EX_NOACTIVATE`로 표시·클릭·drag 중에도 기존 foreground 창을 보존한다. |
 | 시점 | 등반 중 정면 포즈는 벽/밧줄과의 접촉 방향을 흐린다. | prepare/loop/finish action frame은 후면 또는 후면 3/4 시점으로 그리고, terminal calibration frame만 정면 idle을 사용한다. |
 
 ## 4. 유스케이스 / 시나리오

@@ -1,5 +1,6 @@
 using Bolttagu.Platform.Windows;
 using System.Threading;
+using System.Runtime.InteropServices;
 using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Threading;
@@ -9,6 +10,9 @@ namespace Bolttagu.Architecture.Tests;
 [TestClass]
 public sealed class OverlayWindowSmokeTests
 {
+    private const int GwlExStyle = -20;
+    private const nint WsExNoActivate = 0x08000000;
+
     [TestMethod]
     public void OverlayWindow_CreatesARealTransparentTopmostHwnd()
     {
@@ -25,6 +29,11 @@ public sealed class OverlayWindowSmokeTests
                 Assert.IsTrue(window.AllowsTransparency);
                 Assert.IsTrue(window.Topmost);
                 Assert.IsFalse(window.ShowInTaskbar);
+                Assert.IsFalse(window.ShowActivated, "The pet overlay must not take foreground focus from desktop windows.");
+                Assert.AreNotEqual(
+                    (nint)0,
+                    GetWindowLongPtr(handle, GwlExStyle) & WsExNoActivate,
+                    "The overlay HWND must preserve the active application during clicks and drags.");
 
                 var overlay = (Bolttagu.Contracts.IOverlayWindow)window;
                 var surfaces = new DesktopSurfaceProvider(window);
@@ -93,4 +102,7 @@ public sealed class OverlayWindowSmokeTests
             Assert.Fail(failure.ToString());
         }
     }
+
+    [DllImport("user32.dll", EntryPoint = "GetWindowLongPtrW", SetLastError = true)]
+    private static extern nint GetWindowLongPtr(IntPtr hwnd, int index);
 }

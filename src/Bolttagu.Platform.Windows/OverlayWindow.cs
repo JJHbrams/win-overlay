@@ -1,4 +1,5 @@
 using Bolttagu.Contracts;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Interop;
@@ -9,6 +10,8 @@ namespace Bolttagu.Platform.Windows;
 public sealed class OverlayWindow : Window, IOverlayWindow
 {
     private const int WmDpiChanged = 0x02E0;
+    private const int GwlExStyle = -20;
+    private const nint WsExNoActivate = 0x08000000;
     private readonly DragGestureTracker _dragGesture = new();
     private bool _releasingCapture;
     private ScreenPoint _dragAnchorCorrection;
@@ -24,6 +27,7 @@ public sealed class OverlayWindow : Window, IOverlayWindow
         Background = System.Windows.Media.Brushes.Transparent;
         Topmost = true;
         ShowInTaskbar = false;
+        ShowActivated = false;
         Content = content;
         PreviewMouseLeftButtonDown += OnPreviewMouseLeftButtonDown;
         PreviewMouseMove += OnPreviewMouseMove;
@@ -49,7 +53,7 @@ public sealed class OverlayWindow : Window, IOverlayWindow
     public event EventHandler? DragCanceled;
     public event EventHandler? ExitRequested;
     public event EventHandler<double>? DpiScaleChanged;
-    public void ShowOverlay() { Show(); Activate(); }
+    public void ShowOverlay() => Show();
     public void HideOverlay() { CancelPointerInteraction(); Hide(); }
     public void CloseOverlay() { CancelPointerInteraction(); Close(); }
 
@@ -150,9 +154,26 @@ public sealed class OverlayWindow : Window, IOverlayWindow
 
     private void OnSourceInitialized(object? sender, EventArgs e)
     {
-        if (PresentationSource.FromVisual(this) is HwndSource source) source.AddHook(WndProc);
+        if (PresentationSource.FromVisual(this) is HwndSource source)
+        {
+            SetNoActivateStyle(source.Handle);
+            source.AddHook(WndProc);
+        }
         DpiScaleChanged?.Invoke(this, VisualTreeHelper.GetDpi(this).DpiScaleX);
     }
+
+    private static void SetNoActivateStyle(IntPtr hwnd)
+    {
+        var style = GetWindowLongPtr(hwnd, GwlExStyle);
+        var noActivateStyle = style | WsExNoActivate;
+        if (style != noActivateStyle) SetWindowLongPtr(hwnd, GwlExStyle, noActivateStyle);
+    }
+
+    [DllImport("user32.dll", EntryPoint = "GetWindowLongPtrW", SetLastError = true)]
+    private static extern nint GetWindowLongPtr(IntPtr hwnd, int index);
+
+    [DllImport("user32.dll", EntryPoint = "SetWindowLongPtrW", SetLastError = true)]
+    private static extern nint SetWindowLongPtr(IntPtr hwnd, int index, nint newLong);
 
     private IntPtr WndProc(IntPtr hwnd, int message, IntPtr wParam, IntPtr lParam, ref bool handled)
     {

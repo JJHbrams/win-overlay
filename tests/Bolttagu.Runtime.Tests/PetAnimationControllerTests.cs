@@ -248,7 +248,7 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
-    public void WalkLeavingSupportBounds_StartsFall()
+    public void RopeClimb_SupportLossWithoutEligibleObstacleFalls()
     {
         using var fixture = new Fixture(2000, 0, 0, 320, 2000);
         fixture.Surfaces.Current = new(
@@ -512,6 +512,7 @@ public sealed class PetAnimationControllerTests
 
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
+        fixture.Surfaces.SupportValid = false;
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
         fixture.Controller.Tick();
 
