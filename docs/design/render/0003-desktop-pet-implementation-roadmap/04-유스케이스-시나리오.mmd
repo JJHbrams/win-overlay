@@ -1,0 +1,12 @@
+flowchart LR
+  Artist["아트 작업자"] --> Source["전신 모델·개별 frame 제작"]
+  Source --> Build["검증·atlas build"]
+  Developer["개발자"] --> Core["행동·상태 구현"]
+  Developer --> Adapters["Windows·render adapter 구현"]
+  Build --> Slice["실행 가능한 수직 슬라이스"]
+  Core --> Slice
+  Adapters --> Slice
+  User["사용자"] --> Interact["실행·클릭·드래그·설정"]
+  Slice --> Interact
+  Interact --> Diagnose["snapshot·trace·replay"]
+  Diagnose --> Developer

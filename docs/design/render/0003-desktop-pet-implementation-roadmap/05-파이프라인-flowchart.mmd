@@ -1,0 +1,17 @@
+flowchart TD
+  P0["P0 기반·stack spike"] --> G0{"투명 창·DPI·입력 통과?"}
+  G0 -->|아니오| ADR["후보 변경·ADR 갱신"]
+  ADR --> P0
+  G0 -->|예| P1["P1 upstream·아트 pipeline"]
+  P1 --> P2["P2 idle·click 수직 슬라이스"]
+  P2 --> P3["P3 Core 행동·걷기"]
+  P3 --> P4["P4 drag·tray·window lifecycle"]
+  P4 --> P5["P5 multi-monitor·복구"]
+  P5 --> P6["P6 진단·설정·replay"]
+  P6 --> P7["P7 아트 확장·polish"]
+  P7 --> RC["P8 package·release candidate"]
+  RC --> Gate{"AC·성능·E2E 통과?"}
+  Gate -->|아니오| Fix["실패 소유 phase로 환류"]
+  Fix --> RC
+  Gate -->|예| V1["v1 독립형 데스크톱 펫"]
+  V1 -. 선택 .-> Future["P9 외부 integration"]

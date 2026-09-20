@@ -1,0 +1,13 @@
+flowchart TD
+  Sources["Clock · Pointer · Menu · Optional Integrations"] --> Normalize["Input Adapters: PetEvent 정규화"]
+  Normalize --> Queue["Runtime: 단일 순서 이벤트 큐"]
+  Queue --> Core["Core: 상태·우선순위·행동 결정"]
+  Core --> Plan["Runtime: RenderPlan · WindowCommand 생성"]
+  Plan --> Render["Presentation Adapter"]
+  Plan --> Window["Windows Platform Adapter"]
+  Render --> Feedback["결과·오류 feedback"]
+  Window --> Feedback
+  Feedback --> Queue
+  Queue --> Observe["Diagnostics: snapshot · bounded trace"]
+  Assets["Asset Catalog"] --> Render
+  Assets --> Core

@@ -1,0 +1,14 @@
+stateDiagram-v2
+  [*] --> Planned
+  Planned --> StackValidated: P0 gate
+  StackValidated --> AssetReady: P1 gate
+  AssetReady --> VerticalSlice: P2 gate
+  VerticalSlice --> FeatureComplete: P3~P6 gate
+  FeatureComplete --> ContentComplete: P7 gate
+  ContentComplete --> ReleaseCandidate: P8 build
+  ReleaseCandidate --> Released: 전체 AC 통과
+  ReleaseCandidate --> FeatureComplete: runtime 결함
+  ReleaseCandidate --> ContentComplete: art·polish 결함
+  StackValidated --> Planned: stack spike 실패
+  AssetReady --> StackValidated: asset 계약 변경
+  Released --> IntegrationOptional: 별도 승인

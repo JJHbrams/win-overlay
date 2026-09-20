@@ -1,0 +1,11 @@
+flowchart TD
+  App --> Runtime
+  App --> Adapters["Adapters"]
+  Runtime --> Core
+  Runtime --> Ports["Ports · Contracts"]
+  Assets --> Ports
+  Presentation --> Ports
+  Windows["Platform.Windows"] --> Ports
+  Diagnostics --> Ports
+  Integrations --> Ports
+  Adapters -. 구현 .-> Ports

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bolttagu.Assets\Bolttagu.Assets.csproj" />
+    <ProjectReference Include="..\Bolttagu.Contracts\Bolttagu.Contracts.csproj" />
+    <ProjectReference Include="..\Bolttagu.Diagnostics\Bolttagu.Diagnostics.csproj" />
+    <ProjectReference Include="..\Bolttagu.Platform.Windows\Bolttagu.Platform.Windows.csproj" />
+    <ProjectReference Include="..\Bolttagu.Presentation\Bolttagu.Presentation.csproj" />
+    <ProjectReference Include="..\Bolttagu.Runtime\Bolttagu.Runtime.csproj" />
+  </ItemGroup>
+
+</Project>

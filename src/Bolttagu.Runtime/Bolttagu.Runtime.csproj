@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+</PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bolttagu.Contracts\Bolttagu.Contracts.csproj" />
+    <ProjectReference Include="..\Bolttagu.Core\Bolttagu.Core.csproj" />
+  </ItemGroup>
+
+</Project>

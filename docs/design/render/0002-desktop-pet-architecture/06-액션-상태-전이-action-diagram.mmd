@@ -1,0 +1,25 @@
+stateDiagram-v2
+  [*] --> Booting
+  Booting --> SafeIdle: pack·window 준비
+  Booting --> Faulted: 필수 구성 실패
+  SafeIdle --> Acting: scheduler 행동 선택
+  SafeIdle --> Reacting: click·hover
+  SafeIdle --> Dragged: pointer down + drag threshold
+  Acting --> SafeIdle: 완료·취소
+  Acting --> Reacting: 사용자 입력이 선점
+  Reacting --> SafeIdle: dwell 완료
+  Reacting --> Dragged: drag 시작
+  Dragged --> SafeIdle: release·capture lost
+  SafeIdle --> Hidden: 사용자 숨김
+  Acting --> Hidden: 숨김이 행동 취소
+  Reacting --> Hidden: 숨김이 반응 취소
+  Dragged --> Hidden: capture 해제 후 숨김
+  Hidden --> SafeIdle: 표시
+  SafeIdle --> Suspended: session lock·display change
+  Acting --> Suspended: 행동 취소
+  Dragged --> Suspended: capture 해제
+  Suspended --> SafeIdle: 환경 재측정 후 복귀
+  SafeIdle --> Faulted: adapter 오류 한도 초과
+  Acting --> Faulted: 복구 불가 오류
+  Faulted --> SafeIdle: fallback 재구성 성공
+  Faulted --> Hidden: 안전 표시 불가

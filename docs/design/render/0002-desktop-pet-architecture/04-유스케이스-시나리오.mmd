@@ -1,0 +1,12 @@
+flowchart LR
+  U["사용자"] --> Launch["펫 실행·종료"]
+  U --> Direct["클릭·드래그·메뉴"]
+  Clock["시간·화면 환경"] --> Auto["idle·이동 행동"]
+  Artist["아트 작업자"] --> Pack["아트 팩 추가·검증"]
+  Optional["선택형 외부 소스"] --> Event["표준 PetEvent 변환"]
+  Launch --> Runtime["Pet Runtime"]
+  Direct --> Runtime
+  Auto --> Runtime
+  Pack --> Assets["Asset Catalog"]
+  Event --> Runtime
+  Runtime --> View["투명 오버레이 출력"]
