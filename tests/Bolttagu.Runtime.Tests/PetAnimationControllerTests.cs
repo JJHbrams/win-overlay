@@ -150,6 +150,24 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
+    public void DragRelease_ProbesAboveTheFeetSoExactTextContactCanLand()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        fixture.Surfaces.Below = new(
+            new(new(0, 720), new(1200, 24)), DesktopSurfaceKind.TextLine, 77, 0, true);
+
+        fixture.Controller.BeginDrag();
+        fixture.Controller.CompleteDrag();
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(10);
+        fixture.Controller.Tick();
+
+        Assert.IsLessThanOrEqualTo(720, fixture.Surfaces.LastFindFromY,
+            "Landing search must include a thin surface touching the pet's feet.");
+        Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
+    }
+
+    [TestMethod]
     public void CaptureLoss_DuringDragReturnsDirectlyToIdle()
     {
         using var fixture = new Fixture(2000, 2000);
@@ -763,9 +781,13 @@ public sealed class PetAnimationControllerTests
         public DesktopSurface? Intercept { get; set; }
         public bool SupportValid { get; set; } = true;
         public bool ClimbAnchorValid { get; set; } = true;
+        public double LastFindFromY { get; private set; }
 
-        public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea) =>
-            Below ?? Current;
+        public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea)
+        {
+            LastFindFromY = fromY;
+            return Below ?? Current;
+        }
 
         public bool TryRefreshSupport(
             DesktopSurface expected,

@@ -534,7 +534,7 @@ public sealed class PetAnimationController : IDisposable
         var position = _window.Position;
         return _surfaces.FindFirstBelow(
             position.X + (_window.Size.Width / 2d),
-            position.Y + _window.Size.Height + 4,
+            position.Y + _window.Size.Height - 4,
             _window.WorkArea);
     }
 
