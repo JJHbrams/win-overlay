@@ -10,7 +10,36 @@ namespace Bolttagu.Architecture.Tests;
 [TestClass]
 public sealed class OverlayWindowSmokeTests
 {
+    [TestMethod]
+    public void ContactVfxWindow_IsTransparentNonActivatingAndClickThrough()
+    {
+        Exception? failure = null;
+        var thread = new Thread(() =>
+        {
+            try
+            {
+                using var window = new ContactVfxWindow();
+                window.ShowLayer();
+                Assert.IsFalse(window.ShowActivated);
+                Assert.IsFalse(window.IsHitTestVisible);
+                Assert.IsTrue(window.AllowsTransparency);
+                Assert.IsTrue(window.Topmost);
+                var handle = new WindowInteropHelper(window).Handle;
+                var style = GetWindowLongPtr(handle, GwlExStyle);
+                Assert.AreNotEqual((nint)0, style & WsExNoActivate);
+                Assert.AreNotEqual((nint)0, style & WsExTransparent);
+            }
+            catch (Exception exception) { failure = exception; }
+            finally { Dispatcher.CurrentDispatcher.InvokeShutdown(); }
+        });
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+        Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(5)));
+        if (failure is not null) Assert.Fail(failure.ToString());
+    }
+
     private const int GwlExStyle = -20;
+    private const nint WsExTransparent = 0x00000020;
     private const nint WsExNoActivate = 0x08000000;
 
     [TestMethod]

@@ -18,6 +18,7 @@ public partial class App : System.Windows.Application
     private PetAnimationController? _animationController;
     private WpfRuntimeLoop? _runtimeLoop;
     private ForegroundVisualGeometryScanner? _visualGeometryScanner;
+    private ContactVfxWindow? _contactVfx;
 
     protected override void OnStartup(StartupEventArgs e)
     {
@@ -25,6 +26,7 @@ public partial class App : System.Windows.Application
         var tray = new TrayController();
         var (view, player, setDpiScale, assetStatus) = CreatePetView();
         var overlay = new OverlayWindow(view);
+        var contactVfx = new ContactVfxWindow();
         var visualGeometryScanner = new ForegroundVisualGeometryScanner(
             new GdiForegroundWindowFrameCapture(() => new WindowInteropHelper(overlay).Handle));
         var animationController = new PetAnimationController(
@@ -45,8 +47,16 @@ public partial class App : System.Windows.Application
             tray.SetStatus($"Bolttagu P3 · {scale:P0} DPI · {assetStatus}");
         };
         overlay.ExitRequested += (_, _) => ExitApplication();
-        tray.ShowRequested += (_, _) => overlay.ShowOverlay();
-        tray.HideRequested += (_, _) => overlay.HideOverlay();
+        tray.ShowRequested += (_, _) =>
+        {
+            contactVfx.ShowLayer();
+            overlay.ShowOverlay();
+        };
+        tray.HideRequested += (_, _) =>
+        {
+            contactVfx.HideLayer();
+            overlay.HideOverlay();
+        };
         tray.ExitRequested += (_, _) => ExitApplication();
         animationController.ExitReady += (_, _) => CompleteShutdown();
 
@@ -56,7 +66,24 @@ public partial class App : System.Windows.Application
         _animationController = animationController;
         _runtimeLoop = runtimeLoop;
         _visualGeometryScanner = visualGeometryScanner;
+        _contactVfx = contactVfx;
+        if (player is IAnimationFrameSource frameSource)
+        {
+            frameSource.FramePresented += (_, args) =>
+            {
+                if (args.ClipId is not (PetActionClips.RopeClimbLoop or PetActionClips.FreeClimbLoop))
+                {
+                    contactVfx.Clear();
+                    return;
+                }
+                var origin = overlay.Position;
+                contactVfx.UpdateContacts(args.Contacts.Select(contact => new VfxContact(
+                    contact.Kind,
+                    new(origin.X + contact.LocalPosition.X, origin.Y + contact.LocalPosition.Y))).ToArray());
+            };
+        }
         overlay.PlaceAtBottomRight(24);
+        contactVfx.ShowLayer();
         overlay.ShowOverlay();
         visualGeometryScanner.Start();
         animationController.Start();
@@ -69,6 +96,7 @@ public partial class App : System.Windows.Application
         _visualGeometryScanner?.Dispose();
         _animationController?.Dispose();
         _animationPlayer?.Dispose();
+        _contactVfx?.Dispose();
         _tray?.Dispose();
         base.OnExit(e);
     }

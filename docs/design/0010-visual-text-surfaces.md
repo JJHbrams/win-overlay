@@ -120,7 +120,7 @@ stateDiagram-v2
 | `src/Bolttagu.Platform.Windows/DesktopSurfaceProvider.cs` | OS surface와 최신 foreground visual snapshot을 합성하고 text support/vertical anchor를 재검증한다. |
 | `src/Bolttagu.Platform.Windows/ForegroundVisualGeometryScanner.cs` | single-flight foreground HWND capture, 4 Hz scheduling, miss grace, immutable snapshot 게시를 담당한다. |
 | `src/Bolttagu.Platform.Windows/VisualGeometryDetector.cs` | in-memory contrast mask에서 text row와 vertical span을 결정론적으로 추출한다. |
-| `src/Bolttagu.Platform.Windows/ContactVfxWindow.cs` (신규) | pet 뒤의 click-through transparent layer와 bounded fade lifecycle을 구현한다. |
+| `src/Bolttagu.Platform.Windows/ContactVfxWindow.cs` | pet 뒤의 click-through transparent layer와 bounded fade lifecycle을 구현한다. |
 | `src/Bolttagu.Presentation/PetSpriteView.cs` | frame contact를 screen-coordinate compositor에 전달할 수 있도록 frame event를 발행한다. |
 | `src/Bolttagu.Assets/AnimationPack.cs` | optional contact metadata validation을 추가한다. |
 | `src/Bolttagu.Assets/RuntimeAnimationCatalog.cs` | build catalog contact를 `SpriteFrame`으로 전달한다. |
@@ -149,5 +149,5 @@ stateDiagram-v2
 - [x] 1. synthetic frame에서 text row·vertical span을 검출하고 stable geometry snapshot을 게시하는 순수 detector/scanner slice를 만든다. (AC-1, AC-2, AC-3, AC-4)
 - [x] 2. visual geometry를 `DesktopSurfaceProvider`와 runtime support/climb 경로에 연결해 문장 끝 낙하와 deterministic line climb을 완성한다. (AC-1, AC-2, AC-3, AC-6)
 - [x] 3. climb frame contact metadata를 pack→catalog→presentation event로 관통시킨다. (AC-5)
-- [ ] 4. screen-fixed click-through VFX layer와 fade/cleanup lifecycle을 연결한다. (AC-5, AC-6)
+- [x] 4. screen-fixed click-through VFX layer와 fade/cleanup lifecycle을 연결한다. (AC-5, AC-6)
 - [ ] 5. 관련 Core/Runtime/Architecture/Presentation/Asset test와 실제 foreground fixture 창 smoke를 실행하고 design status를 `done`으로 닫는다. (AC-1, AC-2, AC-3, AC-4, AC-5, AC-6)

@@ -2,6 +2,7 @@ using Bolttagu.Assets;
 using Bolttagu.Contracts;
 using Bolttagu.Core;
 using Bolttagu.Runtime;
+using Bolttagu.Platform.Windows;
 using System.IO;
 using System.Threading;
 using System.Windows;
@@ -58,6 +59,26 @@ public sealed class AnimationPlaybackTests
         thread.Start();
         Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(5)), "Contact playback thread did not exit.");
         if (failure is not null) Assert.Fail(failure.ToString());
+    }
+
+    [TestMethod]
+    public void ContactVfxTracker_BoundsFadesAndExpiresMarks()
+    {
+        var tracker = new ContactVfxTracker();
+        var start = DateTimeOffset.UnixEpoch;
+        tracker.Update(Enumerable.Range(0, 20)
+            .Select(index => new VfxContact(SpriteContactKind.Hand, new(index * 20, 100)))
+            .ToArray(), start);
+        Assert.HasCount(ContactVfxTracker.MaximumMarks, tracker.GetVisible(start));
+
+        var first = tracker.GetVisible(start)[0];
+        tracker.Update([new(first.Kind, first.ScreenPosition)], start.AddMilliseconds(250));
+        var refreshed = tracker.GetVisible(start.AddMilliseconds(500))
+            .Single(mark => mark.ScreenPosition == first.ScreenPosition);
+        Assert.AreEqual(1d, refreshed.Opacity);
+        var fading = tracker.GetVisible(start.AddMilliseconds(700));
+        Assert.IsTrue(fading.Any(mark => mark.Opacity is > 0 and < 1));
+        Assert.HasCount(0, tracker.GetVisible(start.AddMilliseconds(900)));
     }
 
     [TestMethod]
