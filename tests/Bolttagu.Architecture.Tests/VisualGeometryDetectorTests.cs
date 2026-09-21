@@ -1,5 +1,13 @@
 using Bolttagu.Contracts;
 using Bolttagu.Platform.Windows;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Interop;
+using System.Windows.Media;
+using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Bolttagu.Architecture.Tests;
 
@@ -62,6 +70,102 @@ public sealed class VisualGeometryDetectorTests
         Assert.IsTrue(scheduler.TryStart(start.AddMilliseconds(250)));
     }
 
+    [TestMethod]
+    public void GdiCapture_ForegroundFixtureProducesTextAndVerticalGeometry()
+    {
+        Exception? failure = null;
+        var thread = new Thread(() =>
+        {
+            Window? window = null;
+            try
+            {
+                var canvas = new Canvas { Background = System.Windows.Media.Brushes.White };
+                var text = new TextBlock
+                {
+                    Text = "BOLTTAGU WALKS ON THIS SENTENCE",
+                    FontSize = 28,
+                    FontWeight = FontWeights.Bold,
+                    Foreground = System.Windows.Media.Brushes.Black,
+                };
+                Canvas.SetLeft(text, 40);
+                Canvas.SetTop(text, 90);
+                var line = new Rectangle
+                {
+                    Width = 3,
+                    Height = 190,
+                    Fill = System.Windows.Media.Brushes.Black,
+                };
+                Canvas.SetLeft(line, 500);
+                Canvas.SetTop(line, 55);
+                canvas.Children.Add(text);
+                canvas.Children.Add(line);
+                window = new()
+                {
+                    Title = "Bolttagu Visual Surface Fixture",
+                    Width = 640,
+                    Height = 360,
+                    Left = 120,
+                    Top = 100,
+                    Content = canvas,
+                    Background = System.Windows.Media.Brushes.White,
+                };
+                window.Show();
+                var handle = new WindowInteropHelper(window).Handle;
+                window.Activate();
+                ForceForeground(handle);
+                PumpDispatcherOnce();
+                Assert.AreEqual(handle, GetForegroundWindow());
+
+                var capture = new GdiForegroundWindowFrameCapture(() => IntPtr.Zero)
+                    .Capture(DateTimeOffset.UtcNow);
+                Assert.AreEqual(handle.ToInt64(), capture.ForegroundWindowId);
+                Assert.IsNotNull(capture.Frame);
+                var geometry = new VisualGeometryDetector().Detect(capture.Frame);
+
+                Assert.IsTrue(geometry.Any(item =>
+                    item.Kind == VisualGeometryKind.TextLine && item.Bounds.Size.Width >= 180));
+                Assert.IsTrue(geometry.Any(item =>
+                    item.Kind == VisualGeometryKind.VerticalLine && item.Bounds.Size.Height >= 150));
+            }
+            catch (Exception exception) { failure = exception; }
+            finally
+            {
+                window?.Close();
+                Dispatcher.CurrentDispatcher.InvokeShutdown();
+            }
+        });
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+        Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(10)), "Foreground visual fixture did not exit.");
+        if (failure is not null) Assert.Fail(failure.ToString());
+    }
+
+    private static void PumpDispatcherOnce()
+    {
+        var frame = new DispatcherFrame();
+        Dispatcher.CurrentDispatcher.BeginInvoke(
+            DispatcherPriority.ApplicationIdle,
+            new Action(() => frame.Continue = false));
+        Dispatcher.PushFrame(frame);
+    }
+
+    private static void ForceForeground(IntPtr handle)
+    {
+        var currentThread = GetCurrentThreadId();
+        var foregroundThread = GetWindowThreadProcessId(GetForegroundWindow(), IntPtr.Zero);
+        var attached = foregroundThread != 0 && foregroundThread != currentThread &&
+            AttachThreadInput(currentThread, foregroundThread, true);
+        try
+        {
+            _ = BringWindowToTop(handle);
+            _ = SetForegroundWindow(handle);
+        }
+        finally
+        {
+            if (attached) _ = AttachThreadInput(currentThread, foregroundThread, false);
+        }
+    }
+
     private static byte[] WhiteFrame(int width, int height)
     {
         var pixels = new byte[width * height * 4];
@@ -88,4 +192,25 @@ public sealed class VisualGeometryDetectorTests
             }
         }
     }
+
+    [DllImport("user32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static extern bool SetForegroundWindow(IntPtr handle);
+
+    [DllImport("user32.dll")]
+    private static extern IntPtr GetForegroundWindow();
+
+    [DllImport("kernel32.dll")]
+    private static extern uint GetCurrentThreadId();
+
+    [DllImport("user32.dll")]
+    private static extern uint GetWindowThreadProcessId(IntPtr handle, IntPtr processId);
+
+    [DllImport("user32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static extern bool AttachThreadInput(uint idAttach, uint idAttachTo, bool attach);
+
+    [DllImport("user32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static extern bool BringWindowToTop(IntPtr handle);
 }

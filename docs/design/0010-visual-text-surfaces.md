@@ -2,7 +2,7 @@
 id: 0010-visual-text-surfaces
 title: Visual Text Surfaces and Contact VFX
 tier: M
-status: approved
+status: done
 issue:
 owner: jhjang
 created: 2026-09-21
@@ -150,4 +150,4 @@ stateDiagram-v2
 - [x] 2. visual geometry를 `DesktopSurfaceProvider`와 runtime support/climb 경로에 연결해 문장 끝 낙하와 deterministic line climb을 완성한다. (AC-1, AC-2, AC-3, AC-6)
 - [x] 3. climb frame contact metadata를 pack→catalog→presentation event로 관통시킨다. (AC-5)
 - [x] 4. screen-fixed click-through VFX layer와 fade/cleanup lifecycle을 연결한다. (AC-5, AC-6)
-- [ ] 5. 관련 Core/Runtime/Architecture/Presentation/Asset test와 실제 foreground fixture 창 smoke를 실행하고 design status를 `done`으로 닫는다. (AC-1, AC-2, AC-3, AC-4, AC-5, AC-6)
+- [x] 5. 관련 Core/Runtime/Architecture/Presentation/Asset test와 실제 foreground fixture 창 smoke를 실행하고 design status를 `done`으로 닫는다. (AC-1, AC-2, AC-3, AC-4, AC-5, AC-6)
