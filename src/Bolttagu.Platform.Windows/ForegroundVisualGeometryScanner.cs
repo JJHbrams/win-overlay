@@ -84,7 +84,7 @@ public sealed class VisualGeometrySnapshotTracker : IVisualGeometrySnapshotSourc
 public sealed class ForegroundVisualGeometryScanner : IVisualGeometrySnapshotSource, IDisposable
 {
     public static readonly TimeSpan ScanInterval = TimeSpan.FromMilliseconds(250);
-    public static readonly TimeSpan MaximumSnapshotAge = TimeSpan.FromMilliseconds(750);
+    public static readonly TimeSpan MaximumSnapshotAge = TimeSpan.FromSeconds(3);
     private readonly IForegroundWindowFrameCapture _capture;
     private readonly VisualGeometryDetector _detector;
     private readonly VisualGeometrySnapshotTracker _tracker = new();
@@ -123,11 +123,11 @@ public sealed class ForegroundVisualGeometryScanner : IVisualGeometrySnapshotSou
         {
             var result = _capture.Capture(now);
             var geometry = result.Frame is { } frame ? _detector.Detect(frame) : null;
-            _tracker.Observe(result.ForegroundWindowId, now, geometry);
+            _tracker.Observe(result.ForegroundWindowId, _timeProvider.GetUtcNow(), geometry);
         }
         catch (Exception exception) when (exception is ExternalException or InvalidOperationException or ArgumentException)
         {
-            _tracker.Observe(0, now, null);
+            _tracker.Observe(0, _timeProvider.GetUtcNow(), null);
         }
         finally
         {

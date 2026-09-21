@@ -29,7 +29,7 @@ created: 2026-09-21
 | AC-1 | 현재 foreground 창 캡처에서 글자형 component가 3개 이상 같은 행으로 묶이면 그 union의 top과 좌우 끝을 `TextLine` support로 제공한다. pet 중심이 문장 끝을 벗어나면 다음 support 재검증에서 Falling으로 전이한다. | 합성 monochrome frame을 쓰는 detector/selector 단위 테스트와 `PetAnimationControllerTests`의 문장 끝 낙하 trace를 검증한다. |
 | AC-2 | foreground 창 캡처에서 폭 8 DIP 이하, 높이 96 DIP 이상인 연속 수직 span을 `VerticalLine` climb anchor로 제공한다. 보행 leading edge가 처음 만난 visual line은 확률 판정 없이 기존 rope climb sequence를 시작한다. line top이 `TextLine` 또는 horizontal support와 만나면 착지하고, 아니면 line 끝에서 Falling으로 전이한다. | 좌·우 접근, 동일 line 1회 encounter, top support 유무를 synthetic geometry 및 runtime trace 테스트로 검증한다. |
 | AC-3 | foreground HWND가 바뀌거나 visual geometry가 두 번 연속 scan에서 사라지면 해당 text support/line anchor를 무효화하고 기존 support-loss 또는 anchor-loss Falling 경로를 사용한다. 한 번의 누락은 직전 snapshot을 유지해 캡처 흔들림을 흡수한다. | fake foreground id와 scan sequence로 grace 1회, 2회째 invalidation, stale snapshot 낙하를 검증한다. |
-| AC-4 | 캡처·geometry 분석은 UI thread 밖에서 최대 4 Hz, single-flight로 실행하며 runtime의 33 ms Tick은 마지막 immutable snapshot만 읽는다. 750 ms보다 오래된 visual snapshot은 사용하지 않고 기존 Window/Taskbar surface로 fallback한다. | scanner scheduler 단위 테스트에서 동시 작업 최대 1개, 최소 250 ms scan 간격, stale rejection을 검증한다. |
+| AC-4 | 캡처·geometry 분석은 UI thread 밖에서 최대 4 Hz, single-flight로 실행하며 runtime의 33 ms Tick은 마지막 immutable snapshot만 읽는다. 결과는 분석 완료 시각에 게시하고 foreground HWND가 계속 일치하는 동안 최대 3초까지 사용한 뒤 기존 Window/Taskbar surface로 fallback한다. | scanner scheduler 단위 테스트에서 동시 작업 최대 1개, 최소 250 ms scan 간격, 고해상도 scan 간 snapshot 유지와 stale rejection을 검증한다. |
 | AC-5 | rope/free climb frame의 hand/foot contact metadata가 활성화될 때 pet 뒤·foreground 창 앞의 click-through VFX layer에 12~24 DIP 주름을 만든다. 접점 해제 후 300 ms 안에 fade를 시작하고 600 ms 안에 제거하며, 동시에 16개를 넘지 않는다. | pack/catalog metadata 테스트, presentation tracker fake-clock 테스트, 실제 climb 녹화의 stacking·fade 육안 검수로 확인한다. |
 | AC-6 | fall, drag, hide, foreground 전환, exit 및 dispose는 visual support/anchor와 모든 contact VFX를 정리하며 VFX window는 포커스·pointer hit-test를 가져가지 않는다. | runtime interrupt trace, WPF window style smoke test, 종료 후 VFX item 0개 검증으로 확인한다. |
 
@@ -143,6 +143,7 @@ stateDiagram-v2
 | VFX Topmost window가 대상 창보다 뒤로 내려가거나 pet보다 앞설 수 있다. | no-activate owner 관계와 명시적 z-order 재확인을 smoke test로 검증하고 실패하면 VFX만 비활성화한다. 행동 상태는 유지한다. |
 | per-frame 접점이 artwork와 어긋날 수 있다. | pack contact 좌표를 contact-sheet overlay로 렌더해 육안 검수하고 런타임은 metadata만 신뢰한다. |
 | multi-monitor DPI가 다른 경우 capture pixel과 WPF DIP가 어긋날 수 있다. | snapshot에 capture origin·DPI scale을 보존하고 모든 geometry를 provider 진입 전에 screen DIP로 정규화한다. |
+| 4K foreground 분석 시간이 기존 750 ms freshness를 초과할 수 있다. | 결과의 게시 시각을 분석 완료 시점으로 기록하고, HWND 일치 검증을 유지한 채 snapshot freshness를 3초로 확장한다. |
 
 ## 11. 착수 순서
 

@@ -59,6 +59,24 @@ public sealed class VisualGeometryDetectorTests
     }
 
     [TestMethod]
+    public void PublishedSnapshot_RemainsUsableAcrossAHighResolutionScanInterval()
+    {
+        var tracker = new VisualGeometrySnapshotTracker();
+        var completedAt = DateTimeOffset.UnixEpoch.AddMilliseconds(1400);
+        tracker.Observe(3, completedAt,
+        [
+            new VisualGeometry(7, VisualGeometryKind.TextLine, new(new(10, 20), new(100, 12)), 3),
+        ]);
+
+        Assert.IsNotNull(tracker.GetLatest(
+            completedAt.AddMilliseconds(1600),
+            ForegroundVisualGeometryScanner.MaximumSnapshotAge));
+        Assert.IsNull(tracker.GetLatest(
+            completedAt.AddMilliseconds(3001),
+            ForegroundVisualGeometryScanner.MaximumSnapshotAge));
+    }
+
+    [TestMethod]
     public void ScanScheduler_IsSingleFlightAndEnforcesFourHertzInterval()
     {
         var scheduler = new VisualScanScheduler(TimeSpan.FromMilliseconds(250));
