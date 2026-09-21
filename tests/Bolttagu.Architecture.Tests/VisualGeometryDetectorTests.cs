@@ -21,6 +21,7 @@ public sealed class VisualGeometryDetectorTests
         DrawBlackRectangle(pixels, 240, 20, 40, 8, 18);
         DrawBlackRectangle(pixels, 240, 34, 38, 9, 20);
         DrawBlackRectangle(pixels, 240, 50, 41, 7, 17);
+        DrawBlackRectangle(pixels, 240, 20, 100, 150, 1);
         DrawBlackRectangle(pixels, 240, 180, 20, 3, 130);
         var frame = new CapturedWindowFrame(42, DateTimeOffset.UnixEpoch, new(100, 200), 1,
             240, 180, 240 * 4, pixels);
@@ -35,6 +36,9 @@ public sealed class VisualGeometryDetectorTests
         Assert.IsInRange(278d, 281d, line.Bounds.Origin.X);
         Assert.IsInRange(282d, 285d, line.Bounds.Right);
         Assert.IsGreaterThanOrEqualTo(120, line.Bounds.Size.Height);
+        var horizontal = result.Single(geometry => geometry.Kind == VisualGeometryKind.HorizontalLine);
+        Assert.IsGreaterThanOrEqualTo(145, horizontal.Bounds.Size.Width);
+        Assert.IsLessThanOrEqualTo(5, horizontal.Bounds.Size.Height);
     }
 
     [TestMethod]
@@ -149,9 +153,15 @@ public sealed class VisualGeometryDetectorTests
                 };
                 window.Show();
                 var handle = new WindowInteropHelper(window).Handle;
-                window.Activate();
-                ForceForeground(handle);
-                PumpDispatcherOnce();
+                var deadline = DateTime.UtcNow + TimeSpan.FromSeconds(2);
+                do
+                {
+                    window.Activate();
+                    ForceForeground(handle);
+                    PumpDispatcherOnce();
+                    if (GetForegroundWindow() == handle) break;
+                    Thread.Sleep(25);
+                } while (DateTime.UtcNow < deadline);
                 Assert.AreEqual(handle, GetForegroundWindow());
 
                 var capture = new GdiForegroundWindowFrameCapture(() => IntPtr.Zero)

@@ -5,6 +5,7 @@ namespace Bolttagu.Platform.Windows;
 public enum VisualGeometryKind
 {
     TextLine,
+    HorizontalLine,
     VerticalLine,
 }
 
@@ -147,10 +148,12 @@ public sealed class VisualGeometryDetector
     private const int EdgeThreshold = 36;
     private const double MinimumGlyphHeightDip = 6;
     private const double MaximumGlyphHeightDip = 48;
-    private const double MaximumGlyphWidthDip = 64;
+    private const double MaximumGlyphWidthDip = 512;
     private const double MaximumTextGapDip = 32;
     private const double MinimumVerticalHeightDip = 96;
     private const double MaximumVerticalWidthDip = 8;
+    private const double MinimumHorizontalWidthDip = 96;
+    private const double MaximumHorizontalHeightDip = 8;
 
     public IReadOnlyList<VisualGeometry> Detect(CapturedWindowFrame frame)
         => Analyze(frame).Geometry;
@@ -163,6 +166,7 @@ public sealed class VisualGeometryDetector
         var components = FindComponents(edges, frame.Width, frame.Height);
         var output = new List<VisualGeometry>();
         output.AddRange(FindTextLines(frame, components));
+        output.AddRange(FindHorizontalLines(frame, edges));
         output.AddRange(FindVerticalLines(frame, edges));
         return new(output, new(
             frame.ForegroundWindowId,
@@ -303,14 +307,72 @@ public sealed class VisualGeometryDetector
 
     private static IEnumerable<VisualGeometry> ToTextGeometry(CapturedWindowFrame frame, IReadOnlyList<Component> run)
     {
-        if (run.Count < 3) yield break;
+        if (run.Count == 0) yield break;
         var left = run.Min(component => component.Left);
         var right = run.Max(component => component.Right);
         var top = run.Min(component => component.Top);
         var bottom = run.Max(component => component.Bottom);
+        var estimatedGlyphs = run.Sum(component => Math.Max(1,
+            (int)Math.Round(component.Width / Math.Max(1d, component.Height * 0.7))));
+        if (estimatedGlyphs < 3) yield break;
         var bounds = ToScreenArea(frame, left, top, right, bottom);
         yield return new(StableId(frame.ForegroundWindowId, VisualGeometryKind.TextLine, bounds),
             VisualGeometryKind.TextLine, bounds, frame.ForegroundWindowId);
+    }
+
+    private static IEnumerable<VisualGeometry> FindHorizontalLines(CapturedWindowFrame frame, bool[] edges)
+    {
+        var scale = frame.CoordinateScale;
+        var minimumWidth = Math.Max(1, (int)Math.Ceiling(MinimumHorizontalWidthDip * scale));
+        var maximumHeight = Math.Max(1, (int)Math.Ceiling(MaximumHorizontalHeightDip * scale));
+        var spans = new List<Component>();
+        for (var y = 4; y < frame.Height - 4; y++)
+        {
+            var start = -1;
+            var last = -1;
+            for (var x = 1; x < frame.Width - 1; x++)
+            {
+                if (!edges[y * frame.Width + x])
+                {
+                    if (last >= 0 && x - last <= 2) continue;
+                    if (start >= 0 && last - start + 1 >= minimumWidth)
+                        spans.Add(new(start, y, last + 1, y + 1, last - start + 1));
+                    start = -1;
+                    last = -1;
+                    continue;
+                }
+                if (start < 0) start = x;
+                last = x;
+            }
+            if (start >= 0 && last - start + 1 >= minimumWidth)
+                spans.Add(new(start, y, last + 1, y + 1, last - start + 1));
+        }
+
+        var consumed = new bool[spans.Count];
+        for (var index = 0; index < spans.Count; index++)
+        {
+            if (consumed[index]) continue;
+            var seed = spans[index];
+            var left = seed.Left;
+            var right = seed.Right;
+            var top = seed.Top;
+            var bottom = seed.Bottom;
+            consumed[index] = true;
+            for (var next = index + 1; next < spans.Count; next++)
+            {
+                if (consumed[next] || spans[next].Top - bottom > maximumHeight) break;
+                if (Math.Abs(spans[next].Left - left) > 4 * scale ||
+                    Math.Abs(spans[next].Right - right) > 4 * scale) continue;
+                left = Math.Min(left, spans[next].Left);
+                right = Math.Max(right, spans[next].Right);
+                bottom = spans[next].Bottom;
+                consumed[next] = true;
+            }
+            if (bottom - top > maximumHeight) continue;
+            var bounds = ToScreenArea(frame, left, top, right, bottom);
+            yield return new(StableId(frame.ForegroundWindowId, VisualGeometryKind.HorizontalLine, bounds),
+                VisualGeometryKind.HorizontalLine, bounds, frame.ForegroundWindowId);
+        }
     }
 
     private static IEnumerable<VisualGeometry> FindVerticalLines(CapturedWindowFrame frame, bool[] edges)

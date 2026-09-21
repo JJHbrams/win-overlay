@@ -20,11 +20,6 @@ public sealed class DesktopSurfaceProvider(
         try
         {
             var candidates = Snapshot(workArea);
-            if (TryGetVisualSnapshot(out var visual) && visual.CollisionMask is { } mask &&
-                mask.TryFindPlatform(centerX, fromY - 4, workArea.Bottom, out var platform))
-            {
-                candidates = candidates.Append(ToDesktopSurface(platform)).ToArray();
-            }
             return DesktopSurfaceSelector.FindFirstBelow(candidates, centerX, fromY, workArea);
         }
         catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
@@ -50,13 +45,15 @@ public sealed class DesktopSurfaceProvider(
                        Math.Abs(current.Top - footY) <= 3;
             }
 
-            if (expected.Kind == DesktopSurfaceKind.TextLine &&
-                TryGetVisualSnapshot(out var visual) && visual.CollisionMask is { } mask &&
-                mask.TryFindPlatform(centerX, footY - 6, footY + 6, out var platform))
+            if (expected.Kind == DesktopSurfaceKind.TextLine)
             {
-                current = ToDesktopSurface(platform);
-                return centerX >= current.Left && centerX <= current.Right &&
-                       Math.Abs(current.Top - footY) <= 6;
+                current = candidates
+                    .Where(candidate => candidate.Kind == DesktopSurfaceKind.TextLine)
+                    .Where(candidate => centerX >= candidate.Left && centerX <= candidate.Right)
+                    .Where(candidate => Math.Abs(candidate.Top - footY) <= 6)
+                    .OrderBy(candidate => Math.Abs(candidate.Top - expected.Top))
+                    .FirstOrDefault();
+                return current.Bounds.Size.Width > 0;
             }
 
             current = candidates.FirstOrDefault(candidate =>
@@ -104,13 +101,8 @@ public sealed class DesktopSurfaceProvider(
     {
         try
         {
-            var candidates = Snapshot(workArea);
-            if (TryGetVisualSnapshot(out var visual) && visual.CollisionMask is { } mask &&
-                mask.TryFindPlatform(centerX, targetFootY, fromFootY, out var platform))
-            {
-                candidates = candidates.Append(ToDesktopSurface(platform)).ToArray();
-            }
-            return DesktopSurfaceSelector.FindClimbIntercept(candidates, centerX, fromFootY, targetFootY);
+            return DesktopSurfaceSelector.FindClimbIntercept(
+                Snapshot(workArea), centerX, fromFootY, targetFootY);
         }
         catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
         {
@@ -178,9 +170,7 @@ public sealed class DesktopSurfaceProvider(
             ForegroundVisualGeometryScanner.MaximumSnapshotAge);
         if (visualSnapshot is { } snapshot && snapshot.ForegroundWindowId == foregroundHandle.ToInt64())
         {
-            candidates.AddRange(snapshot.Geometry
-                .Where(geometry => snapshot.CollisionMask is null || geometry.Kind != VisualGeometryKind.TextLine)
-                .Select(ToDesktopSurface));
+            candidates.AddRange(snapshot.Geometry.Select(ToDesktopSurface));
         }
 
         candidates.Add(new(
@@ -206,7 +196,7 @@ public sealed class DesktopSurfaceProvider(
 
     private static DesktopSurface ToDesktopSurface(VisualGeometry geometry) => new(
         geometry.Bounds,
-        geometry.Kind == VisualGeometryKind.TextLine
+        geometry.Kind is VisualGeometryKind.TextLine or VisualGeometryKind.HorizontalLine
             ? DesktopSurfaceKind.TextLine
             : DesktopSurfaceKind.VerticalLine,
         geometry.Id,

@@ -17,6 +17,11 @@ created: 2026-09-21
 > 아니라 foreground collision mask의 local foot probe를 사용한다. 기존 geometry 목록은
 > debug visualization과 vertical-line 실험용으로만 유지한다.
 
+> 2026-09-21 image clarification: 사용자가 지정한 지형은 raw glyph pixel이 아니라
+> (1) 큰 글자 덩어리, (2) 긴 수평 구분선, (3) 작은 글자 덩어리의 bounded horizontal
+> support와 (4) 긴 수직 구분선의 climb anchor다. collision mask는 분석 중간 산출물로만
+> 남기고 실제 physics는 `TextLine`/`HorizontalLine`/`VerticalLine` geometry를 사용한다.
+
 ## 1. 의도 (Intent)
 
 | 항목 | 내용 |
@@ -39,6 +44,7 @@ created: 2026-09-21
 | AC-6 | fall, drag, hide, foreground 전환, exit 및 dispose는 visual support/anchor와 모든 contact VFX를 정리하며 VFX window는 포커스·pointer hit-test를 가져가지 않는다. | runtime interrupt trace, WPF window style smoke test, 종료 후 VFX item 0개 검증으로 확인한다. |
 | AC-7 | 앱 시작 시 pet은 work-area 상단에서 Falling으로 진입하고, foreground collision mask를 아래로 sweep해 처음 만난 local support에 착지한다. 걷는 중 foot probe가 support run 끝을 벗어나면 다시 Falling으로 전이한다. | mask raycast 단위 테스트와 spawn→fall→land, walk→edge→fall runtime trace를 검증한다. |
 | AC-8 | `BOLTTAGU_VISUAL_DEBUG=1`에서 현재 앱 scanner가 게시한 geometry를 click-through VFX layer에 표시하고, 일반 실행에서는 표시하지 않는다. | scanner snapshot을 주입한 WPF smoke와 환경 변수 off 기본값을 검증한다. |
+| AC-9 | 큰 제목과 작은 본문은 글자 크기와 무관하게 같은 baseline의 bounded `TextLine`으로, 폭 96 DIP 이상의 얇은 수평선은 `HorizontalLine` support로, 높이 96 DIP 이상의 얇은 수직선은 `VerticalLine` anchor로 구분한다. | 사용자 예시를 축약한 synthetic frame에서 세 종류를 동시에 검출하고 surface kind mapping을 검증한다. |
 
 ## 3. 확정 사실 (Findings)
 
@@ -162,3 +168,4 @@ stateDiagram-v2
 - [x] 5. 관련 Core/Runtime/Architecture/Presentation/Asset test와 실제 foreground fixture 창 smoke를 실행하고 design status를 `done`으로 닫는다. (AC-1, AC-2, AC-3, AC-4, AC-5, AC-6)
 - [x] 6. foreground edge mask를 local collision mask로 게시하고 foot raycast 착지를 연결한다. (AC-7)
 - [x] 7. startup fall과 in-process debug geometry overlay를 연결하고 실제 4K foreground에서 검증한다. PID 13068이 OS window top이 없는 foot Y=1876에 mask 착지한 뒤 edge 낙하로 work-area bottom Y=2112까지 이동함을 확인했다. (AC-7, AC-8)
+- [x] 8. 사용자 이미지에서 큰 제목 `TextLine(20,355,179)`, 수평선 `HorizontalLine(20,565,700)`, 작은 본문 `TextLine(y=808/831/855)`, 수직선 `VerticalLine(745,1,3,920)`을 검출하고 raw mask를 physics에서 제거했다. (AC-9)

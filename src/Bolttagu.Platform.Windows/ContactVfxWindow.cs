@@ -180,7 +180,7 @@ public sealed class ContactVfxWindow : Window, IDisposable
     {
         var left = geometry.Bounds.Origin.X - SystemParameters.VirtualScreenLeft;
         var top = geometry.Bounds.Origin.Y - SystemParameters.VirtualScreenTop;
-        if (geometry.Kind == VisualGeometryKind.TextLine)
+        if (geometry.Kind is VisualGeometryKind.TextLine or VisualGeometryKind.HorizontalLine)
         {
             return new Line
             {
