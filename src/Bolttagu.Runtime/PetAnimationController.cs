@@ -439,7 +439,9 @@ public sealed class PetAnimationController : IDisposable
         _climbIsRope = true;
         _climbFixedX = facing == FacingDirection.Right ? obstacle.Left - _window.Size.Width : obstacle.Right;
         _climbOrigin = new ScreenPoint(_climbFixedX, currentPosition.Y);
-        _climbTargetY = obstacle.Top - _window.Size.Height;
+        _climbTargetY = Math.Max(
+            _window.WorkArea.Origin.Y,
+            obstacle.Top - _window.Size.Height);
         _climbStartedAt = now;
         _climbSpeedPixelsPerSecond = 84;
         _window.MoveTo(_climbOrigin);
@@ -457,7 +459,9 @@ public sealed class PetAnimationController : IDisposable
         _climbIsRope = false;
         _climbFixedX = _window.Position.X;
         _climbOrigin = _window.Position;
-        _climbTargetY = _climbOrigin.Y - plan.TargetHeight;
+        _climbTargetY = Math.Max(
+            _window.WorkArea.Origin.Y,
+            _climbOrigin.Y - plan.TargetHeight);
         _climbStartedAt = now;
         _climbSpeedPixelsPerSecond = plan.SpeedPixelsPerSecond;
         State = PetRuntimeState.FreeClimbPreparing;

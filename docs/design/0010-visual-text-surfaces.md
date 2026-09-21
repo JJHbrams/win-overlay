@@ -51,6 +51,7 @@ created: 2026-09-21
 | AC-9 | 큰 제목과 작은 본문은 글자 크기와 무관하게 같은 baseline의 bounded `TextLine`으로, 폭 96 DIP 이상의 얇은 수평선은 `HorizontalLine` support로, 높이 96 DIP 이상의 얇은 수직선은 `VerticalLine` anchor로 구분한다. | 사용자 예시를 축약한 synthetic frame에서 세 종류를 동시에 검출하고 surface kind mapping을 검증한다. |
 | AC-10 | rope climb loop는 후면 시점에서 손 동작이 교대하되, 교차하는 팔은 머리카락 뒤에 가려지고 손목·손만 줄 쪽으로 나와야 한다. contact metadata도 같은 손 위치를 따른다. | 4-frame contact sheet의 arm/head occlusion 육안 검수, pack/catalog frame contact 좌표 테스트, 실제 loop 재생 검수로 확인한다. |
 | AC-11 | free climb은 prepare 완료 후 매 tick 이동한 구간만 surface intercept 검사하며, 아직 도달하지 않은 목적지로 즉시 이동하지 않는다. pet overlay에 가려진 기존 visual surface는 해당 영역이 다시 드러날 때까지 직전 snapshot geometry를 유지한다. | 단계별 clock runtime test와 occlusion merge 단위 테스트로 중간 위치·도달 시점·가려진 발판 보존을 검증한다. |
+| AC-12 | rope/free climb 목표 Y가 monitor work-area 상단보다 위로 계산되면 목표를 work-area top으로 clamp하고, 실제 창이 상단에 도달한 tick에 finish 또는 Falling으로 전이한다. | 화면 상단보다 짧은 잔여 거리 fixture에서 창 Y=top과 비-climbing 상태를 검증한다. |
 
 ## 3. 확정 사실 (Findings)
 
@@ -188,3 +189,4 @@ stateDiagram-v2
 - [x] 14. atlas foot pivot 기준으로 하단 13.75 DIP를 crop하고 overlay 물리 높이를 206.25 DIP로 맞췄다. visible scene 대변경은 occlusion carry와 miss grace를 즉시 끊고, rope 홀수 frame의 팔을 머리 뒤로 재합성했다. (AC-3, AC-8, AC-10)
 - [x] 15. scene sampling을 4 px 간격·최소 24 changed samples로 세분화해 sparse text가 스크롤될 때도 pet 아래의 보존 geometry를 즉시 폐기한다. (AC-3, AC-11)
 - [x] 16. 화면 전환 중 연속 changed frame은 게시하지 않고 첫 stable frame에서 한 번만 force-replace해 반복 fall/land를 방지한다. (AC-3, AC-7)
+- [x] 17. rope/free climb 목표를 monitor work-area top으로 clamp해 창만 상단에서 멈춘 채 climbing 상태가 계속되는 경로를 제거한다. (AC-12)

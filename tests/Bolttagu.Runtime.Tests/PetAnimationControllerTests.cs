@@ -600,6 +600,24 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
+    public void FreeClimb_TargetAboveMonitorStopsAtWorkAreaTopInsteadOfClimbingInPlace()
+    {
+        using var fixture = new Fixture(125);
+        fixture.StartToIdle();
+        fixture.Window.MoveTo(new(100, 100));
+        fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.FreeClimb));
+        fixture.Player.Complete(PetActionClips.FreeClimbPrepare);
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(0, fixture.Window.Position.Y);
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Fall, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
     public void RopeClimb_AnchorLossFalls()
     {
         using var fixture = new Fixture(0, 1, 220);
