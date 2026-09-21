@@ -8,7 +8,8 @@ namespace Bolttagu.Platform.Windows;
 
 public sealed class DesktopSurfaceProvider(
     Window owner,
-    IVisualGeometrySnapshotSource? visualGeometry = null) : IDesktopSurfaceProvider
+    IVisualGeometrySnapshotSource? visualGeometry = null,
+    IReadOnlyList<Window>? excludedWindows = null) : IDesktopSurfaceProvider
 {
     private const int DwmExtendedFrameBounds = 9;
     private const long TaskbarId = long.MinValue;
@@ -125,6 +126,10 @@ public sealed class DesktopSurfaceProvider(
     private IReadOnlyList<DesktopSurface> Snapshot(ScreenArea workArea)
     {
         var ownerHandle = new WindowInteropHelper(owner).Handle;
+        var excludedHandles = excludedWindows?
+            .Select(window => new WindowInteropHelper(window).Handle)
+            .Where(handle => handle != IntPtr.Zero)
+            .ToHashSet() ?? [];
         var dpi = VisualTreeHelper.GetDpi(owner);
         var candidates = new List<DesktopSurface>();
         var zOrder = 0;
@@ -132,7 +137,8 @@ public sealed class DesktopSurfaceProvider(
         EnumWindows((handle, _) =>
         {
             var currentZOrder = zOrder++;
-            if (handle == ownerHandle || !IsWindowVisible(handle) || IsIconic(handle)) return true;
+            if (handle == ownerHandle || excludedHandles.Contains(handle) ||
+                !IsWindowVisible(handle) || IsIconic(handle)) return true;
             if (!TryGetBounds(handle, out var rect)) return true;
             var left = rect.Left / dpi.DpiScaleX;
             var right = rect.Right / dpi.DpiScaleX;

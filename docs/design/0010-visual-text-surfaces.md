@@ -40,7 +40,7 @@ created: 2026-09-21
 | 현재 surface | `DesktopSurfaceProvider.Snapshot`은 visible/non-iconic top-level HWND와 taskbar를 만들고 `DesktopSurfaceSelector`가 노출 top을 선택한다. rope 후보만 foreground·비최대화 조건을 요구한다. | 기존 window snapshot은 유지하고 foreground HWND 내부에서 검출한 visual geometry를 별도 kind로 합성한다. |
 | support lifecycle | `TryRefreshSupport` 실패는 다음 Runtime Tick에서 Falling으로 이어지고, rope anchor는 `TryRefreshClimbAnchor`로 매 Tick 재검증된다. | text 끝과 line 소실을 새 상태기계로 만들지 않고 기존 loss 경로에 연결한다. |
 | render loop | `WpfRuntimeLoop`는 Dispatcher에서 33 ms마다 controller Tick을 호출한다. | 캡처와 pixel 분석은 background scanner가 담당하고 provider는 snapshot read만 수행한다. |
-| overlay | pet window는 220×220 투명 Topmost/NoActivate 창이며 이동한다. 현재 창 안에 VFX를 두면 지난 접점이 pet과 함께 이동한다. | 화면 좌표를 유지하는 별도 transparent VFX window가 필요하다. pet보다 아래, 대상 foreground 창보다 위에 배치한다. |
+| overlay | pet window는 220×220 투명 Topmost/NoActivate 창이며 이동한다. 현재 창 안에 VFX를 두면 지난 접점이 pet과 함께 이동한다. 별도 fullscreen VFX HWND를 일반 surface 열거에 포함하면 모든 실제 창이 가려진 것으로 판정된다. | 화면 좌표를 유지하는 별도 transparent VFX window를 사용하되 pet owner와 함께 surface/occlusion 열거에서 명시적으로 제외한다. |
 | animation metadata | `SpriteFrame`과 pack schema v1 frame에는 atlas rect·duration·pivot만 있고 frame-presented event와 접점 좌표가 없다. | optional contact anchors와 frame event를 pack→catalog→presentation 경로에 추가한다. |
 | climb timing | rope/free climb loop는 150 ms frame으로 구성되고 controller는 fixed X로 window를 위로 이동한다. | 각 loop frame의 손·발 접점을 screen 좌표로 변환해 같은 접점을 refresh하고 새 접점만 spawn한다. |
 | capture dependency | Platform.Windows 프로젝트는 WPF/WinForms 외 화면 캡처·OCR package를 참조하지 않으며 저장소에 `PrintWindow`, OCR, UI Automation 기반 content detector가 없다. | 첫 버전은 foreground HWND 전용 in-memory GDI capture와 자체 geometry detector를 사용하고 OCR·외부 서비스는 추가하지 않는다. |
@@ -117,7 +117,7 @@ stateDiagram-v2
 |---|---|
 | `src/Bolttagu.Contracts/OverlayContracts.cs` | `TextLine`/`VerticalLine` geometry kind, snapshot freshness와 climb-only surface 계약을 추가한다. |
 | `src/Bolttagu.Contracts/AnimationContracts.cs` | optional frame contact anchors와 frame-presented event 계약을 추가한다. |
-| `src/Bolttagu.Platform.Windows/DesktopSurfaceProvider.cs` | OS surface와 최신 foreground visual snapshot을 합성하고 text support/vertical anchor를 재검증한다. |
+| `src/Bolttagu.Platform.Windows/DesktopSurfaceProvider.cs` | pet/VFX HWND를 제외한 OS surface와 최신 foreground visual snapshot을 합성하고 text support/vertical anchor를 재검증한다. |
 | `src/Bolttagu.Platform.Windows/ForegroundVisualGeometryScanner.cs` | single-flight foreground HWND capture, 4 Hz scheduling, miss grace, immutable snapshot 게시를 담당한다. |
 | `src/Bolttagu.Platform.Windows/VisualGeometryDetector.cs` | in-memory contrast mask에서 text row와 vertical span을 결정론적으로 추출한다. |
 | `src/Bolttagu.Platform.Windows/ContactVfxWindow.cs` | pet 뒤의 click-through transparent layer와 bounded fade lifecycle을 구현한다. |
@@ -144,6 +144,7 @@ stateDiagram-v2
 | per-frame 접점이 artwork와 어긋날 수 있다. | pack contact 좌표를 contact-sheet overlay로 렌더해 육안 검수하고 런타임은 metadata만 신뢰한다. |
 | multi-monitor DPI가 다른 경우 capture pixel과 WPF DIP가 어긋날 수 있다. | snapshot에 capture origin·DPI scale을 보존하고 모든 geometry를 provider 진입 전에 screen DIP로 정규화한다. |
 | 4K foreground 분석 시간이 기존 750 ms freshness를 초과할 수 있다. | 결과의 게시 시각을 분석 완료 시점으로 기록하고, HWND 일치 검증을 유지한 채 snapshot freshness를 3초로 확장한다. |
+| fullscreen VFX HWND가 실제 창보다 앞선 z-order에서 occlusion을 만들 수 있다. | VFX handle을 `DesktopSurfaceProvider`의 제외 목록에 전달하고 실제 HWND smoke test로 창 상단 선택을 검증한다. |
 
 ## 11. 착수 순서
 

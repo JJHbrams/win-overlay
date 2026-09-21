@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Threading;
+using System.Windows;
 
 namespace Bolttagu.Architecture.Tests;
 
@@ -100,6 +101,60 @@ public sealed class OverlayWindowSmokeTests
         {
             Assert.Fail(failure.ToString());
         }
+    }
+
+    [TestMethod]
+    public void DesktopSurfaceProvider_ExcludesTheFullScreenContactVfxWindow()
+    {
+        Exception? failure = null;
+        var thread = new Thread(() =>
+        {
+            Window? fixture = null;
+            OverlayWindow? overlay = null;
+            ContactVfxWindow? vfx = null;
+            try
+            {
+                fixture = new Window
+                {
+                    Title = "Bolttagu Surface Fixture",
+                    Left = 240,
+                    Top = 260,
+                    Width = 480,
+                    Height = 320,
+                    Topmost = true,
+                    WindowStyle = WindowStyle.None,
+                    Content = new Border { Background = System.Windows.Media.Brushes.White },
+                };
+                fixture.Show();
+                fixture.Activate();
+
+                overlay = new OverlayWindow(new Border()) { Left = 900, Top = 100 };
+                overlay.Show();
+                vfx = new ContactVfxWindow();
+                vfx.ShowLayer();
+
+                var fixtureHandle = new WindowInteropHelper(fixture).Handle;
+                var provider = new DesktopSurfaceProvider(overlay, null, [vfx]);
+                var workArea = ((Bolttagu.Contracts.IOverlayWindow)overlay).WorkArea;
+                var surface = provider.FindFirstBelow(400, 100, workArea);
+
+                Assert.AreEqual(fixtureHandle.ToInt64(), surface.Id,
+                    "The transparent VFX HWND must not occlude the real window surface.");
+                Assert.AreEqual(Bolttagu.Contracts.DesktopSurfaceKind.Window, surface.Kind);
+            }
+            catch (Exception exception) { failure = exception; }
+            finally
+            {
+                vfx?.Dispose();
+                overlay?.Close();
+                fixture?.Close();
+                Dispatcher.CurrentDispatcher.InvokeShutdown();
+            }
+        });
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+        Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(5)), "Surface exclusion smoke thread did not exit.");
+        if (failure is not null) Assert.Fail(failure.ToString());
     }
 
     [TestMethod]

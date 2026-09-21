@@ -34,7 +34,7 @@ public partial class App : System.Windows.Application
             overlay,
             new BehaviorPlanner(new SystemRandomSource(Random.Shared)),
             new StopwatchClock(),
-            new DesktopSurfaceProvider(overlay, visualGeometryScanner));
+            new DesktopSurfaceProvider(overlay, visualGeometryScanner, [contactVfx]));
         var runtimeLoop = new WpfRuntimeLoop(Dispatcher, animationController.Tick);
 
         overlay.ClickObserved += (_, _) => animationController.ReactToClick();
