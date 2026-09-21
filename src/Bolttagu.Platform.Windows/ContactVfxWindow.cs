@@ -99,6 +99,7 @@ public sealed class ContactVfxWindow : Window, IDisposable
     private const nint WsExTransparent = 0x00000020;
     private const nint WsExToolWindow = 0x00000080;
     private const nint WsExNoActivate = 0x08000000;
+    private const uint WdaExcludeFromCapture = 0x00000011;
     private readonly Canvas _canvas = new() { IsHitTestVisible = false };
     private readonly ContactVfxTracker _tracker = new();
     private IReadOnlyList<VisualGeometry> _debugGeometry = [];
@@ -296,6 +297,7 @@ public sealed class ContactVfxWindow : Window, IDisposable
         var style = GetWindowLongPtr(handle, GwlExStyle);
         SetWindowLongPtr(handle, GwlExStyle,
             style | WsExTransparent | WsExToolWindow | WsExNoActivate);
+        _ = SetWindowDisplayAffinity(handle, WdaExcludeFromCapture);
     }
 
     public void Dispose()
@@ -315,4 +317,8 @@ public sealed class ContactVfxWindow : Window, IDisposable
 
     [DllImport("user32.dll", EntryPoint = "SetWindowLongPtrW", SetLastError = true)]
     private static extern nint SetWindowLongPtr(IntPtr handle, int index, nint newLong);
+
+    [DllImport("user32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static extern bool SetWindowDisplayAffinity(IntPtr handle, uint affinity);
 }

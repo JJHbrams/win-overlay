@@ -10,11 +10,11 @@ public interface IVisualGeometrySnapshotSource
     VisualGeometrySnapshot? GetLatest(DateTimeOffset now, TimeSpan maximumAge);
 }
 
-public readonly record struct ForegroundCaptureResult(long ForegroundWindowId, CapturedWindowFrame? Frame);
+public readonly record struct VisualCaptureResult(long CaptureScopeId, CapturedWindowFrame? Frame);
 
-public interface IForegroundWindowFrameCapture
+public interface IVisualFrameCapture
 {
-    ForegroundCaptureResult Capture(DateTimeOffset now);
+    VisualCaptureResult Capture(DateTimeOffset now);
 }
 
 public sealed class VisualScanScheduler(TimeSpan interval)
@@ -47,30 +47,30 @@ public sealed class VisualGeometrySnapshotTracker : IVisualGeometrySnapshotSourc
     private int _consecutiveMisses;
 
     public void Observe(
-        long foregroundWindowId,
+        long captureScopeId,
         DateTimeOffset capturedAt,
         IReadOnlyList<VisualGeometry>? geometry,
         VisualCollisionMask? collisionMask = null)
     {
         lock (_gate)
         {
-            if (_latest is { } previous && previous.ForegroundWindowId != foregroundWindowId)
+            if (_latest is { } previous && previous.CaptureScopeId != captureScopeId)
             {
-                _latest = geometry is null ? null : new(foregroundWindowId, capturedAt, geometry, collisionMask);
+                _latest = geometry is null ? null : new(captureScopeId, capturedAt, geometry, collisionMask);
                 _consecutiveMisses = geometry is { Count: > 0 } ? 0 : 1;
                 return;
             }
 
             if (geometry is { Count: > 0 })
             {
-                _latest = new(foregroundWindowId, capturedAt, geometry, collisionMask);
+                _latest = new(captureScopeId, capturedAt, geometry, collisionMask);
                 _consecutiveMisses = 0;
                 return;
             }
 
             _consecutiveMisses++;
             if (_consecutiveMisses < 2 && _latest is not null) return;
-            _latest = geometry is null ? null : new(foregroundWindowId, capturedAt, geometry, collisionMask);
+            _latest = geometry is null ? null : new(captureScopeId, capturedAt, geometry, collisionMask);
         }
     }
 
@@ -85,11 +85,11 @@ public sealed class VisualGeometrySnapshotTracker : IVisualGeometrySnapshotSourc
     }
 }
 
-public sealed class ForegroundVisualGeometryScanner : IVisualGeometrySnapshotSource, IDisposable
+public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisposable
 {
-    public static readonly TimeSpan ScanInterval = TimeSpan.FromMilliseconds(250);
+    public static readonly TimeSpan ScanInterval = TimeSpan.FromMilliseconds(500);
     public static readonly TimeSpan MaximumSnapshotAge = TimeSpan.FromSeconds(3);
-    private readonly IForegroundWindowFrameCapture _capture;
+    private readonly IVisualFrameCapture _capture;
     private readonly VisualGeometryDetector _detector;
     private readonly VisualGeometrySnapshotTracker _tracker = new();
     private readonly VisualScanScheduler _scheduler = new(ScanInterval);
@@ -97,8 +97,8 @@ public sealed class ForegroundVisualGeometryScanner : IVisualGeometrySnapshotSou
     private readonly System.Threading.Timer _timer;
     private bool _disposed;
 
-    public ForegroundVisualGeometryScanner(
-        IForegroundWindowFrameCapture capture,
+    public VisualGeometryScanner(
+        IVisualFrameCapture capture,
         VisualGeometryDetector? detector = null,
         TimeProvider? timeProvider = null)
     {
@@ -127,10 +127,18 @@ public sealed class ForegroundVisualGeometryScanner : IVisualGeometrySnapshotSou
         {
             var result = _capture.Capture(now);
             var analysis = result.Frame is { } frame ? _detector.Analyze(frame) : null;
+            var geometry = analysis?.Geometry;
+            if (result.Frame is { Exclusions.Count: > 0 } occludedFrame && geometry is not null)
+            {
+                geometry = VisualGeometryOcclusionMerger.Merge(
+                    geometry,
+                    _tracker.GetLatest(now, MaximumSnapshotAge),
+                    occludedFrame);
+            }
             _tracker.Observe(
-                result.ForegroundWindowId,
+                result.CaptureScopeId,
                 _timeProvider.GetUtcNow(),
-                analysis?.Geometry,
+                geometry,
                 analysis?.CollisionMask);
         }
         catch (Exception exception) when (exception is ExternalException or InvalidOperationException or ArgumentException)
@@ -150,45 +158,89 @@ public sealed class ForegroundVisualGeometryScanner : IVisualGeometrySnapshotSou
     }
 }
 
-public sealed class GdiForegroundWindowFrameCapture(nint coordinateWindowHandle) : IForegroundWindowFrameCapture
+public static class VisualGeometryOcclusionMerger
 {
-    private const uint PrintWindowRenderFullContent = 2;
-
-    public ForegroundCaptureResult Capture(DateTimeOffset now)
+    public static IReadOnlyList<VisualGeometry> Merge(
+        IReadOnlyList<VisualGeometry> detected,
+        VisualGeometrySnapshot? previous,
+        CapturedWindowFrame frame)
     {
-        var foreground = GetForegroundWindow();
-        if (foreground == IntPtr.Zero || foreground == coordinateWindowHandle || !GetWindowRect(foreground, out var rect))
-            return new(foreground.ToInt64(), null);
+        if (previous is null || previous.CaptureScopeId != frame.CaptureScopeId ||
+            frame.Exclusions is not { Count: > 0 }) return detected;
+
+        var occludedAreas = frame.Exclusions.Select(exclusion => new ScreenArea(
+            new(
+                frame.ScreenOrigin.X + exclusion.Left / frame.CoordinateScale,
+                frame.ScreenOrigin.Y + exclusion.Top / frame.CoordinateScale),
+            new(
+                Math.Max(0, exclusion.Right - exclusion.Left) / frame.CoordinateScale,
+                Math.Max(0, exclusion.Bottom - exclusion.Top) / frame.CoordinateScale)))
+            .ToArray();
+        var ids = detected.Select(item => item.Id).ToHashSet();
+        var merged = detected.ToList();
+        merged.AddRange(previous.Geometry.Where(item =>
+            !ids.Contains(item.Id) && occludedAreas.Any(area => Intersects(item.Bounds, area))));
+        return merged;
+    }
+
+    private static bool Intersects(ScreenArea left, ScreenArea right) =>
+        left.Origin.X < right.Right && left.Right > right.Origin.X &&
+        left.Origin.Y < right.Bottom && left.Bottom > right.Origin.Y;
+}
+
+public sealed class GdiVisibleDisplayFrameCapture(nint coordinateWindowHandle) : IVisualFrameCapture
+{
+    private const uint MonitorDefaultToNearest = 2;
+    private const double CaptureScale = 0.25;
+    private const int ExclusionPaddingPixels = 8;
+    private const int StretchHalftone = 4;
+    private const uint SourceCopy = 0x00CC0020;
+
+    public VisualCaptureResult Capture(DateTimeOffset now)
+    {
+        var monitor = MonitorFromWindow(coordinateWindowHandle, MonitorDefaultToNearest);
+        var info = new MonitorInfo { Size = Marshal.SizeOf<MonitorInfo>() };
+        if (monitor == IntPtr.Zero || !GetMonitorInfo(monitor, ref info))
+            return new(monitor.ToInt64(), null);
+        var rect = info.Monitor;
         var width = rect.Right - rect.Left;
         var height = rect.Bottom - rect.Top;
-        if (width < 48 || height < 24) return new(foreground.ToInt64(), null);
+        if (width < 48 || height < 24) return new(monitor.ToInt64(), null);
+        var captureWidth = Math.Max(1, (int)Math.Round(width * CaptureScale));
+        var captureHeight = Math.Max(1, (int)Math.Round(height * CaptureScale));
 
-        using var bitmap = new Bitmap(width, height, PixelFormat.Format32bppArgb);
+        using var bitmap = new Bitmap(captureWidth, captureHeight, PixelFormat.Format32bppArgb);
         using (var graphics = Graphics.FromImage(bitmap))
         {
-            var deviceContext = graphics.GetHdc();
+            var destination = graphics.GetHdc();
+            var desktop = GetDC(IntPtr.Zero);
             try
             {
-                if (!PrintWindow(foreground, deviceContext, PrintWindowRenderFullContent))
-                    return new(foreground.ToInt64(), null);
+                _ = SetStretchBltMode(destination, StretchHalftone);
+                if (!StretchBlt(destination, 0, 0, captureWidth, captureHeight,
+                        desktop, rect.Left, rect.Top, width, height, SourceCopy))
+                    return new(monitor.ToInt64(), null);
             }
             finally
             {
-                graphics.ReleaseHdc(deviceContext);
+                _ = ReleaseDC(IntPtr.Zero, desktop);
+                graphics.ReleaseHdc(destination);
             }
         }
 
-        var data = bitmap.LockBits(new(0, 0, width, height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+        var data = bitmap.LockBits(new(0, 0, captureWidth, captureHeight), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
         try
         {
             var stride = Math.Abs(data.Stride);
-            var bytes = new byte[stride * height];
+            var bytes = new byte[stride * captureHeight];
             Marshal.Copy(data.Scan0, bytes, 0, bytes.Length);
-            var dpiHandle = coordinateWindowHandle == IntPtr.Zero ? foreground : coordinateWindowHandle;
-            var dpi = Math.Max(1d, GetDpiForWindow(dpiHandle) / 96d);
-            return new(foreground.ToInt64(), new(
-                foreground.ToInt64(), now, new(rect.Left / dpi, rect.Top / dpi), dpi,
-                width, height, stride, bytes));
+            var dpi = Math.Max(1d, GetDpiForWindow(coordinateWindowHandle) / 96d);
+            IReadOnlyList<PixelExclusion> exclusions = GetWindowRect(coordinateWindowHandle, out var ownerRect)
+                ? [ToCaptureExclusion(ownerRect, rect)]
+                : [];
+            return new(monitor.ToInt64(), new(
+                monitor.ToInt64(), now, new(rect.Left / dpi, rect.Top / dpi), dpi * CaptureScale,
+                captureWidth, captureHeight, stride, bytes, exclusions));
         }
         finally
         {
@@ -196,19 +248,49 @@ public sealed class GdiForegroundWindowFrameCapture(nint coordinateWindowHandle)
         }
     }
 
+    private static PixelExclusion ToCaptureExclusion(NativeRect window, NativeRect monitor) => new(
+        (int)Math.Floor((window.Left - monitor.Left) * CaptureScale) - ExclusionPaddingPixels,
+        (int)Math.Floor((window.Top - monitor.Top) * CaptureScale) - ExclusionPaddingPixels,
+        (int)Math.Ceiling((window.Right - monitor.Left) * CaptureScale) + ExclusionPaddingPixels,
+        (int)Math.Ceiling((window.Bottom - monitor.Top) * CaptureScale) + ExclusionPaddingPixels);
+
     [DllImport("user32.dll")]
-    private static extern IntPtr GetForegroundWindow();
+    private static extern IntPtr MonitorFromWindow(IntPtr handle, uint flags);
+
+    [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static extern bool GetMonitorInfo(IntPtr monitor, ref MonitorInfo info);
+
+    [DllImport("user32.dll")]
+    private static extern uint GetDpiForWindow(IntPtr handle);
 
     [DllImport("user32.dll")]
     [return: MarshalAs(UnmanagedType.Bool)]
     private static extern bool GetWindowRect(IntPtr handle, out NativeRect rect);
 
     [DllImport("user32.dll")]
-    [return: MarshalAs(UnmanagedType.Bool)]
-    private static extern bool PrintWindow(IntPtr handle, IntPtr deviceContext, uint flags);
+    private static extern IntPtr GetDC(IntPtr handle);
 
     [DllImport("user32.dll")]
-    private static extern uint GetDpiForWindow(IntPtr handle);
+    private static extern int ReleaseDC(IntPtr handle, IntPtr deviceContext);
+
+    [DllImport("gdi32.dll")]
+    private static extern int SetStretchBltMode(IntPtr deviceContext, int mode);
+
+    [DllImport("gdi32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static extern bool StretchBlt(
+        IntPtr destination,
+        int destinationX,
+        int destinationY,
+        int destinationWidth,
+        int destinationHeight,
+        IntPtr source,
+        int sourceX,
+        int sourceY,
+        int sourceWidth,
+        int sourceHeight,
+        uint operation);
 
     [StructLayout(LayoutKind.Sequential)]
     private struct NativeRect
@@ -217,5 +299,14 @@ public sealed class GdiForegroundWindowFrameCapture(nint coordinateWindowHandle)
         public int Top;
         public int Right;
         public int Bottom;
+    }
+
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+    private struct MonitorInfo
+    {
+        public int Size;
+        public NativeRect Monitor;
+        public NativeRect WorkArea;
+        public uint Flags;
     }
 }

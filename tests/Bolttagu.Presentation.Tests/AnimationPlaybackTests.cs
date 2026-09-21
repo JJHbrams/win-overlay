@@ -6,6 +6,7 @@ using Bolttagu.Platform.Windows;
 using System.IO;
 using System.Threading;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
@@ -15,6 +16,33 @@ namespace Bolttagu.Presentation.Tests;
 [TestClass]
 public sealed class AnimationPlaybackTests
 {
+    [TestMethod]
+    public void PetViews_KeepDiagnosticTextOutOfTheFootArea()
+    {
+        Exception? failure = null;
+        var thread = new Thread(() =>
+        {
+            try
+            {
+                var root = FindRepositoryRoot();
+                var catalog = RuntimeAnimationCatalog.Load(Path.Combine(root, "asset", "bolttagu", "build"));
+                using var sprite = new PetSpriteView(catalog);
+                using var placeholder = new PetPlaceholderView();
+
+                Assert.IsInstanceOfType<Image>(sprite.Content);
+                var fallbackCanvas = Assert.IsInstanceOfType<Canvas>(placeholder.Content);
+                Assert.IsFalse(fallbackCanvas.Children.OfType<TextBlock>()
+                    .Any(text => text.Text.Contains("DPI", StringComparison.Ordinal)));
+            }
+            catch (Exception exception) { failure = exception; }
+            finally { Dispatcher.CurrentDispatcher.InvokeShutdown(); }
+        });
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+        Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(5)), "Pet view diagnostic smoke thread did not exit.");
+        if (failure is not null) Assert.Fail(failure.ToString());
+    }
+
     [TestMethod]
     public void Cursor_LoopsOrCompletesAccordingToClipPolicy()
     {

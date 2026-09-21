@@ -12,7 +12,6 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer, IAnimationFra
 {
     private readonly IAnimationCatalog _catalog;
     private readonly Image _image;
-    private readonly TextBlock _diagnosticText;
     private readonly DispatcherTimer _timer;
     private readonly ScaleTransform _facingTransform = new(1, 1);
     private readonly Dictionary<string, BitmapSource> _atlases = new(StringComparer.OrdinalIgnoreCase);
@@ -37,19 +36,7 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer, IAnimationFra
         _image.RenderTransformOrigin = new Point(0.5, 0.5);
         _image.RenderTransform = _facingTransform;
 
-        _diagnosticText = new TextBlock
-        {
-            Text = catalog.IsFallback ? "Static fallback" : "P3 · 100% DPI",
-            FontSize = 11,
-            Foreground = Brushes.White,
-            Background = new SolidColorBrush(Color.FromArgb(145, 30, 22, 38)),
-            Padding = new Thickness(5, 2, 5, 2),
-            HorizontalAlignment = HorizontalAlignment.Center,
-            VerticalAlignment = VerticalAlignment.Bottom,
-            Margin = new Thickness(0, 0, 0, 2)
-        };
-
-        Content = new Grid { Children = { _image, _diagnosticText } };
+        Content = _image;
         _timer = new DispatcherTimer(DispatcherPriority.Render, Dispatcher)
         {
             IsEnabled = false
@@ -87,8 +74,7 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer, IAnimationFra
 
     public void SetDpiScale(double scale)
     {
-        var prefix = _catalog.IsFallback ? "Static fallback" : "P3";
-        _diagnosticText.Text = $"{prefix} · {scale:P0} DPI";
+        _ = scale;
     }
 
     public void Dispose()

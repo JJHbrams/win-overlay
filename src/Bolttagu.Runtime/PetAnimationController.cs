@@ -478,12 +478,14 @@ public sealed class PetAnimationController : IDisposable
 
         if (State is PetRuntimeState.RopeClimbPreparing or PetRuntimeState.FreeClimbPreparing) return;
 
+        var elapsedSeconds = Math.Max(0, (now - _climbStartedAt).TotalSeconds);
+        var nextY = Math.Max(_climbTargetY, _climbOrigin.Y - (_climbSpeedPixelsPerSecond * elapsedSeconds));
         var fromFootY = _window.Position.Y + _window.Size.Height;
         if (!_climbIsRope)
         {
-            var targetFootY = _climbTargetY + _window.Size.Height;
+            var nextFootY = nextY + _window.Size.Height;
             var intercept = _surfaces.FindClimbIntercept(
-                _climbFixedX + (_window.Size.Width / 2d), fromFootY, targetFootY, _window.WorkArea);
+                _climbFixedX + (_window.Size.Width / 2d), fromFootY, nextFootY, _window.WorkArea);
             if (intercept is { } surface)
             {
                 StartClimbFinish(surface);
@@ -491,8 +493,6 @@ public sealed class PetAnimationController : IDisposable
             }
         }
 
-        var elapsedSeconds = Math.Max(0, (now - _climbStartedAt).TotalSeconds);
-        var nextY = Math.Max(_climbTargetY, _climbOrigin.Y - (_climbSpeedPixelsPerSecond * elapsedSeconds));
         _window.MoveTo(new(_climbFixedX, nextY));
         if (nextY > _climbTargetY) return;
         if (_climbIsRope && _climbAnchor is { } anchor)

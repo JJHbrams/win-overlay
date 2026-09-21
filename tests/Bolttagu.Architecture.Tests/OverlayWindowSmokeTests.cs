@@ -39,6 +39,31 @@ public sealed class OverlayWindowSmokeTests
         if (failure is not null) Assert.Fail(failure.ToString());
     }
 
+    [TestMethod]
+    public void OverlayWindow_StoresDiagnosticsInItsContextMenu()
+    {
+        Exception? failure = null;
+        var thread = new Thread(() =>
+        {
+            try
+            {
+                var content = new Border();
+                var window = new OverlayWindow(content);
+                window.SetDiagnosticStatus("Bolttagu P3 · 150% DPI · atlas");
+                var item = Assert.IsInstanceOfType<MenuItem>(window.ContextMenu!.Items[0]);
+                Assert.AreEqual("Bolttagu P3 · 150% DPI · atlas", item.Header);
+                Assert.IsFalse(item.IsEnabled);
+                window.Close();
+            }
+            catch (Exception exception) { failure = exception; }
+            finally { Dispatcher.CurrentDispatcher.InvokeShutdown(); }
+        });
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+        Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(5)), "Context-menu diagnostic smoke thread did not exit.");
+        if (failure is not null) Assert.Fail(failure.ToString());
+    }
+
     private const int GwlExStyle = -20;
     private const nint WsExTransparent = 0x00000020;
     private const nint WsExNoActivate = 0x08000000;
@@ -136,7 +161,7 @@ public sealed class OverlayWindowSmokeTests
                 var fixtureHandle = new WindowInteropHelper(fixture).Handle;
                 var provider = new DesktopSurfaceProvider(overlay, null, [vfx]);
                 var workArea = ((Bolttagu.Contracts.IOverlayWindow)overlay).WorkArea;
-                var surface = provider.FindFirstBelow(400, 100, workArea);
+                var surface = provider.FindFirstBelow(400, 250, workArea);
 
                 Assert.AreEqual(fixtureHandle.ToInt64(), surface.Id,
                     "The transparent VFX HWND must not occlude the real window surface.");

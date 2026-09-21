@@ -62,6 +62,40 @@ public sealed class VisualGeometryDetectorTests
     }
 
     [TestMethod]
+    public void Detector_ExcludesThePetWindowFromGeometryAndCollision()
+    {
+        var pixels = WhiteFrame(240, 180);
+        DrawBlackRectangle(pixels, 240, 20, 40, 150, 1);
+        DrawBlackRectangle(pixels, 240, 180, 20, 3, 130);
+        var frame = new CapturedWindowFrame(42, DateTimeOffset.UnixEpoch, new(0, 0), 1,
+            240, 180, 240 * 4, pixels, [new(10, 10, 200, 160)]);
+
+        var analysis = new VisualGeometryDetector().Analyze(frame);
+
+        Assert.IsEmpty(analysis.Geometry);
+        Assert.IsFalse(analysis.CollisionMask.TryFindPlatform(50, 0, 180, out _));
+    }
+
+    [TestMethod]
+    public void OcclusionMerger_PreservesOnlyPriorGeometryHiddenBehindThePet()
+    {
+        var hidden = new VisualGeometry(7, VisualGeometryKind.HorizontalLine,
+            new(new(100, 220), new(180, 2)), 42);
+        var noLongerPresent = new VisualGeometry(8, VisualGeometryKind.TextLine,
+            new(new(500, 400), new(120, 20)), 42);
+        var detected = new VisualGeometry(9, VisualGeometryKind.VerticalLine,
+            new(new(700, 100), new(2, 200)), 42);
+        var previous = new VisualGeometrySnapshot(42, DateTimeOffset.UnixEpoch,
+            [hidden, noLongerPresent]);
+        var frame = new CapturedWindowFrame(42, DateTimeOffset.UnixEpoch, new(0, 0), 0.25,
+            480, 270, 480 * 4, WhiteFrame(480, 270), [new(20, 40, 80, 70)]);
+
+        var merged = VisualGeometryOcclusionMerger.Merge([detected], previous, frame);
+
+        CollectionAssert.AreEquivalent(new long[] { 7, 9 }, merged.Select(item => item.Id).ToArray());
+    }
+
+    [TestMethod]
     public void SnapshotTracker_UsesOneMissGraceThenInvalidatesAndRejectsStaleData()
     {
         var tracker = new VisualGeometrySnapshotTracker();
@@ -94,31 +128,32 @@ public sealed class VisualGeometryDetectorTests
 
         Assert.IsNotNull(tracker.GetLatest(
             completedAt.AddMilliseconds(1600),
-            ForegroundVisualGeometryScanner.MaximumSnapshotAge));
+            VisualGeometryScanner.MaximumSnapshotAge));
         Assert.IsNull(tracker.GetLatest(
             completedAt.AddMilliseconds(3001),
-            ForegroundVisualGeometryScanner.MaximumSnapshotAge));
+            VisualGeometryScanner.MaximumSnapshotAge));
     }
 
     [TestMethod]
-    public void ScanScheduler_IsSingleFlightAndEnforcesFourHertzInterval()
+    public void ScanScheduler_IsSingleFlightAndEnforcesTwoHertzInterval()
     {
-        var scheduler = new VisualScanScheduler(TimeSpan.FromMilliseconds(250));
+        var scheduler = new VisualScanScheduler(TimeSpan.FromMilliseconds(500));
         var start = DateTimeOffset.UnixEpoch;
         Assert.IsTrue(scheduler.TryStart(start));
         Assert.IsFalse(scheduler.TryStart(start.AddMilliseconds(500)), "An active scan must reject overlap.");
         scheduler.Complete();
-        Assert.IsFalse(scheduler.TryStart(start.AddMilliseconds(249)));
-        Assert.IsTrue(scheduler.TryStart(start.AddMilliseconds(250)));
+        Assert.IsFalse(scheduler.TryStart(start.AddMilliseconds(499)));
+        Assert.IsTrue(scheduler.TryStart(start.AddMilliseconds(500)));
     }
 
     [TestMethod]
-    public void GdiCapture_ForegroundFixtureProducesTextAndVerticalGeometry()
+    public void GdiCapture_VisibleDisplayProducesTextAndVerticalGeometry()
     {
         Exception? failure = null;
         var thread = new Thread(() =>
         {
             Window? window = null;
+            Window? sensorWindow = null;
             try
             {
                 var canvas = new Canvas { Background = System.Windows.Media.Brushes.White };
@@ -164,10 +199,25 @@ public sealed class VisualGeometryDetectorTests
                 } while (DateTime.UtcNow < deadline);
                 Assert.AreEqual(handle, GetForegroundWindow());
 
-                var capture = new GdiForegroundWindowFrameCapture(IntPtr.Zero)
+                sensorWindow = new()
+                {
+                    Width = 48,
+                    Height = 48,
+                    Left = 900,
+                    Top = 700,
+                    ShowActivated = false,
+                    ShowInTaskbar = false,
+                    Content = new Border { Background = System.Windows.Media.Brushes.Magenta },
+                };
+                sensorWindow.Show();
+                var sensorHandle = new WindowInteropHelper(sensorWindow).Handle;
+                PumpDispatcherOnce();
+
+                var capture = new GdiVisibleDisplayFrameCapture(sensorHandle)
                     .Capture(DateTimeOffset.UtcNow);
-                Assert.AreEqual(handle.ToInt64(), capture.ForegroundWindowId);
+                Assert.AreNotEqual(0, capture.CaptureScopeId);
                 Assert.IsNotNull(capture.Frame);
+                Assert.HasCount(1, capture.Frame.Exclusions!);
                 var geometry = new VisualGeometryDetector().Detect(capture.Frame);
 
                 Assert.IsTrue(geometry.Any(item =>
@@ -178,6 +228,7 @@ public sealed class VisualGeometryDetectorTests
             catch (Exception exception) { failure = exception; }
             finally
             {
+                sensorWindow?.Close();
                 window?.Close();
                 Dispatcher.CurrentDispatcher.InvokeShutdown();
             }

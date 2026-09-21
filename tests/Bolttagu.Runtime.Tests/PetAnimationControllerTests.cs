@@ -567,6 +567,13 @@ public sealed class PetAnimationControllerTests
         Assert.IsTrue(fixture.Controller.StartAutonomousBehavior(
             BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.FreeClimb)));
         fixture.Player.Complete(PetActionClips.FreeClimbPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.FreeClimbing, fixture.Controller.State);
+        Assert.AreEqual(416, fixture.Window.Position.Y);
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
 
         Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
@@ -687,6 +694,7 @@ public sealed class PetAnimationControllerTests
         exitFixture.Controller.StartAutonomousBehavior(
             BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.FreeClimb));
         exitFixture.Player.Complete(PetActionClips.FreeClimbPrepare);
+        exitFixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         exitFixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.ClimbFinishing, exitFixture.Controller.State);
         exitFixture.Controller.RequestExit();

@@ -10,7 +10,6 @@ namespace Bolttagu.Presentation;
 public sealed class PetPlaceholderView : UserControl, IAnimationPlayer
 {
     private readonly ScaleTransform _scale = new(1, 1);
-    private readonly TextBlock _diagnosticText;
 
     public PetPlaceholderView()
     {
@@ -55,17 +54,6 @@ public sealed class PetPlaceholderView : UserControl, IAnimationPlayer
         Canvas.SetLeft(halo, 60);
         Canvas.SetTop(halo, 16);
         canvas.Children.Add(halo);
-        _diagnosticText = new TextBlock
-        {
-            Text = "P0 · 100% DPI",
-            FontSize = 12,
-            Foreground = Brushes.White,
-            Background = new SolidColorBrush(Color.FromArgb(150, 30, 22, 38)),
-            Padding = new Thickness(6, 2, 6, 2),
-        };
-        Canvas.SetLeft(_diagnosticText, 65);
-        Canvas.SetTop(_diagnosticText, 194);
-        canvas.Children.Add(_diagnosticText);
         Content = canvas;
     }
 
@@ -107,7 +95,7 @@ public sealed class PetPlaceholderView : UserControl, IAnimationPlayer
 
     public void Dispose() => Stop();
 
-    public void SetDpiScale(double scale) => _diagnosticText.Text = $"Fallback · {scale:P0} DPI";
+    public void SetDpiScale(double scale) => _ = scale;
 
     private static Polygon CreateEar(double left, double top, double angle)
     {

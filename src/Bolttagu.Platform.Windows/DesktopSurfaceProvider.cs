@@ -13,7 +13,7 @@ public readonly record struct SurfaceProbeDebug(
     DesktopSurface Surface,
     int TextSurfaceCount,
     int VerticalSurfaceCount,
-    long ForegroundWindowId);
+    long CaptureScopeId);
 
 public sealed class DesktopSurfaceProvider(
     Window owner,
@@ -193,8 +193,8 @@ public sealed class DesktopSurfaceProvider(
         }, IntPtr.Zero);
 
         var visualSnapshot = visualGeometry?.GetLatest(DateTimeOffset.UtcNow,
-            ForegroundVisualGeometryScanner.MaximumSnapshotAge);
-        if (visualSnapshot is { } snapshot && snapshot.ForegroundWindowId == foregroundHandle.ToInt64())
+            VisualGeometryScanner.MaximumSnapshotAge);
+        if (visualSnapshot is { } snapshot)
         {
             candidates.AddRange(snapshot.Geometry.Select(ToDesktopSurface));
         }
@@ -204,20 +204,6 @@ public sealed class DesktopSurfaceProvider(
             DesktopSurfaceKind.Taskbar,
             TaskbarId));
         return candidates;
-    }
-
-    private bool TryGetVisualSnapshot(out VisualGeometrySnapshot snapshot)
-    {
-        var foregroundHandle = GetForegroundWindow();
-        var latest = visualGeometry?.GetLatest(DateTimeOffset.UtcNow,
-            ForegroundVisualGeometryScanner.MaximumSnapshotAge);
-        if (latest is { } value && value.ForegroundWindowId == foregroundHandle.ToInt64())
-        {
-            snapshot = value;
-            return true;
-        }
-        snapshot = null!;
-        return false;
     }
 
     private static DesktopSurface ToDesktopSurface(VisualGeometry geometry) => new(
@@ -245,7 +231,8 @@ public sealed class DesktopSurfaceProvider(
             surface,
             candidates.Count(item => item.Kind == DesktopSurfaceKind.TextLine),
             candidates.Count(item => item.Kind == DesktopSurfaceKind.VerticalLine),
-            GetForegroundWindow().ToInt64());
+            visualGeometry?.GetLatest(DateTimeOffset.UtcNow, VisualGeometryScanner.MaximumSnapshotAge)
+                ?.CaptureScopeId ?? 0);
         lock (_debugGate) _debugSnapshot = snapshot;
     }
 

@@ -18,7 +18,7 @@ public partial class App : System.Windows.Application
     private IAnimationPlayer? _animationPlayer;
     private PetAnimationController? _animationController;
     private WpfRuntimeLoop? _runtimeLoop;
-    private ForegroundVisualGeometryScanner? _visualGeometryScanner;
+    private VisualGeometryScanner? _visualGeometryScanner;
     private ContactVfxWindow? _contactVfx;
     private DispatcherTimer? _visualDebugTimer;
 
@@ -28,10 +28,11 @@ public partial class App : System.Windows.Application
         var tray = new TrayController();
         var (view, player, setDpiScale, assetStatus) = CreatePetView();
         var overlay = new OverlayWindow(view);
+        overlay.SetDiagnosticStatus($"Bolttagu P3 · 100% DPI · {assetStatus}");
         var contactVfx = new ContactVfxWindow();
         var overlayHandle = new WindowInteropHelper(overlay).EnsureHandle();
-        var visualGeometryScanner = new ForegroundVisualGeometryScanner(
-            new GdiForegroundWindowFrameCapture(overlayHandle));
+        var visualGeometryScanner = new VisualGeometryScanner(
+            new GdiVisibleDisplayFrameCapture(overlayHandle));
         var surfaceProvider = new DesktopSurfaceProvider(overlay, visualGeometryScanner, [contactVfx]);
         var animationController = new PetAnimationController(
             player,
@@ -49,7 +50,9 @@ public partial class App : System.Windows.Application
         overlay.DpiScaleChanged += (_, scale) =>
         {
             setDpiScale(scale);
-            tray.SetStatus($"Bolttagu P3 · {scale:P0} DPI · {assetStatus}");
+            var status = $"Bolttagu P3 · {scale:P0} DPI · {assetStatus}";
+            tray.SetStatus(status);
+            overlay.SetDiagnosticStatus(status);
         };
         overlay.ExitRequested += (_, _) => ExitApplication();
         tray.ShowRequested += (_, _) =>
@@ -102,7 +105,7 @@ public partial class App : System.Windows.Application
             {
                 var snapshot = visualGeometryScanner.GetLatest(
                     DateTimeOffset.UtcNow,
-                    ForegroundVisualGeometryScanner.MaximumSnapshotAge);
+                    VisualGeometryScanner.MaximumSnapshotAge);
                 contactVfx.UpdateDebugGeometry(snapshot?.Geometry ?? []);
                 contactVfx.UpdateSurfaceDebug(surfaceProvider.DebugSnapshot);
             };

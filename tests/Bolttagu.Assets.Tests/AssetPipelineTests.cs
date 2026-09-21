@@ -362,6 +362,12 @@ public sealed class AssetPipelineTests
         Assert.IsGreaterThanOrEqualTo(800, huff.Frames.Sum(frame => frame.DurationMs));
         var landing = pack.Clips.Single(clip => clip.Id == "drop_land");
         Assert.IsGreaterThanOrEqualTo(600, landing.Frames.Sum(frame => frame.DurationMs));
+        var ropeLoop = pack.Clips.Single(clip => clip.Id == "rope_climb_loop");
+        Assert.EndsWith("001-left-v2.png", ropeLoop.Frames[1].Path, StringComparison.Ordinal);
+        Assert.EndsWith("003-left.png", ropeLoop.Frames[3].Path, StringComparison.Ordinal);
+        Assert.IsTrue(ropeLoop.Frames
+            .All(frame => frame.Contacts?.Count(contact => contact.Kind == "hand") == 1),
+            "Each rope frame must expose exactly one unambiguous gripping hand.");
 
         var representativeFrames = metrics.RootElement.GetProperty("frames").EnumerateArray().ToArray();
         var idle = representativeFrames.Single(frame =>

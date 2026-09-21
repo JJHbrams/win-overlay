@@ -13,10 +13,10 @@ public readonly record struct VisualGeometry(
     long Id,
     VisualGeometryKind Kind,
     ScreenArea Bounds,
-    long ForegroundWindowId);
+    long CaptureScopeId);
 
 public sealed record VisualGeometrySnapshot(
-    long ForegroundWindowId,
+    long CaptureScopeId,
     DateTimeOffset CapturedAt,
     IReadOnlyList<VisualGeometry> Geometry,
     VisualCollisionMask? CollisionMask = null);
@@ -26,17 +26,20 @@ public sealed record VisualGeometryAnalysis(
     VisualCollisionMask CollisionMask);
 
 public sealed record CapturedWindowFrame(
-    long ForegroundWindowId,
+    long CaptureScopeId,
     DateTimeOffset CapturedAt,
     ScreenPoint ScreenOrigin,
     double CoordinateScale,
     int Width,
     int Height,
     int Stride,
-    byte[] Bgra32);
+    byte[] Bgra32,
+    IReadOnlyList<PixelExclusion>? Exclusions = null);
+
+public readonly record struct PixelExclusion(int Left, int Top, int Right, int Bottom);
 
 public sealed class VisualCollisionMask(
-    long foregroundWindowId,
+    long captureScopeId,
     ScreenPoint screenOrigin,
     double coordinateScale,
     int width,
@@ -66,7 +69,7 @@ public sealed class VisualCollisionMask(
                 new(screenOrigin.X + left / coordinateScale, screenOrigin.Y + y / coordinateScale),
                 new((right - left) / coordinateScale, Math.Max(1, 1 / coordinateScale)));
             if (bounds.Size.Width < MinimumPlatformWidthDip) continue;
-            platform = new(StablePlatformId(bounds), VisualGeometryKind.TextLine, bounds, foregroundWindowId);
+            platform = new(StablePlatformId(bounds), VisualGeometryKind.TextLine, bounds, captureScopeId);
             return true;
         }
         return false;
@@ -134,7 +137,7 @@ public sealed class VisualCollisionMask(
     {
         unchecked
         {
-            var hash = foregroundWindowId;
+            var hash = captureScopeId;
             hash = (hash * 397) ^ (long)Math.Round(bounds.Origin.X / 8d);
             hash = (hash * 397) ^ (long)Math.Round(bounds.Origin.Y / 4d);
             hash = (hash * 397) ^ (long)Math.Round(bounds.Size.Width / 8d);
@@ -162,14 +165,14 @@ public sealed class VisualGeometryDetector
     {
         Validate(frame);
         var luminance = BuildLuminance(frame);
-        var edges = BuildEdgeMask(luminance, frame.Width, frame.Height);
+        var edges = BuildEdgeMask(luminance, frame.Width, frame.Height, frame.Exclusions ?? []);
         var components = FindComponents(edges, frame.Width, frame.Height);
         var output = new List<VisualGeometry>();
         output.AddRange(FindTextLines(frame, components));
         output.AddRange(FindHorizontalLines(frame, edges));
         output.AddRange(FindVerticalLines(frame, edges));
         return new(output, new(
-            frame.ForegroundWindowId,
+            frame.CaptureScopeId,
             frame.ScreenOrigin,
             frame.CoordinateScale,
             frame.Width,
@@ -196,7 +199,11 @@ public sealed class VisualGeometryDetector
         return luminance;
     }
 
-    private static bool[] BuildEdgeMask(byte[] luminance, int width, int height)
+    private static bool[] BuildEdgeMask(
+        byte[] luminance,
+        int width,
+        int height,
+        IReadOnlyList<PixelExclusion> exclusions)
     {
         var edges = new bool[width * height];
         for (var y = 1; y < height - 1; y++)
@@ -211,6 +218,15 @@ public sealed class VisualGeometryDetector
                     Math.Max(Math.Abs(center - luminance[index - width]), Math.Abs(center - luminance[index + width])));
                 edges[index] = contrast >= EdgeThreshold;
             }
+        }
+        foreach (var exclusion in exclusions)
+        {
+            var left = Math.Clamp(exclusion.Left, 0, width);
+            var right = Math.Clamp(exclusion.Right, 0, width);
+            var top = Math.Clamp(exclusion.Top, 0, height);
+            var bottom = Math.Clamp(exclusion.Bottom, 0, height);
+            for (var y = top; y < bottom; y++)
+                Array.Clear(edges, y * width + left, Math.Max(0, right - left));
         }
         return edges;
     }
@@ -316,8 +332,8 @@ public sealed class VisualGeometryDetector
             (int)Math.Round(component.Width / Math.Max(1d, component.Height * 0.7))));
         if (estimatedGlyphs < 3) yield break;
         var bounds = ToScreenArea(frame, left, top, right, bottom);
-        yield return new(StableId(frame.ForegroundWindowId, VisualGeometryKind.TextLine, bounds),
-            VisualGeometryKind.TextLine, bounds, frame.ForegroundWindowId);
+        yield return new(StableId(frame.CaptureScopeId, VisualGeometryKind.TextLine, bounds),
+            VisualGeometryKind.TextLine, bounds, frame.CaptureScopeId);
     }
 
     private static IEnumerable<VisualGeometry> FindHorizontalLines(CapturedWindowFrame frame, bool[] edges)
@@ -370,8 +386,8 @@ public sealed class VisualGeometryDetector
             }
             if (bottom - top > maximumHeight) continue;
             var bounds = ToScreenArea(frame, left, top, right, bottom);
-            yield return new(StableId(frame.ForegroundWindowId, VisualGeometryKind.HorizontalLine, bounds),
-                VisualGeometryKind.HorizontalLine, bounds, frame.ForegroundWindowId);
+            yield return new(StableId(frame.CaptureScopeId, VisualGeometryKind.HorizontalLine, bounds),
+                VisualGeometryKind.HorizontalLine, bounds, frame.CaptureScopeId);
         }
     }
 
@@ -425,8 +441,8 @@ public sealed class VisualGeometryDetector
             }
             if (right - left > maximumWidth) continue;
             var bounds = ToScreenArea(frame, left, top, right, bottom);
-            yield return new(StableId(frame.ForegroundWindowId, VisualGeometryKind.VerticalLine, bounds),
-                VisualGeometryKind.VerticalLine, bounds, frame.ForegroundWindowId);
+            yield return new(StableId(frame.CaptureScopeId, VisualGeometryKind.VerticalLine, bounds),
+                VisualGeometryKind.VerticalLine, bounds, frame.CaptureScopeId);
         }
     }
 
@@ -437,12 +453,12 @@ public sealed class VisualGeometryDetector
             new((right - left) / frame.CoordinateScale,
                 (bottom - top) / frame.CoordinateScale));
 
-    private static long StableId(long foregroundWindowId, VisualGeometryKind kind, ScreenArea bounds)
+    private static long StableId(long captureScopeId, VisualGeometryKind kind, ScreenArea bounds)
     {
         unchecked
         {
             var hash = 1469598103934665603L;
-            hash = (hash ^ foregroundWindowId) * 1099511628211L;
+            hash = (hash ^ captureScopeId) * 1099511628211L;
             hash = (hash ^ (long)kind) * 1099511628211L;
             hash = (hash ^ (long)Math.Round(bounds.Origin.X / 4d)) * 1099511628211L;
             hash = (hash ^ (long)Math.Round(bounds.Origin.Y / 4d)) * 1099511628211L;
