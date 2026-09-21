@@ -30,6 +30,37 @@ public sealed class AnimationPlaybackTests
     }
 
     [TestMethod]
+    public void SpriteView_PublishesScaledFrameContacts()
+    {
+        Exception? failure = null;
+        var thread = new Thread(() =>
+        {
+            try
+            {
+                var root = FindRepositoryRoot();
+                var catalog = RuntimeAnimationCatalog.Load(Path.Combine(root, "asset", "bolttagu", "build"));
+                using var view = new PetSpriteView(catalog);
+                AnimationFramePresentedEventArgs? presented = null;
+                view.FramePresented += (_, args) => presented = args;
+
+                view.Play(PetActionClips.RopeClimbLoop);
+
+                Assert.IsNotNull(presented);
+                Assert.AreEqual(PetActionClips.RopeClimbLoop, presented.ClipId);
+                Assert.HasCount(2, presented.Contacts);
+                Assert.AreEqual(SpriteContactKind.Hand, presented.Contacts[0].Kind);
+                Assert.IsInRange(120d, 150d, presented.Contacts[0].LocalPosition.X);
+            }
+            catch (Exception exception) { failure = exception; }
+            finally { Dispatcher.CurrentDispatcher.InvokeShutdown(); }
+        });
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+        Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(5)), "Contact playback thread did not exit.");
+        if (failure is not null) Assert.Fail(failure.ToString());
+    }
+
+    [TestMethod]
     public void RealSpriteView_LoopingDozeAdvancesByRunnerDeadlineWithoutCompletionEvent()
     {
         Exception? failure = null;

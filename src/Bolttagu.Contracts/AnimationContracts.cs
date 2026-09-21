@@ -2,6 +2,9 @@ namespace Bolttagu.Contracts;
 
 public readonly record struct PixelRect(int X, int Y, int Width, int Height);
 public readonly record struct PixelPoint(int X, int Y);
+public enum SpriteContactKind { Hand, Foot }
+public sealed record SpriteContactAnchor(SpriteContactKind Kind, PixelPoint Point);
+public sealed record RenderedSpriteContact(SpriteContactKind Kind, ScreenPoint LocalPosition);
 
 public enum FacingDirection { Left, Right }
 public enum PetAction
@@ -103,7 +106,11 @@ public sealed record SpriteFrame(
     string AtlasPath,
     PixelRect SourceRect,
     TimeSpan Duration,
-    PixelPoint Pivot);
+    PixelPoint Pivot,
+    IReadOnlyList<SpriteContactAnchor>? Contacts = null)
+{
+    public IReadOnlyList<SpriteContactAnchor> ContactAnchors => Contacts ?? [];
+}
 
 public sealed record SpriteClip(
     string Id,
@@ -120,6 +127,21 @@ public interface IAnimationCatalog
 public sealed class AnimationPlaybackCompletedEventArgs(string clipId) : EventArgs
 {
     public string ClipId { get; } = clipId;
+}
+
+public sealed class AnimationFramePresentedEventArgs(
+    string clipId,
+    int frameIndex,
+    IReadOnlyList<RenderedSpriteContact> contacts) : EventArgs
+{
+    public string ClipId { get; } = clipId;
+    public int FrameIndex { get; } = frameIndex;
+    public IReadOnlyList<RenderedSpriteContact> Contacts { get; } = contacts;
+}
+
+public interface IAnimationFrameSource
+{
+    event EventHandler<AnimationFramePresentedEventArgs>? FramePresented;
 }
 
 public interface IAnimationPlayer : IDisposable

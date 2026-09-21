@@ -140,7 +140,12 @@ public sealed class RuntimeAnimationCatalog : IAnimationCatalog
             atlasPath,
             new(frame.Rect.X, frame.Rect.Y, frame.Rect.Width, frame.Rect.Height),
             TimeSpan.FromMilliseconds(frame.DurationMs),
-            new(frame.Pivot.X, frame.Pivot.Y));
+            new(frame.Pivot.X, frame.Pivot.Y),
+            (frame.Contacts ?? []).Select(contact => new SpriteContactAnchor(
+                contact.Kind.Equals("hand", StringComparison.OrdinalIgnoreCase)
+                    ? SpriteContactKind.Hand
+                    : SpriteContactKind.Foot,
+                new(contact.X, contact.Y))).ToArray());
     }
 
     private static string ResolveContained(string root, string relativePath)
@@ -172,7 +177,9 @@ public sealed class RuntimeAnimationCatalog : IAnimationCatalog
         int Index,
         CatalogRect Rect,
         int DurationMs,
-        CatalogPoint Pivot);
+        CatalogPoint Pivot,
+        IReadOnlyList<CatalogContact>? Contacts);
     private sealed record CatalogRect(int X, int Y, int Width, int Height);
     private sealed record CatalogPoint(int X, int Y);
+    private sealed record CatalogContact(string Kind, int X, int Y);
 }

@@ -221,7 +221,8 @@ public static class Program
                     item.FrameIndex,
                     new(x, y, pack.Canvas.Width, pack.Canvas.Height),
                     item.Frame.DurationMs,
-                    item.Frame.Pivot));
+                    item.Frame.Pivot,
+                    item.Frame.Contacts));
             }
         }
         atlas.Render(visual);
@@ -614,7 +615,13 @@ internal sealed record FrameWorkItem(string ClipId, int FrameIndex, AnimationFra
 internal sealed record FrameMetric(string ClipId, int Index, int X, int Y, int Width, int Height, int Bottom);
 internal sealed record ReviewMetrics(int SchemaVersion, CanvasSize Canvas, IReadOnlyList<FrameMetric> Frames);
 internal sealed record AtlasRect(int X, int Y, int Width, int Height);
-internal sealed record CatalogFrame(string ClipId, int Index, AtlasRect Rect, int DurationMs, PivotPoint Pivot);
+internal sealed record CatalogFrame(
+    string ClipId,
+    int Index,
+    AtlasRect Rect,
+    int DurationMs,
+    PivotPoint Pivot,
+    IReadOnlyList<FrameContact>? Contacts);
 internal sealed record CatalogClip(string Id, bool Loop);
 internal sealed record RuntimeCatalog(
     int SchemaVersion,
