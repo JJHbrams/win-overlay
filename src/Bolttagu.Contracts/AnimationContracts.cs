@@ -14,6 +14,7 @@ public enum PetAction
     ClickHuff,
     Turn,
     Walk,
+    Run,
     DragHeldIdle,
     DragPulled,
     SpawnIn,
@@ -36,6 +37,12 @@ public enum PetAction
     FreeClimbPrepare,
     FreeClimbLoop,
     FreeClimbFinish,
+    RopeClimbDownPrepare,
+    RopeClimbDownLoop,
+    RopeClimbDownFinish,
+    FreeClimbDownPrepare,
+    FreeClimbDownLoop,
+    FreeClimbDownFinish,
 }
 
 public static class PetActionClips
@@ -45,6 +52,7 @@ public static class PetActionClips
     public const string ClickHuff = "click_huff";
     public const string Turn = "turn";
     public const string Walk = "walk";
+    public const string Run = "run";
     public const string DragHeldIdle = "drag_held_idle";
     public const string DragPulled = "drag_pulled";
     public const string SpawnIn = "spawn_in";
@@ -68,6 +76,12 @@ public static class PetActionClips
     public const string FreeClimbPrepare = "free_climb_prepare";
     public const string FreeClimbLoop = "free_climb_loop";
     public const string FreeClimbFinish = "free_climb_finish";
+    public const string RopeClimbDownPrepare = "rope_climb_down_prepare";
+    public const string RopeClimbDownLoop = "rope_climb_down_loop";
+    public const string RopeClimbDownFinish = "rope_climb_down_finish";
+    public const string FreeClimbDownPrepare = "free_climb_down_prepare";
+    public const string FreeClimbDownLoop = "free_climb_down_loop";
+    public const string FreeClimbDownFinish = "free_climb_down_finish";
 
     public static IReadOnlyDictionary<PetAction, string> All { get; } =
         new Dictionary<PetAction, string>
@@ -77,6 +91,7 @@ public static class PetActionClips
             [PetAction.ClickHuff] = ClickHuff,
             [PetAction.Turn] = Turn,
             [PetAction.Walk] = Walk,
+            [PetAction.Run] = Run,
             [PetAction.DragHeldIdle] = DragHeldIdle,
             [PetAction.DragPulled] = DragPulled,
             [PetAction.SpawnIn] = SpawnIn,
@@ -99,6 +114,12 @@ public static class PetActionClips
             [PetAction.FreeClimbPrepare] = FreeClimbPrepare,
             [PetAction.FreeClimbLoop] = FreeClimbLoop,
             [PetAction.FreeClimbFinish] = FreeClimbFinish,
+            [PetAction.RopeClimbDownPrepare] = RopeClimbDownPrepare,
+            [PetAction.RopeClimbDownLoop] = RopeClimbDownLoop,
+            [PetAction.RopeClimbDownFinish] = RopeClimbDownFinish,
+            [PetAction.FreeClimbDownPrepare] = FreeClimbDownPrepare,
+            [PetAction.FreeClimbDownLoop] = FreeClimbDownLoop,
+            [PetAction.FreeClimbDownFinish] = FreeClimbDownFinish,
         };
 }
 

@@ -44,7 +44,7 @@ public sealed class BehaviorPlanner(IRandomSource random)
     private TimeSpan? _lastUserInputAt;
 
     public TimeSpan NextIdleDelay() =>
-        TimeSpan.FromMilliseconds(random.NextInt(2000, 5001));
+        TimeSpan.FromMilliseconds(random.NextInt(800, 2501));
 
     public PlannedWalk PlanWalk(
         ScreenPoint position,
@@ -53,7 +53,7 @@ public sealed class BehaviorPlanner(IRandomSource random)
         FacingDirection currentFacing)
     {
         var facing = random.NextInt(0, 2) == 0 ? FacingDirection.Left : FacingDirection.Right;
-        var distance = random.NextInt(120, 321);
+        var distance = random.NextInt(180, 481);
         var minimumX = workArea.Origin.X;
         var maximumX = Math.Max(minimumX, workArea.Right - petSize.Width);
         var signedDistance = facing == FacingDirection.Left ? -distance : distance;
@@ -70,6 +70,33 @@ public sealed class BehaviorPlanner(IRandomSource random)
     }
 
     public PlannedClimb PlanFreeClimb(ScreenSize petSize)
+    {
+        var hundredthsOfPetHeight = random.NextInt(125, 301);
+        return new(petSize.Height * hundredthsOfPetHeight / 100d, 84);
+    }
+
+    public PlannedWalk PlanRun(
+        ScreenPoint position,
+        ScreenSize petSize,
+        ScreenArea workArea,
+        FacingDirection currentFacing)
+    {
+        var facing = random.NextInt(0, 2) == 0 ? FacingDirection.Left : FacingDirection.Right;
+        var distance = random.NextInt(300, 701);
+        var minimumX = workArea.Origin.X;
+        var maximumX = Math.Max(minimumX, workArea.Right - petSize.Width);
+        var signedDistance = facing == FacingDirection.Left ? -distance : distance;
+        var targetX = Math.Clamp(position.X + signedDistance, minimumX, maximumX);
+        if (Math.Abs(targetX - position.X) < 48)
+        {
+            facing = facing == FacingDirection.Left ? FacingDirection.Right : FacingDirection.Left;
+            signedDistance = facing == FacingDirection.Left ? -distance : distance;
+            targetX = Math.Clamp(position.X + signedDistance, minimumX, maximumX);
+        }
+        return new(facing, targetX, 132, facing != currentFacing);
+    }
+
+    public PlannedClimb PlanFreeDescend(ScreenSize petSize)
     {
         var hundredthsOfPetHeight = random.NextInt(125, 301);
         return new(petSize.Height * hundredthsOfPetHeight / 100d, 84);

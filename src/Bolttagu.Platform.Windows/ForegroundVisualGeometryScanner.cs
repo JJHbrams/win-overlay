@@ -94,8 +94,6 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
     private readonly VisualGeometryDetector _detector;
     private readonly VisualGeometrySnapshotTracker _tracker = new();
     private readonly VisualScanScheduler _scheduler = new(ScanInterval);
-    private readonly VisualSceneChangeDetector _sceneChangeDetector = new();
-    private readonly VisualScenePublicationGate _scenePublicationGate = new();
     private readonly TimeProvider _timeProvider;
     private readonly System.Threading.Timer _timer;
     private bool _disposed;
@@ -129,27 +127,32 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
         try
         {
             var result = _capture.Capture(now);
-            var analysis = result.Frame is { } frame ? _detector.Analyze(frame) : null;
-            var sceneChanged = result.Frame is { } capturedFrame && _sceneChangeDetector.Observe(capturedFrame);
-            if (!_scenePublicationGate.ShouldPublish(sceneChanged, out var forceReplace)) return;
-            var geometry = analysis?.Geometry;
-            if (!forceReplace && result.Frame is { Exclusions.Count: > 0 } occludedFrame && geometry is not null)
+            if (result.Frame is not { } frame)
             {
+                var latest = _tracker.GetLatest(now, MaximumSnapshotAge);
+                if (latest is { } snapshot && snapshot.CaptureScopeId != result.CaptureScopeId)
+                    _tracker.Observe(result.CaptureScopeId, _timeProvider.GetUtcNow(), [], preserveSingleMiss: false);
+                return;
+            }
+
+            var analysis = _detector.Analyze(frame);
+            IReadOnlyList<VisualGeometry> geometry = analysis.Geometry;
+            if (frame.Exclusions is { Count: > 0 })
                 geometry = VisualGeometryOcclusionMerger.Merge(
                     geometry,
                     _tracker.GetLatest(now, MaximumSnapshotAge),
-                    occludedFrame);
-            }
+                    frame);
             _tracker.Observe(
                 result.CaptureScopeId,
                 _timeProvider.GetUtcNow(),
                 geometry,
-                analysis?.CollisionMask,
-                preserveSingleMiss: !forceReplace);
+                analysis.CollisionMask,
+                preserveSingleMiss: false);
         }
         catch (Exception exception) when (exception is ExternalException or InvalidOperationException or ArgumentException)
         {
-            _tracker.Observe(0, _timeProvider.GetUtcNow(), null);
+            // A failed capture is not evidence that the desktop geometry vanished.
+            // Keep the last good snapshot until its normal age limit expires.
         }
         finally
         {
@@ -162,89 +165,6 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
         _disposed = true;
         _timer.Dispose();
     }
-}
-
-public sealed class VisualScenePublicationGate
-{
-    private bool _replaceWhenStable;
-
-    public bool ShouldPublish(bool sceneChanged, out bool forceReplace)
-    {
-        if (sceneChanged)
-        {
-            _replaceWhenStable = true;
-            forceReplace = false;
-            return false;
-        }
-
-        forceReplace = _replaceWhenStable;
-        _replaceWhenStable = false;
-        return true;
-    }
-}
-
-public sealed class VisualSceneChangeDetector
-{
-    private const int SampleStep = 4;
-    private const int LuminanceDelta = 24;
-    private const int MinimumChangedSamples = 24;
-    private const double ChangedSampleRatio = 0.0005;
-    private SceneSample? _previous;
-
-    public bool Observe(CapturedWindowFrame frame)
-    {
-        var current = Sample(frame);
-        var previous = _previous;
-        _previous = current;
-        if (previous is null) return false;
-        if (previous.CaptureScopeId != current.CaptureScopeId ||
-            previous.Width != current.Width || previous.Height != current.Height) return true;
-
-        var compared = 0;
-        var changed = 0;
-        for (var index = 0; index < current.Luminance.Length; index++)
-        {
-            if (!current.Valid[index] || !previous.Valid[index]) continue;
-            compared++;
-            if (Math.Abs(current.Luminance[index] - previous.Luminance[index]) >= LuminanceDelta) changed++;
-        }
-        return compared > 0 && changed >= MinimumChangedSamples &&
-            changed / (double)compared >= ChangedSampleRatio;
-    }
-
-    private static SceneSample Sample(CapturedWindowFrame frame)
-    {
-        var columns = (frame.Width + SampleStep - 1) / SampleStep;
-        var rows = (frame.Height + SampleStep - 1) / SampleStep;
-        var luminance = new byte[columns * rows];
-        var valid = new bool[luminance.Length];
-        var index = 0;
-        for (var y = 0; y < frame.Height; y += SampleStep)
-        {
-            for (var x = 0; x < frame.Width; x += SampleStep)
-            {
-                if (frame.Exclusions?.Any(area =>
-                        x >= area.Left && x < area.Right && y >= area.Top && y < area.Bottom) == true)
-                {
-                    index++;
-                    continue;
-                }
-                var source = y * frame.Stride + x * 4;
-                luminance[index] = (byte)((frame.Bgra32[source + 2] * 77 +
-                    frame.Bgra32[source + 1] * 150 + frame.Bgra32[source] * 29) >> 8);
-                valid[index] = true;
-                index++;
-            }
-        }
-        return new(frame.CaptureScopeId, frame.Width, frame.Height, luminance, valid);
-    }
-
-    private sealed record SceneSample(
-        long CaptureScopeId,
-        int Width,
-        int Height,
-        byte[] Luminance,
-        bool[] Valid);
 }
 
 public static class VisualGeometryOcclusionMerger
@@ -265,11 +185,33 @@ public static class VisualGeometryOcclusionMerger
                 Math.Max(0, exclusion.Right - exclusion.Left) / frame.CoordinateScale,
                 Math.Max(0, exclusion.Bottom - exclusion.Top) / frame.CoordinateScale)))
             .ToArray();
+        var previousVisible = previous.Geometry
+            .Where(item => !occludedAreas.Any(area => Intersects(item.Bounds, area)))
+            .ToArray();
+        var currentVisible = detected
+            .Where(item => !occludedAreas.Any(area => Intersects(item.Bounds, area)))
+            .ToArray();
+        if (!IsCompatibleScene(previousVisible, currentVisible)) return detected;
+
         var ids = detected.Select(item => item.Id).ToHashSet();
         var merged = detected.ToList();
         merged.AddRange(previous.Geometry.Where(item =>
             !ids.Contains(item.Id) && occludedAreas.Any(area => Intersects(item.Bounds, area))));
         return merged;
+    }
+
+    private static bool IsCompatibleScene(
+        IReadOnlyList<VisualGeometry> previous,
+        IReadOnlyList<VisualGeometry> current)
+    {
+        if (previous.Count == 0) return current.Count == 0;
+        if (current.Count == 0) return false;
+        var matches = previous.Count(old => current.Any(now =>
+            old.Kind == now.Kind &&
+            Math.Abs(old.Bounds.Origin.X - now.Bounds.Origin.X) <= 12 &&
+            Math.Abs(old.Bounds.Origin.Y - now.Bounds.Origin.Y) <= 8 &&
+            Math.Abs(old.Bounds.Size.Width - now.Bounds.Size.Width) <= 24));
+        return matches >= Math.Max(1, (int)Math.Ceiling(previous.Count * 0.6));
     }
 
     private static bool Intersects(ScreenArea left, ScreenArea right) =>

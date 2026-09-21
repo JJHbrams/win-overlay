@@ -38,7 +38,7 @@ public static class Program
         }
         catch (Exception exception)
         {
-            Console.Error.WriteLine($"asset-build: {exception.Message}");
+            Console.Error.WriteLine($"asset-build: {exception}");
             return 1;
         }
     }
@@ -407,10 +407,70 @@ public static class Program
         var sheetPath = Path.Combine(reviewRoot, "contact-sheet.png");
         var metricsPath = Path.Combine(reviewRoot, "frame-metrics.json");
         var scaleAuditPath = Path.Combine(reviewRoot, "scale-audit-sheet.png");
+        var showcasePath = Path.Combine(reviewRoot, "animation-showcase.gif");
         SavePng(target, sheetPath);
         WriteJson(metricsPath, new ReviewMetrics(1, pack.Canvas, metrics));
         WriteScaleAuditSheet(scaleAuditPath, animationRoot, frames);
-        return [sheetPath, metricsPath, scaleAuditPath];
+        WriteAnimationShowcaseGif(showcasePath, animationRoot, frames);
+        return [sheetPath, metricsPath, scaleAuditPath, showcasePath];
+    }
+
+    private static void WriteAnimationShowcaseGif(
+        string outputPath,
+        string animationRoot,
+        IReadOnlyList<FrameWorkItem> frames)
+    {
+        const int preview = 256;
+        const int labelHeight = 32;
+        var encoder = new GifBitmapEncoder();
+        foreach (var item in frames)
+        {
+            var target = new RenderTargetBitmap(preview, preview + labelHeight, 96, 96, PixelFormats.Pbgra32);
+            var visual = new DrawingVisual();
+            using (var context = visual.RenderOpen())
+            {
+                context.DrawRectangle(
+                    new SolidColorBrush(Color.FromRgb(15, 17, 22)),
+                    null,
+                    new Rect(0, 0, preview, preview + labelHeight));
+                context.DrawImage(
+                    LoadBitmap(ResolveContained(animationRoot, item.Frame.Path)),
+                    new Rect(0, 0, preview, preview));
+                var label = new FormattedText(
+                    item.ClipId,
+                    CultureInfo.InvariantCulture,
+                    FlowDirection.LeftToRight,
+                    new Typeface("Consolas"),
+                    15,
+                    Brushes.White,
+                    1);
+                context.DrawText(label, new Point(10, preview + 6));
+            }
+            target.Render(visual);
+
+            var metadata = new BitmapMetadata("gif");
+            metadata.SetQuery("/grctlext/Delay", (ushort)Math.Max(6, item.Frame.DurationMs / 10));
+            encoder.Frames.Add(BitmapFrame.Create(target, null, metadata, null));
+        }
+
+        using var encodedStream = new MemoryStream();
+        encoder.Save(encodedStream);
+        var encoded = encodedStream.ToArray();
+        var globalColorTableBytes = (encoded[10] & 0x80) == 0
+            ? 0
+            : 3 * (1 << ((encoded[10] & 0x07) + 1));
+        var extensionOffset = 13 + globalColorTableBytes;
+        byte[] loopForeverExtension =
+        [
+            0x21, 0xFF, 0x0B,
+            (byte)'N', (byte)'E', (byte)'T', (byte)'S', (byte)'C', (byte)'A', (byte)'P', (byte)'E',
+            (byte)'2', (byte)'.', (byte)'0',
+            0x03, 0x01, 0x00, 0x00, 0x00,
+        ];
+        using var stream = new FileStream(outputPath, FileMode.Create, FileAccess.Write, FileShare.None);
+        stream.Write(encoded, 0, extensionOffset);
+        stream.Write(loopForeverExtension);
+        stream.Write(encoded, extensionOffset, encoded.Length - extensionOffset);
     }
 
     private static void WriteScaleAuditSheet(

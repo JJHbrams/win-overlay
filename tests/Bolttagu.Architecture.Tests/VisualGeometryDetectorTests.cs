@@ -83,8 +83,8 @@ public sealed class VisualGeometryDetectorTests
             new(new(100, 220), new(180, 2)), 42);
         var noLongerPresent = new VisualGeometry(8, VisualGeometryKind.TextLine,
             new(new(500, 400), new(120, 20)), 42);
-        var detected = new VisualGeometry(9, VisualGeometryKind.VerticalLine,
-            new(new(700, 100), new(2, 200)), 42);
+        var detected = new VisualGeometry(9, VisualGeometryKind.TextLine,
+            new(new(502, 401), new(118, 20)), 42);
         var previous = new VisualGeometrySnapshot(42, DateTimeOffset.UnixEpoch,
             [hidden, noLongerPresent]);
         var frame = new CapturedWindowFrame(42, DateTimeOffset.UnixEpoch, new(0, 0), 0.25,
@@ -96,55 +96,21 @@ public sealed class VisualGeometryDetectorTests
     }
 
     [TestMethod]
-    public void SceneChangeDetector_RefreshesOnLargeVisibleContentChangeButIgnoresPetExclusion()
+    public void OcclusionMerger_DropsHiddenGeometryWhenVisibleLayoutChanges()
     {
-        var detector = new VisualSceneChangeDetector();
-        var white = new CapturedWindowFrame(42, DateTimeOffset.UnixEpoch, new(0, 0), 1,
-            240, 180, 240 * 4, WhiteFrame(240, 180), [new(0, 0, 40, 40)]);
-        var excludedPixels = WhiteFrame(240, 180);
-        DrawBlackRectangle(excludedPixels, 240, 0, 0, 40, 40);
-        var excludedOnly = white with { Bgra32 = excludedPixels };
-        var changedPixels = WhiteFrame(240, 180);
-        DrawBlackRectangle(changedPixels, 240, 0, 0, 240, 180);
-        var black = white with { Bgra32 = changedPixels };
+        var hidden = new VisualGeometry(7, VisualGeometryKind.TextLine,
+            new(new(100, 220), new(180, 12)), 42);
+        var oldVisible = new VisualGeometry(8, VisualGeometryKind.TextLine,
+            new(new(500, 400), new(120, 20)), 42);
+        var scrolled = new VisualGeometry(9, VisualGeometryKind.TextLine,
+            new(new(500, 460), new(120, 20)), 42);
+        var previous = new VisualGeometrySnapshot(42, DateTimeOffset.UnixEpoch, [hidden, oldVisible]);
+        var frame = new CapturedWindowFrame(42, DateTimeOffset.UnixEpoch, new(0, 0), 0.25,
+            480, 270, 480 * 4, WhiteFrame(480, 270), [new(20, 40, 80, 70)]);
 
-        Assert.IsFalse(detector.Observe(white));
-        Assert.IsFalse(detector.Observe(excludedOnly));
-        Assert.IsTrue(detector.Observe(black));
-    }
+        var merged = VisualGeometryOcclusionMerger.Merge([scrolled], previous, frame);
 
-    [TestMethod]
-    public void SceneChangeDetector_DetectsSparseTextScrolling()
-    {
-        var detector = new VisualSceneChangeDetector();
-        var beforePixels = WhiteFrame(240, 180);
-        var afterPixels = WhiteFrame(240, 180);
-        for (var x = 48; x <= 192; x += 16)
-        {
-            DrawBlackRectangle(beforePixels, 240, x, 40, 8, 12);
-            DrawBlackRectangle(afterPixels, 240, x, 48, 8, 12);
-        }
-        var before = new CapturedWindowFrame(42, DateTimeOffset.UnixEpoch, new(0, 0), 1,
-            240, 180, 240 * 4, beforePixels, [new(0, 0, 32, 32)]);
-        var after = before with { Bgra32 = afterPixels };
-
-        Assert.IsFalse(detector.Observe(before));
-        Assert.IsTrue(detector.Observe(after));
-    }
-
-    [TestMethod]
-    public void ScenePublicationGate_DebouncesTransitionFramesAndReplacesOnceStable()
-    {
-        var gate = new VisualScenePublicationGate();
-
-        Assert.IsFalse(gate.ShouldPublish(sceneChanged: true, out var firstReplace));
-        Assert.IsFalse(firstReplace);
-        Assert.IsFalse(gate.ShouldPublish(sceneChanged: true, out var secondReplace));
-        Assert.IsFalse(secondReplace);
-        Assert.IsTrue(gate.ShouldPublish(sceneChanged: false, out var stableReplace));
-        Assert.IsTrue(stableReplace);
-        Assert.IsTrue(gate.ShouldPublish(sceneChanged: false, out var normalReplace));
-        Assert.IsFalse(normalReplace);
+        CollectionAssert.AreEqual(new long[] { 9 }, merged.Select(item => item.Id).ToArray());
     }
 
     [TestMethod]
@@ -237,19 +203,11 @@ public sealed class VisualGeometryDetectorTests
                     Top = 100,
                     Content = canvas,
                     Background = System.Windows.Media.Brushes.White,
+                    Topmost = true,
+                    ShowActivated = false,
                 };
                 window.Show();
-                var handle = new WindowInteropHelper(window).Handle;
-                var deadline = DateTime.UtcNow + TimeSpan.FromSeconds(2);
-                do
-                {
-                    window.Activate();
-                    ForceForeground(handle);
-                    PumpDispatcherOnce();
-                    if (GetForegroundWindow() == handle) break;
-                    Thread.Sleep(25);
-                } while (DateTime.UtcNow < deadline);
-                Assert.AreEqual(handle, GetForegroundWindow());
+                PumpDispatcherOnce();
 
                 sensorWindow = new()
                 {

@@ -136,6 +136,46 @@ public sealed class DesktopSurfaceProvider(
         }
     }
 
+    public bool TryFindRopeDescendObstacle(
+        DesktopSurface support,
+        double footY,
+        double currentLeadingX,
+        double nextLeadingX,
+        FacingDirection facing,
+        ScreenSize petSize,
+        ScreenArea workArea,
+        out DesktopSurface obstacle)
+    {
+        try
+        {
+            return DesktopSurfaceSelector.TryFindRopeDescendObstacle(
+                Snapshot(workArea), support, footY, currentLeadingX, nextLeadingX, facing, petSize,
+                out obstacle);
+        }
+        catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
+        {
+            obstacle = default;
+            return false;
+        }
+    }
+
+    public DesktopSurface? FindDescendIntercept(
+        double centerX,
+        double fromFootY,
+        double targetFootY,
+        ScreenArea workArea)
+    {
+        try
+        {
+            return DesktopSurfaceSelector.FindDescendIntercept(
+                Snapshot(workArea), centerX, fromFootY, targetFootY);
+        }
+        catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
+        {
+            return null;
+        }
+    }
+
     public bool TryRefreshClimbAnchor(
         DesktopSurface expected,
         double edgeX,
@@ -380,6 +420,48 @@ public static class DesktopSurfaceSelector
             .Where(candidate => centerX >= candidate.Left && centerX <= candidate.Right)
             .Where(candidate => candidate.Top < fromFootY - 3 && candidate.Top >= targetFootY - 3)
             .OrderByDescending(candidate => candidate.Top)
+            .FirstOrDefault();
+        return intercept.Bounds.Size.Width > 0 ? intercept : null;
+    }
+
+    public static bool TryFindRopeDescendObstacle(
+        IEnumerable<DesktopSurface> candidates,
+        DesktopSurface support,
+        double footY,
+        double currentLeadingX,
+        double nextLeadingX,
+        FacingDirection facing,
+        ScreenSize petSize,
+        out DesktopSurface obstacle)
+    {
+        var ascending = facing == FacingDirection.Right;
+        obstacle = candidates
+            .Where(candidate => candidate.Kind == DesktopSurfaceKind.VerticalLine && candidate.IsForeground)
+            .Where(candidate => candidate.Id != support.Id)
+            .Where(candidate => candidate.Top >= support.Top - 6 && candidate.Top <= footY + 6)
+            .Where(candidate => candidate.Bottom >= footY + Math.Min(48, petSize.Height / 2d))
+            .Where(candidate => ascending
+                ? candidate.Left >= currentLeadingX - 3 && candidate.Left <= nextLeadingX + 3
+                : candidate.Right <= currentLeadingX + 3 && candidate.Right >= nextLeadingX - 3)
+            .OrderBy(candidate => ascending ? candidate.Left : -candidate.Right)
+            .FirstOrDefault();
+        return obstacle.Bounds.Size.Width > 0;
+    }
+
+    public static DesktopSurface? FindDescendIntercept(
+        IEnumerable<DesktopSurface> candidates,
+        double centerX,
+        double fromFootY,
+        double targetFootY)
+    {
+        if (targetFootY < fromFootY) return null;
+        var all = candidates.ToArray();
+        var intercept = all
+            .Where(candidate => candidate.Kind != DesktopSurfaceKind.VerticalLine)
+            .Where(candidate => centerX >= candidate.Left && centerX <= candidate.Right)
+            .Where(candidate => candidate.Top > fromFootY + 3 && candidate.Top <= targetFootY + 3)
+            .Where(candidate => IsTopExposed(all, candidate, centerX))
+            .OrderBy(candidate => candidate.Top)
             .FirstOrDefault();
         return intercept.Bounds.Size.Width > 0 ? intercept : null;
     }

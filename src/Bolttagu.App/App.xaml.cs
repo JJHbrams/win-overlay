@@ -79,7 +79,8 @@ public partial class App : System.Windows.Application
         {
             frameSource.FramePresented += (_, args) =>
             {
-                if (args.ClipId is not (PetActionClips.RopeClimbLoop or PetActionClips.FreeClimbLoop))
+                if (args.ClipId is not (PetActionClips.RopeClimbLoop or PetActionClips.FreeClimbLoop or
+                    PetActionClips.RopeClimbDownLoop or PetActionClips.FreeClimbDownLoop))
                 {
                     contactVfx.Clear();
                     return;

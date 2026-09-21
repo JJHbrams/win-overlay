@@ -120,6 +120,76 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
+    public void BehaviorPlanner_UsesLongerWalksAndFasterLongerRuns()
+    {
+        var walk = new BehaviorPlanner(new SequenceRandom(1, 480)).PlanWalk(
+            new(400, 500), new(220, 220), new(new(0, 0), new(1920, 1080)), FacingDirection.Right);
+        var run = new BehaviorPlanner(new SequenceRandom(1, 700)).PlanRun(
+            new(400, 500), new(220, 220), new(new(0, 0), new(1920, 1080)), FacingDirection.Right);
+
+        Assert.AreEqual(480, walk.TargetX - 400);
+        Assert.AreEqual(72, walk.SpeedPixelsPerSecond);
+        Assert.AreEqual(700, run.TargetX - 400);
+        Assert.AreEqual(132, run.SpeedPixelsPerSecond);
+    }
+
+    [TestMethod]
+    public void RunBehavior_UsesDedicatedClipAndMovesAtRunSpeed()
+    {
+        using var fixture = new Fixture(800, 1, 500);
+        fixture.StartToIdle();
+
+        Assert.IsTrue(fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.Run)));
+        Assert.AreEqual(PetRuntimeState.Running, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Run, fixture.Player.CurrentClipId);
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+        Assert.AreEqual(232, fixture.Window.Position.X);
+    }
+
+    [TestMethod]
+    public void RunSupportLossFallsThroughTheSharedLocomotionPath()
+    {
+        using var fixture = new Fixture(800, 1, 500);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.Run));
+
+        fixture.Surfaces.SupportValid = false;
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(100);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Fall, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void RunEncounteringLineBelowEdgeUsesRopeDescendClips()
+    {
+        using var fixture = new Fixture(800, 1, 500);
+        fixture.Surfaces.DescendObstacle = new(
+            new(new(400, 718), new(4, 260)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+        fixture.Surfaces.DescendIntercept = new(
+            new(new(100, 760), new(300, 30)), DesktopSurfaceKind.TextLine, 12, 0, true);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.Run));
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.RopeDescendingPreparing, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.RopeClimbDownPrepare, fixture.Player.CurrentClipId);
+        fixture.Player.Complete(PetActionClips.RopeClimbDownPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.RopeClimbDownFinish, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
     public void BehaviorPlanner_RopeClimbChanceUsesThirtyFivePercentBoundary()
     {
         Assert.IsTrue(new BehaviorPlanner(new SequenceRandom(34)).ShouldStartRopeClimb());
@@ -618,6 +688,44 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
+    public void FreeDescend_InterceptsTheFirstSurfaceBelowAndUsesDownClips()
+    {
+        using var fixture = new Fixture(125);
+        fixture.Surfaces.DescendIntercept = new(
+            new(new(0, 760), new(1200, 40)), DesktopSurfaceKind.TextLine, 4, 0, true);
+        fixture.StartToIdle();
+
+        Assert.IsTrue(fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.FreeDescend)));
+        Assert.AreEqual(PetActionClips.FreeClimbDownPrepare, fixture.Player.CurrentClipId);
+        fixture.Player.Complete(PetActionClips.FreeClimbDownPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
+        Assert.AreEqual(540, fixture.Window.Position.Y);
+        Assert.AreEqual(PetActionClips.FreeClimbDownFinish, fixture.Player.CurrentClipId);
+        fixture.Player.Complete(PetActionClips.FreeClimbDownFinish);
+        Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+    }
+
+    [TestMethod]
+    public void FreeDescend_WithoutInterceptFallsAtSampledTargetHeight()
+    {
+        using var fixture = new Fixture(125);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.FreeDescend));
+        fixture.Player.Complete(PetActionClips.FreeClimbDownPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        Assert.AreEqual(775, fixture.Window.Position.Y);
+        Assert.AreEqual(PetActionClips.Fall, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
     public void RopeClimb_AnchorLossFalls()
     {
         using var fixture = new Fixture(0, 1, 220);
@@ -823,6 +931,8 @@ public sealed class PetAnimationControllerTests
         public DesktopSurface? Below { get; set; }
         public DesktopSurface? Obstacle { get; set; }
         public DesktopSurface? Intercept { get; set; }
+        public DesktopSurface? DescendObstacle { get; set; }
+        public DesktopSurface? DescendIntercept { get; set; }
         public bool SupportValid { get; set; } = true;
         public bool ClimbAnchorValid { get; set; } = true;
         public double LastFindFromY { get; private set; }
@@ -872,14 +982,37 @@ public sealed class PetAnimationControllerTests
                 ? candidate
                 : null;
 
+        public bool TryFindRopeDescendObstacle(
+            DesktopSurface support,
+            double footY,
+            double currentLeadingX,
+            double nextLeadingX,
+            FacingDirection facing,
+            ScreenSize petSize,
+            ScreenArea workArea,
+            out DesktopSurface obstacle)
+        {
+            obstacle = DescendObstacle.GetValueOrDefault();
+            return DescendObstacle is not null;
+        }
+
+        public DesktopSurface? FindDescendIntercept(
+            double centerX,
+            double fromFootY,
+            double targetFootY,
+            ScreenArea workArea) =>
+            DescendIntercept is { } candidate && candidate.Top > fromFootY && candidate.Top <= targetFootY
+                ? candidate
+                : null;
+
         public bool TryRefreshClimbAnchor(
             DesktopSurface expected,
             double edgeX,
             ScreenArea workArea,
             out DesktopSurface current)
         {
-            current = Obstacle.GetValueOrDefault();
-            return ClimbAnchorValid && Obstacle is { } candidate && candidate.Id == expected.Id;
+            current = (Obstacle ?? DescendObstacle).GetValueOrDefault();
+            return ClimbAnchorValid && current.Id == expected.Id;
         }
     }
 }

@@ -176,4 +176,35 @@ public sealed class DesktopSurfaceSelectorTests
         Assert.IsNotNull(intercept);
         Assert.AreEqual(DesktopSurfaceKind.TextLine, intercept.Value.Kind);
     }
+
+    [TestMethod]
+    public void VerticalLineStartingAtSupportEdgeCanBeDescended()
+    {
+        var support = new DesktopSurface(
+            new(new(0, 720), new(400, 300)), DesktopSurfaceKind.TextLine, 10, 0, true);
+        var line = new DesktopSurface(
+            new(new(400, 718), new(4, 260)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+
+        var found = DesktopSurfaceSelector.TryFindRopeDescendObstacle(
+            [support, line], support, 720, 390, 410,
+            FacingDirection.Right, new(220, 220), out var obstacle);
+
+        Assert.IsTrue(found);
+        Assert.AreEqual(11L, obstacle.Id);
+    }
+
+    [TestMethod]
+    public void DescendIntercept_SelectsNearestExposedSurfaceBelow()
+    {
+        DesktopSurface[] candidates =
+        [
+            new(new(new(0, 820), new(1000, 30)), DesktopSurfaceKind.TextLine, 1, 0, true),
+            new(new(new(0, 760), new(1000, 30)), DesktopSurfaceKind.TextLine, 2, 0, true),
+        ];
+
+        var intercept = DesktopSurfaceSelector.FindDescendIntercept(candidates, 300, 720, 900);
+
+        Assert.IsNotNull(intercept);
+        Assert.AreEqual(760, intercept.Value.Top);
+    }
 }
