@@ -39,7 +39,7 @@ public sealed class BehaviorGrammarTests
 
         Assert.AreEqual(50, walk.Weight);
         Assert.AreEqual(10, doze.Weight);
-        Assert.IsTrue(walk.Weight > doze.Weight);
+        Assert.IsGreaterThan(doze.Weight, walk.Weight);
     }
 
     [TestMethod]
