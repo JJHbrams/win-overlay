@@ -67,6 +67,8 @@ public static class BehaviorDefinitionValidator
 public static class BehaviorDefinitions
 {
     public static readonly TimeSpan DozeLoopCycleDuration = TimeSpan.FromMilliseconds(2400);
+    public const int WalkWeight = 50;
+    public const int SitDozeWeight = 10;
     public const string Walk = "walk";
     public const string LookAround = "look-around";
     public const string Stretch = "stretch";
@@ -77,7 +79,7 @@ public static class BehaviorDefinitions
     [
         new(Walk, PetPose.Standing,
             [new(PetActionClips.Turn, PetPose.Standing, PetPose.Standing), new(PetActionClips.Walk, PetPose.Standing, PetPose.Standing, BehaviorCompletionPolicy.External), new(PetActionClips.TurnToIdle, PetPose.Standing, PetPose.Standing)],
-            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 40, TimeSpan.FromSeconds(3)),
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, WalkWeight, TimeSpan.FromSeconds(3)),
         new(LookAround, PetPose.Standing,
             [new(PetActionClips.LookAround, PetPose.Standing, PetPose.Standing)],
             PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 25, TimeSpan.FromSeconds(3)),
@@ -86,7 +88,7 @@ public static class BehaviorDefinitions
             PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 20, TimeSpan.FromSeconds(4)),
         new(SitDoze, PetPose.Standing,
             [new(PetActionClips.SitDown, PetPose.Standing, PetPose.Seated), new(PetActionClips.SitSettle, PetPose.Seated, PetPose.Seated, BehaviorCompletionPolicy.TimedLoop, 1, TimeSpan.FromMilliseconds(750)), new(PetActionClips.DozeEnter, PetPose.Seated, PetPose.Seated), new(PetActionClips.DozeLoop, PetPose.Seated, PetPose.Seated, BehaviorCompletionPolicy.TimedLoop, 2, DozeLoopCycleDuration), new(PetActionClips.WakeUp, PetPose.Seated, PetPose.Seated), new(PetActionClips.StandUp, PetPose.Seated, PetPose.Standing)],
-            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 15, TimeSpan.FromSeconds(10)),
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, SitDozeWeight, TimeSpan.FromSeconds(10)),
         new(FreeClimb, PetPose.Standing,
             [new(PetActionClips.FreeClimbPrepare, PetPose.Standing, PetPose.Climbing)],
             PetPose.Climbing, BehaviorInterruptPolicy.AutonomousOnly, 10, TimeSpan.FromSeconds(8)),

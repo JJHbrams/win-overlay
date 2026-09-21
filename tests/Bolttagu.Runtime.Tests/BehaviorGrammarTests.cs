@@ -32,6 +32,17 @@ public sealed class BehaviorGrammarTests
     }
 
     [TestMethod]
+    public void Registry_FavorsWalkingOverDozing()
+    {
+        var walk = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.Walk);
+        var doze = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.SitDoze);
+
+        Assert.AreEqual(50, walk.Weight);
+        Assert.AreEqual(10, doze.Weight);
+        Assert.IsTrue(walk.Weight > doze.Weight);
+    }
+
+    [TestMethod]
     public void SequenceRunner_ProducesExactDozeTrace()
     {
         using var player = new FakePlayer();
