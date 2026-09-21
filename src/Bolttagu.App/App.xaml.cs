@@ -29,14 +29,16 @@ public partial class App : System.Windows.Application
         var (view, player, setDpiScale, assetStatus) = CreatePetView();
         var overlay = new OverlayWindow(view);
         var contactVfx = new ContactVfxWindow();
+        var overlayHandle = new WindowInteropHelper(overlay).EnsureHandle();
         var visualGeometryScanner = new ForegroundVisualGeometryScanner(
-            new GdiForegroundWindowFrameCapture(() => new WindowInteropHelper(overlay).Handle));
+            new GdiForegroundWindowFrameCapture(overlayHandle));
+        var surfaceProvider = new DesktopSurfaceProvider(overlay, visualGeometryScanner, [contactVfx]);
         var animationController = new PetAnimationController(
             player,
             overlay,
             new BehaviorPlanner(new SystemRandomSource(Random.Shared)),
             new StopwatchClock(),
-            new DesktopSurfaceProvider(overlay, visualGeometryScanner, [contactVfx]),
+            surfaceProvider,
             startWithFall: true);
         var runtimeLoop = new WpfRuntimeLoop(Dispatcher, animationController.Tick);
 
@@ -102,6 +104,7 @@ public partial class App : System.Windows.Application
                     DateTimeOffset.UtcNow,
                     ForegroundVisualGeometryScanner.MaximumSnapshotAge);
                 contactVfx.UpdateDebugGeometry(snapshot?.Geometry ?? []);
+                contactVfx.UpdateSurfaceDebug(surfaceProvider.DebugSnapshot);
             };
             _visualDebugTimer = debugTimer;
             debugTimer.Start();

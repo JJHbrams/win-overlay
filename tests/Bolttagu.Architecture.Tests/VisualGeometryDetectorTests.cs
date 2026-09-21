@@ -164,7 +164,7 @@ public sealed class VisualGeometryDetectorTests
                 } while (DateTime.UtcNow < deadline);
                 Assert.AreEqual(handle, GetForegroundWindow());
 
-                var capture = new GdiForegroundWindowFrameCapture(() => IntPtr.Zero)
+                var capture = new GdiForegroundWindowFrameCapture(IntPtr.Zero)
                     .Capture(DateTimeOffset.UtcNow);
                 Assert.AreEqual(handle.ToInt64(), capture.ForegroundWindowId);
                 Assert.IsNotNull(capture.Frame);

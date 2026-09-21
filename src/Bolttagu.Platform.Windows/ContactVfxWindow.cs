@@ -102,6 +102,7 @@ public sealed class ContactVfxWindow : Window, IDisposable
     private readonly Canvas _canvas = new() { IsHitTestVisible = false };
     private readonly ContactVfxTracker _tracker = new();
     private IReadOnlyList<VisualGeometry> _debugGeometry = [];
+    private SurfaceProbeDebug? _surfaceDebug;
     private readonly DispatcherTimer _timer;
     private bool _disposed;
 
@@ -157,6 +158,15 @@ public sealed class ContactVfxWindow : Window, IDisposable
         Render(DateTimeOffset.UtcNow);
     }
 
+    public void UpdateSurfaceDebug(SurfaceProbeDebug debug)
+    {
+        if (_disposed) return;
+        _surfaceDebug = debug;
+        Title = $"Bolttagu Contact VFX | {debug.Operation} valid={debug.Valid} " +
+                $"surface={debug.Surface.Kind} text={debug.TextSurfaceCount} vertical={debug.VerticalSurfaceCount}";
+        Render(DateTimeOffset.UtcNow);
+    }
+
     public void Clear()
     {
         _tracker.Clear();
@@ -170,10 +180,47 @@ public sealed class ContactVfxWindow : Window, IDisposable
         _canvas.Children.Clear();
         foreach (var geometry in _debugGeometry)
             _canvas.Children.Add(CreateDebugSurface(geometry));
+        if (_surfaceDebug is { } debug)
+        {
+            _canvas.Children.Add(CreateSelectedSurface(debug));
+            _canvas.Children.Add(CreateProbe(debug));
+        }
         foreach (var visual in _tracker.GetVisible(now))
         {
             _canvas.Children.Add(CreateWrinkle(visual));
         }
+    }
+
+    private static Shape CreateSelectedSurface(SurfaceProbeDebug debug)
+    {
+        var left = debug.Surface.Left - SystemParameters.VirtualScreenLeft;
+        var top = debug.Surface.Top - SystemParameters.VirtualScreenTop;
+        return new Line
+        {
+            X1 = left,
+            X2 = debug.Surface.Right - SystemParameters.VirtualScreenLeft,
+            Y1 = top,
+            Y2 = top,
+            Stroke = System.Windows.Media.Brushes.Gold,
+            StrokeThickness = 4,
+            Opacity = 0.9,
+            IsHitTestVisible = false,
+        };
+    }
+
+    private static Shape CreateProbe(SurfaceProbeDebug debug)
+    {
+        var ellipse = new Ellipse
+        {
+            Width = 10,
+            Height = 10,
+            Fill = debug.Valid ? System.Windows.Media.Brushes.Red : System.Windows.Media.Brushes.OrangeRed,
+            Opacity = 0.9,
+            IsHitTestVisible = false,
+        };
+        Canvas.SetLeft(ellipse, debug.Probe.X - SystemParameters.VirtualScreenLeft - 5);
+        Canvas.SetTop(ellipse, debug.Probe.Y - SystemParameters.VirtualScreenTop - 5);
+        return ellipse;
     }
 
     private static Shape CreateDebugSurface(VisualGeometry geometry)
@@ -258,6 +305,7 @@ public sealed class ContactVfxWindow : Window, IDisposable
         _timer.Stop();
         _timer.Tick -= OnTimerTick;
         _debugGeometry = [];
+        _surfaceDebug = null;
         Clear();
         Close();
     }

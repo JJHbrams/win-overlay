@@ -150,15 +150,14 @@ public sealed class ForegroundVisualGeometryScanner : IVisualGeometrySnapshotSou
     }
 }
 
-public sealed class GdiForegroundWindowFrameCapture(Func<nint> coordinateWindowHandle) : IForegroundWindowFrameCapture
+public sealed class GdiForegroundWindowFrameCapture(nint coordinateWindowHandle) : IForegroundWindowFrameCapture
 {
     private const uint PrintWindowRenderFullContent = 2;
 
     public ForegroundCaptureResult Capture(DateTimeOffset now)
     {
-        var coordinateHandle = coordinateWindowHandle();
         var foreground = GetForegroundWindow();
-        if (foreground == IntPtr.Zero || foreground == coordinateHandle || !GetWindowRect(foreground, out var rect))
+        if (foreground == IntPtr.Zero || foreground == coordinateWindowHandle || !GetWindowRect(foreground, out var rect))
             return new(foreground.ToInt64(), null);
         var width = rect.Right - rect.Left;
         var height = rect.Bottom - rect.Top;
@@ -185,7 +184,7 @@ public sealed class GdiForegroundWindowFrameCapture(Func<nint> coordinateWindowH
             var stride = Math.Abs(data.Stride);
             var bytes = new byte[stride * height];
             Marshal.Copy(data.Scan0, bytes, 0, bytes.Length);
-            var dpiHandle = coordinateHandle == IntPtr.Zero ? foreground : coordinateHandle;
+            var dpiHandle = coordinateWindowHandle == IntPtr.Zero ? foreground : coordinateWindowHandle;
             var dpi = Math.Max(1d, GetDpiForWindow(dpiHandle) / 96d);
             return new(foreground.ToInt64(), new(
                 foreground.ToInt64(), now, new(rect.Left / dpi, rect.Top / dpi), dpi,

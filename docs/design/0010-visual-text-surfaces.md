@@ -2,7 +2,7 @@
 id: 0010-visual-text-surfaces
 title: Visual Text Surfaces and Contact VFX
 tier: M
-status: done
+status: in_progress
 issue:
 owner: jhjang
 created: 2026-09-21
@@ -169,3 +169,4 @@ stateDiagram-v2
 - [x] 6. foreground edge mask를 local collision mask로 게시하고 foot raycast 착지를 연결한다. (AC-7)
 - [x] 7. startup fall과 in-process debug geometry overlay를 연결하고 실제 4K foreground에서 검증한다. PID 13068이 OS window top이 없는 foot Y=1876에 mask 착지한 뒤 edge 낙하로 work-area bottom Y=2112까지 이동함을 확인했다. (AC-7, AC-8)
 - [x] 8. 사용자 이미지에서 큰 제목 `TextLine(20,355,179)`, 수평선 `HorizontalLine(20,565,700)`, 작은 본문 `TextLine(y=808/831/855)`, 수직선 `VerticalLine(745,1,3,920)`을 검출하고 raw mask를 physics에서 제거했다. (AC-9)
+- [ ] 9. 실제 사용자 화면에서 구조 검출 결과와 runtime 최종 surface 선택이 일치하는지 발 probe·선택 surface·candidate count를 in-process debug overlay로 추적하고, 재현 실패 원인을 수정한 뒤 사용자 확인으로 닫는다. (AC-7, AC-8, AC-9)

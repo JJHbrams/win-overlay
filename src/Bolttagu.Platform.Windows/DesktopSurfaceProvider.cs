@@ -6,6 +6,15 @@ using System.Windows.Media;
 
 namespace Bolttagu.Platform.Windows;
 
+public readonly record struct SurfaceProbeDebug(
+    string Operation,
+    bool Valid,
+    ScreenPoint Probe,
+    DesktopSurface Surface,
+    int TextSurfaceCount,
+    int VerticalSurfaceCount,
+    long ForegroundWindowId);
+
 public sealed class DesktopSurfaceProvider(
     Window owner,
     IVisualGeometrySnapshotSource? visualGeometry = null,
@@ -14,17 +23,28 @@ public sealed class DesktopSurfaceProvider(
     private const int DwmExtendedFrameBounds = 9;
     private const long TaskbarId = long.MinValue;
     private const long WorkAreaFallbackId = long.MinValue + 1;
+    private readonly object _debugGate = new();
+    private SurfaceProbeDebug _debugSnapshot;
+
+    public SurfaceProbeDebug DebugSnapshot
+    {
+        get { lock (_debugGate) return _debugSnapshot; }
+    }
 
     public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea)
     {
         try
         {
             var candidates = Snapshot(workArea);
-            return DesktopSurfaceSelector.FindFirstBelow(candidates, centerX, fromY, workArea);
+            var selected = DesktopSurfaceSelector.FindFirstBelow(candidates, centerX, fromY, workArea);
+            PublishDebug("landing", true, centerX, fromY, selected, candidates);
+            return selected;
         }
         catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
         {
-            return WorkAreaFallback(workArea);
+            var fallback = WorkAreaFallback(workArea);
+            PublishDebug("landing-error", false, centerX, fromY, fallback, []);
+            return fallback;
         }
     }
 
@@ -41,8 +61,10 @@ public sealed class DesktopSurfaceProvider(
             if (expected.Kind is DesktopSurfaceKind.Taskbar or DesktopSurfaceKind.WorkAreaFallback)
             {
                 current = candidates.First(candidate => candidate.Kind == DesktopSurfaceKind.Taskbar);
-                return centerX >= current.Left && centerX <= current.Right &&
-                       Math.Abs(current.Top - footY) <= 3;
+                var valid = centerX >= current.Left && centerX <= current.Right &&
+                            Math.Abs(current.Top - footY) <= 3;
+                PublishDebug("refresh", valid, centerX, footY, current, candidates);
+                return valid;
             }
 
             if (expected.Kind == DesktopSurfaceKind.TextLine)
@@ -53,15 +75,19 @@ public sealed class DesktopSurfaceProvider(
                     .Where(candidate => Math.Abs(candidate.Top - footY) <= 6)
                     .OrderBy(candidate => Math.Abs(candidate.Top - expected.Top))
                     .FirstOrDefault();
-                return current.Bounds.Size.Width > 0;
+                var valid = current.Bounds.Size.Width > 0;
+                PublishDebug("refresh-text", valid, centerX, footY, current, candidates);
+                return valid;
             }
 
             current = candidates.FirstOrDefault(candidate =>
                 candidate.Kind == expected.Kind && candidate.Id == expected.Id);
-            return current.Bounds.Size.Width > 0 &&
-                   centerX >= current.Left && centerX <= current.Right &&
-                   Math.Abs(current.Top - footY) <= 3 &&
-                   DesktopSurfaceSelector.IsTopExposed(candidates, current, centerX);
+            var refreshed = current.Bounds.Size.Width > 0 &&
+                            centerX >= current.Left && centerX <= current.Right &&
+                            Math.Abs(current.Top - footY) <= 3 &&
+                            DesktopSurfaceSelector.IsTopExposed(candidates, current, centerX);
+            PublishDebug("refresh", refreshed, centerX, footY, current, candidates);
+            return refreshed;
         }
         catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
         {
@@ -203,6 +229,25 @@ public sealed class DesktopSurfaceProvider(
         0,
         true,
         false);
+
+    private void PublishDebug(
+        string operation,
+        bool valid,
+        double probeX,
+        double probeY,
+        DesktopSurface surface,
+        IReadOnlyList<DesktopSurface> candidates)
+    {
+        var snapshot = new SurfaceProbeDebug(
+            operation,
+            valid,
+            new(probeX, probeY),
+            surface,
+            candidates.Count(item => item.Kind == DesktopSurfaceKind.TextLine),
+            candidates.Count(item => item.Kind == DesktopSurfaceKind.VerticalLine),
+            GetForegroundWindow().ToInt64());
+        lock (_debugGate) _debugSnapshot = snapshot;
+    }
 
     private static DesktopSurface WorkAreaFallback(ScreenArea workArea) => new(
         new(new(workArea.Origin.X, workArea.Bottom), new(workArea.Size.Width, 1)),
