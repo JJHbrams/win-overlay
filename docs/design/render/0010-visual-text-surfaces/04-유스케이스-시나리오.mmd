@@ -1,0 +1,12 @@
+flowchart LR
+  U["Foreground app user"] --> T["Visible sentence detected"]
+  T --> W["Pet walks on text top"]
+  W --> E{"Text span continues"}
+  E -->|yes| W
+  E -->|no| F["Fall through existing path"]
+  U --> V["Visible vertical line detected"]
+  V --> R["Pet meets line and rope-climbs"]
+  R --> C["Hand/foot crease VFX"]
+  R --> H{"Top support intersects"}
+  H -->|yes| L["Land on text/support"]
+  H -->|no| F
