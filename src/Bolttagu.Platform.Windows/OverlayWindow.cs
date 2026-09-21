@@ -21,8 +21,12 @@ public sealed class OverlayWindow : Window, IOverlayWindow
     public OverlayWindow(UIElement content)
     {
         Title = "Bolttagu Desktop Pet";
-        Width = 220;
-        Height = 220;
+        Width = content is FrameworkElement { Width: > 0 } elementWidth
+            ? elementWidth.Width
+            : 220;
+        Height = content is FrameworkElement { Height: > 0 } elementHeight
+            ? elementHeight.Height
+            : 220;
         WindowStyle = WindowStyle.None;
         ResizeMode = ResizeMode.NoResize;
         AllowsTransparency = true;

@@ -96,6 +96,24 @@ public sealed class VisualGeometryDetectorTests
     }
 
     [TestMethod]
+    public void SceneChangeDetector_RefreshesOnLargeVisibleContentChangeButIgnoresPetExclusion()
+    {
+        var detector = new VisualSceneChangeDetector();
+        var white = new CapturedWindowFrame(42, DateTimeOffset.UnixEpoch, new(0, 0), 1,
+            240, 180, 240 * 4, WhiteFrame(240, 180), [new(0, 0, 40, 40)]);
+        var excludedPixels = WhiteFrame(240, 180);
+        DrawBlackRectangle(excludedPixels, 240, 0, 0, 40, 40);
+        var excludedOnly = white with { Bgra32 = excludedPixels };
+        var changedPixels = WhiteFrame(240, 180);
+        DrawBlackRectangle(changedPixels, 240, 0, 0, 240, 180);
+        var black = white with { Bgra32 = changedPixels };
+
+        Assert.IsFalse(detector.Observe(white));
+        Assert.IsFalse(detector.Observe(excludedOnly));
+        Assert.IsTrue(detector.Observe(black));
+    }
+
+    [TestMethod]
     public void SnapshotTracker_UsesOneMissGraceThenInvalidatesAndRejectsStaleData()
     {
         var tracker = new VisualGeometrySnapshotTracker();

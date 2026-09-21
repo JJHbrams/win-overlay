@@ -13,8 +13,9 @@ public sealed class PetPlaceholderView : UserControl, IAnimationPlayer
 
     public PetPlaceholderView()
     {
-        Width = 220;
-        Height = 220;
+        Width = PetSpriteView.SpriteWidthDip;
+        Height = PetSpriteView.FootAlignedHeightDip;
+        ClipToBounds = true;
         RenderTransformOrigin = new Point(0.5, 0.82);
         RenderTransform = _scale;
         var canvas = new Canvas { Width = 220, Height = 220, Background = Brushes.Transparent };

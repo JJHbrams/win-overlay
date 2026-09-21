@@ -50,7 +50,8 @@ public sealed class VisualGeometrySnapshotTracker : IVisualGeometrySnapshotSourc
         long captureScopeId,
         DateTimeOffset capturedAt,
         IReadOnlyList<VisualGeometry>? geometry,
-        VisualCollisionMask? collisionMask = null)
+        VisualCollisionMask? collisionMask = null,
+        bool preserveSingleMiss = true)
     {
         lock (_gate)
         {
@@ -69,7 +70,7 @@ public sealed class VisualGeometrySnapshotTracker : IVisualGeometrySnapshotSourc
             }
 
             _consecutiveMisses++;
-            if (_consecutiveMisses < 2 && _latest is not null) return;
+            if (preserveSingleMiss && _consecutiveMisses < 2 && _latest is not null) return;
             _latest = geometry is null ? null : new(captureScopeId, capturedAt, geometry, collisionMask);
         }
     }
@@ -93,6 +94,7 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
     private readonly VisualGeometryDetector _detector;
     private readonly VisualGeometrySnapshotTracker _tracker = new();
     private readonly VisualScanScheduler _scheduler = new(ScanInterval);
+    private readonly VisualSceneChangeDetector _sceneChangeDetector = new();
     private readonly TimeProvider _timeProvider;
     private readonly System.Threading.Timer _timer;
     private bool _disposed;
@@ -127,8 +129,9 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
         {
             var result = _capture.Capture(now);
             var analysis = result.Frame is { } frame ? _detector.Analyze(frame) : null;
+            var sceneChanged = result.Frame is { } capturedFrame && _sceneChangeDetector.Observe(capturedFrame);
             var geometry = analysis?.Geometry;
-            if (result.Frame is { Exclusions.Count: > 0 } occludedFrame && geometry is not null)
+            if (!sceneChanged && result.Frame is { Exclusions.Count: > 0 } occludedFrame && geometry is not null)
             {
                 geometry = VisualGeometryOcclusionMerger.Merge(
                     geometry,
@@ -139,7 +142,8 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
                 result.CaptureScopeId,
                 _timeProvider.GetUtcNow(),
                 geometry,
-                analysis?.CollisionMask);
+                analysis?.CollisionMask,
+                preserveSingleMiss: !sceneChanged);
         }
         catch (Exception exception) when (exception is ExternalException or InvalidOperationException or ArgumentException)
         {
@@ -156,6 +160,68 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
         _disposed = true;
         _timer.Dispose();
     }
+}
+
+public sealed class VisualSceneChangeDetector
+{
+    private const int SampleStep = 8;
+    private const int LuminanceDelta = 36;
+    private const double ChangedSampleRatio = 0.12;
+    private SceneSample? _previous;
+
+    public bool Observe(CapturedWindowFrame frame)
+    {
+        var current = Sample(frame);
+        var previous = _previous;
+        _previous = current;
+        if (previous is null) return false;
+        if (previous.CaptureScopeId != current.CaptureScopeId ||
+            previous.Width != current.Width || previous.Height != current.Height) return true;
+
+        var compared = 0;
+        var changed = 0;
+        for (var index = 0; index < current.Luminance.Length; index++)
+        {
+            if (!current.Valid[index] || !previous.Valid[index]) continue;
+            compared++;
+            if (Math.Abs(current.Luminance[index] - previous.Luminance[index]) >= LuminanceDelta) changed++;
+        }
+        return compared > 0 && changed / (double)compared >= ChangedSampleRatio;
+    }
+
+    private static SceneSample Sample(CapturedWindowFrame frame)
+    {
+        var columns = (frame.Width + SampleStep - 1) / SampleStep;
+        var rows = (frame.Height + SampleStep - 1) / SampleStep;
+        var luminance = new byte[columns * rows];
+        var valid = new bool[luminance.Length];
+        var index = 0;
+        for (var y = 0; y < frame.Height; y += SampleStep)
+        {
+            for (var x = 0; x < frame.Width; x += SampleStep)
+            {
+                if (frame.Exclusions?.Any(area =>
+                        x >= area.Left && x < area.Right && y >= area.Top && y < area.Bottom) == true)
+                {
+                    index++;
+                    continue;
+                }
+                var source = y * frame.Stride + x * 4;
+                luminance[index] = (byte)((frame.Bgra32[source + 2] * 77 +
+                    frame.Bgra32[source + 1] * 150 + frame.Bgra32[source] * 29) >> 8);
+                valid[index] = true;
+                index++;
+            }
+        }
+        return new(frame.CaptureScopeId, frame.Width, frame.Height, luminance, valid);
+    }
+
+    private sealed record SceneSample(
+        long CaptureScopeId,
+        int Width,
+        int Height,
+        byte[] Luminance,
+        bool[] Valid);
 }
 
 public static class VisualGeometryOcclusionMerger

@@ -47,8 +47,10 @@ public sealed class OverlayWindowSmokeTests
         {
             try
             {
-                var content = new Border();
+                var content = new Border { Width = 180, Height = 190 };
                 var window = new OverlayWindow(content);
+                Assert.AreEqual(180, window.Width);
+                Assert.AreEqual(190, window.Height);
                 window.SetDiagnosticStatus("Bolttagu P3 · 150% DPI · atlas");
                 var item = Assert.IsInstanceOfType<MenuItem>(window.ContextMenu!.Items[0]);
                 Assert.AreEqual("Bolttagu P3 · 150% DPI · atlas", item.Header);

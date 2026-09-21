@@ -10,6 +10,9 @@ namespace Bolttagu.Presentation;
 
 public sealed class PetSpriteView : UserControl, IAnimationPlayer, IAnimationFrameSource
 {
+    public const double SpriteWidthDip = 220;
+    public const double SpriteCanvasHeightDip = 220;
+    public const double FootAlignedHeightDip = SpriteCanvasHeightDip * 480d / 512d;
     private readonly IAnimationCatalog _catalog;
     private readonly Image _image;
     private readonly DispatcherTimer _timer;
@@ -21,15 +24,18 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer, IAnimationFra
     public PetSpriteView(IAnimationCatalog catalog)
     {
         _catalog = catalog ?? throw new ArgumentNullException(nameof(catalog));
-        Width = 220;
-        Height = 220;
+        Width = SpriteWidthDip;
+        Height = FootAlignedHeightDip;
+        ClipToBounds = true;
         SnapsToDevicePixels = true;
 
         _image = new Image
         {
+            Width = SpriteWidthDip,
+            Height = SpriteCanvasHeightDip,
             Stretch = Stretch.Uniform,
-            HorizontalAlignment = HorizontalAlignment.Stretch,
-            VerticalAlignment = VerticalAlignment.Stretch,
+            HorizontalAlignment = HorizontalAlignment.Left,
+            VerticalAlignment = VerticalAlignment.Top,
             SnapsToDevicePixels = true
         };
         RenderOptions.SetBitmapScalingMode(_image, BitmapScalingMode.HighQuality);
@@ -126,8 +132,8 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer, IAnimationFra
         var atlas = GetAtlas(frame.AtlasPath);
         var rect = frame.SourceRect;
         _image.Source = new CroppedBitmap(atlas, new Int32Rect(rect.X, rect.Y, rect.Width, rect.Height));
-        var viewWidth = double.IsNaN(ActualWidth) || ActualWidth <= 0 ? Width : ActualWidth;
-        var viewHeight = double.IsNaN(ActualHeight) || ActualHeight <= 0 ? Height : ActualHeight;
+        var viewWidth = SpriteWidthDip;
+        var viewHeight = SpriteCanvasHeightDip;
         var scale = Math.Min(viewWidth / rect.Width, viewHeight / rect.Height);
         var offsetX = (viewWidth - rect.Width * scale) / 2d;
         var offsetY = (viewHeight - rect.Height * scale) / 2d;

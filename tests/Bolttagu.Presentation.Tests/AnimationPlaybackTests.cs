@@ -30,7 +30,10 @@ public sealed class AnimationPlaybackTests
                 using var placeholder = new PetPlaceholderView();
 
                 Assert.IsInstanceOfType<Image>(sprite.Content);
+                Assert.AreEqual(206.25, sprite.Height, 0.001,
+                    "The view must end at the atlas foot pivot instead of retaining the old label strip.");
                 var fallbackCanvas = Assert.IsInstanceOfType<Canvas>(placeholder.Content);
+                Assert.AreEqual(sprite.Height, placeholder.Height, 0.001);
                 Assert.IsFalse(fallbackCanvas.Children.OfType<TextBlock>()
                     .Any(text => text.Text.Contains("DPI", StringComparison.Ordinal)));
             }
