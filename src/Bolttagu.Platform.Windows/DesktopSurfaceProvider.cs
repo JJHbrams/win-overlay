@@ -6,7 +6,9 @@ using System.Windows.Media;
 
 namespace Bolttagu.Platform.Windows;
 
-public sealed class DesktopSurfaceProvider(Window owner) : IDesktopSurfaceProvider
+public sealed class DesktopSurfaceProvider(
+    Window owner,
+    IVisualGeometrySnapshotSource? visualGeometry = null) : IDesktopSurfaceProvider
 {
     private const int DwmExtendedFrameBounds = 9;
     private const long TaskbarId = long.MinValue;
@@ -43,7 +45,7 @@ public sealed class DesktopSurfaceProvider(Window owner) : IDesktopSurfaceProvid
             }
 
             current = candidates.FirstOrDefault(candidate =>
-                candidate.Kind == DesktopSurfaceKind.Window && candidate.Id == expected.Id);
+                candidate.Kind == expected.Kind && candidate.Id == expected.Id);
             return current.Bounds.Size.Width > 0 &&
                    centerX >= current.Left && centerX <= current.Right &&
                    Math.Abs(current.Top - footY) <= 3 &&
@@ -106,7 +108,7 @@ public sealed class DesktopSurfaceProvider(Window owner) : IDesktopSurfaceProvid
         {
             var candidates = Snapshot(workArea);
             current = candidates.FirstOrDefault(candidate =>
-                candidate.Kind == DesktopSurfaceKind.Window && candidate.Id == expected.Id);
+                candidate.Kind == expected.Kind && candidate.Id == expected.Id);
             return current.Bounds.Size.Width > 0 &&
                    Math.Abs(current.Left - expected.Left) <= 3 &&
                    Math.Abs(current.Right - expected.Right) <= 3 &&
@@ -146,6 +148,22 @@ public sealed class DesktopSurfaceProvider(Window owner) : IDesktopSurfaceProvid
                 IsZoomed(handle)));
             return true;
         }, IntPtr.Zero);
+
+        var visualSnapshot = visualGeometry?.GetLatest(
+            DateTimeOffset.UtcNow,
+            ForegroundVisualGeometryScanner.MaximumSnapshotAge);
+        if (visualSnapshot is { } snapshot && snapshot.ForegroundWindowId == foregroundHandle.ToInt64())
+        {
+            candidates.AddRange(snapshot.Geometry.Select(geometry => new DesktopSurface(
+                geometry.Bounds,
+                geometry.Kind == VisualGeometryKind.TextLine
+                    ? DesktopSurfaceKind.TextLine
+                    : DesktopSurfaceKind.VerticalLine,
+                geometry.Id,
+                0,
+                true,
+                false)));
+        }
 
         candidates.Add(new(
             new(new(workArea.Origin.X, workArea.Bottom), new(workArea.Size.Width, 1)),
@@ -223,6 +241,7 @@ public static class DesktopSurfaceSelector
         ScreenArea workArea)
     {
         var surface = candidates
+            .Where(candidate => candidate.Kind != DesktopSurfaceKind.VerticalLine)
             .Where(candidate => centerX >= candidate.Left && centerX <= candidate.Right)
             .Where(candidate => candidate.Top >= fromY - 3)
             .Where(candidate => IsTopExposed(candidates, candidate, centerX))
@@ -252,6 +271,7 @@ public static class DesktopSurfaceSelector
 
     public static bool IsClimbEligible(IEnumerable<DesktopSurface> candidates, DesktopSurface candidate)
     {
+        if (candidate.Kind == DesktopSurfaceKind.VerticalLine) return candidate.IsForeground;
         if (candidate.Kind != DesktopSurfaceKind.Window || candidate.IsMaximized || !candidate.IsForeground) return false;
         if (!IsTopExposed(candidates, candidate, (candidate.Left + candidate.Right) / 2d)) return false;
         return true;
@@ -289,7 +309,10 @@ public static class DesktopSurfaceSelector
     {
         var all = candidates.ToArray();
         var intercept = all
-            .Where(candidate => IsClimbEligible(all, candidate))
+            .Where(candidate => candidate.Kind == DesktopSurfaceKind.TextLine
+                ? candidate.IsForeground
+                : IsClimbEligible(all, candidate))
+            .Where(candidate => candidate.Kind != DesktopSurfaceKind.VerticalLine)
             .Where(candidate => centerX >= candidate.Left && centerX <= candidate.Right)
             .Where(candidate => candidate.Top < fromFootY - 3 && candidate.Top >= targetFootY - 3)
             .OrderByDescending(candidate => candidate.Top)

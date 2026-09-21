@@ -573,6 +573,57 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
+    public void TextLineEndDropsAndVerticalLineClimbBypassesChance()
+    {
+        using var textFixture = new Fixture(0, 1, 220);
+        textFixture.Surfaces.Current = new(
+            new(new(0, 720), new(250, 24)), DesktopSurfaceKind.TextLine, 10, 0, true);
+        textFixture.StartToIdle();
+        textFixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        textFixture.Controller.Tick();
+        textFixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        textFixture.Controller.Tick();
+        textFixture.Clock.Elapsed = TimeSpan.FromSeconds(5.1);
+        textFixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Falling, textFixture.Controller.State);
+
+        using var lineFixture = new Fixture(0, 1, 220, 220, 99);
+        lineFixture.Surfaces.Obstacle = new(
+            new(new(400, 200), new(4, 320)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+        lineFixture.Surfaces.Intercept = new(
+            new(new(360, 200), new(120, 20)), DesktopSurfaceKind.TextLine, 12, 0, true);
+        lineFixture.StartToIdle();
+        lineFixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        lineFixture.Controller.Tick();
+        lineFixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        lineFixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.RopeClimbPreparing, lineFixture.Controller.State,
+            "Visual lines must bypass the window-edge chance roll.");
+        lineFixture.Player.Complete(PetActionClips.RopeClimbPrepare);
+        lineFixture.Clock.Elapsed = TimeSpan.FromSeconds(12);
+        lineFixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.ClimbFinishing, lineFixture.Controller.State);
+        Assert.AreEqual(DesktopSurfaceKind.TextLine, lineFixture.Surfaces.Intercept.Value.Kind);
+    }
+
+    [TestMethod]
+    public void VerticalLineWithoutTopSupportFallsAtItsEnd()
+    {
+        using var fixture = new Fixture(0, 1, 220, 220, 99);
+        fixture.Surfaces.Obstacle = new(
+            new(new(400, 200), new(4, 320)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+        fixture.StartToIdle();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        fixture.Controller.Tick();
+        fixture.Player.Complete(PetActionClips.RopeClimbPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(12);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+    }
+
+    [TestMethod]
     public void DragAndExit_PreemptClimbPrepareAndClearItsTransientState()
     {
         using var dragFixture = new Fixture(125);

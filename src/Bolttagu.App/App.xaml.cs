@@ -6,6 +6,7 @@ using Bolttagu.Runtime;
 using Bolttagu.Core;
 using System.IO;
 using System.Windows;
+using System.Windows.Interop;
 
 namespace Bolttagu.App;
 
@@ -16,6 +17,7 @@ public partial class App : System.Windows.Application
     private IAnimationPlayer? _animationPlayer;
     private PetAnimationController? _animationController;
     private WpfRuntimeLoop? _runtimeLoop;
+    private ForegroundVisualGeometryScanner? _visualGeometryScanner;
 
     protected override void OnStartup(StartupEventArgs e)
     {
@@ -23,12 +25,14 @@ public partial class App : System.Windows.Application
         var tray = new TrayController();
         var (view, player, setDpiScale, assetStatus) = CreatePetView();
         var overlay = new OverlayWindow(view);
+        var visualGeometryScanner = new ForegroundVisualGeometryScanner(
+            new GdiForegroundWindowFrameCapture(() => new WindowInteropHelper(overlay).Handle));
         var animationController = new PetAnimationController(
             player,
             overlay,
             new BehaviorPlanner(new SystemRandomSource(Random.Shared)),
             new StopwatchClock(),
-            new DesktopSurfaceProvider(overlay));
+            new DesktopSurfaceProvider(overlay, visualGeometryScanner));
         var runtimeLoop = new WpfRuntimeLoop(Dispatcher, animationController.Tick);
 
         overlay.ClickObserved += (_, _) => animationController.ReactToClick();
@@ -51,8 +55,10 @@ public partial class App : System.Windows.Application
         _animationPlayer = player;
         _animationController = animationController;
         _runtimeLoop = runtimeLoop;
+        _visualGeometryScanner = visualGeometryScanner;
         overlay.PlaceAtBottomRight(24);
         overlay.ShowOverlay();
+        visualGeometryScanner.Start();
         animationController.Start();
         runtimeLoop.Start();
     }
@@ -60,6 +66,7 @@ public partial class App : System.Windows.Application
     protected override void OnExit(ExitEventArgs e)
     {
         _runtimeLoop?.Dispose();
+        _visualGeometryScanner?.Dispose();
         _animationController?.Dispose();
         _animationPlayer?.Dispose();
         _tray?.Dispose();

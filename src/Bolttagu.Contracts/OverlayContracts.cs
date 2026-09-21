@@ -8,7 +8,7 @@ public readonly record struct ScreenArea(ScreenPoint Origin, ScreenSize Size)
     public double Bottom => Origin.Y + Size.Height;
 }
 
-public enum DesktopSurfaceKind { Window, Taskbar, WorkAreaFallback }
+public enum DesktopSurfaceKind { Window, TextLine, VerticalLine, Taskbar, WorkAreaFallback }
 
 public readonly record struct DesktopSurface(
     ScreenArea Bounds,

@@ -420,7 +420,7 @@ public sealed class PetAnimationController : IDisposable
         var encounter = new RopeEdgeEncounter(obstacle.Id, facing);
         if (_lastRopeEdgeEncounter == encounter) return false;
         _lastRopeEdgeEncounter = encounter;
-        if (!_planner.ShouldStartRopeClimb()) return false;
+        if (obstacle.Kind != DesktopSurfaceKind.VerticalLine && !_planner.ShouldStartRopeClimb()) return false;
 
         _walk = null;
         _sequence.Cancel();
@@ -486,6 +486,21 @@ public sealed class PetAnimationController : IDisposable
         if (nextY > _climbTargetY) return;
         if (_climbIsRope && _climbAnchor is { } anchor)
         {
+            if (anchor.Kind == DesktopSurfaceKind.VerticalLine)
+            {
+                var topSupport = _surfaces.FindClimbIntercept(
+                    (anchor.Left + anchor.Right) / 2d,
+                    fromFootY,
+                    anchor.Top - 3,
+                    _window.WorkArea);
+                if (topSupport is { } visualTop)
+                {
+                    StartClimbFinish(visualTop);
+                    return;
+                }
+                StartFalling(now);
+                return;
+            }
             StartClimbFinish(anchor);
             return;
         }

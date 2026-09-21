@@ -154,4 +154,26 @@ public sealed class DesktopSurfaceSelectorTests
 
         Assert.IsNull(DesktopSurfaceSelector.FindClimbIntercept(candidates, 300, 720, 300));
     }
+
+    [TestMethod]
+    public void TextLineIsLandingSurfaceAndVerticalLineIsClimbOnly()
+    {
+        var workArea = new ScreenArea(new(0, 0), new(1920, 1040));
+        var text = new DesktopSurface(
+            new(new(200, 500), new(300, 24)), DesktopSurfaceKind.TextLine, 10, 0, true);
+        var line = new DesktopSurface(
+            new(new(500, 220), new(4, 300)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+
+        var selected = DesktopSurfaceSelector.FindFirstBelow([text, line], 300, 300, workArea);
+        Assert.AreEqual(DesktopSurfaceKind.TextLine, selected.Kind);
+
+        var found = DesktopSurfaceSelector.TryFindRopeClimbObstacle(
+            [text, line], text, 500, 450, 520, FacingDirection.Right, new(220, 220), out var obstacle);
+        Assert.IsTrue(found);
+        Assert.AreEqual(DesktopSurfaceKind.VerticalLine, obstacle.Kind);
+
+        var intercept = DesktopSurfaceSelector.FindClimbIntercept([text, line], 300, 720, 300);
+        Assert.IsNotNull(intercept);
+        Assert.AreEqual(DesktopSurfaceKind.TextLine, intercept.Value.Kind);
+    }
 }
