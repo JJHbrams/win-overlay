@@ -114,6 +114,25 @@ public sealed class VisualGeometryDetectorTests
     }
 
     [TestMethod]
+    public void SceneChangeDetector_DetectsSparseTextScrolling()
+    {
+        var detector = new VisualSceneChangeDetector();
+        var beforePixels = WhiteFrame(240, 180);
+        var afterPixels = WhiteFrame(240, 180);
+        for (var x = 48; x <= 192; x += 16)
+        {
+            DrawBlackRectangle(beforePixels, 240, x, 40, 8, 12);
+            DrawBlackRectangle(afterPixels, 240, x, 48, 8, 12);
+        }
+        var before = new CapturedWindowFrame(42, DateTimeOffset.UnixEpoch, new(0, 0), 1,
+            240, 180, 240 * 4, beforePixels, [new(0, 0, 32, 32)]);
+        var after = before with { Bgra32 = afterPixels };
+
+        Assert.IsFalse(detector.Observe(before));
+        Assert.IsTrue(detector.Observe(after));
+    }
+
+    [TestMethod]
     public void SnapshotTracker_UsesOneMissGraceThenInvalidatesAndRejectsStaleData()
     {
         var tracker = new VisualGeometrySnapshotTracker();

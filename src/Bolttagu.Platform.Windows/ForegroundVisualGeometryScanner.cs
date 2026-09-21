@@ -164,9 +164,10 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
 
 public sealed class VisualSceneChangeDetector
 {
-    private const int SampleStep = 8;
-    private const int LuminanceDelta = 36;
-    private const double ChangedSampleRatio = 0.12;
+    private const int SampleStep = 4;
+    private const int LuminanceDelta = 24;
+    private const int MinimumChangedSamples = 24;
+    private const double ChangedSampleRatio = 0.0005;
     private SceneSample? _previous;
 
     public bool Observe(CapturedWindowFrame frame)
@@ -186,7 +187,8 @@ public sealed class VisualSceneChangeDetector
             compared++;
             if (Math.Abs(current.Luminance[index] - previous.Luminance[index]) >= LuminanceDelta) changed++;
         }
-        return compared > 0 && changed / (double)compared >= ChangedSampleRatio;
+        return compared > 0 && changed >= MinimumChangedSamples &&
+            changed / (double)compared >= ChangedSampleRatio;
     }
 
     private static SceneSample Sample(CapturedWindowFrame frame)

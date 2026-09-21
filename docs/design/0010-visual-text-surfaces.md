@@ -42,7 +42,7 @@ created: 2026-09-21
 |---|---|---|
 | AC-1 | pet이 위치한 monitor의 visible composite에서 글자형 component가 3개 이상 같은 행으로 묶이면 그 union의 top과 좌우 끝을 `TextLine` support로 제공한다. focus를 다른 창으로 옮겨도 화면에 보이는 동일 문장은 유지하며, pet 중심이 문장 끝을 벗어나면 Falling으로 전이한다. | 합성 frame detector/selector 테스트, 서로 다른 두 visible window fixture, focus 전환 전후 동일 geometry smoke와 문장 끝 runtime trace를 검증한다. |
 | AC-2 | 같은 monitor-visible composite에서 폭 8 DIP 이하, 높이 96 DIP 이상인 연속 수직 span을 `VerticalLine` climb anchor로 제공한다. 보행 leading edge가 처음 만난 visual line은 확률 판정 없이 기존 rope climb sequence를 시작한다. | 좌·우 접근, 동일 line 1회 encounter, focus와 무관한 anchor 유지, top support 유무를 synthetic geometry 및 runtime trace로 검증한다. |
-| AC-3 | focus HWND 변경은 visual geometry를 무효화하지 않는다. pet이 다른 monitor로 이동하거나 visible scene 표본의 12% 이상이 바뀌면 즉시 새 snapshot으로 교체한다. 같은 scene의 일시적 누락만 직전 snapshot을 1회 유지한다. | fake display id와 scan sequence로 focus-independent 유지, display·scene 변경, grace 1회, stale rejection을 검증한다. |
+| AC-3 | focus HWND 변경은 visual geometry를 무효화하지 않는다. pet이 다른 monitor로 이동하거나 visible scene의 4 px 간격 표본 중 24개 이상이 유의미하게 바뀌면 스크롤로 간주해 즉시 새 snapshot으로 교체한다. 같은 scene의 일시적 누락만 직전 snapshot을 1회 유지한다. | fake display id와 scan sequence로 focus-independent 유지, display 변경, 희소 text scroll, grace 1회, stale rejection을 검증한다. |
 | AC-4 | monitor 캡처·geometry 분석은 UI thread 밖에서 2 Hz, single-flight, 25% linear scale로 실행하며 runtime의 33 ms Tick은 마지막 immutable snapshot만 읽는다. 결과는 분석 완료 시각에 게시하고 같은 display scope에서 최대 3초까지 사용한다. | scheduler 단위 테스트에서 동시 작업 최대 1개, 최소 500 ms 간격, 고해상도 scan 간 snapshot 유지와 stale rejection을 검증한다. |
 | AC-5 | rope/free climb frame의 hand/foot contact metadata가 활성화될 때 pet 뒤·visible desktop 앞의 click-through VFX layer에 12~24 DIP 주름을 만든다. 접점 해제 후 300 ms 안에 fade를 시작하고 600 ms 안에 제거하며, 동시에 16개를 넘지 않는다. | pack/catalog metadata 테스트, presentation tracker fake-clock 테스트, 실제 climb 녹화의 stacking·fade 육안 검수로 확인한다. |
 | AC-6 | fall, drag, hide, display 변경, exit 및 dispose는 visual support/anchor와 모든 contact VFX를 정리하며 VFX window는 포커스·pointer hit-test를 가져가지 않는다. | runtime interrupt trace, WPF window style smoke test, 종료 후 VFX item 0개 검증으로 확인한다. |
@@ -186,3 +186,4 @@ stateDiagram-v2
 - [x] 12. pet canvas의 발밑 진단 라벨을 제거하고 context menu로 옮겼으며, 일반 환경 변수 없이 앱을 실행해 geometry debug timer가 생성되지 않는 경로를 검증했다. (AC-8)
 - [x] 13. pet exclusion 뒤의 기존 geometry를 보존하고, free climb intercept를 전체 목적 구간이 아니라 실제 tick 이동 구간으로 제한했다. (AC-7, AC-11)
 - [x] 14. atlas foot pivot 기준으로 하단 13.75 DIP를 crop하고 overlay 물리 높이를 206.25 DIP로 맞췄다. visible scene 대변경은 occlusion carry와 miss grace를 즉시 끊고, rope 홀수 frame의 팔을 머리 뒤로 재합성했다. (AC-3, AC-8, AC-10)
+- [x] 15. scene sampling을 4 px 간격·최소 24 changed samples로 세분화해 sparse text가 스크롤될 때도 pet 아래의 보존 geometry를 즉시 폐기한다. (AC-3, AC-11)
