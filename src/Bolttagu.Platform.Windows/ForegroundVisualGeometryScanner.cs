@@ -95,6 +95,7 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
     private readonly VisualGeometrySnapshotTracker _tracker = new();
     private readonly VisualScanScheduler _scheduler = new(ScanInterval);
     private readonly VisualSceneChangeDetector _sceneChangeDetector = new();
+    private readonly VisualScenePublicationGate _scenePublicationGate = new();
     private readonly TimeProvider _timeProvider;
     private readonly System.Threading.Timer _timer;
     private bool _disposed;
@@ -130,8 +131,9 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
             var result = _capture.Capture(now);
             var analysis = result.Frame is { } frame ? _detector.Analyze(frame) : null;
             var sceneChanged = result.Frame is { } capturedFrame && _sceneChangeDetector.Observe(capturedFrame);
+            if (!_scenePublicationGate.ShouldPublish(sceneChanged, out var forceReplace)) return;
             var geometry = analysis?.Geometry;
-            if (!sceneChanged && result.Frame is { Exclusions.Count: > 0 } occludedFrame && geometry is not null)
+            if (!forceReplace && result.Frame is { Exclusions.Count: > 0 } occludedFrame && geometry is not null)
             {
                 geometry = VisualGeometryOcclusionMerger.Merge(
                     geometry,
@@ -143,7 +145,7 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
                 _timeProvider.GetUtcNow(),
                 geometry,
                 analysis?.CollisionMask,
-                preserveSingleMiss: !sceneChanged);
+                preserveSingleMiss: !forceReplace);
         }
         catch (Exception exception) when (exception is ExternalException or InvalidOperationException or ArgumentException)
         {
@@ -159,6 +161,25 @@ public sealed class VisualGeometryScanner : IVisualGeometrySnapshotSource, IDisp
     {
         _disposed = true;
         _timer.Dispose();
+    }
+}
+
+public sealed class VisualScenePublicationGate
+{
+    private bool _replaceWhenStable;
+
+    public bool ShouldPublish(bool sceneChanged, out bool forceReplace)
+    {
+        if (sceneChanged)
+        {
+            _replaceWhenStable = true;
+            forceReplace = false;
+            return false;
+        }
+
+        forceReplace = _replaceWhenStable;
+        _replaceWhenStable = false;
+        return true;
     }
 }
 

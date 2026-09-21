@@ -133,6 +133,21 @@ public sealed class VisualGeometryDetectorTests
     }
 
     [TestMethod]
+    public void ScenePublicationGate_DebouncesTransitionFramesAndReplacesOnceStable()
+    {
+        var gate = new VisualScenePublicationGate();
+
+        Assert.IsFalse(gate.ShouldPublish(sceneChanged: true, out var firstReplace));
+        Assert.IsFalse(firstReplace);
+        Assert.IsFalse(gate.ShouldPublish(sceneChanged: true, out var secondReplace));
+        Assert.IsFalse(secondReplace);
+        Assert.IsTrue(gate.ShouldPublish(sceneChanged: false, out var stableReplace));
+        Assert.IsTrue(stableReplace);
+        Assert.IsTrue(gate.ShouldPublish(sceneChanged: false, out var normalReplace));
+        Assert.IsFalse(normalReplace);
+    }
+
+    [TestMethod]
     public void SnapshotTracker_UsesOneMissGraceThenInvalidatesAndRejectsStaleData()
     {
         var tracker = new VisualGeometrySnapshotTracker();
