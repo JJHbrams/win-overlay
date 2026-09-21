@@ -20,6 +20,11 @@ public sealed class DesktopSurfaceProvider(
         try
         {
             var candidates = Snapshot(workArea);
+            if (TryGetVisualSnapshot(out var visual) && visual.CollisionMask is { } mask &&
+                mask.TryFindPlatform(centerX, fromY - 4, workArea.Bottom, out var platform))
+            {
+                candidates = candidates.Append(ToDesktopSurface(platform)).ToArray();
+            }
             return DesktopSurfaceSelector.FindFirstBelow(candidates, centerX, fromY, workArea);
         }
         catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
@@ -43,6 +48,15 @@ public sealed class DesktopSurfaceProvider(
                 current = candidates.First(candidate => candidate.Kind == DesktopSurfaceKind.Taskbar);
                 return centerX >= current.Left && centerX <= current.Right &&
                        Math.Abs(current.Top - footY) <= 3;
+            }
+
+            if (expected.Kind == DesktopSurfaceKind.TextLine &&
+                TryGetVisualSnapshot(out var visual) && visual.CollisionMask is { } mask &&
+                mask.TryFindPlatform(centerX, footY - 6, footY + 6, out var platform))
+            {
+                current = ToDesktopSurface(platform);
+                return centerX >= current.Left && centerX <= current.Right &&
+                       Math.Abs(current.Top - footY) <= 6;
             }
 
             current = candidates.FirstOrDefault(candidate =>
@@ -90,8 +104,13 @@ public sealed class DesktopSurfaceProvider(
     {
         try
         {
-            return DesktopSurfaceSelector.FindClimbIntercept(
-                Snapshot(workArea), centerX, fromFootY, targetFootY);
+            var candidates = Snapshot(workArea);
+            if (TryGetVisualSnapshot(out var visual) && visual.CollisionMask is { } mask &&
+                mask.TryFindPlatform(centerX, targetFootY, fromFootY, out var platform))
+            {
+                candidates = candidates.Append(ToDesktopSurface(platform)).ToArray();
+            }
+            return DesktopSurfaceSelector.FindClimbIntercept(candidates, centerX, fromFootY, targetFootY);
         }
         catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
         {
@@ -155,20 +174,13 @@ public sealed class DesktopSurfaceProvider(
             return true;
         }, IntPtr.Zero);
 
-        var visualSnapshot = visualGeometry?.GetLatest(
-            DateTimeOffset.UtcNow,
+        var visualSnapshot = visualGeometry?.GetLatest(DateTimeOffset.UtcNow,
             ForegroundVisualGeometryScanner.MaximumSnapshotAge);
         if (visualSnapshot is { } snapshot && snapshot.ForegroundWindowId == foregroundHandle.ToInt64())
         {
-            candidates.AddRange(snapshot.Geometry.Select(geometry => new DesktopSurface(
-                geometry.Bounds,
-                geometry.Kind == VisualGeometryKind.TextLine
-                    ? DesktopSurfaceKind.TextLine
-                    : DesktopSurfaceKind.VerticalLine,
-                geometry.Id,
-                0,
-                true,
-                false)));
+            candidates.AddRange(snapshot.Geometry
+                .Where(geometry => snapshot.CollisionMask is null || geometry.Kind != VisualGeometryKind.TextLine)
+                .Select(ToDesktopSurface));
         }
 
         candidates.Add(new(
@@ -177,6 +189,30 @@ public sealed class DesktopSurfaceProvider(
             TaskbarId));
         return candidates;
     }
+
+    private bool TryGetVisualSnapshot(out VisualGeometrySnapshot snapshot)
+    {
+        var foregroundHandle = GetForegroundWindow();
+        var latest = visualGeometry?.GetLatest(DateTimeOffset.UtcNow,
+            ForegroundVisualGeometryScanner.MaximumSnapshotAge);
+        if (latest is { } value && value.ForegroundWindowId == foregroundHandle.ToInt64())
+        {
+            snapshot = value;
+            return true;
+        }
+        snapshot = null!;
+        return false;
+    }
+
+    private static DesktopSurface ToDesktopSurface(VisualGeometry geometry) => new(
+        geometry.Bounds,
+        geometry.Kind == VisualGeometryKind.TextLine
+            ? DesktopSurfaceKind.TextLine
+            : DesktopSurfaceKind.VerticalLine,
+        geometry.Id,
+        0,
+        true,
+        false);
 
     private static DesktopSurface WorkAreaFallback(ScreenArea workArea) => new(
         new(new(workArea.Origin.X, workArea.Bottom), new(workArea.Size.Width, 1)),

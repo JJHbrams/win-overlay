@@ -17,7 +17,12 @@ public readonly record struct VisualGeometry(
 public sealed record VisualGeometrySnapshot(
     long ForegroundWindowId,
     DateTimeOffset CapturedAt,
-    IReadOnlyList<VisualGeometry> Geometry);
+    IReadOnlyList<VisualGeometry> Geometry,
+    VisualCollisionMask? CollisionMask = null);
+
+public sealed record VisualGeometryAnalysis(
+    IReadOnlyList<VisualGeometry> Geometry,
+    VisualCollisionMask CollisionMask);
 
 public sealed record CapturedWindowFrame(
     long ForegroundWindowId,
@@ -28,6 +33,114 @@ public sealed record CapturedWindowFrame(
     int Height,
     int Stride,
     byte[] Bgra32);
+
+public sealed class VisualCollisionMask(
+    long foregroundWindowId,
+    ScreenPoint screenOrigin,
+    double coordinateScale,
+    int width,
+    int height,
+    bool[] solid)
+{
+    private const double FootSensorHalfWidthDip = 12;
+    private const double MaximumBridgeGapDip = 18;
+    private const double GlyphBandHeightDip = 48;
+    private const double MinimumPlatformWidthDip = 10;
+
+    public bool TryFindPlatform(double screenX, double fromScreenY, double toScreenY, out VisualGeometry platform)
+    {
+        platform = default;
+        if (solid.Length != width * height || coordinateScale <= 0 || toScreenY < fromScreenY) return false;
+        var centerX = ToPixelX(screenX);
+        if (centerX < 0 || centerX >= width) return false;
+        var startY = Math.Clamp(ToPixelY(fromScreenY), 0, height - 1);
+        var endY = Math.Clamp(ToPixelY(toScreenY), 0, height - 1);
+        var halfWidth = Math.Max(2, (int)Math.Ceiling(FootSensorHalfWidthDip * coordinateScale));
+
+        for (var y = startY; y <= endY; y++)
+        {
+            var hitX = FindSolidNear(y, centerX, halfWidth);
+            if (hitX < 0 || !TryBuildRun(hitX, y, out var left, out var right)) continue;
+            var bounds = new ScreenArea(
+                new(screenOrigin.X + left / coordinateScale, screenOrigin.Y + y / coordinateScale),
+                new((right - left) / coordinateScale, Math.Max(1, 1 / coordinateScale)));
+            if (bounds.Size.Width < MinimumPlatformWidthDip) continue;
+            platform = new(StablePlatformId(bounds), VisualGeometryKind.TextLine, bounds, foregroundWindowId);
+            return true;
+        }
+        return false;
+    }
+
+    private int FindSolidNear(int y, int centerX, int halfWidth)
+    {
+        var left = Math.Max(0, centerX - halfWidth);
+        var right = Math.Min(width - 1, centerX + halfWidth);
+        for (var distance = 0; distance <= halfWidth; distance++)
+        {
+            var rightX = centerX + distance;
+            if (rightX <= right && solid[y * width + rightX]) return rightX;
+            var leftX = centerX - distance;
+            if (distance > 0 && leftX >= left && solid[y * width + leftX]) return leftX;
+        }
+        return -1;
+    }
+
+    private bool TryBuildRun(int seedX, int topY, out int left, out int right)
+    {
+        var bandBottom = Math.Min(height, topY + Math.Max(2, (int)Math.Ceiling(GlyphBandHeightDip * coordinateScale)));
+        var maximumGap = Math.Max(2, (int)Math.Ceiling(MaximumBridgeGapDip * coordinateScale));
+        left = seedX;
+        right = seedX + 1;
+        var occupiedColumns = 0;
+
+        var gap = 0;
+        for (var x = seedX; x >= 0; x--)
+        {
+            if (ColumnHasSolid(x, topY, bandBottom))
+            {
+                left = x;
+                occupiedColumns++;
+                gap = 0;
+            }
+            else if (++gap > maximumGap) break;
+        }
+
+        gap = 0;
+        for (var x = seedX + 1; x < width; x++)
+        {
+            if (ColumnHasSolid(x, topY, bandBottom))
+            {
+                right = x + 1;
+                occupiedColumns++;
+                gap = 0;
+            }
+            else if (++gap > maximumGap) break;
+        }
+        return occupiedColumns >= 3;
+    }
+
+    private bool ColumnHasSolid(int x, int top, int bottom)
+    {
+        for (var y = top; y < bottom; y++)
+            if (solid[y * width + x]) return true;
+        return false;
+    }
+
+    private int ToPixelX(double screenX) => (int)Math.Round((screenX - screenOrigin.X) * coordinateScale);
+    private int ToPixelY(double screenY) => (int)Math.Floor((screenY - screenOrigin.Y) * coordinateScale);
+
+    private long StablePlatformId(ScreenArea bounds)
+    {
+        unchecked
+        {
+            var hash = foregroundWindowId;
+            hash = (hash * 397) ^ (long)Math.Round(bounds.Origin.X / 8d);
+            hash = (hash * 397) ^ (long)Math.Round(bounds.Origin.Y / 4d);
+            hash = (hash * 397) ^ (long)Math.Round(bounds.Size.Width / 8d);
+            return hash == 0 ? 1 : hash;
+        }
+    }
+}
 
 public sealed class VisualGeometryDetector
 {
@@ -40,6 +153,9 @@ public sealed class VisualGeometryDetector
     private const double MaximumVerticalWidthDip = 8;
 
     public IReadOnlyList<VisualGeometry> Detect(CapturedWindowFrame frame)
+        => Analyze(frame).Geometry;
+
+    public VisualGeometryAnalysis Analyze(CapturedWindowFrame frame)
     {
         Validate(frame);
         var luminance = BuildLuminance(frame);
@@ -48,7 +164,13 @@ public sealed class VisualGeometryDetector
         var output = new List<VisualGeometry>();
         output.AddRange(FindTextLines(frame, components));
         output.AddRange(FindVerticalLines(frame, edges));
-        return output;
+        return new(output, new(
+            frame.ForegroundWindowId,
+            frame.ScreenOrigin,
+            frame.CoordinateScale,
+            frame.Width,
+            frame.Height,
+            edges));
     }
 
     private static byte[] BuildLuminance(CapturedWindowFrame frame)

@@ -101,6 +101,7 @@ public sealed class ContactVfxWindow : Window, IDisposable
     private const nint WsExNoActivate = 0x08000000;
     private readonly Canvas _canvas = new() { IsHitTestVisible = false };
     private readonly ContactVfxTracker _tracker = new();
+    private IReadOnlyList<VisualGeometry> _debugGeometry = [];
     private readonly DispatcherTimer _timer;
     private bool _disposed;
 
@@ -149,6 +150,13 @@ public sealed class ContactVfxWindow : Window, IDisposable
         Render(DateTimeOffset.UtcNow);
     }
 
+    public void UpdateDebugGeometry(IReadOnlyList<VisualGeometry> geometry)
+    {
+        if (_disposed) return;
+        _debugGeometry = geometry;
+        Render(DateTimeOffset.UtcNow);
+    }
+
     public void Clear()
     {
         _tracker.Clear();
@@ -160,10 +168,44 @@ public sealed class ContactVfxWindow : Window, IDisposable
     private void Render(DateTimeOffset now)
     {
         _canvas.Children.Clear();
+        foreach (var geometry in _debugGeometry)
+            _canvas.Children.Add(CreateDebugSurface(geometry));
         foreach (var visual in _tracker.GetVisible(now))
         {
             _canvas.Children.Add(CreateWrinkle(visual));
         }
+    }
+
+    private static Shape CreateDebugSurface(VisualGeometry geometry)
+    {
+        var left = geometry.Bounds.Origin.X - SystemParameters.VirtualScreenLeft;
+        var top = geometry.Bounds.Origin.Y - SystemParameters.VirtualScreenTop;
+        if (geometry.Kind == VisualGeometryKind.TextLine)
+        {
+            return new Line
+            {
+                X1 = left,
+                X2 = left + geometry.Bounds.Size.Width,
+                Y1 = top,
+                Y2 = top,
+                Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(38, 235, 216)),
+                StrokeThickness = 2,
+                Opacity = 0.8,
+                IsHitTestVisible = false,
+            };
+        }
+        var rectangle = new System.Windows.Shapes.Rectangle
+        {
+            Width = Math.Max(2, geometry.Bounds.Size.Width),
+            Height = geometry.Bounds.Size.Height,
+            Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(236, 70, 220)),
+            StrokeThickness = 2,
+            Opacity = 0.7,
+            IsHitTestVisible = false,
+        };
+        Canvas.SetLeft(rectangle, left);
+        Canvas.SetTop(rectangle, top);
+        return rectangle;
     }
 
     private static Path CreateWrinkle(ContactVfxVisual visual)
@@ -215,6 +257,7 @@ public sealed class ContactVfxWindow : Window, IDisposable
         _disposed = true;
         _timer.Stop();
         _timer.Tick -= OnTimerTick;
+        _debugGeometry = [];
         Clear();
         Close();
     }

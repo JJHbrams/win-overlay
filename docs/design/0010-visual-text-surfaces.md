@@ -2,7 +2,7 @@
 id: 0010-visual-text-surfaces
 title: Visual Text Surfaces and Contact VFX
 tier: M
-status: done
+status: in_progress
 issue:
 owner: jhjang
 created: 2026-09-21
@@ -11,6 +11,11 @@ created: 2026-09-21
 # Visual Text Surfaces and Contact VFX
 
 > tier **M** — foreground-window visual geometry, runtime surface lifecycle, and transient climb VFX
+
+> 2026-09-21 revision: 실제 4K foreground 진단에서 문장 component grouping이 조각화되고
+> 수직 획을 과검출함을 확인했다. MobaXterm penguin 동작을 참고해 실제 물리는 객체 목록이
+> 아니라 foreground collision mask의 local foot probe를 사용한다. 기존 geometry 목록은
+> debug visualization과 vertical-line 실험용으로만 유지한다.
 
 ## 1. 의도 (Intent)
 
@@ -32,6 +37,8 @@ created: 2026-09-21
 | AC-4 | 캡처·geometry 분석은 UI thread 밖에서 최대 4 Hz, single-flight로 실행하며 runtime의 33 ms Tick은 마지막 immutable snapshot만 읽는다. 결과는 분석 완료 시각에 게시하고 foreground HWND가 계속 일치하는 동안 최대 3초까지 사용한 뒤 기존 Window/Taskbar surface로 fallback한다. | scanner scheduler 단위 테스트에서 동시 작업 최대 1개, 최소 250 ms scan 간격, 고해상도 scan 간 snapshot 유지와 stale rejection을 검증한다. |
 | AC-5 | rope/free climb frame의 hand/foot contact metadata가 활성화될 때 pet 뒤·foreground 창 앞의 click-through VFX layer에 12~24 DIP 주름을 만든다. 접점 해제 후 300 ms 안에 fade를 시작하고 600 ms 안에 제거하며, 동시에 16개를 넘지 않는다. | pack/catalog metadata 테스트, presentation tracker fake-clock 테스트, 실제 climb 녹화의 stacking·fade 육안 검수로 확인한다. |
 | AC-6 | fall, drag, hide, foreground 전환, exit 및 dispose는 visual support/anchor와 모든 contact VFX를 정리하며 VFX window는 포커스·pointer hit-test를 가져가지 않는다. | runtime interrupt trace, WPF window style smoke test, 종료 후 VFX item 0개 검증으로 확인한다. |
+| AC-7 | 앱 시작 시 pet은 work-area 상단에서 Falling으로 진입하고, foreground collision mask를 아래로 sweep해 처음 만난 local support에 착지한다. 걷는 중 foot probe가 support run 끝을 벗어나면 다시 Falling으로 전이한다. | mask raycast 단위 테스트와 spawn→fall→land, walk→edge→fall runtime trace를 검증한다. |
+| AC-8 | `BOLTTAGU_VISUAL_DEBUG=1`에서 현재 앱 scanner가 게시한 geometry를 click-through VFX layer에 표시하고, 일반 실행에서는 표시하지 않는다. | scanner snapshot을 주입한 WPF smoke와 환경 변수 off 기본값을 검증한다. |
 
 ## 3. 확정 사실 (Findings)
 
@@ -153,3 +160,5 @@ stateDiagram-v2
 - [x] 3. climb frame contact metadata를 pack→catalog→presentation event로 관통시킨다. (AC-5)
 - [x] 4. screen-fixed click-through VFX layer와 fade/cleanup lifecycle을 연결한다. (AC-5, AC-6)
 - [x] 5. 관련 Core/Runtime/Architecture/Presentation/Asset test와 실제 foreground fixture 창 smoke를 실행하고 design status를 `done`으로 닫는다. (AC-1, AC-2, AC-3, AC-4, AC-5, AC-6)
+- [ ] 6. foreground edge mask를 local collision mask로 게시하고 foot raycast 착지를 연결한다. (AC-7)
+- [ ] 7. startup fall과 in-process debug geometry overlay를 연결하고 실제 4K foreground에서 검증한다. (AC-7, AC-8)

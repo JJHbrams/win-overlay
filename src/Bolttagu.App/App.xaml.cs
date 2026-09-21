@@ -7,6 +7,7 @@ using Bolttagu.Core;
 using System.IO;
 using System.Windows;
 using System.Windows.Interop;
+using System.Windows.Threading;
 
 namespace Bolttagu.App;
 
@@ -19,6 +20,7 @@ public partial class App : System.Windows.Application
     private WpfRuntimeLoop? _runtimeLoop;
     private ForegroundVisualGeometryScanner? _visualGeometryScanner;
     private ContactVfxWindow? _contactVfx;
+    private DispatcherTimer? _visualDebugTimer;
 
     protected override void OnStartup(StartupEventArgs e)
     {
@@ -34,7 +36,8 @@ public partial class App : System.Windows.Application
             overlay,
             new BehaviorPlanner(new SystemRandomSource(Random.Shared)),
             new StopwatchClock(),
-            new DesktopSurfaceProvider(overlay, visualGeometryScanner, [contactVfx]));
+            new DesktopSurfaceProvider(overlay, visualGeometryScanner, [contactVfx]),
+            startWithFall: true);
         var runtimeLoop = new WpfRuntimeLoop(Dispatcher, animationController.Tick);
 
         overlay.ClickObserved += (_, _) => animationController.ReactToClick();
@@ -86,6 +89,23 @@ public partial class App : System.Windows.Application
         contactVfx.ShowLayer();
         overlay.ShowOverlay();
         visualGeometryScanner.Start();
+        if (string.Equals(Environment.GetEnvironmentVariable("BOLTTAGU_VISUAL_DEBUG"), "1",
+                StringComparison.Ordinal))
+        {
+            var debugTimer = new DispatcherTimer(DispatcherPriority.Background, Dispatcher)
+            {
+                Interval = TimeSpan.FromMilliseconds(500),
+            };
+            debugTimer.Tick += (_, _) =>
+            {
+                var snapshot = visualGeometryScanner.GetLatest(
+                    DateTimeOffset.UtcNow,
+                    ForegroundVisualGeometryScanner.MaximumSnapshotAge);
+                contactVfx.UpdateDebugGeometry(snapshot?.Geometry ?? []);
+            };
+            _visualDebugTimer = debugTimer;
+            debugTimer.Start();
+        }
         animationController.Start();
         runtimeLoop.Start();
     }
@@ -93,6 +113,7 @@ public partial class App : System.Windows.Application
     protected override void OnExit(ExitEventArgs e)
     {
         _runtimeLoop?.Dispose();
+        _visualDebugTimer?.Stop();
         _visualGeometryScanner?.Dispose();
         _animationController?.Dispose();
         _animationPlayer?.Dispose();

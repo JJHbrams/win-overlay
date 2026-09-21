@@ -46,27 +46,31 @@ public sealed class VisualGeometrySnapshotTracker : IVisualGeometrySnapshotSourc
     private VisualGeometrySnapshot? _latest;
     private int _consecutiveMisses;
 
-    public void Observe(long foregroundWindowId, DateTimeOffset capturedAt, IReadOnlyList<VisualGeometry>? geometry)
+    public void Observe(
+        long foregroundWindowId,
+        DateTimeOffset capturedAt,
+        IReadOnlyList<VisualGeometry>? geometry,
+        VisualCollisionMask? collisionMask = null)
     {
         lock (_gate)
         {
             if (_latest is { } previous && previous.ForegroundWindowId != foregroundWindowId)
             {
-                _latest = geometry is null ? null : new(foregroundWindowId, capturedAt, geometry);
+                _latest = geometry is null ? null : new(foregroundWindowId, capturedAt, geometry, collisionMask);
                 _consecutiveMisses = geometry is { Count: > 0 } ? 0 : 1;
                 return;
             }
 
             if (geometry is { Count: > 0 })
             {
-                _latest = new(foregroundWindowId, capturedAt, geometry);
+                _latest = new(foregroundWindowId, capturedAt, geometry, collisionMask);
                 _consecutiveMisses = 0;
                 return;
             }
 
             _consecutiveMisses++;
             if (_consecutiveMisses < 2 && _latest is not null) return;
-            _latest = geometry is null ? null : new(foregroundWindowId, capturedAt, geometry);
+            _latest = geometry is null ? null : new(foregroundWindowId, capturedAt, geometry, collisionMask);
         }
     }
 
@@ -122,8 +126,12 @@ public sealed class ForegroundVisualGeometryScanner : IVisualGeometrySnapshotSou
         try
         {
             var result = _capture.Capture(now);
-            var geometry = result.Frame is { } frame ? _detector.Detect(frame) : null;
-            _tracker.Observe(result.ForegroundWindowId, _timeProvider.GetUtcNow(), geometry);
+            var analysis = result.Frame is { } frame ? _detector.Analyze(frame) : null;
+            _tracker.Observe(
+                result.ForegroundWindowId,
+                _timeProvider.GetUtcNow(),
+                analysis?.Geometry,
+                analysis?.CollisionMask);
         }
         catch (Exception exception) when (exception is ExternalException or InvalidOperationException or ArgumentException)
         {

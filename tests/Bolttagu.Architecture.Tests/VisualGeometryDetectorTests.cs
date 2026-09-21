@@ -38,6 +38,26 @@ public sealed class VisualGeometryDetectorTests
     }
 
     [TestMethod]
+    public void CollisionMask_RaycastsToGlyphPixelsAndReturnsTheLocalHorizontalRun()
+    {
+        var pixels = WhiteFrame(240, 180);
+        DrawBlackRectangle(pixels, 240, 20, 40, 8, 18);
+        DrawBlackRectangle(pixels, 240, 34, 38, 9, 20);
+        DrawBlackRectangle(pixels, 240, 50, 41, 7, 17);
+        var frame = new CapturedWindowFrame(42, DateTimeOffset.UnixEpoch, new(100, 200), 1,
+            240, 180, 240 * 4, pixels);
+
+        var analysis = new VisualGeometryDetector().Analyze(frame);
+        var found = analysis.CollisionMask.TryFindPlatform(125, 210, 300, out var platform);
+
+        Assert.IsTrue(found);
+        Assert.AreEqual(VisualGeometryKind.TextLine, platform.Kind);
+        Assert.IsInRange(235d, 242d, platform.Bounds.Origin.Y);
+        Assert.IsLessThanOrEqualTo(125d, platform.Bounds.Origin.X);
+        Assert.IsGreaterThanOrEqualTo(150d, platform.Bounds.Right);
+    }
+
+    [TestMethod]
     public void SnapshotTracker_UsesOneMissGraceThenInvalidatesAndRejectsStaleData()
     {
         var tracker = new VisualGeometrySnapshotTracker();

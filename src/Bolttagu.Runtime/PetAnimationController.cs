@@ -39,6 +39,7 @@ public sealed class PetAnimationController : IDisposable
     private readonly BehaviorPlanner _planner;
     private readonly IMonotonicClock _clock;
     private readonly IDesktopSurfaceProvider _surfaces;
+    private readonly bool _startWithFall;
     private readonly BehaviorSequenceRunner _sequence;
     private PlannedWalk? _walk;
     private ScreenPoint _walkOrigin;
@@ -69,13 +70,15 @@ public sealed class PetAnimationController : IDisposable
         IOverlayWindow window,
         BehaviorPlanner planner,
         IMonotonicClock clock,
-        IDesktopSurfaceProvider surfaces)
+        IDesktopSurfaceProvider surfaces,
+        bool startWithFall = false)
     {
         _player = player ?? throw new ArgumentNullException(nameof(player));
         _window = window ?? throw new ArgumentNullException(nameof(window));
         _planner = planner ?? throw new ArgumentNullException(nameof(planner));
         _clock = clock ?? throw new ArgumentNullException(nameof(clock));
         _surfaces = surfaces ?? throw new ArgumentNullException(nameof(surfaces));
+        _startWithFall = startWithFall;
         _sequence = new BehaviorSequenceRunner(_player);
         _sequence.Completed += OnSequenceCompleted;
         _sequence.StepStarted += OnSequenceStepStarted;
@@ -100,7 +103,15 @@ public sealed class PetAnimationController : IDisposable
     public void Start()
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
-        SnapToSurface();
+        if (_startWithFall)
+        {
+            var workArea = _window.WorkArea;
+            _window.MoveTo(new(_window.Position.X, workArea.Origin.Y));
+        }
+        else
+        {
+            SnapToSurface();
+        }
         State = PetRuntimeState.Launching;
         _player.Play(PetActionClips.SpawnIn);
     }
@@ -602,7 +613,8 @@ public sealed class PetAnimationController : IDisposable
         if (_sequence.HandleCompletion(e.ClipId, _clock.Elapsed)) return;
         if (State == PetRuntimeState.Launching && e.ClipId == PetActionClips.SpawnIn)
         {
-            EnterIdle(_clock.Elapsed);
+            if (_startWithFall) StartFalling(_clock.Elapsed);
+            else EnterIdle(_clock.Elapsed);
         }
         else if (State == PetRuntimeState.Exiting && e.ClipId == PetActionClips.DespawnOut)
         {

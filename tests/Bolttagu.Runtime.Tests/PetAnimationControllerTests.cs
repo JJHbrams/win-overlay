@@ -7,6 +7,24 @@ namespace Bolttagu.Runtime.Tests;
 public sealed class PetAnimationControllerTests
 {
     [TestMethod]
+    public void StartupFall_BeginsAtWorkAreaTopAfterSpawn()
+    {
+        var player = new FakeAnimationPlayer();
+        var window = new FakeWindow();
+        var clock = new FakeClock();
+        var surfaces = new FakeSurfaceProvider();
+        using var controller = new PetAnimationController(
+            player, window, new(new SequenceRandom([0])), clock, surfaces, startWithFall: true);
+
+        controller.Start();
+        Assert.AreEqual(window.WorkArea.Origin.Y, window.Position.Y);
+        player.Complete(PetActionClips.SpawnIn);
+
+        Assert.AreEqual(PetRuntimeState.Falling, controller.State);
+        Assert.AreEqual(PetActionClips.Fall, player.CurrentClipId);
+    }
+
+    [TestMethod]
     public void Start_PlaysSpawnBeforeEnteringIdle()
     {
         using var fixture = new Fixture(2000, 2000);
