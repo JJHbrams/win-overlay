@@ -2,7 +2,7 @@
 id: 0010-visual-text-surfaces
 title: Visual Text Surfaces and Contact VFX
 tier: M
-status: in_progress
+status: done
 issue:
 owner: jhjang
 created: 2026-09-21
@@ -160,5 +160,5 @@ stateDiagram-v2
 - [x] 3. climb frame contact metadata를 pack→catalog→presentation event로 관통시킨다. (AC-5)
 - [x] 4. screen-fixed click-through VFX layer와 fade/cleanup lifecycle을 연결한다. (AC-5, AC-6)
 - [x] 5. 관련 Core/Runtime/Architecture/Presentation/Asset test와 실제 foreground fixture 창 smoke를 실행하고 design status를 `done`으로 닫는다. (AC-1, AC-2, AC-3, AC-4, AC-5, AC-6)
-- [ ] 6. foreground edge mask를 local collision mask로 게시하고 foot raycast 착지를 연결한다. (AC-7)
-- [ ] 7. startup fall과 in-process debug geometry overlay를 연결하고 실제 4K foreground에서 검증한다. (AC-7, AC-8)
+- [x] 6. foreground edge mask를 local collision mask로 게시하고 foot raycast 착지를 연결한다. (AC-7)
+- [x] 7. startup fall과 in-process debug geometry overlay를 연결하고 실제 4K foreground에서 검증한다. PID 13068이 OS window top이 없는 foot Y=1876에 mask 착지한 뒤 edge 낙하로 work-area bottom Y=2112까지 이동함을 확인했다. (AC-7, AC-8)
