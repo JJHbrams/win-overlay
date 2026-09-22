@@ -51,6 +51,38 @@ public sealed class BehaviorGrammarTests
     }
 
     [TestMethod]
+    public void Registry_IdleExpressionsAreStandingNonLoopingAndLowWeight()
+    {
+        var expressions = new[]
+        {
+            (BehaviorDefinitions.IdleDazed, PetActionClips.IdleDazed),
+            (BehaviorDefinitions.IdleProud, PetActionClips.IdleProud),
+            (BehaviorDefinitions.IdlePout, PetActionClips.IdlePout),
+        };
+
+        foreach (var (id, clipId) in expressions)
+        {
+            var expression = BehaviorDefinitions.Autonomous.Single(x => x.Id == id);
+            Assert.AreEqual(PetPose.Standing, expression.EntryPose);
+            Assert.AreEqual(PetPose.Standing, expression.ExitPose);
+            Assert.AreEqual(BehaviorInterruptPolicy.AutonomousOnly, expression.InterruptPolicy);
+            Assert.AreEqual(1, expression.Weight);
+            Assert.AreEqual(TimeSpan.FromSeconds(15), expression.Cooldown);
+            Assert.HasCount(1, expression.Steps);
+            Assert.AreEqual(clipId, expression.Steps[0].ClipId);
+            Assert.AreEqual(BehaviorCompletionPolicy.AdvanceOnClipComplete, expression.Steps[0].Completion);
+        }
+
+        Assert.AreEqual(3, expressions.Select(x => x.Item2).Distinct(StringComparer.Ordinal).Count());
+        var locomotionWeight = BehaviorDefinitions.Autonomous
+            .Where(x => x.Id is BehaviorDefinitions.Walk or BehaviorDefinitions.Run)
+            .Sum(x => x.Weight);
+        Assert.IsGreaterThanOrEqualTo(
+            0.70,
+            locomotionWeight / (double)BehaviorDefinitions.Autonomous.Sum(x => x.Weight));
+    }
+
+    [TestMethod]
     public void SequenceRunner_ProducesExactDozeTrace()
     {
         using var player = new FakePlayer();
@@ -117,6 +149,21 @@ public sealed class BehaviorGrammarTests
         planner.EnterIdleHub(TimeSpan.Zero);
         Assert.IsNotNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(2), [only]));
         Assert.IsNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(5), [only]));
+    }
+
+    [TestMethod]
+    public void Scheduler_IdleExpressionsAvoidRecentRepeatsAndHonorCooldown()
+    {
+        var planner = new BehaviorPlanner(new FixedRandom(0));
+        var expressions = BehaviorDefinitions.Autonomous.Where(x => x.Id is
+            BehaviorDefinitions.IdleDazed or BehaviorDefinitions.IdleProud or BehaviorDefinitions.IdlePout).ToArray();
+        planner.EnterIdleHub(TimeSpan.Zero);
+
+        Assert.AreEqual(BehaviorDefinitions.IdleDazed, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(2), expressions)!.Id);
+        Assert.AreEqual(BehaviorDefinitions.IdleProud, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(3), expressions)!.Id);
+        Assert.AreEqual(BehaviorDefinitions.IdlePout, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(4), expressions)!.Id);
+        Assert.IsNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(5), expressions));
+        Assert.AreEqual(BehaviorDefinitions.IdleDazed, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(17), expressions)!.Id);
     }
 
     private sealed class FixedRandom(int value) : IRandomSource

@@ -55,6 +55,7 @@ $dotnetExe = Join-Path $PWD '.dotnet\dotnet.exe'
 - 캐릭터가 선 창이 닫히거나 다른 창 뒤로 가려지면 다음 노출 표면까지 낙하한다.
 - 자율 보행 중 현재 표면의 가장자리를 벗어나도 같은 낙하·착지 흐름을 사용한다.
 - 걷기와 달리기는 전체 자율 행동 선택의 70% 이상을 차지하며, 짧은 idle 뒤 더 긴 거리를 이동한다.
+- 서서 쉬는 동안 낮은 확률로 멍함·뿌듯함·삐짐 표정과 대응 몸짓을 보이고 기본 호흡으로 돌아간다.
 - 걷다가 캐릭터 키 이상 높은 foreground 비최대화 창의 좌우 변 연장선을 만나면 경계마다
   한 번 35% 확률로 후면 rope-climb이 발동해 그 창 상단에 착지한다.
 - idle 중에는 후면 free-climb이 임의 높이까지 발동하며, 노출된 창 상단을 만나면 착지하고
@@ -73,6 +74,8 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 ```
 
 세부 규칙과 라이선스 주의사항은 `asset/bolttagu/README.md`를 참고한다.
+신규 idle 표정 3종은 `asset/bolttagu/derived/model/idle-rig.json`의 머리·몸통·좌우 팔·다리
+레이어를 빌드할 때 합성한다. 기존 클립과 실행 중 atlas 렌더링 방식은 그대로 유지한다.
 
 ## 설계 정본
 
@@ -87,3 +90,4 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 - `docs/design/0009-launch-packaging-branding.md`
 - `docs/design/0010-visual-text-surfaces.md`
 - `docs/design/0011-directional-climb-and-run.md`
+- `docs/design/0012-idle-expression-variants.md`

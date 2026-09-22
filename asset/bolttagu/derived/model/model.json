@@ -13,6 +13,14 @@
     "back": { "x": 1330, "y": 0, "width": 444, "height": 887 }
   },
   "review": "Approved by the user as the P1 animation guide on 2026-09-20.",
+  "idleRig": {
+    "asset": "idle-rig.json",
+    "sourceSheet": "idle-rig/source-sheet-v1.png",
+    "sourceSheetSha256": "B5DA95C76525CD71A5EC569754250FAF217C99A03C85DC24332BC32DA13C6AD5",
+    "status": "candidate",
+    "clips": ["idle_dazed", "idle_proud", "idle_pout"],
+    "review": "Layer-composited expression poses require live Windows review before approval. Individual source hashes are recorded in build/build-manifest.json."
+  },
   "actionSources": {
     "walk": {
       "asset": "walk-strip-v2.png",

@@ -1,0 +1,8 @@
+stateDiagram-v2
+  [*] --> Idle
+  Idle --> Expression: 자율 선택
+  Expression --> Idle: 클립 완료
+  Expression --> Falling: 지지 상실
+  Expression --> InputReaction: 클릭/드래그
+  Falling --> Idle: 착지·회복
+  InputReaction --> Idle: 반응 완료

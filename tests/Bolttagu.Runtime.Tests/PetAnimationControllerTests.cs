@@ -629,6 +629,37 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
+    public void IdleExpression_ClickAndSupportLossPreemptSequence()
+    {
+        var expression = BehaviorDefinitions.Autonomous.Single(
+            definition => definition.Id == BehaviorDefinitions.IdleDazed);
+
+        using (var clickFixture = new Fixture(2000, 2000))
+        {
+            clickFixture.StartToIdle();
+            Assert.IsTrue(clickFixture.Controller.StartAutonomousBehavior(expression));
+            Assert.AreEqual(PetActionClips.IdleDazed, clickFixture.Player.CurrentClipId);
+            Assert.IsTrue(clickFixture.Controller.HasActiveBehavior);
+
+            clickFixture.Controller.ReactToClick();
+
+            Assert.AreEqual(PetRuntimeState.Reacting, clickFixture.Controller.State);
+            Assert.AreEqual(PetActionClips.Click, clickFixture.Player.CurrentClipId);
+            Assert.IsFalse(clickFixture.Controller.HasActiveBehavior);
+        }
+
+        using var supportFixture = new Fixture(2000, 2000);
+        supportFixture.StartToIdle();
+        Assert.IsTrue(supportFixture.Controller.StartAutonomousBehavior(expression));
+        supportFixture.Surfaces.SupportValid = false;
+        supportFixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Falling, supportFixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Fall, supportFixture.Player.CurrentClipId);
+        Assert.IsFalse(supportFixture.Controller.HasActiveBehavior);
+    }
+
+    [TestMethod]
     public void RopeClimb_RightObstacle_UsesPrepareLoopFinishAndLandsOnObstacleTop()
     {
         using var fixture = new Fixture(0, 1, 220);

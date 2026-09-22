@@ -10,11 +10,20 @@ assets from an Engram installation at runtime.
 - `inventory.json` records the source revision, original relative path, byte length, and SHA-256 of
   every upstream file. `asset-build verify` treats a mismatch as an error.
 - `derived/model/` contains reviewed model sheets and generation provenance.
+- `derived/model/idle-rig/` contains transparent source parts for the three new idle expressions;
+  `derived/model/idle-rig.json` records their per-frame transforms and draw order. These parts
+  are composited at build time; the runtime still displays one atlas frame at a time.
 - `derived/animations/<clip>/frames/` contains individual 512×512 transparent RGBA frames.
 - `build/` contains deterministic runtime outputs. It can always be rebuilt from `derived/`.
 
 The upstream repository does not currently declare redistribution terms for these character
 files. Keep the snapshot local to this project until the rights holder confirms release terms.
+
+The idle-rig sources are new bitmap assets generated with OpenAI image generation using the
+project's existing `idle_breathe/frames/000.png` and approved expression previews as visual
+references. Prompts requested the same character's head expressions (dazed, proud, pout) and a
+transparent six-part cutout sheet; `source-sheet-v1.png` is retained beside the mechanically
+cropped `parts/` images. No external emoji or character artwork was copied into the rig.
 
 ## Art contract
 

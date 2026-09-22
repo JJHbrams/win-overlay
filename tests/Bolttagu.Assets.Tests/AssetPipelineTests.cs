@@ -46,7 +46,7 @@ public sealed class AssetPipelineTests
         CollectionAssert.AreEqual(
             new[]
             {
-                "idle_breathe", "click", "walk", "run", "click_huff", "turn", "drag_held_idle",
+                "idle_breathe", "idle_dazed", "idle_proud", "idle_pout", "click", "walk", "run", "click_huff", "turn", "drag_held_idle",
                 "drag_pulled", "spawn_in", "despawn_out", "drop_land", "turn_to_idle", "fall",
                 "sit_down", "sit_settle", "doze_enter", "doze_loop", "wake_up", "stand_up",
                 "doze_startle", "look_around", "stretch", "land_recover",
@@ -65,10 +65,25 @@ public sealed class AssetPipelineTests
         using var stream = File.OpenRead(path);
         var decoder = new GifBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.OnLoad);
 
-        Assert.HasCount(135, decoder.Frames);
+        Assert.HasCount(147, decoder.Frames);
         Assert.AreEqual(256, decoder.Frames[0].PixelWidth);
         Assert.AreEqual(288, decoder.Frames[0].PixelHeight);
         Assert.Contains("NETSCAPE2.0", Encoding.ASCII.GetString(File.ReadAllBytes(path)));
+    }
+
+    [TestMethod]
+    public void IdleExpressionFrames_KeepGroundBaselineAcrossKeyframes()
+    {
+        var path = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build", "review", "frame-metrics.json");
+        using var document = JsonDocument.Parse(File.ReadAllText(path));
+        var frames = document.RootElement.GetProperty("frames").EnumerateArray().ToArray();
+        foreach (var clipId in new[] { PetActionClips.IdleDazed, PetActionClips.IdleProud, PetActionClips.IdlePout })
+        {
+            var clipFrames = frames.Where(frame => frame.GetProperty("clipId").GetString() == clipId).ToArray();
+            Assert.HasCount(4, clipFrames);
+            Assert.IsTrue(clipFrames.All(frame => frame.GetProperty("bottom").GetInt32() == 477),
+                $"{clipId} must keep both shoes on the same ground baseline.");
+        }
     }
 
     [TestMethod]
@@ -191,6 +206,68 @@ public sealed class AssetPipelineTests
                 }
                 """);
             Assert.AreEqual(1, Program.Main(["generate", root]), "Out-of-bounds calibration rectangles must be rejected.");
+        }
+        finally
+        {
+            Directory.Delete(root, recursive: true);
+        }
+    }
+
+    [TestMethod]
+    public void IdleRig_ComposesFixedCanvasFramesWithCanonicalLayerDefaults()
+    {
+        var root = Path.Combine(Path.GetTempPath(), $"bolttagu-idle-rig-{Guid.NewGuid():N}");
+        var modelRoot = Path.Combine(root, "asset", "bolttagu", "derived", "model");
+        var rigRoot = Path.Combine(modelRoot, "idle-rig");
+        Directory.CreateDirectory(rigRoot);
+        try
+        {
+            File.WriteAllText(Path.Combine(root, "Bolttagu.slnx"), "<Solution />");
+            var calibration = Path.Combine(RepositoryRoot, "asset", "bolttagu", "derived", "model", "canonical-idle-calibration-v1.png");
+            File.Copy(calibration, Path.Combine(modelRoot, "canonical.png"));
+            File.Copy(calibration, Path.Combine(rigRoot, "part.png"));
+            File.WriteAllText(Path.Combine(modelRoot, "animation-recipes.json"), """
+                { "schemaVersion": 1, "source": "canonical.png", "sourceRect": { "x": 0, "y": 0, "width": 512, "height": 512 }, "canvas": { "width": 512, "height": 512 }, "padding": 32, "clips": [] }
+                """);
+            File.WriteAllText(Path.Combine(modelRoot, "idle-rig.json"), """
+                {
+                  "schemaVersion": 1,
+                  "canvas": { "width": 512, "height": 512 },
+                  "clips": [
+                    { "id": "idle_dazed", "frames": [{ "layers": [
+                      { "id":"body", "source":"part.png", "drawOrder":10 }, { "id":"head", "source":"part.png", "drawOrder":20, "rotationDeg":2 },
+                      { "id":"left_arm", "source":"part.png", "drawOrder":5, "scaleX":0.98 }, { "id":"right_arm", "source":"part.png", "drawOrder":25 },
+                      { "id":"left_leg", "source":"part.png", "drawOrder":1 }, { "id":"right_leg", "source":"part.png", "drawOrder":2 }
+                    ] }] },
+                    { "id": "idle_proud", "frames": [{ "layers": [
+                      { "id":"body", "source":"part.png" }, { "id":"head", "source":"part.png" }, { "id":"left_arm", "source":"part.png" },
+                      { "id":"right_arm", "source":"part.png" }, { "id":"left_leg", "source":"part.png" }, { "id":"right_leg", "source":"part.png" }
+                    ] }] },
+                    { "id": "idle_pout", "frames": [{ "layers": [
+                      { "id":"body", "source":"part.png" }, { "id":"head", "source":"part.png" }, { "id":"left_arm", "source":"part.png" },
+                      { "id":"right_arm", "source":"part.png" }, { "id":"left_leg", "source":"part.png" }, { "id":"right_leg", "source":"part.png" }
+                    ] }] }
+                  ]
+                }
+                """);
+
+            Assert.AreEqual(0, Program.Main(["generate", root]));
+            foreach (var clipId in new[] { "idle_dazed", "idle_proud", "idle_pout" })
+            {
+                var frame = PngInspector.Read(Path.Combine(root, "asset", "bolttagu", "derived", "animations", clipId, "frames", "000.png"));
+                Assert.AreEqual(512, frame.Width);
+                Assert.AreEqual(512, frame.Height);
+                Assert.IsTrue(frame.HasAlpha);
+            }
+
+            var rigPath = Path.Combine(modelRoot, "idle-rig.json");
+            var validRig = File.ReadAllText(rigPath);
+            File.WriteAllText(rigPath, validRig.Replace("\"schemaVersion\": 1", "\"schemaVersion\": 2", StringComparison.Ordinal));
+            Assert.AreEqual(1, Program.Main(["generate", root]), "Unsupported rig schemas must fail before emitting a new build.");
+            File.WriteAllText(rigPath, validRig.Replace("part.png", "../part.png", StringComparison.Ordinal));
+            Assert.AreEqual(1, Program.Main(["generate", root]), "Rig sources must not escape idle-rig/.");
+            File.WriteAllText(rigPath, validRig.Replace("\"id\":\"right_leg\"", "\"id\":\"missing_leg\"", StringComparison.Ordinal));
+            Assert.AreEqual(1, Program.Main(["generate", root]), "Each keyframe must declare both leg slots.");
         }
         finally
         {

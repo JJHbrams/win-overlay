@@ -75,6 +75,8 @@ public static class Program
     private static int Generate(string root)
     {
         var modelRoot = Path.Combine(root, "asset", "bolttagu", "derived", "model");
+        var animationRoot = Path.Combine(root, "asset", "bolttagu", "derived", "animations");
+        var rigFrames = IdleRigComposer.ComposeIfPresent(modelRoot, animationRoot);
         var recipePath = Path.Combine(modelRoot, "animation-recipes.json");
         var recipe = ReadJson<ModelRecipe>(recipePath);
         if (recipe.SchemaVersion != 1)
@@ -82,7 +84,6 @@ public static class Program
             throw new InvalidDataException($"Unsupported recipe schema {recipe.SchemaVersion}.");
         }
 
-        var animationRoot = Path.Combine(root, "asset", "bolttagu", "derived", "animations");
         var sourceCache = new Dictionary<string, BitmapSource>(StringComparer.OrdinalIgnoreCase);
         var written = 0;
         foreach (var clip in recipe.Clips.OrderBy(clip => clip.Id, StringComparer.Ordinal))
@@ -173,7 +174,7 @@ public static class Program
         var sourceCount = recipe.Clips.Select(clip => clip.Source ?? recipe.Source)
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .Count();
-        Console.WriteLine($"generated {written} deterministic preview frames from {sourceCount} model sources");
+        Console.WriteLine($"generated {written + rigFrames} deterministic preview frames from {sourceCount} model sources ({rigFrames} rig-composited)");
         return 0;
     }
 
@@ -244,10 +245,16 @@ public static class Program
         var reviewOutputs = WriteReviewArtifacts(buildRoot, animationRoot, pack, orderedFrames);
 
         var modelRoot = Path.Combine(root, "asset", "bolttagu", "derived", "model");
-        var inputs = Directory.EnumerateFiles(modelRoot, "*.png", SearchOption.TopDirectoryOnly)
+        var inputs = Directory.EnumerateFiles(modelRoot, "*.png", SearchOption.AllDirectories)
             .Select(path => HashArtifact(root, path))
             .ToList();
         inputs.Add(HashArtifact(root, Path.Combine(modelRoot, "animation-recipes.json")));
+        inputs.Add(HashArtifact(root, Path.Combine(modelRoot, "model.json")));
+        var rigPath = Path.Combine(modelRoot, "idle-rig.json");
+        if (File.Exists(rigPath))
+        {
+            inputs.Add(HashArtifact(root, rigPath));
+        }
         inputs.Add(HashArtifact(root, packPath));
         inputs.AddRange(orderedFrames.Select(item => HashArtifact(root, ResolveContained(animationRoot, item.Frame.Path))));
         inputs = inputs.DistinctBy(item => item.Path, StringComparer.Ordinal).OrderBy(item => item.Path, StringComparer.Ordinal).ToList();
