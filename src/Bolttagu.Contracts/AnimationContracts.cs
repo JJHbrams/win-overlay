@@ -43,6 +43,9 @@ public enum PetAction
     FreeClimbDownPrepare,
     FreeClimbDownLoop,
     FreeClimbDownFinish,
+    IdleDazed,
+    IdleProud,
+    IdlePout,
 }
 
 public static class PetActionClips
@@ -82,6 +85,9 @@ public static class PetActionClips
     public const string FreeClimbDownPrepare = "free_climb_down_prepare";
     public const string FreeClimbDownLoop = "free_climb_down_loop";
     public const string FreeClimbDownFinish = "free_climb_down_finish";
+    public const string IdleDazed = "idle_dazed";
+    public const string IdleProud = "idle_proud";
+    public const string IdlePout = "idle_pout";
 
     public static IReadOnlyDictionary<PetAction, string> All { get; } =
         new Dictionary<PetAction, string>
@@ -120,6 +126,9 @@ public static class PetActionClips
             [PetAction.FreeClimbDownPrepare] = FreeClimbDownPrepare,
             [PetAction.FreeClimbDownLoop] = FreeClimbDownLoop,
             [PetAction.FreeClimbDownFinish] = FreeClimbDownFinish,
+            [PetAction.IdleDazed] = IdleDazed,
+            [PetAction.IdleProud] = IdleProud,
+            [PetAction.IdlePout] = IdlePout,
         };
 }
 

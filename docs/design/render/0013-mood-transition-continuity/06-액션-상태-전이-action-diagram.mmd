@@ -1,0 +1,10 @@
+stateDiagram-v2
+  [*] --> Idle
+  Idle --> Curious: look-around
+  Curious --> Active: 이동·등반 우대
+  Active --> Calm: 행동 완료·idle 허브
+  Calm --> Dozing: 에너지 낮음·진정 시간 충족
+  Dozing --> Idle: 회복·기상
+  Calm --> Idle: 에너지 충분
+  Idle --> Pout: 삐짐
+  Pout --> Calm: 중립 행동 필요

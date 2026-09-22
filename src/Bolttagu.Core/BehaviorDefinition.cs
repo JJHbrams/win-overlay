@@ -75,6 +75,9 @@ public static class BehaviorDefinitions
     public const string LookAround = "look-around";
     public const string Stretch = "stretch";
     public const string SitDoze = "sit-doze";
+    public const string IdleDazed = "idle-dazed";
+    public const string IdleProud = "idle-proud";
+    public const string IdlePout = "idle-pout";
     public const string FreeClimb = "free-climb";
     public const string FreeDescend = "free-descend";
 
@@ -88,10 +91,19 @@ public static class BehaviorDefinitions
             PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, RunWeight, TimeSpan.FromSeconds(3)),
         new(LookAround, PetPose.Standing,
             [new(PetActionClips.LookAround, PetPose.Standing, PetPose.Standing)],
-            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 20, TimeSpan.FromSeconds(3)),
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 19, TimeSpan.FromSeconds(3)),
         new(Stretch, PetPose.Standing,
             [new(PetActionClips.Stretch, PetPose.Standing, PetPose.Standing)],
-            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 15, TimeSpan.FromSeconds(4)),
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 14, TimeSpan.FromSeconds(4)),
+        new(IdleDazed, PetPose.Standing,
+            [new(PetActionClips.IdleDazed, PetPose.Standing, PetPose.Standing)],
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 1, TimeSpan.FromSeconds(15)),
+        new(IdleProud, PetPose.Standing,
+            [new(PetActionClips.IdleProud, PetPose.Standing, PetPose.Standing)],
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 1, TimeSpan.FromSeconds(15)),
+        new(IdlePout, PetPose.Standing,
+            [new(PetActionClips.IdlePout, PetPose.Standing, PetPose.Standing)],
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 1, TimeSpan.FromSeconds(15)),
         new(SitDoze, PetPose.Standing,
             [new(PetActionClips.SitDown, PetPose.Standing, PetPose.Seated), new(PetActionClips.SitSettle, PetPose.Seated, PetPose.Seated, BehaviorCompletionPolicy.TimedLoop, 1, TimeSpan.FromMilliseconds(750)), new(PetActionClips.DozeEnter, PetPose.Seated, PetPose.Seated), new(PetActionClips.DozeLoop, PetPose.Seated, PetPose.Seated, BehaviorCompletionPolicy.TimedLoop, 2, DozeLoopCycleDuration), new(PetActionClips.WakeUp, PetPose.Seated, PetPose.Seated), new(PetActionClips.StandUp, PetPose.Seated, PetPose.Standing)],
             PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, SitDozeWeight, TimeSpan.FromSeconds(10)),

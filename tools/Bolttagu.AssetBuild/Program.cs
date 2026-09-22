@@ -75,6 +75,7 @@ public static class Program
     private static int Generate(string root)
     {
         var modelRoot = Path.Combine(root, "asset", "bolttagu", "derived", "model");
+        var animationRoot = Path.Combine(root, "asset", "bolttagu", "derived", "animations");
         var recipePath = Path.Combine(modelRoot, "animation-recipes.json");
         var recipe = ReadJson<ModelRecipe>(recipePath);
         if (recipe.SchemaVersion != 1)
@@ -82,7 +83,6 @@ public static class Program
             throw new InvalidDataException($"Unsupported recipe schema {recipe.SchemaVersion}.");
         }
 
-        var animationRoot = Path.Combine(root, "asset", "bolttagu", "derived", "animations");
         var sourceCache = new Dictionary<string, BitmapSource>(StringComparer.OrdinalIgnoreCase);
         var written = 0;
         foreach (var clip in recipe.Clips.OrderBy(clip => clip.Id, StringComparer.Ordinal))
@@ -90,6 +90,10 @@ public static class Program
             if (!IsSnakeCase(clip.Id))
             {
                 throw new InvalidDataException($"Invalid clip id '{clip.Id}'.");
+            }
+            if (!double.IsFinite(clip.SourceFrameScale) || clip.SourceFrameScale <= 0)
+            {
+                throw new InvalidDataException($"Clip '{clip.Id}' has an invalid source frame scale.");
             }
 
             var outputDirectory = Path.Combine(animationRoot, clip.Id, "frames");
@@ -146,7 +150,7 @@ public static class Program
                     frameSources[index].Source,
                     frameSources[index].Bounds,
                     recipe.Canvas,
-                    commonScale,
+                    commonScale * clip.SourceFrameScale,
                     clip.AnchorY,
                     clip.Align,
                     clip.Frames[index],
@@ -248,6 +252,7 @@ public static class Program
             .Select(path => HashArtifact(root, path))
             .ToList();
         inputs.Add(HashArtifact(root, Path.Combine(modelRoot, "animation-recipes.json")));
+        inputs.Add(HashArtifact(root, Path.Combine(modelRoot, "model.json")));
         inputs.Add(HashArtifact(root, packPath));
         inputs.AddRange(orderedFrames.Select(item => HashArtifact(root, ResolveContained(animationRoot, item.Frame.Path))));
         inputs = inputs.DistinctBy(item => item.Path, StringComparer.Ordinal).OrderBy(item => item.Path, StringComparer.Ordinal).ToList();
@@ -412,13 +417,34 @@ public static class Program
         WriteJson(metricsPath, new ReviewMetrics(1, pack.Canvas, metrics));
         WriteScaleAuditSheet(scaleAuditPath, animationRoot, frames);
         WriteAnimationShowcaseGif(showcasePath, animationRoot, frames);
-        return [sheetPath, metricsPath, scaleAuditPath, showcasePath];
+        var reviewOutputs = new List<string> { sheetPath, metricsPath, scaleAuditPath, showcasePath };
+        foreach (var clipId in new[] { "idle_dazed", "idle_proud", "idle_pout" })
+        {
+            var clipFrames = frames.Where(item => item.ClipId == clipId).ToArray();
+            if (clipFrames.Length == 0)
+            {
+                throw new InvalidDataException($"Showcase clip '{clipId}' has no frames.");
+            }
+            var clipPath = Path.Combine(reviewRoot, $"{clipId}.gif");
+            WriteAnimationShowcaseGif(clipPath, animationRoot, clipFrames, SlowExpressionDelayMs);
+            reviewOutputs.Add(clipPath);
+        }
+        return reviewOutputs.ToArray();
     }
+
+    private static int SlowExpressionDelayMs(FrameWorkItem item) => item.FrameIndex switch
+    {
+        0 => 500,
+        1 => 450,
+        2 => 1200,
+        _ => 500
+    };
 
     private static void WriteAnimationShowcaseGif(
         string outputPath,
         string animationRoot,
-        IReadOnlyList<FrameWorkItem> frames)
+        IReadOnlyList<FrameWorkItem> frames,
+        Func<FrameWorkItem, int>? delayMs = null)
     {
         const int preview = 256;
         const int labelHeight = 32;
@@ -449,13 +475,15 @@ public static class Program
             target.Render(visual);
 
             var metadata = new BitmapMetadata("gif");
-            metadata.SetQuery("/grctlext/Delay", (ushort)Math.Max(6, item.Frame.DurationMs / 10));
+            metadata.SetQuery("/grctlext/Delay", (ushort)Math.Max(6, (delayMs?.Invoke(item) ?? item.Frame.DurationMs) / 10));
             encoder.Frames.Add(BitmapFrame.Create(target, null, metadata, null));
         }
 
         using var encodedStream = new MemoryStream();
         encoder.Save(encodedStream);
         var encoded = encodedStream.ToArray();
+        PatchGifFrameDelays(encoded, frames.Select(item =>
+            (ushort)Math.Clamp((delayMs?.Invoke(item) ?? item.Frame.DurationMs) / 10, 6, ushort.MaxValue)).ToArray());
         var globalColorTableBytes = (encoded[10] & 0x80) == 0
             ? 0
             : 3 * (1 << ((encoded[10] & 0x07) + 1));
@@ -471,6 +499,77 @@ public static class Program
         stream.Write(encoded, 0, extensionOffset);
         stream.Write(loopForeverExtension);
         stream.Write(encoded, extensionOffset, encoded.Length - extensionOffset);
+    }
+
+    // WPF's GifBitmapEncoder writes zero delay bytes even when BitmapMetadata contains /grctlext/Delay.
+    // Patch the encoded Graphic Control Extensions so browsers play the authored timing.
+    private static void PatchGifFrameDelays(byte[] gif, IReadOnlyList<ushort> delays)
+    {
+        if (gif.Length < 14 || gif[0] != 'G' || gif[1] != 'I' || gif[2] != 'F')
+        {
+            throw new InvalidDataException("GIF encoder returned an invalid header.");
+        }
+        var offset = 13 + ((gif[10] & 0x80) == 0 ? 0 : 3 * (1 << ((gif[10] & 7) + 1)));
+        var frameIndex = 0;
+        while (offset < gif.Length)
+        {
+            var block = gif[offset];
+            if (block == 0x3B)
+            {
+                break;
+            }
+            if (block == 0x21)
+            {
+                if (offset + 2 >= gif.Length)
+                {
+                    throw new InvalidDataException("GIF extension is truncated.");
+                }
+                if (gif[offset + 1] == 0xF9)
+                {
+                    if (offset + 7 >= gif.Length || gif[offset + 2] != 4 || gif[offset + 7] != 0 || frameIndex >= delays.Count)
+                    {
+                        throw new InvalidDataException("GIF frame control extension is malformed.");
+                    }
+                    var delay = delays[frameIndex++];
+                    gif[offset + 4] = (byte)delay;
+                    gif[offset + 5] = (byte)(delay >> 8);
+                    offset += 8;
+                    continue;
+                }
+                offset += 2;
+            }
+            else if (block == 0x2C)
+            {
+                if (offset + 9 >= gif.Length)
+                {
+                    throw new InvalidDataException("GIF image descriptor is truncated.");
+                }
+                var packed = gif[offset + 9];
+                offset += 10 + ((packed & 0x80) == 0 ? 0 : 3 * (1 << ((packed & 7) + 1)));
+                offset++; // LZW minimum code size
+            }
+            else
+            {
+                throw new InvalidDataException($"Unexpected GIF block 0x{block:X2}.");
+            }
+            while (true)
+            {
+                if (offset >= gif.Length)
+                {
+                    throw new InvalidDataException("GIF data block is truncated.");
+                }
+                var size = gif[offset++];
+                if (size == 0)
+                {
+                    break;
+                }
+                offset += size;
+            }
+        }
+        if (frameIndex != delays.Count)
+        {
+            throw new InvalidDataException($"GIF has {frameIndex} frame controls, expected {delays.Count}.");
+        }
     }
 
     private static void WriteScaleAuditSheet(
@@ -661,7 +760,8 @@ internal sealed record ClipRecipe(
     int AnchorY = 480,
     string Align = "bottom",
     int ReferenceFrame = 0,
-    CalibrationFrame? Calibration = null);
+    CalibrationFrame? Calibration = null,
+    double SourceFrameScale = 1.0);
 internal sealed record CalibrationFrame(
     SourceRect SourceRect,
     string? Source = null,

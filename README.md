@@ -2,7 +2,12 @@
 
 # Bolttagu Desktop Pet
 
-![Bolttagu animation showcase](asset/bolttagu/build/review/animation-showcase.gif)
+새 idle 표정은 각각 느린 GIF로 볼 수 있다. 전체 프레임을 빠르게 훑는
+[자산 검토용 GIF](asset/bolttagu/build/review/animation-showcase.gif)는 별도로 남겨 두었다.
+
+| 멍함 · 고개 기울이기 | 뿌듯함 · 손을 허리로 | 삐짐 · 팔 모으기 |
+|:---:|:---:|:---:|
+| ![멍함 표정 애니메이션](asset/bolttagu/build/review/idle_dazed.gif) | ![뿌듯함 표정 애니메이션](asset/bolttagu/build/review/idle_proud.gif) | ![삐짐 표정 애니메이션](asset/bolttagu/build/review/idle_pout.gif) |
 
 독립 실행되는 Windows용 볼따구 데스크톱 펫이다. Engram은 필수 구성 요소가 아니며,
 현재 투명 창에서 atlas 기반 등장·idle·walk·run·turn·click/huff·drag/fall/land·상하 climb·퇴장 애니메이션을 재생하고,
@@ -55,6 +60,7 @@ $dotnetExe = Join-Path $PWD '.dotnet\dotnet.exe'
 - 캐릭터가 선 창이 닫히거나 다른 창 뒤로 가려지면 다음 노출 표면까지 낙하한다.
 - 자율 보행 중 현재 표면의 가장자리를 벗어나도 같은 낙하·착지 흐름을 사용한다.
 - 걷기와 달리기는 전체 자율 행동 선택의 70% 이상을 차지하며, 짧은 idle 뒤 더 긴 거리를 이동한다.
+- 서서 쉬는 동안 낮은 확률로 멍함·뿌듯함·삐짐 표정과 대응 몸짓을 보이고 기본 호흡으로 돌아간다.
 - 걷다가 캐릭터 키 이상 높은 foreground 비최대화 창의 좌우 변 연장선을 만나면 경계마다
   한 번 35% 확률로 후면 rope-climb이 발동해 그 창 상단에 착지한다.
 - idle 중에는 후면 free-climb이 임의 높이까지 발동하며, 노출된 창 상단을 만나면 착지하고
@@ -73,6 +79,13 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 ```
 
 세부 규칙과 라이선스 주의사항은 `asset/bolttagu/README.md`를 참고한다.
+신규 idle 표정 3종은 표정별 전신 스프라이트 셀을 잘라 공통 idle 기준 프레임으로
+크기·발 위치를 맞춘다. 기존 클립과 실행 중 atlas 렌더링 방식은 그대로 유지한다.
+자율 행동은 내부 에너지·호기심·짜증(각 0~100)을 참고한다. 걷기보다 달리기·등반이
+더 피곤하고, 충분히 피곤해진 뒤 진정 시간이 지나야 졸기를 고른다. 둘러보기 완료는
+호기심을 올려 이동·등반을 우대하고, 반복 클릭은 짜증을 올려 삐짐을 가능하게 한다.
+뿌듯함은 등반을 정상 완료했을 때만 나온다. 강화학습·외부 에이전트 연동은 현재
+런타임에 포함하지 않는다.
 
 ## 설계 정본
 
@@ -87,3 +100,6 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 - `docs/design/0009-launch-packaging-branding.md`
 - `docs/design/0010-visual-text-surfaces.md`
 - `docs/design/0011-directional-climb-and-run.md`
+- `docs/design/0012-idle-expression-variants.md`
+- `docs/design/0013-mood-transition-continuity.md`
+- `docs/design/0014-autonomous-state-dynamics.md`

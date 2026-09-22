@@ -13,6 +13,16 @@
     "back": { "x": 1330, "y": 0, "width": 444, "height": 887 }
   },
   "review": "Approved by the user as the P1 animation guide on 2026-09-20.",
+  "idleExpressionSheets": {
+    "status": "candidate",
+    "calibration": "canonical-idle-calibration-v1.png",
+    "sources": [
+      { "clip": "idle_dazed", "asset": "idle-dazed-grid-v1.png", "sha256": "9E779EA5D3D42A5BB895A20AAAE425395BFE2ADEEC2E77106039B4048BB7BE2A" },
+      { "clip": "idle_proud", "asset": "idle-proud-grid-v1.png", "sha256": "BEAF9BC8F479DF517920069165DD5C13514FC1F51D0DB81EEA3105B21D1C9C4B" },
+      { "clip": "idle_pout", "asset": "idle-pout-grid-v1.png", "sha256": "158692AEC0A1B02A925E0C67E3AFA38ADDB04A91491DE51D2683502E4E614DFA" }
+    ],
+    "review": "Six full-body poses per expression plus a canonical idle return. Windows runtime visual review remains pending."
+  },
   "actionSources": {
     "walk": {
       "asset": "walk-strip-v2.png",

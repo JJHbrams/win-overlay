@@ -46,7 +46,7 @@ public sealed class AssetPipelineTests
         CollectionAssert.AreEqual(
             new[]
             {
-                "idle_breathe", "click", "walk", "run", "click_huff", "turn", "drag_held_idle",
+                "idle_breathe", "idle_dazed", "idle_proud", "idle_pout", "click", "walk", "run", "click_huff", "turn", "drag_held_idle",
                 "drag_pulled", "spawn_in", "despawn_out", "drop_land", "turn_to_idle", "fall",
                 "sit_down", "sit_settle", "doze_enter", "doze_loop", "wake_up", "stand_up",
                 "doze_startle", "look_around", "stretch", "land_recover",
@@ -65,10 +65,42 @@ public sealed class AssetPipelineTests
         using var stream = File.OpenRead(path);
         var decoder = new GifBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.OnLoad);
 
-        Assert.HasCount(135, decoder.Frames);
+        Assert.HasCount(156, decoder.Frames);
         Assert.AreEqual(256, decoder.Frames[0].PixelWidth);
         Assert.AreEqual(288, decoder.Frames[0].PixelHeight);
         Assert.Contains("NETSCAPE2.0", Encoding.ASCII.GetString(File.ReadAllBytes(path)));
+    }
+
+    [TestMethod]
+    public void IdleExpressionShowcases_AreSeparateSlowLoopingGifs()
+    {
+        foreach (var clipId in new[] { PetActionClips.IdleDazed, PetActionClips.IdleProud, PetActionClips.IdlePout })
+        {
+            var path = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build", "review", $"{clipId}.gif");
+            using var stream = File.OpenRead(path);
+            var decoder = new GifBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.OnLoad);
+            Assert.HasCount(7, decoder.Frames, $"{clipId} must show its own complete action, not the full animation catalog.");
+            CollectionAssert.AreEqual(new ushort[] { 50, 45, 120, 50, 50, 50, 50 },
+                decoder.Frames.Select(frame => (ushort)((BitmapMetadata)frame.Metadata).GetQuery("/grctlext/Delay")!).ToArray());
+            Assert.Contains("NETSCAPE2.0", Encoding.ASCII.GetString(File.ReadAllBytes(path)));
+        }
+    }
+
+    [TestMethod]
+    public void IdleExpressionFrames_KeepGroundBaselineAcrossKeyframes()
+    {
+        var path = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build", "review", "frame-metrics.json");
+        using var document = JsonDocument.Parse(File.ReadAllText(path));
+        var frames = document.RootElement.GetProperty("frames").EnumerateArray().ToArray();
+        foreach (var clipId in new[] { PetActionClips.IdleDazed, PetActionClips.IdleProud, PetActionClips.IdlePout })
+        {
+            var clipFrames = frames.Where(frame => frame.GetProperty("clipId").GetString() == clipId).ToArray();
+            Assert.HasCount(7, clipFrames);
+            Assert.IsTrue(clipFrames.All(frame => frame.GetProperty("bottom").GetInt32() == 479),
+                $"{clipId} must keep both shoes on the same ground baseline.");
+            Assert.IsTrue(clipFrames.Take(6).All(frame => Math.Abs(frame.GetProperty("height").GetInt32() - 370) <= 16),
+                $"{clipId} source poses must match the canonical idle height closely enough to avoid a size jump.");
+        }
     }
 
     [TestMethod]
