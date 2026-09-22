@@ -1,0 +1,16 @@
+sequenceDiagram
+  participant C as Controller
+  participant M as ThreeAxisState
+  participant P as Planner
+  participant A as Animation
+  C->>M: Advance(dt, activity)
+  alt 안전/사용자 사건
+    C->>A: 행동 중단·물리/입력 반응
+    C->>M: Interrupted(reason)
+  else 서 있는 idle 허브
+    C->>P: Choose(E,C,I, pose, affordance)
+    P-->>C: 행동 또는 idle
+    C->>A: 시퀀스 시작
+    A-->>C: Completed(action, outcome)
+    C->>M: Completed(action, outcome)
+  end

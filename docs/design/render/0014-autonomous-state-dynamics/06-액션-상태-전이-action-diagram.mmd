@@ -1,0 +1,15 @@
+stateDiagram-v2
+  [*] --> IdleHub
+  IdleHub --> Curious: 둘러보기 완료/C 상승
+  Curious --> Active: 이동 선택
+  Active --> Climbing: 가능한 경계·E>20
+  Climbing --> PridePending: 마무리 정상 완료
+  PridePending --> IdleHub: 뿌듯함 또는 12초 만료
+  Active --> Calm: 행동 종료·E 낮음
+  Calm --> Dozing: E≤20·진정 시간 충족
+  Dozing --> IdleHub: 기상·회복
+  IdleHub --> Irritated: 반복 클릭/I 상승
+  Irritated --> Calm: 삐짐 후 중립 복귀
+  Active --> Falling: 발판 소실
+  Climbing --> Falling: 지지 소실
+  Falling --> IdleHub: 착지·회복

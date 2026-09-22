@@ -81,9 +81,11 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 세부 규칙과 라이선스 주의사항은 `asset/bolttagu/README.md`를 참고한다.
 신규 idle 표정 3종은 표정별 전신 스프라이트 셀을 잘라 공통 idle 기준 프레임으로
 크기·발 위치를 맞춘다. 기존 클립과 실행 중 atlas 렌더링 방식은 그대로 유지한다.
-자율 행동은 내부 에너지(0~100)를 참고한다. 걷기보다 달리기·등반이 더 피곤하고,
-충분히 피곤해진 뒤 진정 시간이 지나야 졸기를 고른다. 둘러본 직후에는 잠깐 이동을
-우대하며 삐짐과 뿌듯함이 바로 맞붙지 않도록 중립 행동을 사이에 둔다.
+자율 행동은 내부 에너지·호기심·짜증(각 0~100)을 참고한다. 걷기보다 달리기·등반이
+더 피곤하고, 충분히 피곤해진 뒤 진정 시간이 지나야 졸기를 고른다. 둘러보기 완료는
+호기심을 올려 이동·등반을 우대하고, 반복 클릭은 짜증을 올려 삐짐을 가능하게 한다.
+뿌듯함은 등반을 정상 완료했을 때만 나온다. 강화학습·외부 에이전트 연동은 현재
+런타임에 포함하지 않는다.
 
 ## 설계 정본
 
@@ -100,3 +102,4 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 - `docs/design/0011-directional-climb-and-run.md`
 - `docs/design/0012-idle-expression-variants.md`
 - `docs/design/0013-mood-transition-continuity.md`
+- `docs/design/0014-autonomous-state-dynamics.md`

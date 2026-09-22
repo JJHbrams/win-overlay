@@ -266,7 +266,7 @@ public sealed class PetAnimationControllerTests
     [TestMethod]
     public void RunEncounteringLineBelowEdgeUsesRopeDescendClips()
     {
-        using var fixture = new Fixture(800, 1, 500);
+        using var fixture = new Fixture(800, 1, 500, 0);
         fixture.Surfaces.DescendObstacle = new(
             new(new(400, 718), new(4, 260)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
         fixture.Surfaces.DescendIntercept = new(
@@ -288,10 +288,30 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
-    public void BehaviorPlanner_RopeClimbChanceUsesThirtyFivePercentBoundary()
+    public void RunEncounteringLineBelowEdgeCanKeepRunningWhenRopeIsDeclined()
     {
-        Assert.IsTrue(new BehaviorPlanner(new SequenceRandom(34)).ShouldStartRopeClimb());
-        Assert.IsFalse(new BehaviorPlanner(new SequenceRandom(35)).ShouldStartRopeClimb());
+        using var fixture = new Fixture(800, 1, 500, 99);
+        fixture.Surfaces.DescendObstacle = new(
+            new(new(400, 718), new(4, 260)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.Run));
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Running, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Run, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void BehaviorPlanner_RopeClimbChanceRespondsToCuriosity()
+    {
+        Assert.IsTrue(new BehaviorPlanner(new SequenceRandom(29)).ShouldStartRopeClimb());
+        Assert.IsFalse(new BehaviorPlanner(new SequenceRandom(30)).ShouldStartRopeClimb());
+        var curious = new BehaviorPlanner(new SequenceRandom(51));
+        curious.RecordLookAroundCompleted();
+        Assert.IsTrue(curious.ShouldStartRopeClimb());
+        Assert.IsFalse(new BehaviorPlanner(new SequenceRandom(51)).ShouldStartRopeClimb());
     }
 
     [TestMethod]
@@ -915,7 +935,7 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
-    public void TextLineEndDropsAndVerticalLineClimbBypassesChance()
+    public void TextLineEndDropsAndVerticalLineClimbCanBeChosen()
     {
         using var textFixture = new Fixture(0, 1, 220);
         textFixture.Surfaces.Current = new(
@@ -929,7 +949,7 @@ public sealed class PetAnimationControllerTests
         textFixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.Falling, textFixture.Controller.State);
 
-        using var lineFixture = new Fixture(0, 1, 220, 220, 99);
+        using var lineFixture = new Fixture(0, 1, 220, 220, 0);
         lineFixture.Surfaces.Obstacle = new(
             new(new(400, 200), new(4, 320)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
         lineFixture.Surfaces.Intercept = new(
@@ -940,7 +960,7 @@ public sealed class PetAnimationControllerTests
         lineFixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
         lineFixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.RopeClimbPreparing, lineFixture.Controller.State,
-            "Visual lines must bypass the window-edge chance roll.");
+            "A visual line should remain climbable when the choice succeeds.");
         lineFixture.Player.Complete(PetActionClips.RopeClimbPrepare);
         lineFixture.Clock.Elapsed = TimeSpan.FromSeconds(12);
         lineFixture.Controller.Tick();
@@ -949,9 +969,30 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
-    public void VerticalLineWithoutTopSupportFallsAtItsEnd()
+    public void VerticalLineDoesNotForceRopeClimbWhenChoiceFails()
     {
         using var fixture = new Fixture(0, 1, 220, 220, 99);
+        fixture.Surfaces.Obstacle = new(
+            new(new(400, 200), new(4, 320)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+        fixture.StartToIdle();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Walking, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Walk, fixture.Player.CurrentClipId);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(5.1);
+        fixture.Controller.Tick();
+        Assert.AreNotEqual(PetRuntimeState.RopeClimbPreparing, fixture.Controller.State,
+            "A declined line should not reroll on every frame of the same encounter.");
+        CollectionAssert.DoesNotContain(fixture.Player.PlayedClips, PetActionClips.RopeClimbPrepare);
+    }
+
+    [TestMethod]
+    public void VerticalLineWithoutTopSupportFallsAtItsEnd()
+    {
+        using var fixture = new Fixture(0, 1, 220, 220, 0);
         fixture.Surfaces.Obstacle = new(
             new(new(400, 200), new(4, 320)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
         fixture.StartToIdle();
@@ -1031,14 +1072,87 @@ public sealed class PetAnimationControllerTests
         fixture.Controller.Tick();
     }
 
+    [TestMethod]
+    public void MoodEvents_RequireCompletedLookAroundAndValidClicks()
+    {
+        var look = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.LookAround);
+        using var completed = new Fixture(0);
+        completed.StartToIdle();
+        Assert.IsTrue(completed.Controller.StartAutonomousBehavior(look));
+        Assert.AreEqual(25, completed.Planner.Curiosity, 0.001);
+        completed.Player.Complete(PetActionClips.LookAround);
+        Assert.AreEqual(80, completed.Planner.Curiosity, 0.001);
+
+        using var interrupted = new Fixture(0);
+        interrupted.StartToIdle();
+        Assert.IsTrue(interrupted.Controller.StartAutonomousBehavior(look));
+        interrupted.Controller.ReactToClick();
+        Assert.AreEqual(30, interrupted.Planner.Irritation, 0.001);
+        interrupted.Player.Complete(PetActionClips.LookAround);
+        Assert.AreEqual(25, interrupted.Planner.Curiosity, 0.001);
+        interrupted.Controller.BeginDrag();
+        interrupted.Controller.ReactToClick();
+        Assert.AreEqual(30, interrupted.Planner.Irritation, 0.001, "A click that cannot react while hanging is not a valid irritation event.");
+    }
+
+    [TestMethod]
+    public void MoodEvents_ClimbVictoryOnlyAfterFinishAndIsClearedByInterruption()
+    {
+        using var completed = new Fixture(125);
+        completed.Surfaces.Intercept = new(
+            new(new(0, 600), new(1200, 300)), DesktopSurfaceKind.Window, 3);
+        completed.StartToIdle();
+        Assert.IsTrue(completed.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.FreeClimb)));
+        completed.Player.Complete(PetActionClips.FreeClimbPrepare);
+        completed.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        completed.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.ClimbFinishing, completed.Controller.State);
+        Assert.IsFalse(completed.Planner.Mood.HasPrideOpportunity(completed.Clock.Elapsed));
+        completed.Player.Complete(PetActionClips.FreeClimbFinish);
+        Assert.IsTrue(completed.Planner.Mood.HasPrideOpportunity(completed.Clock.Elapsed));
+        completed.Controller.BeginDrag();
+        Assert.IsFalse(completed.Planner.Mood.HasPrideOpportunity(completed.Clock.Elapsed));
+
+        using var interrupted = new Fixture(125);
+        interrupted.StartToIdle();
+        Assert.IsTrue(interrupted.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.FreeClimb)));
+        interrupted.Controller.BeginDrag();
+        interrupted.Player.Complete(PetActionClips.FreeClimbFinish);
+        Assert.IsFalse(interrupted.Planner.Mood.HasPrideOpportunity(interrupted.Clock.Elapsed));
+    }
+
+    [TestMethod]
+    public void AutonomousClimb_RequiresNearbyReachableSurface()
+    {
+        using var absent = new Fixture(int.MaxValue);
+        absent.StartToIdle();
+        absent.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        absent.Controller.Tick();
+        Assert.AreNotEqual(PetRuntimeState.FreeClimbPreparing, absent.Controller.State);
+
+        using var reachable = new Fixture(int.MaxValue);
+        reachable.Surfaces.Intercept = new(
+            new(new(0, 600), new(1200, 300)), DesktopSurfaceKind.Window, 3);
+        reachable.StartToIdle();
+        reachable.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        reachable.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.FreeClimbPreparing, reachable.Controller.State);
+    }
+
     private sealed class Fixture : IDisposable
     {
-        public Fixture(params int[] randomValues) =>
-            Controller = new(Player, Window, new(new SequenceRandom(randomValues)), Clock, Surfaces);
+        public Fixture(params int[] randomValues)
+        {
+            Planner = new(new SequenceRandom(randomValues));
+            Controller = new(Player, Window, Planner, Clock, Surfaces);
+        }
         public FakeAnimationPlayer Player { get; } = new();
         public FakeWindow Window { get; } = new();
         public FakeClock Clock { get; } = new();
         public FakeSurfaceProvider Surfaces { get; } = new();
+        public BehaviorPlanner Planner { get; }
         public PetAnimationController Controller { get; }
         public void StartToIdle()
         {

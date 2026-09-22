@@ -71,6 +71,10 @@ public sealed class PetAnimationController : IDisposable
     private bool _climbIsRope;
     private int _climbDirection = -1;
     private RopeEdgeEncounter? _lastRopeEdgeEncounter;
+    private RopeEdgeEncounter? _lastRopeDescendEncounter;
+    private long? _recentRopeSurfaceId;
+    private TimeSpan _recentRopeStartedAt;
+    private static readonly TimeSpan RopeSurfaceCooldown = TimeSpan.FromSeconds(20);
     private bool _exitReadyRaised;
     private bool _disposed;
 
@@ -135,11 +139,14 @@ public sealed class PetAnimationController : IDisposable
             ? PetActivity.Dozing
             : State switch
             {
+                PetRuntimeState.Idle => PetActivity.Resting,
                 PetRuntimeState.Walking => PetActivity.Walking,
                 PetRuntimeState.Running => PetActivity.Running,
-                PetRuntimeState.RopeClimbing or PetRuntimeState.FreeClimbing or
+                PetRuntimeState.RopeClimbPreparing or PetRuntimeState.FreeClimbPreparing or
+                    PetRuntimeState.RopeClimbing or PetRuntimeState.FreeClimbing or
+                    PetRuntimeState.RopeDescendingPreparing or PetRuntimeState.FreeDescendingPreparing or
                     PetRuntimeState.RopeDescending or PetRuntimeState.FreeDescending => PetActivity.Climbing,
-                _ => PetActivity.Resting,
+                _ => PetActivity.Neutral,
             });
         if (State == PetRuntimeState.Exiting)
         {
@@ -158,7 +165,7 @@ public sealed class PetAnimationController : IDisposable
         if (_sequence.Tick(now)) return;
         if (State == PetRuntimeState.Idle && now >= _nextActionAt)
         {
-            var behavior = _planner.ChooseAutonomousBehavior(now);
+            var behavior = _planner.ChooseAutonomousBehavior(now, affordances: GetAutonomousAffordances());
             if (behavior is null)
             {
                 _nextActionAt = now + _planner.NextIdleDelay();
@@ -219,12 +226,14 @@ public sealed class PetAnimationController : IDisposable
         _planner.RecordUserInput(_clock.Elapsed);
         if (Pose == PetPose.Seated)
         {
+            _planner.RecordValidClick(_clock.Elapsed);
             _sequence.Cancel();
             State = PetRuntimeState.Dozing;
             _player.Play(PetActionClips.DozeStartle);
             return;
         }
         if (Pose != PetPose.Standing) return;
+        _planner.RecordValidClick(_clock.Elapsed);
         _walk = null;
         ClearClimb();
         _sequence.Cancel();
@@ -237,6 +246,7 @@ public sealed class PetAnimationController : IDisposable
         ObjectDisposedException.ThrowIf(_disposed, this);
         if (State == PetRuntimeState.Exiting) return;
         _planner.RecordUserInput(_clock.Elapsed);
+        _planner.InvalidatePride();
         _walk = null;
         ClearClimb();
         _sequence.Cancel();
@@ -413,6 +423,7 @@ public sealed class PetAnimationController : IDisposable
 
     private void StartFalling(TimeSpan now)
     {
+        _planner.InvalidatePride();
         _walkInterruptedByFall = State is PetRuntimeState.Walking or PetRuntimeState.Running
             ? _walk
             : null;
@@ -466,11 +477,20 @@ public sealed class PetAnimationController : IDisposable
                 facing,
                 _window.Size,
                 _window.WorkArea,
-                out var obstacle)) return false;
+                out var obstacle))
+        {
+            _lastRopeDescendEncounter = null;
+            return false;
+        }
+        var encounter = new RopeEdgeEncounter(obstacle.Id, facing);
+        if (_lastRopeDescendEncounter == encounter) return false;
+        _lastRopeDescendEncounter = encounter;
+        if (IsRopeSurfaceCoolingDown(obstacle, now) || !_planner.ShouldStartRopeClimb()) return false;
 
         _walk = null;
         _sequence.Cancel();
         _climbAnchor = obstacle;
+        RememberRopeSurface(obstacle, now);
         _climbIsRope = true;
         _climbDirection = 1;
         _climbFixedX = facing == FacingDirection.Right ? obstacle.Left - _window.Size.Width : obstacle.Right;
@@ -516,11 +536,12 @@ public sealed class PetAnimationController : IDisposable
         var encounter = new RopeEdgeEncounter(obstacle.Id, facing);
         if (_lastRopeEdgeEncounter == encounter) return false;
         _lastRopeEdgeEncounter = encounter;
-        if (obstacle.Kind != DesktopSurfaceKind.VerticalLine && !_planner.ShouldStartRopeClimb()) return false;
+        if (IsRopeSurfaceCoolingDown(obstacle, now) || !_planner.ShouldStartRopeClimb()) return false;
 
         _walk = null;
         _sequence.Cancel();
         _climbAnchor = obstacle;
+        RememberRopeSurface(obstacle, now);
         _climbIsRope = true;
         _climbDirection = -1;
         _climbFixedX = facing == FacingDirection.Right ? obstacle.Left - _window.Size.Width : obstacle.Right;
@@ -693,9 +714,19 @@ public sealed class PetAnimationController : IDisposable
         _climbIsRope = false;
         _climbDirection = -1;
         _lastRopeEdgeEncounter = null;
+        _lastRopeDescendEncounter = null;
     }
 
     private readonly record struct RopeEdgeEncounter(long WindowId, FacingDirection ApproachedFrom);
+
+    private bool IsRopeSurfaceCoolingDown(DesktopSurface surface, TimeSpan now) =>
+        _recentRopeSurfaceId == surface.Id && now - _recentRopeStartedAt < RopeSurfaceCooldown;
+
+    private void RememberRopeSurface(DesktopSurface surface, TimeSpan now)
+    {
+        _recentRopeSurfaceId = surface.Id;
+        _recentRopeStartedAt = now;
+    }
 
     private DesktopSurface FindLandingSurface()
     {
@@ -704,6 +735,19 @@ public sealed class PetAnimationController : IDisposable
             position.X + (_window.Size.Width / 2d),
             position.Y + _window.Size.Height - 4,
             _window.WorkArea);
+    }
+
+    private AutonomousAffordances GetAutonomousAffordances()
+    {
+        var centerX = _window.Position.X + (_window.Size.Width / 2d);
+        var footY = _window.Position.Y + _window.Size.Height;
+        // A platform within the minimum planned distance is reachable by every sampled climb.
+        var minimumClimbDistance = _window.Size.Height * 1.25;
+        var upperFootY = Math.Max(_window.WorkArea.Origin.Y, footY - minimumClimbDistance);
+        var lowerFootY = Math.Min(_window.WorkArea.Bottom, footY + minimumClimbDistance);
+        return new(
+            _surfaces.FindClimbIntercept(centerX, footY - 24, upperFootY, _window.WorkArea) is not null,
+            _surfaces.FindDescendIntercept(centerX, footY, lowerFootY, _window.WorkArea) is not null);
     }
 
     private DesktopSurface CurrentSurface()
@@ -843,6 +887,8 @@ public sealed class PetAnimationController : IDisposable
                  e.ClipId is PetActionClips.RopeClimbFinish or PetActionClips.FreeClimbFinish or
                      PetActionClips.RopeClimbDownFinish or PetActionClips.FreeClimbDownFinish)
         {
+            if (e.ClipId is PetActionClips.RopeClimbFinish or PetActionClips.FreeClimbFinish)
+                _planner.RecordClimbCompleted(_clock.Elapsed);
             EnterIdle(_clock.Elapsed);
         }
         else if (State == PetRuntimeState.Dozing && e.ClipId == PetActionClips.DozeStartle)
@@ -893,6 +939,9 @@ public sealed class PetAnimationController : IDisposable
     private void OnSequenceCompleted(object? sender, BehaviorDefinition definition)
     {
         if (_disposed) return;
+        if (definition.Id == BehaviorDefinitions.LookAround) _planner.RecordLookAroundCompleted();
+        else if (definition.Id == BehaviorDefinitions.Stretch) _planner.RecordStretchCompleted();
+        else if (definition.Id == BehaviorDefinitions.IdlePout) _planner.RecordPoutCompleted();
         EnterIdle(_clock.Elapsed);
     }
 
