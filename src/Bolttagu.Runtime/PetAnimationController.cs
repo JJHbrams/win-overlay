@@ -47,6 +47,8 @@ public sealed class PetAnimationController : IDisposable
     private readonly bool _startWithFall;
     private readonly BehaviorSequenceRunner _sequence;
     private PlannedWalk? _walk;
+    private PlannedWalk? _walkInterruptedByFall;
+    private bool _interruptedWalkWasRunning;
     private bool _isRunning;
     private ScreenPoint _walkOrigin;
     private TimeSpan _walkStartedAt;
@@ -401,6 +403,10 @@ public sealed class PetAnimationController : IDisposable
 
     private void StartFalling(TimeSpan now)
     {
+        _walkInterruptedByFall = State is PetRuntimeState.Walking or PetRuntimeState.Running
+            ? _walk
+            : null;
+        _interruptedWalkWasRunning = State == PetRuntimeState.Running;
         _walk = null;
         ClearClimb();
         _sequence.Cancel();
@@ -418,6 +424,7 @@ public sealed class PetAnimationController : IDisposable
         _window.MoveTo(new(_window.Position.X, landingY));
         if (landingY - _fallOrigin.Y >= DizzyRecoveryFallHeight)
         {
+            _walkInterruptedByFall = null;
             State = PetRuntimeState.Recovering;
             _player.Play(PetActionClips.LandRecover);
         }
@@ -716,6 +723,7 @@ public sealed class PetAnimationController : IDisposable
 
     private void EnterIdle(TimeSpan now)
     {
+        _walkInterruptedByFall = null;
         ClearClimb();
         State = PetRuntimeState.Idle;
         _planner.EnterIdleHub(now);
@@ -762,7 +770,18 @@ public sealed class PetAnimationController : IDisposable
         }
         else if (State == PetRuntimeState.Landing && e.ClipId == PetActionClips.DropLand)
         {
-            EnterIdle(_clock.Elapsed);
+            var interrupted = _walkInterruptedByFall;
+            _walkInterruptedByFall = null;
+            if (interrupted is { } walk && Math.Abs(walk.TargetX - _window.Position.X) > 1)
+            {
+                _walk = walk;
+                _isRunning = _interruptedWalkWasRunning;
+                _player.SetFacing(walk.Facing);
+                _sequence.Start(_isRunning
+                    ? BehaviorDefinitions.CreateRun(false)
+                    : BehaviorDefinitions.CreateWalk(false), _clock.Elapsed);
+            }
+            else EnterIdle(_clock.Elapsed);
         }
         else if (State == PetRuntimeState.Recovering && e.ClipId == PetActionClips.LandRecover)
         {
