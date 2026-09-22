@@ -2,7 +2,12 @@
 
 # Bolttagu Desktop Pet
 
-![Bolttagu animation showcase](asset/bolttagu/build/review/animation-showcase.gif)
+새 idle 표정은 각각 느린 GIF로 볼 수 있다. 전체 프레임을 빠르게 훑는
+[자산 검토용 GIF](asset/bolttagu/build/review/animation-showcase.gif)는 별도로 남겨 두었다.
+
+| 멍함 · 고개 기울이기 | 뿌듯함 · 손을 허리로 | 삐짐 · 팔 모으기 |
+|:---:|:---:|:---:|
+| ![멍함 표정 애니메이션](asset/bolttagu/build/review/idle_dazed.gif) | ![뿌듯함 표정 애니메이션](asset/bolttagu/build/review/idle_proud.gif) | ![삐짐 표정 애니메이션](asset/bolttagu/build/review/idle_pout.gif) |
 
 독립 실행되는 Windows용 볼따구 데스크톱 펫이다. Engram은 필수 구성 요소가 아니며,
 현재 투명 창에서 atlas 기반 등장·idle·walk·run·turn·click/huff·drag/fall/land·상하 climb·퇴장 애니메이션을 재생하고,

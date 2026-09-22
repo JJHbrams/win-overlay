@@ -419,13 +419,34 @@ public static class Program
         WriteJson(metricsPath, new ReviewMetrics(1, pack.Canvas, metrics));
         WriteScaleAuditSheet(scaleAuditPath, animationRoot, frames);
         WriteAnimationShowcaseGif(showcasePath, animationRoot, frames);
-        return [sheetPath, metricsPath, scaleAuditPath, showcasePath];
+        var reviewOutputs = new List<string> { sheetPath, metricsPath, scaleAuditPath, showcasePath };
+        foreach (var clipId in new[] { "idle_dazed", "idle_proud", "idle_pout" })
+        {
+            var clipFrames = frames.Where(item => item.ClipId == clipId).ToArray();
+            if (clipFrames.Length == 0)
+            {
+                throw new InvalidDataException($"Showcase clip '{clipId}' has no frames.");
+            }
+            var clipPath = Path.Combine(reviewRoot, $"{clipId}.gif");
+            WriteAnimationShowcaseGif(clipPath, animationRoot, clipFrames, SlowExpressionDelayMs);
+            reviewOutputs.Add(clipPath);
+        }
+        return reviewOutputs.ToArray();
     }
+
+    private static int SlowExpressionDelayMs(FrameWorkItem item) => item.FrameIndex switch
+    {
+        0 => 500,
+        1 => 450,
+        2 => 1200,
+        _ => 500
+    };
 
     private static void WriteAnimationShowcaseGif(
         string outputPath,
         string animationRoot,
-        IReadOnlyList<FrameWorkItem> frames)
+        IReadOnlyList<FrameWorkItem> frames,
+        Func<FrameWorkItem, int>? delayMs = null)
     {
         const int preview = 256;
         const int labelHeight = 32;
@@ -456,13 +477,15 @@ public static class Program
             target.Render(visual);
 
             var metadata = new BitmapMetadata("gif");
-            metadata.SetQuery("/grctlext/Delay", (ushort)Math.Max(6, item.Frame.DurationMs / 10));
+            metadata.SetQuery("/grctlext/Delay", (ushort)Math.Max(6, (delayMs?.Invoke(item) ?? item.Frame.DurationMs) / 10));
             encoder.Frames.Add(BitmapFrame.Create(target, null, metadata, null));
         }
 
         using var encodedStream = new MemoryStream();
         encoder.Save(encodedStream);
         var encoded = encodedStream.ToArray();
+        PatchGifFrameDelays(encoded, frames.Select(item =>
+            (ushort)Math.Clamp((delayMs?.Invoke(item) ?? item.Frame.DurationMs) / 10, 6, ushort.MaxValue)).ToArray());
         var globalColorTableBytes = (encoded[10] & 0x80) == 0
             ? 0
             : 3 * (1 << ((encoded[10] & 0x07) + 1));
@@ -478,6 +501,77 @@ public static class Program
         stream.Write(encoded, 0, extensionOffset);
         stream.Write(loopForeverExtension);
         stream.Write(encoded, extensionOffset, encoded.Length - extensionOffset);
+    }
+
+    // WPF's GifBitmapEncoder writes zero delay bytes even when BitmapMetadata contains /grctlext/Delay.
+    // Patch the encoded Graphic Control Extensions so browsers play the authored timing.
+    private static void PatchGifFrameDelays(byte[] gif, IReadOnlyList<ushort> delays)
+    {
+        if (gif.Length < 14 || gif[0] != 'G' || gif[1] != 'I' || gif[2] != 'F')
+        {
+            throw new InvalidDataException("GIF encoder returned an invalid header.");
+        }
+        var offset = 13 + ((gif[10] & 0x80) == 0 ? 0 : 3 * (1 << ((gif[10] & 7) + 1)));
+        var frameIndex = 0;
+        while (offset < gif.Length)
+        {
+            var block = gif[offset];
+            if (block == 0x3B)
+            {
+                break;
+            }
+            if (block == 0x21)
+            {
+                if (offset + 2 >= gif.Length)
+                {
+                    throw new InvalidDataException("GIF extension is truncated.");
+                }
+                if (gif[offset + 1] == 0xF9)
+                {
+                    if (offset + 7 >= gif.Length || gif[offset + 2] != 4 || gif[offset + 7] != 0 || frameIndex >= delays.Count)
+                    {
+                        throw new InvalidDataException("GIF frame control extension is malformed.");
+                    }
+                    var delay = delays[frameIndex++];
+                    gif[offset + 4] = (byte)delay;
+                    gif[offset + 5] = (byte)(delay >> 8);
+                    offset += 8;
+                    continue;
+                }
+                offset += 2;
+            }
+            else if (block == 0x2C)
+            {
+                if (offset + 9 >= gif.Length)
+                {
+                    throw new InvalidDataException("GIF image descriptor is truncated.");
+                }
+                var packed = gif[offset + 9];
+                offset += 10 + ((packed & 0x80) == 0 ? 0 : 3 * (1 << ((packed & 7) + 1)));
+                offset++; // LZW minimum code size
+            }
+            else
+            {
+                throw new InvalidDataException($"Unexpected GIF block 0x{block:X2}.");
+            }
+            while (true)
+            {
+                if (offset >= gif.Length)
+                {
+                    throw new InvalidDataException("GIF data block is truncated.");
+                }
+                var size = gif[offset++];
+                if (size == 0)
+                {
+                    break;
+                }
+                offset += size;
+            }
+        }
+        if (frameIndex != delays.Count)
+        {
+            throw new InvalidDataException($"GIF has {frameIndex} frame controls, expected {delays.Count}.");
+        }
     }
 
     private static void WriteScaleAuditSheet(

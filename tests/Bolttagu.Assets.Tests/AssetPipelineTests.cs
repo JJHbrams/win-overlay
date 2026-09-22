@@ -72,6 +72,21 @@ public sealed class AssetPipelineTests
     }
 
     [TestMethod]
+    public void IdleExpressionShowcases_AreSeparateSlowLoopingGifs()
+    {
+        foreach (var clipId in new[] { PetActionClips.IdleDazed, PetActionClips.IdleProud, PetActionClips.IdlePout })
+        {
+            var path = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build", "review", $"{clipId}.gif");
+            using var stream = File.OpenRead(path);
+            var decoder = new GifBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.OnLoad);
+            Assert.HasCount(4, decoder.Frames, $"{clipId} must show its own complete action, not the full animation catalog.");
+            CollectionAssert.AreEqual(new ushort[] { 50, 45, 120, 50 },
+                decoder.Frames.Select(frame => (ushort)((BitmapMetadata)frame.Metadata).GetQuery("/grctlext/Delay")!).ToArray());
+            Assert.Contains("NETSCAPE2.0", Encoding.ASCII.GetString(File.ReadAllBytes(path)));
+        }
+    }
+
+    [TestMethod]
     public void IdleExpressionFrames_KeepGroundBaselineAcrossKeyframes()
     {
         var path = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build", "review", "frame-metrics.json");
