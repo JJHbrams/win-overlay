@@ -194,6 +194,25 @@ public sealed class DesktopSurfaceSelectorTests
     }
 
     [TestMethod]
+    public void ClimbAnchorRefreshAcceptsSmallVisualLineJitterButNotAReplacementElsewhere()
+    {
+        var original = new DesktopSurface(
+            new(new(400, 200), new(4, 320)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+        var jittered = new DesktopSurface(
+            new(new(402, 204), new(4, 316)), DesktopSurfaceKind.VerticalLine, 12, 0, true);
+        var elsewhere = new DesktopSurface(
+            new(new(450, 204), new(4, 316)), DesktopSurfaceKind.VerticalLine, 13, 0, true);
+
+        Assert.IsTrue(DesktopSurfaceSelector.TryRefreshClimbAnchor(
+            [jittered], original, 400, out var refreshed));
+        Assert.AreEqual(12L, refreshed.Id);
+        Assert.IsFalse(DesktopSurfaceSelector.TryRefreshClimbAnchor(
+            [elsewhere], original, 400, out _));
+        Assert.IsFalse(DesktopSurfaceSelector.TryRefreshClimbAnchor(
+            [], original, 400, out _));
+    }
+
+    [TestMethod]
     public void DescendIntercept_SelectsNearestExposedSurfaceBelow()
     {
         DesktopSurface[] candidates =

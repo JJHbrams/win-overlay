@@ -184,14 +184,8 @@ public sealed class DesktopSurfaceProvider(
     {
         try
         {
-            var candidates = Snapshot(workArea);
-            current = candidates.FirstOrDefault(candidate =>
-                candidate.Kind == expected.Kind && candidate.Id == expected.Id);
-            return current.Bounds.Size.Width > 0 &&
-                   Math.Abs(current.Left - expected.Left) <= 3 &&
-                   Math.Abs(current.Right - expected.Right) <= 3 &&
-                   DesktopSurfaceSelector.IsClimbEligible(candidates, current) &&
-                   edgeX >= current.Left - 3 && edgeX <= current.Right + 3;
+            return DesktopSurfaceSelector.TryRefreshClimbAnchor(
+                Snapshot(workArea), expected, edgeX, out current);
         }
         catch (Exception exception) when (exception is InvalidOperationException or ExternalException)
         {
@@ -338,6 +332,30 @@ public sealed class DesktopSurfaceProvider(
 
 public static class DesktopSurfaceSelector
 {
+    public static bool TryRefreshClimbAnchor(
+        IEnumerable<DesktopSurface> candidates,
+        DesktopSurface expected,
+        double edgeX,
+        out DesktopSurface current)
+    {
+        var all = candidates.ToArray();
+        current = all
+            .Where(candidate => candidate.Kind == expected.Kind)
+            .Where(candidate => candidate.Id == expected.Id ||
+                (expected.Kind == DesktopSurfaceKind.VerticalLine &&
+                 Math.Abs(candidate.Left - expected.Left) <= 8 &&
+                 Math.Abs(candidate.Top - expected.Top) <= 16 &&
+                 Math.Abs(candidate.Bottom - expected.Bottom) <= 16))
+            .Where(candidate => Math.Abs(candidate.Left - expected.Left) <= 8 &&
+                Math.Abs(candidate.Right - expected.Right) <= 8)
+            .Where(candidate => IsClimbEligible(all, candidate) &&
+                edgeX >= candidate.Left - 8 && edgeX <= candidate.Right + 8)
+            .OrderBy(candidate => candidate.Id == expected.Id ? 0 : 1)
+            .ThenBy(candidate => Math.Abs(candidate.Left - expected.Left))
+            .FirstOrDefault();
+        return current.Bounds.Size.Width > 0;
+    }
+
     public static DesktopSurface FindFirstBelow(
         IEnumerable<DesktopSurface> candidates,
         double centerX,

@@ -649,6 +649,11 @@ public sealed class PetAnimationControllerTests
         fixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
         Assert.AreEqual(80, fixture.Window.Position.Y);
+        Assert.IsGreaterThanOrEqualTo(fixture.Surfaces.Obstacle!.Value.Left,
+            fixture.Window.Position.X + fixture.Window.Size.Width / 2d);
+        fixture.Surfaces.Current = fixture.Surfaces.Obstacle.Value;
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
         fixture.Player.Complete(PetActionClips.RopeClimbFinish);
 
         Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
@@ -657,6 +662,25 @@ public sealed class PetAnimationControllerTests
             PetActionClips.Idle, PetActionClips.Walk, PetActionClips.RopeClimbPrepare,
             PetActionClips.RopeClimbLoop, PetActionClips.RopeClimbFinish, PetActionClips.Idle,
         }, fixture.Player.PlayedClips.ToArray());
+    }
+
+    [TestMethod]
+    public void RopeClimb_ValidatesTheContactEdgeRatherThanTheWindowOrigin()
+    {
+        using var fixture = new Fixture(0, 1, 220);
+        fixture.Surfaces.Obstacle = new(
+            new(new(400, 300), new(500, 600)), DesktopSurfaceKind.Window, 2);
+        fixture.StartToIdle();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.RopeClimbPreparing, fixture.Controller.State);
+
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.RopeClimbPreparing, fixture.Controller.State);
+        Assert.AreEqual(400, fixture.Surfaces.LastClimbEdgeX);
     }
 
     [TestMethod]
@@ -678,7 +702,9 @@ public sealed class PetAnimationControllerTests
         fixture.Player.Complete(PetActionClips.RopeClimbPrepare);
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(10);
         fixture.Controller.Tick();
-        Assert.AreEqual(300, fixture.Window.Position.X);
+        Assert.IsLessThan(300, fixture.Window.Position.X);
+        Assert.IsLessThanOrEqualTo(300,
+            fixture.Window.Position.X + fixture.Window.Size.Width / 2d);
         Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
     }
 
@@ -748,6 +774,24 @@ public sealed class PetAnimationControllerTests
         Assert.AreEqual(380, fixture.Window.Position.Y);
         fixture.Player.Complete(PetActionClips.FreeClimbFinish);
         Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+    }
+
+    [TestMethod]
+    public void FreeClimb_IgnoresASecondEstimateOfItsStartingPlatform()
+    {
+        using var fixture = new Fixture(125);
+        fixture.Surfaces.Intercept = new(
+            new(new(0, 716), new(1200, 12)), DesktopSurfaceKind.TextLine, 3, 0, true);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(BehaviorDefinitions.Autonomous.Single(
+            definition => definition.Id == BehaviorDefinitions.FreeClimb));
+        fixture.Player.Complete(PetActionClips.FreeClimbPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.FreeClimbing, fixture.Controller.State);
+        Assert.AreEqual(416, fixture.Window.Position.Y);
     }
 
     [TestMethod]
@@ -1034,6 +1078,7 @@ public sealed class PetAnimationControllerTests
         public bool SupportValid { get; set; } = true;
         public bool ClimbAnchorValid { get; set; } = true;
         public double LastFindFromY { get; private set; }
+        public double LastClimbEdgeX { get; private set; }
 
         public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea)
         {
@@ -1110,7 +1155,9 @@ public sealed class PetAnimationControllerTests
             out DesktopSurface current)
         {
             current = (Obstacle ?? DescendObstacle).GetValueOrDefault();
-            return ClimbAnchorValid && current.Id == expected.Id;
+            LastClimbEdgeX = edgeX;
+            return ClimbAnchorValid && current.Id == expected.Id &&
+                   (Math.Abs(edgeX - current.Left) <= 3 || Math.Abs(edgeX - current.Right) <= 3);
         }
     }
 }

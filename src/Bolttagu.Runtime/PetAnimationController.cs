@@ -568,7 +568,10 @@ public sealed class PetAnimationController : IDisposable
     {
         if (_climbIsRope)
         {
-            if (_climbAnchor is not { } climbAnchor || !_surfaces.TryRefreshClimbAnchor(climbAnchor, _climbFixedX, _window.WorkArea, out var refreshed))
+            var contactEdgeX = _player.Facing == FacingDirection.Right
+                ? _climbFixedX + _window.Size.Width
+                : _climbFixedX;
+            if (_climbAnchor is not { } climbAnchor || !_surfaces.TryRefreshClimbAnchor(climbAnchor, contactEdgeX, _window.WorkArea, out var refreshed))
             {
                 StartFalling(now);
                 return;
@@ -598,8 +601,14 @@ public sealed class PetAnimationController : IDisposable
         else if (!_climbIsRope)
         {
             var nextFootY = nextY + _window.Size.Height;
+            // A second estimate of the takeoff platform must not finish a climb
+            // before the pet has visibly cleared that platform.
+            const double takeoffClearance = 24;
+            var probeFromFootY = Math.Min(
+                fromFootY,
+                _climbOrigin.Y + _window.Size.Height - takeoffClearance + 3);
             var intercept = _surfaces.FindClimbIntercept(
-                _climbFixedX + (_window.Size.Width / 2d), fromFootY, nextFootY, _window.WorkArea);
+                _climbFixedX + (_window.Size.Width / 2d), probeFromFootY, nextFootY, _window.WorkArea);
             if (intercept is { } surface)
             {
                 StartClimbFinish(surface);
@@ -643,7 +652,16 @@ public sealed class PetAnimationController : IDisposable
     private void StartClimbFinish(DesktopSurface surface)
     {
         _support = surface;
-        _window.MoveTo(new(_climbFixedX, surface.Top - _window.Size.Height));
+        var halfWidth = _window.Size.Width / 2d;
+        var centerX = Math.Clamp(
+            _climbFixedX + halfWidth,
+            surface.Left + 2,
+            Math.Max(surface.Left + 2, surface.Right - 2));
+        var landingX = Math.Clamp(
+            centerX - halfWidth,
+            _window.WorkArea.Origin.X,
+            Math.Max(_window.WorkArea.Origin.X, _window.WorkArea.Right - _window.Size.Width));
+        _window.MoveTo(new(landingX, surface.Top - _window.Size.Height));
         State = PetRuntimeState.ClimbFinishing;
         _player.Play((_climbIsRope, _climbDirection) switch
         {
