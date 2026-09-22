@@ -418,6 +418,23 @@ public static class Program
         WriteScaleAuditSheet(scaleAuditPath, animationRoot, frames);
         WriteAnimationShowcaseGif(showcasePath, animationRoot, frames);
         var reviewOutputs = new List<string> { sheetPath, metricsPath, scaleAuditPath, showcasePath };
+        var groupedShowcases = new (string FileName, string[] ClipIds)[]
+        {
+            ("idle-patterns", ["idle_breathe", "idle_dazed", "idle_proud", "idle_pout"]),
+            ("click-reaction", ["click", "click_huff"]),
+            ("action-locomotion", ["walk", "run", "rope_climb_prepare", "rope_climb_loop", "rope_climb_finish", "free_climb_prepare", "free_climb_loop", "free_climb_finish"]),
+        };
+        foreach (var (fileName, clipIds) in groupedShowcases)
+        {
+            var groupedFrames = frames.Where(item => clipIds.Contains(item.ClipId, StringComparer.Ordinal)).ToArray();
+            if (groupedFrames.Length == 0)
+            {
+                throw new InvalidDataException($"Showcase group '{fileName}' has no frames.");
+            }
+            var groupedPath = Path.Combine(reviewRoot, $"{fileName}.gif");
+            WriteAnimationShowcaseGif(groupedPath, animationRoot, groupedFrames, ShowcaseDelayMs);
+            reviewOutputs.Add(groupedPath);
+        }
         foreach (var clipId in new[] { "idle_dazed", "idle_proud", "idle_pout" })
         {
             var clipFrames = frames.Where(item => item.ClipId == clipId).ToArray();
@@ -438,6 +455,14 @@ public static class Program
         1 => 450,
         2 => 1200,
         _ => 500
+    };
+
+    private static int ShowcaseDelayMs(FrameWorkItem item) => item.ClipId switch
+    {
+        "idle_breathe" => 240,
+        "idle_dazed" or "idle_proud" or "idle_pout" => SlowExpressionDelayMs(item),
+        "click" or "click_huff" => 220,
+        _ => Math.Max(120, item.Frame.DurationMs),
     };
 
     private static void WriteAnimationShowcaseGif(
