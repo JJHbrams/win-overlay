@@ -2,8 +2,14 @@
 
 # Bolttagu Desktop Pet
 
-새 idle 표정은 각각 느린 GIF로 볼 수 있다. 전체 프레임을 빠르게 훑는
-[자산 검토용 GIF](asset/bolttagu/build/review/animation-showcase.gif)는 별도로 남겨 두었다.
+애니메이션은 실제 런타임 맥락에 맞춰 세 그룹으로 나눠 느린 GIF로 확인할 수 있다.
+전체 프레임을 빠르게 훑는 [자산 검토용 GIF](asset/bolttagu/build/review/animation-showcase.gif)는 별도로 남겨 두었다.
+
+| idle 패턴 | 클릭 시 반응 | action: 걷기·뛰기·벽타기 |
+|:---:|:---:|:---:|
+| ![idle 패턴](asset/bolttagu/build/review/idle-patterns.gif) | ![클릭 반응](asset/bolttagu/build/review/click-reaction.gif) | ![이동·벽타기 액션](asset/bolttagu/build/review/action-locomotion.gif) |
+
+세부 idle 표정은 멍함·뿌듯함·삐짐 GIF로도 따로 확인할 수 있다.
 
 | 멍함 · 고개 기울이기 | 뿌듯함 · 손을 허리로 | 삐짐 · 팔 모으기 |
 |:---:|:---:|:---:|
