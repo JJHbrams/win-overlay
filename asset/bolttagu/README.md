@@ -24,6 +24,9 @@ project's existing `idle_breathe/frames/000.png` and approved expression preview
 references. Prompts requested the same character's head expressions (dazed, proud, pout) and a
 transparent six-part cutout sheet; `source-sheet-v1.png` is retained beside the mechanically
 cropped `parts/` images. No external emoji or character artwork was copied into the rig.
+The `*_jacket-v2.png` parts correct an early cutout that accidentally treated the open jacket
+front as fabric attached to each arm. The active rig now keeps the short front panels on the
+torso and uses separate fitted sleeves. The original cutouts remain as unused source history.
 
 ## Art contract
 
@@ -35,7 +38,7 @@ cropped `parts/` images. No external emoji or character artwork was copied into 
 | Clip naming | lower `snake_case` |
 | Frame naming | zero-padded `000.png`, `001.png`, ... |
 | Outline | dark violet, visually stable between frames |
-| Silhouette | round head, bob hair, halo, right-side ribbon/ears, oversized hoodie |
+| Silhouette | round head, bob hair, halo, right-side ribbon/ears, short open jacket over green shirt |
 | Palette anchors | charcoal `#262633`, violet `#4B3868`, teal `#4E8E88`, magenta `#F22BD6`, skin `#FFD6C6` |
 
 Animation frames must keep the pivot fixed unless locomotion metadata explicitly says otherwise.

@@ -19,6 +19,11 @@
     "sourceSheetSha256": "B5DA95C76525CD71A5EC569754250FAF217C99A03C85DC24332BC32DA13C6AD5",
     "status": "candidate",
     "clips": ["idle_dazed", "idle_proud", "idle_pout"],
+    "jacketRevision": {
+      "reason": "Replace cape-like arm cutouts with fitted sleeves and put short jacket front panels on the torso.",
+      "activeParts": ["idle-rig/parts/body_jacket-v2.png", "idle-rig/parts/left_arm_jacket-v2.png", "idle-rig/parts/right_arm_jacket-v2.png"],
+      "status": "candidate"
+    },
     "review": "Layer-composited expression poses require live Windows review before approval. Individual source hashes are recorded in build/build-manifest.json."
   },
   "actionSources": {

@@ -102,6 +102,24 @@ public sealed class AssetPipelineTests
     }
 
     [TestMethod]
+    public void IdleRig_KeepsJacketFrontOnTorsoAndSleevesOnArms()
+    {
+        var path = Path.Combine(RepositoryRoot, "asset", "bolttagu", "derived", "model", "idle-rig.json");
+        using var document = JsonDocument.Parse(File.ReadAllText(path));
+        foreach (var clip in document.RootElement.GetProperty("clips").EnumerateArray())
+        {
+            foreach (var frame in clip.GetProperty("frames").EnumerateArray())
+            {
+                var layers = frame.GetProperty("layers").EnumerateArray()
+                    .ToDictionary(layer => layer.GetProperty("id").GetString()!, layer => layer.GetProperty("source").GetString()!);
+                Assert.AreEqual("parts/body_jacket-v2.png", layers["body"]);
+                Assert.AreEqual("parts/left_arm_jacket-v2.png", layers["left_arm"]);
+                Assert.AreEqual("parts/right_arm_jacket-v2.png", layers["right_arm"]);
+            }
+        }
+    }
+
+    [TestMethod]
     public void PngInspector_ReportsTurnaroundAlpha()
     {
         var path = Path.Combine(
