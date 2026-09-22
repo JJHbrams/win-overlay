@@ -87,6 +87,25 @@ public sealed class AssetPipelineTests
     }
 
     [TestMethod]
+    public void CategorizedShowcases_ExposeIdleClickAndLocomotionGroups()
+    {
+        var expected = new[]
+        {
+            ("idle-patterns", 25),
+            ("click-reaction", 8),
+            ("action-locomotion", 24),
+        };
+        foreach (var (name, frameCount) in expected)
+        {
+            var path = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build", "review", $"{name}.gif");
+            using var stream = File.OpenRead(path);
+            var decoder = new GifBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.OnLoad);
+            Assert.HasCount(frameCount, decoder.Frames, $"{name} must contain its complete category.");
+            Assert.Contains("NETSCAPE2.0", Encoding.ASCII.GetString(File.ReadAllBytes(path)));
+        }
+    }
+
+    [TestMethod]
     public void IdleExpressionFrames_KeepGroundBaselineAcrossKeyframes()
     {
         var path = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build", "review", "frame-metrics.json");
