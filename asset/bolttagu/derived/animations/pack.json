@@ -34,6 +34,16 @@
       ]
     },
     {
+      "id": "run",
+      "loop": true,
+      "frames": [
+        { "path": "run/frames/000.png", "durationMs": 90, "pivot": { "x": 256, "y": 480 } },
+        { "path": "run/frames/001.png", "durationMs": 90, "pivot": { "x": 256, "y": 480 } },
+        { "path": "run/frames/002.png", "durationMs": 90, "pivot": { "x": 256, "y": 480 } },
+        { "path": "run/frames/003.png", "durationMs": 90, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
       "id": "click_huff",
       "loop": false,
       "frames": [
@@ -246,10 +256,10 @@
       "id": "rope_climb_loop",
       "loop": true,
       "frames": [
-        { "path": "rope_climb_loop/frames/000.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
-        { "path": "rope_climb_loop/frames/001.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
-        { "path": "rope_climb_loop/frames/002.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
-        { "path": "rope_climb_loop/frames/003.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } }
+        { "path": "rope_climb_loop/frames/000.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 312, "y": 130 }, { "kind": "foot", "x": 338, "y": 372 }] },
+        { "path": "rope_climb_loop/frames/001-left-v2.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 327, "y": 128 }, { "kind": "foot", "x": 342, "y": 380 }] },
+        { "path": "rope_climb_loop/frames/002.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 312, "y": 151 }, { "kind": "foot", "x": 342, "y": 369 }] },
+        { "path": "rope_climb_loop/frames/003-left.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 314, "y": 123 }, { "kind": "foot", "x": 342, "y": 383 }] }
       ]
     },
     {
@@ -271,11 +281,11 @@
       "id": "free_climb_loop",
       "loop": true,
       "frames": [
-        { "path": "free_climb_loop/frames/000.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
-        { "path": "free_climb_loop/frames/001.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
-        { "path": "free_climb_loop/frames/002.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
-        { "path": "free_climb_loop/frames/003.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } },
-        { "path": "free_climb_loop/frames/004.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 } }
+        { "path": "free_climb_loop/frames/000.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 368, "y": 102 }, { "kind": "hand", "x": 165, "y": 310 }, { "kind": "foot", "x": 337, "y": 394 }] },
+        { "path": "free_climb_loop/frames/001.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 151, "y": 160 }, { "kind": "hand", "x": 349, "y": 320 }, { "kind": "foot", "x": 293, "y": 397 }] },
+        { "path": "free_climb_loop/frames/002.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 357, "y": 108 }, { "kind": "hand", "x": 177, "y": 314 }, { "kind": "foot", "x": 349, "y": 364 }] },
+        { "path": "free_climb_loop/frames/003.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 155, "y": 139 }, { "kind": "hand", "x": 354, "y": 313 }, { "kind": "foot", "x": 207, "y": 396 }] },
+        { "path": "free_climb_loop/frames/004.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 126, "y": 145 }, { "kind": "hand", "x": 374, "y": 144 }, { "kind": "foot", "x": 345, "y": 399 }] }
       ]
     },
     {
@@ -284,6 +294,58 @@
       "frames": [
         { "path": "free_climb_finish/frames/000.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } },
         { "path": "free_climb_finish/frames/001.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "rope_climb_down_prepare",
+      "loop": false,
+      "frames": [
+        { "path": "rope_climb_finish/frames/001.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } },
+        { "path": "rope_climb_finish/frames/000.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "rope_climb_down_loop",
+      "loop": true,
+      "frames": [
+        { "path": "rope_climb_loop/frames/003-left.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 314, "y": 123 }, { "kind": "foot", "x": 342, "y": 383 }] },
+        { "path": "rope_climb_loop/frames/002.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 312, "y": 151 }, { "kind": "foot", "x": 342, "y": 369 }] },
+        { "path": "rope_climb_loop/frames/001-left-v2.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 327, "y": 128 }, { "kind": "foot", "x": 342, "y": 380 }] },
+        { "path": "rope_climb_loop/frames/000.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 312, "y": 130 }, { "kind": "foot", "x": 338, "y": 372 }] }
+      ]
+    },
+    {
+      "id": "rope_climb_down_finish",
+      "loop": false,
+      "frames": [
+        { "path": "rope_climb_prepare/frames/001.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } },
+        { "path": "rope_climb_prepare/frames/000.png", "durationMs": 160, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "free_climb_down_prepare",
+      "loop": false,
+      "frames": [
+        { "path": "free_climb_finish/frames/001.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } },
+        { "path": "free_climb_finish/frames/000.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } }
+      ]
+    },
+    {
+      "id": "free_climb_down_loop",
+      "loop": true,
+      "frames": [
+        { "path": "free_climb_loop/frames/004.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 126, "y": 145 }, { "kind": "hand", "x": 374, "y": 144 }, { "kind": "foot", "x": 345, "y": 399 }] },
+        { "path": "free_climb_loop/frames/003.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 155, "y": 139 }, { "kind": "hand", "x": 354, "y": 313 }, { "kind": "foot", "x": 207, "y": 396 }] },
+        { "path": "free_climb_loop/frames/002.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 357, "y": 108 }, { "kind": "hand", "x": 177, "y": 314 }, { "kind": "foot", "x": 349, "y": 364 }] },
+        { "path": "free_climb_loop/frames/001.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 151, "y": 160 }, { "kind": "hand", "x": 349, "y": 320 }, { "kind": "foot", "x": 293, "y": 397 }] },
+        { "path": "free_climb_loop/frames/000.png", "durationMs": 150, "pivot": { "x": 256, "y": 480 }, "contacts": [{ "kind": "hand", "x": 368, "y": 102 }, { "kind": "hand", "x": 165, "y": 310 }, { "kind": "foot", "x": 337, "y": 394 }] }
+      ]
+    },
+    {
+      "id": "free_climb_down_finish",
+      "loop": false,
+      "frames": [
+        { "path": "free_climb_prepare/frames/000.png", "durationMs": 180, "pivot": { "x": 256, "y": 480 } }
       ]
     }
   ]

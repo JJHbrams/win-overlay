@@ -154,4 +154,76 @@ public sealed class DesktopSurfaceSelectorTests
 
         Assert.IsNull(DesktopSurfaceSelector.FindClimbIntercept(candidates, 300, 720, 300));
     }
+
+    [TestMethod]
+    public void TextLineIsLandingSurfaceAndVerticalLineIsClimbOnly()
+    {
+        var workArea = new ScreenArea(new(0, 0), new(1920, 1040));
+        var text = new DesktopSurface(
+            new(new(200, 500), new(300, 24)), DesktopSurfaceKind.TextLine, 10, 0, true);
+        var line = new DesktopSurface(
+            new(new(500, 220), new(4, 300)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+
+        var selected = DesktopSurfaceSelector.FindFirstBelow([text, line], 300, 300, workArea);
+        Assert.AreEqual(DesktopSurfaceKind.TextLine, selected.Kind);
+
+        var found = DesktopSurfaceSelector.TryFindRopeClimbObstacle(
+            [text, line], text, 500, 450, 520, FacingDirection.Right, new(220, 220), out var obstacle);
+        Assert.IsTrue(found);
+        Assert.AreEqual(DesktopSurfaceKind.VerticalLine, obstacle.Kind);
+
+        var intercept = DesktopSurfaceSelector.FindClimbIntercept([text, line], 300, 720, 300);
+        Assert.IsNotNull(intercept);
+        Assert.AreEqual(DesktopSurfaceKind.TextLine, intercept.Value.Kind);
+    }
+
+    [TestMethod]
+    public void VerticalLineStartingAtSupportEdgeCanBeDescended()
+    {
+        var support = new DesktopSurface(
+            new(new(0, 720), new(400, 300)), DesktopSurfaceKind.TextLine, 10, 0, true);
+        var line = new DesktopSurface(
+            new(new(400, 718), new(4, 260)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+
+        var found = DesktopSurfaceSelector.TryFindRopeDescendObstacle(
+            [support, line], support, 720, 390, 410,
+            FacingDirection.Right, new(220, 220), out var obstacle);
+
+        Assert.IsTrue(found);
+        Assert.AreEqual(11L, obstacle.Id);
+    }
+
+    [TestMethod]
+    public void ClimbAnchorRefreshAcceptsSmallVisualLineJitterButNotAReplacementElsewhere()
+    {
+        var original = new DesktopSurface(
+            new(new(400, 200), new(4, 320)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+        var jittered = new DesktopSurface(
+            new(new(402, 204), new(4, 316)), DesktopSurfaceKind.VerticalLine, 12, 0, true);
+        var elsewhere = new DesktopSurface(
+            new(new(450, 204), new(4, 316)), DesktopSurfaceKind.VerticalLine, 13, 0, true);
+
+        Assert.IsTrue(DesktopSurfaceSelector.TryRefreshClimbAnchor(
+            [jittered], original, 400, out var refreshed));
+        Assert.AreEqual(12L, refreshed.Id);
+        Assert.IsFalse(DesktopSurfaceSelector.TryRefreshClimbAnchor(
+            [elsewhere], original, 400, out _));
+        Assert.IsFalse(DesktopSurfaceSelector.TryRefreshClimbAnchor(
+            [], original, 400, out _));
+    }
+
+    [TestMethod]
+    public void DescendIntercept_SelectsNearestExposedSurfaceBelow()
+    {
+        DesktopSurface[] candidates =
+        [
+            new(new(new(0, 820), new(1000, 30)), DesktopSurfaceKind.TextLine, 1, 0, true),
+            new(new(new(0, 760), new(1000, 30)), DesktopSurfaceKind.TextLine, 2, 0, true),
+        ];
+
+        var intercept = DesktopSurfaceSelector.FindDescendIntercept(candidates, 300, 720, 900);
+
+        Assert.IsNotNull(intercept);
+        Assert.AreEqual(760, intercept.Value.Top);
+    }
 }

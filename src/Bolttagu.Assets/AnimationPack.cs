@@ -18,9 +18,11 @@ public sealed record AnimationClip(
 public sealed record AnimationFrame(
     string Path,
     int DurationMs,
-    PivotPoint Pivot);
+    PivotPoint Pivot,
+    IReadOnlyList<FrameContact>? Contacts = null);
 
 public sealed record PivotPoint(int X, int Y);
+public sealed record FrameContact(string Kind, int X, int Y);
 
 public sealed record PngMetadata(int Width, int Height, byte BitDepth, byte ColorType)
 {
@@ -75,6 +77,14 @@ public static class AnimationPackValidator
             foreach (var frame in clip.Frames)
             {
                 ValidateFrame(packRoot, pack.Canvas, clip.Id, frame, issues);
+                foreach (var contact in frame.Contacts ?? [])
+                {
+                    if (contact.Kind is not ("hand" or "foot"))
+                        issues.Add(new(frame.Path, $"Unsupported contact kind '{contact.Kind}'."));
+                    if (contact.X < 0 || contact.X > pack.Canvas.Width ||
+                        contact.Y < 0 || contact.Y > pack.Canvas.Height)
+                        issues.Add(new(frame.Path, "Frame contact must be inside the canvas."));
+                }
             }
         }
 

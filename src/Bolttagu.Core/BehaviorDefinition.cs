@@ -67,29 +67,40 @@ public static class BehaviorDefinitionValidator
 public static class BehaviorDefinitions
 {
     public static readonly TimeSpan DozeLoopCycleDuration = TimeSpan.FromMilliseconds(2400);
+    public const int WalkWeight = 80;
+    public const int RunWeight = 55;
+    public const int SitDozeWeight = 5;
     public const string Walk = "walk";
+    public const string Run = "run";
     public const string LookAround = "look-around";
     public const string Stretch = "stretch";
     public const string SitDoze = "sit-doze";
     public const string FreeClimb = "free-climb";
+    public const string FreeDescend = "free-descend";
 
     public static IReadOnlyList<BehaviorDefinition> Autonomous { get; } =
     [
         new(Walk, PetPose.Standing,
             [new(PetActionClips.Turn, PetPose.Standing, PetPose.Standing), new(PetActionClips.Walk, PetPose.Standing, PetPose.Standing, BehaviorCompletionPolicy.External), new(PetActionClips.TurnToIdle, PetPose.Standing, PetPose.Standing)],
-            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 40, TimeSpan.FromSeconds(3)),
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, WalkWeight, TimeSpan.FromSeconds(3)),
+        new(Run, PetPose.Standing,
+            [new(PetActionClips.Turn, PetPose.Standing, PetPose.Standing), new(PetActionClips.Run, PetPose.Standing, PetPose.Standing, BehaviorCompletionPolicy.External), new(PetActionClips.TurnToIdle, PetPose.Standing, PetPose.Standing)],
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, RunWeight, TimeSpan.FromSeconds(3)),
         new(LookAround, PetPose.Standing,
             [new(PetActionClips.LookAround, PetPose.Standing, PetPose.Standing)],
-            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 25, TimeSpan.FromSeconds(3)),
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 20, TimeSpan.FromSeconds(3)),
         new(Stretch, PetPose.Standing,
             [new(PetActionClips.Stretch, PetPose.Standing, PetPose.Standing)],
-            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 20, TimeSpan.FromSeconds(4)),
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 15, TimeSpan.FromSeconds(4)),
         new(SitDoze, PetPose.Standing,
             [new(PetActionClips.SitDown, PetPose.Standing, PetPose.Seated), new(PetActionClips.SitSettle, PetPose.Seated, PetPose.Seated, BehaviorCompletionPolicy.TimedLoop, 1, TimeSpan.FromMilliseconds(750)), new(PetActionClips.DozeEnter, PetPose.Seated, PetPose.Seated), new(PetActionClips.DozeLoop, PetPose.Seated, PetPose.Seated, BehaviorCompletionPolicy.TimedLoop, 2, DozeLoopCycleDuration), new(PetActionClips.WakeUp, PetPose.Seated, PetPose.Seated), new(PetActionClips.StandUp, PetPose.Seated, PetPose.Standing)],
-            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, 15, TimeSpan.FromSeconds(10)),
+            PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly, SitDozeWeight, TimeSpan.FromSeconds(10)),
         new(FreeClimb, PetPose.Standing,
             [new(PetActionClips.FreeClimbPrepare, PetPose.Standing, PetPose.Climbing)],
-            PetPose.Climbing, BehaviorInterruptPolicy.AutonomousOnly, 10, TimeSpan.FromSeconds(8)),
+            PetPose.Climbing, BehaviorInterruptPolicy.AutonomousOnly, 8, TimeSpan.FromSeconds(8)),
+        new(FreeDescend, PetPose.Standing,
+            [new(PetActionClips.FreeClimbDownPrepare, PetPose.Standing, PetPose.Climbing)],
+            PetPose.Climbing, BehaviorInterruptPolicy.AutonomousOnly, 8, TimeSpan.FromSeconds(8)),
     ];
 
     public static BehaviorDefinition CreateWalk(bool requiresTurn)
@@ -99,5 +110,14 @@ public static class BehaviorDefinitions
         steps.Add(new(PetActionClips.Walk, PetPose.Standing, PetPose.Standing, BehaviorCompletionPolicy.External));
         steps.Add(new(PetActionClips.TurnToIdle, PetPose.Standing, PetPose.Standing));
         return new(Walk, PetPose.Standing, steps, PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly);
+    }
+
+    public static BehaviorDefinition CreateRun(bool requiresTurn)
+    {
+        var steps = new List<BehaviorStep>();
+        if (requiresTurn) steps.Add(new(PetActionClips.Turn, PetPose.Standing, PetPose.Standing));
+        steps.Add(new(PetActionClips.Run, PetPose.Standing, PetPose.Standing, BehaviorCompletionPolicy.External));
+        steps.Add(new(PetActionClips.TurnToIdle, PetPose.Standing, PetPose.Standing));
+        return new(Run, PetPose.Standing, steps, PetPose.Standing, BehaviorInterruptPolicy.AutonomousOnly);
     }
 }

@@ -7,6 +7,24 @@ namespace Bolttagu.Runtime.Tests;
 public sealed class PetAnimationControllerTests
 {
     [TestMethod]
+    public void StartupFall_BeginsAtWorkAreaTopAfterSpawn()
+    {
+        var player = new FakeAnimationPlayer();
+        var window = new FakeWindow();
+        var clock = new FakeClock();
+        var surfaces = new FakeSurfaceProvider();
+        using var controller = new PetAnimationController(
+            player, window, new(new SequenceRandom([0])), clock, surfaces, startWithFall: true);
+
+        controller.Start();
+        Assert.AreEqual(window.WorkArea.Origin.Y, window.Position.Y);
+        player.Complete(PetActionClips.SpawnIn);
+
+        Assert.AreEqual(PetRuntimeState.Falling, controller.State);
+        Assert.AreEqual(PetActionClips.Fall, player.CurrentClipId);
+    }
+
+    [TestMethod]
     public void Start_PlaysSpawnBeforeEnteringIdle()
     {
         using var fixture = new Fixture(2000, 2000);
@@ -102,6 +120,174 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
+    public void BehaviorPlanner_UsesLongerWalksAndFasterLongerRuns()
+    {
+        var walk = new BehaviorPlanner(new SequenceRandom(1, 480)).PlanWalk(
+            new(400, 500), new(220, 220), new(new(0, 0), new(1920, 1080)), FacingDirection.Right);
+        var run = new BehaviorPlanner(new SequenceRandom(1, 700)).PlanRun(
+            new(400, 500), new(220, 220), new(new(0, 0), new(1920, 1080)), FacingDirection.Right);
+
+        Assert.AreEqual(480, walk.TargetX - 400);
+        Assert.AreEqual(72, walk.SpeedPixelsPerSecond);
+        Assert.AreEqual(700, run.TargetX - 400);
+        Assert.AreEqual(132, run.SpeedPixelsPerSecond);
+    }
+
+    [TestMethod]
+    public void RunBehavior_UsesDedicatedClipAndMovesAtRunSpeed()
+    {
+        using var fixture = new Fixture(800, 1, 500);
+        fixture.StartToIdle();
+
+        Assert.IsTrue(fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.Run)));
+        Assert.AreEqual(PetRuntimeState.Running, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Run, fixture.Player.CurrentClipId);
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+        Assert.AreEqual(232, fixture.Window.Position.X);
+    }
+
+    [TestMethod]
+    public void RunSupportLossFallsThroughTheSharedLocomotionPath()
+    {
+        using var fixture = new Fixture(800, 1, 500);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.Run));
+
+        fixture.Surfaces.SupportValid = false;
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(100);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Fall, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void ShortFallResumesTheRemainingWalkOrRunAfterLanding()
+    {
+        foreach (var running in new[] { false, true })
+        {
+            using var fixture = new Fixture(800, 1, 480);
+            fixture.StartToIdle();
+            fixture.Controller.StartAutonomousBehavior(BehaviorDefinitions.Autonomous.Single(
+                definition => definition.Id == (running ? BehaviorDefinitions.Run : BehaviorDefinitions.Walk)));
+            var clip = running ? PetActionClips.Run : PetActionClips.Walk;
+            Assert.AreEqual(clip, fixture.Player.CurrentClipId);
+
+            fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+            fixture.Controller.Tick();
+            var interruptedX = fixture.Window.Position.X;
+            var lowerSurface = new DesktopSurface(
+                new(new(0, 979), new(1200, 100)), DesktopSurfaceKind.Window, 2);
+            fixture.Surfaces.SupportValid = false;
+            fixture.Controller.Tick();
+            Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+
+            fixture.Surfaces.Current = lowerSurface;
+            fixture.Surfaces.Below = lowerSurface;
+            fixture.Surfaces.SupportValid = true;
+            fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+            fixture.Controller.Tick();
+            Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
+            fixture.Player.Complete(PetActionClips.DropLand);
+            Assert.AreEqual(running ? PetRuntimeState.Running : PetRuntimeState.Walking, fixture.Controller.State);
+            Assert.AreEqual(clip, fixture.Player.CurrentClipId);
+
+            fixture.Clock.Elapsed = TimeSpan.FromSeconds(3);
+            fixture.Controller.Tick();
+            Assert.IsGreaterThan(interruptedX, fixture.Window.Position.X);
+            fixture.Clock.Elapsed = TimeSpan.FromSeconds(10);
+            fixture.Controller.Tick();
+            Assert.AreEqual(580, fixture.Window.Position.X);
+            Assert.AreEqual(PetRuntimeState.TurningToIdle, fixture.Controller.State);
+        }
+    }
+
+    [TestMethod]
+    public void FallAtRecoveryThresholdDoesNotResumeWalk()
+    {
+        using var fixture = new Fixture(800, 1, 480);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(BehaviorDefinitions.Autonomous.Single(
+            definition => definition.Id == BehaviorDefinitions.Walk));
+        fixture.Surfaces.SupportValid = false;
+        fixture.Controller.Tick();
+        var lowerSurface = new DesktopSurface(
+            new(new(0, 980), new(1200, 100)), DesktopSurfaceKind.Window, 2);
+        fixture.Surfaces.Current = lowerSurface;
+        fixture.Surfaces.Below = lowerSurface;
+        fixture.Surfaces.SupportValid = true;
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Recovering, fixture.Controller.State);
+        fixture.Player.Complete(PetActionClips.LandRecover);
+        Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Idle, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void LandingSupportLossClearsInterruptedWalk()
+    {
+        using var fixture = new Fixture(800, 1, 480);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(BehaviorDefinitions.Autonomous.Single(
+            definition => definition.Id == BehaviorDefinitions.Walk));
+        fixture.Surfaces.SupportValid = false;
+        fixture.Controller.Tick();
+        var firstSurface = new DesktopSurface(
+            new(new(0, 800), new(1200, 100)), DesktopSurfaceKind.Window, 2);
+        fixture.Surfaces.Current = firstSurface;
+        fixture.Surfaces.Below = firstSurface;
+        fixture.Surfaces.SupportValid = true;
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
+
+        fixture.Surfaces.SupportValid = false;
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        var secondSurface = new DesktopSurface(
+            new(new(0, 900), new(1200, 100)), DesktopSurfaceKind.Window, 3);
+        fixture.Surfaces.Current = secondSurface;
+        fixture.Surfaces.Below = secondSurface;
+        fixture.Surfaces.SupportValid = true;
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        fixture.Player.Complete(PetActionClips.DropLand);
+
+        Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Idle, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void RunEncounteringLineBelowEdgeUsesRopeDescendClips()
+    {
+        using var fixture = new Fixture(800, 1, 500);
+        fixture.Surfaces.DescendObstacle = new(
+            new(new(400, 718), new(4, 260)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+        fixture.Surfaces.DescendIntercept = new(
+            new(new(100, 760), new(300, 30)), DesktopSurfaceKind.TextLine, 12, 0, true);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.Run));
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.RopeDescendingPreparing, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.RopeClimbDownPrepare, fixture.Player.CurrentClipId);
+        fixture.Player.Complete(PetActionClips.RopeClimbDownPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.RopeClimbDownFinish, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
     public void BehaviorPlanner_RopeClimbChanceUsesThirtyFivePercentBoundary()
     {
         Assert.IsTrue(new BehaviorPlanner(new SequenceRandom(34)).ShouldStartRopeClimb());
@@ -147,6 +333,24 @@ public sealed class PetAnimationControllerTests
         CollectionAssert.AreEqual(
             new[] { PetActionClips.Idle, PetActionClips.DragHeldIdle, PetActionClips.Fall, PetActionClips.DropLand, PetActionClips.Idle },
             fixture.Player.PlayedClips.ToArray());
+    }
+
+    [TestMethod]
+    public void DragRelease_ProbesAboveTheFeetSoExactTextContactCanLand()
+    {
+        using var fixture = new Fixture(2000, 2000);
+        fixture.StartToIdle();
+        fixture.Surfaces.Below = new(
+            new(new(0, 720), new(1200, 24)), DesktopSurfaceKind.TextLine, 77, 0, true);
+
+        fixture.Controller.BeginDrag();
+        fixture.Controller.CompleteDrag();
+        fixture.Clock.Elapsed = TimeSpan.FromMilliseconds(10);
+        fixture.Controller.Tick();
+
+        Assert.IsLessThanOrEqualTo(720, fixture.Surfaces.LastFindFromY,
+            "Landing search must include a thin surface touching the pet's feet.");
+        Assert.AreEqual(PetRuntimeState.Landing, fixture.Controller.State);
     }
 
     [TestMethod]
@@ -445,6 +649,11 @@ public sealed class PetAnimationControllerTests
         fixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
         Assert.AreEqual(80, fixture.Window.Position.Y);
+        Assert.IsGreaterThanOrEqualTo(fixture.Surfaces.Obstacle!.Value.Left,
+            fixture.Window.Position.X + fixture.Window.Size.Width / 2d);
+        fixture.Surfaces.Current = fixture.Surfaces.Obstacle.Value;
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
         fixture.Player.Complete(PetActionClips.RopeClimbFinish);
 
         Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
@@ -453,6 +662,25 @@ public sealed class PetAnimationControllerTests
             PetActionClips.Idle, PetActionClips.Walk, PetActionClips.RopeClimbPrepare,
             PetActionClips.RopeClimbLoop, PetActionClips.RopeClimbFinish, PetActionClips.Idle,
         }, fixture.Player.PlayedClips.ToArray());
+    }
+
+    [TestMethod]
+    public void RopeClimb_ValidatesTheContactEdgeRatherThanTheWindowOrigin()
+    {
+        using var fixture = new Fixture(0, 1, 220);
+        fixture.Surfaces.Obstacle = new(
+            new(new(400, 300), new(500, 600)), DesktopSurfaceKind.Window, 2);
+        fixture.StartToIdle();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.RopeClimbPreparing, fixture.Controller.State);
+
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.RopeClimbPreparing, fixture.Controller.State);
+        Assert.AreEqual(400, fixture.Surfaces.LastClimbEdgeX);
     }
 
     [TestMethod]
@@ -474,7 +702,9 @@ public sealed class PetAnimationControllerTests
         fixture.Player.Complete(PetActionClips.RopeClimbPrepare);
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(10);
         fixture.Controller.Tick();
-        Assert.AreEqual(300, fixture.Window.Position.X);
+        Assert.IsLessThan(300, fixture.Window.Position.X);
+        Assert.IsLessThanOrEqualTo(300,
+            fixture.Window.Position.X + fixture.Window.Size.Width / 2d);
         Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
     }
 
@@ -531,12 +761,37 @@ public sealed class PetAnimationControllerTests
         Assert.IsTrue(fixture.Controller.StartAutonomousBehavior(
             BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.FreeClimb)));
         fixture.Player.Complete(PetActionClips.FreeClimbPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.FreeClimbing, fixture.Controller.State);
+        Assert.AreEqual(416, fixture.Window.Position.Y);
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         fixture.Controller.Tick();
 
         Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
         Assert.AreEqual(380, fixture.Window.Position.Y);
         fixture.Player.Complete(PetActionClips.FreeClimbFinish);
         Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+    }
+
+    [TestMethod]
+    public void FreeClimb_IgnoresASecondEstimateOfItsStartingPlatform()
+    {
+        using var fixture = new Fixture(125);
+        fixture.Surfaces.Intercept = new(
+            new(new(0, 716), new(1200, 12)), DesktopSurfaceKind.TextLine, 3, 0, true);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(BehaviorDefinitions.Autonomous.Single(
+            definition => definition.Id == BehaviorDefinitions.FreeClimb));
+        fixture.Player.Complete(PetActionClips.FreeClimbPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.FreeClimbing, fixture.Controller.State);
+        Assert.AreEqual(416, fixture.Window.Position.Y);
     }
 
     [TestMethod]
@@ -557,6 +812,62 @@ public sealed class PetAnimationControllerTests
     }
 
     [TestMethod]
+    public void FreeClimb_TargetAboveMonitorStopsAtWorkAreaTopInsteadOfClimbingInPlace()
+    {
+        using var fixture = new Fixture(125);
+        fixture.StartToIdle();
+        fixture.Window.MoveTo(new(100, 100));
+        fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.FreeClimb));
+        fixture.Player.Complete(PetActionClips.FreeClimbPrepare);
+
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(0, fixture.Window.Position.Y);
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        Assert.AreEqual(PetActionClips.Fall, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
+    public void FreeDescend_InterceptsTheFirstSurfaceBelowAndUsesDownClips()
+    {
+        using var fixture = new Fixture(125);
+        fixture.Surfaces.DescendIntercept = new(
+            new(new(0, 760), new(1200, 40)), DesktopSurfaceKind.TextLine, 4, 0, true);
+        fixture.StartToIdle();
+
+        Assert.IsTrue(fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.FreeDescend)));
+        Assert.AreEqual(PetActionClips.FreeClimbDownPrepare, fixture.Player.CurrentClipId);
+        fixture.Player.Complete(PetActionClips.FreeClimbDownPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(1);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.ClimbFinishing, fixture.Controller.State);
+        Assert.AreEqual(540, fixture.Window.Position.Y);
+        Assert.AreEqual(PetActionClips.FreeClimbDownFinish, fixture.Player.CurrentClipId);
+        fixture.Player.Complete(PetActionClips.FreeClimbDownFinish);
+        Assert.AreEqual(PetRuntimeState.Idle, fixture.Controller.State);
+    }
+
+    [TestMethod]
+    public void FreeDescend_WithoutInterceptFallsAtSampledTargetHeight()
+    {
+        using var fixture = new Fixture(125);
+        fixture.StartToIdle();
+        fixture.Controller.StartAutonomousBehavior(
+            BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.FreeDescend));
+        fixture.Player.Complete(PetActionClips.FreeClimbDownPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        fixture.Controller.Tick();
+
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+        Assert.AreEqual(775, fixture.Window.Position.Y);
+        Assert.AreEqual(PetActionClips.Fall, fixture.Player.CurrentClipId);
+    }
+
+    [TestMethod]
     public void RopeClimb_AnchorLossFalls()
     {
         using var fixture = new Fixture(0, 1, 220);
@@ -568,6 +879,57 @@ public sealed class PetAnimationControllerTests
         fixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
         fixture.Controller.Tick();
         fixture.Surfaces.ClimbAnchorValid = false;
+        fixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
+    }
+
+    [TestMethod]
+    public void TextLineEndDropsAndVerticalLineClimbBypassesChance()
+    {
+        using var textFixture = new Fixture(0, 1, 220);
+        textFixture.Surfaces.Current = new(
+            new(new(0, 720), new(250, 24)), DesktopSurfaceKind.TextLine, 10, 0, true);
+        textFixture.StartToIdle();
+        textFixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        textFixture.Controller.Tick();
+        textFixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        textFixture.Controller.Tick();
+        textFixture.Clock.Elapsed = TimeSpan.FromSeconds(5.1);
+        textFixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.Falling, textFixture.Controller.State);
+
+        using var lineFixture = new Fixture(0, 1, 220, 220, 99);
+        lineFixture.Surfaces.Obstacle = new(
+            new(new(400, 200), new(4, 320)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+        lineFixture.Surfaces.Intercept = new(
+            new(new(360, 200), new(120, 20)), DesktopSurfaceKind.TextLine, 12, 0, true);
+        lineFixture.StartToIdle();
+        lineFixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        lineFixture.Controller.Tick();
+        lineFixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        lineFixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.RopeClimbPreparing, lineFixture.Controller.State,
+            "Visual lines must bypass the window-edge chance roll.");
+        lineFixture.Player.Complete(PetActionClips.RopeClimbPrepare);
+        lineFixture.Clock.Elapsed = TimeSpan.FromSeconds(12);
+        lineFixture.Controller.Tick();
+        Assert.AreEqual(PetRuntimeState.ClimbFinishing, lineFixture.Controller.State);
+        Assert.AreEqual(DesktopSurfaceKind.TextLine, lineFixture.Surfaces.Intercept.Value.Kind);
+    }
+
+    [TestMethod]
+    public void VerticalLineWithoutTopSupportFallsAtItsEnd()
+    {
+        using var fixture = new Fixture(0, 1, 220, 220, 99);
+        fixture.Surfaces.Obstacle = new(
+            new(new(400, 200), new(4, 320)), DesktopSurfaceKind.VerticalLine, 11, 0, true);
+        fixture.StartToIdle();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
+        fixture.Controller.Tick();
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(5);
+        fixture.Controller.Tick();
+        fixture.Player.Complete(PetActionClips.RopeClimbPrepare);
+        fixture.Clock.Elapsed = TimeSpan.FromSeconds(12);
         fixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.Falling, fixture.Controller.State);
     }
@@ -600,6 +962,7 @@ public sealed class PetAnimationControllerTests
         exitFixture.Controller.StartAutonomousBehavior(
             BehaviorDefinitions.Autonomous.Single(definition => definition.Id == BehaviorDefinitions.FreeClimb));
         exitFixture.Player.Complete(PetActionClips.FreeClimbPrepare);
+        exitFixture.Clock.Elapsed = TimeSpan.FromSeconds(2);
         exitFixture.Controller.Tick();
         Assert.AreEqual(PetRuntimeState.ClimbFinishing, exitFixture.Controller.State);
         exitFixture.Controller.RequestExit();
@@ -710,11 +1073,18 @@ public sealed class PetAnimationControllerTests
         public DesktopSurface? Below { get; set; }
         public DesktopSurface? Obstacle { get; set; }
         public DesktopSurface? Intercept { get; set; }
+        public DesktopSurface? DescendObstacle { get; set; }
+        public DesktopSurface? DescendIntercept { get; set; }
         public bool SupportValid { get; set; } = true;
         public bool ClimbAnchorValid { get; set; } = true;
+        public double LastFindFromY { get; private set; }
+        public double LastClimbEdgeX { get; private set; }
 
-        public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea) =>
-            Below ?? Current;
+        public DesktopSurface FindFirstBelow(double centerX, double fromY, ScreenArea workArea)
+        {
+            LastFindFromY = fromY;
+            return Below ?? Current;
+        }
 
         public bool TryRefreshSupport(
             DesktopSurface expected,
@@ -755,14 +1125,39 @@ public sealed class PetAnimationControllerTests
                 ? candidate
                 : null;
 
+        public bool TryFindRopeDescendObstacle(
+            DesktopSurface support,
+            double footY,
+            double currentLeadingX,
+            double nextLeadingX,
+            FacingDirection facing,
+            ScreenSize petSize,
+            ScreenArea workArea,
+            out DesktopSurface obstacle)
+        {
+            obstacle = DescendObstacle.GetValueOrDefault();
+            return DescendObstacle is not null;
+        }
+
+        public DesktopSurface? FindDescendIntercept(
+            double centerX,
+            double fromFootY,
+            double targetFootY,
+            ScreenArea workArea) =>
+            DescendIntercept is { } candidate && candidate.Top > fromFootY && candidate.Top <= targetFootY
+                ? candidate
+                : null;
+
         public bool TryRefreshClimbAnchor(
             DesktopSurface expected,
             double edgeX,
             ScreenArea workArea,
             out DesktopSurface current)
         {
-            current = Obstacle.GetValueOrDefault();
-            return ClimbAnchorValid && Obstacle is { } candidate && candidate.Id == expected.Id;
+            current = (Obstacle ?? DescendObstacle).GetValueOrDefault();
+            LastClimbEdgeX = edgeX;
+            return ClimbAnchorValid && current.Id == expected.Id &&
+                   (Math.Abs(edgeX - current.Left) <= 3 || Math.Abs(edgeX - current.Right) <= 3);
         }
     }
 }

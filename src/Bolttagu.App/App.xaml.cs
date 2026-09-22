@@ -6,6 +6,8 @@ using Bolttagu.Runtime;
 using Bolttagu.Core;
 using System.IO;
 using System.Windows;
+using System.Windows.Interop;
+using System.Windows.Threading;
 
 namespace Bolttagu.App;
 
@@ -16,6 +18,9 @@ public partial class App : System.Windows.Application
     private IAnimationPlayer? _animationPlayer;
     private PetAnimationController? _animationController;
     private WpfRuntimeLoop? _runtimeLoop;
+    private VisualGeometryScanner? _visualGeometryScanner;
+    private ContactVfxWindow? _contactVfx;
+    private DispatcherTimer? _visualDebugTimer;
 
     protected override void OnStartup(StartupEventArgs e)
     {
@@ -23,12 +28,19 @@ public partial class App : System.Windows.Application
         var tray = new TrayController();
         var (view, player, setDpiScale, assetStatus) = CreatePetView();
         var overlay = new OverlayWindow(view);
+        overlay.SetDiagnosticStatus($"Bolttagu P3 · 100% DPI · {assetStatus}");
+        var contactVfx = new ContactVfxWindow();
+        var overlayHandle = new WindowInteropHelper(overlay).EnsureHandle();
+        var visualGeometryScanner = new VisualGeometryScanner(
+            new GdiVisibleDisplayFrameCapture(overlayHandle));
+        var surfaceProvider = new DesktopSurfaceProvider(overlay, visualGeometryScanner, [contactVfx]);
         var animationController = new PetAnimationController(
             player,
             overlay,
             new BehaviorPlanner(new SystemRandomSource(Random.Shared)),
             new StopwatchClock(),
-            new DesktopSurfaceProvider(overlay));
+            surfaceProvider,
+            startWithFall: true);
         var runtimeLoop = new WpfRuntimeLoop(Dispatcher, animationController.Tick);
 
         overlay.ClickObserved += (_, _) => animationController.ReactToClick();
@@ -38,11 +50,21 @@ public partial class App : System.Windows.Application
         overlay.DpiScaleChanged += (_, scale) =>
         {
             setDpiScale(scale);
-            tray.SetStatus($"Bolttagu P3 · {scale:P0} DPI · {assetStatus}");
+            var status = $"Bolttagu P3 · {scale:P0} DPI · {assetStatus}";
+            tray.SetStatus(status);
+            overlay.SetDiagnosticStatus(status);
         };
         overlay.ExitRequested += (_, _) => ExitApplication();
-        tray.ShowRequested += (_, _) => overlay.ShowOverlay();
-        tray.HideRequested += (_, _) => overlay.HideOverlay();
+        tray.ShowRequested += (_, _) =>
+        {
+            contactVfx.ShowLayer();
+            overlay.ShowOverlay();
+        };
+        tray.HideRequested += (_, _) =>
+        {
+            contactVfx.HideLayer();
+            overlay.HideOverlay();
+        };
         tray.ExitRequested += (_, _) => ExitApplication();
         animationController.ExitReady += (_, _) => CompleteShutdown();
 
@@ -51,8 +73,46 @@ public partial class App : System.Windows.Application
         _animationPlayer = player;
         _animationController = animationController;
         _runtimeLoop = runtimeLoop;
+        _visualGeometryScanner = visualGeometryScanner;
+        _contactVfx = contactVfx;
+        if (player is IAnimationFrameSource frameSource)
+        {
+            frameSource.FramePresented += (_, args) =>
+            {
+                if (args.ClipId is not (PetActionClips.RopeClimbLoop or PetActionClips.FreeClimbLoop or
+                    PetActionClips.RopeClimbDownLoop or PetActionClips.FreeClimbDownLoop))
+                {
+                    contactVfx.Clear();
+                    return;
+                }
+                var origin = overlay.Position;
+                contactVfx.UpdateContacts(args.Contacts.Select(contact => new VfxContact(
+                    contact.Kind,
+                    new(origin.X + contact.LocalPosition.X, origin.Y + contact.LocalPosition.Y))).ToArray());
+            };
+        }
         overlay.PlaceAtBottomRight(24);
+        contactVfx.ShowLayer();
         overlay.ShowOverlay();
+        visualGeometryScanner.Start();
+        if (string.Equals(Environment.GetEnvironmentVariable("BOLTTAGU_VISUAL_DEBUG"), "1",
+                StringComparison.Ordinal))
+        {
+            var debugTimer = new DispatcherTimer(DispatcherPriority.Background, Dispatcher)
+            {
+                Interval = TimeSpan.FromMilliseconds(500),
+            };
+            debugTimer.Tick += (_, _) =>
+            {
+                var snapshot = visualGeometryScanner.GetLatest(
+                    DateTimeOffset.UtcNow,
+                    VisualGeometryScanner.MaximumSnapshotAge);
+                contactVfx.UpdateDebugGeometry(snapshot?.Geometry ?? []);
+                contactVfx.UpdateSurfaceDebug(surfaceProvider.DebugSnapshot);
+            };
+            _visualDebugTimer = debugTimer;
+            debugTimer.Start();
+        }
         animationController.Start();
         runtimeLoop.Start();
     }
@@ -60,8 +120,11 @@ public partial class App : System.Windows.Application
     protected override void OnExit(ExitEventArgs e)
     {
         _runtimeLoop?.Dispose();
+        _visualDebugTimer?.Stop();
+        _visualGeometryScanner?.Dispose();
         _animationController?.Dispose();
         _animationPlayer?.Dispose();
+        _contactVfx?.Dispose();
         _tray?.Dispose();
         base.OnExit(e);
     }

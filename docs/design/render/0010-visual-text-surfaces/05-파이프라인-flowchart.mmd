@@ -1,0 +1,16 @@
+flowchart TD
+  A["Foreground HWND snapshot request"] --> B{"Scanner idle and 250 ms elapsed"}
+  B -->|no| C["Reuse latest immutable snapshot"]
+  B -->|yes| D["Capture target HWND off UI thread"]
+  D --> E{"Capture valid"}
+  E -->|no, first miss| C
+  E -->|no, second miss| X["Invalidate visual geometry"]
+  E -->|yes| G["Contrast mask and connected components"]
+  G --> T["Group text-line supports"]
+  G --> V["Extract vertical spans"]
+  T --> S["Publish geometry snapshot"]
+  V --> S
+  S --> P["DesktopSurfaceProvider merges OS and visual candidates"]
+  P --> R["Runtime support/climb selection"]
+  R --> K["Frame contact anchors"]
+  K --> Q["Screen-fixed background VFX; fade and remove"]

@@ -29,6 +29,25 @@ public sealed class BehaviorGrammarTests
         var known = PetActionClips.All.Values.Append(PetActionClips.TurnToIdle).ToHashSet(StringComparer.Ordinal);
         BehaviorDefinitionValidator.ValidateAll(BehaviorDefinitions.Autonomous, known);
         BehaviorDefinitionValidator.Validate(BehaviorDefinitions.CreateWalk(false), known);
+        BehaviorDefinitionValidator.Validate(BehaviorDefinitions.CreateRun(false), known);
+    }
+
+    [TestMethod]
+    public void Registry_FavorsWalkingOverDozing()
+    {
+        var walk = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.Walk);
+        var doze = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.SitDoze);
+
+        var run = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.Run);
+
+        Assert.AreEqual(80, walk.Weight);
+        Assert.AreEqual(55, run.Weight);
+        Assert.AreEqual(5, doze.Weight);
+        Assert.IsGreaterThan(doze.Weight, walk.Weight);
+        Assert.IsGreaterThan(doze.Weight, run.Weight);
+        Assert.IsGreaterThanOrEqualTo(
+            0.70,
+            (walk.Weight + run.Weight) / (double)BehaviorDefinitions.Autonomous.Sum(x => x.Weight));
     }
 
     [TestMethod]

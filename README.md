@@ -2,8 +2,10 @@
 
 # Bolttagu Desktop Pet
 
+![Bolttagu animation showcase](asset/bolttagu/build/review/animation-showcase.gif)
+
 독립 실행되는 Windows용 볼따구 데스크톱 펫이다. Engram은 필수 구성 요소가 아니며,
-현재 투명 창에서 atlas 기반 등장·idle·walk·turn·click/huff·drag/fall/land·climb·퇴장 애니메이션을 재생하고,
+현재 투명 창에서 atlas 기반 등장·idle·walk·run·turn·click/huff·drag/fall/land·상하 climb·퇴장 애니메이션을 재생하고,
 지지 창의 닫힘·가림·이동과 보행 중 가장자리 이탈에 즉시 반응한다. 자산 손상 시 정적 또는
 벡터 fallback으로 복구한다.
 
@@ -52,6 +54,7 @@ $dotnetExe = Join-Path $PWD '.dotnet\dotnet.exe'
 - 드래그로 창을 옮길 때는 클릭 반응을 실행하지 않는다.
 - 캐릭터가 선 창이 닫히거나 다른 창 뒤로 가려지면 다음 노출 표면까지 낙하한다.
 - 자율 보행 중 현재 표면의 가장자리를 벗어나도 같은 낙하·착지 흐름을 사용한다.
+- 걷기와 달리기는 전체 자율 행동 선택의 70% 이상을 차지하며, 짧은 idle 뒤 더 긴 거리를 이동한다.
 - 걷다가 캐릭터 키 이상 높은 foreground 비최대화 창의 좌우 변 연장선을 만나면 경계마다
   한 번 35% 확률로 후면 rope-climb이 발동해 그 창 상단에 착지한다.
 - idle 중에는 후면 free-climb이 임의 높이까지 발동하며, 노출된 창 상단을 만나면 착지하고
@@ -82,3 +85,5 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 - `docs/design/0007-animation-transition-grammar.md`
 - `docs/design/0008-window-climbing-behaviors.md`
 - `docs/design/0009-launch-packaging-branding.md`
+- `docs/design/0010-visual-text-surfaces.md`
+- `docs/design/0011-directional-climb-and-run.md`

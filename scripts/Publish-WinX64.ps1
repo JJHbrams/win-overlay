@@ -12,6 +12,9 @@ $dotnetExecutable = Join-Path $repositoryRoot '.dotnet\dotnet.exe'
 $appProject = Join-Path $repositoryRoot 'src\Bolttagu.App\Bolttagu.App.csproj'
 $publishRoot = Join-Path $repositoryRoot 'artifacts\publish\win-x64'
 $expectedExecutable = Join-Path $publishRoot 'Bolttagu.exe'
+$sourceAtlas = Join-Path $repositoryRoot 'asset\bolttagu\build\atlas.png'
+$publishedAssetRoot = Join-Path $publishRoot 'Assets\Bolttagu\build'
+$publishedAtlas = Join-Path $publishedAssetRoot 'atlas.png'
 
 if (-not (Test-Path -LiteralPath $dotnetExecutable)) {
     Write-Host 'Installing the repository-local .NET SDK...'
@@ -50,6 +53,22 @@ try {
 
     if (-not (Test-Path -LiteralPath $expectedExecutable)) {
         throw "Publish completed but '$expectedExecutable' was not created."
+    }
+
+    # The WPF single-file publish can bundle Content items instead of leaving them at
+    # the path where RuntimeAnimationCatalog loads them. Keep the atlas beside the
+    # already-published catalog so the packaged app does not silently use fallback art.
+    if (-not (Test-Path -LiteralPath $sourceAtlas)) {
+        throw "The built animation atlas was not found at '$sourceAtlas'."
+    }
+    if (-not (Test-Path -LiteralPath (Join-Path $publishedAssetRoot 'catalog.json'))) {
+        throw "The published animation catalog is missing from '$publishedAssetRoot'."
+    }
+    New-Item -ItemType Directory -Path $publishedAssetRoot -Force | Out-Null
+    Copy-Item -LiteralPath $sourceAtlas -Destination $publishedAtlas -Force
+    if ((Get-FileHash -LiteralPath $publishedAtlas -Algorithm SHA256).Hash -ne
+        (Get-FileHash -LiteralPath $sourceAtlas -Algorithm SHA256).Hash) {
+        throw 'The published animation atlas does not match the built atlas.'
     }
 
     $bytes = (Get-Item -LiteralPath $expectedExecutable).Length

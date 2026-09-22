@@ -2,9 +2,11 @@ using Bolttagu.Assets;
 using Bolttagu.Contracts;
 using Bolttagu.Core;
 using Bolttagu.Runtime;
+using Bolttagu.Platform.Windows;
 using System.IO;
 using System.Threading;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
@@ -14,6 +16,36 @@ namespace Bolttagu.Presentation.Tests;
 [TestClass]
 public sealed class AnimationPlaybackTests
 {
+    [TestMethod]
+    public void PetViews_KeepDiagnosticTextOutOfTheFootArea()
+    {
+        Exception? failure = null;
+        var thread = new Thread(() =>
+        {
+            try
+            {
+                var root = FindRepositoryRoot();
+                var catalog = RuntimeAnimationCatalog.Load(Path.Combine(root, "asset", "bolttagu", "build"));
+                using var sprite = new PetSpriteView(catalog);
+                using var placeholder = new PetPlaceholderView();
+
+                Assert.IsInstanceOfType<Image>(sprite.Content);
+                Assert.AreEqual(206.25, sprite.Height, 0.001,
+                    "The view must end at the atlas foot pivot instead of retaining the old label strip.");
+                var fallbackCanvas = Assert.IsInstanceOfType<Canvas>(placeholder.Content);
+                Assert.AreEqual(sprite.Height, placeholder.Height, 0.001);
+                Assert.IsFalse(fallbackCanvas.Children.OfType<TextBlock>()
+                    .Any(text => text.Text.Contains("DPI", StringComparison.Ordinal)));
+            }
+            catch (Exception exception) { failure = exception; }
+            finally { Dispatcher.CurrentDispatcher.InvokeShutdown(); }
+        });
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+        Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(5)), "Pet view diagnostic smoke thread did not exit.");
+        if (failure is not null) Assert.Fail(failure.ToString());
+    }
+
     [TestMethod]
     public void Cursor_LoopsOrCompletesAccordingToClipPolicy()
     {
@@ -27,6 +59,57 @@ public sealed class AnimationPlaybackTests
         Assert.IsFalse(oneShot.Advance());
         Assert.IsTrue(oneShot.Advance());
         Assert.AreEqual(1, oneShot.FrameIndex);
+    }
+
+    [TestMethod]
+    public void SpriteView_PublishesScaledFrameContacts()
+    {
+        Exception? failure = null;
+        var thread = new Thread(() =>
+        {
+            try
+            {
+                var root = FindRepositoryRoot();
+                var catalog = RuntimeAnimationCatalog.Load(Path.Combine(root, "asset", "bolttagu", "build"));
+                using var view = new PetSpriteView(catalog);
+                AnimationFramePresentedEventArgs? presented = null;
+                view.FramePresented += (_, args) => presented = args;
+
+                view.Play(PetActionClips.RopeClimbLoop);
+
+                Assert.IsNotNull(presented);
+                Assert.AreEqual(PetActionClips.RopeClimbLoop, presented.ClipId);
+                Assert.HasCount(2, presented.Contacts);
+                Assert.AreEqual(SpriteContactKind.Hand, presented.Contacts[0].Kind);
+                Assert.IsInRange(120d, 150d, presented.Contacts[0].LocalPosition.X);
+            }
+            catch (Exception exception) { failure = exception; }
+            finally { Dispatcher.CurrentDispatcher.InvokeShutdown(); }
+        });
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+        Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(5)), "Contact playback thread did not exit.");
+        if (failure is not null) Assert.Fail(failure.ToString());
+    }
+
+    [TestMethod]
+    public void ContactVfxTracker_BoundsFadesAndExpiresMarks()
+    {
+        var tracker = new ContactVfxTracker();
+        var start = DateTimeOffset.UnixEpoch;
+        tracker.Update(Enumerable.Range(0, 20)
+            .Select(index => new VfxContact(SpriteContactKind.Hand, new(index * 20, 100)))
+            .ToArray(), start);
+        Assert.HasCount(ContactVfxTracker.MaximumMarks, tracker.GetVisible(start));
+
+        var first = tracker.GetVisible(start)[0];
+        tracker.Update([new(first.Kind, first.ScreenPosition)], start.AddMilliseconds(250));
+        var refreshed = tracker.GetVisible(start.AddMilliseconds(500))
+            .Single(mark => mark.ScreenPosition == first.ScreenPosition);
+        Assert.AreEqual(1d, refreshed.Opacity);
+        var fading = tracker.GetVisible(start.AddMilliseconds(700));
+        Assert.IsTrue(fading.Any(mark => mark.Opacity is > 0 and < 1));
+        Assert.HasCount(0, tracker.GetVisible(start.AddMilliseconds(900)));
     }
 
     [TestMethod]

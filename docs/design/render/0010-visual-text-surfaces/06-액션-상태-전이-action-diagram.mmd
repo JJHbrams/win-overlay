@@ -1,0 +1,12 @@
+stateDiagram-v2
+  Idle --> WalkingOnText: text support selected
+  WalkingOnText --> WalkingOnText: support refresh succeeds
+  WalkingOnText --> Falling: sentence end or invalidation
+  WalkingOnText --> RopeClimbPreparing: vertical line encountered
+  RopeClimbPreparing --> RopeClimbing: prepare complete
+  RopeClimbing --> RopeClimbing: contact frame and anchor valid
+  RopeClimbing --> ClimbFinishing: top support intersects
+  RopeClimbing --> Falling: line ends without support or invalidates
+  RopeClimbing --> DraggingIdle: drag
+  RopeClimbing --> Exiting: exit
+  ClimbFinishing --> Idle: finish complete

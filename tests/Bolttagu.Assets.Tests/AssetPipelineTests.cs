@@ -4,6 +4,7 @@ using Bolttagu.Contracts;
 using Bolttagu.Core;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.Json;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -45,14 +46,29 @@ public sealed class AssetPipelineTests
         CollectionAssert.AreEqual(
             new[]
             {
-                "idle_breathe", "click", "walk", "click_huff", "turn", "drag_held_idle",
+                "idle_breathe", "click", "walk", "run", "click_huff", "turn", "drag_held_idle",
                 "drag_pulled", "spawn_in", "despawn_out", "drop_land", "turn_to_idle", "fall",
                 "sit_down", "sit_settle", "doze_enter", "doze_loop", "wake_up", "stand_up",
                 "doze_startle", "look_around", "stretch", "land_recover",
                 "rope_climb_prepare", "rope_climb_loop", "rope_climb_finish",
-                "free_climb_prepare", "free_climb_loop", "free_climb_finish"
+                "free_climb_prepare", "free_climb_loop", "free_climb_finish",
+                "rope_climb_down_prepare", "rope_climb_down_loop", "rope_climb_down_finish",
+                "free_climb_down_prepare", "free_climb_down_loop", "free_climb_down_finish"
             },
             pack.Clips.Select(clip => clip.Id).ToArray());
+    }
+
+    [TestMethod]
+    public void AnimationShowcaseGif_RotatesThroughEveryBuiltFrame()
+    {
+        var path = Path.Combine(RepositoryRoot, "asset", "bolttagu", "build", "review", "animation-showcase.gif");
+        using var stream = File.OpenRead(path);
+        var decoder = new GifBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.OnLoad);
+
+        Assert.HasCount(135, decoder.Frames);
+        Assert.AreEqual(256, decoder.Frames[0].PixelWidth);
+        Assert.AreEqual(288, decoder.Frames[0].PixelHeight);
+        Assert.Contains("NETSCAPE2.0", Encoding.ASCII.GetString(File.ReadAllBytes(path)));
     }
 
     [TestMethod]
@@ -362,6 +378,12 @@ public sealed class AssetPipelineTests
         Assert.IsGreaterThanOrEqualTo(800, huff.Frames.Sum(frame => frame.DurationMs));
         var landing = pack.Clips.Single(clip => clip.Id == "drop_land");
         Assert.IsGreaterThanOrEqualTo(600, landing.Frames.Sum(frame => frame.DurationMs));
+        var ropeLoop = pack.Clips.Single(clip => clip.Id == "rope_climb_loop");
+        Assert.EndsWith("001-left-v2.png", ropeLoop.Frames[1].Path, StringComparison.Ordinal);
+        Assert.EndsWith("003-left.png", ropeLoop.Frames[3].Path, StringComparison.Ordinal);
+        Assert.IsTrue(ropeLoop.Frames
+            .All(frame => frame.Contacts?.Count(contact => contact.Kind == "hand") == 1),
+            "Each rope frame must expose exactly one unambiguous gripping hand.");
 
         var representativeFrames = metrics.RootElement.GetProperty("frames").EnumerateArray().ToArray();
         var idle = representativeFrames.Single(frame =>

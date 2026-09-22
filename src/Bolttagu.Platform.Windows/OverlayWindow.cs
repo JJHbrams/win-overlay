@@ -12,15 +12,21 @@ public sealed class OverlayWindow : Window, IOverlayWindow
     private const int WmDpiChanged = 0x02E0;
     private const int GwlExStyle = -20;
     private const nint WsExNoActivate = 0x08000000;
+    private const uint WdaExcludeFromCapture = 0x00000011;
     private readonly DragGestureTracker _dragGesture = new();
+    private readonly System.Windows.Controls.MenuItem _diagnosticMenuItem;
     private bool _releasingCapture;
     private ScreenPoint _dragAnchorCorrection;
 
     public OverlayWindow(UIElement content)
     {
         Title = "Bolttagu Desktop Pet";
-        Width = 220;
-        Height = 220;
+        Width = content is FrameworkElement { Width: > 0 } elementWidth
+            ? elementWidth.Width
+            : 220;
+        Height = content is FrameworkElement { Height: > 0 } elementHeight
+            ? elementHeight.Height
+            : 220;
         WindowStyle = WindowStyle.None;
         ResizeMode = ResizeMode.NoResize;
         AllowsTransparency = true;
@@ -33,7 +39,7 @@ public sealed class OverlayWindow : Window, IOverlayWindow
         PreviewMouseMove += OnPreviewMouseMove;
         PreviewMouseLeftButtonUp += OnPreviewMouseLeftButtonUp;
         LostMouseCapture += OnLostMouseCapture;
-        ContextMenu = BuildContextMenu();
+        (_diagnosticMenuItem, ContextMenu) = BuildContextMenu();
         SourceInitialized += OnSourceInitialized;
     }
 
@@ -56,6 +62,7 @@ public sealed class OverlayWindow : Window, IOverlayWindow
     public void ShowOverlay() => Show();
     public void HideOverlay() { CancelPointerInteraction(); Hide(); }
     public void CloseOverlay() { CancelPointerInteraction(); Close(); }
+    public void SetDiagnosticStatus(string status) => _diagnosticMenuItem.Header = status;
 
     public void PlaceAtBottomRight(double margin)
     {
@@ -71,13 +78,21 @@ public sealed class OverlayWindow : Window, IOverlayWindow
         Top = Math.Clamp(position.Y, area.Origin.Y, Math.Max(area.Origin.Y, area.Bottom - ActualHeight));
     }
 
-    private System.Windows.Controls.ContextMenu BuildContextMenu()
+    private (System.Windows.Controls.MenuItem Diagnostic, System.Windows.Controls.ContextMenu Menu) BuildContextMenu()
     {
+        var diagnostic = new System.Windows.Controls.MenuItem
+        {
+            Header = "Bolttagu diagnostics",
+            IsEnabled = false,
+        };
         var hide = new System.Windows.Controls.MenuItem { Header = "숨기기" };
         hide.Click += (_, _) => HideOverlay();
         var exit = new System.Windows.Controls.MenuItem { Header = "종료" };
         exit.Click += (_, _) => ExitRequested?.Invoke(this, EventArgs.Empty);
-        return new System.Windows.Controls.ContextMenu { Items = { hide, exit } };
+        return (diagnostic, new System.Windows.Controls.ContextMenu
+        {
+            Items = { diagnostic, new System.Windows.Controls.Separator(), hide, exit },
+        });
     }
 
     private void OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -157,6 +172,7 @@ public sealed class OverlayWindow : Window, IOverlayWindow
         if (PresentationSource.FromVisual(this) is HwndSource source)
         {
             SetNoActivateStyle(source.Handle);
+            _ = SetWindowDisplayAffinity(source.Handle, WdaExcludeFromCapture);
             source.AddHook(WndProc);
         }
         DpiScaleChanged?.Invoke(this, VisualTreeHelper.GetDpi(this).DpiScaleX);
@@ -174,6 +190,10 @@ public sealed class OverlayWindow : Window, IOverlayWindow
 
     [DllImport("user32.dll", EntryPoint = "SetWindowLongPtrW", SetLastError = true)]
     private static extern nint SetWindowLongPtr(IntPtr hwnd, int index, nint newLong);
+
+    [DllImport("user32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static extern bool SetWindowDisplayAffinity(IntPtr hwnd, uint affinity);
 
     private IntPtr WndProc(IntPtr hwnd, int message, IntPtr wParam, IntPtr lParam, ref bool handled)
     {

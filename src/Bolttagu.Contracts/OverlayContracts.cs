@@ -8,7 +8,7 @@ public readonly record struct ScreenArea(ScreenPoint Origin, ScreenSize Size)
     public double Bottom => Origin.Y + Size.Height;
 }
 
-public enum DesktopSurfaceKind { Window, Taskbar, WorkAreaFallback }
+public enum DesktopSurfaceKind { Window, TextLine, VerticalLine, Taskbar, WorkAreaFallback }
 
 public readonly record struct DesktopSurface(
     ScreenArea Bounds,
@@ -63,6 +63,26 @@ public interface IDesktopSurfaceProvider
         current = default;
         return false;
     }
+
+    bool TryFindRopeDescendObstacle(
+        DesktopSurface support,
+        double footY,
+        double currentLeadingX,
+        double nextLeadingX,
+        FacingDirection facing,
+        ScreenSize petSize,
+        ScreenArea workArea,
+        out DesktopSurface obstacle)
+    {
+        obstacle = default;
+        return false;
+    }
+
+    DesktopSurface? FindDescendIntercept(
+        double centerX,
+        double fromFootY,
+        double targetFootY,
+        ScreenArea workArea) => null;
 }
 
 public interface IOverlayWindow

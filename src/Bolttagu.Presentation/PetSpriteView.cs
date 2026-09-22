@@ -8,11 +8,13 @@ using System.Windows.Threading;
 
 namespace Bolttagu.Presentation;
 
-public sealed class PetSpriteView : UserControl, IAnimationPlayer
+public sealed class PetSpriteView : UserControl, IAnimationPlayer, IAnimationFrameSource
 {
+    public const double SpriteWidthDip = 220;
+    public const double SpriteCanvasHeightDip = 220;
+    public const double FootAlignedHeightDip = SpriteCanvasHeightDip * 480d / 512d;
     private readonly IAnimationCatalog _catalog;
     private readonly Image _image;
-    private readonly TextBlock _diagnosticText;
     private readonly DispatcherTimer _timer;
     private readonly ScaleTransform _facingTransform = new(1, 1);
     private readonly Dictionary<string, BitmapSource> _atlases = new(StringComparer.OrdinalIgnoreCase);
@@ -22,34 +24,25 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer
     public PetSpriteView(IAnimationCatalog catalog)
     {
         _catalog = catalog ?? throw new ArgumentNullException(nameof(catalog));
-        Width = 220;
-        Height = 220;
+        Width = SpriteWidthDip;
+        Height = FootAlignedHeightDip;
+        ClipToBounds = true;
         SnapsToDevicePixels = true;
 
         _image = new Image
         {
+            Width = SpriteWidthDip,
+            Height = SpriteCanvasHeightDip,
             Stretch = Stretch.Uniform,
-            HorizontalAlignment = HorizontalAlignment.Stretch,
-            VerticalAlignment = VerticalAlignment.Stretch,
+            HorizontalAlignment = HorizontalAlignment.Left,
+            VerticalAlignment = VerticalAlignment.Top,
             SnapsToDevicePixels = true
         };
         RenderOptions.SetBitmapScalingMode(_image, BitmapScalingMode.HighQuality);
         _image.RenderTransformOrigin = new Point(0.5, 0.5);
         _image.RenderTransform = _facingTransform;
 
-        _diagnosticText = new TextBlock
-        {
-            Text = catalog.IsFallback ? "Static fallback" : "P3 · 100% DPI",
-            FontSize = 11,
-            Foreground = Brushes.White,
-            Background = new SolidColorBrush(Color.FromArgb(145, 30, 22, 38)),
-            Padding = new Thickness(5, 2, 5, 2),
-            HorizontalAlignment = HorizontalAlignment.Center,
-            VerticalAlignment = VerticalAlignment.Bottom,
-            Margin = new Thickness(0, 0, 0, 2)
-        };
-
-        Content = new Grid { Children = { _image, _diagnosticText } };
+        Content = _image;
         _timer = new DispatcherTimer(DispatcherPriority.Render, Dispatcher)
         {
             IsEnabled = false
@@ -61,6 +54,7 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer
     public FacingDirection Facing { get; private set; } = FacingDirection.Right;
     public int CurrentFrameIndex => _cursor?.FrameIndex ?? -1;
     public event EventHandler<AnimationPlaybackCompletedEventArgs>? PlaybackCompleted;
+    public event EventHandler<AnimationFramePresentedEventArgs>? FramePresented;
 
     public void Play(string clipId)
     {
@@ -86,8 +80,7 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer
 
     public void SetDpiScale(double scale)
     {
-        var prefix = _catalog.IsFallback ? "Static fallback" : "P3";
-        _diagnosticText.Text = $"{prefix} · {scale:P0} DPI";
+        _ = scale;
     }
 
     public void Dispose()
@@ -139,6 +132,20 @@ public sealed class PetSpriteView : UserControl, IAnimationPlayer
         var atlas = GetAtlas(frame.AtlasPath);
         var rect = frame.SourceRect;
         _image.Source = new CroppedBitmap(atlas, new Int32Rect(rect.X, rect.Y, rect.Width, rect.Height));
+        var viewWidth = SpriteWidthDip;
+        var viewHeight = SpriteCanvasHeightDip;
+        var scale = Math.Min(viewWidth / rect.Width, viewHeight / rect.Height);
+        var offsetX = (viewWidth - rect.Width * scale) / 2d;
+        var offsetY = (viewHeight - rect.Height * scale) / 2d;
+        var contacts = frame.ContactAnchors.Select(contact =>
+        {
+            var localX = offsetX + contact.Point.X * scale;
+            if (Facing == FacingDirection.Left) localX = viewWidth - localX;
+            return new RenderedSpriteContact(
+                contact.Kind,
+                new(localX, offsetY + contact.Point.Y * scale));
+        }).ToArray();
+        FramePresented?.Invoke(this, new(_cursor!.Clip.Id, _cursor.FrameIndex, contacts));
     }
 
     private BitmapSource GetAtlas(string path)
