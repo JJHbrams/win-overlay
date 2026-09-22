@@ -10,23 +10,20 @@ assets from an Engram installation at runtime.
 - `inventory.json` records the source revision, original relative path, byte length, and SHA-256 of
   every upstream file. `asset-build verify` treats a mismatch as an error.
 - `derived/model/` contains reviewed model sheets and generation provenance.
-- `derived/model/idle-rig/` contains transparent source parts for the three new idle expressions;
-  `derived/model/idle-rig.json` records their per-frame transforms and draw order. These parts
-  are composited at build time; the runtime still displays one atlas frame at a time.
+- `derived/model/idle-{dazed,proud,pout}-grid-v1.png` contains full-body source cells for each
+  expression. `animation-recipes.json` cuts them into frames and appends the shared canonical idle
+  calibration pose. The runtime still displays one atlas frame at a time.
 - `derived/animations/<clip>/frames/` contains individual 512×512 transparent RGBA frames.
 - `build/` contains deterministic runtime outputs. It can always be rebuilt from `derived/`.
 
 The upstream repository does not currently declare redistribution terms for these character
 files. Keep the snapshot local to this project until the rights holder confirms release terms.
 
-The idle-rig sources are new bitmap assets generated with OpenAI image generation using the
-project's existing `idle_breathe/frames/000.png` and approved expression previews as visual
-references. Prompts requested the same character's head expressions (dazed, proud, pout) and a
-transparent six-part cutout sheet; `source-sheet-v1.png` is retained beside the mechanically
-cropped `parts/` images. No external emoji or character artwork was copied into the rig.
-The `*_jacket-v2.png` parts correct an early cutout that accidentally treated the open jacket
-front as fabric attached to each arm. The active rig now keeps the short front panels on the
-torso and uses separate fitted sleeves. The original cutouts remain as unused source history.
+The three expression grids are new bitmap assets generated with OpenAI image generation using
+the existing canonical idle and action sheets as visual references. Prompts requested the same
+character, short open jacket, green shirt, and six full-body poses per expression on a transparent
+3×2 grid. No external emoji or character artwork was copied. An earlier layered-cutout attempt
+was rejected because its jacket and silhouette diverged from the established sprite style.
 
 ## Art contract
 

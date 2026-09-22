@@ -122,12 +122,77 @@ public sealed class BehaviorGrammarTests
     {
         var planner = new BehaviorPlanner(new FixedRandom(0));
         var doze = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.SitDoze);
+        Assert.IsNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(10), [doze]), "A fresh pet is not sleepy.");
+        planner.AdvanceMood(TimeSpan.Zero, PetActivity.Running);
+        for (var second = 1; second <= 40; second++) planner.AdvanceMood(TimeSpan.FromSeconds(second), PetActivity.Running);
+        planner.EnterIdleHub(TimeSpan.FromSeconds(40));
+        planner.RecordUserInput(TimeSpan.FromSeconds(40));
+        Assert.IsNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(47), [doze]));
+        Assert.IsNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(49), [doze]));
+        Assert.AreEqual(BehaviorDefinitions.SitDoze, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(50), [doze])!.Id);
+    }
+
+    [TestMethod]
+    public void Mood_EnergyTracksActivityIntensityAndCapsLongTick()
+    {
+        var planner = new BehaviorPlanner(new FixedRandom(0));
+        planner.AdvanceMood(TimeSpan.Zero, PetActivity.Resting);
+        for (var second = 1; second <= 10; second++) planner.AdvanceMood(TimeSpan.FromSeconds(second), PetActivity.Walking);
+        var afterWalk = planner.Energy;
+        for (var second = 11; second <= 20; second++) planner.AdvanceMood(TimeSpan.FromSeconds(second), PetActivity.Running);
+        var afterRun = planner.Energy;
+        for (var second = 21; second <= 30; second++) planner.AdvanceMood(TimeSpan.FromSeconds(second), PetActivity.Climbing);
+        var afterClimb = planner.Energy;
+        Assert.AreEqual(91, afterWalk, 0.001);
+        Assert.AreEqual(66, afterRun, 0.001);
+        Assert.AreEqual(46, afterClimb, 0.001);
+        planner.AdvanceMood(TimeSpan.FromHours(1), PetActivity.Running);
+        Assert.AreEqual(43.5, planner.Energy, 0.001, "A suspended app must not consume an hour of energy in one tick.");
+        for (var second = 1; second <= 10; second++) planner.AdvanceMood(TimeSpan.FromHours(1) + TimeSpan.FromSeconds(second), PetActivity.Dozing);
+        Assert.AreEqual(100, planner.Energy, 0.001);
+    }
+
+    [TestMethod]
+    public void Scheduler_LowEnergySuppressesVoluntaryRunAndClimb()
+    {
+        var planner = new BehaviorPlanner(new FixedRandom(0));
+        planner.AdvanceMood(TimeSpan.Zero, PetActivity.Running);
+        for (var second = 1; second <= 40; second++) planner.AdvanceMood(TimeSpan.FromSeconds(second), PetActivity.Running);
+        planner.EnterIdleHub(TimeSpan.FromSeconds(40));
+        var vigorous = BehaviorDefinitions.Autonomous.Where(x => x.Id is
+            BehaviorDefinitions.Run or BehaviorDefinitions.FreeClimb or BehaviorDefinitions.FreeDescend).ToArray();
+        Assert.IsNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(50), vigorous));
+    }
+
+    [TestMethod]
+    public void Scheduler_CuriosityTemporarilyWeightsMovementAndOppositeExpressionsNeedBridge()
+    {
+        var random = new RecordingRandom();
+        var planner = new BehaviorPlanner(random);
         planner.EnterIdleHub(TimeSpan.Zero);
-        planner.RecordLocomotion(TimeSpan.Zero);
-        planner.RecordUserInput(TimeSpan.Zero);
-        Assert.IsNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(7), [doze]));
-        Assert.IsNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(9), [doze]));
-        Assert.AreEqual(BehaviorDefinitions.SitDoze, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(10), [doze])!.Id);
+        var look = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.LookAround);
+        var walk = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.Walk);
+        var run = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.Run);
+        Assert.AreEqual(BehaviorDefinitions.LookAround, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(2), [look])!.Id);
+        Assert.AreEqual(BehaviorDefinitions.Run, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(4), [run, walk])!.Id);
+        Assert.AreEqual(325, random.LastMaximum, "Curiosity should boost both walking and running for a short window.");
+        var climb = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.FreeClimb);
+        planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(6), [climb]);
+        Assert.AreEqual(24, random.LastMaximum, "The curiosity window must survive running long enough to lead into climbing.");
+        var expired = new BehaviorPlanner(random);
+        expired.EnterIdleHub(TimeSpan.Zero);
+        expired.ChooseAutonomousBehavior(TimeSpan.FromSeconds(2), [look]);
+        expired.ChooseAutonomousBehavior(TimeSpan.FromSeconds(15), [run, walk]);
+        Assert.AreEqual(135, random.LastMaximum, "The curiosity boost must expire.");
+
+        var emotions = new BehaviorPlanner(new FixedRandom(0));
+        emotions.EnterIdleHub(TimeSpan.Zero);
+        var pout = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.IdlePout);
+        var proud = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.IdleProud);
+        Assert.AreEqual(BehaviorDefinitions.IdlePout, emotions.ChooseAutonomousBehavior(TimeSpan.FromSeconds(2), [pout])!.Id);
+        Assert.IsNull(emotions.ChooseAutonomousBehavior(TimeSpan.FromSeconds(4), [proud]));
+        Assert.AreEqual(BehaviorDefinitions.LookAround, emotions.ChooseAutonomousBehavior(TimeSpan.FromSeconds(5), [look])!.Id);
+        Assert.AreEqual(BehaviorDefinitions.IdleProud, emotions.ChooseAutonomousBehavior(TimeSpan.FromSeconds(6), [proud])!.Id);
     }
 
     [TestMethod]
@@ -161,14 +226,26 @@ public sealed class BehaviorGrammarTests
 
         Assert.AreEqual(BehaviorDefinitions.IdleDazed, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(2), expressions)!.Id);
         Assert.AreEqual(BehaviorDefinitions.IdleProud, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(3), expressions)!.Id);
-        Assert.AreEqual(BehaviorDefinitions.IdlePout, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(4), expressions)!.Id);
+        Assert.IsNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(4), expressions), "Pout cannot follow proud directly.");
         Assert.IsNull(planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(5), expressions));
+        var look = BehaviorDefinitions.Autonomous.Single(x => x.Id == BehaviorDefinitions.LookAround);
+        Assert.AreEqual(BehaviorDefinitions.LookAround, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(16), [look])!.Id);
         Assert.AreEqual(BehaviorDefinitions.IdleDazed, planner.ChooseAutonomousBehavior(TimeSpan.FromSeconds(17), expressions)!.Id);
     }
 
     private sealed class FixedRandom(int value) : IRandomSource
     {
         public int NextInt(int minimumInclusive, int maximumExclusive) => Math.Clamp(value, minimumInclusive, maximumExclusive - 1);
+    }
+
+    private sealed class RecordingRandom : IRandomSource
+    {
+        public int LastMaximum { get; private set; }
+        public int NextInt(int minimumInclusive, int maximumExclusive)
+        {
+            LastMaximum = maximumExclusive;
+            return minimumInclusive;
+        }
     }
 
     private sealed class CyclingRandom(params int[] values) : IRandomSource

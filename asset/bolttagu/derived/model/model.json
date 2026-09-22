@@ -13,18 +13,15 @@
     "back": { "x": 1330, "y": 0, "width": 444, "height": 887 }
   },
   "review": "Approved by the user as the P1 animation guide on 2026-09-20.",
-  "idleRig": {
-    "asset": "idle-rig.json",
-    "sourceSheet": "idle-rig/source-sheet-v1.png",
-    "sourceSheetSha256": "B5DA95C76525CD71A5EC569754250FAF217C99A03C85DC24332BC32DA13C6AD5",
+  "idleExpressionSheets": {
     "status": "candidate",
-    "clips": ["idle_dazed", "idle_proud", "idle_pout"],
-    "jacketRevision": {
-      "reason": "Replace cape-like arm cutouts with fitted sleeves and put short jacket front panels on the torso.",
-      "activeParts": ["idle-rig/parts/body_jacket-v2.png", "idle-rig/parts/left_arm_jacket-v2.png", "idle-rig/parts/right_arm_jacket-v2.png"],
-      "status": "candidate"
-    },
-    "review": "Layer-composited expression poses require live Windows review before approval. Individual source hashes are recorded in build/build-manifest.json."
+    "calibration": "canonical-idle-calibration-v1.png",
+    "sources": [
+      { "clip": "idle_dazed", "asset": "idle-dazed-grid-v1.png", "sha256": "9E779EA5D3D42A5BB895A20AAAE425395BFE2ADEEC2E77106039B4048BB7BE2A" },
+      { "clip": "idle_proud", "asset": "idle-proud-grid-v1.png", "sha256": "BEAF9BC8F479DF517920069165DD5C13514FC1F51D0DB81EEA3105B21D1C9C4B" },
+      { "clip": "idle_pout", "asset": "idle-pout-grid-v1.png", "sha256": "158692AEC0A1B02A925E0C67E3AFA38ADDB04A91491DE51D2683502E4E614DFA" }
+    ],
+    "review": "Six full-body poses per expression plus a canonical idle return. Windows runtime visual review remains pending."
   },
   "actionSources": {
     "walk": {

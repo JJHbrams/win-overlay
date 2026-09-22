@@ -131,6 +131,16 @@ public sealed class PetAnimationController : IDisposable
     {
         ObjectDisposedException.ThrowIf(_disposed, this);
         var now = _clock.Elapsed;
+        _planner.AdvanceMood(now, _sequence.Current?.Id == BehaviorDefinitions.SitDoze
+            ? PetActivity.Dozing
+            : State switch
+            {
+                PetRuntimeState.Walking => PetActivity.Walking,
+                PetRuntimeState.Running => PetActivity.Running,
+                PetRuntimeState.RopeClimbing or PetRuntimeState.FreeClimbing or
+                    PetRuntimeState.RopeDescending or PetRuntimeState.FreeDescending => PetActivity.Climbing,
+                _ => PetActivity.Resting,
+            });
         if (State == PetRuntimeState.Exiting)
         {
             if (now >= _exitDeadline) SignalExitReady();

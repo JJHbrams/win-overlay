@@ -76,7 +76,6 @@ public static class Program
     {
         var modelRoot = Path.Combine(root, "asset", "bolttagu", "derived", "model");
         var animationRoot = Path.Combine(root, "asset", "bolttagu", "derived", "animations");
-        var rigFrames = IdleRigComposer.ComposeIfPresent(modelRoot, animationRoot);
         var recipePath = Path.Combine(modelRoot, "animation-recipes.json");
         var recipe = ReadJson<ModelRecipe>(recipePath);
         if (recipe.SchemaVersion != 1)
@@ -91,6 +90,10 @@ public static class Program
             if (!IsSnakeCase(clip.Id))
             {
                 throw new InvalidDataException($"Invalid clip id '{clip.Id}'.");
+            }
+            if (!double.IsFinite(clip.SourceFrameScale) || clip.SourceFrameScale <= 0)
+            {
+                throw new InvalidDataException($"Clip '{clip.Id}' has an invalid source frame scale.");
             }
 
             var outputDirectory = Path.Combine(animationRoot, clip.Id, "frames");
@@ -147,7 +150,7 @@ public static class Program
                     frameSources[index].Source,
                     frameSources[index].Bounds,
                     recipe.Canvas,
-                    commonScale,
+                    commonScale * clip.SourceFrameScale,
                     clip.AnchorY,
                     clip.Align,
                     clip.Frames[index],
@@ -174,7 +177,7 @@ public static class Program
         var sourceCount = recipe.Clips.Select(clip => clip.Source ?? recipe.Source)
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .Count();
-        Console.WriteLine($"generated {written + rigFrames} deterministic preview frames from {sourceCount} model sources ({rigFrames} rig-composited)");
+        Console.WriteLine($"generated {written} deterministic preview frames from {sourceCount} model sources");
         return 0;
     }
 
@@ -245,16 +248,11 @@ public static class Program
         var reviewOutputs = WriteReviewArtifacts(buildRoot, animationRoot, pack, orderedFrames);
 
         var modelRoot = Path.Combine(root, "asset", "bolttagu", "derived", "model");
-        var inputs = Directory.EnumerateFiles(modelRoot, "*.png", SearchOption.AllDirectories)
+        var inputs = Directory.EnumerateFiles(modelRoot, "*.png", SearchOption.TopDirectoryOnly)
             .Select(path => HashArtifact(root, path))
             .ToList();
         inputs.Add(HashArtifact(root, Path.Combine(modelRoot, "animation-recipes.json")));
         inputs.Add(HashArtifact(root, Path.Combine(modelRoot, "model.json")));
-        var rigPath = Path.Combine(modelRoot, "idle-rig.json");
-        if (File.Exists(rigPath))
-        {
-            inputs.Add(HashArtifact(root, rigPath));
-        }
         inputs.Add(HashArtifact(root, packPath));
         inputs.AddRange(orderedFrames.Select(item => HashArtifact(root, ResolveContained(animationRoot, item.Frame.Path))));
         inputs = inputs.DistinctBy(item => item.Path, StringComparer.Ordinal).OrderBy(item => item.Path, StringComparer.Ordinal).ToList();
@@ -762,7 +760,8 @@ internal sealed record ClipRecipe(
     int AnchorY = 480,
     string Align = "bottom",
     int ReferenceFrame = 0,
-    CalibrationFrame? Calibration = null);
+    CalibrationFrame? Calibration = null,
+    double SourceFrameScale = 1.0);
 internal sealed record CalibrationFrame(
     SourceRect SourceRect,
     string? Source = null,

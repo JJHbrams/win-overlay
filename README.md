@@ -79,8 +79,11 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 ```
 
 세부 규칙과 라이선스 주의사항은 `asset/bolttagu/README.md`를 참고한다.
-신규 idle 표정 3종은 `asset/bolttagu/derived/model/idle-rig.json`의 머리·몸통·좌우 팔·다리
-레이어를 빌드할 때 합성한다. 기존 클립과 실행 중 atlas 렌더링 방식은 그대로 유지한다.
+신규 idle 표정 3종은 표정별 전신 스프라이트 셀을 잘라 공통 idle 기준 프레임으로
+크기·발 위치를 맞춘다. 기존 클립과 실행 중 atlas 렌더링 방식은 그대로 유지한다.
+자율 행동은 내부 에너지(0~100)를 참고한다. 걷기보다 달리기·등반이 더 피곤하고,
+충분히 피곤해진 뒤 진정 시간이 지나야 졸기를 고른다. 둘러본 직후에는 잠깐 이동을
+우대하며 삐짐과 뿌듯함이 바로 맞붙지 않도록 중립 행동을 사이에 둔다.
 
 ## 설계 정본
 
@@ -96,3 +99,4 @@ Engram에서 가져온 원본은 `asset/bolttagu/upstream` 아래의 불변 snap
 - `docs/design/0010-visual-text-surfaces.md`
 - `docs/design/0011-directional-climb-and-run.md`
 - `docs/design/0012-idle-expression-variants.md`
+- `docs/design/0013-mood-transition-continuity.md`

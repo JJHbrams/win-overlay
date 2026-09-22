@@ -34,14 +34,46 @@ public sealed record PlannedClimb(
     double TargetHeight,
     double SpeedPixelsPerSecond);
 
+public enum PetActivity { Resting, Walking, Running, Climbing, Dozing }
+
 public sealed class BehaviorPlanner(IRandomSource random)
 {
     public const int RopeClimbChancePercent = 35;
+    public const double DozeEnergyThreshold = 20;
+    public const double ExhaustedEnergyThreshold = 8;
+    private const double ActivityTickLimitSeconds = 1;
     private readonly Queue<string> _recent = new();
     private readonly Dictionary<string, TimeSpan> _lastSelected = new(StringComparer.Ordinal);
     private TimeSpan _idleHubEnteredAt;
     private TimeSpan? _lastLocomotionAt;
     private TimeSpan? _lastUserInputAt;
+    private TimeSpan? _lastMoodUpdateAt;
+    private string? _lastBehaviorId;
+    private TimeSpan? _curiousUntil;
+
+    public double Energy { get; private set; } = 100;
+
+    public void AdvanceMood(TimeSpan now, PetActivity activity)
+    {
+        if (activity is PetActivity.Walking or PetActivity.Running or PetActivity.Climbing)
+            _lastLocomotionAt = now;
+        if (_lastMoodUpdateAt is not { } previous)
+        {
+            _lastMoodUpdateAt = now;
+            return;
+        }
+        var seconds = Math.Clamp((now - previous).TotalSeconds, 0, ActivityTickLimitSeconds);
+        _lastMoodUpdateAt = now;
+        var rate = activity switch
+        {
+            PetActivity.Walking => -0.9,
+            PetActivity.Running => -2.5,
+            PetActivity.Climbing => -2.0,
+            PetActivity.Dozing => 7.0,
+            _ => 0.25,
+        };
+        Energy = Math.Clamp(Energy + seconds * rate, 0, 100);
+    }
 
     public TimeSpan NextIdleDelay() =>
         TimeSpan.FromMilliseconds(random.NextInt(800, 2501));
@@ -116,25 +148,51 @@ public sealed class BehaviorPlanner(IRandomSource random)
             .Where(definition => IsEligible(definition, now))
             .ToArray();
         if (candidates.Length == 0) return null;
-        var totalWeight = candidates.Sum(definition => Math.Max(0, definition.Weight));
+        var doze = candidates.FirstOrDefault(definition => definition.Id == BehaviorDefinitions.SitDoze);
+        if (Energy <= ExhaustedEnergyThreshold && doze is not null) return RecordSelection(doze, now);
+        var totalWeight = candidates.Sum(definition => EffectiveWeight(definition, now));
         if (totalWeight <= 0) return null;
         var pick = random.NextInt(0, totalWeight);
         BehaviorDefinition selected = candidates[^1];
         foreach (var candidate in candidates)
         {
-            pick -= Math.Max(0, candidate.Weight);
+            pick -= EffectiveWeight(candidate, now);
             if (pick < 0) { selected = candidate; break; }
         }
+        return RecordSelection(selected, now);
+    }
+
+    private BehaviorDefinition RecordSelection(BehaviorDefinition selected, TimeSpan now)
+    {
         _lastSelected[selected.Id] = now;
         _recent.Enqueue(selected.Id);
         while (_recent.Count > 2) _recent.Dequeue();
+        _lastBehaviorId = selected.Id;
+        if (selected.Id == BehaviorDefinitions.LookAround) _curiousUntil = now + TimeSpan.FromSeconds(12);
         return selected;
+    }
+
+    private int EffectiveWeight(BehaviorDefinition definition, TimeSpan now)
+    {
+        var weight = Math.Max(0, definition.Weight);
+        if (definition.Id == BehaviorDefinitions.SitDoze) return Energy <= DozeEnergyThreshold ? weight * 15 : 0;
+        if (_curiousUntil is { } curiousUntil && now <= curiousUntil)
+        {
+            if (definition.Id == BehaviorDefinitions.Walk) return weight * 2;
+            if (definition.Id is BehaviorDefinitions.Run or BehaviorDefinitions.FreeClimb) return weight * 3;
+        }
+        return weight;
     }
 
     private bool IsEligible(BehaviorDefinition definition, TimeSpan now)
     {
         if (_recent.Contains(definition.Id, StringComparer.Ordinal)) return false;
         if (_lastSelected.TryGetValue(definition.Id, out var last) && definition.Cooldown is { } cooldown && now - last < cooldown) return false;
+        if (Energy <= DozeEnergyThreshold && definition.Id is BehaviorDefinitions.Run or BehaviorDefinitions.FreeClimb or BehaviorDefinitions.FreeDescend) return false;
+        if (definition.Id == BehaviorDefinitions.SitDoze && Energy > DozeEnergyThreshold) return false;
+        if (_lastBehaviorId is BehaviorDefinitions.IdlePout or BehaviorDefinitions.IdleProud &&
+            definition.Id is BehaviorDefinitions.IdlePout or BehaviorDefinitions.IdleProud &&
+            definition.Id != _lastBehaviorId) return false;
         if (definition.Id == BehaviorDefinitions.SitDoze &&
             ((_lastLocomotionAt is { } locomotion && now - locomotion < TimeSpan.FromSeconds(8)) ||
              (_lastUserInputAt is { } input && now - input < TimeSpan.FromSeconds(10)))) return false;
