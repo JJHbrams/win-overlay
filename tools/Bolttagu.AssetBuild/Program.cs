@@ -17,7 +17,10 @@ public static class Program
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
         PropertyNameCaseInsensitive = true,
-        WriteIndented = true
+        WriteIndented = true,
+        // The repository stores text as LF (.gitattributes); Environment.NewLine would
+        // rewrite every generated JSON file as CRLF on Windows and leave the tree dirty.
+        NewLine = "\n"
     };
 
     [STAThread]
@@ -703,7 +706,7 @@ public static class Program
         ?? throw new InvalidDataException($"{path} is empty.");
 
     private static void WriteJson<T>(string path, T value) =>
-        File.WriteAllText(path, JsonSerializer.Serialize(value, JsonOptions) + Environment.NewLine, new UTF8Encoding(false));
+        File.WriteAllText(path, JsonSerializer.Serialize(value, JsonOptions) + JsonOptions.NewLine, new UTF8Encoding(false));
 
     private static BuildArtifact HashArtifact(string root, string path)
     {
