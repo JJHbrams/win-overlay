@@ -1,0 +1,35 @@
+{
+  "purpose": "Exact CPU-only ImageCropToMask RGB composites fed to native Pixal3D conditioning; source art preprocessing, not generated renders.",
+  "export_prompt_id": "2ca597fb-52dd-445f-9343-7d9c0a3e9b77",
+  "pixel_format": "PNG, 1024x1024, RGB, sRGB; the native conditioning path consumes image[..., :3].",
+  "background": "#000000",
+  "head_multiview": {
+    "fov_degrees": 20.0,
+    "frame_pad_factor": 1.05,
+    "source_crop_pixels": { "x": 260, "y": 0, "width": 520, "height": 500 },
+    "camera_slots": {
+      "front": { "azimuth_degrees": 0.0, "file": "head_mv_condition_front.png", "sha256": "A3CE7C509B2432D0358A0B757475579D5E44472CB69F51ACF6B532C71847C7E8" },
+      "left": { "azimuth_degrees": 90.0, "file": "head_mv_condition_left.png", "sha256": "FDD28D6F4568B7194A47B4C004123E97D793982C4EF1641210A9F0C5FC108DBF" },
+      "back": { "azimuth_degrees": 180.0, "file": "head_mv_condition_back.png", "sha256": "09DFE6D82EC25FDB35FA459A4A36DD6E79389E3589E94C8350229266E4D7768E" }
+    },
+    "rig_distance": 3.1192050007897403,
+    "rig_distance_formula": "1.1 * 0.5 / tan(radians(20) / 2)",
+    "source_hashes": {
+      "front": "63545F141A5CD86074BEC2A09CF66868223D8971B8D74E4A6A355704046794DA",
+      "left_profile": "356C805EEDE3720D86F7341FCD5DBD79B01215AF0F5FF6E7C5059059485AAFCB",
+      "back": "80DC674FC4E40901A190648CAF385E78C8DFCA6B3C718CC98A9E5921A45FFDEE"
+    }
+  },
+  "body_multiview": {
+    "fov_degrees": 20.0,
+    "frame_pad_factor": 1.1,
+    "source_crop_pixels": null,
+    "front": { "file": "body_mv_condition_front.png", "sha256": "AD2FC96ACF3F079BBB5AE7205B67944CE12502DFEDD71B2F11287359813930A8" },
+    "back": { "file": "body_mv_condition_back.png", "sha256": "DDCB1B6F3F457CB0626D685B8C6FA096D4464AD308A72FF2B365BB912E6EC4E0" }
+  },
+  "axis_notes": {
+    "pixal3d_model_frame": "y_up",
+    "trellis2_z_up_conversion": "Only vanilla TRELLIS2 Z-up vertices are converted by (x,y,z)->(x,z,-y) before GLB export.",
+    "pixal3d_export": "Pixal3D conditioning sets model_frame=y_up, so VaeDecodeShapeTrellis does not apply that conversion; MeshToFile3D serializes the current mesh coordinates to GLB. Blender's glTF import therefore receives the Pixal3D Y-up mesh directly."
+  }
+}

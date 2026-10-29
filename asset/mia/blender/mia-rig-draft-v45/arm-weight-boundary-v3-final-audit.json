@@ -1,0 +1,128 @@
+{
+  "scope": "read-only audit of v3 isolated arm-weight trial",
+  "source_blend": "D:\\ai\\Mia3DWork\\rig_trials\\v44\\Mia_RigDraft_v44.blend",
+  "source_blend_sha256": "f6535a476a4d96cf1c0090fe1270724c02b5a9f7aefa9a8c5f5051e9d24873a1",
+  "trial_blend": "D:\\ai\\Mia3DWork\\weight_boundary_trial\\Mia_RigDraft_v44_arm_weight_trial_v3.blend",
+  "trial_blend_sha256": "4520afbe31e265d348fb71e61aaf57d90195d5d618c329967979b35045b6b078",
+  "geometry_and_uv_preserved": {
+    "Mia_Graft_Body_Editable": true,
+    "Mia_Graft_Head_Editable": true
+  },
+  "mesh_fingerprints": {
+    "source": {
+      "Mia_Graft_Body_Editable": {
+        "mesh": "Mia_Graft_Body_Editable",
+        "vertices": 147285,
+        "polygons": 162789,
+        "loops": 488367,
+        "geometry_and_uv_sha256": "c9cdd231b6d334122741ffe9fb4a8a3377b7ea8cb7e166f50d1d24d7a61872a8",
+        "uv_layers": {
+          "UVMap": "c9ba98e313cc7ad29ce19176427deafc218cb7e3ec42baa18989e642e7a06645",
+          "UV_PROJ_BODY_FRONT": "4dc6589cf2839e1cc41822e3b767043ec14d11872e06d49e74a5c2fa60c00c64",
+          "UV_PROJ_BODY_BACK": "77b793dd3062ee79b4362647b545782617d4f4665fc08f9876e7bde59b382710"
+        }
+      },
+      "Mia_Graft_Head_Editable": {
+        "mesh": "Mia_Graft_Head_Editable",
+        "vertices": 156323,
+        "polygons": 99538,
+        "loops": 298614,
+        "geometry_and_uv_sha256": "d51f7dd3938283a517419a2d6a73757e4723d72ac135e3c5c8d48addb9c1e937",
+        "uv_layers": {
+          "UVMap": "938e4125e5dab829b2a212c33fe89f94adb1185c5cbbdd02190e23b6222fa071",
+          "UV_PROJ_FRONT": "71b0b3aed9348de9d0cd7f2735f58d4f0f4a75a8b5895f40968e49bd5e40cbdc"
+        }
+      }
+    },
+    "trial": {
+      "Mia_Graft_Body_Editable": {
+        "mesh": "Mia_Graft_Body_Editable",
+        "vertices": 147285,
+        "polygons": 162789,
+        "loops": 488367,
+        "geometry_and_uv_sha256": "c9cdd231b6d334122741ffe9fb4a8a3377b7ea8cb7e166f50d1d24d7a61872a8",
+        "uv_layers": {
+          "UVMap": "c9ba98e313cc7ad29ce19176427deafc218cb7e3ec42baa18989e642e7a06645",
+          "UV_PROJ_BODY_FRONT": "4dc6589cf2839e1cc41822e3b767043ec14d11872e06d49e74a5c2fa60c00c64",
+          "UV_PROJ_BODY_BACK": "77b793dd3062ee79b4362647b545782617d4f4665fc08f9876e7bde59b382710"
+        }
+      },
+      "Mia_Graft_Head_Editable": {
+        "mesh": "Mia_Graft_Head_Editable",
+        "vertices": 156323,
+        "polygons": 99538,
+        "loops": 298614,
+        "geometry_and_uv_sha256": "d51f7dd3938283a517419a2d6a73757e4723d72ac135e3c5c8d48addb9c1e937",
+        "uv_layers": {
+          "UVMap": "938e4125e5dab829b2a212c33fe89f94adb1185c5cbbdd02190e23b6222fa071",
+          "UV_PROJ_FRONT": "71b0b3aed9348de9d0cd7f2735f58d4f0f4a75a8b5895f40968e49bd5e40cbdc"
+        }
+      }
+    }
+  },
+  "supersession": {
+    "invalid_attempt": "out/ action-overridden render pass",
+    "reason": "Idle action keys could re-evaluate and reset the manual arm pose.",
+    "valid_attempt": "out-v3; action=None and all NLA tracks muted before the manual probe."
+  },
+  "coincident_weight_method": {
+    "position_bucket_tolerance_m": 1e-05,
+    "same_normal_dot_min": 0.95,
+    "operation": "Average every DEF_* vertex-group weight over each same-facing coincident-position cluster; preserve topology and per-loop UVs."
+  },
+  "true_lower_torso_hem": "0.70<=z<=0.88 and abs(x)<=0.14; only this central region was forced to zero arm influence.",
+  "valid_probe_evidence": {
+    "before": {
+      "evaluated_bone_matrix_max_abs_delta": {
+        "DEF_UpperArm_R": 0.07959657907485962,
+        "DEF_Forearm_R": 0.2704623341560364
+      },
+      "evaluated_body_vertex_max_displacement_m": 0.15260781730238854
+    },
+    "after": {
+      "evaluated_bone_matrix_max_abs_delta": {
+        "DEF_UpperArm_R": 0.07959657907485962,
+        "DEF_Forearm_R": 0.2704623341560364
+      },
+      "evaluated_body_vertex_max_displacement_m": 0.14534349572409402
+    }
+  },
+  "rest_neutral_body_delta_m": 5.364418029785156e-07,
+  "weight_evidence": {
+    "changed_vertices": 29863,
+    "before": {
+      "eligible_vertices": 29890,
+      "edge_count": 69573,
+      "mean_arm_weight_edge_delta": 0.02356404929487321,
+      "hard_edges_over_0_8": 920,
+      "max_arm_weight_edge_delta": 1.0000000409781933
+    },
+    "after": {
+      "eligible_vertices": 29890,
+      "edge_count": 69573,
+      "mean_arm_weight_edge_delta": 0.019114156950392463,
+      "hard_edges_over_0_8": 0,
+      "max_arm_weight_edge_delta": 0.3657161146402359
+    },
+    "coincident_seam_weights": {
+      "before": {
+        "coincident_same_normal_clusters": 8203,
+        "clusters_with_arm_weight_difference": 3775,
+        "max_arm_weight_difference": 0.23748275637626648
+      },
+      "fix": {
+        "seam_clusters_equalized": 8203,
+        "vertices_equalized": 17488
+      },
+      "after": {
+        "coincident_same_normal_clusters": 8203,
+        "clusters_with_arm_weight_difference": 0,
+        "max_arm_weight_difference": 0.0
+      }
+    },
+    "coat_hem_vertices": 4025,
+    "coat_hem_arm_weighted": 0
+  },
+  "component_caveat": "The 606 count is only for the restricted sleeve/cuff ROI index-adjacency graph. It does not establish global mesh disconnection; xatlas UV/normal seams are a plausible explanation.",
+  "conclusion": "The v3 render removes the tested vertical sleeve/hand strip. This does not validate fingers, face, collisions, or a production-ready full animation range."
+}

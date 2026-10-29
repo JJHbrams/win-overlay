@@ -1,0 +1,60 @@
+{
+  "scope": "Local native ComfyUI Pixal3D/TRELLIS2 candidate generation and Blender projection trial. This record is evidence for a draft, not a production approval.",
+  "current_draft": {
+    "body_glb": {
+      "path": "D:/ai/Mia3DWork/output/mia_pixal3d_mv512_tex2048_00001.glb",
+      "sha256": "40EE1D976A20988E8959102A6EC053A892FD432B9D47ADF38322FBF562E55972",
+      "bytes": 14797208,
+      "prompt_id": "61b40a01-2c1f-466d-8f43-31d3d990d6c0"
+    },
+    "single_head_glb": {
+      "path": "D:/ai/Mia3DWork/output/mia_pixal_head512_tex2048_00001.glb",
+      "sha256": "97D76C20E08D92B1E05079B9EC5D340683863A843F1D434A7DCD7C907FB34ADA",
+      "prompt_id": "3cceb12b-54cb-4224-91e5-3a620e98813e"
+    },
+    "selected_projected_head_blend": {
+      "path": "D:/ai/Mia3DWork/projected_head/alternative_single/mia-head-v32-front-art-projected.blend",
+      "sha256": "B2538334056F39E6F1E098198F4A9B1D06BB9E891272E06B41FAF791C42CB8FE",
+      "source_native_blend": "C:/Users/antio/Desktop/Workspace/projects/win-overlay/asset/mia/blender/pixal-head-v32/mia-head-v32-native.blend",
+      "geometry_assertion": {"vertices": 156323, "polygons": 198513, "sha256_before_after": "60e0eae70c73c29022a9202b91584298d91555a529739458668f908f6233461c"}
+    }
+  },
+  "source_concept": {
+    "front_apose": {"path": "C:/Users/antio/.codex/visualizations/2026/10/29/01a1885c-8934-7af0-a487-a7f8d5981f65/mia-rigging-apose-front-v30.png", "sha256": "63545F141A5CD86074BEC2A09CF66868223D8971B8D74E4A6A355704046794DA"},
+    "back_apose": {"path": "C:/Users/antio/.codex/visualizations/2026/10/29/01a1885c-8934-7af0-a487-a7f8d5981f65/mia-rigging-apose-back-v30.png", "sha256": "80DC674FC4E40901A190648CAF385E78C8DFCA6B3C718CC98A9E5921A45FFDEE"},
+    "side_apose": {"path": "C:/Users/antio/.codex/visualizations/2026/10/29/01a1885c-8934-7af0-a487-a7f8d5981f65/mia-rigging-apose-side-v30.png", "sha256": "356C805EEDE3720D86F7341FCD5DBD79B01215AF0F5FF6E7C5059059485AAFCB"},
+    "concept_prompt": {"path": "C:/Users/antio/.codex/visualizations/2026/10/29/01a1885c-8934-7af0-a487-a7f8d5981f65/mia-rigging-apose-front-prompt-v30.txt", "sha256": "BFB0562943D116D0E52DDAD1E64F4032C6D78661D7927D77AE6F5CD347DFBE8F"}
+  },
+  "native_generation": {
+    "server": "ComfyUI isolated loopback http://127.0.0.1:8197; --disable-all-custom-nodes --disable-api-nodes --disable-auto-launch --lowvram --reserve-vram 0.5; D: input/output/temp/user directories",
+    "template": "D:/ai/ComfyUI_windows_portable/python_embeded/Lib/site-packages/comfyui_workflow_templates_json/templates/3d_pixal3d_trellis2_image_to_model.json",
+    "api_prompts": ["D:/ai/Mia3DWork/pixal3d_mia_frontback_mv512_tex2048_api_prompt.json", "D:/ai/Mia3DWork/pixal3d_mia_head512_tex2048_api_prompt.json", "D:/ai/Mia3DWork/pixal3d_mia_head_multiview512_tex2048_api_prompt.json"],
+    "geometry": "Pixal3D 512 route: VaeDecodeStructureTrellis2 resolution 32; 1536 cascade bypassed; remesh resolution 512 then DecimateMesh target 200000 midpoint.",
+    "sampling": "shape sampler seed 42, 20 Euler/normal steps, CFG 7.5; texture sampler seed 43, 12 Euler/normal steps, CFG 1; auxiliary sampler seed 56, 12 Euler/normal steps, CFG 7.5.",
+    "body_multiview": "front/back only; FOV 20; CropToMask 1024 square, alpha-aware black background, pad 1.1; 2048 texture atlas, 196262 faces/3152 charts, packed atlas 2130x2132.",
+    "single_head": "front crop x=260,y=0,w=520,h=500; CropToMask 1024 RGB sRGB, alpha-aware black background, pad 1.05; FOV 20; 2048 texture atlas, 198518 faces/3699 charts, packed atlas 2146x2151.",
+    "head_multiview_reference": "front/left/back exact crops; screen-left-facing side source correctly maps to native left=+90 degrees (front=0, back=180); never mirrored. Its GLB is preserved but not selected."
+  },
+  "projection": {
+    "script": "D:/ai/Mia3DWork/projection_scripts/project_head_art.py",
+    "source_png": {"path": "D:/ai/Mia3DWork/projection_inputs/head_mv_condition_front.png", "sha256": "A3CE7C509B2432D0358A0B757475579D5E44472CB69F51ACF6B532C71847C7E8", "format": "1024x1024 RGB sRGB, #000000 background"},
+    "camera": "canonical C=(0,-3.1192050007897403,0), forward +Y, right +X, up +Z, FOV 20 degrees; v is Blender UV bottom-origin",
+    "parameters": "uv-scale=1, offset-u=0, offset-v=0, strength=1; UV_PROJ_FRONT and POINT FaceProjectionWeight; source image packed; original PBR base-color branch preserved and mixed only inside face/neck ellipses.",
+    "qa_renders": "D:/ai/Mia3DWork/projected_head/alternative_single/qa_toon/ (albedo-only NPR QA, not production shading)"
+  },
+  "weights": {
+    "download_location": "D:/ai/ComfyUI_windows_portable/ComfyUI/models/",
+    "files": [
+      {"path": "diffusion_models/pixal3d_int8_convrot.safetensors", "bytes": 5584555824, "sha256": "4621eac3b715484f79303c7152af641fe0b2b14f4d0e3d394fd6922d00f955ec"},
+      {"path": "diffusion_models/pixal3d_multiview_int8_convrot.safetensors", "bytes": 5584555824, "sha256": "6b1eb3328930d921d3b57508d9c46cceec1c174dcedeebc14f176ab67d49f477"},
+      {"path": "vae/trellis_2_texture_vae_bf16.safetensors", "bytes": 948461364, "sha256": "714e5ebf094a610e12a8e3b5175c18a62f37f6ea4218acb6073644456b73ab0e"},
+      {"path": "vae/trellis_2_shape_vae_bf16.safetensors", "bytes": 1095844024, "sha256": "de0cb4949a76c59ee5c091a995a69bcc8c51d5aeda939f0c641a50d2a72341f4"},
+      {"path": "clip_vision/dino_v3_L_naf_fp32.safetensors", "bytes": 1215214176, "sha256": "4ad2ec4e0879a5b5b04cd97325cc37da954a7b6edca5170b86510f17f2b2290f"},
+      {"path": "geometry_estimation/moge_2_vitl_normal_fp16.safetensors", "bytes": 661859924, "sha256": "cb1a692d03235671e959e81360d7b4d9f44aefadb1f852d6ca6aa17799d5e31f"},
+      {"path": "background_removal/birefnet.safetensors", "bytes": 444473596, "sha256": "9ab37426bf4de0567af6b5d21b16151357149139362e6e8992021b8ce356a154"}
+    ],
+    "license_observations": "Public Comfy-Org/Microsoft model-card checks performed during download reported MIT for Pixal3D, TRELLIS2, MoGe2, and BiRefNet. The local ComfyUI core is GPL-3.0. DINOv3's upstream license was not captured in this delivery record; verify it separately before redistribution. These observations are not a blanket license grant."
+  },
+  "runtime_and_network": {"python": "3.13.14 embedded", "torch": "2.13.0+cu130", "cuda": true, "gpu": "NVIDIA GeForce RTX 3070 8GB", "blender": "5.2.3 LTS", "network": "public unauthenticated model downloads only; no user-art upload, cloud inference, paid service, or API key used"},
+  "known_fidelity_failures": ["Bangs/fringe still obscure eyes in three-quarter views.", "Generated texture/UV baking can contain duplicate or blurred facial details; projection improves only the bounded front face/neck region.", "Hands/fingers from the body candidate remain fused or otherwise unsuitable for rigging.", "Coat/cardigan and rear-bag/accessory fidelity remains inferred and may differ from source views.", "This is generated topology and unrigged draft geometry; no production, retopology, seam, or rig approval is implied."]
+}

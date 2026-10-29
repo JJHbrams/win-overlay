@@ -1,0 +1,12 @@
+**/__pycache__/
+.test-tmp/
+# Superseded raster/procedural prototypes are retained locally.
+/build.py
+/test_build.py
+/blender/build_baseline.py
+/blender/build_model_v*.py
+/blender/rig_model_v*.py
+/blender/refine_model_v*.py
+/blender/finalize_v29_metadata.py
+/blender/sculpt_trial_v30.py
+/blender/README-mechanism-check.md

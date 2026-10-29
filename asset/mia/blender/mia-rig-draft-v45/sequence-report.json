@@ -1,0 +1,55 @@
+{
+  "input": "D:\\ai\\Mia3DWork\\rig_trials\\v45\\Mia_RigDraft_v45.blend",
+  "render_requested": true,
+  "camera": "QA_Camera_Front",
+  "resolution": [
+    512,
+    768
+  ],
+  "transparent": true,
+  "fps": 30,
+  "clips": {
+    "Idle": {
+      "action": "Idle_90f",
+      "frames": [
+        1,
+        90
+      ],
+      "frame_count": 90,
+      "loop_end_pose_delta": 0.0,
+      "frame001_pose_hash": "b0b10df6944898aebd8d6754fd80974fe9055f4175b6a0ce292429f92e07098b",
+      "matches_canonical_idle_frame001": true,
+      "frames_pattern": "D:\\ai\\Mia3DWork\\rig_trials\\v45\\sequences\\idle\\%04d.png"
+    },
+    "Turn": {
+      "action": "Turn_60f",
+      "frames": [
+        1,
+        60
+      ],
+      "frame_count": 60,
+      "loop_end_pose_delta": 0.0,
+      "frame001_pose_hash": "b0b10df6944898aebd8d6754fd80974fe9055f4175b6a0ce292429f92e07098b",
+      "matches_canonical_idle_frame001": true,
+      "frames_pattern": "D:\\ai\\Mia3DWork\\rig_trials\\v45\\sequences\\turn\\%04d.png"
+    },
+    "Click": {
+      "action": "Click_30f",
+      "frames": [
+        1,
+        30
+      ],
+      "frame_count": 30,
+      "loop_end_pose_delta": 0.0,
+      "frame001_pose_hash": "b0b10df6944898aebd8d6754fd80974fe9055f4175b6a0ce292429f92e07098b",
+      "matches_canonical_idle_frame001": true,
+      "frames_pattern": "D:\\ai\\Mia3DWork\\rig_trials\\v45\\sequences\\click\\%04d.png"
+    }
+  },
+  "limitations": [
+    "This exporter does not establish rig quality or final-input approval.",
+    "Click uses only the independently trialed 0..5-degree upper-arm and 0..14-degree forearm range; fingers remain unverified.",
+    "Finger and Blink proof must remain separately verified."
+  ],
+  "canonical_idle_frame001_hash": "b0b10df6944898aebd8d6754fd80974fe9055f4175b6a0ce292429f92e07098b"
+}

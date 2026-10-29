@@ -1,0 +1,34 @@
+{
+  "actions": {
+    "Idle_90f": [
+      1,
+      90
+    ],
+    "Turn_60f": [
+      1,
+      60
+    ],
+    "Click_30f": [
+      1,
+      30
+    ]
+  },
+  "fps": 30,
+  "active_action": "Idle_90f",
+  "active_frame": 1,
+  "saved_scene_fps": 30,
+  "saved_scene_fps_base": 1.0,
+  "saved_scene_frame_range": [
+    1,
+    90
+  ],
+  "idle_footplant_max_delta_m": 0.0,
+  "turn_shoulder_head_sampled_min_distance_m": 0.00729766075092155,
+  "renders": {},
+  "limitations": [
+    "Idle contains breath only; no Blink action/shape key is claimed.",
+    "Shoulder/head value is a sampled proximity diagnostic, not collision proof.",
+    "Click uses only the independently trialed 0..5-degree upper-arm and 0..14-degree forearm range; fingers remain unverified.",
+    "Fused-mesh distal fingers remain unweighted in this trial."
+  ]
+}

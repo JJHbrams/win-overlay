@@ -1,0 +1,87 @@
+{
+  "source": "D:\\ai\\Mia3DWork\\rig_trials\\v44\\Mia_RigDraft_v44.blend",
+  "output": "D:\\ai\\Mia3DWork\\weight_boundary_trial\\Mia_RigDraft_v44_arm_weight_trial_v3.blend",
+  "scope": "isolated arm/sleeve continuity test; not production rig or mesh repair",
+  "component_diagnostics": {
+    "transition_components": 606,
+    "largest_component_vertices": 430,
+    "component_sizes_top5": [
+      430,
+      351,
+      338,
+      322,
+      320
+    ]
+  },
+  "weight_smoothing": {
+    "changed_vertices": 29863,
+    "before": {
+      "eligible_vertices": 29890,
+      "edge_count": 69573,
+      "mean_arm_weight_edge_delta": 0.02356404929487321,
+      "hard_edges_over_0_8": 920,
+      "max_arm_weight_edge_delta": 1.0000000409781933
+    },
+    "after": {
+      "eligible_vertices": 29890,
+      "edge_count": 69573,
+      "mean_arm_weight_edge_delta": 0.019114156950392463,
+      "hard_edges_over_0_8": 0,
+      "max_arm_weight_edge_delta": 0.3657161146402359
+    },
+    "coincident_seam_weights": {
+      "before": {
+        "coincident_same_normal_clusters": 8203,
+        "clusters_with_arm_weight_difference": 3775,
+        "max_arm_weight_difference": 0.23748275637626648
+      },
+      "fix": {
+        "seam_clusters_equalized": 8203,
+        "vertices_equalized": 17488
+      },
+      "after": {
+        "coincident_same_normal_clusters": 8203,
+        "clusters_with_arm_weight_difference": 0,
+        "max_arm_weight_difference": 0.0
+      }
+    },
+    "coat_hem_vertices": 4025,
+    "coat_hem_arm_weighted": 0
+  },
+  "rest_neutral_body_delta_m": 5.364418029785156e-07,
+  "probe": {
+    "side": "R",
+    "upperarm_world_x_degrees": 5.0,
+    "forearm_world_x_degrees": 14.0
+  },
+  "actual_probe_evaluation": {
+    "before": {
+      "evaluated_bone_matrix_max_abs_delta": {
+        "DEF_UpperArm_R": 0.07959657907485962,
+        "DEF_Forearm_R": 0.2704623341560364
+      },
+      "evaluated_body_vertex_max_displacement_m": 0.15260781730238854
+    },
+    "after": {
+      "evaluated_bone_matrix_max_abs_delta": {
+        "DEF_UpperArm_R": 0.07959657907485962,
+        "DEF_Forearm_R": 0.2704623341560364
+      },
+      "evaluated_body_vertex_max_displacement_m": 0.14534349572409402
+    }
+  },
+  "renders": {
+    "before": "before-original-weights-click-pose.png",
+    "after": "after-smoothed-weights-click-pose.png"
+  },
+  "rendered_pose_difference": {
+    "changed_pixels": 10254,
+    "total_pixels": 393216,
+    "max_channel_delta": 1.0
+  },
+  "pass_mechanical": true,
+  "limitations": [
+    "Visual comparison is required; topology and fused fingers are unchanged.",
+    "This does not establish face, finger, collision, or production animation quality."
+  ]
+}
