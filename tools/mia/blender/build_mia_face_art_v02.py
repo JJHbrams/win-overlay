@@ -25,6 +25,8 @@ BODY_NAME = "Mia_Body_Anatomy_Skin"
 ART_KEY = "MIA_FaceArt_OwnedBrowPlacement"
 IMAGE_NAME = "Mia_FaceArt_UV_Pigment"
 PROPORTION_KEY = "MIA_FaceArt_EyeProportion"
+NEUTRAL_CLOSE = .45
+UNDER_EYE_STRENGTH = .38
 
 
 def cli():
@@ -34,7 +36,12 @@ def cli():
     p.add_argument("--render-dir", required=True)
     p.add_argument("--report", required=True)
     p.add_argument("--resolution", type=int, default=768)
-    return p.parse_args(sys.argv[sys.argv.index("--") + 1:])
+    p.add_argument("--neutral-close", type=float, default=NEUTRAL_CLOSE)
+    p.add_argument("--under-eye-strength", type=float, default=UNDER_EYE_STRENGTH)
+    args = p.parse_args(sys.argv[sys.argv.index("--") + 1:])
+    if not 0 <= args.neutral_close <= 1 or not 0 <= args.under_eye_strength <= 1:
+        p.error("Neutral closure and pigment strength must be between 0 and 1")
+    return args
 
 
 def sha(path):
@@ -93,7 +100,7 @@ def pose(face, proof="neutral"):
         if any(part in k.name for part in ("Fcl_EYE_", "Fcl_MTH_", "Fcl_BRW_")):
             k.value = 0.0
     values = {
-        "Fcl_EYE_Close": .56,
+        "Fcl_EYE_Close": NEUTRAL_CLOSE,
         "Fcl_EYE_Sorrow": .10,
         "Fcl_BRW_Angry": .06,
         "Fcl_MTH_Angry": .18,
@@ -419,21 +426,32 @@ def owned_ink(original, name, mode, fitted_rim=None):
 
 
 def lower_eye_contours(face, mesh):
+    """Fit the visible Skin/White boundary, not the larger concealed white card."""
     result = []
     ids = material_ids(face, 1)
     all_points = np.array([tuple(face.matrix_world @ mesh.vertices[i].co) for i in ids])
+    vertices = [face.matrix_world @ vertex.co for vertex in mesh.vertices]
+    surface = [poly for poly in mesh.polygons if poly.material_index in (1, 7)]
+    tree = BVHTree.FromPolygons(vertices, [list(poly.vertices) for poly in surface])
     for side in (-1, 1):
         points = all_points[all_points[:, 0] * side > 0]
         lo, hi = points[:, 0].min(), points[:, 0].max()
-        center = (lo + hi) * .5
-        half_width = (hi - lo) * .5
         samples = []
-        for x in np.linspace(lo, hi, 11):
-            near = points[np.abs(points[:, 0] - x) < half_width * .18]
-            if len(near):
-                samples.append((float((x-center)/half_width), float(near[:, 2].min())))
-        poly = np.polyfit([p[0] for p in samples], [p[1] for p in samples], 2)
-        result.append({"center_x": float(center), "half_width": float(half_width), "lower_z_poly": [float(x) for x in poly]})
+        for x in np.linspace(lo, hi, 25):
+            for z in np.arange(points[:, 2].min() - .004, points[:, 2].max() + .004, .0002):
+                hit = tree.ray_cast(Vector((float(x), -.5, float(z))), Vector((0, 1, 0)), 1.0)
+                if hit[0] is not None and surface[hit[2]].material_index == 1:
+                    samples.append((float(x), float(z)))
+                    break
+        if len(samples) < 5:
+            raise RuntimeError("Could not resolve the visible lower eyelid boundary")
+        center = (samples[0][0] + samples[-1][0]) * .5
+        half_width = (samples[-1][0] - samples[0][0]) * .5
+        poly = np.polyfit([(p[0]-center)/half_width for p in samples], [p[1] for p in samples], 2)
+        result.append({"center_x": float(center), "half_width": float(half_width),
+                       "lower_z_poly": [float(x) for x in poly],
+                       "method": "front first-visible EyeWhite/Skin boundary, 0.2mm ray grid",
+                       "visible_boundary_samples": samples})
     return result
 
 
@@ -449,7 +467,7 @@ def pigment(world, contours):
         below = rim - z
         side = np.maximum(0, 1-u*u)
         vertical = np.clip(below / .006, 0, 1)
-        strength = np.exp(-np.maximum(0,below)/.0022) * side * .24
+        strength = np.exp(-np.maximum(0,below)/.0022) * side * UNDER_EYE_STRENGTH
         strength *= (below > 0) & (below < .006) & (np.abs(u) < 1) & (y < -.025)
         color[..., :3] = color[..., :3]*(1-strength[..., None]) + np.array((.27, .208, .247))*strength[..., None]
         # One restrained lower-lid crease, distinct from a wide gray cheek patch.
@@ -571,7 +589,10 @@ def aim(camera,angle):
 
 
 def main():
+    global NEUTRAL_CLOSE, UNDER_EYE_STRENGTH
     a=cli();source=os.path.abspath(a.input);output=os.path.abspath(a.output)
+    NEUTRAL_CLOSE = a.neutral_close
+    UNDER_EYE_STRENGTH = a.under_eye_strength
     if source==output:
         raise RuntimeError("Input overwrite is forbidden")
     os.makedirs(a.render_dir,exist_ok=True);os.makedirs(os.path.dirname(output),exist_ok=True)
@@ -645,6 +666,8 @@ def main():
         "status":"FACE_ART_CANDIDATE_REQUIRES_REFERENCE_REVIEW",
         "input":source,"input_sha256_before":before_sha,"input_sha256_after":sha(source),
         "output":output,"output_sha256":sha(output),
+        "builder_sha256":sha(__file__),
+        "look_parameters":{"neutral_close":NEUTRAL_CLOSE,"under_eye_strength":UNDER_EYE_STRENGTH},
         "original_face_fingerprint":original_face,"face_fingerprint_after":fingerprint(face,names),
         "original_body_fingerprint":original_body,"body_fingerprint_after":fingerprint(body),
         "original_shape_key_count":len(names),"original_shape_key_names":names,
