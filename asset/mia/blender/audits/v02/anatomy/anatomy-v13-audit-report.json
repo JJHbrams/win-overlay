@@ -1,0 +1,1907 @@
+{
+  "stage": "anatomy-v13-body",
+  "input": "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\Mia_AnimeAnatomy_v02_candidate_v13_body.blend",
+  "input_sha256_before": "d90744a9ec2370ae8d9564e482fbffd6b2485334f9571278d4482ce26ac943ca",
+  "input_sha256_after": "d90744a9ec2370ae8d9564e482fbffd6b2485334f9571278d4482ce26ac943ca",
+  "input_unchanged": true,
+  "render": {
+    "engine": "BLENDER_EEVEE",
+    "resolution": 384,
+    "camera": {
+      "type": "ORTHO",
+      "front": "-Y",
+      "yaw_count": 12,
+      "elevations": [
+        -10,
+        0,
+        10
+      ],
+      "views": [
+        {
+          "scale": "full",
+          "target": [
+            0,
+            0,
+            0.88
+          ],
+          "ortho": 2.0
+        },
+        {
+          "scale": "torso",
+          "target": [
+            0,
+            0,
+            1.2
+          ],
+          "ortho": 1.05
+        },
+        {
+          "scale": "head",
+          "target": [
+            0,
+            0,
+            1.57
+          ],
+          "ortho": 0.6
+        }
+      ]
+    }
+  },
+  "inventory": [
+    {
+      "name": "Mia_Face_AnimeTopology",
+      "collections": [
+        "MIA_ANATOMY_V02"
+      ],
+      "vertices": 2339,
+      "edges": 5389,
+      "polygons": 3150,
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE",
+        "F00_000_00_EyeWhite_00_EYE",
+        "Mia_CharcoalEyeLine_MToon",
+        "Mia_CharcoalLash_MToon",
+        "Mia_SlateBrow_MToon",
+        "Mia_AshBlueGrey_Iris_MToon",
+        "Mia_MutedEyeAccent_MToon",
+        "Mia_CoolMutedSkin_MToon",
+        "Mia_MutedEyeAccent_MToon.001"
+      ],
+      "part_ownership_custom_properties": {
+        "role": "ANATOMY_FACE_TOPOLOGY",
+        "source_mesh": "Face",
+        "basis_edit": "disabled for core-interface calibration",
+        "brow_vertex_route": "FaceBrow material-index vertices; z lowered 10mm and arch compressed 70% across Basis plus every relative shape key",
+        "mouth_vertex_route": "FaceMouth material-index corners lowered up to 4mm across Basis plus every relative shape key",
+        "shared_head_body_map": "lower cheek/jaw 6% taper applied Face Basis+42 targets and Body head core"
+      },
+      "shape_keys": 42,
+      "hide_render": false
+    },
+    {
+      "name": "Mia_Body_Anatomy_Skin",
+      "collections": [
+        "MIA_ANATOMY_V02"
+      ],
+      "vertices": 4648,
+      "edges": 12338,
+      "polygons": 7732,
+      "materials": [
+        "Mia_CoolMutedBodySkin_MToon",
+        "F00_002_01_Tops_01_CLOTH",
+        "F00_002_01_Shoes_01_CLOTH",
+        "F00_000_HairBack_00_HAIR"
+      ],
+      "part_ownership_custom_properties": {
+        "role": "ANATOMY_BODY_SKIN_ONLY",
+        "source_mesh": "Body",
+        "removed_material_slots": [
+          "F00_002_01_Tops_01_CLOTH",
+          "F00_002_01_Shoes_01_CLOTH",
+          "F00_000_HairBack_00_HAIR"
+        ],
+        "torso_refinement": "{\"bust_max_back_mm\": 12.825177300489013, \"bust_vertices\": 327, \"waist_max_forward_mm\": 5.998117159540356, \"waist_max_width_percent\": 3.9987447730269077, \"waist_vertices\": 218}"
+      },
+      "shape_keys": 0,
+      "hide_render": false
+    }
+  ],
+  "duplicate_owner_checks": {
+    "canonical_visible_face_names": [
+      "Mia_Face_AnimeTopology"
+    ],
+    "canonical_visible_body_names": [
+      "Mia_Body_Anatomy_Skin"
+    ],
+    "required_face_count": 1,
+    "required_body_count": 1,
+    "passed": true
+  },
+  "shape_key_43_count": 0,
+  "isolation": {
+    "face_core_isolation": [
+      {
+        "source": "Mia_Face_AnimeTopology",
+        "kept_material_slots": [
+          "F00_000_00_FaceMouth_00_FACE",
+          "Mia_CoolMutedSkin_MToon"
+        ],
+        "skipped": null
+      }
+    ],
+    "excluded_alpha_face_layers": [],
+    "disabled_outline_nodes_on_copies": {
+      "QA_FACE_CORE_Mia_Face_AnimeTopology": [
+        "MToon Outline (F00_000_00_Face_00_SKIN)"
+      ],
+      "QA_CLAY_Mia_Body_Anatomy_Skin": [
+        "MToon Outline (F00_002_01_Shoes_01_CLOTH)",
+        "MToon Outline (F00_002_01_Tops_01_CLOTH)",
+        "MToon Outline (F00_002_02_Body_00_SKIN)"
+      ]
+    },
+    "structure_copy_visibility": [
+      {
+        "name": "QA_FACE_CORE_Mia_Face_AnimeTopology",
+        "hide_render": false,
+        "hide_viewport": false
+      },
+      {
+        "name": "QA_CLAY_Mia_Body_Anatomy_Skin",
+        "hide_render": false,
+        "hide_viewport": false
+      }
+    ],
+    "assembled_core_assertion": {
+      "recognized_face_sources": [
+        "Mia_Face_AnimeTopology"
+      ],
+      "rendered_face_core_copies": [
+        "QA_FACE_CORE_Mia_Face_AnimeTopology"
+      ],
+      "recognized_body_sources": [
+        "Mia_Body_Anatomy_Skin"
+      ],
+      "rendered_body_core_copies": [
+        "QA_CLAY_Mia_Body_Anatomy_Skin"
+      ],
+      "passed": true
+    }
+  },
+  "art_records": [
+    {
+      "file": "art_full_y000_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 0,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y030_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 30,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y060_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 60,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y090_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 90,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y120_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 120,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y150_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 150,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y180_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 180,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y210_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 210,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y240_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 240,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y270_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 270,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y300_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 300,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y330_e-10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 330,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y000_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 0,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y030_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 30,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y060_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 60,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y090_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y120_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 120,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y150_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 150,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y180_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 180,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y210_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 210,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y240_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 240,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y270_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 270,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y300_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 300,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y330_e+00.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 330,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y000_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 0,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y030_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 30,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y060_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 60,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y090_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 90,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y120_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 120,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y150_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 150,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y180_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 180,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y210_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 210,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y240_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 240,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y270_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 270,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y300_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 300,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_full_y330_e+10.png",
+      "mode": "art",
+      "scale": "full",
+      "yaw": 330,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "art_torso_y000_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 0,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y030_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 30,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y060_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 60,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y090_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 90,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y120_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 120,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y150_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 150,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y180_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 180,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y210_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 210,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y240_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 240,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y270_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 270,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y300_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 300,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y330_e-10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 330,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y000_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 0,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y030_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 30,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y060_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 60,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y090_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y120_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 120,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y150_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 150,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y180_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 180,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y210_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 210,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y240_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 240,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y270_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 270,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y300_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 300,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y330_e+00.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 330,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y000_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 0,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y030_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 30,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y060_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 60,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y090_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 90,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y120_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 120,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y150_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 150,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y180_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 180,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y210_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 210,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y240_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 240,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y270_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 270,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y300_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 300,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_torso_y330_e+10.png",
+      "mode": "art",
+      "scale": "torso",
+      "yaw": 330,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "art_head_y000_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 0,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y030_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 30,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y060_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 60,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y090_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 90,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y120_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 120,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y150_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 150,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y180_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 180,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y210_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 210,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y240_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 240,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y270_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 270,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y300_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 300,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y330_e-10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 330,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y000_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 0,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y030_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 30,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y060_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 60,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y090_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y120_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 120,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y150_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 150,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y180_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 180,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y210_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 210,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y240_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 240,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y270_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 270,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y300_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 300,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y330_e+00.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 330,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y000_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 0,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y030_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 30,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y060_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 60,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y090_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 90,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y120_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 120,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y150_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 150,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y180_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 180,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y210_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 210,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y240_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 240,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y270_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 270,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y300_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 300,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "art_head_y330_e+10.png",
+      "mode": "art",
+      "scale": "head",
+      "yaw": 330,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    }
+  ],
+  "structure_records": [
+    {
+      "file": "structure_full_y000_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 0,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y030_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 30,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y060_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 60,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y090_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 90,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y120_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 120,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y150_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 150,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y180_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 180,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y210_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 210,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y240_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 240,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y270_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 270,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y300_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 300,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y330_e-10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 330,
+      "elevation": -10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y000_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 0,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y030_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 30,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y060_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 60,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y090_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y120_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 120,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y150_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 150,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y180_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 180,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y210_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 210,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y240_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 240,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y270_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 270,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y300_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 300,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y330_e+00.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 330,
+      "elevation": 0,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y000_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 0,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y030_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 30,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y060_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 60,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y090_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 90,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y120_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 120,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y150_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 150,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y180_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 180,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y210_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 210,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y240_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 240,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y270_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 270,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y300_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 300,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_full_y330_e+10.png",
+      "mode": "structure",
+      "scale": "full",
+      "yaw": 330,
+      "elevation": 10,
+      "ortho_scale": 2.0
+    },
+    {
+      "file": "structure_torso_y000_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 0,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y030_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 30,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y060_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 60,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y090_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 90,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y120_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 120,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y150_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 150,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y180_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 180,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y210_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 210,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y240_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 240,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y270_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 270,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y300_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 300,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y330_e-10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 330,
+      "elevation": -10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y000_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 0,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y030_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 30,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y060_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 60,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y090_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y120_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 120,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y150_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 150,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y180_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 180,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y210_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 210,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y240_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 240,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y270_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 270,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y300_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 300,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y330_e+00.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 330,
+      "elevation": 0,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y000_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 0,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y030_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 30,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y060_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 60,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y090_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 90,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y120_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 120,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y150_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 150,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y180_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 180,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y210_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 210,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y240_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 240,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y270_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 270,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y300_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 300,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_torso_y330_e+10.png",
+      "mode": "structure",
+      "scale": "torso",
+      "yaw": 330,
+      "elevation": 10,
+      "ortho_scale": 1.05
+    },
+    {
+      "file": "structure_head_y000_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 0,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y030_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 30,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y060_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 60,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y090_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 90,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y120_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 120,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y150_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 150,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y180_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 180,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y210_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 210,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y240_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 240,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y270_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 270,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y300_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 300,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y330_e-10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 330,
+      "elevation": -10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y000_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 0,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y030_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 30,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y060_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 60,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y090_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y120_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 120,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y150_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 150,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y180_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 180,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y210_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 210,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y240_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 240,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y270_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 270,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y300_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 300,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y330_e+00.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 330,
+      "elevation": 0,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y000_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 0,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y030_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 30,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y060_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 60,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y090_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 90,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y120_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 120,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y150_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 150,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y180_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 180,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y210_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 210,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y240_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 240,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y270_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 270,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y300_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 300,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    },
+    {
+      "file": "structure_head_y330_e+10.png",
+      "mode": "structure",
+      "scale": "head",
+      "yaw": 330,
+      "elevation": 10,
+      "ortho_scale": 0.6
+    }
+  ],
+  "actual_art_count": 108,
+  "actual_structure_count": 108,
+  "expected_per_mode": 108,
+  "status": "EVIDENCE_ONLY: renders and inventory require independent visual review; no likeness PASS inferred."
+}

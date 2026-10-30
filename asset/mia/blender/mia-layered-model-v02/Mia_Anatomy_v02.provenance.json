@@ -1,0 +1,11 @@
+{
+  "status": "ANATOMY_STAGE_ACCEPTED_HAIR_PENDING",
+  "source_native": "D:/ai/Mia3DWork/model-v02/anime-anatomy/Mia_AnimeAnatomy_v02_candidate_v13_body.blend",
+  "source_native_sha256": "d90744a9ec2370ae8d9564e482fbffd6b2485334f9571278d4482ce26ac943ca",
+  "packaged_native_sha256": "d90744a9ec2370ae8d9564e482fbffd6b2485334f9571278d4482ce26ac943ca",
+  "licensed_anime_reference": {"source": "Victoria Rubin / VRoid beta AvatarSample_4", "vrm_sha256": "b1372131bdbf233f46320146d565f342a7e4f6f4b8f2aefb301f1a283ec07e1e", "imported_source_sha256": "5f381e152f6a737f6f51b44733d7f33d2047fede71a01589233bc2b87653a3cf", "scope": "Face/Body topology and morph basis adopted as editable anatomy reference; original Hair and wardrobe are not adopted."},
+  "anatomy": "single Face/Body authored stage, full bust retained; source originals hidden and preserved",
+  "validated_features": ["43 face keys", "UV", "blink proof", "mouth proof"],
+  "gates": {"AC1_anatomy_multiview": "PASS", "AC2_hair": "PENDING", "AC3_garments": "PENDING", "AC4_accessories": "PENDING", "AC5_rig_events": "PENDING"},
+  "review": "Independent v13 anatomy review viewed all three contact sheets. No collapse, gap, or severe intersection. T-pose hand and neck projection remain noted. Whole model is NOT COMPLETE."
+}

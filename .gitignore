@@ -8,3 +8,9 @@ TestResults/
 *.user
 *.suo
 
+# Blender automatic local backups; reviewed checkpoints use .blend and Git LFS.
+*.blend[0-9]
+
+__pycache__/
+*.py[cod]
+

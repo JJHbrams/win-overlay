@@ -1,0 +1,127 @@
+{
+  "source_path": "D:\\ai\\Mia3DWork\\anime-base-sources\\import-probe\\Victoria_Rubin_imported.blend",
+  "source_sha256_before": "5f381e152f6a737f6f51b44733d7f33d2047fede71a01589233bc2b87653a3cf",
+  "source_sha256_after": "5f381e152f6a737f6f51b44733d7f33d2047fede71a01589233bc2b87653a3cf",
+  "source_unchanged": true,
+  "checkpoint": "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\Mia_AnimeAnatomy_v02_candidate_v13_body.blend",
+  "renders": [
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\neutral_front.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\neutral_three_quarter_left.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\neutral_profile.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\neutral_full_front.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\neutral_full_side.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\neutral_full_back.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\neutral_torso_three_quarter.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\neutral_three_quarter_outline_off.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\blink_full_front.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\blink_three_quarter.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\mouth_a_front.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\anime-anatomy\\keyviews-v13-body\\mouth_a_three_quarter.png"
+  ],
+  "objects": {
+    "face": {
+      "vertices": 2339,
+      "polygons": 3150,
+      "shape_keys": [
+        "Basis",
+        "Face.M_F00_000_00_Fcl_ALL_Angry",
+        "Face.M_F00_000_00_Fcl_ALL_Fun",
+        "Face.M_F00_000_00_Fcl_ALL_Joy",
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+        "Face.M_F00_000_00_Fcl_ALL_Surprised",
+        "Face.M_F00_000_00_Fcl_BRW_Angry",
+        "Face.M_F00_000_00_Fcl_BRW_Fun",
+        "Face.M_F00_000_00_Fcl_BRW_Joy",
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+        "Face.M_F00_000_00_Fcl_BRW_Surprised",
+        "Face.M_F00_000_00_Fcl_EYE_Natural",
+        "Face.M_F00_000_00_Fcl_EYE_Angry",
+        "Face.M_F00_000_00_Fcl_EYE_Close",
+        "Face.M_F00_000_00_Fcl_EYE_Close_R",
+        "Face.M_F00_000_00_Fcl_EYE_Close_L",
+        "Face.M_F00_000_00_Fcl_EYE_Joy",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+        "Face.M_F00_000_00_Fcl_EYE_Surprised",
+        "Face.M_F00_000_00_Fcl_EYE_Extra",
+        "Face.M_F00_000_00_Fcl_MTH_Up",
+        "Face.M_F00_000_00_Fcl_MTH_Down",
+        "Face.M_F00_000_00_Fcl_MTH_Angry",
+        "Face.M_F00_000_00_Fcl_MTH_Neutral",
+        "Face.M_F00_000_00_Fcl_MTH_Fun",
+        "Face.M_F00_000_00_Fcl_MTH_Joy",
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+        "Face.M_F00_000_00_Fcl_MTH_Surprised",
+        "Face.M_F00_000_00_Fcl_MTH_A",
+        "Face.M_F00_000_00_Fcl_MTH_I",
+        "Face.M_F00_000_00_Fcl_MTH_U",
+        "Face.M_F00_000_00_Fcl_MTH_E",
+        "Face.M_F00_000_00_Fcl_MTH_O",
+        "Face.M_F00_000_00_Fcl_HA_Fung1",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+        "Face.M_F00_000_00_Fcl_HA_Fung2",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On"
+      ]
+    },
+    "body_skin_only": {
+      "vertices": 4648,
+      "polygons": 7732,
+      "skin_material_slots": [
+        0
+      ],
+      "removed_materials": [
+        "F00_002_01_Tops_01_CLOTH",
+        "F00_002_01_Shoes_01_CLOTH",
+        "F00_000_HairBack_00_HAIR"
+      ]
+    }
+  },
+  "face_cage_enabled": false,
+  "shared_head_cage_enabled": true,
+  "disabled_face_nodes_for_diagnostic": [],
+  "face_edit_routes": {
+    "brows": "FaceBrow material-index vertices; z lowered 10mm and arch compressed 70% across Basis plus every relative shape key",
+    "eyes_lashes": "existing Face alpha material slots 3/4/5/8; packed masks and expression bindings retained",
+    "mouth": "existing MTH_Neutral=0.80 and MTH_Down=0.25 shape-key values"
+  },
+  "packed_approved_references_nonrender": [
+    "mia-clean-master-v22.png",
+    "mia-canonical-source-v22.png",
+    "mia-expressions-clean-16-v22.png"
+  ],
+  "material_tone_audit": {
+    "Mia_CharcoalEyeLine_MToon": {
+      "toned_color_routes": "{\"Lit Color Texture Color\": [\"Mtoon1BaseColorTexture.Image\"], \"Shade Color Texture\": [\"Mtoon1ShadeMultiplyTexture.Image\"]}",
+      "preserved_noncolor_image_nodes": "[\"Mtoon1EmissiveTexture.Image\", \"Mtoon1MatcapTexture.Image\", \"Mtoon1NormalTexture.Image\", \"Mtoon1OutlineWidthMultiplyTexture.Image\", \"Mtoon1RimMultiplyTexture.Image\", \"Mtoon1ShadingShiftTexture.Image\", \"Mtoon1UvAnimationMaskTexture.Image\"]"
+    },
+    "Mia_CharcoalLash_MToon": {
+      "toned_color_routes": "{\"Lit Color Texture Color\": [\"Mtoon1BaseColorTexture.Image\"], \"Shade Color Texture\": [\"Mtoon1ShadeMultiplyTexture.Image\"]}",
+      "preserved_noncolor_image_nodes": "[\"Mtoon1EmissiveTexture.Image\", \"Mtoon1MatcapTexture.Image\", \"Mtoon1NormalTexture.Image\", \"Mtoon1OutlineWidthMultiplyTexture.Image\", \"Mtoon1RimMultiplyTexture.Image\", \"Mtoon1ShadingShiftTexture.Image\", \"Mtoon1UvAnimationMaskTexture.Image\"]"
+    },
+    "Mia_SlateBrow_MToon": {
+      "toned_color_routes": "{\"Lit Color Texture Color\": [\"Mtoon1BaseColorTexture.Image\"], \"Shade Color Texture\": [\"Mtoon1ShadeMultiplyTexture.Image\"]}",
+      "preserved_noncolor_image_nodes": "[\"Mtoon1EmissiveTexture.Image\", \"Mtoon1MatcapTexture.Image\", \"Mtoon1NormalTexture.Image\", \"Mtoon1OutlineWidthMultiplyTexture.Image\", \"Mtoon1RimMultiplyTexture.Image\", \"Mtoon1ShadingShiftTexture.Image\", \"Mtoon1UvAnimationMaskTexture.Image\"]"
+    },
+    "Mia_AshBlueGrey_Iris_MToon": {
+      "toned_color_routes": "{\"Lit Color Texture Color\": [\"Mtoon1BaseColorTexture.Image\"], \"Shade Color Texture\": [\"Mtoon1ShadeMultiplyTexture.Image\"]}",
+      "preserved_noncolor_image_nodes": "[\"Mtoon1EmissiveTexture.Image\", \"Mtoon1MatcapTexture.Image\", \"Mtoon1NormalTexture.Image\", \"Mtoon1OutlineWidthMultiplyTexture.Image\", \"Mtoon1RimMultiplyTexture.Image\", \"Mtoon1ShadingShiftTexture.Image\", \"Mtoon1UvAnimationMaskTexture.Image\"]"
+    },
+    "Mia_MutedEyeAccent_MToon": {
+      "toned_color_routes": "{\"Lit Color Texture Color\": [\"Mtoon1BaseColorTexture.Image\"], \"Shade Color Texture\": [\"Mtoon1ShadeMultiplyTexture.Image\"]}",
+      "preserved_noncolor_image_nodes": "[\"Mtoon1EmissiveTexture.Image\", \"Mtoon1MatcapTexture.Image\", \"Mtoon1NormalTexture.Image\", \"Mtoon1OutlineWidthMultiplyTexture.Image\", \"Mtoon1RimMultiplyTexture.Image\", \"Mtoon1ShadingShiftTexture.Image\", \"Mtoon1UvAnimationMaskTexture.Image\"]"
+    },
+    "Mia_CoolMutedSkin_MToon": {
+      "toned_color_routes": "{\"Lit Color Texture Color\": [\"Mtoon1BaseColorTexture.Image\"], \"Shade Color Texture\": [\"Mtoon1ShadeMultiplyTexture.Image\"]}",
+      "preserved_noncolor_image_nodes": "[\"Mtoon1EmissiveTexture.Image\", \"Mtoon1MatcapTexture.Image\", \"Mtoon1NormalTexture.Image\", \"Mtoon1OutlineWidthMultiplyTexture.Image\", \"Mtoon1RimMultiplyTexture.Image\", \"Mtoon1ShadingShiftTexture.Image\", \"Mtoon1UvAnimationMaskTexture.Image\"]"
+    },
+    "Mia_MutedEyeAccent_MToon.001": {
+      "toned_color_routes": "{\"Lit Color Texture Color\": [\"Mtoon1BaseColorTexture.Image\"], \"Shade Color Texture\": [\"Mtoon1ShadeMultiplyTexture.Image\"]}",
+      "preserved_noncolor_image_nodes": "[\"Mtoon1EmissiveTexture.Image\", \"Mtoon1MatcapTexture.Image\", \"Mtoon1NormalTexture.Image\", \"Mtoon1OutlineWidthMultiplyTexture.Image\", \"Mtoon1RimMultiplyTexture.Image\", \"Mtoon1ShadingShiftTexture.Image\", \"Mtoon1UvAnimationMaskTexture.Image\"]"
+    }
+  },
+  "review_status": "UNVERIFIED: visual gate required before custom Mia hair/wardrobe work"
+}
