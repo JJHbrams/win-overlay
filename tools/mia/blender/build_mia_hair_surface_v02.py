@@ -326,6 +326,81 @@ def panel(name, guides, widths, facing, mat, owner, region, ink=None,
     return obj
 
 
+def soft_rear_mass(name,guides,widths,depths,mat,owner,region,hierarchy,ink=None,crease=False):
+    """A softly rounded, closed primary volume; no ribbon edge ink pair.
+
+    Only selected masses receive one subordinate flow crease. Rounded ends
+    have 2–3 mm half-width, while roots enter the concealed support volume.
+    """
+    vertices,faces,samples=[],[],[]
+    rows,section=72,20
+    previous=None
+    for i in range(rows):
+        t=i/(rows-1);p=catmull(guides,t)
+        tangent=(catmull(guides,min(1,t+.002))-catmull(guides,max(0,t-.002))).normalized()
+        side_mass=('Outer' in name or 'Side' in name)
+        outward=Vector((math.copysign(1,p.x),.35,.05) if side_mass else (p.x*2,1,.05)).normalized()
+        across=tangent.cross(outward).normalized()
+        if previous is not None and across.dot(previous)<0:across=-across
+        previous=across;normal=across.cross(tangent).normalized()
+        if normal.dot(outward)<0:normal=-normal
+        w=max(.002,piecewise(widths,t));d=max(.001,piecewise(depths,t)*.5)
+        samples.append((p,across,normal,w,d))
+        for j in range(section):
+            a=math.tau*j/section
+            vertices.append(p+across*(w*math.cos(a))+normal*(d*math.sin(a)))
+    for i in range(rows-1):
+        for j in range(section):
+            a=i*section+j;b=i*section+(j+1)%section
+            faces.append((a,b,b+section,a+section))
+    faces.extend([tuple(reversed(range(section))),tuple((rows-1)*section+j for j in range(section))])
+    obj=mesh(name,vertices,faces,mat,owner,region)
+    obj['hierarchy']=hierarchy
+    obj['construction']='closed rounded flowing mass; unequal authored guides and softened rounded tip'
+    # Closed volume winding is independent of its manually transported frame.
+    bm=bmesh.new();bm.from_mesh(obj.data)
+    bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(obj.data);bm.free()
+    if ink and crease:
+        pts=[p+across*(w*.27)+normal*(d*.97+.0002)for p,across,normal,w,d in samples[18:-11]]
+        line(name+'_OneSubordinateCrease',pts,.00020,ink,owner,region)
+    return obj
+
+
+def rear_hierarchy(owner,mats):
+    dark,ash,ink=mats
+    # Five unequal primary masses overlap broadly. Their long S flow forms the
+    # main silhouette instead of an equally ranked field of narrow strips.
+    primary=[
+        ('LeftOuter',[(-.065,.050,1.655),(-.120,.045,1.590),(-.145,.080,1.505),(-.135,.115,1.417),(-.140,.080,1.340),(-.120,.075,1.302)],
+         [.006,.025,.032,.030,.020,.0030],[.002,.005,.007,.006,.004,.0018]),
+        ('LeftInner',[(-.044,.112,1.656),(-.079,.164,1.578),(-.049,.188,1.487),(-.080,.169,1.398),(-.066,.152,1.318)],
+         [.007,.034,.038,.030,.0025],[.002,.006,.008,.007,.0018]),
+        ('Center',[(-.008,.128,1.642),(.015,.185,1.566),(-.008,.207,1.473),(.023,.177,1.383),(.005,.151,1.294)],
+         [.008,.034,.038,.029,.0030],[.002,.006,.008,.006,.0018]),
+        ('RightInner',[(.044,.110,1.652),(.079,.158,1.590),(.110,.183,1.509),(.080,.183,1.420),(.102,.152,1.345),(.078,.143,1.318)],
+         [.007,.028,.034,.036,.023,.0025],[.002,.005,.008,.008,.005,.0018]),
+        ('RightOuter',[(.067,.047,1.648),(.120,.045,1.581),(.145,.080,1.494),(.133,.114,1.405),(.148,.079,1.352),(.137,.073,1.326)],
+         [.006,.025,.029,.030,.019,.0030],[.002,.005,.007,.006,.004,.0018]),
+    ]
+    for i,(name,guides,widths,depths)in enumerate(primary):
+        soft_rear_mass('MiaHair_RearPrimary_'+name,guides,widths,depths,dark,owner,
+                       'NAPE_LONG_WAVE','PRIMARY',ink,crease=i in (0,1,3))
+    # Six shorter, unequal overlaps sit on selected portions of the primaries.
+    # Most roots disappear under the gathering; they are not six extra full
+    # length ropes, and most carry no contour stroke.
+    secondary=[
+        ('LeftUpper',[(-.040,.112,1.653),(-.090,.173,1.580),(-.115,.189,1.513),(-.087,.182,1.447),(-.108,.169,1.421)], [.004,.020,.022,.016,.0025]),
+        ('CenterUpper',[(-.020,.125,1.652),(-.032,.188,1.589),(.001,.219,1.527),(-.018,.202,1.478)], [.004,.022,.024,.0030]),
+        ('RightUpper',[(.030,.118,1.654),(.068,.182,1.576),(.043,.209,1.505),(.065,.190,1.445)], [.004,.020,.022,.0030]),
+        ('LeftSide',[(-.060,.035,1.653),(-.111,.025,1.586),(-.143,.050,1.514),(-.155,.065,1.465),(-.137,.035,1.438)], [.004,.020,.025,.015,.0025]),
+        ('RightSide',[(.065,.037,1.654),(.119,.025,1.579),(.151,.051,1.517),(.139,.037,1.452)], [.004,.020,.024,.0030]),
+        ('LowerLeft',[(-.022,.144,1.588),(-.047,.200,1.520),(-.020,.207,1.449),(-.043,.182,1.388)], [.004,.020,.022,.0030]),
+    ]
+    for i,(name,guides,widths)in enumerate(secondary):
+        soft_rear_mass('MiaHair_RearSecondary_'+name,guides,widths,[.0018,.0038,.0048,.0030,.0016],
+                       ash if i in (0,4) else dark,owner,'NAPE_SHORT_LAYER','SUBORDINATE',ink,crease=i in (0,3))
+
+
 def concealed_volume(owner, mat):
     # Front recedes behind the face below the forehead; lower contour is buried
     # above the visible wave tips. The closed dome prevents open-scalp windows.
@@ -406,24 +481,19 @@ def crown(owner, mats):
                (side*.092,-.056,1.493)],
               [.004,.014,.014,.011,.0003],(side*.6,-1,.05),dark,owner,
               "UNDER_FRINGE",ink,camber=.0011,strand_lines=1)
-    # Actual upper crown-to-knot gathering follows the dome around both sides.
-    for side,label in ((-1,"R"),(1,"L")):
-        for i in range(4):
-            x = .042 + i*.021
-            guides = [(side*.007,.024,1.759-i*.002), (side*x,.061,1.735-i*.009),
-                      (side*(x+.022),.112,1.686-i*.007), (side*.038,.160,1.623+i*.003)]
-            panel("MiaHair_Gather_%s%d" % (label,i), guides,
-                  [.004,.024,.022,.005], (side*.6,.8,.2), ash if i==2 else dark,
-                  owner,"CROWN_GATHER",ink,camber=.0013,strand_lines=1)
-    for i,x in enumerate((-.030,0,.030)):
-        panel("MiaHair_Gather_BackPart%d"%i,
-              [(x*.12,.026,1.762),(x*.6,.092,1.731),(x,.145,1.686),(x*.4,.164,1.634)],
-              [.004,.026,.028,.005],(0,1,.3),ash if i==0 else dark,owner,"CROWN_GATHER",ink,camber=.0013,strand_lines=1)
-    for side,label in ((-1,"R"),(1,"L")):
-        panel("MiaHair_Gather_Temple"+label,
-              [(side*.044,-.002,1.737),(side*.101,.008,1.691),
-               (side*.119,.050,1.654),(side*.095,.121,1.628),(side*.035,.158,1.625)],
-              [.004,.024,.027,.023,.004],(side,.0,.1),dark,owner,"CROWN_GATHER",ink,camber=.0013,strand_lines=1)
+    # Five broad, unoutlined gathering flows replace thirteen equally ranked
+    # narrow plates. Their final control points enter the closed knot volume.
+    gather=[
+        ('LeftTemple',[(-.038,.004,1.737),(-.101,.045,1.691),(-.115,.100,1.650),(-.068,.145,1.629),(-.015,.155,1.626)], [.005,.035,.038,.025,.002]),
+        ('RightTemple',[(.044,.006,1.738),(.105,.049,1.689),(.115,.108,1.651),(.065,.149,1.632),(.014,.156,1.627)], [.005,.033,.037,.027,.002]),
+        ('LeftRear',[(-.003,.026,1.760),(-.055,.092,1.728),(-.055,.147,1.685),(-.025,.166,1.642),(-.010,.154,1.624)], [.004,.033,.037,.025,.002]),
+        ('RightRear',[(.008,.027,1.759),(.055,.094,1.729),(.054,.145,1.690),(.024,.164,1.643),(.010,.154,1.624)], [.004,.034,.038,.026,.002]),
+        ('BackCenter',[(.002,.030,1.760),(.001,.107,1.726),(-.004,.157,1.680),(.006,.170,1.644),(.002,.154,1.624)], [.004,.028,.031,.022,.002]),
+    ]
+    for name,guides,widths in gather:
+        panel('MiaHair_GatherSoft_'+name,guides,widths,
+              lambda p:(p.x*4,p.y-.025,.2),dark,owner,'CROWN_GATHER',None,
+              camber=.0016,strand_lines=0)
     # Smaller asymmetric splits sit on selected larger bangs; they do not form
     # a second equally ranked fringe or a straight bowl edge.
     small=[
@@ -469,26 +539,8 @@ def loose_waves(owner,mats):
                       [w*(.37 if child<0 else .33) for w in (.012,.030,.025,.028,.019,.0004)],
                       (side*.7,-.8,0),ash if i==1 and child<0 else dark,owner,
                       "TEMPLE_LOOSE_WAVE",ink,camber=.0011,strand_lines=1)
-        # Side-to-nape layers cover the support volume while leaving short
-        # tufts to break silhouette. No repeated rose-shaped surface ornaments.
-        for i in range(2):
-            guides=[(side*.096,.057+i*.034,1.671-i*.018),
-                    (side*.126,.077+i*.032,1.596-i*.024),
-                    (side*.152,.078+i*.030,1.514-i*.023),
-                    (side*.142,.093+i*.030,1.436-i*.027),
-                    (side*.165,.074+i*.033,1.379-i*.025),
-                    (side*.153,.088+i*.031,1.347-i*.018)]
-            for child in (-1,1):
-                flow=[]
-                for j,p in enumerate(guides):
-                    u=j/(len(guides)-1)
-                    flow.append((p[0]+side*child*.003*u,p[1]+child*.012*u,
-                                 p[2]+child*.017*u*u))
-                panel("MiaHair_%s_SideNape%d_%d"%(label,i,child),flow,
-                      [w*(.35 if child<0 else .32) for w in (.009,.031,.033,.033,.019,.0003)],
-                      (side,.2,.0),dark if i==0 else ash,owner,"SIDE_NAPE",ink,
-                      camber=.0012,strand_lines=1)
         for i,(z,y,length) in enumerate(((1.652,-.010,.175),(1.566,.018,.180),(1.476,.066,.145))):
+            if i==2:continue # only one rear-side curl per side; front wisp remains unchanged
             length=min(length,z-1.435)
             guides=[(side*.125,y,z),(side*.141,y-.010,z-length*.38),
                     (side*.155,y-.010,z-length*.72),(side*.162,y,z-length)]
@@ -500,45 +552,7 @@ def loose_waves(owner,mats):
             wisp_region = "SIDE_WISP" if i == 0 else "SIDE_REAR_WISP"
             panel("MiaHair_%s_LooseWisp%d"%(label,i),guides,[.001,.0035,.0028,.0002],
                   (side,-.4,.1),dark,owner,wisp_region,ink,camber=.0005,cols=7,strand_lines=0)
-    # Rear loose hair starts below/around the half-up gathering. The uneven
-    # lengths, staggered S-bends and overlapping widths avoid a cape-like rim.
-    specifications=[
-        (-.120,.105,1.653,-.154,1.327),(-.084,.143,1.679,-.118,1.291),
-        (-.043,.159,1.638,-.065,1.319),(.000,.169,1.654,.010,1.283),
-        (.042,.163,1.643,.072,1.307),(.086,.143,1.674,.119,1.292),
-        (.120,.102,1.641,.151,1.340),
-    ]
-    for i,(x,y,z,endx,endz) in enumerate(specifications):
-        bend=1 if i%2 else -1
-        guides=[(x*.72,y*.70,z+.018),(x+bend*.018,y+.014,z-.078),
-                (x-bend*.010,y+.018,z-.154),(endx+bend*.016,y-.018,endz+.055),
-                (endx,y-.035,endz)]
-        for child in ((-1,0,1) if i in (0,2,3,5) else (-1,1)):
-            flow=[]
-            for j,p in enumerate(guides):
-                u=j/(len(guides)-1)
-                flow.append((p[0]+child*.014*u,p[1]+abs(child)*.002,
-                             p[2]+child*.022*u*u))
-            scale=.31 if child<=0 else .27
-            panel("MiaHair_Rear_LongWave%02d_%d"%(i,child),flow,
-                  [w*scale for w in (.001,.034,.035,.026,.0004)],
-                  (x*3,1,.1),ash if i in (2,5) and child<=0 else dark,
-                  owner,"NAPE_LONG_WAVE",ink,camber=.0012,strand_lines=1)
-    # Short overlapping rear tiers retain large shared masses; they are not
-    # equal-ranking copies of every long wave.
-    for i,(x,z) in enumerate(((-.096,1.465),(-.035,1.443),(.038,1.476),(.102,1.450))):
-        guides=[(x*.30,.110,1.697),(x,.176,1.593),(x*1.2,.184,z+.075),
-                (x*1.05,.171,z),(x*.82,.181,z-.028)]
-        for child in (-1,0,1):
-            flow=[]
-            for j,p in enumerate(guides):
-                u=j/(len(guides)-1)
-                flow.append((p[0]+child*.015*u,p[1]+abs(child)*.002,
-                             p[2]+child*.019*u*u))
-            panel("MiaHair_Rear_ShortLayer%02d_%d"%(i,child),flow,
-                  [w*(.33 if child<=0 else .30) for w in (.001,.035,.035,.024,.0004)],
-                  (x*2,1,.1),dark if i%2 or child else ash,owner,"NAPE_SHORT_LAYER",ink,
-                  camber=.0012,strand_lines=1)
+    rear_hierarchy(owner,mats)
 
 
 def knot_and_braid(owner,mats):
@@ -550,25 +564,24 @@ def knot_and_braid(owner,mats):
         p=math.pi*i/(rings-1)
         for j in range(segments):
             a=math.tau*j/segments
-            radial=1+.065*math.sin(3*a+2*p)
-            vertices.append((.044*math.sin(p)*math.cos(a)*radial,
-                             .157+.034*math.sin(p)*math.sin(a)*radial,
-                             1.625+.037*math.cos(p)))
+            radial=1+.045*math.sin(3*a+2*p)
+            vertices.append((.046*math.sin(p)*math.cos(a)*radial,
+                             .157+.029*math.sin(p)*math.sin(a)*radial,
+                             1.625+.032*math.cos(p)))
     for i in range(rings-1):
         for j in range(segments):
             a=i*segments+j;b=i*segments+(j+1)%segments
             faces.append((a,b,b+segments,a+segments))
     mesh("MiaHair_HalfUp_OneClosedKnot",vertices,faces,dark,owner,"HALF_UP_KNOT")
-    for i in range(6):
-        a=i*math.tau/6
-        guides=[]
-        for j in range(6):
-            t=j/5
-            ang=a+t*math.pi*1.3
-            guides.append((.044*math.cos(ang),.159+.036*math.sin(ang),1.625+.029*math.sin(t*math.pi-.7)))
-        panel("MiaHair_Knot_Wrap%02d"%i,guides,[.003,.008,.009,.009,.006,.001],
-              lambda p:(p.x,p.y-.157,(p.z-1.625)*.7),ash if i==2 else dark,owner,"KNOT_WRAP",ink,
-              camber=.0017,cols=7,strand_lines=1)
+    wraps=[
+        ([(-.025,.150,1.644),(-.045,.173,1.628),(-.013,.189,1.606),(.023,.170,1.614)],[.003,.011,.010,.002]),
+        ([(.026,.155,1.644),(.039,.177,1.631),(.014,.190,1.612),(-.021,.169,1.615)],[.003,.010,.011,.002]),
+        ([(-.026,.150,1.618),(-.032,.179,1.611),(.006,.190,1.615),(.020,.164,1.638)],[.002,.007,.008,.002]),
+    ]
+    for i,(guides,widths)in enumerate(wraps):
+        panel('MiaHair_Knot_SoftWrap%d'%i,guides,widths,
+              lambda p:(p.x,p.y-.157,(p.z-1.625)*.7),dark,owner,'KNOT_WRAP',None,
+              camber=.0010,cols=9,strand_lines=0)
     centers=[(.100,-.003,1.606),(.111,-.028,1.561),(.121,-.066,1.493),
              (.132,-.102,1.406),(.145,-.111,1.319)]
     for lane in range(3):
