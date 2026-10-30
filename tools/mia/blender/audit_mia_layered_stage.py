@@ -229,6 +229,37 @@ def canonical_owner_check(meshes):
     return result
 
 
+def shape_key_names(obj):
+    if not obj or not obj.data.shape_keys:
+        return []
+    return [key.name for key in obj.data.shape_keys.key_blocks]
+
+
+def canonical_face_morph_report(owner_check):
+    """Compare the active face against the archived source without limiting additions."""
+    active_name = next(iter(owner_check["canonical_visible_face_names"]), None)
+    active = bpy.data.objects.get(active_name) if active_name else None
+    archived = bpy.data.objects.get("Face")
+    active_names = shape_key_names(active)
+    archived_names = shape_key_names(archived)
+    missing = [name for name in archived_names if name not in active_names]
+    extras = [name for name in active_names if name not in archived_names]
+    archived_sequence_in_active_order = [name for name in active_names if name in archived_names]
+    return {
+        "canonical_face_object": active.name if active else None,
+        "canonical_face_key_count": len(active_names),
+        "canonical_face_key_names": active_names,
+        "archived_source_face_object": archived.name if archived else None,
+        "archived_source_face_key_count": len(archived_names),
+        "archived_source_face_key_names": archived_names,
+        "missing_archived_source_key_names": missing,
+        "extra_corrective_key_names": extras,
+        "all_archived_source_names_preserved": bool(archived) and not missing,
+        "archived_source_order_preserved": bool(archived) and archived_sequence_in_active_order == archived_names,
+        "note": "Extra corrective keys are reported, not rejected solely because of count.",
+    }
+
+
 def render_set(scene, camera, output, mode, views):
     records = []
     for scale_name, target, ortho, distance in views:
@@ -266,6 +297,7 @@ def main():
     camera = make_camera()
     meshes = stage_meshes()
     owner_check = canonical_owner_check(meshes)
+    morph_report = canonical_face_morph_report(owner_check)
     if not owner_check["passed"]:
         after = digest(source)
         report.write_text(json.dumps({
@@ -274,6 +306,7 @@ def main():
             "input_unchanged": before == after,
             "inventory": inventory(meshes),
             "duplicate_owner_checks": owner_check,
+            "canonical_face_morphs": morph_report,
             "status": "EVIDENCE_ONLY: PRE_RENDER_OWNER_GATE_FAILED",
         }, indent=2), encoding="utf-8")
         raise RuntimeError(owner_check["failure"])
@@ -325,7 +358,7 @@ def main():
                               "views": [{"scale": n, "target": t, "ortho": o} for n, t, o, _ in views]}},
         "inventory": inventory(meshes),
         "duplicate_owner_checks": owner_check,
-        "shape_key_43_count": sum(1 for obj in meshes if obj.data.shape_keys and len(obj.data.shape_keys.key_blocks) == 43),
+        "canonical_face_morphs": morph_report,
         "isolation": isolation,
         "art_records": art, "structure_records": structure,
         "actual_art_count": len(art), "actual_structure_count": len(structure),
