@@ -116,6 +116,7 @@ def main():
     bpy.context.scene.collection.children.link(imported)
     imported.name = "Anatomy"
     anatomy_objects = list(imported.objects)
+    bpy.context.view_layer.update()
     body = bpy.data.objects.get(EXPECTED_BODY)
     if body is None or body not in anatomy_objects:
         raise RuntimeError("expected CC0 body object %r not in scoped collection" % EXPECTED_BODY)
@@ -132,12 +133,39 @@ def main():
             obj["role"] = "existing_base_eye_geometry"
             eyes.append(obj.name)
     mask_cleanup = disable_mask_modifiers(anatomy_objects)
-    low, high = collection_bounds(anatomy_objects)
-    original_height = high.z - low.z
+    body_low, body_high = collection_bounds([body])
+    original_height = body_high.z - body_low.z
     factor = 1.68 / original_height
+    body_origin_before = body.matrix_world.translation.copy()
+    eye_relative_before = {
+        eye.name: (eye.matrix_world.translation - body_origin_before).copy()
+        for eye in (bpy.data.objects.get(name) for name in eyes) if eye is not None
+    }
+    root = bpy.data.objects.new("Anatomy_NormalizationRoot", None)
+    imported.objects.link(root)
+    root["role"] = "single_uniform_anatomy_normalization_transform"
+    # Parent only hierarchy roots. Existing child relationships are retained,
+    # so eyes/other future components keep their local relation to the body.
     for obj in anatomy_objects:
-        obj.location = Vector((obj.location.x, obj.location.y, (obj.location.z - low.z) * factor))
-        obj.scale = obj.scale * factor
+        if obj.parent not in anatomy_objects:
+            obj.parent = root
+    root.location = (-((body_low.x + body_high.x) / 2), -((body_low.y + body_high.y) / 2), -body_low.z)
+    root.scale = (factor, factor, factor)
+    bpy.context.view_layer.update()
+    normalized_low, normalized_high = collection_bounds([body])
+    normalized_height = normalized_high.z - normalized_low.z
+    if abs(normalized_height - 1.68) > 0.0001:
+        raise RuntimeError("uniform normalization failed: %.6f m" % normalized_height)
+    eye_relative_after = {
+        eye.name: eye.matrix_world.translation - body.matrix_world.translation
+        for eye in (bpy.data.objects.get(name) for name in eyes) if eye is not None
+    }
+    eye_uniform_errors = {
+        name: max(abs(eye_relative_after[name][axis] - vector[axis] * factor) for axis in range(3))
+        for name, vector in eye_relative_before.items()
+    }
+    if any(error > 0.0001 for error in eye_uniform_errors.values()):
+        raise RuntimeError("eye relative transforms were not uniformly preserved: %s" % eye_uniform_errors)
     for name in ("ScalpGuide", "Hair", "Garments", "Bag", "Hardware", "Refs", "RigGuide"):
         col = new_collection(name)
         col["status"] = "PLANNED_EMPTY"
@@ -178,7 +206,9 @@ def main():
             "existing_eye_objects": eyes,
             "original_height": original_height,
             "uniform_scale_factor": factor,
-            "normalized_height_m": 1.68,
+            "normalized_height_m": normalized_height,
+            "normalization_root": root.name,
+            "eye_relative_uniform_error_max": eye_uniform_errors,
             "mask_modifiers_disabled": mask_cleanup["mask_modifiers"],
             "invalid_visibility_drivers_removed": mask_cleanup["invalid_visibility_drivers_removed"],
             "body_hide_groups": [],
