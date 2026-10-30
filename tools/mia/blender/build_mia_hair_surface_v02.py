@@ -23,7 +23,7 @@ BODY_BVH = None
 BODY_FRAME = None
 CLEARANCE_STATS = {}
 FRONT_REGIONS = {"TEMPLE_LOOSE_WAVE", "SIDE_WISP", "LEFT_BRAID"}
-REAR_REGIONS = {"SIDE_NAPE", "NAPE_LONG_WAVE", "NAPE_SHORT_LAYER", "CONCEALED_VOLUME"}
+REAR_REGIONS = {"SIDE_NAPE", "SIDE_REAR_WISP", "NAPE_LONG_WAVE", "NAPE_SHORT_LAYER", "CONCEALED_VOLUME"}
 PROFILES = [
     (1.766,.001,.001,.021),(1.744,.056,.066,.021),
     (1.712,.088,.102,.023),(1.673,.107,.117,.024),
@@ -454,11 +454,11 @@ def loose_waves(owner,mats):
         for i in range(3):
             lift=i*.014
             guides=[(side*(.077+i*.012),.003,1.677-i*.018),
-                    (side*(.117+i*.012),-.021,1.579-i*.020),
-                    (side*(.126+i*.017),-.038,1.513-i*.020),
-                    (side*(.144+i*.006),-.034,1.485-i*.008),
-                    (side*(.146+i*.006),-.029,1.462-i*.004),
-                    (side*(.145+i*.006),-.022,1.437-i*.001)]
+                    (side*(.117+i*.012),-.055,1.579-i*.020),
+                    (side*(.126+i*.017),-.090,1.513-i*.020),
+                    (side*(.144+i*.006),-.112,1.485-i*.008),
+                    (side*(.146+i*.006),-.120,1.462-i*.004),
+                    (side*(.145+i*.006),-.125,1.437-i*.001)]
             for child in (-1,1):
                 flow=[]
                 for j,p in enumerate(guides):
@@ -492,8 +492,14 @@ def loose_waves(owner,mats):
             length=min(length,z-1.435)
             guides=[(side*.125,y,z),(side*.141,y-.010,z-length*.38),
                     (side*.155,y-.010,z-length*.72),(side*.162,y,z-length)]
+            if i == 0:
+                guides = [(p[0], depth, p[2]) for p, depth in
+                          zip(guides, (-.010, -.050, -.085, -.100))]
+            # These two wisps originate behind the ear. Front projection folded
+            # them around the shoulder; keep their intended rear-side flow.
+            wisp_region = "SIDE_WISP" if i == 0 else "SIDE_REAR_WISP"
             panel("MiaHair_%s_LooseWisp%d"%(label,i),guides,[.001,.0035,.0028,.0002],
-                  (side,-.4,.1),dark,owner,"SIDE_WISP",ink,camber=.0005,cols=7,strand_lines=0)
+                  (side,-.4,.1),dark,owner,wisp_region,ink,camber=.0005,cols=7,strand_lines=0)
     # Rear loose hair starts below/around the half-up gathering. The uneven
     # lengths, staggered S-bends and overlapping widths avoid a cape-like rim.
     specifications=[

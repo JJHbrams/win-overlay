@@ -27,6 +27,8 @@ IMAGE_NAME = "Mia_FaceArt_UV_Pigment"
 PROPORTION_KEY = "MIA_FaceArt_EyeProportion"
 NEUTRAL_CLOSE = .45
 UNDER_EYE_STRENGTH = .38
+NOSE_MARKER = None
+BASE_SKIN = (.94, .88, .85, 1.0)
 
 
 def cli():
@@ -38,9 +40,12 @@ def cli():
     p.add_argument("--resolution", type=int, default=768)
     p.add_argument("--neutral-close", type=float, default=NEUTRAL_CLOSE)
     p.add_argument("--under-eye-strength", type=float, default=UNDER_EYE_STRENGTH)
+    p.add_argument("--outline-width", type=float, default=.00065, help="Rendered skin contour shell width in metres; 0 disables it")
     args = p.parse_args(sys.argv[sys.argv.index("--") + 1:])
     if not 0 <= args.neutral_close <= 1 or not 0 <= args.under_eye_strength <= 1:
         p.error("Neutral closure and pigment strength must be between 0 and 1")
+    if not 0 <= args.outline_width <= .003:
+        p.error("Outline width must be between 0 and 3mm")
     return args
 
 
@@ -459,7 +464,7 @@ def pigment(world, contours):
     """Paint in source surface coordinates, rasterized onto its unchanged UVs."""
     x, y, z = world
     color = np.empty((*x.shape, 4), dtype=np.float32)
-    color[..., :] = (.83, .73, .70, 1.0)
+    color[..., :] = BASE_SKIN
     for contour in contours:
         u = (x - contour["center_x"]) / (contour["half_width"] * 1.02)
         poly = contour["lower_z_poly"]
@@ -470,6 +475,15 @@ def pigment(world, contours):
         strength = np.exp(-np.maximum(0,below)/.0022) * side * UNDER_EYE_STRENGTH
         strength *= (below > 0) & (below < .006) & (np.abs(u) < 1) & (y < -.025)
         color[..., :3] = color[..., :3]*(1-strength[..., None]) + np.array((.27, .208, .247))*strength[..., None]
+    if NOSE_MARKER is not None:
+        # A short surface-bound ink accent, positioned from the actual nose tip.
+        a = np.array((NOSE_MARKER[0]+.0015, NOSE_MARKER[2]+.004))
+        b = np.array((NOSE_MARKER[0]+.0040, NOSE_MARKER[2]-.0025))
+        dx, dz = b-a
+        t = np.clip(((x-a[0])*dx+(z-a[1])*dz)/(dx*dx+dz*dz), 0, 1)
+        distance = np.sqrt((x-a[0]-t*dx)**2+(z-a[1]-t*dz)**2)
+        nose_ink = np.clip(1-distance/.0004, 0, 1)*.62*(y < -.08)
+        color[..., :3] = color[..., :3]*(1-nose_ink[..., None])+np.array((.16,.12,.15))*nose_ink[..., None]
         # One restrained lower-lid crease, distinct from a wide gray cheek patch.
         crease_distance = np.abs(below - .0007)
         crease = np.clip(1-crease_distance/.0003, 0, 1)*side*.13
@@ -486,13 +500,19 @@ def pigment(world, contours):
 
 
 def bake_skin(face, path):
+    global NOSE_MARKER
     deps = bpy.context.evaluated_depsgraph_get()
     evaluated = face.evaluated_get(deps)
     mesh = evaluated.to_mesh(preserve_all_data_layers=True, depsgraph=deps)
     contours = lower_eye_contours(face, mesh)
+    nose_points = [face.matrix_world @ mesh.vertices[i].co for i in material_ids(face, 7)]
+    nose_points = [p for p in nose_points if abs(p.x)<.014 and 1.520<p.z<1.545]
+    if not nose_points:
+        raise RuntimeError("Could not locate the source nose surface")
+    NOSE_MARKER = tuple(min(nose_points, key=lambda p: p.y))
     size = 1024
     pixels = np.empty((size,size,4), dtype=np.float32)
-    pixels[:,:,:] = (.83,.73,.70,1)
+    pixels[:,:,:] = BASE_SKIN
     uv = mesh.uv_layers.active.data
     for poly in mesh.polygons:
         if poly.material_index != 7:
@@ -536,7 +556,7 @@ def skin_material(image=None, body_source=None):
         tex=nodes.new("ShaderNodeTexImage");tex.image=image;tex.interpolation="Linear"
         pigment_output=tex.outputs["Color"]
     else:
-        color=nodes.new("ShaderNodeRGB");color.outputs[0].default_value=(.83,.73,.70,1)
+        color=nodes.new("ShaderNodeRGB");color.outputs[0].default_value=BASE_SKIN
         pigment_output=color.outputs[0]
     geometry=nodes.new("ShaderNodeNewGeometry")
     dot=nodes.new("ShaderNodeVectorMath");dot.operation="DOT_PRODUCT"
@@ -566,6 +586,62 @@ def skin_material(image=None, body_source=None):
     mat["owned_pigment_image"]=image.name if image else "uniform matched complexion, original Body alpha preserved"
     mat["rendering_note"]="Unlit pigment with normal-dependent restrained cool tone; no specular skin highlight"
     return mat
+
+
+def add_toon_contours(face, body, width):
+    """Add a culled ink shell; no source skin polygons or key data are removed."""
+    if width == 0:
+        return {"enabled": False}
+    ink, nodes, links = new_nodes("Mia_FaceArt_ContourInk")
+    ink.use_backface_culling = True
+    emission = nodes.new("ShaderNodeEmission")
+    emission.inputs["Color"].default_value = (.018,.014,.018,1)
+    output = nodes.new("ShaderNodeOutputMaterial")
+    links.new(emission.outputs[0], output.inputs["Surface"])
+    modifiers = []
+    for obj, skin_slot in ((body, 0), (face, 7)):
+        skin = obj.data.materials[skin_slot]
+        obj.data.materials.append(ink)
+        tree = bpy.data.node_groups.new("Mia_Contour_"+obj.name, "GeometryNodeTree")
+        tree.interface.new_socket(name="Geometry", in_out="INPUT", socket_type="NodeSocketGeometry")
+        tree.interface.new_socket(name="Geometry", in_out="OUTPUT", socket_type="NodeSocketGeometry")
+        ns, ls = tree.nodes, tree.links
+        gi, go = ns.new("NodeGroupInput"), ns.new("NodeGroupOutput")
+        material = ns.new("GeometryNodeMaterialSelection")
+        material.inputs["Material"].default_value = skin
+        selection = material.outputs["Selection"]
+        if obj == face:
+            # Bind the ink region to rest topology, so head motion cannot make
+            # the jaw selection cross a fixed height threshold and pop.
+            attr_name = "Mia_ContourRestRegion"
+            attribute = obj.data.attributes.new(attr_name, "FLOAT", "POINT")
+            for i, point in enumerate(obj.data.shape_keys.key_blocks[0].data):
+                x, _, z = point.co
+                attribute.data[i].value = float((((abs(x)>.035) or z<1.49) and z<1.57) or abs(x)>.080)
+            named = ns.new("GeometryNodeInputNamedAttribute"); named.data_type="FLOAT"
+            named.inputs["Name"].default_value=attr_name
+            majority=ns.new("ShaderNodeMath"); majority.operation="GREATER_THAN"; majority.inputs[1].default_value=.5
+            ls.new(named.outputs["Attribute"],majority.inputs[0])
+            mask=ns.new("FunctionNodeBooleanMath"); mask.operation="AND"
+            ls.new(selection,mask.inputs[0]); ls.new(majority.outputs[0],mask.inputs[1]); selection=mask.outputs[0]
+        separate=ns.new("GeometryNodeSeparateGeometry"); separate.domain="FACE"
+        ls.new(gi.outputs["Geometry"],separate.inputs["Geometry"]); ls.new(selection,separate.inputs["Selection"])
+        normal=ns.new("GeometryNodeInputNormal")
+        scale=ns.new("ShaderNodeVectorMath"); scale.operation="SCALE"; scale.inputs["Scale"].default_value=width
+        ls.new(normal.outputs[0],scale.inputs[0])
+        position=ns.new("GeometryNodeSetPosition")
+        ls.new(separate.outputs["Selection"],position.inputs["Geometry"]); ls.new(scale.outputs["Vector"],position.inputs["Offset"])
+        flip=ns.new("GeometryNodeFlipFaces"); ls.new(position.outputs["Geometry"],flip.inputs["Mesh"])
+        assign=ns.new("GeometryNodeSetMaterial"); assign.inputs["Material"].default_value=ink
+        ls.new(flip.outputs["Mesh"],assign.inputs["Geometry"])
+        join=ns.new("GeometryNodeJoinGeometry")
+        ls.new(gi.outputs["Geometry"],join.inputs["Geometry"]); ls.new(assign.outputs["Geometry"],join.inputs["Geometry"])
+        ls.new(join.outputs[0],go.inputs["Geometry"])
+        modifier=obj.modifiers.new("MIA_Contour_OUTLINE","NODES"); modifier.node_group=tree
+        modifiers.append({"object":obj.name,"modifier":modifier.name})
+    return {"enabled":True,"width_m":width,"modifiers":modifiers,
+            "face_scope":"rest-bound jaw/ear skin shell; central nose and mouth excluded from shell",
+            "structure_qa":"Disable OUTLINE modifiers to inspect the unchanged physical skin meshes"}
 
 
 def camera_setup(resolution):
@@ -625,6 +701,7 @@ def main():
     original_body_materials=[m.name for m in body.data.materials]
     body.data.materials[0]=skin_material(body_source=body.data.materials[0])
     upper_rim=build_upper_rim(face,rim_uv_paths)
+    toon_contours = add_toon_contours(face, body, a.outline_width)
     # The new owned physical line replaces these source paint cards visually.
     face.data.materials[2]=owned_ink(source_materials[2],"Mia_FaceArt_SourceRim_Transparent","lash")
     camera=camera_setup(a.resolution)
@@ -668,6 +745,9 @@ def main():
         "output":output,"output_sha256":sha(output),
         "builder_sha256":sha(__file__),
         "look_parameters":{"neutral_close":NEUTRAL_CLOSE,"under_eye_strength":UNDER_EYE_STRENGTH},
+        "nose_marker_surface_anchor":NOSE_MARKER,
+        "base_skin_rgba":BASE_SKIN,
+        "toon_contours":toon_contours,
         "original_face_fingerprint":original_face,"face_fingerprint_after":fingerprint(face,names),
         "original_body_fingerprint":original_body,"body_fingerprint_after":fingerprint(body),
         "original_shape_key_count":len(names),"original_shape_key_names":names,
