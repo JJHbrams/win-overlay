@@ -1,0 +1,91 @@
+{
+  "schema": "mia-layered-foundation/v1",
+  "status": "INCOMPLETE",
+  "source_bundle": "C:\\Users\\antio\\.codex\\visualizations\\2026\\10\\29\\01a1885c-8934-7af0-a487-a7f8d5981f65\\mia-blender-source\\human-base-meshes-v1.4.1\\human-base-meshes-bundle-v1.4.1\\human_base_meshes_bundle.blend",
+  "source_bundle_sha256_before": "3C121505651140CEB4D69FD1D8923F7788FFADD81672F5BE14845A5F2C75C137",
+  "license": {
+    "scoped_collection": "Body Female - Stylized",
+    "metadata_author": "Julien Kaspar",
+    "metadata_license": "CC0",
+    "scope_note": "Other source-bundle contents, including the Rain Rig CC-BY license text, were not appended."
+  },
+  "anatomy": {
+    "body_object": "BodyHead_Master",
+    "source_topology": {
+      "vertices": 12502,
+      "polygons": 12500
+    },
+    "existing_eye_objects": [
+      "Eyes_body_female_stylized.eye.L",
+      "Eyes_body_female_stylized.eye.R"
+    ],
+    "original_height": 1.6515318155288696,
+    "uniform_scale_factor": 1.017237442357121,
+    "normalized_height_m": 1.68,
+    "mask_modifiers_disabled": [],
+    "invalid_visibility_drivers_removed": [
+      {
+        "object": "BodyHead_Master",
+        "data_path": "modifiers[\"mask_arms\"].show_viewport"
+      },
+      {
+        "object": "BodyHead_Master",
+        "data_path": "modifiers[\"mask_legs\"].show_viewport"
+      },
+      {
+        "object": "Eyes_body_female_stylized.eye.L",
+        "data_path": "modifiers[\"mask_arms\"].show_viewport"
+      },
+      {
+        "object": "Eyes_body_female_stylized.eye.L",
+        "data_path": "modifiers[\"mask_legs\"].show_viewport"
+      },
+      {
+        "object": "Eyes_body_female_stylized.eye.R",
+        "data_path": "modifiers[\"mask_arms\"].show_viewport"
+      },
+      {
+        "object": "Eyes_body_female_stylized.eye.R",
+        "data_path": "modifiers[\"mask_legs\"].show_viewport"
+      }
+    ],
+    "body_hide_groups": []
+  },
+  "references": [
+    {
+      "file": "mia-clean-master-v22.png",
+      "packed": true,
+      "object": "REF_mia-clean-master-v22"
+    },
+    {
+      "file": "mia-canonical-source-v22.png",
+      "packed": true,
+      "object": "REF_mia-canonical-source-v22"
+    },
+    {
+      "file": "mia-expressions-clean-16-v22.png",
+      "packed": true,
+      "object": "REF_mia-expressions-clean-16-v22"
+    }
+  ],
+  "planned_empty_collections": [
+    "ScalpGuide",
+    "Hair",
+    "Garments",
+    "Bag",
+    "Hardware",
+    "RigGuide"
+  ],
+  "pending": [
+    "Mia-specific sculpt",
+    "hair",
+    "garments",
+    "bag",
+    "hardware",
+    "rig",
+    "correctives",
+    "event animation"
+  ],
+  "source_bundle_sha256_after": "3C121505651140CEB4D69FD1D8923F7788FFADD81672F5BE14845A5F2C75C137",
+  "source_bundle_immutable": true
+}
