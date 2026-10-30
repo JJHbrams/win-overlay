@@ -15,9 +15,15 @@ from pathlib import Path
 import bpy
 import bmesh
 from mathutils import Vector
+from mathutils.bvhtree import BVHTree
 
 EXPECTED_SHA = "d90744a9ec2370ae8d9564e482fbffd6b2485334f9571278d4482ce26ac943ca"
 ROOT = Path("D:/ai/Mia3DWork/model-v02/hair-surface-stage")
+BODY_BVH = None
+BODY_FRAME = None
+CLEARANCE_STATS = {}
+FRONT_REGIONS = {"TEMPLE_LOOSE_WAVE", "SIDE_WISP", "LEFT_BRAID"}
+REAR_REGIONS = {"SIDE_NAPE", "NAPE_LONG_WAVE", "NAPE_SHORT_LAYER", "CONCEALED_VOLUME"}
 PROFILES = [
     (1.766,.001,.001,.021),(1.744,.056,.066,.021),
     (1.712,.088,.102,.023),(1.673,.107,.117,.024),
@@ -67,6 +73,62 @@ def fingerprint(obj):
     return h.hexdigest()
 
 
+def build_body_bvh(body):
+    """Only the active canonical body, in its evaluated world frame."""
+    global BODY_BVH, BODY_FRAME
+    deps=bpy.context.evaluated_depsgraph_get()
+    evaluated=body.evaluated_get(deps)
+    data=evaluated.to_mesh(preserve_all_data_layers=True,depsgraph=deps)
+    BODY_FRAME=[list(row)for row in evaluated.matrix_world]
+    BODY_BVH=BVHTree.FromPolygons(
+        [evaluated.matrix_world@v.co for v in data.vertices],
+        [list(p.vertices)for p in data.polygons])
+    evaluated.to_mesh_clear()
+
+
+def body_hit(x,z,front):
+    origin=Vector((x,-2 if front else 2,z))
+    return BODY_BVH.ray_cast(origin,Vector((0,1 if front else -1,0)),4)[0]
+
+
+def body_clearance(point,region,margin=.008):
+    p=Vector(point)
+    if p.z>=1.49 or region not in FRONT_REGIONS|REAR_REGIONS:return p
+    front=region in FRONT_REGIONS
+    hit=body_hit(p.x,p.z,front)
+    if hit is None:return p
+    target=hit.y-margin if front else hit.y+margin
+    prior=p.y
+    p.y=min(p.y,target) if front else max(p.y,target)
+    if abs(p.y-prior)>1e-8:
+        row=CLEARANCE_STATS.setdefault(region,{"adjusted_samples":0,"max_y_shift":0})
+        row["adjusted_samples"]+=1
+        row["max_y_shift"]=max(row["max_y_shift"],abs(p.y-prior))
+    return p
+
+
+def clearance_proof(owned):
+    summary={}
+    for obj in owned.objects:
+        region=obj.get("region")
+        if obj.type!="MESH" or region not in FRONT_REGIONS|REAR_REGIONS:continue
+        row=summary.setdefault(region,{"tested":0,"minimum_clearance":None,"below_3mm":0})
+        data=obj.data
+        samples=[v.co for v in data.vertices]
+        samples.extend(sum((data.vertices[i].co for i in poly.vertices),Vector())/len(poly.vertices)
+                       for poly in data.polygons)
+        front=region in FRONT_REGIONS
+        for p in samples:
+            if p.z>=1.49:continue
+            hit=body_hit(p.x,p.z,front)
+            if hit is None:continue
+            gap=hit.y-p.y if front else p.y-hit.y
+            row["tested"]+=1
+            row["minimum_clearance"]=gap if row["minimum_clearance"] is None else min(gap,row["minimum_clearance"])
+            row["below_3mm"]+=gap<.003
+    return summary
+
+
 def collection(name):
     result = bpy.data.collections.new(name)
     bpy.context.scene.collection.children.link(result)
@@ -112,7 +174,9 @@ def catmull(points, t):
 def piecewise(values, t):
     u = min(.999999, max(0, t)) * (len(values) - 1)
     index = int(u)
-    return values[index] * (1 - (u-index)) + values[index+1] * (u-index)
+    x=u-index
+    a,b,c,d=[values[min(len(values)-1,max(0,j))]for j in (index-1,index,index+1,index+2)]
+    return .5*((2*b)+(-a+c)*x+(2*a-5*b+4*c-d)*x*x+(-a+3*b-3*c+d)*x*x*x)
 
 
 def on_crown_surface(center):
@@ -158,7 +222,7 @@ def actual_crown_surface(point, offset=0):
 
 def mesh(name, vertices, polygons, mat, owner, region):
     data = bpy.data.meshes.new(name + "_MESH")
-    data.from_pydata(vertices, [], polygons)
+    data.from_pydata([body_clearance(p,region)for p in vertices], [], polygons)
     data.materials.append(mat)
     data.update()
     if region in ("CONCEALED_VOLUME","HALF_UP_KNOT","LEFT_BRAID"):
@@ -184,7 +248,7 @@ def line(name, points, radius, mat, owner, region):
     data.bevel_resolution = 2
     sp = data.splines.new("POLY")
     sp.points.add(len(points)-1)
-    for item, co in zip(sp.points, points):
+    for item, co in zip(sp.points, [body_clearance(p,region,.008+radius)for p in points]):
         item.co = (*co, 1)
     data.materials.append(mat)
     obj = bpy.data.objects.new(name, data)
@@ -228,12 +292,15 @@ def panel(name, guides, widths, facing, mat, owner, region, ink=None,
             q = j / (cols-1)*2-1
             height = camber*(1-q*q)*math.sin(math.pi*min(.95, t+.05))**.35
             vertex=center + across*q*half_width + normal*height
-            if region in ("CROWN_GATHER","SIDE_NAPE") and t<.82:
+            if region in ("CROWN_GATHER","SIDE_NAPE") and t<.86:
                 # The root enters the support smoothly; patch edges follow its
                 # curvature instead of slicing it in staircase-shaped cuts.
                 buried=max(0,min(1,t/.16))
                 attach_offset=-.0015*(1-buried)+(.0010+height)*buried
-                vertex=actual_crown_surface(vertex,attach_offset)
+                projected=actual_crown_surface(vertex,attach_offset)
+                release=max(0,min(1,(t-.60)/.26))
+                release=release*release*(3-2*release)
+                vertex=projected.lerp(vertex,release)
             coordinates.append(vertex)
     for i in range(rows-1):
         for j in range(cols-1):
@@ -389,9 +456,9 @@ def loose_waves(owner,mats):
             guides=[(side*(.077+i*.012),.003,1.677-i*.018),
                     (side*(.117+i*.012),-.021,1.579-i*.020),
                     (side*(.126+i*.017),-.038,1.513-i*.020),
-                    (side*(.146+i*.007),-.019,1.456-i*.021),
-                    (side*(.133+i*.012),-.006,1.415-i*.035),
-                    (side*(.156+i*.003),.006,1.389-i*.038)]
+                    (side*(.144+i*.006),-.034,1.485-i*.008),
+                    (side*(.146+i*.006),-.029,1.462-i*.004),
+                    (side*(.145+i*.006),-.022,1.437-i*.001)]
             for child in (-1,1):
                 flow=[]
                 for j,p in enumerate(guides):
@@ -422,10 +489,11 @@ def loose_waves(owner,mats):
                       (side,.2,.0),dark if i==0 else ash,owner,"SIDE_NAPE",ink,
                       camber=.0012,strand_lines=1)
         for i,(z,y,length) in enumerate(((1.652,-.010,.175),(1.566,.018,.180),(1.476,.066,.145))):
-            guides=[(side*.125,y,z),(side*.146,y-.018,z-length*.38),
-                    (side*.170,y-.007,z-length*.72),(side*.156,y+.010,z-length)]
-            panel("MiaHair_%s_LooseWisp%d"%(label,i),guides,[.002,.007,.005,.0002],
-                  (side,-.4,.1),dark,owner,"SIDE_WISP",ink,camber=.0008,cols=7,strand_lines=0)
+            length=min(length,z-1.435)
+            guides=[(side*.125,y,z),(side*.141,y-.010,z-length*.38),
+                    (side*.155,y-.010,z-length*.72),(side*.162,y,z-length)]
+            panel("MiaHair_%s_LooseWisp%d"%(label,i),guides,[.001,.0035,.0028,.0002],
+                  (side,-.4,.1),dark,owner,"SIDE_WISP",ink,camber=.0005,cols=7,strand_lines=0)
     # Rear loose hair starts below/around the half-up gathering. The uneven
     # lengths, staggered S-bends and overlapping widths avoid a cape-like rim.
     specifications=[
@@ -507,6 +575,11 @@ def knot_and_braid(owner,mats):
             v=tangent.cross(u).normalized()
             phase=t*math.tau*6.5+lane*math.tau/3
             radius=.010*(1-.48*t)
+            if c.z<1.49:
+                full_radius=radius+.0073*(1-.55*t)
+                hits=[body_hit(c.x+offset,c.z,True)for offset in (-full_radius,0,full_radius)]
+                hits=[p for p in hits if p is not None]
+                if hits:c.y=min(c.y,min(p.y for p in hits)-full_radius-.008)
             points.append(c+u*(radius*math.cos(phase))+v*(radius*.70*math.sin(phase)))
         verts,polys=[],[]
         section=10
@@ -528,7 +601,8 @@ def knot_and_braid(owner,mats):
         obj["braid_assembly"]="ONE_ANATOMICAL_LEFT_BRAID"
         # A narrow front-facing internal stroke makes each over/under lobe read.
         line("MiaHair_Braid_Etch%d"%lane,[p+Vector((0,-.004,0)) for p in points],.00035,ink,owner,"LEFT_BRAID")
-    tail=[(.145,-.111,1.330),(.145,-.110,1.310),(.153,-.109,1.292)]
+    tail=[body_clearance(p,"LEFT_BRAID",.0165)for p in
+          ((.145,-.111,1.330),(.145,-.110,1.310),(.153,-.109,1.292))]
     panel("MiaHair_Braid_Tail",tail,[.011,.009,.0003],(0,-1,0),dark,owner,"LEFT_BRAID",ink,cols=9,strand_lines=2)
 
 
@@ -592,6 +666,7 @@ def main():
     assert {o.name for o in primary}=={o.name for o in canonical} and len(primary)==2,"Duplicate canonical anatomy"
     before={o.name:fingerprint(o) for o in canonical}
     source_expression={k.name:k.value for k in canonical[0].data.shape_keys.key_blocks}
+    build_body_bvh(canonical[1])
     owned=collection("MIA_HAIR_SURFACE_V01_OWNED")
     mats=(material("MiaHairSurface_Charcoal",(.051,.046,.053)),
           material("MiaHairSurface_Ash",(.073,.066,.073)),
@@ -604,6 +679,7 @@ def main():
     after={o.name:fingerprint(o) for o in canonical}
     assert before==after,"Anatomy changed"
     assert source_expression=={k.name:k.value for k in canonical[0].data.shape_keys.key_blocks},"Expression changed"
+    clearance=clearance_proof(owned)
     Path(args.output).parent.mkdir(parents=True,exist_ok=True)
     bpy.ops.wm.save_as_mainfile(filepath=args.output)
     frames=render(args,owned)
@@ -614,6 +690,10 @@ def main():
             "builder_sha256":sha(__file__),
             "owned_collection":owned.name,"mesh_objects":sum(o.type=="MESH"for o in owned.objects),
             "canonical_expression_preserved":True,"input_expression":source_expression,
+            "clearance_target":"evaluated active Mia_Body_Anatomy_Skin; no archived donor/Face ray target",
+            "clearance_body_world":BODY_FRAME,"clearance_adjustments":CLEARANCE_STATS,
+            "clearance_vertex_and_face_center_proof":clearance,
+            "clearance_scope":"below z1.49; semantic front locks/braid and rear nape/support, scalp roots exempt",
             "articulation":"unrigged static hair study; no secondary animation claim",
             "braid_assemblies":1,"braid_lanes":3,"construction":"closed concealed volume + regional authored shallow convex panels",
             "renders":frames}
