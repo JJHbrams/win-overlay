@@ -149,13 +149,22 @@ def main():
     for obj in anatomy_objects:
         if obj.parent not in anatomy_objects:
             obj.parent = root
-    root.location = (-((body_low.x + body_high.x) / 2), -((body_low.y + body_high.y) / 2), -body_low.z)
+    # Parent world transform is T(root.location) @ S(factor), therefore the
+    # translation must be scaled too: S(factor) @ T(-center, -ground).
+    root.location = (-((body_low.x + body_high.x) / 2) * factor,
+                     -((body_low.y + body_high.y) / 2) * factor,
+                     -body_low.z * factor)
     root.scale = (factor, factor, factor)
     bpy.context.view_layer.update()
     normalized_low, normalized_high = collection_bounds([body])
     normalized_height = normalized_high.z - normalized_low.z
+    normalized_center_xy = ((normalized_low.x + normalized_high.x) / 2,
+                            (normalized_low.y + normalized_high.y) / 2)
     if abs(normalized_height - 1.68) > 0.0001:
         raise RuntimeError("uniform normalization failed: %.6f m" % normalized_height)
+    if abs(normalized_low.z) > 0.0001 or max(abs(value) for value in normalized_center_xy) > 0.0001:
+        raise RuntimeError("ground/center normalization failed: low_z=%.6f center_xy=%s" %
+                           (normalized_low.z, normalized_center_xy))
     eye_relative_after = {
         eye.name: eye.matrix_world.translation - body.matrix_world.translation
         for eye in (bpy.data.objects.get(name) for name in eyes) if eye is not None
@@ -207,6 +216,9 @@ def main():
             "original_height": original_height,
             "uniform_scale_factor": factor,
             "normalized_height_m": normalized_height,
+            "normalized_bounds_min": list(normalized_low),
+            "normalized_bounds_max": list(normalized_high),
+            "normalized_center_xy": list(normalized_center_xy),
             "normalization_root": root.name,
             "eye_relative_uniform_error_max": eye_uniform_errors,
             "mask_modifiers_disabled": mask_cleanup["mask_modifiers"],
