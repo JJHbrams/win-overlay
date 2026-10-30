@@ -287,12 +287,32 @@ def build_upper_rim(face, uv_paths):
             driver=target.driver_add('value').driver
             var=driver.variables.new();var.name='source_value';var.type='SINGLE_PROP';var.targets[0].id_type='KEY';var.targets[0].id=face.data.shape_keys
             var.targets[0].data_path='key_blocks['+json.dumps(sourcekey.name)+'].value';driver.expression='source_value'
-    weights={}
-    for i in material_ids(face,1):
-        for g in mesh.vertices[i].groups:weights[g.group]=weights.get(g.group,0)+g.weight
-    total=sum(weights.values())
-    for group_index,value in weights.items():
-        group=obj.vertex_groups.new(name=face.vertex_groups[group_index].name);group.add(list(range(len(basis_coords))),value/total,'REPLACE')
+    groups={};side_weights={"negative_X":set(),"positive_X":set()};bound_index=0
+    for path in paths:
+        for uv_point,(indices,barycentric) in path:
+            weights={}
+            for source_index,coefficient in zip(indices,barycentric):
+                for entry in mesh.vertices[source_index].groups:
+                    weights[entry.group]=weights.get(entry.group,0)+entry.weight*coefficient
+            weights={i:max(0,w) for i,w in weights.items() if w>1e-7}
+            total=sum(weights.values())
+            assert total>1e-5,"Upper-rim UV binding has no source deformation weights"
+            normalized={i:w/total for i,w in weights.items()}
+            assert abs(sum(normalized.values())-1)<1e-6
+            for group_index,value in normalized.items():
+                if group_index not in groups:
+                    groups[group_index]=obj.vertex_groups.new(name=face.vertex_groups[group_index].name)
+                groups[group_index].add([bound_index,bound_index+1],value,'REPLACE')
+            point=mw@sum((basis.data[i].co*w for i,w in zip(indices,barycentric)),Vector())
+            side="negative_X" if point.x<0 else "positive_X"
+            significant={face.vertex_groups[i].name for i,w in normalized.items() if w>.01}
+            side_weights[side].update(significant)
+            assert len(significant)==1,"Expected side-specific source EyeSet binding"
+            assert max(normalized.values())>.999,"EyeSet binding was averaged across both eyes"
+            bound_index+=2
+    assert bound_index==len(basis_coords)
+    assert all(len(names)==1 for names in side_weights.values()),"One physical eye has mixed EyeSet owners"
+    assert side_weights["negative_X"]!=side_weights["positive_X"],"Both ribbons use the same EyeSet owner"
     for mod in face.modifiers:
         if mod.type=='ARMATURE':
             copy=obj.modifiers.new('MiaArt_shared_Armature','ARMATURE');copy.object=mod.object;copy.use_deform_preserve_volume=mod.use_deform_preserve_volume
@@ -315,7 +335,7 @@ def build_upper_rim(face, uv_paths):
     close=next(k.name for k in face.data.shape_keys.key_blocks if k.name.endswith('Fcl_EYE_Close'))
     var.targets[0].data_path='key_blocks['+json.dumps(close)+'].value';driver.expression='max(0,min(1,(closed-.56)/.44))'
     pose(face)
-    return {'object':obj.name,'vertices':len(basis_coords),'faces':len(faces),'morphs':len(blocks)+1,'source_morph_drivers':len(blocks)-1,'part_role':obj['part_role'],'half_width_m':.00062,'source_uv_trace':[[(float(u),float(v)) for (u,v),data in path] for path in paths],'forward_clearance_delta_range':[min(min(row) for row in offsets),max(max(row) for row in offsets)],'blink_clearance_delta_range':[min(blink_delta),max(blink_delta)],'blink_clearance_driver':'clamp((Close-.56)/.44,0,1)'}
+    return {'object':obj.name,'vertices':len(basis_coords),'faces':len(faces),'morphs':len(blocks)+1,'source_morph_drivers':len(blocks)-1,'part_role':obj['part_role'],'half_width_m':.00062,'source_uv_trace':[[(float(u),float(v)) for (u,v),data in path] for path in paths],'forward_clearance_delta_range':[min(min(row) for row in offsets),max(max(row) for row in offsets)],'blink_clearance_delta_range':[min(blink_delta),max(blink_delta)],'blink_clearance_driver':'clamp((Close-.56)/.44,0,1)','vertex_weight_binding':'exact source upper-line UV triangle barycentric weights; no cross-eye averaging','EyeSet_distribution':{side:sorted(names) for side,names in side_weights.items()},'per_point_source_EyeSet_asserted':True}
 
 
 def new_nodes(name):
@@ -636,7 +656,7 @@ def main():
         "pigment_texture":{"path":texture_path,"sha256":sha(texture_path),"packed":bool(skin_image.packed_file),"size":list(skin_image.size)},
         "thin_rim_texture":{"path":rim_path,"sha256":sha(rim_path),"packed":bool(rim_image.packed_file),"size":list(rim_image.size),"role":"Diagnostic alpha/UV calibration only; final visible upper line is the owned morph-driven ribbon"},
         "eye_lower_contours":contours,"neutral_values_restored":neutral,"proofs":proofs,
-        "limitations":["Hair framing must be reviewed separately; this source is bald.","Painted closed-lip ink follows skin UV during mouth keys; open-mouth style/corner continuity still requires visual acceptance.","This modifies materials and a named brow corrective only; it is not final likeness or full rig acceptance."]}
+        "limitations":["Hair framing must be reviewed separately; this source is bald.","Painted closed-lip ink follows skin UV during mouth keys; open-mouth style/corner continuity still requires visual acceptance.","This changes owned materials, two facial correctives and a morph-driven upper-rim helper; final likeness, complete expression coverage and final rig remain separate acceptance gates."]}
     os.makedirs(os.path.dirname(os.path.abspath(a.report)),exist_ok=True)
     with open(a.report,"w",encoding="utf-8",newline="\n") as stream:
         json.dump(report,stream,indent=2);stream.write("\n")
