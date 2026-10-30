@@ -6,7 +6,8 @@
   "coordinate_convention": "Front is -Y. Anatomical left braid, anatomical right slate pants panel. Pose differences from pocketed art must be stated.",
   "acceptance_criteria": [
     {
-      "id": "AC1", "critical": true,
+      "id": "AC1",
+      "critical": true,
       "criterion": "Licensed editable anime facial base with eyelid/mouth expression structure, intact face/body volume, owned eye/brow/lash components, Mia facial proportions and supported bust-waist-hip silhouette; no v45 geometry reuse.",
       "user_visible_outcome": "Face and body remain volumetric and coherent from front, side, back and three-quarter closeups.",
       "intended_runtime": "Blender 5.2",
@@ -14,7 +15,8 @@
       "evidence": "Source rights/provenance, preserved original facial topology and morphs, anatomy checkpoint, structure/art audits, blink/mouth proof and SHA-bound stage review"
     },
     {
-      "id": "AC2", "critical": true,
+      "id": "AC2",
+      "critical": true,
       "criterion": "Separate owned scalp/hair with irregular bangs, full rear waves, half-up knot and one anatomical-left braid.",
       "user_visible_outcome": "Hair has coherent thickness and silhouette during rotation without removing face surfaces or duplicating braid.",
       "intended_runtime": "Blender 5.2",
@@ -22,7 +24,8 @@
       "evidence": "Hair checkpoint blend, audit report, owner inventory, SHA-bound stage review"
     },
     {
-      "id": "AC3", "critical": true,
+      "id": "AC3",
+      "critical": true,
       "criterion": "Separate crop tee, inner band, oversized cardigan, patch cargo pants, socks and sneakers with actual thickness and no visible rest-pose body clipping.",
       "user_visible_outcome": "Floating crop hem, low cardigan rear hem, loose sleeves, right-leg slate panel and footwear match the art from all sides.",
       "intended_runtime": "Blender 5.2",
@@ -30,7 +33,8 @@
       "evidence": "Garment checkpoint blend, coverage report, audit, SHA-bound stage review"
     },
     {
-      "id": "AC4", "critical": true,
+      "id": "AC4",
+      "critical": true,
       "criterion": "Single crossbody strap, rear bag, cyan/brass pin, chain and tags with clear Bag/Hardware ownership and physical detail layers.",
       "user_visible_outcome": "Strap follows torso, bag sits behind hip, flap/window/cards/clasp have real depth and no duplicate assemblies appear in three-quarter views.",
       "intended_runtime": "Blender 5.2",
@@ -38,7 +42,8 @@
       "evidence": "Final modeling blend, inventory, audit, SHA-bound stage review"
     },
     {
-      "id": "AC5", "critical": true,
+      "id": "AC5",
+      "critical": true,
       "criterion": "Review and repair each stage before dependent modeling proceeds; require both structure and art QA. Preserve checkpoints and failed procedural experiments, distinguish geometry from normal/material causes, and report artistic gaps honestly.",
       "user_visible_outcome": "Actual stage evidence and identified limitations remain available; image counts never imply likeness acceptance.",
       "intended_runtime": "Blender 5.2 and independent visual review",
@@ -47,5 +52,7 @@
     }
   ],
   "later_work": "Rigging, facial expressions, pose collision/correctives and event animation follow modeling acceptance; this contract covers static modeling.",
-  "status": "IN_PROGRESS"
+  "status": "IN_PROGRESS",
+  "expression_style_authority": "asset/mia/references/mia-expression-style-confirmed-20261031.png; user reaffirmed 2026-10-31",
+  "art_gate_reaffirmation": "Narrow heavy-lidded gray eyes, dry near-level mouth, defined under-eye tone, irregular layered charcoal waves. Anatomy construction approval does not imply final likeness acceptance."
 }

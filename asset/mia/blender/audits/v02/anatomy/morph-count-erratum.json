@@ -1,0 +1,10 @@
+{
+  "schema": "mia-morph-count-erratum-v1",
+  "status": "authoritative_correction",
+  "correction": "The historical field shape_key_43_count was misnamed; the actual Blender shape-key inventory contains 42 keys including Basis (41 non-Basis targets).",
+  "counts": {"Victoria_Rubin_imported.Face": 42, "Mia_Anatomy_v02_candidate_v13_body.Face": 42, "Mia_Anatomy_v02_candidate_v13_body.Mia_Face_AnimeTopology": 42, "Mia_Hair_v02_candidate_v03.Face": 42, "Mia_Hair_v02_candidate_v03.Mia_Face_AnimeTopology": 42, "FaceLook_v01.Face": 42, "FaceLook_v01.Mia_Face_AnimeTopology": 42},
+  "ordered_names_identical": true,
+  "missing_extra_or_reorder": false,
+  "source_report": "D:/ai/Mia3DWork/model-v02/morph-count-groundtruth.json",
+  "source_report_sha256": "86ea0a99bc0809c2fd1bc9eae881e7dd9a690f38c26f9457356e04dacee5149a"
+}

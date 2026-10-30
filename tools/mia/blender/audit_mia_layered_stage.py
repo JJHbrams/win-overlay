@@ -55,8 +55,20 @@ def excluded(obj):
 
 
 def stage_meshes():
+    """Include renderable curves and respect parent collection visibility."""
+    render_collections = set()
+
+    def visit(layer, allowed=True):
+        allowed = allowed and not layer.exclude and not layer.collection.hide_render
+        if allowed:
+            render_collections.add(layer.collection.name)
+        for child in layer.children:
+            visit(child, allowed)
+
+    visit(bpy.context.view_layer.layer_collection)
     return [obj for obj in bpy.context.scene.objects
-            if obj.type == "MESH" and not obj.hide_render and not excluded(obj)]
+            if obj.type in {"MESH", "CURVE"} and not obj.hide_render and not excluded(obj)
+            and any(collection.name in render_collections for collection in obj.users_collection)]
 
 
 def make_camera():
@@ -108,6 +120,8 @@ def has_name_token(name, token):
 def is_face(obj):
     """Only identify a deliberately named face mesh, never arbitrary *surface* meshes."""
     role = str(obj.get("part_role", obj.get("role", ""))).upper()
+    if role:
+        return role == "ANATOMY_FACE_TOPOLOGY"
     return (role == "ANATOMY_FACE_TOPOLOGY" or obj.name.upper().startswith("MIA_FACE")
             or obj.name.upper().startswith("FACE_") or has_name_token(obj.name, "face"))
 
@@ -125,6 +139,8 @@ def alpha_face_layer(obj):
 
 def is_body_core(obj):
     role = str(obj.get("part_role", obj.get("role", ""))).upper()
+    if role:
+        return role in {"ANATOMY_BODY_SKIN", "ANATOMY_BODY_SKIN_ONLY"}
     return role == "ANATOMY_BODY_SKIN" or obj.name.upper().startswith("MIA_BODY") or has_name_token(obj.name, "body")
 
 
@@ -191,9 +207,13 @@ def inventory(meshes):
     for obj in meshes:
         rows.append({
             "name": obj.name,
+            "object_type": obj.type,
             "collections": sorted(collection.name for collection in obj.users_collection),
-            "vertices": len(obj.data.vertices), "edges": len(obj.data.edges),
-            "polygons": len(obj.data.polygons), "materials": material_terms(obj),
+            "vertices": len(getattr(obj.data, "vertices", ())),
+            "edges": len(getattr(obj.data, "edges", ())),
+            "polygons": len(getattr(obj.data, "polygons", ())),
+            "splines": len(getattr(obj.data, "splines", ())),
+            "materials": material_terms(obj),
             "part_ownership_custom_properties": {
                 key: obj[key] for key in obj.keys() if key not in {"_RNA_UI"}},
             "shape_keys": len(obj.data.shape_keys.key_blocks) if obj.data.shape_keys else 0,
@@ -209,9 +229,10 @@ def canonical_owner_check(meshes):
     for obj in meshes:
         role = str(obj.get("part_role", obj.get("role", ""))).upper()
         source_mesh = str(obj.get("source_mesh", "")).upper()
-        if role == "ANATOMY_FACE_TOPOLOGY" or obj.name.upper().startswith("MIA_FACE"):
+        if role == "ANATOMY_FACE_TOPOLOGY" or (not role and obj.name.upper().startswith("MIA_FACE")):
             faces.append(obj.name)
-        if source_mesh == "BODY" or obj.name.upper().startswith("MIA_BODY"):
+        if role in {"ANATOMY_BODY_SKIN", "ANATOMY_BODY_SKIN_ONLY"} or (not role and
+                (source_mesh == "BODY" or obj.name.upper().startswith("MIA_BODY"))):
             bodies.append(obj.name)
     result = {
         "canonical_visible_face_names": sorted(faces),
@@ -227,6 +248,37 @@ def canonical_owner_check(meshes):
                 faces=", ".join(result["canonical_visible_face_names"]) or "<none>",
                 bodies=", ".join(result["canonical_visible_body_names"]) or "<none>"))
     return result
+
+
+def shape_key_names(obj):
+    if not obj or not obj.data.shape_keys:
+        return []
+    return [key.name for key in obj.data.shape_keys.key_blocks]
+
+
+def canonical_face_morph_report(owner_check):
+    """Compare the active face against the archived source without limiting additions."""
+    active_name = next(iter(owner_check["canonical_visible_face_names"]), None)
+    active = bpy.data.objects.get(active_name) if active_name else None
+    archived = bpy.data.objects.get("Face")
+    active_names = shape_key_names(active)
+    archived_names = shape_key_names(archived)
+    missing = [name for name in archived_names if name not in active_names]
+    extras = [name for name in active_names if name not in archived_names]
+    archived_sequence_in_active_order = [name for name in active_names if name in archived_names]
+    return {
+        "canonical_face_object": active.name if active else None,
+        "canonical_face_key_count": len(active_names),
+        "canonical_face_key_names": active_names,
+        "archived_source_face_object": archived.name if archived else None,
+        "archived_source_face_key_count": len(archived_names),
+        "archived_source_face_key_names": archived_names,
+        "missing_archived_source_key_names": missing,
+        "extra_corrective_key_names": extras,
+        "all_archived_source_names_preserved": bool(archived) and not missing,
+        "archived_source_order_preserved": bool(archived) and archived_sequence_in_active_order == archived_names,
+        "note": "Extra corrective keys are reported, not rejected solely because of count.",
+    }
 
 
 def render_set(scene, camera, output, mode, views):
@@ -266,6 +318,7 @@ def main():
     camera = make_camera()
     meshes = stage_meshes()
     owner_check = canonical_owner_check(meshes)
+    morph_report = canonical_face_morph_report(owner_check)
     if not owner_check["passed"]:
         after = digest(source)
         report.write_text(json.dumps({
@@ -274,6 +327,7 @@ def main():
             "input_unchanged": before == after,
             "inventory": inventory(meshes),
             "duplicate_owner_checks": owner_check,
+            "canonical_face_morphs": morph_report,
             "status": "EVIDENCE_ONLY: PRE_RENDER_OWNER_GATE_FAILED",
         }, indent=2), encoding="utf-8")
         raise RuntimeError(owner_check["failure"])
@@ -325,7 +379,7 @@ def main():
                               "views": [{"scale": n, "target": t, "ortho": o} for n, t, o, _ in views]}},
         "inventory": inventory(meshes),
         "duplicate_owner_checks": owner_check,
-        "shape_key_43_count": sum(1 for obj in meshes if obj.data.shape_keys and len(obj.data.shape_keys.key_blocks) == 43),
+        "canonical_face_morphs": morph_report,
         "isolation": isolation,
         "art_records": art, "structure_records": structure,
         "actual_art_count": len(art), "actual_structure_count": len(structure),
