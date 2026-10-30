@@ -23,8 +23,8 @@ PROFILES = [
     (1.712,.088,.102,.023),(1.673,.107,.117,.024),
     (1.623,.115,.114,.029),(1.584,.119,.085,.053),
     (1.537,.126,.075,.068),(1.476,.132,.074,.079),
-    (1.418,.132,.066,.089),(1.370,.112,.050,.096),
-    (1.349,.040,.028,.101),(1.350,.001,.001,.101),
+    (1.430,.122,.061,.089),(1.411,.095,.045,.096),
+    (1.403,.038,.020,.101),(1.404,.001,.001,.101),
 ]
 
 
@@ -137,6 +137,25 @@ def on_crown_surface(center):
     return center
 
 
+def actual_crown_surface(point, offset=0):
+    """Project a patch vertex to the same smooth profile as its support mesh.
+
+    Per-row linear profile estimates caused stepped intersections. The guide
+    stays artist-authored; only the supporting crown attachment is registered.
+    """
+    if point.z>1.755 or point.z<1.62:
+        return point
+    lo,hi=0,.52
+    for _ in range(24):
+        t=(lo+hi)*.5
+        if catmull(PROFILES,t)[0]>point.z:lo=t
+        else:hi=t
+    z,rx,ry,cy=catmull(PROFILES,(lo+hi)*.5)
+    theta=math.atan2((point.y-cy)/max(ry,.001),point.x/max(rx,.001))
+    normal=Vector((math.cos(theta)/max(rx,.001),math.sin(theta)/max(ry,.001),0)).normalized()
+    return Vector((rx*math.cos(theta),cy+ry*math.sin(theta),point.z))+normal*offset
+
+
 def mesh(name, vertices, polygons, mat, owner, region):
     data = bpy.data.meshes.new(name + "_MESH")
     data.from_pydata(vertices, [], polygons)
@@ -208,26 +227,35 @@ def panel(name, guides, widths, facing, mat, owner, region, ink=None,
         for j in range(cols):
             q = j / (cols-1)*2-1
             height = camber*(1-q*q)*math.sin(math.pi*min(.95, t+.05))**.35
-            coordinates.append(center + across*q*half_width + normal*height)
+            vertex=center + across*q*half_width + normal*height
+            if region in ("CROWN_GATHER","SIDE_NAPE") and t<.82:
+                # The root enters the support smoothly; patch edges follow its
+                # curvature instead of slicing it in staircase-shaped cuts.
+                buried=max(0,min(1,t/.16))
+                attach_offset=-.0015*(1-buried)+(.0010+height)*buried
+                vertex=actual_crown_surface(vertex,attach_offset)
+            coordinates.append(vertex)
     for i in range(rows-1):
         for j in range(cols-1):
             a = i*cols+j
             polygons.append((a, a+1, a+cols+1, a+cols))
     obj = mesh(name, coordinates, polygons, mat, owner, region)
     solid = obj.modifiers.new("Shallow physical hair surface", "SOLIDIFY")
-    solid.thickness = .0018
+    solid.thickness = .0010
     solid.offset = -1
     obj["construction"] = "authored region flow; shallow convex patch with thickness"
     if ink:
         # Ink is selective and much thinner than the geometric width.
         for edge in (-1, 1):
-            pts = [p+a*(edge*w)+n*.0003 for p, a, n, w in samples][7:]
-            line(name + ("_EdgeL" if edge < 0 else "_EdgeR"), pts, .00042, ink, owner, region)
+            col=0 if edge<0 else cols-1
+            pts=[coordinates[i*cols+col]+samples[i][2]*.00018 for i in range(7,rows)]
+            line(name + ("_EdgeL" if edge < 0 else "_EdgeR"), pts, .00030, ink, owner, region)
         for k in range(strand_lines):
             q = -.50 + (k+.35) / max(1, strand_lines)*.9
-            pts = [p + a*(q*w) + n*(camber*(1-q*q)+.0005)
-                   for p,a,n,w in samples[10:-4]]
-            line(name + "_Etch%02d" % k, pts, .00023, ink, owner, region)
+            u=(q+1)*.5*(cols-1);index=int(u);blend=u-index
+            pts=[coordinates[i*cols+index].lerp(coordinates[i*cols+index+1],blend)+samples[i][2]*.00018
+                 for i in range(10,rows-4)]
+            line(name + "_Etch%02d" % k, pts, .00018, ink, owner, region)
     return obj
 
 
@@ -285,10 +313,32 @@ def crown(owner, mats):
                 u=j/(len(guides)-1)
                 offset=child*.010*math.sin(u*math.pi*.70)
                 flow.append((p[0]+offset,p[1]-.001*abs(child),p[2]+child*.014*u*u))
-            scale=.53 if child==0 else (.41 if child<0 else .37)
+            scale=.36 if child==0 else (.41 if child<0 else .37)
             panel("MiaHair_CrownFringe_"+name+"_%d"%child,flow,[w*scale for w in widths],
                   (0,-1,.20),ash if i in (2,4) and child<=0 else dark,owner,
-                  "CROWN_FRINGE",ink,camber=.0022,strand_lines=2)
+                  "CROWN_FRINGE",ink,camber=.0013,strand_lines=1)
+    # Seven low under-fringe sweeps fill the large windows left by the long
+    # outer locks. Their uneven tips skim brows, while eye apertures stay open.
+    under=[
+        ("R0",[(.004,-.020,1.738),(-.034,-.078,1.686),(-.072,-.107,1.625),(-.083,-.109,1.584)], [.003,.013,.012,.0003]),
+        ("R1",[(.015,-.025,1.738),(-.012,-.088,1.680),(-.046,-.111,1.621),(-.063,-.113,1.572)], [.003,.014,.013,.0003]),
+        ("R2",[(.018,-.027,1.735),(.001,-.089,1.680),(-.020,-.113,1.632),(-.039,-.115,1.584)], [.003,.014,.013,.0003]),
+        ("Mid",[(.022,-.030,1.738),(.011,-.096,1.672),(-.002,-.116,1.621),(-.018,-.118,1.600)], [.003,.013,.013,.0003]),
+        ("L0",[(.024,-.021,1.739),(.034,-.088,1.681),(.026,-.113,1.628),(.012,-.116,1.587)], [.003,.013,.012,.0003]),
+        ("L1",[(.028,-.017,1.736),(.056,-.078,1.683),(.062,-.108,1.625),(.047,-.114,1.578)], [.003,.014,.012,.0003]),
+        ("L2",[(.033,-.010,1.736),(.079,-.066,1.680),(.091,-.101,1.626),(.078,-.110,1.586)], [.003,.013,.011,.0003]),
+    ]
+    for i,(name,guides,widths) in enumerate(under):
+        panel("MiaHair_UnderFringe_"+name,guides,widths,(0,-1,.1),
+              ash if i in (1,4) else dark,owner,"UNDER_FRINGE",ink,
+              camber=.0010,strand_lines=1)
+    for side,label in ((-1,"R"),(1,"L")):
+        panel("MiaHair_UnderFringe_Temple"+label,
+              [(side*.079,-.020,1.665),(side*.098,-.045,1.612),
+               (side*.094,-.059,1.558),(side*.109,-.053,1.523),
+               (side*.092,-.056,1.493)],
+              [.004,.014,.014,.011,.0003],(side*.6,-1,.05),dark,owner,
+              "UNDER_FRINGE",ink,camber=.0011,strand_lines=1)
     # Actual upper crown-to-knot gathering follows the dome around both sides.
     for side,label in ((-1,"R"),(1,"L")):
         for i in range(4):
@@ -296,17 +346,17 @@ def crown(owner, mats):
             guides = [(side*.007,.024,1.759-i*.002), (side*x,.061,1.735-i*.009),
                       (side*(x+.022),.112,1.686-i*.007), (side*.038,.160,1.623+i*.003)]
             panel("MiaHair_Gather_%s%d" % (label,i), guides,
-                  [.005,.029,.026,.008], (side*.6,.8,.2), ash if i==2 else dark,
-                  owner,"CROWN_GATHER",ink,camber=.0035,strand_lines=2)
+                  [.004,.024,.022,.005], (side*.6,.8,.2), ash if i==2 else dark,
+                  owner,"CROWN_GATHER",ink,camber=.0013,strand_lines=1)
     for i,x in enumerate((-.030,0,.030)):
         panel("MiaHair_Gather_BackPart%d"%i,
               [(x*.12,.026,1.762),(x*.6,.092,1.731),(x,.145,1.686),(x*.4,.164,1.634)],
-              [.005,.028,.030,.007],(0,1,.3),ash if i==0 else dark,owner,"CROWN_GATHER",ink,strand_lines=3)
+              [.004,.026,.028,.005],(0,1,.3),ash if i==0 else dark,owner,"CROWN_GATHER",ink,camber=.0013,strand_lines=1)
     for side,label in ((-1,"R"),(1,"L")):
         panel("MiaHair_Gather_Temple"+label,
               [(side*.044,-.002,1.737),(side*.101,.008,1.691),
                (side*.119,.050,1.654),(side*.095,.121,1.628),(side*.035,.158,1.625)],
-              [.006,.027,.030,.025,.005],(side,.0,.1),dark,owner,"CROWN_GATHER",ink,strand_lines=3)
+              [.004,.024,.027,.023,.004],(side,.0,.1),dark,owner,"CROWN_GATHER",ink,camber=.0013,strand_lines=1)
     # Smaller asymmetric splits sit on selected larger bangs; they do not form
     # a second equally ranked fringe or a straight bowl edge.
     small=[
@@ -340,10 +390,18 @@ def loose_waves(owner,mats):
                     (side*(.117+i*.012),-.021,1.579-i*.020),
                     (side*(.126+i*.017),-.038,1.513-i*.020),
                     (side*(.146+i*.007),-.019,1.456-i*.021),
-                    (side*(.133+i*.012),-.006,1.402-i*.019),
-                    (side*(.156+i*.003),.006,1.371-i*.013)]
-            panel("MiaHair_%s_TempleWave%d"%(label,i),guides,[.012,.030,.025,.028,.019,.0004],
-                  (side*.7,-.8,0),ash if i==1 else dark,owner,"TEMPLE_LOOSE_WAVE",ink,strand_lines=2)
+                    (side*(.133+i*.012),-.006,1.415-i*.035),
+                    (side*(.156+i*.003),.006,1.389-i*.038)]
+            for child in (-1,1):
+                flow=[]
+                for j,p in enumerate(guides):
+                    u=j/(len(guides)-1)
+                    flow.append((p[0]+side*child*.006*u,p[1]+child*.009*u,
+                                 p[2]+child*.013*u*u))
+                panel("MiaHair_%s_TempleWave%d_%d"%(label,i,child),flow,
+                      [w*(.37 if child<0 else .33) for w in (.012,.030,.025,.028,.019,.0004)],
+                      (side*.7,-.8,0),ash if i==1 and child<0 else dark,owner,
+                      "TEMPLE_LOOSE_WAVE",ink,camber=.0011,strand_lines=1)
         # Side-to-nape layers cover the support volume while leaving short
         # tufts to break silhouette. No repeated rose-shaped surface ornaments.
         for i in range(2):
@@ -353,8 +411,16 @@ def loose_waves(owner,mats):
                     (side*.142,.093+i*.030,1.436-i*.027),
                     (side*.165,.074+i*.033,1.379-i*.025),
                     (side*.153,.088+i*.031,1.347-i*.018)]
-            panel("MiaHair_%s_SideNape%d"%(label,i),guides,[.009,.031,.033,.033,.019,.0003],
-                  (side,.2,.0),dark if i==0 else ash,owner,"SIDE_NAPE",ink,camber=.004,strand_lines=2)
+            for child in (-1,1):
+                flow=[]
+                for j,p in enumerate(guides):
+                    u=j/(len(guides)-1)
+                    flow.append((p[0]+side*child*.003*u,p[1]+child*.012*u,
+                                 p[2]+child*.017*u*u))
+                panel("MiaHair_%s_SideNape%d_%d"%(label,i,child),flow,
+                      [w*(.35 if child<0 else .32) for w in (.009,.031,.033,.033,.019,.0003)],
+                      (side,.2,.0),dark if i==0 else ash,owner,"SIDE_NAPE",ink,
+                      camber=.0012,strand_lines=1)
         for i,(z,y,length) in enumerate(((1.652,-.010,.175),(1.566,.018,.180),(1.476,.066,.145))):
             guides=[(side*.125,y,z),(side*.146,y-.018,z-length*.38),
                     (side*.170,y-.007,z-length*.72),(side*.156,y+.010,z-length)]
@@ -370,27 +436,35 @@ def loose_waves(owner,mats):
     ]
     for i,(x,y,z,endx,endz) in enumerate(specifications):
         bend=1 if i%2 else -1
-        guides=[(x,y,z),(x+bend*.018,y+.014,z-.078),
+        guides=[(x*.72,y*.70,z+.018),(x+bend*.018,y+.014,z-.078),
                 (x-bend*.010,y+.018,z-.154),(endx+bend*.016,y-.018,endz+.055),
                 (endx,y-.035,endz)]
-        for child in ((-1,1) if i in (0,2,3,5) else (0,)):
+        for child in ((-1,0,1) if i in (0,2,3,5) else (-1,1)):
             flow=[]
             for j,p in enumerate(guides):
                 u=j/(len(guides)-1)
-                flow.append((p[0]+child*.013*u,p[1]+abs(child)*.002,
-                             p[2]+child*.017*u*u))
-            scale=.57 if child else .86
+                flow.append((p[0]+child*.014*u,p[1]+abs(child)*.002,
+                             p[2]+child*.022*u*u))
+            scale=.31 if child<=0 else .27
             panel("MiaHair_Rear_LongWave%02d_%d"%(i,child),flow,
-                  [w*scale for w in (.017,.034,.035,.026,.0004)],
+                  [w*scale for w in (.001,.034,.035,.026,.0004)],
                   (x*3,1,.1),ash if i in (2,5) and child<=0 else dark,
-                  owner,"NAPE_LONG_WAVE",ink,camber=.0035,strand_lines=2)
+                  owner,"NAPE_LONG_WAVE",ink,camber=.0012,strand_lines=1)
     # Short overlapping rear tiers retain large shared masses; they are not
     # equal-ranking copies of every long wave.
     for i,(x,z) in enumerate(((-.096,1.465),(-.035,1.443),(.038,1.476),(.102,1.450))):
-        guides=[(x*.5,.145,1.675),(x,.176,1.593),(x*1.2,.184,z+.075),
+        guides=[(x*.30,.110,1.697),(x,.176,1.593),(x*1.2,.184,z+.075),
                 (x*1.05,.171,z),(x*.82,.181,z-.028)]
-        panel("MiaHair_Rear_ShortLayer%02d"%i,guides,[.009,.035,.035,.024,.0004],
-              (x*2,1,.1),dark if i%2 else ash,owner,"NAPE_SHORT_LAYER",ink,strand_lines=2)
+        for child in (-1,0,1):
+            flow=[]
+            for j,p in enumerate(guides):
+                u=j/(len(guides)-1)
+                flow.append((p[0]+child*.015*u,p[1]+abs(child)*.002,
+                             p[2]+child*.019*u*u))
+            panel("MiaHair_Rear_ShortLayer%02d_%d"%(i,child),flow,
+                  [w*(.33 if child<=0 else .30) for w in (.001,.035,.035,.024,.0004)],
+                  (x*2,1,.1),dark if i%2 or child else ash,owner,"NAPE_SHORT_LAYER",ink,
+                  camber=.0012,strand_lines=1)
 
 
 def knot_and_braid(owner,mats):
