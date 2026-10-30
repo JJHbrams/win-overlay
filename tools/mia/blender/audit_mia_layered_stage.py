@@ -55,8 +55,20 @@ def excluded(obj):
 
 
 def stage_meshes():
+    """Include renderable curves and respect parent collection visibility."""
+    render_collections = set()
+
+    def visit(layer, allowed=True):
+        allowed = allowed and not layer.exclude and not layer.collection.hide_render
+        if allowed:
+            render_collections.add(layer.collection.name)
+        for child in layer.children:
+            visit(child, allowed)
+
+    visit(bpy.context.view_layer.layer_collection)
     return [obj for obj in bpy.context.scene.objects
-            if obj.type == "MESH" and not obj.hide_render and not excluded(obj)]
+            if obj.type in {"MESH", "CURVE"} and not obj.hide_render and not excluded(obj)
+            and any(collection.name in render_collections for collection in obj.users_collection)]
 
 
 def make_camera():
@@ -191,9 +203,13 @@ def inventory(meshes):
     for obj in meshes:
         rows.append({
             "name": obj.name,
+            "object_type": obj.type,
             "collections": sorted(collection.name for collection in obj.users_collection),
-            "vertices": len(obj.data.vertices), "edges": len(obj.data.edges),
-            "polygons": len(obj.data.polygons), "materials": material_terms(obj),
+            "vertices": len(getattr(obj.data, "vertices", ())),
+            "edges": len(getattr(obj.data, "edges", ())),
+            "polygons": len(getattr(obj.data, "polygons", ())),
+            "splines": len(getattr(obj.data, "splines", ())),
+            "materials": material_terms(obj),
             "part_ownership_custom_properties": {
                 key: obj[key] for key in obj.keys() if key not in {"_RNA_UI"}},
             "shape_keys": len(obj.data.shape_keys.key_blocks) if obj.data.shape_keys else 0,
