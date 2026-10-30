@@ -1,0 +1,40 @@
+{
+  "stage": "AC2_HAIR_ART",
+  "status": "FAIL",
+  "native": "D:/ai/Mia3DWork/model-v02/hair-surface-stage/Mia_HairSurface_v08.blend",
+  "native_sha256": "8b3d438e41f20b8152f2f0e659536c43463d872d92adf777195fd7cee7d3ddb3",
+  "builder_sha256": "5f8b7ca0783c34c727a4dd8dc3f5e533576dc2cc5a7197968b7ffa66742a59ef",
+  "reviewer": "mia_reference_hair_surface manual inspection of four actual Blender renders",
+  "reviewed_renders": [
+    "D:\\ai\\Mia3DWork\\model-v02\\hair-surface-stage\\previews-v08\\art_front.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\hair-surface-stage\\previews-v08\\art_left.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\hair-surface-stage\\previews-v08\\art_back.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\hair-surface-stage\\previews-v08\\art_right_3q.png"
+  ],
+  "method_change": {
+    "primary_closed_masses": 5,
+    "medium_subordinate_masses": 6,
+    "crown_gather_flows": 5,
+    "knot_wraps": 3,
+    "rear_ink": "five selected single flow creases; no paired edge ink on every mass"
+  },
+  "findings": [
+    "Equal-rank narrow comb field was removed, but replacement still reads as oversimplified broad lobes or sheets rather than Mia layered messy waves.",
+    "Side-facing mass orientation improves profile coverage, but broad support cap and rigid gathering remain visible.",
+    "The simplified knot and gathering transitions do not match the reference soft bundled flow.",
+    "Do not infer art acceptance from reduced object counts or closed topology."
+  ],
+  "integrity": {
+    "source_unchanged": true,
+    "canonical_geometry_uv_morph_world_preserved": true,
+    "neutral_preserved": true,
+    "protected_front_braid_identical": true,
+    "protected_object_count": 169
+  },
+  "not_run": [
+    "full 12-view extension",
+    "216-view acceptance audit",
+    "all-pose rig or cloth collision acceptance"
+  ],
+  "next": "Do not promote this candidate. Rework the scalp-to-nape shared silhouette and attachment transitions with sculpted continuous flow before detailed strand expansion."
+}

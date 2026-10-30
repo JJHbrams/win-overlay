@@ -1,0 +1,174 @@
+{
+  "status": "ART_CANDIDATE_PENDING_REVIEW",
+  "source": "D:\\ai\\Mia3DWork\\model-v02\\face-reference-stage\\FaceReference_v17.blend",
+  "source_sha256": "4bfdf36e0451ed69c79709d42b97e4bb0211eb5ace34c09e6e1b5b0374df358f",
+  "source_unchanged": true,
+  "canonical_fingerprints_before": {
+    "Mia_Face_AnimeTopology": "78c746e99dcac97f2bbf5492bbbffc7f43fdab8869c570657b9450fe22cbcbeb",
+    "Mia_Body_Anatomy_Skin": "f6023755b7845b1d000088d68b4ddcb5af4580641cdf102a74978c4fd5f898a9"
+  },
+  "canonical_fingerprints_after": {
+    "Mia_Face_AnimeTopology": "78c746e99dcac97f2bbf5492bbbffc7f43fdab8869c570657b9450fe22cbcbeb",
+    "Mia_Body_Anatomy_Skin": "f6023755b7845b1d000088d68b4ddcb5af4580641cdf102a74978c4fd5f898a9"
+  },
+  "output": "D:/ai/Mia3DWork/model-v02/face-hair-integration/v05/Mia_FaceHair_Study_v05.blend",
+  "output_sha256": "6ac9693c3a900cc914c9e9da90212b3619a49ada27930f44c3f114f3435d7778",
+  "envelope_xyz": [
+    [
+      -0.18912124633789062,
+      0.16885076463222504
+    ],
+    [
+      -0.1367778778076172,
+      0.1988712102174759
+    ],
+    [
+      1.260850191116333,
+      1.7868596315383911
+    ]
+  ],
+  "builder_sha256": "86a36db9bc39a3eb401386e7760dbe2386864e0e1573784d697d7c75c75e5481",
+  "owned_collection": "MIA_HAIR_SURFACE_V01_OWNED",
+  "mesh_objects": 108,
+  "canonical_expression_preserved": true,
+  "input_expression": {
+    "Basis": 1.0,
+    "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Angry": 0.1599999964237213,
+    "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Close": 0.44999998807907104,
+    "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+    "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Angry": 0.18000000715255737,
+    "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.11999999731779099,
+    "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+    "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+    "MIA_FaceArt_EyeProportion": 1.0,
+    "MIA_FaceArt_OwnedBrowPlacement": 1.0
+  },
+  "clearance_target": "evaluated active Mia_Body_Anatomy_Skin; no archived donor/Face ray target",
+  "clearance_body_world": [
+    [
+      -1.0,
+      8.742277657347586e-08,
+      0.0,
+      0.0
+    ],
+    [
+      -8.742277657347586e-08,
+      -1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "clearance_adjustments": {
+    "CONCEALED_VOLUME": {
+      "adjusted_samples": 2,
+      "max_y_shift": 0.0029823221266269684
+    }
+  },
+  "clearance_vertex_and_face_center_proof": {
+    "CONCEALED_VOLUME": {
+      "tested": 3137,
+      "minimum_clearance": 0.008000001311302185,
+      "below_3mm": 0
+    },
+    "TEMPLE_LOOSE_WAVE": {
+      "tested": 0,
+      "minimum_clearance": null,
+      "below_3mm": 0
+    },
+    "SIDE_NAPE": {
+      "tested": 2715,
+      "minimum_clearance": 0.021071601659059525,
+      "below_3mm": 0
+    },
+    "SIDE_WISP": {
+      "tested": 0,
+      "minimum_clearance": null,
+      "below_3mm": 0
+    },
+    "SIDE_REAR_WISP": {
+      "tested": 0,
+      "minimum_clearance": null,
+      "below_3mm": 0
+    },
+    "NAPE_LONG_WAVE": {
+      "tested": 6451,
+      "minimum_clearance": 0.03247084468603134,
+      "below_3mm": 0
+    },
+    "NAPE_SHORT_LAYER": {
+      "tested": 1544,
+      "minimum_clearance": 0.13306355476379395,
+      "below_3mm": 0
+    },
+    "LEFT_BRAID": {
+      "tested": 1790,
+      "minimum_clearance": 0.05890469253063202,
+      "below_3mm": 0
+    }
+  },
+  "clearance_scope": "below z1.49; semantic front locks/braid and rear nape/support, scalp roots exempt",
+  "articulation": "unrigged static hair study; no secondary animation claim",
+  "braid_assemblies": 1,
+  "braid_lanes": 3,
+  "construction": "closed concealed volume + regional authored shallow convex panels",
+  "renders": [
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\art_front.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\art_left.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\art_back.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\art_right_3q.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\art_left_3q.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\art_rear_3q.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\art_right.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\art_high_front.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\structure_front.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\structure_left.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\structure_back.png",
+    "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v05\\previews\\structure_right_3q.png"
+  ]
+}

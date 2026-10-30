@@ -1,0 +1,31 @@
+{
+  "status": "WORK_IN_PROGRESS_ART_GATES_UNRESOLVED",
+  "latest_native": "Mia_FaceHair_Study_v06.blend",
+  "latest_sha256": "a2333af0898b48c52252b628961cdd43d2da71eec1a61d02dee8bddb123c7e6a",
+  "previous_reviewed_native": "rejected/Mia_FaceHair_Study_v04.blend",
+  "previous_reviewed_sha256": "bcf06195df7ddc6fa487fcd70ee50a52f7dd9e0cd7ac5478dd407d4292fb8ed6",
+  "previous_review": "../audits/v02/head-art-v04/stage-review.json",
+  "previous_216_frame_audit_applies_to_v04_only": true,
+  "latest_evidence": "12 build views + 6 head/pose views; face-only v18 9 proofs; latest source has no independent acceptance",
+  "remaining": [
+    "Mia reference likeness not accepted",
+    "Rear hair mass/flow remains a critical art gap",
+    "Garments and accessories not built",
+    "Final rig and event animation not accepted"
+  ],
+  "original_anatomy_sha256": "d90744a9ec2370ae8d9564e482fbffd6b2485334f9571278d4482ce26ac943ca",
+  "original_facial_keys_preserved": 42,
+  "additional_face_correctives": 2,
+  "source_images_and_uv_and_body_geometry_preserved": true,
+  "face_recipe_sha256": "5459985bf7fabd5ee5d9eb3d8eba10589a7176ce855530759b236273de93785f",
+  "hair_recipe_sha256": "86a36db9bc39a3eb401386e7760dbe2386864e0e1573784d697d7c75c75e5481",
+  "source_rights": "Victoria Rubin / VRoid beta4 CC0; see tools/mia/blender/sources/VRoid_Beta4_CC0.md; source originals remain archived/hidden in native",
+  "style_reference": "asset/mia/references/mia-expression-style-confirmed-20261031.png",
+  "not_runtime_activation": true,
+  "face_latest_parameters": {
+    "neutral_close": 0.5,
+    "under_eye_strength": 0.68
+  },
+  "face_latest_iris_scale": 0.74,
+  "previous_followup_review": "rejected/v05-follow-up-review.json"
+}

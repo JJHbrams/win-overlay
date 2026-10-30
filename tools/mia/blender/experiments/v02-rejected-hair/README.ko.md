@@ -7,6 +7,7 @@
 | build_mia_hair_v02.py | 같은 비중의 독립 clump가 로프·잎사귀 형태로 반복됐다. |
 | build_mia_hair_mass_v02.py | 후두부 덮임과 긴 머리의 단면·윤곽이 불충분했고 판처럼 보였다. |
 | rework_mia_hair_donor.py | CC0 샘플의 반듯한 앞머리와 장발 실루엣이 남았다. 좌표·alpha·색상 수정은 원화 작화 통과를 뜻하지 않는다. |
+| build_mia_hair_hierarchy_v08.py | 5개 주 덩어리와 6개 보조 덩어리로 다시 구성했지만 넓은 판·덩어리와 경직된 cap/gather가 남았다. 작화 FAIL. 원본 커밋 0493418. |
 
 원본과 시안·실제 렌더는 `D:/ai/Mia3DWork/model-v02/`의 hair-stage,
 hair-mass-stage, hair-donor-stage에 보존했다. 이 실험은 해당 로컬 경로를

@@ -25,8 +25,8 @@ BODY_NAME = "Mia_Body_Anatomy_Skin"
 ART_KEY = "MIA_FaceArt_OwnedBrowPlacement"
 IMAGE_NAME = "Mia_FaceArt_UV_Pigment"
 PROPORTION_KEY = "MIA_FaceArt_EyeProportion"
-NEUTRAL_CLOSE = .45
-UNDER_EYE_STRENGTH = .38
+NEUTRAL_CLOSE = .50
+UNDER_EYE_STRENGTH = .68
 NOSE_MARKER = None
 BASE_SKIN = (.94, .88, .85, 1.0)
 
@@ -107,7 +107,7 @@ def pose(face, proof="neutral"):
     values = {
         "Fcl_EYE_Close": NEUTRAL_CLOSE,
         "Fcl_EYE_Sorrow": .10,
-        "Fcl_BRW_Angry": .06,
+        "Fcl_BRW_Angry": .16,
         "Fcl_MTH_Angry": .18,
         "Fcl_MTH_Neutral": .12,
     }
@@ -187,7 +187,7 @@ def add_eye_proportion(face):
         if roles & {1,2,3}:
             delta.x=.14*(p.x-c.x);delta.z=-.045*(p.z-c.z);counts["eye_parts"]+=1
         elif roles & {5,6,8}:
-            delta.x=-.12*(p.x-c.x);delta.z=-.12*(p.z-c.z);counts["iris"]+=1
+            delta.x=-.26*(p.x-c.x);delta.z=-.26*(p.z-c.z);counts["iris"]+=1
         elif 7 in roles:
             radius=math.sqrt(((p.x-c.x)/.056)**2+((p.z-c.z)/.047)**2)
             weight=1.0 if radius<.72 else max(0,1-(radius-.72)/.55)
@@ -196,7 +196,7 @@ def add_eye_proportion(face):
         if delta.length:
             key.data[i].co+=inverse@delta
     key.value=1
-    return {"name":key.name,"counts":counts,"eye_horizontal_scale":1.14,"iris_scale":.88,"orbital_skin_falloff":"full inside .72 ellipse, smooth to zero by1.27; front skin only"}
+    return {"name":key.name,"counts":counts,"eye_horizontal_scale":1.14,"iris_scale":.74,"orbital_skin_falloff":"full inside .72 ellipse, smooth to zero by1.27; front skin only"}
 
 
 def build_upper_rim(face, uv_paths):
@@ -269,13 +269,21 @@ def build_upper_rim(face, uv_paths):
             row.append(max(-.014,delta))
         offsets.append(row)
     evaluated.to_mesh_clear()
+    pressure = []
+    for path in paths:
+        xs = [abs((mw@sum((basis.data[i].co*w for i,w in zip(indices,weights)),Vector())).x)
+              for _,(indices,weights) in path]
+        lo,hi=min(xs),max(xs)
+        pressure.append([(.00042+.00095*((x-lo)/max(hi-lo,1e-6))**1.3)
+                         *(.32+.68*math.sin(math.pi*j/(len(path)-1))**.25)
+                         for j,x in enumerate(xs)])
     def coords(key):
         result=[]
         for side,path in enumerate(paths):
             for j,(uv_point,(indices,weights)) in enumerate(path):
                 point=mw@sum((key.data[i].co*w for i,w in zip(indices,weights)),Vector())
                 point.y+=offsets[side][j]
-                t=j/(len(path)-1);half=.00062*(.35+.65*math.sin(math.pi*t)**.4)
+                half=pressure[side][j]
                 result.extend((inverse@(point+Vector((0,0,-half))),inverse@(point+Vector((0,0,half)))))
         return result
     basis_coords=coords(basis);faces=[];start=0
@@ -347,7 +355,7 @@ def build_upper_rim(face, uv_paths):
     close=next(k.name for k in face.data.shape_keys.key_blocks if k.name.endswith('Fcl_EYE_Close'))
     var.targets[0].data_path='key_blocks['+json.dumps(close)+'].value';driver.expression='max(0,min(1,(closed-.56)/.44))'
     pose(face)
-    return {'object':obj.name,'vertices':len(basis_coords),'faces':len(faces),'morphs':len(blocks)+1,'source_morph_drivers':len(blocks)-1,'part_role':obj['part_role'],'half_width_m':.00062,'source_uv_trace':[[(float(u),float(v)) for (u,v),data in path] for path in paths],'forward_clearance_delta_range':[min(min(row) for row in offsets),max(max(row) for row in offsets)],'blink_clearance_delta_range':[min(blink_delta),max(blink_delta)],'blink_clearance_driver':'clamp((Close-.56)/.44,0,1)','vertex_weight_binding':'exact source upper-line UV triangle barycentric weights; no cross-eye averaging','EyeSet_distribution':{side:sorted(names) for side,names in side_weights.items()},'per_point_source_EyeSet_asserted':True}
+    return {'object':obj.name,'vertices':len(basis_coords),'faces':len(faces),'morphs':len(blocks)+1,'source_morph_drivers':len(blocks)-1,'part_role':obj['part_role'],'half_width_range_m':[min(min(p)for p in pressure),max(max(p)for p in pressure)],'source_uv_trace':[[(float(u),float(v)) for (u,v),data in path] for path in paths],'forward_clearance_delta_range':[min(min(row) for row in offsets),max(max(row) for row in offsets)],'blink_clearance_delta_range':[min(blink_delta),max(blink_delta)],'blink_clearance_driver':'clamp((Close-.56)/.44,0,1)','vertex_weight_binding':'exact source upper-line UV triangle barycentric weights; no cross-eye averaging','EyeSet_distribution':{side:sorted(names) for side,names in side_weights.items()},'per_point_source_EyeSet_asserted':True}
 
 
 def new_nodes(name):
@@ -430,6 +438,33 @@ def owned_ink(original, name, mode, fitted_rim=None):
     return mat
 
 
+def owned_eye_tone(original, highlight=False):
+    mat,nodes,links=new_nodes("Mia_FaceArt_RestrainedEyeGlint" if highlight else "Mia_FaceArt_GrayIrisHierarchy")
+    texture=nodes.new("ShaderNodeTexImage"); texture.image=source_image(original)
+    texture.interpolation="Linear"
+    emission=nodes.new("ShaderNodeEmission")
+    if highlight:
+        emission.inputs["Color"].default_value=(.90,.94,.96,1)
+        alpha=nodes.new("ShaderNodeMath"); alpha.operation="MULTIPLY"; alpha.inputs[1].default_value=.08
+        links.new(texture.outputs["Alpha"],alpha.inputs[0])
+    else:
+        gray=nodes.new("ShaderNodeRGBToBW"); links.new(texture.outputs["Color"],gray.inputs["Color"])
+        ramp=nodes.new("ShaderNodeValToRGB"); ramp.color_ramp.interpolation="EASE"
+        ramp.color_ramp.elements[0].color=(.008,.012,.016,1)
+        ramp.color_ramp.elements[1].color=(.64,.69,.71,1)
+        mid=ramp.color_ramp.elements.new(.35); mid.color=(.22,.28,.31,1)
+        links.new(gray.outputs[0],ramp.inputs[0]); links.new(ramp.outputs["Color"],emission.inputs["Color"])
+        alpha=nodes.new("ShaderNodeMath"); alpha.operation="GREATER_THAN"; alpha.inputs[1].default_value=.5
+        links.new(texture.outputs["Alpha"],alpha.inputs[0])
+    transparent=nodes.new("ShaderNodeBsdfTransparent"); mix=nodes.new("ShaderNodeMixShader")
+    links.new(alpha.outputs[0],mix.inputs[0]); links.new(transparent.outputs[0],mix.inputs[1]); links.new(emission.outputs[0],mix.inputs[2])
+    out=nodes.new("ShaderNodeOutputMaterial"); links.new(mix.outputs[0],out.inputs["Surface"])
+    mat.surface_render_method="DITHERED"; mat.use_transparency_overlap=False
+    mat.use_backface_culling=original.use_backface_culling
+    mat["source_image"]=texture.image.name
+    return mat
+
+
 def lower_eye_contours(face, mesh):
     """Fit the visible Skin/White boundary, not the larger concealed white card."""
     result = []
@@ -471,10 +506,16 @@ def pigment(world, contours):
         rim = poly[0] * u*u + poly[1] * u + poly[2]
         below = rim - z
         side = np.maximum(0, 1-u*u)
-        vertical = np.clip(below / .006, 0, 1)
-        strength = np.exp(-np.maximum(0,below)/.0022) * side * UNDER_EYE_STRENGTH
-        strength *= (below > 0) & (below < .006) & (np.abs(u) < 1) & (y < -.025)
-        color[..., :3] = color[..., :3]*(1-strength[..., None]) + np.array((.27, .208, .247))*strength[..., None]
+        strength = np.exp(-np.maximum(0,below)/.0035) * side * UNDER_EYE_STRENGTH
+        strength *= (below > 0) & (below < .008) & (np.abs(u) < 1) & (y < -.025)
+        color[..., :3] = color[..., :3]*(1-strength[..., None]) + np.array((.12,.105,.15))*strength[..., None]
+        lower_ink = np.clip(1-np.abs(below-.00035)/.0004,0,1)*side*.68
+        lower_ink *= (np.abs(u)<.96) & (y<-.025)
+        color[..., :3] = color[..., :3]*(1-lower_ink[...,None])+np.array((.10,.085,.12))*lower_ink[...,None]
+        outer = u * (1 if contour["center_x"] > 0 else -1)
+        crease = np.clip(1-np.abs(below-(.0022+.0015*outer))/.00025,0,1)
+        crease *= np.clip(1-np.abs((outer-.50)/.30),0,1)*.52*(y<-.025)
+        color[..., :3] = color[..., :3]*(1-crease[...,None])+np.array((.16,.14,.18))*crease[...,None]
     if NOSE_MARKER is not None:
         # A short surface-bound ink accent, positioned from the actual nose tip.
         a = np.array((NOSE_MARKER[0]+.0015, NOSE_MARKER[2]+.004))
@@ -484,11 +525,6 @@ def pigment(world, contours):
         distance = np.sqrt((x-a[0]-t*dx)**2+(z-a[1]-t*dz)**2)
         nose_ink = np.clip(1-distance/.0004, 0, 1)*.62*(y < -.08)
         color[..., :3] = color[..., :3]*(1-nose_ink[..., None])+np.array((.16,.12,.15))*nose_ink[..., None]
-        # One restrained lower-lid crease, distinct from a wide gray cheek patch.
-        crease_distance = np.abs(below - .0007)
-        crease = np.clip(1-crease_distance/.0003, 0, 1)*side*.13
-        crease *= (np.abs(u)>.58) & (np.abs(u)<.90) & (y<-.025)
-        color[..., :3] = color[..., :3]*(1-crease[..., None])+np.array((.17,.13,.16))*crease[...,None]
     # A dry, near-horizontal closed-lip line. Skin UV follows actual mouth shape keys.
     width = .0175
     q = np.abs((x+.00048)/width)
@@ -695,6 +731,8 @@ def main():
     face.data.materials[2]=owned_ink(source_materials[2],"Mia_FaceArt_ThinDarkEyeRim","rim",rim_image)
     face.data.materials[3]=owned_ink(source_materials[3],"Mia_FaceArt_RestrainedLash","lash")
     face.data.materials[4]=owned_ink(source_materials[4],"Mia_FaceArt_LowGraphiteBrow","brow")
+    face.data.materials[5]=owned_eye_tone(source_materials[5])
+    face.data.materials[6]=owned_eye_tone(source_materials[6],highlight=True)
     texture_path=os.path.abspath(os.path.join(a.render_dir,"Mia_FaceArt_UV_Pigment.png"))
     skin_image,contours=bake_skin(face,texture_path)
     face.data.materials[7]=skin_material(skin_image)
@@ -755,7 +793,7 @@ def main():
         "corrective_ownership":ownership_report,"gaze_proof":{"bones":[pb.name for pb in eye_bones],"world_z_degrees":12,"pose_restored":eye_pose_restored},
         "source_images_unchanged":True,"original_materials":original_materials,
         "original_body_materials":original_body_materials,"matched_body_material":body.data.materials[0].name,
-        "owned_materials":[face.data.materials[i].name for i in (2,3,4,7)],
+        "owned_materials":[face.data.materials[i].name for i in (2,3,4,5,6,7)],
         "pigment_texture":{"path":texture_path,"sha256":sha(texture_path),"packed":bool(skin_image.packed_file),"size":list(skin_image.size)},
         "thin_rim_texture":{"path":rim_path,"sha256":sha(rim_path),"packed":bool(rim_image.packed_file),"size":list(rim_image.size),"role":"Diagnostic alpha/UV calibration only; final visible upper line is the owned morph-driven ribbon"},
         "eye_lower_contours":contours,"neutral_values_restored":neutral,"proofs":proofs,
