@@ -1,0 +1,42 @@
+{
+  "status": "UNDECIDED — inventory only; Pixal is a comparison/reuse candidate, not a mandated base or production technique. No single approval baseline or visual selection was made.",
+  "approved_concept_references": [
+    {"path":"asset/mia/references/mia-clean-master-v22.png","sha256":"3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19","role":"highest-priority design reference; illustrated views are not a strict orthographic turnaround"},
+    {"path":"asset/mia/references/mia-expression-style-confirmed-20261031.png","sha256":"bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52","role":"highest-priority expression and face-style reference; illustrated views have pose/camera differences"}
+  ],
+  "candidates": [
+    {
+      "id": "pixal-single-front",
+      "path": "D:/ai/Mia3DWork/output/mia_pixal_head512_tex2048_00001.glb",
+      "sha256": "97D76C20E08D92B1E05079B9EC5D340683863A843F1D434A7DCD7C907FB34ADA",
+      "structure": {"position_count": 156323, "index_count": 595554, "connected_components": 3699, "meshes": 1, "primitives": 1, "materials": 1, "nodes": 1, "png_images": [2048, 2048, 512], "uv": true, "normal": true, "tangent": true, "skins": 0, "morph_targets": 0, "animations": 0},
+      "inspection_level": "binary/glTF structural inspection only; no new render or visual selection"
+    },
+    {
+      "id": "pixal-head-multiview",
+      "path": "D:/ai/Mia3DWork/output/mia_pixal_head_mv512_tex2048_00001.glb",
+      "sha256": "1B08D5EAA598EE80FAD5C3A36D5C355A467C30C9C878F1054EE4788358B3E343",
+      "structure": {"position_count": 170119, "index_count": 597162, "connected_components": 5419, "meshes": 1, "primitives": 1, "materials": 1, "nodes": 1, "png_images": [2048, 2048, 512], "uv": true, "normal": true, "tangent": true, "skins": 0, "morph_targets": 0, "animations": 0},
+      "inspection_level": "binary/glTF structural inspection and SHA rechecked against the local file; no new render or visual selection"
+    },
+    {
+      "id": "pixal-full-multiview",
+      "path": "D:/ai/Mia3DWork/output/mia_pixal3d_mv512_tex2048_00001.glb",
+      "sha256": "40EE1D976A20988E8959102A6EC053A892FD432B9D47ADF38322FBF562E55972",
+      "structure": {"position_count": 147285, "index_count": 588786, "connected_components": 3152, "meshes": 1, "primitives": 1, "materials": 1, "nodes": 1, "png_images": [2048, 2048, 512], "uv": true, "normal": true, "tangent": true, "skins": 0, "morph_targets": 0, "animations": 0},
+      "inspection_level": "binary/glTF structural inspection only; no new render or visual selection"
+    }
+  ],
+  "interpretation_limits": [
+    "connected_components are index-connected graph components without coordinate welding; UV seams and attribute duplication may inflate the count.",
+    "One mesh/primitive/material/node does not prove either a completely monolithic character or the existence of usable semantic parts.",
+    "No candidate is approved until a controlled visual/multiview review is performed.",
+    "Pixal likeness evidence may be reused during comparison, direct-poly, or retopology decisions; it does not prescribe a new generation method, donor workflow, or base mesh."
+  ],
+  "prompt_wrapper_observations": {
+    "single_view": "one LoadImage: mia-rigging-apose-front-v30.png; head crop x=260,y=0,w=520,h=500 through ImageCropToMask1024x1024 pad=1.05",
+    "multiview": "adds back/side-v30; front/left/back combined at fov=20.0; each head crop uses the same crop operation",
+    "unverified_hypotheses": ["left input maps to anatomically correct side direction", "independent crops preserve camera framing consistency"],
+    "restriction": "Do not rerun generation for this milestone."
+  }
+}
