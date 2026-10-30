@@ -1,0 +1,51 @@
+{
+  "request": "Rebuild Mia to approved v22 art in face/body, hair, garments, accessories order; inspect every stage in multiple views and scales.",
+  "branch": "codex/mia-layered-model-v02",
+  "method_revision": "User-requested side-review correction: preserve expression-ready anime topology; co-design geometry, owned eye/brow/lash parts, textures, toon/normal shading and morphs. Procedural skull experiments remain rejected evidence.",
+  "reference_authority": "asset/mia/references/mia-clean-master-v22.png and mia-canonical-source-v22.png; expressions for face identity",
+  "coordinate_convention": "Front is -Y. Anatomical left braid, anatomical right slate pants panel. Pose differences from pocketed art must be stated.",
+  "acceptance_criteria": [
+    {
+      "id": "AC1", "critical": true,
+      "criterion": "Licensed editable anime facial base with eyelid/mouth expression structure, intact face/body volume, owned eye/brow/lash components, Mia facial proportions and supported bust-waist-hip silhouette; no v45 geometry reuse.",
+      "user_visible_outcome": "Face and body remain volumetric and coherent from front, side, back and three-quarter closeups.",
+      "intended_runtime": "Blender 5.2",
+      "verification": "Separate structure QA (clay/wire/face orientation/volume/intersections/actual blink and mouth deformation) and art QA (real eye/liner/skin textures and toon/normal setup against reference); 12 yaw x 3 elevation x 3 scales, closeup and perspective supplement. Source hash preservation. Separate parts do not require forced skin welding.",
+      "evidence": "Source rights/provenance, preserved original facial topology and morphs, anatomy checkpoint, structure/art audits, blink/mouth proof and SHA-bound stage review"
+    },
+    {
+      "id": "AC2", "critical": true,
+      "criterion": "Separate owned scalp/hair with irregular bangs, full rear waves, half-up knot and one anatomical-left braid.",
+      "user_visible_outcome": "Hair has coherent thickness and silhouette during rotation without removing face surfaces or duplicating braid.",
+      "intended_runtime": "Blender 5.2",
+      "verification": "Hair isolation and complete 216-view saved/clay audit; scalp/face clearance and reference comparison.",
+      "evidence": "Hair checkpoint blend, audit report, owner inventory, SHA-bound stage review"
+    },
+    {
+      "id": "AC3", "critical": true,
+      "criterion": "Separate crop tee, inner band, oversized cardigan, patch cargo pants, socks and sneakers with actual thickness and no visible rest-pose body clipping.",
+      "user_visible_outcome": "Floating crop hem, low cardigan rear hem, loose sleeves, right-leg slate panel and footwear match the art from all sides.",
+      "intended_runtime": "Blender 5.2",
+      "verification": "Garment isolation, complete 216-view saved/clay audit, exposed-skin/hem coverage review. Complete anatomy original preserved.",
+      "evidence": "Garment checkpoint blend, coverage report, audit, SHA-bound stage review"
+    },
+    {
+      "id": "AC4", "critical": true,
+      "criterion": "Single crossbody strap, rear bag, cyan/brass pin, chain and tags with clear Bag/Hardware ownership and physical detail layers.",
+      "user_visible_outcome": "Strap follows torso, bag sits behind hip, flap/window/cards/clasp have real depth and no duplicate assemblies appear in three-quarter views.",
+      "intended_runtime": "Blender 5.2",
+      "verification": "Accessory isolation, complete 216-view saved/clay audit, ownership/clearance/reference review.",
+      "evidence": "Final modeling blend, inventory, audit, SHA-bound stage review"
+    },
+    {
+      "id": "AC5", "critical": true,
+      "criterion": "Review and repair each stage before dependent modeling proceeds; require both structure and art QA. Preserve checkpoints and failed procedural experiments, distinguish geometry from normal/material causes, and report artistic gaps honestly.",
+      "user_visible_outcome": "Actual stage evidence and identified limitations remain available; image counts never imply likeness acceptance.",
+      "intended_runtime": "Blender 5.2 and independent visual review",
+      "verification": "Sequential stage reviews tied to exact source hashes plus fresh independent acceptance audit.",
+      "evidence": "Stage review records, final independent audit; FAIL/UNVERIFIED cannot be called complete"
+    }
+  ],
+  "later_work": "Rigging, facial expressions, pose collision/correctives and event animation follow modeling acceptance; this contract covers static modeling.",
+  "status": "IN_PROGRESS"
+}

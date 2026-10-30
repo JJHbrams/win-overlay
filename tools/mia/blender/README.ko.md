@@ -42,3 +42,9 @@ WebP 변환에는 Python 3와 Pillow가 필요하다. PNG 시퀀스는 고정 �
 이 도구는 0–330도 궤도, full/torso/head 배율, 상·하 시점을 저장된 재질과 이미지/normal 노드를 쓰지 않는 neutral clay로 렌더한다. 입력 파일 SHA-256 전후를 검증하며, 기본 gate는 언제나 `UNVERIFIED`다. 수동 review JSON은 정확히 같은 `source_sha256`에만 묶여 사용된다.
 
 외부 GLB의 새 재구성에는 별도 로컬 ComfyUI/모델이 필요하며, 이 저장소는 그 체크포인트나 모든 이전 실험본을 배포하지 않는다. 세부 생성 기록은 자산 번들의 `provenance/`에 있다. 전 동작 범위·손가락·표정·충돌 검증까지 완료된 제작 도구로 간주하지 않는다.
+
+## v02 얼굴 제작 접근 재평가
+
+`experiments/v02-procedural-rejected/`는 원화 닮음에 실패한 절차적 얼굴 실험의 보존본이다. 자동 생성 얼굴 표면/CDT·스무딩·접합 반복을 표준 버튜버 제작 공정으로 설명하거나, 다음 Mia 얼굴 제작 기반으로 자동 선택하지 않는다. 실패 native/key view는 `asset/mia/blender/audits/v02/rejected-procedural-face/`에 있다.
+
+후속 제작 계약은 `model_v02_contract.json`에 있다. 출처·권리를 검증한 anime 얼굴 topology와 눈·눈썹·속눈썹·texture·toon/normal·Shape Key를 함께 편집하고 구조 QA와 작화 QA를 구분한다. 얼굴 부품의 일체 봉합을 의무로 삼지 않는다. 기존 실패는 PASS로 재분류하지 않는다.

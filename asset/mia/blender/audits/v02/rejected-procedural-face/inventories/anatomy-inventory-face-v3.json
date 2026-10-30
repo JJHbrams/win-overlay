@@ -1,0 +1,52 @@
+{
+  "schema": "mia-v02-anatomy/v1",
+  "stage": "ANATOMY_ONLY",
+  "status": "READY_FOR_HUMAN_MULTIVIEW_REVIEW",
+  "source_foundation": "C:\\Users\\antio\\.codex\\worktrees\\mia-layered-workflow\\win-overlay\\asset\\mia\\blender\\mia-layered-foundation\\Mia_LayeredFoundation_v01.blend",
+  "source_foundation_sha256_before": "D390D8E1763CF9D86B0ADEFAEF15D8DC3F471ADE716CEB3DAC2EC0EACDD85F6D",
+  "source_foundation_sha256_after": "D390D8E1763CF9D86B0ADEFAEF15D8DC3F471ADE716CEB3DAC2EC0EACDD85F6D",
+  "source_immutable": true,
+  "output": "C:\\Users\\antio\\.codex\\worktrees\\mia-layered-workflow\\win-overlay\\asset\\mia\\blender\\mia-layered-model-v02\\Mia_Anatomy_v02_face-v3.blend",
+  "output_sha256": "E02503A68F88E29B47959CD87C6379CEDF66E13FE8F6E84A29B1D1E921342585",
+  "body": {
+    "object": "BodyHead_Master",
+    "vertices": 12502,
+    "polygons": 12500,
+    "shape_keys": [
+      "Foundation_Basis",
+      "Mia_FaceBody_Sculpt_v02"
+    ]
+  },
+  "eyes": [
+    {
+      "object": "Eyes_body_female_stylized.eye.L",
+      "world_center": [
+        0.049177,
+        -0.03788,
+        1.524269
+      ]
+    },
+    {
+      "object": "Eyes_body_female_stylized.eye.R",
+      "world_center": [
+        -0.049177,
+        -0.03788,
+        1.524269
+      ]
+    }
+  ],
+  "face_details": [],
+  "collections_unimplemented": [
+    "ScalpGuide",
+    "Hair",
+    "Garments",
+    "Bag",
+    "Hardware",
+    "RigGuide"
+  ],
+  "claims": [
+    "No v45 geometry or projected texture was read.",
+    "The body remains a complete topology; this stage deletes no face, scalp, or torso geometry.",
+    "Hair, garments, bag, hardware, rig, and animation remain unimplemented."
+  ]
+}
