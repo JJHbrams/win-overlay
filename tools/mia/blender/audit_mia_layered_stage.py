@@ -120,6 +120,8 @@ def has_name_token(name, token):
 def is_face(obj):
     """Only identify a deliberately named face mesh, never arbitrary *surface* meshes."""
     role = str(obj.get("part_role", obj.get("role", ""))).upper()
+    if role:
+        return role == "ANATOMY_FACE_TOPOLOGY"
     return (role == "ANATOMY_FACE_TOPOLOGY" or obj.name.upper().startswith("MIA_FACE")
             or obj.name.upper().startswith("FACE_") or has_name_token(obj.name, "face"))
 
@@ -137,6 +139,8 @@ def alpha_face_layer(obj):
 
 def is_body_core(obj):
     role = str(obj.get("part_role", obj.get("role", ""))).upper()
+    if role:
+        return role in {"ANATOMY_BODY_SKIN", "ANATOMY_BODY_SKIN_ONLY"}
     return role == "ANATOMY_BODY_SKIN" or obj.name.upper().startswith("MIA_BODY") or has_name_token(obj.name, "body")
 
 
@@ -225,9 +229,10 @@ def canonical_owner_check(meshes):
     for obj in meshes:
         role = str(obj.get("part_role", obj.get("role", ""))).upper()
         source_mesh = str(obj.get("source_mesh", "")).upper()
-        if role == "ANATOMY_FACE_TOPOLOGY" or obj.name.upper().startswith("MIA_FACE"):
+        if role == "ANATOMY_FACE_TOPOLOGY" or (not role and obj.name.upper().startswith("MIA_FACE")):
             faces.append(obj.name)
-        if source_mesh == "BODY" or obj.name.upper().startswith("MIA_BODY"):
+        if role in {"ANATOMY_BODY_SKIN", "ANATOMY_BODY_SKIN_ONLY"} or (not role and
+                (source_mesh == "BODY" or obj.name.upper().startswith("MIA_BODY"))):
             bodies.append(obj.name)
     result = {
         "canonical_visible_face_names": sorted(faces),
