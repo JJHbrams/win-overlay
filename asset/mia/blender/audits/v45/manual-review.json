@@ -1,0 +1,18 @@
+{
+  "source_sha256": "CB5B98A5D789DBE387FE08836CD793BBAFBE4F38E905CECA6AA7575953C2CE94",
+  "review_type": "human multi-view negative evidence",
+  "gates": {
+    "artistic": "FAIL",
+    "geometry": "FAIL",
+    "manual": "FAIL",
+    "head_surface": "FAIL",
+    "single_ownership": "FAIL",
+    "profile_fidelity": "FAIL"
+  },
+  "evidence": [
+    "Neutral-clay face-front inspection has transparent/open pixels at (250,400) and (260,410) in the 900px capture.",
+    "Three-quarter inspection reveals two physical straps, pins, and anatomical-left braids at different depths; front projection hid the duplication.",
+    "Side silhouette does not meet the approved art's supported torso/bust profile."
+  ],
+  "limitations": "This review is evidence for exactly this source hash. It does not establish a universal cause from a coordinate ROI, and mesh object count is not a quality pass."
+}
