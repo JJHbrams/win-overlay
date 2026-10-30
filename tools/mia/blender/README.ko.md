@@ -36,7 +36,7 @@ WebP 변환에는 Python 3와 Pillow가 필요하다. PNG 시퀀스는 고정 �
 & $miaBlender --background --factory-startup --disable-autoexec --python tools/mia/blender/audit_multiview.py -- `
   --input asset/mia/blender/mia-rig-draft-v45/Mia_RigDraft_v45.blend `
   --output-dir artifacts/mia-v45/multiview --report artifacts/mia-v45/multiview-report.json `
-  --manual-review asset/mia/blender/mia-rig-draft-v45/manual-review-v45.json
+  --manual-review asset/mia/blender/audits/v45/manual-review.json
 ```
 
 이 도구는 0–330도 궤도, full/torso/head 배율, 상·하 시점을 저장된 재질과 이미지/normal 노드를 쓰지 않는 neutral clay로 렌더한다. 입력 파일 SHA-256 전후를 검증하며, 기본 gate는 언제나 `UNVERIFIED`다. 수동 review JSON은 정확히 같은 `source_sha256`에만 묶여 사용된다.

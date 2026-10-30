@@ -1,6 +1,12 @@
 # Mia Blender 자산
 
-## 현재 드래프트
+## 현재 상태
+
+`mia-rig-draft-v45/`는 좁은 Idle/Turn/Click 기계 동작만 보존한 archive다. 다각도 clay 검토에서 얼굴 절단/열린 표면 및 중복 strap·pin·braid가 확인되어 artistic/geometry acceptance는 **FAIL**이다. 2개 오브젝트나 프레임 수는 품질 PASS 근거가 아니다.
+
+별도의 [mia-layered-foundation](mia-layered-foundation/README.ko.md)은 scoped CC0 일반 해부학 기반이며 **INCOMPLETE**다. 아직 Mia likeness·헤어·의상·가방·리그·이벤트 애니메이션은 구현하지 않는다. [v45 감사 증거](audits/v45/README.ko.md)와 `tools/mia/blender/README.ko.md`의 버전 고정 감사 절차를 함께 확인한다.
+
+## 보존된 v45 기계적 드래프트
 
 - [Mia_RigDraft_v45.blend](mia-rig-draft-v45/Mia_RigDraft_v45.blend)
 - [Idle 90f](mia-rig-draft-v45/Idle_90f.webp), [Turn 60f](mia-rig-draft-v45/Turn_60f.webp), [Click 30f](mia-rig-draft-v45/Click_30f.webp)

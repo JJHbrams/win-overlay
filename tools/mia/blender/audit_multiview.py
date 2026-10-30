@@ -55,15 +55,34 @@ def scene_inventory():
 
 
 def bounds():
+    """Frame evaluated, renderable geometry rather than object bounding boxes."""
+    depsgraph = bpy.context.evaluated_depsgraph_get()
+    depsgraph.update()
     points = []
+    included_types = {}
+    excluded_types = {}
     for obj in bpy.context.scene.objects:
-        if obj.type == "MESH" and not obj.hide_render:
-            points.extend(obj.matrix_world @ Vector(corner) for corner in obj.bound_box)
+        if obj.hide_render:
+            continue
+        if obj.type not in {"MESH", "CURVE", "CURVES", "SURFACE", "FONT", "META"}:
+            excluded_types[obj.type] = excluded_types.get(obj.type, 0) + 1
+            continue
+        evaluated = obj.evaluated_get(depsgraph)
+        try:
+            mesh = evaluated.to_mesh()
+        except RuntimeError:
+            excluded_types[obj.type] = excluded_types.get(obj.type, 0) + 1
+            continue
+        try:
+            points.extend(evaluated.matrix_world @ vertex.co for vertex in mesh.vertices)
+            included_types[obj.type] = included_types.get(obj.type, 0) + 1
+        finally:
+            evaluated.to_mesh_clear()
     if not points:
         raise RuntimeError("No render-visible mesh objects")
     low = Vector((min(p.x for p in points), min(p.y for p in points), min(p.z for p in points)))
     high = Vector((max(p.x for p in points), max(p.y for p in points), max(p.z for p in points)))
-    return low, high
+    return low, high, {"evaluated_object_types": included_types, "excluded_object_types": excluded_types}
 
 
 def make_camera():
@@ -81,15 +100,10 @@ def track(camera, target):
 
 def setup_render(resolution):
     scene = bpy.context.scene
-    scene.render.engine = "BLENDER_EEVEE"
     scene.render.resolution_x = resolution
     scene.render.resolution_y = resolution
     scene.render.resolution_percentage = 100
     scene.render.image_settings.file_format = "PNG"
-    scene.render.film_transparent = False
-    if scene.world is None:
-        scene.world = bpy.data.worlds.new("AUDIT_WORLD")
-    scene.world.color = (0.045, 0.045, 0.055)
 
 
 def make_clay_material():
@@ -123,6 +137,7 @@ def restore_materials(original):
 
 
 def lighting():
+    lights = []
     for name, position, energy in (("AUDIT_KEY", (3, -4, 5), 900), ("AUDIT_FILL", (-4, -2, 3), 350), ("AUDIT_RIM", (2, 3, 4), 500)):
         data = bpy.data.lights.new(name, "AREA")
         data.energy = energy
@@ -133,17 +148,58 @@ def lighting():
         obj.location = position
         obj.rotation_euler = (0, 0, 0)
         obj.rotation_euler = (Vector((0, 0, 1)) - obj.location).to_track_quat("-Z", "Y").to_euler()
+        lights.append(obj)
+    return lights
+
+
+def clay_lighting_state():
+    """Use controlled clay illumination without changing source-as-saved mode."""
+    scene = bpy.context.scene
+    prior = {
+        "world": scene.world,
+        "film_transparent": scene.render.film_transparent,
+        "view_transform": scene.view_settings.view_transform,
+        "look": scene.view_settings.look,
+        "exposure": scene.view_settings.exposure,
+        "gamma": scene.view_settings.gamma,
+        "lights": [(obj, obj.hide_render) for obj in scene.objects if obj.type == "LIGHT"],
+    }
+    for obj, _ in prior["lights"]:
+        obj.hide_render = True
+    world = bpy.data.worlds.new("AUDIT_NEUTRAL_WORLD")
+    world.color = (0.045, 0.045, 0.055)
+    scene.world = world
+    scene.render.film_transparent = False
+    scene.view_settings.view_transform = "Standard"
+    scene.view_settings.look = "None"
+    scene.view_settings.exposure = 0.0
+    scene.view_settings.gamma = 1.0
+    return prior, lighting()
+
+
+def restore_clay_lighting(prior, audit_lights):
+    scene = bpy.context.scene
+    for obj in audit_lights:
+        bpy.data.objects.remove(obj, do_unlink=True)
+    for obj, hide_render in prior["lights"]:
+        if obj.name in bpy.data.objects:
+            obj.hide_render = hide_render
+    scene.world = prior["world"]
+    scene.render.film_transparent = prior["film_transparent"]
+    scene.view_settings.view_transform = prior["view_transform"]
+    scene.view_settings.look = prior["look"]
+    scene.view_settings.exposure = prior["exposure"]
+    scene.view_settings.gamma = prior["gamma"]
 
 
 def render_views(args, source_hash):
     output = Path(args.output_dir)
     output.mkdir(parents=True, exist_ok=True)
     setup_render(args.resolution)
-    low, high = bounds()
+    low, high, framing = bounds()
     center = (low + high) / 2
     height = high.z - low.z
     camera = make_camera()
-    lighting()
     scale_defs = {
         "full": (center.z, max(height * 1.12, 0.2)),
         "torso": (low.z + height * 0.57, max(height * 0.66, 0.2)),
@@ -154,6 +210,7 @@ def render_views(args, source_hash):
     yaws = range(0, 360, args.yaw_step)
     for mode in args.modes:
         saved = clay_override(clay) if mode == "clay" else None
+        clay_state, audit_lights = clay_lighting_state() if mode == "clay" else (None, [])
         for scale_name in args.scales:
             target_z, ortho = scale_defs[scale_name]
             camera.data.ortho_scale = ortho
@@ -182,7 +239,9 @@ def render_views(args, source_hash):
                     })
         if saved is not None:
             restore_materials(saved)
-    return records
+        if clay_state is not None:
+            restore_clay_lighting(clay_state, audit_lights)
+    return records, framing
 
 
 def main():
@@ -196,7 +255,7 @@ def main():
         args.manual_review = str(Path(args.manual_review).resolve())
     before = sha256(source)
     bpy.ops.wm.open_mainfile(filepath=str(source))
-    records = render_views(args, before)
+    records, framing = render_views(args, before)
     after = sha256(source)
     if after != before:
         raise RuntimeError("SOURCE MUTATED: before=%s after=%s" % (before, after))
@@ -221,12 +280,18 @@ def main():
         "yaw_step": args.yaw_step,
         "elevations": args.elevations,
         "inventory": scene_inventory(),
+        "framing": framing,
+        "mode_lighting": {
+            "saved": "source scene world, lights, and view settings are left as saved; only the audit camera is added transiently",
+            "clay": "source render lights hidden; controlled AUDIT_NEUTRAL_WORLD, Standard view transform, and three audit area lights",
+        },
         "gates": gates,
         "manual_review": review_info,
         "renders": records,
         "limitations": [
             "Image generation and mesh inventory are diagnostic evidence, not an artistic or topology pass.",
             "Neutral clay assigns a new Principled material and does not use image or normal-map nodes.",
+            "Framing uses evaluated vertices for renderable mesh and curve-like objects; any excluded object types are reported rather than silently framed.",
             "The source blend is never saved by this tool.",
         ],
     }
