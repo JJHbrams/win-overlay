@@ -1,0 +1,281 @@
+{
+  "native_sha256": "02f8f8acaf074e9c61b8f4ed9200f7e8c9d6c1e5389c107adcf95d9c9df79ffc",
+  "recipe_sha256": "fcf41d275deb83c06074832a089e10f7bc7f8b657a2e7b4917e4e2873dc057f3",
+  "source_sha256_before": {
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-head-refine-v06\\win-overlay\\asset\\mia\\blender\\mia-head-refine-v06\\astra-v09\\Mia_Astra_Head_v09.blend": "63523417f451b5bc193d6cb2ef8940f4a0004f0db0e89f713d01f486cb408232",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-head-refine-v06\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v07\\Mia_ReusedFoundation_DetailedHair.blend": "afb4cb651da32c678ae6a69f3ee988a502e09611d69640b5146dd28c22ccd1f2",
+    "D:\\ai\\Mia3DWork\\model-v02\\hair-surface-stage\\Mia_HairSurface_v06.blend": "9ef40cabbd2dd73f67e14e38fd54713d4c5ac0ceaf1ce4aa32b64af33f3830a6"
+  },
+  "source_sha256_after": {
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-head-refine-v06\\win-overlay\\asset\\mia\\blender\\mia-head-refine-v06\\astra-v09\\Mia_Astra_Head_v09.blend": "63523417f451b5bc193d6cb2ef8940f4a0004f0db0e89f713d01f486cb408232",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-head-refine-v06\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v07\\Mia_ReusedFoundation_DetailedHair.blend": "afb4cb651da32c678ae6a69f3ee988a502e09611d69640b5146dd28c22ccd1f2",
+    "D:\\ai\\Mia3DWork\\model-v02\\hair-surface-stage\\Mia_HairSurface_v06.blend": "9ef40cabbd2dd73f67e14e38fd54713d4c5ac0ceaf1ce4aa32b64af33f3830a6"
+  },
+  "parts": [
+    {
+      "part": "MIA_V11_Hair_Bangs",
+      "source_object": "MIA_PIXAL_HAIR_DESIGN_SEPARATE",
+      "polygons": 10131,
+      "vertices": 8902,
+      "removed_from_source_polygon_count": 46309
+    },
+    {
+      "part": "MIA_V11_Hair_CrownAndCheekLocks",
+      "source_object": "MIA_PIXAL_HAIR_DESIGN_SEPARATE",
+      "polygons": 45578,
+      "vertices": 38618,
+      "removed_from_source_polygon_count": 10862
+    },
+    {
+      "part": "MIA_V11_Hair_Rear",
+      "source_object": "SINGLE_HAIR_MIXED_REVIEW",
+      "polygons": 20398,
+      "vertices": 17156,
+      "removed_from_source_polygon_count": 2158
+    },
+    {
+      "part": "MIA_V11_Hair_Scalp_Front",
+      "source_object": "TEMP_SCALP_SOURCE",
+      "polygons": 206,
+      "vertices": 155,
+      "removed_from_source_polygon_count": 2944
+    },
+    {
+      "part": "MIA_V11_Hair_Scalp_Rear",
+      "source_object": "TEMP_SCALP_SOURCE",
+      "polygons": 194,
+      "vertices": 126,
+      "removed_from_source_polygon_count": 7538
+    },
+    {
+      "part": "MIA_V11_MiaHair_LEFT_OneBraid_Lane2.001",
+      "source_object": "MiaHair_LEFT_OneBraid_Lane2.001",
+      "role": "one left braid",
+      "polygons": 1492
+    },
+    {
+      "part": "MIA_V11_MiaHair_LEFT_OneBraid_Lane1.001",
+      "source_object": "MiaHair_LEFT_OneBraid_Lane1.001",
+      "role": "one left braid",
+      "polygons": 1492
+    },
+    {
+      "part": "MIA_V11_MiaHair_LEFT_OneBraid_Lane0.001",
+      "source_object": "MiaHair_LEFT_OneBraid_Lane0.001",
+      "role": "one left braid",
+      "polygons": 1492
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap05_Etch00.001",
+      "source_object": "MiaHair_Knot_Wrap05_Etch00.001",
+      "role": "half-up knot",
+      "polygons": 312
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap05_EdgeR.001",
+      "source_object": "MiaHair_Knot_Wrap05_EdgeR.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap05_EdgeL.001",
+      "source_object": "MiaHair_Knot_Wrap05_EdgeL.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap05.001",
+      "source_object": "MiaHair_Knot_Wrap05.001",
+      "role": "half-up knot",
+      "polygons": 754
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap04_Etch00.001",
+      "source_object": "MiaHair_Knot_Wrap04_Etch00.001",
+      "role": "half-up knot",
+      "polygons": 312
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap04_EdgeR.001",
+      "source_object": "MiaHair_Knot_Wrap04_EdgeR.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap04_EdgeL.001",
+      "source_object": "MiaHair_Knot_Wrap04_EdgeL.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap04.001",
+      "source_object": "MiaHair_Knot_Wrap04.001",
+      "role": "half-up knot",
+      "polygons": 754
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap03_Etch00.001",
+      "source_object": "MiaHair_Knot_Wrap03_Etch00.001",
+      "role": "half-up knot",
+      "polygons": 312
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap03_EdgeR.001",
+      "source_object": "MiaHair_Knot_Wrap03_EdgeR.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap03_EdgeL.001",
+      "source_object": "MiaHair_Knot_Wrap03_EdgeL.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap03.001",
+      "source_object": "MiaHair_Knot_Wrap03.001",
+      "role": "half-up knot",
+      "polygons": 754
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap02_Etch00.001",
+      "source_object": "MiaHair_Knot_Wrap02_Etch00.001",
+      "role": "half-up knot",
+      "polygons": 312
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap02_EdgeR.001",
+      "source_object": "MiaHair_Knot_Wrap02_EdgeR.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap02_EdgeL.001",
+      "source_object": "MiaHair_Knot_Wrap02_EdgeL.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap02.001",
+      "source_object": "MiaHair_Knot_Wrap02.001",
+      "role": "half-up knot",
+      "polygons": 754
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap01_Etch00.001",
+      "source_object": "MiaHair_Knot_Wrap01_Etch00.001",
+      "role": "half-up knot",
+      "polygons": 312
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap01_EdgeR.001",
+      "source_object": "MiaHair_Knot_Wrap01_EdgeR.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap01_EdgeL.001",
+      "source_object": "MiaHair_Knot_Wrap01_EdgeL.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap01.001",
+      "source_object": "MiaHair_Knot_Wrap01.001",
+      "role": "half-up knot",
+      "polygons": 754
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap00_Etch00.001",
+      "source_object": "MiaHair_Knot_Wrap00_Etch00.001",
+      "role": "half-up knot",
+      "polygons": 312
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap00_EdgeR.001",
+      "source_object": "MiaHair_Knot_Wrap00_EdgeR.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap00_EdgeL.001",
+      "source_object": "MiaHair_Knot_Wrap00_EdgeL.001",
+      "role": "half-up knot",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Knot_Wrap00.001",
+      "source_object": "MiaHair_Knot_Wrap00.001",
+      "role": "half-up knot",
+      "polygons": 754
+    },
+    {
+      "part": "MIA_V11_MiaHair_HalfUp_OneClosedKnot.001",
+      "source_object": "MiaHair_HalfUp_OneClosedKnot.001",
+      "role": "half-up knot",
+      "polygons": 1056
+    },
+    {
+      "part": "MIA_V11_MiaHair_Braid_Tail_Etch01.001",
+      "source_object": "MiaHair_Braid_Tail_Etch01.001",
+      "role": "one left braid",
+      "polygons": 312
+    },
+    {
+      "part": "MIA_V11_MiaHair_Braid_Tail_Etch00.001",
+      "source_object": "MiaHair_Braid_Tail_Etch00.001",
+      "role": "one left braid",
+      "polygons": 312
+    },
+    {
+      "part": "MIA_V11_MiaHair_Braid_Tail_EdgeR.001",
+      "source_object": "MiaHair_Braid_Tail_EdgeR.001",
+      "role": "one left braid",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Braid_Tail_EdgeL.001",
+      "source_object": "MiaHair_Braid_Tail_EdgeL.001",
+      "role": "one left braid",
+      "polygons": 368
+    },
+    {
+      "part": "MIA_V11_MiaHair_Braid_Tail.001",
+      "source_object": "MiaHair_Braid_Tail.001",
+      "role": "one left braid",
+      "polygons": 970
+    },
+    {
+      "part": "MIA_V11_MiaHair_Braid_Etch2.001",
+      "source_object": "MiaHair_Braid_Etch2.001",
+      "role": "one left braid",
+      "polygons": 1192
+    },
+    {
+      "part": "MIA_V11_MiaHair_Braid_Etch1.001",
+      "source_object": "MiaHair_Braid_Etch1.001",
+      "role": "one left braid",
+      "polygons": 1192
+    },
+    {
+      "part": "MIA_V11_MiaHair_Braid_Etch0.001",
+      "source_object": "MiaHair_Braid_Etch0.001",
+      "role": "one left braid",
+      "polygons": 1192
+    }
+  ],
+  "base_choice": "v09 preserves approved body and complete Face44; v10 ribbon hair and cheek taper excluded",
+  "limits": [
+    "Static sculpt study, not ART approved",
+    "Detailed source contains prior cut boundaries; cleanup is restricted to hair-owned polygons",
+    "Original Face44 eye/mouth material islands remain on their preserved master; hair parts are separate",
+    "No rig weights motion or pose validation authored"
+  ],
+  "art_status": "FAIL - static study only; upper detailed silhouette reusable, rear attachment and lower cut silhouette unfinished",
+  "visual_findings": [
+    "Short messy cheek curls and flyaways recover detail missing in v10 ribbon study.",
+    "Back scalp exposure band and hard nape handoff remain visible.",
+    "Stretched lower source has a curtain-like silhouette and flat-cut tips; not production-ready.",
+    "Braid and knot use separate older source geometry with a flatter material response."
+  ]
+}
