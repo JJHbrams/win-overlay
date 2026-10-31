@@ -1,0 +1,18 @@
+{
+  "front": {
+    "observed_differences": "Local brown/mauve lower-lid crescent is more readable; existing fixed ROI .976 to .968 is at lower mask edge, while core scan .783-.840. Geometry, iris and lash unchanged.",
+    "unresolved": "Full face likeness remains FAIL/WIP: broad midface/temple, jaw/nose/mouth and source pose/hair occlusion differences remain. New crescent is smoother/narrower and lighter than source; front previous ROI remains mostly unchanged. No expression or animation acceptance."
+  },
+  "profile": {
+    "observed_differences": "Hair occludes under-eye in yaw80 view; no visible nose/chin silhouette change. This view cannot validate crescent shape.",
+    "unresolved": "Full face likeness remains FAIL/WIP: broad midface/temple, jaw/nose/mouth and source pose/hair occlusion differences remain. New crescent is smoother/narrower and lighter than source; front previous ROI remains mostly unchanged. No expression or animation acceptance."
+  },
+  "left_oblique": {
+    "observed_differences": "Same fixed 9x9 under-eye/cheek display-luma ratio 1.010 to .839; source .563. Local crescent stronger without broad cheek haze or sclera spill in inspected render.",
+    "unresolved": "Full face likeness remains FAIL/WIP: broad midface/temple, jaw/nose/mouth and source pose/hair occlusion differences remain. New crescent is smoother/narrower and lighter than source; front previous ROI remains mostly unchanged. No expression or animation acceptance."
+  },
+  "right_oblique": {
+    "observed_differences": "Near-front opposite subtle angle shows localized crease-adjacent pigment; neutral mouth and gaze remain different from expressive source.",
+    "unresolved": "Full face likeness remains FAIL/WIP: broad midface/temple, jaw/nose/mouth and source pose/hair occlusion differences remain. New crescent is smoother/narrower and lighter than source; front previous ROI remains mostly unchanged. No expression or animation acceptance."
+  }
+}

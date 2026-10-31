@@ -30,9 +30,10 @@
     "body_comparison": "blender/mia-body-reference-audit-v19/body_reference_comparison_4rows.png",
     "body_findings": "blender/mia-body-reference-audit-v19/BODY_AUDIT.md",
     "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md",
-    "current_live_viewing_setup": "blender/mia-reference-finish-v22/Mia_ReviewSetup_v22.blend",
+    "current_live_viewing_setup": "blender/mia-reference-finish-v22/integration-wip-3/Mia_ReferenceFinish_v22.blend",
     "viewport_and_camera_audit": "blender/mia-reference-finish-v22/camera-audit.json",
-    "integration_wip_v22": "blender/mia-reference-finish-v22/integration-diagnostic-1/integration-manifest.json"
+    "integration_wip_v22": "blender/mia-reference-finish-v22/integration-diagnostic-1/integration-manifest.json",
+    "current_live_evidence": "blender/mia-reference-finish-v22/live-wip-3/live-review.json"
   },
   "correction_review": {
     "independent_round1": "blender/mia-correction-v20/acceptance-round-1.md",
@@ -115,14 +116,21 @@
   "active_progress": "blender/mia-reference-finish-v22/PROGRESS.md",
   "resumed_v22": {
     "face_finish4_sha256": "9d2c9d42c01c99f0138bb9227e3679ce3afa882d2f43c339ab26496c4c559a4b",
-    "face_status": "Independent local WIP recommendation only; AC2 FAIL. Hair occlusion tested by yaw bracket.",
-    "body_status": "c8 corrected 8a5bc113 rejected for long horizontal lower shelf. c9 tests X-dependent lower-pole height. Body art remains FAIL.",
+    "face_status": "Face5 local under-eye shader improvement independently recommended. Full face identity/shape/expression FAIL.",
+    "body_status": "Body8–11 rejected; true lower-return geometry but broad upper mass/heavy ledge. Candidate12 revisits primary volume using corrected source registration.",
     "hair_status": "0d787482 independently recommended as material-only integration WIP; AC4 FAIL. Portable parts/hair-ink-paint evidence archived.",
     "integration_diagnostic_sha256": "4c35b58700db0adac5c5b9994a4cec18ba593a0bd3da0175330f9bd4c41f68be",
     "diagnostic_is_selected_final": false,
-    "last_remote_checkpoint": "ed080d502705021c36f1a0509ec43b52e2d6ddf1",
+    "last_remote_checkpoint": "ae04799",
     "resume_entry": "blender/mia-reference-finish-v22/PROGRESS.md",
     "integrated_diagnostic_review": "blender/mia-reference-finish-v22/integrated-review-diagnostic-1/README.md",
-    "independent_parts_review": "blender/mia-reference-finish-v22/independent-parts-review-2.md"
+    "independent_parts_review": "blender/mia-reference-finish-v22/independent-parts-review-2.md",
+    "face_finish5_sha256": "a5ec86e9fab19fe0e62b9208f48a146760fc758cb42c7e13977d1573f29ffbbb",
+    "body_registration_correction": "Selected-front supplement used shoulderY350 instead of approx290–295; source was6.7% oversized. v06 four-view vertical branch unaffected, but lateral torso centring needs explicit translation. Old supplemental boards excluded from proportion judgment."
+  },
+  "current_surface_wip": {
+    "path": "blender/mia-reference-finish-v22/integration-wip-3/Mia_ReferenceFinish_v22.blend",
+    "sha256": "fc939a759707cace22a71012aa9c422c263e8e611be6828198110bc419059e05",
+    "selection_means": "Current live/editor surface WIP: Face5, hair0d, interim Body5. Anatomy and art remain FAIL; not final model."
   }
 }

@@ -1,0 +1,70 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-3\\Mia_ReferenceFinish_v22.blend",
+  "sha256": "fc939a759707cace22a71012aa9c422c263e8e611be6828198110bc419059e05",
+  "native_unchanged": true,
+  "before": "Code executed successfully: {\"path\": \"C:\\\\Users\\\\antio\\\\.codex\\\\worktrees\\\\mia-body-head-v06\\\\win-overlay\\\\asset\\\\mia\\\\blender\\\\mia-reference-finish-v22\\\\Mia_ReviewSetup_v22.blend\", \"dirty\": false, \"scene\": \"Scene\"}\n",
+  "after": "Code executed successfully: {\"path\": \"C:\\\\Users\\\\antio\\\\.codex\\\\worktrees\\\\mia-body-head-v06\\\\win-overlay\\\\asset\\\\mia\\\\blender\\\\mia-reference-finish-v22\\\\integration-wip-3\\\\Mia_ReferenceFinish_v22.blend\", \"camera\": \"MIA_REVIEW_Head_Front\", \"projection\": \"ORTHO\", \"viewports\": [{\"center\": [0.0, 0.0, 1.5499999523162842], \"distance\": 0.6299999952316284, \"projection\": \"ORTHO\"}]}\n",
+  "captures": [
+    {
+      "name": "head-front",
+      "focus": "head",
+      "angle": "Front",
+      "distance": 0.63,
+      "images": [
+        {
+          "path": "head-front-0.png",
+          "sha256": "2171950d5c052ecf9b69da4fbdd16638a25766fabbb78296218f58625ce0f522"
+        }
+      ]
+    },
+    {
+      "name": "head-left-oblique",
+      "focus": "head",
+      "angle": "LeftOblique",
+      "distance": 0.63,
+      "images": [
+        {
+          "path": "head-left-oblique-0.png",
+          "sha256": "27938c5804b0fdc8ece2c173c2f0bef8a2a23d912891010ef9eea5cac9ed34a4"
+        }
+      ]
+    },
+    {
+      "name": "head-profile",
+      "focus": "head",
+      "angle": "Profile",
+      "distance": 0.63,
+      "images": [
+        {
+          "path": "head-profile-0.png",
+          "sha256": "78a681cc4fc28867697d8178ccf7d489a36f5aba491d66526f6bee27efdfabc0"
+        }
+      ]
+    },
+    {
+      "name": "head-zoom",
+      "focus": "head",
+      "angle": "Front",
+      "distance": 0.4,
+      "images": [
+        {
+          "path": "head-zoom-0.png",
+          "sha256": "8277223ee21a851b3c3de02bbcd51fd6626e869a0d4038f982bd196295267e34"
+        }
+      ]
+    },
+    {
+      "name": "body-front",
+      "focus": "body",
+      "angle": "Front",
+      "distance": 2.7,
+      "images": [
+        {
+          "path": "body-front-0.png",
+          "sha256": "db4494db0f6e779f02497692e41d7a6c03b77ba7859c4c7aebbcc96ccbfc766f"
+        }
+      ]
+    }
+  ],
+  "scope": "Actual MCP viewport navigation only; no native saved. Freestyle render ink is not visible here."
+}

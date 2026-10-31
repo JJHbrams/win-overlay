@@ -1,0 +1,518 @@
+{
+  "front": {
+    "camera": {
+      "projection": "ORTHO",
+      "ortho_scale": 0.29,
+      "matrix": [
+        [
+          0.9933727979660034,
+          0.11493712663650513,
+          8.146736618641626e-10,
+          0.0
+        ],
+        [
+          2.0223808405717136e-08,
+          -2.1591667120901548e-07,
+          -1.0,
+          -2.0
+        ],
+        [
+          -0.11493712663650513,
+          0.9933727979660034,
+          -2.1712973818921455e-07,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "yaw": 0,
+      "elevation": 0,
+      "image_roll": -6.6,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 1.0
+      },
+      "lighting": {
+        "key": {
+          "location": [
+            -0.6,
+            -1,
+            2.2
+          ],
+          "watts": 60,
+          "size": 1
+        },
+        "fill": {
+          "location": [
+            0.8,
+            -0.8,
+            1.8
+          ],
+          "watts": 15,
+          "size": 1.5
+        },
+        "rim": {
+          "location": [
+            0,
+            0.9,
+            2.05
+          ],
+          "watts": 8,
+          "size": 0.8
+        },
+        "area_shape": "DISK",
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          1.55
+        ],
+        "world_linear": [
+          0.18,
+          0.18,
+          0.18
+        ],
+        "world_strength": 0.1,
+        "other_scene_lights_disabled": true
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "resolution": [
+        1000,
+        1000
+      ],
+      "pixel_aspect": [
+        1,
+        1
+      ],
+      "lens_shift": [
+        0,
+        0
+      ]
+    },
+    "landmarks": {
+      "anchor_pixels": [
+        [
+          500.50705671310425,
+          517.3493325710297
+        ],
+        [
+          531.8415760993958,
+          785.0810140371323
+        ]
+      ],
+      "anchor_world": [
+        [
+          -0.0004322286695241928,
+          -0.06166590750217438,
+          1.5449855327606201
+        ],
+        [
+          -0.00032938909134827554,
+          -0.06250333040952682,
+          1.4668134450912476
+        ]
+      ],
+      "definition": "Mean curved iris carrier center(s), not a fitted gaze pupil; actual evaluated central chin minimumZ. Same definition before/after."
+    }
+  },
+  "profile": {
+    "camera": {
+      "projection": "ORTHO",
+      "ortho_scale": 0.29,
+      "matrix": [
+        [
+          0.17364779114723206,
+          3.228635847563055e-08,
+          0.9848079681396484,
+          1.9696154594421387
+        ],
+        [
+          0.9848079681396484,
+          -1.4505165779610252e-07,
+          -0.1736479550600052,
+          -0.3472963571548462
+        ],
+        [
+          -3.228635847563055e-08,
+          1.0000001192092896,
+          -1.992346057022587e-07,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "yaw": 80,
+      "elevation": 0,
+      "image_roll": 0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 1.0
+      },
+      "lighting": {
+        "key": {
+          "location": [
+            -0.6,
+            -1,
+            2.2
+          ],
+          "watts": 60,
+          "size": 1
+        },
+        "fill": {
+          "location": [
+            0.8,
+            -0.8,
+            1.8
+          ],
+          "watts": 15,
+          "size": 1.5
+        },
+        "rim": {
+          "location": [
+            0,
+            0.9,
+            2.05
+          ],
+          "watts": 8,
+          "size": 0.8
+        },
+        "area_shape": "DISK",
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          1.55
+        ],
+        "world_linear": [
+          0.18,
+          0.18,
+          0.18
+        ],
+        "world_strength": 0.1,
+        "other_scene_lights_disabled": true
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "resolution": [
+        1000,
+        1000
+      ],
+      "pixel_aspect": [
+        1,
+        1
+      ],
+      "lens_shift": [
+        0,
+        0
+      ]
+    },
+    "landmarks": {
+      "anchor_pixels": [
+        [
+          310.49713492393494,
+          517.4283683300018
+        ],
+        [
+          287.5501215457916,
+          786.8504375219345
+        ]
+      ],
+      "anchor_world": [
+        [
+          0.03318210318684578,
+          -0.06165501847863197,
+          1.5449458360671997
+        ],
+        [
+          -0.00032938909134827554,
+          -0.06250333040952682,
+          1.4668134450912476
+        ]
+      ],
+      "definition": "Mean curved iris carrier center(s), not a fitted gaze pupil; actual evaluated central chin minimumZ. Same definition before/after."
+    }
+  },
+  "left_oblique": {
+    "camera": {
+      "projection": "ORTHO",
+      "ortho_scale": 0.29,
+      "matrix": [
+        [
+          0.8792434334754944,
+          0.22032305598258972,
+          0.4223608672618866,
+          0.8447216153144836
+        ],
+        [
+          0.40003156661987305,
+          0.13993360102176666,
+          -0.9057556390762329,
+          -1.8115113973617554
+        ],
+        [
+          -0.25866132974624634,
+          0.9653373956680298,
+          0.034899525344371796,
+          1.6197988986968994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "yaw": 25,
+      "elevation": 2,
+      "image_roll": -15,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 1.0
+      },
+      "lighting": {
+        "key": {
+          "location": [
+            -0.6,
+            -1,
+            2.2
+          ],
+          "watts": 60,
+          "size": 1
+        },
+        "fill": {
+          "location": [
+            0.8,
+            -0.8,
+            1.8
+          ],
+          "watts": 15,
+          "size": 1.5
+        },
+        "rim": {
+          "location": [
+            0,
+            0.9,
+            2.05
+          ],
+          "watts": 8,
+          "size": 0.8
+        },
+        "area_shape": "DISK",
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          1.55
+        ],
+        "world_linear": [
+          0.18,
+          0.18,
+          0.18
+        ],
+        "world_strength": 0.1,
+        "other_scene_lights_disabled": true
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "resolution": [
+        1000,
+        1000
+      ],
+      "pixel_aspect": [
+        1,
+        1
+      ],
+      "lens_shift": [
+        0,
+        0
+      ]
+    },
+    "landmarks": {
+      "anchor_pixels": [
+        [
+          418.0995225906372,
+          546.7757880687714
+        ],
+        [
+          486.9806468486786,
+          807.3171079158783
+        ]
+      ],
+      "anchor_world": [
+        [
+          -0.0004322286695241928,
+          -0.06166590750217438,
+          1.5449855327606201
+        ],
+        [
+          -0.00032938909134827554,
+          -0.06250333040952682,
+          1.4668134450912476
+        ]
+      ],
+      "definition": "Mean curved iris carrier center(s), not a fitted gaze pupil; actual evaluated central chin minimumZ. Same definition before/after."
+    }
+  },
+  "right_oblique": {
+    "camera": {
+      "projection": "ORTHO",
+      "ortho_scale": 0.29,
+      "matrix": [
+        [
+          0.9536033868789673,
+          0.24610860645771027,
+          -0.17341013252735138,
+          -0.3468203842639923
+        ],
+        [
+          -0.15439151227474213,
+          -0.09472780674695969,
+          -0.9834581017494202,
+          -1.9669162034988403
+        ],
+        [
+          -0.2584642767906189,
+          0.9646020531654358,
+          -0.05233568325638771,
+          1.4453279972076416
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "yaw": -10,
+      "elevation": -3,
+      "image_roll": -15,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 1.0
+      },
+      "lighting": {
+        "key": {
+          "location": [
+            -0.6,
+            -1,
+            2.2
+          ],
+          "watts": 60,
+          "size": 1
+        },
+        "fill": {
+          "location": [
+            0.8,
+            -0.8,
+            1.8
+          ],
+          "watts": 15,
+          "size": 1.5
+        },
+        "rim": {
+          "location": [
+            0,
+            0.9,
+            2.05
+          ],
+          "watts": 8,
+          "size": 0.8
+        },
+        "area_shape": "DISK",
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "target": [
+          0,
+          0,
+          1.55
+        ],
+        "world_linear": [
+          0.18,
+          0.18,
+          0.18
+        ],
+        "world_strength": 0.1,
+        "other_scene_lights_disabled": true
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "resolution": [
+        1000,
+        1000
+      ],
+      "pixel_aspect": [
+        1,
+        1
+      ],
+      "lens_shift": [
+        0,
+        0
+      ]
+    },
+    "landmarks": {
+      "anchor_pixels": [
+        [
+          535.8777046203613,
+          496.90115451812744
+        ],
+        [
+          606.3330769538879,
+          756.5576136112213
+        ]
+      ],
+      "anchor_world": [
+        [
+          -0.0004322286695241928,
+          -0.06166590750217438,
+          1.5449855327606201
+        ],
+        [
+          -0.00032938909134827554,
+          -0.06250333040952682,
+          1.4668134450912476
+        ]
+      ],
+      "definition": "Mean curved iris carrier center(s), not a fitted gaze pupil; actual evaluated central chin minimumZ. Same definition before/after."
+    }
+  }
+}

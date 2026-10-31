@@ -12,6 +12,13 @@ sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 artifact=lambda p:{'path':str(Path(p).resolve()),'sha256':sha(p)}
 sources={role:Path(getattr(a,role)).resolve() for role in ['baseline','candidate']};source_art={k:artifact(v) for k,v in sources.items()}
 packages={part:Path(getattr(a,part+'_package')).resolve() for part in ['face','body','hair']};data={k:json.loads(v.read_text(encoding='utf-8-sig')) for k,v in packages.items()}
+package_artifacts={k:artifact(v) for k,v in packages.items()}
+if a.diagnostics_only:
+ previous=json.loads((OUT/'render-manifest.json').read_text())
+ assert previous['baseline_native']==source_art['baseline'] and previous['candidate_native']==source_art['candidate'], 'Diagnostics must use the same frozen natives'
+ assert previous['input_packages']==package_artifacts, 'Changed source packages require fresh comparison renders'
+else:
+ assert not (OUT/'render-manifest.json').exists(), 'Use a new output directory for a fresh review'
 deps=OUT/'dependencies';deps.mkdir(exist_ok=True);shutil.copyfile(__file__,deps/Path(__file__).name)
 for part,p in packages.items():shutil.copyfile(p,deps/(part+'-source-package.json'))
 
@@ -43,6 +50,8 @@ def aim(obj,pos,target):obj.location=pos;obj.rotation_euler=(Vector(target)-obj.
 
 def setup(path,part):
  bpy.ops.wm.open_mainfile(filepath=str(path),use_scripts=False);s=bpy.context.scene;s.frame_set(1)
+ s['mia_review_production_routes']=json.dumps(routes())
+ s['mia_review_body_uv']=production_uv('MIA_V06_BODY_SKIN')
  for o in render_visible():
   if o.data.shape_keys:
    for k in o.data.shape_keys.key_blocks[1:]:k.value=0
@@ -103,7 +112,7 @@ if a.diagnostics_only:
  previous=json.loads((OUT/'render-manifest.json').read_text());assert previous['baseline_native']==source_art['baseline'] and previous['candidate_native']==source_art['candidate'];records=json.loads((OUT/'render-records.json').read_text());material_records=json.loads((OUT/'material-routes.json').read_text())
 for role,path in ([] if a.diagnostics_only else sources.items()):
  for part,package in data.items():
-  s,lamps=setup(path,part);material_records[role+'/'+part]=routes()
+  s,lamps=setup(path,part);material_records[role+'/'+part]={'production_before_review_override':json.loads(s['mia_review_production_routes']),'actual_review_routes':routes()}
   for row in package['views']:
    view=row['id'];camera_and_lights(s,lamps,row['baseline_camera'],part);folder=OUT/role/part;folder.mkdir(parents=True,exist_ok=True);p=folder/(view+'.png');s.render.filepath=str(p);bpy.ops.render.render(write_still=True);records[role+'/'+part+'/'+view]={'render':artifact(p),'camera':record(s,lamps),'visible_mesh_owners':[o.name for o in render_visible()]}
   print('FINISHED_PART',role,part,flush=True)
@@ -125,7 +134,7 @@ diag_save('face_color_only',s,lamps)
 s,lamps=setup(sources['candidate'],'face');hair_hide();camera_and_lights(s,lamps,front,'face');face_uv=production_uv('MIA_V14_SculptedSkin');bpy.data.objects['MIA_V14_SculptedSkin'].material_slots[7].material=material('checker',face_uv);diag_save('face_uv',s,lamps);diagnostics['face_uv']['explicit_uv_layer']=face_uv
 s,lamps=setup(sources['candidate'],'face');hair_hide();camera_and_lights(s,lamps,front,'face');skin=bpy.data.objects['MIA_V14_SculptedSkin'];key=next(k for k in skin.data.shape_keys.key_blocks if k.name.endswith('Fcl_EYE_Close'));key.value=.5;bpy.context.view_layer.update();diag_save('face_close_half',s,lamps)
 for part,name,owner in [('hair','hair_uv','MIA_V17_PIXAL_DetailedHair'),('body','body_uv','MIA_V06_BODY_SKIN')]:
- s,lamps=setup(sources['candidate'],part);camera_and_lights(s,lamps,next(v for v in data[part]['views'] if v['id']=='front')['baseline_camera'],part);uv_layer=production_uv(owner);check=material('checker',uv_layer)
+ s,lamps=setup(sources['candidate'],part);camera_and_lights(s,lamps,next(v for v in data[part]['views'] if v['id']=='front')['baseline_camera'],part);uv_layer=s['mia_review_body_uv'] if part=='body' else production_uv(owner);check=material('checker',uv_layer)
  for slot in bpy.data.objects[owner].material_slots:slot.material=check
  diag_save(name,s,lamps);diagnostics[name]['explicit_uv_layer']=uv_layer
 for part,package in data.items():

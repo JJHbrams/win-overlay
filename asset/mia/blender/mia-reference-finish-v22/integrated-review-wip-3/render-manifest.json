@@ -1,0 +1,34 @@
+{
+  "baseline_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-correction-v20\\integrated-r2\\Mia_Corrected_v20.blend",
+    "sha256": "c02b8ad73b86b278f2768e61eff019be223a8828bd92df62ce0ab7cb60f56936"
+  },
+  "candidate_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-3\\Mia_ReferenceFinish_v22.blend",
+    "sha256": "fc939a759707cace22a71012aa9c422c263e8e611be6828198110bc419059e05"
+  },
+  "input_packages": {
+    "face": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\face-finish5\\reference-review.json",
+      "sha256": "03d7b704ef1beba5f6b12a7399147e8155e3b3b295b80796c5553aa9c3194378"
+    },
+    "body": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\body-candidate5\\reference-review.json",
+      "sha256": "47f8bf296297afd189374248b6456dd84b4a210f4ffe62bed04bc4f4b2ed241c"
+    },
+    "hair": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\hair-ink-paint\\reference-review.json",
+      "sha256": "cf9e57d382ed3f13181791fc41e22a8df7b76a8ccea5429f8dd7deb0d69d15f3"
+    }
+  },
+  "renderer": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\render_integrated_review.py",
+    "sha256": "9c2b3855360f84f03461343232d28c811504838bc87b411f4152337dd0fee107"
+  },
+  "same_conditions_all_views": true,
+  "native_saved": false,
+  "native_hashes_unchanged": true,
+  "keys_policy": "Actual render-visible mesh non-Basis nonzero keys only; visible expression keys neutralized in-memory for matched neutral comparison; hidden archived key values excluded.",
+  "freestyle_policy": "OFF for matched review, including neutral body; production materials retained for face/hair. Separate root ink tests excluded.",
+  "art_status": "DIAGNOSTIC WIP ONLY; no ART/animation pass inferred."
+}

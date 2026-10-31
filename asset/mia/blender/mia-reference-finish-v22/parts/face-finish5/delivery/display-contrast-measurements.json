@@ -1,0 +1,254 @@
+{
+  "method": "9x9 median encoded/display RGB Rec709 luma; ratio to adjacent cheek. NOT physical reflectance/albedo. Coordinates are 640x640 original registered panels excluding 55px board header. No candidate registration refit.",
+  "prior_fixed_ROIs": [
+    {
+      "view": "front",
+      "role": "source",
+      "under_xy": [
+        198,
+        299
+      ],
+      "cheek_xy": [
+        198,
+        336
+      ],
+      "ratio": 0.6592709998522016,
+      "under_center_shift_3px_range": [
+        0.5984052271698949,
+        0.7314646648284041
+      ]
+    },
+    {
+      "view": "front",
+      "role": "face4",
+      "under_xy": [
+        210,
+        299
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "ratio": 0.9755791321741696,
+      "under_center_shift_3px_range": [
+        0.9232197914080852,
+        1.0003246881734358
+      ]
+    },
+    {
+      "view": "front",
+      "role": "face5",
+      "under_xy": [
+        210,
+        299
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "ratio": 0.9675410762018858,
+      "under_center_shift_3px_range": [
+        0.8036877740961796,
+        1.0003246881734358
+      ]
+    },
+    {
+      "view": "left_oblique",
+      "role": "source",
+      "under_xy": [
+        357,
+        242
+      ],
+      "cheek_xy": [
+        379,
+        271
+      ],
+      "ratio": 0.563282966900514,
+      "under_center_shift_3px_range": [
+        0.4523573050904957,
+        0.5964604702250141
+      ]
+    },
+    {
+      "view": "left_oblique",
+      "role": "face4",
+      "under_xy": [
+        359,
+        267
+      ],
+      "cheek_xy": [
+        365,
+        296
+      ],
+      "ratio": 1.009760190424945,
+      "under_center_shift_3px_range": [
+        1.0016096744627199,
+        1.014320174738599
+      ]
+    },
+    {
+      "view": "left_oblique",
+      "role": "face5",
+      "under_xy": [
+        359,
+        267
+      ],
+      "cheek_xy": [
+        365,
+        296
+      ],
+      "ratio": 0.8393599606017355,
+      "under_center_shift_3px_range": [
+        0.8295997701767904,
+        0.9007756533317522
+      ]
+    }
+  ],
+  "front_vertical_scan": [
+    {
+      "under_xy": [
+        210,
+        282
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9692121859698731,
+      "face5": 0.9688874977964376
+    },
+    {
+      "under_xy": [
+        210,
+        284
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9777979845948502,
+      "face5": 0.9319548926280494
+    },
+    {
+      "under_xy": [
+        210,
+        286
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9777979845948502,
+      "face5": 0.8873673815202962
+    },
+    {
+      "under_xy": [
+        210,
+        288
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9777979845948502,
+      "face5": 0.8743600674919682
+    },
+    {
+      "under_xy": [
+        210,
+        290
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9595030202296022,
+      "face5": 0.7921267165301357
+    },
+    {
+      "under_xy": [
+        210,
+        292
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9437515964584703,
+      "face5": 0.7831325843020014
+    },
+    {
+      "under_xy": [
+        210,
+        294
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9392545303444031,
+      "face5": 0.7831325843020014
+    },
+    {
+      "under_xy": [
+        210,
+        296
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9517896524307542,
+      "face5": 0.8396643030087171
+    },
+    {
+      "under_xy": [
+        210,
+        298
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9710820660601024,
+      "face5": 0.9376670660061375
+    },
+    {
+      "under_xy": [
+        210,
+        300
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9836171881464534,
+      "face5": 0.9800761982882368
+    },
+    {
+      "under_xy": [
+        210,
+        302
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9919799322921726,
+      "face5": 0.9916552441187368
+    },
+    {
+      "under_xy": [
+        210,
+        304
+      ],
+      "cheek_xy": [
+        210,
+        336
+      ],
+      "face4": 0.9961523102328042,
+      "face5": 0.9961523102328042
+    }
+  ],
+  "interpretation": "Front prior ROI y299 falls at/beyond narrow mask lower falloff; do not claim .78-.85 there. Mask core y290..296 gives .783..840. Oblique prior ROI .839. Source darker and differently drawn/lit; no numeric equality target."
+}

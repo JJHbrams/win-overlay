@@ -1,5 +1,9 @@
 # Active v22 work — resume without dropping the source-view gate
 
+## Current after surface integration and registration audit
+
+Current live surface WIP3 is fc939a759707cace22a71012aa9c422c263e8e611be6828198110bc419059e05 (Face5 + hair0d + interim Body5). See integration-wip-3/README.md, actual live-wip-3 and integrated-review-wip-3. Whole art/anatomy remains FAIL. Face5 is a narrow under-eye shader gain with unchanged geometry/images. Body8–11 are rejected; Body12 primary-volume work is ongoing. A selected-front source registration error was independently confirmed: shoulderY350 was chest/strap, actual approx290–295; old source was6.7% oversized. Exclude old front_anchor board from proportion inference. v06 four-view scale branch is independent, but per-panel torso-axis translation is being made explicit. Root-source comparison pipeline did not automatically validate manual landmark correctness. The next corrected package must preserve this distinction.
+
 ## Resumed after account-limit interruption, 2026-11-01
 
 Latest user: "이어서 진행해줘". Preserve the unfinished production objective; the source-view protocol is mandatory. This is not a heartbeat-only research run. Last remote checkpoint is ed080d502705021c36f1a0509ec43b52e2d6ddf1, with the portable bodycandidate4 package, real gate fault tests and actual UI orbit/zoom evidence. Model completion and art approval remain false.

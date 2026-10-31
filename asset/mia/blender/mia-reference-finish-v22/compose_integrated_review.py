@@ -18,6 +18,7 @@ for part,source_package in manifest['input_packages'].items():
   refim=ref if part=='face' else cropped
   assert old['baseline_registration']==old['candidate_registration'],(part,name,'input candidate was independently refitted')
   br=records['baseline/'+part+'/'+name];cr=records['candidate/'+part+'/'+name];assert br['camera']==cr['camera']
+  for recorded in (br,cr):assert sha(recorded['render']['path'])==recorded['render']['sha256'], 'Render bytes changed after capture'
   panes=[transform(refim,old['reference_registration'],size),transform(Image.open(br['render']['path']),old['baseline_registration'],size),transform(Image.open(cr['render']['path']),old['baseline_registration'],size)]
   board=Image.new('RGB',(size[0]*3,size[1]+105),'#edf1f4');draw=ImageDraw.Draw(board)
   for i,im in enumerate(panes):board.paste(im,(i*size[0],55));draw.text((i*size[0]+12,15),['SOURCE ART','c02 / FRESH BASELINE','INTEGRATED / FRESH WIP'][i],font=font,fill='#172633')
