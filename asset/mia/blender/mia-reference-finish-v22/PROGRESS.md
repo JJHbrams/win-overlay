@@ -2,6 +2,8 @@
 
 ## Active user correction — face-feedback-7
 
+Latest steering supersedes view-by-view fitting: low-front cheek has an abrupt bulge relative to jaw, and oblique orbit/zygoma/cheek connection is unnatural. Inspect hair-off matte/wire at low/level/high elevations through continuous yaw. Correct the connected orbit–zygoma–cheek–jaw volume before using source views as checks. AC-SURFACE-06 is now critical. First Face7 r1 is diagnostic only, not promoted; actual renders still show uneven surface transitions.
+
 WIP4 remains the live native, but the user explicitly rejects its cheek/jaw and eye likeness. New contract: face-feedback-7/ACCEPTANCE.md. Face6 protected the eyelid rims and only narrowed a limited lower-cheek band; it did not finish jaw/chin or eye contour. One producer owns a fresh finish-7 derivative from immutable Face6; root owns integration. Correct actual cheek/jaw/chin and coordinated lid/orbit/lash geometry before new makeup. Front, both obliques, profile, neutral matte and limited actual expressions are required. Keep Body14/Hair0d and no final rig/garments. Do not resume historical body/hair tasks ahead of this feedback.
 
 Read WORKING_PROTOCOL.md, CURRENT_STATE.json, REFERENCE_INDEX.md and REFERENCE_REVIEW_GATE.md before resuming. Current user task remains continued source-faithful production, not heartbeat research.

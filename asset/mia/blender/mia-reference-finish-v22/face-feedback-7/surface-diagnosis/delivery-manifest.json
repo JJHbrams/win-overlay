@@ -1,0 +1,317 @@
+{
+  "source_original": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-6\\continuous-candidate\\Mia_FaceFinish6_v22.blend",
+    "sha256": "f5d17264e07f492983e7e075d5a3213b2bd14a4adaead82072899e9b3e15d98a"
+  },
+  "source_canonical_archive": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\face-finish6\\native\\f5d17264e07f-Mia_FaceFinish6_v22.blend",
+    "sha256": "f5d17264e07f492983e7e075d5a3213b2bd14a4adaead82072899e9b3e15d98a"
+  },
+  "source_unchanged": true,
+  "historical_executed_recipe": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\inspect_continuous_surface.executed.py",
+    "sha256": "29d998798fdb59b713d1e67d91ffd348b3be79ab1e5561dea84098a0322b7c08"
+  },
+  "portable_recipe": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\inspect_continuous_surface.py",
+    "sha256": "f5d9e77ad95936f524d55bf999f4499dc989f22da120fc04763fbe98a83dc28e"
+  },
+  "dependencies": [
+    {
+      "frozen": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\dependencies\\review_setup.py",
+        "sha256": "6f570eecd1bcaf66ea66a223dee7a83e16cd04769f1a8593df3640d3105b366b"
+      },
+      "original": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\replay\\review_setup.py",
+        "sha256": "6f570eecd1bcaf66ea66a223dee7a83e16cd04769f1a8593df3640d3105b366b"
+      },
+      "byte_identical": true
+    },
+    {
+      "frozen": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\dependencies\\shape_evidence.py",
+        "sha256": "d92ad106839f691f51673d46f36976b5b78dd9e824238905da0236d7e2815fbd"
+      },
+      "original": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\replay\\shape_evidence.py",
+        "sha256": "d92ad106839f691f51673d46f36976b5b78dd9e824238905da0236d7e2815fbd"
+      },
+      "byte_identical": true
+    }
+  ],
+  "portable_validation": "Blender 5.2.3 --validate-only succeeded; canonical archive and frozen helper hashes checked, no native opened or new render produced. Rendering logic unchanged from historical recipe; only CLI/path handling and overwrite guard added.",
+  "fresh_render_count": 55,
+  "fresh_render_hashes_unchanged": true,
+  "fresh_render_metadata": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\render-records.json",
+    "sha256": "c8ae1fa10129c1757ed436a57a47fb27de70f77e3bee4c3364e54b87af5f0a20"
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\compose_diagnosis.py",
+      "sha256": "66575e03f9817ad794fd3c60b375dbc06a334ad96483871182315ed95c31a023"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\continuous-negative-yaw.png",
+      "sha256": "48687c95d87e24357ee817b9f4dad5a47a19010fb772d906ece45d10ccb960d0"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\continuous-positive-yaw.png",
+      "sha256": "b5b79350e4492ad2502670059cf71031451ac5957007ec796b1eeafc56bc841b"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\evaluated-vertical-sections.png",
+      "sha256": "d099eddf27a210aef6db5b633c067ee48fd92b98b1c741ec053e65d14ab5b749"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\FINDINGS.md",
+      "sha256": "a0c906a4c98134f06d7a2f3af6308a4af35925fc32079071d232d01e6e82d80a"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\inspect_continuous_surface.executed.py",
+      "sha256": "29d998798fdb59b713d1e67d91ffd348b3be79ab1e5561dea84098a0322b7c08"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\inspect_continuous_surface.py",
+      "sha256": "f5d9e77ad95936f524d55bf999f4499dc989f22da120fc04763fbe98a83dc28e"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+00_elev+00.png",
+      "sha256": "ed9e11f6c6d83f69cbfb49c823b16232117e061c8a0557a95b5472bd165c282f"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+00_elev+10.png",
+      "sha256": "75aa221fc7d48865a06111e0be51b7f53cdb2f740a096ae1bd5c9fc10b5956ce"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+00_elev-10.png",
+      "sha256": "486346902399f23d37aa80bcb711974ad26e5f773a04036c40221f8110ec2b4b"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+15_elev+00.png",
+      "sha256": "4a850f32c49928938d3bade277937a4623684bc61d304842e8801e7921a9ab2e"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+15_elev+10.png",
+      "sha256": "4afc2079debb49abf3411a81a12e24170837f79bf9da452c27bf8ba8f292bb1d"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+15_elev-10.png",
+      "sha256": "0f38b6fb8c0f805bb6646f2033ae1bd1ca739a87ee9e9ecce190a8cd1ff6a200"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+30_elev+00.png",
+      "sha256": "d6937fa04823f4bd83bface3817be77bd44369e7c0067d917e5cc3f71e7f0642"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+30_elev+10.png",
+      "sha256": "70ea5ebee4c6b2098c3513067a4ffd6059a1fb1f3ba4021a5c1993ccdedaf263"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+30_elev-10.png",
+      "sha256": "c6b286785e982351c7bab46f32435a580472d3946910d8754a38f31895efc553"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+45_elev+00.png",
+      "sha256": "1834b2cb058617bb54c5b6cfdbbc8c01704c45b490f23f457132377b217f36fa"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+45_elev+10.png",
+      "sha256": "ab3943f2a80821608e4fff446b8d2e5933026061b4620631c7000577a54d7c4f"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+45_elev-10.png",
+      "sha256": "fb7b5353b571be1c82cd9eed57dfb2049f1e2541e46d4fe8e38d44515f69c324"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+60_elev+00.png",
+      "sha256": "bd8645ebdd18abe0df4693365cc4c4c56fd2b32a42894ad50fb44e55e1ae87f0"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+60_elev+10.png",
+      "sha256": "87bb023053e0c4e08ef41eb579c085ebcd33eeacd8cdbd02548ae127f23c50ea"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+60_elev-10.png",
+      "sha256": "2ef299cf8a816ae49e09ddd833abf912961344e3ddac64bc6a0688348411fa1f"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+75_elev+00.png",
+      "sha256": "59c6d566fca81896b00e5d3a7da3484c4a332c558850f5ff4f3c6fad60c3e71b"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+75_elev+10.png",
+      "sha256": "4bcfaab985c879f7ede1dd1feafc81f79383dd3786ae568a04355c3d91127143"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+75_elev-10.png",
+      "sha256": "b5801bc556de0107d770c36adf9ee5859aec3c3310cc69a10bfd535cd5d9b32a"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+90_elev+00.png",
+      "sha256": "e5f301cb6a42bed31fee9caa6f7e1db40d43416bbfb591ed9e8b4ec1e6d41174"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+90_elev+10.png",
+      "sha256": "e4fe6a52b062fed05852671df819da2c77d186f28e0fbc1d987f0ed5c9bc198a"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw+90_elev-10.png",
+      "sha256": "eb3e18a9bd1eab0b4bb277f911c6045ffdb1de3fa9d3168de92d6776a89d6f3f"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-15_elev+00.png",
+      "sha256": "4a71dabad705b65d964f5bd7ba5c94cc6e88fe11ae1368a79e2b60630f4ee757"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-15_elev+10.png",
+      "sha256": "c7f7ef60b99e377252a8da54e8424df66df363d18fb6397685a8f10db14a6783"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-15_elev-10.png",
+      "sha256": "7b702c581d933619895c4d032fd75f59a5aebbc980ebd53b26f3f17c3b7c46fa"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-30_elev+00.png",
+      "sha256": "370ea45580fe2860eb7e833af477850a1df03bc0a03076e519f89f249ba0d0dc"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-30_elev+10.png",
+      "sha256": "0ea974aee6428e1a2089fb59aab647694b588ed496dbe6e24882926b11e6ea6f"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-30_elev-10.png",
+      "sha256": "03f7219d5f5fe64abc7b8d1f0a0e0c07d4e32bcf5e368c20d330b839b9f5b559"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-45_elev+00.png",
+      "sha256": "85031439951a9e8abe947445a44454e0c4905a3e01c922fab2b2fe613f29f98d"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-45_elev+10.png",
+      "sha256": "2a5497dbedbc56faa2770408032f282c01de9730dd7a9ecae73d1f134d4a9b39"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-45_elev-10.png",
+      "sha256": "36ce4da65fbbbddd0e68225637cfb398784700cedb871f4eff29801707c50ab3"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-60_elev+00.png",
+      "sha256": "031f7d4caa6bd74e1be1a866a574fa2c8869bcaefd4fcc92602bffe5eb855d0b"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-60_elev+10.png",
+      "sha256": "896b8736bfdbffa3d0dd8ef43cc0ecca5777052ffe778c6161a475e5ff9ed880"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-60_elev-10.png",
+      "sha256": "ccba0a6cfa5b5953cecf5e2397033c2ec8de2cf6addfe4806eae97274ef00bcc"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-75_elev+00.png",
+      "sha256": "98abeb5eafa1e62a97a7c3c508e1862e1861b3eb9724d89724a73760d5573e52"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-75_elev+10.png",
+      "sha256": "5c2bed175bce60305138c3c5e94f8e0453318fa47d8cecc5c75d46df7923c5f6"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-75_elev-10.png",
+      "sha256": "12056e257ba5dc8b3579438aedc1fe0f9f7feb2157498b377c67905f71e3338d"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-90_elev+00.png",
+      "sha256": "81b71470ad865bc5c0ded8d21ae64a1f071c2aa320dddf8e83b48bbbbc339e2c"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-90_elev+10.png",
+      "sha256": "4a417863333f9b50f41824e8401625a49fe00dab2dc831d6beae1db33f3c73ba"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\matte_yaw-90_elev-10.png",
+      "sha256": "9ed4024d87ba779334240e0c5b970d9cda1b1e982fa1f1da217809a18a332458"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\package_evidence.py",
+      "sha256": "ad9b6bac68174bfaeec153b0433270e3fb0e15be3ba907a79293ea66efaf4704"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw+00_elev+00.png",
+      "sha256": "bf1fe58acf1cf62b5873ef708911329e94985e4502c20136971c279d0cafc68f"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw+00_elev-10.png",
+      "sha256": "d2a7025570bd873840c365ed628d4fb0c1b08cc2a1ba1e3a95e8f4cc3f83897b"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw+15_elev+00.png",
+      "sha256": "35b761a005a3c63c1723f1436b775b144f308880a6d3c8a26f7895a8381f2528"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw+30_elev+00.png",
+      "sha256": "581145eadf17e295f889f2a1aff777a47e3dc6abb1337c10623fd59ebdbbb0bb"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw+30_elev-10.png",
+      "sha256": "dfd4725667d8f49bde5dd2706128e7c637ba19df889e0763f72e2ba6d802a49e"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw+45_elev+00.png",
+      "sha256": "dc6064c2057587b232533a5443a35b446932f00472c7f6ada5dcb33eb10406d4"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw+60_elev+00.png",
+      "sha256": "8931495c5f86a3197e0df603470fc4d1dda1b8fd9864531762938176b432549e"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw+75_elev+00.png",
+      "sha256": "2a4ca9cf7d0d75d5e9c124410a091ff3b09574b9af7e2b1d103004cfe7dde5b5"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw+90_elev+00.png",
+      "sha256": "4b0397db22af9981efc61e6f8361191628568d110ae303d20dab9d7ad29acd24"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw-15_elev+00.png",
+      "sha256": "c1c076f8bb1806101fb7b5913831b3ab0c51bf351be566316970261f2a0b33f1"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw-30_elev+00.png",
+      "sha256": "3a895ed3d14558b83187e68b159d6c78a2baa516f6f634654ced8214316daa3f"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw-30_elev-10.png",
+      "sha256": "16584e1e5bdea81bcbbb93e394ad82890241c4891260cedd254d3a59cd3a0ccc"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw-45_elev+00.png",
+      "sha256": "24c3291ab2f3b735aa1dee0318743d80d7a574c156ddc708d0d961e3cbb6b25b"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw-60_elev+00.png",
+      "sha256": "d3de0f8b49aed129b0545a42d15cc25d6028c7a15fe8cecc8036f2853cc8d775"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw-75_elev+00.png",
+      "sha256": "b29b20d24db4ed579e54259911a05885394336c5c2841b6de35ec4f1ebbf5e3d"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\wire_yaw-90_elev+00.png",
+      "sha256": "499654583572986a02e030ce16ed4b521a9c2ad0b226388dd8c54e948f5283c8"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\yaw-ping-pong-high.gif",
+      "sha256": "ce752e8b6bb526971576128a3b75054f702cee8c4ce63bce4a016109d06caa4d"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\yaw-ping-pong-level.gif",
+      "sha256": "42b3aae6d6d68174bb8d82df9bbcc3136e61e016ef2cd3b86d8e313625dfece0"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\yaw-ping-pong-low.gif",
+      "sha256": "90b9104f9c93b413f0b2f9b4dc9ad2121631f8c7502d1fc831c223ab61d497c5"
+    }
+  ],
+  "limitations": "GIFs are discrete actual orthographic render samples with palette quantization, no interpolation or geometry animation. Lossless original PNGs/contact sheets remain primary. This is surface diagnosis, not ART PASS."
+}
