@@ -19,6 +19,8 @@ from mathutils.kdtree import KDTree
 
 FACE_NAME = "MIA_V06_FACE_SKIN"
 BODY_NAME = "MIA_V06_BODY_SKIN"
+HEAD_SCALE = .82
+HEAD_ANCHOR = Vector((0.0, 0.0, 1.4655))
 
 
 def _smooth(v):
@@ -29,7 +31,7 @@ def _smooth(v):
 def _crown_dome(q, upper):
     """Preserve the source cap, but restore volume lost by uniform z scaling."""
     radial = max(0.0, 1.0 - (q.x / .112) ** 2 - ((q.y + .010) / .115) ** 2)
-    q.z += .027 * upper * radial
+    q.z += .016 * upper * radial
     return q
 
 
@@ -49,6 +51,37 @@ def _face_map(p):
     q.x *= 1.0 + .055 * cheek - .018 * chin
     # A shallow facial plane keeps the profile from reading as a flat mask.
     q.y += .0035 * cheek
+    # Shared spatial relief keeps source morph correspondence intact.
+    import math
+    front = _smooth((q.y - .025) / .035)
+    nose = math.exp(-((q.x/.014)**2 + ((q.z-1.555)/.023)**2)) * front
+    muzzle = math.exp(-((q.x/.034)**4 + ((q.z-1.505)/.020)**2)) * front
+    q.y += .006 * nose + .0025 * muzzle
+    q.x *= 1.0 + .12 * muzzle
+    return q
+
+
+def _scale_head_about_chin(p, weight=1.0):
+    """Apply the v07 naked-head proportion test in the shared local frame.
+
+    The anchor is the measured Face44 chin/neck handoff, rather than an
+    upper-cap-only pivot. This keeps all 44 facial shape-key deltas and the
+    face cards in the same proportion space while taking the bald cranium
+    below the guide's hair-inclusive silhouette.
+    """
+    factor = 1.0 + (HEAD_SCALE - 1.0) * max(0.0, min(1.0, weight))
+    return HEAD_ANCHOR + (p - HEAD_ANCHOR) * factor
+
+
+def _adult_landmark_map(p):
+    """Lift the low orbital band without scaling the complete skull again.
+
+    Chin and crown remain anchors. A smooth 10 mm lift at the eye plane
+    elongates the lower facial third and reduces the empty forehead band.
+    """
+    import math
+    q=p.copy()
+    q.z += .010 * math.exp(-((p.z-1.537)/.026)**2)
     return q
 
 
@@ -69,7 +102,38 @@ def _body_head_map(p, head_weight, neck_weight):
     # Blend a very small neck widening toward the head to avoid a pinched join.
     neck_blend = _smooth((q.z - 1.49) / .085) * min(head_weight, neck_weight)
     q.x *= 1.0 + .018 * neck_blend
+    # A complete naked-head proportion test needs the source Body cap and
+    # neck handoff to share Face44's scale. Let it fade through the neck
+    # group so body vertices outside Head/Neck stay strictly untouched.
+    scale_weight = max(head_weight, .60 * neck_weight)
+    q = _scale_head_about_chin(q, scale_weight)
     return q
+
+
+def _scale_head_rig_rest(rig):
+    """Move Head descendants in the same local frame as the mesh scale."""
+    if not rig or rig.type != "ARMATURE":
+        return {"status": "missing_rig"}
+    head = rig.data.bones.get("J_Bip_C_Head")
+    if not head:
+        return {"status": "missing_head_bone"}
+    descendants = {head}
+    pending = [head]
+    while pending:
+        current = pending.pop()
+        for child in current.children:
+            if child not in descendants:
+                descendants.add(child); pending.append(child)
+    bpy.context.view_layer.objects.active = rig
+    rig.select_set(True)
+    bpy.ops.object.mode_set(mode="EDIT")
+    for bone in descendants:
+        edit = rig.data.edit_bones.get(bone.name)
+        edit.head = _adult_landmark_map(_scale_head_about_chin(edit.head))
+        edit.tail = _adult_landmark_map(_scale_head_about_chin(edit.tail))
+    bpy.ops.object.mode_set(mode="OBJECT")
+    return {"status": "scaled_head_descendants", "factor": HEAD_SCALE,
+            "anchor": list(HEAD_ANCHOR), "bone_count": len(descendants)}
 
 
 def _weight(vertex, group_index):
@@ -194,6 +258,65 @@ def _tint_existing_paper_skin(face):
     return {"status": "existing_paper_image_retained_tinted", "material": mat.name}
 
 
+def _repair_iris_depth(face):
+    """Transport depth by the existing .82 and .74 iris X/Z scale factors.
+
+    Keeping Y fixed while shrinking X/Z made the far iris nearly edge-on.
+    This restores surface slope rather than pushing cards through eyelids.
+    """
+    keys = list(face.data.shape_keys.key_blocks)
+    basis = keys[0]
+    ids = {i for poly in face.data.polygons if poly.material_index in {5,6,8} for i in poly.vertices}
+    centers = {}
+    for side in (-1, 1):
+        points = [basis.data[i].co for i in ids if basis.data[i].co.x * side > 0]
+        centers[side] = sum(p.y for p in points) / len(points)
+    for key in keys:
+        for i in ids:
+            p = key.data[i].co
+            cy = centers[-1 if basis.data[i].co.x < 0 else 1]
+            p.y = cy + (p.y - cy) * .82
+    owned = keys[-2]
+    if owned.name != "MIA_FaceArt_EyeProportion":
+        raise RuntimeError("Unexpected owned corrective order")
+    for i in ids:
+        p = basis.data[i].co
+        cy = centers[-1 if p.x < 0 else 1]
+        owned.data[i].co.y = p.y - .26 * (p.y - cy)
+    return {"vertices":len(ids), "basis_depth_scale":.82, "owned_depth_scale":.74,
+            "eye_depth_centers":centers, "reason":"preserve oblique iris surface slope"}
+
+
+def _close_head_handoff(face, body):
+    """Match coincident source seam indices spatially after different fit maps.
+
+    The two source surfaces retain separate topology and UV ownership. Only
+    head boundary points within 4 mm of the matching Face skin boundary move.
+    """
+    from collections import Counter
+    def boundary(mesh, skin_only=False):
+        edges = Counter(tuple(sorted(edge)) for poly in mesh.polygons
+                        if not skin_only or poly.material_index == 7 for edge in poly.edge_keys)
+        return {i for edge,count in edges.items() if count == 1 for i in edge}
+    fb = face.data.shape_keys.key_blocks[0].data
+    candidates = [fb[i].co.copy() for i in boundary(face.data, True)
+                  if fb[i].co.z > 1.49 and fb[i].co.y < .035]
+    tree = KDTree(len(candidates))
+    for i,p in enumerate(candidates): tree.insert(p,i)
+    tree.balance()
+    head_i = body.vertex_groups.get('J_Bip_C_Head').index
+    moved=[];maximum=0.0
+    for i in boundary(body.data):
+        v=body.data.vertices[i]
+        if v.co.z <= 1.49 or _weight(v,head_i) < .5: continue
+        target,_,distance=tree.find(v.co)
+        if distance < .004:
+            maximum=max(maximum,distance)
+            if distance>1e-8:
+                v.co=target;moved.append(i)
+    return {"vertices":moved,"max_distance":maximum,"method":"source head boundary spatial correspondence, no weld or deletion"}
+
+
 def refine_head(face, body, rig=None, expected_stage="v04-mapped"):
     """Refine one v04 Face44/body-headcap pair in place, exactly once."""
     if face.get("mia_head_refine_v06"):
@@ -201,9 +324,10 @@ def refine_head(face, body, rig=None, expected_stage="v04-mapped"):
     keys = list(face.data.shape_keys.key_blocks) if face.data.shape_keys else []
     if len(keys) != 44:
         raise RuntimeError("Expected v04 Face44; got %s keys." % len(keys))
+    iris_depth = _repair_iris_depth(face)
     for key in keys:
         for point in key.data:
-            point.co = _face_map(point.co)
+            point.co = _scale_head_about_chin(_face_map(point.co))
     groups = {g.name: g.index for g in body.vertex_groups}
     head_i, neck_i = groups.get("J_Bip_C_Head"), groups.get("J_Bip_C_Neck")
     changed_indices = []
@@ -213,6 +337,8 @@ def refine_head(face, body, rig=None, expected_stage="v04-mapped"):
         vertex.co = _body_head_map(old, hw, nw)
         if (vertex.co - old).length > 1e-8:
             changed_indices.append(vertex.index)
+    handoff = _close_head_handoff(face, body)
+    changed_indices = sorted(set(changed_indices) | set(handoff['vertices']))
     # Keep authored face pigment. Body uses the same normal-to-toon-ramp
     # response, constructed without a face image/UV input.
     paper_face = _tint_existing_paper_skin(face)
@@ -228,23 +354,39 @@ def refine_head(face, body, rig=None, expected_stage="v04-mapped"):
     face["mia_head_refine_note"] = "all 44 keys mapped together; UV/topology/index order unchanged"
     body["mia_head_refine_v06"] = True
     brow_delta = _retune_owned_brow_delta(face)
+    from astra_mia_fatigue_v08 import apply_fatigue_ink
+    fatigue_ink = apply_fatigue_ink(face)
+    # UV ink was authored in the v08 frame, then travels with this geometry.
+    for key in keys:
+        for point in key.data:
+            point.co = _adult_landmark_map(point.co)
+    for vertex in body.data.vertices:
+        hw = _weight(vertex, head_i)
+        if hw > .001:
+            vertex.co += (_adult_landmark_map(vertex.co) - vertex.co) * hw
+            changed_indices.append(vertex.index)
+    changed_indices = sorted(set(changed_indices))
     neutral = set_mia_neutral(face)
+    rig_rest = _scale_head_rig_rest(rig)
     return {"face_keys_mapped": [key.name for key in keys],
             "face_vertices_per_key": len(face.data.vertices),
             "face_vertex_indices": "all 0..%d" % (len(face.data.vertices) - 1),
             "face_change_reason": "upper-cranium reduction plus cheek/jaw plane correction, transported identically to preserve expression deltas",
+            "naked_head_proportion_test": {"factor": HEAD_SCALE, "anchor": list(HEAD_ANCHOR),
+                                             "reason": "whole bald head, not only upper cap, is reduced against the hair-inclusive body guide"},
             "body_head_neck_vertices_changed": changed_indices,
             "body_change_reason": "J_Bip_C_Head island first receives v04's exact Face44 base cap map, then the shared upper-cranium map; neck blending is only inside that Head island",
             "body_material_slots": replaced, "rim": rim, "paper_face": paper_face,
-            "brow": brow,
+            "brow": brow, "iris_depth": iris_depth, "fatigue_ink": fatigue_ink, "head_handoff": handoff,
+            "adult_landmark_pass": {"orbital_lift_m":.010,"center_z":1.537,"falloff_m":.026,"whole_head_scale_unchanged":True},
             "body_pigment_multiplier": {"sample_region":"Face slot7 forehead/temple z>1.60 UV average","colorspace":"Non-Color","rgb":[.94118,.87843,.85098]},
             "eye_extra_slot_8": "preserved: source material is EyeExtra_01 and v04 fit treats it with iris/highlight family",
-            "neutral_guide": neutral, "owned_brow_delta": brow_delta}
+            "neutral_guide": neutral, "owned_brow_delta": brow_delta, "rig_rest": rig_rest}
 
 
 def set_mia_neutral(face):
     """Reference-guided idle guide: heavy upper lid, visible low iris, dry mouth."""
-    values = {"Fcl_EYE_Close": .38, "Fcl_EYE_Sorrow": .12,
+    values = {"Fcl_EYE_Close": .48, "Fcl_EYE_Sorrow": .12,
               "Fcl_BRW_Angry": .10, "Fcl_MTH_Angry": .05,
               "Fcl_MTH_Neutral": .23,
               # Owned v05 design correctives: wider horizontal eye aperture,
@@ -370,6 +512,171 @@ def _material_id_three_quarter(scene, cam, face, body, out):
     return str(path)
 
 
+def _bounds(vertices):
+    return {axis: [round(min(v.co[i] for v in vertices), 6), round(max(v.co[i] for v in vertices), 6)]
+            for i, axis in enumerate(("x", "y", "z"))}
+
+
+def _evaluated_bounds(obj):
+    depsgraph = bpy.context.evaluated_depsgraph_get()
+    evaluated = obj.evaluated_get(depsgraph).to_mesh()
+    try:
+        return _bounds(evaluated.vertices)
+    finally:
+        obj.evaluated_get(depsgraph).to_mesh_clear()
+
+
+def _iris_plane_diagnostic(face):
+    """Measure only the existing iris/highlight slots; do not guess their role."""
+    depsgraph = bpy.context.evaluated_depsgraph_get()
+    evaluated = face.evaluated_get(depsgraph).to_mesh()
+    result = {"slots": {}}
+    try:
+        for index in (5, 6, 8):
+            polygons = [p for p in evaluated.polygons if p.material_index == index]
+            if not polygons:
+                continue
+            normal = sum((p.normal for p in polygons), Vector()).normalized()
+            center = sum((p.center for p in polygons), Vector()) / len(polygons)
+            result["slots"][str(index)] = {
+                "material": face.material_slots[index].material.name if face.material_slots[index].material else None,
+                "polygons": len(polygons),
+                "center": [round(v, 6) for v in center],
+                "mean_normal": [round(v, 6) for v in normal],
+            }
+    finally:
+        face.evaluated_get(depsgraph).to_mesh_clear()
+    return result
+
+
+def _iris_occlusion_diagnostic(face, camera):
+    """Ray-test iris faces against the existing eye-white/lid/card geometry.
+
+    This is an ownership/depth diagnostic only. It deliberately does not alter
+    eye rotations or the white/lid mesh from a single oblique render.
+    """
+    depsgraph = bpy.context.evaluated_depsgraph_get()
+    evaluated_obj = face.evaluated_get(depsgraph)
+    mesh = evaluated_obj.to_mesh()
+    inverse = evaluated_obj.matrix_world.inverted()
+    origin = inverse @ camera.matrix_world.translation
+    result = {}
+    try:
+        for name, loc, target in (
+            ("three_quarter_l", (1.10, -1.10, 1.58), (0, 0, 1.58)),
+            ("three_quarter_r", (-1.10, -1.10, 1.58), (0, 0, 1.58)),
+        ):
+            _aim(camera, loc, target)
+            origin = inverse @ camera.matrix_world.translation
+            hits = {}
+            depth_gaps = []
+            tested = 0
+            for polygon in mesh.polygons:
+                if polygon.material_index not in {5, 6, 8}:
+                    continue
+                tested += 1
+                direction = (polygon.center - origin).normalized()
+                hit, location, _, face_index = evaluated_obj.ray_cast(origin, direction, distance=(polygon.center-origin).length + .002)
+                material_index = mesh.polygons[face_index].material_index if hit and face_index >= 0 else None
+                key = str(material_index)
+                hits[key] = hits.get(key, 0) + 1
+                if hit:
+                    depth_gaps.append((polygon.center - origin).length - (location - origin).length)
+            result[name] = {
+                "tested_iris_highlight_faces": tested,
+                "first_hit_material_counts": hits,
+                "iris_behind_first_hit_distance": {"min": round(min(depth_gaps), 6), "mean": round(sum(depth_gaps)/len(depth_gaps), 6), "max": round(max(depth_gaps), 6)},
+                "slot_names": {str(i): (face.material_slots[i].material.name if i is not None and i < len(face.material_slots) and face.material_slots[i].material else None)
+                               for i in [0, 1, 2, 3, 4, 5, 6, 7, 8]},
+                "interpretation": "a non-5/6/8 first hit identifies geometric depth occlusion; alpha is not used by this ray test",
+            }
+    finally:
+        evaluated_obj.to_mesh_clear()
+    return result
+
+
+def _render_full_front(scene, cam, face, body, out):
+    """One body-guide comparison frame; head views remain at close-up scale."""
+    old_scale = cam.data.ortho_scale
+    cam.data.ortho_scale = 1.82
+    _aim(cam, (0, -2.4, .90), (0, 0, .90))
+    path = out / "body_guide_front.png"
+    scene.render.filepath = str(path)
+    bpy.ops.render.render(write_still=True)
+    cam.data.ortho_scale = old_scale
+    return str(path)
+
+
+def _render_iris_depth_ab(scene, cam, face, body, out):
+    """Render a diagnostic with only Face skin slot 7 removed.
+
+    It tests whether the renderer's distant-iris loss is actually caused by
+    the skin surface. This clone is never saved and no source material or
+    polygon is changed.
+    """
+    clone = face.copy(); clone.data = face.data.copy(); clone.name = "MIA_V07_IRIS_DEPTH_AB_NO_SKIN"
+    bpy.context.scene.collection.objects.link(clone)
+    bpy.context.view_layer.objects.active = clone; clone.select_set(True)
+    bpy.ops.object.mode_set(mode="EDIT"); bpy.ops.mesh.select_all(action="DESELECT"); bpy.ops.object.mode_set(mode="OBJECT")
+    for polygon in clone.data.polygons:
+        polygon.select = polygon.material_index == 7
+    bpy.ops.object.mode_set(mode="EDIT"); bpy.ops.mesh.delete(type="FACE"); bpy.ops.object.mode_set(mode="OBJECT")
+    clone.select_set(False)
+    face.hide_render = True
+    _aim(cam, (1.10, -1.10, 1.58), (0, 0, 1.58))
+    path = out / "iris_depth_ab_three_quarter_l_no_face_skin.png"
+    scene.render.filepath = str(path); bpy.ops.render.render(write_still=True)
+    face.hide_render = False
+    bpy.data.objects.remove(clone, do_unlink=True)
+    return str(path)
+
+
+def _render_iris_culling_ab(scene, cam, face, body, out):
+    """Single-variable A/B: disable backface culling on existing iris slot 5."""
+    material = face.material_slots[5].material
+    old_culling = material.use_backface_culling
+    material.use_backface_culling = False
+    made = []
+    for name, loc in (("three_quarter_l", (1.10, -1.10, 1.58)),
+                      ("three_quarter_r", (-1.10, -1.10, 1.58))):
+        _aim(cam, loc, (0, 0, 1.58))
+        path = out / ("iris_culling_ab_" + name + ".png")
+        scene.render.filepath = str(path); bpy.ops.render.render(write_still=True)
+        made.append(str(path))
+    material.use_backface_culling = old_culling
+    return {"slot": 5, "material": material.name, "old_backface_culling": old_culling,
+            "test_backface_culling": False, "renders": made}
+
+
+def _render_iris_overlap_ab(scene, cam, face, out):
+    """Single-variable A/B: enable overlap on the existing iris material."""
+    material = face.material_slots[5].material
+    old_overlap = material.use_transparency_overlap
+    material.use_transparency_overlap = True
+    made = []
+    for name, loc in (("three_quarter_l", (1.10, -1.10, 1.58)),
+                      ("three_quarter_r", (-1.10, -1.10, 1.58))):
+        _aim(cam, loc, (0, 0, 1.58))
+        path = out / ("iris_overlap_ab_" + name + ".png")
+        scene.render.filepath = str(path); bpy.ops.render.render(write_still=True)
+        made.append(str(path))
+    material.use_transparency_overlap = old_overlap
+    return {"slot": 5, "material": material.name, "old_overlap": old_overlap,
+            "test_overlap": True, "renders": made}
+
+
+def _render_cycles_baseline(scene, cam, out):
+    """One unsaved low-sample Cycles frame to isolate an EEVEE-only artifact."""
+    old_engine = scene.render.engine
+    old_samples = scene.cycles.samples
+    scene.render.engine = "CYCLES"; scene.cycles.samples = 16
+    _aim(cam, (1.10, -1.10, 1.58), (0, 0, 1.58))
+    path = out / "iris_cycles16_baseline_three_quarter_l.png"
+    scene.render.filepath = str(path); bpy.ops.render.render(write_still=True)
+    scene.render.engine = old_engine; scene.cycles.samples = old_samples
+    return {"engine": "CYCLES", "samples": 16, "render": str(path), "native_saved_with_cycles": False}
+
+
 def _pose_proof(scene, cam, face, out):
     keys = face.data.shape_keys.key_blocks
     saved = {key.name: key.value for key in keys}
@@ -404,7 +711,7 @@ def _pose_proof(scene, cam, face, out):
         for name, profile_value in identity.items():
             found = next((key for key in keys if key.name == name), None)
             if found: found.value = profile_value
-        for name, neutral_value in (("Fcl_EYE_Close", .38), ("Fcl_EYE_Sorrow", .12),
+        for name, neutral_value in (("Fcl_EYE_Close", .48), ("Fcl_EYE_Sorrow", .12),
                                     ("Fcl_BRW_Angry", .10), ("Fcl_MTH_Angry", .05),
                                     ("Fcl_MTH_Neutral", .23)):
             found = next((key for key in keys if key.name.endswith(name)), None)
@@ -412,14 +719,14 @@ def _pose_proof(scene, cam, face, out):
         for name in ("J_Adj_L_FaceEye", "J_Adj_R_FaceEye"):
             bone = rig.pose.bones.get(name)
             if bone:
-                old_mode, old_rotation = bone.rotation_mode, tuple(bone.rotation_euler)
+                old_mode, old_rotation = bone.rotation_mode, bone.matrix_basis.copy()
                 bone.rotation_mode="XYZ"; bone.rotation_euler=(.10,0,0); eye_bones.append((bone,old_mode,old_rotation))
         if eye_bones:
             bpy.context.view_layer.update(); _aim(cam,(0,-1.55,1.58),(0,0,1.58)); path=out/"expression_gaze.png"
             scene.render.filepath=str(path); bpy.ops.render.render(write_still=True); output.append(str(path))
             cases.append({"case":"gaze_neutral","bones":[bone.name for bone,_,_ in eye_bones],"identity_profiles":identity.copy(),"expression_reset":"neutral guide restored before eye-bone motion"})
             for bone, old_mode, old_rotation in eye_bones:
-                bone.rotation_euler=old_rotation; bone.rotation_mode=old_mode
+                bone.rotation_mode=old_mode; bone.matrix_basis=old_rotation
             bpy.context.view_layer.update()
     for key in keys: key.value = saved[key.name]
     return {"renders":output,"cases":cases,"restored_values":saved}
@@ -452,14 +759,25 @@ def _boundary_check(face, body):
 
 
 def build(source, output):
-    source, output = Path(source), Path(output)
+    # Blender changes its current working directory while opening a .blend;
+    # resolve both paths before that state transition so CLI outputs never
+    # escape the selected study directory.
+    source, output = Path(source).resolve(), Path(output).resolve()
     bpy.ops.wm.open_mainfile(filepath=str(source))
     face, body = bpy.data.objects.get(FACE_NAME), bpy.data.objects.get(BODY_NAME)
     if not face or not body: raise RuntimeError("v04 MIA_V06 face/body objects not found")
     report=refine_head(face, body, bpy.data.objects.get("MIA_V06_RIG"))
+    report["bounds"] = {"face_evaluated": _evaluated_bounds(face), "body": _bounds(body.data.vertices)}
+    report["iris_plane_diagnostic_neutral"] = _iris_plane_diagnostic(face)
     report["crown_boundary_check"] = _boundary_check(face, body)
     scene,cam=_review_scene(face,body); proof=output/"proof"
+    report["iris_occlusion_diagnostic"] = _iris_occlusion_diagnostic(face, cam)
+    report["body_guide_front"] = _render_full_front(scene, cam, face, body, proof)
     report["actual"]=_render_set(scene,cam,face,body,proof,"head_actual")
+    report["iris_depth_ab"] = _render_iris_depth_ab(scene, cam, face, body, proof)
+    report["iris_culling_ab"] = _render_iris_culling_ab(scene, cam, face, body, proof)
+    report["iris_overlap_ab"] = _render_iris_overlap_ab(scene, cam, face, proof)
+    report["iris_cycles_baseline"] = _render_cycles_baseline(scene, cam, proof)
     report["material_id_three_quarter"]=_material_id_three_quarter(scene,cam,face,body,proof)
     report["clay"]=_render_set(scene,cam,face,body,proof,"head_clay",clay=True)
     report["wire"]=_render_set(scene,cam,face,body,proof,"head_wire",wire=True)
