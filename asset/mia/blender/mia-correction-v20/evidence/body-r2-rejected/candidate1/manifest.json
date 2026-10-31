@@ -1,0 +1,3370 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-correction-v20\\integrated\\Mia_Corrected_v20.blend",
+  "source_sha256": "aa02b736452bc876abf6f81a09b94bad71eb15c5ced35834b6fde17b90f8b5a6",
+  "native_sha256": "dfb5b33581e26301f7228abf3fd78ae17c03b933213b9c5f4d8a6ca9328ec093",
+  "changed_vertices": 834,
+  "max_delta_m": 0.012697011313489848,
+  "protected_z_min": 1.46,
+  "protected_vertices": 183,
+  "other_meshes_exact": 159,
+  "packed_images_exact": 61,
+  "all_before": {
+    "Body": {
+      "co": "b8b4865a5ec362443dd2ca3f7b04d60a2d783a8fbeaed0367020ee36967a881b",
+      "uv": "358624cbf3f7037904969559168bac46c806d41cef014b7cf8e29c591a98dabb",
+      "topology": "4a496922cdedc955d30d0b5cb8bd657ecc11e8f0759021b93530638a0d5a5f1e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "d9a0d851f3060fbc7e737a71cfae52ba0988645189630b2a7e8017337dfac3ac",
+      "materials": [
+        "F00_002_02_Body_00_SKIN",
+        "F00_002_01_Tops_01_CLOTH",
+        "F00_002_01_Shoes_01_CLOTH",
+        "F00_000_HairBack_00_HAIR"
+      ]
+    },
+    "Face": {
+      "co": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187",
+      "uv": "52a3430efa1ca194117103f3eb284f1cf88f2bdd3061dfd9ccf02a95171e367c",
+      "topology": "984ec28cca321742cc74c90280ace61593875d7b3d4770b4064a39d0b4fd02fa",
+      "keys": "e3acce3d96ed73488a51f90239c1f2d7583cde86c5abe53a51bd943d7dc1a282",
+      "weights": "284c1f41d6ec98e41dc5bb1c722991adbad131f554239fb95cebd09a115c83a6",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE",
+        "F00_000_00_EyeWhite_00_EYE",
+        "F00_000_00_FaceEyeline_00_FACE",
+        "F00_000_00_FaceEyelash_00_FACE",
+        "F00_000_00_FaceBrow_00_FACE",
+        "F00_000_00_EyeIris_00_EYE",
+        "F00_000_00_EyeHighlight_00_EYE",
+        "F00_000_00_Face_00_SKIN",
+        "F00_000_00_EyeExtra_01_EYE"
+      ]
+    },
+    "Face.001": {
+      "co": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187",
+      "uv": "52a3430efa1ca194117103f3eb284f1cf88f2bdd3061dfd9ccf02a95171e367c",
+      "topology": "984ec28cca321742cc74c90280ace61593875d7b3d4770b4064a39d0b4fd02fa",
+      "keys": "e3acce3d96ed73488a51f90239c1f2d7583cde86c5abe53a51bd943d7dc1a282",
+      "weights": "284c1f41d6ec98e41dc5bb1c722991adbad131f554239fb95cebd09a115c83a6",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE.001",
+        "F00_000_00_EyeWhite_00_EYE.001",
+        "F00_000_00_FaceEyeline_00_FACE.001",
+        "F00_000_00_FaceEyelash_00_FACE.001",
+        "F00_000_00_FaceBrow_00_FACE.001",
+        "F00_000_00_EyeIris_00_EYE.001",
+        "F00_000_00_EyeHighlight_00_EYE.001",
+        "F00_000_00_Face_00_SKIN.001",
+        "F00_000_00_EyeExtra_01_EYE.001"
+      ]
+    },
+    "Hair001": {
+      "co": "34c5f10a33d5a3ab439b38236676b2a7d622c6d8d10cb1db8fc8065f326187d2",
+      "uv": "22c1fa10bdbc1e5d48e553bd4549017d4f15a9d19196724929333ed981fa3ada",
+      "topology": "80c51986145ed68cc5ced61fbddfd751f5cb4984ed5c22ec9347d48dd78503de",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "5ababa105e7a194467ffbb87cc17c7e6947d17f0b90e012ae03e0aac8e930497",
+      "materials": [
+        "F00_000_Hair_00_HAIR_01",
+        "F00_000_Hair_00_HAIR_02",
+        "F00_000_Hair_00_HAIR_03"
+      ]
+    },
+    "Mia_Body_Anatomy_Skin": {
+      "co": "5a3c07d2e3ad8b1605d48c51e87bf3f67c931bda04c8cd3bea0d1f801ae489da",
+      "uv": "6ab033ca1a48e8ade5f39d13563f89e0305ea1d4221830084e11240fcecfe2d5",
+      "topology": "da866b4f894eb34f6461188f7771b813eaf765f1d157bbd5fc013c427b19e070",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "abcec2558715b30ec4a961614bbfd7d3c5226619e2c1d754de7885885bc00cc4",
+      "materials": [
+        "Mia_CoolMutedBodySkin_MToon",
+        "F00_002_01_Tops_01_CLOTH",
+        "F00_002_01_Shoes_01_CLOTH",
+        "F00_000_HairBack_00_HAIR"
+      ]
+    },
+    "Mia_Face_AnimeTopology": {
+      "co": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187",
+      "uv": "52a3430efa1ca194117103f3eb284f1cf88f2bdd3061dfd9ccf02a95171e367c",
+      "topology": "984ec28cca321742cc74c90280ace61593875d7b3d4770b4064a39d0b4fd02fa",
+      "keys": "2651fe27e20d8ebf73b3812f451a368d394d9385ba81e34151096f83431aac5a",
+      "weights": "284c1f41d6ec98e41dc5bb1c722991adbad131f554239fb95cebd09a115c83a6",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE",
+        "F00_000_00_EyeWhite_00_EYE",
+        "Mia_CharcoalEyeLine_MToon",
+        "Mia_CharcoalLash_MToon",
+        "Mia_SlateBrow_MToon",
+        "Mia_AshBlueGrey_Iris_MToon",
+        "Mia_MutedEyeAccent_MToon",
+        "Mia_CoolMutedSkin_MToon",
+        "Mia_MutedEyeAccent_MToon.001"
+      ]
+    },
+    "MIA_V06_BODY_SKIN": {
+      "co": "fa310511b68399ffb2f1e4c8cd0906b89fe46fb5fb6e0c5d0a731f421a3201a3",
+      "uv": "913825cc7f5adf37457c768c558f53ad68627ad13c2c8cb531c66fcb90a4883a",
+      "topology": "aa98ca83ac5368254cc0bf55c27d9e3f6d37bb5dcdcbc9a1d1d014b93e0b1bc7",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "7195da85973ce3e43fef9d54263ba9cb60732b021618b7a9d428fffab0afca70",
+      "materials": [
+        "MIA_V13_PaintedBodySkin",
+        "MIA_V13_PaintedBodySkin",
+        "MIA_V13_PaintedBodySkin",
+        "MIA_V13_PaintedBodySkin"
+      ]
+    },
+    "MIA_V06_FACE_SKIN": {
+      "co": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187",
+      "uv": "52a3430efa1ca194117103f3eb284f1cf88f2bdd3061dfd9ccf02a95171e367c",
+      "topology": "984ec28cca321742cc74c90280ace61593875d7b3d4770b4064a39d0b4fd02fa",
+      "keys": "bef9d8f219a6e502c84f11eb3f618f58ec928a59173d5031c1305cdee419998e",
+      "weights": "284c1f41d6ec98e41dc5bb1c722991adbad131f554239fb95cebd09a115c83a6",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE.001",
+        "MIA_V14_SoftIvorySclera",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "Mia_FaceArt_GrayIrisHierarchy",
+        "Mia_FaceArt_RestrainedEyeGlint",
+        "MIA_V14_SourceSkinHidden",
+        "Mia_MutedEyeAccent_MToon.002",
+        "Mia_FaceArt_ContourInk"
+      ]
+    },
+    "MIA_V12_AngledBrow_-1": {
+      "co": "1fd14d194a8600b5078b105773e07e3d6bac708bfcb24b4d3b4793d67d5e10ae",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "a9c6cb70b13b7c7552fa33d140bca73af2c21b05a3c2781b7bbc30ec4280ce22",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_BrowInk"
+      ]
+    },
+    "MIA_V12_AngledBrow_1": {
+      "co": "8269dafee0ca0d72c20537d02d6ff04649f1ccf2399559d5b653cf5aa84cbd7c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "a9c6cb70b13b7c7552fa33d140bca73af2c21b05a3c2781b7bbc30ec4280ce22",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_BrowInk"
+      ]
+    },
+    "MIA_V12_CleanUpperLash_-1": {
+      "co": "17afc1a97f91490c32d1d9ef1c52546b24898753ef09e137dac5b118bc3cee81",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "76eb39041d03c6454b598e416425e64c1f2fed8290d88f06549b1cbdcea18ec9",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LashInk"
+      ]
+    },
+    "MIA_V12_CleanUpperLash_1": {
+      "co": "e87e436a2f6e59af044eef07715621f32b1a940047651dfc35720b5dc73c9229",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "76eb39041d03c6454b598e416425e64c1f2fed8290d88f06549b1cbdcea18ec9",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LashInk"
+      ]
+    },
+    "MIA_V12_FineLowerLid_-1": {
+      "co": "176f6f87666b283b6094ad4046cd5bbfa4e86ddcc7bd579614f1793a4cdd5b00",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "76eb39041d03c6454b598e416425e64c1f2fed8290d88f06549b1cbdcea18ec9",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LowerLidInk"
+      ]
+    },
+    "MIA_V12_FineLowerLid_1": {
+      "co": "f1c990b3d936cc15508d8bd2d412e122bd07c74684ad4dad2835cbf3efb56bf4",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "76eb39041d03c6454b598e416425e64c1f2fed8290d88f06549b1cbdcea18ec9",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LowerLidInk"
+      ]
+    },
+    "MIA_V12_OuterLash_-1": {
+      "co": "4b521889850147c99cc5571ea8dbe6f373a5191b5a5d30a3bdeeb177dcad58c3",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "2084470fb3ab3afb3e843d3dfef42b0c1124f3357d70d13fa774d0c8981f6fd7",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LashInk"
+      ]
+    },
+    "MIA_V12_OuterLash_1": {
+      "co": "15b1835232d053fed67ad2e6090ed0b1c54bf76dc73e7e1ed3f73527fccbca16",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "2084470fb3ab3afb3e843d3dfef42b0c1124f3357d70d13fa774d0c8981f6fd7",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LashInk"
+      ]
+    },
+    "MIA_V13_BodyOutline": {
+      "co": "dde3e3fdc7c2b43a1dee9efc170497e5b36ab67adaa32cb3e89f17d04487eb93",
+      "uv": "6ab033ca1a48e8ade5f39d13563f89e0305ea1d4221830084e11240fcecfe2d5",
+      "topology": "da866b4f894eb34f6461188f7771b813eaf765f1d157bbd5fc013c427b19e070",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "abcec2558715b30ec4a961614bbfd7d3c5226619e2c1d754de7885885bc00cc4",
+      "materials": [
+        "MIA_V13_SkinSilhouetteInk"
+      ]
+    },
+    "MIA_V13_FaceOutline": {
+      "co": "87ad65955fd84c151a78f6f36b0aabb423d45901a34594ec312039cd7a2e1166",
+      "uv": "6d6b4f1dd213e4a226da5aea7f3428d1aaa70df9fc1416d9b75307a4c77723c2",
+      "topology": "f6a58d08260f7475cd49cbdb1f10aea6b23080150f9341ea6e4985e791ebffbc",
+      "keys": "c01fb9cd05860ee8513935ce3116948282fa0a37c65b819f3c1b2ebd30e8707c",
+      "weights": "4e0881e81ebe6d2d3bdfeca067f905a8e8b8f6bca9a24b988c44eb2ce4805026",
+      "materials": [
+        "MIA_V13_SkinSilhouetteInk"
+      ]
+    },
+    "MIA_V14_Brow_-1": {
+      "co": "c423ea943f91e9343c11c33352a93fef9baa3b42b905f5d0e43badec47b2e9e3",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "f19b31b997adce0252af8337738094c76e0f786ed8e1540698f02c4fa069326d",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_BrowInk"
+      ]
+    },
+    "MIA_V14_Brow_1": {
+      "co": "faf14f5ce6711a0b246ccaf15106c4b8b0e91db937fb12a812c0660258b183fb",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "f19b31b997adce0252af8337738094c76e0f786ed8e1540698f02c4fa069326d",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_BrowInk"
+      ]
+    },
+    "MIA_V14_EyeSurface": {
+      "co": "e02531c050f3a36104595f26083317128e96d3792d2bad4b5ea8e25ac244f3f2",
+      "uv": "425aa97ccc127d5e9d926146e28e15960b4eacd386566436fdb2ef3d2df7cc77",
+      "topology": "fd7c45f3f460a70ede5f4e152c1a105b1ef63c3405dc78ebee35976fedcb5673",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "7c0f3985a37f32105dcba9c73fc967b55b41b9bdc0f4c906f7765c5a85591bea",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE.001",
+        "MIA_V16_Sclera_BackfaceCullingRestored",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V18_Coordinated_GrayIris",
+        "MIA_V17_LegacyEyeGlintsHidden",
+        "MIA_V14_SourceSkinHidden",
+        "MIA_V17_LegacyEyeGlintsHidden",
+        "Mia_FaceArt_ContourInk"
+      ]
+    },
+    "MIA_V14_MouthSeam": {
+      "co": "6c44012d73c2fa1ed4a60e16a48b6655b1d20a8bc416e98857daa0674f99a12c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "1a64e3076229e93c48f28209bfb58f5c68abb9736fc1dd38de1890a23578a6dd",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_MouthSeamInk"
+      ]
+    },
+    "MIA_V14_OuterWing_-1": {
+      "co": "a37102cc143793955d94d571f714e8ebfa4946822f6fc18812642bb11a020c56",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e92d8f39db657794ec9bab5ba9f0a6a8f1a5106b0f6a1d1b2d6f012a364bf4cf",
+      "keys": "11fe711c05ee5b5ac2f7e73b3967d7d13380e5852426278bf5e6e096996d8270",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_LashInk"
+      ]
+    },
+    "MIA_V14_OuterWing_1": {
+      "co": "e9ff24398ca74df083bdf004152dd94c2f59835e75f782172d219b16f4de8e2d",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e92d8f39db657794ec9bab5ba9f0a6a8f1a5106b0f6a1d1b2d6f012a364bf4cf",
+      "keys": "1949e531aa253b15dcdab13346ea7e0e9bb56648ec551daaea8ebe1747370918",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_LashInk"
+      ]
+    },
+    "MIA_V14_SculptedSkin": {
+      "co": "9ae050aa632cfc6f71a73b62717c28a209a117a8b9382184425753408105496a",
+      "uv": "25f2a5f136bec94cbebeb8ec687d392f0df2ff6c88f8473cdcf1d30198f51889",
+      "topology": "d0728f5750410b1ab98c9d4713cb5802dfee4753d0abdd08ed9dd7dcfb34bcdb",
+      "keys": "565cb53183c3e0687dbaf564e46795b128342a976554a2f2394eccd0c52374c3",
+      "weights": "1f34e0d997cf17e631846927656e9f31315c597270d687e4c63fff18e74c3e1e",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE.001",
+        "F00_000_00_EyeWhite_00_EYE.001",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "Mia_FaceArt_GrayIrisHierarchy",
+        "Mia_FaceArt_RestrainedEyeGlint",
+        "MIA_V17_FixedUV_PaintedSkin",
+        "Mia_MutedEyeAccent_MToon.002",
+        "Mia_FaceArt_ContourInk"
+      ]
+    },
+    "MIA_V14_SmoothJawInk": {
+      "co": "28f3582de9ffc3f4e879c9571072ec712dd4a790cfb88379fbb5fc787b1d5e18",
+      "uv": "d3a10c24eb6365a28f0661cf81e55c6cbf20b828db580b0a6e29bb622e1796e5",
+      "topology": "463012f8fa6ca1caf601db5b867e61ea574856fa4e6ddf4eef05a5e18a163931",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "5e7de9c38c27f552bd6875f8eba7081da63a55265dc41d56881b86c12e44088b",
+      "materials": [
+        "MIA_V14_JawInk"
+      ]
+    },
+    "MIA_V14_UpperLash_-1": {
+      "co": "08685f898bc47f0537389e5b00e9fd4d857c6f198c9a4f19a7fc0c0a4c9a6561",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "74b37004fb14dbc6c73dfa25d685a73d3ed1c7f8fd6cab895a983576b25fda46",
+      "keys": "cbcd7e73274d688634508b498a5549249989ae9fc812b82a0ac8233ba8fee7c4",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_LashInk"
+      ]
+    },
+    "MIA_V14_UpperLash_1": {
+      "co": "a1d34f0b378a21e75acf399c0ef94387e9eb9671c84df8b4d4416297de2966f1",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "45e3dc3c04ae9bc1c31980e448f13f9dc1e6e66fadf00f9b01ff7cb16153bb00",
+      "keys": "b8aeffeaedbb7624b0dcdbebbceed17f2b565e9027359058b09430d8508e60a3",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_LashInk"
+      ]
+    },
+    "MIA_V16_PIXAL_LowerHair": {
+      "co": "2b60432838d7d5802ab4a87a280be902cfba967d78bc39a2d06f12ce26a2e77b",
+      "uv": "db94dd6051d9c232f7bb21621354bcdc438bef8472b89f7b35627ac09d9a4002",
+      "topology": "a733271d6af797e14f054e45dd7062f8a871f0861551fd7b07b6fe2d6cbc4a5a",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "GUIDE_ALBEDO_Material_0.001"
+      ]
+    },
+    "MIA_V16_PIXAL_RecoveredRear": {
+      "co": "1fec800b13484581d60643f851dc7e93a07aec7df043085f12db9fb555d85429",
+      "uv": "49029fb98182f801542d13932b40a69be7b92e65f77aaf89bf994989f58c4a0e",
+      "topology": "d9767caf412a0f3cf0d2172baa89bafd22ebc89319a101b26934bbb8f74f0f02",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "GUIDE_ALBEDO_Material_0.002"
+      ]
+    },
+    "MIA_V16_PIXAL_UpperHair": {
+      "co": "3da7b7e465b5344470f63a63fb59bd18234cf85f0a46d5be819e63be4d546410",
+      "uv": "4eace7aaf1a99e0daea81d0e70a192e03b28567c8cc112cccaf6739979630171",
+      "topology": "1612fdb49745cde34d9778b370ebc61bf0bafc6dac4980e13d8ab076f8e6c110",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "GUIDE_ALBEDO_Material_0.001"
+      ]
+    },
+    "MIA_V17_LeftBraid_Lane0": {
+      "co": "f5ce8303e620f6771292a2b1d0f8ec0d364c15b43a7750da3ce14d6a86c735cd",
+      "uv": "97d0c5329ae08c40ef803d91676f1a14d379208f933615cb1564615f1dd79795",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "a45f5581dab12181d5cc4ee369562a631cc9ac968bde8cbacaa6dd0926b3429f",
+      "materials": [
+        "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_LeftBraid_Lane1": {
+      "co": "034ddeccc449f317c36e02ebad4d8627cc4c5db73655b545ba79a2a151585ca5",
+      "uv": "97d0c5329ae08c40ef803d91676f1a14d379208f933615cb1564615f1dd79795",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "a45f5581dab12181d5cc4ee369562a631cc9ac968bde8cbacaa6dd0926b3429f",
+      "materials": [
+        "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_LeftBraid_Lane2": {
+      "co": "465bb9ab195b6b54fe1348a4ffe7b8259153fe6c6da7c6d072d12be8fc15c3ce",
+      "uv": "97d0c5329ae08c40ef803d91676f1a14d379208f933615cb1564615f1dd79795",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "a45f5581dab12181d5cc4ee369562a631cc9ac968bde8cbacaa6dd0926b3429f",
+      "materials": [
+        "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_LeftBraid_Tail": {
+      "co": "e739c1be007273e8fb01cfc35b7256528e7f6bf1773036c36687a73941e97d47",
+      "uv": "cc5d58f1b4ae51f0b2964ed4cca6d25c00843c9f1b888c7f0f37a632259b361c",
+      "topology": "42c7854b3419b08cf4b95a268f37c0d6c37aaea3979254fddd0b246471cb2450",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "5a13290aaebefdf4f4c61be379a1021c9024c36a00fee9b7d9aa288e630ae9ab",
+      "materials": [
+        "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_LeftBraid_Tie": {
+      "co": "4b024e2ad282d660c2d7ce9a90857342a329d6a774dd019e6b1bd540b7ef4aa3",
+      "uv": "c630a4137d6279e71ccc2abfd244ddbdec0291573f25765d3381afa6489925c1",
+      "topology": "9dba79c49524f4ed9cb8b68ffc31ee071a35b8e8075195de4f6e4c41e8b50341",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_MutedTealTie.001"
+      ]
+    },
+    "MIA_V17_MiaHair_HalfUp_OneClosedKnot": {
+      "co": "6fbc709f243e140cd7b0d2e6c322f4c8736859d3895bfc89e13bbcb86e4e62b6",
+      "uv": "514b9e4e77cc5df6e7c24e4443b8c76f2d428e2306739309dbf43c227c7c27ee",
+      "topology": "e294fc54428cedb0edce4f5e6a315a53be60016809d3f3f5caa2120d231f3aa8",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap00": {
+      "co": "13a5d10391613426a08148899455570bbed8fde9670b616d4714cdbc6223f2d1",
+      "uv": "719712ee0a1c5475fc91439dec84138a59c004e54a4ad72fb486bbc4700a4d35",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap01": {
+      "co": "49c64e5101d6d72485b64656c136f9557435fb66dafc3341e80fd67a34f6c97c",
+      "uv": "cf0f14dccb9abb4d6a0b79741bbe68544496fa94d666cfd133fadea5ce1d7d2c",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap02": {
+      "co": "d4b524e6c60725df0ed2e1811974e730a8f706f0ef7be65cf059abe68c20a00e",
+      "uv": "f4cc9023169af1281f5f4e07b9790b11880e9b105607f6d0769b8f7e50b46020",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap03": {
+      "co": "65680304a55cd99dcb3c9c907d20b361c7ba04c32c171f947bda2a2ddbf97861",
+      "uv": "29013e486510c25cc9cfe97ad411d10c9e340a7e21c408167e37b0807c82d7c8",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap04": {
+      "co": "b27bc3d7f82ae3f84193a6cad05527b7471d95bd8b8be4907ff3ca46841f15f4",
+      "uv": "1290cad907ae940f5a6adee5d73ebbe342477dbfa3c653215f8a828d77cead33",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap05": {
+      "co": "037fd1b3ff76d0e6360a6b048d660be6e06059f235e1dd67f47a5d4752e99c51",
+      "uv": "eed742ee7ce30b92395c0bbffc64f25254f754948822af1c1b021ff5dc876f4f",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_PIXAL_DetailedHair": {
+      "co": "90c077c91cc0b27d5a87ddb3c94fc54a8fa3f6f4e930741cd539bbb588d2d1dd",
+      "uv": "c0b675a28b4a34465318d1a4aa137f8f6c52fa9494bcb0f8c65f3723efabc67e",
+      "topology": "010fe6ad9d4d197a0def4615951befe29e7b8bd54e778ae21f2ee1f5d5eddcb1",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "41db54665787aa0a414df34d282e3a79af4e1acb1274a1425d08316119ded026",
+      "materials": [
+        "MIA_V17_ReferenceAshGray_PaintUV.001",
+        "MIA_V17_RecoveredBraidTie.002"
+      ]
+    },
+    "MIA_V17_RootLining_MIA_V06_BODY_SKIN": {
+      "co": "4ed8a4af5f3cbc45484d251987bd6c351631db07febe55b3768ab61efd3b0cf2",
+      "uv": "910817be84b6a6acc222f25c65b4ce8f57bbf9c15c95e9e917ad923ee56d83dd",
+      "topology": "76672d9ab009f426ce0f364a3cecafd22972950c003e287e12d2dae5c0f54dcb",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "c6d1f14d849ab999431d1fd1bfc86f2b8efcc784323d404000dbc4075178cb75",
+      "materials": [
+        "MIA_V17G_RootLining_WarmHairShadow.001"
+      ]
+    },
+    "MIA_V17_RootLining_MIA_V14_SculptedSkin": {
+      "co": "ed9a5ab6042dba095f94943f5061834fb383591b34520dc9149a14fa5eb15977",
+      "uv": "203d5f01c3deaed407461ea4b5a602a727dbf1a7c9e0977b067610bd4f9cd04b",
+      "topology": "9340f6464d9a571c9c6f9713f86a399e0739f42d9fc9914ab768d5df0572018d",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "0e4a0c756fe47ee1a1caf0c15bdf18e30d5249c9f6912da7c6f3df9003595797",
+      "materials": [
+        "MIA_V17_HairRootAsh.001"
+      ]
+    },
+    "MIA_V17_SingleUnderEyeCrease_-1": {
+      "co": "154d0b016746fe34d551a6889f497396e78f8514bd2aef67aa02be825d40cf55",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "0d6a5f053209deeb69d564ae2d270878c87bc9c5babf9387dfff0b498bf401e1",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_SingleLowerCrease"
+      ]
+    },
+    "MIA_V17_SingleUnderEyeCrease_1": {
+      "co": "8e0af7914fa300891c86cc342c13ea9bf92e7910c92fb026e733f1c50bb1c038",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "8feec45a68c455cce66b404f4220dc9e24f90a5c38c74f6c8e8ecab3d3a24a74",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_SingleLowerCrease"
+      ]
+    },
+    "MIA_V20_Crown_PixalDonorLock": {
+      "co": "b78498ab66a16ad759c9e45cdf21321b9e23d94ee02691136580dee2d54c9b44",
+      "uv": "142734b1d51aff069a431492daf14a5890e6591b7d20cecb44c4f12dac1b6424",
+      "topology": "ec3b788d09fa7303be45506c4831ad6b388e17222b368d05e2f411c6f6241aaa",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_ReferenceAshGray_PaintUV.001",
+        "MIA_V17_RecoveredBraidTie.002"
+      ]
+    },
+    "MIA_V20_HalfUp_Binder": {
+      "co": "9dfe9bb06abcd93fd511ffb846683b430207f279937e706ceae4f65e18ac26f2",
+      "uv": "a8af8d338baf26204c7e6674480cd10617e481b4eb69cb2128f4492fd7e8ad9f",
+      "topology": "e514a43b23a5e27a28e955a6a3f7e48ab8b4a1f1bfe7b639fd92eef7ff7b5b2e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "8d3575968ad1b0e239dc5c0547b9e647ef7bac8ee4f6c978bd057f1866ea32b9",
+      "materials": [
+        "MIA_V20_AuthoredFold_AshStrata"
+      ]
+    },
+    "MIA_V20_HalfUp_Fold_Left": {
+      "co": "6cc757f1d00d40ed05d7b899e153a05369308eb4374ccadd168224f599daf289",
+      "uv": "a8af8d338baf26204c7e6674480cd10617e481b4eb69cb2128f4492fd7e8ad9f",
+      "topology": "e514a43b23a5e27a28e955a6a3f7e48ab8b4a1f1bfe7b639fd92eef7ff7b5b2e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "8d3575968ad1b0e239dc5c0547b9e647ef7bac8ee4f6c978bd057f1866ea32b9",
+      "materials": [
+        "MIA_V20_AuthoredFold_AshStrata"
+      ]
+    },
+    "MIA_V20_HalfUp_Fold_Right": {
+      "co": "9442a4f91756ff3cb4397d3773ca167701a1538a27e82cbb49bb10be8e87f93c",
+      "uv": "a8af8d338baf26204c7e6674480cd10617e481b4eb69cb2128f4492fd7e8ad9f",
+      "topology": "e514a43b23a5e27a28e955a6a3f7e48ab8b4a1f1bfe7b639fd92eef7ff7b5b2e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "8d3575968ad1b0e239dc5c0547b9e647ef7bac8ee4f6c978bd057f1866ea32b9",
+      "materials": [
+        "MIA_V20_AuthoredFold_AshStrata"
+      ]
+    },
+    "MiaHair_Braid_Tail": {
+      "co": "1135c53d7f5f102f9274d2675d1cb1adb31e8c06381da5d3207ee179f38b9c5b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "42c7854b3419b08cf4b95a268f37c0d6c37aaea3979254fddd0b246471cb2450",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Concealed_Closed_DomeNape": {
+      "co": "e065cf43b03f387910aa3463ab51d1de1d843847182f1d59f47d487a811cbdb9",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "aab08013664b1dd804db396d7a692bce4f4b3aa1923aa8ceaccd616c2870e17b",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Crown_Flyaway_00": {
+      "co": "82c6b3be4843cfd6280b471a1f9744356d3a844b8174cff31174d3bddc70b9bc",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Crown_Flyaway_01": {
+      "co": "d8cfc252e1e5d9de35585a7d7f76c51a8ea279313df6b62fdaa09a2ac4db39e1",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Crown_Flyaway_02": {
+      "co": "89be0d3c29c2a08bc57533c7e53af57f9da29132be5cd202e0a4a122df01c5fe",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Crown_Flyaway_03": {
+      "co": "65b29e3dfad5cd0c1cbd1618c8ac3bd828d2eefb1b0b479b0fc935aa3f7ec0d0",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_Center_Slip_0": {
+      "co": "d3a1af3bef8750372ef43cf81c08cef2f64a04596620c82f04f222ed667a73d6",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_L_Outer_-1": {
+      "co": "1f176b8ca5576aaa7efe58330b5dd2008ea75b2b0ff44a56264997c481013506",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_L_Outer_1": {
+      "co": "5acbc3de56d5962378c293d186617fb803e1b4c92aaef7aa90412b63d6cb4e22",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_L_Sweep_-1": {
+      "co": "85aab74accaee63705dec77bd48d160b780b08d589fd4d30505190f838ed1ec6",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_CrownFringe_L_Sweep_1": {
+      "co": "501e0216bd60d97b9275ef1a5af0e8c21940c668750acb2145734c345cb6ddd7",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Outer_-1": {
+      "co": "e0e05b13e0194771d6564397933b32b314e79d91f465f227818e99e24768e136",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Outer_1": {
+      "co": "425575ab14b13f56da1057d7f1b1444d2fff2988cc91cdec0cb0d4f5f8ba24b7",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Short_-1": {
+      "co": "e60a2a08c26e4930c2e2a3f362086a7c38f2eddb93c5128e9833708a8c469a45",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Short_1": {
+      "co": "7578f1899f2290c893593af0caaffd8fdedc90e86fb37f7398d85ba747843d3a",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Sweep_-1": {
+      "co": "aed3954640cf8fe15de06a4cb822d9ea603586b2017450985cef1a1aa03ea6d2",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Sweep_1": {
+      "co": "d7c7cead6ea30b5b2855e00df6c954948d589e9b831aa5771ad01d8dd3467b0d",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Fringe_Split0": {
+      "co": "2bffd51970dde4bbd2ca7b424295f01c090a36be4964085676808c372ee9e196",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Fringe_Split1": {
+      "co": "9c7c58a753c187419c57711cf68ec1768e0bc85c4cb20161dfefeb0f8173b50e",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Fringe_Split2": {
+      "co": "acb3bc6f20ac9a57c0ae74f2c882acb58c630e98828b4d733ef1ca0b2022eee8",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_BackPart0": {
+      "co": "39e59e7e360f98242a3bea17ed2869faa067a68b250ccc3fd092dafee20e550b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Gather_BackPart1": {
+      "co": "b8c5660aa3911695aca9a4712bc24e43cb968d6ed10a204da1c5b4dfbfb93669",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_BackPart2": {
+      "co": "6e338580b3b2a67f74126f435f4b91674da2632d532c3fd209b0916a7206c214",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_L0": {
+      "co": "405ce275d80e30fe8c484a1b60519ecd82094fae3894cefed7f8045607909e21",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_L1": {
+      "co": "400de15a3e31e4e5c92430149bf2472da024e20295d57e7487615b7a7f5247a7",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_L2": {
+      "co": "afe6ff8de855190aa6f6227072f3b92665b6542d1dfbe44ea67b4eafbcfcc7fe",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Gather_L3": {
+      "co": "cb84134c6e82c0925cb5fde494579cbf3826c686171ff0f4bd552117354a5c02",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_R0": {
+      "co": "c6ac6bcd73d4bebbec14db75b720bae0a580b90ee787c83b4fc271655caecec2",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_R1": {
+      "co": "3b87a040665657c980f465fafb0f6361c296dc16ff7a74e68b95f88e5963616f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_R2": {
+      "co": "4bdfe6595d574fec179797e044f7ef030d3532079285459d73408fc4ed79d03f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Gather_R3": {
+      "co": "5e3112ca2c6a629985806dd135bf414f2bafe9a5bd1a2f3ceb581c581c07646c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_TempleL": {
+      "co": "f08f1ca5801da0766e8722201af7a6ef47c382cf61b5302f02e8b06edb0798bd",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_TempleR": {
+      "co": "2c5d0db9c6fcef2c10b7fb3f7f2e7649c5981465341c00ff7497224ee10b1dd3",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_HalfUp_OneClosedKnot": {
+      "co": "5f23d3b74d10f05605aa4b03df92d1d7c50366db7e6be3dbded2030904dc06a0",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e294fc54428cedb0edce4f5e6a315a53be60016809d3f3f5caa2120d231f3aa8",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Knot_Wrap00": {
+      "co": "8cd2b4e42909f74b19e6b31abbf3b66f8b2c3e724458a3fd061621096249a5b5",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Knot_Wrap01": {
+      "co": "ba172421f41f39170163016f563311868a4c057d313a0ba32e80923b75bd12c3",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Knot_Wrap02": {
+      "co": "a703159ddec5e86e6f5901c24542b9fd130787619b3f4e2bf22bd0516a96fdec",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Knot_Wrap03": {
+      "co": "6e5187345909d6b36edf3e74c2881fa4db1a2631a231f1456b08644827220fe8",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Knot_Wrap04": {
+      "co": "f7b1f1a8ad53cb084d01f14c8e2bdda8b404ccc9bf87eadeb0dad1bdb115b673",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Knot_Wrap05": {
+      "co": "0a81f2e1089d2b234da9bdf6025c93679643d96cddc88adebafedbc1129b2311",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_LooseWisp0": {
+      "co": "41be2634629d4f54b4e51dd54118f48d9f26c22cabd7d01943c75ea21ee33e03",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_LooseWisp1": {
+      "co": "5a2accc18a1dd8a0f32a6ee914a6e984c87088e5e173bce80b58ee45f103c893",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_LooseWisp2": {
+      "co": "da7dc943fa2ad66db62ce0ca879a99badf20fb59944bad56d4ecd69aae29ed29",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_SideNape0_-1": {
+      "co": "758acc380e202e33616489a8ed11b3ec421b825046b35ab31b6869f07be53eeb",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_SideNape0_1": {
+      "co": "e4b518648c70c1a44c803f4ee286234b1b61611039313ff5b1e41ae05501480b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_SideNape1_-1": {
+      "co": "f51474ec613c9c6af06d917d4e9978d17d78cd3e9d69e4133a87aa4ff66ef548",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_L_SideNape1_1": {
+      "co": "13a44334eb7a178e1140a14099eeb8a5c112c41a1fbc538e3265c64938bbb360",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_L_TempleWave0_-1": {
+      "co": "8bc938ad45c617e03d093d26859235eee6b7b1a96d49e60b744143483d55de14",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_TempleWave0_1": {
+      "co": "61f88e312922858b4bc777aee95bde40b9ed546afbe0e9168e17e21f2f8cab8e",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_TempleWave1_-1": {
+      "co": "68d6111660460fae8ebdad5c48bdc957e9bceb7fe472febe5e37491d9b32c556",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_L_TempleWave1_1": {
+      "co": "9e314ff6baa06335e8dbe0a2aadff29221f1bcda66d8a1eedfd7bc9ce9927599",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_TempleWave2_-1": {
+      "co": "96dcce6bd7161c38388e7941f08dc0b9077837dad7132e971fe1e34469f2faf8",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_TempleWave2_1": {
+      "co": "276542f538c2047c326db71c4814eecd93898d14f811127f750664f6f5f4b495",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_LEFT_OneBraid_Lane0": {
+      "co": "714578ce2c54d0ca7c5e42514a6c5fbec479269e252a5cd24ee6cce22c9e0c18",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_LEFT_OneBraid_Lane1": {
+      "co": "55b4e7297f766d654e28ce682351033e0f803e4cf70a63e1925b9392febcb6e1",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_LEFT_OneBraid_Lane2": {
+      "co": "466cec6eed98863db3f5a2b3556c88584791330138d8f93d587a15b051d4fc72",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_LooseWisp0": {
+      "co": "6c371666fd88e8376d1431ef475cb50d9acf9bf3a43c98f6f06be8dda82e33f5",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_LooseWisp1": {
+      "co": "7ab90f893eb2c459a424972e4ef39c86bb20f10023fe49194cbee78dcf007689",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_LooseWisp2": {
+      "co": "2594d2dc2af25becfbf1ff21670021293c7a5bb5da23876e509996ca3ba6ad6f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_SideNape0_-1": {
+      "co": "db7ccf9bdc7cd7dee350fe86749602bed8b0fd79c9e391f03f1843276df61299",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_SideNape0_1": {
+      "co": "1aed2d300f359b0900bbbda965857015f0a4fafd1cb62b26dd9cc6524a38966e",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_SideNape1_-1": {
+      "co": "955b4a71adf037fdf4d3162431bd1b7d45098434cd9da8a715f33e22bf4a97df",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_R_SideNape1_1": {
+      "co": "f9e02bc7a3f88239f2b2a6b53fb3ebb2f83dfc484ae7e2eed1efe24aa1bd1400",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_R_TempleWave0_-1": {
+      "co": "6b7470ade78a17f422bfacaa590b85cf037af8e885cd040228f10532945d94d8",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_TempleWave0_1": {
+      "co": "34dab24cc2a26d75058bfed4bafafca84868c2e1826d0be589c9011e5ab71b9b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_TempleWave1_-1": {
+      "co": "bc174d3b701349b7332301945cc0de1449c1aaf7eadeef59df89106da76924c8",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_R_TempleWave1_1": {
+      "co": "a16eacfb4855f0e11963286d44cbb3b8f5c9c8d1192ae7ef710af754a3e8e18b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_TempleWave2_-1": {
+      "co": "9a3488cff223a2dd89fedec63ed6d590f7a50c0fa676b4fa07b42c29f0546777",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_TempleWave2_1": {
+      "co": "977223d08b591aa81bd78890f817d69383c3a87a1603be0568dc412327057852",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave00_-1": {
+      "co": "599b9bb183a64e017d9489f09e4935c89e33f2d995ed96d0b268949904b37342",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave00_0": {
+      "co": "28b3f5ae64e16618477c1a99bd16fb9a817cc10fd2428d450b650a4340fc96ed",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave00_1": {
+      "co": "ec12468c584cd50079ac2b46912d5af16d8245f5618440b277e495c75bf71197",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave01_-1": {
+      "co": "6c68c7d9cf214abaf3e4d51a76adc80a18f4b3355fa9d9dab36251f783214b31",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave01_1": {
+      "co": "95259b04c24e243fb7deb4ff7e9ee4d98cb229aa4796c1f9bddeaddc0738df2b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave02_-1": {
+      "co": "a63ff5e364db35c6ee5228067f7b044d3f48ff2fe07857cb8167c73ddb404868",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_LongWave02_0": {
+      "co": "1005ff0a4527ef2e37c648cb85755d147f47c2d2ef20c828dfeccec520dc851c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_LongWave02_1": {
+      "co": "7be3af3e95d27a444210b1243e1233c05194fd41df3d04bd8b4cc928f88edcef",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave03_-1": {
+      "co": "daa786fdf36ce3d4063d6d734ebd9d1c5f8f79d2e57a7fb464d82d15f1723113",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave03_0": {
+      "co": "c460c2119b59b53cd6fc81ed46a4e495806f13ede83a86f14c8cb4897a6c02e6",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave03_1": {
+      "co": "0adc22e73b4d83083868048628ea492de4cb67515e19dbc7fe8f5aa56738b7b9",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave04_-1": {
+      "co": "8688064a06ed8e2164d475f28de094069c46be06c28a29ae9b0057a7bdc57921",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave04_1": {
+      "co": "5e0034387c34084cb516048fbfc749067d0c21df40f04749fefd1606fb6f8ea6",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave05_-1": {
+      "co": "3a7ed17d7ffa53ce02b631ab931c874e6bf3e33cdc4d7596ba59cfe3170cf2ba",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_LongWave05_0": {
+      "co": "65da68cd527e308179692dd85ed7ef80ca877d750239bfdf49edf7b7fc134881",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_LongWave05_1": {
+      "co": "99ba9ba6901c00558142a6d4637343ef4d24bd8fb12fb7efc66efdf9a36b8bed",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave06_-1": {
+      "co": "e7ec6c188eb24e6899978696f8b31122174eff1a8a7950def52d0664f7acc78f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave06_1": {
+      "co": "cfed7573cfcd1e47bc4856c72ecce88797092fed98abef619f9401d23b3e8b32",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer00_-1": {
+      "co": "b14c46a5c7b72f59b60216140acf51447b52919fbfb3c77dd5b69fe9a3c6586a",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer00_0": {
+      "co": "bbf3426f42127279d14d9241aaada97971b7403901dcb15dd9a847bc4e2c9b98",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer00_1": {
+      "co": "d3f065d7ded0658be8b5b319afaffe581568484dec5074c0eab44f24cee04ba6",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer01_-1": {
+      "co": "145d1f6df035e730f2e4cbd1d83f7f8d2c654ce4ade49aa41e3f8ce78a7f4d88",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer01_0": {
+      "co": "8ae8c2a91d6920f2b6c3d4fc61fe3431a0ecf3e9ca2fd0e08097a85b1426d4e9",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer01_1": {
+      "co": "3a2cae04236704c75b72168b2fc771671f3da3e232a186a4fea89dccd507935f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer02_-1": {
+      "co": "596c7d809437c95ad86d27941de4377920bf5075243fa9a84d2b201cd999a96e",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer02_0": {
+      "co": "21d391715146b00fbef74993ee91e0cc9b00d6bd1b95bd0480cbcdef936b8dea",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer02_1": {
+      "co": "552dda9ea9e158d5e231ddc1c83c88889cd0f2025aa94aa114977d7622547c9c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer03_-1": {
+      "co": "cbe7c39b1a8e92357f89ddf48e22bef39620e4216a80fe8dbcde08def6cd89cb",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer03_0": {
+      "co": "e0a8b4a6bd8a586feb2231a440bb8ece6a4ca64f9edea030ce4e7daf3cf7e63a",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer03_1": {
+      "co": "2ec369fc4a42d059bed0e2f17b89815eee7e5470e01a17634b816fafa797a686",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_L0": {
+      "co": "be7d97a5e71205b715b370bdc2847487959215640d265ec28ad8c45f15aa8010",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_UnderFringe_L1": {
+      "co": "675701b37f860b9da93119c1b2d8d3051c502bdceb009d0ae74906fb3ef45517",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_L2": {
+      "co": "a4c13cd199248eca6edc3a848ef8a7c3304ab485eba11de59c8671e949064190",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_Mid": {
+      "co": "de6b1a6a8449fbb306cc7b857e2785d23bb8239cb1edd179ccd31a5b39b512f7",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_R0": {
+      "co": "d77e8767c3c4346320f94f1428fd2dc80f89f3db0c2b09ef61124944485e0584",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_R1": {
+      "co": "d8c4c92002f6a8f84dff1e21289462da697f713dea9819c5d665a52489e606c7",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_UnderFringe_R2": {
+      "co": "b8c621cffad3d50b4fc74633d9254094e9df2dd1a6f36d02ddf9abffc7e6669c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_TempleL": {
+      "co": "da19c5bd4520784747ddabc52dd02f59037f34fdb6427b587b656957c10b2c50",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_TempleR": {
+      "co": "72f01a11eef42d94842343f93b39f68a49997d24b1600b225b09bcc891967722",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    }
+  },
+  "all_after": {
+    "Body": {
+      "co": "b8b4865a5ec362443dd2ca3f7b04d60a2d783a8fbeaed0367020ee36967a881b",
+      "uv": "358624cbf3f7037904969559168bac46c806d41cef014b7cf8e29c591a98dabb",
+      "topology": "4a496922cdedc955d30d0b5cb8bd657ecc11e8f0759021b93530638a0d5a5f1e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "d9a0d851f3060fbc7e737a71cfae52ba0988645189630b2a7e8017337dfac3ac",
+      "materials": [
+        "F00_002_02_Body_00_SKIN",
+        "F00_002_01_Tops_01_CLOTH",
+        "F00_002_01_Shoes_01_CLOTH",
+        "F00_000_HairBack_00_HAIR"
+      ]
+    },
+    "Face": {
+      "co": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187",
+      "uv": "52a3430efa1ca194117103f3eb284f1cf88f2bdd3061dfd9ccf02a95171e367c",
+      "topology": "984ec28cca321742cc74c90280ace61593875d7b3d4770b4064a39d0b4fd02fa",
+      "keys": "e3acce3d96ed73488a51f90239c1f2d7583cde86c5abe53a51bd943d7dc1a282",
+      "weights": "284c1f41d6ec98e41dc5bb1c722991adbad131f554239fb95cebd09a115c83a6",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE",
+        "F00_000_00_EyeWhite_00_EYE",
+        "F00_000_00_FaceEyeline_00_FACE",
+        "F00_000_00_FaceEyelash_00_FACE",
+        "F00_000_00_FaceBrow_00_FACE",
+        "F00_000_00_EyeIris_00_EYE",
+        "F00_000_00_EyeHighlight_00_EYE",
+        "F00_000_00_Face_00_SKIN",
+        "F00_000_00_EyeExtra_01_EYE"
+      ]
+    },
+    "Face.001": {
+      "co": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187",
+      "uv": "52a3430efa1ca194117103f3eb284f1cf88f2bdd3061dfd9ccf02a95171e367c",
+      "topology": "984ec28cca321742cc74c90280ace61593875d7b3d4770b4064a39d0b4fd02fa",
+      "keys": "e3acce3d96ed73488a51f90239c1f2d7583cde86c5abe53a51bd943d7dc1a282",
+      "weights": "284c1f41d6ec98e41dc5bb1c722991adbad131f554239fb95cebd09a115c83a6",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE.001",
+        "F00_000_00_EyeWhite_00_EYE.001",
+        "F00_000_00_FaceEyeline_00_FACE.001",
+        "F00_000_00_FaceEyelash_00_FACE.001",
+        "F00_000_00_FaceBrow_00_FACE.001",
+        "F00_000_00_EyeIris_00_EYE.001",
+        "F00_000_00_EyeHighlight_00_EYE.001",
+        "F00_000_00_Face_00_SKIN.001",
+        "F00_000_00_EyeExtra_01_EYE.001"
+      ]
+    },
+    "Hair001": {
+      "co": "34c5f10a33d5a3ab439b38236676b2a7d622c6d8d10cb1db8fc8065f326187d2",
+      "uv": "22c1fa10bdbc1e5d48e553bd4549017d4f15a9d19196724929333ed981fa3ada",
+      "topology": "80c51986145ed68cc5ced61fbddfd751f5cb4984ed5c22ec9347d48dd78503de",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "5ababa105e7a194467ffbb87cc17c7e6947d17f0b90e012ae03e0aac8e930497",
+      "materials": [
+        "F00_000_Hair_00_HAIR_01",
+        "F00_000_Hair_00_HAIR_02",
+        "F00_000_Hair_00_HAIR_03"
+      ]
+    },
+    "Mia_Body_Anatomy_Skin": {
+      "co": "5a3c07d2e3ad8b1605d48c51e87bf3f67c931bda04c8cd3bea0d1f801ae489da",
+      "uv": "6ab033ca1a48e8ade5f39d13563f89e0305ea1d4221830084e11240fcecfe2d5",
+      "topology": "da866b4f894eb34f6461188f7771b813eaf765f1d157bbd5fc013c427b19e070",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "abcec2558715b30ec4a961614bbfd7d3c5226619e2c1d754de7885885bc00cc4",
+      "materials": [
+        "Mia_CoolMutedBodySkin_MToon",
+        "F00_002_01_Tops_01_CLOTH",
+        "F00_002_01_Shoes_01_CLOTH",
+        "F00_000_HairBack_00_HAIR"
+      ]
+    },
+    "Mia_Face_AnimeTopology": {
+      "co": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187",
+      "uv": "52a3430efa1ca194117103f3eb284f1cf88f2bdd3061dfd9ccf02a95171e367c",
+      "topology": "984ec28cca321742cc74c90280ace61593875d7b3d4770b4064a39d0b4fd02fa",
+      "keys": "2651fe27e20d8ebf73b3812f451a368d394d9385ba81e34151096f83431aac5a",
+      "weights": "284c1f41d6ec98e41dc5bb1c722991adbad131f554239fb95cebd09a115c83a6",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE",
+        "F00_000_00_EyeWhite_00_EYE",
+        "Mia_CharcoalEyeLine_MToon",
+        "Mia_CharcoalLash_MToon",
+        "Mia_SlateBrow_MToon",
+        "Mia_AshBlueGrey_Iris_MToon",
+        "Mia_MutedEyeAccent_MToon",
+        "Mia_CoolMutedSkin_MToon",
+        "Mia_MutedEyeAccent_MToon.001"
+      ]
+    },
+    "MIA_V06_BODY_SKIN": {
+      "co": "51a3812330619c315644d448dedba2cceb696a92e0ac1a787530be62500ddb88",
+      "uv": "913825cc7f5adf37457c768c558f53ad68627ad13c2c8cb531c66fcb90a4883a",
+      "topology": "aa98ca83ac5368254cc0bf55c27d9e3f6d37bb5dcdcbc9a1d1d014b93e0b1bc7",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "7195da85973ce3e43fef9d54263ba9cb60732b021618b7a9d428fffab0afca70",
+      "materials": [
+        "MIA_V13_PaintedBodySkin",
+        "MIA_V13_PaintedBodySkin",
+        "MIA_V13_PaintedBodySkin",
+        "MIA_V13_PaintedBodySkin"
+      ]
+    },
+    "MIA_V06_FACE_SKIN": {
+      "co": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187",
+      "uv": "52a3430efa1ca194117103f3eb284f1cf88f2bdd3061dfd9ccf02a95171e367c",
+      "topology": "984ec28cca321742cc74c90280ace61593875d7b3d4770b4064a39d0b4fd02fa",
+      "keys": "bef9d8f219a6e502c84f11eb3f618f58ec928a59173d5031c1305cdee419998e",
+      "weights": "284c1f41d6ec98e41dc5bb1c722991adbad131f554239fb95cebd09a115c83a6",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE.001",
+        "MIA_V14_SoftIvorySclera",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "Mia_FaceArt_GrayIrisHierarchy",
+        "Mia_FaceArt_RestrainedEyeGlint",
+        "MIA_V14_SourceSkinHidden",
+        "Mia_MutedEyeAccent_MToon.002",
+        "Mia_FaceArt_ContourInk"
+      ]
+    },
+    "MIA_V12_AngledBrow_-1": {
+      "co": "1fd14d194a8600b5078b105773e07e3d6bac708bfcb24b4d3b4793d67d5e10ae",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "a9c6cb70b13b7c7552fa33d140bca73af2c21b05a3c2781b7bbc30ec4280ce22",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_BrowInk"
+      ]
+    },
+    "MIA_V12_AngledBrow_1": {
+      "co": "8269dafee0ca0d72c20537d02d6ff04649f1ccf2399559d5b653cf5aa84cbd7c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "a9c6cb70b13b7c7552fa33d140bca73af2c21b05a3c2781b7bbc30ec4280ce22",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_BrowInk"
+      ]
+    },
+    "MIA_V12_CleanUpperLash_-1": {
+      "co": "17afc1a97f91490c32d1d9ef1c52546b24898753ef09e137dac5b118bc3cee81",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "76eb39041d03c6454b598e416425e64c1f2fed8290d88f06549b1cbdcea18ec9",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LashInk"
+      ]
+    },
+    "MIA_V12_CleanUpperLash_1": {
+      "co": "e87e436a2f6e59af044eef07715621f32b1a940047651dfc35720b5dc73c9229",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "76eb39041d03c6454b598e416425e64c1f2fed8290d88f06549b1cbdcea18ec9",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LashInk"
+      ]
+    },
+    "MIA_V12_FineLowerLid_-1": {
+      "co": "176f6f87666b283b6094ad4046cd5bbfa4e86ddcc7bd579614f1793a4cdd5b00",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "76eb39041d03c6454b598e416425e64c1f2fed8290d88f06549b1cbdcea18ec9",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LowerLidInk"
+      ]
+    },
+    "MIA_V12_FineLowerLid_1": {
+      "co": "f1c990b3d936cc15508d8bd2d412e122bd07c74684ad4dad2835cbf3efb56bf4",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "76eb39041d03c6454b598e416425e64c1f2fed8290d88f06549b1cbdcea18ec9",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LowerLidInk"
+      ]
+    },
+    "MIA_V12_OuterLash_-1": {
+      "co": "4b521889850147c99cc5571ea8dbe6f373a5191b5a5d30a3bdeeb177dcad58c3",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "2084470fb3ab3afb3e843d3dfef42b0c1124f3357d70d13fa774d0c8981f6fd7",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LashInk"
+      ]
+    },
+    "MIA_V12_OuterLash_1": {
+      "co": "15b1835232d053fed67ad2e6090ed0b1c54bf76dc73e7e1ed3f73527fccbca16",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "2084470fb3ab3afb3e843d3dfef42b0c1124f3357d70d13fa774d0c8981f6fd7",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V12_LashInk"
+      ]
+    },
+    "MIA_V13_BodyOutline": {
+      "co": "dde3e3fdc7c2b43a1dee9efc170497e5b36ab67adaa32cb3e89f17d04487eb93",
+      "uv": "6ab033ca1a48e8ade5f39d13563f89e0305ea1d4221830084e11240fcecfe2d5",
+      "topology": "da866b4f894eb34f6461188f7771b813eaf765f1d157bbd5fc013c427b19e070",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "abcec2558715b30ec4a961614bbfd7d3c5226619e2c1d754de7885885bc00cc4",
+      "materials": [
+        "MIA_V13_SkinSilhouetteInk"
+      ]
+    },
+    "MIA_V13_FaceOutline": {
+      "co": "87ad65955fd84c151a78f6f36b0aabb423d45901a34594ec312039cd7a2e1166",
+      "uv": "6d6b4f1dd213e4a226da5aea7f3428d1aaa70df9fc1416d9b75307a4c77723c2",
+      "topology": "f6a58d08260f7475cd49cbdb1f10aea6b23080150f9341ea6e4985e791ebffbc",
+      "keys": "c01fb9cd05860ee8513935ce3116948282fa0a37c65b819f3c1b2ebd30e8707c",
+      "weights": "4e0881e81ebe6d2d3bdfeca067f905a8e8b8f6bca9a24b988c44eb2ce4805026",
+      "materials": [
+        "MIA_V13_SkinSilhouetteInk"
+      ]
+    },
+    "MIA_V14_Brow_-1": {
+      "co": "c423ea943f91e9343c11c33352a93fef9baa3b42b905f5d0e43badec47b2e9e3",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "f19b31b997adce0252af8337738094c76e0f786ed8e1540698f02c4fa069326d",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_BrowInk"
+      ]
+    },
+    "MIA_V14_Brow_1": {
+      "co": "faf14f5ce6711a0b246ccaf15106c4b8b0e91db937fb12a812c0660258b183fb",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "f19b31b997adce0252af8337738094c76e0f786ed8e1540698f02c4fa069326d",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_BrowInk"
+      ]
+    },
+    "MIA_V14_EyeSurface": {
+      "co": "e02531c050f3a36104595f26083317128e96d3792d2bad4b5ea8e25ac244f3f2",
+      "uv": "425aa97ccc127d5e9d926146e28e15960b4eacd386566436fdb2ef3d2df7cc77",
+      "topology": "fd7c45f3f460a70ede5f4e152c1a105b1ef63c3405dc78ebee35976fedcb5673",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "7c0f3985a37f32105dcba9c73fc967b55b41b9bdc0f4c906f7765c5a85591bea",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE.001",
+        "MIA_V16_Sclera_BackfaceCullingRestored",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V18_Coordinated_GrayIris",
+        "MIA_V17_LegacyEyeGlintsHidden",
+        "MIA_V14_SourceSkinHidden",
+        "MIA_V17_LegacyEyeGlintsHidden",
+        "Mia_FaceArt_ContourInk"
+      ]
+    },
+    "MIA_V14_MouthSeam": {
+      "co": "6c44012d73c2fa1ed4a60e16a48b6655b1d20a8bc416e98857daa0674f99a12c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "1a64e3076229e93c48f28209bfb58f5c68abb9736fc1dd38de1890a23578a6dd",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_MouthSeamInk"
+      ]
+    },
+    "MIA_V14_OuterWing_-1": {
+      "co": "a37102cc143793955d94d571f714e8ebfa4946822f6fc18812642bb11a020c56",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e92d8f39db657794ec9bab5ba9f0a6a8f1a5106b0f6a1d1b2d6f012a364bf4cf",
+      "keys": "11fe711c05ee5b5ac2f7e73b3967d7d13380e5852426278bf5e6e096996d8270",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_LashInk"
+      ]
+    },
+    "MIA_V14_OuterWing_1": {
+      "co": "e9ff24398ca74df083bdf004152dd94c2f59835e75f782172d219b16f4de8e2d",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e92d8f39db657794ec9bab5ba9f0a6a8f1a5106b0f6a1d1b2d6f012a364bf4cf",
+      "keys": "1949e531aa253b15dcdab13346ea7e0e9bb56648ec551daaea8ebe1747370918",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_LashInk"
+      ]
+    },
+    "MIA_V14_SculptedSkin": {
+      "co": "9ae050aa632cfc6f71a73b62717c28a209a117a8b9382184425753408105496a",
+      "uv": "25f2a5f136bec94cbebeb8ec687d392f0df2ff6c88f8473cdcf1d30198f51889",
+      "topology": "d0728f5750410b1ab98c9d4713cb5802dfee4753d0abdd08ed9dd7dcfb34bcdb",
+      "keys": "565cb53183c3e0687dbaf564e46795b128342a976554a2f2394eccd0c52374c3",
+      "weights": "1f34e0d997cf17e631846927656e9f31315c597270d687e4c63fff18e74c3e1e",
+      "materials": [
+        "F00_000_00_FaceMouth_00_FACE.001",
+        "F00_000_00_EyeWhite_00_EYE.001",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "MIA_V12_ReplacedBrowCard",
+        "Mia_FaceArt_GrayIrisHierarchy",
+        "Mia_FaceArt_RestrainedEyeGlint",
+        "MIA_V17_FixedUV_PaintedSkin",
+        "Mia_MutedEyeAccent_MToon.002",
+        "Mia_FaceArt_ContourInk"
+      ]
+    },
+    "MIA_V14_SmoothJawInk": {
+      "co": "28f3582de9ffc3f4e879c9571072ec712dd4a790cfb88379fbb5fc787b1d5e18",
+      "uv": "d3a10c24eb6365a28f0661cf81e55c6cbf20b828db580b0a6e29bb622e1796e5",
+      "topology": "463012f8fa6ca1caf601db5b867e61ea574856fa4e6ddf4eef05a5e18a163931",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "5e7de9c38c27f552bd6875f8eba7081da63a55265dc41d56881b86c12e44088b",
+      "materials": [
+        "MIA_V14_JawInk"
+      ]
+    },
+    "MIA_V14_UpperLash_-1": {
+      "co": "08685f898bc47f0537389e5b00e9fd4d857c6f198c9a4f19a7fc0c0a4c9a6561",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "74b37004fb14dbc6c73dfa25d685a73d3ed1c7f8fd6cab895a983576b25fda46",
+      "keys": "cbcd7e73274d688634508b498a5549249989ae9fc812b82a0ac8233ba8fee7c4",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_LashInk"
+      ]
+    },
+    "MIA_V14_UpperLash_1": {
+      "co": "a1d34f0b378a21e75acf399c0ef94387e9eb9671c84df8b4d4416297de2966f1",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "45e3dc3c04ae9bc1c31980e448f13f9dc1e6e66fadf00f9b01ff7cb16153bb00",
+      "keys": "b8aeffeaedbb7624b0dcdbebbceed17f2b565e9027359058b09430d8508e60a3",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V14_LashInk"
+      ]
+    },
+    "MIA_V16_PIXAL_LowerHair": {
+      "co": "2b60432838d7d5802ab4a87a280be902cfba967d78bc39a2d06f12ce26a2e77b",
+      "uv": "db94dd6051d9c232f7bb21621354bcdc438bef8472b89f7b35627ac09d9a4002",
+      "topology": "a733271d6af797e14f054e45dd7062f8a871f0861551fd7b07b6fe2d6cbc4a5a",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "GUIDE_ALBEDO_Material_0.001"
+      ]
+    },
+    "MIA_V16_PIXAL_RecoveredRear": {
+      "co": "1fec800b13484581d60643f851dc7e93a07aec7df043085f12db9fb555d85429",
+      "uv": "49029fb98182f801542d13932b40a69be7b92e65f77aaf89bf994989f58c4a0e",
+      "topology": "d9767caf412a0f3cf0d2172baa89bafd22ebc89319a101b26934bbb8f74f0f02",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "GUIDE_ALBEDO_Material_0.002"
+      ]
+    },
+    "MIA_V16_PIXAL_UpperHair": {
+      "co": "3da7b7e465b5344470f63a63fb59bd18234cf85f0a46d5be819e63be4d546410",
+      "uv": "4eace7aaf1a99e0daea81d0e70a192e03b28567c8cc112cccaf6739979630171",
+      "topology": "1612fdb49745cde34d9778b370ebc61bf0bafc6dac4980e13d8ab076f8e6c110",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "GUIDE_ALBEDO_Material_0.001"
+      ]
+    },
+    "MIA_V17_LeftBraid_Lane0": {
+      "co": "f5ce8303e620f6771292a2b1d0f8ec0d364c15b43a7750da3ce14d6a86c735cd",
+      "uv": "97d0c5329ae08c40ef803d91676f1a14d379208f933615cb1564615f1dd79795",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "a45f5581dab12181d5cc4ee369562a631cc9ac968bde8cbacaa6dd0926b3429f",
+      "materials": [
+        "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_LeftBraid_Lane1": {
+      "co": "034ddeccc449f317c36e02ebad4d8627cc4c5db73655b545ba79a2a151585ca5",
+      "uv": "97d0c5329ae08c40ef803d91676f1a14d379208f933615cb1564615f1dd79795",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "a45f5581dab12181d5cc4ee369562a631cc9ac968bde8cbacaa6dd0926b3429f",
+      "materials": [
+        "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_LeftBraid_Lane2": {
+      "co": "465bb9ab195b6b54fe1348a4ffe7b8259153fe6c6da7c6d072d12be8fc15c3ce",
+      "uv": "97d0c5329ae08c40ef803d91676f1a14d379208f933615cb1564615f1dd79795",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "a45f5581dab12181d5cc4ee369562a631cc9ac968bde8cbacaa6dd0926b3429f",
+      "materials": [
+        "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_LeftBraid_Tail": {
+      "co": "e739c1be007273e8fb01cfc35b7256528e7f6bf1773036c36687a73941e97d47",
+      "uv": "cc5d58f1b4ae51f0b2964ed4cca6d25c00843c9f1b888c7f0f37a632259b361c",
+      "topology": "42c7854b3419b08cf4b95a268f37c0d6c37aaea3979254fddd0b246471cb2450",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "5a13290aaebefdf4f4c61be379a1021c9024c36a00fee9b7d9aa288e630ae9ab",
+      "materials": [
+        "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_LeftBraid_Tie": {
+      "co": "4b024e2ad282d660c2d7ce9a90857342a329d6a774dd019e6b1bd540b7ef4aa3",
+      "uv": "c630a4137d6279e71ccc2abfd244ddbdec0291573f25765d3381afa6489925c1",
+      "topology": "9dba79c49524f4ed9cb8b68ffc31ee071a35b8e8075195de4f6e4c41e8b50341",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_MutedTealTie.001"
+      ]
+    },
+    "MIA_V17_MiaHair_HalfUp_OneClosedKnot": {
+      "co": "6fbc709f243e140cd7b0d2e6c322f4c8736859d3895bfc89e13bbcb86e4e62b6",
+      "uv": "514b9e4e77cc5df6e7c24e4443b8c76f2d428e2306739309dbf43c227c7c27ee",
+      "topology": "e294fc54428cedb0edce4f5e6a315a53be60016809d3f3f5caa2120d231f3aa8",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap00": {
+      "co": "13a5d10391613426a08148899455570bbed8fde9670b616d4714cdbc6223f2d1",
+      "uv": "719712ee0a1c5475fc91439dec84138a59c004e54a4ad72fb486bbc4700a4d35",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap01": {
+      "co": "49c64e5101d6d72485b64656c136f9557435fb66dafc3341e80fd67a34f6c97c",
+      "uv": "cf0f14dccb9abb4d6a0b79741bbe68544496fa94d666cfd133fadea5ce1d7d2c",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap02": {
+      "co": "d4b524e6c60725df0ed2e1811974e730a8f706f0ef7be65cf059abe68c20a00e",
+      "uv": "f4cc9023169af1281f5f4e07b9790b11880e9b105607f6d0769b8f7e50b46020",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap03": {
+      "co": "65680304a55cd99dcb3c9c907d20b361c7ba04c32c171f947bda2a2ddbf97861",
+      "uv": "29013e486510c25cc9cfe97ad411d10c9e340a7e21c408167e37b0807c82d7c8",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap04": {
+      "co": "b27bc3d7f82ae3f84193a6cad05527b7471d95bd8b8be4907ff3ca46841f15f4",
+      "uv": "1290cad907ae940f5a6adee5d73ebbe342477dbfa3c653215f8a828d77cead33",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_MiaHair_Knot_Wrap05": {
+      "co": "037fd1b3ff76d0e6360a6b048d660be6e06059f235e1dd67f47a5d4752e99c51",
+      "uv": "eed742ee7ce30b92395c0bbffc64f25254f754948822af1c1b021ff5dc876f4f",
+      "topology": "7dd5001157bae04eb048296ea8f243fec481dbee8785243edf5dc5740aa2e983",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001"
+      ]
+    },
+    "MIA_V17_PIXAL_DetailedHair": {
+      "co": "90c077c91cc0b27d5a87ddb3c94fc54a8fa3f6f4e930741cd539bbb588d2d1dd",
+      "uv": "c0b675a28b4a34465318d1a4aa137f8f6c52fa9494bcb0f8c65f3723efabc67e",
+      "topology": "010fe6ad9d4d197a0def4615951befe29e7b8bd54e778ae21f2ee1f5d5eddcb1",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "41db54665787aa0a414df34d282e3a79af4e1acb1274a1425d08316119ded026",
+      "materials": [
+        "MIA_V17_ReferenceAshGray_PaintUV.001",
+        "MIA_V17_RecoveredBraidTie.002"
+      ]
+    },
+    "MIA_V17_RootLining_MIA_V06_BODY_SKIN": {
+      "co": "4ed8a4af5f3cbc45484d251987bd6c351631db07febe55b3768ab61efd3b0cf2",
+      "uv": "910817be84b6a6acc222f25c65b4ce8f57bbf9c15c95e9e917ad923ee56d83dd",
+      "topology": "76672d9ab009f426ce0f364a3cecafd22972950c003e287e12d2dae5c0f54dcb",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "c6d1f14d849ab999431d1fd1bfc86f2b8efcc784323d404000dbc4075178cb75",
+      "materials": [
+        "MIA_V17G_RootLining_WarmHairShadow.001"
+      ]
+    },
+    "MIA_V17_RootLining_MIA_V14_SculptedSkin": {
+      "co": "ed9a5ab6042dba095f94943f5061834fb383591b34520dc9149a14fa5eb15977",
+      "uv": "203d5f01c3deaed407461ea4b5a602a727dbf1a7c9e0977b067610bd4f9cd04b",
+      "topology": "9340f6464d9a571c9c6f9713f86a399e0739f42d9fc9914ab768d5df0572018d",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "0e4a0c756fe47ee1a1caf0c15bdf18e30d5249c9f6912da7c6f3df9003595797",
+      "materials": [
+        "MIA_V17_HairRootAsh.001"
+      ]
+    },
+    "MIA_V17_SingleUnderEyeCrease_-1": {
+      "co": "154d0b016746fe34d551a6889f497396e78f8514bd2aef67aa02be825d40cf55",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "0d6a5f053209deeb69d564ae2d270878c87bc9c5babf9387dfff0b498bf401e1",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_SingleLowerCrease"
+      ]
+    },
+    "MIA_V17_SingleUnderEyeCrease_1": {
+      "co": "8e0af7914fa300891c86cc342c13ea9bf92e7910c92fb026e733f1c50bb1c038",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "8feec45a68c455cce66b404f4220dc9e24f90a5c38c74f6c8e8ecab3d3a24a74",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_SingleLowerCrease"
+      ]
+    },
+    "MIA_V20_Crown_PixalDonorLock": {
+      "co": "b78498ab66a16ad759c9e45cdf21321b9e23d94ee02691136580dee2d54c9b44",
+      "uv": "142734b1d51aff069a431492daf14a5890e6591b7d20cecb44c4f12dac1b6424",
+      "topology": "ec3b788d09fa7303be45506c4831ad6b388e17222b368d05e2f411c6f6241aaa",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MIA_V17_ReferenceAshGray_PaintUV.001",
+        "MIA_V17_RecoveredBraidTie.002"
+      ]
+    },
+    "MIA_V20_HalfUp_Binder": {
+      "co": "9dfe9bb06abcd93fd511ffb846683b430207f279937e706ceae4f65e18ac26f2",
+      "uv": "a8af8d338baf26204c7e6674480cd10617e481b4eb69cb2128f4492fd7e8ad9f",
+      "topology": "e514a43b23a5e27a28e955a6a3f7e48ab8b4a1f1bfe7b639fd92eef7ff7b5b2e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "8d3575968ad1b0e239dc5c0547b9e647ef7bac8ee4f6c978bd057f1866ea32b9",
+      "materials": [
+        "MIA_V20_AuthoredFold_AshStrata"
+      ]
+    },
+    "MIA_V20_HalfUp_Fold_Left": {
+      "co": "6cc757f1d00d40ed05d7b899e153a05369308eb4374ccadd168224f599daf289",
+      "uv": "a8af8d338baf26204c7e6674480cd10617e481b4eb69cb2128f4492fd7e8ad9f",
+      "topology": "e514a43b23a5e27a28e955a6a3f7e48ab8b4a1f1bfe7b639fd92eef7ff7b5b2e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "8d3575968ad1b0e239dc5c0547b9e647ef7bac8ee4f6c978bd057f1866ea32b9",
+      "materials": [
+        "MIA_V20_AuthoredFold_AshStrata"
+      ]
+    },
+    "MIA_V20_HalfUp_Fold_Right": {
+      "co": "9442a4f91756ff3cb4397d3773ca167701a1538a27e82cbb49bb10be8e87f93c",
+      "uv": "a8af8d338baf26204c7e6674480cd10617e481b4eb69cb2128f4492fd7e8ad9f",
+      "topology": "e514a43b23a5e27a28e955a6a3f7e48ab8b4a1f1bfe7b639fd92eef7ff7b5b2e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "8d3575968ad1b0e239dc5c0547b9e647ef7bac8ee4f6c978bd057f1866ea32b9",
+      "materials": [
+        "MIA_V20_AuthoredFold_AshStrata"
+      ]
+    },
+    "MiaHair_Braid_Tail": {
+      "co": "1135c53d7f5f102f9274d2675d1cb1adb31e8c06381da5d3207ee179f38b9c5b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "42c7854b3419b08cf4b95a268f37c0d6c37aaea3979254fddd0b246471cb2450",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Concealed_Closed_DomeNape": {
+      "co": "e065cf43b03f387910aa3463ab51d1de1d843847182f1d59f47d487a811cbdb9",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "aab08013664b1dd804db396d7a692bce4f4b3aa1923aa8ceaccd616c2870e17b",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Crown_Flyaway_00": {
+      "co": "82c6b3be4843cfd6280b471a1f9744356d3a844b8174cff31174d3bddc70b9bc",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Crown_Flyaway_01": {
+      "co": "d8cfc252e1e5d9de35585a7d7f76c51a8ea279313df6b62fdaa09a2ac4db39e1",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Crown_Flyaway_02": {
+      "co": "89be0d3c29c2a08bc57533c7e53af57f9da29132be5cd202e0a4a122df01c5fe",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Crown_Flyaway_03": {
+      "co": "65b29e3dfad5cd0c1cbd1618c8ac3bd828d2eefb1b0b479b0fc935aa3f7ec0d0",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_Center_Slip_0": {
+      "co": "d3a1af3bef8750372ef43cf81c08cef2f64a04596620c82f04f222ed667a73d6",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_L_Outer_-1": {
+      "co": "1f176b8ca5576aaa7efe58330b5dd2008ea75b2b0ff44a56264997c481013506",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_L_Outer_1": {
+      "co": "5acbc3de56d5962378c293d186617fb803e1b4c92aaef7aa90412b63d6cb4e22",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_L_Sweep_-1": {
+      "co": "85aab74accaee63705dec77bd48d160b780b08d589fd4d30505190f838ed1ec6",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_CrownFringe_L_Sweep_1": {
+      "co": "501e0216bd60d97b9275ef1a5af0e8c21940c668750acb2145734c345cb6ddd7",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Outer_-1": {
+      "co": "e0e05b13e0194771d6564397933b32b314e79d91f465f227818e99e24768e136",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Outer_1": {
+      "co": "425575ab14b13f56da1057d7f1b1444d2fff2988cc91cdec0cb0d4f5f8ba24b7",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Short_-1": {
+      "co": "e60a2a08c26e4930c2e2a3f362086a7c38f2eddb93c5128e9833708a8c469a45",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Short_1": {
+      "co": "7578f1899f2290c893593af0caaffd8fdedc90e86fb37f7398d85ba747843d3a",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Sweep_-1": {
+      "co": "aed3954640cf8fe15de06a4cb822d9ea603586b2017450985cef1a1aa03ea6d2",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_CrownFringe_R_Sweep_1": {
+      "co": "d7c7cead6ea30b5b2855e00df6c954948d589e9b831aa5771ad01d8dd3467b0d",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Fringe_Split0": {
+      "co": "2bffd51970dde4bbd2ca7b424295f01c090a36be4964085676808c372ee9e196",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Fringe_Split1": {
+      "co": "9c7c58a753c187419c57711cf68ec1768e0bc85c4cb20161dfefeb0f8173b50e",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Fringe_Split2": {
+      "co": "acb3bc6f20ac9a57c0ae74f2c882acb58c630e98828b4d733ef1ca0b2022eee8",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_BackPart0": {
+      "co": "39e59e7e360f98242a3bea17ed2869faa067a68b250ccc3fd092dafee20e550b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Gather_BackPart1": {
+      "co": "b8c5660aa3911695aca9a4712bc24e43cb968d6ed10a204da1c5b4dfbfb93669",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_BackPart2": {
+      "co": "6e338580b3b2a67f74126f435f4b91674da2632d532c3fd209b0916a7206c214",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_L0": {
+      "co": "405ce275d80e30fe8c484a1b60519ecd82094fae3894cefed7f8045607909e21",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_L1": {
+      "co": "400de15a3e31e4e5c92430149bf2472da024e20295d57e7487615b7a7f5247a7",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_L2": {
+      "co": "afe6ff8de855190aa6f6227072f3b92665b6542d1dfbe44ea67b4eafbcfcc7fe",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Gather_L3": {
+      "co": "cb84134c6e82c0925cb5fde494579cbf3826c686171ff0f4bd552117354a5c02",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_R0": {
+      "co": "c6ac6bcd73d4bebbec14db75b720bae0a580b90ee787c83b4fc271655caecec2",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_R1": {
+      "co": "3b87a040665657c980f465fafb0f6361c296dc16ff7a74e68b95f88e5963616f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_R2": {
+      "co": "4bdfe6595d574fec179797e044f7ef030d3532079285459d73408fc4ed79d03f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Gather_R3": {
+      "co": "5e3112ca2c6a629985806dd135bf414f2bafe9a5bd1a2f3ceb581c581c07646c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_TempleL": {
+      "co": "f08f1ca5801da0766e8722201af7a6ef47c382cf61b5302f02e8b06edb0798bd",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Gather_TempleR": {
+      "co": "2c5d0db9c6fcef2c10b7fb3f7f2e7649c5981465341c00ff7497224ee10b1dd3",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_HalfUp_OneClosedKnot": {
+      "co": "5f23d3b74d10f05605aa4b03df92d1d7c50366db7e6be3dbded2030904dc06a0",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e294fc54428cedb0edce4f5e6a315a53be60016809d3f3f5caa2120d231f3aa8",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Knot_Wrap00": {
+      "co": "8cd2b4e42909f74b19e6b31abbf3b66f8b2c3e724458a3fd061621096249a5b5",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Knot_Wrap01": {
+      "co": "ba172421f41f39170163016f563311868a4c057d313a0ba32e80923b75bd12c3",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Knot_Wrap02": {
+      "co": "a703159ddec5e86e6f5901c24542b9fd130787619b3f4e2bf22bd0516a96fdec",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Knot_Wrap03": {
+      "co": "6e5187345909d6b36edf3e74c2881fa4db1a2631a231f1456b08644827220fe8",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Knot_Wrap04": {
+      "co": "f7b1f1a8ad53cb084d01f14c8e2bdda8b404ccc9bf87eadeb0dad1bdb115b673",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Knot_Wrap05": {
+      "co": "0a81f2e1089d2b234da9bdf6025c93679643d96cddc88adebafedbc1129b2311",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_LooseWisp0": {
+      "co": "41be2634629d4f54b4e51dd54118f48d9f26c22cabd7d01943c75ea21ee33e03",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_LooseWisp1": {
+      "co": "5a2accc18a1dd8a0f32a6ee914a6e984c87088e5e173bce80b58ee45f103c893",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_LooseWisp2": {
+      "co": "da7dc943fa2ad66db62ce0ca879a99badf20fb59944bad56d4ecd69aae29ed29",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_SideNape0_-1": {
+      "co": "758acc380e202e33616489a8ed11b3ec421b825046b35ab31b6869f07be53eeb",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_SideNape0_1": {
+      "co": "e4b518648c70c1a44c803f4ee286234b1b61611039313ff5b1e41ae05501480b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_SideNape1_-1": {
+      "co": "f51474ec613c9c6af06d917d4e9978d17d78cd3e9d69e4133a87aa4ff66ef548",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_L_SideNape1_1": {
+      "co": "13a44334eb7a178e1140a14099eeb8a5c112c41a1fbc538e3265c64938bbb360",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_L_TempleWave0_-1": {
+      "co": "8bc938ad45c617e03d093d26859235eee6b7b1a96d49e60b744143483d55de14",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_TempleWave0_1": {
+      "co": "61f88e312922858b4bc777aee95bde40b9ed546afbe0e9168e17e21f2f8cab8e",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_TempleWave1_-1": {
+      "co": "68d6111660460fae8ebdad5c48bdc957e9bceb7fe472febe5e37491d9b32c556",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_L_TempleWave1_1": {
+      "co": "9e314ff6baa06335e8dbe0a2aadff29221f1bcda66d8a1eedfd7bc9ce9927599",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_TempleWave2_-1": {
+      "co": "96dcce6bd7161c38388e7941f08dc0b9077837dad7132e971fe1e34469f2faf8",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_L_TempleWave2_1": {
+      "co": "276542f538c2047c326db71c4814eecd93898d14f811127f750664f6f5f4b495",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_LEFT_OneBraid_Lane0": {
+      "co": "714578ce2c54d0ca7c5e42514a6c5fbec479269e252a5cd24ee6cce22c9e0c18",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_LEFT_OneBraid_Lane1": {
+      "co": "55b4e7297f766d654e28ce682351033e0f803e4cf70a63e1925b9392febcb6e1",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_LEFT_OneBraid_Lane2": {
+      "co": "466cec6eed98863db3f5a2b3556c88584791330138d8f93d587a15b051d4fc72",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_LooseWisp0": {
+      "co": "6c371666fd88e8376d1431ef475cb50d9acf9bf3a43c98f6f06be8dda82e33f5",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_LooseWisp1": {
+      "co": "7ab90f893eb2c459a424972e4ef39c86bb20f10023fe49194cbee78dcf007689",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_LooseWisp2": {
+      "co": "2594d2dc2af25becfbf1ff21670021293c7a5bb5da23876e509996ca3ba6ad6f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "e00f17ef7e0b1d2ea8bde0d324d883160795bb8dc98c7a42095cce1fb5af7651",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_SideNape0_-1": {
+      "co": "db7ccf9bdc7cd7dee350fe86749602bed8b0fd79c9e391f03f1843276df61299",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_SideNape0_1": {
+      "co": "1aed2d300f359b0900bbbda965857015f0a4fafd1cb62b26dd9cc6524a38966e",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_SideNape1_-1": {
+      "co": "955b4a71adf037fdf4d3162431bd1b7d45098434cd9da8a715f33e22bf4a97df",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_R_SideNape1_1": {
+      "co": "f9e02bc7a3f88239f2b2a6b53fb3ebb2f83dfc484ae7e2eed1efe24aa1bd1400",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_R_TempleWave0_-1": {
+      "co": "6b7470ade78a17f422bfacaa590b85cf037af8e885cd040228f10532945d94d8",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_TempleWave0_1": {
+      "co": "34dab24cc2a26d75058bfed4bafafca84868c2e1826d0be589c9011e5ab71b9b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_TempleWave1_-1": {
+      "co": "bc174d3b701349b7332301945cc0de1449c1aaf7eadeef59df89106da76924c8",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_R_TempleWave1_1": {
+      "co": "a16eacfb4855f0e11963286d44cbb3b8f5c9c8d1192ae7ef710af754a3e8e18b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_TempleWave2_-1": {
+      "co": "9a3488cff223a2dd89fedec63ed6d590f7a50c0fa676b4fa07b42c29f0546777",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_R_TempleWave2_1": {
+      "co": "977223d08b591aa81bd78890f817d69383c3a87a1603be0568dc412327057852",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave00_-1": {
+      "co": "599b9bb183a64e017d9489f09e4935c89e33f2d995ed96d0b268949904b37342",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave00_0": {
+      "co": "28b3f5ae64e16618477c1a99bd16fb9a817cc10fd2428d450b650a4340fc96ed",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave00_1": {
+      "co": "ec12468c584cd50079ac2b46912d5af16d8245f5618440b277e495c75bf71197",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave01_-1": {
+      "co": "6c68c7d9cf214abaf3e4d51a76adc80a18f4b3355fa9d9dab36251f783214b31",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave01_1": {
+      "co": "95259b04c24e243fb7deb4ff7e9ee4d98cb229aa4796c1f9bddeaddc0738df2b",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave02_-1": {
+      "co": "a63ff5e364db35c6ee5228067f7b044d3f48ff2fe07857cb8167c73ddb404868",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_LongWave02_0": {
+      "co": "1005ff0a4527ef2e37c648cb85755d147f47c2d2ef20c828dfeccec520dc851c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_LongWave02_1": {
+      "co": "7be3af3e95d27a444210b1243e1233c05194fd41df3d04bd8b4cc928f88edcef",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave03_-1": {
+      "co": "daa786fdf36ce3d4063d6d734ebd9d1c5f8f79d2e57a7fb464d82d15f1723113",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave03_0": {
+      "co": "c460c2119b59b53cd6fc81ed46a4e495806f13ede83a86f14c8cb4897a6c02e6",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave03_1": {
+      "co": "0adc22e73b4d83083868048628ea492de4cb67515e19dbc7fe8f5aa56738b7b9",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave04_-1": {
+      "co": "8688064a06ed8e2164d475f28de094069c46be06c28a29ae9b0057a7bdc57921",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave04_1": {
+      "co": "5e0034387c34084cb516048fbfc749067d0c21df40f04749fefd1606fb6f8ea6",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave05_-1": {
+      "co": "3a7ed17d7ffa53ce02b631ab931c874e6bf3e33cdc4d7596ba59cfe3170cf2ba",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_LongWave05_0": {
+      "co": "65da68cd527e308179692dd85ed7ef80ca877d750239bfdf49edf7b7fc134881",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_LongWave05_1": {
+      "co": "99ba9ba6901c00558142a6d4637343ef4d24bd8fb12fb7efc66efdf9a36b8bed",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave06_-1": {
+      "co": "e7ec6c188eb24e6899978696f8b31122174eff1a8a7950def52d0664f7acc78f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_LongWave06_1": {
+      "co": "cfed7573cfcd1e47bc4856c72ecce88797092fed98abef619f9401d23b3e8b32",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer00_-1": {
+      "co": "b14c46a5c7b72f59b60216140acf51447b52919fbfb3c77dd5b69fe9a3c6586a",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer00_0": {
+      "co": "bbf3426f42127279d14d9241aaada97971b7403901dcb15dd9a847bc4e2c9b98",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer00_1": {
+      "co": "d3f065d7ded0658be8b5b319afaffe581568484dec5074c0eab44f24cee04ba6",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer01_-1": {
+      "co": "145d1f6df035e730f2e4cbd1d83f7f8d2c654ce4ade49aa41e3f8ce78a7f4d88",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer01_0": {
+      "co": "8ae8c2a91d6920f2b6c3d4fc61fe3431a0ecf3e9ca2fd0e08097a85b1426d4e9",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer01_1": {
+      "co": "3a2cae04236704c75b72168b2fc771671f3da3e232a186a4fea89dccd507935f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer02_-1": {
+      "co": "596c7d809437c95ad86d27941de4377920bf5075243fa9a84d2b201cd999a96e",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer02_0": {
+      "co": "21d391715146b00fbef74993ee91e0cc9b00d6bd1b95bd0480cbcdef936b8dea",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer02_1": {
+      "co": "552dda9ea9e158d5e231ddc1c83c88889cd0f2025aa94aa114977d7622547c9c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer03_-1": {
+      "co": "cbe7c39b1a8e92357f89ddf48e22bef39620e4216a80fe8dbcde08def6cd89cb",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer03_0": {
+      "co": "e0a8b4a6bd8a586feb2231a440bb8ece6a4ca64f9edea030ce4e7daf3cf7e63a",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_Rear_ShortLayer03_1": {
+      "co": "2ec369fc4a42d059bed0e2f17b89815eee7e5470e01a17634b816fafa797a686",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_L0": {
+      "co": "be7d97a5e71205b715b370bdc2847487959215640d265ec28ad8c45f15aa8010",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_UnderFringe_L1": {
+      "co": "675701b37f860b9da93119c1b2d8d3051c502bdceb009d0ae74906fb3ef45517",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_L2": {
+      "co": "a4c13cd199248eca6edc3a848ef8a7c3304ab485eba11de59c8671e949064190",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_Mid": {
+      "co": "de6b1a6a8449fbb306cc7b857e2785d23bb8239cb1edd179ccd31a5b39b512f7",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_R0": {
+      "co": "d77e8767c3c4346320f94f1428fd2dc80f89f3db0c2b09ef61124944485e0584",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_R1": {
+      "co": "d8c4c92002f6a8f84dff1e21289462da697f713dea9819c5d665a52489e606c7",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Ash"
+      ]
+    },
+    "MiaHair_UnderFringe_R2": {
+      "co": "b8c621cffad3d50b4fc74633d9254094e9df2dd1a6f36d02ddf9abffc7e6669c",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_TempleL": {
+      "co": "da19c5bd4520784747ddabc52dd02f59037f34fdb6427b587b656957c10b2c50",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    },
+    "MiaHair_UnderFringe_TempleR": {
+      "co": "72f01a11eef42d94842343f93b39f68a49997d24b1600b225b09bcc891967722",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "topology": "3bccbe0c9542263f609373edb200c67a43ac43fae925ca243f9f12a5cc1e7d0e",
+      "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "weights": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "materials": [
+        "MiaHairSurface_Charcoal"
+      ]
+    }
+  },
+  "before": {
+    "co": "fa310511b68399ffb2f1e4c8cd0906b89fe46fb5fb6e0c5d0a731f421a3201a3",
+    "uv": "913825cc7f5adf37457c768c558f53ad68627ad13c2c8cb531c66fcb90a4883a",
+    "topology": "aa98ca83ac5368254cc0bf55c27d9e3f6d37bb5dcdcbc9a1d1d014b93e0b1bc7",
+    "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "weights": "7195da85973ce3e43fef9d54263ba9cb60732b021618b7a9d428fffab0afca70",
+    "materials": [
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin"
+    ]
+  },
+  "after": {
+    "co": "51a3812330619c315644d448dedba2cceb696a92e0ac1a787530be62500ddb88",
+    "uv": "913825cc7f5adf37457c768c558f53ad68627ad13c2c8cb531c66fcb90a4883a",
+    "topology": "aa98ca83ac5368254cc0bf55c27d9e3f6d37bb5dcdcbc9a1d1d014b93e0b1bc7",
+    "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "weights": "7195da85973ce3e43fef9d54263ba9cb60732b021618b7a9d428fffab0afca70",
+    "materials": [
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin"
+    ]
+  },
+  "art_status": "Requires actual four-view review; no automatic PASS"
+}
