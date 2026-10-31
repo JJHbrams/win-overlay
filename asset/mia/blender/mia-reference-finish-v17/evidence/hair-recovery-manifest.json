@@ -1,0 +1,24 @@
+{
+  "source_hashes": {
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-pixal-head-v17\\v17b-hair\\Mia_PixalHead_v17.blend": "55e8f201cc7c894e3aa1aaf4beee26ccafbba491971d30b92c7cc6df6b197f28",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-pixal-head-v17\\v17b-hair\\Recovered_Pixal_Hair_Source.blend": "a3a99c81283cdf274aca8c780dbc839966af4474864dffc06c5a69773f7e9834"
+  },
+  "native_sha256": "4846e9fdb32e0c6b86d49fd0b44c1bbe3545cad15d3ebcf43db80b355ce5859b",
+  "recipe_sha256": "854a39511316453f6aa27bc246dfe9de8286a52db32041e2daa287bb55447c6a",
+  "restored_faces": 122190,
+  "preserved_corresponding_vertices": 75001,
+  "status": "Frozen local nape restoration candidate, not overall ART PASS",
+  "build_exit_code": 0,
+  "scope_exit_code": 0,
+  "removed_source_polygon_reasons": {
+    "measured_original_braid_tube": 4926,
+    "connected_dark_cloth_atlas_patch": 463,
+    "detached_original_braid_or_front_cloth_remnant": 311
+  },
+  "provenance_correction": "v17/v17b horizontal nape cut and rectangular lower holes were introduced by our broad coordinate deletion masks, not proven source defects. Those masks are absent in v17c.",
+  "remaining_limits": [
+    "Small dark fragments remain at bottom of profile crop.",
+    "Knot remains simplified; residual uneven extraction edges require art review."
+  ],
+  "integration": "Replace MIA_V17_PIXAL_DetailedHair only; all153 other mesh coordinate/key/UV hashes equal55e8. Collection MIA_V17_PIXAL_HAIR can also be transplanted as a unit."
+}

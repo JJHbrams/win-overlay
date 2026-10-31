@@ -1,0 +1,48 @@
+{
+  "reference_images": [
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png"
+  ],
+  "reference_crop_windows": [
+    [
+      "front",
+      0,
+      460,
+      237
+    ],
+    [
+      "profile",
+      460,
+      735,
+      568
+    ],
+    [
+      "back",
+      735,
+      1140,
+      929
+    ],
+    [
+      "three_quarter",
+      1140,
+      1536,
+      1310
+    ]
+  ],
+  "model_crop_x": [
+    262,
+    762
+  ],
+  "resizing": "None; all inputs1024px high. Only horizontal crops/centering and labels.",
+  "shoulder_reference": "approximate illustrated upper shoulder line220; mapped to mean posed upper-arm joint height, not exact acromion surface correspondence",
+  "calibration": {
+    "reference_shoulder_y": 220,
+    "reference_sole_y": 946,
+    "reference_height_px": 1024,
+    "model_shoulder_z": 1.378481924533844,
+    "model_sole_z": 0.03891202062368393,
+    "single_global_ortho_scale": 1.889420911300281,
+    "target_z": 0.8397017427958733,
+    "note": "Approximate shoulder/sole registration only. Illustrated views are not calibrated orthographic cameras; no anisotropic or per-part scaling."
+  }
+}

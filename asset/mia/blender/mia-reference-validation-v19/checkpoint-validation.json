@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-31T13:31:02.098560+00:00",
+  "branch": "codex/mia-body-head-v06",
+  "parent_commit": "bba44baa7adb7e9b871b24811e35524fb750a590",
+  "scope": "WIP validation checkpoint; character art and facial deformation not accepted",
+  "selected_native_sha256": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d",
+  "review_native_sha256": "f4b9e6096fe620977fd92528cc467d658a1b77a9bcbd50209bbefa4b13e2abc8",
+  "reference_and_diagnostic_paths_exist": true,
+  "python_ast_valid_count": 24,
+  "exact_face_contour_recipe_sha256": "dc08b0d3688aa5ac8465c7d07359170a66d492c964a26519bfaddf1fa9a4b613",
+  "git_diff_check": {
+    "exit_code": 2,
+    "known_warnings": [
+      "asset/mia/blender/mia-reference-finish-v17/review_live_face_v18.py:12: trailing whitespace.",
+      "tools/mia/blender/project_mia_face_paint_v17.py:96: new blank line at EOF.",
+      "tools/mia/blender/refine_mia_face_surface_v17b.py:133: new blank line at EOF."
+    ],
+    "reason_preserved": "Original captured user prompt retains its trailing space; frozen historical face/paint recipes retain terminal blank line for exact build-source provenance. No other whitespace warnings."
+  },
+  "art_status": "FAIL",
+  "post_compaction_behavior_guarantee": false,
+  "no_model_changes_during_v19_comparison": true
+}

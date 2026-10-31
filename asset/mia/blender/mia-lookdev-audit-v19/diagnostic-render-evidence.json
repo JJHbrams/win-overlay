@@ -1,0 +1,85 @@
+{
+  "source_sha256_before": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d",
+  "source_sha256_after": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d",
+  "saved_native": false,
+  "renders": [
+    {
+      "name": "target_front",
+      "camera_location": [
+        0.0,
+        -2.0,
+        1.5549999475479126
+      ],
+      "ortho_scale": 0.47999998927116394,
+      "view": "Standard",
+      "look": "Medium High Contrast"
+    },
+    {
+      "name": "target_three_quarter",
+      "camera_location": [
+        1.4142135381698608,
+        -1.4142135381698608,
+        1.5549999475479126
+      ],
+      "ortho_scale": 0.47999998927116394,
+      "view": "Standard",
+      "look": "Medium High Contrast"
+    },
+    {
+      "name": "lamps_off_front",
+      "camera_location": [
+        0.0,
+        -2.0,
+        1.5549999475479126
+      ],
+      "ortho_scale": 0.47999998927116394,
+      "view": "Standard",
+      "look": "Medium High Contrast"
+    },
+    {
+      "name": "unlit_color_signal_front",
+      "camera_location": [
+        0.0,
+        -2.0,
+        1.5549999475479126
+      ],
+      "ortho_scale": 0.47999998927116394,
+      "view": "Standard",
+      "look": "None"
+    },
+    {
+      "name": "uv_checker_front",
+      "camera_location": [
+        0.0,
+        -2.0,
+        1.5549999475479126
+      ],
+      "ortho_scale": 0.47999998927116394,
+      "view": "Standard",
+      "look": "None"
+    },
+    {
+      "name": "diffuse_clay_three_quarter",
+      "camera_location": [
+        1.4142135381698608,
+        -1.4142135381698608,
+        1.5549999475479126
+      ],
+      "ortho_scale": 0.47999998927116394,
+      "view": "Standard",
+      "look": "None"
+    },
+    {
+      "name": "specular_probe_three_quarter",
+      "camera_location": [
+        1.4142135381698608,
+        -1.4142135381698608,
+        1.5549999475479126
+      ],
+      "ortho_scale": 0.47999998927116394,
+      "view": "Standard",
+      "look": "None"
+    }
+  ],
+  "note": "Unlit signal is not certified physical albedo. Specular probe is a temporary test shader, not a delivered material/map."
+}

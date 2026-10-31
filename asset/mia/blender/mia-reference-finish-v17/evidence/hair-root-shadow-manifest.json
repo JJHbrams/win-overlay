@@ -1,0 +1,64 @@
+{
+  "source_sha256": "e60c9e15aab16969095aff2d4138402f1eb37b546329196247a397efd7ddf428",
+  "native_sha256": "a384d7552bf5e9fda69e79b20742892cee7eb6e3610113dc8122141fb58775ff",
+  "recipe_sha256": "d11e7e23a951549374ffdae563ac0aedb3e6118f613c3e25ab4f9c00da634840",
+  "changed_owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+  "changed_material": "MIA_V17G_RootLining_WarmHairShadow",
+  "geometry_uv_key_meshes_exact": 156,
+  "other_material_owners_exact": 155,
+  "packed_images_byte_exact": 58,
+  "ray_evidence": [
+    {
+      "y": 0.06,
+      "z": 1.628,
+      "hair_first_x": -0.07759952545166016,
+      "scene_first_owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "scene_first_x": 0.04014861583709717
+    },
+    {
+      "y": 0.063,
+      "z": 1.628,
+      "hair_first_x": -0.07697343826293945,
+      "scene_first_owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "scene_first_x": 0.03578007221221924
+    },
+    {
+      "y": 0.06,
+      "z": 1.634,
+      "hair_first_x": -0.07285475730895996,
+      "scene_first_owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "scene_first_x": 0.01928567886352539
+    },
+    {
+      "y": 0.052,
+      "z": 1.628,
+      "hair_first_x": 0.08108663558959961,
+      "scene_first_owner": "MIA_V17_PIXAL_DetailedHair",
+      "scene_first_x": 0.08108663558959961
+    },
+    {
+      "y": 0.072,
+      "z": 1.628,
+      "hair_first_x": 0.06251883506774902,
+      "scene_first_owner": "MIA_V17_PIXAL_DetailedHair",
+      "scene_first_x": 0.06251883506774902
+    },
+    {
+      "y": 0.06,
+      "z": 1.618,
+      "hair_first_x": 0.08711910247802734,
+      "scene_first_owner": "MIA_V17_PIXAL_DetailedHair",
+      "scene_first_x": 0.08711910247802734
+    }
+  ],
+  "diagnosis": "Near-side source hair hole reveals root liner; not liner protrusion. Material shadow continuity only, no restored strands or geometry clipping fix.",
+  "shadow_linear_rgb": [
+    0.15,
+    0.125,
+    0.122
+  ],
+  "frozen": true,
+  "build_exit_code": 0,
+  "visual_result": "Abrupt unrelated dark gray rectangle reduced to warm hair-shadow; rectangular source opening remains discernible.",
+  "remaining_limit": "Source near-side strand hole is not reconstructed. This is material continuity, not geometry/clipping repair."
+}

@@ -2,6 +2,12 @@
 
 ## 현재 상태
 
+2026-10-31: 현재 선택본은 [v18 정적 WIP](blender/mia-reference-finish-v17/integrated-v18/Mia_HeadHair_v18.blend)이며 **얼굴·바디·헤어의 원화 정합은 미승인**이다. 정면만이 아니라 기존 다각도 원화와 대응시킨 검토, 고정 카메라·조명/셰이더 분리 검사가 선행돼야 한다.
+
+재개·압축·인계 후에는 [제작 기준](WORKING_PROTOCOL.md) → [현재 상태](CURRENT_STATE.json) → [원화 인덱스](REFERENCE_INDEX.md)를 먼저 읽는다. 저장/렌더/해시 보존은 조형 완료의 근거가 아니다. 유방·골반·목선과 얼굴/눈매 문제는 별도의 미해결 항목으로 유지한다.
+
+아래 v45/foundation 자료는 보존 이력이다.
+
 v45는 mechanical Idle/Turn/Click 3클립을 보존하는 아카이브일 뿐, Mia 완성 모델이 아니다. 다각도 clay 검토에서 얼굴 절단/열린 표면과 정면에서 가려진 중복 strap·pin·braid가 확인되어 **artistic/geometry gate는 FAIL**이다.
 
 새 [CC0 layered foundation](blender/mia-layered-foundation/README.ko.md)은 완전한 Mia 조형이 아닌 일반 해부학 바탕이며 **INCOMPLETE**다. Mia 얼굴·헤어·의상·가방·리그·이벤트 애니메이션을 주장하지 않는다.

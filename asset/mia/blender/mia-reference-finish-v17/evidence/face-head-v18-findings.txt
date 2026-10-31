@@ -1,0 +1,29 @@
+V18 READ-ONLY HEAD/FACE DIAGNOSTIC
+Source SHA256: 41e198b13c75fe1fe4f6883b08df4fbbb6b3ccc141c0df934709fe1c8c047d82
+Source unchanged after all renders: True. No native saved. No geometry, UV, hair, key or weight changes.
+Camera: orthographic .29 m, target (0,0,1.55), 1000x1000. Front, yaw +/-45, true yaw90; +/-45 at elevation20 and35. The head is neutral in every view. Diagnostic clay uses the same geometry/camera, diffuse material, -2.5EV relative to source to avoid clipping. Prefer neutral_clay_* over earlier clipped clay_skin_*.
+
+CAUSAL FINDINGS
+1. The outer eye to cheek transition is genuinely abrupt in geometry. At world x=+55mm the evaluated surface normal turns 50.23 degrees across z1.542 to1.532 (10mm); front depth recedes 8.82mm across z1.542 to1.522. This is a local sampled fact, not a universal anatomical target. Both 45-degree neutral-clay views retain the broad orbital ledge and side-cheek wall without makeup. A toon normal ramp and under-eye paint reinforce it; they do not create the whole issue.
+2. The face reads broad through the upper cheek and flatter through the lateral midface than the portrait. Hair-on frontal comparison also has a broader exposed face framing; side locks obscure the true art contour. Do not infer a precise percentage scale from these unmatched art poses. Measured frontal depth-gated widths: z1.520 ~107.81mm, z1.535 ~121.40mm, z1.550 ~133.85mm. These exclude much ear/rear skull but are not exact anatomical segmentation.
+3. Bare cranium is not shown to be too short. Crown z1.645209, chin z1.466560; crown-to-eye about105.9mm, eye-to-chin about72.7mm. The frontal-parietal surface is wide/flat and the side profile has a large posterior mass. Upper35 hair-off views show substantial upper-head volume. Hair crest/silhouette is not a valid skull-height measurement. A global head-height increase is not supported by this evidence.
+4. Neutral clay reveals a separate face/cap shading join above the temple/ear. This merits a boundary-normal/position continuity check if cranial work follows. The lower orbital-to-cheek turn is within the face skin and cannot be blamed entirely on that join.
+5. Face:728 control vertices,1342 triangles,47 keys; Subsurf2 evaluates16338 vertices/16104 polygons. All source polygons smooth, no custom_normal attribute. Body/cap3906 control vertices ->63505 evaluated, Weld before Subsurf2 and local Smooth. Eye carrier436 vertices/544 polygons, no subdivision, no keys, custom normals present; active emissive eye appearance and mesh silhouette are not fixed by skin normal recalculation. Density is adequate for a static prototype but sparse, uneven triangulated control flow is not a mature deformation topology. More global subdivision would polish the existing shape, not correct its proportions or the ledge.
+
+BOUNDED NEXT CORRECTION PROPOSAL (NOT IMPLEMENTED)
+A. First test a local smooth orbital-cheek depth redistribution, approximately0.5-1.5mm, within |x|.045-.060 and z1.525-1.545, easing the ledge into the upper cheek. Preserve eyelid rim/canthi initially; do not move the iris to hide the skin problem. Evaluate both45 and trueprofile before extending scope.
+B. Test only1.5-2.5mm per-side midface width reduction with broad smooth falloff around |x|.045-.070,z1.50-1.555, protecting ear attachment, mouth/nose, eye opening. This is an initial bounded experiment, not a measured reference fit. Avoid whole-head X scaling and avoid increasing flatness by pulling only the outer contour inward.
+C. Keep crown height initially. If the arc still reads low after A/B and hair framing, separately assess front-parietal roundness plus face/cap seam and hair clearance; additional consistent high3Q art is useful for that choice. No arbitrary global skull raise now.
+D. Apply exactly the same local displacement to Basis and all47 keys; preserve original relative deltas, UV coordinates, topology and weights. If local control flow cannot represent the target, plan a dedicated skin topology/transfer change rather than indiscriminate extra subdivision. Recheck fixed-UV crease placement after the geometry settles. Do not add texture noise to disguise shape errors.
+
+REFERENCE LIMITS / NEED FOR MORE ART
+Viewed the original portrait and v22 canonical art. They are drawn with hair occlusion, head roll/pitch and stylized projection; neither uniquely specifies a bare skull. One coherent 30-45degree yaw reference at10-20degree elevation and a side view with readable hairline would reduce uncertainty. Such art is helpful, not a prerequisite for correcting the demonstrated orbital-cheek ledge. Existing images support qualitative face-flow critique but not an exact millimeter or percentage reconstruction.
+
+PRIMARY EVIDENCE
+hair_on_front.png / hair_on_left45.png / hair_on_right45.png
+hair_off_front.png / hair_off_left45.png / hair_off_right45.png / hair_off_profile90.png
+hair_off_upper20_left45.png / hair_off_upper20_right45.png / hair_off_upper35_left45.png / hair_off_upper35_right45.png
+neutral_clay_left45.png / neutral_clay_right45.png / neutral_clay_profile90.png / neutral_clay_upper20_left45.png / neutral_clay_upper35_left45.png
+base_control_wire_not_final_surface_left45.png / evaluated_wire_left45.png
+reference_face_inspection_crop.png is only an unchanged crop of supplied portrait, not generated reference or a model render.
+measurements.json contains inventory, bounds, aperture rows, surface samples and complete provenance.

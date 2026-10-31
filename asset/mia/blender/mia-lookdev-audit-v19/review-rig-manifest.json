@@ -1,0 +1,208 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\Mia_HeadHair_v18.blend",
+  "source_sha256": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d",
+  "review_native_sha256": "f4b9e6096fe620977fd92528cc467d658a1b77a9bcbd50209bbefa4b13e2abc8",
+  "recipe_sha256": "28c307d619b6a0507b8abc4cb89036768493b34c88bf9b5a3dfaf0fdca8427df",
+  "mesh_coordinates_uv_keys_material_slots_matrix_exact": 156,
+  "packed_images_byte_exact": 59,
+  "active_saved_camera": "V19_Head_Front",
+  "source_beauty_layer_preserved": "ViewLayer",
+  "review_color_management": "Standard/None exposure0 gamma1",
+  "cameras": [
+    {
+      "name": "V19_Head_Front",
+      "scale": 0.29,
+      "azimuth": 0,
+      "elevation": 0,
+      "location": [
+        0.0,
+        -2.0,
+        1.5549999475479126
+      ]
+    },
+    {
+      "name": "V19_Head_Profile",
+      "scale": 0.29,
+      "azimuth": 90,
+      "elevation": 0,
+      "location": [
+        2.0,
+        -1.2246468525851679e-16,
+        1.5549999475479126
+      ]
+    },
+    {
+      "name": "V19_Head_Back",
+      "scale": 0.29,
+      "azimuth": 180,
+      "elevation": 0,
+      "location": [
+        2.4492937051703357e-16,
+        2.0,
+        1.5549999475479126
+      ]
+    },
+    {
+      "name": "V19_Head_ThreeQuarterL",
+      "scale": 0.29,
+      "azimuth": 45,
+      "elevation": 0,
+      "location": [
+        1.4142135381698608,
+        -1.4142135381698608,
+        1.5549999475479126
+      ]
+    },
+    {
+      "name": "V19_Head_ThreeQuarterR",
+      "scale": 0.29,
+      "azimuth": -45,
+      "elevation": 0,
+      "location": [
+        -1.4142135381698608,
+        -1.4142135381698608,
+        1.5549999475479126
+      ]
+    },
+    {
+      "name": "V19_Head_Elev20",
+      "scale": 0.29,
+      "azimuth": 0,
+      "elevation": 20,
+      "location": [
+        0.0,
+        -1.879385232925415,
+        2.2390403747558594
+      ]
+    },
+    {
+      "name": "V19_Hair_Front",
+      "scale": 0.48,
+      "azimuth": 0,
+      "elevation": 0,
+      "location": [
+        0.0,
+        -2.0,
+        1.5549999475479126
+      ]
+    },
+    {
+      "name": "V19_Hair_Profile",
+      "scale": 0.48,
+      "azimuth": 90,
+      "elevation": 0,
+      "location": [
+        2.0,
+        -1.2246468525851679e-16,
+        1.5549999475479126
+      ]
+    },
+    {
+      "name": "V19_Hair_Back",
+      "scale": 0.48,
+      "azimuth": 180,
+      "elevation": 0,
+      "location": [
+        2.4492937051703357e-16,
+        2.0,
+        1.5549999475479126
+      ]
+    },
+    {
+      "name": "V19_Hair_ThreeQuarterL",
+      "scale": 0.48,
+      "azimuth": 45,
+      "elevation": 0,
+      "location": [
+        1.4142135381698608,
+        -1.4142135381698608,
+        1.5549999475479126
+      ]
+    },
+    {
+      "name": "V19_Hair_ThreeQuarterR",
+      "scale": 0.48,
+      "azimuth": -45,
+      "elevation": 0,
+      "location": [
+        -1.4142135381698608,
+        -1.4142135381698608,
+        1.5549999475479126
+      ]
+    },
+    {
+      "name": "V19_Hair_Elev20",
+      "scale": 0.48,
+      "azimuth": 0,
+      "elevation": 20,
+      "location": [
+        0.0,
+        -1.879385232925415,
+        2.2390403747558594
+      ]
+    }
+  ],
+  "lights": [
+    {
+      "name": "V19_Key",
+      "location": [
+        -0.6,
+        -1.0,
+        2.2
+      ],
+      "energy": 60,
+      "size": 1.0
+    },
+    {
+      "name": "V19_Fill",
+      "location": [
+        0.8,
+        -0.8,
+        1.8
+      ],
+      "energy": 15,
+      "size": 1.5
+    },
+    {
+      "name": "V19_Edge",
+      "location": [
+        0,
+        0.9,
+        2.05
+      ],
+      "energy": 8,
+      "size": 0.8
+    }
+  ],
+  "runtime_checks": [
+    {
+      "layer": "ViewLayer",
+      "camera": "V19_Head_Front",
+      "file": "review_toon_front.png"
+    },
+    {
+      "layer": "V19_DiffuseClay_SkinOnly",
+      "camera": "V19_Head_Front",
+      "file": "review_clay_front.png"
+    },
+    {
+      "layer": "V19_DiffuseClay_SkinOnly",
+      "camera": "V19_Head_ThreeQuarterL",
+      "file": "review_clay_three_quarter.png"
+    },
+    {
+      "layer": "V19_SpecularProbe_SkinOnly",
+      "camera": "V19_Head_ThreeQuarterL",
+      "file": "review_specular_three_quarter.png"
+    }
+  ],
+  "saved_after_checks": false,
+  "build_exit_code": 0,
+  "fresh_reopen_runtime_render_checks_passed": true,
+  "frozen": true,
+  "notes": [
+    "Original production ViewLayer is preserved. Review world/lighting/color-management are controlled and differ from original beauty presentation.",
+    "Diagnostic material overrides are actual runtime-tested EEVEE view layers, not production material replacements.",
+    "Hair scale.48 is head/hair context and may crop the lowest long ends; head scale.29 is facial inspection. All share target(0,0,1.555)."
+  ]
+}

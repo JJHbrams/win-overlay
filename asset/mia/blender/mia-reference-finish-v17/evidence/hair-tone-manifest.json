@@ -1,0 +1,90 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-pixal-head-v17\\v17e-finish\\Mia_HairFinish_v17e.blend",
+  "source_sha256": "c6e254df9cd0b4d39e496acdbfffb1e984140c273c78b1eaec0358ec13d5e611",
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-pixal-head-v17\\v17f-tone\\Mia_HairTone_v17f.blend",
+  "native_sha256": "e60c9e15aab16969095aff2d4138402f1eb37b546329196247a397efd7ddf428",
+  "recipe_sha256": "2dc45cd996141558928c0c883df5d4d94afc809e8de2dfa5b71e13a2a399b19a",
+  "unchanged_geometry_uv_key_meshes": 156,
+  "unchanged_nonhair_material_owners": 141,
+  "packed_images_byte_exact": 58,
+  "changed_materials": {
+    "MIA_V17_Pixal_RepackedUV_SameResponse": "MIA_V17_ReferenceAshGray_PaintUV",
+    "MIA_V17_KnotAsh_StrandNormals.001": "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh",
+    "MIA_V17_BraidAsh_Strata.001": "MIA_V17_BraidAsh_Strata.001_ReferenceAsh"
+  },
+  "tone_stops_linear": [
+    [
+      0,
+      [
+        0.005200000000000001,
+        0.00455,
+        0.00455,
+        1
+      ]
+    ],
+    [
+      0.01,
+      [
+        0.052000000000000005,
+        0.04225,
+        0.0403,
+        1
+      ]
+    ],
+    [
+      0.03,
+      [
+        0.15275,
+        0.12545,
+        0.12285,
+        1
+      ]
+    ],
+    [
+      0.05,
+      [
+        0.22100000000000003,
+        0.18200000000000002,
+        0.1781,
+        1
+      ]
+    ],
+    [
+      0.1,
+      [
+        0.2535,
+        0.21450000000000002,
+        0.21125000000000002,
+        1
+      ]
+    ]
+  ],
+  "scope": "Hair material response only. No geometry/UV/rig/face/body changes. Normal multiplier retained.",
+  "calibration": "Root bright tone RGB151,137,135 was too light; this candidate scales its linear palette by.65 toward portrait122,111,110. Source dark85,85,85. Different viewpoints make this a directional color guide, not a global likeness metric.",
+  "frozen": true,
+  "build_exit_code": 0,
+  "partition_inspection_exit_code": 0,
+  "trials": 1,
+  "visual_review": "Chosen .65-linear warm-gray palette; strand value variation retained. Not a universal likeness/ROI pass.",
+  "sample_roi_pixels": [
+    440,
+    220,
+    560,
+    270
+  ],
+  "after_sample_rgb_median": [
+    121.0,
+    109.0,
+    107.0
+  ],
+  "before_sample_rgb_median": [
+    85.0,
+    85.0,
+    85.0
+  ],
+  "remaining_limits": [
+    "Inherited simplified knot, uneven extraction surfaces and broad upper lock shapes are unchanged.",
+    "Dark root-lining patch is more noticeable at profile crown with lighter hair; no geometry masking/refit performed.",
+    "Fringe/rear/crown remain one main mesh, not semantic separate owners."
+  ]
+}

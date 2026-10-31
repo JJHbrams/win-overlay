@@ -1,0 +1,87 @@
+{
+  "reference": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay/asset/mia/references/received/mia-face-reaffirmed-20261031.png",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "pixel_origin": "top-left",
+  "method": "Manual estimates from supplied original portrait/enlarged unchanged crop; not exact geometric reconstruction.",
+  "points": {
+    "left_image_visible_pupil_center": {
+      "xy": [
+        451,
+        321
+      ],
+      "confidence": "medium",
+      "uncertainty_px": 2,
+      "occlusion": "Upper pupil joins upper-lid ink; visible black pupil estimate."
+    },
+    "right_image_visible_pupil_center": {
+      "xy": [
+        580,
+        304
+      ],
+      "confidence": "medium",
+      "uncertainty_px": 2,
+      "occlusion": "Upper pupil joins upper-lid ink; visible black pupil estimate."
+    },
+    "left_image_visible_iris_center_prior_estimate": {
+      "xy": [
+        451,
+        324
+      ],
+      "confidence": "medium-low",
+      "uncertainty_px": 3,
+      "occlusion": "Center of visible gray region, NOT unoccluded nominal iris-disc center; prior .890 ratio used this."
+    },
+    "right_image_visible_iris_center_prior_estimate": {
+      "xy": [
+        580,
+        309
+      ],
+      "confidence": "medium-low",
+      "uncertainty_px": 3,
+      "occlusion": "Center of visible gray region, NOT unoccluded nominal iris-disc center; prior .890 ratio used this."
+    },
+    "mouth_seam_center": {
+      "xy": [
+        518,
+        411
+      ],
+      "confidence": "medium-high",
+      "uncertainty_px": 2,
+      "occlusion": "Visible painted seam midpoint, not bottom lip shadow."
+    },
+    "chin_outline_tip": {
+      "xy": [
+        519,
+        463
+      ],
+      "confidence": "high",
+      "uncertainty_px": 2,
+      "occlusion": "Visible external chin line; hair does not obscure tip."
+    }
+  },
+  "prior_estimate_definition": {
+    "anchors": [
+      [
+        451,
+        324
+      ],
+      [
+        580,
+        309
+      ]
+    ],
+    "roll_deg": -6.6325,
+    "iris_visible_center_spacing_over_eye_line_chin": 0.88998
+  },
+  "cautions": [
+    "Do not equate model nominal iris UV center (upper-lid occluded) with visible gray-region centroid.",
+    "Prefer visible pupil shader-center to manually estimated visible pupil; allow2px uncertainty and separate sensitivity registration.",
+    "No conclusion that chin is too long/short from raw unregistered pictures.",
+    "Roll estimate differs slightly if pupil versus gray-region centers are used; both are approximate."
+  ],
+  "pupil_anchor_roll_deg": -7.50734666694966,
+  "pupil_anchor_distance_px": 130.11533345459327
+}

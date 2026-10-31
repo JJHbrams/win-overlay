@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-31",
+  "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
+  "status": "reference_validation_before_further_production_changes",
+  "character_complete": false,
+  "art_approved": false,
+  "read_first": ["WORKING_PROTOCOL.md", "REFERENCE_INDEX.md"],
+  "selected_static_wip": {
+    "path": "blender/mia-reference-finish-v17/integrated-v18/Mia_HeadHair_v18.blend",
+    "sha256": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d",
+    "selection_means": "A preserved comparison input, not approved anatomy or finished character"
+  },
+  "reference_catalog": "references/reference-catalog.json",
+  "diagnostics": {
+    "front_registration": "blender/mia-reference-validation-v19/front-registration.json",
+    "front_comparison": "blender/mia-reference-validation-v19/front-registered-comparison.png",
+    "lookdev_review_native": "blender/mia-lookdev-audit-v19/Mia_LookdevReview_v19.blend",
+    "lookdev_sha256": "f4b9e6096fe620977fd92528cc467d658a1b77a9bcbd50209bbefa4b13e2abc8",
+    "multiview_registration": "blender/mia-reference-validation-v19/multi-view-registration.json",
+    "multiview_comparison": "blender/mia-reference-validation-v19/multi-view-registered-comparison.png",
+    "body_comparison": "blender/mia-body-reference-audit-v19/body_reference_comparison_4rows.png",
+    "body_findings": "blender/mia-body-reference-audit-v19/BODY_AUDIT.md",
+    "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md"
+  },
+  "reference_roles": {
+    "face_identity": "references/received/mia-face-reaffirmed-20261031.png",
+    "face_angles_and_expressions": "references/mia-expression-style-confirmed-20261031.png",
+    "clothed_turnaround": "references/mia-clean-master-v22.png",
+    "body_turnaround_candidate": "references/body-foundation/v06/mia-body-turnaround-v06.png",
+    "body_visibility_supplement": "references/body-foundation/v06/mia-body-visibility-guide-v06.png"
+  },
+  "stage_status": {
+    "reference_inventory": "organized; generated candidate approvals remain separate",
+    "corresponding_view_camera_registration": "in_progress; no art PASS",
+    "lookdev_diagnostic_rig": "built and fresh-reopen tested; source shaders unchanged",
+    "face_head_art": "FAIL; width/height, eye design, mouth-chin, cheek flow and cap join require registered comparison",
+    "body_art": "FAIL_REOPENED; breast, pelvis, hip/thigh and neck/shoulder need corresponding-view review",
+    "hair_art": "FAIL; rough source holes, mechanical knot, clean lock ownership and reference fit unresolved",
+    "uv_and_color": "technical checks only; calibrated albedo/lighting and final art not approved",
+    "facial_deformation": "FAIL; inherited static lash/paint/carrier mismatch during blink",
+    "garments": "deferred until anatomy gate",
+    "final_rig_and_events": "deferred until static art and deformation gates"
+  },
+  "known_rejected_paths": [
+    "v13 art PASS was revoked",
+    "v17d was not a finished source-matched face",
+    "v18 isolated cheek narrowing/fill trials worsened the ledge",
+    "v18 coordinated trial1 lost far-eye visibility",
+    "3 percent mouth-level narrowing is not a validated target proportion",
+    "iris/aperture ratio alone does not validate eye size relative to the face",
+    "fixed-world-X normal-angle sample cannot accept a changed anatomical section"
+  ],
+  "immediate_next": [
+    "Finish registered front/profile/back/oblique comparison using existing concept art and subtle-angle expression panels",
+    "Use the completed four-view body audit to define breast/chest, pelvis/thigh and neck/shoulder correction targets; do not inherit a body art PASS",
+    "Keep actual shader color/UV/diffuse-clay/specular-probe/target-toon evidence separate",
+    "Derive coordinated correction targets from those comparisons before more production geometry or paint changes"
+  ],
+  "do_not_infer_pass_from": ["successful save", "render count", "source hash preservation", "shape key count", "latest version", "subagent completion"],
+  "session_constraints": {
+    "saved_sources_immutable": true,
+    "discard_live_test_view_authorized": true,
+    "user_prefers_live_blender_mcp": true,
+    "private_real_person_references_not_used_or_recorded": true
+  }
+}

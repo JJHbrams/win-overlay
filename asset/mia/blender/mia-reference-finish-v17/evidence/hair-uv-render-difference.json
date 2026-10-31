@@ -1,0 +1,37 @@
+{
+  "beauty_front": {
+    "rgb_rmse_byte": 0.2807182837311041,
+    "max_channel_diff": 48.0,
+    "fraction_pixels_maxdiff_over8": 9.752066115702479e-05,
+    "fraction_pixels_maxdiff_over24": 2.4793388429752066e-06,
+    "changedpixel_p95diff": 1.0
+  },
+  "beauty_left": {
+    "rgb_rmse_byte": 0.3563740722034124,
+    "max_channel_diff": 44.0,
+    "fraction_pixels_maxdiff_over8": 0.00027355371900826444,
+    "fraction_pixels_maxdiff_over24": 6.611570247933884e-06,
+    "changedpixel_p95diff": 2.0
+  },
+  "beauty_back": {
+    "rgb_rmse_byte": 0.314272082993002,
+    "max_channel_diff": 46.0,
+    "fraction_pixels_maxdiff_over8": 0.00010413223140495868,
+    "fraction_pixels_maxdiff_over24": 8.264462809917356e-06,
+    "changedpixel_p95diff": 1.0
+  },
+  "detail_fringe": {
+    "rgb_rmse_byte": 0.46050973679942403,
+    "max_channel_diff": 59.0,
+    "fraction_pixels_maxdiff_over8": 0.0002637755102040816,
+    "fraction_pixels_maxdiff_over24": 2.7040816326530612e-05,
+    "changedpixel_p95diff": 2.0
+  },
+  "detail_rear": {
+    "rgb_rmse_byte": 0.411593882133255,
+    "max_channel_diff": 74.0,
+    "fraction_pixels_maxdiff_over8": 0.00012346938775510205,
+    "fraction_pixels_maxdiff_over24": 3.061224489795918e-05,
+    "changedpixel_p95diff": 1.0
+  }
+}

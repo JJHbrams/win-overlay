@@ -10,14 +10,16 @@
     "latest_requested_front_revision": "MIA-BODY-FRONT-CALF-V01",
     "latest_available_four_view_study": "MIA-BODY-V06",
     "body_visibility_modeling_supplement": "MIA-BODY-V06-VISIBILITY-GUIDE",
-    "side_volume_revision": "blocked_no_v04_image"
+    "side_volume_revision": "blocked_no_v04_image",
+    "latest_reaffirmed_face_and_hair_portrait": "MIA-FACE-PORTRAIT-REAFFIRMED-20261031"
   },
   "rules": [
     "Select by role and explicit user decision, never by largest version number alone.",
     "Existing source files/paths are preserved.",
     "Generated views are illustrative reconstructions and do not certify model geometry or dimensions.",
     "V06 is an illustrated four-view candidate derived from the selected front/calf revision; it remains pending user review and does not certify geometry or dimensions.",
-    "The separately requested v04 side-volume revision remains blocked and is not fulfilled by v05."
+    "The separately requested v04 side-volume revision remains blocked and is not fulfilled by v05.",
+    "The latest reaffirmed face portrait supplements the existing expression and design roles; generated body studies remain candidates unless explicitly approved."
   ],
   "assets": [
     {
@@ -31,6 +33,19 @@
         1024
       ],
       "mode": "RGB"
+    },
+    {
+      "id": "MIA-FACE-PORTRAIT-REAFFIRMED-20261031",
+      "status": "user_reaffirmed",
+      "role": "face_and_original_hair_portrait",
+      "path": "received/mia-face-reaffirmed-20261031.png",
+      "sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "provenance": "received/mia-face-reaffirmed-20261031.provenance.json"
     },
     {
       "id": "MIA-FACE-CONFIRMED-20261031",

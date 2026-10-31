@@ -1,0 +1,829 @@
+{
+  "source_native_sha": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d",
+  "model_geometry_unchanged": true,
+  "source_reference_hashes": {
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+  },
+  "v06_turnaround_status": "Viewed actual full turnaround; main comparison uses v22 top four panels, supplementary comparison uses actual v06 visibility guide.",
+  "registration_policy": "Uniform scale and translation only, no2Drotation and noanisotropic/per-feature warp. Camera yaw explicit. Art roll/pitch unresolved, especially top3/4 label.",
+  "rows": [
+    {
+      "label": "FRONT",
+      "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+      "reference_sha": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "reference_crop_original_pixels": [
+        220,
+        0,
+        430,
+        180
+      ],
+      "reference_anchor_a": [
+        325,
+        73.5
+      ],
+      "reference_anchor_b": [
+        331,
+        111
+      ],
+      "reference_anchor_confidence": "medium-low: tiny original panel, manual+-2 source pixels; eye midpoint/visible pupil to chin",
+      "model_render": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_front_hair.png",
+      "model_render_sha": "a168b5c1a52aebbb83029c72a28aa46fd53a461e5bf173218ab5167a642e062f",
+      "camera": {
+        "yaw_deg": 0,
+        "elevation_deg": 0,
+        "roll_deg": 0,
+        "ortho_scale_m": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ]
+      },
+      "model_anchor_a_pixels": [
+        447.33083901802695,
+        470.8746757507323
+      ],
+      "model_anchor_b_pixels": [
+        447.38494929422933,
+        613.0882110595702
+      ],
+      "model_to_reference_transform": {
+        "isotropic_scale": 0.26368798102489444,
+        "translation_pixels": [
+          207.04423420916442,
+          -50.66399256446242
+        ],
+        "rotation_deg": 0,
+        "anisotropic_warp": false
+      },
+      "display_crop_scale": 2.0952380952380953,
+      "normalized_dimension": "visible pupil/eye-midpoint to geometric chin VERTICAL height",
+      "remaining_dimensions": "Horizontal silhouette width, nose/lip projection, hair volume and lateral arc are NOT normalized; reference roll/pitch remains unmatched.",
+      "notes": "Top FRONT panel; head roll about -12 deg remains. Vertical eye-to-chin normalized; width remains measurable.",
+      "model_mouth_after_transform_reference_pixels": [
+        325.03879355749484,
+        98.86315137233548
+      ],
+      "model_chin_after_transform_reference_pixels": [
+        325.0142682294845,
+        111.00000000000001
+      ],
+      "actual_render_camera_record": {
+        "name": "close_front_hair",
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_front_hair.png",
+        "scale": 0.48,
+        "location": [
+          0.0,
+          -2.0,
+          1.5549999475479126
+        ],
+        "rotation": [
+          1.5707964897155762,
+          -0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "label": "SIDE",
+      "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+      "reference_sha": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "reference_crop_original_pixels": [
+        495,
+        0,
+        705,
+        180
+      ],
+      "reference_anchor_a": [
+        558,
+        70
+      ],
+      "reference_anchor_b": [
+        557,
+        107
+      ],
+      "reference_anchor_confidence": "medium-low: tiny original panel, manual+-2 source pixels; eye midpoint/visible pupil to chin",
+      "model_render": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_profile_hair.png",
+      "model_render_sha": "df6f4b3c40c0e9c38323693754bd0d8c3fd3641c02a6d22c97c09a6377f443ee",
+      "camera": {
+        "yaw_deg": 90,
+        "elevation_deg": 0,
+        "roll_deg": 0,
+        "ortho_scale_m": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ]
+      },
+      "model_anchor_a_pixels": [
+        336.1838073333104,
+        470.8746757507323
+      ],
+      "model_anchor_b_pixels": [
+        335.78900106747943,
+        613.0882110595702
+      ],
+      "model_to_reference_transform": {
+        "isotropic_scale": 0.26017214127789584,
+        "translation_pixels": [
+          470.53433898313705,
+          -52.508472663602916
+        ],
+        "rotation_deg": 0,
+        "anisotropic_warp": false
+      },
+      "display_crop_scale": 2.0952380952380953,
+      "normalized_dimension": "visible pupil/eye-midpoint to geometric chin VERTICAL height",
+      "remaining_dimensions": "Horizontal silhouette width, nose/lip projection, hair volume and lateral arc are NOT normalized; reference roll/pitch remains unmatched.",
+      "notes": "True 90 deg model profile; art may be slightly short of90. Eye-to-chin normalized; nose/lip/back-head depth remains.",
+      "model_mouth_after_transform_reference_pixels": [
+        550.2378518756269,
+        95.02497602070433
+      ],
+      "model_chin_after_transform_reference_pixels": [
+        557.8972824084289,
+        107.00000000000001
+      ],
+      "actual_render_camera_record": {
+        "name": "close_profile_hair",
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_profile_hair.png",
+        "scale": 0.48,
+        "location": [
+          2.0,
+          0.0,
+          1.5549999475479126
+        ],
+        "rotation": [
+          1.5707963705062866,
+          -0.0,
+          1.5707963705062866
+        ]
+      }
+    },
+    {
+      "label": "BACK",
+      "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+      "reference_sha": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "reference_crop_original_pixels": [
+        730,
+        0,
+        950,
+        190
+      ],
+      "reference_anchor_a": [
+        836,
+        19
+      ],
+      "reference_anchor_b": [
+        836,
+        115
+      ],
+      "reference_anchor_confidence": "low: nape hidden, +-12 source pixels",
+      "model_render": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_back_hair.png",
+      "model_render_sha": "3369678469033bb06f532bc495fa93abaf8421e9cc5e309922e4db5ac7e4a817",
+      "camera": {
+        "yaw_deg": 180,
+        "elevation_deg": 0,
+        "roll_deg": 0,
+        "ortho_scale_m": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ]
+      },
+      "model_anchor_a_pixels": [
+        448,
+        237
+      ],
+      "model_anchor_b_pixels": [
+        448,
+        569.3333333333333
+      ],
+      "model_to_reference_transform": {
+        "isotropic_scale": 0.28886659979939827,
+        "translation_pixels": [
+          706.5877632898696,
+          -49.461384152457384
+        ],
+        "rotation_deg": 0,
+        "anisotropic_warp": false
+      },
+      "display_crop_scale": 1.9894736842105263,
+      "normalized_dimension": "hair-crown to estimated nape vertical height",
+      "remaining_dimensions": "Horizontal silhouette width, nose/lip projection, hair volume and lateral arc are NOT normalized; reference roll/pitch remains unmatched.",
+      "notes": "LOW confidence: hair crown to estimated hidden nape. Crown anchor excludes loose spikes. Does NOT validate bare skull height.",
+      "actual_render_camera_record": {
+        "name": "close_back_hair",
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_back_hair.png",
+        "scale": 0.48,
+        "location": [
+          0.0,
+          2.0,
+          1.5549999475479126
+        ],
+        "rotation": [
+          -1.570796251296997,
+          3.141592502593994,
+          -0.0
+        ]
+      }
+    },
+    {
+      "label": "3/4 LABEL",
+      "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+      "reference_sha": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "reference_crop_original_pixels": [
+        990,
+        0,
+        1210,
+        190
+      ],
+      "reference_anchor_a": [
+        1085,
+        73.5
+      ],
+      "reference_anchor_b": [
+        1097,
+        111
+      ],
+      "reference_anchor_confidence": "medium-low: tiny original panel, manual+-2 source pixels; eye midpoint/visible pupil to chin",
+      "model_render": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-front-registration-v19\\multi-view-model-yaw20.png",
+      "model_render_sha": "7194e68cd4d96bcd4fcc024449dfa1b9dedf2f63914c3d5fc7b5d1664ca98a84",
+      "camera": {
+        "yaw_deg": 20,
+        "elevation_deg": 0,
+        "roll_deg": 0,
+        "ortho_scale_m": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ]
+      },
+      "model_anchor_a_pixels": [
+        409.12780412113034,
+        470.8746757507323
+      ],
+      "model_anchor_b_pixels": [
+        409.043619452761,
+        613.0882110595702
+      ],
+      "model_to_reference_transform": {
+        "isotropic_scale": 0.26368798102489444,
+        "translation_pixels": [
+          977.1179153501506,
+          -50.66399256446242
+        ],
+        "rotation_deg": 0,
+        "anisotropic_warp": false
+      },
+      "display_crop_scale": 1.9894736842105263,
+      "normalized_dimension": "visible pupil/eye-midpoint to geometric chin VERTICAL height",
+      "remaining_dimensions": "Horizontal silhouette width, nose/lip projection, hair volume and lateral arc are NOT normalized; reference roll/pitch remains unmatched.",
+      "notes": "20 deg candidate, NOT a solved camera. Art reads near-front (roughly0-20); see20/35/45 bracket. Roll/pitch unmatched.",
+      "model_mouth_after_transform_reference_pixels": [
+        1082.345767181185,
+        98.86315137233548
+      ],
+      "model_chin_after_transform_reference_pixels": [
+        1084.9778015147645,
+        111.00000000000001
+      ],
+      "actual_render_camera_record": {
+        "yaw_deg": 20,
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-front-registration-v19\\multi-view-model-yaw20.png",
+        "ortho_scale": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ],
+        "camera_matrix_world": [
+          [
+            0.9396926164627075,
+            -1.2067105537028056e-08,
+            0.3420202136039734,
+            0.6840403079986572
+          ],
+          [
+            0.3420202136039734,
+            7.59511209480479e-08,
+            -0.9396926164627075,
+            -1.879385232925415
+          ],
+          [
+            -1.4637449474719233e-08,
+            1.0,
+            7.549790126404332e-08,
+            1.5549999475479126
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "label": "YAW_BRACKET_20",
+      "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+      "reference_sha": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "reference_crop_original_pixels": [
+        990,
+        0,
+        1210,
+        190
+      ],
+      "reference_anchor_a": [
+        1085,
+        73.5
+      ],
+      "reference_anchor_b": [
+        1097,
+        111
+      ],
+      "reference_anchor_confidence": "medium-low: tiny original panel, manual+-2 source pixels; eye midpoint/visible pupil to chin",
+      "model_render": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-front-registration-v19\\multi-view-model-yaw20.png",
+      "model_render_sha": "7194e68cd4d96bcd4fcc024449dfa1b9dedf2f63914c3d5fc7b5d1664ca98a84",
+      "camera": {
+        "yaw_deg": 20,
+        "elevation_deg": 0,
+        "roll_deg": 0,
+        "ortho_scale_m": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ]
+      },
+      "model_anchor_a_pixels": [
+        409.12780412113034,
+        470.8746757507323
+      ],
+      "model_anchor_b_pixels": [
+        409.043619452761,
+        613.0882110595702
+      ],
+      "model_to_reference_transform": {
+        "isotropic_scale": 0.26368798102489444,
+        "translation_pixels": [
+          977.1179153501506,
+          -50.66399256446242
+        ],
+        "rotation_deg": 0,
+        "anisotropic_warp": false
+      },
+      "display_crop_scale": 1.9894736842105263,
+      "normalized_dimension": "visible pupil/eye-midpoint to geometric chin VERTICAL height",
+      "remaining_dimensions": "Horizontal silhouette width, nose/lip projection, hair volume and lateral arc are NOT normalized; reference roll/pitch remains unmatched.",
+      "notes": "Same reference anchors and vertical scale basis; no independent eye/face reshaping.",
+      "model_mouth_after_transform_reference_pixels": [
+        1082.345767181185,
+        98.86315137233548
+      ],
+      "model_chin_after_transform_reference_pixels": [
+        1084.9778015147645,
+        111.00000000000001
+      ],
+      "actual_render_camera_record": {
+        "yaw_deg": 20,
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-front-registration-v19\\multi-view-model-yaw20.png",
+        "ortho_scale": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ],
+        "camera_matrix_world": [
+          [
+            0.9396926164627075,
+            -1.2067105537028056e-08,
+            0.3420202136039734,
+            0.6840403079986572
+          ],
+          [
+            0.3420202136039734,
+            7.59511209480479e-08,
+            -0.9396926164627075,
+            -1.879385232925415
+          ],
+          [
+            -1.4637449474719233e-08,
+            1.0,
+            7.549790126404332e-08,
+            1.5549999475479126
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "label": "YAW_BRACKET_35",
+      "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+      "reference_sha": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "reference_crop_original_pixels": [
+        990,
+        0,
+        1210,
+        190
+      ],
+      "reference_anchor_a": [
+        1085,
+        73.5
+      ],
+      "reference_anchor_b": [
+        1097,
+        111
+      ],
+      "reference_anchor_confidence": "medium-low: tiny original panel, manual+-2 source pixels; eye midpoint/visible pupil to chin",
+      "model_render": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-front-registration-v19\\multi-view-model-yaw35.png",
+      "model_render_sha": "5c6ca06491a0ffea82e7a1dbecb51b8984e8d76b7d13b80799db7139a7cd12b4",
+      "camera": {
+        "yaw_deg": 35,
+        "elevation_deg": 0,
+        "roll_deg": 0,
+        "ortho_scale_m": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ]
+      },
+      "model_anchor_a_pixels": [
+        383.31672209755664,
+        470.8746757507323
+      ],
+      "model_anchor_b_pixels": [
+        383.1345950699204,
+        613.0882110595702
+      ],
+      "model_to_reference_transform": {
+        "isotropic_scale": 0.26368798102489444,
+        "translation_pixels": [
+          983.9239874570147,
+          -50.66399256446242
+        ],
+        "rotation_deg": 0,
+        "anisotropic_warp": false
+      },
+      "display_crop_scale": 1.9894736842105263,
+      "normalized_dimension": "visible pupil/eye-midpoint to geometric chin VERTICAL height",
+      "remaining_dimensions": "Horizontal silhouette width, nose/lip projection, hair volume and lateral arc are NOT normalized; reference roll/pitch remains unmatched.",
+      "notes": "Same reference anchors and vertical scale basis; no independent eye/face reshaping.",
+      "model_mouth_after_transform_reference_pixels": [
+        1080.5194278966499,
+        98.86315137233548
+      ],
+      "model_chin_after_transform_reference_pixels": [
+        1084.9519752917925,
+        111.00000000000001
+      ],
+      "actual_render_camera_record": {
+        "yaw_deg": 35,
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-front-registration-v19\\multi-view-model-yaw35.png",
+        "ortho_scale": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ],
+        "camera_matrix_world": [
+          [
+            0.8191519379615784,
+            1.0991087862066706e-07,
+            0.5735766291618347,
+            1.1471529006958008
+          ],
+          [
+            0.5735766291618347,
+            -1.2192899134788604e-07,
+            -0.8191519379615784,
+            -1.6383041143417358
+          ],
+          [
+            -2.0098083197694905e-08,
+            1.0,
+            -1.6292068494294654e-07,
+            1.5549999475479126
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "label": "YAW_BRACKET_45",
+      "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+      "reference_sha": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "reference_crop_original_pixels": [
+        990,
+        0,
+        1210,
+        190
+      ],
+      "reference_anchor_a": [
+        1085,
+        73.5
+      ],
+      "reference_anchor_b": [
+        1097,
+        111
+      ],
+      "reference_anchor_confidence": "medium-low: tiny original panel, manual+-2 source pixels; eye midpoint/visible pupil to chin",
+      "model_render": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_left_hair.png",
+      "model_render_sha": "22b0f94f546310c4e3a6d965067b05548854bd5b52582cf673f1cf18403286a5",
+      "camera": {
+        "yaw_deg": 45,
+        "elevation_deg": 0,
+        "roll_deg": 0,
+        "ortho_scale_m": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ]
+      },
+      "model_anchor_a_pixels": [
+        368.4608436508637,
+        470.8746757507323
+      ],
+      "model_anchor_b_pixels": [
+        368.2199352062743,
+        613.0882110595702
+      ],
+      "model_to_reference_transform": {
+        "isotropic_scale": 0.26368798102489444,
+        "translation_pixels": [
+          987.8413040509745,
+          -50.66399256446242
+        ],
+        "rotation_deg": 0,
+        "anisotropic_warp": false
+      },
+      "display_crop_scale": 1.9894736842105263,
+      "normalized_dimension": "visible pupil/eye-midpoint to geometric chin VERTICAL height",
+      "remaining_dimensions": "Horizontal silhouette width, nose/lip projection, hair volume and lateral arc are NOT normalized; reference roll/pitch remains unmatched.",
+      "notes": "Same reference anchors and vertical scale basis; no independent eye/face reshaping.",
+      "model_mouth_after_transform_reference_pixels": [
+        1079.464592428802,
+        98.86315137233548
+      ],
+      "model_chin_after_transform_reference_pixels": [
+        1084.9364753386344,
+        111.00000000000001
+      ],
+      "actual_render_camera_record": {
+        "name": "close_left_hair",
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_left_hair.png",
+        "scale": 0.48,
+        "location": [
+          1.399999976158142,
+          -1.399999976158142,
+          1.5549999475479126
+        ],
+        "rotation": [
+          1.5707963705062866,
+          -3.8938612334504796e-08,
+          0.7853981256484985
+        ]
+      }
+    },
+    {
+      "label": "VISIBILITY_FRONT",
+      "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png",
+      "reference_sha": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+      "reference_crop_original_pixels": [
+        140,
+        55,
+        320,
+        220
+      ],
+      "reference_anchor_a": [
+        229.5,
+        140
+      ],
+      "reference_anchor_b": [
+        232,
+        185
+      ],
+      "reference_anchor_confidence": "medium-low: tiny original panel, manual+-2 source pixels; eye midpoint/visible pupil to chin",
+      "model_render": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_front_bald.png",
+      "model_render_sha": "5dce7781efd6878b1888d8c0c2a95f1ac4ecba48613dce5fa2930326300c1e50",
+      "camera": {
+        "yaw_deg": 0,
+        "elevation_deg": 0,
+        "roll_deg": 0,
+        "ortho_scale_m": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ]
+      },
+      "model_anchor_a_pixels": [
+        447.33083901802695,
+        470.8746757507323
+      ],
+      "model_anchor_b_pixels": [
+        447.38494929422933,
+        613.0882110595702
+      ],
+      "model_to_reference_transform": {
+        "isotropic_scale": 0.3164255772298733,
+        "translation_pixels": [
+          87.9530810509973,
+          -8.996791077354885
+        ],
+        "rotation_deg": 0,
+        "anisotropic_warp": false
+      },
+      "display_crop_scale": 2.290909090909091,
+      "normalized_dimension": "visible pupil/eye-midpoint to geometric chin VERTICAL height",
+      "remaining_dimensions": "Horizontal silhouette width, nose/lip projection, hair volume and lateral arc are NOT normalized; reference roll/pitch remains unmatched.",
+      "notes": "Eye-to-chin vertical normalization; hair occlusion and art roll remain. No direct crown-height claim.",
+      "model_mouth_after_transform_reference_pixels": [
+        229.5465522689938,
+        170.43578164680258
+      ],
+      "model_chin_after_transform_reference_pixels": [
+        229.5171218753814,
+        185.0
+      ],
+      "actual_render_camera_record": {
+        "name": "close_front_bald",
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_front_bald.png",
+        "scale": 0.48,
+        "location": [
+          0.0,
+          -2.0,
+          1.5549999475479126
+        ],
+        "rotation": [
+          1.5707964897155762,
+          -0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "label": "VISIBILITY_PROFILE",
+      "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png",
+      "reference_sha": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+      "reference_crop_original_pixels": [
+        495,
+        55,
+        675,
+        220
+      ],
+      "reference_anchor_a": [
+        552,
+        135
+      ],
+      "reference_anchor_b": [
+        545,
+        181
+      ],
+      "reference_anchor_confidence": "medium-low: tiny original panel, manual+-2 source pixels; eye midpoint/visible pupil to chin",
+      "model_render": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_profile_bald.png",
+      "model_render_sha": "595db6829838ae4fdb989cd19e11fb7f1dada7af34d2d9a205a9f53a030662b2",
+      "camera": {
+        "yaw_deg": 90,
+        "elevation_deg": 0,
+        "roll_deg": 0,
+        "ortho_scale_m": 0.48,
+        "target": [
+          0,
+          0,
+          1.555
+        ],
+        "resolution": [
+          896,
+          896
+        ]
+      },
+      "model_anchor_a_pixels": [
+        336.1838073333104,
+        470.8746757507323
+      ],
+      "model_anchor_b_pixels": [
+        335.78900106747943,
+        613.0882110595702
+      ],
+      "model_to_reference_transform": {
+        "isotropic_scale": 0.3234572567238705,
+        "translation_pixels": [
+          443.2589079249812,
+          -17.30783087907389
+        ],
+        "rotation_deg": 0,
+        "anisotropic_warp": false
+      },
+      "display_crop_scale": 2.290909090909091,
+      "normalized_dimension": "visible pupil/eye-midpoint to geometric chin VERTICAL height",
+      "remaining_dimensions": "Horizontal silhouette width, nose/lip projection, hair volume and lateral arc are NOT normalized; reference roll/pitch remains unmatched.",
+      "notes": "Actual left-profile guide: eye-to-chin normalized; nose/lip/chin and rear-skull depth remain unwarped.",
+      "model_mouth_after_transform_reference_pixels": [
+        542.3497617913199,
+        166.11213235006485
+      ],
+      "model_chin_after_transform_reference_pixels": [
+        551.8722970483169,
+        181.0
+      ],
+      "actual_render_camera_record": {
+        "name": "close_profile_bald",
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\fresh-review\\close_profile_bald.png",
+        "scale": 0.48,
+        "location": [
+          2.0,
+          0.0,
+          1.5549999475479126
+        ],
+        "rotation": [
+          1.5707963705062866,
+          -0.0,
+          1.5707963705062866
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Top v22 heads are low resolution; manual anchors+-2px matter.",
+    "Eye-to-chin height is normalized and cannot independently be scored for length. Root detailed front pupil-distance registration is separate.",
+    "Back nape is hair-occluded; approximate anchor makes back row low confidence.",
+    "Bare visibility supplement contains short-hair reference crown; do not infer bare skull height from that contour.",
+    "Existing source lighting is unchanged; figure does not validate albedo/diffuse/specular maps."
+  ],
+  "figures": [
+    "multi-view-registered-comparison.png",
+    "multi-view-yaw-bracket.png",
+    "multi-view-visibility-supplement.png"
+  ],
+  "review_observations": [
+    "At eye-to-chin-height normalization, model visible eye aperture/iris and spacing do not reproduce v22/v06 stylized eyes; this is not equivalent to proving whole face too wide.",
+    "Visibility-guide profile shows a different nose/lip/chin contour and lateral head/ear relation. Crown comparison remains confounded by short hair on reference.",
+    "Back hair mass/knot/strand organization differs visibly. Nape anchor is hidden and low confidence; do not use this row as a skull-height fit.",
+    "v22 top3Q face reads closer to frontal than strict45deg.20deg is a candidate only;35/45 bracket makes sensitivity visible.",
+    "No art pass or geometry change results from this diagnostic."
+  ],
+  "source_native_sha_after_composition": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d"
+}
