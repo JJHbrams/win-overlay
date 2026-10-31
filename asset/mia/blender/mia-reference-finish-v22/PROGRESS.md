@@ -1,5 +1,9 @@
 # Current v22 handoff — WIP4
 
+## Active user correction — face-feedback-7
+
+WIP4 remains the live native, but the user explicitly rejects its cheek/jaw and eye likeness. New contract: face-feedback-7/ACCEPTANCE.md. Face6 protected the eyelid rims and only narrowed a limited lower-cheek band; it did not finish jaw/chin or eye contour. One producer owns a fresh finish-7 derivative from immutable Face6; root owns integration. Correct actual cheek/jaw/chin and coordinated lid/orbit/lash geometry before new makeup. Front, both obliques, profile, neutral matte and limited actual expressions are required. Keep Body14/Hair0d and no final rig/garments. Do not resume historical body/hair tasks ahead of this feedback.
+
 Read WORKING_PROTOCOL.md, CURRENT_STATE.json, REFERENCE_INDEX.md and REFERENCE_REVIEW_GATE.md before resuming. Current user task remains continued source-faithful production, not heartbeat research.
 
 ## Actual current state
