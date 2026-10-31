@@ -19,7 +19,6 @@ sources = []
 sets = {
     'head-before-after': ['head_front', 'head_left', 'head_profile', 'head_back'],
     'face-shape-before-after': ['clay_face_front', 'clay_face_left', 'clay_face_right', 'clay_face_profile'],
-    'body-before-after': ['clay_body_front', 'clay_body_three_quarter', 'clay_body_profile', 'clay_body_back'],
 }
 for title, names in sets.items():
     sheet = Image.new('RGB', (1600, 948), '#20262b')

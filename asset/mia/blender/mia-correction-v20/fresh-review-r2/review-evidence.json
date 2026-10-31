@@ -1,0 +1,4167 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-correction-v20\\integrated-r2\\Mia_Corrected_v20.blend",
+  "source_sha256_before": "c02b8ad73b86b278f2768e61eff019be223a8828bd92df62ce0ab7cb60f56936",
+  "source_sha256_after": "c02b8ad73b86b278f2768e61eff019be223a8828bd92df62ce0ab7cb60f56936",
+  "native_saved": false,
+  "renders": [
+    {
+      "name": "head_front",
+      "yaw": 0,
+      "elevation": 0,
+      "ortho_scale": 0.48,
+      "target_z": 1.555,
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "unchanged production emission-toon; area lights do not define its synthetic shadow",
+      "lights": [
+        {
+          "name": "HeadKey",
+          "type": "AREA",
+          "energy": 380.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7966912388801575,
+              -0.18207302689552307,
+              0.5763093829154968,
+              2.200000047683716
+            ],
+            [
+              0.604386568069458,
+              0.24000532925128937,
+              -0.759680449962616,
+              -2.9000000953674316
+            ],
+            [
+              -1.4205276954726287e-08,
+              0.9535443782806396,
+              0.3012526333332062,
+              2.700000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadFill",
+          "type": "AREA",
+          "energy": 150.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7399399876594543,
+              0.10066337138414383,
+              -0.665098249912262,
+              -2.0
+            ],
+            [
+              -0.6726729273796082,
+              0.11072980612516403,
+              -0.7316078543663025,
+              -2.200000047683716
+            ],
+            [
+              8.547876007014565e-08,
+              0.9887394905090332,
+              0.14964692294597626,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadRim",
+          "type": "AREA",
+          "energy": 220.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.2999999523162842,
+          "matrix": [
+            [
+              -1.0,
+              -4.849331602940765e-08,
+              -1.0991847432251234e-07,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -0.3338472545146942,
+              0.9426271915435791,
+              2.4000000953674316
+            ],
+            [
+              -8.240709803430946e-08,
+              0.9426271915435791,
+              0.3338472545146942,
+              2.4000000953674316
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "MIA_ANATOMY_WORLD",
+      "color_management": [
+        "Standard",
+        "Medium High Contrast",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "head_profile",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 0.48,
+      "target_z": 1.555,
+      "camera_matrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -1.2246468525851679e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "unchanged production emission-toon; area lights do not define its synthetic shadow",
+      "lights": [
+        {
+          "name": "HeadKey",
+          "type": "AREA",
+          "energy": 380.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7966912388801575,
+              -0.18207302689552307,
+              0.5763093829154968,
+              2.200000047683716
+            ],
+            [
+              0.604386568069458,
+              0.24000532925128937,
+              -0.759680449962616,
+              -2.9000000953674316
+            ],
+            [
+              -1.4205276954726287e-08,
+              0.9535443782806396,
+              0.3012526333332062,
+              2.700000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadFill",
+          "type": "AREA",
+          "energy": 150.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7399399876594543,
+              0.10066337138414383,
+              -0.665098249912262,
+              -2.0
+            ],
+            [
+              -0.6726729273796082,
+              0.11072980612516403,
+              -0.7316078543663025,
+              -2.200000047683716
+            ],
+            [
+              8.547876007014565e-08,
+              0.9887394905090332,
+              0.14964692294597626,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadRim",
+          "type": "AREA",
+          "energy": 220.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.2999999523162842,
+          "matrix": [
+            [
+              -1.0,
+              -4.849331602940765e-08,
+              -1.0991847432251234e-07,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -0.3338472545146942,
+              0.9426271915435791,
+              2.4000000953674316
+            ],
+            [
+              -8.240709803430946e-08,
+              0.9426271915435791,
+              0.3338472545146942,
+              2.4000000953674316
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "MIA_ANATOMY_WORLD",
+      "color_management": [
+        "Standard",
+        "Medium High Contrast",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "head_back",
+      "yaw": 180,
+      "elevation": 0,
+      "ortho_scale": 0.48,
+      "target_z": 1.555,
+      "camera_matrix": [
+        [
+          -1.0,
+          1.5099580252808664e-07,
+          -1.1399865765455465e-14,
+          2.4492937051703357e-16
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.5099580252808664e-07,
+          1.0,
+          -7.549790126404332e-08,
+          1.5549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "unchanged production emission-toon; area lights do not define its synthetic shadow",
+      "lights": [
+        {
+          "name": "HeadKey",
+          "type": "AREA",
+          "energy": 380.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7966912388801575,
+              -0.18207302689552307,
+              0.5763093829154968,
+              2.200000047683716
+            ],
+            [
+              0.604386568069458,
+              0.24000532925128937,
+              -0.759680449962616,
+              -2.9000000953674316
+            ],
+            [
+              -1.4205276954726287e-08,
+              0.9535443782806396,
+              0.3012526333332062,
+              2.700000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadFill",
+          "type": "AREA",
+          "energy": 150.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7399399876594543,
+              0.10066337138414383,
+              -0.665098249912262,
+              -2.0
+            ],
+            [
+              -0.6726729273796082,
+              0.11072980612516403,
+              -0.7316078543663025,
+              -2.200000047683716
+            ],
+            [
+              8.547876007014565e-08,
+              0.9887394905090332,
+              0.14964692294597626,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadRim",
+          "type": "AREA",
+          "energy": 220.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.2999999523162842,
+          "matrix": [
+            [
+              -1.0,
+              -4.849331602940765e-08,
+              -1.0991847432251234e-07,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -0.3338472545146942,
+              0.9426271915435791,
+              2.4000000953674316
+            ],
+            [
+              -8.240709803430946e-08,
+              0.9426271915435791,
+              0.3338472545146942,
+              2.4000000953674316
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "MIA_ANATOMY_WORLD",
+      "color_management": [
+        "Standard",
+        "Medium High Contrast",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "head_left",
+      "yaw": 45,
+      "elevation": 0,
+      "ortho_scale": 0.48,
+      "target_z": 1.555,
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          1.4142135381698608
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "unchanged production emission-toon; area lights do not define its synthetic shadow",
+      "lights": [
+        {
+          "name": "HeadKey",
+          "type": "AREA",
+          "energy": 380.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7966912388801575,
+              -0.18207302689552307,
+              0.5763093829154968,
+              2.200000047683716
+            ],
+            [
+              0.604386568069458,
+              0.24000532925128937,
+              -0.759680449962616,
+              -2.9000000953674316
+            ],
+            [
+              -1.4205276954726287e-08,
+              0.9535443782806396,
+              0.3012526333332062,
+              2.700000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadFill",
+          "type": "AREA",
+          "energy": 150.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7399399876594543,
+              0.10066337138414383,
+              -0.665098249912262,
+              -2.0
+            ],
+            [
+              -0.6726729273796082,
+              0.11072980612516403,
+              -0.7316078543663025,
+              -2.200000047683716
+            ],
+            [
+              8.547876007014565e-08,
+              0.9887394905090332,
+              0.14964692294597626,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadRim",
+          "type": "AREA",
+          "energy": 220.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.2999999523162842,
+          "matrix": [
+            [
+              -1.0,
+              -4.849331602940765e-08,
+              -1.0991847432251234e-07,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -0.3338472545146942,
+              0.9426271915435791,
+              2.4000000953674316
+            ],
+            [
+              -8.240709803430946e-08,
+              0.9426271915435791,
+              0.3338472545146942,
+              2.4000000953674316
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "MIA_ANATOMY_WORLD",
+      "color_management": [
+        "Standard",
+        "Medium High Contrast",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "head_right",
+      "yaw": -45,
+      "elevation": 0,
+      "ortho_scale": 0.48,
+      "target_z": 1.555,
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          7.450235983696984e-08,
+          -0.7071067690849304,
+          -1.4142135381698608
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          -1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "unchanged production emission-toon; area lights do not define its synthetic shadow",
+      "lights": [
+        {
+          "name": "HeadKey",
+          "type": "AREA",
+          "energy": 380.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7966912388801575,
+              -0.18207302689552307,
+              0.5763093829154968,
+              2.200000047683716
+            ],
+            [
+              0.604386568069458,
+              0.24000532925128937,
+              -0.759680449962616,
+              -2.9000000953674316
+            ],
+            [
+              -1.4205276954726287e-08,
+              0.9535443782806396,
+              0.3012526333332062,
+              2.700000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadFill",
+          "type": "AREA",
+          "energy": 150.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7399399876594543,
+              0.10066337138414383,
+              -0.665098249912262,
+              -2.0
+            ],
+            [
+              -0.6726729273796082,
+              0.11072980612516403,
+              -0.7316078543663025,
+              -2.200000047683716
+            ],
+            [
+              8.547876007014565e-08,
+              0.9887394905090332,
+              0.14964692294597626,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadRim",
+          "type": "AREA",
+          "energy": 220.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.2999999523162842,
+          "matrix": [
+            [
+              -1.0,
+              -4.849331602940765e-08,
+              -1.0991847432251234e-07,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -0.3338472545146942,
+              0.9426271915435791,
+              2.4000000953674316
+            ],
+            [
+              -8.240709803430946e-08,
+              0.9426271915435791,
+              0.3338472545146942,
+              2.4000000953674316
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "MIA_ANATOMY_WORLD",
+      "color_management": [
+        "Standard",
+        "Medium High Contrast",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "face_front",
+      "yaw": 0,
+      "elevation": 0,
+      "ortho_scale": 0.29,
+      "target_z": 1.55,
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "unchanged production emission-toon; area lights do not define its synthetic shadow",
+      "lights": [
+        {
+          "name": "HeadKey",
+          "type": "AREA",
+          "energy": 380.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7966912388801575,
+              -0.18207302689552307,
+              0.5763093829154968,
+              2.200000047683716
+            ],
+            [
+              0.604386568069458,
+              0.24000532925128937,
+              -0.759680449962616,
+              -2.9000000953674316
+            ],
+            [
+              -1.4205276954726287e-08,
+              0.9535443782806396,
+              0.3012526333332062,
+              2.700000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadFill",
+          "type": "AREA",
+          "energy": 150.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7399399876594543,
+              0.10066337138414383,
+              -0.665098249912262,
+              -2.0
+            ],
+            [
+              -0.6726729273796082,
+              0.11072980612516403,
+              -0.7316078543663025,
+              -2.200000047683716
+            ],
+            [
+              8.547876007014565e-08,
+              0.9887394905090332,
+              0.14964692294597626,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadRim",
+          "type": "AREA",
+          "energy": 220.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.2999999523162842,
+          "matrix": [
+            [
+              -1.0,
+              -4.849331602940765e-08,
+              -1.0991847432251234e-07,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -0.3338472545146942,
+              0.9426271915435791,
+              2.4000000953674316
+            ],
+            [
+              -8.240709803430946e-08,
+              0.9426271915435791,
+              0.3338472545146942,
+              2.4000000953674316
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "MIA_ANATOMY_WORLD",
+      "color_management": [
+        "Standard",
+        "Medium High Contrast",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "face_profile",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 0.29,
+      "target_z": 1.55,
+      "camera_matrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -1.2246468525851679e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "unchanged production emission-toon; area lights do not define its synthetic shadow",
+      "lights": [
+        {
+          "name": "HeadKey",
+          "type": "AREA",
+          "energy": 380.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7966912388801575,
+              -0.18207302689552307,
+              0.5763093829154968,
+              2.200000047683716
+            ],
+            [
+              0.604386568069458,
+              0.24000532925128937,
+              -0.759680449962616,
+              -2.9000000953674316
+            ],
+            [
+              -1.4205276954726287e-08,
+              0.9535443782806396,
+              0.3012526333332062,
+              2.700000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadFill",
+          "type": "AREA",
+          "energy": 150.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7399399876594543,
+              0.10066337138414383,
+              -0.665098249912262,
+              -2.0
+            ],
+            [
+              -0.6726729273796082,
+              0.11072980612516403,
+              -0.7316078543663025,
+              -2.200000047683716
+            ],
+            [
+              8.547876007014565e-08,
+              0.9887394905090332,
+              0.14964692294597626,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadRim",
+          "type": "AREA",
+          "energy": 220.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.2999999523162842,
+          "matrix": [
+            [
+              -1.0,
+              -4.849331602940765e-08,
+              -1.0991847432251234e-07,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -0.3338472545146942,
+              0.9426271915435791,
+              2.4000000953674316
+            ],
+            [
+              -8.240709803430946e-08,
+              0.9426271915435791,
+              0.3338472545146942,
+              2.4000000953674316
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "MIA_ANATOMY_WORLD",
+      "color_management": [
+        "Standard",
+        "Medium High Contrast",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "face_left",
+      "yaw": 45,
+      "elevation": 0,
+      "ortho_scale": 0.29,
+      "target_z": 1.55,
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          1.4142135381698608
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "unchanged production emission-toon; area lights do not define its synthetic shadow",
+      "lights": [
+        {
+          "name": "HeadKey",
+          "type": "AREA",
+          "energy": 380.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7966912388801575,
+              -0.18207302689552307,
+              0.5763093829154968,
+              2.200000047683716
+            ],
+            [
+              0.604386568069458,
+              0.24000532925128937,
+              -0.759680449962616,
+              -2.9000000953674316
+            ],
+            [
+              -1.4205276954726287e-08,
+              0.9535443782806396,
+              0.3012526333332062,
+              2.700000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadFill",
+          "type": "AREA",
+          "energy": 150.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7399399876594543,
+              0.10066337138414383,
+              -0.665098249912262,
+              -2.0
+            ],
+            [
+              -0.6726729273796082,
+              0.11072980612516403,
+              -0.7316078543663025,
+              -2.200000047683716
+            ],
+            [
+              8.547876007014565e-08,
+              0.9887394905090332,
+              0.14964692294597626,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadRim",
+          "type": "AREA",
+          "energy": 220.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.2999999523162842,
+          "matrix": [
+            [
+              -1.0,
+              -4.849331602940765e-08,
+              -1.0991847432251234e-07,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -0.3338472545146942,
+              0.9426271915435791,
+              2.4000000953674316
+            ],
+            [
+              -8.240709803430946e-08,
+              0.9426271915435791,
+              0.3338472545146942,
+              2.4000000953674316
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "MIA_ANATOMY_WORLD",
+      "color_management": [
+        "Standard",
+        "Medium High Contrast",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "face_right",
+      "yaw": -45,
+      "elevation": 0,
+      "ortho_scale": 0.29,
+      "target_z": 1.55,
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          7.450235983696984e-08,
+          -0.7071067690849304,
+          -1.4142135381698608
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          -1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "unchanged production emission-toon; area lights do not define its synthetic shadow",
+      "lights": [
+        {
+          "name": "HeadKey",
+          "type": "AREA",
+          "energy": 380.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7966912388801575,
+              -0.18207302689552307,
+              0.5763093829154968,
+              2.200000047683716
+            ],
+            [
+              0.604386568069458,
+              0.24000532925128937,
+              -0.759680449962616,
+              -2.9000000953674316
+            ],
+            [
+              -1.4205276954726287e-08,
+              0.9535443782806396,
+              0.3012526333332062,
+              2.700000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadFill",
+          "type": "AREA",
+          "energy": 150.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7399399876594543,
+              0.10066337138414383,
+              -0.665098249912262,
+              -2.0
+            ],
+            [
+              -0.6726729273796082,
+              0.11072980612516403,
+              -0.7316078543663025,
+              -2.200000047683716
+            ],
+            [
+              8.547876007014565e-08,
+              0.9887394905090332,
+              0.14964692294597626,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "HeadRim",
+          "type": "AREA",
+          "energy": 220.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.2999999523162842,
+          "matrix": [
+            [
+              -1.0,
+              -4.849331602940765e-08,
+              -1.0991847432251234e-07,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -0.3338472545146942,
+              0.9426271915435791,
+              2.4000000953674316
+            ],
+            [
+              -8.240709803430946e-08,
+              0.9426271915435791,
+              0.3338472545146942,
+              2.4000000953674316
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "MIA_ANATOMY_WORLD",
+      "color_management": [
+        "Standard",
+        "Medium High Contrast",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "clay_face_front",
+      "yaw": 0,
+      "elevation": 0,
+      "ortho_scale": 0.29,
+      "target_z": 1.55,
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "18% neutral diffuse diagnostic; fixed white area rig, Standard/None, world strength 0.1",
+      "lights": [
+        {
+          "name": "V20_Key",
+          "type": "AREA",
+          "energy": 60.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.0,
+          "matrix": [
+            [
+              0.8574929237365723,
+              0.24901016056537628,
+              -0.450221985578537,
+              -0.6000000238418579
+            ],
+            [
+              -0.5144957900047302,
+              0.41501688957214355,
+              -0.7503699660301208,
+              -1.0
+            ],
+            [
+              -2.2522955944737078e-08,
+              0.8750742673873901,
+              0.4839887022972107,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Fill",
+          "type": "AREA",
+          "energy": 15.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.5,
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1496560424566269,
+              0.6910884380340576,
+              0.800000011920929
+            ],
+            [
+              0.70710688829422,
+              0.14965595304965973,
+              -0.6910882592201233,
+              -0.800000011920929
+            ],
+            [
+              3.5808287890404245e-08,
+              0.9773464798927307,
+              0.21164554357528687,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Edge",
+          "type": "AREA",
+          "energy": 8.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 0.800000011920929,
+          "matrix": [
+            [
+              -1.0,
+              -1.3988690739097365e-07,
+              9.538936751596339e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.48191866278648376,
+              0.876215934753418,
+              0.8999999761581421
+            ],
+            [
+              -7.660122491870425e-08,
+              0.876215934753418,
+              0.48191866278648376,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "V20_InspectionWorld",
+      "color_management": [
+        "Standard",
+        "None",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "clay_face_left",
+      "yaw": 45,
+      "elevation": 0,
+      "ortho_scale": 0.29,
+      "target_z": 1.55,
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          1.4142135381698608
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "18% neutral diffuse diagnostic; fixed white area rig, Standard/None, world strength 0.1",
+      "lights": [
+        {
+          "name": "V20_Key",
+          "type": "AREA",
+          "energy": 60.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.0,
+          "matrix": [
+            [
+              0.8574929237365723,
+              0.24901016056537628,
+              -0.450221985578537,
+              -0.6000000238418579
+            ],
+            [
+              -0.5144957900047302,
+              0.41501688957214355,
+              -0.7503699660301208,
+              -1.0
+            ],
+            [
+              -2.2522955944737078e-08,
+              0.8750742673873901,
+              0.4839887022972107,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Fill",
+          "type": "AREA",
+          "energy": 15.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.5,
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1496560424566269,
+              0.6910884380340576,
+              0.800000011920929
+            ],
+            [
+              0.70710688829422,
+              0.14965595304965973,
+              -0.6910882592201233,
+              -0.800000011920929
+            ],
+            [
+              3.5808287890404245e-08,
+              0.9773464798927307,
+              0.21164554357528687,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Edge",
+          "type": "AREA",
+          "energy": 8.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 0.800000011920929,
+          "matrix": [
+            [
+              -1.0,
+              -1.3988690739097365e-07,
+              9.538936751596339e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.48191866278648376,
+              0.876215934753418,
+              0.8999999761581421
+            ],
+            [
+              -7.660122491870425e-08,
+              0.876215934753418,
+              0.48191866278648376,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "V20_InspectionWorld",
+      "color_management": [
+        "Standard",
+        "None",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "clay_face_right",
+      "yaw": -45,
+      "elevation": 0,
+      "ortho_scale": 0.29,
+      "target_z": 1.55,
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          7.450235983696984e-08,
+          -0.7071067690849304,
+          -1.4142135381698608
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          -1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "18% neutral diffuse diagnostic; fixed white area rig, Standard/None, world strength 0.1",
+      "lights": [
+        {
+          "name": "V20_Key",
+          "type": "AREA",
+          "energy": 60.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.0,
+          "matrix": [
+            [
+              0.8574929237365723,
+              0.24901016056537628,
+              -0.450221985578537,
+              -0.6000000238418579
+            ],
+            [
+              -0.5144957900047302,
+              0.41501688957214355,
+              -0.7503699660301208,
+              -1.0
+            ],
+            [
+              -2.2522955944737078e-08,
+              0.8750742673873901,
+              0.4839887022972107,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Fill",
+          "type": "AREA",
+          "energy": 15.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.5,
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1496560424566269,
+              0.6910884380340576,
+              0.800000011920929
+            ],
+            [
+              0.70710688829422,
+              0.14965595304965973,
+              -0.6910882592201233,
+              -0.800000011920929
+            ],
+            [
+              3.5808287890404245e-08,
+              0.9773464798927307,
+              0.21164554357528687,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Edge",
+          "type": "AREA",
+          "energy": 8.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 0.800000011920929,
+          "matrix": [
+            [
+              -1.0,
+              -1.3988690739097365e-07,
+              9.538936751596339e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.48191866278648376,
+              0.876215934753418,
+              0.8999999761581421
+            ],
+            [
+              -7.660122491870425e-08,
+              0.876215934753418,
+              0.48191866278648376,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "V20_InspectionWorld",
+      "color_management": [
+        "Standard",
+        "None",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "clay_face_profile",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 0.29,
+      "target_z": 1.55,
+      "camera_matrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -1.2246468525851679e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "18% neutral diffuse diagnostic; fixed white area rig, Standard/None, world strength 0.1",
+      "lights": [
+        {
+          "name": "V20_Key",
+          "type": "AREA",
+          "energy": 60.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.0,
+          "matrix": [
+            [
+              0.8574929237365723,
+              0.24901016056537628,
+              -0.450221985578537,
+              -0.6000000238418579
+            ],
+            [
+              -0.5144957900047302,
+              0.41501688957214355,
+              -0.7503699660301208,
+              -1.0
+            ],
+            [
+              -2.2522955944737078e-08,
+              0.8750742673873901,
+              0.4839887022972107,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Fill",
+          "type": "AREA",
+          "energy": 15.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.5,
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1496560424566269,
+              0.6910884380340576,
+              0.800000011920929
+            ],
+            [
+              0.70710688829422,
+              0.14965595304965973,
+              -0.6910882592201233,
+              -0.800000011920929
+            ],
+            [
+              3.5808287890404245e-08,
+              0.9773464798927307,
+              0.21164554357528687,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Edge",
+          "type": "AREA",
+          "energy": 8.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 0.800000011920929,
+          "matrix": [
+            [
+              -1.0,
+              -1.3988690739097365e-07,
+              9.538936751596339e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.48191866278648376,
+              0.876215934753418,
+              0.8999999761581421
+            ],
+            [
+              -7.660122491870425e-08,
+              0.876215934753418,
+              0.48191866278648376,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "V20_InspectionWorld",
+      "color_management": [
+        "Standard",
+        "None",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "clay_hair_back",
+      "yaw": 180,
+      "elevation": 0,
+      "ortho_scale": 0.64,
+      "target_z": 1.46,
+      "camera_matrix": [
+        [
+          -1.0,
+          1.5099580252808664e-07,
+          -1.1399865765455465e-14,
+          2.4492937051703357e-16
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.5099580252808664e-07,
+          1.0,
+          -7.549790126404332e-08,
+          1.4600000381469727
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "18% neutral diffuse diagnostic; fixed white area rig, Standard/None, world strength 0.1",
+      "lights": [
+        {
+          "name": "V20_Key",
+          "type": "AREA",
+          "energy": 60.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.0,
+          "matrix": [
+            [
+              0.8574929237365723,
+              0.24901016056537628,
+              -0.450221985578537,
+              -0.6000000238418579
+            ],
+            [
+              -0.5144957900047302,
+              0.41501688957214355,
+              -0.7503699660301208,
+              -1.0
+            ],
+            [
+              -2.2522955944737078e-08,
+              0.8750742673873901,
+              0.4839887022972107,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Fill",
+          "type": "AREA",
+          "energy": 15.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.5,
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1496560424566269,
+              0.6910884380340576,
+              0.800000011920929
+            ],
+            [
+              0.70710688829422,
+              0.14965595304965973,
+              -0.6910882592201233,
+              -0.800000011920929
+            ],
+            [
+              3.5808287890404245e-08,
+              0.9773464798927307,
+              0.21164554357528687,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Edge",
+          "type": "AREA",
+          "energy": 8.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 0.800000011920929,
+          "matrix": [
+            [
+              -1.0,
+              -1.3988690739097365e-07,
+              9.538936751596339e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.48191866278648376,
+              0.876215934753418,
+              0.8999999761581421
+            ],
+            [
+              -7.660122491870425e-08,
+              0.876215934753418,
+              0.48191866278648376,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "V20_InspectionWorld",
+      "color_management": [
+        "Standard",
+        "None",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "clay_hair_profile",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 0.64,
+      "target_z": 1.46,
+      "camera_matrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -1.2246468525851679e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.4600000381469727
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        896,
+        896
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "18% neutral diffuse diagnostic; fixed white area rig, Standard/None, world strength 0.1",
+      "lights": [
+        {
+          "name": "V20_Key",
+          "type": "AREA",
+          "energy": 60.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.0,
+          "matrix": [
+            [
+              0.8574929237365723,
+              0.24901016056537628,
+              -0.450221985578537,
+              -0.6000000238418579
+            ],
+            [
+              -0.5144957900047302,
+              0.41501688957214355,
+              -0.7503699660301208,
+              -1.0
+            ],
+            [
+              -2.2522955944737078e-08,
+              0.8750742673873901,
+              0.4839887022972107,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Fill",
+          "type": "AREA",
+          "energy": 15.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.5,
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1496560424566269,
+              0.6910884380340576,
+              0.800000011920929
+            ],
+            [
+              0.70710688829422,
+              0.14965595304965973,
+              -0.6910882592201233,
+              -0.800000011920929
+            ],
+            [
+              3.5808287890404245e-08,
+              0.9773464798927307,
+              0.21164554357528687,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Edge",
+          "type": "AREA",
+          "energy": 8.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 0.800000011920929,
+          "matrix": [
+            [
+              -1.0,
+              -1.3988690739097365e-07,
+              9.538936751596339e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.48191866278648376,
+              0.876215934753418,
+              0.8999999761581421
+            ],
+            [
+              -7.660122491870425e-08,
+              0.876215934753418,
+              0.48191866278648376,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "V20_InspectionWorld",
+      "color_management": [
+        "Standard",
+        "None",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "clay_body_front",
+      "yaw": 0,
+      "elevation": 0,
+      "ortho_scale": 1.8894209113,
+      "target_z": 0.8397017428,
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          0.839701771736145
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        1024,
+        1024
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "18% neutral diffuse diagnostic; fixed white area rig, Standard/None, world strength 0.1",
+      "lights": [
+        {
+          "name": "V20_Key",
+          "type": "AREA",
+          "energy": 200.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.8574929237365723,
+              0.2139788269996643,
+              -0.4678876996040344,
+              -1.7999999523162842
+            ],
+            [
+              -0.5144957304000854,
+              0.35663142800331116,
+              -0.7798129320144653,
+              -3.0
+            ],
+            [
+              1.1749065720323415e-08,
+              0.909410297870636,
+              0.4159001410007477,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Fill",
+          "type": "AREA",
+          "energy": 70.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1924501210451126,
+              0.6804139018058777,
+              2.0
+            ],
+            [
+              0.70710688829422,
+              0.19244994223117828,
+              -0.6804137825965881,
+              -2.0
+            ],
+            [
+              9.685066260090025e-08,
+              0.9622504711151123,
+              0.272165447473526,
+              1.7000000476837158
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Edge",
+          "type": "AREA",
+          "energy": 30.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.7999999523162842,
+          "matrix": [
+            [
+              -1.0,
+              -1.4526339953135903e-07,
+              8.26294765943203e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.5734623670578003,
+              0.8192318677902222,
+              2.0
+            ],
+            [
+              -7.161951742773454e-08,
+              0.8192318677902222,
+              0.5734623670578003,
+              2.299999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "V20_InspectionWorld",
+      "color_management": [
+        "Standard",
+        "None",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "clay_body_profile",
+      "yaw": 90,
+      "elevation": 0,
+      "ortho_scale": 1.8894209113,
+      "target_z": 0.8397017428,
+      "camera_matrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -1.2246468525851679e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.839701771736145
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        1024,
+        1024
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "18% neutral diffuse diagnostic; fixed white area rig, Standard/None, world strength 0.1",
+      "lights": [
+        {
+          "name": "V20_Key",
+          "type": "AREA",
+          "energy": 200.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.5144955515861511,
+              -0.35663142800331116,
+              0.7798129916191101,
+              3.0
+            ],
+            [
+              0.8574930429458618,
+              0.2139786332845688,
+              -0.46788763999938965,
+              -1.7999999523162842
+            ],
+            [
+              1.1898374907559628e-07,
+              0.9094103574752808,
+              0.41590002179145813,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Fill",
+          "type": "AREA",
+          "energy": 70.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              -0.7071067690849304,
+              -0.19244994223117828,
+              0.6804138422012329,
+              2.0
+            ],
+            [
+              0.7071067690849304,
+              -0.19244995713233948,
+              0.6804138422012329,
+              2.0
+            ],
+            [
+              2.247597219451336e-09,
+              0.9622505307197571,
+              0.27216532826423645,
+              1.7000000476837158
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Edge",
+          "type": "AREA",
+          "energy": 30.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.7999999523162842,
+          "matrix": [
+            [
+              -1.6292068494294654e-07,
+              0.5734623074531555,
+              -0.8192319273948669,
+              -2.0
+            ],
+            [
+              -1.0,
+              -9.469405171103062e-08,
+              1.325841907373615e-07,
+              1.2246468525851679e-16
+            ],
+            [
+              -1.5443468726061838e-09,
+              0.8192319273948669,
+              0.5734623074531555,
+              2.299999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "V20_InspectionWorld",
+      "color_management": [
+        "Standard",
+        "None",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "clay_body_back",
+      "yaw": 180,
+      "elevation": 0,
+      "ortho_scale": 1.8894209113,
+      "target_z": 0.8397017428,
+      "camera_matrix": [
+        [
+          -1.0,
+          1.5099580252808664e-07,
+          -1.1399865765455465e-14,
+          2.4492937051703357e-16
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.5099580252808664e-07,
+          1.0,
+          -7.549790126404332e-08,
+          0.839701771736145
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        1024,
+        1024
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "18% neutral diffuse diagnostic; fixed white area rig, Standard/None, world strength 0.1",
+      "lights": [
+        {
+          "name": "V20_Key",
+          "type": "AREA",
+          "energy": 200.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              -0.8574929237365723,
+              -0.2139788717031479,
+              0.4678877294063568,
+              1.7999999523162842
+            ],
+            [
+              0.5144957304000854,
+              -0.35663142800331116,
+              0.7798128724098206,
+              3.0
+            ],
+            [
+              -2.6170273059733518e-08,
+              0.909410297870636,
+              0.4159001410007477,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Fill",
+          "type": "AREA",
+          "energy": 70.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              -0.7071067690849304,
+              0.19244994223117828,
+              -0.6804138422012329,
+              -2.0
+            ],
+            [
+              -0.7071067690849304,
+              -0.19244995713233948,
+              0.6804138422012329,
+              2.0
+            ],
+            [
+              -2.247597219451336e-09,
+              0.9622505307197571,
+              0.27216532826423645,
+              1.7000000476837158
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Edge",
+          "type": "AREA",
+          "energy": 30.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.7999999523162842,
+          "matrix": [
+            [
+              1.0,
+              7.022887808539333e-17,
+              -1.0032698287365811e-16,
+              -2.4492937051703357e-16
+            ],
+            [
+              -1.2246468525851679e-16,
+              0.5734623074531555,
+              -0.8192319869995117,
+              -2.0
+            ],
+            [
+              -2.3129942110800143e-24,
+              0.8192319869995117,
+              0.5734623074531555,
+              2.299999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "V20_InspectionWorld",
+      "color_management": [
+        "Standard",
+        "None",
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "clay_body_three_quarter",
+      "yaw": 45,
+      "elevation": 0,
+      "ortho_scale": 1.8894209113,
+      "target_z": 0.8397017428,
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          1.4142135381698608
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          0.839701771736145
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "lens_shift": [
+        0.0,
+        0.0
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "resolution": [
+        1024,
+        1024
+      ],
+      "frame": 1,
+      "active_shape_keys": {
+        "Mia_Face_AnimeTopology": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.41999998688697815,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.4000000059604645
+        },
+        "Face": {
+          "Basis": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0,
+          "MIA_V14_HoodCheekMouthCorrective": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.47999998927116394,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05000000074505806,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23000000417232513,
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0,
+          "MIA_V12_ReferenceFacialSculpt": 1.0,
+          "MIA_V13_LidJawRefinement": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_-1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_UpperLash_1": {
+          "Basis": 1.0
+        },
+        "MIA_V14_OuterWing_1": {
+          "Basis": 1.0
+        }
+      },
+      "material_mode": "18% neutral diffuse diagnostic; fixed white area rig, Standard/None, world strength 0.1",
+      "lights": [
+        {
+          "name": "V20_Key",
+          "type": "AREA",
+          "energy": 200.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              0.9701424837112427,
+              -0.10087060928344727,
+              0.22056439518928528,
+              0.8485281467437744
+            ],
+            [
+              0.24253562092781067,
+              0.40348249673843384,
+              -0.8822575211524963,
+              -3.3941125869750977
+            ],
+            [
+              -2.2726560189312295e-08,
+              0.9094102382659912,
+              0.41590026021003723,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Fill",
+          "type": "AREA",
+          "energy": 70.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 2.0,
+          "matrix": [
+            [
+              1.9470718370939721e-07,
+              -0.2721656560897827,
+              0.9622504115104675,
+              2.8284270763397217
+            ],
+            [
+              1.0,
+              4.8880122172079155e-09,
+              -2.0096311459383287e-07,
+              0.0
+            ],
+            [
+              4.999176894671109e-08,
+              0.9622504115104675,
+              0.2721656560897827,
+              1.7000000476837158
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "V20_Edge",
+          "type": "AREA",
+          "energy": 30.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "size": 1.7999999523162842,
+          "matrix": [
+            [
+              -0.7071069478988647,
+              0.4054989814758301,
+              -0.5792843103408813,
+              -1.4142135381698608
+            ],
+            [
+              -0.7071065902709961,
+              -0.40549910068511963,
+              0.57928466796875,
+              1.4142135381698608
+            ],
+            [
+              7.333481022442356e-08,
+              0.8192319869995117,
+              0.5734622478485107,
+              2.299999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "world": "V20_InspectionWorld",
+      "color_management": [
+        "Standard",
+        "None",
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "hair_visible_owners": [
+    "MIA_V17_LeftBraid_Tail",
+    "MIA_V17_LeftBraid_Lane2",
+    "MIA_V17_LeftBraid_Lane1",
+    "MIA_V17_LeftBraid_Lane0",
+    "MIA_V17_LeftBraid_Tie",
+    "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+    "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+    "MIA_V17_PIXAL_DetailedHair",
+    "MIA_V20_HalfUp_Fold_Left",
+    "MIA_V20_HalfUp_Fold_Right",
+    "MIA_V20_HalfUp_Binder",
+    "MIA_V20_Crown_PixalDonorLock"
+  ],
+  "body_light_mode": "camera-relative, same v19 whole-body diagnostic powers/sizes",
+  "head_light_mode": "fixed world neutral diagnostic rig",
+  "limits": "Actual fresh replay only. No image warping; no art or animation approval inferred."
+}

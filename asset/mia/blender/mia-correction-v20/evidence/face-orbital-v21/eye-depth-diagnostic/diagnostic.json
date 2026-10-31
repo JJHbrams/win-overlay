@@ -1,0 +1,1092 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-correction-v20\\frozen\\Mia_FaceCorrection_v20.blend",
+  "source_sha256": "6794a9b331b7c061e6d75ffc27e9f65d8d31e48971d3f82dd2e98be499b52ed0",
+  "source_sha_after": "6794a9b331b7c061e6d75ffc27e9f65d8d31e48971d3f82dd2e98be499b52ed0",
+  "no_native_saved": true,
+  "face_lids_lashes_geometry_and_keys_fixed": true,
+  "neutral_key_values": {
+    "Basis": 1.0,
+    "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+    "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+    "MIA_FaceArt_EyeProportion": 0.0,
+    "MIA_FaceArt_OwnedBrowPlacement": 0.0,
+    "MIA_V12_ReferenceFacialSculpt": 0.0,
+    "MIA_V13_LidJawRefinement": 0.0,
+    "MIA_V14_HoodCheekMouthCorrective": 0.0
+  },
+  "eye_structure": {
+    "object": "MIA_V14_EyeSurface",
+    "vertices": 436,
+    "polygons": 544,
+    "shape_keys": false,
+    "modifiers": [],
+    "material_regions": [
+      {
+        "slot": 0,
+        "material": "F00_000_00_FaceMouth_00_FACE.001",
+        "polygons": 0,
+        "vertices": 0,
+        "boundary_edges": 0,
+        "world_min": null,
+        "world_max": null,
+        "backface_culling": true
+      },
+      {
+        "slot": 1,
+        "material": "MIA_V16_Sclera_BackfaceCullingRestored",
+        "polygons": 96,
+        "vertices": 142,
+        "boundary_edges": 140,
+        "world_min": [
+          -0.05694395303726196,
+          -0.06514047086238861,
+          1.5313479900360107
+        ],
+        "world_max": [
+          0.05627141147851944,
+          -0.04708828032016754,
+          1.555689811706543
+        ],
+        "backface_culling": true
+      },
+      {
+        "slot": 2,
+        "material": "MIA_V12_ReplacedBrowCard",
+        "polygons": 0,
+        "vertices": 0,
+        "boundary_edges": 0,
+        "world_min": null,
+        "world_max": null,
+        "backface_culling": false
+      },
+      {
+        "slot": 3,
+        "material": "MIA_V12_ReplacedBrowCard",
+        "polygons": 0,
+        "vertices": 0,
+        "boundary_edges": 0,
+        "world_min": null,
+        "world_max": null,
+        "backface_culling": false
+      },
+      {
+        "slot": 4,
+        "material": "MIA_V12_ReplacedBrowCard",
+        "polygons": 0,
+        "vertices": 0,
+        "boundary_edges": 0,
+        "world_min": null,
+        "world_max": null,
+        "backface_culling": false
+      },
+      {
+        "slot": 5,
+        "material": "MIA_V18_Coordinated_GrayIris",
+        "polygons": 192,
+        "vertices": 122,
+        "boundary_edges": 48,
+        "world_min": [
+          -0.044691555202007294,
+          -0.06431536376476288,
+          1.5288280248641968
+        ],
+        "world_max": [
+          0.043899063020944595,
+          -0.05764450132846832,
+          1.5578938722610474
+        ],
+        "backface_culling": false
+      },
+      {
+        "slot": 6,
+        "material": "MIA_V17_LegacyEyeGlintsHidden",
+        "polygons": 192,
+        "vertices": 122,
+        "boundary_edges": 48,
+        "world_min": [
+          -0.04462902620434761,
+          -0.06399516016244888,
+          1.5288234949111938
+        ],
+        "world_max": [
+          0.043850578367710114,
+          -0.05767392739653587,
+          1.5578609704971313
+        ],
+        "backface_culling": false
+      },
+      {
+        "slot": 7,
+        "material": "MIA_V14_SourceSkinHidden",
+        "polygons": 0,
+        "vertices": 0,
+        "boundary_edges": 0,
+        "world_min": null,
+        "world_max": null,
+        "backface_culling": false
+      },
+      {
+        "slot": 8,
+        "material": "MIA_V17_LegacyEyeGlintsHidden",
+        "polygons": 64,
+        "vertices": 50,
+        "boundary_edges": 32,
+        "world_min": [
+          -0.040042899549007416,
+          -0.050743576139211655,
+          1.5354654788970947
+        ],
+        "world_max": [
+          0.0393146388232708,
+          -0.04551795870065689,
+          1.5545670986175537
+        ],
+        "backface_culling": false
+      },
+      {
+        "slot": 9,
+        "material": "Mia_FaceArt_ContourInk",
+        "polygons": 0,
+        "vertices": 0,
+        "boundary_edges": 0,
+        "world_min": null,
+        "world_max": null,
+        "backface_culling": true
+      }
+    ]
+  },
+  "camera": {
+    "ortho": 0.29,
+    "target": [
+      0,
+      0,
+      1.55
+    ],
+    "resolution": [
+      1400,
+      1400
+    ],
+    "pixel_aspect": [
+      1,
+      1
+    ],
+    "roll": 0
+  },
+  "variants": [
+    {
+      "label": "retreat_1p5",
+      "world_y_delta_m": 0.0015,
+      "positive_y": "retreat away from frontal camera",
+      "view": "front",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          0.001500000013038516
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "retreat_1p5",
+      "world_y_delta_m": 0.0015,
+      "positive_y": "retreat away from frontal camera",
+      "view": "left45",
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          1.4142135381698608
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          0.001500000013038516
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "retreat_1p5",
+      "world_y_delta_m": 0.0015,
+      "positive_y": "retreat away from frontal camera",
+      "view": "profile90",
+      "camera_matrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -1.2246468525851679e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          0.001500000013038516
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "retreat_0p5",
+      "world_y_delta_m": 0.0005,
+      "positive_y": "retreat away from frontal camera",
+      "view": "front",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          0.0005000000237487257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "retreat_0p5",
+      "world_y_delta_m": 0.0005,
+      "positive_y": "retreat away from frontal camera",
+      "view": "left45",
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          1.4142135381698608
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          0.0005000000237487257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "retreat_0p5",
+      "world_y_delta_m": 0.0005,
+      "positive_y": "retreat away from frontal camera",
+      "view": "profile90",
+      "camera_matrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -1.2246468525851679e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          0.0005000000237487257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "baseline",
+      "world_y_delta_m": 0,
+      "positive_y": "retreat away from frontal camera",
+      "view": "front",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "baseline",
+      "world_y_delta_m": 0,
+      "positive_y": "retreat away from frontal camera",
+      "view": "left45",
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          1.4142135381698608
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "baseline",
+      "world_y_delta_m": 0,
+      "positive_y": "retreat away from frontal camera",
+      "view": "profile90",
+      "camera_matrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -1.2246468525851679e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "advance_0p5",
+      "world_y_delta_m": -0.0005,
+      "positive_y": "retreat away from frontal camera",
+      "view": "front",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          -0.0005000000237487257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "advance_0p5",
+      "world_y_delta_m": -0.0005,
+      "positive_y": "retreat away from frontal camera",
+      "view": "left45",
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          1.4142135381698608
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          -0.0005000000237487257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "advance_0p5",
+      "world_y_delta_m": -0.0005,
+      "positive_y": "retreat away from frontal camera",
+      "view": "profile90",
+      "camera_matrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -1.2246468525851679e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          -0.0005000000237487257
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "advance_1p5",
+      "world_y_delta_m": -0.0015,
+      "positive_y": "retreat away from frontal camera",
+      "view": "front",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          -0.001500000013038516
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "advance_1p5",
+      "world_y_delta_m": -0.0015,
+      "positive_y": "retreat away from frontal camera",
+      "view": "left45",
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          1.4142135381698608
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -1.4142135381698608
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          -0.001500000013038516
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "label": "advance_1p5",
+      "world_y_delta_m": -0.0015,
+      "positive_y": "retreat away from frontal camera",
+      "view": "profile90",
+      "camera_matrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -1.2246468525851679e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5499999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eye_matrix": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          -0.001500000013038516
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "v21_difference": "Main3cd has a separate cheek depth correction plus iris vertices only retreated0.35mm in worldY; that is not equivalent to moving the whole EyeSurface as this A/B does.",
+  "limits": [
+    "Eye-only transform can alter occlusion/gaze impression but cannot change fixed skin normals or cheek wall geometry.",
+    "Native EyeSurface consists of material-separated open curved surfaces, not asserted to be a closed anatomical eyeball.",
+    "No production-depth selection is implied."
+  ]
+}

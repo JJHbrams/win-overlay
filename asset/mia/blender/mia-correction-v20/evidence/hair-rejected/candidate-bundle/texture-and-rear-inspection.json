@@ -1,0 +1,174 @@
+{
+  "source_sha256_unchanged": "83c0df5e8bbeb3688bf94ee62994e2aa5d56d1b712aec60cad405892dc5076f6",
+  "actual_images": [
+    {
+      "material": "MIA_V17_ReferenceAshGray_PaintUV",
+      "node": "REBAKED_PIXAL_COLOR_ATLAS",
+      "image": "MIA_V17_Pixal_Repacked4096.001",
+      "size": [
+        4096,
+        4096
+      ],
+      "colorspace": "sRGB",
+      "interpolation": "Linear",
+      "packed": true,
+      "vector_links": [
+        [
+          "PAINT_UV_EXPLICIT",
+          "UV"
+        ]
+      ]
+    }
+  ],
+  "uv_layers": [
+    "UVMap",
+    "MIA_V17_PAINT_UV"
+  ],
+  "density": [
+    {
+      "region": "rear",
+      "uv": "UVMap",
+      "world_area_m2": 0.3920028739917585,
+      "uv_area": 0.1343782121374849,
+      "area_weighted_median_pixels_per_cm": 11.59749489501223,
+      "aggregate_pixels_per_cm": 11.990844088323836
+    },
+    {
+      "region": "rear",
+      "uv": "MIA_V17_PAINT_UV",
+      "world_area_m2": 0.3920028739917585,
+      "uv_area": 0.0907654798639681,
+      "area_weighted_median_pixels_per_cm": 19.411136278474068,
+      "aggregate_pixels_per_cm": 19.709503150371873
+    },
+    {
+      "region": "side",
+      "uv": "UVMap",
+      "world_area_m2": 0.26474982441304573,
+      "uv_area": 0.08050240577649323,
+      "area_weighted_median_pixels_per_cm": 11.560657691084504,
+      "aggregate_pixels_per_cm": 11.293187572621152
+    },
+    {
+      "region": "side",
+      "uv": "MIA_V17_PAINT_UV",
+      "world_area_m2": 0.26474982441304573,
+      "uv_area": 0.0603085238809475,
+      "area_weighted_median_pixels_per_cm": 19.436232627938285,
+      "aggregate_pixels_per_cm": 19.549311060095206
+    },
+    {
+      "region": "front",
+      "uv": "UVMap",
+      "world_area_m2": 0.08742525764381082,
+      "uv_area": 0.026622001934696823,
+      "area_weighted_median_pixels_per_cm": 11.557927531728843,
+      "aggregate_pixels_per_cm": 11.301389608196148
+    },
+    {
+      "region": "front",
+      "uv": "MIA_V17_PAINT_UV",
+      "world_area_m2": 0.08742525764381082,
+      "uv_area": 0.01963353227489088,
+      "area_weighted_median_pixels_per_cm": 19.444729983976163,
+      "aggregate_pixels_per_cm": 19.410678118767564
+    },
+    {
+      "region": "crown",
+      "uv": "UVMap",
+      "world_area_m2": 0.15140064948019627,
+      "uv_area": 0.046473973948490004,
+      "area_weighted_median_pixels_per_cm": 11.557674501382131,
+      "aggregate_pixels_per_cm": 11.346736989638801
+    },
+    {
+      "region": "crown",
+      "uv": "MIA_V17_PAINT_UV",
+      "world_area_m2": 0.15140064948019627,
+      "uv_area": 0.03362342213197608,
+      "area_weighted_median_pixels_per_cm": 19.362755770148645,
+      "aggregate_pixels_per_cm": 19.30265441690196
+    }
+  ],
+  "current1000px_ortho052_screen_pixels_per_cm": 19.23076923076923,
+  "rear_surface_rays": [
+    {
+      "x": -0.025,
+      "z": 1.54,
+      "surface_y": 0.12311124801635742,
+      "poly": 56894
+    },
+    {
+      "x": 0,
+      "z": 1.54,
+      "surface_y": 0.1298295259475708,
+      "poly": 63671
+    },
+    {
+      "x": 0.025,
+      "z": 1.54,
+      "surface_y": 0.12275314331054688,
+      "poly": 70463
+    },
+    {
+      "x": -0.025,
+      "z": 1.56,
+      "surface_y": 0.13570821285247803,
+      "poly": 57185
+    },
+    {
+      "x": 0,
+      "z": 1.56,
+      "surface_y": 0.1286485195159912,
+      "poly": 63163
+    },
+    {
+      "x": 0.025,
+      "z": 1.56,
+      "surface_y": 0.12662553787231445,
+      "poly": 69454
+    },
+    {
+      "x": -0.025,
+      "z": 1.58,
+      "surface_y": 0.13157546520233154,
+      "poly": 57636
+    },
+    {
+      "x": 0,
+      "z": 1.58,
+      "surface_y": 0.12649905681610107,
+      "poly": 63119
+    },
+    {
+      "x": 0.025,
+      "z": 1.58,
+      "surface_y": 0.12541604042053223,
+      "poly": 69994
+    },
+    {
+      "x": -0.025,
+      "z": 1.6,
+      "surface_y": 0.12411057949066162,
+      "poly": 57853
+    },
+    {
+      "x": 0,
+      "z": 1.6,
+      "surface_y": 0.12233245372772217,
+      "poly": 63178
+    },
+    {
+      "x": 0.025,
+      "z": 1.6,
+      "surface_y": 0.12123382091522217,
+      "poly": 70696
+    }
+  ],
+  "density_formula": "Per polygon sqrt(UV triangle area * image_resolution^2 / surface area_m2) /100 = pixels_per_cm. Median weighted by surface area. Aggregate sqrt(sumUVarea * resolution^2 / sumSurfaceArea)/100.",
+  "screen_formula": "1000px /0.52m /100 =19.2308screen pixels/cm;1000/0.29/100=34.4828for close head framing.",
+  "source_information_limit": "Rebake recipe EMIT samples original2048 rawRGB through originalUVMap into4096 paintUV. It interpolates/reallocates existing data; creates no new strand information. Median11.6original texels/cm gives0.60original texel per screen pixel atortho.52,0.34atortho.29.",
+  "scope_limits": "Read-only. Area-based density is not an anisotropy/seam/sharpness proof. Existing geometry facets and baked atlas marks also affect appearance; this does not attribute all visible breakup to image resolution.",
+  "rebake_recipe_read": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\tools\\mia\\blender\\rebake_pixal_hair_uv_v17.py",
+  "rebake_recipe_sha256": "332859d47bc8bef3df4b687331092f828741ec1790a9e6056470f00046975371"
+}

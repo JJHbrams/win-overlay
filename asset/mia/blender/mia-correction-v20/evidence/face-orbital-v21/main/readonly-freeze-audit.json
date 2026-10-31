@@ -1,0 +1,427 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-correction-v20\\frozen\\Mia_FaceCorrection_v20.blend",
+  "source_sha256": "6794a9b331b7c061e6d75ffc27e9f65d8d31e48971d3f82dd2e98be499b52ed0",
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-correction-v20\\candidate-orbital-v21\\main\\Mia_OrbitalGuide_v21.blend",
+  "native_sha256": "3cd4b6414b017223d4be721c4022df361f7d2e83b5b6f0276bc82711838bed75",
+  "exact_recipe": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-correction-v20\\candidate-orbital-v21\\main\\exact-recipe.py",
+  "recipe_sha256": "33239f453adbcf45a04ccb6d792a6ea0135e55f8e39f025a1d12d167e9c9dff4",
+  "no_native_saved": true,
+  "changed_owner_scope": [
+    "MIA_V14_EyeSurface",
+    "MIA_V14_OuterWing_-1",
+    "MIA_V14_OuterWing_1",
+    "MIA_V14_SculptedSkin",
+    "MIA_V14_UpperLash_-1",
+    "MIA_V14_UpperLash_1"
+  ],
+  "all_other_mesh_snapshot_exact": true,
+  "visible_mesh_set_unchanged": true,
+  "body_evaluated_hash_identical": "973330e45a76389620cf06164674d8e8b129e83daafab6634e703d7df05caf32",
+  "skin_key_count": 47,
+  "skin_relative_key_max_error_m": 3.725290298461914e-09,
+  "key_errors_m": {
+    "Basis": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Angry": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_ALL_Fun": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_ALL_Joy": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_ALL_Sorrow": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Angry": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_EYE_Close": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_EYE_Close_R": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_EYE_Joy_R": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Sorrow": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Extra": 3.725290298461914e-09,
+    "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+    "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+    "MIA_FaceArt_EyeProportion": 1.862645149230957e-09,
+    "MIA_FaceArt_OwnedBrowPlacement": 0.0,
+    "MIA_V12_ReferenceFacialSculpt": 0.0,
+    "MIA_V13_LidJawRefinement": 0.0,
+    "MIA_V14_HoodCheekMouthCorrective": 1.862645149230957e-09
+  },
+  "neutral_key_values": {
+    "Basis": 1.0,
+    "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+    "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+    "MIA_FaceArt_EyeProportion": 0.0,
+    "MIA_FaceArt_OwnedBrowPlacement": 0.0,
+    "MIA_V12_ReferenceFacialSculpt": 0.0,
+    "MIA_V13_LidJawRefinement": 0.0,
+    "MIA_V14_HoodCheekMouthCorrective": 0.0
+  },
+  "packed_image_count": 59,
+  "packed_bytes_match_source": true,
+  "all_packed_fake_user": true,
+  "images": {
+    "F00_000_00_EyeExtra_01": {
+      "sha256": "e2b10828b60d28d4dec20215412cd1c76d9c7e8a3288f5d77da23f249632dd50",
+      "fake_user": true,
+      "users": 9
+    },
+    "F00_000_00_EyeExtra_01.001": {
+      "sha256": "e2b10828b60d28d4dec20215412cd1c76d9c7e8a3288f5d77da23f249632dd50",
+      "fake_user": true,
+      "users": 9
+    },
+    "F00_000_00_Face_00_nml": {
+      "sha256": "1e6aa5a275603384910e78956b8c2ab1c37735ab86f79daf46815fd55b7079b4",
+      "fake_user": true,
+      "users": 6
+    },
+    "F00_000_00_Face_00_nml.001": {
+      "sha256": "1e6aa5a275603384910e78956b8c2ab1c37735ab86f79daf46815fd55b7079b4",
+      "fake_user": true,
+      "users": 4
+    },
+    "F00_000_00_Face_00_out": {
+      "sha256": "1e2416d720645c9a71e4c8d15087b4018ea4de13c118eb08d13e1c0508f30614",
+      "fake_user": true,
+      "users": 8
+    },
+    "F00_000_00_Face_00_out.001": {
+      "sha256": "1e2416d720645c9a71e4c8d15087b4018ea4de13c118eb08d13e1c0508f30614",
+      "fake_user": true,
+      "users": 7
+    },
+    "F00_000_EyeHighlight_00": {
+      "sha256": "006c199fb54e7abb60abf34241ae6fa90652ab47c80b807ca946cd1edc70e102",
+      "fake_user": true,
+      "users": 9
+    },
+    "F00_000_EyeHighlight_00.001": {
+      "sha256": "006c199fb54e7abb60abf34241ae6fa90652ab47c80b807ca946cd1edc70e102",
+      "fake_user": true,
+      "users": 6
+    },
+    "F00_000_EyeIris_00": {
+      "sha256": "a2c88a7b75d48f37c0fb597d85cc7da795eda49ebdddab9057311be8c3626753",
+      "fake_user": true,
+      "users": 9
+    },
+    "F00_000_EyeIris_00.001": {
+      "sha256": "a2c88a7b75d48f37c0fb597d85cc7da795eda49ebdddab9057311be8c3626753",
+      "fake_user": true,
+      "users": 6
+    },
+    "F00_000_EyeWhite_00": {
+      "sha256": "cb61f933073d7e43e93988dc4a50c9bb38d5f0769aafcbba76fcb3c5d33ee769",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_EyeWhite_00.001": {
+      "sha256": "cb61f933073d7e43e93988dc4a50c9bb38d5f0769aafcbba76fcb3c5d33ee769",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_Face_00": {
+      "sha256": "4eb17f207ab5f204275a87c4580cd11a3722efc56680056bb558df5fb597cba5",
+      "fake_user": true,
+      "users": 11
+    },
+    "F00_000_Face_00.001": {
+      "sha256": "4eb17f207ab5f204275a87c4580cd11a3722efc56680056bb558df5fb597cba5",
+      "fake_user": true,
+      "users": 7
+    },
+    "F00_000_FaceBrow_00": {
+      "sha256": "82f442f30c059b52793e8e9d19e8d2ea6c332d9dabeb6b93a4a863d18a4415dc",
+      "fake_user": true,
+      "users": 9
+    },
+    "F00_000_FaceBrow_00.001": {
+      "sha256": "82f442f30c059b52793e8e9d19e8d2ea6c332d9dabeb6b93a4a863d18a4415dc",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_FaceEyelash_00": {
+      "sha256": "f90fe1e6db99afe865c16685af8d51e8c3f7356b65b90fd242b4f34c3e344cc3",
+      "fake_user": true,
+      "users": 9
+    },
+    "F00_000_FaceEyelash_00.001": {
+      "sha256": "f90fe1e6db99afe865c16685af8d51e8c3f7356b65b90fd242b4f34c3e344cc3",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_FaceEyeline_00": {
+      "sha256": "8229bae815b5403d8be9bd0677e34268bb84cb2d80fcd59c0c367a74e55d45c9",
+      "fake_user": true,
+      "users": 9
+    },
+    "F00_000_FaceEyeline_00.001": {
+      "sha256": "8229bae815b5403d8be9bd0677e34268bb84cb2d80fcd59c0c367a74e55d45c9",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_FaceMouth_00": {
+      "sha256": "7fd7c542e628bebe9a7b744492d885a51f01d46c0bdf2b4ed968b06c2cbbb029",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_FaceMouth_00.001": {
+      "sha256": "7fd7c542e628bebe9a7b744492d885a51f01d46c0bdf2b4ed968b06c2cbbb029",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_Hair_00_01": {
+      "sha256": "16d4fdb5b28b02d20ed2632b81c7a9759f828ec4e51c7846b9b1f6ed6cd2477e",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_Hair_00_02": {
+      "sha256": "1c67da940952fe659a71b887198dbea92d9829af56c87720cbf1115fe6f605f3",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_Hair_00_03": {
+      "sha256": "764a0f0e4413ac6b467d7b3cb57df430f178c84f9328aa12cee6bb53c27d9dc4",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_Hair_00_nml": {
+      "sha256": "6fa6d663cdb5af7aeb380628d138fcdfe417f6f8bb8e6458bed4929e588f1ad3",
+      "fake_user": true,
+      "users": 7
+    },
+    "F00_000_Hair_00_spe": {
+      "sha256": "5be73c761268d5a1b2c685866a319823eacb2658cf618a93505393eb5ef6c292",
+      "fake_user": true,
+      "users": 7
+    },
+    "F00_000_HairBack_00": {
+      "sha256": "1be9a663f784c4db3c89f8b07319d4b8311f61a9bfd3100f8954e5f539a11c47",
+      "fake_user": true,
+      "users": 5
+    },
+    "F00_000_HairBack_00_nml": {
+      "sha256": "ff198a1bf756c6775c1d40ea02e91aecc536b1f7fc721d702aeb88f049de44f9",
+      "fake_user": true,
+      "users": 3
+    },
+    "F00_002_02_Body_00_nml": {
+      "sha256": "a92461af165dfc448c9ba831aca42481a7b44ba014e95b75f39924f67e3c5d1d",
+      "fake_user": true,
+      "users": 6
+    },
+    "F00_002_Body_00": {
+      "sha256": "6fd69290a2a374666106d2a9a548a3bca811f650af0d3427f954b26e1ead1c0b",
+      "fake_user": true,
+      "users": 11
+    },
+    "F00_002_Onepiece_01": {
+      "sha256": "409eb967d43de6827ab5432de6f8d695e1deb402ea0c03a69ce3b60153cf335f",
+      "fake_user": true,
+      "users": 7
+    },
+    "F00_002_Shoes_01": {
+      "sha256": "e62a2cac0c5964a30e7bcd546b28e90ffa4e3346fa750c128359f32e32c5c43b",
+      "fake_user": true,
+      "users": 7
+    },
+    "Image_0.001": {
+      "sha256": "e05c6927087e9d4d7a7a0c7ea852b0c44542898f99ba72b175c1241565a66a2b",
+      "fake_user": true,
+      "users": 2
+    },
+    "Image_0.002": {
+      "sha256": "e05c6927087e9d4d7a7a0c7ea852b0c44542898f99ba72b175c1241565a66a2b",
+      "fake_user": true,
+      "users": 2
+    },
+    "Image_0.003": {
+      "sha256": "e05c6927087e9d4d7a7a0c7ea852b0c44542898f99ba72b175c1241565a66a2b",
+      "fake_user": true,
+      "users": 3
+    },
+    "Image_0.004": {
+      "sha256": "e05c6927087e9d4d7a7a0c7ea852b0c44542898f99ba72b175c1241565a66a2b",
+      "fake_user": true,
+      "users": 1
+    },
+    "Matcap_Rim": {
+      "sha256": "22fe0562d8af76b13e08c75bd6dafdb1c0961c5663f4c2be44ea66711143d669",
+      "fake_user": true,
+      "users": 25
+    },
+    "Matcap_Rim.001": {
+      "sha256": "22fe0562d8af76b13e08c75bd6dafdb1c0961c5663f4c2be44ea66711143d669",
+      "fake_user": true,
+      "users": 10
+    },
+    "Matcap_RimHair": {
+      "sha256": "e2122e7809900f096222ce104a26dd459d180d3a14bb41bd86726de9f78f45c3",
+      "fake_user": true,
+      "users": 9
+    },
+    "mia-body-turnaround-v06.png": {
+      "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a",
+      "fake_user": true,
+      "users": 2
+    },
+    "mia-body-visibility-guide-v06.png": {
+      "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+      "fake_user": true,
+      "users": 2
+    },
+    "mia-expression-style-confirmed-20261031.png": {
+      "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+      "fake_user": true,
+      "users": 2
+    },
+    "MIA_Astra_UV_LowerLid_Ink_v08": {
+      "sha256": "05aec1b0a7f69fb7dbbbfeb45bbebe184652df5192578b347f71cf4d2bbdb4c2",
+      "fake_user": true,
+      "users": 2
+    },
+    "Mia_FaceArt_UV_Pigment": {
+      "sha256": "e4bd1ef04426affca8b34cdbceea49468ced20ca588fe028b63c99ee097d0f42",
+      "fake_user": true,
+      "users": 3
+    },
+    "MIA_REF_mia-canonical-source-v22.png": {
+      "sha256": "bee7055c953bfb0611abe7ef4ca6eea5ecd3b5360f1322a8199095550419249e",
+      "fake_user": true,
+      "users": 2
+    },
+    "MIA_REF_mia-clean-master-v22.png": {
+      "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "fake_user": true,
+      "users": 2
+    },
+    "MIA_REF_mia-expressions-clean-16-v22.png": {
+      "sha256": "047ba31c44ee9e5c68ac85579cfe1b209da6c95a02f574f679b8ba43fa88a40e",
+      "fake_user": true,
+      "users": 2
+    },
+    "MIA_V13_BodySkin_UV_2048": {
+      "sha256": "5875ba3aade497438ac24ebd03cf4cd3b7d3e7af0f51f9acf3b97f1f129380d0",
+      "fake_user": true,
+      "users": 2
+    },
+    "MIA_V13_FaceFinePigment": {
+      "sha256": "a991c015855126c80c24e4db6b6d7b56adde549ffa1c74007939fa8a9a984a69",
+      "fake_user": true,
+      "users": 2
+    },
+    "MIA_V15_FixedUV_PaintedPigment": {
+      "sha256": "e9d0926ea8808326d7e51c13851b8a257881433c801a04ecb1003509a63a60eb",
+      "fake_user": true,
+      "users": 2
+    },
+    "MIA_V17_FixedUV_FacePigment": {
+      "sha256": "c534dea24d281930b724757253a20a470b7d9bf57faf85c1704de0d7849aafc0",
+      "fake_user": true,
+      "users": 2
+    },
+    "MIA_V17_Pixal_Repacked4096": {
+      "sha256": "c85baae88ab8e09e0762bd0db923ea9c690d4ec2c52e505315ee40c397fe4c2f",
+      "fake_user": true,
+      "users": 1
+    },
+    "MIA_V17_Pixal_Repacked4096.001": {
+      "sha256": "c85baae88ab8e09e0762bd0db923ea9c690d4ec2c52e505315ee40c397fe4c2f",
+      "fake_user": true,
+      "users": 2
+    },
+    "Shader_NoneBlack": {
+      "sha256": "f3d3041bd0fd91f762bbae71c920be829305acaa8b2bef824f1ed65b757e0fc2",
+      "fake_user": true,
+      "users": 67
+    },
+    "Shader_NoneBlack.001": {
+      "sha256": "f3d3041bd0fd91f762bbae71c920be829305acaa8b2bef824f1ed65b757e0fc2",
+      "fake_user": true,
+      "users": 34
+    },
+    "Shader_NoneNormal": {
+      "sha256": "bdb4dd51887eedb9525089cd17d3ae3b0c42823844430f889daafaf9872ddf1c",
+      "fake_user": true,
+      "users": 35
+    },
+    "Shader_NoneNormal.001": {
+      "sha256": "bdb4dd51887eedb9525089cd17d3ae3b0c42823844430f889daafaf9872ddf1c",
+      "fake_user": true,
+      "users": 19
+    },
+    "Thumbnail": {
+      "sha256": "04785c0524406957e96c6462d6cb7e7de21c6b2ac2eb65d0ade2710acfa4b329",
+      "fake_user": true,
+      "users": 3
+    }
+  },
+  "finite_mesh_and_uv": true,
+  "limitations": [
+    "Inherited blink deformation and fixed makeup are not a final expression pass.",
+    "Uneven triangle control cage and residual corner/temple/forehead shading remain.",
+    "Eye depth probe variants were never saved or adopted.",
+    "This preservation audit does not decide art acceptance."
+  ]
+}
