@@ -2,12 +2,13 @@
   "schema_version": 1,
   "updated": "2026-11-01",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
-  "status": "partial_correction_checkpoint_static_art_failed",
+  "status": "reference_finish_v22_in_progress_art_not_approved",
   "character_complete": false,
   "art_approved": false,
   "read_first": [
     "WORKING_PROTOCOL.md",
-    "REFERENCE_INDEX.md"
+    "REFERENCE_INDEX.md",
+    "REFERENCE_REVIEW_GATE.md"
   ],
   "selected_static_wip": {
     "path": "blender/mia-correction-v20/integrated-r2/Mia_Corrected_v20.blend",
@@ -28,7 +29,9 @@
     "multiview_comparison": "blender/mia-reference-validation-v19/multi-view-registered-comparison.png",
     "body_comparison": "blender/mia-body-reference-audit-v19/body_reference_comparison_4rows.png",
     "body_findings": "blender/mia-body-reference-audit-v19/BODY_AUDIT.md",
-    "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md"
+    "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md",
+    "current_live_viewing_setup": "blender/mia-reference-finish-v22/Mia_ReviewSetup_v22.blend",
+    "viewport_and_camera_audit": "blender/mia-reference-finish-v22/camera-audit.json"
   },
   "correction_review": {
     "independent_round1": "blender/mia-correction-v20/acceptance-round-1.md",
@@ -71,6 +74,7 @@
     "rear bun cbb bulb and739 rolled-tube candidates rejected; no source-faithful bun completion"
   ],
   "immediate_next": [
+    "Mandatory source-art/baseline/candidate view packages per REFERENCE_REVIEW_GATE.md. Model-only before/after is insufficient. Validate package before integration; independently inspect boards after compaction.",
     "Reconstruct coherent thorax-to-breast primary form from Body Foundation front/profile. Current pad/perimeter seam persists; do not retry rejected local fields or claim underside-only success. Preserve body before any topology change.",
     "Continue from selected3cd orbital improvement: compare reference identity and actual eyelid/eye/cheek surface in front/profile/oblique; old expression04 camera is uncalibrated.",
     "Rebuild the concept gathered hair as hair volume and overlapping rolled locks; current narrow fold, bulb and tube trials are not an accepted bun.",
@@ -92,16 +96,20 @@
     "private_real_person_references_not_used_or_recorded": true
   },
   "worktree_archive": "WORKTREE_ARCHIVE.md",
-  "active_contract": "blender/mia-correction-v20/ACCEPTANCE.md",
+  "active_contract": "blender/mia-reference-finish-v22/ACCEPTANCE.md",
   "latest_user_feedback": {
     "body": "Use Body Foundation front/profile and anatomy-led form construction. Modular replacement is a hypothesis, not a required industry rule. All later body candidates remain rejected; current body is still8e262.",
     "face": "Feedback originated on live aa02 neutral. The rejected side-plane candidate was excluded; locally reviewed orbital3cd is now in live c02. Full face identity remains FAIL.",
     "hair": "Rear central finishing volume appears absent; half-up feature is gathered hair/bun, not cord or ribbon.",
     "texture": "Visible hair detail is low-resolution; active4096 image is a rebake of2048 source, not newly authored detail.",
-    "eyes_tested": "Eye-only translations +/-0.5/1.5mm and depth scale0.9/1.1 alter lid contact/sclera but leave fixed skin wall; no probe variant selected. 3cd actual surface guide selected."
+    "eyes_tested": "Eye-only translations +/-0.5/1.5mm and depth scale0.9/1.1 alter lid contact/sclera but leave fixed skin wall; no probe variant selected. 3cd actual surface guide selected.",
+    "viewport": "Actual live PERSP50 view pivot Y2.087m behind head; saved camera and prior19 renders ORTHO. Fix head-centred navigation/cameras/lights without changing model origins.",
+    "profile_texture": "Use main/expressions/turnaround eye-nose-mouth profile and nose shading; finish face/head/body and UV style maps autonomously while user sleeps."
   },
   "prior_remote_checkpoints": [
     "96761ba9719132640151c1b113a6cc7c0e3988ac",
     "fc61e0c"
-  ]
+  ],
+  "reference_review_gate": "REFERENCE_REVIEW_GATE.md",
+  "active_progress": "blender/mia-reference-finish-v22/PROGRESS.md"
 }

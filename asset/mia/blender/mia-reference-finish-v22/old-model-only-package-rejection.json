@@ -1,0 +1,14 @@
+{
+  "evidence_valid": false,
+  "art_acceptance": "NOT_EVALUATED",
+  "package": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-correction-v20\\fresh-review-r2\\review-evidence.json",
+  "checked_artifacts": [],
+  "errors": [
+    "schema_version must be 1",
+    "baseline_native: path and sha256 required",
+    "candidate_native: path and sha256 required",
+    "nonempty required_views required",
+    "part must be face, head, body or surface"
+  ],
+  "limits": "Hashes and declared coverage are checked; actual image correspondence and likeness need independent visual review."
+}

@@ -1,0 +1,38 @@
+{
+  "source_sha256": "c02b8ad73b86b278f2768e61eff019be223a8828bd92df62ce0ab7cb60f56936",
+  "setup_sha256": "ab78670f3d1a87e53c06accca40ad3359ce709237d68e8f7ba29391c51db61f9",
+  "protected_models_compared": 161,
+  "changed_models": [],
+  "checks": [
+    "vertex coordinates",
+    "ordered loop indices",
+    "UV coordinates",
+    "all shape-key coordinates",
+    "object world matrices",
+    "parents"
+  ],
+  "prior_19_fresh_render_projections": {
+    "head_front": "ORTHO",
+    "head_profile": "ORTHO",
+    "head_back": "ORTHO",
+    "head_left": "ORTHO",
+    "head_right": "ORTHO",
+    "face_front": "ORTHO",
+    "face_profile": "ORTHO",
+    "face_left": "ORTHO",
+    "face_right": "ORTHO",
+    "clay_face_front": "ORTHO",
+    "clay_face_left": "ORTHO",
+    "clay_face_right": "ORTHO",
+    "clay_face_profile": "ORTHO",
+    "clay_hair_back": "ORTHO",
+    "clay_hair_profile": "ORTHO",
+    "clay_body_front": "ORTHO",
+    "clay_body_profile": "ORTHO",
+    "clay_body_back": "ORTHO",
+    "clay_body_three_quarter": "ORTHO"
+  },
+  "prior_proof_limit": "This verifies the recorded last19 saved-camera renders; it does not retrospectively certify every historical viewport screenshot.",
+  "viewport_observation": "Actual live view was PERSP50 with orbit targetY2.087344m; setup uses head-centred ORTHO and preserves model origins.",
+  "art_acceptance": "NOT_EVALUATED"
+}
