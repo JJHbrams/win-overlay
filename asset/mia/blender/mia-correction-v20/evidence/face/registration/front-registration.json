@@ -1,0 +1,142 @@
+{
+  "model_native_sha256": "6794a9b331b7c061e6d75ffc27e9f65d8d31e48971d3f82dd2e98be499b52ed0",
+  "source_files_sha256": {
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-correction-v20\\frozen\\front_bare_rgba.png": "0afc26934811c0bfa26674b24e43b88dc78aeade5e1fd4b8876bac0a16fa2c41",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-correction-v20\\frozen\\front_hair_rgba.png": "1a15eb1e772140e7e6730a399ba8a608aa9c058a38b286501651cfca0a399f29",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-correction-v20\\frozen\\front-landmarks.json": "2bd509f72534f729a6189c191f4439a4c83ce899e8ea37fee79daa405468618b",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-front-registration-v19\\reference-point-estimates.json": "ee0b4ba0c38ce227b06a54114cb4db74c473958e55e2c81fff3acc413c0a4178"
+  },
+  "primary_registration": {
+    "anchors": "visible pupil shader centers to manual visible pupils",
+    "matrix_model_pixels_to_reference_pixels": [
+      [
+        0.5531840932737743,
+        0.07356516420697001,
+        201.03723435316672
+      ],
+      [
+        -0.07356516420697001,
+        0.5531840932737743,
+        58.7521501382318
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "uniform_scale": 0.5580541859317303,
+    "rotation_degrees": -7.575030772965779
+  },
+  "sensitivity_registration": {
+    "anchors": "eye midpoint and chin; these distances are normalized, not validated",
+    "matrix": [
+      [
+        0.5728864944428936,
+        0.012835299811059596,
+        223.09696307462684
+      ],
+      [
+        -0.012835299811059596,
+        0.5728864944428936,
+        18.125718979815872
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "uniform_scale": 0.5730302613617428,
+    "rotation_degrees": -1.2834750023881991
+  },
+  "reference_points_approximate": [
+    [
+      451.0,
+      321.0
+    ],
+    [
+      580.0,
+      304.0
+    ],
+    [
+      518.0,
+      411.0
+    ],
+    [
+      519.0,
+      463.0
+    ]
+  ],
+  "model_projected_points": [
+    [
+      382.0609152317047,
+      524.8781144618988
+    ],
+    [
+      615.2197122573853,
+      525.1535475254059
+    ],
+    [
+      499.03562664985657,
+      702.69975066185
+    ],
+    [
+      498.8638162612915,
+      787.7255827188492
+    ]
+  ],
+  "registered_model_points": [
+    [
+      451.0,
+      321.0
+    ],
+    [
+      580.0,
+      304.0
+    ],
+    [
+      528.7900275384133,
+      410.76283673218967
+    ],
+    [
+      534.9499240615073,
+      457.81041380293624
+    ]
+  ],
+  "residual_model_minus_reference_pixels": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      10.790027538413256,
+      -0.23716326781033104
+    ],
+    [
+      15.949924061507318,
+      -5.189586197063761
+    ]
+  ],
+  "reference_ratios_approximate": {
+    "mouth_chin_over_pupil_distance": 0.3997193344928353,
+    "eye_mid_chin_over_pupil_distance": 1.1569788754050312
+  },
+  "model_ratios": {
+    "mouth_chin_over_pupil_distance": 0.36466969036602387,
+    "eye_mid_chin_over_pupil_distance": 1.1267413747400208
+  },
+  "limits": [
+    "Reference \u00b12px manual uncertainty; head pose/asymmetry cannot be resolved by two points.",
+    "Uniform S/R/T only. No anisotropic resizing or local feature warping.",
+    "Two-pupil alignment fixes pupil distance; it does not test that distance itself.",
+    "Hair hides reference skin contour. No full-face width inferred from hair outline.",
+    "This is one front diagnostic; profile/back/oblique comparisons are required independently.",
+    "Current beauty uses synthetic emission shading. This plot is not albedo or lighting validation."
+  ]
+}

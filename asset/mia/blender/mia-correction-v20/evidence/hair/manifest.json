@@ -1,0 +1,155 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-body-correction-v20\\Mia_BodyCorrection_v20.blend",
+  "source_sha256": "8e262b27eba9f0870e0bf4100320ba3715c912cffccbbc7df8c9d4ad16bd3907",
+  "native_sha256": "a367748d886bd7dc6763c0ca7accc45de93c146eb08ae602b689e45123765e2a",
+  "nonhair_mesh_uv_keys_exact": 141,
+  "packed_images_exact": 59,
+  "main_hair_faces": 122129,
+  "main_uv_exact": "c0b675a28b4a34465318d1a4aa137f8f6c52fa9494bcb0f8c65f3723efabc67e",
+  "tip_vertices_smoothed": 19439,
+  "new_owners": [
+    "MIA_V20_HalfUp_Fold_Left",
+    "MIA_V20_HalfUp_Fold_Right",
+    "MIA_V20_HalfUp_Binder",
+    "MIA_V20_Crown_PixalDonorLock"
+  ],
+  "old_knot_archived_hidden": 7,
+  "hole_rays": [
+    {
+      "y": 0.06,
+      "z": 1.628,
+      "first_object": "MIA_V20_Crown_PixalDonorLock",
+      "world_x": 0.061032652854919434
+    },
+    {
+      "y": 0.06,
+      "z": 1.634,
+      "first_object": "MIA_V20_Crown_PixalDonorLock",
+      "world_x": 0.05661952495574951
+    },
+    {
+      "y": 0.063,
+      "z": 1.628,
+      "first_object": "MIA_V20_Crown_PixalDonorLock",
+      "world_x": 0.06187295913696289
+    }
+  ],
+  "art_status": "Candidate only. Crown donor differs from absent raw strands, knot simplified, rough rear ends and main semantic ownership unresolved. BODY ART FAIL remains open.",
+  "visible_owners": [
+    "MIA_V17_LeftBraid_Tail",
+    "MIA_V17_LeftBraid_Lane2",
+    "MIA_V17_LeftBraid_Lane1",
+    "MIA_V17_LeftBraid_Lane0",
+    "MIA_V17_LeftBraid_Tie",
+    "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+    "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+    "MIA_V17_PIXAL_DetailedHair",
+    "MIA_V20_HalfUp_Fold_Left",
+    "MIA_V20_HalfUp_Fold_Right",
+    "MIA_V20_HalfUp_Binder",
+    "MIA_V20_Crown_PixalDonorLock"
+  ],
+  "hidden_owners": [
+    "MIA_V17_MiaHair_Knot_Wrap05",
+    "MIA_V17_MiaHair_Knot_Wrap04",
+    "MIA_V17_MiaHair_Knot_Wrap03",
+    "MIA_V17_MiaHair_Knot_Wrap02",
+    "MIA_V17_MiaHair_Knot_Wrap01",
+    "MIA_V17_MiaHair_Knot_Wrap00",
+    "MIA_V17_MiaHair_HalfUp_OneClosedKnot"
+  ],
+  "hidden_child_collections": [
+    {
+      "name": "MIA_V20_REJECTED_KNOT_ARCHIVE",
+      "hide_render": true,
+      "hide_viewport": true
+    }
+  ],
+  "changed_existing_meshes": [
+    "MIA_V17_PIXAL_DetailedHair"
+  ],
+  "new_materials": [
+    "MIA_V20_AuthoredFold_AshStrata"
+  ],
+  "new_owners_detail": [
+    {
+      "name": "MIA_V20_HalfUp_Fold_Left",
+      "verts": 3200,
+      "faces": 3170,
+      "uv_layers": [
+        "MIA_V20_LongitudinalUV"
+      ]
+    },
+    {
+      "name": "MIA_V20_HalfUp_Fold_Right",
+      "verts": 3200,
+      "faces": 3170,
+      "uv_layers": [
+        "MIA_V20_LongitudinalUV"
+      ]
+    },
+    {
+      "name": "MIA_V20_HalfUp_Binder",
+      "verts": 3200,
+      "faces": 3170,
+      "uv_layers": [
+        "MIA_V20_LongitudinalUV"
+      ]
+    },
+    {
+      "name": "MIA_V20_Crown_PixalDonorLock",
+      "verts": 359,
+      "faces": 420,
+      "uv_layers": [
+        "UVMap",
+        "MIA_V17_PAINT_UV"
+      ]
+    }
+  ],
+  "recipe_sha256": "21226ef3915916ff002923769ab59e79c907141b576f1a69d71da87dcfddd6e8",
+  "original_raw_glb_sha256": "97d76c20e08d92b1e05079b9ec5d340683863a843f1d434a7dcd7c907fb34ada",
+  "raw_stage1_source_sha256": "0afe197c67142087f1f776f2cf1ac805b92ea8a65ef70b0924831368aac055b1",
+  "scope_note": "Main source hair UV/paintUV and122129faces preserved; only submillimeter lower rear coordinate polish. Seven old knot objects moved hidden into child archive; four authored/reconstructed independent owners. All141nonhair meshes/UV/keys unchanged incl body8e262. No complete semantic split of original main mesh.",
+  "raw_hole_test": [
+    {
+      "y": 0.06,
+      "z": 1.628,
+      "hit": [
+        -0.07759952545166016,
+        0.05999999865889549,
+        1.628000020980835
+      ],
+      "sourcepoly": 49066
+    },
+    {
+      "y": 0.06,
+      "z": 1.634,
+      "hit": [
+        -0.07285475730895996,
+        0.05999999865889549,
+        1.6339999437332153
+      ],
+      "sourcepoly": 51470
+    },
+    {
+      "y": 0.063,
+      "z": 1.628,
+      "hit": [
+        -0.07697343826293945,
+        0.06300000101327896,
+        1.628000020980835
+      ],
+      "sourcepoly": 49065
+    }
+  ],
+  "commands_exit_codes": {
+    "build": 0,
+    "clay": 0,
+    "final_five_views": 0
+  },
+  "all_five_views_same_native": {
+    "before": "8e262b27eba9f0870e0bf4100320ba3715c912cffccbbc7df8c9d4ad16bd3907",
+    "after": "a367748d886bd7dc6763c0ca7accc45de93c146eb08ae602b689e45123765e2a"
+  },
+  "frozen_no_pending_native_writes": true
+}

@@ -1,0 +1,44 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v17\\integrated-v18\\Mia_HeadHair_v18.blend",
+  "source_sha256": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d",
+  "native_sha256": "8e262b27eba9f0870e0bf4100320ba3715c912cffccbbc7df8c9d4ad16bd3907",
+  "changed_vertices": 1300,
+  "max_delta_m": 0.020424450744689324,
+  "protected_z_min": 1.46,
+  "protected_vertices": 183,
+  "other_meshes_exact": 155,
+  "packed_images_exact": 59,
+  "before": {
+    "co": "95b461719e08e7aca967320a7f76187d4f1e480ebfc2167f2db3207b4bee20bb",
+    "uv": "913825cc7f5adf37457c768c558f53ad68627ad13c2c8cb531c66fcb90a4883a",
+    "topology": "aa98ca83ac5368254cc0bf55c27d9e3f6d37bb5dcdcbc9a1d1d014b93e0b1bc7",
+    "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "weights": "7195da85973ce3e43fef9d54263ba9cb60732b021618b7a9d428fffab0afca70",
+    "materials": [
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin"
+    ]
+  },
+  "after": {
+    "co": "fa310511b68399ffb2f1e4c8cd0906b89fe46fb5fb6e0c5d0a731f421a3201a3",
+    "uv": "913825cc7f5adf37457c768c558f53ad68627ad13c2c8cb531c66fcb90a4883a",
+    "topology": "aa98ca83ac5368254cc0bf55c27d9e3f6d37bb5dcdcbc9a1d1d014b93e0b1bc7",
+    "keys": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "weights": "7195da85973ce3e43fef9d54263ba9cb60732b021618b7a9d428fffab0afca70",
+    "materials": [
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin"
+    ]
+  },
+  "art_status": "Requires actual four-view review; no automatic PASS",
+  "recipe_sha256": "983f517d0ffa55e6e16e4c813f53d4d827d6b325d450fa153e7491c75b2fc04b",
+  "commands_exit_codes": {
+    "build": 0,
+    "render_comparison": 0
+  },
+  "visual_review": "Broader upper/lateral breast root and rounder high-hip turning point. Lower oval border remains; BODY ART FAIL remains open."
+}

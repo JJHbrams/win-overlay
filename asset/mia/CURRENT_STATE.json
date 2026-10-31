@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated": "2026-10-31",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
-  "status": "v20_body_face_correction_then_hair_in_progress",
+  "status": "v20_round1_integrated_fail_additional_corrections_in_progress",
   "character_complete": false,
   "art_approved": false,
   "read_first": [
@@ -10,9 +10,13 @@
     "REFERENCE_INDEX.md"
   ],
   "selected_static_wip": {
+    "path": "blender/mia-correction-v20/integrated/Mia_Corrected_v20.blend",
+    "sha256": "aa02b736452bc876abf6f81a09b94bad71eb15c5ced35834b6fde17b90f8b5a6",
+    "selection_means": "First integrated correction, opened live and reviewed in 19 fresh views; independent art review FAIL, not approved anatomy or finished character"
+  },
+  "preserved_baseline": {
     "path": "blender/mia-reference-finish-v17/integrated-v18/Mia_HeadHair_v18.blend",
-    "sha256": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d",
-    "selection_means": "A preserved comparison input, not approved anatomy or finished character"
+    "sha256": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d"
   },
   "reference_catalog": "references/reference-catalog.json",
   "diagnostics": {
@@ -26,6 +30,11 @@
     "body_findings": "blender/mia-body-reference-audit-v19/BODY_AUDIT.md",
     "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md"
   },
+  "correction_review": {
+    "independent_round1": "blender/mia-correction-v20/acceptance-round-1.md",
+    "fresh_actual_views": "blender/mia-correction-v20/fresh-review/review-evidence.json",
+    "live_mcp": "blender/mia-correction-v20/live-mcp/live-preview-evidence.json"
+  },
   "reference_roles": {
     "face_identity": "references/received/mia-face-reaffirmed-20261031.png",
     "face_angles_and_expressions": "references/mia-expression-style-confirmed-20261031.png",
@@ -37,11 +46,11 @@
     "reference_inventory": "organized; generated candidate approvals remain separate",
     "corresponding_view_camera_registration": "in_progress; no art PASS",
     "lookdev_diagnostic_rig": "built and fresh-reopen tested; source shaders unchanged",
-    "face_head_art": "FAIL; width/height, eye design, mouth-chin, cheek flow and cap join require registered comparison",
-    "body_art": "FAIL_REOPENED; breast, pelvis, hip/thigh and neck/shoulder need corresponding-view review",
-    "hair_art": "FAIL; rough source holes, mechanical knot, clean lock ownership and reference fit unresolved",
+    "face_head_art": "FAIL; eye aperture and cheek transition improved; broad side plane, temple/cap shading and painted reference identity remain",
+    "body_art": "FAIL; root/axilla/pelvis/neck improved but closed lower-breast oval and high-hip/upper-thigh transitions remain",
+    "hair_art": "FAIL; mechanical disc replaced and raw crown hole covered using reconstructed donor lock; rear tips, knot interior and meaningful lock ownership remain",
     "uv_and_color": "technical checks only; calibrated albedo/lighting and final art not approved",
-    "facial_deformation": "FAIL; inherited static lash/paint/carrier mismatch during blink",
+    "facial_deformation": "FAIL; small lash Close followers added, but full blink/paint/fold behavior and expression combinations remain unfinished",
     "garments": "deferred until anatomy gate",
     "final_rig_and_events": "deferred until static art and deformation gates"
   },
@@ -52,13 +61,14 @@
     "v18 coordinated trial1 lost far-eye visibility",
     "3 percent mouth-level narrowing is not a validated target proportion",
     "iris/aperture ratio alone does not validate eye size relative to the face",
-    "fixed-world-X normal-angle sample cannot accept a changed anatomical section"
+    "fixed-world-X normal-angle sample cannot accept a changed anatomical section",
+    "v20 missing 8mm face lift diagnosis mixed vertex cache with actual Basis/evaluated coordinates; lift/cap trials regressed and were rejected"
   ],
   "immediate_next": [
-    "Review actual v20 body breast-root/pelvis/neck corrections against all four views; remaining oval/high-hip defects stay open",
-    "Finish coordinated face/eye changes and measured forehead-cap boundary continuity; compare front/profile/both oblique and expression angles",
-    "Correct Pixal crown hole and mechanical half-up knot without discarding main hair detail; keep exact ownership/UV provenance",
-    "Integrate independently owned edits into a new immutable native, fresh multiview review and live Blender preview; no automatic art PASS"
+    "Additional body lower-attachment and hip/thigh correction in mia-reference-recovery worktree; inspect real sections and same four views",
+    "Additional face side-plane correction from frozen6794, preserving iris design and headcap; compare front/profile/both oblique and expression04",
+    "Repair selected four rear hair tips and original UV-split seam correspondence from frozena367; retain other source locks and explicit donor provenance",
+    "Integrate new disjoint candidates into a second immutable native, fresh review/live MCP and remote checkpoint; retain art FAIL unless new evidence resolves it"
   ],
   "do_not_infer_pass_from": [
     "successful save",

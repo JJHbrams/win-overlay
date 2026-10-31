@@ -16,6 +16,8 @@ The first move of `mia-layered-workflow` encountered a temporary file lock. The 
 
 `result.json`, `plan.json`, per-worktree `files-before.json` / `files-after.json` and `git-admin-snapshot` live in the archive. The old `.git` file was preserved as `.git.archived-pointer` after verification, so these snapshots cannot be mistaken for active worktrees. Recover through a new worktree of the preserved branch plus the archived files; never blindly restore the obsolete pointer.
 
-Active modeling workspaces: canonical `mia-body-head-v06`, producer `mia-final-face-v12`, producer `mia-head-hair-fit-v16`; current chat cwd `mia-reference-recovery` remains as a handoff entry. The user's Desktop checkout, animation calibration, launch branding and window-climbing worktrees were retained.
+Active modeling workspaces: canonical `mia-body-head-v06`, producer `mia-final-face-v12`, producer `mia-head-hair-fit-v16`; current chat cwd `mia-reference-recovery` remains and was reused for the bounded body surface comparison. No new worktree was needed for that comparison. The user's Desktop checkout, animation calibration, launch branding and window-climbing worktrees were retained.
+
+After the archive and Git-registration cleanup succeeded, automatic approval review blocked removal of five empty parent containers with the message `blocked by policy`; no more specific reason was returned. Those empty folders remain. The rejected deletion was not retried through another tool.
 
 Machine-readable scoped evidence: [worktree-archive.json](blender/mia-correction-v20/worktree-archive.json). Historical absolute paths into archived worktrees now require the mapping above. Canonical packed v18 and diagnostic v19 natives remain in the canonical worktree and are unchanged.

@@ -1,0 +1,52 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-correction-v20\\frozen\\Mia_FaceCorrection_v20.blend",
+  "native_sha256": "6794a9b331b7c061e6d75ffc27e9f65d8d31e48971d3f82dd2e98be499b52ed0",
+  "recipe": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\tools\\mia\\blender\\refine_mia_face_correction_v20.py",
+  "recipe_sha256": "b799acec51ce416cb642ed5fef1ad374d43b65f07bbe06b006f21b11ab4d44d8",
+  "source_sha256": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d",
+  "changes": [
+    "MIA_V14_EyeSurface",
+    "MIA_V14_OuterWing_-1",
+    "MIA_V14_OuterWing_1",
+    "MIA_V14_SculptedSkin",
+    "MIA_V14_UpperLash_-1",
+    "MIA_V14_UpperLash_1"
+  ],
+  "body_headcap_changed": false,
+  "source_keys": 47,
+  "key_delta_error_m": 3.725290298461914e-09,
+  "face_evaluated_max_delta_m": 0.004006432949371873,
+  "packed_image_count": 59,
+  "preservation": "Entire Body evaluated mesh and all packed image bytes identical; original topology, UVs, weights and materials unchanged. No hair edit.",
+  "geometry_changes_only_not_targets": {
+    "geometric_aperture_width_px_1000": [
+      107.24,
+      117.1
+    ],
+    "visible_gray_iris_mask_width_px_1000_before": [
+      58,
+      58
+    ],
+    "visible_gray_iris_mask_width_px_1000_after": [
+      63,
+      64
+    ],
+    "malar_skin_width_px_before_after": [
+      449.419,
+      448.407
+    ],
+    "midcheek_width_px_before_after": [
+      418.577,
+      418.112
+    ]
+  },
+  "iris_mask_definition": "RGB render diagnostic ROI y510:560; x320:450 /550:680, G-R>6 B-R>6 maxRGB<210 minRGB>40. Not a geometric iris landmark or reference measurement.",
+  "art_judgment": "Partial local improvement: softer orbital-to-cheek transition, less pinched eye opening and larger visible gray iris; far iris retained. Broad temple/side plane, forehead shading join, fixed paint and overall identity remain unresolved.",
+  "blink": "Single Close driver moves 4 owned lash/wing meshes; source floating fragments are reduced at Close0.5. Fixed paint/eyelid folds remain; final deformation FAIL.",
+  "camera": "900x900 square ortho .29 target(0,0,1.55), yaw0/+45/-45/+90. Portrait bracket yaw-5 elevation3 roll-7.5; expression04 bracket yaw-20 elevation5 roll-9. These angles are approximate correspondences, not solved cameras. Fresh landmark front is1000 square.",
+  "rejected": [
+    "candidate-3: wrongly doubled existing Basis crown lift; hair breakout",
+    "candidate-4: wrongly reversed cap lift; upper seam notch"
+  ],
+  "coordinate_note": "Fields and normal fairing use source actual Basis key coordinates. Identical local offsets are added to each of 47 key arrays and to the separate mesh.data.vertices cache; source cache/Basis discrepancy is preserved, not treated as a missing lift. Evaluation uses all non-Basis keys at zero."
+}
