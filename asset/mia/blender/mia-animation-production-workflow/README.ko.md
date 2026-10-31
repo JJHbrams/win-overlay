@@ -1,12 +1,12 @@
 # Mia 애니메이션용 전문 제작 절차 — 계획과 수용 조건
 
-상태: **PLANNED / 모델·UV·베이크·rig·animation gate는 모두 NOT RUN**. 목표는 원화에서 출발해 애니메이션·30fps sprite 출력까지 갈 수 있는 반복 제작 절차를 정하는 것이다. Pixal은 원화 닮음이 좋았던 **비교/재사용 후보**이지 base, 신규 생성 기법, donor workflow로 확정되지 않았다.
+상태: **Stage 0 비교와 Stage 1 기술 블록아웃 실행 완료 / ART NOTAPPROVED / 캐릭터 전체 INCOMPLETE**. [현재 검토본](../mia-production-stage1/README.ko.md)은 native 재열기와 데이터 보존 검사를 통과했지만 눈·손·옷의 핏, production topology, rig·animation은 미완료다. Pixal 단일 머리의 조형과 기존 braid를 재사용하고 상의·가디건·끈·가방 등은 별도 editable cage로 구성했다. 이는 Pixal 전체를 제작 방식으로 강제 채택한 결정이 아니다.
 
 ## 우선 원화와 후보 ledger
 
 최우선 원화는 `asset/mia/references/mia-clean-master-v22.png` (`3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19`) 및 `mia-expression-style-confirmed-20261031.png` (`bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52`)다. 두 시트는 strict orthographic turnaround가 아니며 포즈·카메라 차이가 있다.
 
-[inventory.json](inventory.json)은 Pixal GLB 후보의 path/SHA/구조를 보존한다. 후보는 모두 **UNDECIDED**다. 구조 수치만으로 semantic part, 연속 메시, 사용 가능 topology를 결론 내리지 않으며 v30 A-pose/crop 및 multiview camera 가설도 원화 해석 보조일 뿐이다. 이 milestone에서는 생성 재실행을 하지 않는다.
+[inventory.json](inventory.json)은 Pixal GLB 후보의 path/SHA/구조를 보존한다. 부위별 선택은 [part-decisions.md](part-decisions.md)와 Stage 1 보고서를 따른다. 구조 수치만으로 semantic part, 연속 메시, 사용 가능 topology를 결론 내리지 않으며 v30 A-pose/crop 및 multiview camera 가설도 원화 해석 보조일 뿐이다. 생성 모델을 새로 실행하지 않았다.
 
 ## 근거와 접근 수준
 
@@ -23,8 +23,8 @@
 
 | 단계 | 목적과 산출물 | 시작/종료 gate | 상태 |
 |---|---|---|---|
-| 0. 제작 brief | 원화 핵심, 허용 표정/pose/camera, 30fps sprite 출력, part/UV 책임과 후보 ledger | 원화 SHA·후보 path/SHA 기록 → 시각 비교 계획 | PLANNED |
-| 1. 전체 blockout·디자인 정합 | 머리·몸·헤어·의상·가방 큰 실루엣을 함께 대조하고 guide color를 일찍 쓴다. 전신 비율 정합 뒤 얼굴/체형, 헤어, 의상/소품 detail 순으로 진행한다. | Stage 0 → near/far 정·측·후·양 3/4의 clay/wire/actual-color 검토 | NOT RUN |
+| 0. 제작 brief | 원화 핵심, 허용 표정/pose/camera, 30fps sprite 출력, part/UV 책임과 후보 ledger | 원화 SHA·후보 path/SHA 기록 → 시각 비교 계획 | 기술 비교 실행 / 원화 정합은 정성 평가 |
+| 1. 전체 blockout·디자인 정합 | 머리·몸·헤어·의상·가방 큰 실루엣을 함께 대조하고 guide color를 일찍 쓴다. 전신 비율 정합 뒤 얼굴/체형, 헤어, 의상/소품 detail 순으로 진행한다. | Stage 0 → near/far 정·측·후·양 3/4의 clay/wire/actual-color 검토 | 기술 블록아웃 검증 / ART 미승인 |
 | 2. production modeling/topology | 허용된 원본을 비교 재료로만 쓰며 부위별 direct-poly/retopo를 선택한다. semantic surface, 눈·입 관절 loop, 두께·틈, hero pose와 간단 변형 시험. | Stage 1 → part owner/retopo와 trial rig 진입 | NOT RUN |
 | 3. 안정 topology handoff | 안정 topology 뒤 UV/texturing/lookdev와 rig/weights를 필요에 따라 병행하고 placeholder color를 유지한다. | Stage 2 → part별 UV/bake/lookdev와 rig 변경 범위 기록 | NOT RUN |
 | 4. rig stress·animation test | on-model pose library, 허용 표정/hero pose, 대표 clip으로 rig/model/weight/corrective feedback을 반복. | Stage 3 → stress 실패를 owner 단계로 반환, 동일 뷰에서 수정 전후 확인 | NOT RUN |

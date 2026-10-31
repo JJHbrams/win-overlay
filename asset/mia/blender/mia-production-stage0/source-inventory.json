@@ -1,0 +1,5886 @@
+{
+  "status": "EVIDENCE_READY; qualitative review uses explicitly approximate head proxies, not metric landmark alignment",
+  "sources_unchanged": true,
+  "camera_note": "GLB forward axis intentionally not corrected: yaw probe renders must establish orientation before any comparison decision. Native source cameras/lights are excluded; native shader/material differences are preserved in actual pass; clay is a scene override only.",
+  "views": [
+    "front",
+    "side",
+    "back",
+    "three_quarter_right",
+    "three_quarter_left",
+    "perspective"
+  ],
+  "records": [
+    {
+      "id": "pixal_single",
+      "path": "D:\\ai\\Mia3DWork\\output\\mia_pixal_head512_tex2048_00001.glb",
+      "sha256_before": "97d76c20e08d92b1e05079b9ec5d340683863a843f1d434a7dcd7c907fb34ada",
+      "kind": "glb",
+      "glb_import_uniform_scale": 0.46274188343478756,
+      "preview_root_uniform_scale": 1.8181818006671386,
+      "preview_root_location": [
+        -0.008399310521781445,
+        0.020818425342440605,
+        1.4086331129074097
+      ],
+      "normalization": "preview root maps bbox head proxy to 0.45m and center (0,0,1.58); source object data/transforms are not saved",
+      "bounds_after": {
+        "min": [
+          -0.36382216215133667,
+          -0.23052044212818146,
+          0.9868181943893433
+        ],
+        "max": [
+          0.36382216215133667,
+          0.23052042722702026,
+          1.8050000667572021
+        ]
+      },
+      "head_bounds": {
+        "min": [
+          -0.36382216215133667,
+          -0.23052041232585907,
+          1.3550000190734863
+        ],
+        "max": [
+          0.36382216215133667,
+          0.23052042722702026,
+          1.8050000667572021
+        ],
+        "basis": "top 55% bbox proxy; no face landmark established"
+      },
+      "native_fingerprints": {
+        "face": null,
+        "body": null
+      },
+      "head_evidence": [
+        "pixal_single_front_actual.png",
+        "pixal_single_front_clay.png",
+        "pixal_single_side_actual.png",
+        "pixal_single_side_clay.png",
+        "pixal_single_back_actual.png",
+        "pixal_single_back_clay.png",
+        "pixal_single_three_quarter_right_actual.png",
+        "pixal_single_three_quarter_right_clay.png",
+        "pixal_single_three_quarter_left_actual.png",
+        "pixal_single_three_quarter_left_clay.png",
+        "pixal_single_perspective_actual.png",
+        "pixal_single_perspective_clay.png"
+      ],
+      "sha256_after": "97d76c20e08d92b1e05079b9ec5d340683863a843f1d434a7dcd7c907fb34ada"
+    },
+    {
+      "id": "pixal_mv",
+      "path": "D:\\ai\\Mia3DWork\\output\\mia_pixal_head_mv512_tex2048_00001.glb",
+      "sha256_before": "1b08d5eaa598ee80fad5c3a36d5c355a467c30c9c878f1054ee4788358b3e343",
+      "kind": "glb",
+      "glb_import_uniform_scale": 0.4510035283993887,
+      "preview_root_uniform_scale": 1.8181818006671386,
+      "preview_root_location": [
+        -0.0011767446994781494,
+        0.004095110110938549,
+        1.397650957107544
+      ],
+      "normalization": "preview root maps bbox head proxy to 0.45m and center (0,0,1.58); source object data/transforms are not saved",
+      "bounds_after": {
+        "min": [
+          -0.3857012093067169,
+          -0.3221951723098755,
+          0.986818253993988
+        ],
+        "max": [
+          0.3857012093067169,
+          0.3221951723098755,
+          1.8050000667572021
+        ]
+      },
+      "head_bounds": {
+        "min": [
+          -0.3857012093067169,
+          -0.3221951723098755,
+          1.3550000190734863
+        ],
+        "max": [
+          0.3857012093067169,
+          0.3221951723098755,
+          1.8050000667572021
+        ],
+        "basis": "top 55% bbox proxy; no face landmark established"
+      },
+      "native_fingerprints": {
+        "face": null,
+        "body": null
+      },
+      "head_evidence": [
+        "pixal_mv_front_actual.png",
+        "pixal_mv_front_clay.png",
+        "pixal_mv_side_actual.png",
+        "pixal_mv_side_clay.png",
+        "pixal_mv_back_actual.png",
+        "pixal_mv_back_clay.png",
+        "pixal_mv_three_quarter_right_actual.png",
+        "pixal_mv_three_quarter_right_clay.png",
+        "pixal_mv_three_quarter_left_actual.png",
+        "pixal_mv_three_quarter_left_clay.png",
+        "pixal_mv_perspective_actual.png",
+        "pixal_mv_perspective_clay.png"
+      ],
+      "sha256_after": "1b08d5eaa598ee80fad5c3a36d5c355a467c30c9c878f1054ee4788358b3e343"
+    },
+    {
+      "id": "pixal_full",
+      "path": "D:\\ai\\Mia3DWork\\output\\mia_pixal3d_mv512_tex2048_00001.glb",
+      "sha256_before": "40ee1d976a20988e8959102a6ec053a892fd432b9d47adf38322fbf562e55972",
+      "kind": "glb",
+      "glb_import_uniform_scale": 1.727621403623967,
+      "preview_root_uniform_scale": 0.8823529576760266,
+      "preview_root_location": [
+        -0.0009727872675284743,
+        -0.008703768253326416,
+        0.3049999475479126
+      ],
+      "normalization": "preview root maps bbox head proxy to 0.45m and center (0,0,1.58); source object data/transforms are not saved",
+      "bounds_after": {
+        "min": [
+          -0.3124103248119354,
+          -0.22016122937202454,
+          0.3049999475479126
+        ],
+        "max": [
+          0.3124103248119354,
+          0.22016124427318573,
+          1.8049999475479126
+        ]
+      },
+      "head_bounds": {
+        "min": [
+          -0.3124103248119354,
+          -0.22016124427318573,
+          1.3550000190734863
+        ],
+        "max": [
+          0.3124103546142578,
+          0.22016124427318573,
+          1.8049999475479126
+        ],
+        "basis": "top 30% bbox proxy; no face landmark established"
+      },
+      "native_fingerprints": {
+        "face": null,
+        "body": null
+      },
+      "head_evidence": [
+        "pixal_full_front_actual.png",
+        "pixal_full_front_clay.png",
+        "pixal_full_side_actual.png",
+        "pixal_full_side_clay.png",
+        "pixal_full_back_actual.png",
+        "pixal_full_back_clay.png",
+        "pixal_full_three_quarter_right_actual.png",
+        "pixal_full_three_quarter_right_clay.png",
+        "pixal_full_three_quarter_left_actual.png",
+        "pixal_full_three_quarter_left_clay.png",
+        "pixal_full_perspective_actual.png",
+        "pixal_full_perspective_clay.png"
+      ],
+      "fullbody_evidence": [
+        "pixal_full_full_front_actual.png",
+        "pixal_full_full_front_clay.png",
+        "pixal_full_full_side_actual.png",
+        "pixal_full_full_side_clay.png",
+        "pixal_full_full_back_actual.png",
+        "pixal_full_full_back_clay.png",
+        "pixal_full_full_three_quarter_right_actual.png",
+        "pixal_full_full_three_quarter_right_clay.png",
+        "pixal_full_full_three_quarter_left_actual.png",
+        "pixal_full_full_three_quarter_left_clay.png"
+      ],
+      "fullbody_common_frame": {
+        "visible_height": 1.7,
+        "sole_z": 0.0,
+        "ortho_scale": 1.95,
+        "root_matrix": [
+          [
+            1.1333333253860474,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.1333333253860474,
+            0.0,
+            -8.443991283968444E-09
+          ],
+          [
+            0.0,
+            0.0,
+            1.1333333253860474,
+            -0.3456666171550751
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "purpose": "uniform full-silhouette comparison; source poses and shaders remain different"
+      },
+      "fullbody_common_evidence": [
+        "pixal_full_full_front_actual.png",
+        "pixal_full_full_front_clay.png",
+        "pixal_full_full_side_actual.png",
+        "pixal_full_full_side_clay.png",
+        "pixal_full_full_back_actual.png",
+        "pixal_full_full_back_clay.png"
+      ],
+      "sha256_after": "40ee1d976a20988e8959102a6ec053a892fd432b9d47adf38322fbf562e55972"
+    },
+    {
+      "id": "previous0240",
+      "path": "D:\\ai\\Mia3DWork\\model-v02\\hair-surface-stage\\Mia_HairSurface_v06.blend",
+      "sha256_before": "9ef40cabbd2dd73f67e14e38fd54713d4c5ac0ceaf1ce4aa32b64af33f3830a6",
+      "kind": "blend",
+      "glb_import_uniform_scale": 1.0,
+      "preview_root_uniform_scale": 1.8932642674151037,
+      "preview_root_location": [
+        -0.0009044150356203318,
+        -0.06853067129850388,
+        -1.4195388555526733
+      ],
+      "normalization": "preview root maps bbox head proxy to 0.45m and center (0,0,1.58); source object data/transforms are not saved",
+      "bounds_after": {
+        "min": [
+          -1.3119465112686157,
+          -0.32748734951019287,
+          -1.350496530532837
+        ],
+        "max": [
+          1.3083276748657227,
+          0.30785897374153137,
+          1.9631675481796265
+        ]
+      },
+      "head_bounds": {
+        "min": [
+          -0.20350490510463715,
+          -0.27827128767967224,
+          1.3549998998641968
+        ],
+        "max": [
+          0.1999150663614273,
+          0.004148597829043865,
+          1.8049999475479126
+        ],
+        "basis": "native Mia_Face_AnimeTopology bounds"
+      },
+      "native_fingerprints": {
+        "face": {
+          "vertex_coordinates": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187",
+          "uv_coordinates": {
+            "UVMap": "52a3430efa1ca194117103f3eb284f1cf88f2bdd3061dfd9ccf02a95171e367c"
+          },
+          "shape_key_coordinates": {
+            "Basis": "9b1c544188a504984811e48ab77868915bdaee14ac59a408ba72ab49ecd6d8bd",
+            "Face.M_F00_000_00_Fcl_ALL_Angry": "ad739a84b39ade305c1e61980b98ce4aef7920715ec6404f1b508ca183974acc",
+            "Face.M_F00_000_00_Fcl_ALL_Fun": "e593362e8c36763742546d52e80fe804848712348c26bb111e85da6ebe930bc8",
+            "Face.M_F00_000_00_Fcl_ALL_Joy": "3bbcad322028ee2ccd6325cd7dfb3af21313b65c907d6e3aee8890f9bce82d83",
+            "Face.M_F00_000_00_Fcl_ALL_Sorrow": "8f2e7159e3da8feab349d433b34fff1084f968468247dd125394def997e60aea",
+            "Face.M_F00_000_00_Fcl_ALL_Surprised": "5f65adc0c3065a6b22e315d3395bea9411aed331205cd0225a86a1c365d6c496",
+            "Face.M_F00_000_00_Fcl_BRW_Angry": "44790b9bfc8bb69114ffd0164d36b449cef65910f05b408fef74d005989db0e4",
+            "Face.M_F00_000_00_Fcl_BRW_Fun": "3b1131ec7b49243c642c865d034de03057548f2c55e345b6aff044eb10b6ee4b",
+            "Face.M_F00_000_00_Fcl_BRW_Joy": "4fe4249df1ea62d87ae0db7f6d4a95dd6f9de6283d1abcb3834bb51b11045b8f",
+            "Face.M_F00_000_00_Fcl_BRW_Sorrow": "d37719875bf604a0714187499095a3af39f937339870011aca986b149260aa2e",
+            "Face.M_F00_000_00_Fcl_BRW_Surprised": "8568909cc432479a54e215a6f33afdd5c65db4aab2942b62fba4b1fc1cd1ed5a",
+            "Face.M_F00_000_00_Fcl_EYE_Natural": "9b1c544188a504984811e48ab77868915bdaee14ac59a408ba72ab49ecd6d8bd",
+            "Face.M_F00_000_00_Fcl_EYE_Angry": "73c14e26c3bc8511392df0af31bd6d4abe0909507fa6015b2744644fe2e7c4a9",
+            "Face.M_F00_000_00_Fcl_EYE_Close": "9e467541b2804b0c18a85f3c430d0e270fe9561d67f07dda4fe70b2023029d08",
+            "Face.M_F00_000_00_Fcl_EYE_Close_R": "47db7fc829217f42368dc639a4a87b2a44c3477fca60d65a09dcdb45ac495f46",
+            "Face.M_F00_000_00_Fcl_EYE_Close_L": "567d7fa1c50f52426073a69dbc722ac0a062e28401b0fa07c96bd475cfc7231c",
+            "Face.M_F00_000_00_Fcl_EYE_Joy": "c8d3c94ccbe764e80c9e7dd8e96eef8c5f50d79edc1fce828fd5b237bab980e0",
+            "Face.M_F00_000_00_Fcl_EYE_Joy_R": "54ab8a8a790b03f37053e7b97850b8404c9ea53b4bbe03e6b897cca8b18da452",
+            "Face.M_F00_000_00_Fcl_EYE_Joy_L": "fc6672a6bfe8386ea6814d510ba2c4fe8b39efcc363017b8e8d349aa6b4cccc9",
+            "Face.M_F00_000_00_Fcl_EYE_Sorrow": "5d6434daa27c94492262e89d3783cf98638eaa75c64fa66e34b7721f80914d88",
+            "Face.M_F00_000_00_Fcl_EYE_Surprised": "4d11b5b751f1a707584d17971b2c15e993f75e2291e0dee8ac7e2b33368cb888",
+            "Face.M_F00_000_00_Fcl_EYE_Extra": "4ce5437ef07999d7d1eb871c662394f0b0b48bd2fadc2cb201b235f436a22c7d",
+            "Face.M_F00_000_00_Fcl_MTH_Up": "4cbb57719d3739cbf2ea18b8817459b07aad6632fa1c9c1829201dc7e6a47212",
+            "Face.M_F00_000_00_Fcl_MTH_Down": "05237785b37ed246865224f817d734e8e5d7121ee58e9708b26a18160a3eea09",
+            "Face.M_F00_000_00_Fcl_MTH_Angry": "bc063ea5351000bb32513747c695a2f8bfba742492f2a7ebff5c7f2e2e7660fb",
+            "Face.M_F00_000_00_Fcl_MTH_Neutral": "946a0ff6e9d8770cfab47f6cf5e227f2ec144040b4f868338ab7f5d4bdaa98ba",
+            "Face.M_F00_000_00_Fcl_MTH_Fun": "edcdc6691de10cbe9c0a27b3041a24eea2b8b75a079834e468b0d401e6e1e938",
+            "Face.M_F00_000_00_Fcl_MTH_Joy": "5fba5ce31460afc06c808ededf3ff17b4a30d69069510e56c061af6d993b8520",
+            "Face.M_F00_000_00_Fcl_MTH_Sorrow": "d3495aba44370e3c04ab10e24b8d85a61038bbd8084c5ac3d2a0514b764077b0",
+            "Face.M_F00_000_00_Fcl_MTH_Surprised": "c5bf7471d30ff90928c473efef4d62ee4b267e0466e49476722f979a3f2fe42e",
+            "Face.M_F00_000_00_Fcl_MTH_A": "76b156e6a1dc4b67c9683861ce482a6a78bbef4db775e67540e1532ef13245e9",
+            "Face.M_F00_000_00_Fcl_MTH_I": "23297f2430ca569fbdf3873ba776bdd94e1bcdd2621f7529b47a362807448e7a",
+            "Face.M_F00_000_00_Fcl_MTH_U": "73519a8490638ff17a3d7a9bed612f7b7be2209d583c914f93d193437bebe631",
+            "Face.M_F00_000_00_Fcl_MTH_E": "0cf9e35949ca8fa671c0c5aea20ed398e6b7acfd362bf8ca20b7ad9188266ec4",
+            "Face.M_F00_000_00_Fcl_MTH_O": "1bc61848e6347f5d189a8ce6aab699071f9892ce833e274c7aaa3a67a106f7f8",
+            "Face.M_F00_000_00_Fcl_HA_Fung1": "3f3a0c9cf1cb32491859fe2bbc6c056ee0ab06e06d9bbe08bfe9b7c85aa7fbaf",
+            "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "0fd55ca57fc4a4bb32c77151d1307ec34cd45160a48e9836fd61d6815f6ff411",
+            "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "fe59efe89ce124938e81e1bb99cebe0099a0a32da5b7833ff002944bc8c4eb0b",
+            "Face.M_F00_000_00_Fcl_HA_Fung2": "a026e505ac6f27782baa48cbeffb1401684acdf71402f2da856684c55d7763e4",
+            "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "b435e5c0d61c9c29aab038bbd5a2e1648bc3bdd1219201e7e29561650a2a7c35",
+            "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "98d8bcd39e7d1ce6b0d96a42248f141ab3d27c32d1ec5d7ec958a3975a9573e9",
+            "EyeExtra_01.M_F00_000_00_EyeExtra_On": "cc4659fce1fddc24461708f7cc9a22887d6b34910ccfe3ee5d811cf1d5544c75"
+          }
+        },
+        "body": {
+          "vertex_coordinates": "5a3c07d2e3ad8b1605d48c51e87bf3f67c931bda04c8cd3bea0d1f801ae489da",
+          "uv_coordinates": {
+            "UVMap": "6ab033ca1a48e8ade5f39d13563f89e0305ea1d4221830084e11240fcecfe2d5"
+          },
+          "shape_key_coordinates": {}
+        }
+      },
+      "head_evidence": [
+        "previous0240_front_actual.png",
+        "previous0240_front_clay.png",
+        "previous0240_side_actual.png",
+        "previous0240_side_clay.png",
+        "previous0240_back_actual.png",
+        "previous0240_back_clay.png",
+        "previous0240_three_quarter_right_actual.png",
+        "previous0240_three_quarter_right_clay.png",
+        "previous0240_three_quarter_left_actual.png",
+        "previous0240_three_quarter_left_clay.png",
+        "previous0240_perspective_actual.png",
+        "previous0240_perspective_clay.png"
+      ],
+      "fullbody_common_frame": {
+        "visible_height": 1.7,
+        "sole_z": 0.0,
+        "ortho_scale": 1.95,
+        "root_matrix": [
+          [
+            0.5130272507667542,
+            0.0,
+            0.0,
+            0.0009282808168791234
+          ],
+          [
+            0.0,
+            0.5130272507667542,
+            0.0,
+            0.005034945905208588
+          ],
+          [
+            0.0,
+            0.0,
+            0.5130272507667542,
+            0.6928415298461914
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "purpose": "uniform full-silhouette comparison; source poses and shaders remain different"
+      },
+      "fullbody_common_evidence": [
+        "previous0240_full_front_actual.png",
+        "previous0240_full_front_clay.png",
+        "previous0240_full_side_actual.png",
+        "previous0240_full_side_clay.png",
+        "previous0240_full_back_actual.png",
+        "previous0240_full_back_clay.png"
+      ],
+      "sha256_after": "9ef40cabbd2dd73f67e14e38fd54713d4c5ac0ceaf1ce4aa32b64af33f3830a6"
+    },
+    {
+      "id": "latest0416",
+      "path": "D:\\ai\\Mia3DWork\\model-v02\\face-hair-integration\\v06\\Mia_FaceHair_Study_v06.blend",
+      "sha256_before": "a2333af0898b48c52252b628961cdd43d2da71eec1a61d02dee8bddb123c7e6a",
+      "kind": "blend",
+      "glb_import_uniform_scale": 1.0,
+      "preview_root_uniform_scale": 1.8932642674151037,
+      "preview_root_location": [
+        -0.0009044150356203318,
+        -0.06853067129850388,
+        -1.4195388555526733
+      ],
+      "normalization": "preview root maps bbox head proxy to 0.45m and center (0,0,1.58); source object data/transforms are not saved",
+      "bounds_after": {
+        "min": [
+          -1.3122751712799072,
+          -0.32748734951019287,
+          -1.3517242670059204
+        ],
+        "max": [
+          1.3086563348770142,
+          0.3079850971698761,
+          1.9634586572647095
+        ]
+      },
+      "head_bounds": {
+        "min": [
+          -0.2045898735523224,
+          -0.27827128767967224,
+          1.353850245475769
+        ],
+        "max": [
+          0.2010003626346588,
+          0.0053716180846095085,
+          1.8049999475479126
+        ],
+        "basis": "native Mia_Face_AnimeTopology bounds"
+      },
+      "native_fingerprints": {
+        "face": {
+          "vertex_coordinates": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187",
+          "uv_coordinates": {
+            "UVMap": "52a3430efa1ca194117103f3eb284f1cf88f2bdd3061dfd9ccf02a95171e367c"
+          },
+          "shape_key_coordinates": {
+            "Basis": "9b1c544188a504984811e48ab77868915bdaee14ac59a408ba72ab49ecd6d8bd",
+            "Face.M_F00_000_00_Fcl_ALL_Angry": "ad739a84b39ade305c1e61980b98ce4aef7920715ec6404f1b508ca183974acc",
+            "Face.M_F00_000_00_Fcl_ALL_Fun": "e593362e8c36763742546d52e80fe804848712348c26bb111e85da6ebe930bc8",
+            "Face.M_F00_000_00_Fcl_ALL_Joy": "3bbcad322028ee2ccd6325cd7dfb3af21313b65c907d6e3aee8890f9bce82d83",
+            "Face.M_F00_000_00_Fcl_ALL_Sorrow": "8f2e7159e3da8feab349d433b34fff1084f968468247dd125394def997e60aea",
+            "Face.M_F00_000_00_Fcl_ALL_Surprised": "5f65adc0c3065a6b22e315d3395bea9411aed331205cd0225a86a1c365d6c496",
+            "Face.M_F00_000_00_Fcl_BRW_Angry": "44790b9bfc8bb69114ffd0164d36b449cef65910f05b408fef74d005989db0e4",
+            "Face.M_F00_000_00_Fcl_BRW_Fun": "3b1131ec7b49243c642c865d034de03057548f2c55e345b6aff044eb10b6ee4b",
+            "Face.M_F00_000_00_Fcl_BRW_Joy": "4fe4249df1ea62d87ae0db7f6d4a95dd6f9de6283d1abcb3834bb51b11045b8f",
+            "Face.M_F00_000_00_Fcl_BRW_Sorrow": "d37719875bf604a0714187499095a3af39f937339870011aca986b149260aa2e",
+            "Face.M_F00_000_00_Fcl_BRW_Surprised": "8568909cc432479a54e215a6f33afdd5c65db4aab2942b62fba4b1fc1cd1ed5a",
+            "Face.M_F00_000_00_Fcl_EYE_Natural": "9b1c544188a504984811e48ab77868915bdaee14ac59a408ba72ab49ecd6d8bd",
+            "Face.M_F00_000_00_Fcl_EYE_Angry": "73c14e26c3bc8511392df0af31bd6d4abe0909507fa6015b2744644fe2e7c4a9",
+            "Face.M_F00_000_00_Fcl_EYE_Close": "9e467541b2804b0c18a85f3c430d0e270fe9561d67f07dda4fe70b2023029d08",
+            "Face.M_F00_000_00_Fcl_EYE_Close_R": "47db7fc829217f42368dc639a4a87b2a44c3477fca60d65a09dcdb45ac495f46",
+            "Face.M_F00_000_00_Fcl_EYE_Close_L": "567d7fa1c50f52426073a69dbc722ac0a062e28401b0fa07c96bd475cfc7231c",
+            "Face.M_F00_000_00_Fcl_EYE_Joy": "c8d3c94ccbe764e80c9e7dd8e96eef8c5f50d79edc1fce828fd5b237bab980e0",
+            "Face.M_F00_000_00_Fcl_EYE_Joy_R": "54ab8a8a790b03f37053e7b97850b8404c9ea53b4bbe03e6b897cca8b18da452",
+            "Face.M_F00_000_00_Fcl_EYE_Joy_L": "fc6672a6bfe8386ea6814d510ba2c4fe8b39efcc363017b8e8d349aa6b4cccc9",
+            "Face.M_F00_000_00_Fcl_EYE_Sorrow": "5d6434daa27c94492262e89d3783cf98638eaa75c64fa66e34b7721f80914d88",
+            "Face.M_F00_000_00_Fcl_EYE_Surprised": "4d11b5b751f1a707584d17971b2c15e993f75e2291e0dee8ac7e2b33368cb888",
+            "Face.M_F00_000_00_Fcl_EYE_Extra": "4ce5437ef07999d7d1eb871c662394f0b0b48bd2fadc2cb201b235f436a22c7d",
+            "Face.M_F00_000_00_Fcl_MTH_Up": "4cbb57719d3739cbf2ea18b8817459b07aad6632fa1c9c1829201dc7e6a47212",
+            "Face.M_F00_000_00_Fcl_MTH_Down": "05237785b37ed246865224f817d734e8e5d7121ee58e9708b26a18160a3eea09",
+            "Face.M_F00_000_00_Fcl_MTH_Angry": "bc063ea5351000bb32513747c695a2f8bfba742492f2a7ebff5c7f2e2e7660fb",
+            "Face.M_F00_000_00_Fcl_MTH_Neutral": "946a0ff6e9d8770cfab47f6cf5e227f2ec144040b4f868338ab7f5d4bdaa98ba",
+            "Face.M_F00_000_00_Fcl_MTH_Fun": "edcdc6691de10cbe9c0a27b3041a24eea2b8b75a079834e468b0d401e6e1e938",
+            "Face.M_F00_000_00_Fcl_MTH_Joy": "5fba5ce31460afc06c808ededf3ff17b4a30d69069510e56c061af6d993b8520",
+            "Face.M_F00_000_00_Fcl_MTH_Sorrow": "d3495aba44370e3c04ab10e24b8d85a61038bbd8084c5ac3d2a0514b764077b0",
+            "Face.M_F00_000_00_Fcl_MTH_Surprised": "c5bf7471d30ff90928c473efef4d62ee4b267e0466e49476722f979a3f2fe42e",
+            "Face.M_F00_000_00_Fcl_MTH_A": "76b156e6a1dc4b67c9683861ce482a6a78bbef4db775e67540e1532ef13245e9",
+            "Face.M_F00_000_00_Fcl_MTH_I": "23297f2430ca569fbdf3873ba776bdd94e1bcdd2621f7529b47a362807448e7a",
+            "Face.M_F00_000_00_Fcl_MTH_U": "73519a8490638ff17a3d7a9bed612f7b7be2209d583c914f93d193437bebe631",
+            "Face.M_F00_000_00_Fcl_MTH_E": "0cf9e35949ca8fa671c0c5aea20ed398e6b7acfd362bf8ca20b7ad9188266ec4",
+            "Face.M_F00_000_00_Fcl_MTH_O": "1bc61848e6347f5d189a8ce6aab699071f9892ce833e274c7aaa3a67a106f7f8",
+            "Face.M_F00_000_00_Fcl_HA_Fung1": "3f3a0c9cf1cb32491859fe2bbc6c056ee0ab06e06d9bbe08bfe9b7c85aa7fbaf",
+            "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "0fd55ca57fc4a4bb32c77151d1307ec34cd45160a48e9836fd61d6815f6ff411",
+            "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "fe59efe89ce124938e81e1bb99cebe0099a0a32da5b7833ff002944bc8c4eb0b",
+            "Face.M_F00_000_00_Fcl_HA_Fung2": "a026e505ac6f27782baa48cbeffb1401684acdf71402f2da856684c55d7763e4",
+            "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "b435e5c0d61c9c29aab038bbd5a2e1648bc3bdd1219201e7e29561650a2a7c35",
+            "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "98d8bcd39e7d1ce6b0d96a42248f141ab3d27c32d1ec5d7ec958a3975a9573e9",
+            "EyeExtra_01.M_F00_000_00_EyeExtra_On": "cc4659fce1fddc24461708f7cc9a22887d6b34910ccfe3ee5d811cf1d5544c75",
+            "MIA_FaceArt_EyeProportion": "b52b3ad10a0ff6c2e968fa5830fc3139b3cd5eadbb021a39ecd6c54b59f28d6b",
+            "MIA_FaceArt_OwnedBrowPlacement": "34497c5cdb69fe83e1bd67f3a2a2d47f03e68f18ff8dc68d9079ba33b180d7e9"
+          }
+        },
+        "body": {
+          "vertex_coordinates": "5a3c07d2e3ad8b1605d48c51e87bf3f67c931bda04c8cd3bea0d1f801ae489da",
+          "uv_coordinates": {
+            "UVMap": "6ab033ca1a48e8ade5f39d13563f89e0305ea1d4221830084e11240fcecfe2d5"
+          },
+          "shape_key_coordinates": {}
+        }
+      },
+      "head_evidence": [
+        "latest0416_front_actual.png",
+        "latest0416_front_clay.png",
+        "latest0416_side_actual.png",
+        "latest0416_side_clay.png",
+        "latest0416_back_actual.png",
+        "latest0416_back_clay.png",
+        "latest0416_three_quarter_right_actual.png",
+        "latest0416_three_quarter_right_clay.png",
+        "latest0416_three_quarter_left_actual.png",
+        "latest0416_three_quarter_left_clay.png",
+        "latest0416_perspective_actual.png",
+        "latest0416_perspective_clay.png"
+      ],
+      "fullbody_common_frame": {
+        "visible_height": 1.7,
+        "sole_z": 0.0,
+        "ortho_scale": 1.95,
+        "root_matrix": [
+          [
+            0.5127922296524048,
+            0.0,
+            0.0,
+            0.0009278556099161506
+          ],
+          [
+            0.0,
+            0.5127922296524048,
+            0.0,
+            0.0050003016367554665
+          ],
+          [
+            0.0,
+            0.0,
+            0.5127922296524048,
+            0.6931536793708801
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "purpose": "uniform full-silhouette comparison; source poses and shaders remain different"
+      },
+      "fullbody_common_evidence": [
+        "latest0416_full_front_actual.png",
+        "latest0416_full_front_clay.png",
+        "latest0416_full_side_actual.png",
+        "latest0416_full_side_clay.png",
+        "latest0416_full_back_actual.png",
+        "latest0416_full_back_clay.png"
+      ],
+      "sha256_after": "a2333af0898b48c52252b628961cdd43d2da71eec1a61d02dee8bddb123c7e6a"
+    }
+  ],
+  "render_camera_manifest": [
+    {
+      "file": "latest0416_back_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_back_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_front_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_front_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_full_back_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "latest0416_full_back_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "latest0416_full_front_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "latest0416_full_front_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "latest0416_full_side_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "latest0416_full_side_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "latest0416_perspective_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "PERSP",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_perspective_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "PERSP",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_side_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_side_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_three_quarter_left_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_three_quarter_left_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_three_quarter_right_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "latest0416_three_quarter_right_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_back_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_back_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_front_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_front_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_full_back_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "pixal_full_full_back_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "pixal_full_full_front_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "pixal_full_full_front_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "pixal_full_full_side_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "pixal_full_full_side_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "pixal_full_full_three_quarter_left_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -3.181980609893799
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -3.181980609893799
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.0549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -3.181980609893799
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -3.181980609893799
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.0549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.5,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        7.450580596923828E-09,
+        1.0549999475479126
+      ]
+    },
+    {
+      "file": "pixal_full_full_three_quarter_left_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -3.181980609893799
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -3.181980609893799
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.0549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -3.181980609893799
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -3.181980609893799
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.0549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.5,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        7.450580596923828E-09,
+        1.0549999475479126
+      ]
+    },
+    {
+      "file": "pixal_full_full_three_quarter_right_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          3.181980609893799
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -3.181980609893799
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.0549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          3.181980609893799
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -3.181980609893799
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.0549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.5,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        7.450580596923828E-09,
+        1.0549999475479126
+      ]
+    },
+    {
+      "file": "pixal_full_full_three_quarter_right_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          3.181980609893799
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -3.181980609893799
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.0549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          3.181980609893799
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -3.181980609893799
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.0549999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.5,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        7.450580596923828E-09,
+        1.0549999475479126
+      ]
+    },
+    {
+      "file": "pixal_full_perspective_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "PERSP",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_perspective_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "PERSP",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_side_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_side_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_three_quarter_left_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_three_quarter_left_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_three_quarter_right_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_full_three_quarter_right_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_back_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_back_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_front_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_front_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_perspective_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "PERSP",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_perspective_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "PERSP",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_side_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_side_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_three_quarter_left_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_three_quarter_left_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_three_quarter_right_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_mv_three_quarter_right_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_back_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_back_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_front_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_front_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_perspective_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "PERSP",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_perspective_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "PERSP",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_side_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_side_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_three_quarter_left_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_three_quarter_left_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_three_quarter_right_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "pixal_single_three_quarter_right_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_back_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_back_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          2.020667240591078E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_front_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_front_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -1.649999976158142
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_full_back_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "previous0240_full_back_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -1.0,
+          1.5099580252808664E-07,
+          -1.1399865765455465E-14,
+          7.164184021448783E-16
+        ],
+        [
+          0.0,
+          7.549790126404332E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.5099580252808664E-07,
+          1.0,
+          -7.549790126404332E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "previous0240_full_front_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "previous0240_full_front_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654E-07,
+          -1.0,
+          -5.849999904632568
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654E-07,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "previous0240_full_side_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "previous0240_full_side_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          5.849999904632568
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -3.5820920107243915E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          0.8500000238418579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.9500000476837158,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        0.8500000238418579
+      ]
+    },
+    {
+      "file": "previous0240_perspective_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "PERSP",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_perspective_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "PERSP",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_side_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_side_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          -4.371138828673793E-08,
+          4.371138828673793E-08,
+          1.0,
+          1.649999976158142
+        ],
+        [
+          1.0,
+          1.910685676922942E-15,
+          4.371138828673793E-08,
+          -1.010333620295539E-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_three_quarter_left_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_three_quarter_left_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          7.450235983696984E-08,
+          -0.7071067690849304,
+          -1.1667262315750122
+        ],
+        [
+          -0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          -1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_three_quarter_right_actual.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    },
+    {
+      "file": "previous0240_three_quarter_right_clay.png",
+      "scene_camera": "STAGE0_CAMERA",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "evaluated_matrix_world": [
+        [
+          0.7071068286895752,
+          -7.450235983696984E-08,
+          0.7071067690849304,
+          1.1667262315750122
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592E-07,
+          -0.7071068286895752,
+          -1.1667262315750122
+        ],
+        [
+          1.490736281084537E-07,
+          1.0,
+          -4.371138828673793E-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.550000011920929,
+      "camera_type": "ORTHO",
+      "constraints": 0,
+      "animation_data": false,
+      "target": [
+        0.0,
+        0.0,
+        1.5800000429153442
+      ]
+    }
+  ],
+  "limitations": [
+    "Generated illustrated input is not a calibrated orthographic turnaround.",
+    "Head normalization uses recorded region/bounds proxies; differences in face proportions are qualitative.",
+    "Actual-color passes preserve source shader differences; use clay alongside them."
+  ]
+}
