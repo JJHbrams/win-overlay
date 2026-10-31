@@ -2,10 +2,13 @@
   "schema_version": 1,
   "updated": "2026-10-31",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
-  "status": "reference_validation_before_further_production_changes",
+  "status": "v20_body_face_correction_then_hair_in_progress",
   "character_complete": false,
   "art_approved": false,
-  "read_first": ["WORKING_PROTOCOL.md", "REFERENCE_INDEX.md"],
+  "read_first": [
+    "WORKING_PROTOCOL.md",
+    "REFERENCE_INDEX.md"
+  ],
   "selected_static_wip": {
     "path": "blender/mia-reference-finish-v17/integrated-v18/Mia_HeadHair_v18.blend",
     "sha256": "87334607c76f6c0e876807f10ff407e8ce60fc7055265ae3591257893ba7b88d",
@@ -52,16 +55,25 @@
     "fixed-world-X normal-angle sample cannot accept a changed anatomical section"
   ],
   "immediate_next": [
-    "Finish registered front/profile/back/oblique comparison using existing concept art and subtle-angle expression panels",
-    "Use the completed four-view body audit to define breast/chest, pelvis/thigh and neck/shoulder correction targets; do not inherit a body art PASS",
-    "Keep actual shader color/UV/diffuse-clay/specular-probe/target-toon evidence separate",
-    "Derive coordinated correction targets from those comparisons before more production geometry or paint changes"
+    "Review actual v20 body breast-root/pelvis/neck corrections against all four views; remaining oval/high-hip defects stay open",
+    "Finish coordinated face/eye changes and measured forehead-cap boundary continuity; compare front/profile/both oblique and expression angles",
+    "Correct Pixal crown hole and mechanical half-up knot without discarding main hair detail; keep exact ownership/UV provenance",
+    "Integrate independently owned edits into a new immutable native, fresh multiview review and live Blender preview; no automatic art PASS"
   ],
-  "do_not_infer_pass_from": ["successful save", "render count", "source hash preservation", "shape key count", "latest version", "subagent completion"],
+  "do_not_infer_pass_from": [
+    "successful save",
+    "render count",
+    "source hash preservation",
+    "shape key count",
+    "latest version",
+    "subagent completion"
+  ],
   "session_constraints": {
     "saved_sources_immutable": true,
     "discard_live_test_view_authorized": true,
     "user_prefers_live_blender_mcp": true,
     "private_real_person_references_not_used_or_recorded": true
-  }
+  },
+  "worktree_archive": "WORKTREE_ARCHIVE.md",
+  "active_contract": "blender/mia-correction-v20/ACCEPTANCE.md"
 }
