@@ -1,0 +1,34 @@
+{
+  "asset_id": "MIA-BODY-FRONT-SELECTED-20261031",
+  "status": "user_selected_basis_for_further_edits",
+  "generator": "built-in image_gen.imagegen",
+  "created_date": "2026-10-31",
+  "input_images": [
+    {
+      "path": "received/mia-front-body-reaffirmed-20261031.png",
+      "sha256": "be7c2790bf87f6e0cbf988863464a1a04924d31f1a87e8ddc04464ac5890aae6",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "output": {
+    "path": "body-foundation/anchors/mia-body-front-user-selected-20261031.png",
+    "sha256": "09238b027687c7cd16f99d781c1d79ef081769c7258b49bb840d1badf11c6d42",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA"
+  },
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "229165825736adaeedcbee3c45aac7a440d9547b0f0d401a83406f69eadd1985",
+  "user_direction": "Use this front body as the basis; keep pelvis/thigh silhouette and adjust side chest volume. Later request: slightly reduce calf thickness.",
+  "limitations": [
+    "Derived reconstruction, not literal recovery of hidden skin.",
+    "Original character/hair intent preserved by generation; not guaranteed pixel-identical to clothed source.",
+    "RGBA export contains broad soft-alpha haze; not a production sprite cutout."
+  ]
+}

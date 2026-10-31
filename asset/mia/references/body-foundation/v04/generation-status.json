@@ -1,0 +1,43 @@
+{
+  "status": "not_generated_safety_filter_blocked",
+  "date": "2026-10-31",
+  "requested_change": "Match profile/oblique chest volume and other views to the user-selected front; preserve chosen pelvis/thighs and original hair.",
+  "generator": "built-in image_gen.imagegen",
+  "input_images": [
+    {
+      "path": "body-foundation/v03/mia-body-underwear-study-v03.png",
+      "sha256": "29b5e44748e218f734d53d7d1cf320419ed7885e968b363f4ba35a0d3da87bae",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "body-foundation/anchors/mia-body-front-user-selected-20261031.png",
+      "sha256": "09238b027687c7cd16f99d781c1d79ef081769c7258b49bb840d1badf11c6d42",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "mia-clean-master-v22.png",
+      "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "9fc40213857eb9378e6668edff5a6b3acbfc76f8194ec30df9f0b58beeb825b8",
+  "error_type": "moderation_blocked",
+  "moderation_stage": "output",
+  "category": "sexual",
+  "request_id": "781bd0a1-4631-451d-bbea-9114c23ddd28",
+  "output_image": null,
+  "fallback_used": false
+}

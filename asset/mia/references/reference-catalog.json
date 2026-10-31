@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "character": "Mia",
+  "updated_date": "2026-10-31",
+  "reference_selection": {
+    "character_design": "MIA-DESIGN-MASTER-V22",
+    "face_identity": "MIA-FACE-CONFIRMED-20261031",
+    "visible_front_body_and_original_hair": "MIA-USER-FRONT-20261031",
+    "selected_front_body_anchor": "MIA-BODY-FRONT-SELECTED-20261031",
+    "latest_requested_front_revision": "MIA-BODY-FRONT-CALF-V01",
+    "latest_available_four_view_study": "MIA-BODY-V03",
+    "side_volume_revision": "blocked_no_v04_image"
+  },
+  "rules": [
+    "Select by role and explicit user decision, never by largest version number alone.",
+    "Existing source files/paths are preserved.",
+    "Generated views are illustrative reconstructions and do not certify model geometry or dimensions.",
+    "Latest front/calf revision is not synchronized to the older four-view sheet; side-volume revision was blocked."
+  ],
+  "assets": [
+    {
+      "id": "MIA-DESIGN-MASTER-V22",
+      "status": "existing_approved",
+      "role": "character_wardrobe_accessories",
+      "path": "mia-clean-master-v22.png",
+      "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "MIA-FACE-CONFIRMED-20261031",
+      "status": "user_confirmed",
+      "role": "face_expression_lineart",
+      "path": "mia-expression-style-confirmed-20261031.png",
+      "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "MIA-FRONT-V22",
+      "status": "existing_approved_support",
+      "role": "original_front_support",
+      "path": "mia-canonical-source-v22.png",
+      "sha256": "bee7055c953bfb0611abe7ef4ca6eea5ecd3b5360f1322a8199095550419249e",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "id": "MIA-EXPRESSIONS-V22",
+      "status": "existing_approved_support",
+      "role": "expression_support",
+      "path": "mia-expressions-clean-16-v22.png",
+      "sha256": "047ba31c44ee9e5c68ac85579cfe1b209da6c95a02f574f679b8ba43fa88a40e",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "MIA-USER-FRONT-20261031",
+      "status": "user_reaffirmed",
+      "role": "visible_body_silhouette_abs_original_hair",
+      "path": "received/mia-front-body-reaffirmed-20261031.png",
+      "sha256": "be7c2790bf87f6e0cbf988863464a1a04924d31f1a87e8ddc04464ac5890aae6",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "id": "MIA-BODY-FRONT-SELECTED-20261031",
+      "status": "user_selected_for_further_edits",
+      "role": "front_body_anchor",
+      "path": "body-foundation/anchors/mia-body-front-user-selected-20261031.png",
+      "sha256": "09238b027687c7cd16f99d781c1d79ef081769c7258b49bb840d1badf11c6d42",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "id": "MIA-BODY-FRONT-CALF-V01",
+      "status": "requested_revision_candidate",
+      "role": "calf_refinement",
+      "path": "body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png",
+      "sha256": "a79af7148079278c10ff88543b9f801d4d618e0007ec4f1a01ab26253c4db685",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "id": "MIA-BODY-V01",
+      "status": "superseded_identity_and_physique_mismatch",
+      "role": "generated_body_study",
+      "path": "body-foundation/v01/mia-body-underwear-study-v01.png",
+      "sha256": "f0cb3b34b8af84233b14827573f53103a0eb2d250aaf80770049c5eb0856e1d9",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "provenance": "body-foundation/v01/provenance.json"
+    },
+    {
+      "id": "MIA-BODY-V02",
+      "status": "superseded_identity_mismatch",
+      "role": "generated_body_study",
+      "path": "body-foundation/v02/mia-body-underwear-study-v02.png",
+      "sha256": "1b2f7cbbf34627a5520d52c132a5ec343c7be380248b20427e92170d573348f0",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "provenance": "body-foundation/v02/provenance.json"
+    },
+    {
+      "id": "MIA-BODY-V03",
+      "status": "four_view_study_pending_review_not_synchronized_to_later_front_selection",
+      "role": "generated_body_study",
+      "path": "body-foundation/v03/mia-body-underwear-study-v03.png",
+      "sha256": "29b5e44748e218f734d53d7d1cf320419ed7885e968b363f4ba35a0d3da87bae",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "provenance": "body-foundation/v03/provenance.json"
+    },
+    {
+      "id": "MIA-LEGACY-BODY_MV_CONDITION_BACK",
+      "status": "legacy_derived_input_not_design_master",
+      "role": "reconstruction_conditioning",
+      "path": "conditioning/body_mv_condition_back.png",
+      "sha256": "ddcb1b6f3f457cb0626d685b8c6fa096d4464ad308a72ff2b365bb912e6ec4e0",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "MIA-LEGACY-BODY_MV_CONDITION_FRONT",
+      "status": "legacy_derived_input_not_design_master",
+      "role": "reconstruction_conditioning",
+      "path": "conditioning/body_mv_condition_front.png",
+      "sha256": "ad2fc96acf3f079bbb5ae7205b67944ce12502dfedd71b2f11287359813930a8",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "MIA-LEGACY-HEAD_MV_CONDITION_FRONT",
+      "status": "legacy_derived_input_not_design_master",
+      "role": "reconstruction_conditioning",
+      "path": "conditioning/head_mv_condition_front.png",
+      "sha256": "a3ce7c509b2432d0358a0b757475579d5e44472cb69f51acf6b532c71847c7e8",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "MIA-LEGACY-MIA-RIGGING-APOSE-BACK-V30",
+      "status": "legacy_derived_input_not_design_master",
+      "role": "reconstruction_input",
+      "path": "inputs/mia-rigging-apose-back-v30.png",
+      "sha256": "80dc674fc4e40901a190648caf385e78c8dfca6b3c718cc98a9e5921a45ffdee",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "id": "MIA-LEGACY-MIA-RIGGING-APOSE-FRONT-V30",
+      "status": "legacy_derived_input_not_design_master",
+      "role": "reconstruction_input",
+      "path": "inputs/mia-rigging-apose-front-v30.png",
+      "sha256": "63545f141a5cd86074bec2a09cf66868223d8971b8d74e4a6a355704046794da",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "reaffirmed_front_pixel_equal_to_old_canonical": false
+}

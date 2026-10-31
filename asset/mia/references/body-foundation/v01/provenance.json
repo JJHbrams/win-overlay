@@ -1,0 +1,92 @@
+{
+  "asset_id": "MIA-BODY-V01",
+  "created_date": "2026-10-31",
+  "generator": "built-in image_gen.imagegen",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "fdaa4513f9a7ce10d635502b0f7bb98ed73c0a9ec293e5f77d623be07efb1972",
+  "output": {
+    "path": "body-foundation/v01/mia-body-underwear-study-v01.png",
+    "sha256": "f0cb3b34b8af84233b14827573f53103a0eb2d250aaf80770049c5eb0856e1d9",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB"
+  },
+  "views": [
+    {
+      "view": "front",
+      "path": "body-foundation/v01/views/mia-body-v01-front.png",
+      "source_pixel_box": [
+        24,
+        48,
+        440,
+        1004
+      ],
+      "operation": "lossless crop; no rescale",
+      "projection_calibrated": false
+    },
+    {
+      "view": "left-profile",
+      "path": "body-foundation/v01/views/mia-body-v01-left-profile.png",
+      "source_pixel_box": [
+        448,
+        48,
+        724,
+        1004
+      ],
+      "operation": "lossless crop; no rescale",
+      "projection_calibrated": false
+    },
+    {
+      "view": "back",
+      "path": "body-foundation/v01/views/mia-body-v01-back.png",
+      "source_pixel_box": [
+        736,
+        48,
+        1122,
+        1004
+      ],
+      "operation": "lossless crop; no rescale",
+      "projection_calibrated": false
+    },
+    {
+      "view": "front-three-quarter",
+      "path": "body-foundation/v01/views/mia-body-v01-front-three-quarter.png",
+      "source_pixel_box": [
+        1128,
+        48,
+        1536,
+        1004
+      ],
+      "operation": "lossless crop; no rescale",
+      "projection_calibrated": false
+    }
+  ],
+  "status": "superseded_identity_and_physique_mismatch",
+  "method": "new four-view generation from clothed master and confirmed face sheet",
+  "input_images": [
+    {
+      "path": "mia-clean-master-v22.png",
+      "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "mia-expression-style-confirmed-20261031.png",
+      "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "feedback": [
+    "Body read softer/full relative to visible canonical midriff.",
+    "Hair was gathered up for anatomy readability, then user rejected changed hairstyle."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "asset_id": "MIA-BODY-FRONT-CALF-V01",
+  "status": "requested_revision_candidate",
+  "generator": "built-in image_gen.imagegen",
+  "created_date": "2026-10-31",
+  "input_images": [
+    {
+      "path": "body-foundation/anchors/mia-body-front-user-selected-20261031.png",
+      "sha256": "09238b027687c7cd16f99d781c1d79ef081769c7258b49bb840d1badf11c6d42",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "output": {
+    "path": "body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png",
+    "sha256": "a79af7148079278c10ff88543b9f801d4d618e0007ec4f1a01ab26253c4db685",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA"
+  },
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "26b4cd49978bbc779d2f24317e2e6fda09771eb41b67704079dc18c7a65d8b82",
+  "requested_change": "Slightly reduce the widest portion of both calves while retaining knee/ankle/foot positions, leg lengths and chosen pelvis/thigh silhouette.",
+  "invariants": "Same original-derived face, long loose hair/half-up/braid, pose and underwear.",
+  "limitations": [
+    "No exact percentage or pixel-perfect invariance claimed.",
+    "Not yet propagated into the four-view sheet.",
+    "RGBA export is a concept reference, not a cleaned production sprite cutout."
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "asset_id": "MIA-BODY-V03",
+  "created_date": "2026-10-31",
+  "generator": "built-in image_gen.imagegen",
+  "prompt_file": "prompt.txt",
+  "prompt_sha256": "313ffdf1d1adfd176811a87a0a37d7d0998e9d9bad56b2c22ebc87c48c8e739e",
+  "output": {
+    "path": "body-foundation/v03/mia-body-underwear-study-v03.png",
+    "sha256": "29b5e44748e218f734d53d7d1cf320419ed7885e968b363f4ba35a0d3da87bae",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB"
+  },
+  "views": [
+    {
+      "view": "front",
+      "path": "body-foundation/v03/views/mia-body-v03-front.png",
+      "source_pixel_box": [
+        24,
+        48,
+        440,
+        1004
+      ],
+      "operation": "lossless crop; no rescale",
+      "projection_calibrated": false
+    },
+    {
+      "view": "left-profile",
+      "path": "body-foundation/v03/views/mia-body-v03-left-profile.png",
+      "source_pixel_box": [
+        448,
+        48,
+        724,
+        1004
+      ],
+      "operation": "lossless crop; no rescale",
+      "projection_calibrated": false
+    },
+    {
+      "view": "back",
+      "path": "body-foundation/v03/views/mia-body-v03-back.png",
+      "source_pixel_box": [
+        736,
+        48,
+        1122,
+        1004
+      ],
+      "operation": "lossless crop; no rescale",
+      "projection_calibrated": false
+    },
+    {
+      "view": "front-three-quarter",
+      "path": "body-foundation/v03/views/mia-body-v03-front-three-quarter.png",
+      "source_pixel_box": [
+        1128,
+        48,
+        1536,
+        1004
+      ],
+      "operation": "lossless crop; no rescale",
+      "projection_calibrated": false
+    }
+  ],
+  "status": "four_view_study_pending_review_not_synchronized_to_later_front_selection",
+  "method": "direct clothing-replacement front study, then multi-view reconstruction using original front and clothed master",
+  "input_images": [
+    {
+      "path": "body-foundation/v03/mia-body-front-refined-study-v03.png",
+      "sha256": "4bcc48b9a5c73b76aeed4735e02b9ac7b8d23f8d4ae251e06a565ef4a233f243",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "received/mia-front-body-reaffirmed-20261031.png",
+      "sha256": "be7c2790bf87f6e0cbf988863464a1a04924d31f1a87e8ddc04464ac5890aae6",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "mia-clean-master-v22.png",
+      "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "feedback": [
+    "Long loose waves, half-up arrangement and anatomical-left braid restored.",
+    "User later selected the less-slimmed original-derived front anchor instead of this refined front.",
+    "Existing sheet is not the completed side-volume revision of that selected anchor."
+  ]
+}
