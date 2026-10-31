@@ -1,0 +1,100 @@
+{
+  "asset_id": "MIA-BODY-V05",
+  "created_date": "2026-10-31",
+  "generator": "built-in image_gen.imagegen",
+  "transparent_background": false,
+  "path_convention": {
+    "inputs_and_outputs": "relative to asset/mia/references",
+    "prompt_file": "relative to body-foundation/v05"
+  },
+  "status": "completed_requested_art_pending_user_review",
+  "authoritative_inputs": [
+    {
+      "path": "body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png",
+      "sha256": "a79af7148079278c10ff88543b9f801d4d618e0007ec4f1a01ab26253c4db685",
+      "size": [1024, 1536],
+      "mode": "RGBA",
+      "role": "selected front body and calf proportion anchor"
+    },
+    {
+      "path": "mia-expression-style-confirmed-20261031.png",
+      "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+      "size": [1536, 1024],
+      "mode": "RGB",
+      "role": "face identity and linework reference"
+    }
+  ],
+  "generation_chain": [
+    {
+      "step": "layout",
+      "prompt_file": "01-layout-prompt.txt",
+      "prompt_sha256": "5927ad36c30242f264eb9463a5a8aca4dba8f31835d5c7a50d23caffeab1e708",
+      "inputs": [
+        "body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png",
+        "body-foundation/v03/mia-body-underwear-study-v03.png",
+        "mia-expression-style-confirmed-20261031.png"
+      ],
+      "output": {
+        "path": "body-foundation/v05/iterations/mia-body-turnaround-v05-layout.png",
+        "sha256": "b1343884dabf35cb64e6f1cabbb74d8c4a2ac81eab49656cad8f3be65e96b512",
+        "size": [1536, 1024],
+        "mode": "RGB"
+      },
+      "status": "superseded_by_angle_correction"
+    },
+    {
+      "step": "three-quarter-angle-correction",
+      "prompt_file": "02-angle-prompt.txt",
+      "prompt_sha256": "8f237b22594104345942f3a033c98a89e06762aa4394b735e1f26442a08cd64f",
+      "inputs": [
+        "body-foundation/v05/iterations/mia-body-turnaround-v05-layout.png",
+        "body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png",
+        "mia-expression-style-confirmed-20261031.png"
+      ],
+      "output": {
+        "path": "body-foundation/v05/iterations/mia-body-turnaround-v05-angle.png",
+        "sha256": "f5ff34b30ca4dde6b38f36409258aa22ed9ae5c0a11c26f43ada1db29ecc991a",
+        "size": [1536, 1024],
+        "mode": "RGB"
+      },
+      "status": "superseded_by_calf_consistency_correction"
+    },
+    {
+      "step": "main-turnaround",
+      "prompt_file": "03-calf-consistency-prompt.txt",
+      "prompt_sha256": "4cfe2f2672ab427c021b54a995fad32f6511a1efe55ece35fcacb7f22f5ef4c8",
+      "inputs": [
+        "body-foundation/v05/iterations/mia-body-turnaround-v05-angle.png",
+        "body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png"
+      ],
+      "output": {
+        "path": "body-foundation/v05/mia-body-turnaround-v05.png",
+        "sha256": "bdf57d4667a5b1067b9edf4786387d93b05830969bc7252c6658f7cdadc2905a",
+        "size": [1536, 1024],
+        "mode": "RGB"
+      },
+      "status": "completed_requested_art_pending_user_review"
+    },
+    {
+      "step": "body-visibility-supplement",
+      "prompt_file": "04-body-visibility-prompt.txt",
+      "prompt_sha256": "d197e30a93a1724ab8803757bbb810cc1aa352108e05ef0a0bae3b934f7ca7ee",
+      "inputs": [
+        "body-foundation/v05/mia-body-turnaround-v05.png",
+        "body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png"
+      ],
+      "output": {
+        "path": "body-foundation/v05/mia-body-visibility-guide-v05.png",
+        "sha256": "3a334a468058083cf64a99ea450328526c1b0605f035075460d29e74632da2e0",
+        "size": [1536, 1024],
+        "mode": "RGB"
+      },
+      "note": "Long hair is temporarily hidden only to expose neck, shoulder and back body surfaces for modeling; it is not a hairstyle replacement.",
+      "status": "completed_requested_art_pending_user_review"
+    }
+  ],
+  "not_fulfilled": [
+    "This v05 turnaround does not fulfill the separately blocked v04 side-volume revision.",
+    "The images are illustrative concept sheets, not calibrated orthographic drawings or 3D model approval."
+  ]
+}
