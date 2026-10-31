@@ -1,0 +1,1964 @@
+{
+  "status": "MODULAR_ASSEMBLY_AND_FACE_ART_STUDY; ART_NOTAPPROVED; CHARACTER_INCOMPLETE",
+  "base": "02:40 HairSurface_v06 facial/body topology, rig and UV preserved; two explicitly owned face-art correctives were added in the preceding operation",
+  "input_hashes_before": {
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\Mia_ReusedFace_ArtStudy.blend": "f2c007dee7d90c397865ac836479840d4e8f723e3d002558b6405e48e9643b5e",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v04\\Mia_Stage2_FittedFace.blend": "42e1d31066f0c8286be6478dd7d9db6e6676de858bda8f4ba9634c260be0120f"
+  },
+  "input_hashes_after": {
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\Mia_ReusedFace_ArtStudy.blend": "f2c007dee7d90c397865ac836479840d4e8f723e3d002558b6405e48e9643b5e",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v04\\Mia_Stage2_FittedFace.blend": "42e1d31066f0c8286be6478dd7d9db6e6676de858bda8f4ba9634c260be0120f"
+  },
+  "face_fingerprint_before": "090e36b7c0b6a155faa0d803969c53f84f767d79c60a4bcd3f925d024a177558",
+  "face_fingerprint_after": "090e36b7c0b6a155faa0d803969c53f84f767d79c60a4bcd3f925d024a177558",
+  "body_fingerprint_before": "c53dff86b97f54c61495b03a5fe19887a7bb389de3faf533ee3e05f7054daa86",
+  "body_fingerprint_after": "c53dff86b97f54c61495b03a5fe19887a7bb389de3faf533ee3e05f7054daa86",
+  "base_face_key_count": 44,
+  "new_hair_objects": [
+    "MIA_PIXAL_HAIR_DESIGN_SEPARATE",
+    "SINGLE_HAIR_MIXED_REVIEW"
+  ],
+  "existing_hair_original_visibility": {
+    "MiaHair_Concealed_Closed_DomeNape": false,
+    "MiaHair_CrownFringe_R_Outer_-1": false,
+    "MiaHair_CrownFringe_R_Outer_-1_EdgeL": false,
+    "MiaHair_CrownFringe_R_Outer_-1_EdgeR": false,
+    "MiaHair_CrownFringe_R_Outer_-1_Etch00": false,
+    "MiaHair_CrownFringe_R_Outer_1": false,
+    "MiaHair_CrownFringe_R_Outer_1_EdgeL": false,
+    "MiaHair_CrownFringe_R_Outer_1_EdgeR": false,
+    "MiaHair_CrownFringe_R_Outer_1_Etch00": false,
+    "MiaHair_CrownFringe_R_Sweep_-1": false,
+    "MiaHair_CrownFringe_R_Sweep_-1_EdgeL": false,
+    "MiaHair_CrownFringe_R_Sweep_-1_EdgeR": false,
+    "MiaHair_CrownFringe_R_Sweep_-1_Etch00": false,
+    "MiaHair_CrownFringe_R_Sweep_1": false,
+    "MiaHair_CrownFringe_R_Sweep_1_EdgeL": false,
+    "MiaHair_CrownFringe_R_Sweep_1_EdgeR": false,
+    "MiaHair_CrownFringe_R_Sweep_1_Etch00": false,
+    "MiaHair_CrownFringe_R_Short_-1": false,
+    "MiaHair_CrownFringe_R_Short_-1_EdgeL": false,
+    "MiaHair_CrownFringe_R_Short_-1_EdgeR": false,
+    "MiaHair_CrownFringe_R_Short_-1_Etch00": false,
+    "MiaHair_CrownFringe_R_Short_1": false,
+    "MiaHair_CrownFringe_R_Short_1_EdgeL": false,
+    "MiaHair_CrownFringe_R_Short_1_EdgeR": false,
+    "MiaHair_CrownFringe_R_Short_1_Etch00": false,
+    "MiaHair_CrownFringe_Center_Slip_0": false,
+    "MiaHair_CrownFringe_Center_Slip_0_EdgeL": false,
+    "MiaHair_CrownFringe_Center_Slip_0_EdgeR": false,
+    "MiaHair_CrownFringe_Center_Slip_0_Etch00": false,
+    "MiaHair_CrownFringe_L_Sweep_-1": false,
+    "MiaHair_CrownFringe_L_Sweep_-1_EdgeL": false,
+    "MiaHair_CrownFringe_L_Sweep_-1_EdgeR": false,
+    "MiaHair_CrownFringe_L_Sweep_-1_Etch00": false,
+    "MiaHair_CrownFringe_L_Sweep_1": false,
+    "MiaHair_CrownFringe_L_Sweep_1_EdgeL": false,
+    "MiaHair_CrownFringe_L_Sweep_1_EdgeR": false,
+    "MiaHair_CrownFringe_L_Sweep_1_Etch00": false,
+    "MiaHair_CrownFringe_L_Outer_-1": false,
+    "MiaHair_CrownFringe_L_Outer_-1_EdgeL": false,
+    "MiaHair_CrownFringe_L_Outer_-1_EdgeR": false,
+    "MiaHair_CrownFringe_L_Outer_-1_Etch00": false,
+    "MiaHair_CrownFringe_L_Outer_1": false,
+    "MiaHair_CrownFringe_L_Outer_1_EdgeL": false,
+    "MiaHair_CrownFringe_L_Outer_1_EdgeR": false,
+    "MiaHair_CrownFringe_L_Outer_1_Etch00": false,
+    "MiaHair_UnderFringe_R0": false,
+    "MiaHair_UnderFringe_R0_EdgeL": false,
+    "MiaHair_UnderFringe_R0_EdgeR": false,
+    "MiaHair_UnderFringe_R0_Etch00": false,
+    "MiaHair_UnderFringe_R1": false,
+    "MiaHair_UnderFringe_R1_EdgeL": false,
+    "MiaHair_UnderFringe_R1_EdgeR": false,
+    "MiaHair_UnderFringe_R1_Etch00": false,
+    "MiaHair_UnderFringe_R2": false,
+    "MiaHair_UnderFringe_R2_EdgeL": false,
+    "MiaHair_UnderFringe_R2_EdgeR": false,
+    "MiaHair_UnderFringe_R2_Etch00": false,
+    "MiaHair_UnderFringe_Mid": false,
+    "MiaHair_UnderFringe_Mid_EdgeL": false,
+    "MiaHair_UnderFringe_Mid_EdgeR": false,
+    "MiaHair_UnderFringe_Mid_Etch00": false,
+    "MiaHair_UnderFringe_L0": false,
+    "MiaHair_UnderFringe_L0_EdgeL": false,
+    "MiaHair_UnderFringe_L0_EdgeR": false,
+    "MiaHair_UnderFringe_L0_Etch00": false,
+    "MiaHair_UnderFringe_L1": false,
+    "MiaHair_UnderFringe_L1_EdgeL": false,
+    "MiaHair_UnderFringe_L1_EdgeR": false,
+    "MiaHair_UnderFringe_L1_Etch00": false,
+    "MiaHair_UnderFringe_L2": false,
+    "MiaHair_UnderFringe_L2_EdgeL": false,
+    "MiaHair_UnderFringe_L2_EdgeR": false,
+    "MiaHair_UnderFringe_L2_Etch00": false,
+    "MiaHair_UnderFringe_TempleR": false,
+    "MiaHair_UnderFringe_TempleR_EdgeL": false,
+    "MiaHair_UnderFringe_TempleR_EdgeR": false,
+    "MiaHair_UnderFringe_TempleR_Etch00": false,
+    "MiaHair_UnderFringe_TempleL": false,
+    "MiaHair_UnderFringe_TempleL_EdgeL": false,
+    "MiaHair_UnderFringe_TempleL_EdgeR": false,
+    "MiaHair_UnderFringe_TempleL_Etch00": false,
+    "MiaHair_Gather_R0": false,
+    "MiaHair_Gather_R0_EdgeL": false,
+    "MiaHair_Gather_R0_EdgeR": false,
+    "MiaHair_Gather_R0_Etch00": false,
+    "MiaHair_Gather_R1": false,
+    "MiaHair_Gather_R1_EdgeL": false,
+    "MiaHair_Gather_R1_EdgeR": false,
+    "MiaHair_Gather_R1_Etch00": false,
+    "MiaHair_Gather_R2": false,
+    "MiaHair_Gather_R2_EdgeL": false,
+    "MiaHair_Gather_R2_EdgeR": false,
+    "MiaHair_Gather_R2_Etch00": false,
+    "MiaHair_Gather_R3": false,
+    "MiaHair_Gather_R3_EdgeL": false,
+    "MiaHair_Gather_R3_EdgeR": false,
+    "MiaHair_Gather_R3_Etch00": false,
+    "MiaHair_Gather_L0": false,
+    "MiaHair_Gather_L0_EdgeL": false,
+    "MiaHair_Gather_L0_EdgeR": false,
+    "MiaHair_Gather_L0_Etch00": false,
+    "MiaHair_Gather_L1": false,
+    "MiaHair_Gather_L1_EdgeL": false,
+    "MiaHair_Gather_L1_EdgeR": false,
+    "MiaHair_Gather_L1_Etch00": false,
+    "MiaHair_Gather_L2": false,
+    "MiaHair_Gather_L2_EdgeL": false,
+    "MiaHair_Gather_L2_EdgeR": false,
+    "MiaHair_Gather_L2_Etch00": false,
+    "MiaHair_Gather_L3": false,
+    "MiaHair_Gather_L3_EdgeL": false,
+    "MiaHair_Gather_L3_EdgeR": false,
+    "MiaHair_Gather_L3_Etch00": false,
+    "MiaHair_Gather_BackPart0": false,
+    "MiaHair_Gather_BackPart0_EdgeL": false,
+    "MiaHair_Gather_BackPart0_EdgeR": false,
+    "MiaHair_Gather_BackPart0_Etch00": false,
+    "MiaHair_Gather_BackPart1": false,
+    "MiaHair_Gather_BackPart1_EdgeL": false,
+    "MiaHair_Gather_BackPart1_EdgeR": false,
+    "MiaHair_Gather_BackPart1_Etch00": false,
+    "MiaHair_Gather_BackPart2": false,
+    "MiaHair_Gather_BackPart2_EdgeL": false,
+    "MiaHair_Gather_BackPart2_EdgeR": false,
+    "MiaHair_Gather_BackPart2_Etch00": false,
+    "MiaHair_Gather_TempleR": false,
+    "MiaHair_Gather_TempleR_EdgeL": false,
+    "MiaHair_Gather_TempleR_EdgeR": false,
+    "MiaHair_Gather_TempleR_Etch00": false,
+    "MiaHair_Gather_TempleL": false,
+    "MiaHair_Gather_TempleL_EdgeL": false,
+    "MiaHair_Gather_TempleL_EdgeR": false,
+    "MiaHair_Gather_TempleL_Etch00": false,
+    "MiaHair_Fringe_Split0": false,
+    "MiaHair_Fringe_Split0_EdgeL": false,
+    "MiaHair_Fringe_Split0_EdgeR": false,
+    "MiaHair_Fringe_Split0_Etch00": false,
+    "MiaHair_Fringe_Split1": false,
+    "MiaHair_Fringe_Split1_EdgeL": false,
+    "MiaHair_Fringe_Split1_EdgeR": false,
+    "MiaHair_Fringe_Split1_Etch00": false,
+    "MiaHair_Fringe_Split2": false,
+    "MiaHair_Fringe_Split2_EdgeL": false,
+    "MiaHair_Fringe_Split2_EdgeR": false,
+    "MiaHair_Fringe_Split2_Etch00": false,
+    "MiaHair_Crown_Flyaway_00": false,
+    "MiaHair_Crown_Flyaway_00_EdgeL": false,
+    "MiaHair_Crown_Flyaway_00_EdgeR": false,
+    "MiaHair_Crown_Flyaway_01": false,
+    "MiaHair_Crown_Flyaway_01_EdgeL": false,
+    "MiaHair_Crown_Flyaway_01_EdgeR": false,
+    "MiaHair_Crown_Flyaway_02": false,
+    "MiaHair_Crown_Flyaway_02_EdgeL": false,
+    "MiaHair_Crown_Flyaway_02_EdgeR": false,
+    "MiaHair_Crown_Flyaway_03": false,
+    "MiaHair_Crown_Flyaway_03_EdgeL": false,
+    "MiaHair_Crown_Flyaway_03_EdgeR": false,
+    "MiaHair_R_TempleWave0_-1": false,
+    "MiaHair_R_TempleWave0_-1_EdgeL": false,
+    "MiaHair_R_TempleWave0_-1_EdgeR": false,
+    "MiaHair_R_TempleWave0_-1_Etch00": false,
+    "MiaHair_R_TempleWave0_1": false,
+    "MiaHair_R_TempleWave0_1_EdgeL": false,
+    "MiaHair_R_TempleWave0_1_EdgeR": false,
+    "MiaHair_R_TempleWave0_1_Etch00": false,
+    "MiaHair_R_TempleWave1_-1": false,
+    "MiaHair_R_TempleWave1_-1_EdgeL": false,
+    "MiaHair_R_TempleWave1_-1_EdgeR": false,
+    "MiaHair_R_TempleWave1_-1_Etch00": false,
+    "MiaHair_R_TempleWave1_1": false,
+    "MiaHair_R_TempleWave1_1_EdgeL": false,
+    "MiaHair_R_TempleWave1_1_EdgeR": false,
+    "MiaHair_R_TempleWave1_1_Etch00": false,
+    "MiaHair_R_TempleWave2_-1": false,
+    "MiaHair_R_TempleWave2_-1_EdgeL": false,
+    "MiaHair_R_TempleWave2_-1_EdgeR": false,
+    "MiaHair_R_TempleWave2_-1_Etch00": false,
+    "MiaHair_R_TempleWave2_1": false,
+    "MiaHair_R_TempleWave2_1_EdgeL": false,
+    "MiaHair_R_TempleWave2_1_EdgeR": false,
+    "MiaHair_R_TempleWave2_1_Etch00": false,
+    "MiaHair_R_SideNape0_-1": false,
+    "MiaHair_R_SideNape0_-1_EdgeL": false,
+    "MiaHair_R_SideNape0_-1_EdgeR": false,
+    "MiaHair_R_SideNape0_-1_Etch00": false,
+    "MiaHair_R_SideNape0_1": false,
+    "MiaHair_R_SideNape0_1_EdgeL": false,
+    "MiaHair_R_SideNape0_1_EdgeR": false,
+    "MiaHair_R_SideNape0_1_Etch00": false,
+    "MiaHair_R_SideNape1_-1": false,
+    "MiaHair_R_SideNape1_-1_EdgeL": false,
+    "MiaHair_R_SideNape1_-1_EdgeR": false,
+    "MiaHair_R_SideNape1_-1_Etch00": false,
+    "MiaHair_R_SideNape1_1": false,
+    "MiaHair_R_SideNape1_1_EdgeL": false,
+    "MiaHair_R_SideNape1_1_EdgeR": false,
+    "MiaHair_R_SideNape1_1_Etch00": false,
+    "MiaHair_R_LooseWisp0": false,
+    "MiaHair_R_LooseWisp0_EdgeL": false,
+    "MiaHair_R_LooseWisp0_EdgeR": false,
+    "MiaHair_R_LooseWisp1": false,
+    "MiaHair_R_LooseWisp1_EdgeL": false,
+    "MiaHair_R_LooseWisp1_EdgeR": false,
+    "MiaHair_R_LooseWisp2": false,
+    "MiaHair_R_LooseWisp2_EdgeL": false,
+    "MiaHair_R_LooseWisp2_EdgeR": false,
+    "MiaHair_L_TempleWave0_-1": false,
+    "MiaHair_L_TempleWave0_-1_EdgeL": false,
+    "MiaHair_L_TempleWave0_-1_EdgeR": false,
+    "MiaHair_L_TempleWave0_-1_Etch00": false,
+    "MiaHair_L_TempleWave0_1": false,
+    "MiaHair_L_TempleWave0_1_EdgeL": false,
+    "MiaHair_L_TempleWave0_1_EdgeR": false,
+    "MiaHair_L_TempleWave0_1_Etch00": false,
+    "MiaHair_L_TempleWave1_-1": false,
+    "MiaHair_L_TempleWave1_-1_EdgeL": false,
+    "MiaHair_L_TempleWave1_-1_EdgeR": false,
+    "MiaHair_L_TempleWave1_-1_Etch00": false,
+    "MiaHair_L_TempleWave1_1": false,
+    "MiaHair_L_TempleWave1_1_EdgeL": false,
+    "MiaHair_L_TempleWave1_1_EdgeR": false,
+    "MiaHair_L_TempleWave1_1_Etch00": false,
+    "MiaHair_L_TempleWave2_-1": false,
+    "MiaHair_L_TempleWave2_-1_EdgeL": false,
+    "MiaHair_L_TempleWave2_-1_EdgeR": false,
+    "MiaHair_L_TempleWave2_-1_Etch00": false,
+    "MiaHair_L_TempleWave2_1": false,
+    "MiaHair_L_TempleWave2_1_EdgeL": false,
+    "MiaHair_L_TempleWave2_1_EdgeR": false,
+    "MiaHair_L_TempleWave2_1_Etch00": false,
+    "MiaHair_L_SideNape0_-1": false,
+    "MiaHair_L_SideNape0_-1_EdgeL": false,
+    "MiaHair_L_SideNape0_-1_EdgeR": false,
+    "MiaHair_L_SideNape0_-1_Etch00": false,
+    "MiaHair_L_SideNape0_1": false,
+    "MiaHair_L_SideNape0_1_EdgeL": false,
+    "MiaHair_L_SideNape0_1_EdgeR": false,
+    "MiaHair_L_SideNape0_1_Etch00": false,
+    "MiaHair_L_SideNape1_-1": false,
+    "MiaHair_L_SideNape1_-1_EdgeL": false,
+    "MiaHair_L_SideNape1_-1_EdgeR": false,
+    "MiaHair_L_SideNape1_-1_Etch00": false,
+    "MiaHair_L_SideNape1_1": false,
+    "MiaHair_L_SideNape1_1_EdgeL": false,
+    "MiaHair_L_SideNape1_1_EdgeR": false,
+    "MiaHair_L_SideNape1_1_Etch00": false,
+    "MiaHair_L_LooseWisp0": false,
+    "MiaHair_L_LooseWisp0_EdgeL": false,
+    "MiaHair_L_LooseWisp0_EdgeR": false,
+    "MiaHair_L_LooseWisp1": false,
+    "MiaHair_L_LooseWisp1_EdgeL": false,
+    "MiaHair_L_LooseWisp1_EdgeR": false,
+    "MiaHair_L_LooseWisp2": false,
+    "MiaHair_L_LooseWisp2_EdgeL": false,
+    "MiaHair_L_LooseWisp2_EdgeR": false,
+    "MiaHair_Rear_LongWave00_-1": false,
+    "MiaHair_Rear_LongWave00_-1_EdgeL": false,
+    "MiaHair_Rear_LongWave00_-1_EdgeR": false,
+    "MiaHair_Rear_LongWave00_-1_Etch00": false,
+    "MiaHair_Rear_LongWave00_0": false,
+    "MiaHair_Rear_LongWave00_0_EdgeL": false,
+    "MiaHair_Rear_LongWave00_0_EdgeR": false,
+    "MiaHair_Rear_LongWave00_0_Etch00": false,
+    "MiaHair_Rear_LongWave00_1": false,
+    "MiaHair_Rear_LongWave00_1_EdgeL": false,
+    "MiaHair_Rear_LongWave00_1_EdgeR": false,
+    "MiaHair_Rear_LongWave00_1_Etch00": false,
+    "MiaHair_Rear_LongWave01_-1": false,
+    "MiaHair_Rear_LongWave01_-1_EdgeL": false,
+    "MiaHair_Rear_LongWave01_-1_EdgeR": false,
+    "MiaHair_Rear_LongWave01_-1_Etch00": false,
+    "MiaHair_Rear_LongWave01_1": false,
+    "MiaHair_Rear_LongWave01_1_EdgeL": false,
+    "MiaHair_Rear_LongWave01_1_EdgeR": false,
+    "MiaHair_Rear_LongWave01_1_Etch00": false,
+    "MiaHair_Rear_LongWave02_-1": false,
+    "MiaHair_Rear_LongWave02_-1_EdgeL": false,
+    "MiaHair_Rear_LongWave02_-1_EdgeR": false,
+    "MiaHair_Rear_LongWave02_-1_Etch00": false,
+    "MiaHair_Rear_LongWave02_0": false,
+    "MiaHair_Rear_LongWave02_0_EdgeL": false,
+    "MiaHair_Rear_LongWave02_0_EdgeR": false,
+    "MiaHair_Rear_LongWave02_0_Etch00": false,
+    "MiaHair_Rear_LongWave02_1": false,
+    "MiaHair_Rear_LongWave02_1_EdgeL": false,
+    "MiaHair_Rear_LongWave02_1_EdgeR": false,
+    "MiaHair_Rear_LongWave02_1_Etch00": false,
+    "MiaHair_Rear_LongWave03_-1": false,
+    "MiaHair_Rear_LongWave03_-1_EdgeL": false,
+    "MiaHair_Rear_LongWave03_-1_EdgeR": false,
+    "MiaHair_Rear_LongWave03_-1_Etch00": false,
+    "MiaHair_Rear_LongWave03_0": false,
+    "MiaHair_Rear_LongWave03_0_EdgeL": false,
+    "MiaHair_Rear_LongWave03_0_EdgeR": false,
+    "MiaHair_Rear_LongWave03_0_Etch00": false,
+    "MiaHair_Rear_LongWave03_1": false,
+    "MiaHair_Rear_LongWave03_1_EdgeL": false,
+    "MiaHair_Rear_LongWave03_1_EdgeR": false,
+    "MiaHair_Rear_LongWave03_1_Etch00": false,
+    "MiaHair_Rear_LongWave04_-1": false,
+    "MiaHair_Rear_LongWave04_-1_EdgeL": false,
+    "MiaHair_Rear_LongWave04_-1_EdgeR": false,
+    "MiaHair_Rear_LongWave04_-1_Etch00": false,
+    "MiaHair_Rear_LongWave04_1": false,
+    "MiaHair_Rear_LongWave04_1_EdgeL": false,
+    "MiaHair_Rear_LongWave04_1_EdgeR": false,
+    "MiaHair_Rear_LongWave04_1_Etch00": false,
+    "MiaHair_Rear_LongWave05_-1": false,
+    "MiaHair_Rear_LongWave05_-1_EdgeL": false,
+    "MiaHair_Rear_LongWave05_-1_EdgeR": false,
+    "MiaHair_Rear_LongWave05_-1_Etch00": false,
+    "MiaHair_Rear_LongWave05_0": false,
+    "MiaHair_Rear_LongWave05_0_EdgeL": false,
+    "MiaHair_Rear_LongWave05_0_EdgeR": false,
+    "MiaHair_Rear_LongWave05_0_Etch00": false,
+    "MiaHair_Rear_LongWave05_1": false,
+    "MiaHair_Rear_LongWave05_1_EdgeL": false,
+    "MiaHair_Rear_LongWave05_1_EdgeR": false,
+    "MiaHair_Rear_LongWave05_1_Etch00": false,
+    "MiaHair_Rear_LongWave06_-1": false,
+    "MiaHair_Rear_LongWave06_-1_EdgeL": false,
+    "MiaHair_Rear_LongWave06_-1_EdgeR": false,
+    "MiaHair_Rear_LongWave06_-1_Etch00": false,
+    "MiaHair_Rear_LongWave06_1": false,
+    "MiaHair_Rear_LongWave06_1_EdgeL": false,
+    "MiaHair_Rear_LongWave06_1_EdgeR": false,
+    "MiaHair_Rear_LongWave06_1_Etch00": false,
+    "MiaHair_Rear_ShortLayer00_-1": false,
+    "MiaHair_Rear_ShortLayer00_-1_EdgeL": false,
+    "MiaHair_Rear_ShortLayer00_-1_EdgeR": false,
+    "MiaHair_Rear_ShortLayer00_-1_Etch00": false,
+    "MiaHair_Rear_ShortLayer00_0": false,
+    "MiaHair_Rear_ShortLayer00_0_EdgeL": false,
+    "MiaHair_Rear_ShortLayer00_0_EdgeR": false,
+    "MiaHair_Rear_ShortLayer00_0_Etch00": false,
+    "MiaHair_Rear_ShortLayer00_1": false,
+    "MiaHair_Rear_ShortLayer00_1_EdgeL": false,
+    "MiaHair_Rear_ShortLayer00_1_EdgeR": false,
+    "MiaHair_Rear_ShortLayer00_1_Etch00": false,
+    "MiaHair_Rear_ShortLayer01_-1": false,
+    "MiaHair_Rear_ShortLayer01_-1_EdgeL": false,
+    "MiaHair_Rear_ShortLayer01_-1_EdgeR": false,
+    "MiaHair_Rear_ShortLayer01_-1_Etch00": false,
+    "MiaHair_Rear_ShortLayer01_0": false,
+    "MiaHair_Rear_ShortLayer01_0_EdgeL": false,
+    "MiaHair_Rear_ShortLayer01_0_EdgeR": false,
+    "MiaHair_Rear_ShortLayer01_0_Etch00": false,
+    "MiaHair_Rear_ShortLayer01_1": false,
+    "MiaHair_Rear_ShortLayer01_1_EdgeL": false,
+    "MiaHair_Rear_ShortLayer01_1_EdgeR": false,
+    "MiaHair_Rear_ShortLayer01_1_Etch00": false,
+    "MiaHair_Rear_ShortLayer02_-1": false,
+    "MiaHair_Rear_ShortLayer02_-1_EdgeL": false,
+    "MiaHair_Rear_ShortLayer02_-1_EdgeR": false,
+    "MiaHair_Rear_ShortLayer02_-1_Etch00": false,
+    "MiaHair_Rear_ShortLayer02_0": false,
+    "MiaHair_Rear_ShortLayer02_0_EdgeL": false,
+    "MiaHair_Rear_ShortLayer02_0_EdgeR": false,
+    "MiaHair_Rear_ShortLayer02_0_Etch00": false,
+    "MiaHair_Rear_ShortLayer02_1": false,
+    "MiaHair_Rear_ShortLayer02_1_EdgeL": false,
+    "MiaHair_Rear_ShortLayer02_1_EdgeR": false,
+    "MiaHair_Rear_ShortLayer02_1_Etch00": false,
+    "MiaHair_Rear_ShortLayer03_-1": false,
+    "MiaHair_Rear_ShortLayer03_-1_EdgeL": false,
+    "MiaHair_Rear_ShortLayer03_-1_EdgeR": false,
+    "MiaHair_Rear_ShortLayer03_-1_Etch00": false,
+    "MiaHair_Rear_ShortLayer03_0": false,
+    "MiaHair_Rear_ShortLayer03_0_EdgeL": false,
+    "MiaHair_Rear_ShortLayer03_0_EdgeR": false,
+    "MiaHair_Rear_ShortLayer03_0_Etch00": false,
+    "MiaHair_Rear_ShortLayer03_1": false,
+    "MiaHair_Rear_ShortLayer03_1_EdgeL": false,
+    "MiaHair_Rear_ShortLayer03_1_EdgeR": false,
+    "MiaHair_Rear_ShortLayer03_1_Etch00": false,
+    "MiaHair_HalfUp_OneClosedKnot": false,
+    "MiaHair_Knot_Wrap00": false,
+    "MiaHair_Knot_Wrap00_EdgeL": false,
+    "MiaHair_Knot_Wrap00_EdgeR": false,
+    "MiaHair_Knot_Wrap00_Etch00": false,
+    "MiaHair_Knot_Wrap01": false,
+    "MiaHair_Knot_Wrap01_EdgeL": false,
+    "MiaHair_Knot_Wrap01_EdgeR": false,
+    "MiaHair_Knot_Wrap01_Etch00": false,
+    "MiaHair_Knot_Wrap02": false,
+    "MiaHair_Knot_Wrap02_EdgeL": false,
+    "MiaHair_Knot_Wrap02_EdgeR": false,
+    "MiaHair_Knot_Wrap02_Etch00": false,
+    "MiaHair_Knot_Wrap03": false,
+    "MiaHair_Knot_Wrap03_EdgeL": false,
+    "MiaHair_Knot_Wrap03_EdgeR": false,
+    "MiaHair_Knot_Wrap03_Etch00": false,
+    "MiaHair_Knot_Wrap04": false,
+    "MiaHair_Knot_Wrap04_EdgeL": false,
+    "MiaHair_Knot_Wrap04_EdgeR": false,
+    "MiaHair_Knot_Wrap04_Etch00": false,
+    "MiaHair_Knot_Wrap05": false,
+    "MiaHair_Knot_Wrap05_EdgeL": false,
+    "MiaHair_Knot_Wrap05_EdgeR": false,
+    "MiaHair_Knot_Wrap05_Etch00": false,
+    "MiaHair_LEFT_OneBraid_Lane0": false,
+    "MiaHair_Braid_Etch0": false,
+    "MiaHair_LEFT_OneBraid_Lane1": false,
+    "MiaHair_Braid_Etch1": false,
+    "MiaHair_LEFT_OneBraid_Lane2": false,
+    "MiaHair_Braid_Etch2": false,
+    "MiaHair_Braid_Tail": false,
+    "MiaHair_Braid_Tail_EdgeL": false,
+    "MiaHair_Braid_Tail_EdgeR": false,
+    "MiaHair_Braid_Tail_Etch00": false,
+    "MiaHair_Braid_Tail_Etch01": false
+  },
+  "existing_inner_cap_reused": false,
+  "skin_fitted_independent_caps": [
+    "MIA_HAIR_SCALP_CAP_Front",
+    "MIA_HAIR_SCALP_CAP_Rear"
+  ],
+  "fitting_matrix": [
+    [
+      0.8799999952316284,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.8799999952316284,
+      0.0,
+      0.02500000037252903
+    ],
+    [
+      0.0,
+      0.0,
+      0.8799999952316284,
+      0.22192001342773438
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "hair_head_attachment_bone": "J_Bip_C_Head",
+  "cameras": [
+    {
+      "file": "assembly_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "assembly_side.png",
+      "yaw": 90,
+      "matrix_world": [
+        [
+          -4.371138828673793e-08,
+          -0.016664404422044754,
+          0.9998611211776733,
+          0.8999999761581421
+        ],
+        [
+          1.0,
+          -5.982614226240912e-08,
+          4.272035525332285e-08,
+          0.009999999776482582
+        ],
+        [
+          5.910592193458797e-08,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "assembly_quarter_right.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "assembly_quarter_left.png",
+      "yaw": -35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          0.009558171965181828,
+          -0.5734968185424805,
+          -0.5162187814712524
+        ],
+        [
+          -0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "assembly_back.png",
+      "yaw": 180,
+      "matrix_world": [
+        [
+          -1.0,
+          8.594165024078393e-08,
+          8.886727442813935e-08,
+          1.1021821011522021e-16
+        ],
+        [
+          8.742277657347586e-08,
+          -0.016664285212755203,
+          0.9998611211776733,
+          0.9099999666213989
+        ],
+        [
+          8.741062629269436e-08,
+          0.9998611211776733,
+          0.016664285212755203,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "skin_only_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "skin_only_side.png",
+      "yaw": 90,
+      "matrix_world": [
+        [
+          -4.371138828673793e-08,
+          -0.016664404422044754,
+          0.9998611211776733,
+          0.8999999761581421
+        ],
+        [
+          1.0,
+          -5.982614226240912e-08,
+          4.272035525332285e-08,
+          0.009999999776482582
+        ],
+        [
+          5.910592193458797e-08,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "skin_only_back.png",
+      "yaw": 180,
+      "matrix_world": [
+        [
+          -1.0,
+          8.594165024078393e-08,
+          8.886727442813935e-08,
+          1.1021821011522021e-16
+        ],
+        [
+          8.742277657347586e-08,
+          -0.016664285212755203,
+          0.9998611211776733,
+          0.9099999666213989
+        ],
+        [
+          8.741062629269436e-08,
+          0.9998611211776733,
+          0.016664285212755203,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0_center_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0_center_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0_left_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0_left_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0_right_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0_right_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0_up_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0_up_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0_down_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0_down_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0.5_center_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0.5_center_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0.5_left_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0.5_left_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0.5_right_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0.5_right_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0.5_up_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0.5_up_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0.5_down_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_0.5_down_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_1_center_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_1_center_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_1_left_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_1_left_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_1_right_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_1_right_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_1_up_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_1_up_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_1_down_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "eye_1_down_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "mouth_a_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "mouth_a_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "annoyed_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "annoyed_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "smile_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "smile_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "left_blink_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "left_blink_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "right_blink_front.png",
+      "yaw": 0,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.016664404422044754,
+          -0.9998611211776733,
+          -0.8899999856948853
+        ],
+        [
+          0.0,
+          0.9998611211776733,
+          0.016664404422044754,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    },
+    {
+      "file": "right_blink_quarter.png",
+      "yaw": 35,
+      "matrix_world": [
+        [
+          0.8191520571708679,
+          -0.009558171965181828,
+          0.5734968185424805,
+          0.5162187814712524
+        ],
+        [
+          0.5735764503479004,
+          0.013650487177073956,
+          -0.8190382719039917,
+          -0.7272368669509888
+        ],
+        [
+          -1.9281500840406807e-09,
+          0.9998611211776733,
+          0.016664166003465652,
+          1.5950000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.47999998927116394
+    }
+  ],
+  "proofs_rendered": true,
+  "limitations": [
+    "Art likeness and texture detail require further comparison against approved original art",
+    "Hair semantic extraction remains a design partition and needs boundary/strand production review",
+    "Hair is head-attached only; strand bones/weights, collision and secondary motion are not complete",
+    "Existing body proportions and garments are not reapproved by this facial checkpoint",
+    "Original concept image has not been projected as the final skin texture; current UV pigment is a restrained study"
+  ]
+}

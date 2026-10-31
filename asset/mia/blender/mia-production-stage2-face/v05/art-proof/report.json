@@ -1,0 +1,723 @@
+{
+  "status": "FACE_ART_CANDIDATE_REQUIRES_REFERENCE_REVIEW",
+  "input": "D:\\ai\\Mia3DWork\\model-v02\\hair-surface-stage\\Mia_HairSurface_v06.blend",
+  "input_sha256_before": "9ef40cabbd2dd73f67e14e38fd54713d4c5ac0ceaf1ce4aa32b64af33f3830a6",
+  "input_sha256_after": "9ef40cabbd2dd73f67e14e38fd54713d4c5ac0ceaf1ce4aa32b64af33f3830a6",
+  "output": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\Mia_ReusedFace_ArtStudy.blend",
+  "output_sha256": "f2c007dee7d90c397865ac836479840d4e8f723e3d002558b6405e48e9643b5e",
+  "builder_sha256": "5459985bf7fabd5ee5d9eb3d8eba10589a7176ce855530759b236273de93785f",
+  "look_parameters": {
+    "neutral_close": 0.35,
+    "under_eye_strength": 0.4
+  },
+  "nose_marker_surface_anchor": [
+    0.0023356815800070763,
+    -0.11078251898288727,
+    1.5268256664276123
+  ],
+  "base_skin_rgba": [
+    0.94,
+    0.88,
+    0.85,
+    1.0
+  ],
+  "toon_contours": {
+    "enabled": true,
+    "width_m": 0.0005,
+    "modifiers": [
+      {
+        "object": "Mia_Body_Anatomy_Skin",
+        "modifier": "MIA_Contour_OUTLINE"
+      },
+      {
+        "object": "Mia_Face_AnimeTopology",
+        "modifier": "MIA_Contour_OUTLINE"
+      }
+    ],
+    "face_scope": "rest-bound jaw/ear skin shell; central nose and mouth excluded from shell",
+    "structure_qa": "Disable OUTLINE modifiers to inspect the unchanged physical skin meshes"
+  },
+  "original_face_fingerprint": "9b68ca9a50353e733df8769f3715653ca688fea8be60a1161ad83f0989b3de17",
+  "face_fingerprint_after": "9b68ca9a50353e733df8769f3715653ca688fea8be60a1161ad83f0989b3de17",
+  "original_body_fingerprint": "c53dff86b97f54c61495b03a5fe19887a7bb389de3faf533ee3e05f7054daa86",
+  "body_fingerprint_after": "c53dff86b97f54c61495b03a5fe19887a7bb389de3faf533ee3e05f7054daa86",
+  "original_shape_key_count": 42,
+  "original_shape_key_names": [
+    "Basis",
+    "Face.M_F00_000_00_Fcl_ALL_Angry",
+    "Face.M_F00_000_00_Fcl_ALL_Fun",
+    "Face.M_F00_000_00_Fcl_ALL_Joy",
+    "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+    "Face.M_F00_000_00_Fcl_ALL_Surprised",
+    "Face.M_F00_000_00_Fcl_BRW_Angry",
+    "Face.M_F00_000_00_Fcl_BRW_Fun",
+    "Face.M_F00_000_00_Fcl_BRW_Joy",
+    "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+    "Face.M_F00_000_00_Fcl_BRW_Surprised",
+    "Face.M_F00_000_00_Fcl_EYE_Natural",
+    "Face.M_F00_000_00_Fcl_EYE_Angry",
+    "Face.M_F00_000_00_Fcl_EYE_Close",
+    "Face.M_F00_000_00_Fcl_EYE_Close_R",
+    "Face.M_F00_000_00_Fcl_EYE_Close_L",
+    "Face.M_F00_000_00_Fcl_EYE_Joy",
+    "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+    "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+    "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+    "Face.M_F00_000_00_Fcl_EYE_Surprised",
+    "Face.M_F00_000_00_Fcl_EYE_Extra",
+    "Face.M_F00_000_00_Fcl_MTH_Up",
+    "Face.M_F00_000_00_Fcl_MTH_Down",
+    "Face.M_F00_000_00_Fcl_MTH_Angry",
+    "Face.M_F00_000_00_Fcl_MTH_Neutral",
+    "Face.M_F00_000_00_Fcl_MTH_Fun",
+    "Face.M_F00_000_00_Fcl_MTH_Joy",
+    "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+    "Face.M_F00_000_00_Fcl_MTH_Surprised",
+    "Face.M_F00_000_00_Fcl_MTH_A",
+    "Face.M_F00_000_00_Fcl_MTH_I",
+    "Face.M_F00_000_00_Fcl_MTH_U",
+    "Face.M_F00_000_00_Fcl_MTH_E",
+    "Face.M_F00_000_00_Fcl_MTH_O",
+    "Face.M_F00_000_00_Fcl_HA_Fung1",
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+    "Face.M_F00_000_00_Fcl_HA_Fung2",
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+    "EyeExtra_01.M_F00_000_00_EyeExtra_On"
+  ],
+  "added_corrective": {
+    "name": "MIA_FaceArt_OwnedBrowPlacement",
+    "affected_brow_vertices": 110,
+    "placement": "Lowered 29mm with a 52% vertical card scale and restrained outward slope",
+    "eyeline_vertices_clearance_adjusted": 274,
+    "eyeline_y_clearance_delta_range": [
+      -0.0014572787046432528,
+      -0.0005
+    ]
+  },
+  "eye_proportion_corrective": {
+    "name": "MIA_FaceArt_EyeProportion",
+    "counts": {
+      "orbital_skin": 345,
+      "eye_parts": 584,
+      "iris": 294
+    },
+    "eye_horizontal_scale": 1.14,
+    "iris_scale": 0.74,
+    "orbital_skin_falloff": "full inside .72 ellipse, smooth to zero by1.27; front skin only"
+  },
+  "upper_rim": {
+    "object": "MiaArt_UpperRim",
+    "vertices": 116,
+    "faces": 56,
+    "morphs": 45,
+    "source_morph_drivers": 43,
+    "part_role": "FACE_ART_UPPER_RIM",
+    "half_width_range_m": [
+      0.00013440000000000001,
+      0.0010537120161203711
+    ],
+    "source_uv_trace": [
+      [
+        [
+          0.12451171875,
+          0.5567756914393002
+        ],
+        [
+          0.13577706473214285,
+          0.5611329105229282
+        ],
+        [
+          0.14704241071428573,
+          0.5673600225448608
+        ],
+        [
+          0.15830775669642858,
+          0.5673600225448608
+        ],
+        [
+          0.16957310267857142,
+          0.5673600225448608
+        ],
+        [
+          0.1808384486607143,
+          0.5673600225448608
+        ],
+        [
+          0.19210379464285715,
+          0.5673600225448608
+        ],
+        [
+          0.203369140625,
+          0.5673600225448608
+        ],
+        [
+          0.21463448660714285,
+          0.5673600225448608
+        ],
+        [
+          0.22589983258928573,
+          0.5673600225448608
+        ],
+        [
+          0.23716517857142858,
+          0.5673600225448608
+        ],
+        [
+          0.24843052455357145,
+          0.5673600225448608
+        ],
+        [
+          0.2596958705357143,
+          0.5673600225448608
+        ],
+        [
+          0.27096121651785715,
+          0.5673600225448608
+        ],
+        [
+          0.2822265625,
+          0.5673600225448608
+        ],
+        [
+          0.2934919084821429,
+          0.5673600225448608
+        ],
+        [
+          0.3047572544642857,
+          0.5673600225448608
+        ],
+        [
+          0.3160226004464286,
+          0.5673600225448608
+        ],
+        [
+          0.32728794642857145,
+          0.5673600225448608
+        ],
+        [
+          0.3385532924107143,
+          0.5673600225448608
+        ],
+        [
+          0.34981863839285715,
+          0.5673600225448608
+        ],
+        [
+          0.361083984375,
+          0.5673600225448608
+        ],
+        [
+          0.3723493303571429,
+          0.5673600225448608
+        ],
+        [
+          0.38361467633928575,
+          0.5673600225448608
+        ],
+        [
+          0.3948800223214286,
+          0.5673600225448608
+        ],
+        [
+          0.40614536830357145,
+          0.5673600225448608
+        ],
+        [
+          0.4174107142857143,
+          0.5673600225448608
+        ],
+        [
+          0.42867606026785715,
+          0.5673600225448608
+        ],
+        [
+          0.43994140625,
+          0.5673600225448608
+        ]
+      ],
+      [
+        [
+          0.56103515625,
+          0.5673600225448608
+        ],
+        [
+          0.5723005022321429,
+          0.5673600225448608
+        ],
+        [
+          0.5835658482142857,
+          0.5673600225448608
+        ],
+        [
+          0.5948311941964286,
+          0.5673600225448608
+        ],
+        [
+          0.6060965401785714,
+          0.5673600225448608
+        ],
+        [
+          0.6173618861607143,
+          0.5673600225448608
+        ],
+        [
+          0.6286272321428572,
+          0.5673600225448608
+        ],
+        [
+          0.639892578125,
+          0.5673600225448608
+        ],
+        [
+          0.6511579241071429,
+          0.5673600225448608
+        ],
+        [
+          0.6624232700892857,
+          0.5673600225448608
+        ],
+        [
+          0.6736886160714286,
+          0.5673600225448608
+        ],
+        [
+          0.6849539620535714,
+          0.5673600225448608
+        ],
+        [
+          0.6962193080357143,
+          0.5673600225448608
+        ],
+        [
+          0.7074846540178572,
+          0.5673600225448608
+        ],
+        [
+          0.71875,
+          0.5673600225448608
+        ],
+        [
+          0.7300153459821429,
+          0.5673600225448608
+        ],
+        [
+          0.7412806919642857,
+          0.5673600225448608
+        ],
+        [
+          0.7525460379464286,
+          0.5673600225448608
+        ],
+        [
+          0.7638113839285714,
+          0.5673600225448608
+        ],
+        [
+          0.7750767299107143,
+          0.5673600225448608
+        ],
+        [
+          0.7863420758928572,
+          0.5673600225448608
+        ],
+        [
+          0.797607421875,
+          0.5673600225448608
+        ],
+        [
+          0.8088727678571429,
+          0.5673600225448608
+        ],
+        [
+          0.8201381138392858,
+          0.5673600225448608
+        ],
+        [
+          0.8314034598214286,
+          0.5673600225448608
+        ],
+        [
+          0.8426688058035714,
+          0.5673600225448608
+        ],
+        [
+          0.8539341517857143,
+          0.5671426364548937
+        ],
+        [
+          0.8651994977678572,
+          0.5605622233282018
+        ],
+        [
+          0.87646484375,
+          0.5569171008213927
+        ]
+      ]
+    ],
+    "forward_clearance_delta_range": [
+      -0.0008,
+      -0.0008
+    ],
+    "blink_clearance_delta_range": [
+      -0.002903774046897886,
+      0
+    ],
+    "blink_clearance_driver": "clamp((Close-.56)/.44,0,1)",
+    "vertex_weight_binding": "exact source upper-line UV triangle barycentric weights; no cross-eye averaging",
+    "EyeSet_distribution": {
+      "negative_X": [
+        "J_Adj_R_FaceEyeSet"
+      ],
+      "positive_X": [
+        "J_Adj_L_FaceEyeSet"
+      ]
+    },
+    "per_point_source_EyeSet_asserted": true
+  },
+  "source_uv_and_key_coordinates_preserved": true,
+  "corrective_ownership": {
+    "MIA_FaceArt_EyeProportion": {
+      "changed_vertices": 1223,
+      "outside_owned_vertices": 0,
+      "basis_coordinates_explicitly_initialized": true
+    },
+    "MIA_FaceArt_OwnedBrowPlacement": {
+      "changed_vertices": 384,
+      "outside_owned_vertices": 0,
+      "basis_coordinates_explicitly_initialized": true
+    }
+  },
+  "gaze_proof": {
+    "bones": [
+      "J_Adj_L_FaceEye",
+      "J_Adj_R_FaceEye"
+    ],
+    "world_z_degrees": 12,
+    "pose_restored": true
+  },
+  "source_images_unchanged": true,
+  "original_materials": [
+    "F00_000_00_FaceMouth_00_FACE",
+    "F00_000_00_EyeWhite_00_EYE",
+    "Mia_CharcoalEyeLine_MToon",
+    "Mia_CharcoalLash_MToon",
+    "Mia_SlateBrow_MToon",
+    "Mia_AshBlueGrey_Iris_MToon",
+    "Mia_MutedEyeAccent_MToon",
+    "Mia_CoolMutedSkin_MToon",
+    "Mia_MutedEyeAccent_MToon.001"
+  ],
+  "original_body_materials": [
+    "Mia_CoolMutedBodySkin_MToon",
+    "F00_002_01_Tops_01_CLOTH",
+    "F00_002_01_Shoes_01_CLOTH",
+    "F00_000_HairBack_00_HAIR"
+  ],
+  "matched_body_material": "Mia_FaceArt_CoolPaperBodySkin",
+  "owned_materials": [
+    "Mia_FaceArt_SourceRim_Transparent",
+    "Mia_FaceArt_RestrainedLash",
+    "Mia_FaceArt_LowGraphiteBrow",
+    "Mia_FaceArt_GrayIrisHierarchy",
+    "Mia_FaceArt_RestrainedEyeGlint",
+    "Mia_FaceArt_CoolPaperSkin"
+  ],
+  "pigment_texture": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\Mia_FaceArt_UV_Pigment.png",
+    "sha256": "e4bd1ef04426affca8b34cdbceea49468ced20ca588fe028b63c99ee097d0f42",
+    "packed": true,
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  "thin_rim_texture": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\Mia_FaceArt_ThinRimUV.png",
+    "sha256": "dd53ecd0b65c2c9a23486e9aede0da39195d3f56b9d89429dd558703bfd57c57",
+    "packed": true,
+    "size": [
+      1024,
+      256
+    ],
+    "role": "Diagnostic alpha/UV calibration only; final visible upper line is the owned morph-driven ribbon"
+  },
+  "eye_lower_contours": [
+    {
+      "center_x": -0.04610800463706255,
+      "half_width": 0.019894038327038288,
+      "lower_z_poly": [
+        0.006970559210526216,
+        -0.00025438596491197913,
+        1.54317192211151
+      ],
+      "method": "front first-visible EyeWhite/Skin boundary, 0.2mm ray grid",
+      "visible_boundary_samples": [
+        [
+          -0.06600204296410084,
+          1.5510687971115091
+        ],
+        [
+          -0.06366156786680222,
+          1.5488687971115094
+        ],
+        [
+          -0.06132109276950359,
+          1.5472687971115096
+        ],
+        [
+          -0.05898061767220497,
+          1.5460687971115097
+        ],
+        [
+          -0.05664014257490635,
+          1.5448687971115098
+        ],
+        [
+          -0.05429966747760773,
+          1.54406879711151
+        ],
+        [
+          -0.051959192380309105,
+          1.54346879711151
+        ],
+        [
+          -0.04961871728301048,
+          1.54326879711151
+        ],
+        [
+          -0.04727824218571186,
+          1.54326879711151
+        ],
+        [
+          -0.04493776708841324,
+          1.54326879711151
+        ],
+        [
+          -0.042597291991114616,
+          1.54366879711151
+        ],
+        [
+          -0.040256816893815994,
+          1.54406879711151
+        ],
+        [
+          -0.03791634179651737,
+          1.5446687971115098
+        ],
+        [
+          -0.03557586669921875,
+          1.5452687971115098
+        ],
+        [
+          -0.03323539160192013,
+          1.5460687971115097
+        ],
+        [
+          -0.030894916504621506,
+          1.5468687971115096
+        ],
+        [
+          -0.028554441407322884,
+          1.5480687971115095
+        ],
+        [
+          -0.02621396631002426,
+          1.5496687971115093
+        ]
+      ]
+    },
+    {
+      "center_x": 0.04516299449217816,
+      "half_width": 0.01989316885980467,
+      "lower_z_poly": [
+        0.0069705592105266355,
+        0.0002543859649123221,
+        1.543171922111509
+      ],
+      "method": "front first-visible EyeWhite/Skin boundary, 0.2mm ray grid",
+      "visible_boundary_samples": [
+        [
+          0.02526982563237349,
+          1.5496687971115093
+        ],
+        [
+          0.027610198439409334,
+          1.5480687971115095
+        ],
+        [
+          0.02995057124644518,
+          1.5468687971115096
+        ],
+        [
+          0.03229094405348102,
+          1.5460687971115097
+        ],
+        [
+          0.03463131686051686,
+          1.5452687971115098
+        ],
+        [
+          0.03697168966755271,
+          1.5446687971115098
+        ],
+        [
+          0.03931206247458855,
+          1.54406879711151
+        ],
+        [
+          0.04165243528162439,
+          1.54366879711151
+        ],
+        [
+          0.04399280808866024,
+          1.54326879711151
+        ],
+        [
+          0.04633318089569608,
+          1.54326879711151
+        ],
+        [
+          0.04867355370273192,
+          1.54326879711151
+        ],
+        [
+          0.05101392650976777,
+          1.54346879711151
+        ],
+        [
+          0.05335429931680361,
+          1.54406879711151
+        ],
+        [
+          0.05569467212383945,
+          1.5448687971115098
+        ],
+        [
+          0.0580350449308753,
+          1.5460687971115097
+        ],
+        [
+          0.06037541773791114,
+          1.5472687971115096
+        ],
+        [
+          0.06271579054494698,
+          1.5488687971115094
+        ],
+        [
+          0.06505616335198283,
+          1.5510687971115091
+        ]
+      ]
+    }
+  ],
+  "neutral_values_restored": {
+    "Basis": 1.0,
+    "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Angry": 0.1599999964237213,
+    "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Close": 0.3499999940395355,
+    "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.10000000149011612,
+    "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Angry": 0.18000000715255737,
+    "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.11999999731779099,
+    "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+    "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+    "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+    "MIA_FaceArt_EyeProportion": 1.0,
+    "MIA_FaceArt_OwnedBrowPlacement": 1.0
+  },
+  "proofs": [
+    {
+      "pose": "neutral",
+      "yaw": 0,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\face_neutral_y000.png",
+      "sha256": "b2cf7af47a9911d235d73a52aee0bdd1cfbba99a8dcc63d59926ed5af825bfda"
+    },
+    {
+      "pose": "neutral",
+      "yaw": 35,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\face_neutral_y035.png",
+      "sha256": "b28c72826eac7d3d9189a7fb5c70e4fa7977e7038ff34b951487cc0239d2423b"
+    },
+    {
+      "pose": "neutral",
+      "yaw": 90,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\face_neutral_y090.png",
+      "sha256": "6337d6c66ff4d27e842516461e925ef310fea8ae4bf86c9148f9461b203f8507"
+    },
+    {
+      "pose": "blink",
+      "yaw": 0,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\face_blink_y000.png",
+      "sha256": "111642e0da9fee03312eb21ac74381aa69c76c13c21627cfb68c89fa6e7b2a56"
+    },
+    {
+      "pose": "blink",
+      "yaw": 35,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\face_blink_y035.png",
+      "sha256": "91267802bbdc36f78dc282c63533538ca178c183014549768944e815fcda2f9d"
+    },
+    {
+      "pose": "mouth_a",
+      "yaw": 0,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\face_mouth_a_y000.png",
+      "sha256": "bb141204bfa3371e4c6eeb20539d023ed32f20147a8abaffee991da08648d24c"
+    },
+    {
+      "pose": "mouth_a",
+      "yaw": 35,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\face_mouth_a_y035.png",
+      "sha256": "eccf70ccb8c995f86ab980bec3531a9d345da7c0b819cde2934251f2fa6f429e"
+    },
+    {
+      "pose": "gaze_left",
+      "yaw": 0,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\face_gaze_left_y000.png",
+      "sha256": "576a48f8a496b1ab334d34a89d396dd110021a11df300bf4813e698fac6b6ab8"
+    },
+    {
+      "pose": "gaze_left",
+      "yaw": 35,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-production-stage2-face\\v05\\art-proof\\face_gaze_left_y035.png",
+      "sha256": "17f3d1b880cd426a2b7555af6e129efc11818ce2e09bcadb321b77c6b3086b09"
+    }
+  ],
+  "limitations": [
+    "Hair framing must be reviewed separately; this source is bald.",
+    "Painted closed-lip ink follows skin UV during mouth keys; open-mouth style/corner continuity still requires visual acceptance.",
+    "This changes owned materials, two facial correctives and a morph-driven upper-rim helper; final likeness, complete expression coverage and final rig remain separate acceptance gates."
+  ]
+}

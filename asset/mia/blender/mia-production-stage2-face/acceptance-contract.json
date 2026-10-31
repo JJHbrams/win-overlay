@@ -1,0 +1,53 @@
+{
+  "stage": "Mia Stage2 face expression checkpoint",
+  "status": "PARTIAL: functional reuse PASS; AC2 art/assembly FAIL",
+  "acceptance_criteria": [
+    {
+      "id": "AC1",
+      "criterion": "Preserve Stage1 while new face has discrete skin, eye/iris, lid, brow, liner and mouth ownership.",
+      "user_visible_outcome": "Face can be inspected independently without losing existing hair/body/clothes.",
+      "intended_runtime": "Blender 5.2 native",
+      "verification": "fresh reopen/object manifest/archive boundary",
+      "evidence": "native/report/audit",
+      "critical": true
+    },
+    {
+      "id": "AC2",
+      "criterion": "Compare Mia facial volume and eye placement at front, side and both obliques.",
+      "user_visible_outcome": "Narrow tired eye read survives rotation.",
+      "intended_runtime": "Blender render",
+      "verification": "same-camera neutral/clay/wire views",
+      "evidence": "PNG views/camera data",
+      "critical": true
+    },
+    {
+      "id": "AC3",
+      "criterion": "Lids follow eye travel surface for half/full blink and gaze states.",
+      "user_visible_outcome": "No floated lids/intersections in tested states.",
+      "intended_runtime": "Blender shape-key preview",
+      "verification": "3 blink x5 gaze plus independent L/R renders",
+      "evidence": "state PNGs/key audit",
+      "critical": true
+    },
+    {
+      "id": "AC4",
+      "criterion": "Mouth cavity/lip loop support open, annoyed and crooked smile.",
+      "user_visible_outcome": "Dry neutral and expressions are readable front/oblique.",
+      "intended_runtime": "Blender shape-key preview",
+      "verification": "expression renders/topology audit",
+      "evidence": "PNGs/report",
+      "critical": true
+    },
+    {
+      "id": "AC5",
+      "criterion": "Stage1 stays unmodified and Stage2 is its own native checkpoint.",
+      "user_visible_outcome": "Earlier work stays comparable/recoverable.",
+      "intended_runtime": "Blender CLI",
+      "verification": "input hash and old mesh fingerprints plus fresh reopen",
+      "evidence": "report/audit log",
+      "critical": true
+    }
+  ],
+  "execution_evidence": "v07/fresh-native-audit.json, eye-matrix-30.png, review-board.png, acceptance-audit.md",
+  "latest_user_direction": "Reuse existing 02:40 body/head topology/UV/rig; add independent detailed hair; refine facial geometry/skin art and fit garments. Do not rebuild generic heads or accept fused generated character as production skin."
+}
