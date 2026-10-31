@@ -1,0 +1,72 @@
+{
+  "method": "smooth minimum of thorax varying ellipse cylinder and two rotated ellipsoid signed-distance approximations; XYZ finite-gradient projection of existing continuous cage; C2 outer blend to parent",
+  "centres_world": [
+    [
+      -0.05847769,
+      -0.075,
+      1.25
+    ],
+    [
+      0.05752231,
+      -0.075,
+      1.25
+    ]
+  ],
+  "ellipsoid_radii_xyz": [
+    0.058,
+    0.076,
+    0.058
+  ],
+  "upper_axis_tilt_degrees": 6,
+  "tilt_direction": "upper longitudinal axis toward medial centre; bilateral mirrored",
+  "thorax_z": [
+    1.16,
+    1.18,
+    1.2,
+    1.24,
+    1.28,
+    1.32,
+    1.36,
+    1.39,
+    1.41
+  ],
+  "thorax_radius_x": [
+    0.081,
+    0.085,
+    0.096,
+    0.112,
+    0.126,
+    0.14,
+    0.155,
+    0.16,
+    0.158
+  ],
+  "thorax_anterior_depth": [
+    0.12,
+    0.117,
+    0.115,
+    0.108,
+    0.102,
+    0.097,
+    0.085,
+    0.055,
+    0.04
+  ],
+  "thorax_y_mid": -0.025,
+  "union_blend_m": {
+    "breast_pair": 0.008,
+    "thorax_lower": 0.02,
+    "upper_add": 0.02,
+    "outer_add": 0.008
+  },
+  "reference_basis": "candidate12/reference-registration.json; profile supported projection nearZ1.24\u00b1.015, lower rounding around1.21\u00b1.015, front bilateral centres~absX.058; clothing does not define exact bare crease/volume",
+  "mapping": "Same parent vertex IDs; canonical source cap mapping in patch-provenance.json",
+  "fit_quality": {
+    "core_max_abs_field": 4.071375163340954e-06,
+    "minimum_edge_length_ratio": 0.45236250917919996,
+    "degenerate_triangles_area_lt_1e_10": 0
+  },
+  "redistribution": "16 tangential relaxation/reprojection steps on same volumetric target; C2 thorax-radius interpolation; no primitive radius/centre change",
+  "primary_change": "centre moved inside thorax; compensating Y radius preserves frontmost-.151. C2 smooth union, source-guided c12 upper collar>=1.34 fixed; no further primitive loop planned without review",
+  "art_acceptance": "NOT_EVALUATED"
+}

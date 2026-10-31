@@ -171,10 +171,17 @@ def main(config_path):
         # Blender replaces entries in the requested list with loaded datablocks.
         requested.materials = list(material_names)
     loaded_materials = dict(zip(material_names, requested.materials))
+    isolated_hair_meshes = []
     for name, slots in hair_slots.items():
         owner = bpy.data.objects[name]
         assert mesh_scope(owner) == hair_scopes[name], ('Hair geometry/UV mismatch', name)
         assert len(owner.material_slots) == len(slots)
+        # DATA-linked slots belong to the mesh, so avoid changing an undeclared
+        # owner if a producer shared that datablock between objects.
+        if any(other != owner and other.type == 'MESH' and other.data == owner.data for other in bpy.data.objects):
+            owner.data = owner.data.copy()
+            assert mesh_scope(owner) == hair_scopes[name], ('Hair copy changed protected mesh data', name)
+            isolated_hair_meshes.append(name)
         for slot, original_name in zip(owner.material_slots, slots):
             slot.material = loaded_materials[original_name]
     assert all(mesh_scope(bpy.data.objects[name]) == expected for name, expected in protected.items())
@@ -207,6 +214,7 @@ def main(config_path):
               'reference_validations': validations,
               'face_other_geometry_preserved': protected,
               'hair_material_slots_replayed': hair_slots,
+              'shared_hair_meshes_isolated_before_material_replay': isolated_hair_meshes,
               'headcap_old_ids': sorted(cap_ids),
               'headcap_changed_from_baseline': [i for i in sorted(cap_ids) if (face_body[i]-base_coords[i]).length > 1e-7],
               'headcap_weights_uv_topology_material_indices_preserved': True,
