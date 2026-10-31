@@ -1,0 +1,57 @@
+[
+  {
+    "model": "face6",
+    "view": "low30",
+    "changed_pixel_count": 0,
+    "mean_absolute_rgb": 0.0,
+    "max_rgb": 0,
+    "bbox": null,
+    "inner_cheek_roi_260_350_420_470_max": 0,
+    "inner_cheek_roi_mean": 0.0
+  },
+  {
+    "model": "face6",
+    "view": "level60",
+    "changed_pixel_count": 24103,
+    "mean_absolute_rgb": 0.045298639455782316,
+    "max_rgb": 49,
+    "bbox": [
+      157,
+      133,
+      514,
+      576
+    ],
+    "inner_cheek_roi_260_350_420_470_max": 2,
+    "inner_cheek_roi_mean": 0.19526041666666666
+  },
+  {
+    "model": "r8",
+    "view": "low30",
+    "changed_pixel_count": 27416,
+    "mean_absolute_rgb": 0.050240816326530616,
+    "max_rgb": 19,
+    "bbox": [
+      156,
+      123,
+      566,
+      526
+    ],
+    "inner_cheek_roi_260_350_420_470_max": 19,
+    "inner_cheek_roi_mean": 0.30885416666666665
+  },
+  {
+    "model": "r8",
+    "view": "level60",
+    "changed_pixel_count": 24355,
+    "mean_absolute_rgb": 0.04613197278911565,
+    "max_rgb": 49,
+    "bbox": [
+      157,
+      133,
+      514,
+      551
+    ],
+    "inner_cheek_roi_260_350_420_470_max": 4,
+    "inner_cheek_roi_mean": 0.2125
+  }
+]

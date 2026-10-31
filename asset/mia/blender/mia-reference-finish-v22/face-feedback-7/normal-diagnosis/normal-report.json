@@ -1,0 +1,1083 @@
+{
+  "scope": "In-memory diagnostic only; no mesh coordinates or native files saved. Recomputed route reconstructs the already evaluated skin with identical coordinates/faces, all-smooth and no custom/sharp attributes. Body route remains unchanged.",
+  "sources": {
+    "face6": {
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-6\\continuous-candidate\\Mia_FaceFinish6_v22.blend",
+        "sha256": "f5d17264e07f492983e7e075d5a3213b2bd14a4adaead82072899e9b3e15d98a"
+      },
+      "skin": {
+        "vertices": 728,
+        "polygons": 1342,
+        "smooth_polygons": 1342,
+        "sharp_edges": 0,
+        "has_custom_normals": false,
+        "attributes": [
+          {
+            "name": "Mia_ContourRestRegion",
+            "domain": "POINT",
+            "data_type": "FLOAT"
+          },
+          {
+            "name": "crease_edge",
+            "domain": "EDGE",
+            "data_type": "FLOAT"
+          },
+          {
+            "name": "UVMap",
+            "domain": "CORNER",
+            "data_type": "FLOAT2"
+          },
+          {
+            "name": ".select_vert",
+            "domain": "POINT",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".select_edge",
+            "domain": "EDGE",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".select_poly",
+            "domain": "FACE",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".uv_select_vert",
+            "domain": "CORNER",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".uv_select_edge",
+            "domain": "CORNER",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".uv_select_face",
+            "domain": "FACE",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": "material_index",
+            "domain": "FACE",
+            "data_type": "INT"
+          },
+          {
+            "name": "position",
+            "domain": "POINT",
+            "data_type": "FLOAT_VECTOR"
+          },
+          {
+            "name": ".edge_verts",
+            "domain": "EDGE",
+            "data_type": "INT32_2D"
+          },
+          {
+            "name": ".corner_vert",
+            "domain": "CORNER",
+            "data_type": "INT"
+          },
+          {
+            "name": ".corner_edge",
+            "domain": "CORNER",
+            "data_type": "INT"
+          },
+          {
+            "name": "sharp_face",
+            "domain": "FACE",
+            "data_type": "BOOLEAN"
+          }
+        ],
+        "modifiers": [
+          {
+            "name": "Transferred skin armature",
+            "type": "ARMATURE",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "Skin-only smooth silhouette",
+            "type": "SUBSURF",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {
+              "uv_smooth": "PRESERVE_BOUNDARIES",
+              "quality": 3,
+              "boundary_smooth": "ALL",
+              "levels": 2,
+              "render_levels": 2,
+              "use_custom_normals": false
+            }
+          }
+        ],
+        "materials": [
+          {
+            "name": "F00_000_00_FaceMouth_00_FACE.001",
+            "linked_normal_inputs": [
+              {
+                "node": "Mtoon1Material.CompatibleShader",
+                "type": "BSDF_PRINCIPLED",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Normal Map",
+                    "Normal"
+                  ]
+                ]
+              },
+              {
+                "node": "Mtoon1Material.Mtoon1Output",
+                "type": "GROUP",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Reroute",
+                    "Output"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F00_000_00_EyeWhite_00_EYE.001",
+            "linked_normal_inputs": [
+              {
+                "node": "Mtoon1Material.CompatibleShader",
+                "type": "BSDF_PRINCIPLED",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Normal Map",
+                    "Normal"
+                  ]
+                ]
+              },
+              {
+                "node": "Mtoon1Material.Mtoon1Output",
+                "type": "GROUP",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Reroute",
+                    "Output"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MIA_V12_ReplacedBrowCard",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V12_ReplacedBrowCard",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V12_ReplacedBrowCard",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "Mia_FaceArt_GrayIrisHierarchy",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "Mia_FaceArt_RestrainedEyeGlint",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V22_Finish5_LocalUnderEye",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "Mia_MutedEyeAccent_MToon.002",
+            "linked_normal_inputs": [
+              {
+                "node": "Mtoon1Material.CompatibleShader",
+                "type": "BSDF_PRINCIPLED",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Normal Map",
+                    "Normal"
+                  ]
+                ]
+              },
+              {
+                "node": "Mtoon1Material.Mtoon1Output",
+                "type": "GROUP",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Reroute",
+                    "Output"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mia_FaceArt_ContourInk",
+            "linked_normal_inputs": []
+          }
+        ]
+      },
+      "body": {
+        "vertices": 3906,
+        "polygons": 4060,
+        "smooth_polygons": 4060,
+        "sharp_edges": 0,
+        "has_custom_normals": false,
+        "attributes": [
+          {
+            "name": "UVMap",
+            "domain": "CORNER",
+            "data_type": "FLOAT2"
+          },
+          {
+            "name": ".uv_select_vert",
+            "domain": "CORNER",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".uv_select_edge",
+            "domain": "CORNER",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".uv_select_face",
+            "domain": "FACE",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": "position",
+            "domain": "POINT",
+            "data_type": "FLOAT_VECTOR"
+          },
+          {
+            "name": ".edge_verts",
+            "domain": "EDGE",
+            "data_type": "INT32_2D"
+          },
+          {
+            "name": ".corner_vert",
+            "domain": "CORNER",
+            "data_type": "INT"
+          },
+          {
+            "name": ".corner_edge",
+            "domain": "CORNER",
+            "data_type": "INT"
+          }
+        ],
+        "modifiers": [
+          {
+            "name": "Armature",
+            "type": "ARMATURE",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "V14 Stitch coincident skin seams",
+            "type": "WELD",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "V14 Continuous skin curvature",
+            "type": "SUBSURF",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {
+              "uv_smooth": "PRESERVE_BOUNDARIES",
+              "quality": 3,
+              "boundary_smooth": "ALL",
+              "levels": 2,
+              "render_levels": 2,
+              "use_custom_normals": false
+            }
+          },
+          {
+            "name": "V14 Local transition relaxation",
+            "type": "SMOOTH",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "MToon Outline (F00_002_01_Shoes_01_CLOTH)",
+            "type": "NODES",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "MToon Outline (F00_002_02_Body_00_SKIN)",
+            "type": "NODES",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "MToon Outline (F00_002_01_Tops_01_CLOTH)",
+            "type": "NODES",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          }
+        ],
+        "materials": [
+          {
+            "name": "MIA_V22_Body_CommonLight_Preview.001",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V13_PaintedBodySkin",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V13_PaintedBodySkin",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V13_PaintedBodySkin",
+            "linked_normal_inputs": []
+          }
+        ]
+      },
+      "active_skin_keys": {},
+      "renders": [
+        {
+          "route": "original",
+          "view": "low30",
+          "artifact": {
+            "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\normal-diagnosis\\face6_original_low30.png",
+            "sha256": "440723c8c0857e2c4226625788d8f21973574720089219442a1ea1b14ad4183e"
+          },
+          "matrix": [
+            [
+              0.866025447845459,
+              0.08682407438755035,
+              0.4924038350582123,
+              0.9848077297210693
+            ],
+            [
+              0.4999999403953552,
+              -0.15038378536701202,
+              -0.8528685569763184,
+              -1.7057371139526367
+            ],
+            [
+              3.8357445220071895e-08,
+              0.9848077297210693,
+              -0.17364822328090668,
+              1.202703595161438
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 0.29,
+          "resolution": [
+            700,
+            700
+          ]
+        },
+        {
+          "route": "original",
+          "view": "level60",
+          "artifact": {
+            "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\normal-diagnosis\\face6_original_level60.png",
+            "sha256": "803613d77eafc6631271218ac3aa5fbb79cd07d4a96f61c2e0a2138296871a02"
+          },
+          "matrix": [
+            [
+              0.4999999701976776,
+              5.646608514098261e-09,
+              0.8660253882408142,
+              1.7320507764816284
+            ],
+            [
+              0.8660253882408142,
+              -8.817736585342573e-08,
+              -0.4999999701976776,
+              -1.0
+            ],
+            [
+              7.86470906177783e-08,
+              1.0,
+              -4.6030518063844283e-08,
+              1.5499999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 0.29,
+          "resolution": [
+            700,
+            700
+          ]
+        },
+        {
+          "route": "recomputed",
+          "view": "low30",
+          "artifact": {
+            "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\normal-diagnosis\\face6_recomputed_low30.png",
+            "sha256": "0da4db68a6198ffe558fa6d2f30217d2d08c5c08a20552effaf10335ded3b4ea"
+          },
+          "matrix": [
+            [
+              0.866025447845459,
+              0.08682407438755035,
+              0.4924038350582123,
+              0.9848077297210693
+            ],
+            [
+              0.4999999403953552,
+              -0.15038378536701202,
+              -0.8528685569763184,
+              -1.7057371139526367
+            ],
+            [
+              3.8357445220071895e-08,
+              0.9848077297210693,
+              -0.17364822328090668,
+              1.202703595161438
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 0.29,
+          "resolution": [
+            700,
+            700
+          ]
+        },
+        {
+          "route": "recomputed",
+          "view": "level60",
+          "artifact": {
+            "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\normal-diagnosis\\face6_recomputed_level60.png",
+            "sha256": "558277db9464576c334372a6fc5d48598c15ba8ba539f1bcb415c82abfe7ce45"
+          },
+          "matrix": [
+            [
+              0.4999999701976776,
+              5.646608514098261e-09,
+              0.8660253882408142,
+              1.7320507764816284
+            ],
+            [
+              0.8660253882408142,
+              -8.817736585342573e-08,
+              -0.4999999701976776,
+              -1.0
+            ],
+            [
+              7.86470906177783e-08,
+              1.0,
+              -4.6030518063844283e-08,
+              1.5499999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 0.29,
+          "resolution": [
+            700,
+            700
+          ]
+        }
+      ],
+      "evaluated": {
+        "vertices": 16338,
+        "polygons": 16104,
+        "has_custom_normals": false,
+        "sharp_edges": 0,
+        "smooth_polygons": 16104
+      },
+      "old_vs_recomputed_corner_normals": {
+        "euclidean_difference": {
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "angle_degrees_float_precision_limited": {
+          "min": 0.0,
+          "p50": 0.002278150955307503,
+          "p95": 0.027369319966993398,
+          "max": 0.03907294845974541
+        },
+        "count_difference_gt_1e-5": 0
+      },
+      "corner_vs_polygon_normal_angle_degrees": {
+        "min": 0.0,
+        "p50": 1.906124808411264,
+        "p95": 8.00557289073,
+        "max": 148.43628700143773
+      },
+      "max_shared_vertex_corner_normal_spread": 0.0,
+      "fresh_geometry_exact": true,
+      "source_unchanged": true
+    },
+    "r8": {
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r8\\Mia_FaceFinish7_RadialGuideR8_v22.blend",
+        "sha256": "8b92d4df49c80bccc44e8c5def1664788d68b56c0c6b5de805b3c72c1768d4b9"
+      },
+      "skin": {
+        "vertices": 728,
+        "polygons": 1342,
+        "smooth_polygons": 1342,
+        "sharp_edges": 0,
+        "has_custom_normals": false,
+        "attributes": [
+          {
+            "name": "Mia_ContourRestRegion",
+            "domain": "POINT",
+            "data_type": "FLOAT"
+          },
+          {
+            "name": "crease_edge",
+            "domain": "EDGE",
+            "data_type": "FLOAT"
+          },
+          {
+            "name": "UVMap",
+            "domain": "CORNER",
+            "data_type": "FLOAT2"
+          },
+          {
+            "name": ".select_vert",
+            "domain": "POINT",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".select_edge",
+            "domain": "EDGE",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".select_poly",
+            "domain": "FACE",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".uv_select_vert",
+            "domain": "CORNER",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".uv_select_edge",
+            "domain": "CORNER",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".uv_select_face",
+            "domain": "FACE",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": "material_index",
+            "domain": "FACE",
+            "data_type": "INT"
+          },
+          {
+            "name": "position",
+            "domain": "POINT",
+            "data_type": "FLOAT_VECTOR"
+          },
+          {
+            "name": ".edge_verts",
+            "domain": "EDGE",
+            "data_type": "INT32_2D"
+          },
+          {
+            "name": ".corner_vert",
+            "domain": "CORNER",
+            "data_type": "INT"
+          },
+          {
+            "name": ".corner_edge",
+            "domain": "CORNER",
+            "data_type": "INT"
+          },
+          {
+            "name": "sharp_face",
+            "domain": "FACE",
+            "data_type": "BOOLEAN"
+          }
+        ],
+        "modifiers": [
+          {
+            "name": "Transferred skin armature",
+            "type": "ARMATURE",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "Skin-only smooth silhouette",
+            "type": "SUBSURF",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {
+              "uv_smooth": "PRESERVE_BOUNDARIES",
+              "quality": 3,
+              "boundary_smooth": "ALL",
+              "levels": 2,
+              "render_levels": 2,
+              "use_custom_normals": false
+            }
+          }
+        ],
+        "materials": [
+          {
+            "name": "F00_000_00_FaceMouth_00_FACE.001",
+            "linked_normal_inputs": [
+              {
+                "node": "Mtoon1Material.CompatibleShader",
+                "type": "BSDF_PRINCIPLED",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Normal Map",
+                    "Normal"
+                  ]
+                ]
+              },
+              {
+                "node": "Mtoon1Material.Mtoon1Output",
+                "type": "GROUP",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Reroute",
+                    "Output"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F00_000_00_EyeWhite_00_EYE.001",
+            "linked_normal_inputs": [
+              {
+                "node": "Mtoon1Material.CompatibleShader",
+                "type": "BSDF_PRINCIPLED",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Normal Map",
+                    "Normal"
+                  ]
+                ]
+              },
+              {
+                "node": "Mtoon1Material.Mtoon1Output",
+                "type": "GROUP",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Reroute",
+                    "Output"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MIA_V12_ReplacedBrowCard",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V12_ReplacedBrowCard",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V12_ReplacedBrowCard",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "Mia_FaceArt_GrayIrisHierarchy",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "Mia_FaceArt_RestrainedEyeGlint",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V22_Finish5_LocalUnderEye",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "Mia_MutedEyeAccent_MToon.002",
+            "linked_normal_inputs": [
+              {
+                "node": "Mtoon1Material.CompatibleShader",
+                "type": "BSDF_PRINCIPLED",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Normal Map",
+                    "Normal"
+                  ]
+                ]
+              },
+              {
+                "node": "Mtoon1Material.Mtoon1Output",
+                "type": "GROUP",
+                "input": "Normal",
+                "from": [
+                  [
+                    "Reroute",
+                    "Output"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mia_FaceArt_ContourInk",
+            "linked_normal_inputs": []
+          }
+        ]
+      },
+      "body": {
+        "vertices": 3906,
+        "polygons": 4060,
+        "smooth_polygons": 4060,
+        "sharp_edges": 0,
+        "has_custom_normals": false,
+        "attributes": [
+          {
+            "name": "UVMap",
+            "domain": "CORNER",
+            "data_type": "FLOAT2"
+          },
+          {
+            "name": ".uv_select_vert",
+            "domain": "CORNER",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".uv_select_edge",
+            "domain": "CORNER",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": ".uv_select_face",
+            "domain": "FACE",
+            "data_type": "BOOLEAN"
+          },
+          {
+            "name": "position",
+            "domain": "POINT",
+            "data_type": "FLOAT_VECTOR"
+          },
+          {
+            "name": ".edge_verts",
+            "domain": "EDGE",
+            "data_type": "INT32_2D"
+          },
+          {
+            "name": ".corner_vert",
+            "domain": "CORNER",
+            "data_type": "INT"
+          },
+          {
+            "name": ".corner_edge",
+            "domain": "CORNER",
+            "data_type": "INT"
+          }
+        ],
+        "modifiers": [
+          {
+            "name": "Armature",
+            "type": "ARMATURE",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "V14 Stitch coincident skin seams",
+            "type": "WELD",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "V14 Continuous skin curvature",
+            "type": "SUBSURF",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {
+              "uv_smooth": "PRESERVE_BOUNDARIES",
+              "quality": 3,
+              "boundary_smooth": "ALL",
+              "levels": 2,
+              "render_levels": 2,
+              "use_custom_normals": false
+            }
+          },
+          {
+            "name": "V14 Local transition relaxation",
+            "type": "SMOOTH",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "MToon Outline (F00_002_01_Shoes_01_CLOTH)",
+            "type": "NODES",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "MToon Outline (F00_002_02_Body_00_SKIN)",
+            "type": "NODES",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          },
+          {
+            "name": "MToon Outline (F00_002_01_Tops_01_CLOTH)",
+            "type": "NODES",
+            "show_render": true,
+            "show_viewport": true,
+            "settings": {}
+          }
+        ],
+        "materials": [
+          {
+            "name": "MIA_V22_Body_CommonLight_Preview.001",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V13_PaintedBodySkin",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V13_PaintedBodySkin",
+            "linked_normal_inputs": []
+          },
+          {
+            "name": "MIA_V13_PaintedBodySkin",
+            "linked_normal_inputs": []
+          }
+        ]
+      },
+      "active_skin_keys": {},
+      "renders": [
+        {
+          "route": "original",
+          "view": "low30",
+          "artifact": {
+            "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\normal-diagnosis\\r8_original_low30.png",
+            "sha256": "5e7b0e67cca2e002167f0e3ff25914406bd1c671578b33697f4eff5e6c53004c"
+          },
+          "matrix": [
+            [
+              0.866025447845459,
+              0.08682407438755035,
+              0.4924038350582123,
+              0.9848077297210693
+            ],
+            [
+              0.4999999403953552,
+              -0.15038378536701202,
+              -0.8528685569763184,
+              -1.7057371139526367
+            ],
+            [
+              3.8357445220071895e-08,
+              0.9848077297210693,
+              -0.17364822328090668,
+              1.202703595161438
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 0.29,
+          "resolution": [
+            700,
+            700
+          ]
+        },
+        {
+          "route": "original",
+          "view": "level60",
+          "artifact": {
+            "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\normal-diagnosis\\r8_original_level60.png",
+            "sha256": "4f4c47d587d605b58aaa8a042c1f0f74fbd6f634e1a4431efd0d39011723c984"
+          },
+          "matrix": [
+            [
+              0.4999999701976776,
+              5.646608514098261e-09,
+              0.8660253882408142,
+              1.7320507764816284
+            ],
+            [
+              0.8660253882408142,
+              -8.817736585342573e-08,
+              -0.4999999701976776,
+              -1.0
+            ],
+            [
+              7.86470906177783e-08,
+              1.0,
+              -4.6030518063844283e-08,
+              1.5499999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 0.29,
+          "resolution": [
+            700,
+            700
+          ]
+        },
+        {
+          "route": "recomputed",
+          "view": "low30",
+          "artifact": {
+            "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\normal-diagnosis\\r8_recomputed_low30.png",
+            "sha256": "bcb27e1a69ae917de29a5da4d116443813a8934f1d4c50cf0ebd048f6e3d8a75"
+          },
+          "matrix": [
+            [
+              0.866025447845459,
+              0.08682407438755035,
+              0.4924038350582123,
+              0.9848077297210693
+            ],
+            [
+              0.4999999403953552,
+              -0.15038378536701202,
+              -0.8528685569763184,
+              -1.7057371139526367
+            ],
+            [
+              3.8357445220071895e-08,
+              0.9848077297210693,
+              -0.17364822328090668,
+              1.202703595161438
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 0.29,
+          "resolution": [
+            700,
+            700
+          ]
+        },
+        {
+          "route": "recomputed",
+          "view": "level60",
+          "artifact": {
+            "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\normal-diagnosis\\r8_recomputed_level60.png",
+            "sha256": "9ecabe7e16d9fdbf281dac5209824b9953deceef6e3b65d983d70ab6b6b315d6"
+          },
+          "matrix": [
+            [
+              0.4999999701976776,
+              5.646608514098261e-09,
+              0.8660253882408142,
+              1.7320507764816284
+            ],
+            [
+              0.8660253882408142,
+              -8.817736585342573e-08,
+              -0.4999999701976776,
+              -1.0
+            ],
+            [
+              7.86470906177783e-08,
+              1.0,
+              -4.6030518063844283e-08,
+              1.5499999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 0.29,
+          "resolution": [
+            700,
+            700
+          ]
+        }
+      ],
+      "evaluated": {
+        "vertices": 16338,
+        "polygons": 16104,
+        "has_custom_normals": false,
+        "sharp_edges": 0,
+        "smooth_polygons": 16104
+      },
+      "old_vs_recomputed_corner_normals": {
+        "euclidean_difference": {
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "angle_degrees_float_precision_limited": {
+          "min": 0.0,
+          "p50": 0.0014103031481692214,
+          "p95": 0.027290873017452755,
+          "max": 0.037699674467054835
+        },
+        "count_difference_gt_1e-5": 0
+      },
+      "corner_vs_polygon_normal_angle_degrees": {
+        "min": 0.0,
+        "p50": 1.9302602194497545,
+        "p95": 8.022075213514903,
+        "max": 148.43628700143773
+      },
+      "max_shared_vertex_corner_normal_spread": 0.0,
+      "fresh_geometry_exact": true,
+      "source_unchanged": true
+    }
+  }
+}
