@@ -1,0 +1,162 @@
+{
+  "input_source": "D:\\ai\\Mia3DWork\\model-v02\\hair-surface-stage\\Mia_HairSurface_v06.blend",
+  "input_source_sha256": "9ef40cabbd2dd73f67e14e38fd54713d4c5ac0ceaf1ce4aa32b64af33f3830a6",
+  "builder_script": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\tools\\mia\\blender\\build_mia_body_head_v06.py",
+  "builder_script_sha256": "c381a93c6aa6132ef2125e06f889cbb0d62ce8c2271ee8247d9bd47364d81d45",
+  "output_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\Mia_BodyHead_v06.blend",
+  "output_native_sha256": "97b05f5bef8e2291669c49119e1cf8bcabe638e93c117c4e8b9d55f15ed4b75f",
+  "common_neutral": {
+    "expression_keys": {
+      "Face.M_F00_000_00_Fcl_BRW_Angry": 0.1,
+      "Face.M_F00_000_00_Fcl_EYE_Close": 0.38,
+      "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.12,
+      "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05,
+      "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23,
+      "MIA_FaceArt_EyeProportion": 1.0,
+      "MIA_FaceArt_OwnedBrowPlacement": 1.0
+    },
+    "a_pose_controls": {
+      "controls": [
+        "J_Bip_L_UpperArm",
+        "J_Bip_R_UpperArm",
+        "J_Bip_L_UpperLeg_derived_abduction",
+        "J_Bip_R_UpperLeg_derived_abduction"
+      ],
+      "evaluated_endpoints": {
+        "J_Bip_L_UpperLeg": {
+          "rest_head_world": [
+            0.076645,
+            -0.001408,
+            0.970424
+          ],
+          "rest_tail_world": [
+            0.05463,
+            0.006743,
+            0.584672
+          ],
+          "evaluated_head_world": [
+            0.076645,
+            -0.001408,
+            0.970424
+          ],
+          "evaluated_tail_world": [
+            0.09464,
+            0.006747,
+            0.584463
+          ]
+        },
+        "J_Bip_L_LowerLeg": {
+          "rest_head_world": [
+            0.05463,
+            0.006743,
+            0.584672
+          ],
+          "rest_tail_world": [
+            0.043581,
+            0.030747,
+            0.143664
+          ],
+          "evaluated_head_world": [
+            0.09464,
+            0.006747,
+            0.584463
+          ],
+          "evaluated_tail_world": [
+            0.129287,
+            0.030726,
+            0.144678
+          ]
+        },
+        "J_Bip_L_Foot": {
+          "rest_head_world": [
+            0.043581,
+            0.030747,
+            0.143664
+          ],
+          "rest_tail_world": [
+            0.044963,
+            -0.0797,
+            0.077563
+          ],
+          "evaluated_head_world": [
+            0.129287,
+            0.030726,
+            0.144678
+          ],
+          "evaluated_tail_world": [
+            0.137253,
+            -0.079731,
+            0.079062
+          ]
+        },
+        "J_Bip_R_UpperLeg": {
+          "rest_head_world": [
+            -0.0776,
+            -0.001408,
+            0.970424
+          ],
+          "rest_tail_world": [
+            -0.055585,
+            0.006743,
+            0.584672
+          ],
+          "evaluated_head_world": [
+            -0.0776,
+            -0.001408,
+            0.970424
+          ],
+          "evaluated_tail_world": [
+            -0.095595,
+            0.006747,
+            0.584464
+          ]
+        },
+        "J_Bip_R_LowerLeg": {
+          "rest_head_world": [
+            -0.055585,
+            0.006743,
+            0.584672
+          ],
+          "rest_tail_world": [
+            -0.044535,
+            0.030747,
+            0.143664
+          ],
+          "evaluated_head_world": [
+            -0.095595,
+            0.006747,
+            0.584464
+          ],
+          "evaluated_tail_world": [
+            -0.130242,
+            0.030725,
+            0.144678
+          ]
+        },
+        "J_Bip_R_Foot": {
+          "rest_head_world": [
+            -0.044535,
+            0.030747,
+            0.143664
+          ],
+          "rest_tail_world": [
+            -0.045916,
+            -0.079699,
+            0.077563
+          ],
+          "evaluated_head_world": [
+            -0.130242,
+            0.030725,
+            0.144678
+          ],
+          "evaluated_tail_world": [
+            -0.138207,
+            -0.079732,
+            0.079062
+          ]
+        }
+      }
+    }
+  },
+  "coordinate_frame": "Body and Face retain source active world Rz180; MIA_V06_RIG world is identity"
+}

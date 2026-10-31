@@ -1,0 +1,12 @@
+{
+  "command": "C:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe --background --python-expr \"exec(__import__('pathlib').Path(r'C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\independent-final-audit-r2\\compare_frozen_inputs.py').read_text())\"",
+  "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\Mia_BodyHead_v06.blend",
+  "head_study": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-head-refine-v06\\Mia_HeadRefine_v06.blend",
+  "v12_baseline": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\iterations\\v12-body-fit-frozen\\Mia_BodyHead_v06_v12.blend",
+  "source_sha256": "9ef40cabbd2dd73f67e14e38fd54713d4c5ac0ceaf1ce4aa32b64af33f3830a6",
+  "candidate_sha256": "97b05f5bef8e2291669c49119e1cf8bcabe638e93c117c4e8b9d55f15ed4b75f",
+  "v12_sha256": "54e2ea0843f67e400863ef4df3aee83eab27fb934e6442d8a080fc173ab5474d",
+  "face_keys": {"candidate": 44, "study": 44, "all_44_name_count_hashes_equal": true},
+  "body_outside_head_neck": {"candidate_vertices": 4648, "v12_vertices": 4648, "excluded_head_neck": 399, "compared": 4249, "max_abs_delta": 0.0, "mean_abs_delta": 0.0},
+  "writes_to_native_files": false
+}

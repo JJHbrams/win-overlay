@@ -1,0 +1,572 @@
+{
+  "files": {
+    "source": "D:\\ai\\Mia3DWork\\model-v02\\hair-surface-stage\\Mia_HairSurface_v06.blend",
+    "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\Mia_BodyHead_v06.blend",
+    "sha_before": {
+      "source": "9ef40cabbd2dd73f67e14e38fd54713d4c5ac0ceaf1ce4aa32b64af33f3830a6",
+      "candidate": "97b05f5bef8e2291669c49119e1cf8bcabe638e93c117c4e8b9d55f15ed4b75f"
+    },
+    "sha_after": {
+      "source": "9ef40cabbd2dd73f67e14e38fd54713d4c5ac0ceaf1ce4aa32b64af33f3830a6",
+      "candidate": "97b05f5bef8e2291669c49119e1cf8bcabe638e93c117c4e8b9d55f15ed4b75f"
+    },
+    "files_unchanged": true
+  },
+  "source": {
+    "body": {
+      "vertices": 4648,
+      "polygons": 7732,
+      "topology_order_hash": "9d8cce5f0b6416298777ca070fb328924e7e038ab479ab8f30320dbc557e118c",
+      "uv_hash": "3bc0200c2479f8e9bd0531579006362e11175fe27d9e6184fb90644b1ceede59",
+      "uv_layers": [
+        "UVMap"
+      ],
+      "coordinate_hash_float32": "5a3c07d2e3ad8b1605d48c51e87bf3f67c931bda04c8cd3bea0d1f801ae489da"
+    },
+    "face": {
+      "vertices": 2339,
+      "polygons": 3150,
+      "topology_order_hash": "d4528b17cef49cc2f891430a2964ddfde5a1ebc463e16dd7de98a6d7686ed8b5",
+      "uv_hash": "228e58a3b0e112e7ecbe75df9f21856d438bbf11af786bc43242cf93f850fe90",
+      "uv_layers": [
+        "UVMap"
+      ],
+      "coordinate_hash_float32": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187"
+    },
+    "face_keys": {
+      "count": 42,
+      "names": [
+        "Basis",
+        "Face.M_F00_000_00_Fcl_ALL_Angry",
+        "Face.M_F00_000_00_Fcl_ALL_Fun",
+        "Face.M_F00_000_00_Fcl_ALL_Joy",
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+        "Face.M_F00_000_00_Fcl_ALL_Surprised",
+        "Face.M_F00_000_00_Fcl_BRW_Angry",
+        "Face.M_F00_000_00_Fcl_BRW_Fun",
+        "Face.M_F00_000_00_Fcl_BRW_Joy",
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+        "Face.M_F00_000_00_Fcl_BRW_Surprised",
+        "Face.M_F00_000_00_Fcl_EYE_Natural",
+        "Face.M_F00_000_00_Fcl_EYE_Angry",
+        "Face.M_F00_000_00_Fcl_EYE_Close",
+        "Face.M_F00_000_00_Fcl_EYE_Close_R",
+        "Face.M_F00_000_00_Fcl_EYE_Close_L",
+        "Face.M_F00_000_00_Fcl_EYE_Joy",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+        "Face.M_F00_000_00_Fcl_EYE_Surprised",
+        "Face.M_F00_000_00_Fcl_EYE_Extra",
+        "Face.M_F00_000_00_Fcl_MTH_Up",
+        "Face.M_F00_000_00_Fcl_MTH_Down",
+        "Face.M_F00_000_00_Fcl_MTH_Angry",
+        "Face.M_F00_000_00_Fcl_MTH_Neutral",
+        "Face.M_F00_000_00_Fcl_MTH_Fun",
+        "Face.M_F00_000_00_Fcl_MTH_Joy",
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+        "Face.M_F00_000_00_Fcl_MTH_Surprised",
+        "Face.M_F00_000_00_Fcl_MTH_A",
+        "Face.M_F00_000_00_Fcl_MTH_I",
+        "Face.M_F00_000_00_Fcl_MTH_U",
+        "Face.M_F00_000_00_Fcl_MTH_E",
+        "Face.M_F00_000_00_Fcl_MTH_O",
+        "Face.M_F00_000_00_Fcl_HA_Fung1",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+        "Face.M_F00_000_00_Fcl_HA_Fung2",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On"
+      ],
+      "finite_coordinates": true
+    },
+    "face_key_coordinate_hashes": {
+      "Basis": "9b1c544188a504984811e48ab77868915bdaee14ac59a408ba72ab49ecd6d8bd",
+      "Face.M_F00_000_00_Fcl_ALL_Angry": "ad739a84b39ade305c1e61980b98ce4aef7920715ec6404f1b508ca183974acc",
+      "Face.M_F00_000_00_Fcl_ALL_Fun": "e593362e8c36763742546d52e80fe804848712348c26bb111e85da6ebe930bc8",
+      "Face.M_F00_000_00_Fcl_ALL_Joy": "3bbcad322028ee2ccd6325cd7dfb3af21313b65c907d6e3aee8890f9bce82d83",
+      "Face.M_F00_000_00_Fcl_ALL_Sorrow": "8f2e7159e3da8feab349d433b34fff1084f968468247dd125394def997e60aea",
+      "Face.M_F00_000_00_Fcl_ALL_Surprised": "5f65adc0c3065a6b22e315d3395bea9411aed331205cd0225a86a1c365d6c496",
+      "Face.M_F00_000_00_Fcl_BRW_Angry": "44790b9bfc8bb69114ffd0164d36b449cef65910f05b408fef74d005989db0e4",
+      "Face.M_F00_000_00_Fcl_BRW_Fun": "3b1131ec7b49243c642c865d034de03057548f2c55e345b6aff044eb10b6ee4b",
+      "Face.M_F00_000_00_Fcl_BRW_Joy": "4fe4249df1ea62d87ae0db7f6d4a95dd6f9de6283d1abcb3834bb51b11045b8f",
+      "Face.M_F00_000_00_Fcl_BRW_Sorrow": "d37719875bf604a0714187499095a3af39f937339870011aca986b149260aa2e",
+      "Face.M_F00_000_00_Fcl_BRW_Surprised": "8568909cc432479a54e215a6f33afdd5c65db4aab2942b62fba4b1fc1cd1ed5a",
+      "Face.M_F00_000_00_Fcl_EYE_Natural": "9b1c544188a504984811e48ab77868915bdaee14ac59a408ba72ab49ecd6d8bd",
+      "Face.M_F00_000_00_Fcl_EYE_Angry": "73c14e26c3bc8511392df0af31bd6d4abe0909507fa6015b2744644fe2e7c4a9",
+      "Face.M_F00_000_00_Fcl_EYE_Close": "9e467541b2804b0c18a85f3c430d0e270fe9561d67f07dda4fe70b2023029d08",
+      "Face.M_F00_000_00_Fcl_EYE_Close_R": "47db7fc829217f42368dc639a4a87b2a44c3477fca60d65a09dcdb45ac495f46",
+      "Face.M_F00_000_00_Fcl_EYE_Close_L": "567d7fa1c50f52426073a69dbc722ac0a062e28401b0fa07c96bd475cfc7231c",
+      "Face.M_F00_000_00_Fcl_EYE_Joy": "c8d3c94ccbe764e80c9e7dd8e96eef8c5f50d79edc1fce828fd5b237bab980e0",
+      "Face.M_F00_000_00_Fcl_EYE_Joy_R": "54ab8a8a790b03f37053e7b97850b8404c9ea53b4bbe03e6b897cca8b18da452",
+      "Face.M_F00_000_00_Fcl_EYE_Joy_L": "fc6672a6bfe8386ea6814d510ba2c4fe8b39efcc363017b8e8d349aa6b4cccc9",
+      "Face.M_F00_000_00_Fcl_EYE_Sorrow": "5d6434daa27c94492262e89d3783cf98638eaa75c64fa66e34b7721f80914d88",
+      "Face.M_F00_000_00_Fcl_EYE_Surprised": "4d11b5b751f1a707584d17971b2c15e993f75e2291e0dee8ac7e2b33368cb888",
+      "Face.M_F00_000_00_Fcl_EYE_Extra": "4ce5437ef07999d7d1eb871c662394f0b0b48bd2fadc2cb201b235f436a22c7d",
+      "Face.M_F00_000_00_Fcl_MTH_Up": "4cbb57719d3739cbf2ea18b8817459b07aad6632fa1c9c1829201dc7e6a47212",
+      "Face.M_F00_000_00_Fcl_MTH_Down": "05237785b37ed246865224f817d734e8e5d7121ee58e9708b26a18160a3eea09",
+      "Face.M_F00_000_00_Fcl_MTH_Angry": "bc063ea5351000bb32513747c695a2f8bfba742492f2a7ebff5c7f2e2e7660fb",
+      "Face.M_F00_000_00_Fcl_MTH_Neutral": "946a0ff6e9d8770cfab47f6cf5e227f2ec144040b4f868338ab7f5d4bdaa98ba",
+      "Face.M_F00_000_00_Fcl_MTH_Fun": "edcdc6691de10cbe9c0a27b3041a24eea2b8b75a079834e468b0d401e6e1e938",
+      "Face.M_F00_000_00_Fcl_MTH_Joy": "5fba5ce31460afc06c808ededf3ff17b4a30d69069510e56c061af6d993b8520",
+      "Face.M_F00_000_00_Fcl_MTH_Sorrow": "d3495aba44370e3c04ab10e24b8d85a61038bbd8084c5ac3d2a0514b764077b0",
+      "Face.M_F00_000_00_Fcl_MTH_Surprised": "c5bf7471d30ff90928c473efef4d62ee4b267e0466e49476722f979a3f2fe42e",
+      "Face.M_F00_000_00_Fcl_MTH_A": "76b156e6a1dc4b67c9683861ce482a6a78bbef4db775e67540e1532ef13245e9",
+      "Face.M_F00_000_00_Fcl_MTH_I": "23297f2430ca569fbdf3873ba776bdd94e1bcdd2621f7529b47a362807448e7a",
+      "Face.M_F00_000_00_Fcl_MTH_U": "73519a8490638ff17a3d7a9bed612f7b7be2209d583c914f93d193437bebe631",
+      "Face.M_F00_000_00_Fcl_MTH_E": "0cf9e35949ca8fa671c0c5aea20ed398e6b7acfd362bf8ca20b7ad9188266ec4",
+      "Face.M_F00_000_00_Fcl_MTH_O": "1bc61848e6347f5d189a8ce6aab699071f9892ce833e274c7aaa3a67a106f7f8",
+      "Face.M_F00_000_00_Fcl_HA_Fung1": "3f3a0c9cf1cb32491859fe2bbc6c056ee0ab06e06d9bbe08bfe9b7c85aa7fbaf",
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "0fd55ca57fc4a4bb32c77151d1307ec34cd45160a48e9836fd61d6815f6ff411",
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "fe59efe89ce124938e81e1bb99cebe0099a0a32da5b7833ff002944bc8c4eb0b",
+      "Face.M_F00_000_00_Fcl_HA_Fung2": "a026e505ac6f27782baa48cbeffb1401684acdf71402f2da856684c55d7763e4",
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "b435e5c0d61c9c29aab038bbd5a2e1648bc3bdd1219201e7e29561650a2a7c35",
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "98d8bcd39e7d1ce6b0d96a42248f141ab3d27c32d1ec5d7ec958a3975a9573e9",
+      "EyeExtra_01.M_F00_000_00_EyeExtra_On": "cc4659fce1fddc24461708f7cc9a22887d6b34910ccfe3ee5d811cf1d5544c75"
+    }
+  },
+  "archive": {
+    "body_present": true,
+    "face_present": true,
+    "body": {
+      "vertices": 4648,
+      "polygons": 7732,
+      "topology_order_hash": "9d8cce5f0b6416298777ca070fb328924e7e038ab479ab8f30320dbc557e118c",
+      "uv_hash": "3bc0200c2479f8e9bd0531579006362e11175fe27d9e6184fb90644b1ceede59",
+      "uv_layers": [
+        "UVMap"
+      ],
+      "coordinate_hash_float32": "5a3c07d2e3ad8b1605d48c51e87bf3f67c931bda04c8cd3bea0d1f801ae489da"
+    },
+    "face": {
+      "vertices": 2339,
+      "polygons": 3150,
+      "topology_order_hash": "d4528b17cef49cc2f891430a2964ddfde5a1ebc463e16dd7de98a6d7686ed8b5",
+      "uv_hash": "228e58a3b0e112e7ecbe75df9f21856d438bbf11af786bc43242cf93f850fe90",
+      "uv_layers": [
+        "UVMap"
+      ],
+      "coordinate_hash_float32": "6cd77bf33072a00109f79634d9b7b7674866a6d1af1714fcef48de52a4e47187"
+    },
+    "face_key_coordinate_hashes": {
+      "Basis": "9b1c544188a504984811e48ab77868915bdaee14ac59a408ba72ab49ecd6d8bd",
+      "Face.M_F00_000_00_Fcl_ALL_Angry": "ad739a84b39ade305c1e61980b98ce4aef7920715ec6404f1b508ca183974acc",
+      "Face.M_F00_000_00_Fcl_ALL_Fun": "e593362e8c36763742546d52e80fe804848712348c26bb111e85da6ebe930bc8",
+      "Face.M_F00_000_00_Fcl_ALL_Joy": "3bbcad322028ee2ccd6325cd7dfb3af21313b65c907d6e3aee8890f9bce82d83",
+      "Face.M_F00_000_00_Fcl_ALL_Sorrow": "8f2e7159e3da8feab349d433b34fff1084f968468247dd125394def997e60aea",
+      "Face.M_F00_000_00_Fcl_ALL_Surprised": "5f65adc0c3065a6b22e315d3395bea9411aed331205cd0225a86a1c365d6c496",
+      "Face.M_F00_000_00_Fcl_BRW_Angry": "44790b9bfc8bb69114ffd0164d36b449cef65910f05b408fef74d005989db0e4",
+      "Face.M_F00_000_00_Fcl_BRW_Fun": "3b1131ec7b49243c642c865d034de03057548f2c55e345b6aff044eb10b6ee4b",
+      "Face.M_F00_000_00_Fcl_BRW_Joy": "4fe4249df1ea62d87ae0db7f6d4a95dd6f9de6283d1abcb3834bb51b11045b8f",
+      "Face.M_F00_000_00_Fcl_BRW_Sorrow": "d37719875bf604a0714187499095a3af39f937339870011aca986b149260aa2e",
+      "Face.M_F00_000_00_Fcl_BRW_Surprised": "8568909cc432479a54e215a6f33afdd5c65db4aab2942b62fba4b1fc1cd1ed5a",
+      "Face.M_F00_000_00_Fcl_EYE_Natural": "9b1c544188a504984811e48ab77868915bdaee14ac59a408ba72ab49ecd6d8bd",
+      "Face.M_F00_000_00_Fcl_EYE_Angry": "73c14e26c3bc8511392df0af31bd6d4abe0909507fa6015b2744644fe2e7c4a9",
+      "Face.M_F00_000_00_Fcl_EYE_Close": "9e467541b2804b0c18a85f3c430d0e270fe9561d67f07dda4fe70b2023029d08",
+      "Face.M_F00_000_00_Fcl_EYE_Close_R": "47db7fc829217f42368dc639a4a87b2a44c3477fca60d65a09dcdb45ac495f46",
+      "Face.M_F00_000_00_Fcl_EYE_Close_L": "567d7fa1c50f52426073a69dbc722ac0a062e28401b0fa07c96bd475cfc7231c",
+      "Face.M_F00_000_00_Fcl_EYE_Joy": "c8d3c94ccbe764e80c9e7dd8e96eef8c5f50d79edc1fce828fd5b237bab980e0",
+      "Face.M_F00_000_00_Fcl_EYE_Joy_R": "54ab8a8a790b03f37053e7b97850b8404c9ea53b4bbe03e6b897cca8b18da452",
+      "Face.M_F00_000_00_Fcl_EYE_Joy_L": "fc6672a6bfe8386ea6814d510ba2c4fe8b39efcc363017b8e8d349aa6b4cccc9",
+      "Face.M_F00_000_00_Fcl_EYE_Sorrow": "5d6434daa27c94492262e89d3783cf98638eaa75c64fa66e34b7721f80914d88",
+      "Face.M_F00_000_00_Fcl_EYE_Surprised": "4d11b5b751f1a707584d17971b2c15e993f75e2291e0dee8ac7e2b33368cb888",
+      "Face.M_F00_000_00_Fcl_EYE_Extra": "4ce5437ef07999d7d1eb871c662394f0b0b48bd2fadc2cb201b235f436a22c7d",
+      "Face.M_F00_000_00_Fcl_MTH_Up": "4cbb57719d3739cbf2ea18b8817459b07aad6632fa1c9c1829201dc7e6a47212",
+      "Face.M_F00_000_00_Fcl_MTH_Down": "05237785b37ed246865224f817d734e8e5d7121ee58e9708b26a18160a3eea09",
+      "Face.M_F00_000_00_Fcl_MTH_Angry": "bc063ea5351000bb32513747c695a2f8bfba742492f2a7ebff5c7f2e2e7660fb",
+      "Face.M_F00_000_00_Fcl_MTH_Neutral": "946a0ff6e9d8770cfab47f6cf5e227f2ec144040b4f868338ab7f5d4bdaa98ba",
+      "Face.M_F00_000_00_Fcl_MTH_Fun": "edcdc6691de10cbe9c0a27b3041a24eea2b8b75a079834e468b0d401e6e1e938",
+      "Face.M_F00_000_00_Fcl_MTH_Joy": "5fba5ce31460afc06c808ededf3ff17b4a30d69069510e56c061af6d993b8520",
+      "Face.M_F00_000_00_Fcl_MTH_Sorrow": "d3495aba44370e3c04ab10e24b8d85a61038bbd8084c5ac3d2a0514b764077b0",
+      "Face.M_F00_000_00_Fcl_MTH_Surprised": "c5bf7471d30ff90928c473efef4d62ee4b267e0466e49476722f979a3f2fe42e",
+      "Face.M_F00_000_00_Fcl_MTH_A": "76b156e6a1dc4b67c9683861ce482a6a78bbef4db775e67540e1532ef13245e9",
+      "Face.M_F00_000_00_Fcl_MTH_I": "23297f2430ca569fbdf3873ba776bdd94e1bcdd2621f7529b47a362807448e7a",
+      "Face.M_F00_000_00_Fcl_MTH_U": "73519a8490638ff17a3d7a9bed612f7b7be2209d583c914f93d193437bebe631",
+      "Face.M_F00_000_00_Fcl_MTH_E": "0cf9e35949ca8fa671c0c5aea20ed398e6b7acfd362bf8ca20b7ad9188266ec4",
+      "Face.M_F00_000_00_Fcl_MTH_O": "1bc61848e6347f5d189a8ce6aab699071f9892ce833e274c7aaa3a67a106f7f8",
+      "Face.M_F00_000_00_Fcl_HA_Fung1": "3f3a0c9cf1cb32491859fe2bbc6c056ee0ab06e06d9bbe08bfe9b7c85aa7fbaf",
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "0fd55ca57fc4a4bb32c77151d1307ec34cd45160a48e9836fd61d6815f6ff411",
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "fe59efe89ce124938e81e1bb99cebe0099a0a32da5b7833ff002944bc8c4eb0b",
+      "Face.M_F00_000_00_Fcl_HA_Fung2": "a026e505ac6f27782baa48cbeffb1401684acdf71402f2da856684c55d7763e4",
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "b435e5c0d61c9c29aab038bbd5a2e1648bc3bdd1219201e7e29561650a2a7c35",
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "98d8bcd39e7d1ce6b0d96a42248f141ab3d27c32d1ec5d7ec958a3975a9573e9",
+      "EyeExtra_01.M_F00_000_00_EyeExtra_On": "cc4659fce1fddc24461708f7cc9a22887d6b34910ccfe3ee5d811cf1d5544c75"
+    }
+  },
+  "derived": {
+    "body": {
+      "vertices": 4648,
+      "polygons": 7732,
+      "topology_order_hash": "9d8cce5f0b6416298777ca070fb328924e7e038ab479ab8f30320dbc557e118c",
+      "uv_hash": "3bc0200c2479f8e9bd0531579006362e11175fe27d9e6184fb90644b1ceede59",
+      "uv_layers": [
+        "UVMap"
+      ]
+    },
+    "face": {
+      "vertices": 2339,
+      "polygons": 3150,
+      "topology_order_hash": "d4528b17cef49cc2f891430a2964ddfde5a1ebc463e16dd7de98a6d7686ed8b5",
+      "uv_hash": "228e58a3b0e112e7ecbe75df9f21856d438bbf11af786bc43242cf93f850fe90",
+      "uv_layers": [
+        "UVMap"
+      ]
+    },
+    "face_keys": {
+      "count": 44,
+      "names": [
+        "Basis",
+        "Face.M_F00_000_00_Fcl_ALL_Angry",
+        "Face.M_F00_000_00_Fcl_ALL_Fun",
+        "Face.M_F00_000_00_Fcl_ALL_Joy",
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+        "Face.M_F00_000_00_Fcl_ALL_Surprised",
+        "Face.M_F00_000_00_Fcl_BRW_Angry",
+        "Face.M_F00_000_00_Fcl_BRW_Fun",
+        "Face.M_F00_000_00_Fcl_BRW_Joy",
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+        "Face.M_F00_000_00_Fcl_BRW_Surprised",
+        "Face.M_F00_000_00_Fcl_EYE_Natural",
+        "Face.M_F00_000_00_Fcl_EYE_Angry",
+        "Face.M_F00_000_00_Fcl_EYE_Close",
+        "Face.M_F00_000_00_Fcl_EYE_Close_R",
+        "Face.M_F00_000_00_Fcl_EYE_Close_L",
+        "Face.M_F00_000_00_Fcl_EYE_Joy",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+        "Face.M_F00_000_00_Fcl_EYE_Surprised",
+        "Face.M_F00_000_00_Fcl_EYE_Extra",
+        "Face.M_F00_000_00_Fcl_MTH_Up",
+        "Face.M_F00_000_00_Fcl_MTH_Down",
+        "Face.M_F00_000_00_Fcl_MTH_Angry",
+        "Face.M_F00_000_00_Fcl_MTH_Neutral",
+        "Face.M_F00_000_00_Fcl_MTH_Fun",
+        "Face.M_F00_000_00_Fcl_MTH_Joy",
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+        "Face.M_F00_000_00_Fcl_MTH_Surprised",
+        "Face.M_F00_000_00_Fcl_MTH_A",
+        "Face.M_F00_000_00_Fcl_MTH_I",
+        "Face.M_F00_000_00_Fcl_MTH_U",
+        "Face.M_F00_000_00_Fcl_MTH_E",
+        "Face.M_F00_000_00_Fcl_MTH_O",
+        "Face.M_F00_000_00_Fcl_HA_Fung1",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+        "Face.M_F00_000_00_Fcl_HA_Fung2",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On",
+        "MIA_FaceArt_EyeProportion",
+        "MIA_FaceArt_OwnedBrowPlacement"
+      ],
+      "finite_coordinates": true
+    }
+  },
+  "archive_exact_match": true,
+  "derived_structure_match": false,
+  "face_key_contract": {
+    "source_prefix_count": 42,
+    "valid": true
+  },
+  "rig": {
+    "body_parent": "MIA_V06_RIG",
+    "face_parent": "MIA_V06_RIG",
+    "body_armature_targets": [
+      "MIA_V06_RIG"
+    ],
+    "face_armature_targets": [
+      "MIA_V06_RIG"
+    ],
+    "body_world": [
+      [
+        -1.0,
+        1e-07,
+        0.0,
+        0.0
+      ],
+      [
+        -1e-07,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "face_world": [
+      [
+        -1.0,
+        1e-07,
+        0.0,
+        0.0
+      ],
+      [
+        -1e-07,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "rig_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "references": {
+    "expected": 3,
+    "found": [
+      {
+        "object": "REF_MIA_CONFIRMED_FACE",
+        "image": "mia-expression-style-confirmed-20261031.png",
+        "packed": true
+      },
+      {
+        "object": "REF_V06_TURNAROUND",
+        "image": "mia-body-turnaround-v06.png",
+        "packed": true
+      },
+      {
+        "object": "REF_V06_VISIBILITY",
+        "image": "mia-body-visibility-guide-v06.png",
+        "packed": true
+      }
+    ],
+    "all_packed": true,
+    "missing_textures": []
+  },
+  "identity_profile_actual_values": {
+    "MIA_FaceArt_EyeProportion": 1.0,
+    "MIA_FaceArt_OwnedBrowPlacement": 1.0
+  },
+  "expressions": {
+    "blink": {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close",
+      "value": 1.0,
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "evaluated_face_delta": {
+        "vertices_compared": 2339,
+        "max_m": 0.01830226,
+        "mean_m": 0.00182272
+      }
+    },
+    "mouth": {
+      "control": "Face.M_F00_000_00_Fcl_MTH_A",
+      "value": 1.0,
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "evaluated_face_delta": {
+        "vertices_compared": 2339,
+        "max_m": 0.01372199,
+        "mean_m": 0.00202429
+      }
+    },
+    "neutral_return": {
+      "vertices_compared": 2339,
+      "max_m": 0.0,
+      "mean_m": 0.0
+    }
+  },
+  "gaze": {
+    "expected_eye_bones": [
+      "J_Adj_L_FaceEye",
+      "J_Adj_R_FaceEye"
+    ],
+    "found_eye_bones": [
+      "J_Adj_L_FaceEye",
+      "J_Adj_R_FaceEye"
+    ],
+    "cases": {
+      "gaze_left": {
+        "axis": "local Z",
+        "radians": 0.16,
+        "actual_rotation_euler": {
+          "J_Adj_L_FaceEye": [
+            0.0,
+            0.0,
+            0.1599999964237213
+          ],
+          "J_Adj_R_FaceEye": [
+            0.0,
+            0.0,
+            0.1599999964237213
+          ]
+        },
+        "identity_profile_actual_values": {
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0
+        },
+        "evaluated_face_delta": {
+          "vertices_compared": 2339,
+          "max_m": 0.00994859,
+          "mean_m": 0.00097493
+        }
+      },
+      "gaze_right": {
+        "axis": "local Z",
+        "radians": -0.16,
+        "actual_rotation_euler": {
+          "J_Adj_L_FaceEye": [
+            0.0,
+            0.0,
+            -0.1599999964237213
+          ],
+          "J_Adj_R_FaceEye": [
+            0.0,
+            0.0,
+            -0.1599999964237213
+          ]
+        },
+        "identity_profile_actual_values": {
+          "MIA_FaceArt_EyeProportion": 1.0,
+          "MIA_FaceArt_OwnedBrowPlacement": 1.0
+        },
+        "evaluated_face_delta": {
+          "vertices_compared": 2339,
+          "max_m": 0.00994859,
+          "mean_m": 0.00097493
+        }
+      }
+    },
+    "neutral_return": {
+      "vertices_compared": 2339,
+      "max_m": 0.0,
+      "mean_m": 0.0
+    }
+  },
+  "poses": {
+    "upper_arm_raise": {
+      "control": "J_Bip_L_UpperArm",
+      "axis": "Y",
+      "radians": 0.55,
+      "evaluated_body_delta": {
+        "vertices_compared": 4648,
+        "max_m": 0.05588911,
+        "mean_m": 0.00439114
+      }
+    },
+    "torso_yaw": {
+      "control": "J_Bip_C_Spine",
+      "axis": "Z",
+      "radians": 0.38,
+      "evaluated_body_delta": {
+        "vertices_compared": 4648,
+        "max_m": 0.23282923,
+        "mean_m": 0.0837419
+      }
+    },
+    "knee_bend": {
+      "control": "J_Bip_L_LowerLeg",
+      "axis": "X",
+      "radians": 0.65,
+      "evaluated_body_delta": {
+        "vertices_compared": 4648,
+        "max_m": 0.35525882,
+        "mean_m": 0.02274589
+      }
+    },
+    "neutral_return": {
+      "vertices_compared": 4648,
+      "max_m": 0.0,
+      "mean_m": 0.0
+    }
+  },
+  "head_yaw_checks": {
+    "control": "J_Bip_C_Head",
+    "found": true,
+    "cases": {
+      "yaw_left_20deg": {
+        "radians": 0.3490658503988659,
+        "actual_rotation_euler": [
+          0.0,
+          0.0,
+          0.3490658402442932
+        ],
+        "evaluated_face_delta": {
+          "vertices_compared": 2339,
+          "max_m": 0.06209761,
+          "mean_m": 0.02018708
+        },
+        "renders": {
+          "actual": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\independent-final-audit\\head_yaw_left_20deg_actual.png",
+          "clay": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\independent-final-audit\\head_yaw_left_20deg_clay.png"
+        }
+      },
+      "yaw_right_20deg": {
+        "radians": -0.3490658503988659,
+        "actual_rotation_euler": [
+          0.0,
+          0.0,
+          -0.3490658402442932
+        ],
+        "evaluated_face_delta": {
+          "vertices_compared": 2339,
+          "max_m": 0.06209754,
+          "mean_m": 0.02018705
+        },
+        "renders": {
+          "actual": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\independent-final-audit\\head_yaw_right_20deg_actual.png",
+          "clay": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\independent-final-audit\\head_yaw_right_20deg_clay.png"
+        }
+      }
+    },
+    "neutral_return": {
+      "vertices_compared": 2339,
+      "max_m": 0.0,
+      "mean_m": 0.0
+    }
+  },
+  "fresh_reopen_actual_head": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\independent-final-audit\\fresh_reopen_actual_head.png",
+  "pass_structure": false,
+  "art_pass": "not evaluated"
+}

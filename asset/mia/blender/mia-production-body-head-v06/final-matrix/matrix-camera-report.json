@@ -1,0 +1,255 @@
+{
+  "input_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\Mia_BodyHead_v06.blend",
+  "input_native_sha256": "97b05f5bef8e2291669c49119e1cf8bcabe638e93c117c4e8b9d55f15ed4b75f",
+  "script": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\tools\\mia\\blender\\render_mia_body_head_v06_matrix.py",
+  "script_sha256": "902f0c87b547a19f37763872014ac9e4caec7d1e919436059b7189d13dcc64d5",
+  "views": {
+    "full_front": {
+      "target": [
+        0,
+        0,
+        0.93
+      ],
+      "camera": [
+        0.0,
+        -4.0,
+        0.9300000071525574
+      ],
+      "ortho_scale": 1.9
+    },
+    "full_profile_l": {
+      "target": [
+        0,
+        0,
+        0.93
+      ],
+      "camera": [
+        4.0,
+        0.0,
+        0.9300000071525574
+      ],
+      "ortho_scale": 1.9
+    },
+    "full_back": {
+      "target": [
+        0,
+        0,
+        0.93
+      ],
+      "camera": [
+        0.0,
+        4.0,
+        0.9300000071525574
+      ],
+      "ortho_scale": 1.9
+    },
+    "full_three_quarter_l": {
+      "target": [
+        0,
+        0,
+        0.93
+      ],
+      "camera": [
+        2.8299999237060547,
+        -2.8299999237060547,
+        0.9300000071525574
+      ],
+      "ortho_scale": 1.9
+    },
+    "full_three_quarter_r": {
+      "target": [
+        0,
+        0,
+        0.93
+      ],
+      "camera": [
+        -2.8299999237060547,
+        -2.8299999237060547,
+        0.9300000071525574
+      ],
+      "ortho_scale": 1.9
+    },
+    "torso_front": {
+      "target": [
+        0,
+        0,
+        1.11
+      ],
+      "camera": [
+        0.0,
+        -4.0,
+        1.1100000143051147
+      ],
+      "ortho_scale": 0.8
+    },
+    "torso_profile_l": {
+      "target": [
+        0,
+        0,
+        1.11
+      ],
+      "camera": [
+        4.0,
+        0.0,
+        1.1100000143051147
+      ],
+      "ortho_scale": 0.8
+    },
+    "torso_back": {
+      "target": [
+        0,
+        0,
+        1.11
+      ],
+      "camera": [
+        0.0,
+        4.0,
+        1.1100000143051147
+      ],
+      "ortho_scale": 0.8
+    },
+    "torso_three_quarter_l": {
+      "target": [
+        0,
+        0,
+        1.11
+      ],
+      "camera": [
+        2.8299999237060547,
+        -2.8299999237060547,
+        1.1100000143051147
+      ],
+      "ortho_scale": 0.8
+    },
+    "torso_three_quarter_r": {
+      "target": [
+        0,
+        0,
+        1.11
+      ],
+      "camera": [
+        -2.8299999237060547,
+        -2.8299999237060547,
+        1.1100000143051147
+      ],
+      "ortho_scale": 0.8
+    },
+    "head_front": {
+      "target": [
+        0,
+        0,
+        1.58
+      ],
+      "camera": [
+        0.0,
+        -4.0,
+        1.5800000429153442
+      ],
+      "ortho_scale": 0.44
+    },
+    "head_profile_l": {
+      "target": [
+        0,
+        0,
+        1.58
+      ],
+      "camera": [
+        4.0,
+        0.0,
+        1.5800000429153442
+      ],
+      "ortho_scale": 0.44
+    },
+    "head_back": {
+      "target": [
+        0,
+        0,
+        1.58
+      ],
+      "camera": [
+        0.0,
+        4.0,
+        1.5800000429153442
+      ],
+      "ortho_scale": 0.44
+    },
+    "head_three_quarter_l": {
+      "target": [
+        0,
+        0,
+        1.58
+      ],
+      "camera": [
+        2.8299999237060547,
+        -2.8299999237060547,
+        1.5800000429153442
+      ],
+      "ortho_scale": 0.44
+    },
+    "head_three_quarter_r": {
+      "target": [
+        0,
+        0,
+        1.58
+      ],
+      "camera": [
+        -2.8299999237060547,
+        -2.8299999237060547,
+        1.5800000429153442
+      ],
+      "ortho_scale": 0.44
+    }
+  },
+  "mode_visible_owners": {
+    "actual": [
+      {
+        "name": "MIA_V06_BODY_SKIN",
+        "polygons": 7732
+      },
+      {
+        "name": "MIA_V06_FACE_SKIN",
+        "polygons": 3150
+      }
+    ],
+    "clay": [
+      {
+        "name": "MIA_V06_MATRIX_FACE_WIRE_SKIN",
+        "polygons": 1838
+      },
+      {
+        "name": "MIA_V06_BODY_SKIN",
+        "polygons": 7732
+      }
+    ],
+    "wire": [
+      {
+        "name": "MIA_V06_MATRIX_WIRE_MIA_V06_BODY_SKIN",
+        "polygons": 7732
+      },
+      {
+        "name": "MIA_V06_MATRIX_WIRE_MIA_V06_MATRIX_FACE_WIRE_SKIN",
+        "polygons": 1838
+      }
+    ]
+  },
+  "note": "Reference panels remain illustrative; this is a consistent review matrix, not orthographic registration. All anatomy gates exclude archive, hair, references and display proxy.",
+  "selection": {
+    "crops": [
+      "full",
+      "torso",
+      "head"
+    ],
+    "views": [
+      "front",
+      "profile_l",
+      "back",
+      "three_quarter_l",
+      "three_quarter_r"
+    ],
+    "modes": [
+      "actual",
+      "clay",
+      "wire"
+    ]
+  }
+}
