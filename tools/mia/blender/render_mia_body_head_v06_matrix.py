@@ -82,7 +82,7 @@ def main():
     cam=camera(scene); lighting(scene); clay=mat("MIA_V06_MATRIX_CLAY",(.18,.21,.25,1))
     views={"front":((0,-4,0), (0,0,0)), "profile_l":((4,0,0),(0,0,0)), "back":((0,4,0),(0,0,0)),
            "three_quarter_l":((2.83,-2.83,0),(0,0,0)), "three_quarter_r":((-2.83,-2.83,0),(0,0,0))}
-    crops={"full":((0,0,.93),1.90),"torso":((0,0,1.11),.80),"head":((0,0,1.58),.44)}
+    crops={"full":((0,0,.93),1.90),"torso":((0,0,1.11),.80),"head":((0,0,1.55),.32)}
     report={"input_native":str(Path(a.input).resolve()),"input_native_sha256":digest(Path(a.input).resolve()),
             "script":str(Path(__file__).resolve()),"script_sha256":digest(Path(__file__).resolve()),
             "views":{},"mode_visible_owners":{},"note":"Reference panels remain illustrative; this is a consistent review matrix, not orthographic registration. All anatomy gates exclude archive, hair, references and display proxy."}

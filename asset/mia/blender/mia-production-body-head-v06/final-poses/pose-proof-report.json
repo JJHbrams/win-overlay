@@ -1,8 +1,8 @@
 {
   "input_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\Mia_BodyHead_v06.blend",
-  "input_native_sha256": "97b05f5bef8e2291669c49119e1cf8bcabe638e93c117c4e8b9d55f15ed4b75f",
+  "input_native_sha256": "81773274ef99152728ad584488ba720a35d783a2cb12acb2b313c0ca14253d10",
   "script": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\tools\\mia\\blender\\render_mia_body_head_v06_poses.py",
-  "script_sha256": "c649a94b872defcf7f350d57030659badd85280d686c2e2a920e27fbcaf85de8",
+  "script_sha256": "f962c5615a4c794194ca995a6c9d66677be15b5d56b41e2ee9bc254f8433a96e",
   "facial": [
     {
       "case": "neutral",
@@ -245,15 +245,58 @@
     {
       "case": "arm_forward",
       "bone": "J_Bip_R_UpperArm",
-      "rotation": [
+      "legacy_local_rotation": [
         -1.08,
         0.45,
         0
       ],
+      "world_pose_proof": {
+        "space": "WORLD",
+        "actual_delta_axis": [
+          -0.9028716683387756,
+          1.7087361925405276e-07,
+          0.42991024255752563
+        ],
+        "actual_delta_angle_rad": 0.7126298546791077,
+        "quaternion_error_rad": 0.0,
+        "pivot_error_m": 0.0,
+        "head_world_before": [
+          -0.10915782302618027,
+          0.00384729215875268,
+          1.378482699394226
+        ],
+        "tail_world_before": [
+          -0.203321635723114,
+          -0.00601377384737134,
+          1.1807254552841187
+        ],
+        "tail_world_after": [
+          -0.1776346117258072,
+          -0.14682242274284363,
+          1.2346718311309814
+        ],
+        "front_world_axis": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "tail_forward_delta_m": 0.14080864191055298,
+        "minimum_forward_delta_m": 0.05,
+        "baseline_arm_direction": [
+          -0.4294750690460205,
+          -0.04497568681836128,
+          -0.9019580483436584
+        ],
+        "target_arm_direction": [
+          -0.3123181462287903,
+          -0.68719482421875,
+          -0.6559120416641235
+        ]
+      },
       "actual_rotation_euler": [
-        -1.0800000429153442,
-        0.44999998807907104,
-        0.0
+        -0.9674546718597412,
+        0.6165874600410461,
+        0.383161723613739
       ],
       "views": [
         "front",
@@ -263,15 +306,48 @@
     {
       "case": "torso_yaw",
       "bone": "J_Bip_C_Chest",
-      "rotation": [
+      "legacy_local_rotation": [
         0,
         0,
         0.26
       ],
+      "world_pose_proof": {
+        "space": "WORLD",
+        "actual_delta_axis": [
+          -4.567960232293444e-08,
+          6.202751023920428e-08,
+          1.0000033378601074
+        ],
+        "actual_delta_angle_rad": 0.25999915599823,
+        "quaternion_error_rad": 0.0,
+        "pivot_error_m": 0.0,
+        "head_world_before": [
+          -0.00047767037176527083,
+          -0.03246186673641205,
+          1.1766430139541626
+        ],
+        "tail_world_before": [
+          -0.0004776836431119591,
+          -0.01823177933692932,
+          1.3060864210128784
+        ],
+        "tail_world_after": [
+          -0.00413596211001277,
+          -0.018710056319832802,
+          1.3060864210128784
+        ],
+        "requested_world_axis": [
+          0,
+          0,
+          1
+        ],
+        "requested_angle_rad": 0.26,
+        "actual_signed_yaw_rad": 0.25999915599823
+      },
       "actual_rotation_euler": [
         0.0,
         0.0,
-        0.25999999046325684
+        0.0
       ],
       "views": [
         "front",
@@ -300,5 +376,18 @@
   "neutral_return": {
     "shape_keys_restored": true,
     "bones_restored": true
+  },
+  "world_space_amendment": {
+    "cases": [
+      "arm_forward",
+      "torso_yaw"
+    ],
+    "base_report_sha256": "7fe66c877a1dea32308e256562875035662ede1f1dc64b2579e96c7e5e00bedf",
+    "patch_report": "../pose-world-space-corrections/pose-proof-report.json",
+    "renderer_script_sha256": "e00ce9b450cc2b450a59f8da24ad6d17cafcc7555c09503cb9a84a8d37585c22",
+    "world_pose_utility_sha256": "ca3baa1f64dd58d7c2d3b9b1926ec1b1f162d464ec1089b532eae18d829eedaa",
+    "changed_png_count": 4,
+    "unchanged_png_count": 26,
+    "note": "Base script hash applies to 26 retained renders; the four amended body renders use the patch script/utility hashes."
   }
 }

@@ -449,8 +449,8 @@
         ],
         [
           0.691521,
-          0.115484,
-          1.686799
+          0.101026,
+          1.638712
         ]
       ]
     },
@@ -550,8 +550,8 @@
         ],
         [
           0.691521,
-          0.115484,
-          1.686799
+          0.101026,
+          1.638712
         ]
       ]
     },
@@ -676,7 +676,7 @@
       "chest": {
         "width_x": 1.383998,
         "depth_y": 0.190584,
-        "vertices": 2594
+        "vertices": 2592
       }
     },
     "source_face": {
@@ -891,6 +891,15 @@
     "face_vertices_per_key": 2339,
     "face_vertex_indices": "all 0..2338",
     "face_change_reason": "upper-cranium reduction plus cheek/jaw plane correction, transported identically to preserve expression deltas",
+    "naked_head_proportion_test": {
+      "factor": 0.82,
+      "anchor": [
+        0.0,
+        0.0,
+        1.465499997138977
+      ],
+      "reason": "whole bald head, not only upper cap, is reduced against the hair-inclusive body guide"
+    },
     "body_head_neck_vertices_changed": [
       0,
       1,
@@ -1203,6 +1212,71 @@
       "image": "F00_000_FaceBrow_00.001",
       "material": "MIA_V06_ReadableGraphiteBrow"
     },
+    "iris_depth": {
+      "vertices": 294,
+      "basis_depth_scale": 0.82,
+      "owned_depth_scale": 0.74,
+      "eye_depth_centers": {
+        "-1": 0.07068897104587685,
+        "1": 0.07068893680868506
+      },
+      "reason": "preserve oblique iris surface slope"
+    },
+    "fatigue_ink": {
+      "image": "MIA_Astra_UV_LowerLid_Ink_v08",
+      "uv_unchanged": true,
+      "source_pigment_unchanged": true,
+      "maximum_mask": 0.5815964937210083,
+      "method": "narrow lower-lid curves rasterized on existing skin UV triangles"
+    },
+    "head_handoff": {
+      "vertices": [
+        1,
+        168,
+        196,
+        286,
+        288,
+        435,
+        4539,
+        4540,
+        4541,
+        4549,
+        4550,
+        4561,
+        4562,
+        4564,
+        4566,
+        4567,
+        4569,
+        4571,
+        4572,
+        4573,
+        4574,
+        4601,
+        4602,
+        4603,
+        4611,
+        4612,
+        4634,
+        4635,
+        4637,
+        4639,
+        4640,
+        4642,
+        4644,
+        4645,
+        4646,
+        4647
+      ],
+      "max_distance": 0.001610628329217434,
+      "method": "source head boundary spatial correspondence, no weld or deletion"
+    },
+    "adult_landmark_pass": {
+      "orbital_lift_m": 0.01,
+      "center_z": 1.537,
+      "falloff_m": 0.026,
+      "whole_head_scale_unchanged": true
+    },
     "body_pigment_multiplier": {
       "sample_region": "Face slot7 forehead/temple z>1.60 UV average",
       "colorspace": "Non-Color",
@@ -1215,7 +1289,7 @@
     "eye_extra_slot_8": "preserved: source material is EyeExtra_01 and v04 fit treats it with iris/highlight family",
     "neutral_guide": {
       "Face.M_F00_000_00_Fcl_BRW_Angry": 0.1,
-      "Face.M_F00_000_00_Fcl_EYE_Close": 0.38,
+      "Face.M_F00_000_00_Fcl_EYE_Close": 0.48,
       "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.12,
       "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05,
       "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23,
@@ -1228,6 +1302,16 @@
       "scale": 0.55,
       "vertices": 384,
       "reason": "rest-pose brow/lid clearance after v04 face fit"
+    },
+    "rig_rest": {
+      "status": "scaled_head_descendants",
+      "factor": 0.82,
+      "anchor": [
+        0.0,
+        0.0,
+        1.465499997138977
+      ],
+      "bone_count": 62
     }
   },
   "final_evidence": {
@@ -1382,7 +1466,7 @@
   },
   "neutral_expression_keys": {
     "Face.M_F00_000_00_Fcl_BRW_Angry": 0.1,
-    "Face.M_F00_000_00_Fcl_EYE_Close": 0.38,
+    "Face.M_F00_000_00_Fcl_EYE_Close": 0.48,
     "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.12,
     "Face.M_F00_000_00_Fcl_MTH_Angry": 0.05,
     "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.23,

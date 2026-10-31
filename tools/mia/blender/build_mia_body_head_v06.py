@@ -699,6 +699,10 @@ def build(a):
     (out / "build-report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     recipe = {"input_source": str(source), "input_source_sha256": source_sha,
               "builder_script": str(Path(__file__).resolve()), "builder_script_sha256": digest(Path(__file__).resolve()),
+              "shader_dependencies": {"head_refine": {"path": str(Path(__file__).resolve().parent / "refine_mia_head_v06.py"),
+                                                        "sha256": digest(Path(__file__).resolve().parent / "refine_mia_head_v06.py")},
+                                      "astra_fatigue_ink": {"path": str(Path(__file__).resolve().parent / "astra_mia_fatigue_v08.py"),
+                                                             "sha256": digest(Path(__file__).resolve().parent / "astra_mia_fatigue_v08.py")}},
               "output_native": str(blend), "output_native_sha256": digest(blend),
               "common_neutral": {"expression_keys": neutral_keys, "a_pose_controls": a_pose_controls},
               "coordinate_frame": "Body and Face retain source active world Rz180; MIA_V06_RIG world is identity"}

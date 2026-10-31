@@ -1,0 +1,131 @@
+{
+  "input_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\Mia_BodyHead_v06.blend",
+  "input_native_sha256": "81773274ef99152728ad584488ba720a35d783a2cb12acb2b313c0ca14253d10",
+  "script": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\tools\\mia\\blender\\render_mia_body_head_v06_poses.py",
+  "script_sha256": "e00ce9b450cc2b450a59f8da24ad6d17cafcc7555c09503cb9a84a8d37585c22",
+  "facial": [],
+  "body": [
+    {
+      "case": "arm_forward",
+      "bone": "J_Bip_R_UpperArm",
+      "legacy_local_rotation": [
+        -1.08,
+        0.45,
+        0
+      ],
+      "world_pose_proof": {
+        "space": "WORLD",
+        "actual_delta_axis": [
+          -0.9028716683387756,
+          1.7087361925405276e-07,
+          0.42991024255752563
+        ],
+        "actual_delta_angle_rad": 0.7126298546791077,
+        "quaternion_error_rad": 0.0,
+        "pivot_error_m": 0.0,
+        "head_world_before": [
+          -0.10915782302618027,
+          0.00384729215875268,
+          1.378482699394226
+        ],
+        "tail_world_before": [
+          -0.203321635723114,
+          -0.00601377384737134,
+          1.1807254552841187
+        ],
+        "tail_world_after": [
+          -0.1776346117258072,
+          -0.14682242274284363,
+          1.2346718311309814
+        ],
+        "front_world_axis": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "tail_forward_delta_m": 0.14080864191055298,
+        "minimum_forward_delta_m": 0.05,
+        "baseline_arm_direction": [
+          -0.4294750690460205,
+          -0.04497568681836128,
+          -0.9019580483436584
+        ],
+        "target_arm_direction": [
+          -0.3123181462287903,
+          -0.68719482421875,
+          -0.6559120416641235
+        ]
+      },
+      "actual_rotation_euler": [
+        -0.9674546718597412,
+        0.6165874600410461,
+        0.383161723613739
+      ],
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "torso_yaw",
+      "bone": "J_Bip_C_Chest",
+      "legacy_local_rotation": [
+        0,
+        0,
+        0.26
+      ],
+      "world_pose_proof": {
+        "space": "WORLD",
+        "actual_delta_axis": [
+          -4.567960232293444e-08,
+          6.202751023920428e-08,
+          1.0000033378601074
+        ],
+        "actual_delta_angle_rad": 0.25999915599823,
+        "quaternion_error_rad": 0.0,
+        "pivot_error_m": 0.0,
+        "head_world_before": [
+          -0.00047767037176527083,
+          -0.03246186673641205,
+          1.1766430139541626
+        ],
+        "tail_world_before": [
+          -0.0004776836431119591,
+          -0.01823177933692932,
+          1.3060864210128784
+        ],
+        "tail_world_after": [
+          -0.00413596211001277,
+          -0.018710056319832802,
+          1.3060864210128784
+        ],
+        "requested_world_axis": [
+          0,
+          0,
+          1
+        ],
+        "requested_angle_rad": 0.26,
+        "actual_signed_yaw_rad": 0.25999915599823
+      },
+      "actual_rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    }
+  ],
+  "neutral_return": {
+    "shape_keys_restored": true,
+    "bones_restored": true
+  },
+  "case_filter": [
+    "arm_forward",
+    "torso_yaw"
+  ],
+  "world_pose_utility_sha256": "ca3baa1f64dd58d7c2d3b9b1926ec1b1f162d464ec1089b532eae18d829eedaa",
+  "input_native_sha256_after": "81773274ef99152728ad584488ba720a35d783a2cb12acb2b313c0ca14253d10"
+}

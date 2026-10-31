@@ -1,0 +1,112 @@
+{
+  "upper_arm_raise": {
+    "control": "J_Bip_L_UpperArm",
+    "axis": "WORLD_UP_AIM",
+    "radians": null,
+    "world_pose_proof": {
+      "space": "WORLD",
+      "actual_delta_axis": [
+        -0.10414005070924759,
+        -0.9945623874664307,
+        -6.342865077613169e-08
+      ],
+      "actual_delta_angle_rad": 0.5961065888404846,
+      "quaternion_error_rad": 0.0,
+      "pivot_error_m": 0.0,
+      "head_world_before": [
+        0.10820262879133224,
+        0.003847315441817045,
+        1.378481149673462
+      ],
+      "tail_world_before": [
+        0.20236685872077942,
+        -0.006012566853314638,
+        1.1807259321212769
+      ],
+      "tail_world_after": [
+        0.29654714465141296,
+        -0.015874119475483894,
+        1.2679883241653442
+      ],
+      "tail_world_z_rise_m": 0.08726239204406738,
+      "minimum_world_z_rise_m": 0.05,
+      "target_arm_direction": [
+        0.8590338230133057,
+        -0.08994893729686737,
+        -0.5039545893669128
+      ],
+      "requested_aim_bias_world": [
+        0,
+        0,
+        0.65
+      ]
+    },
+    "evaluated_body_delta": {
+      "vertices_compared": 4648,
+      "max_m": 0.34277543,
+      "mean_m": 0.05809391
+    }
+  },
+  "torso_yaw": {
+    "control": "J_Bip_C_Spine",
+    "axis": "Z",
+    "radians": 0.38,
+    "world_pose_proof": {
+      "space": "WORLD",
+      "actual_delta_axis": [
+        -7.388988620959935e-08,
+        3.718191265988935e-08,
+        0.9999997019767761
+      ],
+      "actual_delta_angle_rad": 0.38000011444091797,
+      "quaternion_error_rad": 0.0,
+      "pivot_error_m": 0.0,
+      "head_world_before": [
+        -0.000477687397506088,
+        -0.01829252578318119,
+        1.0626552104949951
+      ],
+      "tail_world_before": [
+        -0.00047767037176527083,
+        -0.03246186673641205,
+        1.1766430139541626
+      ],
+      "tail_world_after": [
+        0.004778026603162289,
+        -0.03145108371973038,
+        1.1766430139541626
+      ],
+      "requested_world_axis": [
+        0,
+        0,
+        1
+      ],
+      "requested_angle_rad": 0.38,
+      "actual_signed_yaw_rad": 0.38000011444091797
+    },
+    "evaluated_body_delta": {
+      "vertices_compared": 4648,
+      "max_m": 0.14303229,
+      "mean_m": 0.05954335
+    }
+  },
+  "knee_bend": {
+    "control": "J_Bip_L_LowerLeg",
+    "axis": "X",
+    "radians": 0.65,
+    "world_pose_proof": null,
+    "evaluated_body_delta": {
+      "vertices_compared": 4648,
+      "max_m": 0.35525882,
+      "mean_m": 0.02274589
+    }
+  },
+  "neutral_return": {
+    "vertices_compared": 4648,
+    "max_m": 0.0,
+    "mean_m": 0.0
+  },
+  "native_sha_before": "81773274ef99152728ad584488ba720a35d783a2cb12acb2b313c0ca14253d10",
+  "native_sha_after": "81773274ef99152728ad584488ba720a35d783a2cb12acb2b313c0ca14253d10",
+  "audit_script_sha256": "78f0e8aaaa13b857fa343909577f19c75c046b10e2dba201ed6ed46922251332"
+}

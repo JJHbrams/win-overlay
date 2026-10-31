@@ -1,0 +1,304 @@
+{
+  "input_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-production-body-head-v06\\Mia_BodyHead_v06.blend",
+  "input_native_sha256": "81773274ef99152728ad584488ba720a35d783a2cb12acb2b313c0ca14253d10",
+  "script": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\tools\\mia\\blender\\render_mia_body_head_v06_poses.py",
+  "script_sha256": "f962c5615a4c794194ca995a6c9d66677be15b5d56b41e2ee9bc254f8433a96e",
+  "facial": [
+    {
+      "case": "neutral",
+      "eye_bones": [
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye"
+      ],
+      "local_rotation": [
+        0,
+        0
+      ],
+      "actual_rotation_euler": {
+        "J_Adj_L_FaceEye": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "J_Adj_R_FaceEye": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "gaze_l",
+      "eye_bones": [
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye"
+      ],
+      "local_rotation": [
+        0.16,
+        0
+      ],
+      "actual_rotation_euler": {
+        "J_Adj_L_FaceEye": [
+          0.0,
+          0.0,
+          0.1599999964237213
+        ],
+        "J_Adj_R_FaceEye": [
+          0.0,
+          0.0,
+          0.1599999964237213
+        ]
+      },
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "gaze_r",
+      "eye_bones": [
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye"
+      ],
+      "local_rotation": [
+        -0.16,
+        0
+      ],
+      "actual_rotation_euler": {
+        "J_Adj_L_FaceEye": [
+          0.0,
+          0.0,
+          -0.1599999964237213
+        ],
+        "J_Adj_R_FaceEye": [
+          0.0,
+          0.0,
+          -0.1599999964237213
+        ]
+      },
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "gaze_u",
+      "eye_bones": [
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye"
+      ],
+      "local_rotation": [
+        0,
+        0.13
+      ],
+      "actual_rotation_euler": {
+        "J_Adj_L_FaceEye": [
+          0.12999999523162842,
+          0.0,
+          0.0
+        ],
+        "J_Adj_R_FaceEye": [
+          0.12999999523162842,
+          0.0,
+          0.0
+        ]
+      },
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "gaze_d",
+      "eye_bones": [
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye"
+      ],
+      "local_rotation": [
+        0,
+        -0.13
+      ],
+      "actual_rotation_euler": {
+        "J_Adj_L_FaceEye": [
+          -0.12999999523162842,
+          0.0,
+          0.0
+        ],
+        "J_Adj_R_FaceEye": [
+          -0.12999999523162842,
+          0.0,
+          0.0
+        ]
+      },
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "blink_half",
+      "key": "Face.M_F00_000_00_Fcl_EYE_Close",
+      "value": 0.5,
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "blink_full",
+      "key": "Face.M_F00_000_00_Fcl_EYE_Close",
+      "value": 1,
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "mouth_a",
+      "key": "Face.M_F00_000_00_Fcl_MTH_A",
+      "value": 1,
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "mouth_sorrow",
+      "key": "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+      "value": 0.8,
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "neutral_elevation_checks",
+      "identity_profile_actual_values": {
+        "MIA_FaceArt_EyeProportion": 1.0,
+        "MIA_FaceArt_OwnedBrowPlacement": 1.0
+      },
+      "views": [
+        "up_10deg",
+        "down_10deg"
+      ]
+    }
+  ],
+  "body": [
+    {
+      "case": "arm_raise",
+      "bone": "J_Bip_L_UpperArm",
+      "rotation": [
+        -0.3,
+        0,
+        0
+      ],
+      "actual_rotation_euler": [
+        -0.30000001192092896,
+        0.0,
+        0.0
+      ],
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "arm_forward",
+      "bone": "J_Bip_R_UpperArm",
+      "rotation": [
+        -1.08,
+        0.45,
+        0
+      ],
+      "actual_rotation_euler": [
+        -1.0800000429153442,
+        0.44999998807907104,
+        0.0
+      ],
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "torso_yaw",
+      "bone": "J_Bip_C_Chest",
+      "rotation": [
+        0,
+        0,
+        0.26
+      ],
+      "actual_rotation_euler": [
+        0.0,
+        0.0,
+        0.25999999046325684
+      ],
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    },
+    {
+      "case": "knee_bend",
+      "bone": "J_Bip_L_LowerLeg",
+      "rotation": [
+        0.42,
+        0,
+        0
+      ],
+      "actual_rotation_euler": [
+        0.41999998688697815,
+        0.0,
+        0.0
+      ],
+      "views": [
+        "front",
+        "three_quarter_l"
+      ]
+    }
+  ],
+  "neutral_return": {
+    "shape_keys_restored": true,
+    "bones_restored": true
+  }
+}

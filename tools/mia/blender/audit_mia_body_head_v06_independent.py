@@ -13,6 +13,8 @@ from pathlib import Path
 
 import bpy
 from mathutils import Vector
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from mia_world_pose_v09 import yaw_world, rotate_world, evaluated_frame
 
 
 BODY = "Mia_Body_Anatomy_Skin"
@@ -96,7 +98,7 @@ def delta(before, after):
 
 
 def snapshot_pose(rig):
-    return {bone.name: {"mode": bone.rotation_mode, "euler": list(bone.rotation_euler),
+    return {bone.name: {"basis": bone.matrix_basis.copy(), "mode": bone.rotation_mode, "euler": list(bone.rotation_euler),
                         "quaternion": list(bone.rotation_quaternion), "axis_angle": list(bone.rotation_axis_angle),
                         "location": list(bone.location), "scale": list(bone.scale)} for bone in rig.pose.bones}
 
@@ -106,18 +108,22 @@ def restore_pose(rig, snapshot):
         bone = rig.pose.bones.get(name)
         if not bone:
             continue
+        # Restore basis first, then exact saved channels; matrix decomposition
+        # alone can introduce float32 drift in nontrivial arm rest poses.
+        bone.matrix_basis = values["basis"].copy()
         bone.rotation_mode = values["mode"]
         bone.rotation_euler = values["euler"]
         bone.rotation_quaternion = values["quaternion"]
         bone.rotation_axis_angle = values["axis_angle"]
         bone.location = values["location"]
         bone.scale = values["scale"]
+    bpy.context.view_layer.update()
 
 
 def pose_deformation_cases(body, rig):
     baseline = mesh_world_positions(body)
     snapshot = snapshot_pose(rig)
-    cases = (("upper_arm_raise", "J_Bip_L_UpperArm", "Y", .55),
+    cases = (("upper_arm_raise", "J_Bip_L_UpperArm", "WORLD_UP_AIM", None),
              ("torso_yaw", "J_Bip_C_Spine", "Z", .38),
              ("knee_bend", "J_Bip_L_LowerLeg", "X", .65))
     result = {}
@@ -127,10 +133,23 @@ def pose_deformation_cases(body, rig):
         if not bone:
             result[label] = {"control": bone_name, "missing": True}
             continue
-        bone.rotation_mode = "XYZ"
-        bone.rotation_euler.rotate_axis(axis, radians)
+        world_proof = None
+        if label == "torso_yaw":
+            world_proof = yaw_world(rig, bone, radians)
+        elif label == "upper_arm_raise":
+            _, head, tail = evaluated_frame(rig, bone)
+            direction = (tail - head).normalized()
+            target = (direction + Vector((0, 0, .65))).normalized()
+            world_proof = rotate_world(rig, bone, direction.rotation_difference(target))
+            rise = world_proof["tail_world_after"][2] - tail.z
+            assert rise >= .05, ("upper arm did not rise in world Z", rise)
+            world_proof.update(tail_world_z_rise_m=rise, minimum_world_z_rise_m=.05,
+                               target_arm_direction=list(target), requested_aim_bias_world=[0, 0, .65])
+        else:
+            bone.rotation_mode = "XYZ"
+            bone.rotation_euler.rotate_axis(axis, radians)
         bpy.context.view_layer.update()
-        result[label] = {"control": bone_name, "axis": axis, "radians": radians,
+        result[label] = {"control": bone_name, "axis": axis, "radians": radians, "world_pose_proof": world_proof,
                          "evaluated_body_delta": delta(baseline, mesh_world_positions(body))}
     restore_pose(rig, snapshot)
     bpy.context.view_layer.update()
@@ -259,9 +278,9 @@ def render_head_yaw_checks(output, body, face, rig):
         bpy.ops.object.mode_set(mode="EDIT"); bpy.ops.mesh.delete(type="FACE"); bpy.ops.object.mode_set(mode="OBJECT")
         copy.select_set(False); return copy
     for label, radians in (("yaw_left_20deg", math.radians(20)), ("yaw_right_20deg", math.radians(-20))):
-        restore_pose(rig, snapshot); head.rotation_mode = "XYZ"; head.rotation_euler = (0, 0, radians)
+        restore_pose(rig, snapshot); world_proof = yaw_world(rig, head, radians)
         bpy.context.view_layer.update()
-        record = {"radians": radians, "actual_rotation_euler": list(head.rotation_euler),
+        record = {"radians": radians, "world_pose_proof": world_proof, "actual_rotation_euler": list(head.rotation_euler),
                   "evaluated_face_delta": delta(baseline, mesh_world_positions(face)), "renders": {}}
         for mode, override in (("actual", None), ("clay", clay)):
             skin = None
@@ -320,7 +339,9 @@ def main():
     face_keys_ok = bool(derived["face_keys"] and derived["face_keys"]["count"] >= 44
                         and derived["face_keys"]["names"][:len(source_prefix)] == source_prefix
                         and derived["face_keys"]["finite_coordinates"])
-    report = {"files": {"source": str(source), "candidate": str(candidate), "sha_before": hashes_before, "sha_after": hashes_after,
+    report = {"script_sha256": digest(Path(__file__).resolve()),
+              "world_pose_utility_sha256": digest(Path(__file__).with_name("mia_world_pose_v09.py")),
+              "files": {"source": str(source), "candidate": str(candidate), "sha_before": hashes_before, "sha_after": hashes_after,
                         "files_unchanged": hashes_before == hashes_after}, "source": source_data, "archive": archive, "derived": derived,
               "archive_exact_match": bool(archive_match), "derived_structure_match": derived_match, "face_key_contract": {"source_prefix_count": len(source_prefix), "valid": face_keys_ok},
               "rig": rig_info, "references": {"expected": 3, "found": refs, "all_packed": len(refs) == 3 and all(item["packed"] for item in refs), "missing_textures": material_paths()},

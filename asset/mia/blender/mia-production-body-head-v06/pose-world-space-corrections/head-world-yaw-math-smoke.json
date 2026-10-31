@@ -1,0 +1,72 @@
+{
+  "20": {
+    "space": "WORLD",
+    "actual_delta_axis": [
+      -4.729377653389655e-11,
+      4.3112549974466674e-08,
+      1.0000009536743164
+    ],
+    "actual_delta_angle_rad": 0.3490654230117798,
+    "quaternion_error_rad": 0.0,
+    "pivot_error_m": 0.0,
+    "head_world_before": [
+      -0.0003917289723176509,
+      0.004743410274386406,
+      1.4916651248931885
+    ],
+    "tail_world_before": [
+      -0.0003917289723176509,
+      0.004743410274386406,
+      1.5606131553649902
+    ],
+    "tail_world_after": [
+      -0.00039172969991341233,
+      0.004743410274386406,
+      1.5606131553649902
+    ],
+    "requested_world_axis": [
+      0,
+      0,
+      1
+    ],
+    "requested_angle_rad": 0.3490658503988659,
+    "actual_signed_yaw_rad": 0.3490654230117798
+  },
+  "-20": {
+    "space": "WORLD",
+    "actual_delta_axis": [
+      4.729377653389655e-11,
+      -4.2699909386101353e-08,
+      -1.0000009536743164
+    ],
+    "actual_delta_angle_rad": 0.3490654230117798,
+    "quaternion_error_rad": 0.0,
+    "pivot_error_m": 0.0,
+    "head_world_before": [
+      -0.0003917289723176509,
+      0.004743410274386406,
+      1.4916651248931885
+    ],
+    "tail_world_before": [
+      -0.0003917289723176509,
+      0.004743410274386406,
+      1.5606131553649902
+    ],
+    "tail_world_after": [
+      -0.0003917282447218895,
+      0.004743410274386406,
+      1.5606131553649902
+    ],
+    "requested_world_axis": [
+      0,
+      0,
+      1
+    ],
+    "requested_angle_rad": -0.3490658503988659,
+    "actual_signed_yaw_rad": -0.3490654230117798
+  },
+  "restore_exact": true,
+  "native_sha_before": "81773274ef99152728ad584488ba720a35d783a2cb12acb2b313c0ca14253d10",
+  "native_sha_after": "81773274ef99152728ad584488ba720a35d783a2cb12acb2b313c0ca14253d10",
+  "audit_script_sha256": "ae0ce42e5fb7fc9ea06c9a43ff741eeb0402ec38afcfeb79c8c16e3b9307bef2"
+}
