@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "references": {
+    "v06": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+      "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a",
+      "points": {
+        "front_shoulder_level": [
+          242,
+          220
+        ],
+        "front_sole_level": [
+          242,
+          946
+        ],
+        "front_torso_axis": [
+          242,
+          407
+        ],
+        "profile_foremost_supported_mass": [
+          500,
+          296
+        ],
+        "profile_lower_rounding_covered": [
+          509,
+          316
+        ],
+        "profile_axis_estimate": [
+          574,
+          440
+        ],
+        "back_axis_estimate": [
+          928,
+          450
+        ],
+        "oblique_stance_axis_estimate": [
+          1300,
+          600
+        ]
+      }
+    },
+    "selected_front": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\anchors\\mia-body-front-user-selected-20261031.png",
+      "sha256": "09238b027687c7cd16f99d781c1d79ef081769c7258b49bb840d1badf11c6d42",
+      "points": {
+        "shoulder_level": [
+          512,
+          290
+        ],
+        "left_sole": [
+          400,
+          1478
+        ],
+        "right_sole": [
+          680,
+          1495
+        ],
+        "representative_sole_level": [
+          512,
+          1485
+        ]
+      }
+    }
+  },
+  "selected_front_registration": {
+    "uniform_scale": 0.6075313807531381,
+    "rotation_degrees": 0,
+    "translation_xy": [
+      -55.05606694560669,
+      88.81589958158997
+    ],
+    "basis": "shoulder level290 and representative sole1485 -> v06 target220/946; header45 included; same source-wide uniform transform",
+    "definition": "shoulder level is approximate acromial/clavicular band, not a single exact bone point; soles differ with pose",
+    "uncertainty_pixels": {
+      "shoulder": 10,
+      "sole": 10
+    }
+  },
+  "v06_registration": {
+    "uniform_scale": 1,
+    "rotation_degrees": 0,
+    "vertical_translation": 45,
+    "view_axis_x_estimates": {
+      "front": 242,
+      "profile": 574,
+      "back": 928,
+      "oblique": 1300
+    },
+    "view_crops": {
+      "front": [
+        64,
+        0,
+        448,
+        1024
+      ],
+      "profile": [
+        430,
+        0,
+        790,
+        1024
+      ],
+      "back": [
+        730,
+        0,
+        1130,
+        1024
+      ],
+      "oblique": [
+        1080,
+        0,
+        1510,
+        1024
+      ]
+    },
+    "axis_target_x": 256,
+    "notes": "Per-view whole-source translation only. Front torso centre is clear; profile/back/oblique axes are approximate silhouette/stance axes, uncertain10-20px and not calibrated projection. No part-by-part registration."
+  },
+  "model_camera": {
+    "projection": "ORTHO",
+    "ortho_scale": 1.8894209113,
+    "target_z": 0.8397017428,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "yaw_degrees": [
+      0,
+      90,
+      180,
+      45
+    ],
+    "formula_world_z_from_original_image_y": ".8397017428 + (0.5-y/1024)*1.8894209113"
+  },
+  "scale_exclusion": "Shoulder-to-sole spacing was used for normalization and is not independently validated. X translations also do not validate pose or axis alignment.",
+  "primary_targets": {
+    "upper_primary_fades_by_world_z": [
+      1.33,
+      1.34
+    ],
+    "upper_centres_abs_x": 0.052,
+    "dominant_centres_abs_x": 0.058,
+    "dominant_projection_height_world_z": [
+      1.24,
+      1.25
+    ],
+    "lower_round_pole_world_z": [
+      1.21,
+      1.22
+    ],
+    "maximum_projection": "compare front/profile together; retain near-parent maximum Y first",
+    "uncertainty_world_m": 0.015,
+    "covered_lower_contour": "broad curvature only; no exact skin crease/volume inferred from bra"
+  },
+  "prior_package_limit": "Old selected-front s=.648214 used erroneous shoulder350 and was oversized~6.7%; exclude its shape inference. Old v06 equal-column crops used layout padding rather than per-view axis alignment. Prior files remain unchanged."
+}

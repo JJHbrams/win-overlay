@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated": "2026-11-01",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
-  "status": "reference_finish_v22_resumed_after_usage_interruption",
+  "status": "reference_finish_v22_active_art_correction",
   "character_complete": false,
   "art_approved": false,
   "read_first": [
@@ -32,8 +32,10 @@
     "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md",
     "current_live_viewing_setup": "blender/mia-reference-finish-v22/integration-wip-3/Mia_ReferenceFinish_v22.blend",
     "viewport_and_camera_audit": "blender/mia-reference-finish-v22/camera-audit.json",
-    "integration_wip_v22": "blender/mia-reference-finish-v22/integration-diagnostic-1/integration-manifest.json",
-    "current_live_evidence": "blender/mia-reference-finish-v22/live-wip-3/live-review.json"
+    "integration_wip_v22": "blender/mia-reference-finish-v22/integration-wip-3/integration-manifest.json",
+    "current_live_evidence": "blender/mia-reference-finish-v22/live-wip-3/live-review.json",
+    "body_registration_correction": "blender/mia-reference-finish-v22/parts/body-candidate12-rejected/supplements",
+    "face_aperture_retraction": "blender/mia-reference-finish-v22/evidence/face-aperture/README.md"
   },
   "correction_review": {
     "independent_round1": "blender/mia-correction-v20/acceptance-round-1.md",
@@ -52,12 +54,12 @@
   },
   "stage_status": {
     "reference_inventory": "organized; generated candidate approvals remain separate",
-    "corresponding_view_camera_registration": "14 fresh paired views in integrated-review-diagnostic-1; evidence valid. Estimated art angles and occlusion limits remain; no art PASS.",
+    "corresponding_view_camera_registration": "14 fresh WIP3 paired views; byte/camera integrity valid. Selected-front supplement manual anchor was wrong (6.7% overscale); old front_anchor excluded from proportions. Corrected scale and v06 per-column torso translations archived in body-candidate12-rejected. All future body reviews must use corrected registration.",
     "lookdev_diagnostic_rig": "built and fresh-reopen tested; source shaders unchanged",
-    "face_head_art": "FAIL overall. Face finish4 locally recommended: actual new UV paint, iris/lash and profile improvements; cheek/upperface and source likeness remain unfinished.",
-    "body_art": "FAIL. Continuous patch c4 and c5 waist locally improved; c8 underside exists but horizontal shelf rejected. c9 parametric lower-pole contour in progress.",
-    "hair_art": "FAIL overall. New pigment0d787482 improves selective sheen/lock separation. Root specks, rough lower locks, braid/knot geometry and eye occlusion remain.",
-    "uv_and_color": "Face4 new full-linear albedo and coverage mask; hair new512px-per-view paint projected to4096 atlas with22.29% confident coverage. Actual UV diagnostics and route recorded. Final art/density unfinished.",
+    "face_head_art": "FAIL overall. Face5 under-eye shader locally improved with geometry unchanged; profile/cheek identity and full expressions remain unfinished. Face6 investigation in progress; no new shape accepted.",
+    "body_art": "FAIL. Live uses interim Body5 with c5 waist; c6-c12 rejected. C13 volumetric target fixes lower return but looks like externally attached spheres; rejected for integration. C14 root/centre placement correction in progress.",
+    "hair_art": "FAIL. Live0d pigment locally improved. One-lock3a8 taper removes broad cutoff but folds into a fin/needle and exposes a front triangular plane; not promoted. Local correction in progress. Other open neck/shoulder boundaries, bun/braid and eye occlusion remain.",
+    "uv_and_color": "Face4 full-linear albedo/coverage + Face5 UV-bound under-eye shader; hair512px-per-view paint to4096 atlas,22.29% confident coverage. Actual route/UV diagnostics recorded. Source-style density/graphic quality unfinished; unchanged UV is not distortion approval.",
     "facial_deformation": "FAIL; small lash Close followers added, but full blink/paint/fold behavior and expression combinations remain unfinished",
     "garments": "deferred until anatomy gate",
     "final_rig_and_events": "deferred until static art and deformation gates"
@@ -73,15 +75,18 @@
     "v20 missing 8mm face lift diagnosis mixed vertex cache with actual Basis/evaluated coordinates; lift/cap trials regressed and were rejected",
     "c13 and packed2cd face narrowing steepened the outer-eye wall; not integrated",
     "body v21 f632 and primary e174 rejected despite corrected mirror mapping and protected data",
-    "rear bun cbb bulb and739 rolled-tube candidates rejected; no source-faithful bun completion"
+    "rear bun cbb bulb and739 rolled-tube candidates rejected; no source-faithful bun completion",
+    "body v22 c6-c12 lower taper/shelf or excessive primary upper mass remain rejected; c13 rounded target is externally attached spheres",
+    "hair v22 one-lock3a8 is narrower but deep fold/needle and front triangular fin prevent promotion",
+    "older source129/133 versus model109/112 aperture widths mixed lash extrema and bright opening; withdrawn as geometry target"
   ],
   "immediate_next": [
-    "Mandatory source-art/baseline/candidate view packages per REFERENCE_REVIEW_GATE.md. Model-only before/after is insufficient. Validate package before integration; independently inspect boards after compaction.",
-    "Reconstruct coherent thorax-to-breast primary form from Body Foundation front/profile. Current pad/perimeter seam persists; do not retry rejected local fields or claim underside-only success. Preserve body before any topology change.",
-    "Continue from selected3cd orbital improvement: compare reference identity and actual eyelid/eye/cheek surface in front/profile/oblique; old expression04 camera is uncalibrated.",
-    "Rebuild the concept gathered hair as hair volume and overlapping rolled locks; current narrow fold, bulb and tube trials are not an accepted bun.",
-    "Author higher-information hair paint with appropriate UV density after shape settles; larger rebake alone cannot repair source detail.",
-    "Maintain staged WIP commits and fixed multiview review. Garments/final animation remain deferred."
+    "Keep source-art/baseline/candidate packages and correct manual registrations. For body use c12 corrected selected-front and v06 torso-axis translations, not WIP3 old supplement. Validate bytes/cameras AND inspect landmark meaning.",
+    "Finish bounded C14 continuous thorax/breast volume fitting. Reject attached spheres, pillow/plate, lower shelf/beak, cage folds. Maintain c5 lower-body intent and cap UV/weight mapping; do not auto-promote a later version.",
+    "Refine one ear-side lock without new slit/needle/front planar fin. Root integrator coordinate_owners support is unexecuted; require actual execution and new visual review before selecting any geometry candidate.",
+    "Keep face aperture mixed-measurement retraction: no global iris/opening enlargement inferred. Face5 hair ON/OFF shows fringe occlusion; assess contour/profile with view uncertainty.",
+    "Integrate only local visual gains, render actual multiview comparisons/diagnostics and inspect production preview. Root controls live MCP, fixed head/body cameras and safe dirty-file guard.",
+    "Commit/push checkpoints and retain art/deformation FAIL. Garments and final events/secondary motion remain deferred."
   ],
   "do_not_infer_pass_from": [
     "successful save",
@@ -100,10 +105,10 @@
   "worktree_archive": "WORKTREE_ARCHIVE.md",
   "active_contract": "blender/mia-reference-finish-v22/ACCEPTANCE.md",
   "latest_user_feedback": {
-    "body": "Use Body Foundation front/profile and anatomy-led form construction. Modular replacement is a hypothesis, not a required industry rule. All later body candidates remain rejected; current body is still8e262.",
-    "face": "Feedback originated on live aa02 neutral. The rejected side-plane candidate was excluded; locally reviewed orbital3cd is now in live c02. Full face identity remains FAIL.",
+    "body": "Use Body Foundation front/profile and anatomy-led continuous forms. Current live body is interim Body5; later c6-c13 are rejected, not selected.",
+    "face": "Preserve narrow source face/eye-nose-mouth profile across views. Current live Face5 is a local surface improvement; full shape/identity/expression FAIL.",
     "hair": "Rear central finishing volume appears absent; half-up feature is gathered hair/bun, not cord or ribbon.",
-    "texture": "Visible hair detail is low-resolution; active4096 image is a rebake of2048 source, not newly authored detail.",
+    "texture": "Old4096 rebake did not add information. Current0d has limited newly painted512px-per-view coverage; no4K-detail or final style claim.",
     "eyes_tested": "Eye-only translations +/-0.5/1.5mm and depth scale0.9/1.1 alter lid contact/sclera but leave fixed skin wall; no probe variant selected. 3cd actual surface guide selected.",
     "viewport": "Actual live PERSP50 view pivot Y2.087m behind head; saved camera and prior19 renders ORTHO. Fix head-centred navigation/cameras/lights without changing model origins.",
     "profile_texture": "Use main/expressions/turnaround eye-nose-mouth profile and nose shading; finish face/head/body and UV style maps autonomously while user sleeps."
@@ -117,11 +122,11 @@
   "resumed_v22": {
     "face_finish4_sha256": "9d2c9d42c01c99f0138bb9227e3679ce3afa882d2f43c339ab26496c4c559a4b",
     "face_status": "Face5 local under-eye shader improvement independently recommended. Full face identity/shape/expression FAIL.",
-    "body_status": "Body8–11 rejected; true lower-return geometry but broad upper mass/heavy ledge. Candidate12 revisits primary volume using corrected source registration.",
-    "hair_status": "0d787482 independently recommended as material-only integration WIP; AC4 FAIL. Portable parts/hair-ink-paint evidence archived.",
+    "body_status": "FAIL. Live uses interim Body5 with c5 waist; c6-c12 rejected. C13 volumetric target fixes lower return but looks like externally attached spheres; rejected for integration. C14 root/centre placement correction in progress.",
+    "hair_status": "FAIL. Live0d pigment locally improved. One-lock3a8 taper removes broad cutoff but folds into a fin/needle and exposes a front triangular plane; not promoted. Local correction in progress. Other open neck/shoulder boundaries, bun/braid and eye occlusion remain.",
     "integration_diagnostic_sha256": "4c35b58700db0adac5c5b9994a4cec18ba593a0bd3da0175330f9bd4c41f68be",
     "diagnostic_is_selected_final": false,
-    "last_remote_checkpoint": "ae04799",
+    "last_remote_checkpoint": "3b5364a",
     "resume_entry": "blender/mia-reference-finish-v22/PROGRESS.md",
     "integrated_diagnostic_review": "blender/mia-reference-finish-v22/integrated-review-diagnostic-1/README.md",
     "independent_parts_review": "blender/mia-reference-finish-v22/independent-parts-review-2.md",

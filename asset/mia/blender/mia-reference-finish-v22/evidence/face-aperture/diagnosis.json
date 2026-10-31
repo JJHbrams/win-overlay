@@ -1,0 +1,90 @@
+{
+  "status": "READ_ONLY__NO_GEOMETRY_CHANGE",
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-5\\Mia_FaceFinish5_v22.blend",
+    "sha256": "a5ec86e9fab19fe0e62b9208f48a146760fc758cb42c7e13977d1573f29ffbbb"
+  },
+  "reference": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+    "sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44",
+    "crop_xyxy": [
+      340,
+      220,
+      700,
+      490
+    ],
+    "crop_artifact": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\source-review-hair\\front-source-crop.png",
+      "sha256": "9de024a583acaad200bd8c574cf54c1ca51a8b7c8f90fcca4d6bd17583be149b"
+    }
+  },
+  "source_uniform_registration": {
+    "uniform_scale": 1.6388888888888888,
+    "rotation_degrees": 0.0,
+    "translation_xy": [
+      -532.2222222222222,
+      -261.80555555555554
+    ],
+    "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+  },
+  "model_uniform_registration": {
+    "uniform_scale": 0.912311623077772,
+    "rotation_degrees": 5.314126249484533,
+    "translation_xy": [
+      -98.44109544930888,
+      -261.89537062312104
+    ],
+    "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+  },
+  "previous_claim_withdrawn": "129/133 source visible-aperture vs109/112 model was a mixed manual ink/canthus vs bright-opening measure; not a reliable geometric target.",
+  "manual_source_observed_bright_opening": {
+    "coordinate_frame": "640x640 registered panel, no board header",
+    "screen_left": {
+      "x_span_approx": [
+        139,
+        248
+      ],
+      "width_approx": 109,
+      "width_uncertainty_px": 5
+    },
+    "screen_right": {
+      "x_span_approx": [
+        366,
+        484
+      ],
+      "width_approx": 118,
+      "width_uncertainty_px": 6
+    },
+    "limits": "Manual bright sclera/iris silhouette reading, not true skin eye-hole. Black upper lash and hair conceal anatomical canthi; no exact full-aperture width can be recovered. Source drawing is not a calibrated camera."
+  },
+  "model_evaluated_skin_hole_x_width_px": [
+    115.05343825986782,
+    114.95261396921063
+  ],
+  "model_lash_plus_wing_x_extent_px": [
+    122.55433912930766,
+    123.90860919693935
+  ],
+  "hair_occlusion": {
+    "screen_left": {
+      "bare_eye_surface_ray_count": 2571,
+      "hair_eye_surface_ray_count": 2029,
+      "occluded_fraction": 0.21081291326332163,
+      "bare_horizontal_span": 115.28108747196785,
+      "hair_horizontal_span": 115.19659274558381,
+      "interpretation": "Mid-aperture fringe splits visible region, but both horizontal extrema remain."
+    },
+    "screen_right": {
+      "bare_eye_surface_ray_count": 2570,
+      "hair_eye_surface_ray_count": 2186,
+      "occluded_fraction": 0.1494163424124514,
+      "bare_horizontal_span": 114.18236761944604,
+      "hair_horizontal_span": 90.22623802763314,
+      "interpretation": "Outer aperture/canthus/wing hidden by side fringe."
+    }
+  },
+  "additional_pose_uncertainty": "Approximate source pupil line (207,268) to(430,245) slopes about-5.9deg in registered panel; model visible pupil line about(207,263) to(428,258) slopes-1.3deg. Uniform eye-to-chin registration is not eye-line/pose calibration. These are manual approximate visual centers, not exact iris shader centers; asymmetric lid-height comparisons retain roll/gaze uncertainty.",
+  "conclusion": "Hair contributes clearly, especially screen-right, but prior source/model width gap is not a validated eye-hole mismatch. Do not enlarge iris or whole aperture from it. Stronger source lash taper/upper occlusion and source pose remain appearance differences requiring separate diagnosis.",
+  "scope_limit": "Results use frozen face5 native and its inherited hair. Root fc939/hair0d has not been measured here; do not assign these exact occlusion percentages to another hair geometry.",
+  "native_unchanged": true
+}
