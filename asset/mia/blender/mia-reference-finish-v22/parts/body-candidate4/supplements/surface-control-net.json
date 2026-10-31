@@ -1,0 +1,46 @@
+{
+  "construction": "Continuous thorax height field plus thin-plate boundary residual; old angular loft net unused and removed from this recipe.",
+  "source_base_z": [
+    1.18,
+    1.22,
+    1.26,
+    1.3,
+    1.34,
+    1.36,
+    1.38,
+    1.395
+  ],
+  "anterior_radius": [
+    0.117,
+    0.111,
+    0.106,
+    0.1,
+    0.094,
+    0.0867,
+    0.0707,
+    0.054
+  ],
+  "lateral_radius": [
+    0.119,
+    0.122,
+    0.129,
+    0.137,
+    0.148,
+    0.155,
+    0.159,
+    0.16
+  ],
+  "fullness": {
+    "centres_x": [
+      -0.061,
+      0.061
+    ],
+    "centre_z": 1.285,
+    "depth": 0.051,
+    "sigma_x": 0.032,
+    "sigma_z_formula": ".040 + .014*tanh((z-1.285)/.024)"
+  },
+  "boundary_residual": "boundary-residual-controls.json",
+  "parameter_basis": "artist-authored approximation informed by actual source comparisons and measured source sternum, not a calibrated anatomical measurement",
+  "topology": "365 quads + 98 triangles, shared unchanged source boundary; retained old IDs exact"
+}

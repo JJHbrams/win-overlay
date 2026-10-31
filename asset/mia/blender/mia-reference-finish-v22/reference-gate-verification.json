@@ -1,0 +1,42 @@
+{
+  "real_body_candidate_package_valid": true,
+  "candidate_art_status": "REJECT remains; validator does not approve art",
+  "negative_cases": [
+    {
+      "case": "missing_reference",
+      "rejected": true,
+      "errors": [
+        "front/reference: path and sha256 required",
+        "front: reference crop_xyxy required"
+      ]
+    },
+    {
+      "case": "stale_render_hash",
+      "rejected": true,
+      "errors": [
+        "front/candidate_render: stale hash"
+      ]
+    },
+    {
+      "case": "missing_view",
+      "rejected": true,
+      "errors": [
+        "missing required source views: front"
+      ]
+    },
+    {
+      "case": "anisotropic_registration",
+      "rejected": true,
+      "errors": [
+        "front/candidate_registration: unsupported registration fields; no per-feature or anisotropic warp"
+      ]
+    },
+    {
+      "case": "camera_mismatch",
+      "rejected": true,
+      "errors": [
+        "front: baseline/candidate camera, pose, light or display mismatch"
+      ]
+    }
+  ]
+}
