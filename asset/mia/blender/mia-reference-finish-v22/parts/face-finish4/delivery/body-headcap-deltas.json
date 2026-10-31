@@ -1,0 +1,208 @@
+{
+  "source": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-correction-v20\\integrated-r2\\Mia_Corrected_v20.blend",
+    "sha256": "c02b8ad73b86b278f2768e61eff019be223a8828bd92df62ce0ab7cb60f56936"
+  },
+  "coordinate_definition": "Offsets local to original Body Basis vertex IDs; identical offset to every Body key and mesh cache. Source Basis worldZ>=1.46. Do not replace unrelated body producer geometry.",
+  "deltas": [
+    {
+      "vertex": 0,
+      "source_basis_world_z": 1.4857325553894043,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.0018149156821891665
+      ]
+    },
+    {
+      "vertex": 1,
+      "source_basis_world_z": 1.4973300695419312,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        3.6648856394094764e-08
+      ]
+    },
+    {
+      "vertex": 7,
+      "source_basis_world_z": 1.4691152572631836,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        1.0168805602006614e-06
+      ]
+    },
+    {
+      "vertex": 16,
+      "source_basis_world_z": 1.4653663635253906,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.002576723461970687
+      ]
+    },
+    {
+      "vertex": 17,
+      "source_basis_world_z": 1.47565495967865,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.0038451473228633404
+      ]
+    },
+    {
+      "vertex": 28,
+      "source_basis_world_z": 1.4617654085159302,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.000305878056678921
+      ]
+    },
+    {
+      "vertex": 29,
+      "source_basis_world_z": 1.463584065437317,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.001356606837362051
+      ]
+    },
+    {
+      "vertex": 30,
+      "source_basis_world_z": 1.4690449237823486,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.004379247315227985
+      ]
+    },
+    {
+      "vertex": 31,
+      "source_basis_world_z": 1.4667112827301025,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.0038145387079566717
+      ]
+    },
+    {
+      "vertex": 32,
+      "source_basis_world_z": 1.4730606079101562,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.004487366881221533
+      ]
+    },
+    {
+      "vertex": 33,
+      "source_basis_world_z": 1.4696614742279053,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.004359728191047907
+      ]
+    },
+    {
+      "vertex": 34,
+      "source_basis_world_z": 1.4783374071121216,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.004302234388887882
+      ]
+    },
+    {
+      "vertex": 255,
+      "source_basis_world_z": 1.4691152572631836,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        1.0002594308389234e-06
+      ]
+    },
+    {
+      "vertex": 259,
+      "source_basis_world_z": 1.4653663635253906,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.0025559610221534967
+      ]
+    },
+    {
+      "vertex": 260,
+      "source_basis_world_z": 1.47565495967865,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.0038067130371928215
+      ]
+    },
+    {
+      "vertex": 267,
+      "source_basis_world_z": 1.463584065437317,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.0013556948397308588
+      ]
+    },
+    {
+      "vertex": 268,
+      "source_basis_world_z": 1.4690449237823486,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.004375495482236147
+      ]
+    },
+    {
+      "vertex": 269,
+      "source_basis_world_z": 1.4730606079101562,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.004483612719923258
+      ]
+    },
+    {
+      "vertex": 270,
+      "source_basis_world_z": 1.4783374071121216,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.0042739929631352425
+      ]
+    },
+    {
+      "vertex": 271,
+      "source_basis_world_z": 1.4857325553894043,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        0.001775272423401475
+      ]
+    },
+    {
+      "vertex": 273,
+      "source_basis_world_z": 1.4973300695419312,
+      "delta_local_m": [
+        0.0,
+        0.0,
+        3.455304664612413e-08
+      ]
+    }
+  ],
+  "evaluated_below_boundary_caveat": {
+    "body_basis_below1p46_count": 3723,
+    "body_basis_below1p46_max_delta_m": 0.0,
+    "body_evaluated_below1p46_max_delta_m": 0.0012767314910888672,
+    "body_evaluated_below1p46_changed_count_gt1um": 194,
+    "body_evaluated_below1p46_nonzero_z_range": [
+      1.43130362033844,
+      1.4599741697311401
+    ]
+  }
+}

@@ -1,0 +1,1077 @@
+{
+  "schema_version": 1,
+  "part": "face",
+  "baseline_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-correction-v20\\integrated-r2\\Mia_Corrected_v20.blend",
+    "sha256": "c02b8ad73b86b278f2768e61eff019be223a8828bd92df62ce0ab7cb60f56936"
+  },
+  "candidate_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\Mia_FaceFinish_v22.blend",
+    "sha256": "9d2c9d42c01c99f0138bb9227e3679ce3afa882d2f43c339ab26496c4c559a4b"
+  },
+  "required_views": [
+    "front",
+    "profile",
+    "left_oblique",
+    "right_oblique"
+  ],
+  "views": [
+    {
+      "id": "front",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+        "sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44",
+        "crop_xyxy": [
+          340,
+          220,
+          700,
+          490
+        ],
+        "crop_artifact": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\source-review-hair\\front-source-crop.png",
+          "sha256": "9de024a583acaad200bd8c574cf54c1ca51a8b7c8f90fcca4d6bd17583be149b"
+        }
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\baseline-common-rollfixed\\hair_front.png",
+        "sha256": "8f062ad5d8cb974e2201aee5c0f73847d97f81ed73e81a32f10ebb5d13573303"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\renders\\hair_front.png",
+        "sha256": "cf1bf89d664f4139b70b966e2975f6a757db1fd5fa85ef6db6473b1019d9d632"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\source-review-hair\\front-source-baseline-candidate.png",
+        "sha256": "2fb49dff6d71f6d42fabd6f2e81557eddac33d48244b87d0e12872905980f6d8"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.29,
+        "matrix": [
+          [
+            0.9933727979660034,
+            0.11493712663650513,
+            8.146736618641626e-10,
+            0.0
+          ],
+          [
+            2.0223808405717136e-08,
+            -2.1591667120901548e-07,
+            -1.0,
+            -2.0
+          ],
+          [
+            -0.11493712663650513,
+            0.9933727979660034,
+            -2.1712973818921455e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "yaw": 0,
+        "elevation": 0,
+        "image_roll": -6.6,
+        "frame": 1,
+        "active_shape_keys": {
+          "Basis": 1.0
+        },
+        "lighting": {
+          "key": {
+            "location": [
+              -0.6,
+              -1,
+              2.2
+            ],
+            "watts": 60,
+            "size": 1
+          },
+          "fill": {
+            "location": [
+              0.8,
+              -0.8,
+              1.8
+            ],
+            "watts": 15,
+            "size": 1.5
+          },
+          "rim": {
+            "location": [
+              0,
+              0.9,
+              2.05
+            ],
+            "watts": 8,
+            "size": 0.8
+          },
+          "area_shape": "DISK",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            1.55
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_scene_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ]
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.29,
+        "matrix": [
+          [
+            0.9933727979660034,
+            0.11493712663650513,
+            8.146736618641626e-10,
+            0.0
+          ],
+          [
+            2.0223808405717136e-08,
+            -2.1591667120901548e-07,
+            -1.0,
+            -2.0
+          ],
+          [
+            -0.11493712663650513,
+            0.9933727979660034,
+            -2.1712973818921455e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "yaw": 0,
+        "elevation": 0,
+        "image_roll": -6.6,
+        "frame": 1,
+        "active_shape_keys": {
+          "Basis": 1.0
+        },
+        "lighting": {
+          "key": {
+            "location": [
+              -0.6,
+              -1,
+              2.2
+            ],
+            "watts": 60,
+            "size": 1
+          },
+          "fill": {
+            "location": [
+              0.8,
+              -0.8,
+              1.8
+            ],
+            "watts": 15,
+            "size": 1.5
+          },
+          "rim": {
+            "location": [
+              0,
+              0.9,
+              2.05
+            ],
+            "watts": 8,
+            "size": 0.8
+          },
+          "area_shape": "DISK",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            1.55
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_scene_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ]
+      },
+      "reference_registration": {
+        "uniform_scale": 1.6388888888888888,
+        "rotation_degrees": 0.0,
+        "translation_xy": [
+          -532.2222222222222,
+          -261.80555555555554
+        ],
+        "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+      },
+      "baseline_registration": {
+        "uniform_scale": 0.912311623077772,
+        "rotation_degrees": 5.314126249484533,
+        "translation_xy": [
+          -98.44109544930888,
+          -261.89537062312104
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 0.912311623077772,
+        "rotation_degrees": 5.314126249484533,
+        "translation_xy": [
+          -98.44109544930888,
+          -261.89537062312104
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "pose_uncertainty": "Portrait near-front: yaw +/-6, pitch +/-6, roll +/-3 degrees. Eye midpoint/pupil estimate +/-2 pixels; hair covers temple. Eye-to-chin normalization cannot prove face height.",
+      "observed_differences": "Candidate restores readable tapered upper lash and visible gray iris upper/lower tone, adds a controlled brown/mauve under-eye crescent, and replaces diffuse nose marks with a compact graphic plane. Hair-on context retains source hair geometry. The face is more dimensional under the shared real-light ramp; source still has stronger limbal/reflected arcs, different brow/crease drawing and a stronger jaw outline. No full likeness pass.",
+      "unresolved": "No full ART/animation pass. Broad temple/cap tangent seam, source-specific eye/crease drawing and weak contour remain. Close0.5 nearly fully closes with thick lash; static iris and uneven triangular deformation cage persist. Reference pose/gaze and low-resolution side ambiguity are recorded.",
+      "material_mode": "Same declared actual root scene lights and Standard/None display for before/after. Baseline c02 retains legacy fixed-normal skin shader; candidate replaces it with full linear UV albedo times shared actual white-Diffuse luminance ramp. This is a combined geometry/surface result, not an isolated light-only or geometry-only comparison."
+    },
+    {
+      "id": "profile",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+        "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+        "crop_xyxy": [
+          525,
+          48,
+          605,
+          120
+        ],
+        "crop_artifact": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\source-review-hair\\profile-source-crop.png",
+          "sha256": "3087b72027b38b79010638f50e943064793b4d1235333aca35b78a1f67c97b98"
+        }
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\baseline-common-rollfixed\\hair_profile.png",
+        "sha256": "96afb6892ae74c40bfae068da6ac37b761a8a22f3038f6fd7ec492f3b885701c"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\renders\\hair_profile.png",
+        "sha256": "d7b5019153e66cd7a789cacefd6a318dfc2eeb16e5236c878b3cda52fd9759d5"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\source-review-hair\\profile-source-baseline-candidate.png",
+        "sha256": "ea532fec78013ad633363b6f4b1240db85f28ce2880b9d0672b23f95bf18fdc9"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.29,
+        "matrix": [
+          [
+            0.17364779114723206,
+            3.228635847563055e-08,
+            0.9848079681396484,
+            1.9696154594421387
+          ],
+          [
+            0.9848079681396484,
+            -1.4505165779610252e-07,
+            -0.1736479550600052,
+            -0.3472963571548462
+          ],
+          [
+            -3.228635847563055e-08,
+            1.0000001192092896,
+            -1.992346057022587e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "yaw": 80,
+        "elevation": 0,
+        "image_roll": 0,
+        "frame": 1,
+        "active_shape_keys": {
+          "Basis": 1.0
+        },
+        "lighting": {
+          "key": {
+            "location": [
+              -0.6,
+              -1,
+              2.2
+            ],
+            "watts": 60,
+            "size": 1
+          },
+          "fill": {
+            "location": [
+              0.8,
+              -0.8,
+              1.8
+            ],
+            "watts": 15,
+            "size": 1.5
+          },
+          "rim": {
+            "location": [
+              0,
+              0.9,
+              2.05
+            ],
+            "watts": 8,
+            "size": 0.8
+          },
+          "area_shape": "DISK",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            1.55
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_scene_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ]
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.29,
+        "matrix": [
+          [
+            0.17364779114723206,
+            3.228635847563055e-08,
+            0.9848079681396484,
+            1.9696154594421387
+          ],
+          [
+            0.9848079681396484,
+            -1.4505165779610252e-07,
+            -0.1736479550600052,
+            -0.3472963571548462
+          ],
+          [
+            -3.228635847563055e-08,
+            1.0000001192092896,
+            -1.992346057022587e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "yaw": 80,
+        "elevation": 0,
+        "image_roll": 0,
+        "frame": 1,
+        "active_shape_keys": {
+          "Basis": 1.0
+        },
+        "lighting": {
+          "key": {
+            "location": [
+              -0.6,
+              -1,
+              2.2
+            ],
+            "watts": 60,
+            "size": 1
+          },
+          "fill": {
+            "location": [
+              0.8,
+              -0.8,
+              1.8
+            ],
+            "watts": 15,
+            "size": 1.5
+          },
+          "rim": {
+            "location": [
+              0,
+              0.9,
+              2.05
+            ],
+            "watts": 8,
+            "size": 0.8
+          },
+          "area_shape": "DISK",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            1.55
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_scene_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ]
+      },
+      "reference_registration": {
+        "uniform_scale": 7.375,
+        "rotation_degrees": 0.0,
+        "translation_xy": [
+          -3846.875,
+          -299.5
+        ],
+        "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0168599597074608,
+        "rotation_degrees": 4.236875509204846,
+        "translation_xy": [
+          -9.152177209290699,
+          -331.4039431348381
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0168599597074608,
+        "rotation_degrees": 4.236875509204846,
+        "translation_xy": [
+          -9.152177209290699,
+          -331.4039431348381
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "pose_uncertainty": "Small drawn SIDE panel: estimated yaw70..90, pitch +/-6, visible eye is stylized and not a calibrated anatomical center. Anchors +/-2 original pixels. Forehead/bridge partially hair-occluded. Compare silhouette and lip/nose shape, not exact depth from iris alone.",
+      "observed_differences": "Candidate nose tip is slightly higher/forward, philtrum/muzzle less projected, and posterior chin underside rises instead of remaining nearly horizontal. Same camera and same baseline SRT show this change. Source eye is stylized and much more exposed than model at this yaw; hair masks a large part of the model eye. Exact side depth is uncertain and not validated from this small panel.",
+      "unresolved": "No full ART/animation pass. Broad temple/cap tangent seam, source-specific eye/crease drawing and weak contour remain. Close0.5 nearly fully closes with thick lash; static iris and uneven triangular deformation cage persist. Reference pose/gaze and low-resolution side ambiguity are recorded.",
+      "material_mode": "Same declared actual root scene lights and Standard/None display for before/after. Baseline c02 retains legacy fixed-normal skin shader; candidate replaces it with full linear UV albedo times shared actual white-Diffuse luminance ramp. This is a combined geometry/surface result, not an isolated light-only or geometry-only comparison."
+    },
+    {
+      "id": "left_oblique",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+        "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+        "crop_xyxy": [
+          1230,
+          45,
+          1405,
+          180
+        ],
+        "crop_artifact": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\source-review-hair\\left_oblique-source-crop.png",
+          "sha256": "dc50a94a229e166e08eeea18a8e1f9b2d85ff16077833599dcd54f70803e045c"
+        }
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\baseline-common-rollfixed\\hair_left_oblique.png",
+        "sha256": "4cc951d1f7b58a962f1ed68c6c08760193da41eb45cbc5564111fe8404ac9287"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\renders\\hair_left_oblique.png",
+        "sha256": "1243869f6721f98a27d6d352d851e35909f274c2c696b81259b7ed7d8ce0cb35"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\source-review-hair\\left_oblique-source-baseline-candidate.png",
+        "sha256": "06f6bc2fc2aa9968c9f5e8de8fa1875ca782ea575750178e5da90660eee504eb"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.29,
+        "matrix": [
+          [
+            0.8792434334754944,
+            0.22032305598258972,
+            0.4223608672618866,
+            0.8447216153144836
+          ],
+          [
+            0.40003156661987305,
+            0.13993360102176666,
+            -0.9057556390762329,
+            -1.8115113973617554
+          ],
+          [
+            -0.25866132974624634,
+            0.9653373956680298,
+            0.034899525344371796,
+            1.6197988986968994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "yaw": 25,
+        "elevation": 2,
+        "image_roll": -15,
+        "frame": 1,
+        "active_shape_keys": {
+          "Basis": 1.0
+        },
+        "lighting": {
+          "key": {
+            "location": [
+              -0.6,
+              -1,
+              2.2
+            ],
+            "watts": 60,
+            "size": 1
+          },
+          "fill": {
+            "location": [
+              0.8,
+              -0.8,
+              1.8
+            ],
+            "watts": 15,
+            "size": 1.5
+          },
+          "rim": {
+            "location": [
+              0,
+              0.9,
+              2.05
+            ],
+            "watts": 8,
+            "size": 0.8
+          },
+          "area_shape": "DISK",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            1.55
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_scene_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ]
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.29,
+        "matrix": [
+          [
+            0.8792434334754944,
+            0.22032305598258972,
+            0.4223608672618866,
+            0.8447216153144836
+          ],
+          [
+            0.40003156661987305,
+            0.13993360102176666,
+            -0.9057556390762329,
+            -1.8115113973617554
+          ],
+          [
+            -0.25866132974624634,
+            0.9653373956680298,
+            0.034899525344371796,
+            1.6197988986968994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "yaw": 25,
+        "elevation": 2,
+        "image_roll": -15,
+        "frame": 1,
+        "active_shape_keys": {
+          "Basis": 1.0
+        },
+        "lighting": {
+          "key": {
+            "location": [
+              -0.6,
+              -1,
+              2.2
+            ],
+            "watts": 60,
+            "size": 1
+          },
+          "fill": {
+            "location": [
+              0.8,
+              -0.8,
+              1.8
+            ],
+            "watts": 15,
+            "size": 1.5
+          },
+          "rim": {
+            "location": [
+              0,
+              0.9,
+              2.05
+            ],
+            "watts": 8,
+            "size": 0.8
+          },
+          "area_shape": "DISK",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            1.55
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_scene_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ]
+      },
+      "reference_registration": {
+        "uniform_scale": 3.3714285714285714,
+        "rotation_degrees": 0.0,
+        "translation_xy": [
+          -4121.857142857143,
+          -59.285714285714306
+        ],
+        "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+      },
+      "baseline_registration": {
+        "uniform_scale": 0.8399900854158027,
+        "rotation_degrees": 2.0772797262387996,
+        "translation_xy": [
+          -55.376182063170404,
+          -222.33905376579932
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 0.8399900854158027,
+        "rotation_degrees": 2.0772797262387996,
+        "translation_xy": [
+          -55.376182063170404,
+          -222.33905376579932
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "pose_uncertainty": "Expression04: image-left facing, yaw15..35, pitch +/-8, roll-15 +/-7. Sideways eye gaze differs from neutral; pupil centers approximate orbital anchors. Mouth neutral-ish; far outline partially occluded.",
+      "observed_differences": "Nose/philtrum and rising jaw changes remain coherent at the expression04-related oblique. Actual upper lash and gray iris stay visible; fixed pigment follows the curved skin. Side cheek/temple remains broad/planar compared with drawn source, and neutral gaze differs from sideways source gaze. Upper cap tangent seam remains visible in bald diagnostic.",
+      "unresolved": "No full ART/animation pass. Broad temple/cap tangent seam, source-specific eye/crease drawing and weak contour remain. Close0.5 nearly fully closes with thick lash; static iris and uneven triangular deformation cage persist. Reference pose/gaze and low-resolution side ambiguity are recorded.",
+      "material_mode": "Same declared actual root scene lights and Standard/None display for before/after. Baseline c02 retains legacy fixed-normal skin shader; candidate replaces it with full linear UV albedo times shared actual white-Diffuse luminance ramp. This is a combined geometry/surface result, not an isolated light-only or geometry-only comparison."
+    },
+    {
+      "id": "right_oblique",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+        "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+        "crop_xyxy": [
+          850,
+          45,
+          1030,
+          180
+        ],
+        "crop_artifact": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\source-review-hair\\right_oblique-source-crop.png",
+          "sha256": "554b5bb406c89cfbd3aafc73b1c3dd00ba8de82d6820e7e981678224ff1131d2"
+        }
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\baseline-common-rollfixed\\hair_right_oblique.png",
+        "sha256": "2c6b8214f30b4487c3bba9b44484f9e18402a4c41339ed0b9a551ff5c2c812dc"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\renders\\hair_right_oblique.png",
+        "sha256": "d2932a7f049990f70d6474045b9eae38fc8f1659736859ac8beb500519c656d5"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\source-review-hair\\right_oblique-source-baseline-candidate.png",
+        "sha256": "ca8049f3c3fe2f50b1b9329bb2bee6f97c13f741e89482ba822f300da52bacbc"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.29,
+        "matrix": [
+          [
+            0.9536033868789673,
+            0.24610860645771027,
+            -0.17341013252735138,
+            -0.3468203842639923
+          ],
+          [
+            -0.15439151227474213,
+            -0.09472780674695969,
+            -0.9834581017494202,
+            -1.9669162034988403
+          ],
+          [
+            -0.2584642767906189,
+            0.9646020531654358,
+            -0.05233568325638771,
+            1.4453279972076416
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "yaw": -10,
+        "elevation": -3,
+        "image_roll": -15,
+        "frame": 1,
+        "active_shape_keys": {
+          "Basis": 1.0
+        },
+        "lighting": {
+          "key": {
+            "location": [
+              -0.6,
+              -1,
+              2.2
+            ],
+            "watts": 60,
+            "size": 1
+          },
+          "fill": {
+            "location": [
+              0.8,
+              -0.8,
+              1.8
+            ],
+            "watts": 15,
+            "size": 1.5
+          },
+          "rim": {
+            "location": [
+              0,
+              0.9,
+              2.05
+            ],
+            "watts": 8,
+            "size": 0.8
+          },
+          "area_shape": "DISK",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            1.55
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_scene_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ]
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.29,
+        "matrix": [
+          [
+            0.9536033868789673,
+            0.24610860645771027,
+            -0.17341013252735138,
+            -0.3468203842639923
+          ],
+          [
+            -0.15439151227474213,
+            -0.09472780674695969,
+            -0.9834581017494202,
+            -1.9669162034988403
+          ],
+          [
+            -0.2584642767906189,
+            0.9646020531654358,
+            -0.05233568325638771,
+            1.4453279972076416
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "yaw": -10,
+        "elevation": -3,
+        "image_roll": -15,
+        "frame": 1,
+        "active_shape_keys": {
+          "Basis": 1.0
+        },
+        "lighting": {
+          "key": {
+            "location": [
+              -0.6,
+              -1,
+              2.2
+            ],
+            "watts": 60,
+            "size": 1
+          },
+          "fill": {
+            "location": [
+              0.8,
+              -0.8,
+              1.8
+            ],
+            "watts": 15,
+            "size": 1.5
+          },
+          "rim": {
+            "location": [
+              0,
+              0.9,
+              2.05
+            ],
+            "watts": 8,
+            "size": 0.8
+          },
+          "area_shape": "DISK",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "target": [
+            0,
+            0,
+            1.55
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_scene_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ]
+      },
+      "reference_registration": {
+        "uniform_scale": 3.2777777777777777,
+        "rotation_degrees": 0.0,
+        "translation_xy": [
+          -2761.111111111111,
+          -48.75
+        ],
+        "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+      },
+      "baseline_registration": {
+        "uniform_scale": 0.819537268220571,
+        "rotation_degrees": 4.673384669726472,
+        "translation_xy": [
+          -58.224285120422735,
+          -164.34746161298943
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 0.819537268220571,
+        "rotation_degrees": 4.673384669726472,
+        "translation_xy": [
+          -58.224285120422735,
+          -164.34746161298943
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "pose_uncertainty": "Expression03 is the closest near-front opposite subtle-angle evidence, not a confirmed -45 view: yaw estimated -15..+5, pitch -8..+5, roll-15 +/-7. Upward gaze/open mouth differ from neutral. Do not infer exact opposing temple depth or closed-mouth likeness from this panel.",
+      "observed_differences": "Opposite subtle-angle candidate retains both irises and shows the new under-eye pigment and nose plane without a camera-dependent billboard. Source expression03 has upward gaze/open mouth and uncertain yaw; this is a bounded correspondence, not exact opposite45 ground truth. Closed-mouth likeness cannot be judged against its open mouth.",
+      "unresolved": "No full ART/animation pass. Broad temple/cap tangent seam, source-specific eye/crease drawing and weak contour remain. Close0.5 nearly fully closes with thick lash; static iris and uneven triangular deformation cage persist. Reference pose/gaze and low-resolution side ambiguity are recorded.",
+      "material_mode": "Same declared actual root scene lights and Standard/None display for before/after. Baseline c02 retains legacy fixed-normal skin shader; candidate replaces it with full linear UV albedo times shared actual white-Diffuse luminance ramp. This is a combined geometry/surface result, not an isolated light-only or geometry-only comparison."
+    }
+  ],
+  "art_status": "Producer observed improvement with explicit remaining identity/rig limitations; independent visual acceptance required."
+}

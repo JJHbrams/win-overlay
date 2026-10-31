@@ -1,0 +1,25 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-correction-v20\\integrated-r2\\Mia_Corrected_v20.blend",
+  "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-body-finish-v22\\candidate5\\cap-safe\\Mia_BodyContinuous_v22_candidate5_cap_safe.blend",
+  "source_sha256": "c02b8ad73b86b278f2768e61eff019be223a8828bd92df62ce0ab7cb60f56936",
+  "candidate_sha256": "61d81b53e0ff74e15fedfffa6e8004c88d0fe0d70df3f59948fa37713fd6a8a3",
+  "errors": [],
+  "technical_preservation_pass": true,
+  "art_acceptance": "NOT_EVALUATED",
+  "retained_vertices": 3569,
+  "retained_max_world_delta": 0.010291774857689402,
+  "declared_body_contour_changes": 316,
+  "retained_position_check": "all differences exactly match declared deltas; headcap unchanged",
+  "protected_control_cap_count": 183,
+  "protected_evaluated_cap_count": 2714,
+  "outside_faces": 3681,
+  "source_to_new_mapping": "patch-provenance.json",
+  "checks": [
+    "nonbody mesh/keys/weights and object matrices",
+    "material nodes/defaults/links",
+    "packed images",
+    "outside topology/UV/material assignments/weights",
+    "body headcap control and rounded evaluated positions"
+  ],
+  "limits": "New patch UV and weight interpolation are approximate; render/rig review is still required. No visual acceptance implied."
+}

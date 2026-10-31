@@ -1,5 +1,18 @@
 # Active v22 work — resume without dropping the source-view gate
 
+## Resumed after account-limit interruption, 2026-11-01
+
+Latest user: "이어서 진행해줘". Preserve the unfinished production objective; the source-view protocol is mandatory. This is not a heartbeat-only research run. Last remote checkpoint is ed080d502705021c36f1a0509ec43b52e2d6ddf1, with the portable bodycandidate4 package, real gate fault tests and actual UI orbit/zoom evidence. Model completion and art approval remain false.
+
+- Face finish4 is frozen at 9d2c9d42c01c99f0138bb9227e3679ce3afa882d2f43c339ab26496c4c559a4b under the existing face worktree's mia-face-finish-v22/finish-4. Independent reviewer recommends it only as a local integration WIP: new albedo/under-eye, iris rim/reflection and lash improve recognition, but AC2 remains FAIL for profile/cheek/identity. Actual hair-on/off yaw60/70/80/90 bracket shows much of profile eye loss is hair occlusion. No exact source yaw was established. Finish4 includes exact recipes, maps, source-board packages and disclosed194 evaluated lower-neck vertices affected by cap interpolation (max1.277mm).
+- Bodycandidate5 retains a less-pinched waist but chest is too uniformly pillow/plate-like. Candidate6/7 still produced a tapered lower profile. The producer and root identified a representation constraint: fixed-Z Y=f(X,Z) cannot represent an underside returning upward toward the ribcage. Candidate8 is testing an explicitly parametric Y(t),Z(t) lower surface. Keep shared boundary/cap mapping, source UV/weight provenance and c5 waist intent. No candidate after c4 is silently approved.
+- Hair396 remains the immutable cleanup checkpoint. New five-view imagegen pigment is technically projected into existing UVs; depth capture was corrected to Camera Data View Z Depth. Fresh native 0d787482198137c37a5fd80067f7f6ce74678c1a99df783b0ece7cb59c5fb319 in ink-study/generated-paint adds visible selective lock ink/sheen. Root inspected actual front/profile/back. Source boards, preservation and independent review remain pending. Input is512px/view; no recovered4K detail claim.
+- Root integrator was executed successfully after fixing unlinked-library matrix evaluation and Blender's in-place requested-material list replacement. Diagnostic native integration-diagnostic-1/Mia_ReferenceFinish_v22.blend SHA4c35b58700db0adac5c5b9994a4cec18ba593a0bd3da0175330f9bd4c41f68be combines face4/body5/hair396 for integration testing only, not final selection. Original sources remain immutable; Body object/modifiers/material ownership and cap old-to-new mapping are explicit.
+- Root's render-only object-contour ink probe improves skin outline. Internal silhouette selection was rejected because it drew a nose scratch. Contour is not a geometry correction or art PASS, and viewport does not show Freestyle strokes.
+- Face producer now owns only new root render_integrated_review.py / compose_integrated_review.py plus diagnostic review output, to fresh-render baseline and integrated candidates with actual source-paired view records. Root retains live GUI/integrator/status ownership. Body and hair producers continue in their existing worktrees.
+
+The older bullets below describe earlier checkpoints and are superseded by this resumed-state section where they differ.
+
 The user is sleeping and authorized continued production without interim feedback. Latest steering: documentation alone is insufficient; the source-art/matching-view pipeline must be required through compaction. Continue the face/head/body and surface task, not only this documentation fix.
 
 - Baseline art: c02 / Git083dd40, still not approved. Do not overwrite it.

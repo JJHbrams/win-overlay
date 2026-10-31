@@ -1,0 +1,102 @@
+[
+  {
+    "id": "front",
+    "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+    "crop": [
+      340,
+      220,
+      700,
+      490
+    ],
+    "anchors": [
+      [
+        515.5,
+        312.5
+      ],
+      [
+        519,
+        463
+      ]
+    ],
+    "yaw": 0,
+    "elevation": 0,
+    "roll": -6.6,
+    "uncertainty": "Portrait near-front: yaw +/-6, pitch +/-6, roll +/-3 degrees. Eye midpoint/pupil estimate +/-2 pixels; hair covers temple. Eye-to-chin normalization cannot prove face height.",
+    "reference_sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44"
+  },
+  {
+    "id": "profile",
+    "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+    "crop": [
+      525,
+      48,
+      605,
+      120
+    ],
+    "anchors": [
+      [
+        558,
+        70
+      ],
+      [
+        553,
+        107
+      ]
+    ],
+    "yaw": 80,
+    "elevation": 0,
+    "roll": 0,
+    "uncertainty": "Small drawn SIDE panel: estimated yaw70..90, pitch +/-6, visible eye is stylized and not a calibrated anatomical center. Anchors +/-2 original pixels. Forehead/bridge partially hair-occluded. Compare silhouette and lip/nose shape, not exact depth from iris alone.",
+    "reference_sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19"
+  },
+  {
+    "id": "left_oblique",
+    "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+    "crop": [
+      1230,
+      45,
+      1405,
+      180
+    ],
+    "anchors": [
+      [
+        1305.5,
+        91.5
+      ],
+      [
+        1321,
+        157
+      ]
+    ],
+    "yaw": 25,
+    "elevation": 2,
+    "roll": -15,
+    "uncertainty": "Expression04: image-left facing, yaw15..35, pitch +/-8, roll-15 +/-7. Sideways eye gaze differs from neutral; pupil centers approximate orbital anchors. Mouth neutral-ish; far outline partially occluded.",
+    "reference_sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52"
+  },
+  {
+    "id": "right_oblique",
+    "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+    "crop": [
+      850,
+      45,
+      1030,
+      180
+    ],
+    "anchors": [
+      [
+        948,
+        99.5
+      ],
+      [
+        960,
+        166
+      ]
+    ],
+    "yaw": -10,
+    "elevation": -3,
+    "roll": -15,
+    "uncertainty": "Expression03 is the closest near-front opposite subtle-angle evidence, not a confirmed -45 view: yaw estimated -15..+5, pitch -8..+5, roll-15 +/-7. Upward gaze/open mouth differ from neutral. Do not infer exact opposing temple depth or closed-mouth likeness from this panel.",
+    "reference_sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52"
+  }
+]

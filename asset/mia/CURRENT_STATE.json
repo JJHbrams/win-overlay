@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated": "2026-11-01",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
-  "status": "reference_finish_v22_in_progress_art_not_approved",
+  "status": "reference_finish_v22_resumed_after_usage_interruption",
   "character_complete": false,
   "art_approved": false,
   "read_first": [
@@ -31,7 +31,8 @@
     "body_findings": "blender/mia-body-reference-audit-v19/BODY_AUDIT.md",
     "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md",
     "current_live_viewing_setup": "blender/mia-reference-finish-v22/Mia_ReviewSetup_v22.blend",
-    "viewport_and_camera_audit": "blender/mia-reference-finish-v22/camera-audit.json"
+    "viewport_and_camera_audit": "blender/mia-reference-finish-v22/camera-audit.json",
+    "integration_wip_v22": "blender/mia-reference-finish-v22/integration-diagnostic-1/integration-manifest.json"
   },
   "correction_review": {
     "independent_round1": "blender/mia-correction-v20/acceptance-round-1.md",
@@ -50,12 +51,12 @@
   },
   "stage_status": {
     "reference_inventory": "organized; generated candidate approvals remain separate",
-    "corresponding_view_camera_registration": "in_progress; no art PASS",
+    "corresponding_view_camera_registration": "14 fresh paired views in integrated-review-diagnostic-1; evidence valid. Estimated art angles and occlusion limits remain; no art PASS.",
     "lookdev_diagnostic_rig": "built and fresh-reopen tested; source shaders unchanged",
-    "face_head_art": "FAIL overall; orbital guide3cd locally recommended and integrated after fixed-view comparison. Full reference likeness, temple/cap shading and expressions remain unfinished.",
-    "body_art": "FAIL; first-pass8e262 retained. Subsequent offset, lower-loop and whole-primary attempts all rejected, including e174 after mirror bug repair.",
-    "hair_art": "FAIL overall;83c0 selected rear/lateral tips and coincident UV seams improved. Rear gathering still incorrect; bulb cbb and rolled-tube739 candidates rejected.",
-    "uv_and_color": "Hair4096 atlas is rebaked2048 source, no recovered high-frequency detail. Original UV/source provenance preserved; final repaint/texel density and calibrated material art unfinished.",
+    "face_head_art": "FAIL overall. Face finish4 locally recommended: actual new UV paint, iris/lash and profile improvements; cheek/upperface and source likeness remain unfinished.",
+    "body_art": "FAIL. Continuous patch c4 and c5 waist locally improved; c8 underside exists but horizontal shelf rejected. c9 parametric lower-pole contour in progress.",
+    "hair_art": "FAIL overall. New pigment0d787482 improves selective sheen/lock separation. Root specks, rough lower locks, braid/knot geometry and eye occlusion remain.",
+    "uv_and_color": "Face4 new full-linear albedo and coverage mask; hair new512px-per-view paint projected to4096 atlas with22.29% confident coverage. Actual UV diagnostics and route recorded. Final art/density unfinished.",
     "facial_deformation": "FAIL; small lash Close followers added, but full blink/paint/fold behavior and expression combinations remain unfinished",
     "garments": "deferred until anatomy gate",
     "final_rig_and_events": "deferred until static art and deformation gates"
@@ -111,5 +112,17 @@
     "fc61e0c"
   ],
   "reference_review_gate": "REFERENCE_REVIEW_GATE.md",
-  "active_progress": "blender/mia-reference-finish-v22/PROGRESS.md"
+  "active_progress": "blender/mia-reference-finish-v22/PROGRESS.md",
+  "resumed_v22": {
+    "face_finish4_sha256": "9d2c9d42c01c99f0138bb9227e3679ce3afa882d2f43c339ab26496c4c559a4b",
+    "face_status": "Independent local WIP recommendation only; AC2 FAIL. Hair occlusion tested by yaw bracket.",
+    "body_status": "c8 corrected 8a5bc113 rejected for long horizontal lower shelf. c9 tests X-dependent lower-pole height. Body art remains FAIL.",
+    "hair_status": "0d787482 independently recommended as material-only integration WIP; AC4 FAIL. Portable parts/hair-ink-paint evidence archived.",
+    "integration_diagnostic_sha256": "4c35b58700db0adac5c5b9994a4cec18ba593a0bd3da0175330f9bd4c41f68be",
+    "diagnostic_is_selected_final": false,
+    "last_remote_checkpoint": "ed080d502705021c36f1a0509ec43b52e2d6ddf1",
+    "resume_entry": "blender/mia-reference-finish-v22/PROGRESS.md",
+    "integrated_diagnostic_review": "blender/mia-reference-finish-v22/integrated-review-diagnostic-1/README.md",
+    "independent_parts_review": "blender/mia-reference-finish-v22/independent-parts-review-2.md"
+  }
 }

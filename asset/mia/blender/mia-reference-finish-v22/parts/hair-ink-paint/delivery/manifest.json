@@ -1,0 +1,71 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\Mia_HairLookdev_v22.blend",
+  "source_sha256": "396840f32e625460532acfbaefda3cf1f30c847af43897e4c17d53c7b0ba4b91",
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\ink-study\\generated-paint\\Mia_HairInkPaint_v22.blend",
+  "native_sha256": "0d787482198137c37a5fd80067f7f6ce74678c1a99df783b0ece7cb59c5fb319",
+  "recipe_sha256": "31f6bddb3f0808cd34941496a25e98f156f1045f0e83bcf330586886c46ee58a",
+  "mesh_uv_shape_keys_matrix_exact": 160,
+  "source_packed_images_exact": 63,
+  "material_slot_replay": [
+    {
+      "object": "MIA_V17_PIXAL_DetailedHair",
+      "slot": 0,
+      "old": "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon",
+      "new": "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon_GeneratedInk"
+    },
+    {
+      "object": "MIA_V20_Crown_PixalDonorLock",
+      "slot": 0,
+      "old": "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon",
+      "new": "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon_GeneratedInk"
+    }
+  ],
+  "all_other_slots_exact": true,
+  "status": "Frozen material experiment; source style improved in lock separation and selected sheen, NOT final ART approval",
+  "lighting": "unchanged frozen 396 shared physical review rig; actual diffuse response retained; main additional glossy term removed to avoid double-painted sheen",
+  "preservation": "fresh-preservation.json",
+  "actual_views": {
+    "front": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\ink-study\\generated-paint\\candidate_front.png",
+      "sha256": "eff46249c0513684846718d41145183d67d0ed78daf6cc1ac066a33f9fd1e38b"
+    },
+    "profile": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\ink-study\\generated-paint\\candidate_profile.png",
+      "sha256": "14ab5eb01b067c877d46d9994dfe0062fe28f0eefe9550e56cfee55eff22c275"
+    },
+    "back": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\ink-study\\generated-paint\\candidate_back.png",
+      "sha256": "cf4da42f96fba6b4ca2f3daf9114bd4ef853dbbe78807fefe3357151b7a4d5c1"
+    },
+    "left_oblique": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\ink-study\\generated-paint\\candidate_left_oblique.png",
+      "sha256": "706b5036be87c059c6d6ef0effda05daefb8e4e1f0c7871de3b846a4d65bed7e"
+    },
+    "right_oblique": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\ink-study\\generated-paint\\candidate_right_oblique.png",
+      "sha256": "540ff8bb51e5a879df2dbdda805bedd227aefa02bbb7e7d28440e16324da5738"
+    }
+  },
+  "projection": "projection-provenance.json",
+  "recipe_files": {
+    "build_candidate.py": "31f6bddb3f0808cd34941496a25e98f156f1045f0e83bcf330586886c46ee58a",
+    "build_review_package.py": "640e5f17e7a94816ae91670946b171bc366fa5235fe01b6f85ccf0ea6097f4f9",
+    "capture_projection.py": "bbcd7b015d08944d92a059512c7988302c37928223a158363f9c0244df149df3",
+    "project_paint.py": "3839db4ebdbe11f6194d90d15a64a92b8d79facaf66cbd6bb59d05a0e68e9a23",
+    "verify_preservation.py": "0f44321552ac5f3823a115e090a36a6d61bce47049905588311f548ffeefb6a3"
+  },
+  "runtime_exit_codes": {
+    "capture_corrected": 0,
+    "project_paint": 0,
+    "build_fresh_reopen_render": 0,
+    "fresh_preservation": 0,
+    "reference_review_validator": 0
+  },
+  "observed_limits": [
+    "Some projected fine lines soften or blend across views; 512px panels limit resolution. No claim of restored original 4K detail.",
+    "Residual dark crown root specks and irregular lower wisps remain; no geometric repair in this task.",
+    "Rear knot and braid are still simple and outside material-only scope.",
+    "Profile eye occlusion from existing fringe geometry remains.",
+    "Artist-painted sheen is not a physical specular map. All unseen regions use checkpoint fallback."
+  ]
+}

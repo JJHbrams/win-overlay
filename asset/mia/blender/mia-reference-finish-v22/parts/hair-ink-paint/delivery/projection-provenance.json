@@ -1,0 +1,34 @@
+{
+  "generated_input": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\ink-study\\generated-paint\\hair-paintover.png",
+    "sha256": "a1043f27bae42c3b1a8e134b72ade1eece154a3d68b610962222a1fd1b36d946",
+    "size": [
+      1536,
+      1024
+    ],
+    "per_view_pixels": [
+      512,
+      512
+    ],
+    "provider": "built-in image_gen; authored paintover, NOT actual render"
+  },
+  "source_view_geometry": "fixed 396840f3 head cameras; no mesh/UV changes",
+  "texture": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\ink-study\\generated-paint\\Mia_GeneratedInkPaint_4096.png",
+    "sha256": "c0315287ff0ed88ef97b0dd430e03caa73b181053621be07a124fae095c2632b",
+    "encoding": "sRGB RGB + straight coverage alpha",
+    "dimensions": [
+      4096,
+      4096
+    ]
+  },
+  "projection": "actual rendered depth/target visibility, abs(normal dot view)^6 blend, 2.5mm depth tolerance; generated color divided by captured technical diffuse ramp, not full physical delighting",
+  "coverage_fraction_of_rasterized_UV": 0.22286883941290972,
+  "limits": [
+    "Five 512-square generated panels do not equal 4K unique painted information",
+    "Generated paint can have cross-view drift; final actual native views must be inspected",
+    "Unknown/unseen areas fall back to checkpoint material",
+    "Artist shadows/highlights remain painted information; not pure albedo",
+    "No face/body pixels intentionally projected; conservative chroma/visibility masks applied"
+  ]
+}

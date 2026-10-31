@@ -1,0 +1,800 @@
+{
+  "MIA_V14_SculptedSkin": {
+    "slot": 7,
+    "material": "MIA_V22_Face_ActualLight_NewUV.001",
+    "images": [
+      {
+        "node": "MIA_V22_FULL_LINEAR_ALBEDO",
+        "image": "MIA_V22_Face_BaseColor_LINEAR_2048.001",
+        "colorspace": "Non-Color",
+        "packed": true,
+        "fake_user": true
+      }
+    ],
+    "uv_nodes": {
+      "UV \ub9f5": "UVMap"
+    },
+    "links": [
+      {
+        "from": [
+          "MeasuredWhiteDiffuse",
+          "BSDF"
+        ],
+        "to": [
+          "ActualSceneLighting",
+          "Shader"
+        ]
+      },
+      {
+        "from": [
+          "ActualSceneLighting",
+          "Color"
+        ],
+        "to": [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Color"
+        ]
+      },
+      {
+        "from": [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Val"
+        ],
+        "to": [
+          "\uc218\ud559",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559",
+          "Value"
+        ],
+        "to": [
+          "MIA_CommonSkinLightRamp",
+          "Factor"
+        ]
+      },
+      {
+        "from": [
+          "MIA_CommonSkinLightRamp",
+          "Color"
+        ],
+        "to": [
+          "PigmentTimesControlledLight",
+          "Color2"
+        ]
+      },
+      {
+        "from": [
+          "PigmentTimesControlledLight",
+          "Color"
+        ],
+        "to": [
+          "\ubc29\ucd9c",
+          "Color"
+        ]
+      },
+      {
+        "from": [
+          "\ubc29\ucd9c",
+          "Emission"
+        ],
+        "to": [
+          "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "Surface"
+        ]
+      },
+      {
+        "from": [
+          "UV \ub9f5",
+          "UV"
+        ],
+        "to": [
+          "MIA_V22_FULL_LINEAR_ALBEDO",
+          "Vector"
+        ]
+      },
+      {
+        "from": [
+          "MIA_V22_FULL_LINEAR_ALBEDO",
+          "Color"
+        ],
+        "to": [
+          "PigmentTimesControlledLight",
+          "Color1"
+        ]
+      }
+    ]
+  },
+  "MIA_V06_BODY_SKIN": {
+    "slot": 0,
+    "material": "MIA_V22_Body_CommonLight_Preview.001",
+    "images": [
+      {
+        "node": "AuthoredUVPigment",
+        "image": "MIA_V13_BodySkin_UV_2048",
+        "colorspace": "Non-Color",
+        "packed": true,
+        "fake_user": true
+      }
+    ],
+    "uv_nodes": {
+      "UV \ub9f5": "UVMap"
+    },
+    "links": [
+      {
+        "from": [
+          "MeasuredWhiteDiffuse",
+          "BSDF"
+        ],
+        "to": [
+          "ActualSceneLighting",
+          "Shader"
+        ]
+      },
+      {
+        "from": [
+          "ActualSceneLighting",
+          "Color"
+        ],
+        "to": [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Color"
+        ]
+      },
+      {
+        "from": [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Val"
+        ],
+        "to": [
+          "\uc218\ud559",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559",
+          "Value"
+        ],
+        "to": [
+          "MIA_CommonSkinLightRamp",
+          "Factor"
+        ]
+      },
+      {
+        "from": [
+          "UV \ub9f5",
+          "UV"
+        ],
+        "to": [
+          "AuthoredUVPigment",
+          "Vector"
+        ]
+      },
+      {
+        "from": [
+          "AuthoredUVPigment",
+          "Color"
+        ],
+        "to": [
+          "RemoveOldNeutralMultiplier",
+          "Color1"
+        ]
+      },
+      {
+        "from": [
+          "MIA_CommonSkinBaseLinear",
+          "Color"
+        ],
+        "to": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc)",
+          "Color1"
+        ]
+      },
+      {
+        "from": [
+          "RemoveOldNeutralMultiplier",
+          "Color"
+        ],
+        "to": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc)",
+          "Color2"
+        ]
+      },
+      {
+        "from": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc)",
+          "Color"
+        ],
+        "to": [
+          "PigmentTimesControlledLight",
+          "Color1"
+        ]
+      },
+      {
+        "from": [
+          "MIA_CommonSkinLightRamp",
+          "Color"
+        ],
+        "to": [
+          "PigmentTimesControlledLight",
+          "Color2"
+        ]
+      },
+      {
+        "from": [
+          "PigmentTimesControlledLight",
+          "Color"
+        ],
+        "to": [
+          "\ubc29\ucd9c",
+          "Color"
+        ]
+      },
+      {
+        "from": [
+          "\ubc29\ucd9c",
+          "Emission"
+        ],
+        "to": [
+          "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "Surface"
+        ]
+      }
+    ]
+  },
+  "MIA_V14_EyeSurface": {
+    "slot": 5,
+    "material": "MIA_V22_Iris_LowerArc_Rim",
+    "images": [],
+    "uv_nodes": {
+      "UV \ub9f5": "UVMap"
+    },
+    "links": [
+      {
+        "from": [
+          "UV \ub9f5",
+          "UV"
+        ],
+        "to": [
+          "\ubd84\ub9ac XYZ",
+          "Vector"
+        ]
+      },
+      {
+        "from": [
+          "\ubd84\ub9ac XYZ",
+          "X"
+        ],
+        "to": [
+          "\uc218\ud559",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.001",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.001",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.002",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.002",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.003",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\ubd84\ub9ac XYZ",
+          "Y"
+        ],
+        "to": [
+          "\uc218\ud559.004",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.004",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.005",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.003",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.006",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.003",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.006",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.005",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.007",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.005",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.007",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.006",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.008",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.007",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.008",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.008",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.009",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\ubd84\ub9ac XYZ",
+          "Y"
+        ],
+        "to": [
+          "MIA_V22_VisibleIrisToneRange",
+          "Factor"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.009",
+          "Value"
+        ],
+        "to": [
+          "\uc0c9\uc0c1 \ub7a8\ud504.001",
+          "Factor"
+        ]
+      },
+      {
+        "from": [
+          "MIA_V22_VisibleIrisToneRange",
+          "Color"
+        ],
+        "to": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc)",
+          "Color1"
+        ]
+      },
+      {
+        "from": [
+          "\uc0c9\uc0c1 \ub7a8\ud504.001",
+          "Color"
+        ],
+        "to": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc)",
+          "Color2"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.005",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.010",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.003",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.011",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.003",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.011",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.011",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.013",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.012",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.013",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.013",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.014",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.014",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.015",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.015",
+          "Value"
+        ],
+        "to": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+          "Factor"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.003",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.016",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.005",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.017",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.016",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.018",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.016",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.018",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.017",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.019",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.017",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.019",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.018",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.020",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.019",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.020",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.020",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.021",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.021",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.022",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.022",
+          "Value"
+        ],
+        "to": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+          "Factor"
+        ]
+      },
+      {
+        "from": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+          "Color"
+        ],
+        "to": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+          "Color1"
+        ]
+      },
+      {
+        "from": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+          "Color"
+        ],
+        "to": [
+          "\ubc29\ucd9c",
+          "Color"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.009",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.023",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.023",
+          "Value"
+        ],
+        "to": [
+          "\uc870\ud569 \uc170\uc774\ub354",
+          "Factor"
+        ]
+      },
+      {
+        "from": [
+          "\ud22c\uba85 BSDF",
+          "BSDF"
+        ],
+        "to": [
+          "\uc870\ud569 \uc170\uc774\ub354",
+          "Shader"
+        ]
+      },
+      {
+        "from": [
+          "\ubc29\ucd9c",
+          "Emission"
+        ],
+        "to": [
+          "\uc870\ud569 \uc170\uc774\ub354",
+          "Shader"
+        ]
+      },
+      {
+        "from": [
+          "\uc870\ud569 \uc170\uc774\ub354",
+          "Shader"
+        ],
+        "to": [
+          "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "Surface"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.010",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.024",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.024",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.012",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.024",
+          "Value"
+        ],
+        "to": [
+          "\uc218\ud559.012",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.009",
+          "Value"
+        ],
+        "to": [
+          "MIA_V22_LowerArc_RadialBand",
+          "Factor"
+        ]
+      },
+      {
+        "from": [
+          "\ubd84\ub9ac XYZ",
+          "Y"
+        ],
+        "to": [
+          "MIA_V22_LowerArc_VMask",
+          "Factor"
+        ]
+      },
+      {
+        "from": [
+          "MIA_V22_LowerArc_RadialBand",
+          "Color"
+        ],
+        "to": [
+          "\uc218\ud559.025",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "MIA_V22_LowerArc_VMask",
+          "Color"
+        ],
+        "to": [
+          "\uc218\ud559.025",
+          "Value"
+        ]
+      },
+      {
+        "from": [
+          "\uc218\ud559.025",
+          "Value"
+        ],
+        "to": [
+          "MIA_V22_ReflectedLowerArc",
+          "Factor"
+        ]
+      },
+      {
+        "from": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc)",
+          "Color"
+        ],
+        "to": [
+          "MIA_V22_ReflectedLowerArc",
+          "Color1"
+        ]
+      },
+      {
+        "from": [
+          "MIA_V22_ReflectedLowerArc",
+          "Color"
+        ],
+        "to": [
+          "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+          "Color1"
+        ]
+      }
+    ]
+  },
+  "sclera_backface_culling": true,
+  "native_unchanged": true
+}

@@ -1,0 +1,111 @@
+{
+  "reference": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+    "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+    "crop_xyxy": [
+      525,
+      48,
+      605,
+      120
+    ],
+    "anchors": [
+      [
+        558,
+        70
+      ],
+      [
+        553,
+        107
+      ]
+    ],
+    "anchor_uncertainty_original_px": 2
+  },
+  "candidate": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-4\\Mia_FaceFinish_v22.blend",
+    "sha256": "9d2c9d42c01c99f0138bb9227e3679ce3afa882d2f43c339ab26496c4c559a4b"
+  },
+  "registrations": {
+    "hair_60": {
+      "uniform_scale": 0.7437778873546899,
+      "rotation_degrees": -4.921934148348628,
+      "translation_xy": [
+        -97.9929582466745,
+        -203.62361174026267
+      ],
+      "normalization_basis": "Visible-side iris carrier center to actual chin normalized to manual source eye/chin; this height/orientation is not validated. No anisotropic warp.",
+      "render_sha256": "49af3ba1fd94d7cc0129470cd2c1a9138fff46336ff7b8ab77a10d85df55ee3f"
+    },
+    "hair_70": {
+      "uniform_scale": 0.7529744207016887,
+      "rotation_degrees": -1.2208124133728295,
+      "translation_xy": [
+        -52.265903087734785,
+        -228.07692319846979
+      ],
+      "normalization_basis": "Visible-side iris carrier center to actual chin normalized to manual source eye/chin; this height/orientation is not validated. No anisotropic warp.",
+      "render_sha256": "94344d148fa053cf82eec82f639bd8f2fcfd409eca7cdd0511b147040d782ca3"
+    },
+    "hair_80": {
+      "uniform_scale": 0.7594363460929018,
+      "rotation_degrees": 2.8278476420918044,
+      "translation_xy": [
+        -4.629200748763651,
+        -248.1087830374156
+      ],
+      "normalization_basis": "Visible-side iris carrier center to actual chin normalized to manual source eye/chin; this height/orientation is not validated. No anisotropic warp.",
+      "render_sha256": "7fd324434e9ced24bb15def3d42321aadd63c4d182dd1367d811a37bee83cc44"
+    },
+    "hair_90": {
+      "uniform_scale": 0.7621410197999048,
+      "rotation_degrees": 7.073994214356851,
+      "translation_xy": [
+        42.69550876598856,
+        -262.3258636509809
+      ],
+      "normalization_basis": "Visible-side iris carrier center to actual chin normalized to manual source eye/chin; this height/orientation is not validated. No anisotropic warp.",
+      "render_sha256": "f8209346f92b459609078bd241398ee33b24247562178ddbbce5c6575a25a3f5"
+    },
+    "bare_60": {
+      "uniform_scale": 0.7437778873546899,
+      "rotation_degrees": -4.921934148348628,
+      "translation_xy": [
+        -97.9929582466745,
+        -203.62361174026267
+      ],
+      "normalization_basis": "Visible-side iris carrier center to actual chin normalized to manual source eye/chin; this height/orientation is not validated. No anisotropic warp.",
+      "render_sha256": "cda723af557d6e4ebf4505f841c448a9151fde497e5fb4962889234d4f50b8ee"
+    },
+    "bare_70": {
+      "uniform_scale": 0.7529744207016887,
+      "rotation_degrees": -1.2208124133728295,
+      "translation_xy": [
+        -52.265903087734785,
+        -228.07692319846979
+      ],
+      "normalization_basis": "Visible-side iris carrier center to actual chin normalized to manual source eye/chin; this height/orientation is not validated. No anisotropic warp.",
+      "render_sha256": "0f3b3652b3bf2bbdc067dd7f37509d966afc59bc8c79fcdb00f9b25eb1d68989"
+    },
+    "bare_80": {
+      "uniform_scale": 0.7594363460929018,
+      "rotation_degrees": 2.8278476420918044,
+      "translation_xy": [
+        -4.629200748763651,
+        -248.1087830374156
+      ],
+      "normalization_basis": "Visible-side iris carrier center to actual chin normalized to manual source eye/chin; this height/orientation is not validated. No anisotropic warp.",
+      "render_sha256": "ec22888c1b987f00c166e8ffc7c4e5f4453e5dea8748ad8848debc58b50a3122"
+    },
+    "bare_90": {
+      "uniform_scale": 0.7621410197999048,
+      "rotation_degrees": 7.073994214356851,
+      "translation_xy": [
+        42.69550876598856,
+        -262.3258636509809
+      ],
+      "normalization_basis": "Visible-side iris carrier center to actual chin normalized to manual source eye/chin; this height/orientation is not validated. No anisotropic warp.",
+      "render_sha256": "a9d32d0af346d2610e770c071149d8559e551b8b639e747dbc83fa92b357acee"
+    }
+  },
+  "board_sha256": "ec75e3b664896dc5502f9b5f193a27239905e493519e0db60c9ab7cd2804b9d5",
+  "pose_uncertainty": "Unknown stylized source projection; yaw60..90 bracket, pitch\u00b16; hair and source eye drawing can independently affect iris exposure. SRT eye-to-chin anchors cannot prove exact camera or profile depth."
+}

@@ -1,0 +1,42 @@
+{
+  "source_hashes_unchanged": {
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\Mia_HairLookdev_v22.blend": "396840f32e625460532acfbaefda3cf1f30c847af43897e4c17d53c7b0ba4b91",
+    "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-lookdev-v22\\ink-study\\generated-paint\\Mia_HairInkPaint_v22.blend": "0d787482198137c37a5fd80067f7f6ce74678c1a99df783b0ece7cb59c5fb319"
+  },
+  "checked_meshes": 160,
+  "geometry_uv_weights_keys_matrix_visibility_differences": [],
+  "changed_material_owners": [
+    "MIA_V17_PIXAL_DetailedHair",
+    "MIA_V20_Crown_PixalDonorLock"
+  ],
+  "material_slot_replay": {
+    "MIA_V17_PIXAL_DetailedHair": {
+      "source": [
+        "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon",
+        "MIA_V17_RecoveredBraidTie.002_V22_LightToon"
+      ],
+      "candidate": [
+        "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon_GeneratedInk",
+        "MIA_V17_RecoveredBraidTie.002_V22_LightToon"
+      ]
+    },
+    "MIA_V20_Crown_PixalDonorLock": {
+      "source": [
+        "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon",
+        "MIA_V17_RecoveredBraidTie.002_V22_LightToon"
+      ],
+      "candidate": [
+        "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon_GeneratedInk",
+        "MIA_V17_RecoveredBraidTie.002_V22_LightToon"
+      ]
+    }
+  },
+  "unexpected_nonhair_material_changes": [],
+  "original_packed_images": 63,
+  "original_packed_image_differences": [],
+  "added_packed_images": [
+    "MIA_V22_GeneratedSelectiveLockPigment"
+  ],
+  "scope_pass": true,
+  "saved": false
+}
