@@ -1,0 +1,69 @@
+{
+  "asset_id": "MIA-BODY-V06",
+  "created_date": "2026-10-31",
+  "generator": "built-in image_gen.imagegen",
+  "transparent_background": false,
+  "path_convention": {
+    "inputs_and_outputs": "relative to asset/mia/references",
+    "prompt_file": "relative to body-foundation/v06"
+  },
+  "status": "completed_requested_art_pending_user_review",
+  "authoritative_inputs": [
+    {
+      "path": "body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png",
+      "sha256": "a79af7148079278c10ff88543b9f801d4d618e0007ec4f1a01ab26253c4db685",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "role": "selected front body, lower-outer chest volume and calf proportion anchor"
+    }
+  ],
+  "generation_chain": [
+    {
+      "step": "source-volume-restoration",
+      "prompt_file": "01-source-volume-restoration-prompt.txt",
+      "prompt_sha256": "16d4b631eea3dece690d803e6800f0d6b236411dd7dd87d40b95da7d1ca023f9",
+      "inputs": [
+        "body-foundation/v05/mia-body-turnaround-v05.png",
+        "body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png"
+      ],
+      "output": {
+        "path": "body-foundation/v06/mia-body-turnaround-v06.png",
+        "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "status": "completed_requested_art_pending_user_review"
+    },
+    {
+      "step": "body-visibility-guide-sync",
+      "prompt_file": "02-guide-sync-prompt.txt",
+      "prompt_sha256": "a9e182701d05e79289b1a297aecaf2421309156e1b3d2000ca60c830586f7ef9",
+      "inputs": [
+        "body-foundation/v05/mia-body-visibility-guide-v05.png",
+        "body-foundation/v06/mia-body-turnaround-v06.png",
+        "body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png"
+      ],
+      "output": {
+        "path": "body-foundation/v06/mia-body-visibility-guide-v06.png",
+        "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "note": "Long hair is temporarily hidden only to expose neck, shoulder and back body surfaces for modeling; it is not a hairstyle replacement.",
+      "status": "completed_requested_art_pending_user_review"
+    }
+  ],
+  "not_fulfilled": [
+    "This localized v06 volume restoration does not fulfill the separately blocked v04 side-volume revision.",
+    "The images are illustrative concept sheets, not calibrated orthographic drawings or 3D model approval."
+  ]
+}

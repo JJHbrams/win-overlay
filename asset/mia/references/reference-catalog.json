@@ -8,15 +8,15 @@
     "visible_front_body_and_original_hair": "MIA-USER-FRONT-20261031",
     "selected_front_body_anchor": "MIA-BODY-FRONT-SELECTED-20261031",
     "latest_requested_front_revision": "MIA-BODY-FRONT-CALF-V01",
-    "latest_available_four_view_study": "MIA-BODY-V05",
-    "body_visibility_modeling_supplement": "MIA-BODY-V05-VISIBILITY-GUIDE",
+    "latest_available_four_view_study": "MIA-BODY-V06",
+    "body_visibility_modeling_supplement": "MIA-BODY-V06-VISIBILITY-GUIDE",
     "side_volume_revision": "blocked_no_v04_image"
   },
   "rules": [
     "Select by role and explicit user decision, never by largest version number alone.",
     "Existing source files/paths are preserved.",
     "Generated views are illustrative reconstructions and do not certify model geometry or dimensions.",
-    "V05 is an illustrated four-view candidate derived from the selected front/calf revision; it remains pending user review and does not certify geometry or dimensions.",
+    "V06 is an illustrated four-view candidate derived from the selected front/calf revision; it remains pending user review and does not certify geometry or dimensions.",
     "The separately requested v04 side-volume revision remains blocked and is not fulfilled by v05."
   ],
   "assets": [
@@ -171,8 +171,8 @@
     },
     {
       "id": "MIA-BODY-V05",
-      "status": "completed_requested_art_pending_user_review",
-      "role": "latest_available_four_view_study",
+      "status": "superseded_by_v06_source_volume_restoration_pending_user_review",
+      "role": "generated_body_study",
       "path": "body-foundation/v05/mia-body-turnaround-v05.png",
       "sha256": "bdf57d4667a5b1067b9edf4786387d93b05830969bc7252c6658f7cdadc2905a",
       "size": [
@@ -185,8 +185,8 @@
     },
     {
       "id": "MIA-BODY-V05-VISIBILITY-GUIDE",
-      "status": "completed_requested_art_pending_user_review",
-      "role": "body_visibility_modeling_supplement",
+      "status": "superseded_by_v06_source_volume_restoration_pending_user_review",
+      "role": "generated_body_study_supplement",
       "path": "body-foundation/v05/mia-body-visibility-guide-v05.png",
       "sha256": "3a334a468058083cf64a99ea450328526c1b0605f035075460d29e74632da2e0",
       "size": [
@@ -196,6 +196,34 @@
       "mode": "RGB",
       "provenance": "body-foundation/v05/provenance.json",
       "review": "body-foundation/v05/review.ko.md"
+    },
+    {
+      "id": "MIA-BODY-V06",
+      "status": "completed_requested_art_pending_user_review",
+      "role": "latest_available_four_view_study",
+      "path": "body-foundation/v06/mia-body-turnaround-v06.png",
+      "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "provenance": "body-foundation/v06/provenance.json",
+      "review": "body-foundation/v06/review.ko.md"
+    },
+    {
+      "id": "MIA-BODY-V06-VISIBILITY-GUIDE",
+      "status": "completed_requested_art_pending_user_review",
+      "role": "body_visibility_modeling_supplement",
+      "path": "body-foundation/v06/mia-body-visibility-guide-v06.png",
+      "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "provenance": "body-foundation/v06/provenance.json",
+      "review": "body-foundation/v06/review.ko.md"
     },
     {
       "id": "MIA-LEGACY-BODY_MV_CONDITION_BACK",
