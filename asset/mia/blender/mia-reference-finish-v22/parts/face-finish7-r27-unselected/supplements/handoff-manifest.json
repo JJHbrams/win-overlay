@@ -1,0 +1,239 @@
+{
+  "status": "Frozen R27 proposal awaiting parent/independent art judgment; no integration or whole-art PASS",
+  "superseded_acceptance": "R19 surface approval REVOKED after user rejection of flattened cheek volume. R23 eye work remains separately retained; live WIP6 is diagnostic.",
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\Mia_FaceFinish7_OrbitalTransitionR27_v22.blend",
+    "sha256": "23c5bb76bfad482b605a00e8e740650924620e573bf9919d01eb009a371c73e0"
+  },
+  "source_r23": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\Mia_FaceFinish7_BlinkR23_v22.blend",
+    "sha256": "579cfc375708852132bf406d2b34a958a46b358f32b844dcb074ed70ad6f6923"
+  },
+  "exact_replay": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\owner-key-replay-from-r23.json",
+    "sha256": "85761222c0629d55154443c0ed8d13e36483baf4173ee6a1aeff0847112ad0a2"
+  },
+  "apply_rule": "Verify exact before on source owner/key then replace after; mesh_cache separately. Only skin owner is included. Existing R23 eye/carrier/lash owners, body and hair remain untouched.",
+  "diagnosis": {
+    "baseline_inspection": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\baseline-volume-inspection.json",
+      "sha256": "6c8ead09f97a463636c3102bf0ba7093c54afbc874824978be9d16e8fa2af640"
+    },
+    "specific_outer_support": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r26\\rim-support.json",
+      "sha256": "13a762bcf1d4c8d55d294aa9d3fcb712eb6da93738c9f138c16b5e7341d3316e"
+    },
+    "after_sections": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\restored-section-comparison.json",
+      "sha256": "1ad6794abaf32ea7cf6e2c496ba54fcc2e87c945c8f37b8136630437be358e35"
+    },
+    "finding": "R19/R23 materially retracted anterior malar and short buccal depth, not merely surface noise. R25 restored forward mass but exposed a narrow lower-orbital shelf. R26 retained mass and redistributed apex/support spacing; R27 corrected measured inward-then-outward backtracking in the outer lower-orbital support rows.",
+    "section_examples_mm": {
+      "r23_forward_loss_at_x35_z1512_to1526": [
+        3.3247,
+        7.3251
+      ],
+      "r23_forward_loss_at_x55_z1519": 17.1394,
+      "r27_forward_gain_at_x35_z1519": 5.1171,
+      "r27_forward_gain_at_x45_z1526": 6.6985
+    },
+    "measurement_limit": "Fixed localX/Z front-sheet rays are diagnostic depth projections, not homologous tissue displacement, source-derived dimensions, or total cheek volume."
+  },
+  "anatomical_changes": [
+    "High anterior malar mass restored primarily forward, with a broad apex toward outer iris/zygoma.",
+    "Short anterior-buccal fullness retained below apex, tapering before unchanged chin/jaw.",
+    "Superior and outer orbital support spacing redistributed; a measured backward depth segment was removed without changing the true aperture."
+  ],
+  "scope": {
+    "changed_skin_vertices_from_r23": 78,
+    "maximum_cage_delta_m": 0.0073027407586252115,
+    "owners": [
+      "MIA_V14_SculptedSkin"
+    ],
+    "ear_vertices_588_to727_allkeys_exact": true,
+    "all_changed_skin_positions_above_local1_49": true,
+    "body_hair_eye_carrier_and_four_lash_owners_exact": true,
+    "true_evaluated_aperture_boundary_exact_at_close0_half_full": true,
+    "uv_materials_topology_weights_modifiers_preserved": true,
+    "no_makeup_or_global_smoothing": true
+  },
+  "recipes": {
+    "r25": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\build_volume_r25.py",
+      "sha256": "a12198698b99b4c4a9742933d193b2c4dfc33f7cfe4efd9e6453dafd0962ce2a"
+    },
+    "r26": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r26\\build_transition_r26.py",
+      "sha256": "f8f76f32487bcc1b339c175c2ebf1730db269de2221d7a6b74c66726189c6e9b"
+    },
+    "r27": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\build_tangent_r27.py",
+      "sha256": "51a5117df974b24667c71f99abea55d00902cc96057c0d1bbb0d2ebd3d0e63eb"
+    },
+    "r27_expanded": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\expanded-recipe.py",
+      "sha256": "5c3d536ba289b351fe909af61f8b231b357795a2b8ff8ffc2476ff8a8cbc67a9"
+    },
+    "exact_export": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\export_scope_and_sections.py",
+      "sha256": "be358051b8adf00f9bdb4f97f1cd96520f89d046609a0bcd990031210a3841b3"
+    },
+    "exact_export_expanded": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\expanded-export.py",
+      "sha256": "46dfc2bebf151a78a5a14c0cd43c41635b9e26d3f429fb2c183756d829645b6d"
+    },
+    "contact_audit": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\audit_contact.py",
+      "sha256": "c508d971713b76697141b39fe60db4d1bf6833046c09159a4e274bf9e0f3673c"
+    },
+    "matte_render": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\render_volume.py",
+      "sha256": "39feb3002957c7c6bd29ee5badb0a08858691406bbcf1e73e816e0d4d462797d"
+    },
+    "extra_render": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\render_volume_extra.py",
+      "sha256": "c2e716776b33345900d97cd9fa3f01ca07a751a9cc04201bb84548c74d20cbfb"
+    },
+    "neutral_source_render": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\render_neutral_source_four.py",
+      "sha256": "e985ba986e47f4d7788b6d202c2f213b72cdad44dac442f7954f84b37caea1d4"
+    },
+    "shared_render_setup": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\render_source_motion.py",
+      "sha256": "bd448e4ad88483b5f5d48926e7fb8628475d5daa76edbccc889ca22b616219b7"
+    },
+    "limited_blink_render": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\render_limited_blink.py",
+      "sha256": "e7013fecb052424926140745eb554547e0e7e61bbb5dd7171e5d5e3994ddb511"
+    }
+  },
+  "evidence_sets": {
+    "face6_before": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\face6-before\\render-records.json",
+        "sha256": "f6bdd517f980ca5ca6090d6feb9c5d4c1c68970b561a1c92ee75e63a05d26e2b"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-6\\continuous-candidate\\Mia_FaceFinish6_v22.blend",
+        "sha256": "f5d17264e07f492983e7e075d5a3213b2bd14a4adaead82072899e9b3e15d98a"
+      },
+      "actual_image_count": 9
+    },
+    "r23_before": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\r23-before\\render-records.json",
+        "sha256": "e12f92d569a5b6e3a3fdbbf2c34c74b7ebf52a461462b8be945efceebf05d23b"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\Mia_FaceFinish7_BlinkR23_v22.blend",
+        "sha256": "579cfc375708852132bf406d2b34a958a46b358f32b844dcb074ed70ad6f6923"
+      },
+      "actual_image_count": 9
+    },
+    "r23_extra": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\r23-extra\\render-records.json",
+        "sha256": "2aa2e3c15ad52d124b8d80ca09de141b31efbf3d7077f85a59e9853702d91529"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\Mia_FaceFinish7_BlinkR23_v22.blend",
+        "sha256": "579cfc375708852132bf406d2b34a958a46b358f32b844dcb074ed70ad6f6923"
+      },
+      "actual_image_count": 6
+    },
+    "r25_after": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\after\\render-records.json",
+        "sha256": "1796e6c74a7b90efb41aa0462062efe34b5b4fc5476c49eec925e04a462b0180"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\Mia_FaceFinish7_MalarVolumeR25_v22.blend",
+        "sha256": "90ab9011586c4687987ec74e906654ca97de8f6499aa7bbb55698d248f66d5f5"
+      },
+      "actual_image_count": 9
+    },
+    "r26_after": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r26\\after\\render-records.json",
+        "sha256": "5631f7dd3ba94d8e79896c1e114aa14721784b0dff2bd04b55e971eaa2210bea"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r26\\Mia_FaceFinish7_MalarTransitionR26_v22.blend",
+        "sha256": "ed3efef8c234fda43f9f8ce8429f39119e1e04ba92d6eb78e74d5f80f227f77d"
+      },
+      "actual_image_count": 9
+    },
+    "r27_after": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\after\\render-records.json",
+        "sha256": "44de8582137f024540b5a556deded41d7654689f6191969de3ab2cb26513e5ad"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\Mia_FaceFinish7_OrbitalTransitionR27_v22.blend",
+        "sha256": "23c5bb76bfad482b605a00e8e740650924620e573bf9919d01eb009a371c73e0"
+      },
+      "actual_image_count": 9
+    },
+    "r27_extra": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\after-extra\\render-records.json",
+        "sha256": "8bcecfa1f4c3fa1752cc252e79bcad8fd5201ce6696634ca8d984d69f721e6f7"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\Mia_FaceFinish7_OrbitalTransitionR27_v22.blend",
+        "sha256": "23c5bb76bfad482b605a00e8e740650924620e573bf9919d01eb009a371c73e0"
+      },
+      "actual_image_count": 6
+    },
+    "source_four": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\source-four\\render-records.json",
+        "sha256": "ba025cea00b19c2799fdf94e1edca801ca85b4876f1d93e2b8b34072bf2978a0"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\Mia_FaceFinish7_OrbitalTransitionR27_v22.blend",
+        "sha256": "23c5bb76bfad482b605a00e8e740650924620e573bf9919d01eb009a371c73e0"
+      },
+      "actual_image_count": 12
+    },
+    "limited_blink": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\limited-blink\\render-records.json",
+        "sha256": "ae94f5c80ee40da9f67ed863995188688ecd8f42a18f198d182d0ff7e9a79ec2"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\Mia_FaceFinish7_OrbitalTransitionR27_v22.blend",
+        "sha256": "23c5bb76bfad482b605a00e8e740650924620e573bf9919d01eb009a371c73e0"
+      },
+      "actual_image_count": 8
+    }
+  },
+  "matched_camera_max_component_errors": {
+    "face6_before": 0.0,
+    "r23_before": 0.0,
+    "r25_after": 0.0,
+    "r26_after": 0.0
+  },
+  "contact_audit": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r25\\refinement-r27\\contact-audit.json",
+    "sha256": "8f7a204e8b27ada70ad65b141f5f5a3ed5651a284060699b504dbc8dd3dedd65"
+  },
+  "producer_visual_review": {
+    "inspected": [
+      "R27 lowfront",
+      "R27 low+30",
+      "R27 low+60",
+      "R27 high-30",
+      "R27 hair-source-front",
+      "R27 matte half-front",
+      "R27 matte full+60"
+    ],
+    "finding": "Outer lower-orbital narrow band materially reduced from R26 while forward mass remains. Half remains partial, full has no visible leak in inspected front/+60, lashes attached. High-angle under-orbit contour and overall source form still require independent judgment."
+  },
+  "limits": [
+    "No parent or user acceptance is inferred from technical guards.",
+    "No all47-expression motion claim. R23 subpixel full-closure residual remains unchanged.",
+    "Producer inherited hair is not the selected live Hair0d; parent owns Body14/Hair0d integration.",
+    "R25/R26 frozen failed-transition trials remain preserved. No new candidate will be made until actual review feedback."
+  ]
+}
