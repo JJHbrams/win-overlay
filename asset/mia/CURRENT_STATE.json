@@ -85,9 +85,9 @@
     "older source129/133 versus model109/112 aperture widths mixed lash extrema and bright opening; withdrawn as geometry target"
   ],
   "immediate_next": [
-    "Use WIP8 as review-only actual editor checkpoint. User hollow-cheek issue partially improved, not fully resolved. Preserve highmalar and restoredcentralvolume while fixing upper diagonal transition using one coherent3D surface; no incrementalglobalflattening.",
-    "Compare unchanged sourcefront/profile/bothobliques and low/intermediate views; source profileyaw and eye-to-chin normalization remain uncertainties. Do not use simple numeric residual or one silhouette as ARTacceptance.",
-    "Refine source profile/nose/eye character and silhouette, then assess textures/light; currentD maps remain real but not finalsourceart.",
+    "Whole-face proportion/jaw-taper pass from immutable WIP8. Supersede old cheek-only chin/eye-coordinate locks; preserve source identity and technical coherence instead.",
+    "Compare raw source and front using documented eye-spacing normalization to expose eye-to-chin height; old eye-to-chin-normalized board cannot validate that dimension. Use corresponding bilateral oblique/profile/subtle expression views simultaneously.",
+    "After coherent outline/primary surface, correct upper-outer and lower eyelid curves with eye/lash/contact together, then actual fatigue/makeup layers. Map presence and limited small corrections do not count as completed likeness.",
     "Hair24 bun is readable but too high/concentric; repair gathering position/side convergence and main ear/nape extraction topology; leave originalPixalsource immutable.",
     "Body23n only changes lower/lateral thorax. BodyUV/bodyart incomplete; oldUVMap retained. Garments/finalrig/events remain downstream."
   ],
@@ -106,16 +106,16 @@
     "private_real_person_references_not_used_or_recorded": true
   },
   "worktree_archive": "WORKTREE_ARCHIVE.md",
-  "active_contract": "blender/mia-reference-finish-v22/static-finish-8/ACCEPTANCE.md",
+  "active_contract": "blender/mia-reference-finish-v22/face-anatomy-9/ACCEPTANCE.md",
   "latest_user_feedback": {
     "body": "Use Body Foundation/anatomy-led continuous forms. Live nowBody14 aslocalWIP; lower/outer ovoid boundaries and body UV unfinished.",
-    "face": "LATEST: 볼이 너무 패인거아니야? F2 restores central cheek support and its lateral attachment; under-eye diagonal and whole source likeness still unresolved. Do not erase malar mass with global smoothing or infer completion from this partial recovery.",
+    "face": "LATEST USER: face too wide/short; cheek-to-chin abruptly narrow/pointed; upper outer lid curvature and lower lid angle unlike source; fatigue/makeup impression weak. Whole face proportions/jaw/eyes must change before paint, not another cheek-only patch.",
     "hair": "Rear central finishing volume appears absent; half-up feature is gathered hair/bun, not cord or ribbon.",
     "texture": "Old4096 rebake did not add information. Current0d has limited newly painted512px-per-view coverage; no4K-detail or final style claim.",
     "eyes_tested": "Eye-only translations +/-0.5/1.5mm and depth scale0.9/1.1 alter lid contact/sclera but leave fixed skin wall; no probe variant selected. 3cd actual surface guide selected.",
     "viewport": "Actual live PERSP50 view pivot Y2.087m behind head; saved camera and prior19 renders ORTHO. Fix head-centred navigation/cameras/lights without changing model origins.",
     "profile_texture": "Use main/expressions/turnaround eye-nose-mouth profile and nose shading; finish face/head/body and UV style maps autonomously while user sleeps.",
-    "current_directive": "Combine investigated know-how and finish source-faithful face/head/body/hair modeling including texture maps. Static finish remains unapproved; original sources and separate owners preserved."
+    "current_directive": "Study artist face construction and correct whole-face proportions/continuous jaw contour/eyelid character, then actual source-style makeup. Preserve originals, not erroneous feature coordinates. Current WIP8 remains unapproved."
   },
   "prior_remote_checkpoints": [
     "96761ba9719132640151c1b113a6cc7c0e3988ac",
@@ -153,5 +153,6 @@
     "path": "blender/mia-reference-finish-v22/parts/face-finish8-f2-review/native/6d0672ae12ea-Mia_FaceFinish8_ConnectedBuccalF2.blend",
     "sha256": "6d0672ae12eaa0c8a4386a42291e2bb39cf9b70921d5183929500df2fa63eef9",
     "status": "Review-only central/lateral buccal recovery; under-eye diagonal and source profile still unresolved. D2K maps inherited; eyes and chin preserved from D."
-  }
+  },
+  "unselected_anatomy9_trials": "A1 wrong standalone source; A2 weak improvement; Workbench camera local/world-axis error invalidates those evidence images; A3 proxy transform invalid; A3b target proxy only, not transferred. No candidate promoted; live WIP8 unchanged."
 }
