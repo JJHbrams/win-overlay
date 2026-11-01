@@ -1,0 +1,106 @@
+[
+  {
+    "view": "front",
+    "mode": "lit",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-anatomy-9\\material-work\\upperfold-m5\\placement-corrected-review\\lit-front-source-m4-m5.png",
+    "sha256": "aa965156c3322350e1b701d4816cc30e5db3307e9ce362445215b177c4a37c73",
+    "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+    "reference_registration": {
+      "uniform_scale": 1.6388888888888888,
+      "rotation_degrees": 0.0,
+      "translation_xy": [
+        -532.2222222222222,
+        -261.80555555555554
+      ],
+      "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+    },
+    "baseline_and_candidate_registration": {
+      "uniform_scale": 0.912311623077772,
+      "rotation_degrees": 5.314126249484533,
+      "translation_xy": [
+        -98.44109544930888,
+        -261.89537062312104
+      ],
+      "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+    },
+    "pose_uncertainty": "Portrait near-front: yaw +/-6, pitch +/-6, roll +/-3 degrees. Eye midpoint/pupil estimate +/-2 pixels; hair covers temple. Eye-to-chin normalization cannot prove face height."
+  },
+  {
+    "view": "front",
+    "mode": "color_only",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-anatomy-9\\material-work\\upperfold-m5\\placement-corrected-review\\color_only-front-source-m4-m5.png",
+    "sha256": "030052dcd8dcdd1b8f9661ed23ad5179e369792df48892f927c35e48611b0668",
+    "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+    "reference_registration": {
+      "uniform_scale": 1.6388888888888888,
+      "rotation_degrees": 0.0,
+      "translation_xy": [
+        -532.2222222222222,
+        -261.80555555555554
+      ],
+      "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+    },
+    "baseline_and_candidate_registration": {
+      "uniform_scale": 0.912311623077772,
+      "rotation_degrees": 5.314126249484533,
+      "translation_xy": [
+        -98.44109544930888,
+        -261.89537062312104
+      ],
+      "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+    },
+    "pose_uncertainty": "Portrait near-front: yaw +/-6, pitch +/-6, roll +/-3 degrees. Eye midpoint/pupil estimate +/-2 pixels; hair covers temple. Eye-to-chin normalization cannot prove face height."
+  },
+  {
+    "view": "left_oblique",
+    "mode": "lit",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-anatomy-9\\material-work\\upperfold-m5\\placement-corrected-review\\lit-left_oblique-source-m4-m5.png",
+    "sha256": "c72f423c05a1e0c607b3ffa7e30c0872251b7d2428a0881c886d4ad31a651761",
+    "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+    "reference_registration": {
+      "uniform_scale": 3.3714285714285714,
+      "rotation_degrees": 0.0,
+      "translation_xy": [
+        -4121.857142857143,
+        -59.285714285714306
+      ],
+      "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+    },
+    "baseline_and_candidate_registration": {
+      "uniform_scale": 0.8399900854158027,
+      "rotation_degrees": 2.0772797262387996,
+      "translation_xy": [
+        -55.376182063170404,
+        -222.33905376579932
+      ],
+      "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+    },
+    "pose_uncertainty": "Expression04: image-left facing, yaw15..35, pitch +/-8, roll-15 +/-7. Sideways eye gaze differs from neutral; pupil centers approximate orbital anchors. Mouth neutral-ish; far outline partially occluded."
+  },
+  {
+    "view": "left_oblique",
+    "mode": "color_only",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-anatomy-9\\material-work\\upperfold-m5\\placement-corrected-review\\color_only-left_oblique-source-m4-m5.png",
+    "sha256": "e9a1148cb5b54935d01871a73a4ce75974fe45cdc41710fb307f054ae140617a",
+    "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+    "reference_registration": {
+      "uniform_scale": 3.3714285714285714,
+      "rotation_degrees": 0.0,
+      "translation_xy": [
+        -4121.857142857143,
+        -59.285714285714306
+      ],
+      "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+    },
+    "baseline_and_candidate_registration": {
+      "uniform_scale": 0.8399900854158027,
+      "rotation_degrees": 2.0772797262387996,
+      "translation_xy": [
+        -55.376182063170404,
+        -222.33905376579932
+      ],
+      "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+    },
+    "pose_uncertainty": "Expression04: image-left facing, yaw15..35, pitch +/-8, roll-15 +/-7. Sideways eye gaze differs from neutral; pupil centers approximate orbital anchors. Mouth neutral-ish; far outline partially occluded."
+  }
+]

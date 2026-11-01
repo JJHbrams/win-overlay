@@ -1,0 +1,62 @@
+{
+  "method": "Display-only SRT: translate pupil midpoint, de-roll pupil line, uniform scale by pupil distance; no face warp or eye-to-chin fit.",
+  "limits": [
+    "Manual landmarks are approximate, not ground truth.",
+    "Concept/model pose, perspective and hidden hair boundary remain uncertain.",
+    "Candidate pupils inherited only for a jaw-only pass; update after eye change."
+  ],
+  "images": [
+    {
+      "label": "Concept",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+      "sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44",
+      "manual_pupils_px": [
+        [
+          450,
+          324
+        ],
+        [
+          582,
+          310
+        ]
+      ],
+      "pupil_distance_px": 132.74034804836094,
+      "approx_eye_to_chin_over_ipd": 1.0969353007945517,
+      "approx_mouth_to_chin_over_ipd": 0.38365493757094227
+    },
+    {
+      "label": "WIP8 baseline",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integrated-review-wip-8\\candidate\\face\\front.png",
+      "sha256": "477d549ec895470805d63a2b6aa37122ef3b857fc06dca58d18d566ad032dc71",
+      "manual_pupils_px": [
+        [
+          383,
+          539
+        ],
+        [
+          614,
+          513
+        ]
+      ],
+      "pupil_distance_px": 232.4585984643287,
+      "approx_eye_to_chin_over_ipd": 1.034439365619853,
+      "approx_mouth_to_chin_over_ipd": 0.330606806447434
+    },
+    {
+      "label": "Current WIP9 + M5 / actual native",
+      "path": "asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-9-review\\source-review-m5\\candidate\\face\\front.png",
+      "sha256": "20d830721ef1b1f2d3f87756cb40f2abae7fc7d644c16f0a7cf99d004cd80564",
+      "manual_pupils_px": [
+        [
+          383,
+          539
+        ],
+        [
+          614,
+          513
+        ]
+      ],
+      "pupil_distance_px": 232.4585984643287
+    }
+  ]
+}

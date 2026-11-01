@@ -1,5 +1,25 @@
 # WIP9 combined face review — not final likeness
 
+## Current actual editor: M5 look added
+
+Current native is `Mia_FaceReview_v22_WIP9_M5.blend`, SHA256 `c04f81985330eace7ba06142cb99419f7c043f680f8fcfbefefff237ece56778`. It is the byte-identical adopted copy of the inspected placement-corrected M5 candidate. It retains WIP9 geometry, UV, all keys and original packed map bytes; only the skin material slot7 changes. `m5-adoption.json` links the provenance. Actual MCP opened it from clean WIP9 and returned five fresh captures in `../live-wip-9-m5-review`; root inspected the head zoom. No native was saved by viewport review.
+
+M5 adds a thin warm upper crease and a faint lower bright edge from measured eyelid UV curves. The first placement was hidden by the upper lash and is unselected. Actual lash clearance was measured before correcting the placement, with no contrast sweep. Root and independent reviewer inspected corrected lit/color-only front/oblique and blink evidence. The fold is a small visible improvement; it is still less shaped than the concept and does not solve the generic lower rim or broad under-eye pigment band. No new raster map is claimed.
+
+Fresh final-native source comparisons are in `source-review-m5/face`; root inspected both obliques/profile and the front look. `eye-spacing-wip9-m5.png` retains height visibility. The M5 producer's `placement-corrected-review` contains actual paired half/full blink. Geometry is exactly WIP9, so its matte findings still apply.
+
+| Requested outcome | Actual final state |
+|---|---|
+| Face proportions | Lower-face height improved in approximate eye-spacing calibration; overall width/shape not accepted. |
+| Continuous cheek-to-jaw contour | **Unresolved.** Q10/Q11 rejected; WIP9 notch and profile wedge remain. |
+| Source eye character | Upper/lower rim curves changed; tired gaze closer, source outer/lower finesse still incomplete. |
+| Makeup/fatigue identity | Existing pigment strengthened and upper-fold layer added; source paint character not complete. |
+| Technical preservation/deformation | Native reopened, scoped data preserved; limited actual blink checks only, not full animation validation. |
+
+Overall art acceptance remains **FAIL / unfinished**. There are no further geometry or material producers running. Do not resume small coordinate-field trials as if the failed jaw task were solved.
+
+## Earlier WIP9 / M4 checkpoint
+
 Actual saved native: `Mia_FaceReview_v22_WIP9.blend`, SHA256 `fb85468a623e1befc590176a24636548b944491ce4ae19decaece625304945b2`.
 
 This is a review checkpoint combining Q9 geometry, E2 eyelid contours and M4 material. It is now open in actual Blender through MCP; `../live-wip-9-review/live-review.json` records five real viewport captures and the unchanged native hash. Root viewed front/left-oblique captures. It does not complete Mia, the face art gate, texture authoring or expression validation.
