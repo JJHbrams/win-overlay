@@ -51,3 +51,17 @@ The earlier Workbench mask artifacts came from a wrong front-camera axis: skin l
 The prior `face-feedback-7/normal-diagnosis/FINDINGS.md` isolates earlier Face6/R8 normals and finds the diagonal on the unchanged surface even with ordinary diffuse shading and freshly recomputed normals. That is earlier-model evidence, not a new WIP8 measurement, but it rejects normal recalculation as the established fix. The old cage fans bridge dense eye loops to sparse cheek triangles; topology valence alone is not proof of failure.
 
 The material worker directly inspected WIP8 packed pixels and consumed links: FatigueMask and FineLineMask are present. The missing visual hierarchy is a broad fatigue mass plus a separately readable lower fold/outer line, rather than merely making a uniform narrow band darker. Geometry and material trials stay separate until each is actually inspected.
+
+## Retraction: P2 did not preserve the actual mouth anchor
+
+The P2 producer's intent and the root's earlier explanation said the mouth was kept in place. The actual neutral mouth-boundary comparison contradicts that: WIP8 mean local Z is 1.494905576m, and Q7 (which inherits P2) is 3.999964mm lower on average. All identified rim vertices moved about -4mm. Eye boundary Z stayed unchanged. The height threshold was not the actual mouth boundary, and the root initially accepted the intended behavior rather than verifying the achieved anchor.
+
+This is an implementation/verification error, not an artistic choice. Root explicitly corrected the user-facing statement. Q9 is to restore the actual mouth height with its surrounding muzzle/corners, preserve the useful chin extension, and inspect the resulting facial proportions in all source views. The warm-pigment span comparison suggests a wider visible middle cheek, but hair/shadow/neck contamination prevents treating it as an exact anatomical-width target.
+
+## Connected surface and eye-curve observations
+
+Q1–Q6b did not provide an acceptable face: control-cage fitting reduced a numeric residual while amplifying creases; a direct loft made a new boundary ledge. The original Q6 additionally had all new shape keys at value1 and is an invalid exploded-state test, not evidence of neutral form. Q6b corrected that error.
+
+The bake-only control was compared to original P2 in neutral, half/full blink and local head yaw +/-15 degrees; evaluated positional differences stayed below .001mm and UV error was zero. This validates only those tested states, not a final rig. Q7 then edits the dense actual surface with a broad cubic fit; root and independent review find less fragmented front-cheek curvature without the Q6b ledge. Nose/mouth/chin and full source likeness remain unresolved. The portable replay and exact coordinate/UV/weight/driver/evaluated hashes are archived under `../parts/face-anatomy9-q7-working`.
+
+E2 changes actual upper/lower aperture arcs rather than translating the same curved line or scaling the whole eye. Root and independent review find a clearer tired neutral gaze, with no new visible white leak in the inspected half/full blink. Outer wing thickness, lower-lid integration and whole likeness are still unresolved. It is a local eye improvement, not final face acceptance.

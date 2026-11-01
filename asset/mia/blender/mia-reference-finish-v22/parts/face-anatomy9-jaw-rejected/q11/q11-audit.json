@@ -1,0 +1,55 @@
+{
+  "status": "REJECTED / INDEPENDENT VISUAL REGRESSION",
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-9-review\\Mia_FaceReview_v22_WIP9.blend",
+  "source_sha256": "fb85468a623e1befc590176a24636548b944491ce4ae19decaece625304945b2",
+  "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-connected-v26\\jaw-q11\\Mia_JawCarrier_Q11.blend",
+  "candidate_sha256": "c870c7793059eb1e90b0cc0b414c9f403e5c22b2a47941a5d3e74570117c369f",
+  "mapping": "x_new=x+sign(x)*f(z)*C2(abs(x);12.5mm,30.5mm); y_new=y; z_new=z. Same mapping for all anterior/posterior/circumferential points.",
+  "support_z_m": [
+    1.477,
+    1.504
+  ],
+  "lower_lobe": {
+    "amplitude_m": 0.0015,
+    "rise": [
+      1.477,
+      1.48
+    ],
+    "fall": [
+      1.482,
+      1.485
+    ]
+  },
+  "corner_lobe": {
+    "amplitude_m": -0.0025,
+    "rise": [
+      1.482,
+      1.489
+    ],
+    "fall": [
+      1.496,
+      1.504
+    ]
+  },
+  "actual_max_abs_xyz_mm": [
+    2.5000013411045074,
+    0.0,
+    0.0
+  ],
+  "actual_positive_x_abs_radius_change_mm": 1.071188598871231,
+  "analytic_global_jacobian_lower_bound": 0.7395833333333333,
+  "sampled_surface_jacobian_min": 0.7395849701110808,
+  "sampled_surface_jacobian_max": 1.1562474751104952,
+  "mouth_boundary_max_delta_mm": 0.0,
+  "eye_boundary_max_delta_mm": 0.0,
+  "upper_ear_region_max_delta_mm": 0.0,
+  "all_key_delta_residual_max_mm": 1.862645149230957e-06,
+  "key_names_unchanged": true,
+  "uv_topology_groups_weights_material_names_other_mesh_coordinates_exact": true,
+  "other_mesh_count": 165,
+  "key_count": 47,
+  "changed_vertices": 1755,
+  "scope": "Only gradual lower-cheek/jaw taper; no nose/profile-depth fix, no whole-face approval",
+  "visual_result": "Frontal notch reduces, but new parallel horizontal lower-cheek grooves/crumpled mouth-corner patch and rearward side/profile grooves outweigh contour gain.",
+  "independent_reviewer": "root/final_face_review9"
+}

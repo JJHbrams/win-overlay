@@ -1,0 +1,26 @@
+{
+  "sources": {
+    "baseline": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-connected-v26\\Mia_ConnectedLoft_Q7_SurfaceFit.blend",
+      "sha256": "2ec94d0d0a79969e1583c88c45cfdf3ceb19f1f3f8e7b1e39e325909260ddf81"
+    },
+    "candidate": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-anatomy-9\\eye-identity-work\\e1-q7\\Mia_EyeContour_E1.blend",
+      "sha256": "57598c44ba54aadd08a2f3dde13927259d41d44fa0609fbba79fa5b37784dd6b"
+    }
+  },
+  "same_camera_lighting_pose": true,
+  "source_package": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\face-finish8-f2-review\\reference-review.json",
+    "sha256": "c14b29d365597c7f9cd6516dd5ed7d544090552fb6c5eb67f198ef41ed5abe34"
+  },
+  "renderer": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-anatomy-9\\eye-identity-work\\render_eye_review.py",
+    "sha256": "9723f95d5a3decf08c014340e2957bbe060e92637102c50851581d916f6a5db1"
+  },
+  "art_status": "UNREVIEWED",
+  "limits": [
+    "Neutral four source-camera views, front half/fullblink and two matte angles only. Not full expression validation.",
+    "Signed vertical boundary gap diagnostic is not eyelid-eye collision detection."
+  ]
+}

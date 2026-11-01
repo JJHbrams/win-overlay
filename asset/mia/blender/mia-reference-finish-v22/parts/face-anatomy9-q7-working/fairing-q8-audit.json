@@ -1,0 +1,39 @@
+{
+  "method": "minimum bending graph y(x,z), projected cotangent bi-Laplacian, two fixed boundary collars impose original position and first tangent; six anterior-volume anchors",
+  "patch_vertices": 2328,
+  "free_vertices": 1536,
+  "fixed_vertices": 792,
+  "max_delta_mm": 2.216890254926815,
+  "rms_delta_mm": 0.4991402664673745,
+  "anchors": [
+    {
+      "index": 8436,
+      "target_y": 0.06986876577138901
+    },
+    {
+      "index": 5153,
+      "target_y": 0.06462812287807465
+    },
+    {
+      "index": 2236,
+      "target_y": 0.06502605873346329
+    },
+    {
+      "index": 9621,
+      "target_y": 0.0696420818567276
+    },
+    {
+      "index": 6362,
+      "target_y": 0.06441274149417878
+    },
+    {
+      "index": 3889,
+      "target_y": 0.0644476627111435
+    }
+  ],
+  "no_gaussian_or_iteration_smoothing": true,
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-connected-v26\\Mia_Q6b_BakeOnly_Control.blend",
+  "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-connected-v26\\Mia_ConnectedSurface_Q8_BoundaryFair.blend",
+  "candidate_sha256": "410852702c772ace229c227243c474b25e35342917921795d7704d85e92c7355",
+  "status": "UNAPPROVED"
+}

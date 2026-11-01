@@ -1,0 +1,789 @@
+{
+  "wip8": {
+    "source": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-8-review\\Mia_ReferenceFinish_v22.blend",
+      "sha256": "ff2b61b2b2146fc4f73119cf10534571609dff75f6333fbec34d0926068b8bb4"
+    },
+    "material": "MIA_Finish8_AuthoredFacePigment",
+    "render_visible_skin": true,
+    "raw_vertices": 728,
+    "evaluated_uv_loop_counts": {
+      "UVMap": 64416
+    },
+    "evaluated_uv_hashes": {
+      "UVMap": "67cf33db56f29bfa68817e3c2c730bfb44a7cd8c6dd6bece17525c50f65090a6"
+    },
+    "uv_nodes": {
+      "FINISH8_ACTUAL_UV": "UVMap"
+    },
+    "invalid_uv_nodes": [],
+    "actual_reachable_nodes": [
+      "ActualSceneLighting",
+      "FINISH8_ACTUAL_UV",
+      "FINISH8_BasePigment",
+      "FINISH8_FatigueMask",
+      "FINISH8_FineLineMask",
+      "FINISH8_FineLinePigment",
+      "FINISH8_PigmentFatigue",
+      "MIA_CommonSkinLightRamp",
+      "MeasuredWhiteDiffuse",
+      "PigmentTimesControlledLight",
+      "RGB\ub97c BW\ub85c \ubcc0\ud658",
+      "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+      "\ubc29\ucd9c",
+      "\uc218\ud559"
+    ],
+    "actual_consumed_image_maps": {
+      "FINISH8_BasePigment": {
+        "name": "MIA_Finish8_BasePigment",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "Non-Color",
+        "packed_sha256": "6bdbd142866c918a5db482368220c425d96233a2464aee81ebd525421197e1b4"
+      },
+      "FINISH8_FatigueMask": {
+        "name": "MIA_Finish8_FatigueMask",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "Non-Color",
+        "packed_sha256": "7e4a5ccad264a12c4a0c051cace8689292d7807e292e34838e4131202bf57ed3"
+      },
+      "FINISH8_FineLineMask": {
+        "name": "MIA_Finish8_FineLineMask",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "Non-Color",
+        "packed_sha256": "6e11c7c67945e24a14b73f43dac8f1e82be524d152be46da341a5ff000fc1764"
+      }
+    },
+    "actual_consumed_links": [
+      [
+        [
+          "MeasuredWhiteDiffuse",
+          "BSDF"
+        ],
+        [
+          "ActualSceneLighting",
+          "Shader"
+        ]
+      ],
+      [
+        [
+          "ActualSceneLighting",
+          "Color"
+        ],
+        [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Color"
+        ]
+      ],
+      [
+        [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Val"
+        ],
+        [
+          "\uc218\ud559",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "\uc218\ud559",
+          "Value"
+        ],
+        [
+          "MIA_CommonSkinLightRamp",
+          "Factor"
+        ]
+      ],
+      [
+        [
+          "MIA_CommonSkinLightRamp",
+          "Color"
+        ],
+        [
+          "PigmentTimesControlledLight",
+          "Color2"
+        ]
+      ],
+      [
+        [
+          "PigmentTimesControlledLight",
+          "Color"
+        ],
+        [
+          "\ubc29\ucd9c",
+          "Color"
+        ]
+      ],
+      [
+        [
+          "\ubc29\ucd9c",
+          "Emission"
+        ],
+        [
+          "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "Surface"
+        ]
+      ],
+      [
+        [
+          "FINISH8_ACTUAL_UV",
+          "UV"
+        ],
+        [
+          "FINISH8_BasePigment",
+          "Vector"
+        ]
+      ],
+      [
+        [
+          "FINISH8_ACTUAL_UV",
+          "UV"
+        ],
+        [
+          "FINISH8_FatigueMask",
+          "Vector"
+        ]
+      ],
+      [
+        [
+          "FINISH8_ACTUAL_UV",
+          "UV"
+        ],
+        [
+          "FINISH8_FineLineMask",
+          "Vector"
+        ]
+      ],
+      [
+        [
+          "FINISH8_FatigueMask",
+          "Color"
+        ],
+        [
+          "FINISH8_PigmentFatigue",
+          "Factor"
+        ]
+      ],
+      [
+        [
+          "FINISH8_BasePigment",
+          "Color"
+        ],
+        [
+          "FINISH8_PigmentFatigue",
+          "Color1"
+        ]
+      ],
+      [
+        [
+          "FINISH8_FineLineMask",
+          "Color"
+        ],
+        [
+          "FINISH8_FineLinePigment",
+          "Factor"
+        ]
+      ],
+      [
+        [
+          "FINISH8_PigmentFatigue",
+          "Color"
+        ],
+        [
+          "FINISH8_FineLinePigment",
+          "Color1"
+        ]
+      ],
+      [
+        [
+          "FINISH8_FineLinePigment",
+          "Color"
+        ],
+        [
+          "PigmentTimesControlledLight",
+          "Color1"
+        ]
+      ]
+    ],
+    "note": "No native save. Connected maps are technical evidence only; actual combined-geometry appearance requires the separate render review."
+  },
+  "wip9": {
+    "source": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-9-review\\Mia_FaceReview_v22_WIP9.blend",
+      "sha256": "fb85468a623e1befc590176a24636548b944491ce4ae19decaece625304945b2"
+    },
+    "material": "MIA_FaceAnatomy9_Identity_m4",
+    "render_visible_skin": true,
+    "raw_vertices": 16338,
+    "evaluated_uv_loop_counts": {
+      "UVMap": 64416
+    },
+    "evaluated_uv_hashes": {
+      "UVMap": "67cf33db56f29bfa68817e3c2c730bfb44a7cd8c6dd6bece17525c50f65090a6"
+    },
+    "uv_nodes": {
+      "FINISH8_ACTUAL_UV": "UVMap"
+    },
+    "invalid_uv_nodes": [],
+    "actual_reachable_nodes": [
+      "ActualSceneLighting",
+      "FINISH8_ACTUAL_UV",
+      "FINISH8_BasePigment",
+      "FINISH8_FatigueMask",
+      "FINISH8_FineLineMask",
+      "FINISH8_FineLinePigment",
+      "FINISH8_PigmentFatigue",
+      "IDENTITY9_FatigueExponent",
+      "IDENTITY9_FatigueStrength",
+      "IDENTITY9_FoldInnerFade",
+      "IDENTITY9_FoldMirrorU",
+      "IDENTITY9_FoldOuterFade",
+      "IDENTITY9_FoldUAbs",
+      "IDENTITY9_FoldUOffset",
+      "IDENTITY9_FoldVHigh",
+      "IDENTITY9_FoldVLow",
+      "IDENTITY9_FoldVScope",
+      "IDENTITY9_LidLineExponent",
+      "IDENTITY9_LidLineStrength",
+      "IDENTITY9_MeasuredLowerLidUVCurve",
+      "IDENTITY9_SecondaryFoldPigment",
+      "IDENTITY9_SmoothFoldDistance",
+      "IDENTITY9_SmoothFoldEndpoints",
+      "IDENTITY9_SmoothFoldEyeOnly",
+      "IDENTITY9_SmoothFoldGaussian",
+      "IDENTITY9_SmoothFoldNegative",
+      "IDENTITY9_SmoothFoldOffset",
+      "IDENTITY9_SmoothFoldSquare",
+      "IDENTITY9_SmoothFoldStrength",
+      "IDENTITY9_SmoothFoldValue",
+      "IDENTITY9_SmoothFoldWidth",
+      "IDENTITY9_UVComponents",
+      "MIA_CommonSkinLightRamp",
+      "MeasuredWhiteDiffuse",
+      "PigmentTimesControlledLight",
+      "RGB\ub97c BW\ub85c \ubcc0\ud658",
+      "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+      "\ubc29\ucd9c",
+      "\uc218\ud559"
+    ],
+    "actual_consumed_image_maps": {
+      "FINISH8_BasePigment": {
+        "name": "MIA_Finish8_BasePigment",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "Non-Color",
+        "packed_sha256": "6bdbd142866c918a5db482368220c425d96233a2464aee81ebd525421197e1b4"
+      },
+      "FINISH8_FatigueMask": {
+        "name": "MIA_Finish8_FatigueMask",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "Non-Color",
+        "packed_sha256": "7e4a5ccad264a12c4a0c051cace8689292d7807e292e34838e4131202bf57ed3"
+      },
+      "FINISH8_FineLineMask": {
+        "name": "MIA_Finish8_FineLineMask",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "Non-Color",
+        "packed_sha256": "6e11c7c67945e24a14b73f43dac8f1e82be524d152be46da341a5ff000fc1764"
+      }
+    },
+    "actual_consumed_links": [
+      [
+        [
+          "MeasuredWhiteDiffuse",
+          "BSDF"
+        ],
+        [
+          "ActualSceneLighting",
+          "Shader"
+        ]
+      ],
+      [
+        [
+          "ActualSceneLighting",
+          "Color"
+        ],
+        [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Color"
+        ]
+      ],
+      [
+        [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Val"
+        ],
+        [
+          "\uc218\ud559",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "\uc218\ud559",
+          "Value"
+        ],
+        [
+          "MIA_CommonSkinLightRamp",
+          "Factor"
+        ]
+      ],
+      [
+        [
+          "MIA_CommonSkinLightRamp",
+          "Color"
+        ],
+        [
+          "PigmentTimesControlledLight",
+          "Color2"
+        ]
+      ],
+      [
+        [
+          "PigmentTimesControlledLight",
+          "Color"
+        ],
+        [
+          "\ubc29\ucd9c",
+          "Color"
+        ]
+      ],
+      [
+        [
+          "\ubc29\ucd9c",
+          "Emission"
+        ],
+        [
+          "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "Surface"
+        ]
+      ],
+      [
+        [
+          "FINISH8_ACTUAL_UV",
+          "UV"
+        ],
+        [
+          "FINISH8_BasePigment",
+          "Vector"
+        ]
+      ],
+      [
+        [
+          "FINISH8_ACTUAL_UV",
+          "UV"
+        ],
+        [
+          "FINISH8_FatigueMask",
+          "Vector"
+        ]
+      ],
+      [
+        [
+          "FINISH8_ACTUAL_UV",
+          "UV"
+        ],
+        [
+          "FINISH8_FineLineMask",
+          "Vector"
+        ]
+      ],
+      [
+        [
+          "FINISH8_BasePigment",
+          "Color"
+        ],
+        [
+          "FINISH8_PigmentFatigue",
+          "Color1"
+        ]
+      ],
+      [
+        [
+          "FINISH8_PigmentFatigue",
+          "Color"
+        ],
+        [
+          "FINISH8_FineLinePigment",
+          "Color1"
+        ]
+      ],
+      [
+        [
+          "FINISH8_FatigueMask",
+          "Color"
+        ],
+        [
+          "IDENTITY9_FatigueExponent",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FatigueExponent",
+          "Value"
+        ],
+        [
+          "IDENTITY9_FatigueStrength",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FatigueStrength",
+          "Value"
+        ],
+        [
+          "FINISH8_PigmentFatigue",
+          "Factor"
+        ]
+      ],
+      [
+        [
+          "FINISH8_FineLineMask",
+          "Color"
+        ],
+        [
+          "IDENTITY9_LidLineExponent",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_LidLineExponent",
+          "Value"
+        ],
+        [
+          "IDENTITY9_LidLineStrength",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_LidLineStrength",
+          "Value"
+        ],
+        [
+          "FINISH8_FineLinePigment",
+          "Factor"
+        ]
+      ],
+      [
+        [
+          "FINISH8_ACTUAL_UV",
+          "UV"
+        ],
+        [
+          "IDENTITY9_UVComponents",
+          "Vector"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_UVComponents",
+          "Y"
+        ],
+        [
+          "IDENTITY9_FoldVLow",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_UVComponents",
+          "Y"
+        ],
+        [
+          "IDENTITY9_FoldVHigh",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FoldVLow",
+          "Value"
+        ],
+        [
+          "IDENTITY9_FoldVScope",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FoldVHigh",
+          "Value"
+        ],
+        [
+          "IDENTITY9_FoldVScope",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_UVComponents",
+          "X"
+        ],
+        [
+          "IDENTITY9_FoldUOffset",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FoldUOffset",
+          "Value"
+        ],
+        [
+          "IDENTITY9_FoldUAbs",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FoldUAbs",
+          "Value"
+        ],
+        [
+          "IDENTITY9_FoldMirrorU",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FoldMirrorU",
+          "Value"
+        ],
+        [
+          "IDENTITY9_MeasuredLowerLidUVCurve",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_MeasuredLowerLidUVCurve",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldOffset",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_UVComponents",
+          "Y"
+        ],
+        [
+          "IDENTITY9_SmoothFoldDistance",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldOffset",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldDistance",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldDistance",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldWidth",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldWidth",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldSquare",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldWidth",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldSquare",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldSquare",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldNegative",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldNegative",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldGaussian",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FoldMirrorU",
+          "Value"
+        ],
+        [
+          "IDENTITY9_FoldOuterFade",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FoldMirrorU",
+          "Value"
+        ],
+        [
+          "IDENTITY9_FoldInnerFade",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FoldOuterFade",
+          "Result"
+        ],
+        [
+          "IDENTITY9_SmoothFoldEndpoints",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FoldInnerFade",
+          "Result"
+        ],
+        [
+          "IDENTITY9_SmoothFoldEndpoints",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldEndpoints",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldEyeOnly",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_FoldVScope",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldEyeOnly",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldEyeOnly",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldValue",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldGaussian",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldValue",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldValue",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SmoothFoldStrength",
+          "Value"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SmoothFoldStrength",
+          "Value"
+        ],
+        [
+          "IDENTITY9_SecondaryFoldPigment",
+          "Factor"
+        ]
+      ],
+      [
+        [
+          "FINISH8_FineLinePigment",
+          "Color"
+        ],
+        [
+          "IDENTITY9_SecondaryFoldPigment",
+          "Color1"
+        ]
+      ],
+      [
+        [
+          "IDENTITY9_SecondaryFoldPigment",
+          "Color"
+        ],
+        [
+          "PigmentTimesControlledLight",
+          "Color1"
+        ]
+      ]
+    ],
+    "note": "No native save. Connected maps are technical evidence only; actual combined-geometry appearance requires the separate render review."
+  },
+  "checks": {
+    "evaluated_uv_exact": true,
+    "three_original_packed_maps_exact_and_consumed": true,
+    "m4_procedural_fold_reaches_actual_output": true,
+    "m4_shifted_mask_node_not_used": true,
+    "native_hashes_unchanged": true,
+    "art_pass": false
+  }
+}

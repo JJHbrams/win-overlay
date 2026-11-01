@@ -1,0 +1,61 @@
+{
+  "source": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-8-review\\Mia_ReferenceFinish_v22.blend",
+    "sha256": "ff2b61b2b2146fc4f73119cf10534571609dff75f6333fbec34d0926068b8bb4"
+  },
+  "candidate": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-anatomy-9\\material-work\\trial-m4\\Mia_FaceIdentity9_Material.blend",
+    "sha256": "cd6a862839858a33e97d9afd8fed2b40576818bee8978e76d885a74bd8d20ae2"
+  },
+  "material_before": "MIA_Finish8_AuthoredFacePigment",
+  "material_after": "MIA_FaceAnatomy9_Identity_m4",
+  "maps": {
+    "FINISH8_BasePigment": {
+      "image": "MIA_Finish8_BasePigment",
+      "colorspace": "Non-Color",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed_sha256": "6bdbd142866c918a5db482368220c425d96233a2464aee81ebd525421197e1b4"
+    },
+    "FINISH8_FatigueMask": {
+      "image": "MIA_Finish8_FatigueMask",
+      "colorspace": "Non-Color",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed_sha256": "7e4a5ccad264a12c4a0c051cace8689292d7807e292e34838e4131202bf57ed3"
+    },
+    "FINISH8_FineLineMask": {
+      "image": "MIA_Finish8_FineLineMask",
+      "colorspace": "Non-Color",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed_sha256": "6e11c7c67945e24a14b73f43dac8f1e82be524d152be46da341a5ff000fc1764"
+    },
+    "IDENTITY9_SecondaryFoldExistingMask": {
+      "image": "MIA_Finish8_FineLineMask",
+      "colorspace": "Non-Color",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed_sha256": "6e11c7c67945e24a14b73f43dac8f1e82be524d152be46da341a5ff000fc1764"
+    }
+  },
+  "meshes_uv_keys_transforms_exact": true,
+  "source_unchanged": true,
+  "recipe": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-anatomy-9\\material-work\\apply_material_identity.py",
+    "sha256": "a5d837705f655e20789a276a1914cce0c8f9db741351da59105c4ab3e48cfa2e"
+  },
+  "limits": [
+    "No new UV texture painting or normal/specular maps.",
+    "M3 uses a measured UV lower-lid curve for the separate procedural fold. M1/M2 duplicate the existing line mask. Expression and new eye geometry alignment must be reviewed.",
+    "Material trial is not ART PASS."
+  ]
+}
