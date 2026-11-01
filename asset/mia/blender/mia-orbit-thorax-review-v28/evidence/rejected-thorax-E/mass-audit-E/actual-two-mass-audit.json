@@ -1,0 +1,51 @@
+{
+  "frozen_E": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\Mia_ConnectedThorax_v28_E.blend",
+    "sha256": "dfb9e2c3d9774f9dc3c00bd396e20a5b6f8b3aaa926570aff1a8d5f9d549c87c"
+  },
+  "actual_core_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\mass-audit-E\\Mia_E_ActualCoreContribution.blend",
+    "sha256": "bc24dc731c7a63f10c75807d31015268cc6d66e0ae8e219daec1ec527ce24492"
+  },
+  "algebra": "Epre = narrow[(1-f)*baseline + f*Dsupport + f*.74*Dtissue]; H is the exact linear upper/axillary biharmonic extension. ActualEcore = baseline + H(narrow[(1-f)*baseline+f*Dsupport]-baseline); actualEtissue = H(narrow-vector[f*.74*Dtissue]).",
+  "pre_extension_sum_error_m": 1.3877787807814457e-17,
+  "full_extension_sum_error_m": 1.214306433183765e-16,
+  "same_evaluated_topology": true,
+  "evaluated_vertices": 80771,
+  "inherited_baseline_residual_max_m": 0.0012534401933014276,
+  "inherited_baseline_residual_count_gt1mm_in_thorax": 4,
+  "actual_tissue_offset_max_m": 0.03163395326855187,
+  "corefit_provenance": "Dsupport front/back/width tables were native-section-informed estimates and include sternum/front-center values inherited from e9 in breast-height range. This audit does not assert that those center-front values exclude prior breast mass. Upper extension also retains baseline contributions by construction.",
+  "interpretation_status": "CORE/BREAST MASS GATE UNMET; E unadopted pending independent core-only review and any required corrective construction.",
+  "unchanged_sources": true,
+  "normal_offset_audit": {
+    "definition": "Dot(savedE evaluated point - actual no-Dsoft evaluated point, outward area-weighted no-Dsoft vertex normal); polygon loop correspondence checked, quad diagonals may differ.",
+    "front_region_max_outward_m": 0.02913415941741327,
+    "front_region_min_m": -0.00014506768620130663,
+    "front_inward_count_beyond_.5mm": 0,
+    "back_offset_over1mm_count": 32
+  },
+  "evidence": {
+    "source-core-skin-front.png": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\mass-audit-E\\source-core-skin-front.png",
+      "sha256": "3798e2edffb04800bb8d79f51cc55617ea710719521db5cfd7190aea843bc417"
+    },
+    "source-core-skin-profile.png": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\mass-audit-E\\source-core-skin-profile.png",
+      "sha256": "a0b1acfa2acad5880ef982a487a1edb68bc2ab78071bc77350de8070a4e365e4"
+    },
+    "source-core-skin-oblique.png": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\mass-audit-E\\source-core-skin-oblique.png",
+      "sha256": "6d449e3e612e10780400c2be6075384e427ecfdf1e2d5e186560372bd58ec780"
+    },
+    "actual-core-skin-sections.png": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\mass-audit-E\\actual-core-skin-sections.png",
+      "sha256": "2d9173caae6ef5f4c07808b1005a130764cd357266b0684abec243e1d0dfb589"
+    },
+    "explicit-Dsoft-normal-footprint.png": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\mass-audit-E\\explicit-Dsoft-normal-footprint.png",
+      "sha256": "0e0314a63ceda234583e918d36a792fba1fe41a63c0d3fa844f2daf60b8d08f6"
+    }
+  },
+  "actual_visual_findings": "No-Dsoft renders retain a broad lower-thorax forward bulge and shallow under-bust-like rim. Surface continuity and positive explicit offsets cannot alone establish anatomically valid cage/core. Baseline blend residual is small; support fit itself requires separate review."
+}
