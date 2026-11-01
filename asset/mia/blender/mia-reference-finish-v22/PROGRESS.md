@@ -4,7 +4,7 @@ Read `static-finish-8/ACCEPTANCE.md`, `static-finish-8/REVIEW.md`, `asset/mia/CU
 
 ## Actual editor
 
-`integration-wip-8-review/Mia_ReferenceFinish_v22.blend`, SHA `ff2b61b2b2146fc4f73119cf10534571609dff75f6333fbec34d0926068b8bb4`, is open in actual Blender MCP. It is a review checkpoint, not a completed or ART-approved model. Five rendered ORTHO MCP captures leave head center(0,0,1.55), distance0.63. Native bytes unchanged.32fresh source/diagnostic renders and3strict source packages are recorded in `integrated-review-wip-8`; actual saved-camera previews are in `production-preview-wip-8`.
+`integration-wip-8-review/Mia_ReferenceFinish_v22.blend`, SHA `ff2b61b2b2146fc4f73119cf10534571609dff75f6333fbec34d0926068b8bb4`, is open in actual Blender MCP. It is a review checkpoint, not a completed or ART-approved model. Five rendered ORTHO MCP captures leave head center(0,0,1.55), distance0.63. Native bytes unchanged.34fresh source/diagnostic renders and3strict source packages are recorded in `integrated-review-wip-8`; actual saved-camera previews are in `production-preview-wip-8`.
 
 ## Current owners
 
@@ -20,7 +20,7 @@ Camera/light/source comparison remains mandatory across front/profile/bothobliqu
 
 ## Evidence corrections
 
-Body producer source boards stretched width384→512 without height; root rejected them and rebuilt matched8renders using original SRT. A reviewer claimed glute improvement despite no glute deltas: rejected. BodynewUV per-face rescaling and later overlap/crash trials are unselected. Face white under-lid stripes were aperture-arc classification errors, fixed; mixed-lit cap color-only was replaced by corrected face+cap evidence. Mainhair4K map dimensions do not establish4K authored detail. Actual assigned-polygon shader audit reports12direct image datablocks/15materials, all packed, including duplicate bodyatlas; no invented specular-map completion.
+Body producer source boards stretched width384→512 without height; root rejected them and rebuilt matched10renders using original SRT. A reviewer claimed glute improvement despite no glute deltas: rejected. BodynewUV per-face rescaling and later overlap/crash trials are unselected. Face white under-lid stripes were aperture-arc classification errors, fixed; mixed-lit cap color-only was replaced by corrected face+cap evidence. Mainhair4K map dimensions do not establish4K authored detail. Actual assigned-polygon shader audit reports12direct image datablocks/15materials, all packed, including duplicate bodyatlas; no invented specular-map completion.
 
 ## Reproducibility and gates
 
