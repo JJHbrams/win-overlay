@@ -20,6 +20,7 @@ dest = out / 'source-boards'
 dest.mkdir(parents=True, exist_ok=True)
 font = ImageFont.truetype('C:/Windows/Fonts/arial.ttf', 21)
 records = {r['id']: r for r in json.loads((out / 'source/render-records.json').read_text())}
+baseline_records = {r['id']: r for r in json.loads((out / 'source-baseline/render-records.json').read_text())}
 sha = lambda path: hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 def artifact(path):
@@ -39,10 +40,10 @@ rows = []
 for row in old['views']:
     name = row['id']
     ref = (oldpath.parent / row['reference']['path']).resolve()
-    baseline = (oldpath.parent / row['candidate_render']['path']).resolve()
+    baseline = Path(baseline_records[name + '-hairOFF']['path'])
     cand = Path(records[name + '-hairOFF']['path'])
     assert records[name + '-hairOFF']['native_sha256'] == sha(native)
-    baseline_camera = row['candidate_camera']
+    baseline_camera = baseline_records[name + '-hairOFF']['camera']
     actual_camera = records[name + '-hairOFF']['camera']
     assert baseline_camera == actual_camera, 'Actual camera/light/pose mismatch: ' + name
     src = Image.open(ref).convert('RGBA')

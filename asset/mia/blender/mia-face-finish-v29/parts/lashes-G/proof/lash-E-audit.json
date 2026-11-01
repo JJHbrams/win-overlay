@@ -1,0 +1,1792 @@
+{
+  "input_native_sha256": "e04bc76faaa3f9a855e81660d19bc89adf62b89119c61e087a9a6cf7c394dd26",
+  "output_native_sha256": "17cb484109620e1d06860b49267bfa4fe9617690a4f6464af1e45a0bcc67b84a",
+  "created": [
+    {
+      "owner": "V29_UpperLashes_-1",
+      "layer": "Upper lashes; separate from BoundaryRibbon ink/brows/pigment",
+      "vertices": 168,
+      "faces": 152,
+      "tuft_groups": 4,
+      "closed_elliptic_cross_sections": 6,
+      "curve_stations": 7,
+      "material": "V29_Lash_NativeSoftBlack",
+      "keys": 42,
+      "upper_open_tip_height_mm": "Existinginkwidth*.96+.45",
+      "lower_open_tip_height_mm": null
+    },
+    {
+      "owner": "V29_LowerLashes_-1",
+      "layer": "Lower lashes; separate from BoundaryRibbon ink/brows/pigment",
+      "vertices": 126,
+      "faces": 114,
+      "tuft_groups": 3,
+      "closed_elliptic_cross_sections": 6,
+      "curve_stations": 7,
+      "material": "V29_Lash_NativeSoftBlack",
+      "keys": 42,
+      "upper_open_tip_height_mm": null,
+      "lower_open_tip_height_mm": "0.65..1.0 downward"
+    },
+    {
+      "owner": "V29_UpperLashes_1",
+      "layer": "Upper lashes; separate from BoundaryRibbon ink/brows/pigment",
+      "vertices": 168,
+      "faces": 152,
+      "tuft_groups": 4,
+      "closed_elliptic_cross_sections": 6,
+      "curve_stations": 7,
+      "material": "V29_Lash_NativeSoftBlack",
+      "keys": 42,
+      "upper_open_tip_height_mm": "Existinginkwidth*.96+.45",
+      "lower_open_tip_height_mm": null
+    },
+    {
+      "owner": "V29_LowerLashes_1",
+      "layer": "Lower lashes; separate from BoundaryRibbon ink/brows/pigment",
+      "vertices": 126,
+      "faces": 114,
+      "tuft_groups": 3,
+      "closed_elliptic_cross_sections": 6,
+      "curve_stations": 7,
+      "material": "V29_Lash_NativeSoftBlack",
+      "keys": 42,
+      "upper_open_tip_height_mm": null,
+      "lower_open_tip_height_mm": "0.65..1.0 downward"
+    }
+  ],
+  "archived_old_flat_upper_fans_hidden_not_deleted": [
+    "V28_LashFan_-1",
+    "V28_LashFan_1"
+  ],
+  "C2_skin_and_master_all42_exact": true,
+  "C2_wall_white_and_trimmed_iris_unchanged": true,
+  "old_liner_ribbon_coordinates_and_UV_unchanged": true,
+  "body_L_preserved": "All C2 sharedskin coords exact, including original0..3956 prefix all42.",
+  "actual_perkey_front_root_contact": [
+    {
+      "key": "Basis",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_ALL_Angry",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.32668097820800845,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05509166795876318,
+            0.09490833204123682
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.32668097820800845,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05616106196801428,
+            0.09383893803198572
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.32597722686427466,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05504351602623871,
+            0.09495648397376126
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.32597722686427466,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05550808593841357,
+            0.09449191406158641
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_ALL_Fun",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.6418552284279216,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.07158323902112798,
+            0.078416760978872
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.6418552284279216,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05327216385109166,
+            0.09672783614890833
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.6406914318583993,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.07145669215458648,
+            0.07854330784541351
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.6406914318583993,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05341470120744897,
+            0.09658529879255101
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_ALL_Joy",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.0657714488445527,
+            0.08422855115544728
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05364513349287671,
+            0.09635486650712327
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.06918220226556476,
+            0.08081779773443523
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.053654594623181326,
+            0.09634540537681865
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.8727690800057015,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05672197804348774,
+            0.09327802195651225
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.8727690800057015,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05302097231897019,
+            0.0969790276810298
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.8716663611498487,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05680453990807704,
+            0.09319546009192295
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.8716663611498487,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05492334223705929,
+            0.09507665776294069
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_ALL_Surprised",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04619245123207938,
+            0.1038075487679206
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05639684652573618,
+            0.0936031534742638
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04616685755173802,
+            0.10383314244826196
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571454777133691,
+            0.09428545222866308
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_BRW_Angry",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_BRW_Fun",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_BRW_Joy",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_BRW_Surprised",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Natural",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Angry",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.32668097820800845,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05509166795876318,
+            0.09490833204123682
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.32668097820800845,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05616106196801428,
+            0.09383893803198572
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.32597722686427466,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05504351602623871,
+            0.09495648397376126
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.32597722686427466,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05550808593841357,
+            0.09449191406158641
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Close",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.8417284686984668,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04752417014306507,
+            0.10247582985693492
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.8417284686984668,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05371686212536764,
+            0.09628313787463236
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.8426888160677827,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04738588085025306,
+            0.10261411914974693
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.8426888160677827,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.053718107263174344,
+            0.09628189273682565
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.8417284686984668,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04752417014306507,
+            0.10247582985693492
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.8417284686984668,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05371686212536764,
+            0.09628313787463236
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.8426888160677827,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04738588085025306,
+            0.10261411914974693
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.8426888160677827,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.053718107263174344,
+            0.09628189273682565
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Joy",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.0657714488445527,
+            0.08422855115544728
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05364513349287671,
+            0.09635486650712327
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.06918220226556476,
+            0.08081779773443523
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.053654594623181326,
+            0.09634540537681865
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.0657714488445527,
+            0.08422855115544728
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05364513349287671,
+            0.09635486650712327
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.06918220226556476,
+            0.08081779773443523
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.053654594623181326,
+            0.09634540537681865
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.8727690800057015,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05672197804348774,
+            0.09327802195651225
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.8727690800057015,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05302097231897019,
+            0.0969790276810298
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.8716663611498487,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05680453990807704,
+            0.09319546009192295
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.8716663611498487,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05492334223705929,
+            0.09507665776294069
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Surprised",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04619245123207938,
+            0.1038075487679206
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05639684652573618,
+            0.0936031534742638
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04616685755173802,
+            0.10383314244826196
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571454777133691,
+            0.09428545222866308
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_EYE_Extra",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04282761848509166,
+            0.10717238151490834
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05222639496589249,
+            0.0977736050341075
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04291159867925708,
+            0.1070884013207429
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05222776924479129,
+            0.0977722307552087
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_Up",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_Down",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_Angry",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0002615772408717243,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04785281220019396,
+            0.10214718779980603
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0002615772408717243,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638577418600428,
+            0.0936142258139957
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.00028344747173914,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04783549974754046,
+            0.10216450025245953
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.00028344747173914,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05570951129414431,
+            0.09429048870585567
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_Neutral",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0002615772408717243,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04785281220019396,
+            0.10214718779980603
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0002615772408717243,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638577418600428,
+            0.0936142258139957
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.00028344747173914,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04783549974754046,
+            0.10216450025245953
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.00028344747173914,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05570951129414431,
+            0.09429048870585567
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_Fun",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0002615772408717243,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04785281220019396,
+            0.10214718779980603
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0002615772408717243,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638577418600428,
+            0.0936142258139957
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.00028344747173914,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04783549974754046,
+            0.10216450025245953
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.00028344747173914,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05570951129414431,
+            0.09429048870585567
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_Joy",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0002615772408717243,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04785281220019396,
+            0.10214718779980603
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0002615772408717243,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638577418600428,
+            0.0936142258139957
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.00028344747173914,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04783549974754046,
+            0.10216450025245953
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.00028344747173914,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05570951129414431,
+            0.09429048870585567
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_Surprised",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0002615772408717243,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04785281220019396,
+            0.10214718779980603
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0002615772408717243,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638577418600428,
+            0.0936142258139957
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.00028344747173914,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.04783549974754046,
+            0.10216450025245953
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.00028344747173914,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05570951129414431,
+            0.09429048870585567
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_A",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_I",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_U",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_E",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_MTH_O",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_HA_Fung1",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_HA_Fung2",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    },
+    {
+      "key": "EyeExtra_01.M_F00_000_00_EyeExtra_On",
+      "owners": {
+        "Upper_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047847427811257275,
+            0.10215257218874271
+          ]
+        },
+        "Lower_-1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05638594507457258,
+            0.0936140549254274
+          ]
+        },
+        "Upper_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 24,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.047832764146855195,
+            0.1021672358531448
+          ]
+        },
+        "Lower_1": {
+          "closure_from_actual_margin_gap": 0.0,
+          "root_samples": 18,
+          "root_miss": 0,
+          "front_root_clearance_mm": [
+            0.05571017966422438,
+            0.0942898203357756
+          ]
+        }
+      }
+    }
+  ],
+  "method": "Four upper/lower left/right owners, curved tapered closed tuft meshes (6-point elliptic sections,7curve stations). E further sweeps compact outer grouping forward/laterally and halves lower tufts after actual D pinlike silhouette failed source style. Actual evaluated42-key margin paths and surface-ray seating; closed upper lash curls forward/down with actual margin gap. Existing eyeliner remains a separate owner.",
+  "limits": "Frontal contact samples are not all-angle/all-closure acceptance. First actual isolate/production/half/full review required before surface maps."
+}

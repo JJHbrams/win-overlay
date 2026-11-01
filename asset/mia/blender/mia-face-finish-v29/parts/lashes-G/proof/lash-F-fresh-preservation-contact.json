@@ -1,0 +1,3183 @@
+{
+  "source_C2_sha256": "e04bc76faaa3f9a855e81660d19bc89adf62b89119c61e087a9a6cf7c394dd26",
+  "candidate_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\Mia_EyeLash_v29_F.blend",
+  "candidate_sha256": "60ab21277d641552691c7a161815d9ae026e2e5bee8aa14278d2e3684bd0baf3",
+  "checks": {
+    "new_mesh_owners_exactly_four_upper_lower_sides": true,
+    "all_protected_C2_mesh_recorded_fields_exact": true,
+    "all_C2_material_graphs_exact": true,
+    "all_packed_images_and_colorspaces_exact": true,
+    "C2_shared_skin_all42_exact": true,
+    "master_raw_coordinates_topology_UV_keys_drivers_materials_matrix_exact": true,
+    "master_existing_modifiers_exact_prefix": true,
+    "all_original_master_named_weights_exact": true,
+    "mask_keeps_all_active_mouth_brow_and_excludes_only_transparent_cards": true,
+    "V29_LowerLashes_-1_topology_keys_driver_weights_valid": true,
+    "V29_LowerLashes_1_topology_keys_driver_weights_valid": true,
+    "V29_UpperLashes_-1_topology_keys_driver_weights_valid": true,
+    "V29_UpperLashes_1_topology_keys_driver_weights_valid": true
+  },
+  "all_computed_preservation_and_mesh_checks_pass": true,
+  "master_mask_exception": {
+    "modifier": "V29_Exclude_TransparentLegacyCards",
+    "group": "V29_ActiveMouthBrow_RenderMask",
+    "threshold": 0.5,
+    "actual_evaluated_slot_counts": {
+      "0": 496,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 160,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    },
+    "intentional_exception": "One new nondeform selection group +Mask, original raw geometry/UV/keycoords/materials/weights unchanged."
+  },
+  "owners": [
+    {
+      "owner": "V29_LowerLashes_-1",
+      "vertices": 126,
+      "faces": 114,
+      "all42_key_names_exact": true,
+      "drivers_exact_master41": true,
+      "Head_named_weights_all1": true,
+      "Armature_target_correct": true,
+      "all_edges_incident_two_faces": true,
+      "finite_all42": true,
+      "zero_area_all42_count": 0,
+      "minimum_all42_triangle_area_mm2": 9.006849310642875e-06,
+      "signed_closed_volume_all42_mm3_range": [
+        -0.017281751193865023,
+        0.02489527822082734
+      ],
+      "root_vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "inactive_Close_R_side_positive_basis_exact": null,
+      "inactive_Close_L_side_negative_basis_exact": true
+    },
+    {
+      "owner": "V29_LowerLashes_1",
+      "vertices": 126,
+      "faces": 114,
+      "all42_key_names_exact": true,
+      "drivers_exact_master41": true,
+      "Head_named_weights_all1": true,
+      "Armature_target_correct": true,
+      "all_edges_incident_two_faces": true,
+      "finite_all42": true,
+      "zero_area_all42_count": 0,
+      "minimum_all42_triangle_area_mm2": 6.508670268512546e-06,
+      "signed_closed_volume_all42_mm3_range": [
+        -0.023353748218752995,
+        0.023511951612894006
+      ],
+      "root_vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "inactive_Close_R_side_positive_basis_exact": true,
+      "inactive_Close_L_side_negative_basis_exact": null
+    },
+    {
+      "owner": "V29_UpperLashes_-1",
+      "vertices": 168,
+      "faces": 152,
+      "all42_key_names_exact": true,
+      "drivers_exact_master41": true,
+      "Head_named_weights_all1": true,
+      "Armature_target_correct": true,
+      "all_edges_incident_two_faces": true,
+      "finite_all42": true,
+      "zero_area_all42_count": 0,
+      "minimum_all42_triangle_area_mm2": 5.003055502465207e-05,
+      "signed_closed_volume_all42_mm3_range": [
+        0.4127619512590414,
+        0.8890806703401845
+      ],
+      "root_vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "inactive_Close_R_side_positive_basis_exact": null,
+      "inactive_Close_L_side_negative_basis_exact": true
+    },
+    {
+      "owner": "V29_UpperLashes_1",
+      "vertices": 168,
+      "faces": 152,
+      "all42_key_names_exact": true,
+      "drivers_exact_master41": true,
+      "Head_named_weights_all1": true,
+      "Armature_target_correct": true,
+      "all_edges_incident_two_faces": true,
+      "finite_all42": true,
+      "zero_area_all42_count": 0,
+      "minimum_all42_triangle_area_mm2": 5.021585487866273e-05,
+      "signed_closed_volume_all42_mm3_range": [
+        0.3820295459480053,
+        0.8601833655422148
+      ],
+      "root_vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "inactive_Close_R_side_positive_basis_exact": true,
+      "inactive_Close_L_side_negative_basis_exact": null
+    }
+  ],
+  "actual_evaluated_all42_and_half_root_contact": [
+    {
+      "state": "neutral",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05644559860229492,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279630856122822
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279377516373643
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.055771321058273315,
+            0.09436532855033875
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02841646710294299,
+            0.07956028275657445
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028414289317879593,
+            0.07930958122415177
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10219588875770569
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.0899155784281902
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.0899133988241374
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04786252975463867,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041845567466225475,
+            0.08966083260020241
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04184515250926779,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_ALL_Angry",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03152691351715475,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031526852581009734,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.028393935281201266,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028391114938131068,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04772096872329712,
+            0.10315701365470886
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04152869951212779,
+            0.0897943609743379
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04152860265094205,
+            0.08979162703326438
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047694891691207886,
+            0.10321289300918579
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04148008520132862,
+            0.08969338523456827
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04148005427850876,
+            0.08969057171270833
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_ALL_Fun",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04415959119796753,
+            0.09632855653762817
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03158070467179641,
+            0.08336231257999316
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.03158070512654376,
+            0.08335874861131742
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.045999884605407715,
+            0.0945553183555603
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.028039408789481968,
+            0.08048819290706888
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.0280316799035063,
+            0.08043018078751629
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04839897155761719,
+            0.10473281145095825
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04135494236834347,
+            0.08979714766610414
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04135485914957826,
+            0.08979240465123439
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0484175980091095,
+            0.1047775149345398
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041393603169126436,
+            0.08971229544840753
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04139357952226419,
+            0.08970880207925802
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_ALL_Joy",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            -3.126416355371475,
+            -1.2661926448345184
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.031653300538891926,
+            0.08106500172289088
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.0316523137371405,
+            0.08106452128231467
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            -2.918761223554611,
+            -1.0666362941265106
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.027303276510792784,
+            0.07805092172930017
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.027285167561785784,
+            0.07805069594724046
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.06668642163276672,
+            2.637561410665512
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.040682891267351806,
+            0.09128200326813385
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.0406820543048525,
+            0.0912503801373532
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.06765499711036682,
+            2.324402332305908
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.040740858821664006,
+            0.0909862428670749
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04074015191690705,
+            0.09095347968468559
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.045686960220336914,
+            0.09812414646148682
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.031528023100690916,
+            0.08359493949683383
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031527965802524704,
+            0.0835908954286424
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04733353853225708,
+            0.09598582983016968
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.028075599402654916,
+            0.0805632516858168
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028068318442819873,
+            0.08048440213315189
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04782527685165405,
+            0.10994449257850647
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041150429751724005,
+            0.09015961404656991
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041150380866383784,
+            0.09015230534714647
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04764273762702942,
+            0.11005997657775879
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.0410689644922968,
+            0.0902159299585037
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04106880328436091,
+            0.09020927018354996
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_ALL_Surprised",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03148862379021011,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.03148827909171814,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.028549560738611035,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028548195132316323,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04756078124046326,
+            0.10249391198158264
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04184710269328207,
+            0.09074099943973124
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04184646195426467,
+            0.0907382100194809
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047478824853897095,
+            0.10253489017486572
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041778796003200114,
+            0.09074936679098755
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04177686014372739,
+            0.09074681929632789
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_BRW_Angry",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_BRW_Fun",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_BRW_Joy",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_BRW_Surprised",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Natural",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Angry",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03152691351715475,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031526852581009734,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.028393935281201266,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028391114938131068,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04772096872329712,
+            0.10315701365470886
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04152869951212779,
+            0.0897943609743379
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04152860265094205,
+            0.08979162703326438
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047694891691207886,
+            0.10321289300918579
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04148008520132862,
+            0.08969338523456827
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04148005427850876,
+            0.08969057171270833
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Close",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            -1.9825398921966553,
+            -0.9504184126853943
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.030128958314890042,
+            0.08253837586380541
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.03012304000549193,
+            0.08253561509263818
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            -1.5790313482284546,
+            -0.7699206471443176
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.026600609999150038,
+            0.07943929813336581
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.026577698008622974,
+            0.07911010197858559
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05809590220451355,
+            0.19026920199394226
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04183451164863072,
+            0.09253626922145486
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041834030525933485,
+            0.09251682877220446
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05890801548957825,
+            0.19279494881629944
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04182658085483126,
+            0.09249052527593449
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04182613156444859,
+            0.09247129946743371
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            -1.9825398921966553,
+            -0.9504184126853943
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.030128958314890042,
+            0.08253837586380541
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.03012304000549193,
+            0.08253561509263818
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.055771321058273315,
+            0.09436532855033875
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02841646710294299,
+            0.07956028275657445
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028414289317879593,
+            0.07930958122415177
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05809590220451355,
+            0.19026920199394226
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04183451164863072,
+            0.09253626922145486
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041834030525933485,
+            0.09251682877220446
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04786252975463867,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041845567466225475,
+            0.08966083260020241
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04184515250926779,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05644559860229492,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279630856122822
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279377516373643
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            -1.5790313482284546,
+            -0.7699206471443176
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.026600609999150038,
+            0.07943929813336581
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.026577698008622974,
+            0.07911010197858559
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10219588875770569
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.0899155784281902
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.0899133988241374
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05890801548957825,
+            0.19279494881629944
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04182658085483126,
+            0.09249052527593449
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04182613156444859,
+            0.09247129946743371
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Joy",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            -3.126416355371475,
+            -1.2661926448345184
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.031653300538891926,
+            0.08106500172289088
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.0316523137371405,
+            0.08106452128231467
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            -2.918761223554611,
+            -1.0666362941265106
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.027303276510792784,
+            0.07805092172930017
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.027285167561785784,
+            0.07805069594724046
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.06668642163276672,
+            2.6376061141490936
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.040682891267351806,
+            0.09128200326813385
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.0406820543048525,
+            0.0912503801373532
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.06765499711036682,
+            2.3133158683776855
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.040740858821664006,
+            0.0909862428670749
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04074015191690705,
+            0.09095347968468559
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            -3.126416355371475,
+            -1.2661926448345184
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.031653300538891926,
+            0.08106500172289088
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.0316523137371405,
+            0.08106452128231467
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.06668642163276672,
+            2.6376061141490936
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.040682891267351806,
+            0.09128200326813385
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.0406820543048525,
+            0.0912503801373532
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            -2.918761223554611,
+            -1.0666362941265106
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.027303276510792784,
+            0.07805092172930017
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.027285167561785784,
+            0.07805069594724046
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.06765499711036682,
+            2.3133158683776855
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.040740858821664006,
+            0.0909862428670749
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04074015191690705,
+            0.09095347968468559
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.045686960220336914,
+            0.09812414646148682
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.031528023100690916,
+            0.08359493949683383
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031527965802524704,
+            0.0835908954286424
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04731863737106323,
+            0.09598582983016968
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.028075599402654916,
+            0.0805632516858168
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028068318442819873,
+            0.08048440213315189
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04782527685165405,
+            0.10994449257850647
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041150429751724005,
+            0.09015961404656991
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041150380866383784,
+            0.09015230534714647
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04764273762702942,
+            0.11005997657775879
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.0410689644922968,
+            0.0902159299585037
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04106880328436091,
+            0.09020927018354996
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Surprised",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03148862379021011,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.03148827909171814,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.028549560738611035,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028548195132316323,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04756078124046326,
+            0.10249391198158264
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04184710269328207,
+            0.09074099943973124
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04184646195426467,
+            0.0907382100194809
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047478824853897095,
+            0.10253489017486572
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041778796003200114,
+            0.09074936679098755
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04177686014372739,
+            0.09074681929632789
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_EYE_Extra",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            -2.759702503681183,
+            -0.7514171302318573
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03146930248476565,
+            0.07829015521565452
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.03146861467939743,
+            0.07828981301827298
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            -2.5808103382587433,
+            -0.5706660449504852
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.027341569875716232,
+            0.07729128992650658
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.027333093612469384,
+            0.07729064338946046
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04826486110687256,
+            0.11359900236129761
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.037046200304757804,
+            0.08990161586552858
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.037017940030636964,
+            0.08990160768007627
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.048857182264328,
+            0.11343508958816528
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.036818160879192874,
+            0.08986434841062874
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.0367894213013642,
+            0.08986430384538835
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_Up",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_Down",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_Angry",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_Neutral",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_Fun",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_Joy",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_Surprised",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_A",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_I",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_U",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_E",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_MTH_O",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_HA_Fung1",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_HA_Fung2",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "EyeExtra_01.M_F00_000_00_EyeExtra_On",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05638599395751953,
+            0.09368732571601868
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.03155700323986821,
+            0.08279385656351224
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.031556914109387435,
+            0.08279136000055587
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0557824969291687,
+            0.09436905384063721
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02845346534741111,
+            0.07956686022225767
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.028451220259739785,
+            0.07931611503408931
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.04787743091583252,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.041842464270303026,
+            0.08991706999950111
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.041842300106509356,
+            0.08991487493403838
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.047829002141952515,
+            0.10222569108009338
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04180720497970469,
+            0.08966018503997475
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04180683231425064,
+            0.0896579281288723
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    },
+    {
+      "state": "bilateral_half",
+      "owners": {
+        "V29_LowerLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            -0.5938522517681122,
+            0.11487305164337158
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.030480830901069567,
+            0.08260019967565313
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.030480249733955134,
+            0.08259753667516634
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_LowerLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            -0.43146684765815735,
+            0.11419504880905151
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.02723717079788912,
+            0.079503828601446
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.027227034934185212,
+            0.07922548638816806
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 18
+        },
+        "V29_UpperLashes_-1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.05307048559188843,
+            0.11619925498962402
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.04033544610138051,
+            0.08978586993180215
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.04032686410937458,
+            0.08977868310466874
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        },
+        "V29_UpperLashes_1": {
+          "frontal_skin_root_gap_mm_range": [
+            0.0531710684299469,
+            0.11638179421424866
+          ],
+          "actual_nearest3D_root_surface_distance_mm_range": [
+            0.040348953916691244,
+            0.0896182464202866
+          ],
+          "signed_nearest_normal_distance_mm_range": [
+            0.0403482886213169,
+            0.08961151615949348
+          ],
+          "root_ray_miss": 0,
+          "evaluated_samples": 24
+        }
+      }
+    }
+  ],
+  "archived_old_fans_hidden": [
+    "V28_LashFan_-1",
+    "V28_LashFan_1"
+  ],
+  "intentional_changes": "Four newlash owners +one newprivateblack material; two oldflatfan owner visibility off. F adds explicit master transparent-card Mask exception; all raw original geometry/UV/keys/materials/deformweights preserved.",
+  "limits": "Nearest3D/root-ray samples are not complete all-surface collision proof. Occluded lower roots may sit behind front upperfold; nearest3D is distinct from eye-axis firsthit gap. Runtime silhouette/contact and closure judged from actual renders; native not fullART approved."
+}

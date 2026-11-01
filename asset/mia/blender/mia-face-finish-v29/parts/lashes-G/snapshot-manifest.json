@@ -1,0 +1,365 @@
+{
+  "native": {
+    "path": "native/ee92c9447817-Mia_EyeLash_v29_G.blend",
+    "sha256": "ee92c9447817eb35347aec01fd00c76630e02f3cba3c60d0e9af2874d2e1d45a"
+  },
+  "scope": "Independent upper/lower lashes, explicit master legacy-card evaluation mask, protected C2 geometry. Source style and actual deformation reviewed separately from technical guards.",
+  "rejected": "D upright pins; E half-blink root float; F local lower-tuft inversion despite improved root contact. Failed native binaries are not copied.",
+  "files": [
+    {
+      "path": "proof/audit_lashes_saved.py",
+      "sha256": "3bafd1c412c9bab1836442ebf51bdc4462961bae24e47b1b8200f137160f8432",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\audit_lashes_saved.py"
+    },
+    {
+      "path": "proof/audit_mesh_helpers.py",
+      "sha256": "be7e0facb00f493c9aaa9de34c5baaeea0e8cc142d79b62c12b1126ce01ab5f0",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\audit_mesh_helpers.py"
+    },
+    {
+      "path": "proof/bind_lash_roots_F.py",
+      "sha256": "8cdaa20a9bb16c570c579902bff5ee86b86b30bae59c0169deb3e9c0248c58ef",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\bind_lash_roots_F.py"
+    },
+    {
+      "path": "proof/board_lash_first.py",
+      "sha256": "faa9757b816943392521ccab1cd1dc72cc6b15b83bb0bba1a1859d821a27db4e",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\board_lash_first.py"
+    },
+    {
+      "path": "proof/build_lashes_D.py",
+      "sha256": "b43ccf8145789dbc2b7b0ec144521d373e31b844d81e90f5aaa29d29d05274c1",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\build_lashes_D.py"
+    },
+    {
+      "path": "proof/export_lash_components.py",
+      "sha256": "d5cfd1ce776b4f58e866faa09b22fdb459eb421dcc5e8ccafb42c0603ee5b046",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\export_lash_components.py"
+    },
+    {
+      "path": "proof/inspect_lash_root_distance.py",
+      "sha256": "5280a61a898a3e79d9d314ca3e7e87ffe25bd3e8e35fc2bae06ce729104318a8",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\inspect_lash_root_distance.py"
+    },
+    {
+      "path": "proof/lash-D-audit.json",
+      "sha256": "b872dc7f62d3155a2c38525aa9636794f66933df489f1f8d5de40a57392c199f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-D-audit.json"
+    },
+    {
+      "path": "proof/lash-D-coordinates.npz",
+      "sha256": "5a64cfa5e2dee0d2e7ad26b694c2bcf867478b4830b88819b1b650a550b20403",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-D-coordinates.npz"
+    },
+    {
+      "path": "proof/lash-D-interior-stroke-rays.json",
+      "sha256": "68a3f6dc37114a284bb151b8e61af71c090e7286f2d9e5acb306db81112e98bf",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-D-interior-stroke-rays.json"
+    },
+    {
+      "path": "proof/lash-D-interior-stroke-withmaster-rays.json",
+      "sha256": "8184964d054507973e3fae078e4961080918482a367086b5663d398015470438",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-D-interior-stroke-withmaster-rays.json"
+    },
+    {
+      "path": "proof/lash-E-audit.json",
+      "sha256": "0dac6b874219c8022ca846eeb4efcc9c59efa7286e65c5402dbdddcf6aca2ba0",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-E-audit.json"
+    },
+    {
+      "path": "proof/lash-E-coordinates.npz",
+      "sha256": "002456f74383867f560bc2c30625b5f2fd27a01e2513e3b5631f84f285488831",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-E-coordinates.npz"
+    },
+    {
+      "path": "proof/lash-E-fresh-preservation-contact.json",
+      "sha256": "acae9e98cab1a8c199a68b2b3704606ae11b3456e4bb689b412ab88ea442225c",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-E-fresh-preservation-contact.json"
+    },
+    {
+      "path": "proof/lash-E-nearest-root-probe.json",
+      "sha256": "676fcb7b1d60e7d0380a3595c22244baa421837d947dca67739bbab23a06fddc",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-E-nearest-root-probe.json"
+    },
+    {
+      "path": "proof/lash-F-bindings-and-mask.json",
+      "sha256": "2794db292febafb1c7cf5bd293cb238e27e8804fb7f5136b7c8a153a0def7cad",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-F-bindings-and-mask.json"
+    },
+    {
+      "path": "proof/lash-F-fresh-preservation-contact.json",
+      "sha256": "21ccf8c54451a549fea5b54c2622922dd3bf0e2aad6f488f37ccd7642295bc91",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-F-fresh-preservation-contact.json"
+    },
+    {
+      "path": "proof/lash-F-nearest-root-probe.json",
+      "sha256": "ab053d93edef2f8b08161122d309fd9a95c988afd42ece42f1161ed25bf8b535",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-F-nearest-root-probe.json"
+    },
+    {
+      "path": "proof/lash-F-root-deltas.npz",
+      "sha256": "52c5dbcca229d8e60b5848a0740d017b5a86d2c5559729f1dabd64c6958b3767",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-F-root-deltas.npz"
+    },
+    {
+      "path": "proof/lash-G-components.json",
+      "sha256": "b371b756e7536f7ee256c3014cc33799d21134db61b3613be5a97425823b0da0",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-G-components.json"
+    },
+    {
+      "path": "proof/lash-G-components.npz",
+      "sha256": "6bf7e73faac01aa9a3e071e2c31ab4782937ae6edd2cda54d6cc009d5538b84a",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-G-components.npz"
+    },
+    {
+      "path": "proof/lash-G-fresh-preservation-contact.json",
+      "sha256": "1a8ef69a4592a7709b1a7406c8f03dd6d73d0d0c144d2d5228010f3b67db71d0",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-G-fresh-preservation-contact.json"
+    },
+    {
+      "path": "proof/lash-G-lower-coordinates.npz",
+      "sha256": "5bd567b5f0f8d32004ea4d0568200fcce9b238b7ee3451ae21fb69ed3aa40f51",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-G-lower-coordinates.npz"
+    },
+    {
+      "path": "proof/lash-G-rigid-bindings.json",
+      "sha256": "4c505f123eab04c22c8e9eda8fc61dee2ef03ed053d16200bfc8407c595574aa",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-G-rigid-bindings.json"
+    },
+    {
+      "path": "proof/lash-review/D-source-first.png",
+      "sha256": "a273ec824e582cdbc8e25d197efb999e7de30d2300c7f44bb6e1f989507897fe",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\D-source-first.png"
+    },
+    {
+      "path": "proof/lash-review/E-closure/front-production-Close0.5.png",
+      "sha256": "0df5a4e9f1193dbf6a4f5adc3372c80a6b6fbde674f09229bdba228e1e6f00d2",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-closure\\front-production-Close0.5.png"
+    },
+    {
+      "path": "proof/lash-review/E-closure/front-production-Close1.png",
+      "sha256": "8a1580b5324b14b06363dc36d8ec0ca0cae607728a5212a177ce6b05faeffcd1",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-closure\\front-production-Close1.png"
+    },
+    {
+      "path": "proof/lash-review/E-closure/profile-cleancontact-Close0.5.png",
+      "sha256": "899d8650b5837075eae73507701f86a67cb937ec94ba826da6aff44df1fe3b82",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-closure\\profile-cleancontact-Close0.5.png"
+    },
+    {
+      "path": "proof/lash-review/E-closure/profile-cleancontact-Close1.png",
+      "sha256": "407be6f3b8b97d86ca3a2515b013cedd7b464a5ca4927868eb81be5c5efeb15b",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-closure\\profile-cleancontact-Close1.png"
+    },
+    {
+      "path": "proof/lash-review/E-closure/records.json",
+      "sha256": "85e32f3c2a028ec6eed7364b6792cf58502f1927761a642744f53b3367c8713c",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-closure\\records.json"
+    },
+    {
+      "path": "proof/lash-review/E-first/front-lowerONLY.png",
+      "sha256": "09222cff03435a1074ec058d5427c9e5b487b7c3e09ceeb217da4bf7023a7f3e",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-first\\front-lowerONLY.png"
+    },
+    {
+      "path": "proof/lash-review/E-first/front-production.png",
+      "sha256": "0de14b91d46eefe174f13a1c04e2715fb150b09bf7cadc0008d041a22addb6c4",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-first\\front-production.png"
+    },
+    {
+      "path": "proof/lash-review/E-first/front-upperONLY.png",
+      "sha256": "05a018f425a78a9e5c366a00c4a8f1bfb31abd0cc6269f1321104fecd5bf9943",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-first\\front-upperONLY.png"
+    },
+    {
+      "path": "proof/lash-review/E-first/left_oblique-lashONLY.png",
+      "sha256": "35bac7e61d83ec4c6dcc8f593b5ad88a7aa7c50504c3f3502dcdf6b93211f6ea",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-first\\left_oblique-lashONLY.png"
+    },
+    {
+      "path": "proof/lash-review/E-first/left_oblique-production.png",
+      "sha256": "87e423b220c1ddad21b44f37295e55f0bb7d02c52ebf753d9c06f65dbc5639b4",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-first\\left_oblique-production.png"
+    },
+    {
+      "path": "proof/lash-review/E-first/profile-cleancontact.png",
+      "sha256": "9a3da629aadf2517d1642665ca33d0b27b30bf962b88280b730da649990da325",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-first\\profile-cleancontact.png"
+    },
+    {
+      "path": "proof/lash-review/E-first/profile-lashONLY.png",
+      "sha256": "4440aada43abd5b58ebe45bc0536e05dd974da2bf7ba832b2b5edbfabe97f674",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-first\\profile-lashONLY.png"
+    },
+    {
+      "path": "proof/lash-review/E-first/profile-production.png",
+      "sha256": "07f2f396b538da1bad8d9d3e2cbaabde2e30dcfbf5e22d660e9a8d05b89f8cf3",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-first\\profile-production.png"
+    },
+    {
+      "path": "proof/lash-review/E-first/records.json",
+      "sha256": "7c2cc46cc410b17cdbfb39f82bca25136c125eacbabb9aa278baa378725a89bf",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-first\\records.json"
+    },
+    {
+      "path": "proof/lash-review/E-hideprobe/left_oblique-noNewLashes.png",
+      "sha256": "878c51fb1dd023d494cb712daa187c593b1217c8f58d7f9ee238dcea1ebe474d",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-hideprobe\\left_oblique-noNewLashes.png"
+    },
+    {
+      "path": "proof/lash-review/E-hideprobe/records.json",
+      "sha256": "ce6bec99dda9cfdd358b9b9649ad43a4ee710ed174471cb5490c307a293b3464",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-hideprobe\\records.json"
+    },
+    {
+      "path": "proof/lash-review/E-legacyprobe/left_oblique-noMaster.png",
+      "sha256": "0007c641cf881e24b25e939e5b4fc7d3a9fb515ab27b74e16878b45e3ac86ace",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-legacyprobe\\left_oblique-noMaster.png"
+    },
+    {
+      "path": "proof/lash-review/E-legacyprobe/left_oblique-noOldRibbons.png",
+      "sha256": "43db3a5be70edd35307d3660d08421cda4c9c71c828265348818dfcc31d81318",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-legacyprobe\\left_oblique-noOldRibbons.png"
+    },
+    {
+      "path": "proof/lash-review/E-legacyprobe/left_oblique-noSkinOutlineNodes.png",
+      "sha256": "672b049e0baaf413cbf885b7499b5901b98def3564cc3c252105411a9bfaf275",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-legacyprobe\\left_oblique-noSkinOutlineNodes.png"
+    },
+    {
+      "path": "proof/lash-review/E-legacyprobe/records.json",
+      "sha256": "b8551f3cd384c312f88389fb72de113afeb1591dc39ee78d958917e91264d887",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-legacyprobe\\records.json"
+    },
+    {
+      "path": "proof/lash-review/E-source-first.png",
+      "sha256": "41abf948bdbe8479c4626a02e39fecfbbd069173afe564b156ce5520015cc9b3",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\E-source-first.png"
+    },
+    {
+      "path": "proof/lash-review/F-gate/front-production-Close0.5.png",
+      "sha256": "b2c76a45d28982b02206e99d789878cdf8728d333498e2cbe8dd8a8de988e862",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\F-gate\\front-production-Close0.5.png"
+    },
+    {
+      "path": "proof/lash-review/F-gate/front-production-Close0.png",
+      "sha256": "4f94c8c5dcf1ce1ec6c388e14c68ec5bc764a562f4c76dddb8cd735dbab4d3c3",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\F-gate\\front-production-Close0.png"
+    },
+    {
+      "path": "proof/lash-review/F-gate/front-production-Close1.png",
+      "sha256": "2e6c17f4c0cbe784d5dcc1738a76ada596f811e5ddb517fc9b7f7fc64af876da",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\F-gate\\front-production-Close1.png"
+    },
+    {
+      "path": "proof/lash-review/F-gate/front-unilateralL-Close1.png",
+      "sha256": "5dbc0b1a74c1a47b8b582334c1487a66e26fd972fc89cc81cfa1bdc12fb74700",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\F-gate\\front-unilateralL-Close1.png"
+    },
+    {
+      "path": "proof/lash-review/F-gate/front-unilateralR-Close1.png",
+      "sha256": "ba9cfae650d81cdf42a117dbb4acfb4f0858f9eddd15ea4c962f7c6b2ff435da",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\F-gate\\front-unilateralR-Close1.png"
+    },
+    {
+      "path": "proof/lash-review/F-gate/left_oblique-lowproduction-Close0.png",
+      "sha256": "fb6715d5d466e34e31bb1655ffdfff4fbd71f71da7448576b68436a7c722bcdf",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\F-gate\\left_oblique-lowproduction-Close0.png"
+    },
+    {
+      "path": "proof/lash-review/F-gate/left_oblique-production-Close0.png",
+      "sha256": "dfd77caabff8cb2ba7304c591d5a5ba194bc65b75736c1e2c864c948f04e18af",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\F-gate\\left_oblique-production-Close0.png"
+    },
+    {
+      "path": "proof/lash-review/F-gate/profile-cleancontact-Close0.5.png",
+      "sha256": "5d675acdfd9f803bc8772ca2434bcc0435226735f3459c224f973a8c2bf157db",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\F-gate\\profile-cleancontact-Close0.5.png"
+    },
+    {
+      "path": "proof/lash-review/F-gate/profile-cleancontact-Close1.png",
+      "sha256": "8af37548c472afb0a91c0d799c0036267a4dd0d8866013bc59fae8b5501e74c8",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\F-gate\\profile-cleancontact-Close1.png"
+    },
+    {
+      "path": "proof/lash-review/F-gate/records.json",
+      "sha256": "be734e71f7d901740255d1308958ead034855e06b2efa32a3c4bfdec9247bf8f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\F-gate\\records.json"
+    },
+    {
+      "path": "proof/lash-review/G-gate/front-production-Close0.5.png",
+      "sha256": "7bd1d4658fd5c36b87fa8337c71b6ce25dc4b0ef2b2afc1ef3546775a7a61d3b",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\G-gate\\front-production-Close0.5.png"
+    },
+    {
+      "path": "proof/lash-review/G-gate/front-production-Close0.png",
+      "sha256": "ba702fc47045f7a4c0130da17feb04a0591621310bcb26492ec58f3e9275ea41",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\G-gate\\front-production-Close0.png"
+    },
+    {
+      "path": "proof/lash-review/G-gate/front-production-Close1.png",
+      "sha256": "2afec2b487241ff3e6183f80531cd616da541f88ad649c7c4d642a44afa28133",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\G-gate\\front-production-Close1.png"
+    },
+    {
+      "path": "proof/lash-review/G-gate/front-unilateralL-Close1.png",
+      "sha256": "89163222b60bf4b36e7ec76b0d8aa35b78904b9785a4f51966b54a8b42ad433c",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\G-gate\\front-unilateralL-Close1.png"
+    },
+    {
+      "path": "proof/lash-review/G-gate/front-unilateralR-Close1.png",
+      "sha256": "a46b0b6634d7cab47ae4410fdead619e1663ce5db050f8f1e82fbfe8c303ed41",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\G-gate\\front-unilateralR-Close1.png"
+    },
+    {
+      "path": "proof/lash-review/G-gate/left_oblique-lowproduction-Close0.png",
+      "sha256": "db79c8d2c69304822e8617cd75c7e1993b9c844dabe4231df5a69e083fa46b21",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\G-gate\\left_oblique-lowproduction-Close0.png"
+    },
+    {
+      "path": "proof/lash-review/G-gate/left_oblique-production-Close0.png",
+      "sha256": "3283b420d8f7da4ee9cc4715eefc91bb186ce42c3f6a36e4fc93a39d46f99546",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\G-gate\\left_oblique-production-Close0.png"
+    },
+    {
+      "path": "proof/lash-review/G-gate/profile-cleancontact-Close0.5.png",
+      "sha256": "8829e48b26d336819270f5ef4fd62a46cff1c6eab85bdd43c99dd3c0ed24a553",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\G-gate\\profile-cleancontact-Close0.5.png"
+    },
+    {
+      "path": "proof/lash-review/G-gate/profile-cleancontact-Close1.png",
+      "sha256": "8b7eabdb809931c7550ed09b56485a0e51bb36d14fbcb2645f6c38cedd449582",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\G-gate\\profile-cleancontact-Close1.png"
+    },
+    {
+      "path": "proof/lash-review/G-gate/records.json",
+      "sha256": "edc9286e965e321ffd77fef49e805306a2f4acfe95b70df7acc63c7e7f91081a",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\lash-review\\G-gate\\records.json"
+    },
+    {
+      "path": "proof/ray_lash_strokes.py",
+      "sha256": "a8e540d13a818944aad835c118b913f45f21f62ef9527570b19a9fccecc40f81",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\ray_lash_strokes.py"
+    },
+    {
+      "path": "proof/render_lash_first.py",
+      "sha256": "aaf0c1c66bea9c33d40dd28af786ec710791915ea4ffd63950191ac4f38f4ab7",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\render_lash_first.py"
+    },
+    {
+      "path": "proof/replay_lash_components.py",
+      "sha256": "87f5cb76734d2a58f0063df938cf89c9341cb20ccc02f26d50cdfb01ffa2532f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\replay_lash_components.py"
+    },
+    {
+      "path": "proof/run_lash_stage.py",
+      "sha256": "96e9dab7a6f651142943398373815c9f2c369bc92251743db982e58c7934f9a8",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\run_lash_stage.py"
+    },
+    {
+      "path": "proof/transport_lower_tufts_G.py",
+      "sha256": "78ec0d8345fc8472d0a46157aa31deb53354516ae6657ce262c6f9d818c1ff44",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\transport_lower_tufts_G.py"
+    }
+  ]
+}

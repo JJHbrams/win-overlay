@@ -15,12 +15,13 @@ ap = argparse.ArgumentParser()
 ap.add_argument('--native', required=True)
 ap.add_argument('--sha256', required=True)
 ap.add_argument('--mode', choices=['source', 'critical', 'orbit', 'protection'], required=True)
+ap.add_argument('--role', choices=['candidate', 'baseline'], default='candidate')
 a = ap.parse_args(sys.argv[sys.argv.index('--') + 1:])
 native = Path(a.native).resolve()
 sha = lambda path: hashlib.sha256(Path(path).read_bytes()).hexdigest()
 assert sha(native) == a.sha256
 package = json.loads((P.parent / 'mia-orbit-thorax-review-v28/reviews/G2L-face/reference-review.json').read_text())
-out = P / 'final-review' / a.mode
+out = P / 'final-review' / (a.mode + ('-baseline' if a.role == 'baseline' else ''))
 out.mkdir(parents=True, exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=str(native), use_scripts=False)
 sc = bpy.context.scene
@@ -150,8 +151,9 @@ if a.mode == 'protection':
         render('fullbody-rest' if angle == 0 else 'arms' + str(angle), view, False)
 elif a.mode == 'source':
     for row in package['views']:
-        for label, hide, mode in [('hairON', False, 'production'), ('hairOFF', True, 'production'),
-                                  ('matte', True, 'neutral_matte')]:
+        jobs = [('hairOFF', True, 'production')] if a.role == 'baseline' else [
+            ('hairON', False, 'production'), ('hairOFF', True, 'production'), ('matte', True, 'neutral_matte')]
+        for label, hide, mode in jobs:
             render(row['id'] + '-' + label, row['candidate_camera'], hide, mode)
 else:
     if a.mode == 'critical':
