@@ -2,7 +2,16 @@
   "schema_version": 1,
   "updated": "2026-11-02",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
-  "status": "v28_orbit_lid_and_thorax_correction_in_progress",
+  "status": "v29_medial_canthus_lash_and_face_surface_in_progress",
+  "in_progress_v29": {
+    "baseline_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+    "eye_candidate_A": "C:/Users/antio/.codex/worktrees/mia-final-face-v12/win-overlay/asset/mia/blender/mia-eye-lash-v29/Mia_EyeLash_v29_A.blend",
+    "eye_candidate_A_sha256": "f77e68a6251ce585d03f30e64ed8075f864562d0a2db0f1219bc79db5d751da1",
+    "geometry_checkpoint": "blender/mia-face-finish-v29/parts/medial-C2/native/e04bc76faaa3-Mia_EyeLash_v29_C2.blend",
+    "geometry_checkpoint_sha256": "e04bc76faaa3f9a855e81660d19bc89adf62b89119c61e087a9a6cf7c394dd26",
+    "status": "Bounded AC1/2 geometry gate supported by root/fresh reviewer. Actual64-control medial correction plus coordinated wall/fringe retained; alpha-zero iris exterior structurally trimmed with validated42-key/UV remapping. Onlytwoiris topology exceptions; BodyL and protected data preserved. Upper/lower lash stage in progress, surface not applied. No full ART approval.",
+    "surface": "Actual existing scene-lit diffuse route audited; imagegenUV artA rejected, B staged1254square only; scalar/native shader masks prepared, no newmap applied yet."
+  },
   "active_working_correction": {
     "path": "blender/mia-orbit-thorax-review-v28/integrated-G2L/Mia_Foundation_v28_G2L.blend",
     "sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
@@ -38,7 +47,7 @@
     "body_comparison": "blender/mia-body-reference-audit-v19/body_reference_comparison_4rows.png",
     "body_findings": "blender/mia-body-reference-audit-v19/BODY_AUDIT.md",
     "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md",
-    "current_live_viewing_setup": "blender/mia-orbit-thorax-review-v28/integrated-G2L/Mia_Foundation_v28_G2L.blend",
+    "current_live_viewing_setup": "blender/mia-face-finish-v29/parts/medial-C2/native/e04bc76faaa3-Mia_EyeLash_v29_C2.blend",
     "v28_live_review": "blender/mia-orbit-thorax-review-v28/integrated-G2L/live-review.json",
     "source_eye_layer_diagnosis": "blender/mia-orbit-thorax-review-v28/evidence/eye-H-layer-diagnosis/UPPER_H_REVIEW.md",
     "viewport_and_camera_audit": "blender/mia-reference-finish-v22/camera-audit.json",
@@ -97,11 +106,11 @@
     "v27 shared8c971/7ae354 drafts: numeric group index copying shifted Body weights. Superseded by e9 named-weight reconstruction; do not adopt draft renders as final evidence."
   ],
   "immediate_next": [
-    "Read v28 ACCEPTANCE/PROGRESS and actual source-art pairs. E9 is baseline, not approved lid/orbit target.",
-    "Eye producer modifies only head/face/features; thorax producer only bounded original Body cage; root merges disjoint indexed deltas from exact same e9 baseline.",
-    "Review source-matched hairOFF, contour segment/curvature and orbital planes, actual independent lashes and minimal blink before adoption.",
-    "Thorax uses original unwarped concept and professional art sources; preserve coherent ribcage/breast attachment, upper/lateral/lower transitions.",
-    "Uniform SRT plus crop only; old source4-v23n boards invalid. Strict evidence validator plus real images/live; no ART inferred from hashes/keys/saves."
+    "Read v29 ACCEPTANCE/PROGRESS. User explicitly requires ACTUAL medial-canthus modeling first; old noH-warp diagnosis is not permission to skip modeling.",
+    "Inspect actual candidateA focused union/recess and ocular-fringe facet without lashes/makeup; resolve it, verify closed/wall contact and fresh saved-native guards before lash stage.",
+    "Build source-informed independent upper/lower lash geometry with taper/thickness/contact and correct drivers, distinct from eyeliner/brow/makeup.",
+    "Apply separable UV pigment/makeup/fatigue/fold/shadow and active spec/roughness after eye/lash gate; preserve already-working scene-lit diffuse pipeline and head/neck/body matching.",
+    "Preserve exact BodyL and healthy cheek/hair; fresh source4/critical/orbit/probes, strict validator plus independent actual-art audit, canonical integration/live/commit/push. Crop+uniformSRT only."
   ],
   "do_not_infer_pass_from": [
     "successful save",
@@ -120,8 +129,10 @@
     "delegated_model": "New delegated work inherits main session model/settings; Astra override revoked by user."
   },
   "worktree_archive": "WORKTREE_ARCHIVE.md",
-  "active_contract": "blender/mia-orbit-thorax-review-v28/ACCEPTANCE.md",
+  "active_contract": "blender/mia-face-finish-v29/ACCEPTANCE.md",
   "latest_user_feedback": {
+    "v29_eye_first": "음? 눈머리 모델링은 수정하고, 진행해야지. This supersedes a report-only/no-modeling interpretation of the prior decoration/anatomy diagnosis.",
+    "v29_lash_surface": "원화기준 위/아래 속눈썹은 메쉬로 처리하고, 화장/다크서클/쌍꺼풀/얼굴음영 등을 고려한 텍스쳐/디퓨전/스페큘러 맵을 실제 적용할 것. Geometry first, then lashes and surface.",
     "body": "L whole-soft rebuild on exact G3 core has bounded independent support; preserve it while correcting eyes. Original source bra leaves exact nude crease inferred. J/K boxlike masses rejected and preserved as failures.",
     "face": "User rejects current whole face and eyes as unlike source; malar/front-cheek hollow reads undernourished. Autonomously reconstruct from multiple approved concept views.",
     "hair": "Rear central finishing volume appears absent; half-up feature is gathered hair/bun, not cord or ribbon.",
@@ -143,7 +154,7 @@
     "fc61e0c"
   ],
   "reference_review_gate": "REFERENCE_REVIEW_GATE.md",
-  "active_progress": "blender/mia-orbit-thorax-review-v28/PROGRESS.md",
+  "active_progress": "blender/mia-face-finish-v29/PROGRESS.md",
   "resumed_v22": {
     "face_finish4_sha256": "9d2c9d42c01c99f0138bb9227e3679ce3afa882d2f43c339ab26496c4c559a4b",
     "face_status": "v27 coherent supported cheek/gradual jaw, source-informed eyes/iris, neutral mouth, genuinely shared head boundary adopted locally. Eye-underlining/blush/outer-canthus ink/nose plane shading still differ from art; overall ART unapproved.",

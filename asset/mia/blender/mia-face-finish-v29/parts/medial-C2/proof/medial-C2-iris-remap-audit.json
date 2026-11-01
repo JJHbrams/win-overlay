@@ -1,0 +1,136 @@
+{
+  "input_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\Mia_EyeLash_v29_A.blend",
+  "input_sha256": "f77e68a6251ce585d03f30e64ed8075f864562d0a2db0f1219bc79db5d751da1",
+  "output_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\Mia_EyeLash_v29_C2.blend",
+  "output_sha256": "e04bc76faaa3f9a855e81660d19bc89adf62b89119c61e087a9a6cf7c394dd26",
+  "A_skin_all42_exact": true,
+  "A_walls_and_white_cap_untouched": true,
+  "materials_and_FaceUV_layout_untouched": true,
+  "only_two_iris_carrier_topologies_changed": true,
+  "owners": [
+    {
+      "owner": "V28G_Iris_-1",
+      "source_vertices": 469,
+      "new_vertices": 725,
+      "new_faces": 1044,
+      "same_all42_key_names": true,
+      "allkey_source_triangle_mapping_max_error_mm": 0.0,
+      "minimum_all42_triangle_area_m2": 2.126474156720402e-12,
+      "quality_internal_edge_flips": [
+        {
+          "old_faces": [
+            [
+              256,
+              259,
+              280
+            ],
+            [
+              256,
+              254,
+              259
+            ]
+          ],
+          "new_faces": [
+            [
+              280,
+              256,
+              254
+            ],
+            [
+              280,
+              254,
+              259
+            ]
+          ],
+          "flipped_edge": [
+            256,
+            259
+          ],
+          "replacement_edge": [
+            280,
+            254
+          ],
+          "old_minimum_allkey_area_m2": 2.7636876459333635e-13,
+          "new_minimum_allkey_area_m2": 2.381745929823917e-11
+        }
+      ],
+      "opaque_alpha_surface_preserved": "256-plane UV polygon circumscribes actual radial alpha ellipse. All retained vertices map to A for all42; internal-edge cleanup changes no boundary/UV/vertices. Fresh UV-sampled surface comparison is required for flipped interpolation.",
+      "clip_polygon_sides": 256,
+      "clip_polygon_phase_steps": 0,
+      "UV_ellipse_center": [
+        0.25,
+        0.5
+      ],
+      "UV_ellipse_radii": [
+        0.14676479995250702,
+        0.22200000286102295
+      ],
+      "circumscribed_normalized_radius": 1.0000753038310954,
+      "named_weights": "J_Bip_C_Head=1",
+      "original_armature_modifier_retained": true
+    },
+    {
+      "owner": "V28G_Iris_1",
+      "source_vertices": 469,
+      "new_vertices": 725,
+      "new_faces": 1044,
+      "same_all42_key_names": true,
+      "allkey_source_triangle_mapping_max_error_mm": 0.0,
+      "minimum_all42_triangle_area_m2": 2.105736703577951e-12,
+      "quality_internal_edge_flips": [
+        {
+          "old_faces": [
+            [
+              323,
+              324,
+              325
+            ],
+            [
+              331,
+              323,
+              325
+            ]
+          ],
+          "new_faces": [
+            [
+              324,
+              325,
+              331
+            ],
+            [
+              324,
+              331,
+              323
+            ]
+          ],
+          "flipped_edge": [
+            325,
+            323
+          ],
+          "replacement_edge": [
+            324,
+            331
+          ],
+          "old_minimum_allkey_area_m2": 2.736804549365981e-13,
+          "new_minimum_allkey_area_m2": 2.3752070614138286e-11
+        }
+      ],
+      "opaque_alpha_surface_preserved": "256-plane UV polygon circumscribes actual radial alpha ellipse. All retained vertices map to A for all42; internal-edge cleanup changes no boundary/UV/vertices. Fresh UV-sampled surface comparison is required for flipped interpolation.",
+      "clip_polygon_sides": 256,
+      "clip_polygon_phase_steps": 0,
+      "UV_ellipse_center": [
+        0.75,
+        0.5
+      ],
+      "UV_ellipse_radii": [
+        0.14676479995250702,
+        0.22200000286102295
+      ],
+      "circumscribed_normalized_radius": 1.0000753038310954,
+      "named_weights": "J_Bip_C_Head=1",
+      "original_armature_modifier_retained": true
+    }
+  ],
+  "reason": "Actual NOiris isolates remove dark fringe; alpha-aware pixel rays locate invisible exterior iris sheet nearly coplanar with skin/wall. Remove non-visible carrier exterior rather than hide artifact with lashes or deform corrected skin. B posterior-tuck probe retained but not adopted.",
+  "limits": "Actual macro/closure/critical-angle validation still required; construction mapping is not art approval."
+}

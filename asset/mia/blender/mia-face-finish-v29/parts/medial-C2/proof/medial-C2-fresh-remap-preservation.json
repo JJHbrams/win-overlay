@@ -1,0 +1,77 @@
+{
+  "source_A_sha256": "f77e68a6251ce585d03f30e64ed8075f864562d0a2db0f1219bc79db5d751da1",
+  "candidate_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\Mia_EyeLash_v29_C2.blend",
+  "candidate_sha256": "e04bc76faaa3f9a855e81660d19bc89adf62b89119c61e087a9a6cf7c394dd26",
+  "checks": {
+    "same_scene_mesh_owner_names": true,
+    "all_noniris_objects_exact_all_recorded_fields": true,
+    "all_material_graphs_exact": true,
+    "all_packed_images_and_colorspaces_exact": true,
+    "A_skin_all42_exact": true,
+    "V28G_Iris_-1_remap_valid": true,
+    "V28G_Iris_1_remap_valid": true
+  },
+  "all_computed_checks_pass": true,
+  "local_topology_exception_only": [
+    "V28G_Iris_-1",
+    "V28G_Iris_1"
+  ],
+  "iris_mapping_details": [
+    {
+      "owner": "V28G_Iris_-1",
+      "new_vertices": 725,
+      "faces": 1044,
+      "weights_nonnegative": true,
+      "weights_sum1_maxerror": 4.440892098500626e-16,
+      "fresh_all42_barycentric_coordinate_maxerror_mm": 5.9602894648143846e-05,
+      "fresh_UV_source_remap_maxerror": 3.2668184352863236e-08,
+      "fresh_all42_UVsampled_opaque_surface_maxerror_mm": 5.807578576773488e-05,
+      "opaque_surface_UV_samples_each_key": 6155,
+      "opaque_UV_query_misses": 0,
+      "UV_winding_matches_source_A": true,
+      "all42_finite": true,
+      "minimum_all42_triangle_area_mm2": 2.2577648906008108e-06,
+      "zero_area_count": 0,
+      "tiny_area_below_1e_minus12_m2_count": 0,
+      "winding_dot_positive_count": 43848,
+      "winding_total_count": 43848,
+      "boundary_degrees_all2": true,
+      "boundary_vertex_count": 404,
+      "boundary_normalized_alpha_radius_range": [
+        1.000000000000002,
+        1.0000753038310959
+      ],
+      "actual_new_named_Head_weights_all1": true,
+      "keynames_drivers_modifiers_materials_exact": true
+    },
+    {
+      "owner": "V28G_Iris_1",
+      "new_vertices": 725,
+      "faces": 1044,
+      "weights_nonnegative": true,
+      "weights_sum1_maxerror": 2.220446049250313e-16,
+      "fresh_all42_barycentric_coordinate_maxerror_mm": 5.962591266133513e-05,
+      "fresh_UV_source_remap_maxerror": 3.7279512749137515e-08,
+      "fresh_all42_UVsampled_opaque_surface_maxerror_mm": 5.724314287119676e-05,
+      "opaque_surface_UV_samples_each_key": 6157,
+      "opaque_UV_query_misses": 0,
+      "UV_winding_matches_source_A": true,
+      "all42_finite": true,
+      "minimum_all42_triangle_area_mm2": 1.986891447813832e-06,
+      "zero_area_count": 0,
+      "tiny_area_below_1e_minus12_m2_count": 0,
+      "winding_dot_positive_count": 43848,
+      "winding_total_count": 43848,
+      "boundary_degrees_all2": true,
+      "boundary_vertex_count": 404,
+      "boundary_normalized_alpha_radius_range": [
+        1.0000000000000207,
+        1.0000753038310959
+      ],
+      "actual_new_named_Head_weights_all1": true,
+      "keynames_drivers_modifiers_materials_exact": true
+    }
+  ],
+  "BodyL_preservation": "A skin all42 exact here; A vsf0dead BodyL originalprefix exact independently in medial-A-fresh-preservation.json.",
+  "limits": "Opaque source geometry preserved by independent saved-coordinate remap within serialization precision; actual rendered glint/gaze/edge also required."
+}
