@@ -10,3 +10,19 @@ Accessed2026-11-01. Public lesson-note text was read, not the video lessons. No 
 | Stan Prokopenko, [How to Draw Breasts – Form & Motion](https://www.proko.com/course-lesson/how-to-draw-breasts-form-and-motion/) | Breast mass transitions over the lower pectoral area toward the axilla on a curved cage; upper/lower profile planes differ. Shoulder/arm motion changes the mass and fold. | Reconstruct connected upper, medial, lateral and inferior transitions and inspect small shoulder probes. This does not constitute cloth/secondary-motion or full rig validation. |
 
 Current code/artifact evidence is separate from these sources: R2 horizontal/iris scaling preserved the inherited smooth lid boundary; ribbon densification fixed contact rather than contour design. Old source4-v23n visibly applied horizontal4/3 and vertical1 to art, invalidating those comparison boards. Native diagnosis and new source-matched hair-off comparisons determine which proposed corrections are actually adopted.
+
+## User-resupplied ChiCha face tutorial — direct browser review
+
+Creator: 치차ChiChaArt, [original head tutorial](https://www.youtube.com/watch?v=6xuWKIplo7Q). Access2026-11-01: public timed Korean transcript via YouTube UI, description/chapters, and selected actual frames. Not a full continuous viewing. The supplied1:18:32 point lies in UV organization, not the main socket construction chapter. Initial transcript export was unavailable; the UI transcript subsequently loaded and was read. Do not describe that initial failure as permanent lack of access.
+
+Confirmed relevant text:09:29 angular eye blockout;16:19 depth/profile from references;22:11 flattened oval eye;23:05–23:53 socket fit and rotated inspection;24:42 iris-center concavity;25:10 ocular back-face removal;27:35 eye hiding for socket sculpt;54:17 inner lid-wall extrusion;59:56–1:03:32 independent, thickened lashes. Actual frames observed at1:18:32/1:18:45 (UV),48:16 (face orientation),27:35 (visibility change) and54:17 (opening/retopo). Seek transitions can briefly display the previous frame; only settled frames count as visual evidence.
+
+Mia implication: an open, flattened stylized eye is not itself a failure. The recessed socket, lid-wall depth, curvature and relation to malar support require actual rotating geometry review. A sphere-fit statistic or a front contour cannot establish that relationship. Tutorial proportions are not Mia's target proportions.
+
+## User-resupplied ChiCha body tutorial
+
+Creator: 치차ChiChaArt, [original body tutorial](https://www.youtube.com/watch?v=8kg_CpOkoDE). Public authored-or-unspecified Korean transcript exported through the browser and relevant text read; chapters and selected actual frames also observed. Not full continuous viewing. Transcript UI initially stalled; the supported export succeeded. Do not store the complete transcript in Git.
+
+Confirmed text:01:48 rotating blockout;02:05/02:42 waist/hip blocks with corresponding edge counts;04:05–04:12 joining boundaries;05:17–05:29 breast opening and relaxed boundary;07:23 forward extrusion;07:46/09:11 breast loops and sculpt refinement;12:12 clavicular edge division;12:50/17:35 rotating form review;15:33 replacement of unsuitable edge flow. Actual06:54 frame shows the trunk before breast extrusion. The14:13 view was navigated for joint-flow review; navigation alone does not count as a frame analysis.
+
+Mia implication: trunk and breast construction are distinct even when the resulting skin is connected. Preserve meaningful local edge flow and sufficient control around attachment/return; a smooth mathematical offset is not a substitute for looking at the resulting anatomy. The existing key/UV count does not justify keeping inadequate local topology. Broader pelvis/leg reconstruction remains outside the current thorax correction.
