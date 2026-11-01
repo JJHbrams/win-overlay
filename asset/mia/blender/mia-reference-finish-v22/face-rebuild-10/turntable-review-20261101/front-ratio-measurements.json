@@ -1,0 +1,97 @@
+{
+  "native_sha256": "e9c8654121307b61fb75d73789c9b2443a3e42c53420dfdfada927d194b475d4",
+  "method": "Manual visible iris center proxies in original raw source/current pixels; eye-line de-roll; uniform IPD scale and translation only, chin not fitted.",
+  "uncertainty": "Approx +/-3px anchors plus drawing pose/gaze. Lower-jaw sample is one section at0.80IPD below eye line, not maximum cheek width.",
+  "measurements": {
+    "reference": {
+      "raw_landmarks": {
+        "eyes": [
+          [
+            450,
+            324
+          ],
+          [
+            582,
+            310
+          ]
+        ],
+        "mouth": [
+          518,
+          412
+        ],
+        "chin": [
+          519,
+          463
+        ],
+        "jaw": [
+          [
+            457,
+            430
+          ],
+          [
+            586,
+            416
+          ]
+        ]
+      },
+      "ipd_px": 132.74034804836094,
+      "eye_to_chin_over_ipd": 1.0961407491486945,
+      "eye_to_mouth_over_ipd": 0.7132803632236094,
+      "mouth_to_chin_over_ipd": 0.38286038592508514,
+      "jaw_section_width_over_ipd": 0.9775284453769101,
+      "display_uniform_srt": {
+        "uniform_scale": 1.8080410630877766,
+        "rotation_degrees": 6.054191894114834,
+        "translation_xy": [
+          -587.2962542565266,
+          -483.349602724177
+        ]
+      }
+    },
+    "candidate_render": {
+      "raw_landmarks": {
+        "eyes": [
+          [
+            386,
+            541
+          ],
+          [
+            617,
+            515
+          ]
+        ],
+        "mouth": [
+          520,
+          682
+        ],
+        "chin": [
+          528,
+          772
+        ],
+        "jaw": [
+          [
+            408,
+            726
+          ],
+          [
+            637,
+            700
+          ]
+        ]
+      },
+      "ipd_px": 232.4585984643287,
+      "eye_to_chin_over_ipd": 1.0558136091937007,
+      "eye_to_mouth_over_ipd": 0.6672280104372931,
+      "mouth_to_chin_over_ipd": 0.38858559875640764,
+      "jaw_section_width_over_ipd": 0.9914507695772343,
+      "display_uniform_srt": {
+        "uniform_scale": 1.0324419126050464,
+        "rotation_degrees": 6.421848383517537,
+        "translation_xy": [
+          -173.5492347835742,
+          -414.62026019209065
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "method": "Uniform display height from source crop and current alpha bounds; no anisotropic resizing. Includes hair height and differing pose/underwear, not body-height validation.",
+  "views": [
+    {
+      "view": "\uc815\uba74",
+      "reference_crop": [
+        30,
+        50,
+        432,
+        952
+      ],
+      "model_frame": 0,
+      "model_alpha_bbox": [
+        198,
+        66,
+        521,
+        771
+      ]
+    },
+    {
+      "view": "\uce21\uba74",
+      "reference_crop": [
+        472,
+        50,
+        710,
+        952
+      ],
+      "model_frame": 18,
+      "model_alpha_bbox": [
+        298,
+        65,
+        431,
+        771
+      ]
+    },
+    {
+      "view": "\uc0ac\uc120",
+      "reference_crop": [
+        1148,
+        50,
+        1482,
+        952
+      ],
+      "model_frame": 9,
+      "model_alpha_bbox": [
+        226,
+        66,
+        469,
+        772
+      ]
+    },
+    {
+      "view": "\ud6c4\uba74",
+      "reference_crop": [
+        730,
+        50,
+        1118,
+        952
+      ],
+      "model_frame": 36,
+      "model_alpha_bbox": [
+        199,
+        66,
+        522,
+        768
+      ]
+    }
+  ]
+}
