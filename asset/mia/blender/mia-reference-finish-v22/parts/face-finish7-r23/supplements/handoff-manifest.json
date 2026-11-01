@@ -1,0 +1,133 @@
+{
+  "status": "Frozen local eye WIP for parent integration/review; not final source likeness approval",
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\Mia_FaceFinish7_BlinkR23_v22.blend",
+    "sha256": "579cfc375708852132bf406d2b34a958a46b358f32b844dcb074ed70ad6f6923"
+  },
+  "source_r19": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r19\\Mia_FaceFinish7_PositionFairR19_v22.blend",
+    "sha256": "5677073262e4013c2b750a671634cae16c36862fbd8bba2b08c321fd69d46990"
+  },
+  "neutral_r22": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r22\\Mia_FaceFinish7_EyeArcR22_v22.blend",
+    "sha256": "cc60cd852f305914a95c38ceb8e71d518f04a81c8ab6487364ff215f39bb8812"
+  },
+  "replay": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\owner-key-replay-from-r19.json",
+    "sha256": "b05dcf66a9a6f48e2f38992453c5bd924e2a56d6dabf170b4df8412f37133810"
+  },
+  "replay_rule": "Verify each exact before coordinate on the owner/key, then replace with after. Apply mesh_cache separately. These are R19-to-R23 complete target edits; do NOT combine with R22/R23 intermediate deltas, and do NOT broadcast one delta to all keys. Body14/Hair0d belong to integration and are not included.",
+  "recipes": {
+    "build_eye_arc_r22.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\build_eye_arc_r22.py",
+      "sha256": "8f5800dbd3a55e18782cb6a3c2d49e68d07a3f9431ccb4497027f575f71575d2"
+    },
+    "build_blink_r23.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\build_blink_r23.py",
+      "sha256": "6419ee12e124806e3c5e83454626eddb9e6b6b2e9770de25b794298c47a8d447"
+    },
+    "export_eye_r23_from_r19.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\export_eye_r23_from_r19.py",
+      "sha256": "c43b35d84fb285be42798ba7f26169c28de8bcc934880e834f8b47a6bdf20b1e"
+    },
+    "audit_blink_r23.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\audit_blink_r23.py",
+      "sha256": "f88e4bce1752e791207a38e61330751a468bc976e350183f39c2217b3b2412a3"
+    },
+    "render_blink_stages.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\render_blink_stages.py",
+      "sha256": "722acda7c1984b563ca97ce38e994574ce494c8dd8ed3aa48f5897059a686bf8"
+    },
+    "render_blink_extended.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\render_blink_extended.py",
+      "sha256": "30b5a579c297537cf3b7b27394bd940daf086d4ec045b82f2e462fc7283cc466"
+    },
+    "render_neutral_source_four.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\render_neutral_source_four.py",
+      "sha256": "e985ba986e47f4d7788b6d202c2f213b72cdad44dac442f7954f84b37caea1d4"
+    },
+    "render_source_motion.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\render_source_motion.py",
+      "sha256": "bd448e4ad88483b5f5d48926e7fb8628475d5daa76edbccc889ca22b616219b7"
+    }
+  },
+  "manifests": {
+    "r22": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r22\\manifest.json",
+      "sha256": "e8cd4cc8edc0099d3f4f1e21bbc359db32b3673380c29b0f693c04156fa74966"
+    },
+    "r23": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\manifest.json",
+      "sha256": "51c702f9b8862d9df9751fa010969f57db69e9005879c6cf2be6f38fc6baa58c"
+    },
+    "evaluated_aperture": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\evaluated-blink-aperture.json",
+      "sha256": "bc13042057f95bb1abdc6e06c39b97621853cbe22f93203d55b48de35cd8973e"
+    }
+  },
+  "evidence_sets": {
+    "blink-stages": {
+      "record": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\render-records.json",
+        "sha256": "cfa1ad0d342d6308fd46c2093dee8fc5b03ae613ba1edeb47c39a8d87363f34f"
+      },
+      "actual_render_count": 18
+    },
+    "blink-extended": {
+      "record": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\render-records.json",
+        "sha256": "36c8578ef2688fdb33bc5205310621f1fa4ff2306209b7b2971d2a99e6065579"
+      },
+      "actual_render_count": 36
+    },
+    "neutral-source-four": {
+      "record": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\render-records.json",
+        "sha256": "9a227aca116443a264d2d2fcb3b4d48514896d6308c94b87ad04480bf9db425e"
+      },
+      "actual_render_count": 12
+    }
+  },
+  "scope": {
+    "owners": [
+      "MIA_V14_SculptedSkin",
+      "MIA_V14_UpperLash_-1",
+      "MIA_V14_UpperLash_1",
+      "MIA_V14_OuterWing_-1",
+      "MIA_V14_OuterWing_1"
+    ],
+    "neutral_skin_vertices_changed_from_r19": 64,
+    "neutral_basis_cache_exact_r22": true,
+    "ear_indices_588_through727_all_keys_unchanged": true,
+    "no_changed_skin_coords_below_local_z_1_46": true,
+    "all_nonowner_snapshot_fields_exact": true,
+    "owner_uv_topology_weights_materials_matrix_modifiers_exact": true,
+    "no_makeup_changes": true
+  },
+  "actual_visual_review": {
+    "reviewer": "Producer, parent independently reviewing",
+    "views_inspected": [
+      "native_half_yaw+00",
+      "native_full_yaw+00",
+      "native_full_yaw-30",
+      "matte_full_yaw+30",
+      "matte_half_yaw-30",
+      "native_neutral_yaw+30",
+      "native_full_yaw+60",
+      "native_full_yaw-60",
+      "matte_full_yaw+60",
+      "matte_half_yaw-60",
+      "native_combined_yaw+30",
+      "matte_combined_yaw-30",
+      "native_hair_front"
+    ],
+    "finding": "Half remains visibly open; full has no visible iris leak in inspected0/\u00b130/\u00b160; near-side wing remains attached; combined Close.5 plus Eye/MouthSorrow.15 remains partial. Closed inner line is still diagrammatic."
+  },
+  "limits": [
+    "Source global cheek/jaw likeness remains unfinished; R19 selected local smoothing is retained.",
+    "R23 full evaluated boundary has max0.121mm residual Z gap under lash, despite no visible leak in reviewed angles. This is disclosed, not exact-contact PASS.",
+    "Only symmetric Close0/.5/1 and subtle Eye/MouthSorrow.15 (separate/combined) visually checked. Asymmetric driver coordination and all47 expressions not validated.",
+    "Producer hair is inherited frozen Face6 hair; parent integrates selected Body14/Hair0d separately.",
+    "R24 separate closure-overlap trial exists but is unselected and not required for integration."
+  ]
+}

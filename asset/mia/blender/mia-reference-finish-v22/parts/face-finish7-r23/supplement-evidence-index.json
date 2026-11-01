@@ -1,0 +1,321 @@
+{
+  "files": {
+    "recipes/build_eye_arc_r22.py": {
+      "sha256": "8f5800dbd3a55e18782cb6a3c2d49e68d07a3f9431ccb4497027f575f71575d2",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\build_eye_arc_r22.py"
+    },
+    "recipes/build_blink_r23.py": {
+      "sha256": "6419ee12e124806e3c5e83454626eddb9e6b6b2e9770de25b794298c47a8d447",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\build_blink_r23.py"
+    },
+    "recipes/export_eye_r23_from_r19.py": {
+      "sha256": "c43b35d84fb285be42798ba7f26169c28de8bcc934880e834f8b47a6bdf20b1e",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\export_eye_r23_from_r19.py"
+    },
+    "recipes/audit_blink_r23.py": {
+      "sha256": "f88e4bce1752e791207a38e61330751a468bc976e350183f39c2217b3b2412a3",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\audit_blink_r23.py"
+    },
+    "recipes/render_blink_stages.py": {
+      "sha256": "722acda7c1984b563ca97ce38e994574ce494c8dd8ed3aa48f5897059a686bf8",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\render_blink_stages.py"
+    },
+    "recipes/render_blink_extended.py": {
+      "sha256": "30b5a579c297537cf3b7b27394bd940daf086d4ec045b82f2e462fc7283cc466",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\render_blink_extended.py"
+    },
+    "recipes/render_neutral_source_four.py": {
+      "sha256": "e985ba986e47f4d7788b6d202c2f213b72cdad44dac442f7954f84b37caea1d4",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\render_neutral_source_four.py"
+    },
+    "recipes/render_source_motion.py": {
+      "sha256": "bd448e4ad88483b5f5d48926e7fb8628475d5daa76edbccc889ca22b616219b7",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\render_source_motion.py"
+    },
+    "supplements/r22-manifest.json": {
+      "sha256": "e8cd4cc8edc0099d3f4f1e21bbc359db32b3673380c29b0f693c04156fa74966",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r22\\manifest.json"
+    },
+    "supplements/r23-manifest.json": {
+      "sha256": "51c702f9b8862d9df9751fa010969f57db69e9005879c6cf2be6f38fc6baa58c",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\manifest.json"
+    },
+    "evidence/blink-stages/matte_full_yaw+00.png": {
+      "sha256": "ba9454e1a8b10acaf02a1232e14701e588eb246e46a581a47ab4513baef68213",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\matte_full_yaw+00.png"
+    },
+    "evidence/blink-stages/matte_full_yaw+30.png": {
+      "sha256": "0831c34fe3f8aaa1648c0b39b1afadd8823334e046601143044dbaf6ee44ef80",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\matte_full_yaw+30.png"
+    },
+    "evidence/blink-stages/matte_full_yaw-30.png": {
+      "sha256": "9e31eb4303c42980062f794daf7ea30d8f69f3d680f3694bd608d39b278fd6da",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\matte_full_yaw-30.png"
+    },
+    "evidence/blink-stages/matte_half_yaw+00.png": {
+      "sha256": "2a8e9c6f06d56ffa9dbd1afa7f2ae8766531b55ce509795e734b22f8855270d8",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\matte_half_yaw+00.png"
+    },
+    "evidence/blink-stages/matte_half_yaw+30.png": {
+      "sha256": "9eb5309d4804b3f08eee27b296f32d92b5b2e0771c41ca45e25abb7405cb7b1f",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\matte_half_yaw+30.png"
+    },
+    "evidence/blink-stages/matte_half_yaw-30.png": {
+      "sha256": "6eeb7f6dee90d476f60105c38926dd89aaeff9e61c851cf5cf8cc674bf64cebb",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\matte_half_yaw-30.png"
+    },
+    "evidence/blink-stages/matte_neutral_yaw+00.png": {
+      "sha256": "a01bf7dc3d280c438b354c72b9fa99ab294769fc21e8bed0d50a521822465828",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\matte_neutral_yaw+00.png"
+    },
+    "evidence/blink-stages/matte_neutral_yaw+30.png": {
+      "sha256": "66b5b1ed7deb202e93abfaaa349bb87c02f34b32c0fec7a08a2219016234b615",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\matte_neutral_yaw+30.png"
+    },
+    "evidence/blink-stages/matte_neutral_yaw-30.png": {
+      "sha256": "fbdcdaf76980374cb7b638f1d9ee23c1c9833919c4d0b4efcbaa1cd56362009b",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\matte_neutral_yaw-30.png"
+    },
+    "evidence/blink-stages/native_full_yaw+00.png": {
+      "sha256": "b1467f3b4b77a191c28ff4df058e654f8616490dd96842a7c53369519884ac35",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\native_full_yaw+00.png"
+    },
+    "evidence/blink-stages/native_full_yaw+30.png": {
+      "sha256": "a364c15c1d70bac782d1918c771b0189215363e0ac4bfd5b7136e5fd68d5eb6e",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\native_full_yaw+30.png"
+    },
+    "evidence/blink-stages/native_full_yaw-30.png": {
+      "sha256": "5e4787e1b6b764a98422023e5e0aade6fa6eda7ca7de6b65ee383258395b642e",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\native_full_yaw-30.png"
+    },
+    "evidence/blink-stages/native_half_yaw+00.png": {
+      "sha256": "7b45f00ed4a34dbce57a8f1e133001a8445d8a9dd961ec2c26a3e66c0dba4c84",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\native_half_yaw+00.png"
+    },
+    "evidence/blink-stages/native_half_yaw+30.png": {
+      "sha256": "c792c09963cb302e6a0b9c0037b15020ce0c940df7d9720b5fc84c045aff19a1",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\native_half_yaw+30.png"
+    },
+    "evidence/blink-stages/native_half_yaw-30.png": {
+      "sha256": "a6763281eecaf1fc0a07ba9554a1d97b4c64b2ae63081859491dbcafd1405bad",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\native_half_yaw-30.png"
+    },
+    "evidence/blink-stages/native_neutral_yaw+00.png": {
+      "sha256": "2bd740b19e775cecf6aa6cbe8b12b470e37119cd7be9210ecb56eb9465cf5826",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\native_neutral_yaw+00.png"
+    },
+    "evidence/blink-stages/native_neutral_yaw+30.png": {
+      "sha256": "595e6e7d737fe4cc66a959781864317c6a66ebcc99aad92c8928951cb7f5c8ac",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\native_neutral_yaw+30.png"
+    },
+    "evidence/blink-stages/native_neutral_yaw-30.png": {
+      "sha256": "bd8287ff7c6818129059c7617fedb58e74ac31425f976b51d22dd02431aa08f8",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\native_neutral_yaw-30.png"
+    },
+    "evidence/blink-stages/render-records.json": {
+      "sha256": "cfa1ad0d342d6308fd46c2093dee8fc5b03ae613ba1edeb47c39a8d87363f34f",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-stages\\render-records.json"
+    },
+    "evidence/blink-extended/matte_combined_yaw+00.png": {
+      "sha256": "43afd8a12c2439feb89d99482be461de8376a666511b626077d2363f3b165cd6",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_combined_yaw+00.png"
+    },
+    "evidence/blink-extended/matte_combined_yaw+30.png": {
+      "sha256": "6ecc961d3739cfdc60603c3cf4dd0adf8d72b574fc10c2d5133d6c2749e26bb1",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_combined_yaw+30.png"
+    },
+    "evidence/blink-extended/matte_combined_yaw-30.png": {
+      "sha256": "1fafb17fa8d7729a8f0cf40d6bad4d8a875c011e3b8db9ab85a74c686b657394",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_combined_yaw-30.png"
+    },
+    "evidence/blink-extended/matte_full_yaw+00.png": {
+      "sha256": "95e5c9e1b8913737bfa9674d5e92953a3d32b438576f708e1608668c8714b88f",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_full_yaw+00.png"
+    },
+    "evidence/blink-extended/matte_full_yaw+30.png": {
+      "sha256": "78988197a86ed027db45f6de40fcb9d90c4f9afa5fda97915749babf4187f158",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_full_yaw+30.png"
+    },
+    "evidence/blink-extended/matte_full_yaw+60.png": {
+      "sha256": "b5460e90caf78ae13cf9b6306ddc202c0fc25dc41cc691d644b5ac296bffb6c6",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_full_yaw+60.png"
+    },
+    "evidence/blink-extended/matte_full_yaw-30.png": {
+      "sha256": "00d3ac320f37acc229fb1ad30d2727f6ba7acecc9963e929d49c7c00f28eee69",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_full_yaw-30.png"
+    },
+    "evidence/blink-extended/matte_full_yaw-60.png": {
+      "sha256": "bd8b5c47c8f14bf2d216cefff368f84662d8d38e657361d5a1b4fcb5935aa6b2",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_full_yaw-60.png"
+    },
+    "evidence/blink-extended/matte_half_yaw+00.png": {
+      "sha256": "e4a4dd70a2d0c2737af6e1b47a8a6d9361fac87a9365f2ae1eb74179491277f0",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_half_yaw+00.png"
+    },
+    "evidence/blink-extended/matte_half_yaw+30.png": {
+      "sha256": "d6f7d0a4d93d9f230ab92a34163f422d1b982b52cf298815bc5e29cdaf23646d",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_half_yaw+30.png"
+    },
+    "evidence/blink-extended/matte_half_yaw+60.png": {
+      "sha256": "d53c6e90c9e4765a34b8b6e2a3dd65c0da5a6f46a7987c8c8f052e35884578ce",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_half_yaw+60.png"
+    },
+    "evidence/blink-extended/matte_half_yaw-30.png": {
+      "sha256": "a25acf17f0616a52acb4d2e264d730b3d68b5a2146d91f8d0226bdb843c93777",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_half_yaw-30.png"
+    },
+    "evidence/blink-extended/matte_half_yaw-60.png": {
+      "sha256": "9bc9304c89b6433054f7ab4e8c60a7d36a8e7f3bc416ea86e05e0fe37ecf8bd8",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_half_yaw-60.png"
+    },
+    "evidence/blink-extended/matte_neutral_yaw+00.png": {
+      "sha256": "828695a0b758e13386748b537ef511d6d71e3110e9d367390feb9762a33d1d6e",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_neutral_yaw+00.png"
+    },
+    "evidence/blink-extended/matte_neutral_yaw+30.png": {
+      "sha256": "43b956652623b152e52579af747bb2ceb94beef0256ed9526a07050d2444657a",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_neutral_yaw+30.png"
+    },
+    "evidence/blink-extended/matte_neutral_yaw+60.png": {
+      "sha256": "7f3541f007ab9997f78fa11da1e510e097f4c97a1a165a38323a4072888b75ea",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_neutral_yaw+60.png"
+    },
+    "evidence/blink-extended/matte_neutral_yaw-30.png": {
+      "sha256": "be9886d70ef8cd7ed85abb7b2c5bf3d7977c03e86fd1c1b9d6441c542715280b",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_neutral_yaw-30.png"
+    },
+    "evidence/blink-extended/matte_neutral_yaw-60.png": {
+      "sha256": "cc18e2a78ac2d5c93bd0465824f09a0bf2670ee43fc9c6201885b2122bdd6839",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\matte_neutral_yaw-60.png"
+    },
+    "evidence/blink-extended/native_combined_yaw+00.png": {
+      "sha256": "048750999b19f2f20787bd1ca95cd02345482f8493c14645f48ee933b5fc1c90",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_combined_yaw+00.png"
+    },
+    "evidence/blink-extended/native_combined_yaw+30.png": {
+      "sha256": "d3a1488812e79b3114b6424de1d5f1a11819eece3abd7e24c86370f1f42dee6f",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_combined_yaw+30.png"
+    },
+    "evidence/blink-extended/native_combined_yaw-30.png": {
+      "sha256": "780420b8c4efc9ed662caf18e4a7676f6ee1ec3038113cfdb2e707a6452c26fb",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_combined_yaw-30.png"
+    },
+    "evidence/blink-extended/native_full_yaw+00.png": {
+      "sha256": "1ce90399d1a9c75943df150b41734358966a32e29a157a591b926d1bc481f729",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_full_yaw+00.png"
+    },
+    "evidence/blink-extended/native_full_yaw+30.png": {
+      "sha256": "67b8df6a09bc37442c4a8de94bf9b7e1d02efcc8f16e5365c267c6d8c1b288d2",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_full_yaw+30.png"
+    },
+    "evidence/blink-extended/native_full_yaw+60.png": {
+      "sha256": "f45371c1028c9262b158c2d1e2f882efe4d9d3c18cb6934d154823773ffc72bc",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_full_yaw+60.png"
+    },
+    "evidence/blink-extended/native_full_yaw-30.png": {
+      "sha256": "6b7d50f29a858baf531214beef7bfe929cb17309aa72d788eb3dbe0151c264da",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_full_yaw-30.png"
+    },
+    "evidence/blink-extended/native_full_yaw-60.png": {
+      "sha256": "1def6b9e77f08413ba40671157d00396a624cd9801b0985be361e51d5a1f8755",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_full_yaw-60.png"
+    },
+    "evidence/blink-extended/native_half_yaw+00.png": {
+      "sha256": "1ab7a695c9a03cd000e051bc5c7f01166950c70614a3890d5def5e6926e7f9e9",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_half_yaw+00.png"
+    },
+    "evidence/blink-extended/native_half_yaw+30.png": {
+      "sha256": "1a492caa73d74f51a56e289de61cc0e1ea76c08f78ba975675146c1b46f79613",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_half_yaw+30.png"
+    },
+    "evidence/blink-extended/native_half_yaw+60.png": {
+      "sha256": "07e3d09b25e8de556b420996f2dd91373617d244f23956950ec14cc6db1c7626",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_half_yaw+60.png"
+    },
+    "evidence/blink-extended/native_half_yaw-30.png": {
+      "sha256": "1d479ade290acb6ff360f50980eed5545d224e548b7de25da757d7d39429ca85",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_half_yaw-30.png"
+    },
+    "evidence/blink-extended/native_half_yaw-60.png": {
+      "sha256": "beabef3abe3c8057f6b2d15a7fc0517d84f740d5a0dc10d0f7307622714bb0f6",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_half_yaw-60.png"
+    },
+    "evidence/blink-extended/native_neutral_yaw+00.png": {
+      "sha256": "a7632a6728da8740c415809c093b22e6192e439bfb116aef27076427e9c8a53a",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_neutral_yaw+00.png"
+    },
+    "evidence/blink-extended/native_neutral_yaw+30.png": {
+      "sha256": "c526081e9a022b179ae8be71aab65deba318c479055e46c20f7c24d3837969ee",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_neutral_yaw+30.png"
+    },
+    "evidence/blink-extended/native_neutral_yaw+60.png": {
+      "sha256": "957236331a4abd6473863bd07bc293be515e9e02fea9cfdae2ddfaa7a254f8c9",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_neutral_yaw+60.png"
+    },
+    "evidence/blink-extended/native_neutral_yaw-30.png": {
+      "sha256": "850d0f2f76927a7872c5a7e50ad75300435e4c7ff16960f1436f01c2e8763d53",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_neutral_yaw-30.png"
+    },
+    "evidence/blink-extended/native_neutral_yaw-60.png": {
+      "sha256": "2a3506699274693b06b08de205571b8dcd7d242a4a83ea4d63315b9bbe9aa1b5",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\native_neutral_yaw-60.png"
+    },
+    "evidence/blink-extended/render-records.json": {
+      "sha256": "36c8578ef2688fdb33bc5205310621f1fa4ff2306209b7b2971d2a99e6065579",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\blink-extended\\render-records.json"
+    },
+    "evidence/neutral-source-four/matte_front.png": {
+      "sha256": "a24955c67ba0b12b7e8cb57cde6f467eb72f53bb47e57fc57c9453da1562c4b8",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\matte_front.png"
+    },
+    "evidence/neutral-source-four/matte_left_oblique.png": {
+      "sha256": "9ef8e4120f729ac4421f48b26d77776e2d6856b2e515504d6f7555209f49decc",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\matte_left_oblique.png"
+    },
+    "evidence/neutral-source-four/matte_profile.png": {
+      "sha256": "6b1fbc4f650ee41677b2da94db5b49bc31372f308b98ae9a3b0f859f8bcf6795",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\matte_profile.png"
+    },
+    "evidence/neutral-source-four/matte_right_oblique.png": {
+      "sha256": "3a23e660385136d210e1e18568ad2396f1fe396071cab2262b3f9baeb56c35ef",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\matte_right_oblique.png"
+    },
+    "evidence/neutral-source-four/native_bare_front.png": {
+      "sha256": "73711853c727bb6b8f716ed555e1f051de3d2e69efea472ca1969ef490d62f30",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\native_bare_front.png"
+    },
+    "evidence/neutral-source-four/native_bare_left_oblique.png": {
+      "sha256": "73cb81119bf96864534a9c70ae4b648734e3cdf5672d1a7e7e0a3f802e5a448b",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\native_bare_left_oblique.png"
+    },
+    "evidence/neutral-source-four/native_bare_profile.png": {
+      "sha256": "48b9e24942765c613df4dc5e92964885c4464a3fc452872b8d49c6843c4e9063",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\native_bare_profile.png"
+    },
+    "evidence/neutral-source-four/native_bare_right_oblique.png": {
+      "sha256": "165e679063b84edd7b1d6007e49895987e70d261179dfc3454ea1ab9798ea86d",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\native_bare_right_oblique.png"
+    },
+    "evidence/neutral-source-four/native_hair_front.png": {
+      "sha256": "e87f7b93c66fa9616e6039f7a2068f75aa7ee04b54848b15ff30e36e19d06d7f",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\native_hair_front.png"
+    },
+    "evidence/neutral-source-four/native_hair_left_oblique.png": {
+      "sha256": "390ff0edc55d274f60f974182cf127416f0bc7f72613a2712181a352c5d1ca7c",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\native_hair_left_oblique.png"
+    },
+    "evidence/neutral-source-four/native_hair_profile.png": {
+      "sha256": "8ca171930811540bd6bfe3db5eb6171d08f36cfdcc1b0dabce3d3fb49944b33c",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\native_hair_profile.png"
+    },
+    "evidence/neutral-source-four/native_hair_right_oblique.png": {
+      "sha256": "5568b23b9dcae5c575a47e531ca9d82f035d3aaf1737cc54a3fd13fae10d1166",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\native_hair_right_oblique.png"
+    },
+    "evidence/neutral-source-four/render-records.json": {
+      "sha256": "9a227aca116443a264d2d2fcb3b4d48514896d6308c94b87ad04480bf9db425e",
+      "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\neutral-source-four\\render-records.json"
+    }
+  },
+  "status": "Exact producer evidence bytes; source paths are provenance, canonical paths are keys. No art PASS implied."
+}

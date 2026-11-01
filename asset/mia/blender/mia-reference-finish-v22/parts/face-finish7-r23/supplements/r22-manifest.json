@@ -1,0 +1,242 @@
+{
+  "source": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r19\\Mia_FaceFinish7_PositionFairR19_v22.blend",
+    "sha256": "5677073262e4013c2b750a671634cae16c36862fbd8bba2b08c321fd69d46990"
+  },
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r22\\Mia_FaceFinish7_EyeArcR22_v22.blend",
+    "sha256": "cc60cd852f305914a95c38ceb8e71d518f04a81c8ab6487364ff215f39bb8812"
+  },
+  "recipe": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\build_eye_arc_r22.py",
+    "sha256": "8f5800dbd3a55e18782cb6a3c2d49e68d07a3f9431ccb4497027f575f71575d2"
+  },
+  "arcs": {
+    "1": {
+      "upper_ids": [
+        357,
+        356,
+        353,
+        351,
+        350,
+        349,
+        348,
+        347,
+        346,
+        345
+      ],
+      "inner": 359,
+      "outer": 344,
+      "x": [
+        0.017602624371647835,
+        0.018583251163363457,
+        0.02062162011861801,
+        0.023743411526083946,
+        0.027935057878494263,
+        0.032791320234537125,
+        0.03801729530096054,
+        0.042929552495479584,
+        0.04682282358407974,
+        0.05008358508348465,
+        0.052970364689826965,
+        0.054515961557626724
+      ],
+      "dz": [
+        0.0,
+        -0.00044452631705715895,
+        -0.0006582171342373044,
+        -0.00048045103097771324,
+        0.00033265774350832444,
+        0.0012189276405896177,
+        0.0017950668047723717,
+        0.0017346106929170269,
+        0.0011956935527583923,
+        0.0005145384640135031,
+        -0.0001465393656989722,
+        0.0
+      ],
+      "source_z": [
+        1.5402079820632935,
+        1.5411137342453003,
+        1.5422186851501465,
+        1.5432323217391968,
+        1.5436973571777344,
+        1.5438473224639893,
+        1.5438761711120605,
+        1.5440459251403809,
+        1.5443699359893799,
+        1.5446745157241821,
+        1.5448580980300903,
+        1.5444018840789795
+      ],
+      "target_z": [
+        1.5402079820632935,
+        1.5406692079282431,
+        1.5415604680159092,
+        1.542751870708219,
+        1.5440300149212427,
+        1.5450662501045789,
+        1.545671237916833,
+        1.5457805358332979,
+        1.5455656295421383,
+        1.5451890541881956,
+        1.5447115586643914,
+        1.5444018840789795
+      ]
+    },
+    "-1": {
+      "upper_ids": [
+        510,
+        506,
+        504,
+        503,
+        502,
+        501,
+        500,
+        499,
+        498,
+        497
+      ],
+      "inner": 509,
+      "outer": 495,
+      "x": [
+        0.01669413223862648,
+        0.01767188124358654,
+        0.019728070124983788,
+        0.02288530394434929,
+        0.027115819975733757,
+        0.03200293332338333,
+        0.03724302351474762,
+        0.04215678572654724,
+        0.046039555221796036,
+        0.04929441586136818,
+        0.052198395133018494,
+        0.05376700684428215
+      ],
+      "dz": [
+        0.0,
+        -0.00045123148005843383,
+        -0.0006596312852209518,
+        -0.0004656108182261587,
+        0.0003451266577041423,
+        0.0012172192994992503,
+        0.0017767921778462092,
+        0.0016977012305565697,
+        0.001138912166040118,
+        0.0004574204215774813,
+        -0.00017226104391987462,
+        0.0
+      ],
+      "source_z": [
+        1.5401477813720703,
+        1.5410550832748413,
+        1.5421547889709473,
+        1.5431535243988037,
+        1.5436160564422607,
+        1.543768048286438,
+        1.5437973737716675,
+        1.5439726114273071,
+        1.5443096160888672,
+        1.5446110963821411,
+        1.5447577238082886,
+        1.5442696809768677
+      ],
+      "target_z": [
+        1.5401477813720703,
+        1.5406038517947829,
+        1.5414951576857263,
+        1.5426879135805776,
+        1.5439611830999649,
+        1.5449852675859372,
+        1.5455741659495137,
+        1.5456703126578637,
+        1.5454485282549073,
+        1.5450685168037186,
+        1.5445854627643687,
+        1.5442696809768677
+      ]
+    }
+  },
+  "changed_owners": [
+    "MIA_V14_OuterWing_-1",
+    "MIA_V14_OuterWing_1",
+    "MIA_V14_SculptedSkin",
+    "MIA_V14_UpperLash_-1",
+    "MIA_V14_UpperLash_1"
+  ],
+  "skin_max_delta_m": 0.0017950668047723717,
+  "skin_minimum_old_new_face_normal_dot": 0.936171526712133,
+  "body_ears_lower_face_carrier_materials_exact": true,
+  "relative_key_errors": {
+    "MIA_V14_SculptedSkin": {
+      "Basis": 0.0,
+      "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+      "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+      "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+      "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+      "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+      "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+      "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+      "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+      "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+      "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+      "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+      "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+      "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+      "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+      "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+      "MIA_FaceArt_EyeProportion": 0.0,
+      "MIA_FaceArt_OwnedBrowPlacement": 0.0,
+      "MIA_V12_ReferenceFacialSculpt": 0.0,
+      "MIA_V13_LidJawRefinement": 0.0,
+      "MIA_V14_HoodCheekMouthCorrective": 0.0
+    },
+    "MIA_V14_UpperLash_-1": {
+      "Basis": 0.0,
+      "MIA_V20_BlinkFollower": 0.0
+    },
+    "MIA_V14_OuterWing_-1": {
+      "Basis": 0.0,
+      "MIA_V20_BlinkFollower": 0.0
+    },
+    "MIA_V14_UpperLash_1": {
+      "Basis": 0.0,
+      "MIA_V20_BlinkFollower": 0.0
+    },
+    "MIA_V14_OuterWing_1": {
+      "Basis": 0.0,
+      "MIA_V20_BlinkFollower": 0.0
+    }
+  },
+  "limits": [
+    "Neutral arc and actual movement need visual review.",
+    "Inherited Close key over-closes at value .5; preserved relative keys are not a motion PASS.",
+    "No new makeup or eye/iris scale/depth change."
+  ]
+}

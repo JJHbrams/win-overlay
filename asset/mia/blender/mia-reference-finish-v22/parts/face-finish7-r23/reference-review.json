@@ -1,0 +1,1659 @@
+{
+  "schema_version": 1,
+  "part": "face",
+  "baseline_native": {
+    "path": "../face-finish7-r19/native/5677073262e4-Mia_FaceFinish7_PositionFairR19_v22.blend",
+    "sha256": "5677073262e4013c2b750a671634cae16c36862fbd8bba2b08c321fd69d46990"
+  },
+  "candidate_native": {
+    "path": "native/579cfc375708-Mia_FaceFinish7_BlinkR23_v22.blend",
+    "sha256": "579cfc375708852132bf406d2b34a958a46b358f32b844dcb074ed70ad6f6923"
+  },
+  "required_views": [
+    "front",
+    "profile",
+    "left_oblique",
+    "right_oblique"
+  ],
+  "views": [
+    {
+      "id": "front",
+      "reference": {
+        "path": "../../../../references/received/mia-face-reaffirmed-20261031.png",
+        "sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44",
+        "crop_xyxy": [
+          340,
+          220,
+          700,
+          490
+        ],
+        "crop_artifact": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r23-source-comparison\\face\\front-source-crop.png",
+          "sha256": "9de024a583acaad200bd8c574cf54c1ca51a8b7c8f90fcca4d6bd17583be149b"
+        }
+      },
+      "baseline_render": {
+        "path": "../../face-feedback-7/r23-source-comparison/baseline/face/front.png",
+        "sha256": "4167372d6f96e6bca975b12cb48c805ee8d356e720319683af03630422750839"
+      },
+      "candidate_render": {
+        "path": "../../face-feedback-7/r23-source-comparison/candidate/face/front.png",
+        "sha256": "ee3d2560a7021c2c3231db46231435fd7a7c15e1a5f8e596a88c7ef439a2343c"
+      },
+      "comparison_board": {
+        "path": "../../face-feedback-7/r23-source-comparison/face/front-source-baseline-integrated.png",
+        "sha256": "d7afe765b429b04cc6f23349bbc1c6b2f2cb371c089833c73089d18b91ba3eae"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.9933727979660034,
+            0.11493712663650513,
+            1.6330952146148547e-09,
+            0.0
+          ],
+          [
+            2.0223808405717136e-08,
+            -1.6058071139468666e-07,
+            -1.0,
+            -2.0
+          ],
+          [
+            -0.11493712663650513,
+            0.9933727979660034,
+            -1.6184097262339492e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "role": "Key",
+              "matrix": [
+                [
+                  0.8574928641319275,
+                  0.25048425793647766,
+                  -0.4494035840034485,
+                  -0.6000000238418579
+                ],
+                [
+                  -0.514495849609375,
+                  0.4174736440181732,
+                  -0.7490058541297913,
+                  -1.0
+                ],
+                [
+                  -2.288376066417186e-08,
+                  0.8734834790229797,
+                  0.48685377836227417,
+                  2.200000047683716
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 60.0,
+              "size": 1.0,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Fill",
+              "matrix": [
+                [
+                  0.7071067690849304,
+                  -0.1525694876909256,
+                  0.6904509663581848,
+                  0.800000011920929
+                ],
+                [
+                  0.7071067690849304,
+                  0.1525695025920868,
+                  -0.6904509663581848,
+                  -0.800000011920929
+                ],
+                [
+                  -2.2883238415261076e-08,
+                  0.9764451384544373,
+                  0.2157658487558365,
+                  1.7999999523162842
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 15.0,
+              "size": 1.5,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.401342188955823e-07,
+                  9.48806615497233e-08,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.48564282059669495,
+                  0.8741573095321655,
+                  0.8999999761581421
+                ],
+                [
+                  -7.642123733830886e-08,
+                  0.8741573095321655,
+                  0.48564282059669495,
+                  2.049999952316284
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 8.0,
+              "size": 0.800000011920929,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.9933727979660034,
+            0.11493712663650513,
+            1.6330952146148547e-09,
+            0.0
+          ],
+          [
+            2.0223808405717136e-08,
+            -1.6058071139468666e-07,
+            -1.0,
+            -2.0
+          ],
+          [
+            -0.11493712663650513,
+            0.9933727979660034,
+            -1.6184097262339492e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "role": "Key",
+              "matrix": [
+                [
+                  0.8574928641319275,
+                  0.25048425793647766,
+                  -0.4494035840034485,
+                  -0.6000000238418579
+                ],
+                [
+                  -0.514495849609375,
+                  0.4174736440181732,
+                  -0.7490058541297913,
+                  -1.0
+                ],
+                [
+                  -2.288376066417186e-08,
+                  0.8734834790229797,
+                  0.48685377836227417,
+                  2.200000047683716
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 60.0,
+              "size": 1.0,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Fill",
+              "matrix": [
+                [
+                  0.7071067690849304,
+                  -0.1525694876909256,
+                  0.6904509663581848,
+                  0.800000011920929
+                ],
+                [
+                  0.7071067690849304,
+                  0.1525695025920868,
+                  -0.6904509663581848,
+                  -0.800000011920929
+                ],
+                [
+                  -2.2883238415261076e-08,
+                  0.9764451384544373,
+                  0.2157658487558365,
+                  1.7999999523162842
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 15.0,
+              "size": 1.5,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.401342188955823e-07,
+                  9.48806615497233e-08,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.48564282059669495,
+                  0.8741573095321655,
+                  0.8999999761581421
+                ],
+                [
+                  -7.642123733830886e-08,
+                  0.8741573095321655,
+                  0.48564282059669495,
+                  2.049999952316284
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 8.0,
+              "size": 0.800000011920929,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "reference_registration": {
+        "uniform_scale": 1.6388888888888888,
+        "rotation_degrees": 0.0,
+        "translation_xy": [
+          -532.2222222222222,
+          -261.80555555555554
+        ],
+        "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+      },
+      "baseline_registration": {
+        "uniform_scale": 0.912311623077772,
+        "rotation_degrees": 5.314126249484533,
+        "translation_xy": [
+          -98.44109544930888,
+          -261.89537062312104
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 0.912311623077772,
+        "rotation_degrees": 5.314126249484533,
+        "translation_xy": [
+          -98.44109544930888,
+          -261.89537062312104
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "pose_uncertainty": "Portrait near-front: yaw +/-6, pitch +/-6, roll +/-3 degrees. Eye midpoint/pupil estimate +/-2 pixels; hair covers temple. Eye-to-chin normalization cannot prove face height.",
+      "observed_differences": "Fresh integrated replay from the declared native. Integration combines local WIP candidates; producer observations are not substituted for independent inspection of these new images. No ART pass.",
+      "unresolved": "LOCAL WIP, full face ART remains FAIL. Broad upper temple/side plane, nose pigment side mark and jaw/mouth likeness remain. Existing skin/cap surface gap up to~1.77mm persists, though sampled join distances did not worsen. Old fixed hair inner edge is exposed more in profile. No final expression rig acceptance.",
+      "material_mode": "Actual native production materials, fixed root white area rig, Standard/None, Freestyle OFF for matched comparison. Active material routes and actual visible keys recorded separately."
+    },
+    {
+      "id": "profile",
+      "reference": {
+        "path": "../../../../references/mia-clean-master-v22.png",
+        "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+        "crop_xyxy": [
+          525,
+          48,
+          605,
+          120
+        ],
+        "crop_artifact": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r23-source-comparison\\face\\profile-source-crop.png",
+          "sha256": "3087b72027b38b79010638f50e943064793b4d1235333aca35b78a1f67c97b98"
+        }
+      },
+      "baseline_render": {
+        "path": "../../face-feedback-7/r23-source-comparison/baseline/face/profile.png",
+        "sha256": "1a06d87859e74797f9ee906d4320c15ca1c0ce225ab24d64806ccc8354aa0642"
+      },
+      "candidate_render": {
+        "path": "../../face-feedback-7/r23-source-comparison/candidate/face/profile.png",
+        "sha256": "8935b566c4a4c71fa6dcad04e98448da7b52f9232c25df78667b0671663fe341"
+      },
+      "comparison_board": {
+        "path": "../../face-feedback-7/r23-source-comparison/face/profile-source-baseline-integrated.png",
+        "sha256": "74a82968f0815c90e6d9040b487c65e06581e36c7357ec6f2bb64b055ffcb7d6"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.17364776134490967,
+            1.7726493695136014e-07,
+            0.9848079681396484,
+            1.9696154594421387
+          ],
+          [
+            0.9848079681396484,
+            6.709676370064699e-08,
+            -0.17364776134490967,
+            -0.3472963571548462
+          ],
+          [
+            -9.685908253231901e-08,
+            1.0000001192092896,
+            -1.6292069915380125e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "role": "Key",
+              "matrix": [
+                [
+                  0.8574928641319275,
+                  0.25048425793647766,
+                  -0.4494035840034485,
+                  -0.6000000238418579
+                ],
+                [
+                  -0.514495849609375,
+                  0.4174736440181732,
+                  -0.7490058541297913,
+                  -1.0
+                ],
+                [
+                  -2.288376066417186e-08,
+                  0.8734834790229797,
+                  0.48685377836227417,
+                  2.200000047683716
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 60.0,
+              "size": 1.0,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Fill",
+              "matrix": [
+                [
+                  0.7071067690849304,
+                  -0.1525694876909256,
+                  0.6904509663581848,
+                  0.800000011920929
+                ],
+                [
+                  0.7071067690849304,
+                  0.1525695025920868,
+                  -0.6904509663581848,
+                  -0.800000011920929
+                ],
+                [
+                  -2.2883238415261076e-08,
+                  0.9764451384544373,
+                  0.2157658487558365,
+                  1.7999999523162842
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 15.0,
+              "size": 1.5,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.401342188955823e-07,
+                  9.48806615497233e-08,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.48564282059669495,
+                  0.8741573095321655,
+                  0.8999999761581421
+                ],
+                [
+                  -7.642123733830886e-08,
+                  0.8741573095321655,
+                  0.48564282059669495,
+                  2.049999952316284
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 8.0,
+              "size": 0.800000011920929,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.17364776134490967,
+            1.7726493695136014e-07,
+            0.9848079681396484,
+            1.9696154594421387
+          ],
+          [
+            0.9848079681396484,
+            6.709676370064699e-08,
+            -0.17364776134490967,
+            -0.3472963571548462
+          ],
+          [
+            -9.685908253231901e-08,
+            1.0000001192092896,
+            -1.6292069915380125e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "role": "Key",
+              "matrix": [
+                [
+                  0.8574928641319275,
+                  0.25048425793647766,
+                  -0.4494035840034485,
+                  -0.6000000238418579
+                ],
+                [
+                  -0.514495849609375,
+                  0.4174736440181732,
+                  -0.7490058541297913,
+                  -1.0
+                ],
+                [
+                  -2.288376066417186e-08,
+                  0.8734834790229797,
+                  0.48685377836227417,
+                  2.200000047683716
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 60.0,
+              "size": 1.0,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Fill",
+              "matrix": [
+                [
+                  0.7071067690849304,
+                  -0.1525694876909256,
+                  0.6904509663581848,
+                  0.800000011920929
+                ],
+                [
+                  0.7071067690849304,
+                  0.1525695025920868,
+                  -0.6904509663581848,
+                  -0.800000011920929
+                ],
+                [
+                  -2.2883238415261076e-08,
+                  0.9764451384544373,
+                  0.2157658487558365,
+                  1.7999999523162842
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 15.0,
+              "size": 1.5,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.401342188955823e-07,
+                  9.48806615497233e-08,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.48564282059669495,
+                  0.8741573095321655,
+                  0.8999999761581421
+                ],
+                [
+                  -7.642123733830886e-08,
+                  0.8741573095321655,
+                  0.48564282059669495,
+                  2.049999952316284
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 8.0,
+              "size": 0.800000011920929,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "reference_registration": {
+        "uniform_scale": 7.375,
+        "rotation_degrees": 0.0,
+        "translation_xy": [
+          -3846.875,
+          -299.5
+        ],
+        "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0168599597074608,
+        "rotation_degrees": 4.236875509204846,
+        "translation_xy": [
+          -9.152177209290699,
+          -331.4039431348381
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0168599597074608,
+        "rotation_degrees": 4.236875509204846,
+        "translation_xy": [
+          -9.152177209290699,
+          -331.4039431348381
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "pose_uncertainty": "Small drawn SIDE panel: estimated yaw70..90, pitch +/-6, visible eye is stylized and not a calibrated anatomical center. Anchors +/-2 original pixels. Forehead/bridge partially hair-occluded. Compare silhouette and lip/nose shape, not exact depth from iris alone.",
+      "observed_differences": "Fresh integrated replay from the declared native. Integration combines local WIP candidates; producer observations are not substituted for independent inspection of these new images. No ART pass.",
+      "unresolved": "LOCAL WIP, full face ART remains FAIL. Broad upper temple/side plane, nose pigment side mark and jaw/mouth likeness remain. Existing skin/cap surface gap up to~1.77mm persists, though sampled join distances did not worsen. Old fixed hair inner edge is exposed more in profile. No final expression rig acceptance.",
+      "material_mode": "Actual native production materials, fixed root white area rig, Standard/None, Freestyle OFF for matched comparison. Active material routes and actual visible keys recorded separately."
+    },
+    {
+      "id": "left_oblique",
+      "reference": {
+        "path": "../../../../references/mia-expression-style-confirmed-20261031.png",
+        "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+        "crop_xyxy": [
+          1230,
+          45,
+          1405,
+          180
+        ],
+        "crop_artifact": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r23-source-comparison\\face\\left_oblique-source-crop.png",
+          "sha256": "dc50a94a229e166e08eeea18a8e1f9b2d85ff16077833599dcd54f70803e045c"
+        }
+      },
+      "baseline_render": {
+        "path": "../../face-feedback-7/r23-source-comparison/baseline/face/left_oblique.png",
+        "sha256": "2cc5b68002067787b3a3751c625fe519ba55174168e3c080297268e6eed97882"
+      },
+      "candidate_render": {
+        "path": "../../face-feedback-7/r23-source-comparison/candidate/face/left_oblique.png",
+        "sha256": "9371f1e6ddd0a6cfa1ebb98ba606d0f6354f67d02cd5446ac8c7a21be5e0ba83"
+      },
+      "comparison_board": {
+        "path": "../../face-feedback-7/r23-source-comparison/face/left_oblique-source-baseline-integrated.png",
+        "sha256": "a1e73ea5858934e1e4688503a021637d9aac0e263970c9bcb94227364aa1ac80"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.8792433738708496,
+            0.22032319009304047,
+            0.4223608076572418,
+            0.8447216153144836
+          ],
+          [
+            0.4000316262245178,
+            0.13993316888809204,
+            -0.9057556390762329,
+            -1.8115113973617554
+          ],
+          [
+            -0.25866127014160156,
+            0.9653373956680298,
+            0.03489907085895538,
+            1.6197988986968994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "role": "Key",
+              "matrix": [
+                [
+                  0.8574928641319275,
+                  0.25048425793647766,
+                  -0.4494035840034485,
+                  -0.6000000238418579
+                ],
+                [
+                  -0.514495849609375,
+                  0.4174736440181732,
+                  -0.7490058541297913,
+                  -1.0
+                ],
+                [
+                  -2.288376066417186e-08,
+                  0.8734834790229797,
+                  0.48685377836227417,
+                  2.200000047683716
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 60.0,
+              "size": 1.0,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Fill",
+              "matrix": [
+                [
+                  0.7071067690849304,
+                  -0.1525694876909256,
+                  0.6904509663581848,
+                  0.800000011920929
+                ],
+                [
+                  0.7071067690849304,
+                  0.1525695025920868,
+                  -0.6904509663581848,
+                  -0.800000011920929
+                ],
+                [
+                  -2.2883238415261076e-08,
+                  0.9764451384544373,
+                  0.2157658487558365,
+                  1.7999999523162842
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 15.0,
+              "size": 1.5,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.401342188955823e-07,
+                  9.48806615497233e-08,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.48564282059669495,
+                  0.8741573095321655,
+                  0.8999999761581421
+                ],
+                [
+                  -7.642123733830886e-08,
+                  0.8741573095321655,
+                  0.48564282059669495,
+                  2.049999952316284
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 8.0,
+              "size": 0.800000011920929,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.8792433738708496,
+            0.22032319009304047,
+            0.4223608076572418,
+            0.8447216153144836
+          ],
+          [
+            0.4000316262245178,
+            0.13993316888809204,
+            -0.9057556390762329,
+            -1.8115113973617554
+          ],
+          [
+            -0.25866127014160156,
+            0.9653373956680298,
+            0.03489907085895538,
+            1.6197988986968994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "role": "Key",
+              "matrix": [
+                [
+                  0.8574928641319275,
+                  0.25048425793647766,
+                  -0.4494035840034485,
+                  -0.6000000238418579
+                ],
+                [
+                  -0.514495849609375,
+                  0.4174736440181732,
+                  -0.7490058541297913,
+                  -1.0
+                ],
+                [
+                  -2.288376066417186e-08,
+                  0.8734834790229797,
+                  0.48685377836227417,
+                  2.200000047683716
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 60.0,
+              "size": 1.0,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Fill",
+              "matrix": [
+                [
+                  0.7071067690849304,
+                  -0.1525694876909256,
+                  0.6904509663581848,
+                  0.800000011920929
+                ],
+                [
+                  0.7071067690849304,
+                  0.1525695025920868,
+                  -0.6904509663581848,
+                  -0.800000011920929
+                ],
+                [
+                  -2.2883238415261076e-08,
+                  0.9764451384544373,
+                  0.2157658487558365,
+                  1.7999999523162842
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 15.0,
+              "size": 1.5,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.401342188955823e-07,
+                  9.48806615497233e-08,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.48564282059669495,
+                  0.8741573095321655,
+                  0.8999999761581421
+                ],
+                [
+                  -7.642123733830886e-08,
+                  0.8741573095321655,
+                  0.48564282059669495,
+                  2.049999952316284
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 8.0,
+              "size": 0.800000011920929,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "reference_registration": {
+        "uniform_scale": 3.3714285714285714,
+        "rotation_degrees": 0.0,
+        "translation_xy": [
+          -4121.857142857143,
+          -59.285714285714306
+        ],
+        "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+      },
+      "baseline_registration": {
+        "uniform_scale": 0.8399900854158027,
+        "rotation_degrees": 2.0772797262387996,
+        "translation_xy": [
+          -55.376182063170404,
+          -222.33905376579932
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 0.8399900854158027,
+        "rotation_degrees": 2.0772797262387996,
+        "translation_xy": [
+          -55.376182063170404,
+          -222.33905376579932
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "pose_uncertainty": "Expression04: image-left facing, yaw15..35, pitch +/-8, roll-15 +/-7. Sideways eye gaze differs from neutral; pupil centers approximate orbital anchors. Mouth neutral-ish; far outline partially occluded.",
+      "observed_differences": "Fresh integrated replay from the declared native. Integration combines local WIP candidates; producer observations are not substituted for independent inspection of these new images. No ART pass.",
+      "unresolved": "LOCAL WIP, full face ART remains FAIL. Broad upper temple/side plane, nose pigment side mark and jaw/mouth likeness remain. Existing skin/cap surface gap up to~1.77mm persists, though sampled join distances did not worsen. Old fixed hair inner edge is exposed more in profile. No final expression rig acceptance.",
+      "material_mode": "Actual native production materials, fixed root white area rig, Standard/None, Freestyle OFF for matched comparison. Active material routes and actual visible keys recorded separately."
+    },
+    {
+      "id": "right_oblique",
+      "reference": {
+        "path": "../../../../references/mia-expression-style-confirmed-20261031.png",
+        "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+        "crop_xyxy": [
+          850,
+          45,
+          1030,
+          180
+        ],
+        "crop_artifact": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r23-source-comparison\\face\\right_oblique-source-crop.png",
+          "sha256": "554b5bb406c89cfbd3aafc73b1c3dd00ba8de82d6820e7e981678224ff1131d2"
+        }
+      },
+      "baseline_render": {
+        "path": "../../face-feedback-7/r23-source-comparison/baseline/face/right_oblique.png",
+        "sha256": "eed85c01825134b8605eeebf007304e8f3a8812e735da9139963c8ee2554eea9"
+      },
+      "candidate_render": {
+        "path": "../../face-feedback-7/r23-source-comparison/candidate/face/right_oblique.png",
+        "sha256": "22c4fc383280c301a1bc5a824f604d978bc4d227469a02dbf2e4b7f5d8b45088"
+      },
+      "comparison_board": {
+        "path": "../../face-feedback-7/r23-source-comparison/face/right_oblique-source-baseline-integrated.png",
+        "sha256": "722f4926ab9a95c195012e9bbadb9b47658ba1fdb2711ef497bdea48a6fdb3ed"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.9536032676696777,
+            0.24610866606235504,
+            -0.17341016232967377,
+            -0.3468203842639923
+          ],
+          [
+            -0.1543915569782257,
+            -0.09472780674695969,
+            -0.9834579229354858,
+            -1.9669162034988403
+          ],
+          [
+            -0.25846433639526367,
+            0.9646018743515015,
+            -0.05233565345406532,
+            1.4453279972076416
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "role": "Key",
+              "matrix": [
+                [
+                  0.8574928641319275,
+                  0.25048425793647766,
+                  -0.4494035840034485,
+                  -0.6000000238418579
+                ],
+                [
+                  -0.514495849609375,
+                  0.4174736440181732,
+                  -0.7490058541297913,
+                  -1.0
+                ],
+                [
+                  -2.288376066417186e-08,
+                  0.8734834790229797,
+                  0.48685377836227417,
+                  2.200000047683716
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 60.0,
+              "size": 1.0,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Fill",
+              "matrix": [
+                [
+                  0.7071067690849304,
+                  -0.1525694876909256,
+                  0.6904509663581848,
+                  0.800000011920929
+                ],
+                [
+                  0.7071067690849304,
+                  0.1525695025920868,
+                  -0.6904509663581848,
+                  -0.800000011920929
+                ],
+                [
+                  -2.2883238415261076e-08,
+                  0.9764451384544373,
+                  0.2157658487558365,
+                  1.7999999523162842
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 15.0,
+              "size": 1.5,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.401342188955823e-07,
+                  9.48806615497233e-08,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.48564282059669495,
+                  0.8741573095321655,
+                  0.8999999761581421
+                ],
+                [
+                  -7.642123733830886e-08,
+                  0.8741573095321655,
+                  0.48564282059669495,
+                  2.049999952316284
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 8.0,
+              "size": 0.800000011920929,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.9536032676696777,
+            0.24610866606235504,
+            -0.17341016232967377,
+            -0.3468203842639923
+          ],
+          [
+            -0.1543915569782257,
+            -0.09472780674695969,
+            -0.9834579229354858,
+            -1.9669162034988403
+          ],
+          [
+            -0.25846433639526367,
+            0.9646018743515015,
+            -0.05233565345406532,
+            1.4453279972076416
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "role": "Key",
+              "matrix": [
+                [
+                  0.8574928641319275,
+                  0.25048425793647766,
+                  -0.4494035840034485,
+                  -0.6000000238418579
+                ],
+                [
+                  -0.514495849609375,
+                  0.4174736440181732,
+                  -0.7490058541297913,
+                  -1.0
+                ],
+                [
+                  -2.288376066417186e-08,
+                  0.8734834790229797,
+                  0.48685377836227417,
+                  2.200000047683716
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 60.0,
+              "size": 1.0,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Fill",
+              "matrix": [
+                [
+                  0.7071067690849304,
+                  -0.1525694876909256,
+                  0.6904509663581848,
+                  0.800000011920929
+                ],
+                [
+                  0.7071067690849304,
+                  0.1525695025920868,
+                  -0.6904509663581848,
+                  -0.800000011920929
+                ],
+                [
+                  -2.2883238415261076e-08,
+                  0.9764451384544373,
+                  0.2157658487558365,
+                  1.7999999523162842
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 15.0,
+              "size": 1.5,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "role": "Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.401342188955823e-07,
+                  9.48806615497233e-08,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.48564282059669495,
+                  0.8741573095321655,
+                  0.8999999761581421
+                ],
+                [
+                  -7.642123733830886e-08,
+                  0.8741573095321655,
+                  0.48564282059669495,
+                  2.049999952316284
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "watts": 8.0,
+              "size": 0.800000011920929,
+              "shape": "DISK",
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.1,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          1000,
+          1000
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "reference_registration": {
+        "uniform_scale": 3.2777777777777777,
+        "rotation_degrees": 0.0,
+        "translation_xy": [
+          -2761.111111111111,
+          -48.75
+        ],
+        "normalization_basis": "Display only: source crop uniformly fitted; no source aspect change"
+      },
+      "baseline_registration": {
+        "uniform_scale": 0.819537268220571,
+        "rotation_degrees": 4.673384669726472,
+        "translation_xy": [
+          -58.224285120422735,
+          -164.34746161298943
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 0.819537268220571,
+        "rotation_degrees": 4.673384669726472,
+        "translation_xy": [
+          -58.224285120422735,
+          -164.34746161298943
+        ],
+        "normalization_basis": "Baseline iris-carrier midpoint/visible-side center to evaluated chin mapped to manual source eye/chin anchors. This distance and in-plane orientation are normalized, NOT independently validated. Exact same SRT applied to candidate; no candidate refit."
+      },
+      "pose_uncertainty": "Expression03 is the closest near-front opposite subtle-angle evidence, not a confirmed -45 view: yaw estimated -15..+5, pitch -8..+5, roll-15 +/-7. Upward gaze/open mouth differ from neutral. Do not infer exact opposing temple depth or closed-mouth likeness from this panel.",
+      "observed_differences": "Fresh integrated replay from the declared native. Integration combines local WIP candidates; producer observations are not substituted for independent inspection of these new images. No ART pass.",
+      "unresolved": "LOCAL WIP, full face ART remains FAIL. Broad upper temple/side plane, nose pigment side mark and jaw/mouth likeness remain. Existing skin/cap surface gap up to~1.77mm persists, though sampled join distances did not worsen. Old fixed hair inner edge is exposed more in profile. No final expression rig acceptance.",
+      "material_mode": "Actual native production materials, fixed root white area rig, Standard/None, Freestyle OFF for matched comparison. Active material routes and actual visible keys recorded separately."
+    }
+  ],
+  "input_source_package": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integrated-face-review-wip-5\\face\\reference-review.json",
+    "sha256": "64ec967ec97adcd95cf07cedfea00dcb7354bfd51fa1066c2b48215ef1fe27f7"
+  },
+  "reference_coordinate_space": "full original image",
+  "registration_policy": "Input uniform SRT copied exactly; candidate uses baseline transform without feature refit. Board column/header translation is layout only.",
+  "art_status": "DIAGNOSTIC WIP; independent ART judgment required."
+}

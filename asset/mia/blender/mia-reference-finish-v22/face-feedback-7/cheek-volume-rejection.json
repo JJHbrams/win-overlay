@@ -1,0 +1,282 @@
+{
+  "decision": "R19/WIP5/WIP6 surface acceptance REVOKED after user observed flattened cheek/malar volume",
+  "source_sections": [
+    {
+      "path": "asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\actual-sections-and-cage.json",
+      "sha256": "66a1ec9b367da9985eafe2ad84e20ff75e6e0cae32b0d6608a41c67b1ac3d677"
+    },
+    {
+      "path": "asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-sweep\\actual-sections-and-cage.json",
+      "sha256": "2825aa3a216ba367cbb5359b0ee9f5984150bc5b6eb24172c3f665b613a798ef"
+    }
+  ],
+  "coordinate_convention": "Skin local +Y forward; positive difference is old front-ray depth minus R19 depth",
+  "limits": "Fixed X/Z rays are not homologous anatomical samples after lateral deformation; these are local depth differences, not enclosed-volume estimates or numeric restoration targets. Visual anatomical fullness and source correspondence remain mandatory.",
+  "measurements": [
+    {
+      "local_x_mm": -65,
+      "local_z_range_m": [
+        1.5,
+        1.515
+      ],
+      "valid_sample_count": 7,
+      "mean_anterior_recession_mm": 0.0006811959402901786,
+      "min_mm": 0.0,
+      "max_mm": 0.0028014183044433594
+    },
+    {
+      "local_x_mm": -65,
+      "local_z_range_m": [
+        1.515,
+        1.53
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": -0.23022989432017008,
+      "min_mm": -1.1108368635177612,
+      "max_mm": 0.009804964065551758
+    },
+    {
+      "local_x_mm": -65,
+      "local_z_range_m": [
+        1.53,
+        1.54
+      ],
+      "valid_sample_count": 10,
+      "mean_anterior_recession_mm": 2.650010585784912,
+      "min_mm": -1.2803375720977783,
+      "max_mm": 6.293505430221558
+    },
+    {
+      "local_x_mm": -55,
+      "local_z_range_m": [
+        1.5,
+        1.515
+      ],
+      "valid_sample_count": 10,
+      "mean_anterior_recession_mm": 7.904796302318573,
+      "min_mm": 0.4438459873199463,
+      "max_mm": 15.860512852668762
+    },
+    {
+      "local_x_mm": -55,
+      "local_z_range_m": [
+        1.515,
+        1.53
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": 14.477494359016418,
+      "min_mm": 10.607525706291199,
+      "max_mm": 16.79493486881256
+    },
+    {
+      "local_x_mm": -55,
+      "local_z_range_m": [
+        1.53,
+        1.54
+      ],
+      "valid_sample_count": 10,
+      "mean_anterior_recession_mm": 6.767624616622925,
+      "min_mm": 3.7668049335479736,
+      "max_mm": 9.91465151309967
+    },
+    {
+      "local_x_mm": -45,
+      "local_z_range_m": [
+        1.5,
+        1.515
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": 17.55660076936086,
+      "min_mm": 11.972948908805847,
+      "max_mm": 25.93401074409485
+    },
+    {
+      "local_x_mm": -45,
+      "local_z_range_m": [
+        1.515,
+        1.53
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": 7.384861509005229,
+      "min_mm": 3.3903568983078003,
+      "max_mm": 11.455565690994263
+    },
+    {
+      "local_x_mm": -45,
+      "local_z_range_m": [
+        1.53,
+        1.54
+      ],
+      "valid_sample_count": 8,
+      "mean_anterior_recession_mm": 1.449262723326683,
+      "min_mm": 0.05176663398742676,
+      "max_mm": 2.9383450746536255
+    },
+    {
+      "local_x_mm": -35,
+      "local_z_range_m": [
+        1.5,
+        1.515
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": 9.607785940170288,
+      "min_mm": 6.696194410324097,
+      "max_mm": 13.432160019874573
+    },
+    {
+      "local_x_mm": -35,
+      "local_z_range_m": [
+        1.515,
+        1.53
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": 4.343577226003011,
+      "min_mm": 2.3905783891677856,
+      "max_mm": 6.390929222106934
+    },
+    {
+      "local_x_mm": -35,
+      "local_z_range_m": [
+        1.53,
+        1.54
+      ],
+      "valid_sample_count": 5,
+      "mean_anterior_recession_mm": 1.1434584856033325,
+      "min_mm": 0.0651925802230835,
+      "max_mm": 2.0954757928848267
+    },
+    {
+      "local_x_mm": 35,
+      "local_z_range_m": [
+        1.5,
+        1.515
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": 9.132176637649536,
+      "min_mm": 6.33847713470459,
+      "max_mm": 12.780353426933289
+    },
+    {
+      "local_x_mm": 35,
+      "local_z_range_m": [
+        1.515,
+        1.53
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": 4.0825555721918745,
+      "min_mm": 2.297535538673401,
+      "max_mm": 6.034746766090393
+    },
+    {
+      "local_x_mm": 35,
+      "local_z_range_m": [
+        1.53,
+        1.54
+      ],
+      "valid_sample_count": 5,
+      "mean_anterior_recession_mm": 1.1257469654083252,
+      "min_mm": 0.09042024612426758,
+      "max_mm": 1.9957125186920166
+    },
+    {
+      "local_x_mm": 45,
+      "local_z_range_m": [
+        1.5,
+        1.515
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": 16.575561960538227,
+      "min_mm": 11.34561002254486,
+      "max_mm": 24.257466197013855
+    },
+    {
+      "local_x_mm": 45,
+      "local_z_range_m": [
+        1.515,
+        1.53
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": 6.879821419715881,
+      "min_mm": 3.147423267364502,
+      "max_mm": 10.787546634674072
+    },
+    {
+      "local_x_mm": 45,
+      "local_z_range_m": [
+        1.53,
+        1.54
+      ],
+      "valid_sample_count": 7,
+      "mean_anterior_recession_mm": 1.4660273279462541,
+      "min_mm": 0.2750307321548462,
+      "max_mm": 2.7090907096862793
+    },
+    {
+      "local_x_mm": 55,
+      "local_z_range_m": [
+        1.5,
+        1.515
+      ],
+      "valid_sample_count": 10,
+      "mean_anterior_recession_mm": 11.28164827823639,
+      "min_mm": 0.552058219909668,
+      "max_mm": 18.026769161224365
+    },
+    {
+      "local_x_mm": 55,
+      "local_z_range_m": [
+        1.515,
+        1.53
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": 14.561524987220764,
+      "min_mm": 9.957075119018555,
+      "max_mm": 17.92098581790924
+    },
+    {
+      "local_x_mm": 55,
+      "local_z_range_m": [
+        1.53,
+        1.54
+      ],
+      "valid_sample_count": 10,
+      "mean_anterior_recession_mm": 5.943404138088226,
+      "min_mm": 2.8278082609176636,
+      "max_mm": 9.235501289367676
+    },
+    {
+      "local_x_mm": 65,
+      "local_z_range_m": [
+        1.5,
+        1.515
+      ],
+      "valid_sample_count": 7,
+      "mean_anterior_recession_mm": 0.004087175641741071,
+      "min_mm": 0.0,
+      "max_mm": 0.013530254364013672
+    },
+    {
+      "local_x_mm": 65,
+      "local_z_range_m": [
+        1.515,
+        1.53
+      ],
+      "valid_sample_count": 15,
+      "mean_anterior_recession_mm": -0.23193955421447754,
+      "min_mm": -0.9479373693466187,
+      "max_mm": 0.029921531677246094
+    },
+    {
+      "local_x_mm": 65,
+      "local_z_range_m": [
+        1.53,
+        1.54
+      ],
+      "valid_sample_count": 10,
+      "mean_anterior_recession_mm": 6.086800992488861,
+      "min_mm": 0.5492120981216431,
+      "max_mm": 8.061528205871582
+    }
+  ],
+  "independent_reassessment": "Original Face6 has a rough but visible anterior malar apex/buccal fullness. R19 suppresses its broad positive convexity into a flat side wall and makes the V jaw dominate. No-ridge/no-seam criteria missed the volume loss. R23 eye-only gains may remain separately."
+}

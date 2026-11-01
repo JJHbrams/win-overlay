@@ -24,3 +24,7 @@ All six criteria are critical. Evidence validity is not art approval. No global 
 Execution: one face producer edits a new candidate; root owns integration/live Blender. Cheek/jaw volume is checked across views before eye changes. Eye edits coordinate skin rim, orbital transition, carrier contact and lash Basis/follower. Existing47key names/deltas alone do not certify valid expressions. Source files remain immutable; preserve failed candidates.
 
 Required delivery: source|WIP baseline|candidate front/profile/both oblique, relevant expression panel, neutral/color-only/UV diagnostics, exact recipe, ownership/below-cap protection, reference-review package and validator result. Fresh independent actual-image review must judge these IDs before root promotion. If any critical criterion remains FAIL/UNVERIFIED, report partial and preserve the missing work explicitly.
+
+## User rejection: volume retention is mandatory
+
+The R19/WIP5/WIP6 smoothing stage was rejected for erased malar/anterior-buccal volume. No visible ridge is not sufficient: require a readable high malar support and rounded anterior cheek mass through low-front and intermediate obliques, continuous into jaw/temple, without widening the source silhouette or restoring the original orbital ledge. Source contours constrain one volumetric form; they must not substitute for the form. Compare before/after sections and actual matte images. Eye-only R23 changes do not accept this cheek surface.
