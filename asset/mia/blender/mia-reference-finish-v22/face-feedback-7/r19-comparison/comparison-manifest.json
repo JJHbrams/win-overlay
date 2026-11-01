@@ -1,0 +1,68 @@
+{
+  "sources": {
+    "baseline": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-6\\continuous-candidate\\Mia_FaceFinish6_v22.blend",
+      "sha256": "f5d17264e07f492983e7e075d5a3213b2bd14a4adaead82072899e9b3e15d98a"
+    },
+    "candidate": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r19\\Mia_FaceFinish7_PositionFairR19_v22.blend",
+      "sha256": "5677073262e4013c2b750a671634cae16c36862fbd8bba2b08c321fd69d46990"
+    }
+  },
+  "record_inputs": {
+    "baseline": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\surface-diagnosis\\render-records.json",
+      "sha256": "c8ae1fa10129c1757ed436a57a47fb27de70f77e3bee4c3364e54b87af5f0a20"
+    },
+    "candidate": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-sweep\\render-records.json",
+      "sha256": "d1e9caf140f8b02ca4e5c94648230ff0f108ee90e54a1990199dfc1744f03834"
+    }
+  },
+  "camera_records_equal": true,
+  "input_images_unchanged": true,
+  "transform": "Identical uniform thumbnail scaling only; no refit, no feature warp.",
+  "art_status": "NOT_EVALUATED",
+  "outputs": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-comparison\\matte-elevation-10-before-after.png",
+      "sha256": "68b0364b0f4b598b4ed3a5472a44b47b5ce72a314e8c91db06ead6a024068714"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-comparison\\matte-elevation+0-before-after.png",
+      "sha256": "b2dc21bb52e606529bc90d1446657f0dc80377114fc78dac3d0c903ad899ab5e"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-comparison\\matte-elevation+10-before-after.png",
+      "sha256": "4b4e01d382b923483b0dbb17eb116d16a6c5acca75c63addd8da4d81bded1899"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-comparison\\matte-yaw+0-elevation-10-before-after.png",
+      "sha256": "0c3ca7452b0dd2bd568aab2d9e51a0bfd09d78e8290917f6ed78c736bd2d1a22"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-comparison\\matte-yaw+30-elevation-10-before-after.png",
+      "sha256": "53379d56358a75b358f2d4b9758334c895783f66567a008bea55865762e1a13f"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-comparison\\matte-yaw-30-elevation-10-before-after.png",
+      "sha256": "78ed5ae62a43e196181f84bc3d894f0a58ab8cf28e2d594015cb647d9dba3dad"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-comparison\\matte-yaw+45-elevation+0-before-after.png",
+      "sha256": "12f5655c35a2701e6f619bf04216b20850c3d76c1a84552cd9a456c02409d3e2"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-comparison\\matte-yaw+60-elevation+0-before-after.png",
+      "sha256": "c6e5d59e0caa5e31801d3545555d7cd79f2215ea827744d25cfa4577581a9000"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\r19-comparison\\matte-yaw+90-elevation+0-before-after.png",
+      "sha256": "01d650b92a7d0641ad4a7412a5c81d8619350832d88831c0bedb4af410010ff0"
+    }
+  ],
+  "composer": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\compare_surface_sweeps.py",
+    "sha256": "23e622ab8d9704f720d7608cda017ad238478233e595d97d30dbeed518935e4b"
+  }
+}
