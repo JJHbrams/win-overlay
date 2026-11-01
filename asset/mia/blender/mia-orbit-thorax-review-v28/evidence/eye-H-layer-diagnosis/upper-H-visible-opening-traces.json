@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "authority": "Latest user correction: ocular opening/free lid differs from decorative ink/lashes/brow/makeup. This supersedes anatomical endpoint inference in upper-H-source-traces.json.",
+  "native_unchanged": "Mia_Orbit_v28_G2.blend",
+  "native_edits_for_H": false,
+  "source_policy": "Original source pixels unchanged. Cyan/yellow show only visible ocular-to-lid occlusion segments; magenta region is UNKNOWN covered margin/canthus. A black tail is not an anatomical endpoint. No inpainting, no source clean-lid synthesis.",
+  "uncertainty_original_px": {
+    "front": 1.5,
+    "profile": 1.5,
+    "left_oblique": 1.0,
+    "right_oblique": 1.0
+  },
+  "views": {
+    "front": {
+      "image_left": {
+        "upper_visible": [
+          [
+            411,
+            325
+          ],
+          [
+            424,
+            322
+          ],
+          [
+            440,
+            320
+          ],
+          [
+            456,
+            320
+          ],
+          [
+            470,
+            322
+          ]
+        ],
+        "lower_visible": [
+          [
+            412,
+            329
+          ],
+          [
+            424,
+            337
+          ],
+          [
+            440,
+            340
+          ],
+          [
+            458,
+            337
+          ],
+          [
+            470,
+            332
+          ]
+        ],
+        "unknown_medial_xyxy": [
+          470,
+          318,
+          485,
+          333
+        ]
+      },
+      "image_right": {
+        "upper_visible": [
+          [
+            547,
+            312
+          ],
+          [
+            562,
+            306
+          ],
+          [
+            582,
+            302
+          ],
+          [
+            602,
+            300
+          ],
+          [
+            615,
+            300
+          ]
+        ],
+        "lower_visible": [
+          [
+            548,
+            319
+          ],
+          [
+            563,
+            321
+          ],
+          [
+            582,
+            321
+          ],
+          [
+            599,
+            317
+          ],
+          [
+            611,
+            309
+          ]
+        ],
+        "unknown_medial_xyxy": [
+          536,
+          305,
+          549,
+          323
+        ]
+      }
+    },
+    "left_oblique": {
+      "image_right": {
+        "upper_visible": [
+          [
+            1320.5,
+            82.5
+          ],
+          [
+            1327,
+            78.5
+          ],
+          [
+            1336,
+            76.5
+          ],
+          [
+            1344,
+            74.5
+          ]
+        ],
+        "lower_visible": [
+          [
+            1323,
+            88
+          ],
+          [
+            1331,
+            87.5
+          ],
+          [
+            1340,
+            84
+          ],
+          [
+            1346,
+            78
+          ]
+        ],
+        "unknown_medial_xyxy": [
+          1314,
+          80,
+          1323,
+          89
+        ]
+      },
+      "image_left": {
+        "upper_visible": [
+          [
+            1276,
+            101.5
+          ],
+          [
+            1284,
+            99
+          ],
+          [
+            1292,
+            97.5
+          ],
+          [
+            1295,
+            98.5
+          ]
+        ],
+        "lower_visible": [
+          [
+            1278,
+            106
+          ],
+          [
+            1287,
+            103
+          ],
+          [
+            1295,
+            99.5
+          ]
+        ],
+        "unknown_medial_xyxy": [
+          1294,
+          94,
+          1301,
+          101
+        ]
+      }
+    },
+    "right_oblique": {
+      "image_right": {
+        "upper_visible": [
+          [
+            954,
+            94
+          ],
+          [
+            963,
+            88
+          ],
+          [
+            974,
+            84.5
+          ],
+          [
+            981,
+            83.5
+          ]
+        ],
+        "lower_visible": [
+          [
+            959,
+            98
+          ],
+          [
+            970,
+            95.5
+          ],
+          [
+            980,
+            91.5
+          ]
+        ],
+        "unknown_medial_xyxy": [
+          947,
+          90,
+          958,
+          100
+        ]
+      },
+      "image_left": {
+        "upper_visible": [
+          [
+            897,
+            117
+          ],
+          [
+            907,
+            112.5
+          ],
+          [
+            918,
+            109
+          ],
+          [
+            925,
+            107
+          ]
+        ],
+        "lower_visible": [
+          [
+            903,
+            119.5
+          ],
+          [
+            915,
+            116
+          ],
+          [
+            923,
+            111
+          ]
+        ],
+        "unknown_medial_xyxy": [
+          922,
+          102,
+          931,
+          112
+        ]
+      }
+    },
+    "profile": {
+      "near": {
+        "upper_visible": [
+          [
+            554,
+            71.5
+          ],
+          [
+            558,
+            69
+          ],
+          [
+            564,
+            68
+          ],
+          [
+            569,
+            67.5
+          ]
+        ],
+        "lower_visible": [
+          [
+            555,
+            75
+          ],
+          [
+            559,
+            75
+          ],
+          [
+            564,
+            72
+          ]
+        ],
+        "unknown_medial_xyxy": [
+          549,
+          66,
+          556,
+          77
+        ]
+      }
+    }
+  },
+  "limits": "Opaque eyeliner can cover the true free margin. Traced ocular border is an observed occlusion contour, not proof of the hidden 3D lid margin or canthus. Need review clean G2 opening and separate ink, without using outer black edge as skin target."
+}
