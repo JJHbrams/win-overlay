@@ -1,0 +1,66 @@
+{
+  "source": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\hair-ink-paint\\native\\0d7874821981-Mia_HairInkPaint_v22.blend",
+    "sha256": "0d787482198137c37a5fd80067f7f6ce74678c1a99df783b0ece7cb59c5fb319"
+  },
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\sculpt2\\Mia_HairStructure_v24.blend",
+    "sha256": "d146427b39895e834cb86a307799b586b454356648bdb7463e8e1927800fd402"
+  },
+  "new_owners": [
+    "MIA_V24_Gather_Main",
+    "MIA_V24_Gather_Upper",
+    "MIA_V24_Gather_Tuck"
+  ],
+  "hidden_retained_owners": [
+    "MIA_V20_HalfUp_Fold_Left",
+    "MIA_V20_HalfUp_Fold_Right",
+    "MIA_V20_HalfUp_Binder"
+  ],
+  "replace_mesh_owners": [],
+  "geometry_note": "Centrally overlapping closed lenticular clumps; no BVH nearest projection; +/-Y direction measured from original hair bounds. Shape is a WIP hypothesis until back/profile review.",
+  "dimensions": {
+    "MIA_V24_Gather_Main": [
+      [
+        -0.035051628947257996,
+        0.03276466578245163
+      ],
+      [
+        0.11503493785858154,
+        0.16549991071224213
+      ],
+      [
+        1.5358140468597412,
+        1.596468210220337
+      ]
+    ],
+    "MIA_V24_Gather_Upper": [
+      [
+        -0.02361103892326355,
+        0.031218543648719788
+      ],
+      [
+        0.1142079159617424,
+        0.15823572874069214
+      ],
+      [
+        1.5638972520828247,
+        1.612096905708313
+      ]
+    ],
+    "MIA_V24_Gather_Tuck": [
+      [
+        -0.01971050351858139,
+        0.024421658366918564
+      ],
+      [
+        0.11635255068540573,
+        0.14703786373138428
+      ],
+      [
+        1.538353443145752,
+        1.5769541263580322
+      ]
+    ]
+  }
+}

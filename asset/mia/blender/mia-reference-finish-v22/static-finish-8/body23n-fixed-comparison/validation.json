@@ -1,0 +1,119 @@
+{
+  "evidence_valid": true,
+  "art_acceptance": "NOT_EVALUATED",
+  "package": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\body\\reference-review.json",
+  "checked_artifacts": [
+    {
+      "role": "baseline_native",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\body-candidate14\\native\\98f34b4362b4-Mia_BodyVolumetric_v22_candidate14.blend",
+      "sha256": "98f34b4362b4a425d3867cf44c45bd60c9346094c6a7636b2d487e0be536af21"
+    },
+    {
+      "role": "candidate_native",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-body-finish-v23\\Mia_BodyFinish_v23n.blend",
+      "sha256": "3304662918dc962025a30a4eec9fce63d2a263207adebbf9ce7f8f9a09cee6dd"
+    },
+    {
+      "role": "front/reference",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+      "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+    },
+    {
+      "role": "front/baseline_render",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\baseline\\body\\front.png",
+      "sha256": "c3ae1e2c953138278602694c8da10a9977139a84436531f30e7a15ee3919b032"
+    },
+    {
+      "role": "front/candidate_render",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\candidate\\body\\front.png",
+      "sha256": "addbe76e10b8f6c4baee2adb8fd31fcdde237f04aa3102912eca506a99bdcfd0"
+    },
+    {
+      "role": "front/comparison_board",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\body\\front-source-baseline-integrated.png",
+      "sha256": "e278e7ae67fc6a51a48d857dbde4fbb21990a8d8d9ec104f17dcfb78b05607f2"
+    },
+    {
+      "role": "profile/reference",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+      "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+    },
+    {
+      "role": "profile/baseline_render",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\baseline\\body\\profile.png",
+      "sha256": "dec5dcaa6cef78fc4714e3afe019c1b317aea7d99ca7dd7d43de895d7c8eded8"
+    },
+    {
+      "role": "profile/candidate_render",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\candidate\\body\\profile.png",
+      "sha256": "1e7af782bf2198f37b4176d51bb0b5f09bc1a25bb6a331f66951f1a4a5377c3c"
+    },
+    {
+      "role": "profile/comparison_board",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\body\\profile-source-baseline-integrated.png",
+      "sha256": "15cf92819900dfcd4b3036157a99c702b69cde175e89e4aedaa1773b97d52104"
+    },
+    {
+      "role": "back/reference",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+      "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+    },
+    {
+      "role": "back/baseline_render",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\baseline\\body\\back.png",
+      "sha256": "1a3d48cd73ceefbe8132ac11b336888590559c69cb83e2cb493d70f84cd732ab"
+    },
+    {
+      "role": "back/candidate_render",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\candidate\\body\\back.png",
+      "sha256": "373522641722699f78ed37d5df00c979d98c84e8fa896c8e0cbdfaba18bee053"
+    },
+    {
+      "role": "back/comparison_board",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\body\\back-source-baseline-integrated.png",
+      "sha256": "e068d766653bf110754f2483d50d2419530955ea21daeabacc1899670e7927ec"
+    },
+    {
+      "role": "oblique/reference",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+      "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+    },
+    {
+      "role": "oblique/baseline_render",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\baseline\\body\\oblique.png",
+      "sha256": "6f0966703b5c571f720ee4c69e3df8cadf30b463028a18c76c2f064e34212440"
+    },
+    {
+      "role": "oblique/candidate_render",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\candidate\\body\\oblique.png",
+      "sha256": "9285c18adfd62e81e0795ea3534393be747e5111c2366ce99b4a157275cc3184"
+    },
+    {
+      "role": "oblique/comparison_board",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\body\\oblique-source-baseline-integrated.png",
+      "sha256": "acde8ccb02a1b88bd8248dffbe9fde8c5b9997d20cfe47ef2c1c0fcdfefb84f1"
+    },
+    {
+      "role": "front_anchor/reference",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\anchors\\mia-body-front-user-selected-20261031.png",
+      "sha256": "09238b027687c7cd16f99d781c1d79ef081769c7258b49bb840d1badf11c6d42"
+    },
+    {
+      "role": "front_anchor/baseline_render",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\baseline\\body\\front_anchor.png",
+      "sha256": "8b12b4d8d285edda820fbe0b5454d7253d6dadeccce4f54bb5b2338534c53909"
+    },
+    {
+      "role": "front_anchor/candidate_render",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\candidate\\body\\front_anchor.png",
+      "sha256": "61e9e26190945f95aa384e1c60a20aca21078d06e2d365758ffe141b5f87ab18"
+    },
+    {
+      "role": "front_anchor/comparison_board",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\static-finish-8\\body23n-fixed-comparison\\body\\front_anchor-source-baseline-integrated.png",
+      "sha256": "ec718620c03285810e4ed84bb0810cea71341aa67314b5857a0b53ccb2c0d185"
+    }
+  ],
+  "errors": [],
+  "limits": "Hashes and declared coverage are checked; actual image correspondence and likeness need independent visual review."
+}

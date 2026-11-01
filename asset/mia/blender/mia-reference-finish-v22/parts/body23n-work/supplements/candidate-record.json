@@ -1,0 +1,59 @@
+{
+  "source_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\body-candidate14\\native\\98f34b4362b4-Mia_BodyVolumetric_v22_candidate14.blend",
+  "source_sha256": "98f34b4362b4a425d3867cf44c45bd60c9346094c6a7636b2d487e0be536af21",
+  "candidate_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-body-finish-v23\\Mia_BodyFinish_v23n.blend",
+  "candidate_sha256": "3304662918dc962025a30a4eec9fce63d2a263207adebbf9ce7f8f9a09cee6dd",
+  "owner": "MIA_V06_BODY_SKIN",
+  "cap_z": 1.46,
+  "cap_vertex_count": 183,
+  "cap_coordinates_unchanged": true,
+  "geometry_change": {
+    "kind": "connected lower-lateral thorax/breast transition refinement",
+    "moved_vertex_count": 279,
+    "max_delta_m": 0.03140820886147766,
+    "limits": "Only lower-front lateral breast rim; pelvis, legs, arms, neck and cap are unchanged in this candidate."
+  },
+  "uv": {
+    "legacy_cap_uv": "UVMap preserved verbatim for face-cap consumers",
+    "body_owned_uv": "MIA_BODY_V23_UV",
+    "method": "body-owned UV layer is retained as an inactive trial copy only. The selected material consumes the authored UVMap atlas because ABF/LSCM trial overlap has not passed audit; no unvalidated repack is shipped.",
+    "before_ratio_quantiles": [
+      0.07895109033974543,
+      0.14467415748713386,
+      0.3617345153351022,
+      0.8219263181874952,
+      1.7273623801973106,
+      5.31356740093294,
+      23.041345474530107
+    ],
+    "after_ratio_quantiles": [
+      0.07895109033974543,
+      0.14467415748713386,
+      0.3617345153351022,
+      0.8219263181874952,
+      1.7273623801973106,
+      5.31356740093294,
+      23.041345474530107
+    ],
+    "zero_area_body_triangles_after": 0,
+    "continuity_before": {
+      "checked_nonseam_edges": 7311,
+      "broken_nonseam_edges": 0
+    },
+    "continuity_after": {
+      "checked_nonseam_edges": 7311,
+      "broken_nonseam_edges": 0
+    },
+    "newly_declared_uv_split_seams": 0
+  },
+  "material": {
+    "name": "MIA_V23_Body_CommonLight",
+    "image": "MIA_V13_BodySkin_UV_2048.001",
+    "image_size": [
+      2048,
+      2048
+    ],
+    "consumption": "MIA_V22 actual-scene Diffuse->ShaderToRGB common-light graph appended from WIP7. The authored MIA_V13_BodySkin_UV_2048 atlas is actively consumed through protected UVMap. MIA_BODY_V23_UV is not consumed pending a valid no-overlap unwrap; no fabricated normal/specular map."
+  },
+  "status": "WORKING CANDIDATE / ART UNAPPROVED. UV density statistics are a technical diagnostic, not a paint or likeness pass."
+}

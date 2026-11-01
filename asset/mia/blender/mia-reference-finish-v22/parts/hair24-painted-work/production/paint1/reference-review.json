@@ -1,0 +1,1213 @@
+{
+  "schema_version": 1,
+  "part": "surface",
+  "baseline_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\hair-ink-paint\\native\\0d7874821981-Mia_HairInkPaint_v22.blend",
+    "sha256": "0d787482198137c37a5fd80067f7f6ce74678c1a99df783b0ece7cb59c5fb319"
+  },
+  "candidate_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\Mia_HairStructurePaint_v24.blend",
+    "sha256": "d3b230a52eb775a6b03fbeb5e690c7e2873761617deb85a36922b722ab3e2315"
+  },
+  "required_views": [
+    "front",
+    "profile",
+    "back",
+    "left_oblique",
+    "right_oblique"
+  ],
+  "views": [
+    {
+      "id": "front",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+        "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+        "crop_xyxy": [
+          220,
+          0,
+          430,
+          180
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\baseline_front.png",
+        "sha256": "d2cd07e0aee0438b60889862677533c108b12f508e54041d4b9e41cee4b486b4"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\candidate_front.png",
+        "sha256": "59de616af54553357d2c5170a5aae07b0d9a40ed1105c64c367c650df9cf99c8"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\reference-board_front.png",
+        "sha256": "a1e7dc5b3af5892c6621d55f7a0775b5fc3ed5ce7100a2d9d2192ff136cc76ee"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.47999998927116394,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.6292068494294654e-07,
+            -1.0,
+            -2.0
+          ],
+          [
+            0.0,
+            1.0,
+            -1.6292068494294654e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "frame": 1,
+        "active_shape_keys": {
+          "MIA_V14_OuterWing_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_OuterWing_1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_SculptedSkin": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_1": {
+            "Basis": 1.0
+          }
+        },
+        "lighting": [
+          {
+            "name": "V24 Key",
+            "position": [
+              -0.6000000238418579,
+              0.800000011920929,
+              2.0
+            ],
+            "energy": 55.0,
+            "size": 0.800000011920929
+          },
+          {
+            "name": "V24 Fill",
+            "position": [
+              0.699999988079071,
+              -0.699999988079071,
+              1.899999976158142
+            ],
+            "energy": 40.0,
+            "size": 1.0
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          760,
+          760
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.47999998927116394,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.6292068494294654e-07,
+            -1.0,
+            -2.0
+          ],
+          [
+            0.0,
+            1.0,
+            -1.6292068494294654e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "frame": 1,
+        "active_shape_keys": {
+          "MIA_V14_OuterWing_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_OuterWing_1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_SculptedSkin": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_1": {
+            "Basis": 1.0
+          }
+        },
+        "lighting": [
+          {
+            "name": "V24 Key",
+            "position": [
+              -0.6000000238418579,
+              0.800000011920929,
+              2.0
+            ],
+            "energy": 55.0,
+            "size": 0.800000011920929
+          },
+          {
+            "name": "V24 Fill",
+            "position": [
+              0.699999988079071,
+              -0.699999988079071,
+              1.899999976158142
+            ],
+            "energy": 40.0,
+            "size": 1.0
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          760,
+          760
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "reference_registration": {
+        "uniform_scale": 3.1616,
+        "translation_xy": [
+          48.03199999999999,
+          159.7824
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Vertical eye-to-chin height only; back uses crown-to-estimated-nape. This distance is excluded from proportion validation.",
+        "notes": "Inherited hair0d registration scaled uniformly from 500px panel to760px panel; matched ortho .48m centerZ1.55; no local warp. Manual source/model anchors [(325, 73.5), (331, 111), (500, 516), (500, 672)]; crop-relative translation; no mirroring, per-feature warp or anisotropic scale."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Actual saved 760px camera render, same framing and pose baseline/candidate. No image normalization counted as validation."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Actual saved 760px camera render, same framing and pose baseline/candidate. No image normalization counted as validation."
+      },
+      "pose_uncertainty": "Art roll roughly -12 degrees; yaw near front. Source anchors +/-2px, model +/-5px. Current model yaw front0/profile82/back180/obliques+35,-35; drawings not exact orthographic geometry.",
+      "observed_differences": "Rear gathering change is occluded or marginal; main silhouette and forward hair preserved.",
+      "unresolved": [
+        "ART UNAPPROVED; source size/gathering continuity needs independent review",
+        "Main ear/nape extraction sheets remain cut and jagged; rejected boundary relaxation excluded",
+        "No final rig/physics or full hair atlas repair",
+        "Bun inherits original Fold/Binder high placement; source gathering center is lower relative crown/ear, especially profile."
+      ],
+      "material_mode": "Actual connected generated pigment maps with inherited ash fallback, scene-light toon response and bounded sheen. See pigment-manifest.json and ART_REVIEW.md."
+    },
+    {
+      "id": "profile",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+        "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+        "crop_xyxy": [
+          495,
+          0,
+          705,
+          180
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\baseline_profile.png",
+        "sha256": "68940a5d90a2d375e73e76e89a9b29dd9897acda4c3f6fef87641c99199f8522"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\candidate_profile.png",
+        "sha256": "3192e524fcb3581caa0f07ffd57e50c60475ccf315bf210ec5008ab65442dbbd"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\reference-board_profile.png",
+        "sha256": "e759c7715429072d660262bb1bf88ae540bb6ffcd77dea938ed87016df0a5d9b"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.47999998927116394,
+        "matrix": [
+          [
+            0.1391729861497879,
+            4.7712894968299224e-08,
+            0.9902681112289429,
+            1.9805361032485962
+          ],
+          [
+            0.9902681112289429,
+            2.541562516000795e-08,
+            -0.1391729861497879,
+            -0.2783462107181549
+          ],
+          [
+            -3.1808628619955925e-08,
+            1.0,
+            -4.371138828673793e-08,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "frame": 1,
+        "active_shape_keys": {
+          "MIA_V14_OuterWing_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_OuterWing_1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_SculptedSkin": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_1": {
+            "Basis": 1.0
+          }
+        },
+        "lighting": [
+          {
+            "name": "V24 Key",
+            "position": [
+              -0.6000000238418579,
+              0.800000011920929,
+              2.0
+            ],
+            "energy": 55.0,
+            "size": 0.800000011920929
+          },
+          {
+            "name": "V24 Fill",
+            "position": [
+              0.699999988079071,
+              -0.699999988079071,
+              1.899999976158142
+            ],
+            "energy": 40.0,
+            "size": 1.0
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          760,
+          760
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.47999998927116394,
+        "matrix": [
+          [
+            0.1391729861497879,
+            4.7712894968299224e-08,
+            0.9902681112289429,
+            1.9805361032485962
+          ],
+          [
+            0.9902681112289429,
+            2.541562516000795e-08,
+            -0.1391729861497879,
+            -0.2783462107181549
+          ],
+          [
+            -3.1808628619955925e-08,
+            1.0,
+            -4.371138828673793e-08,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "frame": 1,
+        "active_shape_keys": {
+          "MIA_V14_OuterWing_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_OuterWing_1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_SculptedSkin": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_1": {
+            "Basis": 1.0
+          }
+        },
+        "lighting": [
+          {
+            "name": "V24 Key",
+            "position": [
+              -0.6000000238418579,
+              0.800000011920929,
+              2.0
+            ],
+            "energy": 55.0,
+            "size": 0.800000011920929
+          },
+          {
+            "name": "V24 Fill",
+            "position": [
+              0.699999988079071,
+              -0.699999988079071,
+              1.899999976158142
+            ],
+            "energy": 40.0,
+            "size": 1.0
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          760,
+          760
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "reference_registration": {
+        "uniform_scale": 3.1632432432432434,
+        "translation_xy": [
+          53.79567567567569,
+          169.97297297297297
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Vertical eye-to-chin height only; back uses crown-to-estimated-nape. This distance is excluded from proportion validation.",
+        "notes": "Inherited hair0d registration scaled uniformly from 500px panel to760px panel; matched ortho .48m centerZ1.55; no local warp. Manual source/model anchors [(558, 70), (557, 107), (333, 515), (365, 669)]; crop-relative translation; no mirroring, per-feature warp or anisotropic scale."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Actual saved 760px camera render, same framing and pose baseline/candidate. No image normalization counted as validation."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Actual saved 760px camera render, same framing and pose baseline/candidate. No image normalization counted as validation."
+      },
+      "pose_uncertainty": "Art roughly 80-90deg versus model90; eye under hair. Source +/-3px, model eye is occluded by hair and estimated +/-12px; chin visible +/-3px. Current model yaw front0/profile82/back180/obliques+35,-35; drawings not exact orthographic geometry.",
+      "observed_differences": "Central tiny cord replaced by three overlapping closed gathered curls, shallow unequal strand banks, source-directed pigment if paint candidate. Main detailed hair unchanged.",
+      "unresolved": [
+        "ART UNAPPROVED; source size/gathering continuity needs independent review",
+        "Main ear/nape extraction sheets remain cut and jagged; rejected boundary relaxation excluded",
+        "No final rig/physics or full hair atlas repair",
+        "Bun inherits original Fold/Binder high placement; source gathering center is lower relative crown/ear, especially profile."
+      ],
+      "material_mode": "Actual connected generated pigment maps with inherited ash fallback, scene-light toon response and bounded sheen. See pigment-manifest.json and ART_REVIEW.md."
+    },
+    {
+      "id": "back",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+        "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+        "crop_xyxy": [
+          730,
+          0,
+          950,
+          190
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\baseline_back.png",
+        "sha256": "f3f04eda537d2e70581cf5f90f786855e53beeac24ea41e3b2c8f0f6d99bca4c"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\candidate_back.png",
+        "sha256": "621a375c17431ac13289585e17d2c8622875655d0ff21e9392390f28e66e3256"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\reference-board_back.png",
+        "sha256": "38436de2f1fc8322a20056b0b35b5d2529c4f23d1d4498188c514893005701df"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.47999998927116394,
+        "matrix": [
+          [
+            -1.0,
+            1.5099580252808664e-07,
+            -1.1399865765455465e-14,
+            2.4492937051703357e-16
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            1.0,
+            2.0
+          ],
+          [
+            1.5099580252808664e-07,
+            1.0,
+            -7.549790126404332e-08,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "frame": 1,
+        "active_shape_keys": {
+          "MIA_V14_OuterWing_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_OuterWing_1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_SculptedSkin": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_1": {
+            "Basis": 1.0
+          }
+        },
+        "lighting": [
+          {
+            "name": "V24 Key",
+            "position": [
+              -0.6000000238418579,
+              0.800000011920929,
+              2.0
+            ],
+            "energy": 55.0,
+            "size": 0.800000011920929
+          },
+          {
+            "name": "V24 Fill",
+            "position": [
+              0.699999988079071,
+              -0.699999988079071,
+              1.899999976158142
+            ],
+            "energy": 40.0,
+            "size": 1.0
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          760,
+          760
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.47999998927116394,
+        "matrix": [
+          [
+            -1.0,
+            1.5099580252808664e-07,
+            -1.1399865765455465e-14,
+            2.4492937051703357e-16
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            1.0,
+            2.0
+          ],
+          [
+            1.5099580252808664e-07,
+            1.0,
+            -7.549790126404332e-08,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "frame": 1,
+        "active_shape_keys": {
+          "MIA_V14_OuterWing_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_OuterWing_1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_SculptedSkin": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_1": {
+            "Basis": 1.0
+          }
+        },
+        "lighting": [
+          {
+            "name": "V24 Key",
+            "position": [
+              -0.6000000238418579,
+              0.800000011920929,
+              2.0
+            ],
+            "energy": 55.0,
+            "size": 0.800000011920929
+          },
+          {
+            "name": "V24 Fill",
+            "position": [
+              0.699999988079071,
+              -0.699999988079071,
+              1.899999976158142
+            ],
+            "energy": 40.0,
+            "size": 1.0
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          760,
+          760
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "reference_registration": {
+        "uniform_scale": 2.7708333333333335,
+        "translation_xy": [
+          86.29166666666664,
+          137.35416666666666
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Vertical eye-to-chin height only; back uses crown-to-estimated-nape. This distance is excluded from proportion validation.",
+        "notes": "Inherited hair0d registration scaled uniformly from 500px panel to760px panel; matched ortho .48m centerZ1.55; no local warp. Manual source/model anchors [(836, 19), (836, 115), (500, 250), (500, 600)]; crop-relative translation; no mirroring, per-feature warp or anisotropic scale."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Actual saved 760px camera render, same framing and pose baseline/candidate. No image normalization counted as validation."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Actual saved 760px camera render, same framing and pose baseline/candidate. No image normalization counted as validation."
+      },
+      "pose_uncertainty": "Rear crown to estimated covered nape only; low confidence. Not skull-height evidence. Current model yaw front0/profile82/back180/obliques+35,-35; drawings not exact orthographic geometry.",
+      "observed_differences": "Central tiny cord replaced by three overlapping closed gathered curls, shallow unequal strand banks, source-directed pigment if paint candidate. Main detailed hair unchanged.",
+      "unresolved": [
+        "ART UNAPPROVED; source size/gathering continuity needs independent review",
+        "Main ear/nape extraction sheets remain cut and jagged; rejected boundary relaxation excluded",
+        "No final rig/physics or full hair atlas repair",
+        "Bun inherits original Fold/Binder high placement; source gathering center is lower relative crown/ear, especially profile."
+      ],
+      "material_mode": "Actual connected generated pigment maps with inherited ash fallback, scene-light toon response and bounded sheen. See pigment-manifest.json and ART_REVIEW.md."
+    },
+    {
+      "id": "left_oblique",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+        "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+        "crop_xyxy": [
+          1190,
+          0,
+          1510,
+          245
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\baseline_left_oblique.png",
+        "sha256": "2cef1ff64b546b02a87c4a7a306bc801912370a1e8a2d44cb477ac062270b0e8"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\candidate_left_oblique.png",
+        "sha256": "3225a4cd23f3f1f94e2cd39e3eaf4bfd8a677679699e43df4e3620308fdc1a55"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\reference-board_left_oblique.png",
+        "sha256": "d0f4bf8be03f0e4cd32ca5c1775d65862bcfd8050a18a8d95d954365e67ac1eb"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.47999998927116394,
+        "matrix": [
+          [
+            0.8191519379615784,
+            1.0991087862066706e-07,
+            0.5735766291618347,
+            1.1471529006958008
+          ],
+          [
+            0.5735766291618347,
+            -1.2192899134788604e-07,
+            -0.8191519379615784,
+            -1.6383041143417358
+          ],
+          [
+            -2.0098083197694905e-08,
+            1.0,
+            -1.6292068494294654e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "frame": 1,
+        "active_shape_keys": {
+          "MIA_V14_OuterWing_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_OuterWing_1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_SculptedSkin": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_1": {
+            "Basis": 1.0
+          }
+        },
+        "lighting": [
+          {
+            "name": "V24 Key",
+            "position": [
+              -0.6000000238418579,
+              0.800000011920929,
+              2.0
+            ],
+            "energy": 55.0,
+            "size": 0.800000011920929
+          },
+          {
+            "name": "V24 Fill",
+            "position": [
+              0.699999988079071,
+              -0.699999988079071,
+              1.899999976158142
+            ],
+            "energy": 40.0,
+            "size": 1.0
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          760,
+          760
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.47999998927116394,
+        "matrix": [
+          [
+            0.8191519379615784,
+            1.0991087862066706e-07,
+            0.5735766291618347,
+            1.1471529006958008
+          ],
+          [
+            0.5735766291618347,
+            -1.2192899134788604e-07,
+            -0.8191519379615784,
+            -1.6383041143417358
+          ],
+          [
+            -2.0098083197694905e-08,
+            1.0,
+            -1.6292068494294654e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "frame": 1,
+        "active_shape_keys": {
+          "MIA_V14_OuterWing_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_OuterWing_1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_SculptedSkin": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_1": {
+            "Basis": 1.0
+          }
+        },
+        "lighting": [
+          {
+            "name": "V24 Key",
+            "position": [
+              -0.6000000238418579,
+              0.800000011920929,
+              2.0
+            ],
+            "energy": 55.0,
+            "size": 0.800000011920929
+          },
+          {
+            "name": "V24 Fill",
+            "position": [
+              0.699999988079071,
+              -0.699999988079071,
+              1.899999976158142
+            ],
+            "energy": 40.0,
+            "size": 1.0
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          760,
+          760
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "reference_registration": {
+        "uniform_scale": 1.8239999999999998,
+        "translation_xy": [
+          97.28,
+          222.37600000000003
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Vertical eye-to-chin height only; back uses crown-to-estimated-nape. This distance is excluded from proportion validation.",
+        "notes": "Inherited hair0d registration scaled uniformly from 500px panel to760px panel; matched ortho .48m centerZ1.55; no local warp. Manual source/model anchors [(1305, 91), (1320, 156), (404, 511), (403, 667)]; crop-relative translation; no mirroring, per-feature warp or anisotropic scale."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Actual saved 760px camera render, same framing and pose baseline/candidate. No image normalization counted as validation."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Actual saved 760px camera render, same framing and pose baseline/candidate. No image normalization counted as validation."
+      },
+      "pose_uncertainty": "Panel04 estimated yaw30-45deg with nonzero roll/pitch; model45deg neutral. Anchors +/-4/6px. Current model yaw front0/profile82/back180/obliques+35,-35; drawings not exact orthographic geometry.",
+      "observed_differences": "Rear gathering change is occluded or marginal; main silhouette and forward hair preserved.",
+      "unresolved": [
+        "ART UNAPPROVED; source size/gathering continuity needs independent review",
+        "Main ear/nape extraction sheets remain cut and jagged; rejected boundary relaxation excluded",
+        "No final rig/physics or full hair atlas repair",
+        "Bun inherits original Fold/Binder high placement; source gathering center is lower relative crown/ear, especially profile."
+      ],
+      "material_mode": "Actual connected generated pigment maps with inherited ash fallback, scene-light toon response and bounded sheen. See pigment-manifest.json and ART_REVIEW.md."
+    },
+    {
+      "id": "right_oblique",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+        "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+        "crop_xyxy": [
+          810,
+          0,
+          1135,
+          245
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\baseline_right_oblique.png",
+        "sha256": "a800d3c8827732c8371168a9d36687530684790329bb3bae42a1e1d6833ac782"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\candidate_right_oblique.png",
+        "sha256": "27ea9f6f6230c4e90d161014b60b0ab3980d714d610b2e5045cda1daa5de52d7"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\reference-board_right_oblique.png",
+        "sha256": "4e68ce8915f6ad57de2345dcc08ae2601b5c15014e5c44edad6e5e5cc4440799"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.47999998927116394,
+        "matrix": [
+          [
+            0.8191519379615784,
+            -1.0991087862066706e-07,
+            -0.5735766291618347,
+            -1.1471529006958008
+          ],
+          [
+            -0.5735766291618347,
+            -1.2192899134788604e-07,
+            -0.8191519379615784,
+            -1.6383041143417358
+          ],
+          [
+            2.0098083197694905e-08,
+            1.0,
+            -1.6292068494294654e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "frame": 1,
+        "active_shape_keys": {
+          "MIA_V14_OuterWing_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_OuterWing_1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_SculptedSkin": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_1": {
+            "Basis": 1.0
+          }
+        },
+        "lighting": [
+          {
+            "name": "V24 Key",
+            "position": [
+              -0.6000000238418579,
+              0.800000011920929,
+              2.0
+            ],
+            "energy": 55.0,
+            "size": 0.800000011920929
+          },
+          {
+            "name": "V24 Fill",
+            "position": [
+              0.699999988079071,
+              -0.699999988079071,
+              1.899999976158142
+            ],
+            "energy": 40.0,
+            "size": 1.0
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          760,
+          760
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "ortho_scale": 0.47999998927116394,
+        "matrix": [
+          [
+            0.8191519379615784,
+            -1.0991087862066706e-07,
+            -0.5735766291618347,
+            -1.1471529006958008
+          ],
+          [
+            -0.5735766291618347,
+            -1.2192899134788604e-07,
+            -0.8191519379615784,
+            -1.6383041143417358
+          ],
+          [
+            2.0098083197694905e-08,
+            1.0,
+            -1.6292068494294654e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "frame": 1,
+        "active_shape_keys": {
+          "MIA_V14_OuterWing_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_OuterWing_1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_SculptedSkin": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_-1": {
+            "Basis": 1.0
+          },
+          "MIA_V14_UpperLash_1": {
+            "Basis": 1.0
+          }
+        },
+        "lighting": [
+          {
+            "name": "V24 Key",
+            "position": [
+              -0.6000000238418579,
+              0.800000011920929,
+              2.0
+            ],
+            "energy": 55.0,
+            "size": 0.800000011920929
+          },
+          {
+            "name": "V24 Fill",
+            "position": [
+              0.699999988079071,
+              -0.699999988079071,
+              1.899999976158142
+            ],
+            "energy": 40.0,
+            "size": 1.0
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          760,
+          760
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "reference_registration": {
+        "uniform_scale": 1.7658823529411767,
+        "translation_xy": [
+          218.83529411764707,
+          214.29764705882351
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Vertical eye-to-chin height only; back uses crown-to-estimated-nape. This distance is excluded from proportion validation.",
+        "notes": "Inherited hair0d registration scaled uniformly from 500px panel to760px panel; matched ortho .48m centerZ1.55; no local warp. Manual source/model anchors [(940, 99), (958, 167), (590, 512), (589, 670)]; crop-relative translation; no mirroring, per-feature warp or anisotropic scale."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Actual saved 760px camera render, same framing and pose baseline/candidate. No image normalization counted as validation."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Actual saved 760px camera render, same framing and pose baseline/candidate. No image normalization counted as validation."
+      },
+      "pose_uncertainty": "Panel03 is a subtle angle, NOT a solved opposite45deg reference. Opposite-side color correspondence limited; no mirrored or warped art. ART UNVERIFIED for exact view. Current model yaw front0/profile82/back180/obliques+35,-35; drawings not exact orthographic geometry.",
+      "observed_differences": "Rear gathering change is occluded or marginal; main silhouette and forward hair preserved.",
+      "unresolved": [
+        "ART UNAPPROVED; source size/gathering continuity needs independent review",
+        "Main ear/nape extraction sheets remain cut and jagged; rejected boundary relaxation excluded",
+        "No final rig/physics or full hair atlas repair",
+        "Bun inherits original Fold/Binder high placement; source gathering center is lower relative crown/ear, especially profile."
+      ],
+      "material_mode": "Actual connected generated pigment maps with inherited ash fallback, scene-light toon response and bounded sheen. See pigment-manifest.json and ART_REVIEW.md."
+    }
+  ],
+  "art_status": "UNAPPROVED WIP, no AC5/AC6 PASS claim",
+  "art_review": "ART_REVIEW.md"
+}

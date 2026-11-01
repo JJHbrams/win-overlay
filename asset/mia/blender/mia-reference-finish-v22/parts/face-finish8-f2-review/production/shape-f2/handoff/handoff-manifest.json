@@ -1,0 +1,254 @@
+{
+  "status": "FROZEN REVIEW-ONLY LOCAL VOLUME RECOVERY / WHOLE ART UNAPPROVED",
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f2\\Mia_FaceFinish8_ConnectedBuccalF2.blend",
+    "sha256": "6d0672ae12eaa0c8a4386a42291e2bb39cf9b70921d5183929500df2fa63eef9"
+  },
+  "baseline": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\Mia_FaceFinish8_AuthoredLookD.blend",
+    "sha256": "be2e6fa00a7287e5f8781815f7f209a8600d59a91fc3a71816a7d77897e83170"
+  },
+  "changes": {
+    "MIA_V14_SculptedSkin": {
+      "count": 89,
+      "max_delta_m": 0.019658297300338745
+    },
+    "MIA_V06_BODY_SKIN": {
+      "count": 0,
+      "max_delta_m": 0.0
+    },
+    "MIA_V14_MouthSeam": {
+      "count": 0,
+      "max_delta_m": 0.0
+    },
+    "MIA_V14_SmoothJawInk": {
+      "count": 0,
+      "max_delta_m": 0.0
+    }
+  },
+  "changed_key_names": {
+    "MIA_V14_SculptedSkin": [
+      "Basis",
+      "EyeExtra_01.M_F00_000_00_EyeExtra_On",
+      "Face.M_F00_000_00_Fcl_ALL_Angry",
+      "Face.M_F00_000_00_Fcl_ALL_Fun",
+      "Face.M_F00_000_00_Fcl_ALL_Joy",
+      "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+      "Face.M_F00_000_00_Fcl_ALL_Surprised",
+      "Face.M_F00_000_00_Fcl_BRW_Angry",
+      "Face.M_F00_000_00_Fcl_BRW_Fun",
+      "Face.M_F00_000_00_Fcl_BRW_Joy",
+      "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+      "Face.M_F00_000_00_Fcl_BRW_Surprised",
+      "Face.M_F00_000_00_Fcl_EYE_Angry",
+      "Face.M_F00_000_00_Fcl_EYE_Close",
+      "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "Face.M_F00_000_00_Fcl_EYE_Extra",
+      "Face.M_F00_000_00_Fcl_EYE_Joy",
+      "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+      "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+      "Face.M_F00_000_00_Fcl_EYE_Natural",
+      "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+      "Face.M_F00_000_00_Fcl_EYE_Surprised",
+      "Face.M_F00_000_00_Fcl_HA_Fung1",
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+      "Face.M_F00_000_00_Fcl_HA_Fung2",
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+      "Face.M_F00_000_00_Fcl_MTH_A",
+      "Face.M_F00_000_00_Fcl_MTH_Angry",
+      "Face.M_F00_000_00_Fcl_MTH_Down",
+      "Face.M_F00_000_00_Fcl_MTH_E",
+      "Face.M_F00_000_00_Fcl_MTH_Fun",
+      "Face.M_F00_000_00_Fcl_MTH_I",
+      "Face.M_F00_000_00_Fcl_MTH_Joy",
+      "Face.M_F00_000_00_Fcl_MTH_Neutral",
+      "Face.M_F00_000_00_Fcl_MTH_O",
+      "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+      "Face.M_F00_000_00_Fcl_MTH_Surprised",
+      "Face.M_F00_000_00_Fcl_MTH_U",
+      "Face.M_F00_000_00_Fcl_MTH_Up",
+      "MIA_FaceArt_EyeProportion",
+      "MIA_FaceArt_OwnedBrowPlacement",
+      "MIA_V12_ReferenceFacialSculpt",
+      "MIA_V13_LidJawRefinement",
+      "MIA_V14_HoodCheekMouthCorrective"
+    ]
+  },
+  "anatomical_diagnosis": [
+    "D/E anterior-to-buccal support recedes rapidly below the high malar region. The user-visible hollow is actual evaluated geometry; all polygons smooth, no custom split normals or sharp edges in the cheek, Armature then Subsurf2.",
+    "F recovered central anterior volume around absX20-40mm and Z1.496-1.520m, but attached it to an overly recessed lateral row. At example cage vertices291/259, the F depth dropped about23mm over4mm lateral distance, producing a new angular band.",
+    "F2 connects central F depth anchors to lateral buccal support through height-interpolated convex section targets. It retains high malar mass and short anterior fullness, and changes Y only. No chin shortening/projection, eye adjustment, global width scale, topology change or paint revision.",
+    "F2 lower/anterior cheek recovery is visually useful in fixed matte and opposite native lights. The upper lower-lid-to-nasal/malar diagonal plane band remains; user-visible hollow is not declared fully resolved."
+  ],
+  "source_review": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f2\\review-package\\reference-review.json",
+    "sha256": "163eb361016ce87e47f02abad08dc77d9748e491d8e12eff2215caec5afdd905"
+  },
+  "source_review_validation": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f2\\review-package\\validation.json",
+    "sha256": "6e5cdf8e22c29423250afdc6906b09b15f54c6b1f51eadb0369d0a4690c1d753"
+  },
+  "source_four_records": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f2\\source-four\\render-records.json",
+    "sha256": "1e8aec79d92c10770d0559a3fa257d6adfec9f4f0c988f06eadf54a28598e689"
+  },
+  "matched_matte_and_two_lights": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f2\\paired\\paired-records.json",
+    "sha256": "8de01cebde39e4cedf7598e97e0cfb39c5ad3658301ee61683b09e5622eb5881"
+  },
+  "limited_blink_records": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f2\\limited-blink\\render-records.json",
+    "sha256": "e88cca734c4bfeb525332d0971c177c439e97a7e83b92b0ff658510dced05c1a"
+  },
+  "blink_assessment": "Actual symmetric half/full at front/+60 inspected. Half is partial with iris visible; full shows no visible iris leak or lash detachment in these views. Exact evaluated aperture guard also covers neutral. Not all47 expressions or final rig validation.",
+  "exact_replay": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f2\\handoff\\owner-key-replay-from-d.json",
+    "sha256": "6966f21df73910eeac59c2ad99996861f8ef71a3ef89f0449ad22fa1d27209b4"
+  },
+  "replay_script": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\replay_f2_into_d.py",
+    "sha256": "98e99ccd087a0b0f8b5ef6538f15ed8dcff514e8fb94a437887a0cd9543ef3a9"
+  },
+  "replay_validation": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f2\\handoff\\replay-validation.json",
+    "sha256": "66839877753b504acb0f5316065573d05e78b6bad11323ee9fad2eae31f646f2"
+  },
+  "guards": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f2\\handoff\\guard-summary.json",
+    "sha256": "d741f34af639056f52a71a50084c51fe6f80b02a2ed4d89e120a8b81bd6d1e0f"
+  },
+  "material_map_audit": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f2\\handoff\\material-map-audit.json",
+    "sha256": "651d33c740d3853e72dbbe72c157d026a63deb3fdd5a104c003c284b99f808bc"
+  },
+  "material": "MIA_Finish8_AuthoredFacePigment",
+  "slot": 7,
+  "uv_layer": "UVMap",
+  "map_files": {
+    "BasePigment": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\maps\\BasePigment_LINEAR_2048.exr",
+      "sha256": "6bdbd142866c918a5db482368220c425d96233a2464aee81ebd525421197e1b4",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "node": "FINISH8_BasePigment",
+      "packed_in_native": true,
+      "relative_to_f2_native": "../look-d/maps/BasePigment_LINEAR_2048.exr"
+    },
+    "FatigueMask": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\maps\\FatigueMask_LINEAR_2048.exr",
+      "sha256": "7e4a5ccad264a12c4a0c051cace8689292d7807e292e34838e4131202bf57ed3",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "node": "FINISH8_FatigueMask",
+      "packed_in_native": true,
+      "relative_to_f2_native": "../look-d/maps/FatigueMask_LINEAR_2048.exr"
+    },
+    "FineLineMask": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\maps\\FineLineMask_LINEAR_2048.exr",
+      "sha256": "6e11c7c67945e24a14b73f43dac8f1e82be524d152be46da341a5ff000fc1764",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "node": "FINISH8_FineLineMask",
+      "packed_in_native": true,
+      "relative_to_f2_native": "../look-d/maps/FineLineMask_LINEAR_2048.exr"
+    }
+  },
+  "consumed_route": "UVMap -> BasePigment RGB -> FatigueMask multiply brown-mauve -> FineLineMask multiply deep warm ink -> PigmentTimesControlledLight; white Diffuse -> ShaderToRGB -> inherited scene light ramp -> same multiply -> Emission -> Output",
+  "color_only_socket": "FINISH8_FineLinePigment.Color -> Emission.Color; also bypass cap/body PigmentTimesControlledLight.input1 for pure face+cap pigment.",
+  "material_policy": "Use exact D maps/material unchanged. F2 contains the same packed image bytes. External image paths still point to producer look-d/maps; root may copy/relink in its integrated native without modifying this frozen native. Old MIA_V22_FULL_LINEAR_ALBEDO image node remains archived in material but is not the consumed final pigment route.",
+  "integration_order": "Apply archived R28-to-D owner/key replay and D material/cap mapping first, then this guarded D-to-F2 geometry-only replay. Or import final face owner directly with root-owned cap/body mapping. This replay has zero body/cap rows and does not transfer materials, open, save or operate on live Blender.",
+  "recipe_chain": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\build_shape_e.py",
+      "sha256": "7d87f51a047b5ce2a69d1c3ea46482b76a2b80a4a57c54f83b18b90facb08768"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\build_shape_f.py",
+      "sha256": "477c81b8ff5eaafbe3c5cc6959ebdc83900b057eb34475ed1e073990ff280c23"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\build_shape_f2.py",
+      "sha256": "ae53b3dd8a3c4294f201c0e4f236fdd71680022ab14bdb9a5d280587d6c7490f"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\render_shape_e_review.py",
+      "sha256": "3de23f0fe763e16c326f50333acdee43bf932c2d4ec3f824e1549b77bbb6c2ad"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\render_source_only.py",
+      "sha256": "64a46adf382a6e5ac478b4904088b8b8a8869a1e05b5c4b569e31c40b0129757"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\render_f2_blink.py",
+      "sha256": "d27ed0abec2595e3f279821c522578ca7d8a8d26c93d8b3f547e228c44209960"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\compose_f2_source.py",
+      "sha256": "46d416e0b56691eda9f264d9ba9dce5d40944269b8d8ede0246484fdf07baca2"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\export_f2_replay.py",
+      "sha256": "b2efb3710babf13ada9e9cea13eab6c25ea29f4a99d30c851a8bea74cd3725e0"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\verify_f2_replay.py",
+      "sha256": "c1b93044f5b552477ad22c57dff3133102578eadc1d3d76d9e722bd1a4e48b4d"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\audit_f2_maps.py",
+      "sha256": "27ac1a3621c5f8d9cc647f9f1fb70a90845162c5472581fa7a93dcae45f54307"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\package_f2_handoff.py",
+      "sha256": "b567d92b1903de5ad3f6b767b67989aae58e6e17a5660da0ee50c92b5d5ba854"
+    }
+  ],
+  "failed_F_preserved": {
+    "status": "UNSELECTED: restored central mass with angular lateral attachment",
+    "native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f\\Mia_FaceFinish8_CentralBuccalF.blend",
+      "sha256": "06a20a17f20729e39741ca69d1fdb79eedf0d704645904e61ece272fc3e8779c"
+    },
+    "manifest": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f\\manifest.json",
+      "sha256": "4f5e65a5233e9f77dc1b3d31a38127e7a9bd9fe4f680957f151c0098d2450bab"
+    },
+    "diagnosis": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f\\evaluated-buccal-f-result.json",
+      "sha256": "be9838bb52a441e5f51ce1eb2e3169c88af3976aa9a6def5d77abd629a9cb8cc"
+    },
+    "small_evidence": [
+      {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f\\targeted\\matte_yaw+00_elev-10.png",
+        "sha256": "6d90a480e2599ece057338b793d086dec3e02ec98f32df437252a88b375ee102"
+      },
+      {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-f\\targeted\\matte_yaw+30_elev-10.png",
+        "sha256": "2505178b4de6859d5ad5d3a3a4d611f9d2a894b96590f24dc6b94f5a133b2a71"
+      }
+    ]
+  },
+  "per_acceptance": {
+    "AC1": "LOCAL RECOVERY FOR REVIEW ONLY: anterior/buccal volume visibly restored; upper diagonal transition remains. No full surface approval.",
+    "AC2": "FAIL / UNFINISHED: connected cheek/nose/jaw source form still not established. Chin unchanged from D; eye-to-chin SRT cannot prove absolute height.",
+    "AC3": "LIMITED MOTION GUARD PASS; source tired contour/iris/line fidelity still incomplete. No new eye edit in F2.",
+    "AC6": "D authored maps inherited and actual consumption verified, no new paint authored here. Source-style art acceptance remains unapproved."
+  },
+  "limits": [
+    "Original source SRT and fixed cameras retained, no per-view geometry fitting or candidate renormalization. Source profile yaw/gaze uncertainty and old producer hair occlusion remain.",
+    "Fixed-local section depths are diagnostic, not homologous anatomical volume or source-calibrated measurements.",
+    "Native and UV/material hashes prove provenance/consistency, not art quality. Parent owns independent review and live integration."
+  ]
+}

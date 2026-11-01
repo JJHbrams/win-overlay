@@ -1,0 +1,184 @@
+{
+  "status": "WIP / ART UNAPPROVED, partial rear-gathering improvement only",
+  "candidate_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\Mia_HairStructurePaint_v24.blend",
+    "sha256": "d3b230a52eb775a6b03fbeb5e690c7e2873761617deb85a36922b722ab3e2315"
+  },
+  "source_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\hair-ink-paint\\native\\0d7874821981-Mia_HairInkPaint_v22.blend",
+    "sha256": "0d787482198137c37a5fd80067f7f6ce74678c1a99df783b0ece7cb59c5fb319"
+  },
+  "geometry_parent": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\sculpt2\\Mia_HairStructure_v24.blend",
+    "sha256": "d146427b39895e834cb86a307799b586b454356648bdb7463e8e1927800fd402"
+  },
+  "new_owners": [
+    "MIA_V24_Gather_Main",
+    "MIA_V24_Gather_Tuck",
+    "MIA_V24_Gather_Upper"
+  ],
+  "replace_mesh_owners": [],
+  "hidden_retained_owners": [
+    "MIA_V20_HalfUp_Fold_Left",
+    "MIA_V20_HalfUp_Fold_Right",
+    "MIA_V20_HalfUp_Binder"
+  ],
+  "unchanged_detailed_hair_scope": "9e7d0e90f276e1f492de7ecbfb62bc674b3aa756a833f014301f9234675fdd30",
+  "new_owner_descriptors": [
+    {
+      "name": "MIA_V24_Gather_Main",
+      "parent": null,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "shape_keys": false,
+      "uv": [
+        "MIA_V20_LongitudinalUV",
+        "V24_GatherPaintUV"
+      ],
+      "material": "MIA_V24_Gather_Main_PaintedToon"
+    },
+    {
+      "name": "MIA_V24_Gather_Tuck",
+      "parent": null,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "shape_keys": false,
+      "uv": [
+        "MIA_V20_LongitudinalUV",
+        "V24_GatherPaintUV"
+      ],
+      "material": "MIA_V24_Gather_Tuck_PaintedToon"
+    },
+    {
+      "name": "MIA_V24_Gather_Upper",
+      "parent": null,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "shape_keys": false,
+      "uv": [
+        "MIA_V20_LongitudinalUV",
+        "V24_GatherPaintUV"
+      ],
+      "material": "MIA_V24_Gather_Upper_PaintedToon"
+    }
+  ],
+  "maps": [
+    {
+      "owner": "MIA_V24_Gather_Main",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\MIA_V24_Gather_Main_Pigment1024.png",
+      "sha256": "c811367519d3ea7a7936497ec582658478b14f5e80cafdd7201acc22eb02413a",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "painted_fraction_of_uv_surface": 0.3660022293049097,
+      "color_space": "sRGB",
+      "route": "V24_GatherPaintUV -> generated geometry-aligned pigment RGBA -> alpha fallback to inherited ash -> scene-light toon -> Emission"
+    },
+    {
+      "owner": "MIA_V24_Gather_Tuck",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\MIA_V24_Gather_Tuck_Pigment1024.png",
+      "sha256": "04bbdb68d4b03ad778ad15508c0f55e69298822daade39bed7613c081b7abe1a",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "painted_fraction_of_uv_surface": 0.11754576170820488,
+      "color_space": "sRGB",
+      "route": "V24_GatherPaintUV -> generated geometry-aligned pigment RGBA -> alpha fallback to inherited ash -> scene-light toon -> Emission"
+    },
+    {
+      "owner": "MIA_V24_Gather_Upper",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\paint1\\MIA_V24_Gather_Upper_Pigment1024.png",
+      "sha256": "5819f5e1153d783f6fc14ea9f728cbd52fc834398364284159cca5dd37d2fbff",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "painted_fraction_of_uv_surface": 0.3736872354877475,
+      "color_space": "sRGB",
+      "route": "V24_GatherPaintUV -> generated geometry-aligned pigment RGBA -> alpha fallback to inherited ash -> scene-light toon -> Emission"
+    }
+  ],
+  "limits": [
+    "Main ear/nape extraction failures remain; boundary1 smoothing rejected and excluded",
+    "Whole AC5/AC6 remains FAIL/UNVERIFIED",
+    "No final rig/physics, no original face/body/hair coordinates changed",
+    "Generated maps only add bounded bun pigment, not full-hair high-frequency detail"
+  ]
+}

@@ -101,7 +101,7 @@ def density(obj):
         evaluated.to_mesh_clear()
 
 
-def main(native, out):
+def main(native, out, inventory_only=False):
     before = sha(native)
     if out.exists() and any(out.iterdir()):
         raise RuntimeError('Use a fresh output directory')
@@ -135,8 +135,10 @@ def main(native, out):
             digest = hashlib.sha256(content).hexdigest()
             extension = {'PNG': '.png', 'JPEG': '.jpg', 'OPEN_EXR': '.exr', 'TIFF': '.tif'}.get(image.file_format, '.bin')
             path = maps / (digest[:12] + '-' + re.sub(r'[^A-Za-z0-9_.-]', '_', name)[:90] + extension)
-            path.write_bytes(content)
-            row.update({'exported': str(path.relative_to(out)), 'sha256': digest, 'bytes': len(content)})
+            if not inventory_only:
+                path.write_bytes(content)
+                row['exported'] = str(path.relative_to(out))
+            row.update({'sha256': digest, 'bytes': len(content)})
         else:
             path = Path(bpy.path.abspath(image.filepath)) if image.filepath else None
             row['external_exists'] = bool(path and path.is_file())
@@ -144,7 +146,7 @@ def main(native, out):
         inventory.append(row)
     bodyface = [o for o in owners if o.name in ('MIA_V14_SculptedSkin', 'MIA_V06_BODY_SKIN')]
     report = {'native': str(native), 'native_sha256': before, 'art_status': 'NOT_EVALUATED',
-              'material_routes': routes, 'images': inventory,
+              'material_routes': routes, 'images': inventory, 'inventory_only': inventory_only,
               'uv_density': {o.name: density(o) for o in bodyface},
               'limitations': 'Only directly reachable material image nodes exported. Group internals marked unresolved. Map dimensions and file presence do not establish authored detail or shader quality.'}
     assert sha(native) == before, 'Read-only audit changed native'
@@ -157,5 +159,6 @@ if __name__ == '__main__':
     p = argparse.ArgumentParser()
     p.add_argument('--native', required=True)
     p.add_argument('--output-dir', required=True)
+    p.add_argument('--inventory-only', action='store_true')
     a = p.parse_args(sys.argv[sys.argv.index('--') + 1:])
-    main(Path(a.native).resolve(), Path(a.output_dir).resolve())
+    main(Path(a.native).resolve(), Path(a.output_dir).resolve(), a.inventory_only)

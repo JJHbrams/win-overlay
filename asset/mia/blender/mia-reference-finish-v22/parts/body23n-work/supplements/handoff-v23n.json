@@ -1,0 +1,45 @@
+{
+  "candidate_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-body-finish-v23\\Mia_BodyFinish_v23n.blend",
+  "candidate_sha256": "3304662918dc962025a30a4eec9fce63d2a263207adebbf9ce7f8f9a09cee6dd",
+  "owner": "MIA_V06_BODY_SKIN",
+  "topology": {
+    "vertex_count": 3957,
+    "polygon_count": 4144,
+    "source_to_new_preserved_vertices": "identity mapping: every source vertex index maps to the same candidate vertex index"
+  },
+  "headcap": {
+    "threshold_world_z": 1.46,
+    "vertex_count": 183,
+    "coordinate_policy": "exactly preserved by build assertion; root may still override cap coordinates from face mapping"
+  },
+  "uv": {
+    "legacy": "UVMap preserved and consumed by AuthoredUVPigment",
+    "body_trial": "MIA_BODY_V23_UV inactive/unselected; do not promote without no-overlap review"
+  },
+  "material_slots": [
+    {
+      "index": 0,
+      "material": "MIA_V23_Body_CommonLight"
+    },
+    {
+      "index": 1,
+      "material": "MIA_V23_Body_CommonLight"
+    },
+    {
+      "index": 2,
+      "material": "MIA_V23_Body_CommonLight"
+    },
+    {
+      "index": 3,
+      "material": "MIA_V23_Body_CommonLight"
+    }
+  ],
+  "active_body_material": {
+    "name": "MIA_V23_Body_CommonLight",
+    "scene_light_path": "MeasuredWhiteDiffuse -> ActualSceneLighting(ShaderToRGB) -> MIA_CommonSkinLightRamp -> PigmentTimesControlledLight -> Emission",
+    "authored_pigment": "MIA_V13_BodySkin_UV_2048.001",
+    "uv_map": "UVMap"
+  },
+  "integration_instruction": "Retain MIA_V23_Body_CommonLight on body material slots; do not replace it with face body-material slots. Preserve UVMap and cap UV semantics.",
+  "status": "SELECTED TECHNICAL HANDOFF ONLY / ART UNAPPROVED; separate v23h/k UV experiments are unselected."
+}

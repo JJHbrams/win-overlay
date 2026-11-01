@@ -1,0 +1,93 @@
+{
+  "source_native_sha256": "d146427b39895e834cb86a307799b586b454356648bdb7463e8e1927800fd402",
+  "owners": [
+    "MIA_V24_Gather_Main",
+    "MIA_V24_Gather_Upper",
+    "MIA_V24_Gather_Tuck"
+  ],
+  "views": {
+    "back": {
+      "image": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\sculpt2\\paintplate_back.png",
+      "projection": "ORTHO",
+      "ortho_scale": 0.11500000208616257,
+      "resolution": [
+        1024,
+        1024
+      ],
+      "matrix_world": [
+        [
+          -1.0,
+          -1.5099580252808664e-07,
+          1.1399865765455465e-14,
+          0.0
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          1.0,
+          2.0
+        ],
+        [
+          -1.5099580252808664e-07,
+          1.0,
+          -7.549790126404332e-08,
+          1.5750000476837158
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "formula": "camera_local = inverse(matrix_world) @ world_vertex; u = .5 + local.x/ortho_scale; v=.5+local.y/ortho_scale; texture origin lower-left",
+      "target": [
+        0,
+        0.135,
+        1.575
+      ]
+    },
+    "profile": {
+      "image": "C:\\Users\\antio\\.codex\\worktrees\\mia-head-hair-fit-v16\\win-overlay\\asset\\mia\\blender\\mia-hair-structure-v24\\sculpt2\\paintplate_profile.png",
+      "projection": "ORTHO",
+      "ortho_scale": 0.11500000208616257,
+      "resolution": [
+        1024,
+        1024
+      ],
+      "matrix_world": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.13500000536441803
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5750000476837158
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "formula": "camera_local = inverse(matrix_world) @ world_vertex; u = .5 + local.x/ortho_scale; v=.5+local.y/ortho_scale; texture origin lower-left",
+      "target": [
+        0,
+        0.135,
+        1.575
+      ]
+    }
+  },
+  "instruction": "Keep every geometric silhouette/occlusion/crease position fixed. Paint pigment/hand-drawn source strands only, no new shape. No generated plate is model evidence."
+}
