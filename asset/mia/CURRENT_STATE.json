@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated": "2026-11-01",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
-  "status": "v27_face_reconstruction_adopted_working_candidate",
+  "status": "v28_orbit_lid_and_thorax_correction_in_progress",
   "character_complete": false,
   "art_approved": false,
   "read_first": [
@@ -88,10 +88,11 @@
     "v27 shared8c971/7ae354 drafts: numeric group index copying shifted Body weights. Superseded by e9 named-weight reconstruction; do not adopt draft renders as final evidence."
   ],
   "immediate_next": [
-    "Read face-rebuild-10/REVIEW.md and frozen e9 package before any editing. Do not revert to rejected c04/Q9/E2 or shared7ae weight-error drafts.",
-    "Retain supported cheek volume; remaining source differences primarily need eye-underlining/blush/upper-canthus and nose-plane line/color refinement, not more cheek hollowing.",
-    "Hair extraction boundaries/bun/style, body art/UV, garments and final motion/event animation remain separate unfinished stages.",
-    "Preserve original sources; every new change requires matching source/before/after views and actual saved-native checks."
+    "Read v28 ACCEPTANCE/PROGRESS and actual source-art pairs. E9 is baseline, not approved lid/orbit target.",
+    "Eye producer modifies only head/face/features; thorax producer only bounded original Body cage; root merges disjoint indexed deltas from exact same e9 baseline.",
+    "Review source-matched hairOFF, contour segment/curvature and orbital planes, actual independent lashes and minimal blink before adoption.",
+    "Thorax uses original unwarped concept and professional art sources; preserve coherent ribcage/breast attachment, upper/lateral/lower transitions.",
+    "Uniform SRT plus crop only; old source4-v23n boards invalid. Strict evidence validator plus real images/live; no ART inferred from hashes/keys/saves."
   ],
   "do_not_infer_pass_from": [
     "successful save",
@@ -105,10 +106,11 @@
     "saved_sources_immutable": true,
     "discard_live_test_view_authorized": true,
     "user_prefers_live_blender_mcp": true,
-    "private_real_person_references_not_used_or_recorded": true
+    "private_real_person_references_not_used_or_recorded": true,
+    "delegated_model": "New delegated work inherits main session model/settings; Astra override revoked by user."
   },
   "worktree_archive": "WORKTREE_ARCHIVE.md",
-  "active_contract": "blender/mia-reference-finish-v22/face-rebuild-10/ACCEPTANCE.md",
+  "active_contract": "blender/mia-orbit-thorax-review-v28/ACCEPTANCE.md",
   "latest_user_feedback": {
     "body": "Use Body Foundation/anatomy-led continuous forms. Live nowBody14 aslocalWIP; lower/outer ovoid boundaries and body UV unfinished.",
     "face": "User rejects current whole face and eyes as unlike source; malar/front-cheek hollow reads undernourished. Autonomously reconstruct from multiple approved concept views.",
@@ -117,14 +119,19 @@
     "eyes_tested": "Eye-only translations +/-0.5/1.5mm and depth scale0.9/1.1 alter lid contact/sclera but leave fixed skin wall; no probe variant selected. 3cd actual surface guide selected.",
     "viewport": "Actual live PERSP50 view pivot Y2.087m behind head; saved camera and prior19 renders ORTHO. Fix head-centred navigation/cameras/lights without changing model origins.",
     "profile_texture": "Use main/expressions/turnaround eye-nose-mouth profile and nose shading; finish face/head/body and UV style maps autonomously while user sleeps.",
-    "current_directive": "Whole-face reconstruction with supported malar/front-cheek volume and source eye/nose/mouth/jaw proportions. Do not treat latest partial improvements as accepted; choose foundation by actual multi-view examination."
+    "current_directive": "Whole-face reconstruction with supported malar/front-cheek volume and source eye/nose/mouth/jaw proportions. Do not treat latest partial improvements as accepted; choose foundation by actual multi-view examination.",
+    "orbit": "Required separate review: globe depth, upper orbit/brow planes, lower-lid thickness, medial/lateral socket and infraorbital-malar/cheek transition. Healthy cheek preservation does not freeze orbit.",
+    "eye_contour": "Source resembles rounded parallelogram with long relatively straight runs and concentrated turns; current all-curved crescent is wrong. Lower lateral segment needs broader source-like design. Diagnose generator and review omissions, not only width/height.",
+    "lashes": "Verify actual independent lash meshes/silhouettes: current four ribbons exist but are ink bands, not necessarily source fan/tufts.",
+    "review_occlusion": "Source-matched front/profile/obliques require temporary hair hiding: source|baselinehairON|baselinehairOFF|candidatehairOFF; actual orbit matte separately.",
+    "source4_v23n": "Confirmed old source384x1024 resized512x1024 (sx4/3,sy1), source-only distortion. Invalid for proportions, original PNG unchanged. Forensic replay under blender/mia-orbit-thorax-review-v28/source4-v23n-aspect-audit."
   },
   "prior_remote_checkpoints": [
     "96761ba9719132640151c1b113a6cc7c0e3988ac",
     "fc61e0c"
   ],
   "reference_review_gate": "REFERENCE_REVIEW_GATE.md",
-  "active_progress": "blender/mia-reference-finish-v22/face-rebuild-10/PROGRESS.md",
+  "active_progress": "blender/mia-orbit-thorax-review-v28/PROGRESS.md",
   "resumed_v22": {
     "face_finish4_sha256": "9d2c9d42c01c99f0138bb9227e3679ce3afa882d2f43c339ab26496c4c559a4b",
     "face_status": "v27 coherent supported cheek/gradual jaw, source-informed eyes/iris, neutral mouth, genuinely shared head boundary adopted locally. Eye-underlining/blush/outer-canthus ink/nose plane shading still differ from art; overall ART unapproved.",
@@ -155,7 +162,7 @@
     "path": "blender/mia-reference-finish-v22/face-rebuild-10/selected-v27/native/e9c865412130-Mia_Foundation_v27.blend",
     "sha256": "e9c8654121307b61fb75d73789c9b2443a3e42c53420dfdfada927d194b475d4",
     "selection_means": "Adopted whole-face reconstruction working candidate after actual source4/matte/blink/head-follow review and independent structural audit. Not complete Mia or ART approval.",
-    "status": "Current face correction adopted; source line/color details and full expressions remain unapproved."
+    "status": "Current e9 remains immutable baseline/live; user identifies wrong all-curved eye contour and orbital-volume questions. Prior local ratios are not contour/eye-art acceptance."
   },
   "unselected_anatomy9_trials": "A1 wrong source; A2 weak; WB wrongaxis; A3 proxy wrongtransform; P1 mouth overshoot; P2 mistakenly moved mouth down4mm (now measured/repaired inQ9); Q4 reducedfiterror/worsecreases; Q6 allkeys1invalid; Q6bnewledge; Q8notbetter; E1doublehump; M1red/M2streak/M3ellipse; Q10new lowercheekhollow/crease REJECTED. Original natives retained. Q11globalX-only/Jacpositive also REJECTED for new visible horizontalcheekgrooves."
 }

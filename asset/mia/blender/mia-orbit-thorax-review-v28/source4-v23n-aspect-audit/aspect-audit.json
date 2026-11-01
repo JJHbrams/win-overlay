@@ -1,0 +1,206 @@
+{
+  "producer": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-body-finish-v23\\assemble_source4_v23n.py",
+    "sha256": "c90b7d6c1ffec723dcad11dbec92a851115cb4c8863eee0be8da3be6d33d42ae",
+    "error_line": 32
+  },
+  "original_reference": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+    "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  "old_package": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-body-finish-v23\\source4-v23n\\reference-review.json",
+    "sha256": "eea9c4cb8f430161637ea5c8d348e6a6e013dc788c6b2a109bddb0896c32d092"
+  },
+  "conclusion": "Old source4-v23n boards stretch SOURCE horizontally by4/3 while leaving model crop unchanged. They are invalid for proportion/anatomy acceptance. Original art bytes are unchanged. Corrected displays use original crop pixels and padding only; they do not claim pose/scale matching.",
+  "views": [
+    {
+      "view": "front",
+      "reference_crop": [
+        0,
+        0,
+        384,
+        1024
+      ],
+      "source_crop_size": [
+        384,
+        1024
+      ],
+      "old_display_size": [
+        512,
+        1024
+      ],
+      "old_source_transform": {
+        "singular_scales": [
+          1.3333333333333333,
+          1.0
+        ],
+        "anisotropy_ratio": 1.3333333333333333,
+        "uniform": false
+      },
+      "old_actual_source_pixels_match_reproduction_max_error": 0,
+      "correct_display_transform": {
+        "singular_scales": [
+          1.0,
+          1.0
+        ],
+        "anisotropy_ratio": 1.0,
+        "uniform": true
+      },
+      "candidate_crop_size": [
+        512,
+        1024
+      ],
+      "audit_board": {
+        "path": "front-aspect-audit.png",
+        "sha256": "494ed2384eb5e0710382a285473eec6dab209f950452d3f6e1a3997a01311744"
+      },
+      "old_comparison": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-body-finish-v23\\source4-v23n\\source_candidate_front.png",
+        "sha256": "674d72392fa67d6d7780f37f367c35c677ec02e15e801c4d87293b9b6f07636d"
+      }
+    },
+    {
+      "view": "profile",
+      "reference_crop": [
+        384,
+        0,
+        768,
+        1024
+      ],
+      "source_crop_size": [
+        384,
+        1024
+      ],
+      "old_display_size": [
+        512,
+        1024
+      ],
+      "old_source_transform": {
+        "singular_scales": [
+          1.3333333333333333,
+          1.0
+        ],
+        "anisotropy_ratio": 1.3333333333333333,
+        "uniform": false
+      },
+      "old_actual_source_pixels_match_reproduction_max_error": 0,
+      "correct_display_transform": {
+        "singular_scales": [
+          1.0,
+          1.0
+        ],
+        "anisotropy_ratio": 1.0,
+        "uniform": true
+      },
+      "candidate_crop_size": [
+        512,
+        1024
+      ],
+      "audit_board": {
+        "path": "profile-aspect-audit.png",
+        "sha256": "643733c384d8df5ee2eff25d2d4a73af0b4e7968c7bb77f38b144e4e4c4e1cf5"
+      },
+      "old_comparison": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-body-finish-v23\\source4-v23n\\source_candidate_profile.png",
+        "sha256": "7c528aff8c63e0ab8135230ac6b182e49d6231c5b40c9487a20c4a4edef6111f"
+      }
+    },
+    {
+      "view": "back",
+      "reference_crop": [
+        768,
+        0,
+        1152,
+        1024
+      ],
+      "source_crop_size": [
+        384,
+        1024
+      ],
+      "old_display_size": [
+        512,
+        1024
+      ],
+      "old_source_transform": {
+        "singular_scales": [
+          1.3333333333333333,
+          1.0
+        ],
+        "anisotropy_ratio": 1.3333333333333333,
+        "uniform": false
+      },
+      "old_actual_source_pixels_match_reproduction_max_error": 0,
+      "correct_display_transform": {
+        "singular_scales": [
+          1.0,
+          1.0
+        ],
+        "anisotropy_ratio": 1.0,
+        "uniform": true
+      },
+      "candidate_crop_size": [
+        512,
+        1024
+      ],
+      "audit_board": {
+        "path": "back-aspect-audit.png",
+        "sha256": "a9a95b67d95bf009e3a22f8438ea79e5ba9c9a1f3cc9135e76a6b528045bf21d"
+      },
+      "old_comparison": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-body-finish-v23\\source4-v23n\\source_candidate_back.png",
+        "sha256": "d9c467efac502a0ce4f560d0c0cafadf164dc50e1068ef7c8d800538d31a96c5"
+      }
+    },
+    {
+      "view": "oblique",
+      "reference_crop": [
+        1152,
+        0,
+        1536,
+        1024
+      ],
+      "source_crop_size": [
+        384,
+        1024
+      ],
+      "old_display_size": [
+        512,
+        1024
+      ],
+      "old_source_transform": {
+        "singular_scales": [
+          1.3333333333333333,
+          1.0
+        ],
+        "anisotropy_ratio": 1.3333333333333333,
+        "uniform": false
+      },
+      "old_actual_source_pixels_match_reproduction_max_error": 0,
+      "correct_display_transform": {
+        "singular_scales": [
+          1.0,
+          1.0
+        ],
+        "anisotropy_ratio": 1.0,
+        "uniform": true
+      },
+      "candidate_crop_size": [
+        512,
+        1024
+      ],
+      "audit_board": {
+        "path": "oblique-aspect-audit.png",
+        "sha256": "a8f5a28aefbc1395e23dea530be0dfe4534fe9982fe1a61a70b7424eebb8f675"
+      },
+      "old_comparison": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-body-finish-v23\\source4-v23n\\source_candidate_oblique.png",
+        "sha256": "7b4d451a8f32634a3c67265496e00972726792ae0bb9ec87e410d49aa31d68fa"
+      }
+    }
+  ]
+}

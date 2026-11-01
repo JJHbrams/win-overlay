@@ -57,3 +57,7 @@ asset/mia/blender/mia-reference-finish-v22/live-wip-9-m5-review/** -text
 # v27 whole-face reconstruction: preserve frozen evidence hashes and float paint maps.
 asset/mia/blender/mia-reference-finish-v22/face-rebuild-10/** -text
 asset/mia/blender/mia-reference-finish-v22/face-rebuild-10/**/*.exr filter=lfs diff=lfs merge=lfs -text
+
+# Orbit/thorax correction source and camera evidence retains exact bytes.
+asset/mia/blender/mia-orbit-thorax-review-v28/** -text
+asset/mia/blender/mia-orbit-thorax-review-v28/**/*.exr filter=lfs diff=lfs merge=lfs -text
