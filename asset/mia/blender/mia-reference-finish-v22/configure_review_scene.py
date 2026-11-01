@@ -93,14 +93,18 @@ def setup():
             'material_limit': 'Original emission-toon remains unchanged and does not respond to these scene area lights. Geometry/paint unchanged.'}
 
 
-def focus(part='head', view='Front', distance=None):
+def focus(part='head', view='Front', distance=None, owner_name=None):
     z = 1.55 if part == 'head' else .85
     scene = bpy.context.scene
     camera = bpy.data.objects['MIA_REVIEW_' + ('Head' if part == 'head' else 'Body') + '_' + view]
     scene.camera = camera
     for obj in bpy.context.selected_objects:
         obj.select_set(False)
-    owner = bpy.data.objects.get('MIA_V14_SculptedSkin' if part == 'head' else 'MIA_V06_BODY_SKIN')
+    name = owner_name or ('MIA_V14_SculptedSkin' if part == 'head' else 'MIA_V06_BODY_SKIN')
+    owner = bpy.data.objects.get(name)
+    if owner_name:
+        assert owner is not None and owner.type == 'MESH', 'Requested review owner does not exist'
+        assert not owner.hide_viewport and not owner.hide_get(), 'Requested review owner is hidden'
     if owner is not None:
         owner.select_set(True); bpy.context.view_layer.objects.active = owner
     for win in bpy.context.window_manager.windows:
