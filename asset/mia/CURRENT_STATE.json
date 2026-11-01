@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated": "2026-11-01",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
-  "status": "reference_finish_v22_active_art_correction",
+  "status": "whole_face_reconstruction_after_user_rejection",
   "character_complete": false,
   "art_approved": false,
   "read_first": [
@@ -86,10 +86,10 @@
     "older source129/133 versus model109/112 aperture widths mixed lash extrema and bright opening; withdrawn as geometry target"
   ],
   "immediate_next": [
-    "Jaw correction remains UNSOLVED. Q10 and Q11 were rejected for new hollows/grooves in actual oblique/profile; no geometry producer is running. Retain WIP9 partial improvements. Do not resume coordinate-field variants or declare final likeness based on invertibility/UV preservation.",
-    "Keep source front/profile/both-oblique, eye-spacing calibration, matte and actual blink review. Never normalize away the disputed height or grant ART from artifact validation.",
-    "M5 thin upper fold is now retained as a small visual gain with neutral/half/full blink evidence. Further source-style paint and lower-eye contour remain unfinished. No producer is currently running; no new rastermaps/normal/specularmaps were made this pass.",
-    "Hair24 and Body23n remain unfinished as previously documented; garments/final rig/event animation stay downstream."
+    "Inspect actual unwarped hidden Face foundation in same calibrated scene; verified pristine provenance is not visual quality or Mia likeness.",
+    "Rebuild coherent whole-face primary volumes and all features; no cumulative local field tweaks on the damaged dense face, no frozen E2 eyes.",
+    "Source4 plus intermediate bare matte, eye-spacing calibration, pigment separation and limited actual blink are mandatory.",
+    "Preserve source/non-face owners, permit explicit face topology/UV/key reconstruction. Root independently reviews and opens only a useful integrated candidate through MCP."
   ],
   "do_not_infer_pass_from": [
     "successful save",
@@ -106,23 +106,23 @@
     "private_real_person_references_not_used_or_recorded": true
   },
   "worktree_archive": "WORKTREE_ARCHIVE.md",
-  "active_contract": "blender/mia-reference-finish-v22/face-anatomy-9/ACCEPTANCE.md",
+  "active_contract": "blender/mia-reference-finish-v22/face-rebuild-10/ACCEPTANCE.md",
   "latest_user_feedback": {
     "body": "Use Body Foundation/anatomy-led continuous forms. Live nowBody14 aslocalWIP; lower/outer ovoid boundaries and body UV unfinished.",
-    "face": "LATEST USER: face too wide/short; cheek-to-chin abruptly narrow/pointed; upper outer lid curvature and lower lid angle unlike source; fatigue/makeup impression weak. Whole face proportions/jaw/eyes must change before paint, not another cheek-only patch.",
+    "face": "User rejects current whole face and eyes as unlike source; malar/front-cheek hollow reads undernourished. Autonomously reconstruct from multiple approved concept views.",
     "hair": "Rear central finishing volume appears absent; half-up feature is gathered hair/bun, not cord or ribbon.",
     "texture": "Old4096 rebake did not add information. Current0d has limited newly painted512px-per-view coverage; no4K-detail or final style claim.",
     "eyes_tested": "Eye-only translations +/-0.5/1.5mm and depth scale0.9/1.1 alter lid contact/sclera but leave fixed skin wall; no probe variant selected. 3cd actual surface guide selected.",
     "viewport": "Actual live PERSP50 view pivot Y2.087m behind head; saved camera and prior19 renders ORTHO. Fix head-centred navigation/cameras/lights without changing model origins.",
     "profile_texture": "Use main/expressions/turnaround eye-nose-mouth profile and nose shading; finish face/head/body and UV style maps autonomously while user sleeps.",
-    "current_directive": "Correct whole-face proportions/continuous cheek-jaw contour and source eye/paint identity. Actual live WIP9+M5 is partial; failed jaw transforms must not be promoted. Whole Mia finish remains requested and unfinished."
+    "current_directive": "Whole-face reconstruction with supported malar/front-cheek volume and source eye/nose/mouth/jaw proportions. Do not treat latest partial improvements as accepted; choose foundation by actual multi-view examination."
   },
   "prior_remote_checkpoints": [
     "96761ba9719132640151c1b113a6cc7c0e3988ac",
     "fc61e0c"
   ],
   "reference_review_gate": "REFERENCE_REVIEW_GATE.md",
-  "active_progress": "blender/mia-reference-finish-v22/PROGRESS.md",
+  "active_progress": "blender/mia-reference-finish-v22/face-rebuild-10/PROGRESS.md",
   "resumed_v22": {
     "face_finish4_sha256": "9d2c9d42c01c99f0138bb9227e3679ce3afa882d2f43c339ab26496c4c559a4b",
     "face_status": "ART UNAPPROVED. WIP9 geometry + M5 look retained; lower-face height/mouth/eye/upper-fold local gains. Lower-cheek notch, nose fold, profile wedge and source paint identity still incomplete.",
@@ -147,12 +147,12 @@
   "current_surface_wip": {
     "path": "blender/mia-reference-finish-v22/integration-wip-9-review/Mia_FaceReview_v22_WIP9_M5.blend",
     "sha256": "c04f81985330eace7ba06142cb99419f7c043f680f8fcfbefefff237ece56778",
-    "selection_means": "Actual live REVIEW ONLY: WIP9 geometry with corrected M5 upper-fold look. Jaw/nose/profile/source-paint gaps remain; Q10/Q11 rejected. Overall art/character unfinished."
+    "selection_means": "USER REJECTED face. Remains actual editor only as immutable comparison baseline while whole-face reconstruction proceeds; prior local gains are not user approval."
   },
   "current_face_candidate": {
     "path": "blender/mia-reference-finish-v22/integration-wip-9-review/Mia_FaceReview_v22_WIP9_M5.blend",
     "sha256": "c04f81985330eace7ba06142cb99419f7c043f680f8fcfbefefff237ece56778",
-    "status": "Partial proportion, eyelid and pigment improvement. M5 changes only skin material slot7; actual geometry/keys/UV/packedmaps unchanged from WIP9. Jaw task UNSOLVED."
+    "status": "USER REJECTED: hollow malar/front cheek and unlike-source eyes/whole face. E2/Q9/M5 are not protected design targets."
   },
   "unselected_anatomy9_trials": "A1 wrong source; A2 weak; WB wrongaxis; A3 proxy wrongtransform; P1 mouth overshoot; P2 mistakenly moved mouth down4mm (now measured/repaired inQ9); Q4 reducedfiterror/worsecreases; Q6 allkeys1invalid; Q6bnewledge; Q8notbetter; E1doublehump; M1red/M2streak/M3ellipse; Q10new lowercheekhollow/crease REJECTED. Original natives retained. Q11globalX-only/Jacpositive also REJECTED for new visible horizontalcheekgrooves."
 }
