@@ -1,27 +1,21 @@
-# Current handoff — Finish8 REVIEW ONLY
+# Current handoff — whole-face anatomy and identity correction
 
-Read `static-finish-8/ACCEPTANCE.md`, `static-finish-8/REVIEW.md`, `asset/mia/CURRENT_STATE.json`, `WORKING_PROTOCOL.md`, `REFERENCE_INDEX.md` and `REFERENCE_REVIEW_GATE.md`. This is active source-style static modeling with actual maps, not heartbeat research. Historical progress is preserved in `PROGRESS-history-before-wip8.md`; its older face-only scope and WIP7 pointer do not override this handoff.
+Read `face-anatomy-9/ACCEPTANCE.md`, `face-anatomy-9/DIAGNOSIS.md`, `asset/mia/CURRENT_STATE.json`, and the reference protocol. This handoff supersedes the earlier cheek-only instructions in `PROGRESS-history-before-face-anatomy9.md`. The user explicitly identified broad/short proportions, an abrupt cheek-to-pointed-chin taper, incorrect eyelid curves, and weak fatigue/makeup character. Exact old jaw/eye positions are NOT protected design targets.
 
-## Actual editor
+## Actual editor and preserved baseline
 
-`integration-wip-8-review/Mia_ReferenceFinish_v22.blend`, SHA `ff2b61b2b2146fc4f73119cf10534571609dff75f6333fbec34d0926068b8bb4`, is open in actual Blender MCP. It is a review checkpoint, not a completed or ART-approved model. Five rendered ORTHO MCP captures leave head center(0,0,1.55), distance0.63. Native bytes unchanged.34fresh source/diagnostic renders and3strict source packages are recorded in `integrated-review-wip-8`; actual saved-camera previews are in `production-preview-wip-8`.
+Actual Blender still contains `integration-wip-8-review/Mia_ReferenceFinish_v22.blend`, SHA `ff2b61b2b2146fc4f73119cf10534571609dff75f6333fbec34d0926068b8bb4`. It is unapproved WIP, not a completed Mia. No anatomy9 trial has replaced it yet. Body23n, Hair24 and all earlier known failures remain unchanged; their current status is in CURRENT_STATE.json.
 
-## Current owners
+## Active work and evidence
 
-- Face F2 `parts/face-finish8-f2-review` restores central cheek depth and lateral attachment on D. D's compact chin/nose and three consumed2Kpigment/masks are retained. Exact D→F2 replay and limitedblink/eye-boundary guards are recorded. Local recovery only: upper diagonal under-eye transition, nose/profile and whole likeness remain unfinished.
-- Body23n `parts/body23n-work` changes lower/lateral thorax return only. Prior2KUVMap/pigment and common actual-light shader retained. No pelvis/glute/leg/neck improvement or newUV acceptance claimed. Failed unwraps remain unselected.
-- Hair24 `parts/hair24-painted-work` adds three closed rear-curl owners with three consumed1024RGBA maps, hides but preserves old folds/binder, and preserves the main Pixal geometry. Bun height/concentric form and ear/nape extraction are unfinished.
+- Whole-face proportion tests P1/P2 and eye-only P3 are unselected. P1 moved the mouth too far down. P2 improves the short V locally but looks heavy below the mouth. P3 changes eyes slightly; despite its filename, it does not change the middle face. Root and independent reviewer inspected the actual bare matte and still see diagonal creases and fragmented front-cheek/mouth/chin forms.
+- Small exact trial evidence and historical recipes are in `face-anatomy-9/unselected-v25`. Large original natives are preserved in the producer worktree. These historical absolute-path recipes are not claimed portable replay.
+- `face-anatomy-9/eye-spacing-p2.png` displays unchanged art/render pixels with uniform pupil-distance calibration. Unlike eye-to-chin registration, it exposes the disputed face height. Manual landmarks and pose/hair uncertainty are explicit; numerical ratios are not automatic art gates.
+- A new connected midface producer works in `mia-final-face-v12/.../mia-face-connected-v26`. It must restore the broad orbital-to-malar-to-front/side cheek and mouth mass, rather than adding another isolated bump. Old arbitrary upper-malar vertex locks and frozen two-ring boundaries are superseded by actual feature/contact review.
+- Material trials in `face-anatomy-9/material-work` leave geometry/UV/keys unchanged. WIP8's three packed maps exist and are consumed. Their appearance lacks a separate source-like fatigue/fold hierarchy. Shader trials are not new raster maps or finished source likeness; assess them after geometry and actual color-only/lit comparison.
 
-## Active user feedback and next work
+## Required next decisions
 
-Latest: “볼이 너무 패인거아니야?” This was real missing support/abrupt depth transition, not merely makeup. D/E failed to restore the central volume; F added it but left a new side attachment band; F2 connects that support. Review images show a modest local gain, not full resolution. Preserve recovered high malar/central mass and existing eyes; do not globally flatten cheeks or fit each view independently. Upper orbital-to-buccal transition and source silhouette/profile are the next shape task. Whole-face normals/toon shading must be assessed against actual clay and source imagery, not used to conceal defects.
+Choose by actual source/front/profile/both-oblique and continuous matte evidence, not by version or producer completion. Preserve camera/light calibration and all original natives. Change eye aperture, skin, lash and visible eye surface together when needed; then inspect neutral/half/full blink. Equal Basis deltas do not automatically prove expression contact. Integrate only a visually useful result and verify the saved actual native through MCP before changing the editor pointer. Root owns integration, Git and Wiki.
 
-Camera/light/source comparison remains mandatory across front/profile/bothobliques and low/intermediate angles. Uniform SRT is frozen; no per-candidate refit or anisotropic stretching. Eye-to-chin normalization excludes that distance from measurement. Source profile yaw and hair occlusion are explicit uncertainties.
-
-## Evidence corrections
-
-Body producer source boards stretched width384→512 without height; root rejected them and rebuilt matched10renders using original SRT. A reviewer claimed glute improvement despite no glute deltas: rejected. BodynewUV per-face rescaling and later overlap/crash trials are unselected. Face white under-lid stripes were aperture-arc classification errors, fixed; mixed-lit cap color-only was replaced by corrected face+cap evidence. Mainhair4K map dimensions do not establish4K authored detail. Actual assigned-polygon shader audit reports12direct image datablocks/15materials, all packed, including duplicate bodyatlas; no invented specular-map completion.
-
-## Reproducibility and gates
-
-Root owns canonical integration/Git/liveMCP. Independent producers use separate existing worktrees. Original/failed natives remain preserved; exact selectednative hashes, maps, recipes, replay and diagnostics are archived. Original WIP7 remains unchanged. Face D checkpoint `a8d7dc9` was pushed; the enclosing commit adds this WIP8-review checkpoint. Allcritical ART gates remain unapproved; finalgarments/rig/events remain downstream. Do not infer PASS from successful save, imagecount, preservedUV, replay, subagentcompletion or this handoff.
+Geometry, makeup and render evidence must remain distinguishable. Never infer completion from a successful save, generated-map dimensions, unchanged UVs, a reduced numerical residual, render count or subagent completion. The whole Mia body/head/hair finish and animation are still incomplete.

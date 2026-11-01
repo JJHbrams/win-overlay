@@ -1,0 +1,32 @@
+{
+  "status": "WORKING CANDIDATE / ART UNAPPROVED",
+  "baseline": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-8-review\\Mia_ReferenceFinish_v22.blend",
+    "sha256": "ff2b61b2b2146fc4f73119cf10534571609dff75f6333fbec34d0926068b8bb4"
+  },
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-anatomy-v25\\proportion-p2\\Mia_ReferenceFinish_WIP8_ProportionP2.blend",
+    "sha256": "8f04bb4851641e90868d8a296dd46b046dabc2c1cf555027b6efc6e3de3967c5"
+  },
+  "pass": "whole-face-primary-proportion P2 lower-face anchor correction",
+  "coordinate_space": "skin Basis local space; skin local +Y is the facial anterior axis",
+  "method": "Fresh WIP8 pass. Mouth-height region is held by a Z 1.496-1.503 taper; lower face moves down a maximum 4mm and jaw sides open before the chin. No eye, lid, lash, UV, pigment, global-scale or image-fit change.",
+  "skin": {
+    "changed_vertices": 347,
+    "max_delta_m": 0.0048538778284428485
+  },
+  "guards": {
+    "all_non_skin_mesh_coordinates_exact": true,
+    "all_mesh_uv_material_topology_key_names_exact": true,
+    "all_skin_shape_keys_receive_basis_delta": true,
+    "errors": []
+  },
+  "landmark_hypothesis": {
+    "eye_to_mouth": "retain WIP8 approximately; source and WIP8 were already near under manual IPD-normalized observation",
+    "mouth_to_chin": "increase modestly; initial visual test uses about 4mm lower-carrier displacement, not a fixed source measurement"
+  },
+  "limits": [
+    "P2 does not solve the midface wedge or eyelid curvature; those require subsequent isolated passes.",
+    "Actual source/baseline/candidate fixed-camera review and limited deformation probes remain required before selection."
+  ]
+}

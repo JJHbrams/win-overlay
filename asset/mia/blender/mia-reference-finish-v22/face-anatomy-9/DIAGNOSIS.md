@@ -33,3 +33,21 @@ A one-time read-only sage inspected the actual matte front/low oblique and the f
 Confidence is medium: the observed form failure is clear; the contribution of fixed cage points versus topology must still be tested. This consultation is a design hypothesis, not art acceptance.
 
 Producer A1 was rejected before selection: it used standalone F2 rather than the required integrated WIP8 and repeated a broad bump with inherited protected IDs. Its old source is preserved; it is not an improved current model.
+
+## Whole-face trials after the user's proportion correction
+
+The earlier exact jaw/eye-position locks were wrong for this request. The source's eye-to-chin-normalized board also conceals the very short-face dimension being judged. `eye-spacing-p2.png` instead displays unretouched source and actual raw renders using only pupil-distance scale, translation and roll. Approximate source eye-to-chin/IPD is 1.10 versus baseline 1.03; these manual points are not precise modeling prescriptions. Hair, pose and perspective remain uncertain.
+
+- P1 lowered the mouth together with the chin and overshot. Not selected.
+- P2 keeps the mouth closer to its former height and extends the lower face. The short V is partly eased, but the independent review still finds a heavy/flat lower face and poor cheek-to-jaw continuity. It is only a working trial.
+- P3 changes the actual eye aperture neighborhood and eye/lash owners locally. Its name includes `midface`, but its own manifest confirms the middle face was unchanged. Root and independent review of the actual bare matte show diagonal ridges, small creases and a separate mouth/chin mass. It is not a resolved face.
+
+Actual roots `eye-midface-p3/motion/` contain matte views; there is no `candidate/motion/` directory. Full blink was not demonstrated by the first P3 probe set. Recipe/manifest/small image evidence is archived in `unselected-v25`; the original natives are preserved in the producer worktree. No trial has replaced WIP8.
+
+The earlier Workbench mask artifacts came from a wrong front-camera axis: skin local +Y is anterior, but its Z-180 world transform makes world -Y anterior. They are invalid viewpoints. Hidden archived-head overlap was an initial hypothesis and is withdrawn.
+
+## Surface versus pigment
+
+The prior `face-feedback-7/normal-diagnosis/FINDINGS.md` isolates earlier Face6/R8 normals and finds the diagonal on the unchanged surface even with ordinary diffuse shading and freshly recomputed normals. That is earlier-model evidence, not a new WIP8 measurement, but it rejects normal recalculation as the established fix. The old cage fans bridge dense eye loops to sparse cheek triangles; topology valence alone is not proof of failure.
+
+The material worker directly inspected WIP8 packed pixels and consumed links: FatigueMask and FineLineMask are present. The missing visual hierarchy is a broad fatigue mass plus a separately readable lower fold/outer line, rather than merely making a uniform narrow band darker. Geometry and material trials stay separate until each is actually inspected.

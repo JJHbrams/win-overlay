@@ -1,0 +1,591 @@
+[
+  {
+    "name": "MIA_V14_SculptedSkin",
+    "hide_render": false,
+    "hide_viewport": false,
+    "collections": [
+      "MIA_REVIEW_SKIN_INK",
+      "MIA_V14_FACE_IDENTITY"
+    ],
+    "parent": null,
+    "matrix_world": [
+      [
+        -1.0,
+        1.5099580252808664e-07,
+        0.0,
+        0.0
+      ],
+      [
+        -1.5099580252808664e-07,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "local_bounds": [
+      [
+        -0.08804640918970108,
+        0.08882728219032288
+      ],
+      [
+        -0.030514704063534737,
+        0.08793248236179352
+      ],
+      [
+        1.471922516822815,
+        1.6320065259933472
+      ]
+    ],
+    "world_bounds": [
+      [
+        -0.08882728219032288,
+        0.08804640918970108
+      ],
+      [
+        -0.08793248236179352,
+        0.030514691025018692
+      ],
+      [
+        1.471922516822815,
+        1.6320065259933472
+      ]
+    ],
+    "materials": [
+      "F00_000_00_FaceMouth_00_FACE.001",
+      "F00_000_00_EyeWhite_00_EYE.001",
+      "MIA_V12_ReplacedBrowCard",
+      "MIA_V12_ReplacedBrowCard",
+      "MIA_V12_ReplacedBrowCard",
+      "Mia_FaceArt_GrayIrisHierarchy",
+      "Mia_FaceArt_RestrainedEyeGlint",
+      "MIA_Finish8_AuthoredFacePigment",
+      "Mia_MutedEyeAccent_MToon.002",
+      "Mia_FaceArt_ContourInk"
+    ],
+    "shape_keys": [
+      "Basis",
+      "Face.M_F00_000_00_Fcl_ALL_Angry",
+      "Face.M_F00_000_00_Fcl_ALL_Fun",
+      "Face.M_F00_000_00_Fcl_ALL_Joy",
+      "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+      "Face.M_F00_000_00_Fcl_ALL_Surprised",
+      "Face.M_F00_000_00_Fcl_BRW_Angry",
+      "Face.M_F00_000_00_Fcl_BRW_Fun",
+      "Face.M_F00_000_00_Fcl_BRW_Joy",
+      "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+      "Face.M_F00_000_00_Fcl_BRW_Surprised",
+      "Face.M_F00_000_00_Fcl_EYE_Natural",
+      "Face.M_F00_000_00_Fcl_EYE_Angry",
+      "Face.M_F00_000_00_Fcl_EYE_Close",
+      "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "Face.M_F00_000_00_Fcl_EYE_Joy",
+      "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+      "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+      "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+      "Face.M_F00_000_00_Fcl_EYE_Surprised",
+      "Face.M_F00_000_00_Fcl_EYE_Extra",
+      "Face.M_F00_000_00_Fcl_MTH_Up",
+      "Face.M_F00_000_00_Fcl_MTH_Down",
+      "Face.M_F00_000_00_Fcl_MTH_Angry",
+      "Face.M_F00_000_00_Fcl_MTH_Neutral",
+      "Face.M_F00_000_00_Fcl_MTH_Fun",
+      "Face.M_F00_000_00_Fcl_MTH_Joy",
+      "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+      "Face.M_F00_000_00_Fcl_MTH_Surprised",
+      "Face.M_F00_000_00_Fcl_MTH_A",
+      "Face.M_F00_000_00_Fcl_MTH_I",
+      "Face.M_F00_000_00_Fcl_MTH_U",
+      "Face.M_F00_000_00_Fcl_MTH_E",
+      "Face.M_F00_000_00_Fcl_MTH_O",
+      "Face.M_F00_000_00_Fcl_HA_Fung1",
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+      "Face.M_F00_000_00_Fcl_HA_Fung2",
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+      "EyeExtra_01.M_F00_000_00_EyeExtra_On",
+      "MIA_FaceArt_EyeProportion",
+      "MIA_FaceArt_OwnedBrowPlacement",
+      "MIA_V12_ReferenceFacialSculpt",
+      "MIA_V13_LidJawRefinement",
+      "MIA_V14_HoodCheekMouthCorrective"
+    ]
+  },
+  {
+    "name": "MIA_V14_MouthSeam",
+    "hide_render": true,
+    "hide_viewport": false,
+    "collections": [
+      "MIA_V14_FACE_IDENTITY"
+    ],
+    "parent": null,
+    "matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "local_bounds": [
+      [
+        -0.010353037156164646,
+        0.010353037156164646
+      ],
+      [
+        0.07698354870080948,
+        0.08295322209596634
+      ],
+      [
+        1.4957724809646606,
+        1.4965510368347168
+      ]
+    ],
+    "world_bounds": [
+      [
+        -0.010353037156164646,
+        0.010353037156164646
+      ],
+      [
+        0.07698354870080948,
+        0.08295322209596634
+      ],
+      [
+        1.4957724809646606,
+        1.4965510368347168
+      ]
+    ],
+    "materials": [
+      "MIA_V14_MouthSeamInk"
+    ],
+    "shape_keys": []
+  },
+  {
+    "name": "MIA_V13_FaceOutline",
+    "hide_render": true,
+    "hide_viewport": false,
+    "collections": [
+      "MIA_FOUNDATION_SKIN_INK"
+    ],
+    "parent": "MIA_V06_RIG",
+    "matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "local_bounds": [
+      [
+        -0.05727173015475273,
+        0.05804644897580147
+      ],
+      [
+        0.020150531083345413,
+        0.07898405939340591
+      ],
+      [
+        1.4654642343521118,
+        1.5172725915908813
+      ]
+    ],
+    "world_bounds": [
+      [
+        -0.05727173015475273,
+        0.05804644897580147
+      ],
+      [
+        0.020150531083345413,
+        0.07898405939340591
+      ],
+      [
+        1.4654642343521118,
+        1.5172725915908813
+      ]
+    ],
+    "materials": [
+      "MIA_V13_SkinSilhouetteInk"
+    ],
+    "shape_keys": [
+      "Basis",
+      "Face.M_F00_000_00_Fcl_ALL_Angry",
+      "Face.M_F00_000_00_Fcl_ALL_Fun",
+      "Face.M_F00_000_00_Fcl_ALL_Joy",
+      "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+      "Face.M_F00_000_00_Fcl_ALL_Surprised",
+      "Face.M_F00_000_00_Fcl_BRW_Angry",
+      "Face.M_F00_000_00_Fcl_BRW_Fun",
+      "Face.M_F00_000_00_Fcl_BRW_Joy",
+      "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+      "Face.M_F00_000_00_Fcl_BRW_Surprised",
+      "Face.M_F00_000_00_Fcl_EYE_Natural",
+      "Face.M_F00_000_00_Fcl_EYE_Angry",
+      "Face.M_F00_000_00_Fcl_EYE_Close",
+      "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "Face.M_F00_000_00_Fcl_EYE_Joy",
+      "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+      "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+      "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+      "Face.M_F00_000_00_Fcl_EYE_Surprised",
+      "Face.M_F00_000_00_Fcl_EYE_Extra",
+      "Face.M_F00_000_00_Fcl_MTH_Up",
+      "Face.M_F00_000_00_Fcl_MTH_Down",
+      "Face.M_F00_000_00_Fcl_MTH_Angry",
+      "Face.M_F00_000_00_Fcl_MTH_Neutral",
+      "Face.M_F00_000_00_Fcl_MTH_Fun",
+      "Face.M_F00_000_00_Fcl_MTH_Joy",
+      "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+      "Face.M_F00_000_00_Fcl_MTH_Surprised",
+      "Face.M_F00_000_00_Fcl_MTH_A",
+      "Face.M_F00_000_00_Fcl_MTH_I",
+      "Face.M_F00_000_00_Fcl_MTH_U",
+      "Face.M_F00_000_00_Fcl_MTH_E",
+      "Face.M_F00_000_00_Fcl_MTH_O",
+      "Face.M_F00_000_00_Fcl_HA_Fung1",
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+      "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+      "Face.M_F00_000_00_Fcl_HA_Fung2",
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+      "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+      "EyeExtra_01.M_F00_000_00_EyeExtra_On",
+      "MIA_FaceArt_EyeProportion",
+      "MIA_FaceArt_OwnedBrowPlacement",
+      "MIA_V12_ReferenceFacialSculpt",
+      "MIA_V13_LidJawRefinement"
+    ]
+  },
+  {
+    "name": "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+    "hide_render": false,
+    "hide_viewport": false,
+    "collections": [
+      "MIA_V17_PIXAL_HAIR"
+    ],
+    "parent": null,
+    "matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "local_bounds": [
+      [
+        -0.07715660333633423,
+        0.07637322694063187
+      ],
+      [
+        -0.0781773254275322,
+        -0.009874560870230198
+      ],
+      [
+        1.5802619457244873,
+        1.640480637550354
+      ]
+    ],
+    "world_bounds": [
+      [
+        -0.07715660333633423,
+        0.07637322694063187
+      ],
+      [
+        -0.0781773254275322,
+        -0.009874560870230198
+      ],
+      [
+        1.5802619457244873,
+        1.640480637550354
+      ]
+    ],
+    "materials": [
+      "MIA_V17_HairRootAsh.001_V22_LightToon"
+    ],
+    "shape_keys": []
+  },
+  {
+    "name": "MIA_V14_EyeSurface",
+    "hide_render": false,
+    "hide_viewport": false,
+    "collections": [
+      "MIA_V14_FACE_IDENTITY"
+    ],
+    "parent": "MIA_V06_RIG",
+    "matrix_world": [
+      [
+        -1.0,
+        8.742277657347586e-08,
+        0.0,
+        0.0
+      ],
+      [
+        -8.742277657347586e-08,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "local_bounds": [
+      [
+        -0.057239025831222534,
+        0.05785055458545685
+      ],
+      [
+        0.044678956270217896,
+        0.06576766818761826
+      ],
+      [
+        1.5288280248641968,
+        1.5578938722610474
+      ]
+    ],
+    "world_bounds": [
+      [
+        -0.05785055086016655,
+        0.05723902955651283
+      ],
+      [
+        -0.06576766818761826,
+        -0.0446789525449276
+      ],
+      [
+        1.5288280248641968,
+        1.5578938722610474
+      ]
+    ],
+    "materials": [
+      "F00_000_00_FaceMouth_00_FACE.001",
+      "MIA_V16_Sclera_BackfaceCullingRestored",
+      "MIA_V12_ReplacedBrowCard",
+      "MIA_V12_ReplacedBrowCard",
+      "MIA_V12_ReplacedBrowCard",
+      "MIA_V22_Iris_LowerArc_Rim",
+      "MIA_V17_LegacyEyeGlintsHidden",
+      "MIA_V14_SourceSkinHidden",
+      "MIA_V17_LegacyEyeGlintsHidden",
+      "Mia_FaceArt_ContourInk"
+    ],
+    "shape_keys": []
+  },
+  {
+    "name": "MIA_V14_UpperLash_-1",
+    "hide_render": false,
+    "hide_viewport": false,
+    "collections": [
+      "MIA_V14_FACE_IDENTITY"
+    ],
+    "parent": null,
+    "matrix_world": [
+      [
+        -1.0,
+        1.5099580252808664e-07,
+        0.0,
+        0.0
+      ],
+      [
+        -1.5099580252808664e-07,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "local_bounds": [
+      [
+        -0.053082630038261414,
+        -0.017146704718470573
+      ],
+      [
+        0.05285881459712982,
+        0.07037021964788437
+      ],
+      [
+        1.5400773286819458,
+        1.5489680767059326
+      ]
+    ],
+    "world_bounds": [
+      [
+        0.01714671589434147,
+        0.05308263748884201
+      ],
+      [
+        -0.07037021964788437,
+        -0.052858807146549225
+      ],
+      [
+        1.5400773286819458,
+        1.5489680767059326
+      ]
+    ],
+    "materials": [
+      "MIA_V22_TaperedLash_DeepInk"
+    ],
+    "shape_keys": [
+      "Basis",
+      "MIA_V20_BlinkFollower"
+    ]
+  },
+  {
+    "name": "MIA_V14_UpperLash_1",
+    "hide_render": false,
+    "hide_viewport": false,
+    "collections": [
+      "MIA_V14_FACE_IDENTITY"
+    ],
+    "parent": null,
+    "matrix_world": [
+      [
+        -1.0,
+        1.5099580252808664e-07,
+        0.0,
+        0.0
+      ],
+      [
+        -1.5099580252808664e-07,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "local_bounds": [
+      [
+        0.018301021307706833,
+        0.053586725145578384
+      ],
+      [
+        0.05265284329652786,
+        0.07031764090061188
+      ],
+      [
+        1.5403392314910889,
+        1.5490679740905762
+      ]
+    ],
+    "world_bounds": [
+      [
+        -0.05358671769499779,
+        -0.018301010131835938
+      ],
+      [
+        -0.07031764090061188,
+        -0.05265285074710846
+      ],
+      [
+        1.5403392314910889,
+        1.5490679740905762
+      ]
+    ],
+    "materials": [
+      "MIA_V22_TaperedLash_DeepInk"
+    ],
+    "shape_keys": [
+      "Basis",
+      "MIA_V20_BlinkFollower"
+    ]
+  }
+]

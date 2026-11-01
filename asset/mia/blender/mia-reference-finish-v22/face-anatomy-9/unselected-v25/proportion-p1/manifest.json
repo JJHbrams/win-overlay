@@ -1,0 +1,82 @@
+{
+  "status": "WORKING CANDIDATE / ART UNAPPROVED",
+  "baseline": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-8-review\\Mia_ReferenceFinish_v22.blend",
+    "sha256": "ff2b61b2b2146fc4f73119cf10534571609dff75f6333fbec34d0926068b8bb4"
+  },
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-anatomy-v25\\proportion-p1\\Mia_ReferenceFinish_WIP8_ProportionP1.blend",
+    "sha256": "e6530021747e500fbba11fb94f41ead59dc33f7fa92aa1dda6c2199b6567bef8"
+  },
+  "pass": "whole-face-primary-proportion P1",
+  "coordinate_space": "carrier is evaluated in skin local space; each continuity owner maps world -> skin local -> owner local",
+  "method": "Low-frequency lower-orbit-to-chin carrier: continuous vertical extension plus broad mandibular side width, with a small upper-cheek fade. No source image fit, global smooth, UV edit, or pigment change.",
+  "skin": {
+    "changed_vertices": 503,
+    "max_delta_m": 0.006999845723382839
+  },
+  "continuity_owners": {
+    "MIA_V14_MouthSeam": {
+      "changed_vertices": 0,
+      "max_delta_m": 0.0
+    },
+    "MIA_V13_FaceOutline": {
+      "changed_vertices": 0,
+      "max_delta_m": 0.0
+    },
+    "MIA_V17_RootLining_MIA_V14_SculptedSkin": {
+      "changed_vertices": 0,
+      "max_delta_m": 0.0
+    }
+  },
+  "guards": {
+    "source_hash": "ff2b61b2b2146fc4f73119cf10534571609dff75f6333fbec34d0926068b8bb4",
+    "non_target_meshes_exact": true,
+    "uv_material_topology_unchanged": true,
+    "skin_keys_shifted_equally": true,
+    "errors": []
+  },
+  "landmark_record": {
+    "source_manual_px": {
+      "left_pupil": [
+        450,
+        324
+      ],
+      "right_pupil": [
+        582,
+        310
+      ],
+      "mouth": [
+        518,
+        412
+      ],
+      "chin": [
+        520,
+        463
+      ]
+    },
+    "wip8_raw_render_manual_px": {
+      "left_pupil": [
+        383,
+        539
+      ],
+      "right_pupil": [
+        614,
+        513
+      ],
+      "mouth": [
+        522,
+        688
+      ],
+      "chin": [
+        525,
+        765
+      ]
+    },
+    "limit": "Manual landmarks are approximate and include source roll, hair and pose uncertainty. They guide review; no exact percentage was imposed."
+  },
+  "limits": [
+    "P1 is only the primary proportion/jaw pass. Eyelid geometry and pigment are intentionally untouched.",
+    "Requires frozen-camera front/profile/both-oblique review and blink/mouth probes before any selection."
+  ]
+}
