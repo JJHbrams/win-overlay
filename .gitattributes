@@ -30,3 +30,8 @@ asset/mia/blender/mia-reference-finish-v22/integrated-face-review-wip-7/** -text
 asset/mia/blender/mia-reference-finish-v22/live-wip-7-review/** -text
 asset/mia/blender/mia-reference-finish-v22/face-feedback-7/r29-unselected/** -text
 asset/mia/blender/mia-reference-finish-v22/face-feedback-7/volume-recovery-review/** -text
+
+# Finish8 frozen artifacts retain byte hashes; authored float maps use LFS.
+asset/mia/blender/mia-reference-finish-v22/parts/face-finish8-d/** -text
+asset/mia/blender/mia-reference-finish-v22/static-finish-8/** -text
+asset/mia/blender/mia-reference-finish-v22/parts/face-finish8-d/**/*.exr filter=lfs diff=lfs merge=lfs -text

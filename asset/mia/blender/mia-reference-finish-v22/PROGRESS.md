@@ -1,5 +1,15 @@
 # Current v22 handoff — cheek volume recovery
 
+## Active directive: finish source-style model and maps
+
+The latest user directive expands the current work from the isolated Face7 repair to face/head/body/hair and their UV/material finish. Read `static-finish-8/ACCEPTANCE.md` first. The face-only scope below is historical to that correction; it does not forbid the newly authorized independent body/hair work. WIP7 remains the immutable review baseline, with no art approval inferred.
+
+Ownership: face/head/cap/eyes and face surface in the existing face producer's new finish-8 folder; body below world Z1.46 and body UV/maps in recovery worktree's `mia-body-finish-v23`; hair geometry/layers/UV/maps in hair worktree's `mia-hair-structure-v24` (v23 overlay probe rejected). Root owns canonical integration and live MCP. Actual final source views, checker and connected material-channel checks are required. No final garment/event-animation promotion yet.
+
+Face8 D is frozen in `parts/face-finish8-d` as useful local shape/paint work, **not a promoted model**. Its compact chin, reduced nose wedge and three consumed2K pigment/mask maps have source4, checker, light and limited blink evidence. Exact R28-to-D key replay was actually tested; map bytes and producer recipes are archived. The first white lower-lid stripe was caused by wrong upper/lower aperture-arc selection, not simply insufficient UV gutter. Corrected color-only evidence bypasses face AND cap lighting. Independent review still rejects the whole cheek/jaw construction. The user's new "볼이 너무 패인거아니야?" remains the active critical defect. E's40 lateral-vertex redistribution is too weak to resolve the central hollow; preserve it as an unselected trial. F now diagnoses and restores central buccal support without shrinking the chin again. Current live remains WIP7, confirmed by actual MCP with dirty=false.
+
+Body23n is provisional only. Its producer source boards stretched source crop384px to512px without matching height and omit a matched baseline; they cannot establish proportions. Root is rerendering Body14 and23n through the original fixed source-SRT pipeline. Failed body UV repacks and uniform-pigment placeholders are not adopted. Existing authored2K UVMap/common scene-light route remains. Hair24 replaces the rear badge-like trial with actual curled locks and separately projected pigment; main ear/nape extraction defects remain open. Baseline assigned-polygon material audit finds6 directly consumed images in12 assigned materials, superseding the earlier13 count that included unused slots. None of these technical checks grants ART approval.
+
 **R19/WIP5/WIP6 cheek-surface acceptance is REVOKED.** The user's latest rejection was loss of malar/anterior-buccal volume. A smoother surface was incorrectly treated as sufficient form. R23 eye/lash/blink corrections remain separately retainable; no whole face or character art is approved.
 
 ## Resume contract

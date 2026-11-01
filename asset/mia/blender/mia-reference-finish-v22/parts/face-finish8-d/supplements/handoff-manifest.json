@@ -1,0 +1,226 @@
+{
+  "status": "FROZEN WORKING CANDIDATE / ART UNAPPROVED",
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\Mia_FaceFinish8_AuthoredLookD.blend",
+    "sha256": "be2e6fa00a7287e5f8781815f7f209a8600d59a91fc3a71816a7d77897e83170"
+  },
+  "baseline": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\Mia_FaceFinish7_MedialTransitionR28_v22.blend",
+    "sha256": "c0f531689594f1c68cb6d7f4c582ea280cbf72f1384e74c9db44debcefa6469a"
+  },
+  "exact_replay": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\handoff\\owner-key-replay-from-r28.json",
+    "sha256": "e67836fb3db2a1b31378a717ffcf45b0d10aba717eb66c89ea217b555007a9b3"
+  },
+  "replay_script": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\replay_into_r28.py",
+    "sha256": "bfda33e187d1c6ee6eb8cfdbbf23e1cf1a710be37b91bfbe8d22bf1aaeb29916"
+  },
+  "replay_validation": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\handoff\\replay-validation.json",
+    "sha256": "8fd61308c2bcdc02e5f5a61e7ca541752807a83151c78a6cfc6646e72c44e08e"
+  },
+  "guards": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\handoff\\guard-summary.json",
+    "sha256": "cef2b1745f9aba432a4ff118a702f2f06fa581ef4774940fde9bb41f9464d8a5"
+  },
+  "changes": {
+    "MIA_V14_SculptedSkin": {
+      "count": 296,
+      "max_delta_m": 0.0060440928548452
+    },
+    "MIA_V06_BODY_SKIN": {
+      "count": 25,
+      "max_delta_m": 0.0052828685856978665
+    },
+    "MIA_V14_MouthSeam": {
+      "count": 122,
+      "max_delta_m": 0.003510960186748227
+    },
+    "MIA_V14_SmoothJawInk": {
+      "count": 130,
+      "max_delta_m": 0.006140037898577786
+    }
+  },
+  "material": "MIA_Finish8_AuthoredFacePigment",
+  "slot": 7,
+  "uv_layer": "UVMap",
+  "map_files": {
+    "BasePigment": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\maps\\BasePigment_LINEAR_2048.exr",
+      "sha256": "6bdbd142866c918a5db482368220c425d96233a2464aee81ebd525421197e1b4",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "node": "FINISH8_BasePigment",
+      "relative_to_native": "maps/BasePigment_LINEAR_2048.exr",
+      "packed_in_native": true
+    },
+    "FatigueMask": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\maps\\FatigueMask_LINEAR_2048.exr",
+      "sha256": "7e4a5ccad264a12c4a0c051cace8689292d7807e292e34838e4131202bf57ed3",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "node": "FINISH8_FatigueMask",
+      "relative_to_native": "maps/FatigueMask_LINEAR_2048.exr",
+      "packed_in_native": true
+    },
+    "FineLineMask": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\maps\\FineLineMask_LINEAR_2048.exr",
+      "sha256": "6e11c7c67945e24a14b73f43dac8f1e82be524d152be46da341a5ff000fc1764",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "node": "FINISH8_FineLineMask",
+      "relative_to_native": "maps/FineLineMask_LINEAR_2048.exr",
+      "packed_in_native": true
+    }
+  },
+  "consumed_route": "UVMap -> BasePigment RGB -> FatigueMask multiply brown-mauve -> FineLineMask multiply deep warm ink -> PigmentTimesControlledLight; white Diffuse -> ShaderToRGB -> inherited scene light ramp -> same multiply -> Emission -> Output",
+  "color_only_socket": "FINISH8_FineLinePigment.Color -> Emission.Color; also bypass cap/body PigmentTimesControlledLight.input1 for pure face+cap pigment.",
+  "reference_review": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\review-package\\reference-review.json",
+    "sha256": "710430e1d1dcd17351a805c4eb35dbb357475474709b3d00bc75aab337a6dc04"
+  },
+  "reference_validation": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\review-package\\validation.json",
+    "sha256": "cf3a06a49b92f23a6deb7b536192ebcdf2f8cbd353e3262c1685c199d86200ae"
+  },
+  "source_four_records": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\source-four\\render-records.json",
+    "sha256": "41b36146decf1a5f8d6b8c6e3106c026c60bbfe2509dfc0fe5d994b148e0ed0a"
+  },
+  "uv_light_blink_records": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\uv-light-blink\\render-records.json",
+    "sha256": "3c895e35e3444270e0240dda9583e5823d9865dd45ec80c1e476aba07ff23698"
+  },
+  "corrected_color_only_records": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\color-only-corrected\\render-records.json",
+    "sha256": "0bfad105245539b0753c6bc8bd81f17fc1c46f3122f3872b00af1aadab2a3dfc"
+  },
+  "matte_shape_records": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\shape-b\\targeted\\render-records.json",
+    "sha256": "65374ab6163c4bffb106c0a3127a60a4d5d729caa02e750f23caabc740998712"
+  },
+  "before_after_source_pairs": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\review-package\\front-source-r28-finish8d.png",
+      "sha256": "36d356d877e331677ab316dc9de8518ba991515a3c12a2b5287e278a18e4dcf4"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\review-package\\left_oblique-source-r28-finish8d.png",
+      "sha256": "7b71d0a9ab6c8dc169508b0a4e543e3eb89878265337fbf76dbbeb27daf53c14"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\review-package\\profile-source-r28-finish8d.png",
+      "sha256": "efb9d7aafb22c99bdacc4193eb3f60485257ea3936644d4fbe0c8630b29446e3"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\look-d\\review-package\\right_oblique-source-r28-finish8d.png",
+      "sha256": "bd25e25d3ea27530012869bb39efe0854fcfe042d58fa7853b2285defab9fb57"
+    }
+  ],
+  "recipes": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\build_shape_a.py",
+      "sha256": "d7b753c1e617815bdd9fca01f5d3d772f73bbfe518b74d77633a6480b29e12dd"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\build_shape_b.py",
+      "sha256": "604b22c3e531d9aa2e8d92dfc97b7de14d3178a4ac80ee1d2bc07f51ad080735"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\render_targeted.py",
+      "sha256": "8f77a9091587e91b53413f577bb767ac3ec6dcf88d90df168dea065e35f7584c"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\render_paint_plate.py",
+      "sha256": "37aa9eb87ba268d35fe6719ca252ed066642588e7682bb259a527ff685807945"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\prepare_shape_b_paint.py",
+      "sha256": "23c40dabfd0f80286455cd07dbaa1b924edd782bd43c2e0383e3a74a130f99b1"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\author_uv_maps.py",
+      "sha256": "5b5d8059b098dd6a6fc870060a5b65914f4f81f1c30654ec46fc70b38ac155c7"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\author_uv_maps_c.py",
+      "sha256": "a3d1986bf58ba1a8b1a902ce3abcd7ef63634cf9ab449d875edd1589762944ad"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\author_uv_maps_c_expanded.py",
+      "sha256": "29e82f7ab084c55d0ba3929ce72c35e2a7b38a5477b3af158238b173750fc01d"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\author_uv_maps_d.py",
+      "sha256": "55ba94cb66996d95017d403281e1763bed2b2a0012249afe713a01cf3ce6b005"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\author_uv_maps_d_expanded.py",
+      "sha256": "24850673f2b06a383e4b04f514387f5af3cbd6bc42679d60f21ac99a3cba5cb1"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\build_look_a.py",
+      "sha256": "966516718771c38187df6939c99beff23ca99e45c6de09a8352ba161c2940079"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\build_look_d.py",
+      "sha256": "4594915a9c4011aa5e3d58fbf86fe34c54963183c0f64311e934c95fa4222b75"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\build_look_d_expanded.py",
+      "sha256": "bb2bc18826ced6cde88588fdb6f127f8a9eef83ba8ce766df7fb79de608d5938"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\render_uv_light_blink.py",
+      "sha256": "4569ef492f6093c3e6674d1ab3e851aaad4ad21e4acaed5be96bee52d708ac53"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\render_color_only_corrected.py",
+      "sha256": "915124ec5992969d6634add8d35a4f080029678684aacd1aff48b17e529204a4"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\compose_final_review.py",
+      "sha256": "550b44ded6e06ca4eb7dc72799a8a788ea2aa52f01b18da6abaee15ec7585eaf"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\export_replay.py",
+      "sha256": "e1526ab38ec4b88a768fade46e745b028a0c28587822bae68cc947a6c19dd11b"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\replay_into_r28.py",
+      "sha256": "bfda33e187d1c6ee6eb8cfdbbf23e1cf1a710be37b91bfbe8d22bf1aaeb29916"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\verify_replay.py",
+      "sha256": "fabcbb0eeb87b2dbb611abed60daa5814ea13be0c02f0154b8c957556b5c1c72"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-8\\build_handoff.py",
+      "sha256": "95e856426319f297b30d1f8e54dbad8594a59e7df4cc26c851c7663855b86dfd"
+    }
+  ],
+  "producer_assessment": {
+    "AC1": "UNVERIFIED ART: high malar/anterior support retained; no global flattening or cheek-wide inflation. Independent continuity review still required.",
+    "AC2": "FAIL WHOLE-ART: useful compact chin and reduced nose wedge, but medial/lateral cheek planes and long jaw underside remain residuals. No claimed topology proof or whole-face approval.",
+    "AC3": "LIMITED BLINK GUARD PASS; SOURCE LIKENESS INCOMPLETE. Evaluated192aperture vertices exact at0/.5/1; actual0/\u00b130/+60renders show partial/full closure. Aperture/iris/lash neutral unchanged fromR23/R28; no all-expression claim.",
+    "AC6": "TECHNICAL MAP/ROUTE PASS; ART UNVERIFIED. Real2Klinear pigment and two consumed masks, native shader light response, UV checker and corrected color-only evidence. Source exact fatigue/line character still requires review."
+  },
+  "integration_notes": [
+    "Root alone owns integration. Face shape R28 baseline must match before replay. Body25cap-only values should be mapped aboveworldZ1.46 onto current independent body; do not replace current whole-body owner.",
+    "Only skin materialslot7 changes. All nonface owner materials/UVs and eye/lash geometry retained. Hidden mouthseam/jawink were coherently moved and remain hidden.",
+    "All47skin key coordinates receive the linked neutral delta, preserving their existing relative deltas to\u22641.9e-9m; R23-specific Close targets remain encoded and evaluatedaperture exact.",
+    "Map paths are absolute external producer paths plus packed data. For canonical portability copy listed maps beside native and set corresponding //maps/... paths during root integration; do not mutate this frozen native.",
+    "LookA/B are rejected curve-sampling stripe trials. LookC is valid priorlook; D changes only fine-line mask opacity .48\u2192.82, not broad fatigue, pigment or geometry.",
+    "No garments, bodybelow1.46, hair geometry/materials, liveMCP, canonicalstate or Git changes performed by producer."
+  ]
+}
