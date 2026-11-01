@@ -1,0 +1,30 @@
+{
+  "native_sha256": "e9c8654121307b61fb75d73789c9b2443a3e42c53420dfdfada927d194b475d4",
+  "method": "Bidirectional evaluated original-Body vertex set correspondence; group-constrained Weld changes evaluation index order, so raw polygon order is not correspondence. Body control indices and per-corner UV are independently unchanged outside shared boundary.",
+  "whole_body_max_surface_vertex_distance_m": 0.007645976264029741,
+  "affected_bbox_min": [
+    -0.07615888863801956,
+    -0.0370805449783802,
+    1.460777759552002
+  ],
+  "affected_bbox_max": [
+    0.075375497341156,
+    0.05224849656224251,
+    1.6430943012237549
+  ],
+  "affected_threshold_m": 1e-06,
+  "protected_regions": {
+    "1.35": {
+      "source_vertices": 56927,
+      "candidate_vertices": 56927,
+      "bidirectional_max_distance_m": 3.5762786865234375e-07,
+      "max_nearest_corner_uv_difference": 0.0
+    },
+    "1.4": {
+      "source_vertices": 60135,
+      "candidate_vertices": 60135,
+      "bidirectional_max_distance_m": 3.5762786865234375e-07,
+      "max_nearest_corner_uv_difference": 0.0
+    }
+  }
+}

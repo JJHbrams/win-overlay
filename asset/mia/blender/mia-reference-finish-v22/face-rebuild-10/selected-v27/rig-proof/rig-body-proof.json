@@ -1,0 +1,41 @@
+{
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-foundation-v27\\face-shared-final\\Mia_Foundation_v27.blend",
+    "sha256": "e9c8654121307b61fb75d73789c9b2443a3e42c53420dfdfada927d194b475d4"
+  },
+  "head_follow": [
+    {
+      "degrees": -12,
+      "rigid_head_follow_error_m": {
+        "MIA_V27_Foundation_Face": 1.1920928955078125e-07,
+        "V27_Upper_BoundaryRibbon_-1_Dense": 1.1920928955078125e-07,
+        "V27_Lower_BoundaryRibbon_-1_Dense": 1.1920928955078125e-07,
+        "V27_Upper_BoundaryRibbon.001_1_Dense": 1.1920928955078125e-07,
+        "V27_Lower_BoundaryRibbon.001_1_Dense": 1.1920928955078125e-07
+      },
+      "render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-foundation-v27\\final-rig-body-proof-matched\\head_yaw_-12.png",
+        "sha256": "657d6bb17ce38124de223d0a01c8ed36d7de358317af56292e115a8dad667768"
+      }
+    },
+    {
+      "degrees": 12,
+      "rigid_head_follow_error_m": {
+        "MIA_V27_Foundation_Face": 1.1920928955078125e-07,
+        "V27_Upper_BoundaryRibbon_-1_Dense": 1.1920928955078125e-07,
+        "V27_Lower_BoundaryRibbon_-1_Dense": 1.1920928955078125e-07,
+        "V27_Upper_BoundaryRibbon.001_1_Dense": 1.1920928955078125e-07,
+        "V27_Lower_BoundaryRibbon.001_1_Dense": 1.1920928955078125e-07
+      },
+      "render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-foundation-v27\\final-rig-body-proof-matched\\head_yaw_12.png",
+        "sha256": "53c0cb40bf732ddefcc12dd22dad77dbe5aad6a8690d5d898ca6620e0b433262"
+      }
+    }
+  ],
+  "whole_body_renders": [
+    "whole_body_baseline.png",
+    "whole_body_candidate.png"
+  ],
+  "limits": "Two small head rotations and neutral body comparison only, not full motion rig/animation acceptance."
+}

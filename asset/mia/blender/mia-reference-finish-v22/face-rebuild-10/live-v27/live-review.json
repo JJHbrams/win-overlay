@@ -1,0 +1,85 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-rebuild-10\\selected-v27\\native\\e9c865412130-Mia_Foundation_v27.blend",
+  "sha256": "e9c8654121307b61fb75d73789c9b2443a3e42c53420dfdfada927d194b475d4",
+  "native_unchanged": true,
+  "before": "Code executed successfully: {\"path\": \"C:\\\\Users\\\\antio\\\\.codex\\\\worktrees\\\\mia-body-head-v06\\\\win-overlay\\\\asset\\\\mia\\\\blender\\\\mia-reference-finish-v22\\\\integration-wip-9-review\\\\Mia_FaceReview_v22_WIP9_M5.blend\", \"dirty\": false, \"scene\": \"Scene\"}\n",
+  "after": "Code executed successfully: {\"path\": \"C:\\\\Users\\\\antio\\\\.codex\\\\worktrees\\\\mia-body-head-v06\\\\win-overlay\\\\asset\\\\mia\\\\blender\\\\mia-reference-finish-v22\\\\face-rebuild-10\\\\selected-v27\\\\native\\\\e9c865412130-Mia_Foundation_v27.blend\", \"camera\": \"MIA_REVIEW_Head_Front\", \"projection\": \"ORTHO\", \"viewports\": [{\"center\": [0.0, 0.0, 1.5499999523162842], \"distance\": 0.6299999952316284, \"projection\": \"ORTHO\"}]}\n",
+  "captures": [
+    {
+      "name": "head-front",
+      "focus": "head",
+      "angle": "Front",
+      "distance": 0.63,
+      "images": [
+        {
+          "path": "head-front-0.png",
+          "sha256": "8392733c838fb7acfc3d1d30b4a0b35847241858edad23e8537180e798b791ca"
+        }
+      ]
+    },
+    {
+      "name": "head-left-oblique",
+      "focus": "head",
+      "angle": "LeftOblique",
+      "distance": 0.63,
+      "images": [
+        {
+          "path": "head-left-oblique-0.png",
+          "sha256": "f0d933edffc7eee74f9eb2f74a86ca318486cdc2412a6619ca2a302c693fe60e"
+        }
+      ]
+    },
+    {
+      "name": "head-right-oblique",
+      "focus": "head",
+      "angle": "RightOblique",
+      "distance": 0.63,
+      "images": [
+        {
+          "path": "head-right-oblique-0.png",
+          "sha256": "83a34fd850a5b6df63a21ff4f992c893eb826dba35f2cbc70f792e794230ddb6"
+        }
+      ]
+    },
+    {
+      "name": "head-profile",
+      "focus": "head",
+      "angle": "Profile",
+      "distance": 0.63,
+      "images": [
+        {
+          "path": "head-profile-0.png",
+          "sha256": "8029cddf0919bf322c068c6941186075ccad17c2c0b5c9115c4bc353e826fe40"
+        }
+      ]
+    },
+    {
+      "name": "head-zoom",
+      "focus": "head",
+      "angle": "Front",
+      "distance": 0.4,
+      "images": [
+        {
+          "path": "head-zoom-0.png",
+          "sha256": "096916a270426c91d34932a39149b113900a905c3f7f48d29de902af780d0308"
+        }
+      ]
+    },
+    {
+      "name": "body-front",
+      "focus": "body",
+      "angle": "Front",
+      "distance": 2.7,
+      "images": [
+        {
+          "path": "body-front-0.png",
+          "sha256": "4aa1c9911a7203ac756d3fbb0d571082920c7ecd30c1aeeca967bfda7809e13f"
+        }
+      ]
+    }
+  ],
+  "face_owner": "MIA_V27_SharedHeadBody",
+  "body_owner": "MIA_V27_SharedHeadBody",
+  "focus_helper_sha256": "5630ec93ce7348dad67b2712fa227793db4542b66ab7dd4cdc4ae433355d8c92",
+  "scope": "Actual MCP viewport navigation only; no native saved. Freestyle render ink is not visible here."
+}

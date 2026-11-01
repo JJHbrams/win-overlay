@@ -1,0 +1,3864 @@
+{
+  "source_sha256": "c04f81985330eace7ba06142cb99419f7c043f680f8fcfbefefff237ece56778",
+  "final_sha256": "e9c8654121307b61fb75d73789c9b2443a3e42c53420dfdfada927d194b475d4",
+  "objects": {
+    "MIA_V27_Foundation_Face": {
+      "fingerprint": {
+        "keys": {
+          "Basis": "b22f752b28d4e5531d1ea979392cbd461311a8262a2174cf0a8cc227669a590a",
+          "Face.M_F00_000_00_Fcl_ALL_Angry": "851367ad90433dca6e6111d6e449318ae141bc8301d949e1100edac233ddbc18",
+          "Face.M_F00_000_00_Fcl_ALL_Fun": "770e8b90d26003d402d888f8acb4b28c0c27c70387232b1009baa70a2e9540d9",
+          "Face.M_F00_000_00_Fcl_ALL_Joy": "ae92c6cd73baee605796c1bc5d8b9d2cb819a4b937c8fc1df4eab1350d0a9c95",
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": "30c1e9d9c1c60ba307e0d4ad69eb07185655db89da82be59229bd1cc8ce1eb88",
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": "3eae456000be55ede47527498b499a2d5969215c028fe5331aecc7021a6ec5ac",
+          "Face.M_F00_000_00_Fcl_BRW_Angry": "bafc19eee2eb89c46edca74ca041dffc8a6538d9d54c5555b1ffed95c705780c",
+          "Face.M_F00_000_00_Fcl_BRW_Fun": "7bd3fc263ac7a81c992fc756254592a8830079f88a6afd1d6032c5d363b1787f",
+          "Face.M_F00_000_00_Fcl_BRW_Joy": "8b5123282129ca47b7c36e74571b6ec1e4dfa97d731759cbbe8fe3baf71e7956",
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": "a993d9e611d8af36fd86c664089f3eeb7e474a07316d4c143daa51f0be93d7b3",
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": "d02fad2fbad5403722a9124c1cb901e3e7dd7b3e4a996eac30b10f682fe74106",
+          "Face.M_F00_000_00_Fcl_EYE_Natural": "b22f752b28d4e5531d1ea979392cbd461311a8262a2174cf0a8cc227669a590a",
+          "Face.M_F00_000_00_Fcl_EYE_Angry": "f35f2ca83113e9ca0799615c3d3517086480cafee5c0ee80c5d4505034d2ce0d",
+          "Face.M_F00_000_00_Fcl_EYE_Close": "e84b73f75ebca2a82506ec940f8ae5262b150353dce84cf7a96aac105c7571b0",
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": "3159d585d136383d5a909c55afa534c349f60f772e6a91d70babd2aadfdded38",
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": "c5a57967c17fa9ed85a1658d30888d83adc6ccc4ac228060ecf1bfb2df9bf5e4",
+          "Face.M_F00_000_00_Fcl_EYE_Joy": "7b52ec3c7a3a61a1a2047ab461e84926535fff51ec1414b7fa96b12929780489",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": "587fdf7f7b986b6f5ecd71676c06162db15b6acaeb9508f1c6aaefca9065565e",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": "c13233fe6dde6bc7b4f532286d8efcc6f8b657ec2eddc47252c1ff50b2a61f1c",
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": "c9437dab67a727976f770b5e5c0f9d0a1ca469c82f819ca67399778ccd9dfd16",
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": "d283dc0f6a612290ae46c7dcad05f17897061b002c4b52312fbe6f5ccd4b9596",
+          "Face.M_F00_000_00_Fcl_EYE_Extra": "34e9b89ddddbe95db74315f5c870c1553ced31d355ef752ef7fab370520020b5",
+          "Face.M_F00_000_00_Fcl_MTH_Up": "41bc5f62a90fc70eea071fe758de9978735ca55915936f7bd80a2b8706006151",
+          "Face.M_F00_000_00_Fcl_MTH_Down": "d5461d1c43c17f7435fd22ec8bf673ff69c024a8581f50c71ba16356f10e8124",
+          "Face.M_F00_000_00_Fcl_MTH_Angry": "45afade3111de8703501e27303545b71ae6864016ca945c8ae33f834e254a313",
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": "ae1b913efd3e09f065e63bc853cbada6c4981484caa12f8ddee7a577d2f5e5eb",
+          "Face.M_F00_000_00_Fcl_MTH_Fun": "70e4ebf254302b2dba408e81a5350a6c2250bc74068422e46085d835540040e1",
+          "Face.M_F00_000_00_Fcl_MTH_Joy": "c91de118fa5ed8592c007bca3efd0501445779563b809c9e18004b863772a4d7",
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": "e670b3a477cbb4c8245e597c4766210748d3abc0242eddba451312eff7e6c785",
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": "acb77f7a8e3d8ba2c4c385d857756b5a9755eacc4a6a46e01ef65d4866b305cd",
+          "Face.M_F00_000_00_Fcl_MTH_A": "ae81361203f5b2df9185b03218704712c917834377aaf6b019a52781761f6653",
+          "Face.M_F00_000_00_Fcl_MTH_I": "aebfe1b9c71fc5573a66b784a0fc237dc9306e2993ca68d7917aaec1f85dfbe1",
+          "Face.M_F00_000_00_Fcl_MTH_U": "aa3f54e49a222159304e17df3d6ee95cde75f3b4c61188512ca43cbfccfb0d0d",
+          "Face.M_F00_000_00_Fcl_MTH_E": "c04c93fa592b772fe42abc84a54db48ebfda7d07e0b3670f9798977e12c07e18",
+          "Face.M_F00_000_00_Fcl_MTH_O": "bf6b2d74783bc54d54822454cbe842cd11528ca355b46cab05c8f87c43f56b23",
+          "Face.M_F00_000_00_Fcl_HA_Fung1": "7c13160983091ada910dc97804f2e9cfb275c778d7fe85849cc7c42e9106369a",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "5bf6086bd9c9f963ff50e009651b9d69d7240a5ac8c9286036294060090da091",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "bdde7e24d9c863c62ffe3ac199924dbe8e7344edb43a00299a02e2cda176d6de",
+          "Face.M_F00_000_00_Fcl_HA_Fung2": "a6eada2e6b6496341ca10dbb9b3011415cfa25062767e369c51faa7a2ca3a5a5",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "6607c11bff3063bb766c12951e51cf8afd7d2dc17a319a78cbab86055204ed74",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "737844c9ce8a390dc0723624133ea7ecb68185f621fda6be9b39570332512336",
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": "5397b50212ec3f3eaeca77eee9f3a004f4f6b69b3d0ad176a3bd02fc7582feca"
+        },
+        "topology": "e9ea31250697dd8d463bdbe41c56c1135d306b756e83230fc039deead0d9c64f",
+        "uv": {
+          "UVMap": "0e2724f0bd8d29608af93a8cdae3e147807a63d9b96415f6e2e0c33721d9d347"
+        },
+        "weights": "1b0ae7c3aa8121fa64e24cf0196e991d1d9850ffd7a2b09ec48a99717551d2b6",
+        "material_slots": [
+          "F00_000_00_FaceMouth_00_FACE",
+          "MIA_V16_Sclera_BackfaceCullingRestored.001",
+          "V27_DonorCards_Replaced",
+          "V27_DonorCards_Replaced",
+          "V27_OriginalAlpha_Ink_4",
+          "MIA_V22_Iris_LowerArc_Rim.001",
+          "MIA_V17_LegacyEyeGlintsHidden.001",
+          "V27_DonorCards_Replaced",
+          "MIA_V17_LegacyEyeGlintsHidden.002"
+        ],
+        "material_indices": "4ced7aecefc71d97b59445e9fb4f1bd4b5ef96601ea1ffa7f87559cf6707188f",
+        "matrix_basis": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+      },
+      "parent": null,
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "V27_FaceHead_RigFollow",
+          "type": "ARMATURE",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": false,
+            "show_on_cage": false,
+            "show_expanded": true,
+            "is_active": true,
+            "use_pin_to_last": false,
+            "use_apply_on_spline": false,
+            "object": {
+              "id": "Object",
+              "name": "MIA_V06_RIG"
+            },
+            "use_bone_envelopes": false,
+            "use_vertex_groups": true,
+            "use_deform_preserve_volume": false,
+            "use_multi_modifier": false,
+            "vertex_group": "",
+            "invert_vertex_group": false
+          },
+          "custom": {}
+        }
+      ],
+      "original_material_slots": {
+        "0": "F00_000_00_FaceMouth_00_FACE"
+      }
+    },
+    "V27_Upper_BoundaryRibbon_-1_Dense": {
+      "fingerprint": {
+        "keys": {
+          "Basis": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_ALL_Angry": "7b2ca081baef7be002b1742d5addf225f297b5cc92134ff25429b35011c91018",
+          "Face.M_F00_000_00_Fcl_ALL_Fun": "888574bd389c1d91421ec4516148ff7aada58a88592790076cb8a4186cbd9b58",
+          "Face.M_F00_000_00_Fcl_ALL_Joy": "f4232dc117f62ff06bbdbbc00acf828af5effdd0222ad49f1079cf0dd6e0d9bf",
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": "cb07e820c32d228cca9cc13bfd66f10f018c3aff2ad14f229c59ecb9c40bd1b2",
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": "c52ab8974a8a22efef5cc8ed35ff17a990e832af5d045df84ec5d5a44e7fd672",
+          "Face.M_F00_000_00_Fcl_BRW_Angry": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_BRW_Fun": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_BRW_Joy": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_EYE_Natural": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_EYE_Angry": "08eca7c097471e4599a186a81e53a32e87f7443cef15ed331ae772bad192dadf",
+          "Face.M_F00_000_00_Fcl_EYE_Close": "1df1758464917f37738cc0efc58b4e548a3685ad0faf49d02849b227ff7b4f33",
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": "1df1758464917f37738cc0efc58b4e548a3685ad0faf49d02849b227ff7b4f33",
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": "f6d3703d2e3c1b0022e425dc4ded770635002dab749b11e9c8b6868743fd67a5",
+          "Face.M_F00_000_00_Fcl_EYE_Joy": "1cce91730792da066f8a18115ebb4c964ac6c398d314f4b967ab1ecc808dfabd",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": "1cce91730792da066f8a18115ebb4c964ac6c398d314f4b967ab1ecc808dfabd",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": "cb07e820c32d228cca9cc13bfd66f10f018c3aff2ad14f229c59ecb9c40bd1b2",
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": "c52ab8974a8a22efef5cc8ed35ff17a990e832af5d045df84ec5d5a44e7fd672",
+          "Face.M_F00_000_00_Fcl_EYE_Extra": "f9c2ceb9648cc8050affb15b4c3078b141ad7d3b3ba7792f607442a1a1c2a3db",
+          "Face.M_F00_000_00_Fcl_MTH_Up": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_MTH_Down": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_MTH_Angry": "be784d96e713ae6aabb7e9545b0de2a70d63b96cce34809f7c7a665a1cb7af10",
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": "be784d96e713ae6aabb7e9545b0de2a70d63b96cce34809f7c7a665a1cb7af10",
+          "Face.M_F00_000_00_Fcl_MTH_Fun": "be784d96e713ae6aabb7e9545b0de2a70d63b96cce34809f7c7a665a1cb7af10",
+          "Face.M_F00_000_00_Fcl_MTH_Joy": "1ef061ac38ce3f9dcbaabc18cf6078053ca0df8a9484dde673d38c1c05e9eeb6",
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": "be784d96e713ae6aabb7e9545b0de2a70d63b96cce34809f7c7a665a1cb7af10",
+          "Face.M_F00_000_00_Fcl_MTH_A": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_MTH_I": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_MTH_U": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_MTH_E": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_MTH_O": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_HA_Fung1": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_HA_Fung2": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57",
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": "fc96b03f9bec42f8a3f54b100b3007de91ee46754d3f2cc25b357295b0b5fc57"
+        },
+        "topology": "ea7aa46e2b5868a8c60449eee9155a55c3c93afd33ac090f755a95f1a7675735",
+        "uv": {},
+        "weights": "2868721aaf51b37cbbdf246cdb3edb0d3073b5f47e4580a6a61ed4fe4acf625d",
+        "material_slots": [
+          "V27_UpperLid_Charcoal"
+        ],
+        "material_indices": "52dbd4365b026555e3382c056240376d3aa319c7e46c1aa7c38caa4883570517",
+        "matrix_basis": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+      },
+      "parent": null,
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "V27_FaceHead_RigFollow",
+          "type": "ARMATURE",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": false,
+            "show_on_cage": false,
+            "show_expanded": true,
+            "is_active": true,
+            "use_pin_to_last": false,
+            "use_apply_on_spline": false,
+            "object": {
+              "id": "Object",
+              "name": "MIA_V06_RIG"
+            },
+            "use_bone_envelopes": false,
+            "use_vertex_groups": true,
+            "use_deform_preserve_volume": false,
+            "use_multi_modifier": false,
+            "vertex_group": "",
+            "invert_vertex_group": false
+          },
+          "custom": {}
+        }
+      ],
+      "original_material_slots": {}
+    },
+    "V27_Lower_BoundaryRibbon_-1_Dense": {
+      "fingerprint": {
+        "keys": {
+          "Basis": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_ALL_Angry": "fde732f69d0b8c43065d4f06bf0bc8d0856378dbda3dd6c42add354dbc55bdfc",
+          "Face.M_F00_000_00_Fcl_ALL_Fun": "9f602f8a6a462c387242f76af6cf719d95824bcc7b297cb5e91368ffe316e4c3",
+          "Face.M_F00_000_00_Fcl_ALL_Joy": "c6042e60c03eb3195c490b442814dde2ab99264781c92270abe91b481fe75656",
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": "d4f6b3fc9bb52c041f14a1d8fd0402be5b217805f4ea2215afd0740e8243f564",
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": "3a2a76764f621caf5b02c95a88f22a58707cae2fb70456ef2ee6327eff4782e8",
+          "Face.M_F00_000_00_Fcl_BRW_Angry": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_BRW_Fun": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_BRW_Joy": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_EYE_Natural": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_EYE_Angry": "f5a82fe20917f8050b62017a3e95048f52006c33af154e84236ce45f0525c5af",
+          "Face.M_F00_000_00_Fcl_EYE_Close": "b9d77efeaf085907194261326c692b75227339af53d259288a8adf7da0184e56",
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": "b9d77efeaf085907194261326c692b75227339af53d259288a8adf7da0184e56",
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": "fc679c5aabda7e5f433425e0c6eab47aa24b30eef684621edafaf11470879754",
+          "Face.M_F00_000_00_Fcl_EYE_Joy": "6fa602c6dc2d5961d3e4fc566ad367f61ca8d04a8c3f00b1403cf624eaa72268",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": "6fa602c6dc2d5961d3e4fc566ad367f61ca8d04a8c3f00b1403cf624eaa72268",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": "d4f6b3fc9bb52c041f14a1d8fd0402be5b217805f4ea2215afd0740e8243f564",
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": "3a2a76764f621caf5b02c95a88f22a58707cae2fb70456ef2ee6327eff4782e8",
+          "Face.M_F00_000_00_Fcl_EYE_Extra": "64e705259c08ef03fb0e3a310cba426eecec226572886f67f5e31d4fa2506210",
+          "Face.M_F00_000_00_Fcl_MTH_Up": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_MTH_Down": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_MTH_Angry": "baa20698f580818d0ffdaa1c5a9521df3b7b2ae691aea813d835bff10c653de7",
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": "baa20698f580818d0ffdaa1c5a9521df3b7b2ae691aea813d835bff10c653de7",
+          "Face.M_F00_000_00_Fcl_MTH_Fun": "baa20698f580818d0ffdaa1c5a9521df3b7b2ae691aea813d835bff10c653de7",
+          "Face.M_F00_000_00_Fcl_MTH_Joy": "8f3a86eb80b1daa4aee29125fe9f5d6bc1ea2fc56da9be70f43ddfe467464829",
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": "baa20698f580818d0ffdaa1c5a9521df3b7b2ae691aea813d835bff10c653de7",
+          "Face.M_F00_000_00_Fcl_MTH_A": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_MTH_I": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_MTH_U": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_MTH_E": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_MTH_O": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_HA_Fung1": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_HA_Fung2": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9",
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": "8a38409127ef9c1bdff9dae799630101fe5871c726a77a9c3d0338e9a34457f9"
+        },
+        "topology": "ff249b6c3f175284e48841169b0d0f86353a48c1c0ab13eb38775068dcf117d8",
+        "uv": {},
+        "weights": "33c1656a9a6ac4af2e47305d342c066c3c5d4b849a668e3a1e404e36a11ed216",
+        "material_slots": [
+          "V27_UpperLid_Charcoal"
+        ],
+        "material_indices": "755ba9519eb08efb2d4c68ccfee9d69ceb372301b3a701ad6a3ac309ba37edb6",
+        "matrix_basis": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+      },
+      "parent": null,
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "V27_FaceHead_RigFollow",
+          "type": "ARMATURE",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": false,
+            "show_on_cage": false,
+            "show_expanded": true,
+            "is_active": true,
+            "use_pin_to_last": false,
+            "use_apply_on_spline": false,
+            "object": {
+              "id": "Object",
+              "name": "MIA_V06_RIG"
+            },
+            "use_bone_envelopes": false,
+            "use_vertex_groups": true,
+            "use_deform_preserve_volume": false,
+            "use_multi_modifier": false,
+            "vertex_group": "",
+            "invert_vertex_group": false
+          },
+          "custom": {}
+        }
+      ],
+      "original_material_slots": {}
+    },
+    "V27_Upper_BoundaryRibbon.001_1_Dense": {
+      "fingerprint": {
+        "keys": {
+          "Basis": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_ALL_Angry": "5f9c43f1c0384e5302f84e6348fcc9216faa2f3dcd36b48be8e1c335dbee107a",
+          "Face.M_F00_000_00_Fcl_ALL_Fun": "103a3f7773193c12febcd9ec8656e8618f12183966c536bca0a3ef2af53ff0c1",
+          "Face.M_F00_000_00_Fcl_ALL_Joy": "8879f2ca03c2ee3e242ab605c0fe4620ac76dc685acc59d1e231f83c720e7bc3",
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": "fc5b51d5bcbad3e53358bae7704b3fefc617973da0a732b6111a189cfa809a4a",
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": "04e60e425660a41e0687f10e14f09bdd1b6c94a097e496df5605fd2675d8d733",
+          "Face.M_F00_000_00_Fcl_BRW_Angry": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_BRW_Fun": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_BRW_Joy": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_EYE_Natural": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_EYE_Angry": "bd9d965526bb39677b9c397fda032da6fd72382141766cf946983d42f1e6ae3e",
+          "Face.M_F00_000_00_Fcl_EYE_Close": "1495f01434de31fa235b3c04557ac7f0105a24c8eca49a036d68d7456ccca4d8",
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": "2aaca06d34f96840d4d5e34cf432a4e26718270a150783eaad00afbee994cec2",
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": "1495f01434de31fa235b3c04557ac7f0105a24c8eca49a036d68d7456ccca4d8",
+          "Face.M_F00_000_00_Fcl_EYE_Joy": "2ddef5610de43e51513819d18ba3567c51c0b4289d0e8507b8637f8d19974afd",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": "2ddef5610de43e51513819d18ba3567c51c0b4289d0e8507b8637f8d19974afd",
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": "fc5b51d5bcbad3e53358bae7704b3fefc617973da0a732b6111a189cfa809a4a",
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": "04e60e425660a41e0687f10e14f09bdd1b6c94a097e496df5605fd2675d8d733",
+          "Face.M_F00_000_00_Fcl_EYE_Extra": "de9ae5191198b67e0984ccc3803b0043d7d284b02af7088226641d3556a3e7b9",
+          "Face.M_F00_000_00_Fcl_MTH_Up": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_MTH_Down": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_MTH_Angry": "2c71c40c94b7a5b60e858697e4ec7c154bdd89250a10372c1e60cca7f1e95885",
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": "2c71c40c94b7a5b60e858697e4ec7c154bdd89250a10372c1e60cca7f1e95885",
+          "Face.M_F00_000_00_Fcl_MTH_Fun": "2c71c40c94b7a5b60e858697e4ec7c154bdd89250a10372c1e60cca7f1e95885",
+          "Face.M_F00_000_00_Fcl_MTH_Joy": "2c71c40c94b7a5b60e858697e4ec7c154bdd89250a10372c1e60cca7f1e95885",
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": "2c71c40c94b7a5b60e858697e4ec7c154bdd89250a10372c1e60cca7f1e95885",
+          "Face.M_F00_000_00_Fcl_MTH_A": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_MTH_I": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_MTH_U": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_MTH_E": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_MTH_O": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_HA_Fung1": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_HA_Fung2": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069",
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": "3afc238304e977acf4eef2ed91947b30d45f57254008a10ab9d86e3dc897a069"
+        },
+        "topology": "ea7aa46e2b5868a8c60449eee9155a55c3c93afd33ac090f755a95f1a7675735",
+        "uv": {},
+        "weights": "2868721aaf51b37cbbdf246cdb3edb0d3073b5f47e4580a6a61ed4fe4acf625d",
+        "material_slots": [
+          "V27_UpperLid_Charcoal"
+        ],
+        "material_indices": "52dbd4365b026555e3382c056240376d3aa319c7e46c1aa7c38caa4883570517",
+        "matrix_basis": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+      },
+      "parent": null,
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "V27_FaceHead_RigFollow",
+          "type": "ARMATURE",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": false,
+            "show_on_cage": false,
+            "show_expanded": true,
+            "is_active": true,
+            "use_pin_to_last": false,
+            "use_apply_on_spline": false,
+            "object": {
+              "id": "Object",
+              "name": "MIA_V06_RIG"
+            },
+            "use_bone_envelopes": false,
+            "use_vertex_groups": true,
+            "use_deform_preserve_volume": false,
+            "use_multi_modifier": false,
+            "vertex_group": "",
+            "invert_vertex_group": false
+          },
+          "custom": {}
+        }
+      ],
+      "original_material_slots": {}
+    },
+    "V27_Lower_BoundaryRibbon.001_1_Dense": {
+      "fingerprint": {
+        "keys": {
+          "Basis": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_ALL_Angry": "584c93adc140a311c2471089715f5295d43bcc1c577b6c7b5808a84b4e529504",
+          "Face.M_F00_000_00_Fcl_ALL_Fun": "a07bd1092fbbbf46f50aedf2c218a933e289f2e733bd62ec340d33f724b304de",
+          "Face.M_F00_000_00_Fcl_ALL_Joy": "c5b52b0980f3ca0cef7c7e14156fc1623977a84132a3825b922f3d9d61e570cc",
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": "375c80c62d0576e33e0248d368b3a519338b9fb920ce614048ae5b03034e56fd",
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": "b4e552b504a3090038800acb4b473825a272ea72115b285758991a832be18b92",
+          "Face.M_F00_000_00_Fcl_BRW_Angry": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_BRW_Fun": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_BRW_Joy": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_EYE_Natural": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_EYE_Angry": "c40cca11e051f3c5ef9d05420909156f58da586aa764f3c1ad30e23f39f8222f",
+          "Face.M_F00_000_00_Fcl_EYE_Close": "842cfa1a92e402909a206f6143cfe233bd3dcfa72a9ad96d3a88a55e6f00eb60",
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": "de42da41b219b8150d2a5cf68c6e6a0aa203027331afe7b7899259ba6c36fd78",
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": "842cfa1a92e402909a206f6143cfe233bd3dcfa72a9ad96d3a88a55e6f00eb60",
+          "Face.M_F00_000_00_Fcl_EYE_Joy": "9fc5791130518e92375b429dde4bb0e5333c2793bc5c18ceda218b8acd2ee133",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": "9fc5791130518e92375b429dde4bb0e5333c2793bc5c18ceda218b8acd2ee133",
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": "375c80c62d0576e33e0248d368b3a519338b9fb920ce614048ae5b03034e56fd",
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": "b4e552b504a3090038800acb4b473825a272ea72115b285758991a832be18b92",
+          "Face.M_F00_000_00_Fcl_EYE_Extra": "a2498b57689dd30b70d9cacfc72a9d813e7c5b1b0f2d2f4316987c1d06a6c329",
+          "Face.M_F00_000_00_Fcl_MTH_Up": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_MTH_Down": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_MTH_Angry": "955e4c9a2662a69bc9c91d524d510cd15338e719e1ff2d31b9e8cdfa01eced55",
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": "955e4c9a2662a69bc9c91d524d510cd15338e719e1ff2d31b9e8cdfa01eced55",
+          "Face.M_F00_000_00_Fcl_MTH_Fun": "955e4c9a2662a69bc9c91d524d510cd15338e719e1ff2d31b9e8cdfa01eced55",
+          "Face.M_F00_000_00_Fcl_MTH_Joy": "955e4c9a2662a69bc9c91d524d510cd15338e719e1ff2d31b9e8cdfa01eced55",
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": "955e4c9a2662a69bc9c91d524d510cd15338e719e1ff2d31b9e8cdfa01eced55",
+          "Face.M_F00_000_00_Fcl_MTH_A": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_MTH_I": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_MTH_U": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_MTH_E": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_MTH_O": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_HA_Fung1": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_HA_Fung2": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2",
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": "2d605e0fa0626ba8c2f0e4e15217592a6dce7e9284aadc1e41a9474b7b9a90d2"
+        },
+        "topology": "ff249b6c3f175284e48841169b0d0f86353a48c1c0ab13eb38775068dcf117d8",
+        "uv": {},
+        "weights": "33c1656a9a6ac4af2e47305d342c066c3c5d4b849a668e3a1e404e36a11ed216",
+        "material_slots": [
+          "V27_UpperLid_Charcoal"
+        ],
+        "material_indices": "755ba9519eb08efb2d4c68ccfee9d69ceb372301b3a701ad6a3ac309ba37edb6",
+        "matrix_basis": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+      },
+      "parent": null,
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "V27_FaceHead_RigFollow",
+          "type": "ARMATURE",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": false,
+            "show_on_cage": false,
+            "show_expanded": true,
+            "is_active": true,
+            "use_pin_to_last": false,
+            "use_apply_on_spline": false,
+            "object": {
+              "id": "Object",
+              "name": "MIA_V06_RIG"
+            },
+            "use_bone_envelopes": false,
+            "use_vertex_groups": true,
+            "use_deform_preserve_volume": false,
+            "use_multi_modifier": false,
+            "vertex_group": "",
+            "invert_vertex_group": false
+          },
+          "custom": {}
+        }
+      ],
+      "original_material_slots": {}
+    },
+    "MIA_V27_SharedHeadBody": {
+      "fingerprint": {
+        "keys": {
+          "Basis": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_ALL_Angry": "e315f9c50f806ec301232321d10893ccc7a835a75a15c2dbeea331364aa83812",
+          "Face.M_F00_000_00_Fcl_ALL_Fun": "dc86839f3bf93a2d3dd1cfe76ce77c454e2650cb0e39049d49165e20d7f84fbf",
+          "Face.M_F00_000_00_Fcl_ALL_Joy": "f5ecefe0da2c344a4ad0f0f001efac403c300165a2d168c1583ae8609c9d5d55",
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": "b62894db795d793160c9c4b3b263d54eb6eabf9c6f266d74ce6347e1146a3279",
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": "1d65d34f4c86056f53ed8086d969cc00bcd5bf3f3184432a8a3d11f137e2ab4a",
+          "Face.M_F00_000_00_Fcl_BRW_Angry": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_BRW_Fun": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_BRW_Joy": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_EYE_Natural": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_EYE_Angry": "cf2d85c9c51b3b478a6c0f511e5ad1719d6c2f47eb04a6cc729ff6d9ac95eb6d",
+          "Face.M_F00_000_00_Fcl_EYE_Close": "c893faf2b5fd2e8748581b1a05fd78932258849eb7c8de61e0460d22d2fa5807",
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": "d31f18c9eb43644ffeaa9986ec74019dc79c47e2a365c287cf4bc1b2b84f25aa",
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": "f0370e216f205b408ccee90aefc7472f3eab55418f26f336b67f15729cf2d46f",
+          "Face.M_F00_000_00_Fcl_EYE_Joy": "1bf8150d91699e27a875d50d208b80dd52d89384f877abbfdf1cefb10d2cee40",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": "8eae52b2ea379788d3763cbb811ef144e1ad925fcdfffb802303b5c7e254a291",
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": "77177e68b68e684e12d726e0b624b4dc4d7d661cda0d4dddfa5a4b303d4820b8",
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": "e5849f96e05c2bb25f9a41c646843ca2b32d4f6ddf4fffeccd5854d43a185761",
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": "776d581bde5e0e3d126fd2ae427a5f67b56695de212d52a6030987f2ecafe7da",
+          "Face.M_F00_000_00_Fcl_EYE_Extra": "1b2f0bd48cad46d48cbc7a97499e2ad3ded9ef492f0712eee747e9690f848b5f",
+          "Face.M_F00_000_00_Fcl_MTH_Up": "1f845795be2722a6dcf6a75045ffb4a17841b55f0e09c4061461cfd58169d623",
+          "Face.M_F00_000_00_Fcl_MTH_Down": "05f8e7b3e7e441197892c3f63cd5a8b0c27ecc4b0eceb93cea0d7b73d7a202fb",
+          "Face.M_F00_000_00_Fcl_MTH_Angry": "335eb9343326e6e7003bf5c72fa243daa511de6b4d4cbdf299954ff652e6ba80",
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": "00447c6ea1e35c44b9f8a8b734438847b28e4be9286c6a2d064111ea884d7938",
+          "Face.M_F00_000_00_Fcl_MTH_Fun": "60f40cfb30b5e007c7ceb44a62707f188c864837a9ba9b65331af9c794561373",
+          "Face.M_F00_000_00_Fcl_MTH_Joy": "e26dd29c5dd7dc704baaef39440c9ce09670ec612d2f0ca98bfd106476d33fd1",
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": "28c280c3a6ac2501a72782c04fd5336c9b79aec555d79c9766eceb8207cc8114",
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": "307e7b0edc680e6b499be6196a9bb8e92def5baf6405ed73d10fbc242ce57152",
+          "Face.M_F00_000_00_Fcl_MTH_A": "a9193a764c13cd73aaf2f6b55aa4d7ca64ce76074a8a13ba8cca78527adf11e5",
+          "Face.M_F00_000_00_Fcl_MTH_I": "79616f798eb0e1da4579f71114745aa5f400a18a96d31950ac7d29130af1b28c",
+          "Face.M_F00_000_00_Fcl_MTH_U": "8207a9079373277d3921e4e4534126123d05948412a19ce964c7ca7d63ab5473",
+          "Face.M_F00_000_00_Fcl_MTH_E": "79522b2af0bd048a483b8d8b839fb7ae73fa8340ac39437e9e9f8a791ff16af1",
+          "Face.M_F00_000_00_Fcl_MTH_O": "fb660eb6ae8edd8838447aab94124cb091aa7232d4e6b0e8a4637d7622c86a46",
+          "Face.M_F00_000_00_Fcl_HA_Fung1": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_HA_Fung2": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1",
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "85549b2ce0b9193ace8fc15200a58b02303d61861106445fe79268315b3acae8",
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": "329fa5d60db16740ce9eea6d66ff65634c6b1d338dc8b511e0e35031e64259c1"
+        },
+        "topology": "54442cfa55d42d4fc195145ac242076aa16b791eea2a0ee61ae8981ae325f4c4",
+        "uv": {
+          "UVMap": "5f90904c0f267ebba0bf7ab8d4d847b19f63e4eda750024af8760d4aa4c4c678",
+          "MIA_BODY_V23_UV": "5f90904c0f267ebba0bf7ab8d4d847b19f63e4eda750024af8760d4aa4c4c678"
+        },
+        "weights": "3bf078ed4f41a498dee4af2b956cbb6928f366c2b9c64b741df60debf52700d5",
+        "material_slots": [
+          "MIA_V27_NewSurface_ActualUVIdentity",
+          "MIA_V23_Body_CommonLight",
+          "MIA_V23_Body_CommonLight",
+          "MIA_V23_Body_CommonLight",
+          "MIA_V23_Body_CommonLight",
+          "MIA_V22_Body_CommonLight_Preview.001",
+          "MIA_V13_PaintedBodySkin",
+          "MIA_V13_PaintedBodySkin",
+          "MIA_V13_PaintedBodySkin",
+          "V27_HeadBlend_MIA_V23_Body_CommonLight",
+          "V27_HeadBlend_MIA_V22_Body_CommonLight_Preview.001",
+          "V27_HeadBlend_MIA_V13_PaintedBodySkin"
+        ],
+        "material_indices": "7c808b96c003e625da8cd5399a054f05e4601fb51e23fc4005a01a05ea73b2b4",
+        "matrix_basis": "c4bb000bdb3e23e42194d7c4690bd05a1132cb19dbbd9621a162d9744f5110df"
+      },
+      "parent": "MIA_V06_RIG",
+      "matrix_basis": [
+        [
+          -1.0,
+          8.742277657347586e-08,
+          0.0,
+          0.0
+        ],
+        [
+          -8.742277657347586e-08,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_parent_inverse": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": false,
+            "show_on_cage": false,
+            "show_expanded": true,
+            "is_active": false,
+            "use_pin_to_last": false,
+            "use_apply_on_spline": false,
+            "object": {
+              "id": "Object",
+              "name": "MIA_V06_RIG"
+            },
+            "use_bone_envelopes": false,
+            "use_vertex_groups": true,
+            "use_deform_preserve_volume": false,
+            "use_multi_modifier": false,
+            "vertex_group": "",
+            "invert_vertex_group": false
+          },
+          "custom": {}
+        },
+        {
+          "name": "V14 Stitch coincident skin seams",
+          "type": "WELD",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": true,
+            "show_on_cage": false,
+            "show_expanded": true,
+            "is_active": false,
+            "use_pin_to_last": false,
+            "use_apply_on_spline": false,
+            "mode": "ALL",
+            "merge_threshold": 6.000000212225132e-06,
+            "vertex_group": "V27_OriginalBodyWeldOnly",
+            "invert_vertex_group": false,
+            "loose_edges": false
+          },
+          "custom": {}
+        },
+        {
+          "name": "V14 Continuous skin curvature",
+          "type": "SUBSURF",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": true,
+            "show_on_cage": false,
+            "show_expanded": true,
+            "is_active": false,
+            "use_pin_to_last": false,
+            "use_apply_on_spline": false,
+            "uv_smooth": "PRESERVE_BOUNDARIES",
+            "quality": 3,
+            "boundary_smooth": "ALL",
+            "subdivision_type": "CATMULL_CLARK",
+            "levels": 2,
+            "render_levels": 2,
+            "show_only_control_edges": true,
+            "use_creases": true,
+            "use_custom_normals": false,
+            "use_limit_surface": true,
+            "use_adaptive_subdivision": false,
+            "adaptive_space": "PIXEL",
+            "adaptive_pixel_size": 1.0,
+            "adaptive_object_edge_length": 0.009999999776482582,
+            "open_adaptive_subdivision_panel": false,
+            "open_advanced_panel": false
+          },
+          "custom": {}
+        },
+        {
+          "name": "V14 Local transition relaxation",
+          "type": "SMOOTH",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": false,
+            "show_on_cage": false,
+            "show_expanded": true,
+            "is_active": true,
+            "use_pin_to_last": false,
+            "use_apply_on_spline": false,
+            "use_x": true,
+            "use_y": true,
+            "use_z": true,
+            "factor": 0.44999998807907104,
+            "iterations": 4,
+            "vertex_group": "V14_CurvatureTransitions",
+            "invert_vertex_group": false
+          },
+          "custom": {}
+        },
+        {
+          "name": "MToon Outline (F00_002_01_Shoes_01_CLOTH)",
+          "type": "NODES",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": false,
+            "show_on_cage": false,
+            "show_expanded": false,
+            "is_active": false,
+            "use_pin_to_last": true,
+            "use_apply_on_spline": false,
+            "node_group": {
+              "id": "GeometryNodeTree",
+              "name": "VRM Add-on MToon 1.0 Outline Geometry Revision 1"
+            },
+            "bake_directory": "",
+            "bake_target": "PACKED",
+            "show_group_selector": false,
+            "show_manage_panel": false,
+            "open_output_attributes_panel": false,
+            "open_manage_panel": false,
+            "open_bake_panel": false,
+            "open_named_attributes_panel": false,
+            "open_bake_data_blocks_panel": false,
+            "open_warnings_panel": true
+          },
+          "custom": {}
+        },
+        {
+          "name": "MToon Outline (F00_002_02_Body_00_SKIN)",
+          "type": "NODES",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": false,
+            "show_on_cage": false,
+            "show_expanded": false,
+            "is_active": false,
+            "use_pin_to_last": true,
+            "use_apply_on_spline": false,
+            "node_group": {
+              "id": "GeometryNodeTree",
+              "name": "VRM Add-on MToon 1.0 Outline Geometry Revision 1"
+            },
+            "bake_directory": "",
+            "bake_target": "PACKED",
+            "show_group_selector": false,
+            "show_manage_panel": false,
+            "open_output_attributes_panel": false,
+            "open_manage_panel": false,
+            "open_bake_panel": false,
+            "open_named_attributes_panel": false,
+            "open_bake_data_blocks_panel": false,
+            "open_warnings_panel": true
+          },
+          "custom": {}
+        },
+        {
+          "name": "MToon Outline (F00_002_01_Tops_01_CLOTH)",
+          "type": "NODES",
+          "properties": {
+            "show_viewport": true,
+            "show_render": true,
+            "show_in_editmode": false,
+            "show_on_cage": false,
+            "show_expanded": false,
+            "is_active": false,
+            "use_pin_to_last": true,
+            "use_apply_on_spline": false,
+            "node_group": {
+              "id": "GeometryNodeTree",
+              "name": "VRM Add-on MToon 1.0 Outline Geometry Revision 1"
+            },
+            "bake_directory": "",
+            "bake_target": "PACKED",
+            "show_group_selector": false,
+            "show_manage_panel": false,
+            "open_output_attributes_panel": false,
+            "open_manage_panel": false,
+            "open_bake_panel": false,
+            "open_named_attributes_panel": false,
+            "open_bake_data_blocks_panel": false,
+            "open_warnings_panel": true
+          },
+          "custom": {}
+        }
+      ],
+      "original_material_slots": {
+        "1": "MIA_V23_Body_CommonLight",
+        "2": "MIA_V23_Body_CommonLight",
+        "3": "MIA_V23_Body_CommonLight",
+        "4": "MIA_V23_Body_CommonLight",
+        "5": "MIA_V22_Body_CommonLight_Preview.001",
+        "6": "MIA_V13_PaintedBodySkin",
+        "7": "MIA_V13_PaintedBodySkin",
+        "8": "MIA_V13_PaintedBodySkin"
+      }
+    }
+  },
+  "original_visibility": {
+    "ARCHIVED_R17_MIA_R15_RADIAL_GUIDE_+1": [
+      true,
+      true,
+      false
+    ],
+    "ARCHIVED_R17_MIA_R15_RADIAL_GUIDE_-1": [
+      true,
+      true,
+      false
+    ],
+    "Armature": [
+      true,
+      true,
+      false
+    ],
+    "Body": [
+      true,
+      true,
+      false
+    ],
+    "Face": [
+      true,
+      true,
+      true
+    ],
+    "Face.001": [
+      true,
+      true,
+      false
+    ],
+    "Face.002": [
+      true,
+      true,
+      false
+    ],
+    "Hair001": [
+      true,
+      true,
+      false
+    ],
+    "Hairs": [
+      false,
+      false,
+      false
+    ],
+    "HeadFill": [
+      true,
+      false,
+      true
+    ],
+    "HeadKey": [
+      true,
+      false,
+      true
+    ],
+    "HeadRim": [
+      true,
+      false,
+      true
+    ],
+    "J_Bip_C_Head_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_C_Head_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_C_Neck_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_C_Neck_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_C_Spine_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_C_Spine_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_C_UpperChest_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_C_UpperChest_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_C_UpperChest_collider_1": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_C_UpperChest_collider_1.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_C_UpperChest_collider_2": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_C_UpperChest_collider_2.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_Hand_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_Hand_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_LowerArm_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_LowerArm_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_LowerArm_collider_1": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_LowerArm_collider_1.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_LowerArm_collider_2": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_LowerArm_collider_2.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_LowerArm_collider_3": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_LowerArm_collider_3.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_UpperArm_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_UpperArm_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_UpperArm_collider_1": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_UpperArm_collider_1.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_UpperArm_collider_2": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_UpperArm_collider_2.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_UpperLeg_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_UpperLeg_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_UpperLeg_collider_1": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_UpperLeg_collider_1.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_L_UpperLeg_collider_2": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_L_UpperLeg_collider_2.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_Hand_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_Hand_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_LowerArm_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_LowerArm_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_LowerArm_collider_1": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_LowerArm_collider_1.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_LowerArm_collider_2": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_LowerArm_collider_2.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_LowerArm_collider_3": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_LowerArm_collider_3.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_UpperArm_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_UpperArm_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_UpperArm_collider_1": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_UpperArm_collider_1.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_UpperArm_collider_2": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_UpperArm_collider_2.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_UpperLeg_collider_0": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_UpperLeg_collider_0.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_UpperLeg_collider_1": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_UpperLeg_collider_1.1": [
+      false,
+      false,
+      false
+    ],
+    "J_Bip_R_UpperLeg_collider_2": [
+      true,
+      true,
+      false
+    ],
+    "J_Bip_R_UpperLeg_collider_2.1": [
+      false,
+      false,
+      false
+    ],
+    "Mia_Body_Anatomy_Skin": [
+      true,
+      true,
+      false
+    ],
+    "Mia_Face_AnimeTopology": [
+      true,
+      true,
+      true
+    ],
+    "MIA_REF_mia-canonical-source-v22": [
+      true,
+      true,
+      false
+    ],
+    "MIA_REF_mia-clean-master-v22": [
+      true,
+      true,
+      false
+    ],
+    "MIA_REF_mia-expressions-clean-16-v22": [
+      true,
+      true,
+      false
+    ],
+    "MIA_REVIEW_Body_Back": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_BODY_CENTER": [
+      true,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Body_Front": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Body_LeftOblique": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Body_Profile": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Body_RightOblique": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Face_Back": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Face_Front": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Face_LeftOblique": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Face_Profile": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Face_RightOblique": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Fill": [
+      false,
+      false,
+      false
+    ],
+    "MIA_REVIEW_FOOT_ORIGIN": [
+      true,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Head_Back": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_HEAD_CENTER": [
+      true,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Head_Front": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Head_LeftOblique": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Head_Profile": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Head_RightOblique": [
+      false,
+      false,
+      true
+    ],
+    "MIA_REVIEW_Key": [
+      false,
+      false,
+      false
+    ],
+    "MIA_REVIEW_Rim": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V06_BODY_SKIN": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V06_FACE_SKIN": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V06_HEAD_REVIEW_CAMERA.001": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V06_RIG": [
+      true,
+      false,
+      false
+    ],
+    "MIA_V12_AngledBrow_-1": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V12_AngledBrow_1": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V12_CleanUpperLash_-1": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V12_CleanUpperLash_1": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V12_FineLowerLid_-1": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V12_FineLowerLid_1": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V12_OuterLash_-1": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V12_OuterLash_1": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V13_BodyOutline": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V13_FaceOutline": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V14_Brow_-1": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V14_Brow_1": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V14_EyeSurface": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V14_MouthSeam": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V14_OuterWing_-1": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V14_OuterWing_1": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V14_SculptedSkin": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V14_SmoothJawInk": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V14_UpperLash_-1": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V14_UpperLash_1": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V16_PIXAL_LowerHair": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V16_PIXAL_RecoveredRear": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V16_PIXAL_UpperHair": [
+      true,
+      true,
+      false
+    ],
+    "MIA_V17_LeftBraid_Lane0": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V17_LeftBraid_Lane1": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V17_LeftBraid_Lane2": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V17_LeftBraid_Tail": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V17_LeftBraid_Tie": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V17_MiaHair_HalfUp_OneClosedKnot": [
+      true,
+      false,
+      false
+    ],
+    "MIA_V17_MiaHair_Knot_Wrap00": [
+      true,
+      false,
+      false
+    ],
+    "MIA_V17_MiaHair_Knot_Wrap01": [
+      true,
+      false,
+      false
+    ],
+    "MIA_V17_MiaHair_Knot_Wrap02": [
+      true,
+      false,
+      false
+    ],
+    "MIA_V17_MiaHair_Knot_Wrap03": [
+      true,
+      false,
+      false
+    ],
+    "MIA_V17_MiaHair_Knot_Wrap04": [
+      true,
+      false,
+      false
+    ],
+    "MIA_V17_MiaHair_Knot_Wrap05": [
+      true,
+      false,
+      false
+    ],
+    "MIA_V17_PIXAL_DetailedHair": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V17_RootLining_MIA_V06_BODY_SKIN": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V17_RootLining_MIA_V14_SculptedSkin": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V17_SingleUnderEyeCrease_-1": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V17_SingleUnderEyeCrease_1": [
+      true,
+      true,
+      true
+    ],
+    "MIA_V20_Crown_PixalDonorLock": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V20_HalfUp_Binder": [
+      true,
+      false,
+      true
+    ],
+    "MIA_V20_HalfUp_Fold_Left": [
+      true,
+      false,
+      true
+    ],
+    "MIA_V20_HalfUp_Fold_Right": [
+      true,
+      false,
+      true
+    ],
+    "MIA_V24_Gather_Main": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V24_Gather_Tuck": [
+      false,
+      false,
+      false
+    ],
+    "MIA_V24_Gather_Upper": [
+      false,
+      false,
+      false
+    ],
+    "MiaHair_Braid_Etch0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Braid_Etch1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Braid_Etch2": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Braid_Tail": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Braid_Tail_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Braid_Tail_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Braid_Tail_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Braid_Tail_Etch01": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Concealed_Closed_DomeNape": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_00_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_00_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_01": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_01_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_01_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_02": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_02_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_02_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_03": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_03_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Crown_Flyaway_03_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_Center_Slip_0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_Center_Slip_0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_Center_Slip_0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_Center_Slip_0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Outer_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Outer_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Outer_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Outer_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Outer_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Outer_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Outer_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Outer_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Sweep_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Sweep_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Sweep_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Sweep_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Sweep_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Sweep_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Sweep_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_L_Sweep_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Outer_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Outer_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Outer_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Outer_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Outer_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Outer_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Outer_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Outer_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Short_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Short_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Short_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Short_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Short_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Short_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Short_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Short_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Sweep_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Sweep_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Sweep_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Sweep_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Sweep_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Sweep_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Sweep_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_CrownFringe_R_Sweep_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split2": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split2_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split2_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Fringe_Split2_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart2": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart2_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart2_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_BackPart2_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L2": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L2_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L2_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L2_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L3": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L3_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L3_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_L3_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R2": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R2_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R2_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R2_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R3": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R3_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R3_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_R3_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_TempleL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_TempleL_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_TempleL_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_TempleL_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_TempleR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_TempleR_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_TempleR_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Gather_TempleR_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_HalfUp_OneClosedKnot": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap00_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap00_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap00_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap01": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap01_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap01_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap01_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap02": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap02_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap02_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap02_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap03": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap03_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap03_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap03_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap04": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap04_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap04_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap04_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap05": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap05_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap05_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Knot_Wrap05_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_LooseWisp0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_LooseWisp0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_LooseWisp0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_LooseWisp1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_LooseWisp1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_LooseWisp1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_LooseWisp2": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_LooseWisp2_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_LooseWisp2_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape0_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape0_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape0_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape0_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape0_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape0_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape0_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape0_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape1_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape1_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape1_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape1_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape1_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape1_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape1_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_SideNape1_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave0_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave0_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave0_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave0_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave0_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave0_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave0_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave0_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave1_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave1_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave1_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave1_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave1_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave1_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave1_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave1_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave2_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave2_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave2_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave2_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave2_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave2_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave2_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_L_TempleWave2_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_LEFT_OneBraid_Lane0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_LEFT_OneBraid_Lane1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_LEFT_OneBraid_Lane2": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_LooseWisp0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_LooseWisp0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_LooseWisp0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_LooseWisp1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_LooseWisp1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_LooseWisp1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_LooseWisp2": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_LooseWisp2_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_LooseWisp2_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape0_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape0_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape0_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape0_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape0_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape0_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape0_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape0_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape1_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape1_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape1_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape1_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape1_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape1_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape1_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_SideNape1_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave0_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave0_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave0_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave0_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave0_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave0_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave0_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave0_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave1_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave1_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave1_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave1_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave1_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave1_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave1_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave1_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave2_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave2_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave2_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave2_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave2_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave2_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave2_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_R_TempleWave2_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave00_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave01_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave01_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave01_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave01_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave01_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave01_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave01_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave01_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave02_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave03_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave04_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave04_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave04_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave04_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave04_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave04_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave04_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave04_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave05_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave06_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave06_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave06_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave06_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave06_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave06_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave06_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_LongWave06_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer00_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer01_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer02_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_-1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_-1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_-1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_-1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_Rear_ShortLayer03_1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L2": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L2_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L2_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_L2_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_Mid": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_Mid_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_Mid_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_Mid_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R0": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R0_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R0_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R0_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R1": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R1_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R1_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R1_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R2": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R2_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R2_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_R2_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_TempleL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_TempleL_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_TempleL_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_TempleL_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_TempleR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_TempleR_EdgeL": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_TempleR_EdgeR": [
+      true,
+      true,
+      false
+    ],
+    "MiaHair_UnderFringe_TempleR_Etch00": [
+      true,
+      true,
+      false
+    ],
+    "REF_MIA_CONFIRMED_FACE": [
+      true,
+      false,
+      false
+    ],
+    "REF_V06_TURNAROUND": [
+      true,
+      false,
+      false
+    ],
+    "REF_V06_VISIBILITY": [
+      true,
+      false,
+      false
+    ],
+    "secondary": [
+      false,
+      false,
+      false
+    ],
+    "V22_Fill": [
+      true,
+      false,
+      true
+    ],
+    "V22_Fill.001": [
+      true,
+      false,
+      true
+    ],
+    "V22_Key": [
+      true,
+      false,
+      true
+    ],
+    "V22_Key.001": [
+      true,
+      false,
+      true
+    ],
+    "V22_Rim": [
+      true,
+      false,
+      true
+    ],
+    "V22_Rim.001": [
+      true,
+      false,
+      true
+    ]
+  },
+  "library_sha256": "4a9009d14117c4e7f945013cc5696a7c778850b795c02c415540f528085f0751",
+  "scene": {
+    "render_engine": "BLENDER_EEVEE",
+    "use_freestyle": false,
+    "view_transform": "Standard",
+    "look": "None",
+    "exposure": 0.0,
+    "gamma": 1.0
+  }
+}

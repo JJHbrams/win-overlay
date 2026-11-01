@@ -1,0 +1,20 @@
+{
+  "image": "MIA_V27_ActualUV_Pigment_R3_2048",
+  "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-foundation-v27\\face-final-r3\\MIA_V27_ActualUV_Pigment_R3_2048.exr",
+  "sha256": "826c66754cacf7d846bd4db90ebb913bbba40927fcea3fecda64128b676864c5",
+  "size": [
+    2048,
+    2048
+  ],
+  "color_space": "Non-Color, scene-linear RGB",
+  "rasterized_samples": 3522502,
+  "uv_layer": "UVMap",
+  "method": "Rasterize actual evaluated new skin triangles to original preserved UV; under-eye warm fatigue and thin upper-fold follow new actual upper/lower lid curves in world space. Not old M5 coordinates/maps.",
+  "connected_route": "UVMap -> V27_ACTUAL_UV_PIGMENT -> PigmentTimesControlledLight -> existing controlled-light Emission output",
+  "base_linear": [
+    0.82,
+    0.63,
+    0.55
+  ],
+  "limits": "First painted draft, no art acceptance. Body and hair materials unchanged. Parametric bridge UV at0 samples unpainted base."
+}

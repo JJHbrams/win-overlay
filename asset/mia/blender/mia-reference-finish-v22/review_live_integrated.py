@@ -50,10 +50,11 @@ async def main(args):
             for name, region, angle, distance in [
                 ('head-front', 'head', 'Front', .63),
                 ('head-left-oblique', 'head', 'LeftOblique', .63),
+                ('head-right-oblique', 'head', 'RightOblique', .63),
                 ('head-profile', 'head', 'Profile', .63),
                 ('head-zoom', 'head', 'Front', .4),
                 ('body-front', 'body', 'Front', 2.7)]:
-                owner = args.face_owner if region == 'head' else None
+                owner = args.face_owner if region == 'head' else args.body_owner
                 await execute(prefix+f"review['focus']({region!r},{angle!r},distance={distance!r},owner_name={owner!r})")
                 result = await session.call_tool('look', {'mode': 'viewport', 'shading': 'rendered', 'max_size': 1200, 'user_prompt': PROMPT})
                 if result.isError:
@@ -70,7 +71,7 @@ async def main(args):
             audit = await execute("import bpy,json; print(json.dumps({'path':bpy.data.filepath,'camera':bpy.context.scene.camera.name,'projection':bpy.context.scene.camera.data.type,'viewports':[{'center':list(s.region_3d.view_location),'distance':s.region_3d.view_distance,'projection':s.region_3d.view_perspective} for a in bpy.context.screen.areas if a.type=='VIEW_3D' for s in a.spaces if s.type=='VIEW_3D']}))")
             assert hashlib.sha256(native.read_bytes()).hexdigest() == original_hash
             report={'native':str(native),'sha256':original_hash,'native_unchanged':True,
-                    'before':state,'after':audit,'captures':captures,'face_owner':args.face_owner,
+                    'before':state,'after':audit,'captures':captures,'face_owner':args.face_owner,'body_owner':args.body_owner,
                     'focus_helper_sha256':hashlib.sha256((HERE/'configure_review_scene.py').read_bytes()).hexdigest(),
                     'scope':'Actual MCP viewport navigation only; no native saved. Freestyle render ink is not visible here.'}
             (output/'live-review.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
@@ -84,4 +85,5 @@ if __name__ == '__main__':
     p.add_argument('--expected-current')
     p.add_argument('--output-dir')
     p.add_argument('--face-owner',help='Explicit visible replacement face owner; omit for historical v14 files')
+    p.add_argument('--body-owner',help='Explicit visible replacement body owner; omit for historical v06 files')
     asyncio.run(main(p.parse_args()))

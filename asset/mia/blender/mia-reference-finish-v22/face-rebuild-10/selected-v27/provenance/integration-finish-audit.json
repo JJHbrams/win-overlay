@@ -1,0 +1,53 @@
+{
+  "neutral_rig_follow_max_component_error_m": {
+    "MIA_V27_Foundation_Face": 1.1920928955078125e-07,
+    "V27_Upper_BoundaryRibbon_-1_Dense": 1.1920928955078125e-07,
+    "V27_Lower_BoundaryRibbon_-1_Dense": 1.1920928955078125e-07,
+    "V27_Upper_BoundaryRibbon.001_1_Dense": 1.1920928955078125e-07,
+    "V27_Lower_BoundaryRibbon.001_1_Dense": 1.1920928955078125e-07
+  },
+  "rig": "MIA_V06_RIG",
+  "ribbon_head_weight": 1,
+  "expression_drivers_unchanged": true,
+  "head_material_mask": "Original rig Head vertex weights in rest space, interpolated FLOAT attribute",
+  "head_mask_nonzero_min_z": 1.393617033958435,
+  "head_mask_nonzero_max_z": 1.6467121839523315,
+  "head_material_polygons": 250,
+  "head_uniform_base_linear": [
+    0.82,
+    0.63,
+    0.55
+  ],
+  "uniform_route_nodes": [
+    [
+      "RGB\ub97c BW\ub85c \ubcc0\ud658",
+      "ShaderNodeRGBToBW"
+    ],
+    [
+      "\uc218\ud559",
+      "ShaderNodeMath"
+    ],
+    [
+      "ActualSceneLighting",
+      "ShaderNodeShaderToRGB"
+    ],
+    [
+      "MIA_CommonSkinLightRamp",
+      "ShaderNodeValToRGB"
+    ],
+    [
+      "PigmentTimesControlledLight",
+      "ShaderNodeMixRGB"
+    ],
+    [
+      "\ubc29\ucd9c",
+      "ShaderNodeEmission"
+    ],
+    [
+      "MeasuredWhiteDiffuse",
+      "ShaderNodeBsdfDiffuse"
+    ]
+  ],
+  "lowerbody_original_material_slots_retained": true,
+  "limits": "Small head-pose and final actual image checks pending. Not full motion rig acceptance."
+}

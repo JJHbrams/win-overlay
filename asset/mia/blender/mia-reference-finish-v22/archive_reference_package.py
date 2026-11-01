@@ -49,6 +49,9 @@ def archive(package, destination, repository, supplements=()):
     for row in data['views']:
         for role in ('reference', 'baseline_render', 'candidate_render', 'comparison_board'):
             relocate(row[role], 'references' if role == 'reference' else 'images')
+        crop = row['reference'].get('crop_artifact')
+        if crop:
+            relocate(crop, 'references')
     for src in supplements:
         src = Path(src).resolve()
         target = destination/'supplements'/src.name
