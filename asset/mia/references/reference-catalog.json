@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "character": "Mia",
-  "updated_date": "2026-10-31",
+  "updated_date": "2026-11-02",
   "reference_selection": {
     "character_design": "MIA-DESIGN-MASTER-V22",
     "face_identity": "MIA-FACE-CONFIRMED-20261031",
@@ -11,7 +11,8 @@
     "latest_available_four_view_study": "MIA-BODY-V06",
     "body_visibility_modeling_supplement": "MIA-BODY-V06-VISIBILITY-GUIDE",
     "side_volume_revision": "blocked_no_v04_image",
-    "latest_reaffirmed_face_and_hair_portrait": "MIA-FACE-PORTRAIT-REAFFIRMED-20261031"
+    "latest_reaffirmed_face_and_hair_portrait": "MIA-FACE-PORTRAIT-REAFFIRMED-20261031",
+    "latest_eye_lash_semantic_annotation": "MIA-EYE-LASH-USER-ANNOTATION-20261102"
   },
   "rules": [
     "Select by role and explicit user decision, never by largest version number alone.",
@@ -299,6 +300,20 @@
         1536
       ],
       "mode": "RGBA"
+    },
+    {
+      "id": "MIA-EYE-LASH-USER-ANNOTATION-20261102",
+      "status": "user_annotation",
+      "role": "visible_eye_opening_versus_lash_source_correction",
+      "path": "received/mia-eye-lash-user-markup-20261102.png",
+      "sha256": "3dd3d4bcbf3539e7ed40c9517b63485bb3a244c62f23e59d7cdbeebf4e3e0974",
+      "size": [
+        2560,
+        740
+      ],
+      "mode": "RGBA",
+      "semantics": "User red=source actual eye opening; green=source lashes; orange/yellow=old model opening/lash appearance. Makeup also rejected as unlike source.",
+      "limits": "Manual display annotation, not a texture, exact orthographic blueprint or approval of current model. Original unmarked portrait remains the design source."
     }
   ],
   "reaffirmed_front_pixel_equal_to_old_canonical": false

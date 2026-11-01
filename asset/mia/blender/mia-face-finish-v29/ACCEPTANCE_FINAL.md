@@ -1,5 +1,7 @@
 # Independent final acceptance — bounded v29 changes
 
+**Superseded appearance interpretation,2026-11-02:** the user rejects the delivered result as unchanged/wrong eye opening, absent-looking lashes and wrong makeup, then supplies red/green source-boundary annotation. The technical/anti-regression evidence below remains historical, but it does **not** satisfy current source-look completion. Continue under `../mia-visible-art-v30/ACCEPTANCE.md`; do not use this bounded PASS to waive visible source discrepancies.
+
 Fresh read-only reviewer `face_v29_acceptance` reviewed implementation evidence and actual saved-native images independently of the producers. Root also inspected the paired source boards, critical views, orbit and live result.
 
 | ID | Result | Actual evidence |

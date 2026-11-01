@@ -7,6 +7,7 @@
 | 역할 | 이미지 | 상태 / 사용 범위 |
 |---|---|---|
 | 최신 얼굴·원래 헤어 | [재확인 얼굴 원화](references/received/mia-face-reaffirmed-20261031.png) | 사용자 재확인. 눈매·얼굴 인상·웨이브·왼쪽 braid 기준. 숨겨진 두개골 깊이까지 확정하지 않음 |
+| 눈매와 속눈썹 구분 | [사용자 색상 표시 비교](references/received/mia-eye-lash-user-markup-20261102.png) | 빨강=원화의 실제 눈매, 초록=속눈썹. 주황/노랑의 기존 모델과 다름을 직접 지적한 관찰 자료. 색상 선을 텍스처로 쓰거나 현재 모델 승인으로 해석하지 않음 |
 | 캐릭터·의상·소품 | [v22 착의 마스터](references/mia-clean-master-v22.png) | 기존 승인 디자인. 뷰별 포즈·비율 차이가 있어 엄밀한 정투영 도면은 아님 |
 | 표정·선 표현·미묘한 얼굴 시점 | [재확인 표정 시트](references/mia-expression-style-confirmed-20261031.png) | 사용자 확인 역할 유지. 표정뿐 아니라 고개와 시선의 미묘한 각도도 대조 |
 | 정면 체형 인상·복부·원래 헤어 | [재확인 전신 정면](references/received/mia-front-body-reaffirmed-20261031.png) | 사용자 재확인. 옷에 가려진 체형의 치수는 미확정 |

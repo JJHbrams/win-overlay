@@ -1,0 +1,27 @@
+# Reopened visual work — do not resume the v29 completion interpretation
+
+The user rejects v29's nearly unchanged final appearance and explicitly authorizes continuing until the remaining face/hair source tasks are resolved. Technical assets are present but that fact did not fulfill the visible result. Old `ACCEPTANCE_FINAL.md` is a bounded anti-regression record, not current source-look approval.
+
+Actual truth audit:
+
+- Reopened C contains four visible V29 lash owners and packed active face images. The rendered scene is the reported C hash, not a different stale file.
+- Actual skin change from G2L projects at most about1.56–1.60pixels at delivered512head scale. It is a tiny Gaussian canthus warp, not a new source contour design.
+- Lower individual tufts occupy only about0.37–0.84pixels vertically at512; upper tufts1–3pixels lie against the retained dominant Dense BoundaryRibbon. The user is correct that the intended lash appearance is absent.
+- Actual new color effect averages about0.34/255 over the model and1.08/255 in sampled under-eye regions. The nose pigment barely changes. Generic UV ellipses/parabola and soft artB do not reproduce original lower-lid/fold/nose accents.
+- Hair keeps72percent constant ash, its grazing ink MapRange is0→0, and selective generated ink covers about30percent of area at sampled triangle centroids.4096 is rebake storage; source detail was512per-view/2048original. Washed/coarse hair remains actual unfinished work.
+
+The latest user-marked comparison is authoritative for identifying visible red eye opening versus green lashes. Root preserves it byte-exact in references/received and records its relation to the original unmarked portrait. Do not bake colored marks or conflate green/black makeup with skin boundaries again.
+
+Read ACCEPTANCE.md (critical AC1–7). Work is in progress; no v30 art approval or final native exists yet. BodyL, healthy cheek, source aspect, all existing checkpoints and current live C remain protected. Eye and surface/hair implementations own separate new folders/worktree branches; root integrates only after actual normal-scale source proof. No recurrent automation is created.
+
+## Source frame and initial implementation
+
+User-marked PNG is preserved at `references/received/mia-eye-lash-user-markup-20261102.png`, SHA3dd3d4bcbf3539e7ed40c9517b63485bb3a244c62f23e59d7cdbeebf4e3e0974. `user-markup-pixels.json` extracts original2560x740 red/green/orange/yellow observation pixels; marks are never baked as texture.
+
+The old source board has a real registration error: the native camera already projects the eye-centre line near-6.875degrees (source manual centres-6.422), but old display SRT adds+5.314degrees and flattens the model eye line. New front registration uses one common opening-centre/IPD scalar1.16981465568, rotation0 and translation(-142.011468,-173.938783) in full board coordinates; subtract50fromY for a tile pasted below the header. This display correction does not excuse wrong source geometry or weak paint.
+
+Red/green overlap hides parts of the red trace. A naive per-column min/max falsely read upper points as lower and would collapse the eye. Eye A is rejected before GPU; B uses consistent closed red hull/explicit continuation with2px stroke uncertainty. Actual source-fit field is now substantive (~2–4mm), coordinated across skin/wall/ocular and42keys, rather than token.9mm lowering. First clean/default/closure images are being rendered; no geometry appearance acceptance yet.
+
+Root imagegen D is a1254square source-graphic pigment candidate based on actual2048UV target plus portrait/markup. New face A uses actual lid-root UV traces, removes unwanted D duplicates/tails through native selectors, applies selected art at default1 without flatbase cleanup, and produces visibly defined fatigue/fold/nose marks. Actual first two images are read; source matching remains pending on revised eyes/all views.
+
+Hair A removes the72percent ash suppression and restores atlas variation, but actual front/profile/back remain purple/coarse/clay. A is not hair completion. Hair producer is repairing actual UV-split cut-ring terminals, neutralizing palette and preparing fine linework. Hair also lacks proper head following in the inherited scene; basic rest-preserving attachment and hair-on pose contact must be checked after static look, without claiming final spring physics.
