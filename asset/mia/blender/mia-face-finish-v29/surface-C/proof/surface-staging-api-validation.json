@@ -1,0 +1,84 @@
+{
+  "native_sha256_before": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+  "native_sha256_after": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+  "unassigned_material_only": true,
+  "native_saved": false,
+  "rendered": false,
+  "original_face_graph_unchanged": true,
+  "new_material_node_count": 61,
+  "actual_specular_bsdf": {
+    "type": "ShaderNodeBsdfAnisotropic",
+    "input_names": [
+      "Color",
+      "Roughness",
+      "Anisotropy",
+      "Rotation",
+      "Normal",
+      "Tangent",
+      "Weight"
+    ]
+  },
+  "drivers": [
+    {
+      "path": "nodes[\"V29_FoldOpen_R\"].outputs[0].default_value",
+      "expression": "max(0.0,1.0-max(allclose,sideclose))",
+      "valid": true,
+      "variables": [
+        [
+          "allclose",
+          "Key.018",
+          "key_blocks[\"Face.M_F00_000_00_Fcl_EYE_Close\"].value"
+        ],
+        [
+          "sideclose",
+          "Key.018",
+          "key_blocks[\"Face.M_F00_000_00_Fcl_EYE_Close_R\"].value"
+        ]
+      ]
+    },
+    {
+      "path": "nodes[\"V29_FoldOpen_L\"].outputs[0].default_value",
+      "expression": "max(0.0,1.0-max(allclose,sideclose))",
+      "valid": true,
+      "variables": [
+        [
+          "allclose",
+          "Key.018",
+          "key_blocks[\"Face.M_F00_000_00_Fcl_EYE_Close\"].value"
+        ],
+        [
+          "sideclose",
+          "Key.018",
+          "key_blocks[\"Face.M_F00_000_00_Fcl_EYE_Close_L\"].value"
+        ]
+      ]
+    }
+  ],
+  "images": {
+    "art": {
+      "size": [
+        1254,
+        1254
+      ],
+      "file_depth": 24,
+      "colorspace": "sRGB"
+    },
+    "features": {
+      "size": [
+        2048,
+        2048
+      ],
+      "file_depth": 128,
+      "colorspace": "Non-Color"
+    },
+    "response": {
+      "size": [
+        2048,
+        2048
+      ],
+      "file_depth": 128,
+      "colorspace": "Non-Color"
+    }
+  },
+  "status": "API construction validated only. Material not assigned to any owner; no active-render response or ART acceptance established."
+}

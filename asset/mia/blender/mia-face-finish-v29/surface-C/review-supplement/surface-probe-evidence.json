@@ -1,0 +1,282 @@
+{
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\Mia_FaceSurface_v29_C.blend",
+    "sha256": "d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be"
+  },
+  "verified_png_and_linear_pairs": 32,
+  "boards": {
+    "production_and_pigment": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\paired-production-and-pigment.png",
+      "sha256": "d0eaa821281f4055e1b5086ffc90dde584798fb901dced2852a970b1b93fc95e"
+    },
+    "feature_gain_pairs": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\individual-feature-gains.png",
+      "sha256": "2be03f768e328953a2867bf01d8ebbaf7027c4b9dd4241b8d16bed37b0d5d7a6"
+    },
+    "actual_light_reflection": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\actual-light-reflection-probes.png",
+      "sha256": "6771a68c7792f9424ac3a8c31e647c967d7b50f5f5ff15693ea86093d0cc54d1"
+    },
+    "native_vs_flat_maps": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\native-vs-flat-reflection-controls.png",
+      "sha256": "86091938482a252618797799756b73289fcf03d51b8b679465fed215c8c0fd4c"
+    },
+    "closure": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\surface-closure-probes.png",
+      "sha256": "cc4cf8cf1c37304ab8ede0255d91cf5217ba5937d7c882b628ba5e2330cad9fe"
+    },
+    "headfollow": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\surface-headfollow-probes.png",
+      "sha256": "0e3156416ea56b655e8c08e9ee3573475934fd03ea16a8dc8e9ae5ae8b5d3bd3"
+    }
+  },
+  "linear_response_checks": [
+    {
+      "pair": [
+        "before_production",
+        "after_production"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.15234375,
+      "mean_abs_linear_RGB": 0.0051882583647966385,
+      "rms_linear_RGB": 0.012487286709154766,
+      "pixels_with_delta_above1e-8": 113560,
+      "preset": "first",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "before_color",
+        "after_color"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.153564453125,
+      "mean_abs_linear_RGB": 0.002171508502215147,
+      "rms_linear_RGB": 0.010189132508291468,
+      "pixels_with_delta_above1e-8": 27327,
+      "preset": "first",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "fatigue_0.0",
+        "fatigue_1.0"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.4073486328125,
+      "mean_abs_linear_RGB": 0.0045046997256577015,
+      "rms_linear_RGB": 0.030677414022575684,
+      "pixels_with_delta_above1e-8": 12181,
+      "preset": "features",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "fold_0.0",
+        "fold_1.0"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.46484375,
+      "mean_abs_linear_RGB": 0.0023807999677956104,
+      "rms_linear_RGB": 0.021568017127118484,
+      "pixels_with_delta_above1e-8": 5139,
+      "preset": "features",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "makeup_0.0",
+        "makeup_1.0"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.20263671875,
+      "mean_abs_linear_RGB": 0.0010426895460113883,
+      "rms_linear_RGB": 0.007881967388671583,
+      "pixels_with_delta_above1e-8": 11830,
+      "preset": "features",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "diffuse_original",
+        "diffuse_control"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.078857421875,
+      "mean_abs_linear_RGB": 0.004687381908297539,
+      "rms_linear_RGB": 0.011586511717002953,
+      "pixels_with_delta_above1e-8": 108948,
+      "preset": "response",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "diffuse_control",
+        "diffuse_moved"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.62841796875,
+      "mean_abs_linear_RGB": 0.1493292897939682,
+      "rms_linear_RGB": 0.2074004160737911,
+      "pixels_with_delta_above1e-8": 196914,
+      "preset": "response",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "spec_flat0",
+        "spec_flat1"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.572265625,
+      "mean_abs_linear_RGB": 0.09609370678663254,
+      "rms_linear_RGB": 0.13737169068736133,
+      "pixels_with_delta_above1e-8": 145017,
+      "preset": "response",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "spec_flat1",
+        "spec_moved"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.493408203125,
+      "mean_abs_linear_RGB": 0.10229040682315826,
+      "rms_linear_RGB": 0.13031981017015135,
+      "pixels_with_delta_above1e-8": 197748,
+      "preset": "response",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "rough_low",
+        "rough_high"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 1.643310546875,
+      "mean_abs_linear_RGB": 0.12280967086553574,
+      "rms_linear_RGB": 0.27050954621467943,
+      "pixels_with_delta_above1e-8": 144992,
+      "preset": "response",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "native_spec_and_roughness",
+        "flat_spec_native_roughness"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.06383895874023438,
+      "mean_abs_linear_RGB": 0.0013383538462221622,
+      "rms_linear_RGB": 0.003793309230052876,
+      "pixels_with_delta_above1e-8": 143757,
+      "preset": "map-controls",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "native_spec_and_roughness",
+        "native_spec_flat_roughness"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.025848388671875,
+      "mean_abs_linear_RGB": 0.000113386515295133,
+      "rms_linear_RGB": 0.0011288048693045938,
+      "pixels_with_delta_above1e-8": 110075,
+      "preset": "map-controls",
+      "nonzero_actual_response": true
+    },
+    {
+      "pair": [
+        "native_spec_and_roughness",
+        "flat_spec_and_roughness"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.06565475463867188,
+      "mean_abs_linear_RGB": 0.001338024390861392,
+      "rms_linear_RGB": 0.003839112657309174,
+      "pixels_with_delta_above1e-8": 143753,
+      "preset": "map-controls",
+      "nonzero_actual_response": true
+    }
+  ],
+  "all_expected_actual_response_nonzero": true,
+  "actual_blink_fold_driver_checks": [
+    {
+      "probe": "Close_0.5",
+      "actual_fold_open_R": 0.5000000596046448,
+      "actual_fold_open_L": 0.5000000596046448,
+      "actual_keys": {
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+      }
+    },
+    {
+      "probe": "Close_1.0",
+      "actual_fold_open_R": 0.0,
+      "actual_fold_open_L": 0.0,
+      "actual_keys": {
+        "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+      }
+    },
+    {
+      "probe": "Close_R_0.5",
+      "actual_fold_open_R": 0.5000000596046448,
+      "actual_fold_open_L": 1.0,
+      "actual_keys": {
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+      }
+    },
+    {
+      "probe": "Close_R_1.0",
+      "actual_fold_open_R": 0.0,
+      "actual_fold_open_L": 1.0,
+      "actual_keys": {
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+      }
+    },
+    {
+      "probe": "Close_L_0.5",
+      "actual_fold_open_R": 1.0,
+      "actual_fold_open_L": 0.5000000596046448,
+      "actual_keys": {
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+      }
+    },
+    {
+      "probe": "Close_L_1.0",
+      "actual_fold_open_R": 1.0,
+      "actual_fold_open_L": 0.0,
+      "actual_keys": {
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+      }
+    }
+  ],
+  "preservation": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\surface-candidate-guard.json",
+    "sha256": "e6264f84d605af3d6627f282a1f654b4a809d89eae837d77f7eccd7c9ce0757f"
+  },
+  "source_art_actual_size": [
+    1254,
+    1254
+  ],
+  "native_numeric_maps_size": [
+    2048,
+    2048
+  ],
+  "resolution_note": "Generated B art remains1254-square sRGB;2048 native control bakes do not add imagegen paint detail.",
+  "status": "Actual probe correspondence/response checks only; independent local surface/style/source review and final integrated-native approval remain separate"
+}

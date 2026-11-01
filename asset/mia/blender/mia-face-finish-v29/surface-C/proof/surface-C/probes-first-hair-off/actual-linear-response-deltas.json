@@ -1,0 +1,31 @@
+{
+  "native_sha256": "d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be",
+  "preset": "first",
+  "comparisons": [
+    {
+      "pair": [
+        "before_production",
+        "after_production"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.15234375,
+      "mean_abs_linear_RGB": 0.0051882583647966385,
+      "rms_linear_RGB": 0.012487286709154766,
+      "pixels_with_delta_above1e-8": 113560
+    },
+    {
+      "pair": [
+        "before_color",
+        "after_color"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.153564453125,
+      "mean_abs_linear_RGB": 0.002171508502215147,
+      "rms_linear_RGB": 0.010189132508291468,
+      "pixels_with_delta_above1e-8": 27327
+    }
+  ],
+  "status": "Numerical actual response only; spatial/style/source acceptance remains independent"
+}

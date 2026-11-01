@@ -1,0 +1,63 @@
+{
+  "mode": "built-in image_gen edit",
+  "intent": "staged pigment ART ONLY, not shader/data-masks/native application",
+  "inputs": [
+    {
+      "role": "UV EDIT TARGET",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\actual-packed-pigment-display.png",
+      "sha256": "934f2ce794ee8ad01598822c8ca7b94fec4c9c6fc923208d5b91cc37b8bfd4ac"
+    },
+    {
+      "role": "Mia STYLE/COLOR ONLY",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+      "sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44"
+    }
+  ],
+  "native_baseline_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+  "status": "REJECTED_FOR_DIRECT_UV_USE: extra rim-like line/secondaryarc and background drift; staged art only, not applied",
+  "output": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\art-pigment-A\\Mia_UVPigment_Art_A.png",
+    "generated_original": "C:\\Users\\antio\\.codex\\generated_images\\01a19717-47a4-7d21-842f-b692eee3790c\\exec-790e95a3-cd58-4e1b-b647-a786e6feea2e.png",
+    "sha256": "a0cccc8c55583020e7f4cbb5567ba9d2c005793fd569befed43b913e2c3a7dbc",
+    "actual_size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "no_rescale": true
+  },
+  "protected_forehead_25to75percentX_0to35percentY": {
+    "rgb_mean": [
+      234.69941301988888,
+      207.4917014412328,
+      195.1346558592413
+    ],
+    "rgb_std": [
+      0.5663143735210113,
+      0.576288425600812,
+      0.6237071465788339
+    ],
+    "corner_rgb": [
+      [
+        231,
+        205,
+        191
+      ],
+      [
+        234,
+        206,
+        192
+      ],
+      [
+        232,
+        203,
+        194
+      ],
+      [
+        231,
+        204,
+        191
+      ]
+    ]
+  }
+}

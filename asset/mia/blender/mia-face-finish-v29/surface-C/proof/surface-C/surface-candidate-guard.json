@@ -1,0 +1,7015 @@
+{
+  "baseline": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\Mia_EyeLash_v29_G.blend",
+  "baseline_sha256": "ee92c9447817eb35347aec01fd00c76630e02f3cba3c60d0e9af2874d2e1d45a",
+  "baseline_sha256_after": "ee92c9447817eb35347aec01fd00c76630e02f3cba3c60d0e9af2874d2e1d45a",
+  "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\Mia_FaceSurface_v29_C.blend",
+  "candidate_sha256": "d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be",
+  "geometry_all_owners_exact": true,
+  "original_material_and_nested_group_digests_equal": true,
+  "original_image_pixels_colorspaces_equal": true,
+  "body_head_neck_existing_material_graphs_untouched": true,
+  "new_materials": [
+    "V29_Face_MaskedPigment_ActualLight",
+    "V29_InnerWall_-1_RootFade",
+    "V29_InnerWall_1_RootFade"
+  ],
+  "actual_new_material_graphs": {
+    "V29_Face_MaskedPigment_ActualLight": {
+      "nodes": [
+        {
+          "name": "MeasuredWhiteDiffuse",
+          "type": "ShaderNodeBsdfDiffuse",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Roughness",
+              0.0
+            ],
+            [
+              "Normal",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "ActualSceneLighting",
+          "type": "ShaderNodeShaderToRGB",
+          "mute": false,
+          "inputs": []
+        },
+        {
+          "name": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "type": "ShaderNodeRGBToBW",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "\uc218\ud559",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              4.0
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "DIVIDE"
+        },
+        {
+          "name": "MIA_CommonSkinLightRamp",
+          "type": "ShaderNodeValToRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ]
+          ],
+          "ramp": [
+            [
+              0.02500000037252903,
+              [
+                0.47999998927116394,
+                0.36000001430511475,
+                0.3400000035762787,
+                1.0
+              ]
+            ],
+            [
+              0.17499999701976776,
+              [
+                0.7200000286102295,
+                0.6299999952316284,
+                0.6000000238418579,
+                1.0
+              ]
+            ],
+            [
+              0.550000011920929,
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              0.949999988079071,
+              [
+                1.059999942779541,
+                1.0399999618530273,
+                1.0199999809265137,
+                1.0
+              ]
+            ]
+          ],
+          "ramp_interpolation": "EASE"
+        },
+        {
+          "name": "PigmentTimesControlledLight",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              1.0
+            ],
+            [
+              "Color1",
+              [
+                0.8199999928474426,
+                0.6299999952316284,
+                0.550000011920929,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MULTIPLY"
+        },
+        {
+          "name": "\ubc29\ucd9c",
+          "type": "ShaderNodeEmission",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Strength",
+              1.0
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "type": "ShaderNodeOutputMaterial",
+          "mute": false,
+          "inputs": [
+            [
+              "Displacement",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Thickness",
+              0.0
+            ]
+          ],
+          "is_active_output": true
+        },
+        {
+          "name": "V27_ACTUAL_UV_PIGMENT",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "REPEAT",
+          "image": {
+            "name": "V28_ActualUV_OrbitPigment_2048_D",
+            "colorspace": "Non-Color",
+            "packed_sha": "90ab0e927e6e679c2b16bbd55c6036606566291435b37bca726769518b82dc5a"
+          }
+        },
+        {
+          "name": "UV \ub9f5.001",
+          "type": "ShaderNodeUVMap",
+          "mute": false,
+          "inputs": [],
+          "uv_map": "UVMap"
+        },
+        {
+          "name": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "type": "ShaderNodeSeparateColor",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "V29_NATIVE_FeatureControls",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "EXTEND",
+          "image": {
+            "name": "V29_FeatureControls_RGB.exr",
+            "colorspace": "Non-Color",
+            "packed_sha": "9db1e3a7ce76919ff269fd00d5aa75e39ea6b3a31f5b49f61180a2f6c1e09352"
+          }
+        },
+        {
+          "name": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "type": "ShaderNodeSeparateColor",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "V29_NATIVE_LightReflectControls",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "EXTEND",
+          "image": {
+            "name": "V29_LightReflectControls_RGB.exr",
+            "colorspace": "Non-Color",
+            "packed_sha": "5150f893b7b2a74e437aeba5a16998b99499e4b80841045dba9eef0dfd0a9954"
+          }
+        },
+        {
+          "name": "V29_ImageGenB_MaskedArt_sRGB",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "EXTEND",
+          "image": {
+            "name": "Mia_UVPigment_Art_B.png",
+            "colorspace": "sRGB",
+            "packed_sha": "dd6309a1d4bdc121a73274dd848c55000d22ca0045dad29683155dc7c68c0d34"
+          }
+        },
+        {
+          "name": "V29_SurfaceEnabled",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_FatigueGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.550000011920929
+        },
+        {
+          "name": "V29_FoldGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.6499999761581421
+        },
+        {
+          "name": "V29_MakeupGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.4000000059604645
+        },
+        {
+          "name": "V29_SpecularGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.07999999821186066
+        },
+        {
+          "name": "V29_ShadowEnabled",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_FaceRootFade",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_FoldOpen_R",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_FoldOpen_L",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "\ubd84\ub9ac XYZ",
+          "type": "ShaderNodeSeparateXYZ",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "\uc218\ud559.001",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "LESS_THAN"
+        },
+        {
+          "name": "\uc218\ud559.002",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.003",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              1.0
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "SUBTRACT"
+        },
+        {
+          "name": "\uc218\ud559.004",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.005",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "ADD"
+        },
+        {
+          "name": "\uc218\ud559.006",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.007",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MAXIMUM"
+        },
+        {
+          "name": "V29_LocalOldAccentCleanup",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.8199999928474426,
+                0.6299999952316284,
+                0.550000011920929,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "\uc218\ud559.008",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.009",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.010",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.011",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MAXIMUM"
+        },
+        {
+          "name": "\uc218\ud559.012",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MAXIMUM"
+        },
+        {
+          "name": "V29_IndependentCosmeticArt",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_CompleteCosmeticRootFade",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_OriginalVsSurfaceBypass",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "\uc218\ud559.013",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.014",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.015",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              1.0
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "SUBTRACT"
+        },
+        {
+          "name": "\uc218\ud559.016",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.017",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              1.0
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "SUBTRACT"
+        },
+        {
+          "name": "V29_ActiveDiffuseShadowControl",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_SpecularOverrideFlag",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.0
+        },
+        {
+          "name": "V29_SpecularOverrideValue",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_RoughnessOverrideFlag",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.0
+        },
+        {
+          "name": "V29_RoughnessOverrideValue",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.20000000298023224
+        },
+        {
+          "name": "V29_SpecularMaskOrFlatProbe",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_RoughnessMapOrFlatProbe",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_ACTUAL_SpecularBSDF",
+          "type": "ShaderNodeBsdfAnisotropic",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Roughness",
+              0.5
+            ],
+            [
+              "Anisotropy",
+              0.0
+            ],
+            [
+              "Rotation",
+              0.0
+            ],
+            [
+              "Normal",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Tangent",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ],
+          "distribution": "MULTI_GGX"
+        },
+        {
+          "name": "V29_ActualSceneSpecular",
+          "type": "ShaderNodeShaderToRGB",
+          "mute": false,
+          "inputs": []
+        },
+        {
+          "name": "\uc218\ud559.018",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.019",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "V29_WeightedActualSpecular",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              1.0
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.020",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "V29_DiffusePlusRestrainedSpecular",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              1.0
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "ADD"
+        }
+      ],
+      "links": [
+        [
+          "MeasuredWhiteDiffuse",
+          "BSDF",
+          "ActualSceneLighting",
+          "Shader"
+        ],
+        [
+          "ActualSceneLighting",
+          "Color",
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Color"
+        ],
+        [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Val",
+          "\uc218\ud559",
+          "Value"
+        ],
+        [
+          "\uc218\ud559",
+          "Value",
+          "MIA_CommonSkinLightRamp",
+          "Fac"
+        ],
+        [
+          "\ubc29\ucd9c",
+          "Emission",
+          "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "Surface"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V27_ACTUAL_UV_PIGMENT",
+          "Vector"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V29_NATIVE_FeatureControls",
+          "Vector"
+        ],
+        [
+          "V29_NATIVE_FeatureControls",
+          "Color",
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Color"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V29_NATIVE_LightReflectControls",
+          "Vector"
+        ],
+        [
+          "V29_NATIVE_LightReflectControls",
+          "Color",
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Color"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V29_ImageGenB_MaskedArt_sRGB",
+          "Vector"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "\ubd84\ub9ac XYZ",
+          "Vector"
+        ],
+        [
+          "\ubd84\ub9ac XYZ",
+          "X",
+          "\uc218\ud559.001",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.001",
+          "Value",
+          "\uc218\ud559.002",
+          "Value"
+        ],
+        [
+          "V29_FoldOpen_R",
+          "Value",
+          "\uc218\ud559.002",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.001",
+          "Value",
+          "\uc218\ud559.003",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.003",
+          "Value",
+          "\uc218\ud559.004",
+          "Value"
+        ],
+        [
+          "V29_FoldOpen_L",
+          "Value",
+          "\uc218\ud559.004",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.002",
+          "Value",
+          "\uc218\ud559.005",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.004",
+          "Value",
+          "\uc218\ud559.005",
+          "Value_001"
+        ],
+        [
+          "V29_FoldGain",
+          "Value",
+          "\uc218\ud559.006",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.005",
+          "Value",
+          "\uc218\ud559.006",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Red",
+          "\uc218\ud559.007",
+          "Value"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Green",
+          "\uc218\ud559.007",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.007",
+          "Value",
+          "V29_LocalOldAccentCleanup",
+          "Fac"
+        ],
+        [
+          "V27_ACTUAL_UV_PIGMENT",
+          "Color",
+          "V29_LocalOldAccentCleanup",
+          "Color1"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Red",
+          "\uc218\ud559.008",
+          "Value"
+        ],
+        [
+          "V29_FatigueGain",
+          "Value",
+          "\uc218\ud559.008",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Green",
+          "\uc218\ud559.009",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.006",
+          "Value",
+          "\uc218\ud559.009",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Blue",
+          "\uc218\ud559.010",
+          "Value"
+        ],
+        [
+          "V29_MakeupGain",
+          "Value",
+          "\uc218\ud559.010",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.008",
+          "Value",
+          "\uc218\ud559.011",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.009",
+          "Value",
+          "\uc218\ud559.011",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.011",
+          "Value",
+          "\uc218\ud559.012",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.010",
+          "Value",
+          "\uc218\ud559.012",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.012",
+          "Value",
+          "V29_IndependentCosmeticArt",
+          "Fac"
+        ],
+        [
+          "V29_LocalOldAccentCleanup",
+          "Color",
+          "V29_IndependentCosmeticArt",
+          "Color1"
+        ],
+        [
+          "V29_ImageGenB_MaskedArt_sRGB",
+          "Color",
+          "V29_IndependentCosmeticArt",
+          "Color2"
+        ],
+        [
+          "V29_FaceRootFade",
+          "Value",
+          "V29_CompleteCosmeticRootFade",
+          "Fac"
+        ],
+        [
+          "V27_ACTUAL_UV_PIGMENT",
+          "Color",
+          "V29_CompleteCosmeticRootFade",
+          "Color1"
+        ],
+        [
+          "V29_IndependentCosmeticArt",
+          "Color",
+          "V29_CompleteCosmeticRootFade",
+          "Color2"
+        ],
+        [
+          "V29_SurfaceEnabled",
+          "Value",
+          "V29_OriginalVsSurfaceBypass",
+          "Fac"
+        ],
+        [
+          "V27_ACTUAL_UV_PIGMENT",
+          "Color",
+          "V29_OriginalVsSurfaceBypass",
+          "Color1"
+        ],
+        [
+          "V29_CompleteCosmeticRootFade",
+          "Color",
+          "V29_OriginalVsSurfaceBypass",
+          "Color2"
+        ],
+        [
+          "V29_OriginalVsSurfaceBypass",
+          "Color",
+          "PigmentTimesControlledLight",
+          "Color1"
+        ],
+        [
+          "V29_SurfaceEnabled",
+          "Value",
+          "\uc218\ud559.013",
+          "Value"
+        ],
+        [
+          "V29_ShadowEnabled",
+          "Value",
+          "\uc218\ud559.013",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.013",
+          "Value",
+          "\uc218\ud559.014",
+          "Value"
+        ],
+        [
+          "V29_FaceRootFade",
+          "Value",
+          "\uc218\ud559.014",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Red",
+          "\uc218\ud559.015",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.015",
+          "Value",
+          "\uc218\ud559.016",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.014",
+          "Value",
+          "\uc218\ud559.016",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.016",
+          "Value",
+          "\uc218\ud559.017",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.017",
+          "Value",
+          "V29_ActiveDiffuseShadowControl",
+          "Fac"
+        ],
+        [
+          "MIA_CommonSkinLightRamp",
+          "Color",
+          "V29_ActiveDiffuseShadowControl",
+          "Color2"
+        ],
+        [
+          "V29_ActiveDiffuseShadowControl",
+          "Color",
+          "PigmentTimesControlledLight",
+          "Color2"
+        ],
+        [
+          "V29_SpecularOverrideFlag",
+          "Value",
+          "V29_SpecularMaskOrFlatProbe",
+          "Fac"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Green",
+          "V29_SpecularMaskOrFlatProbe",
+          "Color1"
+        ],
+        [
+          "V29_SpecularOverrideValue",
+          "Value",
+          "V29_SpecularMaskOrFlatProbe",
+          "Color2"
+        ],
+        [
+          "V29_RoughnessOverrideFlag",
+          "Value",
+          "V29_RoughnessMapOrFlatProbe",
+          "Fac"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Blue",
+          "V29_RoughnessMapOrFlatProbe",
+          "Color1"
+        ],
+        [
+          "V29_RoughnessOverrideValue",
+          "Value",
+          "V29_RoughnessMapOrFlatProbe",
+          "Color2"
+        ],
+        [
+          "V29_RoughnessMapOrFlatProbe",
+          "Color",
+          "V29_ACTUAL_SpecularBSDF",
+          "Roughness"
+        ],
+        [
+          "V29_ACTUAL_SpecularBSDF",
+          "BSDF",
+          "V29_ActualSceneSpecular",
+          "Shader"
+        ],
+        [
+          "V29_SpecularGain",
+          "Value",
+          "\uc218\ud559.018",
+          "Value"
+        ],
+        [
+          "V29_SurfaceEnabled",
+          "Value",
+          "\uc218\ud559.018",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.018",
+          "Value",
+          "\uc218\ud559.019",
+          "Value"
+        ],
+        [
+          "V29_FaceRootFade",
+          "Value",
+          "\uc218\ud559.019",
+          "Value_001"
+        ],
+        [
+          "V29_ActualSceneSpecular",
+          "Color",
+          "V29_WeightedActualSpecular",
+          "Color1"
+        ],
+        [
+          "V29_SpecularMaskOrFlatProbe",
+          "Color",
+          "\uc218\ud559.020",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.019",
+          "Value",
+          "\uc218\ud559.020",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.020",
+          "Value",
+          "V29_WeightedActualSpecular",
+          "Color2"
+        ],
+        [
+          "PigmentTimesControlledLight",
+          "Color",
+          "V29_DiffusePlusRestrainedSpecular",
+          "Color1"
+        ],
+        [
+          "V29_WeightedActualSpecular",
+          "Color",
+          "V29_DiffusePlusRestrainedSpecular",
+          "Color2"
+        ],
+        [
+          "V29_DiffusePlusRestrainedSpecular",
+          "Color",
+          "\ubc29\ucd9c",
+          "Color"
+        ]
+      ]
+    },
+    "V29_InnerWall_-1_RootFade": {
+      "nodes": [
+        {
+          "name": "MeasuredWhiteDiffuse",
+          "type": "ShaderNodeBsdfDiffuse",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Roughness",
+              0.0
+            ],
+            [
+              "Normal",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "ActualSceneLighting",
+          "type": "ShaderNodeShaderToRGB",
+          "mute": false,
+          "inputs": []
+        },
+        {
+          "name": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "type": "ShaderNodeRGBToBW",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "\uc218\ud559",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              4.0
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "DIVIDE"
+        },
+        {
+          "name": "MIA_CommonSkinLightRamp",
+          "type": "ShaderNodeValToRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ]
+          ],
+          "ramp": [
+            [
+              0.02500000037252903,
+              [
+                0.47999998927116394,
+                0.36000001430511475,
+                0.3400000035762787,
+                1.0
+              ]
+            ],
+            [
+              0.17499999701976776,
+              [
+                0.7200000286102295,
+                0.6299999952316284,
+                0.6000000238418579,
+                1.0
+              ]
+            ],
+            [
+              0.550000011920929,
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              0.949999988079071,
+              [
+                1.059999942779541,
+                1.0399999618530273,
+                1.0199999809265137,
+                1.0
+              ]
+            ]
+          ],
+          "ramp_interpolation": "EASE"
+        },
+        {
+          "name": "PigmentTimesControlledLight",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              1.0
+            ],
+            [
+              "Color1",
+              [
+                0.8199999928474426,
+                0.6299999952316284,
+                0.550000011920929,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MULTIPLY"
+        },
+        {
+          "name": "\ubc29\ucd9c",
+          "type": "ShaderNodeEmission",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Strength",
+              1.0
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "type": "ShaderNodeOutputMaterial",
+          "mute": false,
+          "inputs": [
+            [
+              "Displacement",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Thickness",
+              0.0
+            ]
+          ],
+          "is_active_output": true
+        },
+        {
+          "name": "V27_ACTUAL_UV_PIGMENT",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "REPEAT",
+          "image": {
+            "name": "V28_ActualUV_OrbitPigment_2048_D",
+            "colorspace": "Non-Color",
+            "packed_sha": "90ab0e927e6e679c2b16bbd55c6036606566291435b37bca726769518b82dc5a"
+          }
+        },
+        {
+          "name": "UV \ub9f5.001",
+          "type": "ShaderNodeUVMap",
+          "mute": false,
+          "inputs": [],
+          "uv_map": "UVMap"
+        },
+        {
+          "name": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "type": "ShaderNodeSeparateColor",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "V29_NATIVE_FeatureControls",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "EXTEND",
+          "image": {
+            "name": "V29_FeatureControls_RGB.exr",
+            "colorspace": "Non-Color",
+            "packed_sha": "9db1e3a7ce76919ff269fd00d5aa75e39ea6b3a31f5b49f61180a2f6c1e09352"
+          }
+        },
+        {
+          "name": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "type": "ShaderNodeSeparateColor",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "V29_NATIVE_LightReflectControls",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "EXTEND",
+          "image": {
+            "name": "V29_LightReflectControls_RGB.exr",
+            "colorspace": "Non-Color",
+            "packed_sha": "5150f893b7b2a74e437aeba5a16998b99499e4b80841045dba9eef0dfd0a9954"
+          }
+        },
+        {
+          "name": "V29_ImageGenB_MaskedArt_sRGB",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "EXTEND",
+          "image": {
+            "name": "Mia_UVPigment_Art_B.png",
+            "colorspace": "sRGB",
+            "packed_sha": "dd6309a1d4bdc121a73274dd848c55000d22ca0045dad29683155dc7c68c0d34"
+          }
+        },
+        {
+          "name": "V29_SurfaceEnabled",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_FatigueGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.550000011920929
+        },
+        {
+          "name": "V29_FoldGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.6499999761581421
+        },
+        {
+          "name": "V29_MakeupGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.4000000059604645
+        },
+        {
+          "name": "V29_SpecularGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.07999999821186066
+        },
+        {
+          "name": "V29_ShadowEnabled",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "\uc18d\uc131",
+          "type": "ShaderNodeAttribute",
+          "mute": false,
+          "inputs": [],
+          "attribute_name": "V29_CosmeticRootFade",
+          "attribute_type": "GEOMETRY"
+        },
+        {
+          "name": "V29_FoldOpen_R",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_FoldOpen_L",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "\ubd84\ub9ac XYZ",
+          "type": "ShaderNodeSeparateXYZ",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "\uc218\ud559.001",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "LESS_THAN"
+        },
+        {
+          "name": "\uc218\ud559.002",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.003",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              1.0
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "SUBTRACT"
+        },
+        {
+          "name": "\uc218\ud559.004",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.005",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "ADD"
+        },
+        {
+          "name": "\uc218\ud559.006",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.007",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MAXIMUM"
+        },
+        {
+          "name": "V29_LocalOldAccentCleanup",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.8199999928474426,
+                0.6299999952316284,
+                0.550000011920929,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "\uc218\ud559.008",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.009",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.010",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.011",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MAXIMUM"
+        },
+        {
+          "name": "\uc218\ud559.012",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MAXIMUM"
+        },
+        {
+          "name": "V29_IndependentCosmeticArt",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_CompleteCosmeticRootFade",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_OriginalVsSurfaceBypass",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "\uc218\ud559.013",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.014",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.015",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              1.0
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "SUBTRACT"
+        },
+        {
+          "name": "\uc218\ud559.016",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.017",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              1.0
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "SUBTRACT"
+        },
+        {
+          "name": "V29_ActiveDiffuseShadowControl",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_SpecularOverrideFlag",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.0
+        },
+        {
+          "name": "V29_SpecularOverrideValue",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_RoughnessOverrideFlag",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.0
+        },
+        {
+          "name": "V29_RoughnessOverrideValue",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.20000000298023224
+        },
+        {
+          "name": "V29_SpecularMaskOrFlatProbe",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_RoughnessMapOrFlatProbe",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_ACTUAL_SpecularBSDF",
+          "type": "ShaderNodeBsdfAnisotropic",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Roughness",
+              0.5
+            ],
+            [
+              "Anisotropy",
+              0.0
+            ],
+            [
+              "Rotation",
+              0.0
+            ],
+            [
+              "Normal",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Tangent",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ],
+          "distribution": "MULTI_GGX"
+        },
+        {
+          "name": "V29_ActualSceneSpecular",
+          "type": "ShaderNodeShaderToRGB",
+          "mute": false,
+          "inputs": []
+        },
+        {
+          "name": "\uc218\ud559.018",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.019",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "V29_WeightedActualSpecular",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              1.0
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.020",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "V29_DiffusePlusRestrainedSpecular",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              1.0
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "ADD"
+        }
+      ],
+      "links": [
+        [
+          "MeasuredWhiteDiffuse",
+          "BSDF",
+          "ActualSceneLighting",
+          "Shader"
+        ],
+        [
+          "ActualSceneLighting",
+          "Color",
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Color"
+        ],
+        [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Val",
+          "\uc218\ud559",
+          "Value"
+        ],
+        [
+          "\uc218\ud559",
+          "Value",
+          "MIA_CommonSkinLightRamp",
+          "Fac"
+        ],
+        [
+          "\ubc29\ucd9c",
+          "Emission",
+          "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "Surface"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V27_ACTUAL_UV_PIGMENT",
+          "Vector"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V29_NATIVE_FeatureControls",
+          "Vector"
+        ],
+        [
+          "V29_NATIVE_FeatureControls",
+          "Color",
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Color"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V29_NATIVE_LightReflectControls",
+          "Vector"
+        ],
+        [
+          "V29_NATIVE_LightReflectControls",
+          "Color",
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Color"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V29_ImageGenB_MaskedArt_sRGB",
+          "Vector"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "\ubd84\ub9ac XYZ",
+          "Vector"
+        ],
+        [
+          "\ubd84\ub9ac XYZ",
+          "X",
+          "\uc218\ud559.001",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.001",
+          "Value",
+          "\uc218\ud559.002",
+          "Value"
+        ],
+        [
+          "V29_FoldOpen_R",
+          "Value",
+          "\uc218\ud559.002",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.001",
+          "Value",
+          "\uc218\ud559.003",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.003",
+          "Value",
+          "\uc218\ud559.004",
+          "Value"
+        ],
+        [
+          "V29_FoldOpen_L",
+          "Value",
+          "\uc218\ud559.004",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.002",
+          "Value",
+          "\uc218\ud559.005",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.004",
+          "Value",
+          "\uc218\ud559.005",
+          "Value_001"
+        ],
+        [
+          "V29_FoldGain",
+          "Value",
+          "\uc218\ud559.006",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.005",
+          "Value",
+          "\uc218\ud559.006",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Red",
+          "\uc218\ud559.007",
+          "Value"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Green",
+          "\uc218\ud559.007",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.007",
+          "Value",
+          "V29_LocalOldAccentCleanup",
+          "Fac"
+        ],
+        [
+          "V27_ACTUAL_UV_PIGMENT",
+          "Color",
+          "V29_LocalOldAccentCleanup",
+          "Color1"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Red",
+          "\uc218\ud559.008",
+          "Value"
+        ],
+        [
+          "V29_FatigueGain",
+          "Value",
+          "\uc218\ud559.008",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Green",
+          "\uc218\ud559.009",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.006",
+          "Value",
+          "\uc218\ud559.009",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Blue",
+          "\uc218\ud559.010",
+          "Value"
+        ],
+        [
+          "V29_MakeupGain",
+          "Value",
+          "\uc218\ud559.010",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.008",
+          "Value",
+          "\uc218\ud559.011",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.009",
+          "Value",
+          "\uc218\ud559.011",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.011",
+          "Value",
+          "\uc218\ud559.012",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.010",
+          "Value",
+          "\uc218\ud559.012",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.012",
+          "Value",
+          "V29_IndependentCosmeticArt",
+          "Fac"
+        ],
+        [
+          "V29_LocalOldAccentCleanup",
+          "Color",
+          "V29_IndependentCosmeticArt",
+          "Color1"
+        ],
+        [
+          "V29_ImageGenB_MaskedArt_sRGB",
+          "Color",
+          "V29_IndependentCosmeticArt",
+          "Color2"
+        ],
+        [
+          "\uc18d\uc131",
+          "Fac",
+          "V29_CompleteCosmeticRootFade",
+          "Fac"
+        ],
+        [
+          "V27_ACTUAL_UV_PIGMENT",
+          "Color",
+          "V29_CompleteCosmeticRootFade",
+          "Color1"
+        ],
+        [
+          "V29_IndependentCosmeticArt",
+          "Color",
+          "V29_CompleteCosmeticRootFade",
+          "Color2"
+        ],
+        [
+          "V29_SurfaceEnabled",
+          "Value",
+          "V29_OriginalVsSurfaceBypass",
+          "Fac"
+        ],
+        [
+          "V27_ACTUAL_UV_PIGMENT",
+          "Color",
+          "V29_OriginalVsSurfaceBypass",
+          "Color1"
+        ],
+        [
+          "V29_CompleteCosmeticRootFade",
+          "Color",
+          "V29_OriginalVsSurfaceBypass",
+          "Color2"
+        ],
+        [
+          "V29_OriginalVsSurfaceBypass",
+          "Color",
+          "PigmentTimesControlledLight",
+          "Color1"
+        ],
+        [
+          "V29_SurfaceEnabled",
+          "Value",
+          "\uc218\ud559.013",
+          "Value"
+        ],
+        [
+          "V29_ShadowEnabled",
+          "Value",
+          "\uc218\ud559.013",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.013",
+          "Value",
+          "\uc218\ud559.014",
+          "Value"
+        ],
+        [
+          "\uc18d\uc131",
+          "Fac",
+          "\uc218\ud559.014",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Red",
+          "\uc218\ud559.015",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.015",
+          "Value",
+          "\uc218\ud559.016",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.014",
+          "Value",
+          "\uc218\ud559.016",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.016",
+          "Value",
+          "\uc218\ud559.017",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.017",
+          "Value",
+          "V29_ActiveDiffuseShadowControl",
+          "Fac"
+        ],
+        [
+          "MIA_CommonSkinLightRamp",
+          "Color",
+          "V29_ActiveDiffuseShadowControl",
+          "Color2"
+        ],
+        [
+          "V29_ActiveDiffuseShadowControl",
+          "Color",
+          "PigmentTimesControlledLight",
+          "Color2"
+        ],
+        [
+          "V29_SpecularOverrideFlag",
+          "Value",
+          "V29_SpecularMaskOrFlatProbe",
+          "Fac"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Green",
+          "V29_SpecularMaskOrFlatProbe",
+          "Color1"
+        ],
+        [
+          "V29_SpecularOverrideValue",
+          "Value",
+          "V29_SpecularMaskOrFlatProbe",
+          "Color2"
+        ],
+        [
+          "V29_RoughnessOverrideFlag",
+          "Value",
+          "V29_RoughnessMapOrFlatProbe",
+          "Fac"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Blue",
+          "V29_RoughnessMapOrFlatProbe",
+          "Color1"
+        ],
+        [
+          "V29_RoughnessOverrideValue",
+          "Value",
+          "V29_RoughnessMapOrFlatProbe",
+          "Color2"
+        ],
+        [
+          "V29_RoughnessMapOrFlatProbe",
+          "Color",
+          "V29_ACTUAL_SpecularBSDF",
+          "Roughness"
+        ],
+        [
+          "V29_ACTUAL_SpecularBSDF",
+          "BSDF",
+          "V29_ActualSceneSpecular",
+          "Shader"
+        ],
+        [
+          "V29_SpecularGain",
+          "Value",
+          "\uc218\ud559.018",
+          "Value"
+        ],
+        [
+          "V29_SurfaceEnabled",
+          "Value",
+          "\uc218\ud559.018",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.018",
+          "Value",
+          "\uc218\ud559.019",
+          "Value"
+        ],
+        [
+          "\uc18d\uc131",
+          "Fac",
+          "\uc218\ud559.019",
+          "Value_001"
+        ],
+        [
+          "V29_ActualSceneSpecular",
+          "Color",
+          "V29_WeightedActualSpecular",
+          "Color1"
+        ],
+        [
+          "V29_SpecularMaskOrFlatProbe",
+          "Color",
+          "\uc218\ud559.020",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.019",
+          "Value",
+          "\uc218\ud559.020",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.020",
+          "Value",
+          "V29_WeightedActualSpecular",
+          "Color2"
+        ],
+        [
+          "PigmentTimesControlledLight",
+          "Color",
+          "V29_DiffusePlusRestrainedSpecular",
+          "Color1"
+        ],
+        [
+          "V29_WeightedActualSpecular",
+          "Color",
+          "V29_DiffusePlusRestrainedSpecular",
+          "Color2"
+        ],
+        [
+          "V29_DiffusePlusRestrainedSpecular",
+          "Color",
+          "\ubc29\ucd9c",
+          "Color"
+        ]
+      ]
+    },
+    "V29_InnerWall_1_RootFade": {
+      "nodes": [
+        {
+          "name": "MeasuredWhiteDiffuse",
+          "type": "ShaderNodeBsdfDiffuse",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Roughness",
+              0.0
+            ],
+            [
+              "Normal",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "ActualSceneLighting",
+          "type": "ShaderNodeShaderToRGB",
+          "mute": false,
+          "inputs": []
+        },
+        {
+          "name": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "type": "ShaderNodeRGBToBW",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "\uc218\ud559",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              4.0
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "DIVIDE"
+        },
+        {
+          "name": "MIA_CommonSkinLightRamp",
+          "type": "ShaderNodeValToRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ]
+          ],
+          "ramp": [
+            [
+              0.02500000037252903,
+              [
+                0.47999998927116394,
+                0.36000001430511475,
+                0.3400000035762787,
+                1.0
+              ]
+            ],
+            [
+              0.17499999701976776,
+              [
+                0.7200000286102295,
+                0.6299999952316284,
+                0.6000000238418579,
+                1.0
+              ]
+            ],
+            [
+              0.550000011920929,
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              0.949999988079071,
+              [
+                1.059999942779541,
+                1.0399999618530273,
+                1.0199999809265137,
+                1.0
+              ]
+            ]
+          ],
+          "ramp_interpolation": "EASE"
+        },
+        {
+          "name": "PigmentTimesControlledLight",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              1.0
+            ],
+            [
+              "Color1",
+              [
+                0.8199999928474426,
+                0.6299999952316284,
+                0.550000011920929,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MULTIPLY"
+        },
+        {
+          "name": "\ubc29\ucd9c",
+          "type": "ShaderNodeEmission",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Strength",
+              1.0
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "type": "ShaderNodeOutputMaterial",
+          "mute": false,
+          "inputs": [
+            [
+              "Displacement",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Thickness",
+              0.0
+            ]
+          ],
+          "is_active_output": true
+        },
+        {
+          "name": "V27_ACTUAL_UV_PIGMENT",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "REPEAT",
+          "image": {
+            "name": "V28_ActualUV_OrbitPigment_2048_D",
+            "colorspace": "Non-Color",
+            "packed_sha": "90ab0e927e6e679c2b16bbd55c6036606566291435b37bca726769518b82dc5a"
+          }
+        },
+        {
+          "name": "UV \ub9f5.001",
+          "type": "ShaderNodeUVMap",
+          "mute": false,
+          "inputs": [],
+          "uv_map": "UVMap"
+        },
+        {
+          "name": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "type": "ShaderNodeSeparateColor",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "V29_NATIVE_FeatureControls",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "EXTEND",
+          "image": {
+            "name": "V29_FeatureControls_RGB.exr",
+            "colorspace": "Non-Color",
+            "packed_sha": "9db1e3a7ce76919ff269fd00d5aa75e39ea6b3a31f5b49f61180a2f6c1e09352"
+          }
+        },
+        {
+          "name": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "type": "ShaderNodeSeparateColor",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                0.800000011920929,
+                0.800000011920929,
+                0.800000011920929,
+                1.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "V29_NATIVE_LightReflectControls",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "EXTEND",
+          "image": {
+            "name": "V29_LightReflectControls_RGB.exr",
+            "colorspace": "Non-Color",
+            "packed_sha": "5150f893b7b2a74e437aeba5a16998b99499e4b80841045dba9eef0dfd0a9954"
+          }
+        },
+        {
+          "name": "V29_ImageGenB_MaskedArt_sRGB",
+          "type": "ShaderNodeTexImage",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ],
+          "interpolation": "Linear",
+          "extension": "EXTEND",
+          "image": {
+            "name": "Mia_UVPigment_Art_B.png",
+            "colorspace": "sRGB",
+            "packed_sha": "dd6309a1d4bdc121a73274dd848c55000d22ca0045dad29683155dc7c68c0d34"
+          }
+        },
+        {
+          "name": "V29_SurfaceEnabled",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_FatigueGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.550000011920929
+        },
+        {
+          "name": "V29_FoldGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.6499999761581421
+        },
+        {
+          "name": "V29_MakeupGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.4000000059604645
+        },
+        {
+          "name": "V29_SpecularGain",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.07999999821186066
+        },
+        {
+          "name": "V29_ShadowEnabled",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "\uc18d\uc131",
+          "type": "ShaderNodeAttribute",
+          "mute": false,
+          "inputs": [],
+          "attribute_name": "V29_CosmeticRootFade",
+          "attribute_type": "GEOMETRY"
+        },
+        {
+          "name": "V29_FoldOpen_R",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_FoldOpen_L",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "\ubd84\ub9ac XYZ",
+          "type": "ShaderNodeSeparateXYZ",
+          "mute": false,
+          "inputs": [
+            [
+              "Vector",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          ]
+        },
+        {
+          "name": "\uc218\ud559.001",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "LESS_THAN"
+        },
+        {
+          "name": "\uc218\ud559.002",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.003",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              1.0
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "SUBTRACT"
+        },
+        {
+          "name": "\uc218\ud559.004",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.005",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "ADD"
+        },
+        {
+          "name": "\uc218\ud559.006",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.007",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MAXIMUM"
+        },
+        {
+          "name": "V29_LocalOldAccentCleanup",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.8199999928474426,
+                0.6299999952316284,
+                0.550000011920929,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "\uc218\ud559.008",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.009",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.010",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.011",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MAXIMUM"
+        },
+        {
+          "name": "\uc218\ud559.012",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MAXIMUM"
+        },
+        {
+          "name": "V29_IndependentCosmeticArt",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_CompleteCosmeticRootFade",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_OriginalVsSurfaceBypass",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "\uc218\ud559.013",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.014",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.015",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              1.0
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "SUBTRACT"
+        },
+        {
+          "name": "\uc218\ud559.016",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.017",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              1.0
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "SUBTRACT"
+        },
+        {
+          "name": "V29_ActiveDiffuseShadowControl",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_SpecularOverrideFlag",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.0
+        },
+        {
+          "name": "V29_SpecularOverrideValue",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 1.0
+        },
+        {
+          "name": "V29_RoughnessOverrideFlag",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.0
+        },
+        {
+          "name": "V29_RoughnessOverrideValue",
+          "type": "ShaderNodeValue",
+          "mute": false,
+          "inputs": [],
+          "constant": 0.20000000298023224
+        },
+        {
+          "name": "V29_SpecularMaskOrFlatProbe",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_RoughnessMapOrFlatProbe",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              0.5
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MIX"
+        },
+        {
+          "name": "V29_ACTUAL_SpecularBSDF",
+          "type": "ShaderNodeBsdfAnisotropic",
+          "mute": false,
+          "inputs": [
+            [
+              "Color",
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            [
+              "Roughness",
+              0.5
+            ],
+            [
+              "Anisotropy",
+              0.0
+            ],
+            [
+              "Rotation",
+              0.0
+            ],
+            [
+              "Normal",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Tangent",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "Weight",
+              0.0
+            ]
+          ],
+          "distribution": "MULTI_GGX"
+        },
+        {
+          "name": "V29_ActualSceneSpecular",
+          "type": "ShaderNodeShaderToRGB",
+          "mute": false,
+          "inputs": []
+        },
+        {
+          "name": "\uc218\ud559.018",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.019",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "V29_WeightedActualSpecular",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              1.0
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "MULTIPLY"
+        },
+        {
+          "name": "\uc218\ud559.020",
+          "type": "ShaderNodeMath",
+          "mute": false,
+          "inputs": [
+            [
+              "Value",
+              0.5
+            ],
+            [
+              "Value_001",
+              0.5
+            ],
+            [
+              "Value_002",
+              0.5
+            ]
+          ],
+          "operation": "MULTIPLY"
+        },
+        {
+          "name": "V29_DiffusePlusRestrainedSpecular",
+          "type": "ShaderNodeMixRGB",
+          "mute": false,
+          "inputs": [
+            [
+              "Fac",
+              1.0
+            ],
+            [
+              "Color1",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ],
+            [
+              "Color2",
+              [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            ]
+          ],
+          "blend_type": "ADD"
+        }
+      ],
+      "links": [
+        [
+          "MeasuredWhiteDiffuse",
+          "BSDF",
+          "ActualSceneLighting",
+          "Shader"
+        ],
+        [
+          "ActualSceneLighting",
+          "Color",
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Color"
+        ],
+        [
+          "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "Val",
+          "\uc218\ud559",
+          "Value"
+        ],
+        [
+          "\uc218\ud559",
+          "Value",
+          "MIA_CommonSkinLightRamp",
+          "Fac"
+        ],
+        [
+          "\ubc29\ucd9c",
+          "Emission",
+          "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "Surface"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V27_ACTUAL_UV_PIGMENT",
+          "Vector"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V29_NATIVE_FeatureControls",
+          "Vector"
+        ],
+        [
+          "V29_NATIVE_FeatureControls",
+          "Color",
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Color"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V29_NATIVE_LightReflectControls",
+          "Vector"
+        ],
+        [
+          "V29_NATIVE_LightReflectControls",
+          "Color",
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Color"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "V29_ImageGenB_MaskedArt_sRGB",
+          "Vector"
+        ],
+        [
+          "UV \ub9f5.001",
+          "UV",
+          "\ubd84\ub9ac XYZ",
+          "Vector"
+        ],
+        [
+          "\ubd84\ub9ac XYZ",
+          "X",
+          "\uc218\ud559.001",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.001",
+          "Value",
+          "\uc218\ud559.002",
+          "Value"
+        ],
+        [
+          "V29_FoldOpen_R",
+          "Value",
+          "\uc218\ud559.002",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.001",
+          "Value",
+          "\uc218\ud559.003",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.003",
+          "Value",
+          "\uc218\ud559.004",
+          "Value"
+        ],
+        [
+          "V29_FoldOpen_L",
+          "Value",
+          "\uc218\ud559.004",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.002",
+          "Value",
+          "\uc218\ud559.005",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.004",
+          "Value",
+          "\uc218\ud559.005",
+          "Value_001"
+        ],
+        [
+          "V29_FoldGain",
+          "Value",
+          "\uc218\ud559.006",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.005",
+          "Value",
+          "\uc218\ud559.006",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Red",
+          "\uc218\ud559.007",
+          "Value"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Green",
+          "\uc218\ud559.007",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.007",
+          "Value",
+          "V29_LocalOldAccentCleanup",
+          "Fac"
+        ],
+        [
+          "V27_ACTUAL_UV_PIGMENT",
+          "Color",
+          "V29_LocalOldAccentCleanup",
+          "Color1"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Red",
+          "\uc218\ud559.008",
+          "Value"
+        ],
+        [
+          "V29_FatigueGain",
+          "Value",
+          "\uc218\ud559.008",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Green",
+          "\uc218\ud559.009",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.006",
+          "Value",
+          "\uc218\ud559.009",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "Blue",
+          "\uc218\ud559.010",
+          "Value"
+        ],
+        [
+          "V29_MakeupGain",
+          "Value",
+          "\uc218\ud559.010",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.008",
+          "Value",
+          "\uc218\ud559.011",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.009",
+          "Value",
+          "\uc218\ud559.011",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.011",
+          "Value",
+          "\uc218\ud559.012",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.010",
+          "Value",
+          "\uc218\ud559.012",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.012",
+          "Value",
+          "V29_IndependentCosmeticArt",
+          "Fac"
+        ],
+        [
+          "V29_LocalOldAccentCleanup",
+          "Color",
+          "V29_IndependentCosmeticArt",
+          "Color1"
+        ],
+        [
+          "V29_ImageGenB_MaskedArt_sRGB",
+          "Color",
+          "V29_IndependentCosmeticArt",
+          "Color2"
+        ],
+        [
+          "\uc18d\uc131",
+          "Fac",
+          "V29_CompleteCosmeticRootFade",
+          "Fac"
+        ],
+        [
+          "V27_ACTUAL_UV_PIGMENT",
+          "Color",
+          "V29_CompleteCosmeticRootFade",
+          "Color1"
+        ],
+        [
+          "V29_IndependentCosmeticArt",
+          "Color",
+          "V29_CompleteCosmeticRootFade",
+          "Color2"
+        ],
+        [
+          "V29_SurfaceEnabled",
+          "Value",
+          "V29_OriginalVsSurfaceBypass",
+          "Fac"
+        ],
+        [
+          "V27_ACTUAL_UV_PIGMENT",
+          "Color",
+          "V29_OriginalVsSurfaceBypass",
+          "Color1"
+        ],
+        [
+          "V29_CompleteCosmeticRootFade",
+          "Color",
+          "V29_OriginalVsSurfaceBypass",
+          "Color2"
+        ],
+        [
+          "V29_OriginalVsSurfaceBypass",
+          "Color",
+          "PigmentTimesControlledLight",
+          "Color1"
+        ],
+        [
+          "V29_SurfaceEnabled",
+          "Value",
+          "\uc218\ud559.013",
+          "Value"
+        ],
+        [
+          "V29_ShadowEnabled",
+          "Value",
+          "\uc218\ud559.013",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.013",
+          "Value",
+          "\uc218\ud559.014",
+          "Value"
+        ],
+        [
+          "\uc18d\uc131",
+          "Fac",
+          "\uc218\ud559.014",
+          "Value_001"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Red",
+          "\uc218\ud559.015",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.015",
+          "Value",
+          "\uc218\ud559.016",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.014",
+          "Value",
+          "\uc218\ud559.016",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.016",
+          "Value",
+          "\uc218\ud559.017",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.017",
+          "Value",
+          "V29_ActiveDiffuseShadowControl",
+          "Fac"
+        ],
+        [
+          "MIA_CommonSkinLightRamp",
+          "Color",
+          "V29_ActiveDiffuseShadowControl",
+          "Color2"
+        ],
+        [
+          "V29_ActiveDiffuseShadowControl",
+          "Color",
+          "PigmentTimesControlledLight",
+          "Color2"
+        ],
+        [
+          "V29_SpecularOverrideFlag",
+          "Value",
+          "V29_SpecularMaskOrFlatProbe",
+          "Fac"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Green",
+          "V29_SpecularMaskOrFlatProbe",
+          "Color1"
+        ],
+        [
+          "V29_SpecularOverrideValue",
+          "Value",
+          "V29_SpecularMaskOrFlatProbe",
+          "Color2"
+        ],
+        [
+          "V29_RoughnessOverrideFlag",
+          "Value",
+          "V29_RoughnessMapOrFlatProbe",
+          "Fac"
+        ],
+        [
+          "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1.001",
+          "Blue",
+          "V29_RoughnessMapOrFlatProbe",
+          "Color1"
+        ],
+        [
+          "V29_RoughnessOverrideValue",
+          "Value",
+          "V29_RoughnessMapOrFlatProbe",
+          "Color2"
+        ],
+        [
+          "V29_RoughnessMapOrFlatProbe",
+          "Color",
+          "V29_ACTUAL_SpecularBSDF",
+          "Roughness"
+        ],
+        [
+          "V29_ACTUAL_SpecularBSDF",
+          "BSDF",
+          "V29_ActualSceneSpecular",
+          "Shader"
+        ],
+        [
+          "V29_SpecularGain",
+          "Value",
+          "\uc218\ud559.018",
+          "Value"
+        ],
+        [
+          "V29_SurfaceEnabled",
+          "Value",
+          "\uc218\ud559.018",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.018",
+          "Value",
+          "\uc218\ud559.019",
+          "Value"
+        ],
+        [
+          "\uc18d\uc131",
+          "Fac",
+          "\uc218\ud559.019",
+          "Value_001"
+        ],
+        [
+          "V29_ActualSceneSpecular",
+          "Color",
+          "V29_WeightedActualSpecular",
+          "Color1"
+        ],
+        [
+          "V29_SpecularMaskOrFlatProbe",
+          "Color",
+          "\uc218\ud559.020",
+          "Value"
+        ],
+        [
+          "\uc218\ud559.019",
+          "Value",
+          "\uc218\ud559.020",
+          "Value_001"
+        ],
+        [
+          "\uc218\ud559.020",
+          "Value",
+          "V29_WeightedActualSpecular",
+          "Color2"
+        ],
+        [
+          "PigmentTimesControlledLight",
+          "Color",
+          "V29_DiffusePlusRestrainedSpecular",
+          "Color1"
+        ],
+        [
+          "V29_WeightedActualSpecular",
+          "Color",
+          "V29_DiffusePlusRestrainedSpecular",
+          "Color2"
+        ],
+        [
+          "V29_DiffusePlusRestrainedSpecular",
+          "Color",
+          "\ubc29\ucd9c",
+          "Color"
+        ]
+      ]
+    }
+  },
+  "only_changed_slots": "SharedHeadBody slot0; both accepted InnerLid slot0. No other owner slots changed.",
+  "wall_fade": "StoredPOINT attr row0=1, row5=0 on6x96 accepted topology; new cosmetics/spec fade into wall while root matchesface.",
+  "fold_fade": "UVleft/worldXnegative uses max(Close,Close_R); UVright uses max(Close,Close_L); originalgeometry/keys/driversunchanged. Inspect actual .5/1 bilateral/unilateral closure before accepting.",
+  "maps": {
+    "art": {
+      "name": "Mia_UVPigment_Art_B.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "colorspace": "sRGB",
+      "packed_sha256": "dd6309a1d4bdc121a73274dd848c55000d22ca0045dad29683155dc7c68c0d34"
+    },
+    "features": {
+      "name": "V29_FeatureControls_RGB.exr",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "packed_sha256": "9db1e3a7ce76919ff269fd00d5aa75e39ea6b3a31f5b49f61180a2f6c1e09352"
+    },
+    "response": {
+      "name": "V29_LightReflectControls_RGB.exr",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "packed_sha256": "5150f893b7b2a74e437aeba5a16998b99499e4b80841045dba9eef0dfd0a9954"
+    }
+  },
+  "packed_map_reopen_verification": true,
+  "cpu_native_endpoint_validation": {
+    "method": "Actual Blender Cycles CPU EMIT bakes through newly built native material graph, sampling192 actual wall-root UV stations plus8 feature/outside controls. Explicit sourceUVMap and separate bakeUV; no manual shader evaluator or bitmap edit.",
+    "source_native_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+    "source_native_sha256_after": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+    "builder_sha256": "cde516cb8119fad039db08561b0cf8f2ef28ec692ed736196c059e76c99c731a",
+    "original_face_graph_sha256": "635c36f628ccee23934eaef77a7b26ed1ecab187bcc8b918dd91a8d0b77a2017",
+    "original_wall_graph_sha256": "635c36f628ccee23934eaef77a7b26ed1ecab187bcc8b918dd91a8d0b77a2017",
+    "sample_count": 200,
+    "samples": [
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 0,
+        "uv": [
+          0.41140878200531006,
+          0.4378310441970825
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 1,
+        "uv": [
+          0.4117029905319214,
+          0.4400780200958252
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 2,
+        "uv": [
+          0.4111122786998749,
+          0.4425455927848816
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 3,
+        "uv": [
+          0.410521537065506,
+          0.4450130760669708
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 4,
+        "uv": [
+          0.4099307954311371,
+          0.44748055934906006
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 5,
+        "uv": [
+          0.4093399941921234,
+          0.4499480128288269
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 6,
+        "uv": [
+          0.4080735445022583,
+          0.45292603969573975
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 7,
+        "uv": [
+          0.4068070352077484,
+          0.4559040665626526
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 8,
+        "uv": [
+          0.4055405259132385,
+          0.45888209342956543
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 9,
+        "uv": [
+          0.40427398681640625,
+          0.4618600010871887
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 10,
+        "uv": [
+          0.402102530002594,
+          0.46490007638931274
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 11,
+        "uv": [
+          0.39993101358413696,
+          0.4679400622844696
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 12,
+        "uv": [
+          0.3977595567703247,
+          0.47098004817962646
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 13,
+        "uv": [
+          0.3955880105495453,
+          0.47402000427246094
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 14,
+        "uv": [
+          0.39228156208992004,
+          0.47667255997657776
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 15,
+        "uv": [
+          0.38897505402565,
+          0.4793250560760498
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 16,
+        "uv": [
+          0.3856685757637024,
+          0.48197755217552185
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 17,
+        "uv": [
+          0.3823620080947876,
+          0.4846299886703491
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 18,
+        "uv": [
+          0.3782733082771301,
+          0.4860888123512268
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 19,
+        "uv": [
+          0.3741845488548279,
+          0.4875475764274597
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 20,
+        "uv": [
+          0.370095819234848,
+          0.48900628089904785
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 21,
+        "uv": [
+          0.366007000207901,
+          0.490464985370636
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 22,
+        "uv": [
+          0.36148905754089355,
+          0.48992428183555603
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 23,
+        "uv": [
+          0.35697102546691895,
+          0.4893835484981537
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 24,
+        "uv": [
+          0.3524530529975891,
+          0.48884278535842896
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 25,
+        "uv": [
+          0.3479349911212921,
+          0.48830199241638184
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 26,
+        "uv": [
+          0.3435913026332855,
+          0.48670580983161926
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 27,
+        "uv": [
+          0.33924755454063416,
+          0.4851095676422119
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 28,
+        "uv": [
+          0.3349038064479828,
+          0.48351332545280457
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 29,
+        "uv": [
+          0.33055999875068665,
+          0.48191702365875244
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 30,
+        "uv": [
+          0.32699355483055115,
+          0.4802098274230957
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 31,
+        "uv": [
+          0.32342708110809326,
+          0.4785025715827942
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 32,
+        "uv": [
+          0.3198605477809906,
+          0.4767953157424927
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 33,
+        "uv": [
+          0.31629401445388794,
+          0.4750880002975464
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 34,
+        "uv": [
+          0.3132375478744507,
+          0.4731285572052002
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 35,
+        "uv": [
+          0.31018105149269104,
+          0.47116905450820923
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 36,
+        "uv": [
+          0.307124525308609,
+          0.46920955181121826
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 37,
+        "uv": [
+          0.304067999124527,
+          0.4672499895095825
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 38,
+        "uv": [
+          0.3012550473213196,
+          0.4648978114128113
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 39,
+        "uv": [
+          0.2984420359134674,
+          0.46254557371139526
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 40,
+        "uv": [
+          0.29562902450561523,
+          0.46019330620765686
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 41,
+        "uv": [
+          0.29281601309776306,
+          0.4578409790992737
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 42,
+        "uv": [
+          0.29115402698516846,
+          0.45527181029319763
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 43,
+        "uv": [
+          0.28949204087257385,
+          0.4527025818824768
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 44,
+        "uv": [
+          0.28783005475997925,
+          0.4501333236694336
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 45,
+        "uv": [
+          0.28616800904273987,
+          0.4475640058517456
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 46,
+        "uv": [
+          0.28656530380249023,
+          0.4449533224105835
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 47,
+        "uv": [
+          0.2869625389575958,
+          0.44234251976013184
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 48,
+        "uv": [
+          0.2873597741127014,
+          0.43973180651664734
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 49,
+        "uv": [
+          0.287757009267807,
+          0.4371209740638733
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 50,
+        "uv": [
+          0.2890705168247223,
+          0.4346737861633301
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 51,
+        "uv": [
+          0.2903840243816376,
+          0.4322265386581421
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 52,
+        "uv": [
+          0.29169753193855286,
+          0.4297792911529541
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 53,
+        "uv": [
+          0.29301100969314575,
+          0.42733198404312134
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 54,
+        "uv": [
+          0.29409754276275635,
+          0.4252530634403229
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 55,
+        "uv": [
+          0.29518404603004456,
+          0.42317402362823486
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 56,
+        "uv": [
+          0.2962705194950104,
+          0.4210950434207916
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 57,
+        "uv": [
+          0.2973569929599762,
+          0.4190160036087036
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 58,
+        "uv": [
+          0.2991422712802887,
+          0.4171522855758667
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 59,
+        "uv": [
+          0.3009275197982788,
+          0.4152885675430298
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 60,
+        "uv": [
+          0.3027127683162689,
+          0.4134247899055481
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 61,
+        "uv": [
+          0.30449798703193665,
+          0.4115610122680664
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 62,
+        "uv": [
+          0.30790653824806213,
+          0.4097592830657959
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 63,
+        "uv": [
+          0.31131505966186523,
+          0.4079575538635254
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 64,
+        "uv": [
+          0.31472352147102356,
+          0.4061557650566101
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 65,
+        "uv": [
+          0.3181320130825043,
+          0.4043539762496948
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 66,
+        "uv": [
+          0.3221900165081024,
+          0.4031815528869629
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 67,
+        "uv": [
+          0.32624801993370056,
+          0.4020090103149414
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 68,
+        "uv": [
+          0.3303060531616211,
+          0.4008365273475647
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 69,
+        "uv": [
+          0.33436399698257446,
+          0.3996639847755432
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 70,
+        "uv": [
+          0.33809781074523926,
+          0.3996870517730713
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 71,
+        "uv": [
+          0.3418315351009369,
+          0.3997100293636322
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 72,
+        "uv": [
+          0.3455653190612793,
+          0.3997330665588379
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 73,
+        "uv": [
+          0.34929901361465454,
+          0.3997560143470764
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 74,
+        "uv": [
+          0.3530290424823761,
+          0.4005400836467743
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 75,
+        "uv": [
+          0.35675907135009766,
+          0.401324063539505
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 76,
+        "uv": [
+          0.36048904061317444,
+          0.4021080434322357
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 77,
+        "uv": [
+          0.3642190098762512,
+          0.40289199352264404
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 78,
+        "uv": [
+          0.3682665526866913,
+          0.40400105714797974
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 79,
+        "uv": [
+          0.3723140358924866,
+          0.40511006116867065
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 80,
+        "uv": [
+          0.37636151909828186,
+          0.4062190651893616
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 81,
+        "uv": [
+          0.38040900230407715,
+          0.4073280096054077
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 82,
+        "uv": [
+          0.3840472996234894,
+          0.40886980295181274
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 83,
+        "uv": [
+          0.38768553733825684,
+          0.410411536693573
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 84,
+        "uv": [
+          0.3913238048553467,
+          0.41195330023765564
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 85,
+        "uv": [
+          0.39496201276779175,
+          0.4134950041770935
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 86,
+        "uv": [
+          0.3974650502204895,
+          0.4155768156051636
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 87,
+        "uv": [
+          0.39996805787086487,
+          0.41765856742858887
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 88,
+        "uv": [
+          0.40247106552124023,
+          0.41974031925201416
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 89,
+        "uv": [
+          0.4049740135669708,
+          0.4218220114707947
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 90,
+        "uv": [
+          0.40636205673217773,
+          0.4241390526294708
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 91,
+        "uv": [
+          0.40775007009506226,
+          0.4264560341835022
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 92,
+        "uv": [
+          0.409138023853302,
+          0.42877301573753357
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 93,
+        "uv": [
+          0.41052600741386414,
+          0.43108999729156494
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 94,
+        "uv": [
+          0.41082027554512024,
+          0.4333370327949524
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_-1",
+        "row": 0,
+        "station": 95,
+        "uv": [
+          0.41111454367637634,
+          0.43558403849601746
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 0,
+        "uv": [
+          0.5885913372039795,
+          0.4378310441970825
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 1,
+        "uv": [
+          0.5882970094680786,
+          0.4400780200958252
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 2,
+        "uv": [
+          0.5888878107070923,
+          0.4425455927848816
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 3,
+        "uv": [
+          0.5894785523414612,
+          0.4450130760669708
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 4,
+        "uv": [
+          0.5900692939758301,
+          0.44748055934906006
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 5,
+        "uv": [
+          0.5906599760055542,
+          0.4499480128288269
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 6,
+        "uv": [
+          0.5919263362884521,
+          0.45292603969573975
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 7,
+        "uv": [
+          0.5931925177574158,
+          0.4559040665626526
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 8,
+        "uv": [
+          0.594458818435669,
+          0.45888209342956543
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 9,
+        "uv": [
+          0.5957249999046326,
+          0.4618600010871887
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 10,
+        "uv": [
+          0.5978968143463135,
+          0.46490007638931274
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 11,
+        "uv": [
+          0.6000685691833496,
+          0.4679400622844696
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 12,
+        "uv": [
+          0.6022403240203857,
+          0.47098004817962646
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 13,
+        "uv": [
+          0.6044120192527771,
+          0.47402000427246094
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 14,
+        "uv": [
+          0.6077185869216919,
+          0.47667255997657776
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 15,
+        "uv": [
+          0.6110250949859619,
+          0.4793250560760498
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 16,
+        "uv": [
+          0.6143315434455872,
+          0.48197755217552185
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 17,
+        "uv": [
+          0.6176379919052124,
+          0.4846299886703491
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 18,
+        "uv": [
+          0.6217268109321594,
+          0.4860888123512268
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 19,
+        "uv": [
+          0.6258155703544617,
+          0.4875475764274597
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 20,
+        "uv": [
+          0.6299043297767639,
+          0.48900628089904785
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 21,
+        "uv": [
+          0.6339930295944214,
+          0.490464985370636
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 22,
+        "uv": [
+          0.638511061668396,
+          0.48992428183555603
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 23,
+        "uv": [
+          0.6430290341377258,
+          0.4893835484981537
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 24,
+        "uv": [
+          0.6475471258163452,
+          0.48884278535842896
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 25,
+        "uv": [
+          0.6520649790763855,
+          0.48830199241638184
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 26,
+        "uv": [
+          0.6564087867736816,
+          0.48670580983161926
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 27,
+        "uv": [
+          0.660752534866333,
+          0.4851095676422119
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 28,
+        "uv": [
+          0.6650962829589844,
+          0.48351332545280457
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 29,
+        "uv": [
+          0.669439971446991,
+          0.48191702365875244
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 30,
+        "uv": [
+          0.6730068325996399,
+          0.4802098274230957
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 31,
+        "uv": [
+          0.6765735745429993,
+          0.4785025715827942
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 32,
+        "uv": [
+          0.6801403164863586,
+          0.4767953157424927
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 33,
+        "uv": [
+          0.6837069988250732,
+          0.4750880002975464
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 34,
+        "uv": [
+          0.6867632865905762,
+          0.4731285572052002
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 35,
+        "uv": [
+          0.6898195147514343,
+          0.47116905450820923
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 36,
+        "uv": [
+          0.6928758025169373,
+          0.46920955181121826
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 37,
+        "uv": [
+          0.6959319710731506,
+          0.4672499895095825
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 38,
+        "uv": [
+          0.6987451314926147,
+          0.4648978114128113
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 39,
+        "uv": [
+          0.7015580534934998,
+          0.46254557371139526
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 40,
+        "uv": [
+          0.7043710947036743,
+          0.46019330620765686
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 41,
+        "uv": [
+          0.7071840167045593,
+          0.4578409790992737
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 42,
+        "uv": [
+          0.7088460922241211,
+          0.45527181029319763
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 43,
+        "uv": [
+          0.7105081081390381,
+          0.4527025818824768
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 44,
+        "uv": [
+          0.7121701836585999,
+          0.4501333236694336
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 45,
+        "uv": [
+          0.7138320207595825,
+          0.4475640058517456
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 46,
+        "uv": [
+          0.7134349346160889,
+          0.4449533224105835
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 47,
+        "uv": [
+          0.7130376100540161,
+          0.44234251976013184
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 48,
+        "uv": [
+          0.7126404047012329,
+          0.43973180651664734
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 49,
+        "uv": [
+          0.7122430205345154,
+          0.4371209740638733
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 50,
+        "uv": [
+          0.7109295725822449,
+          0.4346737861633301
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 51,
+        "uv": [
+          0.7096161246299744,
+          0.4322265386581421
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 52,
+        "uv": [
+          0.7083025574684143,
+          0.4297792911529541
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 53,
+        "uv": [
+          0.7069889903068542,
+          0.42733198404312134
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 54,
+        "uv": [
+          0.7059025764465332,
+          0.4252530634403229
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 55,
+        "uv": [
+          0.7048161029815674,
+          0.42317402362823486
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 56,
+        "uv": [
+          0.7037296295166016,
+          0.4210950434207916
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 57,
+        "uv": [
+          0.7026429772377014,
+          0.4190160036087036
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 58,
+        "uv": [
+          0.7008578777313232,
+          0.4171522855758667
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 59,
+        "uv": [
+          0.6990725994110107,
+          0.4152885675430298
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 60,
+        "uv": [
+          0.6972873210906982,
+          0.4134247899055481
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 61,
+        "uv": [
+          0.695501983165741,
+          0.4115610122680664
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 62,
+        "uv": [
+          0.692093551158905,
+          0.4097592830657959
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 63,
+        "uv": [
+          0.6886850595474243,
+          0.4079575538635254
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 64,
+        "uv": [
+          0.6852765679359436,
+          0.4061557650566101
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 65,
+        "uv": [
+          0.6818680167198181,
+          0.4043539762496948
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 66,
+        "uv": [
+          0.6778100728988647,
+          0.4031815528869629
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 67,
+        "uv": [
+          0.6737520694732666,
+          0.4020090103149414
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 68,
+        "uv": [
+          0.6696940660476685,
+          0.4008365273475647
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 69,
+        "uv": [
+          0.6656360030174255,
+          0.3996639847755432
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 70,
+        "uv": [
+          0.6619023084640503,
+          0.3996870517730713
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 71,
+        "uv": [
+          0.6581685543060303,
+          0.3997100293636322
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 72,
+        "uv": [
+          0.654434859752655,
+          0.3997330665588379
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 73,
+        "uv": [
+          0.6507009863853455,
+          0.3997560143470764
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 74,
+        "uv": [
+          0.6469710469245911,
+          0.4005400836467743
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 75,
+        "uv": [
+          0.6432410478591919,
+          0.401324063539505
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 76,
+        "uv": [
+          0.6395110487937927,
+          0.4021080434322357
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 77,
+        "uv": [
+          0.6357809901237488,
+          0.40289199352264404
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 78,
+        "uv": [
+          0.6317335367202759,
+          0.40400105714797974
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 79,
+        "uv": [
+          0.627686083316803,
+          0.40511006116867065
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 80,
+        "uv": [
+          0.6236386299133301,
+          0.4062190651893616
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 81,
+        "uv": [
+          0.6195909976959229,
+          0.4073280096054077
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 82,
+        "uv": [
+          0.6159528493881226,
+          0.40886980295181274
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 83,
+        "uv": [
+          0.6123145222663879,
+          0.410411536693573
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 84,
+        "uv": [
+          0.6086763143539429,
+          0.41195330023765564
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 85,
+        "uv": [
+          0.6050379872322083,
+          0.4134950041770935
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 86,
+        "uv": [
+          0.6025350689888,
+          0.4155768156051636
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 87,
+        "uv": [
+          0.6000320315361023,
+          0.41765856742858887
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 88,
+        "uv": [
+          0.5975290536880493,
+          0.41974031925201416
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 89,
+        "uv": [
+          0.5950260162353516,
+          0.4218220114707947
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 90,
+        "uv": [
+          0.5936380624771118,
+          0.4241390526294708
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 91,
+        "uv": [
+          0.5922501087188721,
+          0.4264560341835022
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 92,
+        "uv": [
+          0.5908620953559875,
+          0.42877301573753357
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 93,
+        "uv": [
+          0.5894740223884583,
+          0.43108999729156494
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 94,
+        "uv": [
+          0.5891798734664917,
+          0.4333370327949524
+        ]
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "row": 0,
+        "station": 95,
+        "uv": [
+          0.5888856053352356,
+          0.43558403849601746
+        ]
+      },
+      {
+        "owner": "additional diagnostic",
+        "uv": [
+          0.345,
+          0.365
+        ]
+      },
+      {
+        "owner": "additional diagnostic",
+        "uv": [
+          0.655,
+          0.365
+        ]
+      },
+      {
+        "owner": "additional diagnostic",
+        "uv": [
+          0.345,
+          0.505
+        ]
+      },
+      {
+        "owner": "additional diagnostic",
+        "uv": [
+          0.655,
+          0.505
+        ]
+      },
+      {
+        "owner": "additional diagnostic",
+        "uv": [
+          0.255,
+          0.326
+        ]
+      },
+      {
+        "owner": "additional diagnostic",
+        "uv": [
+          0.745,
+          0.326
+        ]
+      },
+      {
+        "owner": "additional diagnostic",
+        "uv": [
+          0.5,
+          0.241
+        ]
+      },
+      {
+        "owner": "additional diagnostic",
+        "uv": [
+          0.5,
+          0.85
+        ]
+      }
+    ],
+    "errors_m_or_linear_RGB": {
+      "deep_color_vs_original": 0.0,
+      "root_color_vs_face": 0.0,
+      "half_color_vs_linear_complete_fade": 0.0,
+      "deep_diffuse_shadow_factor_vs1": 0.0,
+      "deep_specular_scale_vs0": 0.0,
+      "root_diffuse_spec_controls_vs_face": 0.0
+    },
+    "nonzero_cosmetic_difference_max_linear_RGB": 0.1092715859413147,
+    "no_gpu": true,
+    "native_saved": false,
+    "model_owners_unassigned": true,
+    "status": "Native graph endpoint numeric checks PASS. Actual final material/eye/lash/source/render acceptance remains unverified."
+  },
+  "original_geometry_digests": {
+    "ARCHIVED_R17_MIA_R15_RADIAL_GUIDE_+1": "4e68433abc50ea664582e44ff3af60d1530c03b2e29a1138c1d5d0501e7337de",
+    "ARCHIVED_R17_MIA_R15_RADIAL_GUIDE_-1": "de96eee14fce0582640d2fb611b8320ebf81aff1ebf012b5bf8785d9f225710b",
+    "MIA_V27_Foundation_Face": "6d6a97bcedbf5d486f3bfded1ca5b3db93b41c1866b8f7b9b218157030e80284",
+    "V27_Upper_BoundaryRibbon_-1": "faf036cf8f60e93270101696e067b58ee98ac3b01e0455e69881f8aebc537c66",
+    "V27_Lower_BoundaryRibbon_-1": "97cc989c141645e31036b82f82d87e8f8fea373c80e85a51600ef1f439a4009f",
+    "V27_Upper_BoundaryRibbon.001_1": "835bf99c17c86e85cfef29148339c23c56ed65e38ac41dc9d7d56a7264994f77",
+    "V27_Lower_BoundaryRibbon.001_1": "e96a9cd5cfdb243ab990b5edec32e332473e31beac7d8daeafca535424941292",
+    "V27_HeadNeckBridge": "ae2f1a6717d7c7e2960f081ee281b3035178205f4bce0378e73ebc1717342503",
+    "MIA_V27_F4_RejectedNearestBridge": "a2bc1f6256110447655316189be1e0fdafe27991eb126cfd073654dc18f673f6",
+    "MIA_V27_PreGeometricTangent_Archive": "fa8ac40c6ed686b1127641e035f33bd09e666f6b2cf611c6355761820eb37cd5",
+    "V27_Upper_BoundaryRibbon_-1_Dense": "c48a54f5a8dc5fcf3569d2dc1fa9226353111b5453fd4d9a625a8c6f204503a5",
+    "V27_Lower_BoundaryRibbon_-1_Dense": "4ccea0da39951f41f1650c0db17b14fc083965f45932912f7a74de4b7b77d845",
+    "V27_Upper_BoundaryRibbon.001_1_Dense": "0a23a99bc7bc4d365055fcc883449cea0fd461cc9e148885519c6162e58eb025",
+    "V27_Lower_BoundaryRibbon.001_1_Dense": "a8e542c15d248fd9ff52f67121cb8551870944809b032fa41c3c483c0fbf8e91",
+    "MIA_V27_ContinuousSkin": "24375ae20020d1bc79dcd551a89df937f6a4163308fbbc6ba68c838fa22c8940",
+    "MIA_V27_SharedHeadBody": "63020c085d2045142bf87642443a63b6f2ab990915844558c6fe309d7f4b2df3",
+    "V28_LashFan_-1": "34536bb328d2434e57d3b7ffbe109e50e5ac9b9ea9147267fa9a5857e5789dfe",
+    "V28_LashFan_1": "0a025e68eb61329a481938f971dc105e36b300c06dc022f1961afb0b050abf09",
+    "V28G_Sclera_-1": "f7164ce36e57a1ba3955680f9e077c527181b596a18333f2abeabababd56b500",
+    "V28G_Iris_-1": "2ad905bc7340dfe6b11ae2959f3c8d606d75830db1714557f1358dc910b266be",
+    "V28G_InnerLid_-1": "c7644424e772aef85587a84511ec2c8c8e3ffbbb126d480f9ca101bb0ac12ef3",
+    "V28G_Sclera_1": "83ece354de282ce5e71bcf598564b3e8242df9dd4b3da5d267f254f9afcdebdb",
+    "V28G_Iris_1": "e5dd80a679b2a598c1d62d5973075721ecd0b2dfbf47d0fdca712f15e69e8894",
+    "V28G_InnerLid_1": "b36da36a103a77968fafb0383b07bdeccfbc7212099d16b1be709c17bacf2c34",
+    "V29_UpperLashes_-1": "ff057a3e3cb877c71c50e82b4778817c8960229415405cb85ab4bfcef44cf123",
+    "V29_LowerLashes_-1": "2feb00b444eaae79b28eee84ea7e029f7fa2941c19d21c247e62edd97e87497d",
+    "V29_UpperLashes_1": "41ad08ad87c47b0ef5ecc803365414998e7115f49294437783fff6833e73425e",
+    "V29_LowerLashes_1": "797aa2b0271ba4f09bd597439ae33e57bca003c0b96e893ad63c81cb7e5e6100",
+    "Mia_Face_AnimeTopology": "8eeda72ee0e4915b8c06a4d140659af287b4fa6bae786e20e297d7c257de56ef",
+    "Mia_Body_Anatomy_Skin": "6d27787bd9d6a836d486d06e7aac47b238d523ad0887c86d56e88a6e259a23f0",
+    "Body": "4f2f3f09530b96bc3406778ff50bb09bb58126005a4aeacd141f7cd492082ef8",
+    "Face": "0871cc72cdc02833fc2080c75e515b573c7460db1135d8040371469d1e51257a",
+    "Hair001": "1f42cc870aad18f3c53ac875cd1a23b27c27396fa47c8207b49d1323bd029e63",
+    "MiaHair_Concealed_Closed_DomeNape": "9e25fd0ca35ce42782b2b830eaea12dffa9f808524bdc0bc6f02782402929e0c",
+    "MiaHair_CrownFringe_R_Outer_-1": "7d3e1c67c7e8f83372a7ab94ecea2123f39c8e7cb1bc8cec629f26c16b2cf23e",
+    "MiaHair_CrownFringe_R_Outer_1": "52688abad4968cbb902fffde81b88e5a6b40541e26b8947356cccdc7763a4a57",
+    "MiaHair_CrownFringe_R_Sweep_-1": "2875b92470a5302c3bb493a83e1dd5dc739d1ffc6d33e78d5540d6ccf7397da6",
+    "MiaHair_CrownFringe_R_Sweep_1": "d496c63a368bbee4bc84dffd355732f8ccfc7f7c868fbda04fd66009eeb36d97",
+    "MiaHair_CrownFringe_R_Short_-1": "c5f8f6f04412d9b8ef3cc2db488df234fe541e7b26ddbbe8ec4a47c2c85a2e92",
+    "MiaHair_CrownFringe_R_Short_1": "acf34123c26d9f3cf7fc3fb3b1c455f40885394bc84a8dccc77fd3c2faf62f48",
+    "MiaHair_CrownFringe_Center_Slip_0": "6c95dbec71aa9b43a3b8ca922d9ee2106a18cc9351e52b376a1a53160c5df33e",
+    "MiaHair_CrownFringe_L_Sweep_-1": "7c96f16be1fbddafff5a806afe787596508eff67bf4e001667f9467c5d05aaa8",
+    "MiaHair_CrownFringe_L_Sweep_1": "44e382a7940639ca5bb62f048272fa6822905d0958da67cec5dbe189dd2d6be6",
+    "MiaHair_CrownFringe_L_Outer_-1": "78ef569d54ffad7a370f268702b15c06a43ce0aed3d6efe0eecdf240aac149fc",
+    "MiaHair_CrownFringe_L_Outer_1": "b728bf1883a647bb1307efbd0fa28c9a5827d2ada22dea3723b4109815223bc6",
+    "MiaHair_UnderFringe_R0": "8d4779d11e3a43d852b17230d751d21244182a8c3182cab94cc461ae0913e493",
+    "MiaHair_UnderFringe_R1": "08e93d4d0061cf8fedd47e70228c57d7af5c984115bd4011e582805b1beeb4ba",
+    "MiaHair_UnderFringe_R2": "75f530fe8158a9cec9ad79f44fc20571240b24590e067acb6f04bf8ba565426b",
+    "MiaHair_UnderFringe_Mid": "d6a38e1d53279859392d8a398e2e97011636e8a099cdd58b17efed73a68675e5",
+    "MiaHair_UnderFringe_L0": "c9a78dd99aa178056eaf6d30af99423e153748c822d9db2b292979baad071c1e",
+    "MiaHair_UnderFringe_L1": "083b227a3499a269a84c373ac6aaaab11d2e4fd5aad4176ece2318a41ba6f28b",
+    "MiaHair_UnderFringe_L2": "ab1340901db85c5796d8d27b2d33617c4eab25d2349d13e51e69299f6f45ab26",
+    "MiaHair_UnderFringe_TempleR": "143f87a18495658dd51e4474d237e46554f39eaf7cdff31b4e43e0e772f59046",
+    "MiaHair_UnderFringe_TempleL": "d4c221b5c19356437ad8deaae83094d17a0d5f38f821c4d60f38dc1575f62b33",
+    "MiaHair_Gather_R0": "9a0666f12b335f190fea7d669616f619f14313d21162894d8faebc4c378f98df",
+    "MiaHair_Gather_R1": "704ee22a4461530451b8785a0db8a4fca9a33a69a22be5228169eb1fb8aa9904",
+    "MiaHair_Gather_R2": "b4b4c509facb2cf3d0a33bac8ef59344d0ba067257c4f5105fb7bd0628b8a0ad",
+    "MiaHair_Gather_R3": "55f1a5cb49e6bfe197bd91e3313b2d1aac333f795e752a8999c585a58550658a",
+    "MiaHair_Gather_L0": "00ecf9ce35e4411e93f44a28a06e7f89f96edd295a7b7b98c1e7e3657ec64f14",
+    "MiaHair_Gather_L1": "7bb3009b2bd66b28860d389f8b3c34d61dc6f2ab1c885fc9e8417f5681d9def1",
+    "MiaHair_Gather_L2": "9a8eebbd6aa5c09e929515c8512ddc67cc1b764d86c468f2446d300fabd9fc47",
+    "MiaHair_Gather_L3": "948d4ef730699e96b94d80c23bbb2637f879146f5185309d05d3ef24f262f127",
+    "MiaHair_Gather_BackPart0": "13c328f7de918e19c7f0a5078b6d20782950575cd4187250de221c9ac4fa62c4",
+    "MiaHair_Gather_BackPart1": "0078c1ea3f72093adef9149b38b878f5b4e233dc356182c1d1839026d12fcf68",
+    "MiaHair_Gather_BackPart2": "6fff40618296198818a46f714217222e39ca4333cd47903f9a71d1cb1c81d395",
+    "MiaHair_Gather_TempleR": "b3a58fda2d44b508ea87c5d8f5d8c83af19cba8746a107999505a587b316031d",
+    "MiaHair_Gather_TempleL": "35fb58c664ea3f29da859b56c610be0f4edb2612f9a80a3fc944f9a9fcdedd74",
+    "MiaHair_Fringe_Split0": "f0fe15713b87903dd86bc75451e0a81eaf0a054d29247a15a674effd92586cad",
+    "MiaHair_Fringe_Split1": "079744af0584362679855a092629c389a45b92fe839e64ecca27635aeac13b5c",
+    "MiaHair_Fringe_Split2": "b0a2a710734c473f19baee7930dc5d7db6a7a17a2d6c94e8b5718f4257a0673e",
+    "MiaHair_Crown_Flyaway_00": "87328dfdb3cd9d23ce419222fa38d9d5aae0f0b35212829d8915a1ff9c93c5dd",
+    "MiaHair_Crown_Flyaway_01": "c9de031b93a9b62ac897ac77014e612f523648676f267ef1222918cabf72b840",
+    "MiaHair_Crown_Flyaway_02": "cb81c1d6d02a853b2be1dab28e8a84a904ddece12d70f155ee022bad44d3c20c",
+    "MiaHair_Crown_Flyaway_03": "b03cf9e42d864beab29f9e5292470f289963fe707e343050eb94c7d8f975ab5f",
+    "MiaHair_R_TempleWave0_-1": "cb02d8c7cb43fa64098792dd857f17cfc507776ebe54291394dd9c73d62c2245",
+    "MiaHair_R_TempleWave0_1": "c5d82d28133f23d45977a03e40a7709043b2cd110f2aa4691470763fb23571d7",
+    "MiaHair_R_TempleWave1_-1": "d61c55d1d4d66927c02ad0212ee846650471bc3b64fa9e7a1876fc4609990702",
+    "MiaHair_R_TempleWave1_1": "152f81fe65e8c82c0faf481fa211ac465afa2ce5457efe961670291cdde39aa0",
+    "MiaHair_R_TempleWave2_-1": "3a36b478a5a3f611575b826e19ad597ac113c997243e3e619ac0d92220f9fc3e",
+    "MiaHair_R_TempleWave2_1": "45c651a961db7f768d31094e5608c5091a68b8469d53d93d10965b8772c93c1e",
+    "MiaHair_R_SideNape0_-1": "12e5bf7d82eda7e1a75e306a5fd81b8330448f01e23b520c70402f69b604d574",
+    "MiaHair_R_SideNape0_1": "fc7c3ee5bc848a20b5adeb4727337e8907e3d260f39d529cefb4719a23d76aa4",
+    "MiaHair_R_SideNape1_-1": "9b9939cc5f19b079b19d9bfb7d5e41fde434d18f8a3c9acf8b54768bd31f902a",
+    "MiaHair_R_SideNape1_1": "93376d1302e431f70673803ab1f0a9ce4b60e1a82b916e72d76edb02e2e8cad2",
+    "MiaHair_R_LooseWisp0": "0920f2070301701a2ab13fed2e7797820afd21ca97baa2a1bd31ca85560de010",
+    "MiaHair_R_LooseWisp1": "8860b8a3fef173e6bdb683180557ff91d42520b30c235bb76743c0bd0d6ed9cb",
+    "MiaHair_R_LooseWisp2": "f54f4696a34a4add560eec0a5c1e5da6d5b22e9141c93658b6681ebee24285c5",
+    "MiaHair_L_TempleWave0_-1": "13c2f4e0c958725121eb9d4d48e665560456e51df8043d90b0db3ca045921b5b",
+    "MiaHair_L_TempleWave0_1": "47175193bf3ebe3818673edca67e230aa85c0a3460b859c220697869775db1c9",
+    "MiaHair_L_TempleWave1_-1": "e47516787c687021a9175b0394a8c20c55fb988c06fc90919fa4e47949ab6928",
+    "MiaHair_L_TempleWave1_1": "e267df4fd0925970347b313fe1aa3ebd0bba3a019eb461ca93565401d8f8ae90",
+    "MiaHair_L_TempleWave2_-1": "d491e27885c6d4a8b4eddeda7fae38709346ba881ed155155545c390704edce7",
+    "MiaHair_L_TempleWave2_1": "5e1d4c3ed601567b2fdd39038fbb34e9e7f13cdb3045bad3c509451e7f28998b",
+    "MiaHair_L_SideNape0_-1": "9f669f7bf99d87313c78feebb9a5dd7b67c59f5b0d96f850c75eda7371332ffd",
+    "MiaHair_L_SideNape0_1": "b2ff85d59dfe04e5787fd978463de647f376037409ec336e642adc0d9d4d9775",
+    "MiaHair_L_SideNape1_-1": "2a406926bf517dc900b1548957028fc2125130d127ed56d3fabae2f955b2ebc9",
+    "MiaHair_L_SideNape1_1": "cb04d7f2473e0276f46106ea43ccb9dcf8c6542db2d70afc6764cdbaf48af9c9",
+    "MiaHair_L_LooseWisp0": "9bcd69344a9cd838913f12f188910155a849b36967aeed07d672f4d12d10a966",
+    "MiaHair_L_LooseWisp1": "448f3b3a33d4e48a16f5b999efa9dfec30c9493e059870d5f373d45f019d57d0",
+    "MiaHair_L_LooseWisp2": "e927937402213c8802a01bed9eb35cc0fe09ec59b5447542f0bf682f03cf432a",
+    "MiaHair_Rear_LongWave00_-1": "d71735787cd7e4ba6d3e85b23c95431fa4af052bb2d11e72018cedb749568140",
+    "MiaHair_Rear_LongWave00_0": "5a482e0e79cb6de809bf274b18762abf421481fe3a44ddbdd3222f242980219c",
+    "MiaHair_Rear_LongWave00_1": "7264eba858e870e16f6bdad865b22b771e8d1f4e5f0401ef2f3a11565d3a3d5c",
+    "MiaHair_Rear_LongWave01_-1": "b8a284af67ed9c7fc1674c2fe73c571eca2df4bb5abb7dc8d41991a2d77d34d2",
+    "MiaHair_Rear_LongWave01_1": "c99bab128fc4bfd22b6655c47e7ab4a954b0e605713ec5e0839676f50af12fcb",
+    "MiaHair_Rear_LongWave02_-1": "3bb39ea0057341d4d98b9d00173c9b550079ddfb9e567b1fe07362aa6443200a",
+    "MiaHair_Rear_LongWave02_0": "617cf11f684192bacf9ce8d62fe00abb51627238fd6620a7c1d257a9071f135c",
+    "MiaHair_Rear_LongWave02_1": "af5eb57501c0d0779e143b27fc254004a1e480a887f89abcd33a5551b431832e",
+    "MiaHair_Rear_LongWave03_-1": "2c656f220152dffc79b2e129e08d52509cf064b4b24a42a0fa141a884f0bb861",
+    "MiaHair_Rear_LongWave03_0": "8244f8fdb06a91802ebf74d412cbfa48e44f7f6f237d2258a25222ca8bc57935",
+    "MiaHair_Rear_LongWave03_1": "775a6e103693a7c098c000f0f6fd14c8c635078484f335b8a5ad782a6a803952",
+    "MiaHair_Rear_LongWave04_-1": "57e9eafc4a06765767f4e3c86b5cd7deb151171d67037a7c6ed95ef8430f31fb",
+    "MiaHair_Rear_LongWave04_1": "25788ab3fa8edca53c9469140b8ee2b139e6bbf5eab99bc030d1c3bc1f486e44",
+    "MiaHair_Rear_LongWave05_-1": "e8379e35c81ff4ee3faf308f53744898cb714e2942541648904246fe6dc5eb1b",
+    "MiaHair_Rear_LongWave05_0": "9011fe0a522a086e3aa89a0df97d5855b27b18053f70696724bf9a6b5be484ca",
+    "MiaHair_Rear_LongWave05_1": "99091c3962eac02a56066084f99cb732106a597c7777b3b1843b1d8c1e3b5f37",
+    "MiaHair_Rear_LongWave06_-1": "dbccb5008879fc3d2d278b2d97ec2cc80e0c0b16466bdebec3245140efd2050d",
+    "MiaHair_Rear_LongWave06_1": "fa17b7cbf44729aca6844ae55e4fa547bee25a92cbd90aeae2ebe1b2930f07ce",
+    "MiaHair_Rear_ShortLayer00_-1": "f37bdb6efa9f05c8a5dd57fe9e8ae4a3a75872eeadb65026a7ffc19ea05ad316",
+    "MiaHair_Rear_ShortLayer00_0": "1edf544bcd6a116ab979db795ee1c573114f2a51217fa518fccd4e8a7418bbb3",
+    "MiaHair_Rear_ShortLayer00_1": "a60a9dc7e358ced0ac662a9d71eb271ab8280c6193ad2fb17c1c0a131f1c7b71",
+    "MiaHair_Rear_ShortLayer01_-1": "40ca7a6e23fa41980e6f12ac2988f811d91f9e9c4630405430c915b145ccdd06",
+    "MiaHair_Rear_ShortLayer01_0": "1bcc5f28dc8391699db37df903f2402275b5b9e20e997508fcafa53a7968c64c",
+    "MiaHair_Rear_ShortLayer01_1": "154660b9bcfd870a7bd8c229aa7b37862bea8ac04f3d95f4954a0e2fa4627bdc",
+    "MiaHair_Rear_ShortLayer02_-1": "86117389f6ca78f1a1a2d5e1c672efe70c553366d4455ed03f23bba3b743aa06",
+    "MiaHair_Rear_ShortLayer02_0": "8cb6eadcc803661409e62e492178acefe3505733c9e8da59382f93ec575896d0",
+    "MiaHair_Rear_ShortLayer02_1": "f7bb3713ad8c1070596f393fdf2720212babec78acdfa84853746219d98d5a64",
+    "MiaHair_Rear_ShortLayer03_-1": "2bd05012a2b81e79cfdfb6682cb619d86e401d31b81611567ac725e387cc3509",
+    "MiaHair_Rear_ShortLayer03_0": "f2f2c06d7655c63b91d8cea0c487b3051a307b034c91769266e31001cd538e02",
+    "MiaHair_Rear_ShortLayer03_1": "5f1f99f4caec738613fbe2915b6344f90331ac734b396bd2e471c6f374b41a34",
+    "MiaHair_HalfUp_OneClosedKnot": "8c340f05c7de761abdb53e5be23b28df2297a3e9ebc2dd8aa51705af5e6f6dc3",
+    "MiaHair_Knot_Wrap00": "42f64ccabb3907f4f3deb856421995816addfe6bdc70822dd3a4ece8f27600c9",
+    "MiaHair_Knot_Wrap01": "6305e7a2003294f31eeb2a6d1659041fc290078fa28a692cc9dd6b159beed040",
+    "MiaHair_Knot_Wrap02": "6c984ec1b0b5d94f6210d571e1b47aed93b64eec5c386621739c8f5a8d644307",
+    "MiaHair_Knot_Wrap03": "7398b2c54cfa4b20e46c320d8c6e7987ac759ea9143ee67ea53605480f4575c1",
+    "MiaHair_Knot_Wrap04": "b6dd98e54652906038ed4e355dbdae6cd39b79d8f75eba8523e0bf92af7dd841",
+    "MiaHair_Knot_Wrap05": "4b752d0b5e1852c7269414fcce77acb9f29aeb187df012ea591aa14cc524a646",
+    "MiaHair_LEFT_OneBraid_Lane0": "070969df9881034f549308adabb2271c4ccc6cec9d047746506c5d675a6d5359",
+    "MiaHair_LEFT_OneBraid_Lane1": "052fb0a55d66c0b7f0e7ac73e55ab64a999f3a9e6bc96dd40493243195fa879f",
+    "MiaHair_LEFT_OneBraid_Lane2": "a4a932174f8b86df62a7574f513f3e0b2452ea7c44158f10af02dfd4874586f6",
+    "MiaHair_Braid_Tail": "b2cb60744a0bfb330880fc62cd9734d6d6bbcff756bfb3362d883953fc1fa0ae",
+    "MIA_V06_BODY_SKIN": "c9186d12df050e524a08982970ff35d4b02d1f80571368a53875a85bb88b9989",
+    "MIA_V06_FACE_SKIN": "c0458c62a0ed192ff616859c34fc913babb3af83f432156b14d4d74c4dbebc2a",
+    "MIA_V12_CleanUpperLash_-1": "f3aaa1cc1da92461e3ef8f6a2c4030362188ffe8cf30fc9d6142434b91f3649f",
+    "MIA_V12_FineLowerLid_-1": "6758862d80b44ba8a4a71b9e61c278a9825dc53e01d16495cb7b7254fbdd22dd",
+    "MIA_V12_OuterLash_-1": "a9c3cdaadecdf7ef231c3a34b40fcbb6837e52378e9379d703c086c2b914210e",
+    "MIA_V12_AngledBrow_-1": "4c2d9a91a49d01891afcaa3cbaf8f8c0a4eb3e8f4e7b768ca2c99428b077fe75",
+    "MIA_V12_CleanUpperLash_1": "9ffe5d27d9370a5550a3e0ddfc286ef7a880de1fa25f4b3790901d6172227164",
+    "MIA_V12_FineLowerLid_1": "4f70c25d39fa319c90d2d06e96d0f1f364b6904b308a651fc9307be6a0e9d120",
+    "MIA_V12_OuterLash_1": "87f657ce293904a6dba352251593009fefc2dfe51f7e64cb0fa1ed1d02fe3757",
+    "MIA_V12_AngledBrow_1": "81b90d5f2e6978ab7ac996ac9a03e85461011f86daee9505a34e3dc7c3e759b0",
+    "MIA_V13_BodyOutline": "331dfdf32ed20b6984b1a0dabba9e71876292e3d89bd7109c26086de58ed0a28",
+    "MIA_V13_FaceOutline": "bc24f4ceeb1d084206d9ba738fe425f64e4c709c5b2c54eacd0e3f7d2deaf189",
+    "MIA_V14_SculptedSkin": "469695d58f75ae3b1e4348938aa962583932a2e3b7d46a0f83b8b578eb78b93f",
+    "MIA_V14_UpperLash_-1": "9a71ae2206cbb57ae51301d781a9c9a0bf27ea99e5f7fd5031bc14437b7be4f4",
+    "MIA_V14_OuterWing_-1": "3fac6b4a16729c15d0f6acb96c24d84a65b633d12f162048a47eb407974be7ef",
+    "MIA_V14_Brow_-1": "7e8df893e2056ef7b04b6b7f0d526bc0e13026f13ce9af7352ac904036512a3b",
+    "MIA_V14_UpperLash_1": "dcd4eaefbb38f3f19f59059c477afd363be60af421544131b04e33629d08afe0",
+    "MIA_V14_OuterWing_1": "f86701ff607603b6a44270a6aec604597179a8357feab9e245b59773d9357f4e",
+    "MIA_V14_Brow_1": "c410e7f0c3fca32e4d2b45ec2ce178fd1870840403d5fc13d6acf895c4ceff4c",
+    "MIA_V14_MouthSeam": "d9dfbbb610067261338b851e25e55007d31b64735e866915676257f704e6a656",
+    "MIA_V14_SmoothJawInk": "6f08e84f158a306b6ce8d122063e94cad47dd6323cc8ccc110ff12fef1407574",
+    "MIA_V14_EyeSurface": "0deee035899129d87c6e115c3e17a4386a08b8b51a270cfc8354849ebe5fb4e9",
+    "MIA_V16_PIXAL_UpperHair": "f01db16eef4284b1e4f95cedf7e5734d3086c17df860bdba15d892433afb3062",
+    "MIA_V16_PIXAL_RecoveredRear": "21aaf44560679fb7393307c57da99010afe60a4d9bf89dd06964e53a3b445e37",
+    "MIA_V16_PIXAL_LowerHair": "b95894e0fba53e7957d840fd47a9cf5beb29d8e4c87ed695857b777c66672e17",
+    "MIA_V17_SingleUnderEyeCrease_-1": "15c43577a81346785758eed71ddabac0f0e3cf70f560ee2abedb59dfceeebad2",
+    "MIA_V17_SingleUnderEyeCrease_1": "e85239ae23cd6392bae0e7d52128d627b948aee77bed18d4e665e585dd524ee1",
+    "MIA_V17_LeftBraid_Tail": "a7291489f8d0990a5d8515fa742714fb3265afaa5770de40a37ac5b65c2b03ac",
+    "MIA_V17_LeftBraid_Lane2": "81c9db5f04a5e7ff67a46896255da84715a4864588a5de246858019ec71cf3a8",
+    "MIA_V17_LeftBraid_Lane1": "39c13bd7d76df7ec6e2c969d5cc182a63bd513cdcbeb91d6a95a6c16018169ed",
+    "MIA_V17_LeftBraid_Lane0": "a2252c059428199497963e8b858bfd44fe979ca606edd0c5a6b61fec7c70fb32",
+    "MIA_V17_LeftBraid_Tie": "225a368e759ae632a9596cafca9c982f410a134eadfc130b8f2754909ab78ebf",
+    "MIA_V17_RootLining_MIA_V06_BODY_SKIN": "ce937a6cb32705927bdb57437fb48005c734c074802dc502bf8940513cd7623a",
+    "MIA_V17_RootLining_MIA_V14_SculptedSkin": "b575a9e007bc452aafc3a9205aa98ca5f2cf470da9920e9eb00b064bf237e19c",
+    "MIA_V17_PIXAL_DetailedHair": "da1614ca0c4b1dffdbf154734853ece5402041a0fb59ccde70af23588c009ef5",
+    "MIA_V20_HalfUp_Fold_Left": "dce95b67541201b394cfe1e1d291df30dfe9560f3570b0acd9dab64e2f938d69",
+    "MIA_V20_HalfUp_Fold_Right": "770fe635e0f38d534e4c8ef2f5efacba9e06bdcb23bb87330c125b65ff6a83ba",
+    "MIA_V20_HalfUp_Binder": "06e16fd8c4d36091d3a9106599213142daeabf5e09874e95cb2403d55c0fa43a",
+    "MIA_V20_Crown_PixalDonorLock": "03fa5cee7bb4037e5ac01b374d4834f42fb06f69250fb85d7997ecca27567ec6",
+    "MIA_V17_MiaHair_Knot_Wrap05": "db86c28fc097235abec94caa67ec6b030323fa0374e7dd17b1fa0caf42cbb0ad",
+    "MIA_V17_MiaHair_Knot_Wrap04": "1fb356841cd3a2aab26f8de20e1b30fba64cb0f469b9c2983a12ac34c4e85d2a",
+    "MIA_V17_MiaHair_Knot_Wrap03": "9d681b01a40b2cef71396ce61ad353ea9455f277ef4960d3a8f4d70ba7fa2dd3",
+    "MIA_V17_MiaHair_Knot_Wrap02": "afa40cc62fef6e16b471d1f5236374ce1bd8980aa61dd70f2739df3b9e8ed061",
+    "MIA_V17_MiaHair_Knot_Wrap01": "1b5f596d4b1f7ed464e2d0f9079e641214ffda041172e47a86754d43492c3cf0",
+    "MIA_V17_MiaHair_Knot_Wrap00": "49633f3a5c815a4cc60ebe7429f20bdfe543ac86cf0e6c7ee24c7b2270c516d9",
+    "MIA_V17_MiaHair_HalfUp_OneClosedKnot": "e7a2cacea4d04b075f35f1c5ccb0222222214ee3a5c726e1d1510a5e7600fe9d",
+    "MIA_V24_Gather_Main": "168809e95ea9be2fdbfcd8593dfdfb5b0877c5190caa446d71f4d84ea4e99e00",
+    "MIA_V24_Gather_Tuck": "19af6e687d7cf2148464310d50bb75bb90f7f173bb3c7946d0614ffd71e55c15",
+    "MIA_V24_Gather_Upper": "6d384b3bc37474b074b8c980ba4999d8b8616998f2c005d2c916bb4f25a34c9d"
+  },
+  "original_material_digests": {
+    "F00_000_00_EyeExtra_01_EYE": "449cb8240968b25daaff96f72ed7bf5f103ca10c9f4cbe3c612218df7e051cbd",
+    "F00_000_00_EyeExtra_01_EYE.001": "8c4d0b21670a0884e9139bff5e232af4b7c6d7a5b8fc3f555d211dee15a3c623",
+    "F00_000_00_EyeExtra_01_EYE.002": "d347266fbf8884feb2edf88a937f45f01d7fd327bc95be157fc1fe96a14d6c87",
+    "F00_000_00_EyeHighlight_00_EYE": "48489de017e2a9d0128f6786b786d8304d5b1c49afe54fc8f986778c3b1f9f8b",
+    "F00_000_00_EyeHighlight_00_EYE.001": "174360465490a96a27ec19f76d8bf0833222c53b71833035aee3be4c531a689b",
+    "F00_000_00_EyeHighlight_00_EYE.002": "ab86d2d37ac32848ebeb3fa36d419aa92ad6e0f7c9c13d88172a564a5e23610c",
+    "F00_000_00_EyeIris_00_EYE": "90a1f08fad39f3b08ba86cc428b3b62ed980097cb68ba0afd0fabb32e65fe9b6",
+    "F00_000_00_EyeIris_00_EYE.001": "8ded62438e343b17c1f22147418c920b88ea8e0d3a0e4756d3984356502253f5",
+    "F00_000_00_EyeIris_00_EYE.002": "43af707231a31cfc6da046fef45737434551dd88d881a07907aaecd2c3d44464",
+    "F00_000_00_EyeWhite_00_EYE": "33eb39bf860b21a4d0043abbc00c14752172aaa7948cac018be5345f269fbde8",
+    "F00_000_00_EyeWhite_00_EYE.001": "ef9247a48d5c8a9b1cd0432db551fef26470b254bc4d58bf1d055a1ea5ab9a1b",
+    "F00_000_00_EyeWhite_00_EYE.002": "23bf6601e5cdc4e897c96ce968bdd374f0c8db0ccba10adf40b6a9ef88405377",
+    "F00_000_00_Face_00_SKIN": "c1b74bd8a4f03e6d81b34ff30bc057bd42898d477395b796e59d9ba915953b8c",
+    "F00_000_00_Face_00_SKIN.001": "12ac16acd196d94f75c05a73b768d0f30350ab501c715a9f6cee2e79eddbf8c0",
+    "F00_000_00_Face_00_SKIN.002": "204c56b999b95baaec44f7e9ed7743b5c16f1492c30cfd13b984d5b6368ffb78",
+    "F00_000_00_FaceBrow_00_FACE": "f72ef68d35672ef9aeb198a9790185b593604b7384aa4d2395020b869e19eddc",
+    "F00_000_00_FaceBrow_00_FACE.001": "9cade82fbea834e35535879131bdd00092401e3167dbdd541a80cfb5409cf563",
+    "F00_000_00_FaceBrow_00_FACE.002": "9ac88f8a23d602ae705f6b14fd4ac18c9e0079868ecb756e4f726b0bf6bfac23",
+    "F00_000_00_FaceEyelash_00_FACE": "72857a787a4d7019dfff4c693a9343af6ead3cc9deeb4b0f900f40f3c55b6678",
+    "F00_000_00_FaceEyelash_00_FACE.001": "5fa6e021be60421d89bf4d15cac388a8473d54ddd34521644f7c56768f01cccf",
+    "F00_000_00_FaceEyelash_00_FACE.002": "1d253b83108c6278a8598adfbf9add0f3ac9c807fb7b275fa4c841d8b422ab77",
+    "F00_000_00_FaceEyeline_00_FACE": "f479a152a46525e31b19ea1ae751490dd4d519e5be1f92f60948aa598dde6327",
+    "F00_000_00_FaceEyeline_00_FACE.001": "1d587ffaf0e9ec2c107704558bed8d9b4631339c9cee096715633695c3814b16",
+    "F00_000_00_FaceEyeline_00_FACE.002": "131939bac28243947d9c373dcce4f1c53d748abcfb218156c383e67ab3c37133",
+    "F00_000_00_FaceMouth_00_FACE": "85d6666eb3082adef940388d17e5c97875c7d6cd74ee70c10d062cac5839234d",
+    "F00_000_00_FaceMouth_00_FACE.001": "0029d090e6c85af73c6b278a4fa5f4b3305fc6c1d38056eb6bc05ae04111e9f9",
+    "F00_000_00_FaceMouth_00_FACE.002": "3ba9a038206663e16ddacfec0b5fe78a55282b7533df9c6db990702d6eb1bb42",
+    "F00_000_Hair_00_HAIR_01": "c8be80650d4a371322457db94408ce3231a9aa3bfcb71444ab481525f6efca68",
+    "F00_000_Hair_00_HAIR_02": "73c569f7f8f00494bdd9eb8ae89bc7ce3ab8e161f1454debe34a9475f6b293b6",
+    "F00_000_Hair_00_HAIR_03": "505ccc92acfe9eddee09969a4b8cf36bdb7c25748f3a93b32b49ef4eccfb369c",
+    "F00_000_HairBack_00_HAIR": "771b6f5b9b2955a4fb603b02f4f5980184bc9d55b9493e8146bddab41d75fafa",
+    "F00_002_01_Shoes_01_CLOTH": "df44db80e4a632f78df1c4b6d5d963816cf31ab3b4800c74c899ae15636101ee",
+    "F00_002_01_Tops_01_CLOTH": "8da71d67d23e9b95b2c315265a4a8bffc3998ebc9872ee4c3a3b2ff0d38b3db2",
+    "F00_002_02_Body_00_SKIN": "84fc242c4ff67f64131ab44238e9d3447deabd48eb20f31fb642ffc10fb9f162",
+    "GUIDE_ALBEDO_Material_0.001": "0d441468536875ad9c0b86f5777e666f8c3e1594d4fa4d9418f22ba3c4998abd",
+    "GUIDE_ALBEDO_Material_0.002": "4669ac8ec397e160a8ba750df5cdd7ac8c9285e1afdf70d9ba1a0485a5fcff5d",
+    "Mia_AshBlueGrey_Iris_MToon": "ea1fa08a6b30ecfb7374ab9cf379e483a44c5a4e31291cb14444beb58be3a497",
+    "Mia_CharcoalEyeLine_MToon": "dbc7df20610a9026afff8219290e38949f2f7c124b22ad8eeb6dd67f7a679f41",
+    "Mia_CharcoalLash_MToon": "5737633dfcaf2b80276638bdd509fa0c26b5b26e25e58a8a38266c638872a29e",
+    "Mia_CoolMutedBodySkin_MToon": "dcc26e88b436e41126183b6cdceb9354119769132c7da1f97b4210bd63216142",
+    "Mia_CoolMutedSkin_MToon": "4d216de2ad2d41d4db592f105e8314177f48029eda0940e3bfa9f5b164497953",
+    "MIA_FaceAnatomy9_Identity_m5": "3e6457e6a5973568d22cdba3bc1c4081ace0c1f747a63a81f8447a4a9ff188b8",
+    "Mia_FaceArt_ContourInk": "39c48e0af39070f901fc3ada6f793febd1dcdb11c1272a65a742ddc148a656bb",
+    "Mia_FaceArt_CoolPaperSkin": "86207077d52af91a62e24fe74d49021172dc630853513dd92b92be0aed24565b",
+    "Mia_FaceArt_GrayIrisHierarchy": "937a3671176ed769f00f830c087f2335efc1c15def4a5c23110ef98c53715982",
+    "Mia_FaceArt_RestrainedEyeGlint": "7856a56719f58723438d590ba9a94982ffe846117a7c0504f10a49ca96be36e2",
+    "Mia_MutedEyeAccent_MToon": "4a77ae86bd2f0eec2c69826a18e4485fa094c067a7e8568644b17733e82162a6",
+    "Mia_MutedEyeAccent_MToon.001": "1f91335e407ced2e6cb9ee98f850ee43d608b5cbc785a624b137aeb5dd8cd03e",
+    "Mia_MutedEyeAccent_MToon.002": "26eedc330b421e0b3549adbe52d262d5a31865ba7c9be3c01e253a3f42a98898",
+    "Mia_SlateBrow_MToon": "946f387aa1b7fc6a919b8ff752ef2a4310a0c4594c995aef104019a87ebfe629",
+    "MIA_V12_BrowInk": "0038475b1418ff0c154efc3d9e6d04285e982c62248cf4d9a0573c26aaa14130",
+    "MIA_V12_LashInk": "9c45dfa47f35350470c2120fff886d12f9bbc748feea770285a937c6a5c0d20b",
+    "MIA_V12_LowerLidInk": "0202d26b249bfa19888404e4184947a278426e3d4e863bda8c4fb8795399fd9b",
+    "MIA_V12_ReplacedBrowCard": "e9172e15df0857af156b5da577d50973dfc8c77f550e761bdeff6e29fe085a12",
+    "MIA_V13_PaintedBodySkin": "82c2a221a010a09cfdeb3fcb168f904502d739259d2af33dde405707441285fa",
+    "MIA_V13_SkinSilhouetteInk": "d01adf1fc3aba21b110c3c9525cfcaca56ff7dcff81d37a85cad7b7259035405",
+    "MIA_V14_BrowInk": "476387e02b04cae353c6927bec4475f5a14f8bc7984267572b8596f6cde42dd6",
+    "MIA_V14_JawInk": "1d3b2adfd7abf637ad7a63ed500e295eef6222b9071bc243bd35fd582f6c2041",
+    "MIA_V14_MouthSeamInk": "bc15c76d1bda8b910880047f38ece4163b901f652a05576f76929b08debd1e1f",
+    "MIA_V14_SoftIvorySclera": "e4c17163c893f51922fe528a86e9300ecc75675a040db339929477d8cd45969e",
+    "MIA_V14_SourceSkinHidden": "e9172e15df0857af156b5da577d50973dfc8c77f550e761bdeff6e29fe085a12",
+    "MIA_V16_Sclera_BackfaceCullingRestored": "e4c17163c893f51922fe528a86e9300ecc75675a040db339929477d8cd45969e",
+    "MIA_V16_Sclera_BackfaceCullingRestored.001": "e4c17163c893f51922fe528a86e9300ecc75675a040db339929477d8cd45969e",
+    "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001_V22_LightToon": "48e79e750aa7356f4074312842622bb631445439de62bcd821df6a27d893759c",
+    "MIA_V17_HairRootAsh.001_V22_LightToon": "dfc81f234380c671dfca73a59cc86566d682d7f97cac125b0894b82251c1d8f2",
+    "MIA_V17_KnotAsh_StrandNormals.001_ReferenceAsh.001": "956412661350fbbad0174db3ca57d3b088f3769a9af7fc5e2f38f43c07bf74d5",
+    "MIA_V17_LegacyEyeGlintsHidden": "2fdbb85bd9650e0d1153b17ff6f424d7c5687dc8e34f29c0e8b4fffad89e430e",
+    "MIA_V17_LegacyEyeGlintsHidden.001": "2fdbb85bd9650e0d1153b17ff6f424d7c5687dc8e34f29c0e8b4fffad89e430e",
+    "MIA_V17_LegacyEyeGlintsHidden.002": "2fdbb85bd9650e0d1153b17ff6f424d7c5687dc8e34f29c0e8b4fffad89e430e",
+    "MIA_V17_MutedTealTie.001_V22_LightToon": "4c960051942d90ada631e7de5dac8a486d61f29dd5b059f7547340a9c123a977",
+    "MIA_V17_RecoveredBraidTie.002_V22_LightToon": "6391c773e4f45a71fd52172d855c58dfc13fd60112d3cf226523f2a3db5822e7",
+    "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon_GeneratedInk": "3e4d918b7df50aa1ad10d88825c3a590c994f8f3d81b146f9b08043df51569aa",
+    "MIA_V17_SingleLowerCrease": "e3e997d0ba27bd1718e00f67fa98d5deaba964c80c06495d2b2804a8e25b39fd",
+    "MIA_V17G_RootLining_WarmHairShadow.001_V22_LightToon": "eb341dac7d2dda1841a03f73cb9980d113cf952fc228209bfa1baac50023d4e9",
+    "MIA_V20_AuthoredFold_AshStrata": "54307740230dfc528b8de0f4c18180f9a06578594d128755f5f6b8dbcfe3893b",
+    "MIA_V22_Body_CommonLight_Preview.001": "b98a087a48883658393ce0d4776201dd88dd1a51a657a5442b7b3b8ac4dc471b",
+    "MIA_V22_Iris_LowerArc_Rim": "608cea79b3d8c65daf1c978afb3ce0d013eb585c2dd137eb65932e5f3af131bb",
+    "MIA_V22_Iris_LowerArc_Rim.001": "608cea79b3d8c65daf1c978afb3ce0d013eb585c2dd137eb65932e5f3af131bb",
+    "MIA_V22_TaperedLash_DeepInk": "3040e7510342af8bd684e2131610536116e1afdd9a9b0dabf73d0c787f5090f3",
+    "MIA_V23_Body_CommonLight": "4687ef0f956c430da9b19f00c2174c93f046e461bab79c44be2f57c8f3a812e1",
+    "MIA_V24_Gather_Main_PaintedToon": "271dd0f2027725331a928aeb42e299fbb5010139f98e712a046d921450fbb338",
+    "MIA_V24_Gather_Tuck_PaintedToon": "51a90896de84cabe18a0e3474031ba983777ad6bed3271987da1f76b0f8c6929",
+    "MIA_V24_Gather_Upper_PaintedToon": "7614e5d6442cda721b31cd123313099fdb3b09b042c5f748910d83f5b0e35c2e",
+    "MIA_V27_NewSurface_ActualUVIdentity": "26f0ad7cf2ba21a51071c67167c99fd01f70267d6cc9a11842253e6488042673",
+    "MIA_V27_NewSurface_ActualUVIdentity.001": "0bf693daeb20da00f8536d6bd61bc5f79a7264a9f308aeb2c65c7cca353d4198",
+    "MiaHairSurface_Ash": "55654060c83c65dc5f5bbcbd1d0b0e1aa348374dada5b846a8f007b2e2d91f6c",
+    "MiaHairSurface_Charcoal": "c605be78017ea1ca99e2fec27fda2143ad86b7e99ebfbe19f6b20e8221131946",
+    "MiaHairSurface_Ink": "de196689586bffe5e1578fb28ed106845d12222fcde3c3270319739dfd69ead7",
+    "MToon Outline (F00_000_00_Face_00_SKIN)": "b06c81b158d25104f9d22118dedccbc784cf73587dd6ad85d1fdd1c9c8fe12cd",
+    "MToon Outline (F00_000_00_Face_00_SKIN).001": "848d6e144fa59a802c911d6d162df79f1226a6c0abf396b107781e3adcba9f44",
+    "MToon Outline (F00_000_00_Face_00_SKIN).002": "3012ecfdfae1c92b2c9934d48bd440fc7bd27d78d2877af0e9971eedb9aab861",
+    "MToon Outline (F00_002_01_Shoes_01_CLOTH)": "7d427d0c400eecc91628e6385e9a5704f9de957287d80b48ed689eed1ef9b931",
+    "MToon Outline (F00_002_01_Tops_01_CLOTH)": "f8335fecd08cdd95356f5e5d62708d94851538c22dae401c1c19a932d28be96e",
+    "MToon Outline (F00_002_02_Body_00_SKIN)": "b094cd7c6a7031e096f39124735bacb62197dd044f9d0937c9eb369c87937a78",
+    "V27_DonorCards_Replaced": "2fdbb85bd9650e0d1153b17ff6f424d7c5687dc8e34f29c0e8b4fffad89e430e",
+    "V27_F1_UniformWarm_ControlledLight": "8d4e5e3e2709c2d34237e06ba41ae621d580abffbd52f6d56480fd8f12c84344",
+    "V27_HeadBlend_MIA_V13_PaintedBodySkin": "c0cd3f4431878ba977bdc0e2aba5ba95a12f4e42f4e38a39af855ba5f4b32646",
+    "V27_HeadBlend_MIA_V22_Body_CommonLight_Preview.001": "36a3dc208e0aa532269596aa9168e08cfe673dc9f428906a1af57260a988b65e",
+    "V27_HeadBlend_MIA_V23_Body_CommonLight": "d7099e442eeb60435cce041e261d339603e2d955b264724016adfffac0f3869d",
+    "V27_OriginalAlpha_Ink_4": "fafe947422ad10797bbcf92d05a524540f01f43009e7278d353262921187ffb0",
+    "V27_UpperLid_Charcoal": "2306884512ddd283eef3900cc2b0abf92649759595479e222df9c8d4cc66ab29",
+    "V28_Orbit_ActualUV": "635c36f628ccee23934eaef77a7b26ed1ecab187bcc8b918dd91a8d0b77a2017",
+    "V28G_ActualFaceUV_InnerLidSkin": "635c36f628ccee23934eaef77a7b26ed1ecab187bcc8b918dd91a8d0b77a2017",
+    "V28G_ArchivedOriginalOcular_Transparent": "2fdbb85bd9650e0d1153b17ff6f424d7c5687dc8e34f29c0e8b4fffad89e430e",
+    "V29_Lash_NativeSoftBlack": "2306884512ddd283eef3900cc2b0abf92649759595479e222df9c8d4cc66ab29"
+  },
+  "status": "UNREVIEWED material-only native. Actual color-only/source/diffuse/spec/roughness/moved-light/blink probes required; hashes are not art acceptance."
+}

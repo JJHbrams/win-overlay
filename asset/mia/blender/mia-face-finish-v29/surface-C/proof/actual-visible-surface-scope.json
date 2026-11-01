@@ -1,0 +1,891 @@
+{
+  "native_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+  "render_scope": "Collection/view-layer exclusions +collection.hide_render +object.hide_render, not mere material datablock existence. Geometry-node-generated materials remain separately represented by modifier names.",
+  "render_visible_meshes": [
+    {
+      "name": "MIA_V27_Foundation_Face",
+      "vertices": 2339,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "F00_000_00_FaceMouth_00_FACE",
+          "polygon_count": 496
+        },
+        {
+          "slot": 1,
+          "material": "V28G_ArchivedOriginalOcular_Transparent",
+          "polygon_count": 96
+        },
+        {
+          "slot": 2,
+          "material": "V27_DonorCards_Replaced",
+          "polygon_count": 384
+        },
+        {
+          "slot": 3,
+          "material": "V27_DonorCards_Replaced",
+          "polygon_count": 224
+        },
+        {
+          "slot": 4,
+          "material": "V27_OriginalAlpha_Ink_4",
+          "polygon_count": 160
+        },
+        {
+          "slot": 5,
+          "material": "V28G_ArchivedOriginalOcular_Transparent",
+          "polygon_count": 192
+        },
+        {
+          "slot": 6,
+          "material": "MIA_V17_LegacyEyeGlintsHidden.001",
+          "polygon_count": 192
+        },
+        {
+          "slot": 8,
+          "material": "MIA_V17_LegacyEyeGlintsHidden.002",
+          "polygon_count": 64
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V27_FaceHead_RigFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V27_Upper_BoundaryRibbon_-1_Dense",
+      "vertices": 455,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "V27_UpperLid_Charcoal",
+          "polygon_count": 360
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V27_FaceHead_RigFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V28G_LashActualSideThickness",
+          "type": "SOLIDIFY",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V27_Lower_BoundaryRibbon_-1_Dense",
+      "vertices": 525,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "V27_UpperLid_Charcoal",
+          "polygon_count": 416
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V27_FaceHead_RigFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V28G_LashActualSideThickness",
+          "type": "SOLIDIFY",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V27_Upper_BoundaryRibbon.001_1_Dense",
+      "vertices": 455,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "V27_UpperLid_Charcoal",
+          "polygon_count": 360
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V27_FaceHead_RigFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V28G_LashActualSideThickness",
+          "type": "SOLIDIFY",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V27_Lower_BoundaryRibbon.001_1_Dense",
+      "vertices": 525,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "V27_UpperLid_Charcoal",
+          "polygon_count": 416
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V27_FaceHead_RigFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V28G_LashActualSideThickness",
+          "type": "SOLIDIFY",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "MIA_V27_SharedHeadBody",
+      "vertices": 4647,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "V28_Orbit_ActualUV",
+          "polygon_count": 1342
+        },
+        {
+          "slot": 1,
+          "material": "MIA_V23_Body_CommonLight",
+          "polygon_count": 3894
+        },
+        {
+          "slot": 9,
+          "material": "V27_HeadBlend_MIA_V23_Body_CommonLight",
+          "polygon_count": 72
+        },
+        {
+          "slot": 10,
+          "material": "V27_HeadBlend_MIA_V22_Body_CommonLight_Preview.001",
+          "polygon_count": 178
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V14 Stitch coincident skin seams",
+          "type": "WELD",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V14 Continuous skin curvature",
+          "type": "SUBSURF",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V14 Local transition relaxation",
+          "type": "SMOOTH",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "MToon Outline (F00_002_01_Shoes_01_CLOTH)",
+          "type": "NODES",
+          "show_render": true,
+          "node_group": "VRM Add-on MToon 1.0 Outline Geometry Revision 1"
+        },
+        {
+          "name": "MToon Outline (F00_002_02_Body_00_SKIN)",
+          "type": "NODES",
+          "show_render": true,
+          "node_group": "VRM Add-on MToon 1.0 Outline Geometry Revision 1"
+        },
+        {
+          "name": "MToon Outline (F00_002_01_Tops_01_CLOTH)",
+          "type": "NODES",
+          "show_render": true,
+          "node_group": "VRM Add-on MToon 1.0 Outline Geometry Revision 1"
+        }
+      ]
+    },
+    {
+      "name": "V28_LashFan_-1",
+      "vertices": 9,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "V27_UpperLid_Charcoal",
+          "polygon_count": 3
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V28_LashHeadFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V28G_LashActualSideThickness",
+          "type": "SOLIDIFY",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V28_LashFan_1",
+      "vertices": 9,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "V27_UpperLid_Charcoal",
+          "polygon_count": 3
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V28_LashHeadFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V28G_LashActualSideThickness",
+          "type": "SOLIDIFY",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V28G_Sclera_-1",
+      "vertices": 513,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V16_Sclera_BackfaceCullingRestored.001",
+          "polygon_count": 512
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V28G_HeadFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V28G_Iris_-1",
+      "vertices": 469,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V22_Iris_LowerArc_Rim.001",
+          "polygon_count": 864
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V28G_HeadFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V28G_InnerLid_-1",
+      "vertices": 576,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "V28G_ActualFaceUV_InnerLidSkin",
+          "polygon_count": 480
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V28G_HeadFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V28G_EvaluatedSeamNormals",
+          "type": "DATA_TRANSFER",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V28G_Sclera_1",
+      "vertices": 513,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V16_Sclera_BackfaceCullingRestored.001",
+          "polygon_count": 512
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V28G_HeadFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V28G_Iris_1",
+      "vertices": 469,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V22_Iris_LowerArc_Rim.001",
+          "polygon_count": 864
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V28G_HeadFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "V28G_InnerLid_1",
+      "vertices": 576,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "V28G_ActualFaceUV_InnerLidSkin",
+          "polygon_count": 480
+        }
+      ],
+      "modifiers": [
+        {
+          "name": "V28G_HeadFollow",
+          "type": "ARMATURE",
+          "show_render": true,
+          "node_group": null
+        },
+        {
+          "name": "V28G_EvaluatedSeamNormals",
+          "type": "DATA_TRANSFER",
+          "show_render": true,
+          "node_group": null
+        }
+      ]
+    },
+    {
+      "name": "MIA_V17_LeftBraid_Tail",
+      "vertices": 486,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001_V22_LightToon",
+          "polygon_count": 424
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V17_LeftBraid_Lane2",
+      "vertices": 1500,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001_V22_LightToon",
+          "polygon_count": 1492
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V17_LeftBraid_Lane1",
+      "vertices": 1500,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001_V22_LightToon",
+          "polygon_count": 1492
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V17_LeftBraid_Lane0",
+      "vertices": 1500,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001_V22_LightToon",
+          "polygon_count": 1492
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V17_LeftBraid_Tie",
+      "vertices": 480,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V17_MutedTealTie.001_V22_LightToon",
+          "polygon_count": 480
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "vertices": 1192,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V17G_RootLining_WarmHairShadow.001_V22_LightToon",
+          "polygon_count": 1136
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "vertices": 769,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V17_HairRootAsh.001_V22_LightToon",
+          "polygon_count": 697
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V17_PIXAL_DetailedHair",
+      "vertices": 100383,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon_GeneratedInk",
+          "polygon_count": 122129
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V20_Crown_PixalDonorLock",
+      "vertices": 359,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon_GeneratedInk",
+          "polygon_count": 420
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V24_Gather_Main",
+      "vertices": 3890,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V24_Gather_Main_PaintedToon",
+          "polygon_count": 3936
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V24_Gather_Tuck",
+      "vertices": 3890,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V24_Gather_Tuck_PaintedToon",
+          "polygon_count": 3936
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "name": "MIA_V24_Gather_Upper",
+      "vertices": 3890,
+      "materials_with_polygons": [
+        {
+          "slot": 0,
+          "material": "MIA_V24_Gather_Upper_PaintedToon",
+          "polygon_count": 3936
+        }
+      ],
+      "modifiers": []
+    }
+  ],
+  "materials_actually_assigned_to_render_visible_polygons": {
+    "F00_000_00_FaceMouth_00_FACE": [
+      {
+        "owner": "MIA_V27_Foundation_Face",
+        "slot": 0,
+        "polygons": 496
+      }
+    ],
+    "V28G_ArchivedOriginalOcular_Transparent": [
+      {
+        "owner": "MIA_V27_Foundation_Face",
+        "slot": 1,
+        "polygons": 96
+      },
+      {
+        "owner": "MIA_V27_Foundation_Face",
+        "slot": 5,
+        "polygons": 192
+      }
+    ],
+    "V27_DonorCards_Replaced": [
+      {
+        "owner": "MIA_V27_Foundation_Face",
+        "slot": 2,
+        "polygons": 384
+      },
+      {
+        "owner": "MIA_V27_Foundation_Face",
+        "slot": 3,
+        "polygons": 224
+      }
+    ],
+    "V27_OriginalAlpha_Ink_4": [
+      {
+        "owner": "MIA_V27_Foundation_Face",
+        "slot": 4,
+        "polygons": 160
+      }
+    ],
+    "MIA_V17_LegacyEyeGlintsHidden.001": [
+      {
+        "owner": "MIA_V27_Foundation_Face",
+        "slot": 6,
+        "polygons": 192
+      }
+    ],
+    "MIA_V17_LegacyEyeGlintsHidden.002": [
+      {
+        "owner": "MIA_V27_Foundation_Face",
+        "slot": 8,
+        "polygons": 64
+      }
+    ],
+    "V27_UpperLid_Charcoal": [
+      {
+        "owner": "V27_Upper_BoundaryRibbon_-1_Dense",
+        "slot": 0,
+        "polygons": 360
+      },
+      {
+        "owner": "V27_Lower_BoundaryRibbon_-1_Dense",
+        "slot": 0,
+        "polygons": 416
+      },
+      {
+        "owner": "V27_Upper_BoundaryRibbon.001_1_Dense",
+        "slot": 0,
+        "polygons": 360
+      },
+      {
+        "owner": "V27_Lower_BoundaryRibbon.001_1_Dense",
+        "slot": 0,
+        "polygons": 416
+      },
+      {
+        "owner": "V28_LashFan_-1",
+        "slot": 0,
+        "polygons": 3
+      },
+      {
+        "owner": "V28_LashFan_1",
+        "slot": 0,
+        "polygons": 3
+      }
+    ],
+    "V28_Orbit_ActualUV": [
+      {
+        "owner": "MIA_V27_SharedHeadBody",
+        "slot": 0,
+        "polygons": 1342
+      }
+    ],
+    "MIA_V23_Body_CommonLight": [
+      {
+        "owner": "MIA_V27_SharedHeadBody",
+        "slot": 1,
+        "polygons": 3894
+      }
+    ],
+    "V27_HeadBlend_MIA_V23_Body_CommonLight": [
+      {
+        "owner": "MIA_V27_SharedHeadBody",
+        "slot": 9,
+        "polygons": 72
+      }
+    ],
+    "V27_HeadBlend_MIA_V22_Body_CommonLight_Preview.001": [
+      {
+        "owner": "MIA_V27_SharedHeadBody",
+        "slot": 10,
+        "polygons": 178
+      }
+    ],
+    "MIA_V16_Sclera_BackfaceCullingRestored.001": [
+      {
+        "owner": "V28G_Sclera_-1",
+        "slot": 0,
+        "polygons": 512
+      },
+      {
+        "owner": "V28G_Sclera_1",
+        "slot": 0,
+        "polygons": 512
+      }
+    ],
+    "MIA_V22_Iris_LowerArc_Rim.001": [
+      {
+        "owner": "V28G_Iris_-1",
+        "slot": 0,
+        "polygons": 864
+      },
+      {
+        "owner": "V28G_Iris_1",
+        "slot": 0,
+        "polygons": 864
+      }
+    ],
+    "V28G_ActualFaceUV_InnerLidSkin": [
+      {
+        "owner": "V28G_InnerLid_-1",
+        "slot": 0,
+        "polygons": 480
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "slot": 0,
+        "polygons": 480
+      }
+    ],
+    "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001_V22_LightToon": [
+      {
+        "owner": "MIA_V17_LeftBraid_Tail",
+        "slot": 0,
+        "polygons": 424
+      },
+      {
+        "owner": "MIA_V17_LeftBraid_Lane2",
+        "slot": 0,
+        "polygons": 1492
+      },
+      {
+        "owner": "MIA_V17_LeftBraid_Lane1",
+        "slot": 0,
+        "polygons": 1492
+      },
+      {
+        "owner": "MIA_V17_LeftBraid_Lane0",
+        "slot": 0,
+        "polygons": 1492
+      }
+    ],
+    "MIA_V17_MutedTealTie.001_V22_LightToon": [
+      {
+        "owner": "MIA_V17_LeftBraid_Tie",
+        "slot": 0,
+        "polygons": 480
+      }
+    ],
+    "MIA_V17G_RootLining_WarmHairShadow.001_V22_LightToon": [
+      {
+        "owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+        "slot": 0,
+        "polygons": 1136
+      }
+    ],
+    "MIA_V17_HairRootAsh.001_V22_LightToon": [
+      {
+        "owner": "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+        "slot": 0,
+        "polygons": 697
+      }
+    ],
+    "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon_GeneratedInk": [
+      {
+        "owner": "MIA_V17_PIXAL_DetailedHair",
+        "slot": 0,
+        "polygons": 122129
+      },
+      {
+        "owner": "MIA_V20_Crown_PixalDonorLock",
+        "slot": 0,
+        "polygons": 420
+      }
+    ],
+    "MIA_V24_Gather_Main_PaintedToon": [
+      {
+        "owner": "MIA_V24_Gather_Main",
+        "slot": 0,
+        "polygons": 3936
+      }
+    ],
+    "MIA_V24_Gather_Tuck_PaintedToon": [
+      {
+        "owner": "MIA_V24_Gather_Tuck",
+        "slot": 0,
+        "polygons": 3936
+      }
+    ],
+    "MIA_V24_Gather_Upper_PaintedToon": [
+      {
+        "owner": "MIA_V24_Gather_Upper",
+        "slot": 0,
+        "polygons": 3936
+      }
+    ]
+  },
+  "head_neck_attribute": {
+    "name": "V27_HeadMaterialBlend",
+    "domain": "POINT",
+    "type": "FLOAT",
+    "meaning": "Static stored point attribute used as MixShader Fac on head-neck material slots9/10. No current shader world-Z computation. Attribute follows skinned vertices rather than a world-space height cutoff. Historical rest-weight derivation requires provenance; not inferred from filename.",
+    "regions": {
+      "body_nonzero": {
+        "count": 238,
+        "index_minmax": [
+          0,
+          3568
+        ],
+        "basis_world_bbox": [
+          [
+            -0.07697595655918121,
+            -0.0516209602355957,
+            1.393617033958435
+          ],
+          [
+            0.07619258016347885,
+            0.0946972668170929,
+            1.6467121839523315
+          ]
+        ],
+        "unique_mask_values": null
+      },
+      "body_transition": {
+        "count": 97,
+        "index_minmax": [
+          2,
+          613
+        ],
+        "basis_world_bbox": [
+          [
+            -0.03908225893974304,
+            -0.0516209602355957,
+            1.393617033958435
+          ],
+          [
+            0.03820079192519188,
+            0.04211915284395218,
+            1.4961408376693726
+          ]
+        ],
+        "unique_mask_values": [
+          0.009900251403450966,
+          0.009900571778416634,
+          0.00999919231981039,
+          0.00999945867806673,
+          0.00999951921403408,
+          0.009999667294323444,
+          0.00999997928738594,
+          0.010000028647482395,
+          0.0101004708558321,
+          0.01010094303637743,
+          0.010101007297635078,
+          0.010101906023919582,
+          0.019800785928964615,
+          0.019998878240585327,
+          0.02020317316055298,
+          0.02999812923371792,
+          0.029998386278748512,
+          0.04950261861085892,
+          0.0599997453391552,
+          0.0693022832274437,
+          0.07999999076128006,
+          0.09090857207775116,
+          0.09900783002376556,
+          0.09900824725627899,
+          0.15000052750110626,
+          0.1500069797039032,
+          0.1600112020969391,
+          0.16001231968402863,
+          0.2880083918571472,
+          0.3132118284702301,
+          0.33886095881462097,
+          0.3668646216392517,
+          0.634914755821228,
+          0.6695454120635986,
+          0.6806685924530029,
+          0.8400033712387085,
+          0.840003490447998,
+          0.8600043654441833,
+          0.8800031542778015,
+          0.8900010585784912,
+          0.9900001883506775,
+          0.9900002479553223,
+          0.990000307559967,
+          0.9900005459785461
+        ]
+      },
+      "body_full_head": {
+        "count": 141,
+        "index_minmax": [
+          0,
+          3568
+        ],
+        "basis_world_bbox": [
+          [
+            -0.07697595655918121,
+            -0.03586972877383232,
+            1.473270058631897
+          ],
+          [
+            0.07619258016347885,
+            0.0946972668170929,
+            1.6467121839523315
+          ]
+        ],
+        "unique_mask_values": null
+      }
+    }
+  },
+  "read_only": true,
+  "baseline_sha256_after": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2"
+}

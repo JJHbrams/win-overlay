@@ -1,0 +1,48 @@
+{
+  "input_C2_sha256": "e04bc76faaa3f9a855e81660d19bc89adf62b89119c61e087a9a6cf7c394dd26",
+  "target_native_sha256": "ee92c9447817eb35347aec01fd00c76630e02f3cba3c60d0e9af2874d2e1d45a",
+  "actual_in_memory_replay_checks": {
+    "V29_LowerLashes_-1": {
+      "all42_coords_bitexact": true,
+      "UV_bitexact": true,
+      "faces_exact": true,
+      "key_names_exact": true,
+      "named_weights_exact": true
+    },
+    "V29_LowerLashes_1": {
+      "all42_coords_bitexact": true,
+      "UV_bitexact": true,
+      "faces_exact": true,
+      "key_names_exact": true,
+      "named_weights_exact": true
+    },
+    "V29_UpperLashes_-1": {
+      "all42_coords_bitexact": true,
+      "UV_bitexact": true,
+      "faces_exact": true,
+      "key_names_exact": true,
+      "named_weights_exact": true
+    },
+    "V29_UpperLashes_1": {
+      "all42_coords_bitexact": true,
+      "UV_bitexact": true,
+      "faces_exact": true,
+      "key_names_exact": true,
+      "named_weights_exact": true
+    }
+  },
+  "master_mask_evaluated_slot_counts": {
+    "0": 496,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 160,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0
+  },
+  "all_pass": true,
+  "saved_any_native": false,
+  "meaning": "Executed compact reconstruction from reopened C2 and compared with fresh original G; no selected native mutation or extra .blend saved."
+}

@@ -1,0 +1,93 @@
+{
+  "source_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-orbit-thorax-review-v28\\integrated-G2L\\Mia_Foundation_v28_G2L.blend",
+  "source_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+  "source_sha256_after": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+  "art_source": "B generated art remains separate sRGB1254-square, not used to paint these numeric controls.",
+  "native_saved": false,
+  "gpu_used": false,
+  "bake_engine": "CYCLES_CPU",
+  "temporary_mesh": "Only slot0 FaceUV polygons copied for native bake, no original mesh edits or topology transfer.",
+  "uv_layout_sha256": "8b525428ebeabc39c3abd5cee2ecb2791db199cf7366a4d0c048dc01a359a9c9",
+  "status": "Lossless packaged staged controls; final active native/render acceptance remains pending.",
+  "maps": [
+    {
+      "name": "V29_FeatureControls_RGB",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\native-control-maps-final\\V29_FeatureControls_RGB.exr",
+      "sha256": "9db1e3a7ce76919ff269fd00d5aa75e39ea6b3a31f5b49f61180a2f6c1e09352",
+      "size": [
+        2048,
+        2048
+      ],
+      "float_buffer": true,
+      "colorspace": "Non-Color",
+      "channels": {
+        "R": "new fatigue cosmetic selection/gain",
+        "G": "new upper-fold cosmetic selection/gain",
+        "B": "new makeup/cheek/lip selection/gain"
+      },
+      "alpha": "coverage, not an authored control",
+      "per_channel_min": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "per_channel_max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "pixel_hash": "d55f99083319ffdb69d633e9130340b61a95af7358da3c2356febe08306b8d8a",
+      "method": "Blender Cycles CPU one-sample EMIT bake of native UV shader math; island-aware16px EXTEND margin; no bitmap editing or AI numeric data.",
+      "master_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\native-control-maps-v02\\V29_FeatureControls_RGB.exr",
+      "master_sha256": "4ba913d883157b57c3c7009399ca430e17d456a713d03007220baff8fc65fcf5",
+      "master_bytes": 67142053,
+      "file_bytes": 1210644,
+      "compression": "lossless ZIP",
+      "float32_bitwise_roundtrip_equal": true,
+      "roundtrip_depth_bits": 128,
+      "roundtrip_max_difference": 0.0
+    },
+    {
+      "name": "V29_LightReflectControls_RGB",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\native-control-maps-final\\V29_LightReflectControls_RGB.exr",
+      "sha256": "5150f893b7b2a74e437aeba5a16998b99499e4b80841045dba9eef0dfd0a9954",
+      "size": [
+        2048,
+        2048
+      ],
+      "float_buffer": true,
+      "colorspace": "Non-Color",
+      "channels": {
+        "R": "actual diffuse-ramp shadow influence,1=baseline",
+        "G": "active specular weight selection",
+        "B": "active specular closure roughness"
+      },
+      "alpha": "coverage, not an authored control",
+      "per_channel_min": [
+        0.8799999356269836,
+        0.0,
+        0.5900000333786011,
+        1.0
+      ],
+      "per_channel_max": [
+        1.0,
+        0.12000000476837158,
+        0.7400000691413879,
+        1.0
+      ],
+      "pixel_hash": "59b3015df0f3e1524f39115ae58576e68ec2b37e636d57bf6fdecc0f60836875",
+      "method": "Blender Cycles CPU one-sample EMIT bake of native UV shader math; island-aware16px EXTEND margin; no bitmap editing or AI numeric data.",
+      "master_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\native-control-maps-v02\\V29_LightReflectControls_RGB.exr",
+      "master_sha256": "c235fcc0e3782f4c1d59aa16e7565b48bd6a1aad66d7e1f193eed76e3ae57458",
+      "master_bytes": 67142053,
+      "file_bytes": 7600105,
+      "compression": "lossless ZIP",
+      "float32_bitwise_roundtrip_equal": true,
+      "roundtrip_depth_bits": 128,
+      "roundtrip_max_difference": 0.0
+    }
+  ],
+  "packaging": "Blender native save_render OPEN_EXR RGBA32 ZIP; Raw display setting; exact pixel-buffer byte hashes and128-bit float depth verified on reload. Master bakes preserved."
+}

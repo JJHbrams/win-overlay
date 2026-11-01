@@ -1,0 +1,67 @@
+{
+  "native_sha256": "d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be",
+  "preset": "response",
+  "comparisons": [
+    {
+      "pair": [
+        "diffuse_original",
+        "diffuse_control"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.078857421875,
+      "mean_abs_linear_RGB": 0.004687381908297539,
+      "rms_linear_RGB": 0.011586511717002953,
+      "pixels_with_delta_above1e-8": 108948
+    },
+    {
+      "pair": [
+        "diffuse_control",
+        "diffuse_moved"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.62841796875,
+      "mean_abs_linear_RGB": 0.1493292897939682,
+      "rms_linear_RGB": 0.2074004160737911,
+      "pixels_with_delta_above1e-8": 196914
+    },
+    {
+      "pair": [
+        "spec_flat0",
+        "spec_flat1"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.572265625,
+      "mean_abs_linear_RGB": 0.09609370678663254,
+      "rms_linear_RGB": 0.13737169068736133,
+      "pixels_with_delta_above1e-8": 145017
+    },
+    {
+      "pair": [
+        "spec_flat1",
+        "spec_moved"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 0.493408203125,
+      "mean_abs_linear_RGB": 0.10229040682315826,
+      "rms_linear_RGB": 0.13031981017015135,
+      "pixels_with_delta_above1e-8": 197748
+    },
+    {
+      "pair": [
+        "rough_low",
+        "rough_high"
+      ],
+      "source": "Actual scene-linear Render Result, before8-bit PNG quantization",
+      "scope": "All model-covered pixels alpha>.5; other owners are unchanged within a fixed-light pair. Moved-light pairs also affect original scene-lit owners.",
+      "max_abs_linear_RGB": 1.643310546875,
+      "mean_abs_linear_RGB": 0.12280967086553574,
+      "rms_linear_RGB": 0.27050954621467943,
+      "pixels_with_delta_above1e-8": 144992
+    }
+  ],
+  "status": "Numerical actual response only; spatial/style/source acceptance remains independent"
+}

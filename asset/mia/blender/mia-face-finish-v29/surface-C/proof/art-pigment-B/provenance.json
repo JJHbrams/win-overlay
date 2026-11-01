@@ -1,0 +1,68 @@
+{
+  "mode": "built-in image_gen edit",
+  "intent": "staged pigment ART ONLY, not shader/data-masks/native application",
+  "inputs": [
+    {
+      "role": "UV EDIT TARGET",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\actual-packed-pigment-display.png",
+      "sha256": "934f2ce794ee8ad01598822c8ca7b94fec4c9c6fc923208d5b91cc37b8bfd4ac"
+    },
+    {
+      "role": "Mia STYLE/COLOR ONLY",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+      "sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44"
+    }
+  ],
+  "native_baseline_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+  "status": "STAGED ART B: extra strong upper rim removed; not UV/native accepted. Slight background drift and eyelid-hole footprints require native mask/gutter binding and actual accepted-eye review. No more AI iterations requested.",
+  "output": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\art-pigment-B\\Mia_UVPigment_Art_B.png",
+    "generated_original": "C:\\Users\\antio\\.codex\\generated_images\\01a19717-47a4-7d21-842f-b692eee3790c\\exec-e27cfa08-3c46-4ea7-ad09-887f893f2788.png",
+    "sha256": "dd6309a1d4bdc121a73274dd848c55000d22ca0045dad29683155dc7c68c0d34",
+    "actual_size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "no_rescale": true,
+    "requested_size": [
+      2048,
+      2048
+    ],
+    "resolution_honesty": "Built-in returned1254x1254; this is not2048 and no upscale was performed."
+  },
+  "protected_forehead_samples": {
+    "rgb_mean": [
+      232.95856546721723,
+      206.43633159278437,
+      194.0524240239453
+    ],
+    "rgb_std": [
+      0.5949481221508038,
+      0.569115401733128,
+      0.617899799433068
+    ],
+    "corner_rgb": [
+      [
+        229,
+        202,
+        190
+      ],
+      [
+        231,
+        205,
+        192
+      ],
+      [
+        230,
+        202,
+        193
+      ],
+      [
+        230,
+        204,
+        190
+      ]
+    ]
+  }
+}

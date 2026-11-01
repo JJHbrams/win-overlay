@@ -1,0 +1,2390 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\Mia_FaceSurface_v29_C.blend",
+  "native_sha256": "d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be",
+  "reference_camera_package": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-orbit-thorax-review-v28\\reviews\\G2L-face\\reference-review.json",
+  "records": {
+    "Close_0.5": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_0.5.png",
+      "sha256": "7dd25af32c4d4e9ac2eacb43767ddedf5cf792850dde1e7b1bc68c1aecb2b06b",
+      "mode": "production",
+      "hair": "off",
+      "scope": "Face slot0 and inner-wall skin only. Other materials keep production shaders; color diagnostic is not whole-head albedo.",
+      "view_id": "front",
+      "requested_head_yaw_world_degrees": 0.0,
+      "flat_map_comparison": {
+        "definition": "Atlas mean of actual consumed Non-Color response image; no anatomical target claim",
+        "spec_weight": 0.008430927991867065,
+        "roughness": 0.7382301688194275
+      },
+      "camera": {
+        "matrix": [
+          [
+            0.9933727979660034,
+            0.11493712663650513,
+            1.6330952146148547e-09,
+            0.0
+          ],
+          [
+            2.0223808405717136e-08,
+            -1.6058071139468666e-07,
+            -1.0,
+            -2.0
+          ],
+          [
+            -0.11493712663650513,
+            0.9933727979660034,
+            -1.6184097262339492e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "resolution": [
+          768,
+          768
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "display": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "actual_lights": [
+        {
+          "name": "V29_Probe_Key",
+          "matrix": [
+            [
+              0.8574928641319275,
+              0.25048428773880005,
+              -0.4494035840034485,
+              -0.6000000238418579
+            ],
+            [
+              -0.514495849609375,
+              0.4174736440181732,
+              -0.749005913734436,
+              -1.0
+            ],
+            [
+              -4.9147697467333273e-08,
+              0.8734834790229797,
+              0.48685377836227417,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 60.0,
+          "size": 1.0
+        },
+        {
+          "name": "V29_Probe_Fill",
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1525695025920868,
+              0.6904509663581848,
+              0.800000011920929
+            ],
+            [
+              0.7071067094802856,
+              0.1525694876909256,
+              -0.6904509663581848,
+              -0.800000011920929
+            ],
+            [
+              5.683300496883703e-09,
+              0.9764451384544373,
+              0.2157658487558365,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 15.0,
+          "size": 1.5
+        },
+        {
+          "name": "V29_Probe_Rim",
+          "matrix": [
+            [
+              -1.0,
+              -1.4013419047387288e-07,
+              9.48806615497233e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.4856427013874054,
+              0.8741573095321655,
+              0.8999999761581421
+            ],
+            [
+              -7.642124444373621e-08,
+              0.8741573095321655,
+              0.4856427013874054,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 8.0,
+          "size": 0.800000011920929
+        }
+      ],
+      "actual_world": {
+        "active_output": "\uc6d4\ub4dc \ucd9c\ub825",
+        "linked_background": "\ubc30\uacbd",
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.10000000149011612
+      },
+      "active_keys": {
+        "MIA_V27_Foundation_Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "V27_Upper_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "V27_Lower_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "V27_Upper_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "V27_Lower_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "V27_HeadNeckBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "MIA_V27_F4_RejectedNearestBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "MIA_V27_PreGeometricTangent_Archive": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "V27_Upper_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V27_Lower_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V27_Upper_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V27_Lower_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "MIA_V27_ContinuousSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "MIA_V27_SharedHeadBody": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V28_LashFan_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "V28_LashFan_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "V28G_Sclera_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V28G_Iris_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V28G_InnerLid_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V28G_Sclera_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V28G_Iris_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V28G_InnerLid_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V29_UpperLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V29_LowerLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V29_UpperLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "V29_LowerLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.4999999403953552
+        },
+        "Mia_Face_AnimeTopology": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "MIA_V14_SculptedSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+        },
+        "MIA_V14_UpperLash_-1": {},
+        "MIA_V14_OuterWing_-1": {},
+        "MIA_V14_UpperLash_1": {},
+        "MIA_V14_OuterWing_1": {}
+      },
+      "actual_material_values": {
+        "V29_Face_MaskedPigment_ActualLight": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FaceRootFade": 1.0,
+          "V29_FoldOpen_R": 0.5000000596046448,
+          "V29_FoldOpen_L": 0.5000000596046448,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_-1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 0.5000000596046448,
+          "V29_FoldOpen_L": 0.5000000596046448,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 0.5000000596046448,
+          "V29_FoldOpen_L": 0.5000000596046448,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        }
+      },
+      "actual_emission_links": {
+        "V29_Face_MaskedPigment_ActualLight": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_-1_RootFade": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_1_RootFade": "V29_DiffusePlusRestrainedSpecular"
+      },
+      "frame": 1,
+      "actual_head_rig": {
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "head_matrix_basis": [
+          [
+            1.0,
+            1.3877787807814457e-17,
+            8.673619447835567e-19,
+            0.0
+          ],
+          [
+            -1.3877787807814457e-17,
+            1.0,
+            -6.01853251113974e-36,
+            0.0
+          ],
+          [
+            -8.673619447835567e-19,
+            -6.01853251113974e-36,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "native_saved": false,
+      "actual_linear_render_result": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_0.5-linear.npz",
+        "sha256": "9a0dbbf56b49d2281a2bc332587be9025b982de19da93bb2abeccedf7368bc39",
+        "pixel_sha256": "10d6e5e610de655f522501b5ce2be8ddf2de283e69c1f28fba82f06eb4711397",
+        "shape": [
+          768,
+          768,
+          4
+        ],
+        "dtype": "float32",
+        "source": "Same actual Render Result, losslessZIP32-bit EXR reload as numeric Non-Color; no PNG decoding",
+        "max_rgb": 0.94775390625
+      }
+    },
+    "Close_1.0": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_1.0.png",
+      "sha256": "2a56fb23b0b71ef48ec3a38492a0e56ce4c2545a880190fb8212dd1f4e57bfec",
+      "mode": "production",
+      "hair": "off",
+      "scope": "Face slot0 and inner-wall skin only. Other materials keep production shaders; color diagnostic is not whole-head albedo.",
+      "view_id": "front",
+      "requested_head_yaw_world_degrees": 0.0,
+      "flat_map_comparison": {
+        "definition": "Atlas mean of actual consumed Non-Color response image; no anatomical target claim",
+        "spec_weight": 0.008430927991867065,
+        "roughness": 0.7382301688194275
+      },
+      "camera": {
+        "matrix": [
+          [
+            0.9933727979660034,
+            0.11493712663650513,
+            1.6330952146148547e-09,
+            0.0
+          ],
+          [
+            2.0223808405717136e-08,
+            -1.6058071139468666e-07,
+            -1.0,
+            -2.0
+          ],
+          [
+            -0.11493712663650513,
+            0.9933727979660034,
+            -1.6184097262339492e-07,
+            1.5499999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "resolution": [
+          768,
+          768
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "display": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "actual_lights": [
+        {
+          "name": "V29_Probe_Key",
+          "matrix": [
+            [
+              0.8574928641319275,
+              0.25048428773880005,
+              -0.4494035840034485,
+              -0.6000000238418579
+            ],
+            [
+              -0.514495849609375,
+              0.4174736440181732,
+              -0.749005913734436,
+              -1.0
+            ],
+            [
+              -4.9147697467333273e-08,
+              0.8734834790229797,
+              0.48685377836227417,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 60.0,
+          "size": 1.0
+        },
+        {
+          "name": "V29_Probe_Fill",
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1525695025920868,
+              0.6904509663581848,
+              0.800000011920929
+            ],
+            [
+              0.7071067094802856,
+              0.1525694876909256,
+              -0.6904509663581848,
+              -0.800000011920929
+            ],
+            [
+              5.683300496883703e-09,
+              0.9764451384544373,
+              0.2157658487558365,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 15.0,
+          "size": 1.5
+        },
+        {
+          "name": "V29_Probe_Rim",
+          "matrix": [
+            [
+              -1.0,
+              -1.4013419047387288e-07,
+              9.48806615497233e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.4856427013874054,
+              0.8741573095321655,
+              0.8999999761581421
+            ],
+            [
+              -7.642124444373621e-08,
+              0.8741573095321655,
+              0.4856427013874054,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 8.0,
+          "size": 0.800000011920929
+        }
+      ],
+      "actual_world": {
+        "active_output": "\uc6d4\ub4dc \ucd9c\ub825",
+        "linked_background": "\ubc30\uacbd",
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.10000000149011612
+      },
+      "active_keys": {
+        "MIA_V27_Foundation_Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V27_Upper_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V27_Lower_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V27_Upper_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V27_Lower_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V27_HeadNeckBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "MIA_V27_F4_RejectedNearestBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "MIA_V27_PreGeometricTangent_Archive": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V27_Upper_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V27_Lower_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V27_Upper_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V27_Lower_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "MIA_V27_ContinuousSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "MIA_V27_SharedHeadBody": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V28_LashFan_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V28_LashFan_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V28G_Sclera_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V28G_Iris_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V28G_InnerLid_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V28G_Sclera_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V28G_Iris_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V28G_InnerLid_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V29_UpperLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V29_LowerLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V29_UpperLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "V29_LowerLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "Mia_Face_AnimeTopology": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {},
+        "MIA_V14_OuterWing_-1": {},
+        "MIA_V14_UpperLash_1": {},
+        "MIA_V14_OuterWing_1": {}
+      },
+      "actual_material_values": {
+        "V29_Face_MaskedPigment_ActualLight": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FaceRootFade": 1.0,
+          "V29_FoldOpen_R": 0.0,
+          "V29_FoldOpen_L": 0.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_-1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 0.0,
+          "V29_FoldOpen_L": 0.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 0.0,
+          "V29_FoldOpen_L": 0.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        }
+      },
+      "actual_emission_links": {
+        "V29_Face_MaskedPigment_ActualLight": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_-1_RootFade": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_1_RootFade": "V29_DiffusePlusRestrainedSpecular"
+      },
+      "frame": 1,
+      "actual_head_rig": {
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "head_matrix_basis": [
+          [
+            1.0,
+            1.3877787807814457e-17,
+            8.673619447835567e-19,
+            0.0
+          ],
+          [
+            -1.3877787807814457e-17,
+            1.0,
+            -6.01853251113974e-36,
+            0.0
+          ],
+          [
+            -8.673619447835567e-19,
+            -6.01853251113974e-36,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "native_saved": false,
+      "actual_linear_render_result": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_1.0-linear.npz",
+        "sha256": "350ddcd28ccb67acb1c5e03211bee3903485ddb2dd0fd08dd0f222a0b4c1698e",
+        "pixel_sha256": "9c1aa3bee58a6940e27cc8570c71c66918e0c70b6b111d26a7fc74e79ea4931f",
+        "shape": [
+          768,
+          768,
+          4
+        ],
+        "dtype": "float32",
+        "source": "Same actual Render Result, losslessZIP32-bit EXR reload as numeric Non-Color; no PNG decoding",
+        "max_rgb": 0.94775390625
+      }
+    },
+    "Close_R_0.5": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_R_0.5.png",
+      "sha256": "f18cbec9433704807cc4a02c6bcdfe2fde4e273cce93be9439240dc3ae57b671",
+      "mode": "production",
+      "hair": "off",
+      "scope": "Face slot0 and inner-wall skin only. Other materials keep production shaders; color diagnostic is not whole-head albedo.",
+      "view_id": "left_oblique",
+      "requested_head_yaw_world_degrees": 0.0,
+      "flat_map_comparison": {
+        "definition": "Atlas mean of actual consumed Non-Color response image; no anatomical target claim",
+        "spec_weight": 0.008430927991867065,
+        "roughness": 0.7382301688194275
+      },
+      "camera": {
+        "matrix": [
+          [
+            0.8792433738708496,
+            0.22032317519187927,
+            0.4223608076572418,
+            0.8447216153144836
+          ],
+          [
+            0.40003159642219543,
+            0.1399332731962204,
+            -0.9057556390762329,
+            -1.8115113973617554
+          ],
+          [
+            -0.25866129994392395,
+            0.9653373956680298,
+            0.034899186342954636,
+            1.6197988986968994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "resolution": [
+          768,
+          768
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "display": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "actual_lights": [
+        {
+          "name": "V29_Probe_Key",
+          "matrix": [
+            [
+              0.8574928641319275,
+              0.25048428773880005,
+              -0.4494035840034485,
+              -0.6000000238418579
+            ],
+            [
+              -0.514495849609375,
+              0.4174736440181732,
+              -0.749005913734436,
+              -1.0
+            ],
+            [
+              -4.9147697467333273e-08,
+              0.8734834790229797,
+              0.48685377836227417,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 60.0,
+          "size": 1.0
+        },
+        {
+          "name": "V29_Probe_Fill",
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1525695025920868,
+              0.6904509663581848,
+              0.800000011920929
+            ],
+            [
+              0.7071067094802856,
+              0.1525694876909256,
+              -0.6904509663581848,
+              -0.800000011920929
+            ],
+            [
+              5.683300496883703e-09,
+              0.9764451384544373,
+              0.2157658487558365,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 15.0,
+          "size": 1.5
+        },
+        {
+          "name": "V29_Probe_Rim",
+          "matrix": [
+            [
+              -1.0,
+              -1.4013419047387288e-07,
+              9.48806615497233e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.4856427013874054,
+              0.8741573095321655,
+              0.8999999761581421
+            ],
+            [
+              -7.642124444373621e-08,
+              0.8741573095321655,
+              0.4856427013874054,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 8.0,
+          "size": 0.800000011920929
+        }
+      ],
+      "actual_world": {
+        "active_output": "\uc6d4\ub4dc \ucd9c\ub825",
+        "linked_background": "\ubc30\uacbd",
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.10000000149011612
+      },
+      "active_keys": {
+        "MIA_V27_Foundation_Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "V27_Upper_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "V27_Lower_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "V27_Upper_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "V27_Lower_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "V27_HeadNeckBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "MIA_V27_F4_RejectedNearestBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "MIA_V27_PreGeometricTangent_Archive": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "V27_Upper_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V27_Lower_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V27_Upper_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V27_Lower_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "MIA_V27_ContinuousSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "MIA_V27_SharedHeadBody": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V28_LashFan_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "V28_LashFan_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "V28G_Sclera_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V28G_Iris_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V28G_InnerLid_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V28G_Sclera_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V28G_Iris_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V28G_InnerLid_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V29_UpperLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V29_LowerLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V29_UpperLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "V29_LowerLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.4999999403953552
+        },
+        "Mia_Face_AnimeTopology": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "MIA_V14_SculptedSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.5
+        },
+        "MIA_V14_UpperLash_-1": {},
+        "MIA_V14_OuterWing_-1": {},
+        "MIA_V14_UpperLash_1": {},
+        "MIA_V14_OuterWing_1": {}
+      },
+      "actual_material_values": {
+        "V29_Face_MaskedPigment_ActualLight": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FaceRootFade": 1.0,
+          "V29_FoldOpen_R": 0.5000000596046448,
+          "V29_FoldOpen_L": 1.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_-1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 0.5000000596046448,
+          "V29_FoldOpen_L": 1.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 0.5000000596046448,
+          "V29_FoldOpen_L": 1.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        }
+      },
+      "actual_emission_links": {
+        "V29_Face_MaskedPigment_ActualLight": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_-1_RootFade": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_1_RootFade": "V29_DiffusePlusRestrainedSpecular"
+      },
+      "frame": 1,
+      "actual_head_rig": {
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "head_matrix_basis": [
+          [
+            1.0,
+            1.3877787807814457e-17,
+            8.673619447835567e-19,
+            0.0
+          ],
+          [
+            -1.3877787807814457e-17,
+            1.0,
+            -6.01853251113974e-36,
+            0.0
+          ],
+          [
+            -8.673619447835567e-19,
+            -6.01853251113974e-36,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "native_saved": false,
+      "actual_linear_render_result": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_R_0.5-linear.npz",
+        "sha256": "a4b367578767a97cd8b762b569ec74d822fc6f8b589edb75d15c63657e4440d5",
+        "pixel_sha256": "ee27024acfd8dcc73f10227e424329cf199d93c18b019984f49b7551ead10ec7",
+        "shape": [
+          768,
+          768,
+          4
+        ],
+        "dtype": "float32",
+        "source": "Same actual Render Result, losslessZIP32-bit EXR reload as numeric Non-Color; no PNG decoding",
+        "max_rgb": 0.947265625
+      }
+    },
+    "Close_R_1.0": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_R_1.0.png",
+      "sha256": "13a160d8d389a5e98e224f1c15957a154f3071c87a456f942036973bb2438727",
+      "mode": "production",
+      "hair": "off",
+      "scope": "Face slot0 and inner-wall skin only. Other materials keep production shaders; color diagnostic is not whole-head albedo.",
+      "view_id": "left_oblique",
+      "requested_head_yaw_world_degrees": 0.0,
+      "flat_map_comparison": {
+        "definition": "Atlas mean of actual consumed Non-Color response image; no anatomical target claim",
+        "spec_weight": 0.008430927991867065,
+        "roughness": 0.7382301688194275
+      },
+      "camera": {
+        "matrix": [
+          [
+            0.8792433738708496,
+            0.22032317519187927,
+            0.4223608076572418,
+            0.8447216153144836
+          ],
+          [
+            0.40003159642219543,
+            0.1399332731962204,
+            -0.9057556390762329,
+            -1.8115113973617554
+          ],
+          [
+            -0.25866129994392395,
+            0.9653373956680298,
+            0.034899186342954636,
+            1.6197988986968994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "resolution": [
+          768,
+          768
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "display": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "actual_lights": [
+        {
+          "name": "V29_Probe_Key",
+          "matrix": [
+            [
+              0.8574928641319275,
+              0.25048428773880005,
+              -0.4494035840034485,
+              -0.6000000238418579
+            ],
+            [
+              -0.514495849609375,
+              0.4174736440181732,
+              -0.749005913734436,
+              -1.0
+            ],
+            [
+              -4.9147697467333273e-08,
+              0.8734834790229797,
+              0.48685377836227417,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 60.0,
+          "size": 1.0
+        },
+        {
+          "name": "V29_Probe_Fill",
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1525695025920868,
+              0.6904509663581848,
+              0.800000011920929
+            ],
+            [
+              0.7071067094802856,
+              0.1525694876909256,
+              -0.6904509663581848,
+              -0.800000011920929
+            ],
+            [
+              5.683300496883703e-09,
+              0.9764451384544373,
+              0.2157658487558365,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 15.0,
+          "size": 1.5
+        },
+        {
+          "name": "V29_Probe_Rim",
+          "matrix": [
+            [
+              -1.0,
+              -1.4013419047387288e-07,
+              9.48806615497233e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.4856427013874054,
+              0.8741573095321655,
+              0.8999999761581421
+            ],
+            [
+              -7.642124444373621e-08,
+              0.8741573095321655,
+              0.4856427013874054,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 8.0,
+          "size": 0.800000011920929
+        }
+      ],
+      "actual_world": {
+        "active_output": "\uc6d4\ub4dc \ucd9c\ub825",
+        "linked_background": "\ubc30\uacbd",
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.10000000149011612
+      },
+      "active_keys": {
+        "MIA_V27_Foundation_Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V27_Upper_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V27_Lower_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V27_Upper_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V27_Lower_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V27_HeadNeckBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "MIA_V27_F4_RejectedNearestBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "MIA_V27_PreGeometricTangent_Archive": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V27_Upper_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V27_Lower_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V27_Upper_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V27_Lower_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "MIA_V27_ContinuousSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "MIA_V27_SharedHeadBody": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V28_LashFan_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V28_LashFan_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V28G_Sclera_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V28G_Iris_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V28G_InnerLid_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V28G_Sclera_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V28G_Iris_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V28G_InnerLid_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V29_UpperLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V29_LowerLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V29_UpperLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "V29_LowerLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "Mia_Face_AnimeTopology": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {},
+        "MIA_V14_OuterWing_-1": {},
+        "MIA_V14_UpperLash_1": {},
+        "MIA_V14_OuterWing_1": {}
+      },
+      "actual_material_values": {
+        "V29_Face_MaskedPigment_ActualLight": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FaceRootFade": 1.0,
+          "V29_FoldOpen_R": 0.0,
+          "V29_FoldOpen_L": 1.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_-1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 0.0,
+          "V29_FoldOpen_L": 1.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 0.0,
+          "V29_FoldOpen_L": 1.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        }
+      },
+      "actual_emission_links": {
+        "V29_Face_MaskedPigment_ActualLight": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_-1_RootFade": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_1_RootFade": "V29_DiffusePlusRestrainedSpecular"
+      },
+      "frame": 1,
+      "actual_head_rig": {
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "head_matrix_basis": [
+          [
+            1.0,
+            1.3877787807814457e-17,
+            8.673619447835567e-19,
+            0.0
+          ],
+          [
+            -1.3877787807814457e-17,
+            1.0,
+            -6.01853251113974e-36,
+            0.0
+          ],
+          [
+            -8.673619447835567e-19,
+            -6.01853251113974e-36,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "native_saved": false,
+      "actual_linear_render_result": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_R_1.0-linear.npz",
+        "sha256": "46acbef5b3bff80e018c1fea93bd58ea81a1591685c9e8e23d1237cfc72cd995",
+        "pixel_sha256": "9beb10dec683c1d37ad7b55c9a1ba6923c8918f3fd2ae030002664774fececa7",
+        "shape": [
+          768,
+          768,
+          4
+        ],
+        "dtype": "float32",
+        "source": "Same actual Render Result, losslessZIP32-bit EXR reload as numeric Non-Color; no PNG decoding",
+        "max_rgb": 0.947265625
+      }
+    },
+    "Close_L_0.5": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_L_0.5.png",
+      "sha256": "bf7258708e89e6535a0ee5b2f7a729c5eb5bba1385b0db2ad422219216bbeba8",
+      "mode": "production",
+      "hair": "off",
+      "scope": "Face slot0 and inner-wall skin only. Other materials keep production shaders; color diagnostic is not whole-head albedo.",
+      "view_id": "left_oblique",
+      "requested_head_yaw_world_degrees": 0.0,
+      "flat_map_comparison": {
+        "definition": "Atlas mean of actual consumed Non-Color response image; no anatomical target claim",
+        "spec_weight": 0.008430927991867065,
+        "roughness": 0.7382301688194275
+      },
+      "camera": {
+        "matrix": [
+          [
+            0.8792433738708496,
+            0.22032317519187927,
+            0.4223608076572418,
+            0.8447216153144836
+          ],
+          [
+            0.40003159642219543,
+            0.1399332731962204,
+            -0.9057556390762329,
+            -1.8115113973617554
+          ],
+          [
+            -0.25866129994392395,
+            0.9653373956680298,
+            0.034899186342954636,
+            1.6197988986968994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "resolution": [
+          768,
+          768
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "display": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "actual_lights": [
+        {
+          "name": "V29_Probe_Key",
+          "matrix": [
+            [
+              0.8574928641319275,
+              0.25048428773880005,
+              -0.4494035840034485,
+              -0.6000000238418579
+            ],
+            [
+              -0.514495849609375,
+              0.4174736440181732,
+              -0.749005913734436,
+              -1.0
+            ],
+            [
+              -4.9147697467333273e-08,
+              0.8734834790229797,
+              0.48685377836227417,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 60.0,
+          "size": 1.0
+        },
+        {
+          "name": "V29_Probe_Fill",
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1525695025920868,
+              0.6904509663581848,
+              0.800000011920929
+            ],
+            [
+              0.7071067094802856,
+              0.1525694876909256,
+              -0.6904509663581848,
+              -0.800000011920929
+            ],
+            [
+              5.683300496883703e-09,
+              0.9764451384544373,
+              0.2157658487558365,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 15.0,
+          "size": 1.5
+        },
+        {
+          "name": "V29_Probe_Rim",
+          "matrix": [
+            [
+              -1.0,
+              -1.4013419047387288e-07,
+              9.48806615497233e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.4856427013874054,
+              0.8741573095321655,
+              0.8999999761581421
+            ],
+            [
+              -7.642124444373621e-08,
+              0.8741573095321655,
+              0.4856427013874054,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 8.0,
+          "size": 0.800000011920929
+        }
+      ],
+      "actual_world": {
+        "active_output": "\uc6d4\ub4dc \ucd9c\ub825",
+        "linked_background": "\ubc30\uacbd",
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.10000000149011612
+      },
+      "active_keys": {
+        "MIA_V27_Foundation_Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "V27_Upper_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "V27_Lower_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "V27_Upper_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "V27_Lower_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "V27_HeadNeckBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "MIA_V27_F4_RejectedNearestBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "MIA_V27_PreGeometricTangent_Archive": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "V27_Upper_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V27_Lower_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V27_Upper_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V27_Lower_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "MIA_V27_ContinuousSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "MIA_V27_SharedHeadBody": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V28_LashFan_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "V28_LashFan_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "V28G_Sclera_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V28G_Iris_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V28G_InnerLid_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V28G_Sclera_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V28G_Iris_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V28G_InnerLid_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V29_UpperLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V29_LowerLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V29_UpperLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "V29_LowerLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.4999999403953552
+        },
+        "Mia_Face_AnimeTopology": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "MIA_V14_SculptedSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.5
+        },
+        "MIA_V14_UpperLash_-1": {},
+        "MIA_V14_OuterWing_-1": {},
+        "MIA_V14_UpperLash_1": {},
+        "MIA_V14_OuterWing_1": {}
+      },
+      "actual_material_values": {
+        "V29_Face_MaskedPigment_ActualLight": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FaceRootFade": 1.0,
+          "V29_FoldOpen_R": 1.0,
+          "V29_FoldOpen_L": 0.5000000596046448,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_-1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 1.0,
+          "V29_FoldOpen_L": 0.5000000596046448,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 1.0,
+          "V29_FoldOpen_L": 0.5000000596046448,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        }
+      },
+      "actual_emission_links": {
+        "V29_Face_MaskedPigment_ActualLight": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_-1_RootFade": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_1_RootFade": "V29_DiffusePlusRestrainedSpecular"
+      },
+      "frame": 1,
+      "actual_head_rig": {
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "head_matrix_basis": [
+          [
+            1.0,
+            1.3877787807814457e-17,
+            8.673619447835567e-19,
+            0.0
+          ],
+          [
+            -1.3877787807814457e-17,
+            1.0,
+            -6.01853251113974e-36,
+            0.0
+          ],
+          [
+            -8.673619447835567e-19,
+            -6.01853251113974e-36,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "native_saved": false,
+      "actual_linear_render_result": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_L_0.5-linear.npz",
+        "sha256": "8c9e9137bdffe261a3e1ba8146a24d9a8385195b4f52671dae025c6ff8f796fe",
+        "pixel_sha256": "4d0d64cbd42ad0333c4bbfd64c7e739a46a6e76cc2d8ea2de425df4b4e3ef6f2",
+        "shape": [
+          768,
+          768,
+          4
+        ],
+        "dtype": "float32",
+        "source": "Same actual Render Result, losslessZIP32-bit EXR reload as numeric Non-Color; no PNG decoding",
+        "max_rgb": 0.947265625
+      }
+    },
+    "Close_L_1.0": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_L_1.0.png",
+      "sha256": "bddaf4cdeb03ae09aeb51074d1c495b2b108f6622bbec3687e640751333d046d",
+      "mode": "production",
+      "hair": "off",
+      "scope": "Face slot0 and inner-wall skin only. Other materials keep production shaders; color diagnostic is not whole-head albedo.",
+      "view_id": "left_oblique",
+      "requested_head_yaw_world_degrees": 0.0,
+      "flat_map_comparison": {
+        "definition": "Atlas mean of actual consumed Non-Color response image; no anatomical target claim",
+        "spec_weight": 0.008430927991867065,
+        "roughness": 0.7382301688194275
+      },
+      "camera": {
+        "matrix": [
+          [
+            0.8792433738708496,
+            0.22032317519187927,
+            0.4223608076572418,
+            0.8447216153144836
+          ],
+          [
+            0.40003159642219543,
+            0.1399332731962204,
+            -0.9057556390762329,
+            -1.8115113973617554
+          ],
+          [
+            -0.25866129994392395,
+            0.9653373956680298,
+            0.034899186342954636,
+            1.6197988986968994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.28999999165534973,
+        "resolution": [
+          768,
+          768
+        ],
+        "pixel_aspect": [
+          1.0,
+          1.0
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ]
+      },
+      "display": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "actual_lights": [
+        {
+          "name": "V29_Probe_Key",
+          "matrix": [
+            [
+              0.8574928641319275,
+              0.25048428773880005,
+              -0.4494035840034485,
+              -0.6000000238418579
+            ],
+            [
+              -0.514495849609375,
+              0.4174736440181732,
+              -0.749005913734436,
+              -1.0
+            ],
+            [
+              -4.9147697467333273e-08,
+              0.8734834790229797,
+              0.48685377836227417,
+              2.200000047683716
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 60.0,
+          "size": 1.0
+        },
+        {
+          "name": "V29_Probe_Fill",
+          "matrix": [
+            [
+              0.7071067094802856,
+              -0.1525695025920868,
+              0.6904509663581848,
+              0.800000011920929
+            ],
+            [
+              0.7071067094802856,
+              0.1525694876909256,
+              -0.6904509663581848,
+              -0.800000011920929
+            ],
+            [
+              5.683300496883703e-09,
+              0.9764451384544373,
+              0.2157658487558365,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 15.0,
+          "size": 1.5
+        },
+        {
+          "name": "V29_Probe_Rim",
+          "matrix": [
+            [
+              -1.0,
+              -1.4013419047387288e-07,
+              9.48806615497233e-08,
+              0.0
+            ],
+            [
+              1.5099580252808664e-07,
+              -0.4856427013874054,
+              0.8741573095321655,
+              0.8999999761581421
+            ],
+            [
+              -7.642124444373621e-08,
+              0.8741573095321655,
+              0.4856427013874054,
+              2.049999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "watts": 8.0,
+          "size": 0.800000011920929
+        }
+      ],
+      "actual_world": {
+        "active_output": "\uc6d4\ub4dc \ucd9c\ub825",
+        "linked_background": "\ubc30\uacbd",
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.10000000149011612
+      },
+      "active_keys": {
+        "MIA_V27_Foundation_Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V27_Upper_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V27_Lower_BoundaryRibbon_-1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V27_Upper_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V27_Lower_BoundaryRibbon.001_1": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V27_HeadNeckBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "MIA_V27_F4_RejectedNearestBridge": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "MIA_V27_PreGeometricTangent_Archive": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V27_Upper_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V27_Lower_BoundaryRibbon_-1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V27_Upper_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V27_Lower_BoundaryRibbon.001_1_Dense": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "MIA_V27_ContinuousSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "MIA_V27_SharedHeadBody": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V28_LashFan_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V28_LashFan_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V28G_Sclera_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V28G_Iris_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V28G_InnerLid_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V28G_Sclera_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V28G_Iris_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V28G_InnerLid_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V29_UpperLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V29_LowerLashes_-1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V29_UpperLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "V29_LowerLashes_1": {
+          "Basis": 1.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "Mia_Face_AnimeTopology": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "Face": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "MIA_V06_FACE_SKIN": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "MIA_V13_FaceOutline": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "MIA_V14_SculptedSkin": {
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+        },
+        "MIA_V14_UpperLash_-1": {},
+        "MIA_V14_OuterWing_-1": {},
+        "MIA_V14_UpperLash_1": {},
+        "MIA_V14_OuterWing_1": {}
+      },
+      "actual_material_values": {
+        "V29_Face_MaskedPigment_ActualLight": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FaceRootFade": 1.0,
+          "V29_FoldOpen_R": 1.0,
+          "V29_FoldOpen_L": 0.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_-1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 1.0,
+          "V29_FoldOpen_L": 0.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        },
+        "V29_InnerWall_1_RootFade": {
+          "V29_SurfaceEnabled": 1.0,
+          "V29_FatigueGain": 0.550000011920929,
+          "V29_FoldGain": 0.6499999761581421,
+          "V29_MakeupGain": 0.4000000059604645,
+          "V29_SpecularGain": 0.07999999821186066,
+          "V29_ShadowEnabled": 1.0,
+          "V29_FoldOpen_R": 1.0,
+          "V29_FoldOpen_L": 0.0,
+          "V29_SpecularOverrideFlag": 0.0,
+          "V29_SpecularOverrideValue": 1.0,
+          "V29_RoughnessOverrideFlag": 0.0,
+          "V29_RoughnessOverrideValue": 0.20000000298023224
+        }
+      },
+      "actual_emission_links": {
+        "V29_Face_MaskedPigment_ActualLight": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_-1_RootFade": "V29_DiffusePlusRestrainedSpecular",
+        "V29_InnerWall_1_RootFade": "V29_DiffusePlusRestrainedSpecular"
+      },
+      "frame": 1,
+      "actual_head_rig": {
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "head_matrix_basis": [
+          [
+            1.0,
+            1.3877787807814457e-17,
+            8.673619447835567e-19,
+            0.0
+          ],
+          [
+            -1.3877787807814457e-17,
+            1.0,
+            -6.01853251113974e-36,
+            0.0
+          ],
+          [
+            -8.673619447835567e-19,
+            -6.01853251113974e-36,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "native_saved": false,
+      "actual_linear_render_result": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_L_1.0-linear.npz",
+        "sha256": "caa02afd860af62270490f52d3df4c7193cad5a06bb32fcd1e455a5cdf579c31",
+        "pixel_sha256": "a1ae89e0735b9cc5501cf70b831e718ae1f3612e550c6b2797be5871a3f2e0f0",
+        "shape": [
+          768,
+          768,
+          4
+        ],
+        "dtype": "float32",
+        "source": "Same actual Render Result, losslessZIP32-bit EXR reload as numeric Non-Color; no PNG decoding",
+        "max_rgb": 0.947265625
+      }
+    }
+  },
+  "status": "Actual controlled probes only; not source/art acceptance"
+}

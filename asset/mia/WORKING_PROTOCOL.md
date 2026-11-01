@@ -33,7 +33,7 @@ Shape Key가 있는 메시의 기본 좌표 캐시, Basis 좌표, 활성 키·�
 | 반사 프로브 | 고정 중립 rig, 명시된 roughness/IOR | 표면 연속성. 최종 재질 제안과 구분 |
 | 목표 툰 룩 | 승인한 색 관리와 조명/가상 광원 규칙 | 원화의 명암·선·표면 표현 |
 
-현재 v18의 활성 피부·헤어는 주로 색×노멀 기반 음영을 Emission으로 출력한다. 장면 Area light가 이 음영을 제어하지 않으며, 피부와 헤어의 가상 광원 X 부호도 다르다. 이를 물리 diffuse/specular 재질로 해석하거나 사용되지 않는 오래된 노드를 실제 맵으로 세지 않는다. 필요한 맵은 목표 셰이더 설계가 결정하며 모든 PBR 맵을 일괄 추가하지 않는다.
+v18 조사 당시 피부·헤어는 주로 색×노멀 기반 음영을 Emission으로 출력했고, Area light가 해당 음영을 제어하지 않았다. 이를 후속 버전의 현재 상태로 복사하지 않는다. v28 G2L 얼굴의 실제 활성 경로는 Diffuse→ShaderToRGB→ramp×packed pigment→Emission이며 장면 조명에 반응한다. v29 C는 이 경로를 보존하고 얼굴/안검 벽에 독립 cosmetic·shadow/specular/roughness controls와 실제 BSDF 반사 경로를 추가했다. 나머지 헤어/바디까지 같은 방식이라고 추정하지 않는다. 활성 Output ancestry와 actual fixed/moved-light 렌더로 판정하며, 이를 물리적으로 에너지가 보존되는 피부라고 부르지 않는다. 필요한 맵은 목표 셰이더가 결정하며 모든 PBR 맵을 일괄 추가하지 않는다.
 
 ## 단계와 통과 조건
 

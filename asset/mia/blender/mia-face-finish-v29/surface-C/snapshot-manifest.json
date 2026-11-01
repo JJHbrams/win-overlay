@@ -1,0 +1,740 @@
+{
+  "native": {
+    "path": "native/Mia_FaceFinish_v29_C.blend",
+    "sha256": "d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be"
+  },
+  "scope": "G-based material-only face/wall application. Actual UV, packed image/color-space/active-output checks plus source and actual-light probes required separately.",
+  "detail_provenance": "Generated cosmetic art B is1254square sRGB. Numerical native controls2048 float Non-Color; lossless ZIP repack preserves pixel bytes, not an increase of art detail.",
+  "files": [
+    {
+      "path": "proof/active-surface-inventory.json",
+      "sha256": "186b77198581480d9132b4133160df98281dc186dcfed7ecb9711dbf31db2ee0",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\active-surface-inventory.json"
+    },
+    {
+      "path": "proof/actual-active-route-thumbnail.png",
+      "sha256": "712a4397a0e197a1fee957d88dbc62bfefb841a8eb5aafaaf9f21d82439dcb16",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\actual-active-route-thumbnail.png"
+    },
+    {
+      "path": "proof/actual-head-neck-mask-thumbnail.png",
+      "sha256": "11575790bee0921ac211257e7eef70e299baa73ecafe57b03b5f4ee123ab82cc",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\actual-head-neck-mask-thumbnail.png"
+    },
+    {
+      "path": "proof/actual-packed-pigment-display.png",
+      "sha256": "934f2ce794ee8ad01598822c8ca7b94fec4c9c6fc923208d5b91cc37b8bfd4ac",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\actual-packed-pigment-display.png"
+    },
+    {
+      "path": "proof/actual-pigment-UV-thumbnail.png",
+      "sha256": "d59ddaefe7fc5b4936c94c72abb1afda48bd930101f941efa5bfcfe7c4ab75f1",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\actual-pigment-UV-thumbnail.png"
+    },
+    {
+      "path": "proof/actual-visible-surface-scope.json",
+      "sha256": "df92f4a1c445f20a5fb04fc59b5bdde2e87c2e0f3cf5759ee473dc9e8f50de64",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\actual-visible-surface-scope.json"
+    },
+    {
+      "path": "proof/apply_surface_after_eye_gate.py",
+      "sha256": "cde516cb8119fad039db08561b0cf8f2ef28ec692ed736196c059e76c99c731a",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\apply_surface_after_eye_gate.py"
+    },
+    {
+      "path": "proof/art-pigment-A/Mia_UVPigment_Art_A.png",
+      "sha256": "a0cccc8c55583020e7f4cbb5567ba9d2c005793fd569befed43b913e2c3a7dbc",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\art-pigment-A\\Mia_UVPigment_Art_A.png"
+    },
+    {
+      "path": "proof/art-pigment-A/prompt.txt",
+      "sha256": "9975f56683cbd7c8e5a86ffdedbe978888bd9cbf91daa9025f775ee1a5d61ff2",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\art-pigment-A\\prompt.txt"
+    },
+    {
+      "path": "proof/art-pigment-A/provenance.json",
+      "sha256": "7e5d0fc5d580094a0da28e9307c4959d14dceb772ab8546c0e9479e1c7a88987",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\art-pigment-A\\provenance.json"
+    },
+    {
+      "path": "proof/art-pigment-B/Mia_UVPigment_Art_B.png",
+      "sha256": "dd6309a1d4bdc121a73274dd848c55000d22ca0045dad29683155dc7c68c0d34",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\art-pigment-B\\Mia_UVPigment_Art_B.png"
+    },
+    {
+      "path": "proof/art-pigment-B/prompt.txt",
+      "sha256": "7d0da381856c84854fabda6c9f3577278ec882157a8aaf08b121ee2544aacff9",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\art-pigment-B\\prompt.txt"
+    },
+    {
+      "path": "proof/art-pigment-B/provenance.json",
+      "sha256": "a7885edb48d8bf42ea6f30e627603faa89062e3c6956a897d85337ca1c560806",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\art-pigment-B\\provenance.json"
+    },
+    {
+      "path": "proof/assemble_surface_C_evidence.py",
+      "sha256": "8f46e379764175a22ba3cbc0d1cd08bc8a68e2adac7082eab84a1eac73f16973",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\assemble_surface_C_evidence.py"
+    },
+    {
+      "path": "proof/audit_active_surface.py",
+      "sha256": "d698daab0618bd021d377096e9b45889fd2c718d2ce408b17a4bace812973750",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\audit_active_surface.py"
+    },
+    {
+      "path": "proof/audit_surface_scope.py",
+      "sha256": "5f989931d9900dd50086038b4223ab5ddcccb3cc4d059bbbc34037bcec06b661",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\audit_surface_scope.py"
+    },
+    {
+      "path": "proof/display_native_control_maps.py",
+      "sha256": "034d374d0722202edb111ca5472d33066fbaf0e024ec182acb36b41215c0ff45",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\display_native_control_maps.py"
+    },
+    {
+      "path": "proof/make_audit_thumbnails.py",
+      "sha256": "f195e40d18af04f7f753299392c44acd0bf8a24cd709c1ee5b906bb4db9baeab",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\make_audit_thumbnails.py"
+    },
+    {
+      "path": "proof/native-control-maps-final/native-control-bake-manifest.json",
+      "sha256": "428ac845aa415f31896bb39e1a1b6c6d09faac587d097e92950196fb39502c75",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\native-control-maps-final\\native-control-bake-manifest.json"
+    },
+    {
+      "path": "proof/native-control-maps-final/V29_FeatureControls_RGB.exr",
+      "sha256": "9db1e3a7ce76919ff269fd00d5aa75e39ea6b3a31f5b49f61180a2f6c1e09352",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\native-control-maps-final\\V29_FeatureControls_RGB.exr"
+    },
+    {
+      "path": "proof/native-control-maps-final/V29_LightReflectControls_RGB.exr",
+      "sha256": "5150f893b7b2a74e437aeba5a16998b99499e4b80841045dba9eef0dfd0a9954",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\native-control-maps-final\\V29_LightReflectControls_RGB.exr"
+    },
+    {
+      "path": "proof/package_controls_lossless.py",
+      "sha256": "d6eac9294d8261eeb0fb295bc6eb9d6d024a0654c20b1c0c9946066b9e891cc6",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\package_controls_lossless.py"
+    },
+    {
+      "path": "proof/prepare_native_control_maps.py",
+      "sha256": "7a609ed5dc9ecd39881d4ae92ba781a99ccf54e3f50159f736d79837203d011d",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\prepare_native_control_maps.py"
+    },
+    {
+      "path": "proof/render_surface_probes.py",
+      "sha256": "816f4bee492060c51d58565c8f852e01dd2a40242883ed1b66539dad20fa8620",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\render_surface_probes.py"
+    },
+    {
+      "path": "proof/run_surface_C_suite.py",
+      "sha256": "01a276c2d3706d7796c845a62aae334def7341222adb9f7fa5f4fda99b4861de",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\run_surface_C_suite.py"
+    },
+    {
+      "path": "proof/STAGING_STATE.json",
+      "sha256": "8343835687b07b6df4560991e2353bbee624fca34677ade74d87288c5165b284",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\STAGING_STATE.json"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/actual-linear-response-deltas.json",
+      "sha256": "1cc14e010c9b0422c550a8c96c38ec50703713d7b19e0147803b0033f3a790c7",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\actual-linear-response-deltas.json"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_0.5-linear.npz",
+      "sha256": "9a0dbbf56b49d2281a2bc332587be9025b982de19da93bb2abeccedf7368bc39",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_0.5-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_0.5-RenderResult-linear.exr",
+      "sha256": "395030ed040774ef2adffcdc31d2d759e8772d7f67233111ef9a5fe915146963",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_0.5-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_0.5.png",
+      "sha256": "7dd25af32c4d4e9ac2eacb43767ddedf5cf792850dde1e7b1bc68c1aecb2b06b",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_0.5.png"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_1.0-linear.npz",
+      "sha256": "350ddcd28ccb67acb1c5e03211bee3903485ddb2dd0fd08dd0f222a0b4c1698e",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_1.0-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_1.0-RenderResult-linear.exr",
+      "sha256": "41ad4642a12766452c2fa550ee62aa8ae842a70c6c9b0f64c3fd37157f2c82a2",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_1.0-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_1.0.png",
+      "sha256": "2a56fb23b0b71ef48ec3a38492a0e56ce4c2545a880190fb8212dd1f4e57bfec",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_1.0.png"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_L_0.5-linear.npz",
+      "sha256": "8c9e9137bdffe261a3e1ba8146a24d9a8385195b4f52671dae025c6ff8f796fe",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_L_0.5-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_L_0.5-RenderResult-linear.exr",
+      "sha256": "4c57c8f15f5d50e13e92370beb1438929b0eac08556214dd7f8d24c8c66e494f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_L_0.5-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_L_0.5.png",
+      "sha256": "bf7258708e89e6535a0ee5b2f7a729c5eb5bba1385b0db2ad422219216bbeba8",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_L_0.5.png"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_L_1.0-linear.npz",
+      "sha256": "caa02afd860af62270490f52d3df4c7193cad5a06bb32fcd1e455a5cdf579c31",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_L_1.0-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_L_1.0-RenderResult-linear.exr",
+      "sha256": "01ef3fd25122dd75487ecafd149cb52cc81a9dfd8aeb0abcc73a086bef1c92d4",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_L_1.0-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_L_1.0.png",
+      "sha256": "bddaf4cdeb03ae09aeb51074d1c495b2b108f6622bbec3687e640751333d046d",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_L_1.0.png"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_R_0.5-linear.npz",
+      "sha256": "a4b367578767a97cd8b762b569ec74d822fc6f8b589edb75d15c63657e4440d5",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_R_0.5-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_R_0.5-RenderResult-linear.exr",
+      "sha256": "d6c560c7db964cf82ac1712fbf8efe2df5ea583ddef05963878a7a62a8e32742",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_R_0.5-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_R_0.5.png",
+      "sha256": "f18cbec9433704807cc4a02c6bcdfe2fde4e273cce93be9439240dc3ae57b671",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_R_0.5.png"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_R_1.0-linear.npz",
+      "sha256": "46acbef5b3bff80e018c1fea93bd58ea81a1591685c9e8e23d1237cfc72cd995",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_R_1.0-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_R_1.0-RenderResult-linear.exr",
+      "sha256": "668d6607cb346239002a64a084a16f31e3c151624a97852808fb98278c9947d6",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_R_1.0-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/Close_R_1.0.png",
+      "sha256": "13a160d8d389a5e98e224f1c15957a154f3071c87a456f942036973bb2438727",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\Close_R_1.0.png"
+    },
+    {
+      "path": "proof/surface-C/probes-blink-hair-off/probe-records.json",
+      "sha256": "3ef0fb0dcbeebd5f34a80a8579dab656f53a7b2369227e9b86efe17c82c26458",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-blink-hair-off\\probe-records.json"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/actual-linear-response-deltas.json",
+      "sha256": "f2dda08dca25f7143b991e8858e8b45c7076c3b7074d61458aa859bfaa07a18c",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\actual-linear-response-deltas.json"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fatigue_0.0-linear.npz",
+      "sha256": "3547594a6623f5acefa15356cddb61bdc9df503e975a474de0b77d6d49e7cc90",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fatigue_0.0-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fatigue_0.0-RenderResult-linear.exr",
+      "sha256": "cb3cfd69b31dc7d7eb4352aa1218dbf36f039c15c1919a65bd28c6cf059c2e1b",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fatigue_0.0-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fatigue_0.0.png",
+      "sha256": "fb52c127e9713049b4e92ce3689724ecde308865468b8fbdcd04d23ef0604a42",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fatigue_0.0.png"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fatigue_1.0-linear.npz",
+      "sha256": "13b6df773d7770102af72e2814f31701ab36cbc053bcab3138bbff0bc2faefa8",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fatigue_1.0-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fatigue_1.0-RenderResult-linear.exr",
+      "sha256": "aa1763fabce645f580fa878a9f4bac5fc7397cd30e95d42df90a3d0df807ec5d",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fatigue_1.0-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fatigue_1.0.png",
+      "sha256": "4c23a88f74b98677346050e09be1eec26ed532f0b4ecdc5ccbd2b2d545145232",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fatigue_1.0.png"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fold_0.0-linear.npz",
+      "sha256": "11259ed6c9edee4d4d42c3910408e9f09d937fbd5de44790cbf984c1756f9da9",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fold_0.0-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fold_0.0-RenderResult-linear.exr",
+      "sha256": "3a9ec7a7f290b87fbf788312d9eda5bf692552d6192bf9bb61de04ede77a3e3e",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fold_0.0-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fold_0.0.png",
+      "sha256": "da33b83ce57a043b3ab7defac55eb0757363f062bbabb7a1f83cff16ad6e9b7b",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fold_0.0.png"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fold_1.0-linear.npz",
+      "sha256": "29e3d4d6bfe521a8168d4819b8635aeb6c5f71d58a018424f8bfc103beffa1ac",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fold_1.0-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fold_1.0-RenderResult-linear.exr",
+      "sha256": "8dacccac56e465e3e60827646da2634d20e426eb77e9a5d91a73b0f94921de4b",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fold_1.0-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/fold_1.0.png",
+      "sha256": "d603d2c79b7ee252a9e0ff19e7099591fa57ae1cb3fe6997675e7df4da2ea5c1",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\fold_1.0.png"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/makeup_0.0-linear.npz",
+      "sha256": "53a7031f31dac322ff7984ff5d7adb67df5fc84066b2cf1886b36a2d69f6f94a",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\makeup_0.0-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/makeup_0.0-RenderResult-linear.exr",
+      "sha256": "3146ebb24bc85ef41c2d9d41c4396f005a32d229be672b3c7176e49f304f2435",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\makeup_0.0-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/makeup_0.0.png",
+      "sha256": "fbb12540e92af007bdb7f3bbfcf6c0581e72142eea40e342ef8e44d0e8897206",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\makeup_0.0.png"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/makeup_1.0-linear.npz",
+      "sha256": "5fb426669e455392d5ba8d1f413c468fd95829c377a3d21bc5f5dcb630172fd8",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\makeup_1.0-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/makeup_1.0-RenderResult-linear.exr",
+      "sha256": "516ec53739f96e0c4454823f9d0ce9dc7c9e61c77de6505b5dae05c46d3604eb",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\makeup_1.0-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/makeup_1.0.png",
+      "sha256": "e1a1f342cb7da1472011db00e6e2db876ace532ce122154116017fb45118aea5",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\makeup_1.0.png"
+    },
+    {
+      "path": "proof/surface-C/probes-features-hair-off/probe-records.json",
+      "sha256": "28e00b7da226f962318521de94e4291443aff18753da8013d6d9af424eeca459",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-features-hair-off\\probe-records.json"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/actual-linear-response-deltas.json",
+      "sha256": "f7289e0eba1c851ab6b65113279fc4e484e73030a9d68e3a24aa85f66d1022cb",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\actual-linear-response-deltas.json"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/after_color-linear.npz",
+      "sha256": "d5681611bcb0e326be7fc1bf7b7165839ad307a33a34174f3cff7388ca8753a2",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\after_color-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/after_color-RenderResult-linear.exr",
+      "sha256": "c1f8d977c56c162b568db2e39330c2fb3bb6fafdd6faa6ea7eb29d6c2d0b2303",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\after_color-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/after_color.png",
+      "sha256": "2a51468f57ebe62cd8a57f92b357b6decedd860e557ee4f11c468e2ce37c6daa",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\after_color.png"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/after_production-linear.npz",
+      "sha256": "7b4ae29add72ecbc702dfac80066577215084d87ec46c0e5d2098a9e88a4cef2",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\after_production-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/after_production-RenderResult-linear.exr",
+      "sha256": "49e12670066297a526b014420ea0329d6c6268b870152284538cea3dd68860c8",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\after_production-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/after_production.png",
+      "sha256": "bfa9153ee0e7275594c53afc4c43b79ae0c2533f0d38bf58795891e6681451e7",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\after_production.png"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/before_color-linear.npz",
+      "sha256": "c108fb2c27b992113261703985cc8a92e7b0bb96bd7464f237137dfd8fb21a73",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\before_color-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/before_color-RenderResult-linear.exr",
+      "sha256": "7bc763ccf4464f760da64b6598536073a91033d1f0f99b6dfaaa47a2f98019be",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\before_color-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/before_color.png",
+      "sha256": "c636e64165850af407333a1a2dfd691cc560911da2bcdcdad7841ec72ac72d0e",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\before_color.png"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/before_production-linear.npz",
+      "sha256": "ecd43c90116f5f1a39c4ee5edb77e9370c113aeb3afebe4a46f0b95f2e8c4f39",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\before_production-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/before_production-RenderResult-linear.exr",
+      "sha256": "b7d0452b923d6944672a81cc4a51871f0cc11ab7d4ccdb628f7b6bdb1b802354",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\before_production-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/before_production.png",
+      "sha256": "8a6d7c03ed462d884e416cab7d9a79e47f35cb88f1400298bcfe0e561d34f695",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\before_production.png"
+    },
+    {
+      "path": "proof/surface-C/probes-first-hair-off/probe-records.json",
+      "sha256": "9501125177145f3951b6eab9226ddde675a7804392db47db908a36311f2f1add",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-first-hair-off\\probe-records.json"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/actual-linear-response-deltas.json",
+      "sha256": "5e91efc9d10e17d43b37f16a96bfa6493cf8453bc5c6e05ad40ee5e41e6c9d3c",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\actual-linear-response-deltas.json"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_-12.0_front-linear.npz",
+      "sha256": "310bacd77d36d1705a30c8463bae67c517353ceffe90b8a7bcdaee50fb0b91ea",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_-12.0_front-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_-12.0_front-RenderResult-linear.exr",
+      "sha256": "c210b08b405c4a6170175980e06d238f340d9637ed123bf4e3e9af0f59906429",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_-12.0_front-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_-12.0_front.png",
+      "sha256": "aa273b1a22dc8a561128ef423371d7313130a3dc21ed8cab65ddbfdd3defecbf",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_-12.0_front.png"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_-12.0_left_oblique-linear.npz",
+      "sha256": "9304ee961fc83bf046a7e379cd25d31a1d99b85cdb8f00f4349593c70ab9bb2f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_-12.0_left_oblique-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_-12.0_left_oblique-RenderResult-linear.exr",
+      "sha256": "fd9bcccd47d6a29be7bf0f7ff312c077d8f0b6ca420981034dae0e2ad55f01f0",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_-12.0_left_oblique-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_-12.0_left_oblique.png",
+      "sha256": "f1f5806c90755b91a64fd0d332c7722f5897357cbdda4fc153dfe0efb281b849",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_-12.0_left_oblique.png"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_12.0_front-linear.npz",
+      "sha256": "8a7174f85fbdb1abd301ca9e7e7d01c3ba8fe31303be4004f7315dc47148f65a",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_12.0_front-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_12.0_front-RenderResult-linear.exr",
+      "sha256": "2dd66ad06cbdb3a02cc980fd6be196502c60d8bedb0234b9b07b3482374e31d2",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_12.0_front-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_12.0_front.png",
+      "sha256": "94027e42f78153c4934f0f269c065df2ae227cd3379577d7a6183a1d680403e0",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_12.0_front.png"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_12.0_left_oblique-linear.npz",
+      "sha256": "2f365788fa5f3bc4aa38d889b432d48aaa514fcaf909f2fdd0bb0af3a4a4ab20",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_12.0_left_oblique-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_12.0_left_oblique-RenderResult-linear.exr",
+      "sha256": "afe3179e36532ba1487aef2b5292eac3442548d2c57b7c20ab088f37426d427f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_12.0_left_oblique-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/head_12.0_left_oblique.png",
+      "sha256": "82cdb93d2d9a8ee9b8dd9c8639f24f158592d0c1ed9308324c311e5dd2c24ae6",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\head_12.0_left_oblique.png"
+    },
+    {
+      "path": "proof/surface-C/probes-headfollow-hair-off/probe-records.json",
+      "sha256": "5225eb7aea8cf215d4f9dadb656174c3551efbac54294817426e30dfeb9c127f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-headfollow-hair-off\\probe-records.json"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/actual-linear-response-deltas.json",
+      "sha256": "4a846a6c360196c8fcafb0cfa904f3413810ee691282d1459e8c1fb9927c3ce9",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\actual-linear-response-deltas.json"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/flat_spec_and_roughness-linear.npz",
+      "sha256": "d5be5b03104f96061ecf2259857c9c644d31d06ff856689ceb33f9f46f3f0111",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\flat_spec_and_roughness-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/flat_spec_and_roughness-RenderResult-linear.exr",
+      "sha256": "a513942244788572a03ead188db6b312086df8ca6298f6b8bc889a63ca5de428",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\flat_spec_and_roughness-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/flat_spec_and_roughness.png",
+      "sha256": "31dab1086d01ad5e128e88d661958ab01245246298bcf4a5a14b6be4e67cffa3",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\flat_spec_and_roughness.png"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/flat_spec_native_roughness-linear.npz",
+      "sha256": "5f95860ebbf1a031196ec1ff035b7ab281ff30959f98c680953fa69eb402088c",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\flat_spec_native_roughness-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/flat_spec_native_roughness-RenderResult-linear.exr",
+      "sha256": "7c270db6e4e748986fbeaa2e3cb7b2160fe166cfb820e3e8fbf9d479533a8662",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\flat_spec_native_roughness-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/flat_spec_native_roughness.png",
+      "sha256": "37f703831f4adbe2279207ffc03db01b7b2d5c551ee652278fea8cd98ba5564f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\flat_spec_native_roughness.png"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/native_spec_and_roughness-linear.npz",
+      "sha256": "759d9a2b239f1e2be6818d58b33c0eb95e3dd376ceedbf89bdadd61674cbe47e",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\native_spec_and_roughness-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/native_spec_and_roughness-RenderResult-linear.exr",
+      "sha256": "a157a598e0cc7648ba9ab4dcfe1c22cf8bef08b76f6a98e0cec29c12d111659c",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\native_spec_and_roughness-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/native_spec_and_roughness.png",
+      "sha256": "a861bf4353ca4abec9069e6a0fb7acf828e1001ab37d32535fe820ec1cc62398",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\native_spec_and_roughness.png"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/native_spec_flat_roughness-linear.npz",
+      "sha256": "a73f6ec463f30743399ca73a8f9d8c5d4956b2a5fa9adbc28581d5d8e13eb50d",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\native_spec_flat_roughness-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/native_spec_flat_roughness-RenderResult-linear.exr",
+      "sha256": "bd704282fc7a89002a11d5bdce95c454cc4af5959a9f0900e8560ce42e6ac0ab",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\native_spec_flat_roughness-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/native_spec_flat_roughness.png",
+      "sha256": "7de966607223d8cc4b91b5f3a90f36e158a0b48fb1d5ad908a6f8ac69500c50d",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\native_spec_flat_roughness.png"
+    },
+    {
+      "path": "proof/surface-C/probes-map-controls-hair-off/probe-records.json",
+      "sha256": "aac03efb5df438a32b8fca3b22686752fb77e55d2dbd3cc57537217e51d019a6",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-map-controls-hair-off\\probe-records.json"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/actual-linear-response-deltas.json",
+      "sha256": "c9f6f708bc039bd0d2d30b44c9974dbd9da1bbf231e6a74dbe32a459d52883df",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\actual-linear-response-deltas.json"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/diffuse_control-linear.npz",
+      "sha256": "d3f6917d812a6189f41d2ec7fa3ed7d897b888072326cd0686114dd7ea04e0b2",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\diffuse_control-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/diffuse_control-RenderResult-linear.exr",
+      "sha256": "4749401d9db6b0505601d7c03149d3361a8bbfd7d8094a3a1a99201c4065a5b2",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\diffuse_control-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/diffuse_control.png",
+      "sha256": "81e0ef78ebcdd5a15635d91be9bbbae013887837206e478c0337c009a6755f95",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\diffuse_control.png"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/diffuse_moved-linear.npz",
+      "sha256": "80f16b26cad3b96948b0373bbb0d887e6375d5cf7b2fe3ec95ff934483ad9bfb",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\diffuse_moved-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/diffuse_moved-RenderResult-linear.exr",
+      "sha256": "1eb53009e4cddc6f6e8dc7d371f79c7c5d1f34f5587a99002f96bdc88e0e3d38",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\diffuse_moved-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/diffuse_moved.png",
+      "sha256": "35b1014704be574b7148e8ab64315eed38b4b548d8ba336e59cf35426a7f49e9",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\diffuse_moved.png"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/diffuse_original-linear.npz",
+      "sha256": "c2748963bcf09f83fa9ae96a0afbec73129e867dba0214497b367f7ea0423d22",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\diffuse_original-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/diffuse_original-RenderResult-linear.exr",
+      "sha256": "bf53ccbf8cd6220f61a3f8d9e659fcffa470c1c19b9f7988cad97d90320f259d",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\diffuse_original-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/diffuse_original.png",
+      "sha256": "4b495c10ee9f93cf71d0525b840aef274fa8a98524d2de596ad730e5cca150dc",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\diffuse_original.png"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/probe-records.json",
+      "sha256": "d2cd09091757a834d37e50511bcd76ca11468206e44a2078b310de399ec776fd",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\probe-records.json"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/rough_high-linear.npz",
+      "sha256": "1b0c15a9e175a921252e4bce3fdf6ba327712adcd5b0a4028b1b99aa11d66624",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\rough_high-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/rough_high-RenderResult-linear.exr",
+      "sha256": "387de8c9b4835091c62623c3ad26d655ccd84413569c452bb66ebcb9cf30ca91",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\rough_high-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/rough_high.png",
+      "sha256": "bfce7017bb4841aa8d16efa399d336aab2b9e62a21b04e28b9041b35cc99582f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\rough_high.png"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/rough_low-linear.npz",
+      "sha256": "183cc2dc0f4d27597fe8e1650ade7ce7cc1900deacea19a2fd0d6fc5e4f3da90",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\rough_low-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/rough_low-RenderResult-linear.exr",
+      "sha256": "c48f902066e3ca36ec141c979e458e3579ebcbf150e4c461b0e6b0c462ebe85d",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\rough_low-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/rough_low.png",
+      "sha256": "c872319b653d4598dcb05fdac4d28093a819ccba256f5a3d60ef1e2f797a04f6",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\rough_low.png"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/spec_flat0-linear.npz",
+      "sha256": "f3c12e64394dd76fb5212589e4303774feae10e42e00d14caa003309190e91cb",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\spec_flat0-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/spec_flat0-RenderResult-linear.exr",
+      "sha256": "454e0be5595df2bff3abb0fcaceaa3d3a9d946b699578c3ea49658fd7e8b0b9a",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\spec_flat0-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/spec_flat0.png",
+      "sha256": "f95a60da2462a13db41eb0efe58826649c24d193fee8c096f44cb38ab950d052",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\spec_flat0.png"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/spec_flat1-linear.npz",
+      "sha256": "0c1db05deea5bb64005fb07378fd2792cb3427ddf27b32b89126e8634b40e1d7",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\spec_flat1-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/spec_flat1-RenderResult-linear.exr",
+      "sha256": "508f6305b6a187c4287b043a5bc8f261781f3bd4d79b02a5d6044d5ee30563ef",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\spec_flat1-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/spec_flat1.png",
+      "sha256": "8c8e7ce4312a7a308d5eeee21b4a9bab2b9572708dd7b1ffea0f0ef3b0f6fcf6",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\spec_flat1.png"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/spec_moved-linear.npz",
+      "sha256": "235224e59cb841d5279a33ec9a164eec0c7904e2a822bff34971d727685957d8",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\spec_moved-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/spec_moved-RenderResult-linear.exr",
+      "sha256": "776d581d421deae0ad6321dbd8914d043f2b131fd377a470207c1f4d2626aef3",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\spec_moved-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-response-hair-off/spec_moved.png",
+      "sha256": "46342414cbafd036fbb20e89a52852397bea9e57bb6a4c356132beb2556a2249",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-response-hair-off\\spec_moved.png"
+    },
+    {
+      "path": "proof/surface-C/probes-source-hair-on/actual-linear-response-deltas.json",
+      "sha256": "17d6a3855ebb12cf57eb4ebbd5aa511a4ea1ab822ddc74a8782b27eca4937bb8",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-source-hair-on\\actual-linear-response-deltas.json"
+    },
+    {
+      "path": "proof/surface-C/probes-source-hair-on/front-linear.npz",
+      "sha256": "e6ddefe222341868046e1b286582b83ea149984b0cca3a96e80b48e05b7631ae",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-source-hair-on\\front-linear.npz"
+    },
+    {
+      "path": "proof/surface-C/probes-source-hair-on/front-RenderResult-linear.exr",
+      "sha256": "3520edfa992139501f59f07c6082e50f895c903694dbdaaac560fba1f0d35e3c",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-source-hair-on\\front-RenderResult-linear.exr"
+    },
+    {
+      "path": "proof/surface-C/probes-source-hair-on/front.png",
+      "sha256": "7158c494311a40e256d02eb3430acf78d0cd5c4deacf8ab8bcc0b3b8830a4854",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-source-hair-on\\front.png"
+    },
+    {
+      "path": "proof/surface-C/probes-source-hair-on/probe-records.json",
+      "sha256": "5507cfe99b195fbdefc73bd4f9a9a0f598934968922dc98fa97d026ff142c1e3",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\probes-source-hair-on\\probe-records.json"
+    },
+    {
+      "path": "proof/surface-C/surface-candidate-guard.json",
+      "sha256": "e6264f84d605af3d6627f282a1f654b4a809d89eae837d77f7eccd7c9ce0757f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\surface-candidate-guard.json"
+    },
+    {
+      "path": "proof/surface-C/surface-probe-suite-run.json",
+      "sha256": "f2d4fc107f48cd9f71518bb57bc8cc8a342a492f9ec08bc0aa4c529ad50c5bbf",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-C\\surface-probe-suite-run.json"
+    },
+    {
+      "path": "proof/surface-staging-api-validation.json",
+      "sha256": "8cd052f7de4e3d9a42ac19074506ba742da7b90ca7ef76928dace2ae039198c0",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\surface-staging-api-validation.json"
+    },
+    {
+      "path": "proof/SURFACE_AUDIT_AND_PROPOSAL.md",
+      "sha256": "36bc797385670d1e846be533f859b843c42c763af12a13d1e994af3e76798d6f",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\SURFACE_AUDIT_AND_PROPOSAL.md"
+    },
+    {
+      "path": "proof/validate_surface_staging_api.py",
+      "sha256": "ca5e44eb131e4528ea28cab3f8e6db260ecf6cfbeb1cc5b057968676e506cd09",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\validate_surface_staging_api.py"
+    },
+    {
+      "path": "proof/validate_wall_fade_native_endpoints.py",
+      "sha256": "b73dcf7cce4c6d83281068d701605daeee02462eb1f91fd26bf43af0c3de534a",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\validate_wall_fade_native_endpoints.py"
+    },
+    {
+      "path": "proof/wall-fade-native-endpoint-validation.json",
+      "sha256": "f7b46463c1ec7c13169d049b2014cb11a3dc35572f42a6c9f0b0296872893944",
+      "origin": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-face-surface-v29\\wall-fade-native-endpoint-validation.json"
+    }
+  ]
+}

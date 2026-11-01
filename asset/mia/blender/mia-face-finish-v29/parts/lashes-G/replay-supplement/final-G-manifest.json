@@ -1,0 +1,523 @@
+{
+  "schema_version": 1,
+  "selected_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-eye-lash-v29\\Mia_EyeLash_v29_G.blend",
+    "sha256": "ee92c9447817eb35347aec01fd00c76630e02f3cba3c60d0e9af2874d2e1d45a"
+  },
+  "input_C2_sha256": "e04bc76faaa3f9a855e81660d19bc89adf62b89119c61e087a9a6cf7c394dd26",
+  "component_status": "Root/independent bounded eye/lash gate supported. Surface/integrated fullsource4/orbit/wholeART pending.",
+  "exact_geometry_scope": {
+    "new_owners": [
+      "V29_LowerLashes_-1",
+      "V29_LowerLashes_1",
+      "V29_UpperLashes_-1",
+      "V29_UpperLashes_1"
+    ],
+    "old_flatfan_visibility_off": [
+      "V28_LashFan_-1",
+      "V28_LashFan_1"
+    ],
+    "master_exception": {
+      "modifier": "V29_Exclude_TransparentLegacyCards",
+      "group": "V29_ActiveMouthBrow_RenderMask",
+      "threshold": 0.5,
+      "actual_evaluated_slot_counts": {
+        "0": 496,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 160,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      },
+      "intentional_exception": "One new nondeform selection group +Mask, original raw geometry/UV/keycoords/materials/weights unchanged."
+    },
+    "C2_skin_bodyL_iris_wall_and_all_raw_master_coordinates_exact": true
+  },
+  "actual_verification": {
+    "protected_and_mesh_guard_pass": true,
+    "centered_per_tuft_volume_min_all42_plus3half_mm3": 0.004256230375003296,
+    "nearest3D_root_clearance_range_45states_mm": [
+      0.026341271222918294,
+      0.09253626922145486
+    ],
+    "compact_replay_executed_from_reopened_C2_bitexact_all4_42coordinates_UV_faces_keys_weights": true,
+    "replay_saved_any_native": false,
+    "G_actual_gate_images": 9,
+    "neutral_isolates_reused_by_bitexact_geometry_equivalence": "E-first actual upper/lower/profile/oblique isolates, allnewownerneutralcoordinates exact G; no E intermediate-closure acceptance claimed."
+  },
+  "measured_neutral_dimensions": [
+    {
+      "owner": "V29_LowerLashes_-1",
+      "tuft": 0,
+      "measured_neutral_world_AABB_span_mm": [
+        0.5312860012054443,
+        0.2686530351638794,
+        0.2340078353881836
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        -0.4024573912223203,
+        -0.1402286191781385,
+        -0.12399752934766362
+      ],
+      "measured_7station_centerline_polyline_length_mm": 0.46050140838275344,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_LowerLashes_-1",
+      "tuft": 1,
+      "measured_neutral_world_AABB_span_mm": [
+        0.6162375211715698,
+        0.32944604754447937,
+        0.4228353500366211
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        -0.4929732531309128,
+        0.3071427345275879,
+        -0.13627608617139408
+      ],
+      "measured_7station_centerline_polyline_length_mm": 0.6179593914885744,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_LowerLashes_-1",
+      "tuft": 2,
+      "measured_neutral_world_AABB_span_mm": [
+        0.7006525993347168,
+        0.49214065074920654,
+        0.4748106002807617
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        -0.5670978377262728,
+        0.4539837439854963,
+        -0.08004903793334961
+      ],
+      "measured_7station_centerline_polyline_length_mm": 0.7568193867508589,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_LowerLashes_1",
+      "tuft": 0,
+      "measured_neutral_world_AABB_span_mm": [
+        0.5301572382450104,
+        0.2952590584754944,
+        0.2053976058959961
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        0.4024213800827639,
+        -0.166419272621475,
+        -0.08881092071533203
+      ],
+      "measured_7station_centerline_polyline_length_mm": 0.46137577967635424,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_LowerLashes_1",
+      "tuft": 1,
+      "measured_neutral_world_AABB_span_mm": [
+        0.6299726665019989,
+        0.3054961562156677,
+        0.4246234893798828
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        0.5081103493769917,
+        0.2808502564827578,
+        -0.1371900240580981
+      ],
+      "measured_7station_centerline_polyline_length_mm": 0.6179095445211804,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_LowerLashes_1",
+      "tuft": 2,
+      "measured_neutral_world_AABB_span_mm": [
+        0.6727725267410278,
+        0.5598552525043488,
+        0.46575069427490234
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        0.5379381279150621,
+        0.4916638135910034,
+        -0.06532669067382812
+      ],
+      "measured_7station_centerline_polyline_length_mm": 0.7576747922673279,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_UpperLashes_-1",
+      "tuft": 0,
+      "measured_neutral_world_AABB_span_mm": [
+        1.7896704375743866,
+        1.7493553459644318,
+        1.0968446731567383
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        -1.3346541672945023,
+        -1.4382066826025692,
+        1.0457237561543042
+      ],
+      "measured_7station_centerline_polyline_length_mm": 2.2852881363181505,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_UpperLashes_-1",
+      "tuft": 1,
+      "measured_neutral_world_AABB_span_mm": [
+        2.4323686957359314,
+        1.7021670937538147,
+        1.529097557067871
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        -1.861701409022011,
+        -1.242639496922493,
+        1.3959209124247973
+      ],
+      "measured_7station_centerline_polyline_length_mm": 2.717979296227045,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_UpperLashes_-1",
+      "tuft": 2,
+      "measured_neutral_world_AABB_span_mm": [
+        3.5422146320343018,
+        1.34364515542984,
+        1.0242462158203125
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        -3.003287439544998,
+        -0.4102991273005757,
+        0.7009506225585938
+      ],
+      "measured_7station_centerline_polyline_length_mm": 3.2428483632774188,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_UpperLashes_-1",
+      "tuft": 3,
+      "measured_neutral_world_AABB_span_mm": [
+        3.4942924976348877,
+        1.0929331183433533,
+        0.5619525909423828
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        -3.1180158257484436,
+        -0.16486396392186714,
+        0.2510547637939453
+      ],
+      "measured_7station_centerline_polyline_length_mm": 3.244786885880137,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_UpperLashes_1",
+      "tuft": 0,
+      "measured_neutral_world_AABB_span_mm": [
+        1.789230853319168,
+        1.7486773431301117,
+        1.0979175567626953
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        1.334183538953468,
+        -1.4377602686484678,
+        1.0468761126201098
+      ],
+      "measured_7station_centerline_polyline_length_mm": 2.2852568731580285,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_UpperLashes_1",
+      "tuft": 1,
+      "measured_neutral_world_AABB_span_mm": [
+        2.4317391216754913,
+        1.7009004950523376,
+        1.5311241149902344
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        1.8611016372839586,
+        -1.2410624573628084,
+        1.3981262842812647
+      ],
+      "measured_7station_centerline_polyline_length_mm": 2.7179853201946345,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_UpperLashes_1",
+      "tuft": 2,
+      "measured_neutral_world_AABB_span_mm": [
+        3.538917750120163,
+        1.3453364372253418,
+        1.0352134704589844
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        2.9986929148435593,
+        -0.4112701863050461,
+        0.7199446360270922
+      ],
+      "measured_7station_centerline_polyline_length_mm": 3.242948926111617,
+      "neutral_coordinates_exact_reviewed_E": true
+    },
+    {
+      "owner": "V29_UpperLashes_1",
+      "tuft": 3,
+      "measured_neutral_world_AABB_span_mm": [
+        3.484416753053665,
+        1.1063776910305023,
+        0.6393194198608398
+      ],
+      "measured_neutral_tip_minus_root_center_vector_mm": [
+        3.0992391208807604,
+        -0.1743615915377958,
+        0.4201531410217285
+      ],
+      "measured_7station_centerline_polyline_length_mm": 3.2447982262311936,
+      "neutral_coordinates_exact_reviewed_E": true
+    }
+  ],
+  "render_provenance": "Actual saved native rendered Blender5.2 EEVEE Standard/None. Recorded area15/3.75/2W World.18/.1. All camera/key/visibleowner records retained. Sourcecrop+uniformdisplayonly, no source aspect warp.",
+  "failures_not_selected": {
+    "D": "Upright evenly spaced pin silhouette rejected.",
+    "E": "Source-style neutral supported but lower roots floated on half blink.",
+    "F": "Per-root contact fixed, but actual short lower tubes inverted under some key endpoints.",
+    "C2_lineage": "Earlier C2 is already separately archived by root; G builds on it."
+  },
+  "limitations": [
+    "No full42 combinations/loops/physics/finalrig approval.",
+    "Root offsets are sampled surface clearances, not watertight welds.",
+    "Final combined face materials and fullsource4/continuousorbit must be reviewed after surface application.",
+    "Mask-removal A/B proves retained transparent cards affected rendering; exact internal sorting/depth mechanism is an inference.",
+    "Sourceboard front isolate panel is a composite of actual upperONLY/lowerONLY images, not an additional native render."
+  ],
+  "artifacts": [
+    {
+      "relative_path": "LASH_G_HANDOFF.md",
+      "sha256": "2cb7f122249567b899f4f9bc1dc3abe2f0f7239784d7e8d09253cbb18ab8a88a",
+      "bytes": 4799
+    },
+    {
+      "relative_path": "Mia_EyeLash_v29_G.blend",
+      "sha256": "ee92c9447817eb35347aec01fd00c76630e02f3cba3c60d0e9af2874d2e1d45a",
+      "bytes": 180603525
+    },
+    {
+      "relative_path": "audit_lashes_saved.py",
+      "sha256": "3bafd1c412c9bab1836442ebf51bdc4462961bae24e47b1b8200f137160f8432",
+      "bytes": 9107
+    },
+    {
+      "relative_path": "audit_mesh_helpers.py",
+      "sha256": "be7e0facb00f493c9aaa9de34c5baaeea0e8cc142d79b62c12b1126ce01ab5f0",
+      "bytes": 4345
+    },
+    {
+      "relative_path": "bind_lash_roots_F.py",
+      "sha256": "8cdaa20a9bb16c570c579902bff5ee86b86b30bae59c0169deb3e9c0248c58ef",
+      "bytes": 6058
+    },
+    {
+      "relative_path": "board_lash_first.py",
+      "sha256": "faa9757b816943392521ccab1cd1dc72cc6b15b83bb0bba1a1859d821a27db4e",
+      "bytes": 1761
+    },
+    {
+      "relative_path": "build_lashes_D.py",
+      "sha256": "b43ccf8145789dbc2b7b0ec144521d373e31b844d81e90f5aaa29d29d05274c1",
+      "bytes": 9023
+    },
+    {
+      "relative_path": "export_lash_components.py",
+      "sha256": "d5cfd1ce776b4f58e866faa09b22fdb459eb421dcc5e8ccafb42c0603ee5b046",
+      "bytes": 2860
+    },
+    {
+      "relative_path": "inspect_lash_root_distance.py",
+      "sha256": "5280a61a898a3e79d9d314ca3e7e87ffe25bd3e8e35fc2bae06ce729104318a8",
+      "bytes": 1501
+    },
+    {
+      "relative_path": "lash-E-nearest-root-probe.json",
+      "sha256": "676fcb7b1d60e7d0380a3595c22244baa421837d947dca67739bbab23a06fddc",
+      "bytes": 3692
+    },
+    {
+      "relative_path": "lash-F-bindings-and-mask.json",
+      "sha256": "2794db292febafb1c7cf5bd293cb238e27e8804fb7f5136b7c8a153a0def7cad",
+      "bytes": 51594
+    },
+    {
+      "relative_path": "lash-G-components.json",
+      "sha256": "b371b756e7536f7ee256c3014cc33799d21134db61b3613be5a97425823b0da0",
+      "bytes": 13314
+    },
+    {
+      "relative_path": "lash-G-components.npz",
+      "sha256": "6bf7e73faac01aa9a3e071e2c31ab4782937ae6edd2cda54d6cc009d5538b84a",
+      "bytes": 57700
+    },
+    {
+      "relative_path": "lash-G-fresh-preservation-contact.json",
+      "sha256": "1a8ef69a4592a7709b1a7406c8f03dd6d73d0d0c144d2d5228010f3b67db71d0",
+      "bytes": 110626
+    },
+    {
+      "relative_path": "lash-G-replay-audit.json",
+      "sha256": "80c942491aa22c7a8d00553d85b2835cd75e8f2f0be150c18f94ffcf28915ec6",
+      "bytes": 1394
+    },
+    {
+      "relative_path": "lash-G-rigid-bindings.json",
+      "sha256": "4c505f123eab04c22c8e9eda8fc61dee2ef03ed053d16200bfc8407c595574aa",
+      "bytes": 7330
+    },
+    {
+      "relative_path": "lash-review/E-first/front-lowerONLY.png",
+      "sha256": "09222cff03435a1074ec058d5427c9e5b487b7c3e09ceeb217da4bf7023a7f3e",
+      "bytes": 303331
+    },
+    {
+      "relative_path": "lash-review/E-first/front-production.png",
+      "sha256": "0de14b91d46eefe174f13a1c04e2715fb150b09bf7cadc0008d041a22addb6c4",
+      "bytes": 598563
+    },
+    {
+      "relative_path": "lash-review/E-first/front-upperONLY.png",
+      "sha256": "05a018f425a78a9e5c366a00c4a8f1bfb31abd0cc6269f1321104fecd5bf9943",
+      "bytes": 304176
+    },
+    {
+      "relative_path": "lash-review/E-first/left_oblique-lashONLY.png",
+      "sha256": "35bac7e61d83ec4c6dcc8f593b5ad88a7aa7c50504c3f3502dcdf6b93211f6ea",
+      "bytes": 304443
+    },
+    {
+      "relative_path": "lash-review/E-first/left_oblique-production.png",
+      "sha256": "87e423b220c1ddad21b44f37295e55f0bb7d02c52ebf753d9c06f65dbc5639b4",
+      "bytes": 607234
+    },
+    {
+      "relative_path": "lash-review/E-first/profile-cleancontact.png",
+      "sha256": "9a3da629aadf2517d1642665ca33d0b27b30bf962b88280b730da649990da325",
+      "bytes": 408463
+    },
+    {
+      "relative_path": "lash-review/E-first/profile-lashONLY.png",
+      "sha256": "4440aada43abd5b58ebe45bc0536e05dd974da2bf7ba832b2b5edbfabe97f674",
+      "bytes": 304419
+    },
+    {
+      "relative_path": "lash-review/E-first/profile-production.png",
+      "sha256": "07f2f396b538da1bad8d9d3e2cbaabde2e30dcfbf5e22d660e9a8d05b89f8cf3",
+      "bytes": 572517
+    },
+    {
+      "relative_path": "lash-review/E-first/records.json",
+      "sha256": "7c2cc46cc410b17cdbfb39f82bca25136c125eacbabb9aa278baa378725a89bf",
+      "bytes": 28205
+    },
+    {
+      "relative_path": "lash-review/E-hideprobe/left_oblique-noNewLashes.png",
+      "sha256": "878c51fb1dd023d494cb712daa187c593b1217c8f58d7f9ee238dcea1ebe474d",
+      "bytes": 607124
+    },
+    {
+      "relative_path": "lash-review/E-hideprobe/records.json",
+      "sha256": "ce6bec99dda9cfdd358b9b9649ad43a4ee710ed174471cb5490c307a293b3464",
+      "bytes": 3688
+    },
+    {
+      "relative_path": "lash-review/E-legacyprobe/left_oblique-noMaster.png",
+      "sha256": "0007c641cf881e24b25e939e5b4fc7d3a9fb515ab27b74e16878b45e3ac86ace",
+      "bytes": 594810
+    },
+    {
+      "relative_path": "lash-review/E-legacyprobe/left_oblique-noOldRibbons.png",
+      "sha256": "43db3a5be70edd35307d3660d08421cda4c9c71c828265348818dfcc31d81318",
+      "bytes": 603286
+    },
+    {
+      "relative_path": "lash-review/E-legacyprobe/left_oblique-noSkinOutlineNodes.png",
+      "sha256": "672b049e0baaf413cbf885b7499b5901b98def3564cc3c252105411a9bfaf275",
+      "bytes": 607234
+    },
+    {
+      "relative_path": "lash-review/E-legacyprobe/records.json",
+      "sha256": "b8551f3cd384c312f88389fb72de113afeb1591dc39ee78d958917e91264d887",
+      "bytes": 11687
+    },
+    {
+      "relative_path": "lash-review/E-source-first.png",
+      "sha256": "41abf948bdbe8479c4626a02e39fecfbbd069173afe564b156ce5520015cc9b3",
+      "bytes": 757350
+    },
+    {
+      "relative_path": "lash-review/G-gate/front-production-Close0.5.png",
+      "sha256": "7bd1d4658fd5c36b87fa8337c71b6ce25dc4b0ef2b2afc1ef3546775a7a61d3b",
+      "bytes": 592880
+    },
+    {
+      "relative_path": "lash-review/G-gate/front-production-Close0.png",
+      "sha256": "ba702fc47045f7a4c0130da17feb04a0591621310bcb26492ec58f3e9275ea41",
+      "bytes": 598256
+    },
+    {
+      "relative_path": "lash-review/G-gate/front-production-Close1.png",
+      "sha256": "2afec2b487241ff3e6183f80531cd616da541f88ad649c7c4d642a44afa28133",
+      "bytes": 586808
+    },
+    {
+      "relative_path": "lash-review/G-gate/front-unilateralL-Close1.png",
+      "sha256": "89163222b60bf4b36e7ec76b0d8aa35b78904b9785a4f51966b54a8b42ad433c",
+      "bytes": 591656
+    },
+    {
+      "relative_path": "lash-review/G-gate/front-unilateralR-Close1.png",
+      "sha256": "a46b0b6634d7cab47ae4410fdead619e1663ce5db050f8f1e82fbfe8c303ed41",
+      "bytes": 593978
+    },
+    {
+      "relative_path": "lash-review/G-gate/left_oblique-lowproduction-Close0.png",
+      "sha256": "db79c8d2c69304822e8617cd75c7e1993b9c844dabe4231df5a69e083fa46b21",
+      "bytes": 602795
+    },
+    {
+      "relative_path": "lash-review/G-gate/left_oblique-production-Close0.png",
+      "sha256": "3283b420d8f7da4ee9cc4715eefc91bb186ce42c3f6a36e4fc93a39d46f99546",
+      "bytes": 606482
+    },
+    {
+      "relative_path": "lash-review/G-gate/profile-cleancontact-Close0.5.png",
+      "sha256": "8829e48b26d336819270f5ef4fd62a46cff1c6eab85bdd43c99dd3c0ed24a553",
+      "bytes": 403256
+    },
+    {
+      "relative_path": "lash-review/G-gate/profile-cleancontact-Close1.png",
+      "sha256": "8b7eabdb809931c7550ed09b56485a0e51bb36d14fbcb2645f6c38cedd449582",
+      "bytes": 398194
+    },
+    {
+      "relative_path": "lash-review/G-gate/records.json",
+      "sha256": "edc9286e965e321ffd77fef49e805306a2f4acfe95b70df7acc63c7e7f91081a",
+      "bytes": 35580
+    },
+    {
+      "relative_path": "medial-baseline-inspection.json",
+      "sha256": "829f80dc5584d204dc91c3bc58f6a071346f5f15d2ff856194ad06de5cce09be",
+      "bytes": 199712
+    },
+    {
+      "relative_path": "render_lash_first.py",
+      "sha256": "aaf0c1c66bea9c33d40dd28af786ec710791915ea4ffd63950191ac4f38f4ab7",
+      "bytes": 6704
+    },
+    {
+      "relative_path": "replay_lash_components.py",
+      "sha256": "3d89633fd56b5590035a11b14347f041e64e2049871d36d8c8905e02eda7128c",
+      "bytes": 4419
+    },
+    {
+      "relative_path": "transport_lower_tufts_G.py",
+      "sha256": "78ec0d8345fc8472d0a46157aa31deb53354516ae6657ce262c6f9d818c1ff44",
+      "bytes": 4347
+    }
+  ]
+}

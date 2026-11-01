@@ -1,0 +1,71 @@
+{
+  "stage": "surface_execution_resumed_waiting_for_exact_accepted_F_eye_lash_native",
+  "baseline_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+  "baseline_mutated": false,
+  "native_applied": false,
+  "gpu_used": false,
+  "body_v28_modified": false,
+  "art_method": "Built-in imagegen edit, image1 technical UV target and image2 reaffirmed Mia portrait style only",
+  "art_A": "Rejected for extra rim-like arc; preserved with prompt/input/output hashes",
+  "art_B": {
+    "path": "art-pigment-B/Mia_UVPigment_Art_B.png",
+    "actual_size": [
+      1254,
+      1254
+    ],
+    "colorspace": "sRGB",
+    "sha256": "dd6309a1d4bdc121a73274dd848c55000d22ca0045dad29683155dc7c68c0d34",
+    "role": "Only masked cosmetic art source. Never replace entire original flat UV; no UV/ART PASS yet"
+  },
+  "native_control_maps": {
+    "directory": "native-control-maps-final",
+    "method": "Blender Cycles CPU EMIT bake, actual FaceUV loop chart, 2048 square float EXR, Non-Color, 16px EXTEND gutters",
+    "features_RGB": [
+      "fatigue selection",
+      "single upper-fold selection",
+      "makeup selection excluding other feature cores"
+    ],
+    "response_RGB": [
+      "actual diffuse-shadow influence",
+      "specular weight",
+      "roughness"
+    ],
+    "status": "Final lossless numeric assets prepared; active native application pending accepted-eye input.",
+    "older_directory_native_control_maps": "Superseded preliminary preparation; do not bind",
+    "packaging": "LosslessZIP32-bit float EXR; native reload128-bit and pixel byte hashes exact. Masters preserved in native-control-maps-v02.",
+    "packaged_sizes_bytes": [
+      1210644,
+      7600105
+    ]
+  },
+  "deferred_native_builder": "apply_surface_after_eye_gate.py",
+  "deferred_builder_required_inputs": [
+    "accepted eye and upper/lower lash native path",
+    "exact native SHA256",
+    "parent internal eye/lash gate passed"
+  ],
+  "builder_guards": [
+    "all original mesh coordinates/keys/weights/topology/UV exact",
+    "all original material and nested group graphs exact",
+    "original packed images and colorspaces exact",
+    "body/head-neck old material slots exact",
+    "only face slot0 and two wall slot0 receive independent new material copies"
+  ],
+  "wall_fade": "Fixed complete-result fade: mix(originalPigment, cleaned+newCosmetic, rootFade). CPU-native endpoint bakes show exact original at0, exactFace at1, linear complete midpoint. Diffuse/spec control endpoints also exact.",
+  "fold_fade": "UV u<.5 / worldXnegative / Close_R; UV u>.5 / worldXpositive / Close_L; max with bilateral Close. Valid native drivers, actual closure images still required",
+  "probe_renderer": "render_surface_probes.py",
+  "probe_order": [
+    "first3: original/after color-only + after production",
+    "features6: independent fatigue/fold/makeup0/1 pairs",
+    "response8: diffuse/spec0-1/roughness/moved-light",
+    "map-controls4: actual native spec and roughness textures versus separately flattened atlas-mean controls",
+    "half/full bilateral/unilateral closure",
+    "headfollow\u00b112 world-yaw front/oblique4",
+    "corresponding source views after small-probe acceptance"
+  ],
+  "api_validation": "surface-staging-api-validation.json: unassigned temporary material, no saved native or render. Actual specular BSDF sockets and two shape-key drivers validated",
+  "acceptance": "NOT_EVALUATED; no surface implementation or final-native pass claimed",
+  "wall_endpoint_validation": "wall-fade-native-endpoint-validation.json, 200 actual UV/feature samples, all six max errors0; builder SHA and original face/wall graph hashes guard application",
+  "reopen_guard": "Saved plain image identifiers reacquired afteropen_mainfile; newpacked hashes/colorspaces and oldimages/worldgraph verified onreopen.",
+  "linear_response_evidence": "Actual float32 RenderResult RGBA arrays saved aslosslessNPZ;32-bitlinearEXR fallback. Native-v-flat andmoved-light deltas computed before8-bit PNG quantization."
+}
