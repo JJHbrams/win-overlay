@@ -1,0 +1,135 @@
+{
+  "status": "WORKING CANDIDATE / ART UNAPPROVED",
+  "surface_acceptance": "FAIL: modest local improvement, broad planar/linear medial lower-lid/nasal/anterior-buccal transition persists. Not adopted.",
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\Mia_FaceFinish7_MedialTransitionR28_v22.blend",
+    "sha256": "c0f531689594f1c68cb6d7f4c582ea280cbf72f1384e74c9db44debcefa6469a"
+  },
+  "baseline_r23": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r23\\Mia_FaceFinish7_BlinkR23_v22.blend",
+    "sha256": "579cfc375708852132bf406d2b34a958a46b358f32b844dcb074ed70ad6f6923"
+  },
+  "exact_complete_r23_replay": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\owner-key-replay-from-r23.json",
+    "sha256": "022315df7ef8e5822e968538a7b6c3fc0026a8c61c72c9c425a65424b15b1063"
+  },
+  "incremental_r27_replay": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\owner-key-replay-from-r27.json",
+    "sha256": "81a70a1339b242d573153da25017d9799a309fe3fc9520d4ab13b740d4a38d81"
+  },
+  "apply_rule": "Exact before/after coordinates only for R23->R28. Verify before separately on each owner/key; mesh_cache separate. No unrelated owner changes. This is the complete R23 baseline replay; do not add R25/R26/R27/R28 intermediate deltas again.",
+  "changes": {
+    "incremental_r27_skin_vertices": 32,
+    "complete_r23_skin_vertices": 90,
+    "outer_apex_preserved_from_r27": true,
+    "non_skin_owners_exact": true,
+    "evaluated_aperture_exact_r23_at0_half_full": true,
+    "uv_material_topology_weights_modifiers_exact": true
+  },
+  "diagnosis": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\medial-support.json",
+    "sha256": "3ffd75f91c483417ce077406d1919a807512df7f05b786bccc7efce1860c14aa"
+  },
+  "geometry_manifest": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\manifest.json",
+    "sha256": "77b72d7bb7112787ea4e9d92ec0c584bbce9cf2d9e256e2dc1a3121211392d67"
+  },
+  "reference_review": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\review-package\\reference-review.json",
+    "sha256": "3c69e3f0fd228a8d67acf6d13efe247f85c952d670d4e70535af8b0fe7c012dd"
+  },
+  "reference_validation": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\review-package\\reference-review-validation.json",
+    "sha256": "272eb2656d21889e5acff7fccd9d72dcbc58c37d5d72176fda65787e956698b7"
+  },
+  "contact_audit": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\contact-audit.json",
+    "sha256": "06799e55220cfada12b0803b6c6254e971f8caac55ab6fcbfb581579300f8210"
+  },
+  "evidence": {
+    "after": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\after\\render-records.json",
+        "sha256": "28d9bf4f059cfc6ca7690d962644d4dcb27f019294c91caedd9c852cd517f02b"
+      },
+      "count": 9
+    },
+    "before-cage": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\before-cage\\render-records.json",
+        "sha256": "a949d6ee84aa68c8bfab4fc0158c0b4ea84e5b0096c5a6a2dd5bae5de174db7b"
+      },
+      "count": 1
+    },
+    "after-cage": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\after-cage\\render-records.json",
+        "sha256": "a608a535b6cf005f45cfd2efdaef00e565bf034ad339b45f2a702564a742718c"
+      },
+      "count": 1
+    },
+    "source-four": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\source-four\\render-records.json",
+        "sha256": "daa92e6fd67eeac191b4f68ffd86dc13812571fffdd868252051bffa21d53037"
+      },
+      "count": 12
+    },
+    "limited-blink": {
+      "records": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\limited-blink\\render-records.json",
+        "sha256": "28bfb843a65c62bd021fc56a4f93e02550b87e37e4dafae6bb047824f9e31d3f"
+      },
+      "count": 8
+    }
+  },
+  "recipes": {
+    "build_medial_r28.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\build_medial_r28.py",
+      "sha256": "59845642b8d4b9a2a984cda1ec5925d81f512ec472023fee246c62462f427fd3"
+    },
+    "expanded-recipe.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\expanded-recipe.py",
+      "sha256": "e009329629f0e9a844e4415cb241d53979f23b09dd4a6397bd8e8de2d3a895ee"
+    },
+    "render_medial_cage.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\render_medial_cage.py",
+      "sha256": "ace4d301137e128279fc5787d05618615fa6b0ba60fdd4b0bb060e7643869e30"
+    },
+    "export_r28.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\export_r28.py",
+      "sha256": "5f9389a62dd270c7b3055c7367d08cb0ed9fbd4b7ae4f698ada0ffe08e198054"
+    },
+    "export_r23_to_r28.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\export_r23_to_r28.py",
+      "sha256": "0cfbf6dea55042cb46cd6246d1c6fb3623c9a06dc0258d1612e9745cb2215f1a"
+    },
+    "expanded-r23-export.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\expanded-r23-export.py",
+      "sha256": "beaaada54a341e8326ca0fc770329e06fdf4961db8aa29be7eada25ba277cdc2"
+    },
+    "audit_contact.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\audit_contact.py",
+      "sha256": "06aaaedaa0e5a7164f30059527aaa169fa2f7d3b9da9e1ad49e01a9f799f6705"
+    },
+    "render_limited_blink.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\render_limited_blink.py",
+      "sha256": "82981b1798db0a7ef55874a560baf9dace812b9d698f4d8398b5c3ac0d549f38"
+    },
+    "review-package/build_reference_review.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\review-package\\build_reference_review.py",
+      "sha256": "b4c5b9d823f97808cdda5c0402e22193e965015ee46f700aca20a865ec907312"
+    },
+    "review-package/expanded-composer.py": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r28\\review-package\\expanded-composer.py",
+      "sha256": "1e53ccd4a2898789cf1410e30f350c7184998938223bfb680d5210f5b8eba095"
+    }
+  },
+  "visual_check": "Four source boards inspected; matte half-front remains partial and full+60 has no visible iris leak, lash attached. Technical evidence validation is not art acceptance.",
+  "limits": [
+    "R19 surface approval remains REVOKED. R23 eye work retained separately.",
+    "Review-only live integration, if parent chooses, must remain ART UNAPPROVED and does not pass AC-SURFACE.",
+    "Producer inherited hair differs from selected live Hair0d; parent owns integration.",
+    "No G2 or all47-expression motion guarantee. R23 subpixel full-closure residual remains unchanged."
+  ]
+}

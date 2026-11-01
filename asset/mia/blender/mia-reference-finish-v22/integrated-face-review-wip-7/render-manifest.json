@@ -1,0 +1,27 @@
+{
+  "baseline_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-6\\Mia_ReferenceFinish_v22.blend",
+    "sha256": "e3133741eb563a24e507c965997b6059ab00105f45d8cd3b66a4870b4bfa84a2"
+  },
+  "candidate_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\integration-wip-7-review\\Mia_ReferenceFinish_v22.blend",
+    "sha256": "9eab316b9a526eef99db33b8a552d58e7474305cf8377a5a43821711c1a1a140"
+  },
+  "input_packages": {
+    "face": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\parts\\face-finish7-r28-review\\reference-review.json",
+      "sha256": "eedcbaac584e0c13382359a8bed5cf685717edeed570ccc9ca8b288ce043a4a2"
+    }
+  },
+  "rig_source": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\render_integrated_review.py",
+    "sha256": "9c2b3855360f84f03461343232d28c811504838bc87b411f4152337dd0fee107"
+  },
+  "renderer": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-feedback-7\\render_face_comparison.py",
+    "sha256": "643504a993fb2e5a683def12ce3e1ed8bbce5a8ff60b82e401b79fcfad4ae340"
+  },
+  "source_natives_unchanged": true,
+  "art_status": "NOT_EVALUATED",
+  "limitations": "Four source-matched views; continuous matte sweep and actual expressions are separate gates."
+}

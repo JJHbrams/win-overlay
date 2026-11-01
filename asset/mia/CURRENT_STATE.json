@@ -30,15 +30,15 @@
     "body_comparison": "blender/mia-body-reference-audit-v19/body_reference_comparison_4rows.png",
     "body_findings": "blender/mia-body-reference-audit-v19/BODY_AUDIT.md",
     "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md",
-    "current_live_viewing_setup": "blender/mia-reference-finish-v22/integration-wip-6/Mia_ReferenceFinish_v22.blend",
+    "current_live_viewing_setup": "blender/mia-reference-finish-v22/integration-wip-7-review/Mia_ReferenceFinish_v22.blend",
     "viewport_and_camera_audit": "blender/mia-reference-finish-v22/camera-audit.json",
-    "integration_wip_v22": "blender/mia-reference-finish-v22/integration-wip-6/integration-manifest.json",
-    "current_live_evidence": "blender/mia-reference-finish-v22/live-wip-6/live-review.json",
+    "integration_wip_v22": "blender/mia-reference-finish-v22/integration-wip-7-review/integration-manifest.json",
+    "current_live_evidence": "blender/mia-reference-finish-v22/live-wip-7-review/live-review.json",
     "body_registration_correction": "blender/mia-reference-finish-v22/parts/body-candidate12-rejected/supplements",
     "face_aperture_retraction": "blender/mia-reference-finish-v22/evidence/face-aperture/README.md",
     "hair_rejected_terminal": "blender/mia-reference-finish-v22/evidence/rejected-earlock-volume/failure-package.json",
-    "continuous_surface_review": "blender/mia-reference-finish-v22/face-feedback-7/r19-comparison/comparison-manifest.json",
-    "current_eye_deformation": "blender/mia-reference-finish-v22/parts/face-finish7-r23/supplements/handoff-manifest.json"
+    "continuous_surface_review": "blender/mia-reference-finish-v22/face-feedback-7/volume-recovery-review/comparison-manifest.json",
+    "current_eye_deformation": "blender/mia-reference-finish-v22/parts/face-finish7-r28-review/supplements/contact-audit.json"
   },
   "correction_review": {
     "independent_round1": "blender/mia-correction-v20/acceptance-round-1.md",
@@ -57,9 +57,9 @@
   },
   "stage_status": {
     "reference_inventory": "organized; generated candidate approvals remain separate",
-    "corresponding_view_camera_registration": "R19 has55 actual low/level/high front-hemisphere matte/wire renders and9 paired boards; WIP6 has fresh source4 paired face views and actual5MCP head/body ORTHO views. R23 has66 producer neutral/blink/combined images, representative0/±30/±60 inspected. Unchanged Body14/Hair0d retain prior review. Integrity is not art approval.",
+    "corresponding_view_camera_registration": "WIP7-review has8 fresh fixed-camera renders/source4 boards and5actual MCP head/body-centred ORTHO captures, native unchanged. R28 has actual lowfront/intermediate/profile matte and cage plus source4/limited blink evidence. No full360/all-poses claim. Evidence integrity is not art acceptance.",
     "lookdev_diagnostic_rig": "built and fresh-reopen tested; source shaders unchanged",
-    "face_head_art": "FAIL; user explicitly rejects flattened malar/anterior-buccal volume in R19/WIP6. Smoothing erased needed convexity. Surface acceptance revoked. Preserve R23 eye corrections separately; restore coherent high malar/anterior cheek volume without widening an already broad face or restoring old ridges.",
+    "face_head_art": "ART UNAPPROVED: R28 restores malar/anterior-buccal mass and softens orbital/medial transition; high outer-cheek turn, compact lower face, residual medial planes and tired-eye/source likeness remain unfinished. WIP7 is review-only, not surface adoption. R19/WIP5/WIP6 approval stays revoked.",
     "body_art": "FAIL overall. Body14 locally replaces Body5. Rounded lower profile and upper thorax blend improve; ovoid lower/outer rims, lateral attachment, pelvis/groin and neck finishing remain.",
     "hair_art": "FAIL overall. Hair0d retained.3a8 folded fin/needle and d195 pinched bean terminal rejected; d195 has564zero-areaUVtriangles. Open extraction boundaries and full two-lobe/connector topology require work. No geometry repair credit.",
     "uv_and_color": "Face albedo/under-eye shader retained withFace6; hair0d limited512px/view paint retained. Body14 checker enlarges over masses and compresses underneath: UV distortion/density unfinished. Actual routes/diagnostics archived.",
@@ -84,12 +84,12 @@
     "older source129/133 versus model109/112 aperture widths mixed lash extrema and bright opening; withdrawn as geometry target"
   ],
   "immediate_next": [
-    "R19/WIP5/WIP6 surface acceptance remains REVOKED. R25/R26 restored mass but left a narrow shelf; R27 reduced that shelf but medial/nasal-to-malar angular planes still fail actual root/independent review. R27 is a working base only. Astra alone is making bounded R28 without flattening recovered outer-apex volume.",
+    "Continue from WIP7-review/R28 as a working candidate only. Preserve recovered high malar/anterior-buccal mass and R23 eye corrections. R29 wider small smoothing had negligible gain and was rejected. Source-constrained outer cheek turn/compact lower face and medial transition remain priorities; do not repeat ineffective fairness passes or target generically spherical cheeks.",
     "Compare actual lowfront/level/±30/±60/profile and source4. Require visible retained cheek fullness/high malar support and coherent tangent transitions, not just absence of ridges. Preserve eye aperture/lash contact, original ears, body/hair, source width constraints.",
     "From Body14 retain rounded projection; refine lateral attachment and overly uniform lower/outer curvature. Avoid old shelves/beaks and attached spheres; garment-covered art does not define exact bare fold.",
     "Body UV is unfinished: enlarged cells over masses/compressed underside require redistribution after form settles, despite preserved UV bytes.",
     "Hair needs complete two-lobe/connector boundary design. Keep0d;3a8/d195 rejected. d195 UV has564zero-area triangles. Local geometry-transfer prototype is unexecuted and not production.",
-    "Current live WIP6 remains a rejected diagnostic. Canonical R27 working-base evidence is archived, not integrated or art-approved. Source4 and low/level/high matte/wire checks precede any new promotion. R21/R24 remain unselected.",
+    "Live WIP7-review 9eab316b is ART UNAPPROVED. Fresh source4/actual MCP preserve local result, not full likeness. Preserve WIP6 rejected baseline and R27/R28/R29 evidence. No new makeup or final rig before basic form gates.",
     "Preserve separate owners, actual head/body-centred ORTHO/dirtyfileguard and staged Git checkpoints. Garments/final rig/events remain deferred."
   ],
   "do_not_infer_pass_from": [
@@ -125,7 +125,7 @@
   "active_progress": "blender/mia-reference-finish-v22/PROGRESS.md",
   "resumed_v22": {
     "face_finish4_sha256": "9d2c9d42c01c99f0138bb9227e3679ce3afa882d2f43c339ab26496c4c559a4b",
-    "face_status": "FAIL; user explicitly rejects flattened malar/anterior-buccal volume in R19/WIP6. Smoothing erased needed convexity. Surface acceptance revoked. Preserve R23 eye corrections separately; restore coherent high malar/anterior cheek volume without widening an already broad face or restoring old ridges.",
+    "face_status": "ART UNAPPROVED: R28 restores malar/anterior-buccal mass and softens orbital/medial transition; high outer-cheek turn, compact lower face, residual medial planes and tired-eye/source likeness remain unfinished. WIP7 is review-only, not surface adoption. R19/WIP5/WIP6 approval stays revoked.",
     "body_status": "FAIL overall. Body14 locally replaces Body5. Rounded lower profile and upper thorax blend improve; ovoid lower/outer rims, lateral attachment, pelvis/groin and neck finishing remain.",
     "hair_status": "FAIL overall. Hair0d retained.3a8 folded fin/needle and d195 pinched bean terminal rejected; d195 has564zero-areaUVtriangles. Open extraction boundaries and full two-lobe/connector topology require work. No geometry repair credit.",
     "integration_diagnostic_sha256": "4c35b58700db0adac5c5b9994a4cec18ba593a0bd3da0175330f9bd4c41f68be",
@@ -135,22 +135,23 @@
     "independent_parts_review": "blender/mia-reference-finish-v22/independent-parts-review-2.md",
     "face_finish5_sha256": "a5ec86e9fab19fe0e62b9208f48a146760fc758cb42c7e13977d1573f29ffbbb",
     "body_registration_correction": "Selected-front supplement used shoulderY350 instead of approx290–295; source was6.7% oversized. v06 four-view vertical branch unaffected, but lateral torso centring needs explicit translation. Old supplemental boards excluded from proportion judgment.",
-    "previous_remote_checkpoint": "bd80ba8",
+    "previous_remote_checkpoint": "fd220ea",
     "current_checkpoint_lookup": "Enclosing Git commit of CURRENT_STATE.json; pushed SHA recorded in Wiki/final report.",
     "face_finish6_sha256": "f5d17264e07f492983e7e075d5a3213b2bd14a4adaead82072899e9b3e15d98a",
     "body14_sha256": "98f34b4362b4a425d3867cf44c45bd60c9346094c6a7636b2d487e0be536af21",
-    "independent_current_review": "blender/mia-reference-finish-v22/independent-wip6-review.md",
+    "independent_current_review": "blender/mia-reference-finish-v22/independent-wip7-review.md",
     "face_finish7_r19_sha256": "5677073262e4013c2b750a671634cae16c36862fbd8bba2b08c321fd69d46990",
-    "face_finish7_r23_sha256": "579cfc375708852132bf406d2b34a958a46b358f32b844dcb074ed70ad6f6923"
+    "face_finish7_r23_sha256": "579cfc375708852132bf406d2b34a958a46b358f32b844dcb074ed70ad6f6923",
+    "face_finish7_r28_sha256": "c0f531689594f1c68cb6d7f4c582ea280cbf72f1384e74c9db44debcefa6469a"
   },
   "current_surface_wip": {
-    "path": "blender/mia-reference-finish-v22/integration-wip-6/Mia_ReferenceFinish_v22.blend",
-    "sha256": "e3133741eb563a24e507c965997b6059ab00105f45d8cd3b66a4870b4bfa84a2",
-    "selection_means": "Current live/editor WIP6, NOT accepted: user rejects lost cheek/malar volume. Prior R19/WIP5/WIP6 local surface acceptance REVOKED. R23 eye-only corrections may be retained independently. No current candidate is source-likeness approved."
+    "path": "blender/mia-reference-finish-v22/integration-wip-7-review/Mia_ReferenceFinish_v22.blend",
+    "sha256": "9eab316b9a526eef99db33b8a552d58e7474305cf8377a5a43821711c1a1a140",
+    "selection_means": "Current live REVIEW ONLY candidate; local volume recovery inspected, not adopted source-matched surface. R19/WIP5/WIP6 approval remains revoked; overall ART UNAPPROVED."
   },
-  "pending_face_candidate": {
-    "path": "blender/mia-reference-finish-v22/parts/face-finish7-r27-unselected/native/23c5bb76bfad-Mia_FaceFinish7_OrbitalTransitionR27_v22.blend",
-    "sha256": "23c5bb76bfad482b605a00e8e740650924620e573bf9919d01eb009a371c73e0",
-    "status": "NOT_ADOPTED: useful restored-volume working base, still angular medial/nasal transition. R28 in progress; no live replacement."
+  "current_face_candidate": {
+    "path": "blender/mia-reference-finish-v22/parts/face-finish7-r28-review/native/c0f531689594-Mia_FaceFinish7_MedialTransitionR28_v22.blend",
+    "sha256": "c0f531689594f1c68cb6d7f4c582ea280cbf72f1384e74c9db44debcefa6469a",
+    "status": "Working candidate for continued source-form correction; not source likeness/surface approval. R29 unselected."
   }
 }

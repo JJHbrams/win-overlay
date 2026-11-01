@@ -191,7 +191,8 @@ def main(config_path):
     if config.get('skin_contour_render', False):
         ink = runpy.run_path(str(HERE/'production_ink.py'))['configure_skin_ink']()
     scene = bpy.context.scene
-    scene['mia_v22_status'] = 'Integrated work in progress. Source-paired art and deformation acceptance remain separate.'
+    scene['mia_v22_status'] = config.get('status', 'Integrated work in progress. Source-paired art and deformation acceptance remain separate.')
+    scene['mia_art_approved'] = False
     for img in bpy.data.images:
         if img.packed_file:
             img.use_fake_user = True

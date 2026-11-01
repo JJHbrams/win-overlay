@@ -1,0 +1,92 @@
+{
+  "status": "UNSELECTED",
+  "note": "Broader medial support moved max0.737mm; root actual lowfront/+30 and producer agree only modest change, no clear gain over R28, no promotion.",
+  "native_source_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\Mia_FaceFinish7_ConnectedMedialR29_v22.blend",
+  "native_source_sha256": "975a15d7c8f8d6b7919038335a0431a427bd3f91cef14fe13ebc5f1882e2b5b8",
+  "native_not_copied": true,
+  "source_manifest_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\manifest.json",
+  "source_manifest_sha256": "5fc53e1bd8a4211e18526e73d988bd052a7e2c3abd309126ef80812fab7ce401",
+  "recipe": {
+    "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\build_connected_r29.py",
+    "canonical_relative_path": "build_connected_r29.py",
+    "sha256": "4ab1d65c7f4e3570f5b5528405668e5891368842164310682dcbc9d2125bb933"
+  },
+  "evidence_sets": [
+    {
+      "set_name": "after",
+      "record_sha256": "90521b70ebfd25d3d508031b6e30246fbb1e87193e75995d00e51cbf3ae90fdc",
+      "count": 5,
+      "files": [
+        {
+          "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\after\\render-records.json",
+          "canonical_relative_path": "evidence/after/render-records.json",
+          "sha256": "90521b70ebfd25d3d508031b6e30246fbb1e87193e75995d00e51cbf3ae90fdc"
+        },
+        {
+          "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\after\\matte_yaw+00_elev-10.png",
+          "canonical_relative_path": "evidence/after/matte_yaw+00_elev-10.png",
+          "sha256": "6390178ecee4bc34ca59cd375f75b28ed83c2fbfc8479b01e9076c1f7c926541"
+        },
+        {
+          "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\after\\matte_yaw+30_elev-10.png",
+          "canonical_relative_path": "evidence/after/matte_yaw+30_elev-10.png",
+          "sha256": "19c2143af478fb16a52361cc2933354f72586484d0fad582c05e84a582601b77"
+        },
+        {
+          "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\after\\matte_yaw-30_elev-10.png",
+          "canonical_relative_path": "evidence/after/matte_yaw-30_elev-10.png",
+          "sha256": "57b24484d40a70b211edbabbd72cf878a04556398357d382e48af433244f6ad0"
+        },
+        {
+          "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\after\\matte_yaw+60_elev+00.png",
+          "canonical_relative_path": "evidence/after/matte_yaw+60_elev+00.png",
+          "sha256": "37cec2c825389fb44bb3331d8025c88d930effb01afc7d98feab44b96470822e"
+        },
+        {
+          "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\after\\matte_yaw+90_elev+00.png",
+          "canonical_relative_path": "evidence/after/matte_yaw+90_elev+00.png",
+          "sha256": "73d5d89f7b03bcbfa70907fda68913dafb43cd2af1dbd6de82fcfd1e8eda31d7"
+        }
+      ]
+    },
+    {
+      "set_name": "before-cage",
+      "record_sha256": "21a1b39c6d965c627aa57484e07fa04cf1a9c76cc017bd1d03d58995a9ebb00c",
+      "count": 1,
+      "files": [
+        {
+          "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\before-cage\\render-records.json",
+          "canonical_relative_path": "evidence/before-cage/render-records.json",
+          "sha256": "21a1b39c6d965c627aa57484e07fa04cf1a9c76cc017bd1d03d58995a9ebb00c"
+        },
+        {
+          "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\before-cage\\actual_medial_cage_yaw+30_elev-10.png",
+          "canonical_relative_path": "evidence/before-cage/actual_medial_cage_yaw+30_elev-10.png",
+          "sha256": "bcf56f11f9e9a2729d5238df5b7511ba4e736932a3a2682498a48704af02067f"
+        }
+      ]
+    },
+    {
+      "set_name": "after-cage",
+      "record_sha256": "32d4483a3b3d7f696957e2ac255b71d9d8a801741388c0488e075bd879f33bb4",
+      "count": 1,
+      "files": [
+        {
+          "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\after-cage\\render-records.json",
+          "canonical_relative_path": "evidence/after-cage/render-records.json",
+          "sha256": "32d4483a3b3d7f696957e2ac255b71d9d8a801741388c0488e075bd879f33bb4"
+        },
+        {
+          "original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v22\\finish-7\\candidate-r29\\after-cage\\actual_medial_cage_yaw+30_elev-10.png",
+          "canonical_relative_path": "evidence/after-cage/actual_medial_cage_yaw+30_elev-10.png",
+          "sha256": "8ef5d6a5f695a31370d01f86b6e16b33dfbf29d0193e500b8a0cddd6a7ae19ce"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "evidence_sets": 3,
+    "render_artifacts": 7,
+    "diagnosis_json": 0
+  }
+}
