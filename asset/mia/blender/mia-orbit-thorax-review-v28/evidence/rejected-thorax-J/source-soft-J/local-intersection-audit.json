@@ -1,0 +1,28 @@
+{
+  "positive_control": {
+    "bvh_crossing_pairs": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "strict_segment_triangle_detected": true
+  },
+  "I": {
+    "selected_evaluated_triangles": 12213,
+    "bvh_candidate_pairs": 1791,
+    "strict_nonadjacent_intersections": 0,
+    "hits_first30": []
+  },
+  "J": {
+    "selected_evaluated_triangles": 12213,
+    "bvh_candidate_pairs": 1690,
+    "strict_nonadjacent_intersections": 0,
+    "hits_first30": []
+  },
+  "limits": "Strict interior intersections only, selected static breast/return region. Shared-vertex neighbors excluded; this is not all-pose/whole-model collision acceptance."
+}

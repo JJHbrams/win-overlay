@@ -1,0 +1,305 @@
+{
+  "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+  "input_F_sha256": "bdee6f4558fe05a870bf85ec4d188bebfcf2f483e9a407f3411704dcedd0cd26",
+  "source_master_all42keys_bitexact": true,
+  "source_shared_skin_all42keys_bitexact": true,
+  "hair_raw_coordinates_bitexact": true,
+  "components": [
+    {
+      "name": "V28G_Sclera_-1",
+      "verts": 513,
+      "faces": 512,
+      "keys_match42": true,
+      "all_drivers_exact_master": true
+    },
+    {
+      "name": "V28G_Iris_-1",
+      "verts": 469,
+      "faces": 864,
+      "keys_match42": true,
+      "all_drivers_exact_master": true
+    },
+    {
+      "name": "V28G_InnerLid_-1",
+      "verts": 576,
+      "faces": 480,
+      "keys_match42": true,
+      "all_drivers_exact_master": true
+    },
+    {
+      "name": "V28G_Sclera_1",
+      "verts": 513,
+      "faces": 512,
+      "keys_match42": true,
+      "all_drivers_exact_master": true
+    },
+    {
+      "name": "V28G_Iris_1",
+      "verts": 469,
+      "faces": 864,
+      "keys_match42": true,
+      "all_drivers_exact_master": true
+    },
+    {
+      "name": "V28G_InnerLid_1",
+      "verts": 576,
+      "faces": 480,
+      "keys_match42": true,
+      "all_drivers_exact_master": true
+    }
+  ],
+  "actual_evaluated_states": [
+    {
+      "state": "neutral",
+      "head_yaw_deg": 0,
+      "master_keys": {},
+      "sides": {
+        "-1": {
+          "outer_seam_position_max_mm": 0.00011920928955078125,
+          "outer_seam_normal_angle_deg": [
+            0.0026646086679605312,
+            0.07038778996921446
+          ],
+          "visible_inner_contact_count": 91,
+          "occluded_inner_ends": 5,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": [
+            -0.32861530780792236,
+            0.1200065016746521,
+            1.944810152053833
+          ]
+        },
+        "1": {
+          "outer_seam_position_max_mm": 0.00011920928955078125,
+          "outer_seam_normal_angle_deg": [
+            0.0020373842021420493,
+            0.7290162596960159
+          ],
+          "visible_inner_contact_count": 93,
+          "occluded_inner_ends": 3,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": [
+            -0.3655776381492615,
+            0.12001395225524902,
+            1.9583143293857574
+          ]
+        }
+      }
+    },
+    {
+      "state": "half",
+      "head_yaw_deg": 0,
+      "master_keys": {
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.5
+      },
+      "sides": {
+        "-1": {
+          "outer_seam_position_max_mm": 0.0003576472809072584,
+          "outer_seam_normal_angle_deg": [
+            0.00283228185133739,
+            0.12858568515564103
+          ],
+          "visible_inner_contact_count": 48,
+          "occluded_inner_ends": 48,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": [
+            -0.34839287400245667,
+            0.13453513383865356,
+            1.602713018655777
+          ]
+        },
+        "1": {
+          "outer_seam_position_max_mm": 0.0003577103198040277,
+          "outer_seam_normal_angle_deg": [
+            0.0025322201616891507,
+            0.3050308903578824
+          ],
+          "visible_inner_contact_count": 53,
+          "occluded_inner_ends": 43,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": [
+            -0.35641714930534363,
+            0.1475885510444641,
+            1.6543716192245483
+          ]
+        }
+      }
+    },
+    {
+      "state": "closed",
+      "head_yaw_deg": 0,
+      "master_keys": {
+        "Face.M_F00_000_00_Fcl_EYE_Close": 1.0
+      },
+      "sides": {
+        "-1": {
+          "outer_seam_position_max_mm": 0.00011920928955078125,
+          "outer_seam_normal_angle_deg": [
+            0.0024665342363216535,
+            0.08215926466901698
+          ],
+          "visible_inner_contact_count": 0,
+          "occluded_inner_ends": 96,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": null
+        },
+        "1": {
+          "outer_seam_position_max_mm": 0.00011920928955078125,
+          "outer_seam_normal_angle_deg": [
+            0.002938311577237884,
+            0.07980779095171517
+          ],
+          "visible_inner_contact_count": 0,
+          "occluded_inner_ends": 96,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": null
+        }
+      }
+    },
+    {
+      "state": "Close_R",
+      "head_yaw_deg": 0,
+      "master_keys": {
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 1.0
+      },
+      "sides": {
+        "-1": {
+          "outer_seam_position_max_mm": 0.00011920928955078125,
+          "outer_seam_normal_angle_deg": [
+            0.0024665342363216535,
+            0.08215926466901698
+          ],
+          "visible_inner_contact_count": 0,
+          "occluded_inner_ends": 96,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": null
+        },
+        "1": {
+          "outer_seam_position_max_mm": 0.00011920928955078125,
+          "outer_seam_normal_angle_deg": [
+            0.0020373842021420493,
+            0.7290162596960159
+          ],
+          "visible_inner_contact_count": 93,
+          "occluded_inner_ends": 3,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": [
+            -0.36557018756866455,
+            0.12001395225524902,
+            1.9583143293857574
+          ]
+        }
+      }
+    },
+    {
+      "state": "Close_L",
+      "head_yaw_deg": 0,
+      "master_keys": {
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 1.0
+      },
+      "sides": {
+        "-1": {
+          "outer_seam_position_max_mm": 0.00011920928955078125,
+          "outer_seam_normal_angle_deg": [
+            0.0026646086679605312,
+            0.07038778996921446
+          ],
+          "visible_inner_contact_count": 91,
+          "occluded_inner_ends": 5,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": [
+            -0.32860785722732544,
+            0.1200065016746521,
+            1.944810152053833
+          ]
+        },
+        "1": {
+          "outer_seam_position_max_mm": 0.00011920928955078125,
+          "outer_seam_normal_angle_deg": [
+            0.002938311577237884,
+            0.07980779095171517
+          ],
+          "visible_inner_contact_count": 0,
+          "occluded_inner_ends": 96,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": null
+        }
+      }
+    },
+    {
+      "state": "head-12",
+      "head_yaw_deg": -12,
+      "master_keys": {},
+      "sides": {
+        "-1": {
+          "outer_seam_position_max_mm": 0.00012611084093805403,
+          "outer_seam_normal_angle_deg": [
+            0.0022970637945719592,
+            0.03458343826327265
+          ],
+          "visible_inner_contact_count": 91,
+          "occluded_inner_ends": 5,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": [
+            -0.3286182045485475,
+            0.12000581773463637,
+            1.9448075836407952
+          ]
+        },
+        "1": {
+          "outer_seam_position_max_mm": 0.00012065571354469284,
+          "outer_seam_normal_angle_deg": [
+            0.0022225618751143643,
+            19.15508098182202
+          ],
+          "visible_inner_contact_count": 93,
+          "occluded_inner_ends": 3,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": [
+            -0.3655719028756721,
+            0.12000659216937493,
+            1.9583200773922727
+          ]
+        }
+      }
+    },
+    {
+      "state": "head+12",
+      "head_yaw_deg": 12,
+      "master_keys": {},
+      "sides": {
+        "-1": {
+          "outer_seam_position_max_mm": 0.00012293457984924316,
+          "outer_seam_normal_angle_deg": [
+            0.0024884984789199007,
+            0.03236852429706173
+          ],
+          "visible_inner_contact_count": 91,
+          "occluded_inner_ends": 5,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": [
+            -0.32861359795788303,
+            0.12000620517937932,
+            1.9448177481535822
+          ]
+        },
+        "1": {
+          "outer_seam_position_max_mm": 0.00012065571354469284,
+          "outer_seam_normal_angle_deg": [
+            0.0021324252976458674,
+            19.614083234828723
+          ],
+          "visible_inner_contact_count": 93,
+          "occluded_inner_ends": 3,
+          "missing_contact_count": 0,
+          "visible_ocular_minus_wall_along_eye_axis_mm": [
+            -0.36556459781422745,
+            0.12001388267890434,
+            1.9583200773922727
+          ]
+        }
+      }
+    }
+  ],
+  "limits": "Raw source/key/owner guards + evaluated seam/contact under sampledstates. Does not grant ARTpass or certify all42 combinations. Wallcontacts hidden by actualskin are reported separately."
+}

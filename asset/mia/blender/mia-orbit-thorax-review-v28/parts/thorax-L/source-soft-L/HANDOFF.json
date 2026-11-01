@@ -1,0 +1,64 @@
+{
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\Mia_L_CorePlusBreast.blend",
+    "sha256": "e703cbacbbb9f0a564b3671b14e8066ad0240636e8592eba0643bbfd25836f0e"
+  },
+  "patch": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\handoff-L-delta.npz",
+    "sha256": "d86dc43f3aeadb05eba34e3b66d3b4a80c33d5802a96b8c9099aff121287b8a3"
+  },
+  "array_shapes": {
+    "indices": [
+      847
+    ],
+    "local_delta": [
+      847,
+      3
+    ],
+    "world_delta": [
+      847,
+      3
+    ],
+    "key_names": [
+      42
+    ],
+    "baseline_selected42": [
+      42,
+      847,
+      3
+    ],
+    "target_selected42": [
+      42,
+      847,
+      3
+    ]
+  },
+  "local_vs_world": "local_delta is body-object local Rz180; world_delta = local_delta @ matrix3x3.T. Every42key receives the same conceptual delta; float32 saved snapshots in target_selected42 are authoritative.",
+  "integration": "Verify exact baseline_selected42 and disjoint eye indices, then assign target_selected42 at body indices for exact saved-coordinate integration. Do not cast parametric local_delta to float32 before addition and claim bitwise identity. Keep cache==Basis.",
+  "changed_world_bbox_before": [
+    [
+      -0.18040779547192587,
+      -0.14436561983793683,
+      1.1069132089614868
+    ],
+    [
+      0.1794522969320147,
+      0.06033820546879476,
+      1.4097427129745483
+    ]
+  ],
+  "changed_world_bbox_after": [
+    [
+      -0.18041678049490167,
+      -0.13584623482931918,
+      1.1069132089614868
+    ],
+    [
+      0.17943462452922787,
+      0.05709576230243445,
+      1.4097427129745483
+    ]
+  ],
+  "max_body_delta_m": 0.05686994491077109,
+  "limits": "Exact protectedarrays are validated independently. Final merged native must reproduce the accepted body component and undergo parent review; this file is not integration approval."
+}

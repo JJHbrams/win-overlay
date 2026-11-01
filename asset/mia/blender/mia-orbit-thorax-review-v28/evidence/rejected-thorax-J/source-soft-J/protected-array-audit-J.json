@@ -1,0 +1,38 @@
+{
+  "source_sha256": "e9c8654121307b61fb75d73789c9b2443a3e42c53420dfdfada927d194b475d4",
+  "candidate_sha256": "e4b09f3ff321c15f644a0d70020dab76f4bc02b6c1597ac9e8bd191ddb57865d",
+  "keys": 42,
+  "key_names_equal": true,
+  "identical_delta_all42keys_error_m": 5.963840887801553e-08,
+  "protected_all_keys_max_difference_m": 0.0,
+  "face690_max_difference_m": 0.0,
+  "body_head_join_untouched": true,
+  "topology_equal": true,
+  "named_weights_equal": true,
+  "uv_corner_arrays_equal": true,
+  "materials_equal": true,
+  "packed_images_equal": true,
+  "all_other_mesh_coords_and_keys_equal": true,
+  "changed_indices": 847,
+  "status": "structural only; art requires corresponding images",
+  "coordinate_digest_definition": "SHA256 C-contiguous native reopened key coordinates converted to little-endian float64, axes key/vertex/xyz; key order in handoff NPZ key_names. Includes Basis.",
+  "full_coordinate_shape": [
+    42,
+    4647,
+    3
+  ],
+  "baseline_all42_coordinates_sha256": "95fb540b86540e7fb29e11f11f50b62ea69229b3b6228d0bc1f6615d25a361bd",
+  "candidate_all42_coordinates_sha256": "f84bfe19398f5bf936c2715e4de224ab7123fcbf557d0ec636d560b9d0bf3762",
+  "baseline_selected42_coordinates_sha256": "4f68784ae5a56a8e5795b68b9980318c4f63a71904cf6f5c81c5e9b53922a514",
+  "candidate_selected42_coordinates_sha256": "0c17604c2bebb50c7db1b2a92f0231a7e1acc1868cde829a5b696e4f596bb3ca",
+  "indices_sha256": "5a0efce6df7801595cee98f0ed2e6cfe24f0a55975a88cdd1da56986a0108f2b",
+  "local_delta_shape": [
+    847,
+    3
+  ],
+  "indices_minmax": [
+    20,
+    3956
+  ],
+  "local_vs_world": "local_delta belongs to MIA_V27_SharedHeadBody object coordinates; world_delta = local_delta @ body matrix 3x3.T (Rz180), not a separate sculpt. Add local_delta to every corresponding key point; cache originally equals Basis."
+}

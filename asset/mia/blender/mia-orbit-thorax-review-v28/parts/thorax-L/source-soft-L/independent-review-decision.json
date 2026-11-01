@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-11-02T00:39:22.877411+09:00",
+  "reviewer": "/root/orbit_thorax_acceptance",
+  "decision": "BOUNDED_COMPONENT_AC4_PASS",
+  "candidate": "L",
+  "reviewed": [
+    "all36 actual skin orbit frames",
+    "four actual pitch\u00b135 views",
+    "four actual shoulder/arm\u00b120 probe views",
+    "five original-aspect uniform-SRT source boards",
+    "actual core/skin plane sections"
+  ],
+  "findings": "No J/K box, new gutter/column, pinched point, tear or collapse. Core_world independently bit-exact with reviewed I/G3 core; actual sum identity exact. Real underfold permitted. No remaining blocking L form defect identified.",
+  "limits": "Original source bra/yaw/core-visibility uncertainty retained. Final integrated native/package, fullMia ART, fullrig/animation/cloth acceptance are separate.",
+  "native_sha256": "e703cbacbbb9f0a564b3671b14e8066ad0240636e8592eba0643bbfd25836f0e",
+  "evidence_validator": "evidence_valid=true, art_acceptance=NOT_EVALUATED, no errors",
+  "workflow_activity": "Engram start workflow completed earlier in session; final Engram activity tool unavailable in current tool inventory. Parent owns canonical docs/Git/Wiki/live and final activity if connector returns."
+}

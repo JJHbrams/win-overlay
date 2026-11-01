@@ -1,0 +1,237 @@
+{
+  "source_art_immutable": true,
+  "source_scale_policy": "rotation + uniform scale + translation only; no fitted width, recolor or local warp",
+  "views": [
+    {
+      "id": "front",
+      "render_view": "front",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+        "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+      },
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        1024
+      ],
+      "source_registration": {
+        "uniform_scale": 1.7803030303030292,
+        "scale_xy": [
+          1.7803030303030292,
+          1.7803030303030292
+        ],
+        "rotation_degrees": 0,
+        "translation_xy": [
+          -81.43333333333305,
+          -168.44696969696932
+        ],
+        "nonuniform_scale": false,
+        "source_shoulder_y": 221,
+        "source_waist_y": 386,
+        "model_shoulder_z": 1.38,
+        "model_waist_z": 1.145,
+        "normalized_distance_is_not_validation": true,
+        "landmark_uncertainty_px": 10,
+        "reference_yaw_estimate_degrees": 0,
+        "yaw_uncertainty_degrees": 0
+      },
+      "board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source4-uniform-L\\front.png",
+        "sha256": "4740e1804965b9c016626b96cea2b43be955cfd733e46531353d8776e2b3ecaf"
+      },
+      "comparison_crop_xyxy": [
+        0,
+        150,
+        700,
+        800
+      ],
+      "source_visibility_limit": "bra-covered breast volumes and hair-covered back; inferred nude attachment not exact measured source anatomy"
+    },
+    {
+      "id": "profile",
+      "render_view": "profile",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+        "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+      },
+      "crop_xyxy": [
+        384,
+        0,
+        768,
+        1024
+      ],
+      "source_registration": {
+        "uniform_scale": 1.7803030303030292,
+        "scale_xy": [
+          1.7803030303030292,
+          1.7803030303030292
+        ],
+        "rotation_degrees": 0,
+        "translation_xy": [
+          20.99090909090927,
+          -168.44696969696932
+        ],
+        "nonuniform_scale": false,
+        "source_shoulder_y": 221,
+        "source_waist_y": 386,
+        "model_shoulder_z": 1.38,
+        "model_waist_z": 1.145,
+        "normalized_distance_is_not_validation": true,
+        "landmark_uncertainty_px": 10,
+        "reference_yaw_estimate_degrees": 90,
+        "yaw_uncertainty_degrees": 15
+      },
+      "board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source4-uniform-L\\profile.png",
+        "sha256": "93ef63bd5bbfc9598b752a89efbc73687f41c95839cdd06ed9cfb5c58400f583"
+      },
+      "comparison_crop_xyxy": [
+        0,
+        150,
+        700,
+        800
+      ],
+      "source_visibility_limit": "bra-covered breast volumes and hair-covered back; inferred nude attachment not exact measured source anatomy"
+    },
+    {
+      "id": "back",
+      "render_view": "back",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+        "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+      },
+      "crop_xyxy": [
+        768,
+        0,
+        1152,
+        1024
+      ],
+      "source_registration": {
+        "uniform_scale": 1.7803030303030292,
+        "scale_xy": [
+          1.7803030303030292,
+          1.7803030303030292
+        ],
+        "rotation_degrees": 0,
+        "translation_xy": [
+          53.869696969697145,
+          -168.44696969696932
+        ],
+        "nonuniform_scale": false,
+        "source_shoulder_y": 221,
+        "source_waist_y": 386,
+        "model_shoulder_z": 1.38,
+        "model_waist_z": 1.145,
+        "normalized_distance_is_not_validation": true,
+        "landmark_uncertainty_px": 10,
+        "reference_yaw_estimate_degrees": 180,
+        "yaw_uncertainty_degrees": 15
+      },
+      "board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source4-uniform-L\\back.png",
+        "sha256": "d45abead1159dfba74d9f608a754a528057ce198a350b3ceded074b144ffa937"
+      },
+      "comparison_crop_xyxy": [
+        0,
+        150,
+        700,
+        800
+      ],
+      "source_visibility_limit": "bra-covered breast volumes and hair-covered back; inferred nude attachment not exact measured source anatomy"
+    },
+    {
+      "id": "oblique",
+      "render_view": "yaw30",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+        "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+      },
+      "crop_xyxy": [
+        1152,
+        0,
+        1536,
+        1024
+      ],
+      "source_registration": {
+        "uniform_scale": 1.7803030303030292,
+        "scale_xy": [
+          1.7803030303030292,
+          1.7803030303030292
+        ],
+        "rotation_degrees": 0,
+        "translation_xy": [
+          71.03636363636377,
+          -168.44696969696932
+        ],
+        "nonuniform_scale": false,
+        "source_shoulder_y": 221,
+        "source_waist_y": 386,
+        "model_shoulder_z": 1.38,
+        "model_waist_z": 1.145,
+        "normalized_distance_is_not_validation": true,
+        "landmark_uncertainty_px": 10,
+        "reference_yaw_estimate_degrees": 30,
+        "yaw_uncertainty_degrees": 15
+      },
+      "board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source4-uniform-L\\oblique.png",
+        "sha256": "1ca35d9b67d2f4c4e0666f6db511cbb7c94f848e65cac58f76d009257151c5a8"
+      },
+      "comparison_crop_xyxy": [
+        0,
+        150,
+        700,
+        800
+      ],
+      "source_visibility_limit": "bra-covered breast volumes and hair-covered back; inferred nude attachment not exact measured source anatomy"
+    },
+    {
+      "id": "anchor-front",
+      "render_view": "front",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\anchors\\mia-body-front-user-selected-20261031.png",
+        "sha256": "09238b027687c7cd16f99d781c1d79ef081769c7258b49bb840d1badf11c6d42"
+      },
+      "crop_xyxy": [
+        0,
+        0,
+        1024,
+        1536
+      ],
+      "source_registration": {
+        "uniform_scale": 1.1519607843137247,
+        "scale_xy": [
+          1.1519607843137247,
+          1.1519607843137247
+        ],
+        "rotation_degrees": 0,
+        "translation_xy": [
+          -247.3156862745094,
+          -114.82843137254864
+        ],
+        "nonuniform_scale": false,
+        "source_shoulder_y": 295,
+        "source_waist_y": 550,
+        "model_shoulder_z": 1.38,
+        "model_waist_z": 1.145,
+        "normalized_distance_is_not_validation": true,
+        "landmark_uncertainty_px": 10,
+        "reference_yaw_estimate_degrees": 0,
+        "yaw_uncertainty_degrees": 0
+      },
+      "board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source4-uniform-L\\anchor-front.png",
+        "sha256": "f21ac8fb6f20dfd500a8e0e1a645cd92959eb808d9fb1c6244bcb983034e73e3"
+      },
+      "comparison_crop_xyxy": [
+        0,
+        150,
+        700,
+        800
+      ],
+      "source_visibility_limit": "bra-covered breast volumes and hair-covered back; inferred nude attachment not exact measured source anatomy"
+    }
+  ],
+  "status": "WIP corresponding art review; source angles and bra coverage limit exact nude matching"
+}

@@ -1,0 +1,1208 @@
+[
+  {
+    "id": "HIGH-skinONLY",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "skinONLY",
+    "visible_owners": [
+      "MIA_V27_SharedHeadBody",
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      30,
+      35,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.866025447845459,
+        -0.2867882251739502,
+        0.4095759689807892,
+        0.8551520705223083
+      ],
+      [
+        0.4999999701976776,
+        0.49673181772232056,
+        -0.7094064354896545,
+        -1.4788129329681396
+      ],
+      [
+        1.534603000230561e-10,
+        0.8191519975662231,
+        0.5735765099525452,
+        2.687152862548828
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "HIGH-wallONLY",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "wallONLY",
+    "visible_owners": [
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      30,
+      35,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.866025447845459,
+        -0.2867882251739502,
+        0.4095759689807892,
+        0.8551520705223083
+      ],
+      [
+        0.4999999701976776,
+        0.49673181772232056,
+        -0.7094064354896545,
+        -1.4788129329681396
+      ],
+      [
+        1.534603000230561e-10,
+        0.8191519975662231,
+        0.5735765099525452,
+        2.687152862548828
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "HIGH-wallWIRE",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "wallWIRE",
+    "visible_owners": [
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      30,
+      35,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.866025447845459,
+        -0.2867882251739502,
+        0.4095759689807892,
+        0.8551520705223083
+      ],
+      [
+        0.4999999701976776,
+        0.49673181772232056,
+        -0.7094064354896545,
+        -1.4788129329681396
+      ],
+      [
+        1.534603000230561e-10,
+        0.8191519975662231,
+        0.5735765099525452,
+        2.687152862548828
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "HIGH-normal",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "normal",
+    "visible_owners": [
+      "MIA_V27_SharedHeadBody",
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      30,
+      35,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.866025447845459,
+        -0.2867882251739502,
+        0.4095759689807892,
+        0.8551520705223083
+      ],
+      [
+        0.4999999701976776,
+        0.49673181772232056,
+        -0.7094064354896545,
+        -1.4788129329681396
+      ],
+      [
+        1.534603000230561e-10,
+        0.8191519975662231,
+        0.5735765099525452,
+        2.687152862548828
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "LOW-skinONLY",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "skinONLY",
+    "visible_owners": [
+      "MIA_V27_SharedHeadBody",
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      30,
+      -30,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.8660253286361694,
+        0.25000014901161194,
+        0.4330127537250519,
+        0.9020254015922546
+      ],
+      [
+        0.5000001192092896,
+        -0.4330129027366638,
+        -0.7499998211860657,
+        -1.559999942779541
+      ],
+      [
+        4.7842942052511717e-08,
+        0.8660252690315247,
+        -0.5000002384185791,
+        0.5399999618530273
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "LOW-wallONLY",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "wallONLY",
+    "visible_owners": [
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      30,
+      -30,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.8660253286361694,
+        0.25000014901161194,
+        0.4330127537250519,
+        0.9020254015922546
+      ],
+      [
+        0.5000001192092896,
+        -0.4330129027366638,
+        -0.7499998211860657,
+        -1.559999942779541
+      ],
+      [
+        4.7842942052511717e-08,
+        0.8660252690315247,
+        -0.5000002384185791,
+        0.5399999618530273
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "LOW-wallWIRE",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "wallWIRE",
+    "visible_owners": [
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      30,
+      -30,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.8660253286361694,
+        0.25000014901161194,
+        0.4330127537250519,
+        0.9020254015922546
+      ],
+      [
+        0.5000001192092896,
+        -0.4330129027366638,
+        -0.7499998211860657,
+        -1.559999942779541
+      ],
+      [
+        4.7842942052511717e-08,
+        0.8660252690315247,
+        -0.5000002384185791,
+        0.5399999618530273
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "LOW-normal",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "normal",
+    "visible_owners": [
+      "MIA_V27_SharedHeadBody",
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      30,
+      -30,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.8660253286361694,
+        0.25000014901161194,
+        0.4330127537250519,
+        0.9020254015922546
+      ],
+      [
+        0.5000001192092896,
+        -0.4330129027366638,
+        -0.7499998211860657,
+        -1.559999942779541
+      ],
+      [
+        4.7842942052511717e-08,
+        0.8660252690315247,
+        -0.5000002384185791,
+        0.5399999618530273
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "SIDE-skinONLY",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "skinONLY",
+    "visible_owners": [
+      "MIA_V27_SharedHeadBody",
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      80,
+      0,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.17364798486232758,
+        4.8653777895424355e-08,
+        0.9848077893257141,
+        2.005615472793579
+      ],
+      [
+        0.9848077893257141,
+        2.4205458970527616e-08,
+        -0.17364798486232758,
+        -0.407296359539032
+      ],
+      [
+        -3.228635492291687e-08,
+        1.0,
+        -4.371138828673793e-08,
+        1.5399999618530273
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "SIDE-wallONLY",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "wallONLY",
+    "visible_owners": [
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      80,
+      0,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.17364798486232758,
+        4.8653777895424355e-08,
+        0.9848077893257141,
+        2.005615472793579
+      ],
+      [
+        0.9848077893257141,
+        2.4205458970527616e-08,
+        -0.17364798486232758,
+        -0.407296359539032
+      ],
+      [
+        -3.228635492291687e-08,
+        1.0,
+        -4.371138828673793e-08,
+        1.5399999618530273
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "SIDE-wallWIRE",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "wallWIRE",
+    "visible_owners": [
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      80,
+      0,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.17364798486232758,
+        4.8653777895424355e-08,
+        0.9848077893257141,
+        2.005615472793579
+      ],
+      [
+        0.9848077893257141,
+        2.4205458970527616e-08,
+        -0.17364798486232758,
+        -0.407296359539032
+      ],
+      [
+        -3.228635492291687e-08,
+        1.0,
+        -4.371138828673793e-08,
+        1.5399999618530273
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  },
+  {
+    "id": "SIDE-normal",
+    "native_sha256": "77a992872c2b1590e9266f01767e0236e95507b644fe96de21fe20070cc7acfb",
+    "surface_mode": "normal",
+    "visible_owners": [
+      "MIA_V27_SharedHeadBody",
+      "V28G_InnerLid_-1",
+      "V28G_InnerLid_1"
+    ],
+    "hair_hidden": [
+      "MIA_V17_LeftBraid_Tail",
+      "MIA_V17_LeftBraid_Lane2",
+      "MIA_V17_LeftBraid_Lane1",
+      "MIA_V17_LeftBraid_Lane0",
+      "MIA_V17_LeftBraid_Tie",
+      "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "MIA_V17_PIXAL_DetailedHair",
+      "MIA_V20_Crown_PixalDonorLock",
+      "MIA_V24_Gather_Main",
+      "MIA_V24_Gather_Tuck",
+      "MIA_V24_Gather_Upper"
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.07000000029802322,
+    "yaw_pitch_roll_deg": [
+      80,
+      0,
+      0
+    ],
+    "camera_matrix": [
+      [
+        0.17364798486232758,
+        4.8653777895424355e-08,
+        0.9848077893257141,
+        2.005615472793579
+      ],
+      [
+        0.9848077893257141,
+        2.4205458970527616e-08,
+        -0.17364798486232758,
+        -0.407296359539032
+      ],
+      [
+        -3.228635492291687e-08,
+        1.0,
+        -4.371138828673793e-08,
+        1.5399999618530273
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "resolution": [
+      640,
+      640
+    ],
+    "pose": "actualkeysrecorded,restHead",
+    "actual_shape_keys": {},
+    "lights": [
+      {
+        "name": "Key",
+        "power_W": 60,
+        "size_m": 1,
+        "position": [
+          -0.6,
+          -1,
+          2.2
+        ]
+      },
+      {
+        "name": "Fill",
+        "power_W": 15,
+        "size_m": 1.5,
+        "position": [
+          0.8,
+          -0.8,
+          1.8
+        ]
+      },
+      {
+        "name": "Rim",
+        "power_W": 8,
+        "size_m": 0.8,
+        "position": [
+          0,
+          0.9,
+          2
+        ]
+      }
+    ],
+    "world": {
+      "linear": 0.12,
+      "strength": 0.15
+    },
+    "display": "Standard/None exposure0 gamma1",
+    "geometry_shader": "Active Physical Principled gray23%skin/52%sclera/14%iris roughness.8; whitebackfaceculling and actualirisUVradialalpha preserved"
+  }
+]

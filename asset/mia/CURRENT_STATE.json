@@ -1,8 +1,15 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
   "status": "v28_orbit_lid_and_thorax_correction_in_progress",
+  "active_working_correction": {
+    "path": "blender/mia-orbit-thorax-review-v28/integrated-G2L/Mia_Foundation_v28_G2L.blend",
+    "sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
+    "meaning": "Review checkpoint: L body bounded component supported, G2 eye upper/medial contour acceptance reopened by latest user feedback. Not selected final or ART approved.",
+    "face_review": "blender/mia-orbit-thorax-review-v28/reviews/G2L-face/reference-review.json",
+    "body_review": "blender/mia-orbit-thorax-review-v28/reviews/G2L-body/reference-review.json"
+  },
   "character_complete": false,
   "art_approved": false,
   "read_first": [
@@ -31,7 +38,7 @@
     "body_comparison": "blender/mia-body-reference-audit-v19/body_reference_comparison_4rows.png",
     "body_findings": "blender/mia-body-reference-audit-v19/BODY_AUDIT.md",
     "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md",
-    "current_live_viewing_setup": "blender/mia-reference-finish-v22/face-rebuild-10/selected-v27/native/e9c865412130-Mia_Foundation_v27.blend",
+    "current_live_viewing_setup": "C:/Users/antio/.codex/worktrees/mia-final-face-v12/win-overlay/asset/mia/blender/mia-orbit-review-v28/Mia_Orbit_v28_G2.blend",
     "viewport_and_camera_audit": "blender/mia-reference-finish-v22/camera-audit.json",
     "integration_wip_v22": "blender/mia-reference-finish-v22/face-rebuild-10/selected-v27/reference-review.json",
     "current_live_evidence": "blender/mia-reference-finish-v22/face-rebuild-10/live-v27/live-review.json",
@@ -62,8 +69,8 @@
     "reference_inventory": "organized; generated candidate approvals remain separate",
     "corresponding_view_camera_registration": "Frozen e9 source4 with c04 baseline, same cameras/pose/light/display and uniform SRT; supplementary matte/intermediate views; 6 actual MCP orthographic captures. IPD eye measurements separate from face-height-normalized boards. Package valid, not ART PASS.",
     "lookdev_diagnostic_rig": "built and fresh-reopen tested; source shaders unchanged",
-    "face_head_art": "ART UNAPPROVED. Live remains e9. Eye F bdee6f contour/lid/fan and tested blink improve locally; orbital3D relation high/low/rotation still under audit before integration.",
-    "body_art": "ART UNAPPROVED. Actual live remains e9 with Body23n. V28 E surface/limited-pose pass withdrawn after exact core decomposition retained breastlike profile; true core-first F is unadopted and being corrected at clavicular/lower transitions.",
+    "face_head_art": "Overall ART UNAPPROVED. G2 curved ocular/lid-return structure, retained cheek and sampled lash/closure remain supported. User now identifies upper-lid inclination and noseward inner-canthus upward termination as unlike source; AC1/contour acceptance REOPENED. Eye H analysis separates skin opening from ink and does not normalize away slope. Preserve G2; no body rollback.",
+    "body_art": "Overall ART UNAPPROVED. Bounded L anatomy/arm-probe component supported after all36 actual orbit/critical/source/pose views: unchanged G3 core plus whole new convex soft field, resolving J/K boxlike lower envelope. Root G2L f0dead17 integrates exact42 targets and fresh matched views. J/K rejected; upper-eye correction H pending independently.",
     "hair_art": "ART UNAPPROVED. Hair24 rear curl3closed meshes plus3packed1024maps replace retained hidden folds/binder. Bun too high/concentric, ear/nape extraction boundaries unresolved.",
     "uv_and_color": "v27 actual Face-UV2048 packed scene-linear pigment incl fatigue, upper crease, lip/nostril marks; head/upper-neck rest-weight-masked controlled-light material continuity. color_only tests Face slot0 pigment only, not whole-head albedo. Old body/hair surfaces remain unfinished.",
     "facial_deformation": "Frozen e9 neutral/.5/1 Close in front and oblique, plus +/-12degree head-follow inspected. Full42key combinations, unilateral extremes, loops, events and physics unvalidated.",
@@ -106,13 +113,14 @@
     "saved_sources_immutable": true,
     "discard_live_test_view_authorized": true,
     "user_prefers_live_blender_mcp": true,
-    "private_real_person_references_not_used_or_recorded": true,
+    "private_real_person_media_not_archived": true,
+    "adult_art_photo_preview_scope": "Public previews viewed only for qualitative attachment/lower fullness; no measured-volume claim, photo download or real-person photo/identity archive in Git. Mia art remains design authority.",
     "delegated_model": "New delegated work inherits main session model/settings; Astra override revoked by user."
   },
   "worktree_archive": "WORKTREE_ARCHIVE.md",
   "active_contract": "blender/mia-orbit-thorax-review-v28/ACCEPTANCE.md",
   "latest_user_feedback": {
-    "body": "Ribcage/pectoral/shoulder-back trunk core must be constructed and checked independently from added breast soft mass; continuous final skin allowed. E core audit failed and PASS withdrawn. F clean-core construction under review for clavicular/lower-soft transitions; no v28 body adopted.",
+    "body": "L whole-soft rebuild on exact G3 core has bounded independent support; preserve it while correcting eyes. Original source bra leaves exact nude crease inferred. J/K boxlike masses rejected and preserved as failures.",
     "face": "User rejects current whole face and eyes as unlike source; malar/front-cheek hollow reads undernourished. Autonomously reconstruct from multiple approved concept views.",
     "hair": "Rear central finishing volume appears absent; half-up feature is gathered hair/bun, not cord or ribbon.",
     "texture": "Old4096 rebake did not add information. Current0d has limited newly painted512px-per-view coverage; no4K-detail or final style claim.",
@@ -122,6 +130,8 @@
     "current_directive": "Continue source-faithful eye/orbit and core-first thorax correction with actual resupplied ChiCha face/body tutorial evidence, continuous 3D inspection and source-preserving SRT. Do not promote F contour or rejected E thorax as complete anatomy.",
     "orbit": "Continuous 3D relation required: recessed ocular surface, inner lid wall and curved lateral socket wrapping toward retained malar/cheek support. Inspect high-down, low-up, lower diagonal and full orbit, not three silhouettes. Flat/open stylized carrier alone is neither PASS nor FAIL. F contour is not orbital acceptance.",
     "eye_contour": "Source resembles rounded parallelogram with long relatively straight runs and concentrated turns; current all-curved crescent is wrong. Lower lateral segment needs broader source-like design. Diagnose generator and review omissions, not only width/height.",
+    "eye_upper_medial_latest": "상안검형태가 하안검과 비슷한 맥락으로 각도가 다르고 콧대안쪽으로 향하는 눈매의 마감이 원화랑다르게 위쪽방향을 향하고있네. Reopen contour acceptance; compare upper inclination and medial termination in source camera coordinates, not chord-normalized curves. H correction preserves orbital/cheek and Body L.",
+    "source_eye_layer_clarification": "User clarifies that SOURCE lash/eyeliner/eye-makeup lines were being misread as the actual eye shape. Root/reviewer withdraw the black-tail-based inference to lower the anatomical medial canthus. Endpoint preservation is a mechanism to inspect, not proof of required displacement. No H geometry edit has occurred. Compare source visible white/iris margin separately and mark hidden anatomical terminal unknown; clean G2 lid/ocular diagnostics pending.",
     "lashes": "Verify actual independent lash meshes/silhouettes: current four ribbons exist but are ink bands, not necessarily source fan/tufts.",
     "review_occlusion": "Source-matched front/profile/obliques require temporary hair hiding: source|baselinehairON|baselinehairOFF|candidatehairOFF; actual orbit matte separately.",
     "source4_v23n": "Confirmed old source384x1024 resized512x1024 (sx4/3,sy1), source-only distortion. Invalid for proportions, original PNG unchanged. Forensic replay under blender/mia-orbit-thorax-review-v28/source4-v23n-aspect-audit."

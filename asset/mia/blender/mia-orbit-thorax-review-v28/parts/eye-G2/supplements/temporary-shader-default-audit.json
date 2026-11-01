@@ -1,0 +1,17 @@
+{
+  "old_renderer_sha256": "601e4396b8b6b94c97cb52e4ddcc08156d0c61f90ce4df9ac99c1b870c955697",
+  "issue": "Second Output nodes were inactive because Korean-named default Output remained active. Old temporarymatte used defaultPrincipled; oldWorld used defaultBackground. Native F geometry/materials were never saved from reviewrender.",
+  "actual_old_matte_base_linear": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+  ],
+  "actual_old_matte_roughness": 0.5,
+  "actual_old_world_linear": [
+    0.05000000074505806,
+    0.05000000074505806,
+    0.05000000074505806
+  ],
+  "actual_old_world_strength": 1.0,
+  "limits": "Old opaque transparent-helper globesONLY/NOsclera images cannot prove hidden-surfacevisibility. New correctednodes.clear/activeOutput diagnostics supersede them. Relative beforeafter underidenticalactualrig remains valid; noARTpassclaimed."
+}

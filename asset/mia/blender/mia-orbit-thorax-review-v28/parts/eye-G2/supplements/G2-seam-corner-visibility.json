@@ -1,0 +1,70 @@
+[
+  {
+    "head_yaw_deg": -12,
+    "side": 1,
+    "wall_root_station": 50,
+    "arc": "lower",
+    "source_eval_vertex": 26858,
+    "world_m": [
+      0.04212081804871559,
+      -0.0640866830945015,
+      1.5416430234909058
+    ],
+    "normal_difference_deg": 19.15506935119629,
+    "skin_normal": [
+      0.6309621930122375,
+      -0.5466256141662598,
+      -0.5505335330963135
+    ],
+    "wall_transferred_normal": [
+      0.5052139163017273,
+      -0.7859251499176025,
+      -0.3564838171005249
+    ],
+    "render_pixel_xy": [
+      497.35211455190927,
+      393.1646201205761
+    ],
+    "ink_occlusion_hits": [
+      {
+        "owner": "V27_Lower_BoundaryRibbon.001_1_Dense",
+        "in_front_of_corner_mm": 0.30857324600219727
+      }
+    ],
+    "interpretation": "Isolated nearest-normal transfer sampling corner; actual covered/visible status from evaluated dense ink ray is recorded. No claim of zero all-pose normalerror."
+  },
+  {
+    "head_yaw_deg": 12,
+    "side": 1,
+    "wall_root_station": 50,
+    "arc": "lower",
+    "source_eval_vertex": 26858,
+    "world_m": [
+      0.0664411336183548,
+      -0.040844596922397614,
+      1.5416430234909058
+    ],
+    "normal_difference_deg": 19.614076614379883,
+    "skin_normal": [
+      0.8369368314743042,
+      -0.20663051307201385,
+      -0.5067944526672363
+    ],
+    "wall_transferred_normal": [
+      0.7927826046943665,
+      -0.502845287322998,
+      -0.3444451689720154
+    ],
+    "render_pixel_xy": [
+      561.3321663154618,
+      385.7618856546517
+    ],
+    "ink_occlusion_hits": [
+      {
+        "owner": "V27_Lower_BoundaryRibbon.001_1_Dense",
+        "in_front_of_corner_mm": 0.15300512313842773
+      }
+    ],
+    "interpretation": "Isolated nearest-normal transfer sampling corner; actual covered/visible status from evaluated dense ink ray is recorded. No claim of zero all-pose normalerror."
+  }
+]

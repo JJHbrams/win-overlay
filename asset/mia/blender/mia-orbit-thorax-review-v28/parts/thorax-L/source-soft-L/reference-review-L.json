@@ -1,0 +1,5204 @@
+{
+  "schema_version": 1,
+  "part": "body",
+  "baseline_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-reference-finish-v22\\face-rebuild-10\\selected-v27\\native\\e9c865412130-Mia_Foundation_v27.blend",
+    "sha256": "e9c8654121307b61fb75d73789c9b2443a3e42c53420dfdfada927d194b475d4"
+  },
+  "candidate_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\Mia_L_CorePlusBreast.blend",
+    "sha256": "e703cbacbbb9f0a564b3671b14e8066ad0240636e8592eba0643bbfd25836f0e"
+  },
+  "required_views": [
+    "front",
+    "profile",
+    "back",
+    "oblique"
+  ],
+  "views": [
+    {
+      "id": "front",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+        "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a",
+        "crop_xyxy": [
+          0,
+          0,
+          384,
+          1024
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\baseline\\geometry-clay\\front.png",
+        "sha256": "c0843d324fe1dca49ffa102a5a8e693eff5d5e3fd56f22ecfc70d6023a557f46"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\L-core-plus-soft\\geometry-clay\\front.png",
+        "sha256": "de34490a2ab6d96351550718f2d661ccee84e9a2192b34fd034f3e3f1b1435e2"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source4-uniform-L\\front.png",
+        "sha256": "4740e1804965b9c016626b96cea2b43be955cfd733e46531353d8776e2b3ecaf"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.6292068494294654e-07,
+            -1.0,
+            -3.0
+          ],
+          [
+            0.0,
+            1.0,
+            -1.6292068494294654e-07,
+            1.2400000095367432
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.6399999856948853,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "name": "ThoraxReview_Key",
+              "matrix": [
+                [
+                  0.8294633626937866,
+                  0.20757949352264404,
+                  -0.5185569524765015,
+                  -1.2000000476837158
+                ],
+                [
+                  -0.5585611462593079,
+                  0.3082556426525116,
+                  -0.7700570821762085,
+                  -1.7999999523162842
+                ],
+                [
+                  4.7357506360867774e-08,
+                  0.9283798933029175,
+                  0.3716326057910919,
+                  2.0999999046325684
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 110.0,
+              "size": 1.2999999523162842,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Fill",
+              "matrix": [
+                [
+                  0.7025169134140015,
+                  -0.16204041242599487,
+                  0.6929739713668823,
+                  1.399999976158142
+                ],
+                [
+                  0.7116670608520508,
+                  0.15995708107948303,
+                  -0.6840641498565674,
+                  -1.399999976158142
+                ],
+                [
+                  -5.001492553446951e-08,
+                  0.9737333655357361,
+                  0.2276913821697235,
+                  1.7000000476837158
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 38.0,
+              "size": 1.399999976158142,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.3581677649199264e-07,
+                  1.0302829167585514e-07,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.4251503646373749,
+                  0.9051227569580078,
+                  1.600000023841858
+                ],
+                [
+                  -7.912834121270862e-08,
+                  0.9051227569580078,
+                  0.4251503646373749,
+                  2.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 22.0,
+              "size": 1.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.15,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          700,
+          800
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ],
+        "actual_native_rig_pose": {
+          "diagnostic_degrees": 0.0,
+          "method": "Bilateral upper-arm world-Y rotations about native joint heads; +20 raises arms, -20 lowers arms; saved rig unchanged",
+          "armature_object": "MIA_V06_RIG",
+          "armature_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_matrix": [
+            [
+              -1.0,
+              8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_basis": {
+            "J_Bip_C_Spine": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Chest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_UpperChest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Neck": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Head": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.6292068494294654e-07,
+            -1.0,
+            -3.0
+          ],
+          [
+            0.0,
+            1.0,
+            -1.6292068494294654e-07,
+            1.2400000095367432
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.6399999856948853,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "name": "ThoraxReview_Key",
+              "matrix": [
+                [
+                  0.8294633626937866,
+                  0.20757949352264404,
+                  -0.5185569524765015,
+                  -1.2000000476837158
+                ],
+                [
+                  -0.5585611462593079,
+                  0.3082556426525116,
+                  -0.7700570821762085,
+                  -1.7999999523162842
+                ],
+                [
+                  4.7357506360867774e-08,
+                  0.9283798933029175,
+                  0.3716326057910919,
+                  2.0999999046325684
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 110.0,
+              "size": 1.2999999523162842,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Fill",
+              "matrix": [
+                [
+                  0.7025169134140015,
+                  -0.16204041242599487,
+                  0.6929739713668823,
+                  1.399999976158142
+                ],
+                [
+                  0.7116670608520508,
+                  0.15995708107948303,
+                  -0.6840641498565674,
+                  -1.399999976158142
+                ],
+                [
+                  -5.001492553446951e-08,
+                  0.9737333655357361,
+                  0.2276913821697235,
+                  1.7000000476837158
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 38.0,
+              "size": 1.399999976158142,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.3581677649199264e-07,
+                  1.0302829167585514e-07,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.4251503646373749,
+                  0.9051227569580078,
+                  1.600000023841858
+                ],
+                [
+                  -7.912834121270862e-08,
+                  0.9051227569580078,
+                  0.4251503646373749,
+                  2.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 22.0,
+              "size": 1.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.15,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          700,
+          800
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ],
+        "actual_native_rig_pose": {
+          "diagnostic_degrees": 0,
+          "method": "Bilateral upper-arm world-Y rotations about native joint heads; +20 raises arms, -20 lowers arms; saved rig unchanged",
+          "armature_object": "MIA_V06_RIG",
+          "armature_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_matrix": [
+            [
+              -1.0,
+              8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_basis": {
+            "J_Bip_C_Spine": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Chest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_UpperChest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Neck": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Head": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "reference_registration": {
+        "uniform_scale": 1.7803030303030292,
+        "translation_xy": [
+          -81.43333333333305,
+          -168.44696969696932
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Original source shoulder guideline→narrow-waist vertical span normalized to native Z1.38→1.145m; that normalized distance is excluded from validation.",
+        "notes": "Original RGB/aspect preserved; uncertainty±10px. No width fit, per-feature warp or old384→512 anisotropic board used."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0,
+        "translation_xy": [
+          0.0,
+          0.0
+        ],
+        "rotation_degrees": 0.0,
+        "normalization_basis": "Identical700x800 actual orthographic camera; same y150..800 display crop, no per-model fit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0,
+        "translation_xy": [
+          0.0,
+          0.0
+        ],
+        "rotation_degrees": 0.0,
+        "normalization_basis": "Identical700x800 actual orthographic camera; same y150..800 display crop, no per-model fit."
+      },
+      "pose_uncertainty": {
+        "source_yaw_estimate_degrees": 0,
+        "source_yaw_uncertainty_degrees": 0,
+        "source_landmark_uncertainty_px": 10,
+        "source_pose_note": "Stylized illustrated source is not calibrated orthographic anatomy; bra and hair occlude nude forms. Shoulder/waist source span is normalization, not independent validation.",
+        "actual_shader_audit": {
+          "world": {
+            "active_output": "월드 출력",
+            "linked_background": "배경",
+            "color": [
+              0.18000000715255737,
+              0.18000000715255737,
+              0.18000000715255737,
+              1.0
+            ],
+            "strength": 0.15000000596046448
+          },
+          "clay": {
+            "active_output": "머티리얼 출력",
+            "linked_node": "확산 BSDF",
+            "type": "ShaderNodeBsdfDiffuse",
+            "color": [
+              0.33000001311302185,
+              0.33000001311302185,
+              0.33000001311302185,
+              1.0
+            ],
+            "roughness": 0.0
+          }
+        }
+      },
+      "observed_differences": "Original applied-ball/outer-ring construction replaced by independent cage and positive soft tissue with a convex lower pole, rising root corners and thinner upper attachment. L removes J/K near-horizontal inferior floor and parallel box sides.",
+      "unresolved": [
+        "Bra conceals nude attachment/fold: lower trajectory and footprint are an explicitly reviewed inference.",
+        "Local thorax evidence does not approve whole Mia, legs/pelvis/head/UV, full rigging, animation or cloth."
+      ],
+      "material_mode": "Neutral diffuse geometric review, original native materials preserved; legacy outlineGN disabled identically. Actual shader links/inputs are recorded for L."
+    },
+    {
+      "id": "profile",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+        "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a",
+        "crop_xyxy": [
+          384,
+          0,
+          768,
+          1024
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\baseline\\geometry-clay\\profile.png",
+        "sha256": "670f7c28283bf7b7a2e9e7848322e73a5e7ef1a84aebe29b5a46ebadf8d710d3"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\L-core-plus-soft\\geometry-clay\\profile.png",
+        "sha256": "dfd108f288457daabcb8a9b6c7418f7699e727c20ee357c35d772fbe69bbcf8e"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source4-uniform-L\\profile.png",
+        "sha256": "93ef63bd5bbfc9598b752a89efbc73687f41c95839cdd06ed9cfb5c58400f583"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -0.005999930668622255,
+            4.33519069531485e-08,
+            0.9999819993972778,
+            3.0
+          ],
+          [
+            0.9999819993972778,
+            6.004437835827048e-08,
+            0.005999930668622255,
+            -1.8369701465288538e-16
+          ],
+          [
+            -5.978318995403242e-08,
+            1.0,
+            -4.371138828673793e-08,
+            1.2400000095367432
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.6399999856948853,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "name": "ThoraxReview_Key",
+              "matrix": [
+                [
+                  0.5488998889923096,
+                  -0.31001853942871094,
+                  0.7762715220451355,
+                  1.7999999523162842
+                ],
+                [
+                  0.8358880877494812,
+                  0.20357884466648102,
+                  -0.5097516179084778,
+                  -1.2000000476837158
+                ],
+                [
+                  3.345157040257618e-09,
+                  0.9286786913871765,
+                  0.3708852231502533,
+                  2.0999999046325684
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 110.0,
+              "size": 1.2999999523162842,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Fill",
+              "matrix": [
+                [
+                  -0.7116089463233948,
+                  -0.1580309122800827,
+                  0.6845721006393433,
+                  1.399999976158142
+                ],
+                [
+                  0.7025757431983948,
+                  -0.16006283462047577,
+                  0.6933737993240356,
+                  1.399999976158142
+                ],
+                [
+                  5.7681763365735605e-08,
+                  0.9743747115135193,
+                  0.22493082284927368,
+                  1.7000000476837158
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 38.0,
+              "size": 1.399999976158142,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Rim",
+              "matrix": [
+                [
+                  -0.011249467730522156,
+                  0.42900732159614563,
+                  -0.9032309651374817,
+                  -1.600000023841858
+                ],
+                [
+                  -0.9999366998672485,
+                  -0.0048263487406075,
+                  0.010161539539694786,
+                  9.797174158936853e-17
+                ],
+                [
+                  6.692563658816653e-08,
+                  0.9032881259918213,
+                  0.4290344715118408,
+                  2.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 22.0,
+              "size": 1.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.15,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          700,
+          800
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ],
+        "actual_native_rig_pose": {
+          "diagnostic_degrees": 0.0,
+          "method": "Bilateral upper-arm world-Y rotations about native joint heads; +20 raises arms, -20 lowers arms; saved rig unchanged",
+          "armature_object": "MIA_V06_RIG",
+          "armature_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_matrix": [
+            [
+              -1.0,
+              8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_basis": {
+            "J_Bip_C_Spine": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Chest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_UpperChest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Neck": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Head": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -0.005999930668622255,
+            4.33519069531485e-08,
+            0.9999819993972778,
+            3.0
+          ],
+          [
+            0.9999819993972778,
+            6.004437835827048e-08,
+            0.005999930668622255,
+            -1.8369701465288538e-16
+          ],
+          [
+            -5.978318995403242e-08,
+            1.0,
+            -4.371138828673793e-08,
+            1.2400000095367432
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.6399999856948853,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "name": "ThoraxReview_Key",
+              "matrix": [
+                [
+                  0.5488998889923096,
+                  -0.31001853942871094,
+                  0.7762715220451355,
+                  1.7999999523162842
+                ],
+                [
+                  0.8358880877494812,
+                  0.20357884466648102,
+                  -0.5097516179084778,
+                  -1.2000000476837158
+                ],
+                [
+                  3.345157040257618e-09,
+                  0.9286786913871765,
+                  0.3708852231502533,
+                  2.0999999046325684
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 110.0,
+              "size": 1.2999999523162842,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Fill",
+              "matrix": [
+                [
+                  -0.7116089463233948,
+                  -0.1580309122800827,
+                  0.6845721006393433,
+                  1.399999976158142
+                ],
+                [
+                  0.7025757431983948,
+                  -0.16006283462047577,
+                  0.6933737993240356,
+                  1.399999976158142
+                ],
+                [
+                  5.7681763365735605e-08,
+                  0.9743747115135193,
+                  0.22493082284927368,
+                  1.7000000476837158
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 38.0,
+              "size": 1.399999976158142,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Rim",
+              "matrix": [
+                [
+                  -0.011249467730522156,
+                  0.42900732159614563,
+                  -0.9032309651374817,
+                  -1.600000023841858
+                ],
+                [
+                  -0.9999366998672485,
+                  -0.0048263487406075,
+                  0.010161539539694786,
+                  9.797174158936853e-17
+                ],
+                [
+                  6.692563658816653e-08,
+                  0.9032881259918213,
+                  0.4290344715118408,
+                  2.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 22.0,
+              "size": 1.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.15,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          700,
+          800
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ],
+        "actual_native_rig_pose": {
+          "diagnostic_degrees": 0,
+          "method": "Bilateral upper-arm world-Y rotations about native joint heads; +20 raises arms, -20 lowers arms; saved rig unchanged",
+          "armature_object": "MIA_V06_RIG",
+          "armature_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_matrix": [
+            [
+              -1.0,
+              8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_basis": {
+            "J_Bip_C_Spine": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Chest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_UpperChest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Neck": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Head": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "reference_registration": {
+        "uniform_scale": 1.7803030303030292,
+        "translation_xy": [
+          20.99090909090927,
+          -168.44696969696932
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Original source shoulder guideline→narrow-waist vertical span normalized to native Z1.38→1.145m; that normalized distance is excluded from validation.",
+        "notes": "Original RGB/aspect preserved; uncertainty±10px. No width fit, per-feature warp or old384→512 anisotropic board used."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0,
+        "translation_xy": [
+          0.0,
+          0.0
+        ],
+        "rotation_degrees": 0.0,
+        "normalization_basis": "Identical700x800 actual orthographic camera; same y150..800 display crop, no per-model fit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0,
+        "translation_xy": [
+          0.0,
+          0.0
+        ],
+        "rotation_degrees": 0.0,
+        "normalization_basis": "Identical700x800 actual orthographic camera; same y150..800 display crop, no per-model fit."
+      },
+      "pose_uncertainty": {
+        "source_yaw_estimate_degrees": 90,
+        "source_yaw_uncertainty_degrees": 15,
+        "source_landmark_uncertainty_px": 10,
+        "source_pose_note": "Stylized illustrated source is not calibrated orthographic anatomy; bra and hair occlude nude forms. Shoulder/waist source span is normalization, not independent validation.",
+        "actual_shader_audit": {
+          "world": {
+            "active_output": "월드 출력",
+            "linked_background": "배경",
+            "color": [
+              0.18000000715255737,
+              0.18000000715255737,
+              0.18000000715255737,
+              1.0
+            ],
+            "strength": 0.15000000596046448
+          },
+          "clay": {
+            "active_output": "머티리얼 출력",
+            "linked_node": "확산 BSDF",
+            "type": "ShaderNodeBsdfDiffuse",
+            "color": [
+              0.33000001311302185,
+              0.33000001311302185,
+              0.33000001311302185,
+              1.0
+            ],
+            "roughness": 0.0
+          }
+        }
+      },
+      "observed_differences": "Rounded forward/down/under lower pole rolls back into cage. Actual profile alpha apex Z1.2792m, projection relative to own anterior waist31px, inside source-supported brackets under the recorded normalization.",
+      "unresolved": [
+        "Bra conceals nude attachment/fold: lower trajectory and footprint are an explicitly reviewed inference.",
+        "Local thorax evidence does not approve whole Mia, legs/pelvis/head/UV, full rigging, animation or cloth."
+      ],
+      "material_mode": "Neutral diffuse geometric review, original native materials preserved; legacy outlineGN disabled identically. Actual shader links/inputs are recorded for L."
+    },
+    {
+      "id": "back",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+        "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a",
+        "crop_xyxy": [
+          768,
+          0,
+          1152,
+          1024
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\baseline\\geometry-clay\\back.png",
+        "sha256": "9f6fd1b372b38c2c36f4fe117a2b4d9cabe3aee0a09c763ae79be00adceaa97e"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\L-core-plus-soft\\geometry-clay\\back.png",
+        "sha256": "e6fc03d5a63b8faf715c9a7974242eb254dc17cc092ed31466dd5bb696e10ce1"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source4-uniform-L\\back.png",
+        "sha256": "d45abead1159dfba74d9f608a754a528057ce198a350b3ceded074b144ffa937"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -1.0,
+            8.742279078433057e-08,
+            8.742278367890322e-08,
+            3.6739402930577075e-16
+          ],
+          [
+            8.742277657347586e-08,
+            -7.549790836947068e-08,
+            1.0,
+            3.0
+          ],
+          [
+            8.742279788975793e-08,
+            1.0,
+            7.549790126404332e-08,
+            1.2400000095367432
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.6399999856948853,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "name": "ThoraxReview_Key",
+              "matrix": [
+                [
+                  -0.8345840573310852,
+                  -0.20229196548461914,
+                  0.5123937726020813,
+                  1.2000000476837158
+                ],
+                [
+                  0.5508806109428406,
+                  -0.30647242069244385,
+                  0.7762765288352966,
+                  1.7999999523162842
+                ],
+                [
+                  5.6922086599797694e-08,
+                  0.9301357865333557,
+                  0.36721572279930115,
+                  2.0999999046325684
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 110.0,
+              "size": 1.2999999523162842,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Fill",
+              "matrix": [
+                [
+                  -0.7116089463233948,
+                  0.1580309122800827,
+                  -0.6845721006393433,
+                  -1.399999976158142
+                ],
+                [
+                  -0.7025757431983948,
+                  -0.16006283462047577,
+                  0.6933737993240356,
+                  1.399999976158142
+                ],
+                [
+                  -5.7681763365735605e-08,
+                  0.9743747115135193,
+                  0.22493082284927368,
+                  1.7000000476837158
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 38.0,
+              "size": 1.399999976158142,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Rim",
+              "matrix": [
+                [
+                  1.0,
+                  5.3633937622962635e-17,
+                  -1.1164330996175106e-16,
+                  -1.9594348317873706e-16
+                ],
+                [
+                  -1.238580941614195e-16,
+                  0.43302732706069946,
+                  -0.9013807773590088,
+                  -1.600000023841858
+                ],
+                [
+                  2.1599737336984107e-24,
+                  0.9013807773590088,
+                  0.43302732706069946,
+                  2.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 22.0,
+              "size": 1.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.15,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          700,
+          800
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ],
+        "actual_native_rig_pose": {
+          "diagnostic_degrees": 0.0,
+          "method": "Bilateral upper-arm world-Y rotations about native joint heads; +20 raises arms, -20 lowers arms; saved rig unchanged",
+          "armature_object": "MIA_V06_RIG",
+          "armature_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_matrix": [
+            [
+              -1.0,
+              8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_basis": {
+            "J_Bip_C_Spine": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Chest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_UpperChest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Neck": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Head": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -1.0,
+            8.742279078433057e-08,
+            8.742278367890322e-08,
+            3.6739402930577075e-16
+          ],
+          [
+            8.742277657347586e-08,
+            -7.549790836947068e-08,
+            1.0,
+            3.0
+          ],
+          [
+            8.742279788975793e-08,
+            1.0,
+            7.549790126404332e-08,
+            1.2400000095367432
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.6399999856948853,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "name": "ThoraxReview_Key",
+              "matrix": [
+                [
+                  -0.8345840573310852,
+                  -0.20229196548461914,
+                  0.5123937726020813,
+                  1.2000000476837158
+                ],
+                [
+                  0.5508806109428406,
+                  -0.30647242069244385,
+                  0.7762765288352966,
+                  1.7999999523162842
+                ],
+                [
+                  5.6922086599797694e-08,
+                  0.9301357865333557,
+                  0.36721572279930115,
+                  2.0999999046325684
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 110.0,
+              "size": 1.2999999523162842,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Fill",
+              "matrix": [
+                [
+                  -0.7116089463233948,
+                  0.1580309122800827,
+                  -0.6845721006393433,
+                  -1.399999976158142
+                ],
+                [
+                  -0.7025757431983948,
+                  -0.16006283462047577,
+                  0.6933737993240356,
+                  1.399999976158142
+                ],
+                [
+                  -5.7681763365735605e-08,
+                  0.9743747115135193,
+                  0.22493082284927368,
+                  1.7000000476837158
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 38.0,
+              "size": 1.399999976158142,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Rim",
+              "matrix": [
+                [
+                  1.0,
+                  5.3633937622962635e-17,
+                  -1.1164330996175106e-16,
+                  -1.9594348317873706e-16
+                ],
+                [
+                  -1.238580941614195e-16,
+                  0.43302732706069946,
+                  -0.9013807773590088,
+                  -1.600000023841858
+                ],
+                [
+                  2.1599737336984107e-24,
+                  0.9013807773590088,
+                  0.43302732706069946,
+                  2.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 22.0,
+              "size": 1.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.15,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          700,
+          800
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ],
+        "actual_native_rig_pose": {
+          "diagnostic_degrees": 0,
+          "method": "Bilateral upper-arm world-Y rotations about native joint heads; +20 raises arms, -20 lowers arms; saved rig unchanged",
+          "armature_object": "MIA_V06_RIG",
+          "armature_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_matrix": [
+            [
+              -1.0,
+              8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_basis": {
+            "J_Bip_C_Spine": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Chest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_UpperChest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Neck": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Head": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "reference_registration": {
+        "uniform_scale": 1.7803030303030292,
+        "translation_xy": [
+          53.869696969697145,
+          -168.44696969696932
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Original source shoulder guideline→narrow-waist vertical span normalized to native Z1.38→1.145m; that normalized distance is excluded from validation.",
+        "notes": "Original RGB/aspect preserved; uncertainty±10px. No width fit, per-feature warp or old384→512 anisotropic board used."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0,
+        "translation_xy": [
+          0.0,
+          0.0
+        ],
+        "rotation_degrees": 0.0,
+        "normalization_basis": "Identical700x800 actual orthographic camera; same y150..800 display crop, no per-model fit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0,
+        "translation_xy": [
+          0.0,
+          0.0
+        ],
+        "rotation_degrees": 0.0,
+        "normalization_basis": "Identical700x800 actual orthographic camera; same y150..800 display crop, no per-model fit."
+      },
+      "pose_uncertainty": {
+        "source_yaw_estimate_degrees": 180,
+        "source_yaw_uncertainty_degrees": 15,
+        "source_landmark_uncertainty_px": 10,
+        "source_pose_note": "Stylized illustrated source is not calibrated orthographic anatomy; bra and hair occlude nude forms. Shoulder/waist source span is normalization, not independent validation.",
+        "actual_shader_audit": {
+          "world": {
+            "active_output": "월드 출력",
+            "linked_background": "배경",
+            "color": [
+              0.18000000715255737,
+              0.18000000715255737,
+              0.18000000715255737,
+              1.0
+            ],
+            "strength": 0.15000000596046448
+          },
+          "clay": {
+            "active_output": "머티리얼 출력",
+            "linked_node": "확산 BSDF",
+            "type": "ShaderNodeBsdfDiffuse",
+            "color": [
+              0.33000001311302185,
+              0.33000001311302185,
+              0.33000001311302185,
+              1.0
+            ],
+            "roughness": 0.0
+          }
+        }
+      },
+      "observed_differences": "Useful bounded circumferential G3 support retained; soft field has no active posterior >1mm spillover. Source hair hides most back detail.",
+      "unresolved": [
+        "Bra conceals nude attachment/fold: lower trajectory and footprint are an explicitly reviewed inference.",
+        "Local thorax evidence does not approve whole Mia, legs/pelvis/head/UV, full rigging, animation or cloth."
+      ],
+      "material_mode": "Neutral diffuse geometric review, original native materials preserved; legacy outlineGN disabled identically. Actual shader links/inputs are recorded for L."
+    },
+    {
+      "id": "oblique",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+        "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a",
+        "crop_xyxy": [
+          1152,
+          0,
+          1536,
+          1024
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\baseline\\geometry-clay\\yaw30.png",
+        "sha256": "aa3e092df172111cd1b43a430b46296e6fb7ded2a48e0a63574c89d257401de0"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\L-core-plus-soft\\geometry-clay\\yaw30.png",
+        "sha256": "e6aa27cb3921ff655a3931a9ed3ac03f3a2a0d2e7d5f90eecfff40c647ecf144"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source4-uniform-L\\oblique.png",
+        "sha256": "1ca35d9b67d2f4c4e0666f6db511cbb7c94f848e65cac58f76d009257151c5a8"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.864513635635376,
+            7.474083929537301e-08,
+            0.502609372138977,
+            1.5
+          ],
+          [
+            0.502609372138977,
+            -7.1091368347708794e-09,
+            -0.864513635635376,
+            -2.598076105117798
+          ],
+          [
+            -6.104135508167019e-08,
+            1.0,
+            -4.371138828673793e-08,
+            1.2400000095367432
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.6399999856948853,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "name": "ThoraxReview_Key",
+              "matrix": [
+                [
+                  0.997891902923584,
+                  0.024147411808371544,
+                  -0.06023847684264183,
+                  -0.13923048973083496
+                ],
+                [
+                  -0.06489816308021545,
+                  0.37129727005958557,
+                  -0.926243245601654,
+                  -2.1588456630706787
+                ],
+                [
+                  3.8982923555863636e-09,
+                  0.9282000064849854,
+                  0.3720816671848297,
+                  2.0999999046325684
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 110.0,
+              "size": 1.2999999523162842,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Fill",
+              "matrix": [
+                [
+                  0.25030678510665894,
+                  -0.21958515048027039,
+                  0.9429363012313843,
+                  1.912435531616211
+                ],
+                [
+                  0.9681665897369385,
+                  0.05677090212702751,
+                  -0.24378381669521332,
+                  -0.5124355554580688
+                ],
+                [
+                  -3.9287250785946526e-08,
+                  0.9739401340484619,
+                  0.22680513560771942,
+                  1.7000000476837158
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 38.0,
+              "size": 1.399999976158142,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Rim",
+              "matrix": [
+                [
+                  -0.8687973618507385,
+                  0.21077536046504974,
+                  -0.44806793332099915,
+                  -0.800000011920929
+                ],
+                [
+                  -0.4951677620410919,
+                  -0.36981621384620667,
+                  0.7861582636833191,
+                  1.3856406211853027
+                ],
+                [
+                  6.955667153363265e-09,
+                  0.9048810601234436,
+                  0.4256645441055298,
+                  2.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 22.0,
+              "size": 1.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.15,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          700,
+          800
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ],
+        "actual_native_rig_pose": {
+          "diagnostic_degrees": 0.0,
+          "method": "Bilateral upper-arm world-Y rotations about native joint heads; +20 raises arms, -20 lowers arms; saved rig unchanged",
+          "armature_object": "MIA_V06_RIG",
+          "armature_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_matrix": [
+            [
+              -1.0,
+              8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_basis": {
+            "J_Bip_C_Spine": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Chest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_UpperChest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Neck": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Head": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.864513635635376,
+            7.474083929537301e-08,
+            0.502609372138977,
+            1.5
+          ],
+          [
+            0.502609372138977,
+            -7.1091368347708794e-09,
+            -0.864513635635376,
+            -2.598076105117798
+          ],
+          [
+            -6.104135508167019e-08,
+            1.0,
+            -4.371138828673793e-08,
+            1.2400000095367432
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.6399999856948853,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "name": "ThoraxReview_Key",
+              "matrix": [
+                [
+                  0.997891902923584,
+                  0.024147411808371544,
+                  -0.06023847684264183,
+                  -0.13923048973083496
+                ],
+                [
+                  -0.06489816308021545,
+                  0.37129727005958557,
+                  -0.926243245601654,
+                  -2.1588456630706787
+                ],
+                [
+                  3.8982923555863636e-09,
+                  0.9282000064849854,
+                  0.3720816671848297,
+                  2.0999999046325684
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 110.0,
+              "size": 1.2999999523162842,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Fill",
+              "matrix": [
+                [
+                  0.25030678510665894,
+                  -0.21958515048027039,
+                  0.9429363012313843,
+                  1.912435531616211
+                ],
+                [
+                  0.9681665897369385,
+                  0.05677090212702751,
+                  -0.24378381669521332,
+                  -0.5124355554580688
+                ],
+                [
+                  -3.9287250785946526e-08,
+                  0.9739401340484619,
+                  0.22680513560771942,
+                  1.7000000476837158
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 38.0,
+              "size": 1.399999976158142,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Rim",
+              "matrix": [
+                [
+                  -0.8687973618507385,
+                  0.21077536046504974,
+                  -0.44806793332099915,
+                  -0.800000011920929
+                ],
+                [
+                  -0.4951677620410919,
+                  -0.36981621384620667,
+                  0.7861582636833191,
+                  1.3856406211853027
+                ],
+                [
+                  6.955667153363265e-09,
+                  0.9048810601234436,
+                  0.4256645441055298,
+                  2.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 22.0,
+              "size": 1.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.15,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          700,
+          800
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ],
+        "actual_native_rig_pose": {
+          "diagnostic_degrees": 0,
+          "method": "Bilateral upper-arm world-Y rotations about native joint heads; +20 raises arms, -20 lowers arms; saved rig unchanged",
+          "armature_object": "MIA_V06_RIG",
+          "armature_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_matrix": [
+            [
+              -1.0,
+              8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_basis": {
+            "J_Bip_C_Spine": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Chest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_UpperChest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Neck": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Head": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "reference_registration": {
+        "uniform_scale": 1.7803030303030292,
+        "translation_xy": [
+          71.03636363636377,
+          -168.44696969696932
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Original source shoulder guideline→narrow-waist vertical span normalized to native Z1.38→1.145m; that normalized distance is excluded from validation.",
+        "notes": "Original RGB/aspect preserved; uncertainty±10px. No width fit, per-feature warp or old384→512 anisotropic board used."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0,
+        "translation_xy": [
+          0.0,
+          0.0
+        ],
+        "rotation_degrees": 0.0,
+        "normalization_basis": "Identical700x800 actual orthographic camera; same y150..800 display crop, no per-model fit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0,
+        "translation_xy": [
+          0.0,
+          0.0
+        ],
+        "rotation_degrees": 0.0,
+        "normalization_basis": "Identical700x800 actual orthographic camera; same y150..800 display crop, no per-model fit."
+      },
+      "pose_uncertainty": {
+        "source_yaw_estimate_degrees": 30,
+        "source_yaw_uncertainty_degrees": 15,
+        "source_landmark_uncertainty_px": 10,
+        "source_pose_note": "Stylized illustrated source is not calibrated orthographic anatomy; bra and hair occlude nude forms. Shoulder/waist source span is normalization, not independent validation.",
+        "actual_shader_audit": {
+          "world": {
+            "active_output": "월드 출력",
+            "linked_background": "배경",
+            "color": [
+              0.18000000715255737,
+              0.18000000715255737,
+              0.18000000715255737,
+              1.0
+            ],
+            "strength": 0.15000000596046448
+          },
+          "clay": {
+            "active_output": "머티리얼 출력",
+            "linked_node": "확산 BSDF",
+            "type": "ShaderNodeBsdfDiffuse",
+            "color": [
+              0.33000001311302185,
+              0.33000001311302185,
+              0.33000001311302185,
+              1.0
+            ],
+            "roughness": 0.0
+          }
+        }
+      },
+      "observed_differences": "Pectoral/axillary root, upper taper and convex lower envelope read together. Reference yaw estimated30±15 degrees; actual30 used where available, no exact calibration claim.",
+      "unresolved": [
+        "Bra conceals nude attachment/fold: lower trajectory and footprint are an explicitly reviewed inference.",
+        "Local thorax evidence does not approve whole Mia, legs/pelvis/head/UV, full rigging, animation or cloth."
+      ],
+      "material_mode": "Neutral diffuse geometric review, original native materials preserved; legacy outlineGN disabled identically. Actual shader links/inputs are recorded for L."
+    },
+    {
+      "id": "anchor-front",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\anchors\\mia-body-front-user-selected-20261031.png",
+        "sha256": "09238b027687c7cd16f99d781c1d79ef081769c7258b49bb840d1badf11c6d42",
+        "crop_xyxy": [
+          0,
+          0,
+          1024,
+          1536
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\baseline\\geometry-clay\\front.png",
+        "sha256": "c0843d324fe1dca49ffa102a5a8e693eff5d5e3fd56f22ecfc70d6023a557f46"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\L-core-plus-soft\\geometry-clay\\front.png",
+        "sha256": "de34490a2ab6d96351550718f2d661ccee84e9a2192b34fd034f3e3f1b1435e2"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source4-uniform-L\\anchor-front.png",
+        "sha256": "f21ac8fb6f20dfd500a8e0e1a645cd92959eb808d9fb1c6244bcb983034e73e3"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.6292068494294654e-07,
+            -1.0,
+            -3.0
+          ],
+          [
+            0.0,
+            1.0,
+            -1.6292068494294654e-07,
+            1.2400000095367432
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.6399999856948853,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "name": "ThoraxReview_Key",
+              "matrix": [
+                [
+                  0.8294633626937866,
+                  0.20757949352264404,
+                  -0.5185569524765015,
+                  -1.2000000476837158
+                ],
+                [
+                  -0.5585611462593079,
+                  0.3082556426525116,
+                  -0.7700570821762085,
+                  -1.7999999523162842
+                ],
+                [
+                  4.7357506360867774e-08,
+                  0.9283798933029175,
+                  0.3716326057910919,
+                  2.0999999046325684
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 110.0,
+              "size": 1.2999999523162842,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Fill",
+              "matrix": [
+                [
+                  0.7025169134140015,
+                  -0.16204041242599487,
+                  0.6929739713668823,
+                  1.399999976158142
+                ],
+                [
+                  0.7116670608520508,
+                  0.15995708107948303,
+                  -0.6840641498565674,
+                  -1.399999976158142
+                ],
+                [
+                  -5.001492553446951e-08,
+                  0.9737333655357361,
+                  0.2276913821697235,
+                  1.7000000476837158
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 38.0,
+              "size": 1.399999976158142,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.3581677649199264e-07,
+                  1.0302829167585514e-07,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.4251503646373749,
+                  0.9051227569580078,
+                  1.600000023841858
+                ],
+                [
+                  -7.912834121270862e-08,
+                  0.9051227569580078,
+                  0.4251503646373749,
+                  2.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 22.0,
+              "size": 1.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.15,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          700,
+          800
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ],
+        "actual_native_rig_pose": {
+          "diagnostic_degrees": 0.0,
+          "method": "Bilateral upper-arm world-Y rotations about native joint heads; +20 raises arms, -20 lowers arms; saved rig unchanged",
+          "armature_object": "MIA_V06_RIG",
+          "armature_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_matrix": [
+            [
+              -1.0,
+              8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_basis": {
+            "J_Bip_C_Spine": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Chest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_UpperChest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Neck": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Head": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.6292068494294654e-07,
+            -1.0,
+            -3.0
+          ],
+          [
+            0.0,
+            1.0,
+            -1.6292068494294654e-07,
+            1.2400000095367432
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.6399999856948853,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": {
+          "areas": [
+            {
+              "name": "ThoraxReview_Key",
+              "matrix": [
+                [
+                  0.8294633626937866,
+                  0.20757949352264404,
+                  -0.5185569524765015,
+                  -1.2000000476837158
+                ],
+                [
+                  -0.5585611462593079,
+                  0.3082556426525116,
+                  -0.7700570821762085,
+                  -1.7999999523162842
+                ],
+                [
+                  4.7357506360867774e-08,
+                  0.9283798933029175,
+                  0.3716326057910919,
+                  2.0999999046325684
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 110.0,
+              "size": 1.2999999523162842,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Fill",
+              "matrix": [
+                [
+                  0.7025169134140015,
+                  -0.16204041242599487,
+                  0.6929739713668823,
+                  1.399999976158142
+                ],
+                [
+                  0.7116670608520508,
+                  0.15995708107948303,
+                  -0.6840641498565674,
+                  -1.399999976158142
+                ],
+                [
+                  -5.001492553446951e-08,
+                  0.9737333655357361,
+                  0.2276913821697235,
+                  1.7000000476837158
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 38.0,
+              "size": 1.399999976158142,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "ThoraxReview_Rim",
+              "matrix": [
+                [
+                  -1.0,
+                  -1.3581677649199264e-07,
+                  1.0302829167585514e-07,
+                  0.0
+                ],
+                [
+                  1.5099580252808664e-07,
+                  -0.4251503646373749,
+                  0.9051227569580078,
+                  1.600000023841858
+                ],
+                [
+                  -7.912834121270862e-08,
+                  0.9051227569580078,
+                  0.4251503646373749,
+                  2.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "energy": 22.0,
+              "size": 1.0,
+              "color": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "world_linear": [
+            0.18,
+            0.18,
+            0.18
+          ],
+          "world_strength": 0.15,
+          "other_lights_disabled": true
+        },
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          700,
+          800
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0,
+          0
+        ],
+        "actual_native_rig_pose": {
+          "diagnostic_degrees": 0,
+          "method": "Bilateral upper-arm world-Y rotations about native joint heads; +20 raises arms, -20 lowers arms; saved rig unchanged",
+          "armature_object": "MIA_V06_RIG",
+          "armature_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "body_matrix": [
+            [
+              -1.0,
+              8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              -8.742277657347586e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "pose_basis": {
+            "J_Bip_C_Spine": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Chest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_UpperChest": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Neck": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_C_Head": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_L_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_Shoulder": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "J_Bip_R_UpperArm": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4713283181190491,
+                0.8819578289985657,
+                0.0
+              ],
+              [
+                0.0,
+                -0.8819578289985657,
+                0.4713283181190491,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "freestyle": false,
+        "engine": "BLENDER_EEVEE"
+      },
+      "reference_registration": {
+        "uniform_scale": 1.1519607843137247,
+        "translation_xy": [
+          -247.3156862745094,
+          -114.82843137254864
+        ],
+        "rotation_degrees": 0,
+        "normalization_basis": "Original source shoulder guideline→narrow-waist vertical span normalized to native Z1.38→1.145m; that normalized distance is excluded from validation.",
+        "notes": "Original RGB/aspect preserved; uncertainty±10px. No width fit, per-feature warp or old384→512 anisotropic board used."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0,
+        "translation_xy": [
+          0.0,
+          0.0
+        ],
+        "rotation_degrees": 0.0,
+        "normalization_basis": "Identical700x800 actual orthographic camera; same y150..800 display crop, no per-model fit."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0,
+        "translation_xy": [
+          0.0,
+          0.0
+        ],
+        "rotation_degrees": 0.0,
+        "normalization_basis": "Identical700x800 actual orthographic camera; same y150..800 display crop, no per-model fit."
+      },
+      "pose_uncertainty": {
+        "source_yaw_estimate_degrees": 0,
+        "source_yaw_uncertainty_degrees": 0,
+        "source_landmark_uncertainty_px": 10,
+        "source_pose_note": "Stylized illustrated source is not calibrated orthographic anatomy; bra and hair occlude nude forms. Shoulder/waist source span is normalization, not independent validation.",
+        "actual_shader_audit": {
+          "world": {
+            "active_output": "월드 출력",
+            "linked_background": "배경",
+            "color": [
+              0.18000000715255737,
+              0.18000000715255737,
+              0.18000000715255737,
+              1.0
+            ],
+            "strength": 0.15000000596046448
+          },
+          "clay": {
+            "active_output": "머티리얼 출력",
+            "linked_node": "확산 BSDF",
+            "type": "ShaderNodeBsdfDiffuse",
+            "color": [
+              0.33000001311302185,
+              0.33000001311302185,
+              0.33000001311302185,
+              1.0
+            ],
+            "roughness": 0.0
+          }
+        }
+      },
+      "observed_differences": "Unwarped selected-front source supports the feminine compact hierarchy; illustrated bra supports volume and conceals nude attachment. L mass remains distinct from actual G3 core.",
+      "unresolved": [
+        "Bra conceals nude attachment/fold: lower trajectory and footprint are an explicitly reviewed inference.",
+        "Local thorax evidence does not approve whole Mia, legs/pelvis/head/UV, full rigging, animation or cloth."
+      ],
+      "material_mode": "Neutral diffuse geometric review, original native materials preserved; legacy outlineGN disabled identically. Actual shader links/inputs are recorded for L."
+    }
+  ],
+  "supplements": {
+    "small_arm_poses": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\paired-small-arm-poses.png",
+      "sha256": "9e714126ef27c251e4ebc5b818973c0f96430b160c7ae84a7986599f6a41de6a"
+    },
+    "critical_pitch35": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\critical-high-low.png",
+      "sha256": "ee75985a1261621c03100e7375f785cb500c699afca70a7062a30d377e713a7f"
+    },
+    "actual_core_skin_sections": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\actual-core-L-sections.png",
+      "sha256": "00c46f5e183954b30edb29eaf2d16933ecb3e2d09408e17c1d8c21498fa1bf5d"
+    },
+    "actual_lower_envelope": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\actual-lower-envelope-J-K-L.png",
+      "sha256": "270cffdb661b5aede542c83bdd386ec32dc1490508e8a2328fbcbe4eb54213de"
+    },
+    "core_skin_continuous_orbit": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\L-core-versus-soft-orbit.gif",
+      "sha256": "3bed1161de78b02e9d3fb0c8b15def831ea646b1bdbf17d65be37be8964020bd"
+    },
+    "orbit_contact": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\orbit-contact-sheet.png",
+      "sha256": "105b58935945f499f82ae8788755208c2afff9e128755fffcd54b7f083c14176"
+    },
+    "orbit_records": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\orbit-artifacts.json",
+      "sha256": "9cbf6e2339ef21bfe8500018547602f4beba13b13529b0152ed89e6da3a84d5b"
+    },
+    "core_plus_positive_tissue": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\two-mass-actual-audit.json",
+      "sha256": "9ef30ce2af134e5018b5c3feed280630644be3aeabf14339aebe486a16e91024"
+    },
+    "local_intersection_positive_control": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\local-intersection-audit.json",
+      "sha256": "cd128525824eeff87856d3559cd0dc50d280b55319af94d421a98e78b5f2c7c9"
+    }
+  },
+  "supplement_render_records": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\L-core-plus-soft\\geometry-clay\\render-records.json",
+      "sha256": "a9f1dbe7e84c258ead8b16bbd5adb4e0f1750b224a445eda2a2cc6809995ae1c"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\L-core-plus-soft\\geometry-clay-pose--20.0\\render-records.json",
+      "sha256": "aeed91fd5bcc9f0910bf685572aca7c103faec64e2cafa4e5142453b57681183"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\L-core-plus-soft\\geometry-clay-pose-20.0\\render-records.json",
+      "sha256": "27c13d02f3dd69601a7f4e1c2f90d1126dfa386a9c6c243b2a6fd5df6bc9cc9c"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\L-core-plus-soft\\owner-clay\\render-records.json",
+      "sha256": "bb05d686351d9cc6339ee677f91781b461e2dee40d1eab111c7c2cd613a34906"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\L-core-plus-soft\\owner-clay-orbit\\render-records.json",
+      "sha256": "59fa2f8564a3e64bef46953aac7280f0a9eed7c5af34c51f53ddb0c521063db1"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\renders\\I-true-core\\owner-clay-orbit\\render-records.json",
+      "sha256": "627dfefa5f511332edc3cd934bff12c59d4e1d1fa3736eea0e1d62cd8d36b0e2"
+    }
+  ],
+  "guard_audit": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\protected-array-audit-L.json",
+    "sha256": "b206e7af6149869e4fee799505f5a6c178983434217238745b8118283a4cf2fb"
+  },
+  "delta_handoff": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\handoff-L-delta.npz",
+    "sha256": "d86dc43f3aeadb05eba34e3b66d3b4a80c33d5802a96b8c9099aff121287b8a3"
+  },
+  "geometry_sections": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\actual-core-L-sections.png",
+    "sha256": "00c46f5e183954b30edb29eaf2d16933ecb3e2d09408e17c1d8c21498fa1bf5d"
+  },
+  "stage_measures": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\lower-envelope-audit.json",
+    "sha256": "0aa9df0b2f1a310f9a731a7dd6fddebbd2823f4873868f67b50a9863de31c895"
+  },
+  "construction_recipe": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\source-soft-L\\construction.json",
+    "sha256": "61e1c693707eed36eea03931fbf0ea323abf55aa4b615ab82c47715629c2b0e1"
+  },
+  "core_orbit_reuse": {
+    "actual_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-reference-recovery\\win-overlay\\asset\\mia\\blender\\mia-thorax-review-v28\\core-first-G3\\Mia_G3_TrueCore.blend",
+      "sha256": "a2c41cf021772e1436438efbdf2194ba5826e29262cb22fe6ef3aa3a7bf1831f"
+    },
+    "existing_role": "I-true-core",
+    "reason": "Exact unchanged G3 actual core. L skin is its actual core plus explicit independent soft vector contribution; all42 saved coordinates checked. No unrelated diagnostic core."
+  },
+  "status": "Frozen L local component review; no automatic or whole-Mia ART acceptance",
+  "native_saved_during_render": false
+}
