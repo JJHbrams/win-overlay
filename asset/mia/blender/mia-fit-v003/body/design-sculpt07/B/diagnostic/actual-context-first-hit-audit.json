@@ -1,0 +1,113 @@
+{
+  "B_mesh_sha256": "8439b4585d944defab27a03930eec3ce7c1ee7068cac66321cc4cffa40a9c23b",
+  "actors": [
+    {
+      "name": "MIA_v003_DesignSculpt07_B_UNSELECTED",
+      "evaluated_vertices": 68164,
+      "actual_evaluated_triangle_material_counts": {
+        "0": 136324
+      },
+      "actual_evaluated_materials": [
+        {
+          "slot": 0,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        }
+      ],
+      "transparent_output_slots": [],
+      "opaque_triangles": 136324
+    },
+    {
+      "name": "Sculpt07_B_ORIGINAL_CONTEXT_SEAMS_UNVERIFIED",
+      "evaluated_vertices": 80771,
+      "actual_evaluated_triangle_material_counts": {
+        "12": 39104,
+        "1": 86336,
+        "10": 3536,
+        "0": 32208
+      },
+      "actual_evaluated_materials": [
+        {
+          "slot": 0,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 1,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 2,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 3,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 4,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 5,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 6,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 7,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 8,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 9,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 10,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 11,
+          "name": "Sculpt07_PhysicalGray",
+          "sha256": "92a5c6b160f69f268b12ba4d385fed0239fce287c17d88c856ea6b090966658f"
+        },
+        {
+          "slot": 12,
+          "name": "Sculpt07_ContextTransparentMask",
+          "sha256": "12c261b4efc3c5242c0896f3082893c25a07c49a2710dea3ca24fbe0357f12da"
+        }
+      ],
+      "transparent_output_slots": [
+        12
+      ],
+      "opaque_triangles": 122080
+    }
+  ],
+  "first_hit_owners": {
+    "MISS": 252,
+    "MIA_v003_DesignSculpt07_B_UNSELECTED": 2769
+  },
+  "transparent_triangles_skipped_by_actual_output_ancestry": true,
+  "limits": "Opaque first-hit sample grid underbust x\u00b1.14,Z1.14..1.27 at exact front camera. Full-transparent BSDF slots skipped; no general alpha/transmission solver claimed.",
+  "sample_count": 2769,
+  "samples_npz": {
+    "path": "actual-first-hit-samples.npz",
+    "sha256": "7e7debf7b64fdaa6ce2aa953a5fa6244360a54a9b6fdb918261fe886843de6e3"
+  }
+}
