@@ -1,0 +1,264 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+  "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "current_selected_base_confirmed": true,
+  "body_raw_exact_G_solver_field": false,
+  "body_raw_G_solver_max_error_m": 1.2013700256829907e-07,
+  "body_raw_G_solver_different_indices": [
+    3630,
+    3637,
+    3646,
+    3657,
+    3661,
+    3669,
+    3671,
+    3672,
+    3680,
+    3698,
+    3700,
+    3706,
+    3719
+  ],
+  "body_original42_selected1255_exact_G": true,
+  "evaluated_G_agreement": {
+    "topology_same": true,
+    "body_evaluated_indices": 60681,
+    "max_body_distance_m": 0.0
+  },
+  "shared_owner": "MIA_V27_SharedHeadBody",
+  "raw_vertices": 4647,
+  "key_names": [
+    "Basis",
+    "Face.M_F00_000_00_Fcl_ALL_Angry",
+    "Face.M_F00_000_00_Fcl_ALL_Fun",
+    "Face.M_F00_000_00_Fcl_ALL_Joy",
+    "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+    "Face.M_F00_000_00_Fcl_ALL_Surprised",
+    "Face.M_F00_000_00_Fcl_BRW_Angry",
+    "Face.M_F00_000_00_Fcl_BRW_Fun",
+    "Face.M_F00_000_00_Fcl_BRW_Joy",
+    "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+    "Face.M_F00_000_00_Fcl_BRW_Surprised",
+    "Face.M_F00_000_00_Fcl_EYE_Natural",
+    "Face.M_F00_000_00_Fcl_EYE_Angry",
+    "Face.M_F00_000_00_Fcl_EYE_Close",
+    "Face.M_F00_000_00_Fcl_EYE_Close_R",
+    "Face.M_F00_000_00_Fcl_EYE_Close_L",
+    "Face.M_F00_000_00_Fcl_EYE_Joy",
+    "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+    "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+    "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+    "Face.M_F00_000_00_Fcl_EYE_Surprised",
+    "Face.M_F00_000_00_Fcl_EYE_Extra",
+    "Face.M_F00_000_00_Fcl_MTH_Up",
+    "Face.M_F00_000_00_Fcl_MTH_Down",
+    "Face.M_F00_000_00_Fcl_MTH_Angry",
+    "Face.M_F00_000_00_Fcl_MTH_Neutral",
+    "Face.M_F00_000_00_Fcl_MTH_Fun",
+    "Face.M_F00_000_00_Fcl_MTH_Joy",
+    "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+    "Face.M_F00_000_00_Fcl_MTH_Surprised",
+    "Face.M_F00_000_00_Fcl_MTH_A",
+    "Face.M_F00_000_00_Fcl_MTH_I",
+    "Face.M_F00_000_00_Fcl_MTH_U",
+    "Face.M_F00_000_00_Fcl_MTH_E",
+    "Face.M_F00_000_00_Fcl_MTH_O",
+    "Face.M_F00_000_00_Fcl_HA_Fung1",
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+    "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+    "Face.M_F00_000_00_Fcl_HA_Fung2",
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+    "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+    "EyeExtra_01.M_F00_000_00_EyeExtra_On",
+    "Face.M_F00_000_00_Fcl_MIA_ToothyGrin",
+    "Mia.v003.SourceSurprise.Aperture.-1",
+    "Mia.v003.SourceSurprise.Aperture.1",
+    "Mia.v003.SourceSurprise.CloseGate.-1",
+    "Mia.v003.SourceSurprise.CloseGate.1"
+  ],
+  "body_slot": 1,
+  "body_material": "MIA_V002_G_Body_ContinuousSupport",
+  "all_material_slots": [
+    "MIA_v002_MIA_V27_SharedHeadBody_RefinedD2",
+    "MIA_V002_G_Body_ContinuousSupport",
+    "MIA_V23_Body_CommonLight",
+    "MIA_V23_Body_CommonLight",
+    "MIA_V23_Body_CommonLight",
+    "MIA_V22_Body_CommonLight_Preview.001",
+    "MIA_V13_PaintedBodySkin",
+    "MIA_V13_PaintedBodySkin",
+    "MIA_V13_PaintedBodySkin",
+    "V27_HeadBlend_MIA_V23_Body_CommonLight",
+    "V27_HeadBlend_MIA_V22_Body_CommonLight_Preview.001",
+    "V27_HeadBlend_MIA_V13_PaintedBodySkin"
+  ],
+  "active_EEVEE_output": "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+  "active_connected_images": [
+    {
+      "node": "V002_Pigment",
+      "image": "MIA_V002_G_MIA_V002_Underwear_Pigment_sRGB",
+      "file": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\parts\\body-G\\Mia_BodyUnderwear_Color_2048.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "space": "sRGB",
+      "packed_sha256": "f67736081765233bd45db8ccab4f9b1bd501d24a8d401560ea0beac61c475c03",
+      "producer_file": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\Mia_BodyUnderwear_Color_2048.png",
+      "packed_matches_G_file": true,
+      "vector_links": [
+        {
+          "node": "V002_UnderwearUV",
+          "socket": "UV",
+          "uv_map": "MIA_V002_UnderwearUV"
+        }
+      ]
+    },
+    {
+      "node": "AuthoredUVPigment",
+      "image": "MIA_V13_BodySkin_UV_2048.001",
+      "file": "//..\\..\\..\\..\\..\\..\\..\\..\\mia-body-head-v06\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-foundation-v13\\Mia_BodySkin_BaseColor_2048.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "space": "Non-Color",
+      "packed_sha256": "5875ba3aade497438ac24ebd03cf4cd3b7d3e7af0f51f9acf3b97f1f129380d0",
+      "producer_file": null,
+      "packed_matches_G_file": null,
+      "vector_links": [
+        {
+          "node": "UV \ub9f5",
+          "socket": "UV",
+          "uv_map": "UVMap"
+        }
+      ]
+    },
+    {
+      "node": "V002_C_BodyPigment_R",
+      "image": "MIA_V002_G_MIA_V002_C_BodyPigment_R_NonColor",
+      "file": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\parts\\body-G\\Mia_BodyPigment_R_2048.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "space": "Non-Color",
+      "packed_sha256": "10e365ca508ea61e7c3992ff9353bdedefabc1e5d706b8b605ff3b4a170b3d79",
+      "producer_file": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\Mia_BodyPigment_R_2048.png",
+      "packed_matches_G_file": true,
+      "vector_links": [
+        {
+          "node": "V002_UnderwearUV",
+          "socket": "UV",
+          "uv_map": "MIA_V002_UnderwearUV"
+        }
+      ]
+    },
+    {
+      "node": "V002_C_BodyPigment_G",
+      "image": "MIA_V002_G_MIA_V002_C_BodyPigment_G_NonColor",
+      "file": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\parts\\body-G\\Mia_BodyPigment_G_2048.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "space": "Non-Color",
+      "packed_sha256": "858fa8a687437ce7ae65454eae4b1575d7d8c31940f6958505d869eaa9989825",
+      "producer_file": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\Mia_BodyPigment_G_2048.png",
+      "packed_matches_G_file": true,
+      "vector_links": [
+        {
+          "node": "V002_UnderwearUV",
+          "socket": "UV",
+          "uv_map": "MIA_V002_UnderwearUV"
+        }
+      ]
+    },
+    {
+      "node": "V002_C_BodyPigment_B",
+      "image": "MIA_V002_G_MIA_V002_C_BodyPigment_B_NonColor",
+      "file": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\parts\\body-G\\Mia_BodyPigment_B_2048.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "space": "Non-Color",
+      "packed_sha256": "09b333a754cb6f4e84a8a05daf64e7683c9e195dffc9ec6bba3a442955d43595",
+      "producer_file": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\Mia_BodyPigment_B_2048.png",
+      "packed_matches_G_file": true,
+      "vector_links": [
+        {
+          "node": "V002_UnderwearUV",
+          "socket": "UV",
+          "uv_map": "MIA_V002_UnderwearUV"
+        }
+      ]
+    },
+    {
+      "node": "V002_Height",
+      "image": "MIA_V002_G_MIA_V002_Seam_Height_NonColor",
+      "file": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\parts\\body-G\\Mia_Body_SeamHeight_2048.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "space": "Non-Color",
+      "packed_sha256": "a609a269c7f6e52233001e784de2745c13e63c51614c12ea51e54bbb07d3a035",
+      "producer_file": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\Mia_Body_SeamHeight_2048.png",
+      "packed_matches_G_file": true,
+      "vector_links": [
+        {
+          "node": "V002_UnderwearUV",
+          "socket": "UV",
+          "uv_map": "MIA_V002_UnderwearUV"
+        }
+      ]
+    },
+    {
+      "node": "V002_Roughness",
+      "image": "MIA_V002_G_MIA_V002_Fabric_Roughness_NonColor",
+      "file": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\parts\\body-G\\Mia_Body_Roughness_2048.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "space": "Non-Color",
+      "packed_sha256": "d72580fab82095111d614cc5584e79d108120973b28b0af9c2eb32f3c7184241",
+      "producer_file": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\Mia_Body_Roughness_2048.png",
+      "packed_matches_G_file": true,
+      "vector_links": [
+        {
+          "node": "V002_UnderwearUV",
+          "socket": "UV",
+          "uv_map": "MIA_V002_UnderwearUV"
+        }
+      ]
+    }
+  ],
+  "uv_layers": [
+    "UVMap",
+    "MIA_BODY_V23_UV",
+    "MIA_V002_UnderwearUV"
+  ],
+  "protected_nonbody_owners": 617,
+  "face_lock": "All Face690 raw/all current keys/UV/lights/rig/nonbody records frozen; additive body correction must carry zero face deltas and preserve unrelated added keys.",
+  "references": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\anchors\\mia-body-front-user-selected-20261031.png",
+      "sha256": "09238b027687c7cd16f99d781c1d79ef081769c7258b49bb840d1badf11c6d42"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\front-revisions\\calf-v01\\mia-body-front-calf-v01.png",
+      "sha256": "a79af7148079278c10ff88543b9f801d4d618e0007ec4f1a01ab26253c4db685"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-turnaround-v06.png",
+      "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+    }
+  ],
+  "body_art": "USER_REJECTED; inherited G inferior return and upper transition remain unacceptable, regardless of earlier technical guards.",
+  "current_body_render_status": "Current4dc1 has no fresh whole-body review in R3b101frames. Gbody images are inherited-equivalence evidence only after actual body geometry/map comparisons above; later candidate needs actual current4dc1 baseline renders.",
+  "native_saved": false,
+  "gpu_used": false,
+  "native_unchanged": true
+}

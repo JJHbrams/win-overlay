@@ -1,0 +1,33 @@
+{
+  "external_read_only": [
+    {
+      "role": "exact native",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    {
+      "role": "user-confirmed original-aspect source",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+      "sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1"
+    },
+    {
+      "role": "source lighting fixture records",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\review\\integrated-R3b\\source\\render-records.json",
+      "sha256": "7e95779a08a442be4f1e414d6ae64df81ca19ac9486899eecde8a2959cac6214"
+    },
+    {
+      "role": "existing hair ownership classifier",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\component_ownership.py",
+      "sha256": "f5b3f5f9864567de768052eb8c7b3c3f3336be6b06bdcd594ed99de50470f8e4"
+    }
+  ],
+  "local_frozen_mapping": {
+    "path": "inputs/mapping-frame1.npz",
+    "sha256": "c36230677c7491af3ec35f1cd0dce579647ce3bad9e4c5db5495304fbd567045"
+  },
+  "local_verification_helper": {
+    "path": "inputs/scene_fingerprint.py",
+    "sha256": "694d0b0f5e0b649d20e8c036fdca16a2396a23b08a05d3ad6630d9943b20541c"
+  },
+  "historical": "Old A/B/C/D/audit scripts are retained historical recipes; current target01 replay uses its NPZ, current native, local inputs, and recorded canonical fixture/ownership. No old G native or rest56 replay is required."
+}

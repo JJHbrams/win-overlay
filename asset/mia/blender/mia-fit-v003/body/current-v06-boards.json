@@ -1,0 +1,61 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+  "source_sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+  "registration": {
+    "method": "One global front sole-to-hair-crown uniform scale/vertical translation applied to ALL four current views; per-view horizontal pelvis centering only. No feature-specific normalization or aspect stretch.",
+    "source_crown_y": 54,
+    "source_sole_y": 950,
+    "current_alpha16_crown_y": 49,
+    "current_alpha16_sole_y": 943,
+    "scale": 1.0022371364653244,
+    "vertical_translation": 4.890380313199103,
+    "uncertainty": "Source hair flyaways and feet vary by about5px acrossviews; head/bust/shoulder landmarks require visible-run limits. This display normalization removes only total-height difference, not head/body ratio."
+  },
+  "boards": [
+    {
+      "view": "front",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-v06-front.png",
+      "sha256": "062a266fa0f62f7b88a2a7139e13f353366ba03fc9f5d46aeb0ade65fe63c76b",
+      "native_frame": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-source4\\front.png",
+      "reference_crop_x": [
+        0,
+        440
+      ],
+      "horizontal_reference_center": 239
+    },
+    {
+      "view": "profile",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-v06-profile.png",
+      "sha256": "f5a4e1309b9745e567e27b2ce84d809fec1d682be2ef63edcedd2f616e714e16",
+      "native_frame": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-source4\\profile.png",
+      "reference_crop_x": [
+        440,
+        750
+      ],
+      "horizontal_reference_center": 568
+    },
+    {
+      "view": "back",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-v06-back.png",
+      "sha256": "05bd69cae22f48a4c75b458faf12515cd559c29b36a74cd25a7eac19b9d4c617",
+      "native_frame": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-source4\\back.png",
+      "reference_crop_x": [
+        750,
+        1120
+      ],
+      "horizontal_reference_center": 935
+    },
+    {
+      "view": "oblique",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-v06-oblique.png",
+      "sha256": "eae66a92a2beb22eb15b49c45e5a7b3eb4f48a97ee59877161ea28fff0fe38b6",
+      "native_frame": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-source4\\oblique.png",
+      "reference_crop_x": [
+        1120,
+        1536
+      ],
+      "horizontal_reference_center": 1317
+    }
+  ],
+  "native_saved": false
+}

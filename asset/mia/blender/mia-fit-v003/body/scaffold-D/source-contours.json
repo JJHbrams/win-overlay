@@ -1,0 +1,736 @@
+{
+  "reference": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+  "sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+  "size": [
+    1536,
+    1024
+  ],
+  "coordinate_system": "Original pixels; no aspect or per-feature stretch",
+  "authority": "User-confirmed v06",
+  "features": [
+    {
+      "name": "front.left_outer_deltoid_arm",
+      "view": "front",
+      "kind": "observed_skin",
+      "points": [
+        [
+          174,
+          223
+        ],
+        [
+          160,
+          230
+        ],
+        [
+          154,
+          240
+        ],
+        [
+          150,
+          250
+        ],
+        [
+          144,
+          262
+        ],
+        [
+          142,
+          288
+        ],
+        [
+          137,
+          310
+        ],
+        [
+          132,
+          332
+        ],
+        [
+          128,
+          350
+        ],
+        [
+          120,
+          376
+        ]
+      ],
+      "limitation": "Hair hides parts of shoulder apex and inner axilla; contour samples are visible skin runs, about3\u20136px uncertainty."
+    },
+    {
+      "name": "front.right_outer_deltoid_arm",
+      "view": "front",
+      "kind": "observed_skin",
+      "points": [
+        [
+          302,
+          225
+        ],
+        [
+          313,
+          230
+        ],
+        [
+          323,
+          241
+        ],
+        [
+          330,
+          252
+        ],
+        [
+          332,
+          274
+        ],
+        [
+          336,
+          294
+        ],
+        [
+          335,
+          312
+        ],
+        [
+          341,
+          334
+        ],
+        [
+          345,
+          359
+        ],
+        [
+          360,
+          380
+        ]
+      ],
+      "limitation": "Short hair-obscured gaps are not directly measured bone positions."
+    },
+    {
+      "name": "front.left_waist",
+      "view": "front",
+      "kind": "observed_skin",
+      "points": [
+        [
+          191,
+          337
+        ],
+        [
+          195,
+          350
+        ],
+        [
+          195,
+          365
+        ],
+        [
+          185,
+          382
+        ],
+        [
+          180,
+          396
+        ]
+      ],
+      "limitation": "Visible skin boundary; small hair overlaps remain local."
+    },
+    {
+      "name": "front.right_waist",
+      "view": "front",
+      "kind": "observed_skin",
+      "points": [
+        [
+          288,
+          338
+        ],
+        [
+          285,
+          353
+        ],
+        [
+          288,
+          370
+        ],
+        [
+          296,
+          388
+        ],
+        [
+          306,
+          404
+        ]
+      ],
+      "limitation": "Visible skin boundary, not a ribcage cross-section by itself."
+    },
+    {
+      "name": "front.scoop",
+      "view": "front",
+      "kind": "garment",
+      "points": [
+        [
+          182,
+          251
+        ],
+        [
+          190,
+          265
+        ],
+        [
+          207,
+          279
+        ],
+        [
+          226,
+          286
+        ],
+        [
+          242,
+          289
+        ],
+        [
+          263,
+          286
+        ],
+        [
+          284,
+          276
+        ],
+        [
+          300,
+          259
+        ]
+      ],
+      "limitation": "Cloth neckline, NOT a naked anatomical breast root."
+    },
+    {
+      "name": "front.underband",
+      "view": "front",
+      "kind": "garment",
+      "points": [
+        [
+          175,
+          331
+        ],
+        [
+          193,
+          326
+        ],
+        [
+          216,
+          323
+        ],
+        [
+          239,
+          323
+        ],
+        [
+          263,
+          326
+        ],
+        [
+          286,
+          331
+        ],
+        [
+          300,
+          334
+        ]
+      ],
+      "limitation": "Cloth lower edge, not a directly observed inframammary fold."
+    },
+    {
+      "name": "front.clavicle_ink",
+      "view": "front",
+      "kind": "inferred",
+      "points": [
+        [
+          213,
+          222
+        ],
+        [
+          226,
+          219
+        ],
+        [
+          239,
+          225
+        ],
+        [
+          251,
+          220
+        ],
+        [
+          270,
+          222
+        ]
+      ],
+      "limitation": "Drawn structural/line cue. Internal clavicle and skin relief cannot be recovered uniquely."
+    },
+    {
+      "name": "front.pectoral_left",
+      "view": "front",
+      "kind": "inferred",
+      "points": [
+        [
+          230,
+          228
+        ],
+        [
+          211,
+          245
+        ],
+        [
+          190,
+          264
+        ],
+        [
+          176,
+          286
+        ]
+      ],
+      "limitation": "Inferred pectoral fan/root continuity toward anterior axillary fold; not a traced shadow boundary."
+    },
+    {
+      "name": "front.pectoral_right",
+      "view": "front",
+      "kind": "inferred",
+      "points": [
+        [
+          248,
+          228
+        ],
+        [
+          269,
+          246
+        ],
+        [
+          290,
+          265
+        ],
+        [
+          307,
+          286
+        ]
+      ],
+      "limitation": "Inferred source-supported structural continuity; preserve thickness at arm attachment."
+    },
+    {
+      "name": "profile.anterior_neckline_skin",
+      "view": "profile",
+      "kind": "observed_skin",
+      "points": [
+        [
+          553,
+          247
+        ],
+        [
+          543,
+          255
+        ],
+        [
+          532,
+          264
+        ],
+        [
+          521,
+          273
+        ]
+      ],
+      "limitation": "Visible short anterior skin run; hair hides the upper root."
+    },
+    {
+      "name": "profile.cup_outer",
+      "view": "profile",
+      "kind": "garment",
+      "points": [
+        [
+          520,
+          273
+        ],
+        [
+          509,
+          280
+        ],
+        [
+          502,
+          289
+        ],
+        [
+          500,
+          298
+        ],
+        [
+          503,
+          309
+        ],
+        [
+          512,
+          320
+        ],
+        [
+          520,
+          326
+        ]
+      ],
+      "limitation": "Observed cloth silhouette gives an outer depth bound; body skin inside is inferred."
+    },
+    {
+      "name": "profile.anterior_abdomen",
+      "view": "profile",
+      "kind": "observed_skin",
+      "points": [
+        [
+          516,
+          334
+        ],
+        [
+          516,
+          350
+        ],
+        [
+          519,
+          368
+        ],
+        [
+          519,
+          385
+        ],
+        [
+          516,
+          402
+        ]
+      ],
+      "limitation": "Visible anterior skin run; no lighting edge is used as geometry."
+    },
+    {
+      "name": "profile.deltoid_arm",
+      "view": "profile",
+      "kind": "observed_skin",
+      "points": [
+        [
+          598,
+          219
+        ],
+        [
+          610,
+          223
+        ],
+        [
+          619,
+          237
+        ],
+        [
+          628,
+          256
+        ],
+        [
+          630,
+          271
+        ],
+        [
+          625,
+          288
+        ],
+        [
+          620,
+          310
+        ],
+        [
+          616,
+          333
+        ],
+        [
+          615,
+          355
+        ]
+      ],
+      "limitation": "Observed skin silhouette; arm pose differs from native and must not be baked into torso dimensions."
+    },
+    {
+      "name": "profile.hidden_back_ribs",
+      "view": "profile",
+      "kind": "occluded",
+      "points": [
+        [
+          615,
+          248
+        ],
+        [
+          609,
+          274
+        ],
+        [
+          601,
+          300
+        ],
+        [
+          589,
+          327
+        ],
+        [
+          580,
+          350
+        ]
+      ],
+      "limitation": "Back/rib surface hidden by hair and arm. These points show uncertainty corridor only, not measured surface."
+    },
+    {
+      "name": "back.left_deltoid_arm",
+      "view": "back",
+      "kind": "observed_skin",
+      "points": [
+        [
+          866,
+          225
+        ],
+        [
+          853,
+          234
+        ],
+        [
+          843,
+          251
+        ],
+        [
+          838,
+          270
+        ],
+        [
+          839,
+          291
+        ],
+        [
+          834,
+          316
+        ],
+        [
+          830,
+          340
+        ],
+        [
+          822,
+          365
+        ],
+        [
+          811,
+          391
+        ]
+      ],
+      "limitation": "Visible skin runs. Hair occludes shoulder blade and posterior fold."
+    },
+    {
+      "name": "back.right_deltoid_arm",
+      "view": "back",
+      "kind": "observed_skin",
+      "points": [
+        [
+          997,
+          235
+        ],
+        [
+          1012,
+          242
+        ],
+        [
+          1022,
+          257
+        ],
+        [
+          1025,
+          280
+        ],
+        [
+          1024,
+          305
+        ],
+        [
+          1028,
+          330
+        ],
+        [
+          1035,
+          349
+        ],
+        [
+          1039,
+          369
+        ],
+        [
+          1050,
+          391
+        ]
+      ],
+      "limitation": "Visible skin runs; source pose asymmetry retained as uncertainty."
+    },
+    {
+      "name": "back.posterior_folds_hidden",
+      "view": "back",
+      "kind": "occluded",
+      "points": [
+        [
+          865,
+          264
+        ],
+        [
+          892,
+          289
+        ],
+        [
+          931,
+          304
+        ],
+        [
+          974,
+          291
+        ],
+        [
+          1005,
+          266
+        ]
+      ],
+      "limitation": "Entire central back/posterior axillary anatomy is hidden. Inferred using continuity and professional anatomy, not source pixels."
+    },
+    {
+      "name": "oblique.near_shoulder_arm",
+      "view": "oblique",
+      "kind": "observed_skin",
+      "points": [
+        [
+          1370,
+          220
+        ],
+        [
+          1387,
+          229
+        ],
+        [
+          1397,
+          243
+        ],
+        [
+          1401,
+          264
+        ],
+        [
+          1403,
+          287
+        ],
+        [
+          1401,
+          312
+        ],
+        [
+          1403,
+          335
+        ],
+        [
+          1409,
+          360
+        ],
+        [
+          1420,
+          387
+        ]
+      ],
+      "limitation": "Visible contour; do not normalize this view separately."
+    },
+    {
+      "name": "oblique.cup_outer",
+      "view": "oblique",
+      "kind": "garment",
+      "points": [
+        [
+          1256,
+          279
+        ],
+        [
+          1241,
+          291
+        ],
+        [
+          1232,
+          306
+        ],
+        [
+          1236,
+          318
+        ],
+        [
+          1251,
+          326
+        ],
+        [
+          1281,
+          326
+        ],
+        [
+          1317,
+          333
+        ],
+        [
+          1350,
+          330
+        ]
+      ],
+      "limitation": "Garment contour bounds supported outer surface; far root hidden."
+    },
+    {
+      "name": "oblique.waist_near",
+      "view": "oblique",
+      "kind": "observed_skin",
+      "points": [
+        [
+          1348,
+          337
+        ],
+        [
+          1344,
+          356
+        ],
+        [
+          1346,
+          373
+        ],
+        [
+          1355,
+          393
+        ],
+        [
+          1367,
+          409
+        ]
+      ],
+      "limitation": "Visible waist silhouette; no inferred light terminator."
+    },
+    {
+      "name": "oblique.anterior_root_fan",
+      "view": "oblique",
+      "kind": "inferred",
+      "points": [
+        [
+          1306,
+          231
+        ],
+        [
+          1331,
+          251
+        ],
+        [
+          1348,
+          275
+        ],
+        [
+          1358,
+          297
+        ]
+      ],
+      "limitation": "Inferred curved pectoral-to-axilla connection; checked in3D projections, not claimed direct wireframe recovery."
+    }
+  ],
+  "legend": {
+    "observed_skin": "#20e4f4",
+    "garment": "#ffd13b",
+    "inferred": "#f46bcb",
+    "occluded": "#acb7c5",
+    "structural_core": "#6b9fff"
+  },
+  "warning": "2D observed runs + explicit inferred constraints, NOT true3D/CT reconstruction. Garment, hair, pose and lighting leave local uncertainty."
+}
