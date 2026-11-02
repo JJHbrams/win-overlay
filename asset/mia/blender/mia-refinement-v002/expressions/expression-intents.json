@@ -1,0 +1,467 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+  "source_sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+  "source_aspect_unchanged": true,
+  "panels": [
+    {
+      "panel": 1,
+      "id": "neutral_observe",
+      "label": "피곤한 기본 관찰",
+      "source_crop": [
+        0,
+        0,
+        384,
+        256
+      ],
+      "source_panel": "source-panels\\01-neutral_observe.png",
+      "panel_sha256": "68b83136a2c2b2635f976266b63bafb7a531108e4b0674831d5c8269776f9e05",
+      "initial_key_recipe": {},
+      "estimated_head_delta_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Closed neutral mouth; retain source fatigue.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 2,
+      "id": "near_closed_weary",
+      "label": "눈을 거의 감은 피로",
+      "source_crop": [
+        384,
+        0,
+        768,
+        256
+      ],
+      "source_panel": "source-panels\\02-near_closed_weary.png",
+      "panel_sha256": "a6d0193119fe4cdadd921d9eb38f8069e2b43b8fddc5c97f097e7713fcef172b",
+      "initial_key_recipe": {
+        "EYE_Close": 0.88,
+        "BRW_Sorrow": 0.12,
+        "MTH_Sorrow": 0.08
+      },
+      "estimated_head_delta_xyz_deg": [
+        0,
+        0,
+        3
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Keep a narrow ocular sliver; source02 is not full blink.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 3,
+      "id": "skeptical_question",
+      "label": "의아한 질문",
+      "source_crop": [
+        768,
+        0,
+        1152,
+        256
+      ],
+      "source_panel": "source-panels\\03-skeptical_question.png",
+      "panel_sha256": "e898404d2a87a052114f07669e820ff41576385f57ef77799b1fec7012b37f0e",
+      "initial_key_recipe": {
+        "BRW_Sorrow": 0.18,
+        "EYE_Angry": 0.08,
+        "MTH_A": 0.12
+      },
+      "estimated_head_delta_xyz_deg": [
+        0,
+        -2,
+        -3
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Small parted lips and unequal-looking lids; head tilt is separate.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 4,
+      "id": "aside_attention",
+      "label": "옆쪽을 주시",
+      "source_crop": [
+        1152,
+        0,
+        1536,
+        256
+      ],
+      "source_panel": "source-panels\\04-aside_attention.png",
+      "panel_sha256": "87045a0b6d5608ff74b8cc3c1cf2fdb9e0858ac4f51baf742628762a4e9278cf",
+      "initial_key_recipe": {
+        "MTH_Down": 0.1
+      },
+      "estimated_head_delta_xyz_deg": [
+        0,
+        18,
+        0
+      ],
+      "estimated_gaze_xy_deg": [
+        -8,
+        0
+      ],
+      "observation": "Gaze/head turn, not a different face mesh.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 5,
+      "id": "downward_irritated",
+      "label": "아래를 보는 불만",
+      "source_crop": [
+        0,
+        256,
+        384,
+        512
+      ],
+      "source_panel": "source-panels\\05-downward_irritated.png",
+      "panel_sha256": "d80a72487d3f780eb77491af69571c750c5be25f788aee670b60ef2c9442b8ec",
+      "initial_key_recipe": {
+        "BRW_Angry": 0.35,
+        "EYE_Close": 0.12,
+        "MTH_Sorrow": 0.18
+      },
+      "estimated_head_delta_xyz_deg": [
+        7,
+        0,
+        -2
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        -4
+      ],
+      "observation": "Inner brow and lip corners carry tension; do not shrink cheeks.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 6,
+      "id": "upward_uncertain",
+      "label": "올려다보는 망설임",
+      "source_crop": [
+        384,
+        256,
+        768,
+        512
+      ],
+      "source_panel": "source-panels\\06-upward_uncertain.png",
+      "panel_sha256": "cd5aabf4b675b304f56c6c2fbe7e228b70b42fa5674e440fc9e4deec570ce0f3",
+      "initial_key_recipe": {
+        "BRW_Sorrow": 0.35,
+        "EYE_Surprised": 0.08,
+        "MTH_A": 0.13
+      },
+      "estimated_head_delta_xyz_deg": [
+        -7,
+        -18,
+        0
+      ],
+      "estimated_gaze_xy_deg": [
+        6,
+        3
+      ],
+      "observation": "Pose/gaze and small opening are independent.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 7,
+      "id": "thinking",
+      "label": "생각하는 표정",
+      "source_crop": [
+        768,
+        256,
+        1152,
+        512
+      ],
+      "source_panel": "source-panels\\07-thinking.png",
+      "panel_sha256": "27b860ed986a8263fff52adf0f867099bd1679917301cfb47266f4507828edda",
+      "initial_key_recipe": {
+        "BRW_Angry": 0.18,
+        "EYE_Close": 0.06,
+        "MTH_Sorrow": 0.2,
+        "MTH_U": 0.07
+      },
+      "estimated_head_delta_xyz_deg": [
+        3,
+        0,
+        -2
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        -2
+      ],
+      "observation": "Source chin-hand gesture requires a separate body pose; not facial geometry.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 8,
+      "id": "closed_smirk",
+      "label": "입을 다문 미소",
+      "source_crop": [
+        1152,
+        256,
+        1536,
+        512
+      ],
+      "source_panel": "source-panels\\08-closed_smirk.png",
+      "panel_sha256": "195e8fde3122a659be1e7530f64ecd255b3aab4afe4272b7243d28dffea8731e",
+      "initial_key_recipe": {
+        "MTH_Fun": 0.35,
+        "MTH_Up": 0.12
+      },
+      "estimated_head_delta_xyz_deg": [
+        0,
+        0,
+        -2
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Closed asymmetric smile needs actual lip-seal review.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 9,
+      "id": "concerned",
+      "label": "걱정스러운 눈썹",
+      "source_crop": [
+        0,
+        512,
+        384,
+        768
+      ],
+      "source_panel": "source-panels\\09-concerned.png",
+      "panel_sha256": "44651fa776d57709c01a74415943345b604679f940e54b20233bd74960550780",
+      "initial_key_recipe": {
+        "BRW_Sorrow": 0.4,
+        "EYE_Surprised": 0.18,
+        "MTH_Sorrow": 0.1
+      },
+      "estimated_head_delta_xyz_deg": [
+        0,
+        0,
+        2
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Raised inner brow with restrained mouth.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 10,
+      "id": "toothy_grin",
+      "label": "치아가 드러난 장난스러운 웃음",
+      "source_crop": [
+        384,
+        512,
+        768,
+        768
+      ],
+      "source_panel": "source-panels\\10-toothy_grin.png",
+      "panel_sha256": "c89726880ecc3dea7772e7a997b82953f77e0e99a99cad4a23204882e5efa523",
+      "initial_key_recipe": {
+        "MTH_Fun": 0.9,
+        "MTH_Joy": 0.15,
+        "BRW_Fun": 0.2,
+        "EYE_Angry": 0.15
+      },
+      "estimated_head_delta_xyz_deg": [
+        0,
+        0,
+        -4
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Wide oblique tooth band; generic donor laugh/fangs may need actual correction.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 11,
+      "id": "flustered_down",
+      "label": "시선을 내린 당황",
+      "source_crop": [
+        768,
+        512,
+        1152,
+        768
+      ],
+      "source_panel": "source-panels\\11-flustered_down.png",
+      "panel_sha256": "e590f80c2cecd9b8e22c3884f15c609ca774550f79fc81171fa66fb552e723e8",
+      "initial_key_recipe": {
+        "BRW_Sorrow": 0.25,
+        "EYE_Close": 0.15,
+        "MTH_Down": 0.08
+      },
+      "estimated_head_delta_xyz_deg": [
+        6,
+        0,
+        -2
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        -5
+      ],
+      "observation": "Blush impression also comes from paint; do not fake gaze with eye aperture.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 12,
+      "id": "surprised",
+      "label": "놀라서 눈을 크게 뜸",
+      "source_crop": [
+        1152,
+        512,
+        1536,
+        768
+      ],
+      "source_panel": "source-panels\\12-surprised.png",
+      "panel_sha256": "dda43e9992948eace39d96447e36316bbb55fa4a509abf204492bb93f6151948",
+      "initial_key_recipe": {
+        "EYE_Surprised": 0.8,
+        "BRW_Surprised": 0.6,
+        "MTH_A": 0.28
+      },
+      "estimated_head_delta_xyz_deg": [
+        -2,
+        0,
+        0
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Open eye/cap/lash and small mouth need combination testing.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 13,
+      "id": "sulky",
+      "label": "무뚝뚝한 불만",
+      "source_crop": [
+        0,
+        768,
+        384,
+        1024
+      ],
+      "source_panel": "source-panels\\13-sulky.png",
+      "panel_sha256": "e73c804c6d8fb42e0b4b35b4288f3db432996dc147f1ecc2cd3755c87be501e4",
+      "initial_key_recipe": {
+        "BRW_Angry": 0.12,
+        "MTH_Down": 0.12,
+        "EYE_Sorrow": 0.08
+      },
+      "estimated_head_delta_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Subtle variation, not a large angry caricature.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 14,
+      "id": "weary_speaking",
+      "label": "피곤하게 말함",
+      "source_crop": [
+        384,
+        768,
+        768,
+        1024
+      ],
+      "source_panel": "source-panels\\14-weary_speaking.png",
+      "panel_sha256": "d391522ca898e55d9226fac106fb67e3942cff344db03b87bc62e84e0bb35ae3",
+      "initial_key_recipe": {
+        "EYE_Close": 0.08,
+        "BRW_Sorrow": 0.2,
+        "MTH_A": 0.18,
+        "MTH_O": 0.08
+      },
+      "estimated_head_delta_xyz_deg": [
+        1,
+        0,
+        -2
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Small relaxed mouth opening with visible cavity.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 15,
+      "id": "stern",
+      "label": "가라앉은 단호함",
+      "source_crop": [
+        768,
+        768,
+        1152,
+        1024
+      ],
+      "source_panel": "source-panels\\15-stern.png",
+      "panel_sha256": "4392c6841ca5a26fa9049d46987664d3f462774adfafb7e91514b16a64941833",
+      "initial_key_recipe": {
+        "BRW_Angry": 0.3,
+        "EYE_Angry": 0.15,
+        "MTH_Down": 0.14
+      },
+      "estimated_head_delta_xyz_deg": [
+        2,
+        0,
+        0
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Retain lower-rim volume and broad rounded-parallelogram opening.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    },
+    {
+      "panel": 16,
+      "id": "gentle_smile",
+      "label": "조용한 미소",
+      "source_crop": [
+        1152,
+        768,
+        1536,
+        1024
+      ],
+      "source_panel": "source-panels\\16-gentle_smile.png",
+      "panel_sha256": "f59e26a5dfb624412d4554f94f3ca5210a3b54c131ade7d89470b515ee1e82ed",
+      "initial_key_recipe": {
+        "MTH_Fun": 0.22,
+        "MTH_Up": 0.1,
+        "EYE_Joy": 0.08
+      },
+      "estimated_head_delta_xyz_deg": [
+        0,
+        0,
+        -2
+      ],
+      "estimated_gaze_xy_deg": [
+        0,
+        0
+      ],
+      "observation": "Small corners/cheek response, not a separate alternate face.",
+      "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
+    }
+  ]
+}
