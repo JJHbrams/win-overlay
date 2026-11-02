@@ -1,0 +1,358 @@
+{
+  "status": "CPU PASS: rejected05 faithfully reproduced; four diagnostic states prepared, no anatomy approval",
+  "native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "metadata": {
+    "target_sha256": "e3917a7e9641681ee876058b4b49a501fa033476cb0b020722f1de63ab6153a3",
+    "mapping_sha256": "c36230677c7491af3ec35f1cd0dce579647ce3bad9e4c5db5495304fbd567045",
+    "private_q0_bitexact": true,
+    "inverse_control_error_max_mm": 0.00019086433142388178,
+    "inverse_iteration_max_mm": [
+      0.0005962326831740902,
+      0.00020862457193196698,
+      0.00019086433139198724
+    ],
+    "control_face690_exact": true,
+    "original_smooth_group": "V14_CurvatureTransitions",
+    "diagnostic_smooth_group": "MIA_v003_DIAGNOSTIC_Rejected05_SmoothBodyGate",
+    "smooth_mask_nonzero": 1195,
+    "smooth_mask_full": 928,
+    "smooth_mask_world_bounds": [
+      [
+        -0.27264964422873533,
+        -0.15975152874189888,
+        1.0813884735107422
+      ],
+      [
+        0.271694900181852,
+        0.05709576230243445,
+        1.4233251810073853
+      ]
+    ],
+    "smooth_face690_weights_exact": true,
+    "rig_arm_driver_paths": [],
+    "purpose": "Rejected05 pose/operator diagnosis only. Not an anatomy candidate."
+  },
+  "actual05_reproduction": {
+    "evaluated_vertices": 80771,
+    "polygon_topology_exact": true,
+    "positions_bitexact": false,
+    "error_mm": {
+      "max": 0.0004789280498024284,
+      "p95": 5.9720946639242266e-05,
+      "rms": 3.1229185531599065e-05
+    },
+    "true_face_normal_difference_degrees": {
+      "max": 0.07176185639733933,
+      "p95": 0.0018590106082903735
+    }
+  },
+  "states": [
+    {
+      "pose": "current",
+      "smooth_body_roi_on": true,
+      "arm_axes": {
+        "J_Bip_L_UpperArm": {
+          "head": [
+            0.10820262879133224,
+            0.003847315441817045,
+            1.378481149673462
+          ],
+          "tail": [
+            0.20236685872077942,
+            -0.006012566853314638,
+            1.1807259321212769
+          ],
+          "frontal_from_vertical_degrees": 25.462182760379473,
+          "depth_degrees": -2.5774969924800346
+        },
+        "J_Bip_L_LowerArm": {
+          "head": [
+            0.20236685872077942,
+            -0.006012566853314638,
+            1.1807259321212769
+          ],
+          "tail": [
+            0.3018384277820587,
+            -0.031733542680740356,
+            0.9926599860191345
+          ],
+          "frontal_from_vertical_degrees": 27.87519423226444,
+          "depth_degrees": -6.89340716165685
+        },
+        "J_Bip_R_UpperArm": {
+          "head": [
+            -0.10915782302618027,
+            0.00384729215875268,
+            1.378482699394226
+          ],
+          "tail": [
+            -0.203321635723114,
+            -0.00601377384737134,
+            1.1807254552841187
+          ],
+          "frontal_from_vertical_degrees": 25.461856311600208,
+          "depth_degrees": -2.5777866150973465
+        },
+        "J_Bip_R_LowerArm": {
+          "head": [
+            -0.203321635723114,
+            -0.00601377384737134,
+            1.1807254552841187
+          ],
+          "tail": [
+            -0.3027934432029724,
+            -0.03173576295375824,
+            0.9926605224609375
+          ],
+          "frontal_from_vertical_degrees": 27.875378576920085,
+          "depth_degrees": -6.893701281125032
+        }
+      },
+      "smooth_modifier": {
+        "name": "V14 Local transition relaxation",
+        "factor": 0.44999998807907104,
+        "iterations": 4,
+        "vertex_group": "V14_CurvatureTransitions"
+      },
+      "source_pose_limit": "14/19 degree bone-axis hypothesis from approximate visible E2 skin14/19; skin/bone correspondence uncertain.",
+      "name": "current-smooth-on",
+      "head_count": 18825,
+      "evaluated_head_bitexact": true,
+      "all_original_objects_exact": 620,
+      "original47_private_arrays_exact": true,
+      "smooth_body_delta_max_mm": 0.0
+    },
+    {
+      "pose": "current",
+      "smooth_body_roi_on": false,
+      "arm_axes": {
+        "J_Bip_L_UpperArm": {
+          "head": [
+            0.10820262879133224,
+            0.003847315441817045,
+            1.378481149673462
+          ],
+          "tail": [
+            0.20236685872077942,
+            -0.006012566853314638,
+            1.1807259321212769
+          ],
+          "frontal_from_vertical_degrees": 25.462182760379473,
+          "depth_degrees": -2.5774969924800346
+        },
+        "J_Bip_L_LowerArm": {
+          "head": [
+            0.20236685872077942,
+            -0.006012566853314638,
+            1.1807259321212769
+          ],
+          "tail": [
+            0.3018384277820587,
+            -0.031733542680740356,
+            0.9926599860191345
+          ],
+          "frontal_from_vertical_degrees": 27.87519423226444,
+          "depth_degrees": -6.89340716165685
+        },
+        "J_Bip_R_UpperArm": {
+          "head": [
+            -0.10915782302618027,
+            0.00384729215875268,
+            1.378482699394226
+          ],
+          "tail": [
+            -0.203321635723114,
+            -0.00601377384737134,
+            1.1807254552841187
+          ],
+          "frontal_from_vertical_degrees": 25.461856311600208,
+          "depth_degrees": -2.5777866150973465
+        },
+        "J_Bip_R_LowerArm": {
+          "head": [
+            -0.203321635723114,
+            -0.00601377384737134,
+            1.1807254552841187
+          ],
+          "tail": [
+            -0.3027934432029724,
+            -0.03173576295375824,
+            0.9926605224609375
+          ],
+          "frontal_from_vertical_degrees": 27.875378576920085,
+          "depth_degrees": -6.893701281125032
+        }
+      },
+      "smooth_modifier": {
+        "name": "V14 Local transition relaxation",
+        "factor": 0.44999998807907104,
+        "iterations": 4,
+        "vertex_group": "MIA_v003_DIAGNOSTIC_Rejected05_SmoothBodyGate"
+      },
+      "source_pose_limit": "14/19 degree bone-axis hypothesis from approximate visible E2 skin14/19; skin/bone correspondence uncertain.",
+      "name": "current-smooth-body-off",
+      "head_count": 18825,
+      "evaluated_head_bitexact": true,
+      "all_original_objects_exact": 620,
+      "original47_private_arrays_exact": true,
+      "smooth_body_delta_max_mm": 1.0615799623074045
+    },
+    {
+      "pose": "source-like",
+      "smooth_body_roi_on": true,
+      "arm_axes": {
+        "J_Bip_L_UpperArm": {
+          "head": [
+            0.10820262879133224,
+            0.003847315441817045,
+            1.378481149673462
+          ],
+          "tail": [
+            0.16119073331356049,
+            -0.006012572441250086,
+            1.1659575700759888
+          ],
+          "frontal_from_vertical_degrees": 14.000006310976934,
+          "depth_degrees": -2.577498911663438
+        },
+        "J_Bip_L_LowerArm": {
+          "head": [
+            0.16119073331356049,
+            -0.006012572441250086,
+            1.1659575700759888
+          ],
+          "tail": [
+            0.23045599460601807,
+            -0.03173355385661125,
+            0.9647966623306274
+          ],
+          "frontal_from_vertical_degrees": 19.000001538333997,
+          "depth_degrees": -6.8934090904022645
+        },
+        "J_Bip_R_UpperArm": {
+          "head": [
+            -0.10915782302618027,
+            0.00384729215875268,
+            1.378482699394226
+          ],
+          "tail": [
+            -0.16214627027511597,
+            -0.006013771053403616,
+            1.1659575700759888
+          ],
+          "frontal_from_vertical_degrees": 13.999995228757163,
+          "depth_degrees": -2.577787095362071
+        },
+        "J_Bip_R_LowerArm": {
+          "head": [
+            -0.16214627027511597,
+            -0.006013771053403616,
+            1.1659575700759888
+          ],
+          "tail": [
+            -0.23141130805015564,
+            -0.03173575922846794,
+            0.9647973775863647
+          ],
+          "frontal_from_vertical_degrees": 19.00000733511015,
+          "depth_degrees": -6.893700103481122
+        }
+      },
+      "smooth_modifier": {
+        "name": "V14 Local transition relaxation",
+        "factor": 0.44999998807907104,
+        "iterations": 4,
+        "vertex_group": "V14_CurvatureTransitions"
+      },
+      "source_pose_limit": "14/19 degree bone-axis hypothesis from approximate visible E2 skin14/19; skin/bone correspondence uncertain.",
+      "name": "source-like-smooth-on",
+      "head_count": 18825,
+      "evaluated_head_bitexact": true,
+      "all_original_objects_exact": 620,
+      "original47_private_arrays_exact": true,
+      "smooth_body_delta_max_mm": 0.0
+    },
+    {
+      "pose": "source-like",
+      "smooth_body_roi_on": false,
+      "arm_axes": {
+        "J_Bip_L_UpperArm": {
+          "head": [
+            0.10820262879133224,
+            0.003847315441817045,
+            1.378481149673462
+          ],
+          "tail": [
+            0.16119073331356049,
+            -0.006012572441250086,
+            1.1659575700759888
+          ],
+          "frontal_from_vertical_degrees": 14.000006310976934,
+          "depth_degrees": -2.577498911663438
+        },
+        "J_Bip_L_LowerArm": {
+          "head": [
+            0.16119073331356049,
+            -0.006012572441250086,
+            1.1659575700759888
+          ],
+          "tail": [
+            0.23045599460601807,
+            -0.03173355385661125,
+            0.9647966623306274
+          ],
+          "frontal_from_vertical_degrees": 19.000001538333997,
+          "depth_degrees": -6.8934090904022645
+        },
+        "J_Bip_R_UpperArm": {
+          "head": [
+            -0.10915782302618027,
+            0.00384729215875268,
+            1.378482699394226
+          ],
+          "tail": [
+            -0.16214627027511597,
+            -0.006013771053403616,
+            1.1659575700759888
+          ],
+          "frontal_from_vertical_degrees": 13.999995228757163,
+          "depth_degrees": -2.577787095362071
+        },
+        "J_Bip_R_LowerArm": {
+          "head": [
+            -0.16214627027511597,
+            -0.006013771053403616,
+            1.1659575700759888
+          ],
+          "tail": [
+            -0.23141130805015564,
+            -0.03173575922846794,
+            0.9647973775863647
+          ],
+          "frontal_from_vertical_degrees": 19.00000733511015,
+          "depth_degrees": -6.893700103481122
+        }
+      },
+      "smooth_modifier": {
+        "name": "V14 Local transition relaxation",
+        "factor": 0.44999998807907104,
+        "iterations": 4,
+        "vertex_group": "MIA_v003_DIAGNOSTIC_Rejected05_SmoothBodyGate"
+      },
+      "source_pose_limit": "14/19 degree bone-axis hypothesis from approximate visible E2 skin14/19; skin/bone correspondence uncertain.",
+      "name": "source-like-smooth-body-off",
+      "head_count": 18825,
+      "evaluated_head_bitexact": true,
+      "all_original_objects_exact": 620,
+      "original47_private_arrays_exact": true,
+      "smooth_body_delta_max_mm": 1.0614165319003575
+    }
+  ],
+  "private_state_restore_bitexact": true,
+  "original_objects_exact": 620,
+  "scene_envelope_exact": true,
+  "original47_and_accepted_head_exact": true,
+  "native_unchanged": true,
+  "native_saved": false,
+  "gpu_used": false
+}

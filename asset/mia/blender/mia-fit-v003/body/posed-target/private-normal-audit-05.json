@@ -1,0 +1,324 @@
+{
+  "base_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "base": {
+    "raw_has_custom_normals": false,
+    "evaluated_has_custom_normals": false,
+    "fresh_has_custom_normals": false,
+    "evaluated_normals_domain": "POINT",
+    "evaluated_attributes": [
+      {
+        "name": "position",
+        "domain": "POINT",
+        "type": "FLOAT_VECTOR"
+      },
+      {
+        "name": ".edge_verts",
+        "domain": "EDGE",
+        "type": "INT32_2D"
+      },
+      {
+        "name": ".corner_vert",
+        "domain": "CORNER",
+        "type": "INT"
+      },
+      {
+        "name": ".corner_edge",
+        "domain": "CORNER",
+        "type": "INT"
+      },
+      {
+        "name": ".select_vert",
+        "domain": "POINT",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "V27_HeadMaterialBlend",
+        "domain": "POINT",
+        "type": "FLOAT"
+      },
+      {
+        "name": ".select_edge",
+        "domain": "EDGE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "uv_seam",
+        "domain": "EDGE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "crease_edge",
+        "domain": "EDGE",
+        "type": "FLOAT"
+      },
+      {
+        "name": ".select_poly",
+        "domain": "FACE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "sharp_face",
+        "domain": "FACE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "material_index",
+        "domain": "FACE",
+        "type": "INT"
+      },
+      {
+        "name": "UVMap",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      },
+      {
+        "name": "MIA_BODY_V23_UV",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      },
+      {
+        "name": "MIA_V002_UnderwearUV",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      }
+    ],
+    "actual_body_corners": 242400,
+    "rebuilt_geometry_loop_positions_exact": true,
+    "body_corner_vector_max_difference": 0.0,
+    "body_corner_geometric_auto_angle_degrees": {
+      "p50": 0.0,
+      "p95": 1.2074182697257333e-06,
+      "p99": 1.2074182697257333e-06,
+      "max": 1.7075472925031877e-06
+    },
+    "body_smooth_shading_vs_TRUE_FACE_normal_degrees": {
+      "p50": 3.493160843919623,
+      "p95": 7.965374318018463,
+      "p99": 20.554440971381165,
+      "max": 83.58563744059796
+    },
+    "true_face_note": "Smooth shading legitimately differs from each polygon face normal; freshAUTOcomparison is the stale-normal test."
+  },
+  "q0_rig_bake": {
+    "raw_has_custom_normals": false,
+    "evaluated_has_custom_normals": false,
+    "fresh_has_custom_normals": false,
+    "evaluated_normals_domain": "POINT",
+    "evaluated_attributes": [
+      {
+        "name": "position",
+        "domain": "POINT",
+        "type": "FLOAT_VECTOR"
+      },
+      {
+        "name": ".edge_verts",
+        "domain": "EDGE",
+        "type": "INT32_2D"
+      },
+      {
+        "name": ".corner_vert",
+        "domain": "CORNER",
+        "type": "INT"
+      },
+      {
+        "name": ".corner_edge",
+        "domain": "CORNER",
+        "type": "INT"
+      },
+      {
+        "name": ".select_vert",
+        "domain": "POINT",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "V27_HeadMaterialBlend",
+        "domain": "POINT",
+        "type": "FLOAT"
+      },
+      {
+        "name": ".select_edge",
+        "domain": "EDGE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "uv_seam",
+        "domain": "EDGE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "crease_edge",
+        "domain": "EDGE",
+        "type": "FLOAT"
+      },
+      {
+        "name": ".select_poly",
+        "domain": "FACE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "sharp_face",
+        "domain": "FACE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "material_index",
+        "domain": "FACE",
+        "type": "INT"
+      },
+      {
+        "name": "UVMap",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      },
+      {
+        "name": "MIA_BODY_V23_UV",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      },
+      {
+        "name": "MIA_V002_UnderwearUV",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      }
+    ],
+    "actual_body_corners": 242400,
+    "rebuilt_geometry_loop_positions_exact": true,
+    "body_corner_vector_max_difference": 0.0,
+    "body_corner_geometric_auto_angle_degrees": {
+      "p50": 0.0,
+      "p95": 1.2074182697257333e-06,
+      "p99": 1.2074182697257333e-06,
+      "max": 1.7075472925031877e-06
+    },
+    "body_smooth_shading_vs_TRUE_FACE_normal_degrees": {
+      "p50": 3.493160843919623,
+      "p95": 7.965374318018463,
+      "p99": 20.554440971381165,
+      "max": 83.58563744059796
+    },
+    "true_face_note": "Smooth shading legitimately differs from each polygon face normal; freshAUTOcomparison is the stale-normal test."
+  },
+  "q0_source_positions_exact": true,
+  "q0_source_corner_vector_max_difference": 0.0,
+  "source05": {
+    "raw_has_custom_normals": false,
+    "evaluated_has_custom_normals": false,
+    "fresh_has_custom_normals": false,
+    "evaluated_normals_domain": "POINT",
+    "evaluated_attributes": [
+      {
+        "name": "position",
+        "domain": "POINT",
+        "type": "FLOAT_VECTOR"
+      },
+      {
+        "name": ".edge_verts",
+        "domain": "EDGE",
+        "type": "INT32_2D"
+      },
+      {
+        "name": ".corner_vert",
+        "domain": "CORNER",
+        "type": "INT"
+      },
+      {
+        "name": ".corner_edge",
+        "domain": "CORNER",
+        "type": "INT"
+      },
+      {
+        "name": ".select_vert",
+        "domain": "POINT",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "V27_HeadMaterialBlend",
+        "domain": "POINT",
+        "type": "FLOAT"
+      },
+      {
+        "name": ".select_edge",
+        "domain": "EDGE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "uv_seam",
+        "domain": "EDGE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "crease_edge",
+        "domain": "EDGE",
+        "type": "FLOAT"
+      },
+      {
+        "name": ".select_poly",
+        "domain": "FACE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "sharp_face",
+        "domain": "FACE",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "material_index",
+        "domain": "FACE",
+        "type": "INT"
+      },
+      {
+        "name": "UVMap",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      },
+      {
+        "name": "MIA_BODY_V23_UV",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      },
+      {
+        "name": "MIA_V002_UnderwearUV",
+        "domain": "CORNER",
+        "type": "FLOAT2"
+      }
+    ],
+    "actual_body_corners": 242400,
+    "rebuilt_geometry_loop_positions_exact": true,
+    "body_corner_vector_max_difference": 0.0,
+    "body_corner_geometric_auto_angle_degrees": {
+      "p50": 0.0,
+      "p95": 1.2074182697257333e-06,
+      "p99": 1.2074182697257333e-06,
+      "max": 1.7075472925031877e-06
+    },
+    "body_smooth_shading_vs_TRUE_FACE_normal_degrees": {
+      "p50": 3.4645298651018472,
+      "p95": 8.426268850051816,
+      "p99": 20.275704721121397,
+      "max": 87.31112463642035
+    },
+    "true_face_note": "Smooth shading legitimately differs from each polygon face normal; freshAUTOcomparison is the stale-normal test."
+  },
+  "geometry_node_outputs": [
+    "Position",
+    "Normal",
+    "Tangent",
+    "True Normal",
+    "Incoming",
+    "Parametric",
+    "Backfacing",
+    "Pointiness",
+    "Random Per Island"
+  ],
+  "subdivision_identity_probe": {
+    "simple_original_prefix_positions_exact": false,
+    "original_prefix_count": 4647,
+    "simple_catmull_clark_polygon_loop_vertex_indices_exact": true,
+    "note": "This tests indexORDER separately from shadedlimitPOSITIONidentity; the latter is not expected."
+  },
+  "source_original47_key_arrays_exact": true,
+  "original_pose_exact": true,
+  "native_saved": false,
+  "native_unchanged": true,
+  "status": "CPU normals diagnostic; same-camera freshAUTO image remains separate actual evidence."
+}

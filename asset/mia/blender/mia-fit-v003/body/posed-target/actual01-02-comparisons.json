@@ -1,0 +1,26 @@
+{
+  "boards": [
+    {
+      "view": "front",
+      "baseline": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posed-target\\actual-01\\gray-front.png",
+      "baseline_sha256": "a37c7741e58b12ee4f502f30f2191767ec5f24fba7272123468a448d71fcab6d",
+      "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posed-target\\actual-02\\gray-front.png",
+      "candidate_sha256": "9df0cb39644f8837de7aaad2d7a7f3190a10bcd6a3da367fafeff1e55f6dd549",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posed-target\\actual01-02-front.png",
+      "sha256": "1d1cf6df5379bcaaaedc3d7069fb3b6a2327a0f5c0a993e84764fe63b0781274",
+      "camera_actual_lights_color_exact": true
+    },
+    {
+      "view": "lowoblique",
+      "baseline": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posed-target\\actual-01\\gray-lowoblique.png",
+      "baseline_sha256": "0d7e1b58694482576cae2574f62cf8d392be00953d9f9d4c24c026099ab7edb5",
+      "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posed-target\\actual-02\\gray-lowoblique.png",
+      "candidate_sha256": "af7af92ade250ee7cc6bcd06454f0e1382589fa0542b81418baea3eb11271256",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posed-target\\actual01-02-lowoblique.png",
+      "sha256": "5d87b924fb8a8a680db8f5528df05805e71965fd3ae53360fe3264eb938299cb",
+      "camera_actual_lights_color_exact": true
+    }
+  ],
+  "status": "Limited actual surface comparison; no source ART acceptance.",
+  "material_world_note": "Both actual scripts construct physical gray RGB.23/roughness.85 and worldRGB.18/strength.2, then assert slot identity before/after every render. Original-data/pose guards are separate."
+}
