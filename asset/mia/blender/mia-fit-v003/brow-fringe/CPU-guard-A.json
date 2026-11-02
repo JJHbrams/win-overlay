@@ -1,0 +1,618 @@
+{
+  "status": "PASS",
+  "baseline_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "composition_without_fake_brow_overlay": {
+    "components": [
+      {
+        "created": [
+          {
+            "owner": "MIA_V27_SharedHeadBody",
+            "key": "Mia.v003.NeutralLowerLidBalance.1",
+            "vertices": 62,
+            "maximum_delta_mm": 1.1093522310256958
+          },
+          {
+            "owner": "V28G_InnerLid_1",
+            "key": "Mia.v003.NeutralLowerLidBalance.1",
+            "vertices": 294,
+            "maximum_delta_mm": 3.057927131652832
+          },
+          {
+            "owner": "V30_LowerLashes_1",
+            "key": "Mia.v003.NeutralLowerLidBalance.1",
+            "vertices": 456,
+            "maximum_delta_mm": 1.095133662223816
+          }
+        ],
+        "screen": "right",
+        "side": 1,
+        "method": "40% bounded lower-rim profile blend toward the other canthus-local lower curve at retained own width; maximum1.1mm. Corners/upperpath anchored. Depth follows same actual sclera shell. Lowerwall/lashes transported from evaluated skin frames. Original arrays remain unchanged.",
+        "native_replay": false,
+        "native_saved": false,
+        "scope": "Subtle lower-rim curvature; no eyeball scaling, original key-array edits, upper-lid/canthus/whole-face redesign."
+      },
+      {
+        "materials": [
+          {
+            "owner": "MIA_V27_SharedHeadBody",
+            "old_material": "MIA_v002_MIA_V27_SharedHeadBody_RefinedD2",
+            "new_material": "Mia_v003_AlignedCrease_MIA_V27_SharedHeadBody"
+          },
+          {
+            "owner": "V28G_InnerLid_-1",
+            "old_material": "MIA_v002_V28G_InnerLid_-1_RefinedD2",
+            "new_material": "Mia_v003_AlignedCrease_V28G_InnerLid_-1"
+          },
+          {
+            "owner": "V28G_InnerLid_1",
+            "old_material": "MIA_v002_V28G_InnerLid_1_RefinedD2",
+            "new_material": "Mia_v003_AlignedCrease_V28G_InnerLid_1"
+          }
+        ],
+        "config_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\eyes\\upper-crease-visible-C.json",
+        "scope": "Upper crease registration only;0.17mm half-width; gap and observed visibility limits in selected config. Source finesse requires actual review.",
+        "native_saved": false
+      },
+      {
+        "mode": "combined",
+        "material": "MIA_v003_Crown_RecoveredV29_FallbackAndRearGuide",
+        "slot": 2,
+        "faces": 4999,
+        "original6UV_exact": true,
+        "new_UV": "MIA_v003_RecoveredCrown_UV",
+        "new_generic_attributes": 0,
+        "active_generic_attributes": 9,
+        "active_UV_streams": 5,
+        "active_images": 14,
+        "guide_factor_source": "Math.102",
+        "guide_color_source": "Vector Math.007",
+        "guide_art_replacement": "Recovered fallback base across owned Crown; current live guide preserved outside bounded rear override, conservative front-guide hold",
+        "actual_normals_K_lights_preserved": true,
+        "old_normal_maps_reused": false,
+        "native_saved": false,
+        "ART": false,
+        "shader_compilation": "Must be checked by actual one-frame probe; stream count alone is not proof"
+      },
+      {
+        "material": "MIA_v003_UnsupportedCentralLoop_HIDDEN",
+        "slot": 3,
+        "whole_components": 27,
+        "backing_branch_faces": 438,
+        "masked_faces": 1781,
+        "artificial_attachment_cuts": 4,
+        "original_slots_preserved_on_new_material": true,
+        "geometry_UV_weights_keys_fields_normals_untouched": true,
+        "native_opened": false,
+        "native_saved": false,
+        "ART": false
+      }
+    ],
+    "body_surface_changed": false,
+    "new_fine_fringe_applied": false,
+    "central_rear_fill_applied": false,
+    "provisional_brow_ink_is_geometry_completion": false,
+    "native_saved": false,
+    "art_approved": false
+  },
+  "applied": {
+    "candidate": "A",
+    "key": "V003_SourceFringeFine_A",
+    "main_points": 388,
+    "maximum_fringe_move_mm": 8.615758793209652,
+    "logical_clumps": 11,
+    "brow_owners": [
+      "V31_SourceBrow_-1",
+      "V31_SourceBrow_1"
+    ],
+    "original_raw_topology_UV_preserved": true,
+    "brow_centerline_lift": false,
+    "brow_overlay_used": false,
+    "native_saved": false,
+    "ART": "UNVERIFIED"
+  },
+  "original_owners_checked": 620,
+  "nonowned_owner_fingerprints_exact": 617,
+  "Main_original_raw_topology_UV_material_indices_POINT_sourceIDs_weights_preserved": true,
+  "all_original_material_graphs_exact": true,
+  "brow_original42_keys_UV_weights_drivers_raw_exact": true,
+  "actual_reversed_Main_triangles": 0,
+  "Main_outside_sparse_field_evaluated_bitexact": true,
+  "real_hair_gap_visibility_before": [
+    {
+      "side": -1,
+      "observed_samples": 32,
+      "unoccluded": 3,
+      "samples": [
+        {
+          "column": 15,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 16,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 17,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 18,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 19,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 20,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 21,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 22,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 23,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 24,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 25,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 26,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 27,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 28,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 29,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 30,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 31,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 32,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 33,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 34,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 35,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 36,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 37,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 38,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 39,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 40,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 41,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 42,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 43,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 44,
+          "visible_through_real_hair_gap": true
+        },
+        {
+          "column": 45,
+          "visible_through_real_hair_gap": true
+        },
+        {
+          "column": 46,
+          "visible_through_real_hair_gap": true
+        }
+      ]
+    },
+    {
+      "side": 1,
+      "observed_samples": 21,
+      "unoccluded": 2,
+      "samples": [
+        {
+          "column": 2,
+          "visible_through_real_hair_gap": true
+        },
+        {
+          "column": 3,
+          "visible_through_real_hair_gap": true
+        },
+        {
+          "column": 4,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 5,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 6,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 7,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 8,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 9,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 10,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 11,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 12,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 13,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 14,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 15,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 16,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 17,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 18,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 19,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 20,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 21,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 22,
+          "visible_through_real_hair_gap": false
+        }
+      ]
+    }
+  ],
+  "real_hair_gap_visibility_after": [
+    {
+      "side": -1,
+      "observed_samples": 32,
+      "unoccluded": 3,
+      "samples": [
+        {
+          "column": 15,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 16,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 17,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 18,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 19,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 20,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 21,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 22,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 23,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 24,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 25,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 26,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 27,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 28,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 29,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 30,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 31,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 32,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 33,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 34,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 35,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 36,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 37,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 38,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 39,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 40,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 41,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 42,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 43,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 44,
+          "visible_through_real_hair_gap": true
+        },
+        {
+          "column": 45,
+          "visible_through_real_hair_gap": true
+        },
+        {
+          "column": 46,
+          "visible_through_real_hair_gap": true
+        }
+      ]
+    },
+    {
+      "side": 1,
+      "observed_samples": 21,
+      "unoccluded": 2,
+      "samples": [
+        {
+          "column": 2,
+          "visible_through_real_hair_gap": true
+        },
+        {
+          "column": 3,
+          "visible_through_real_hair_gap": true
+        },
+        {
+          "column": 4,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 5,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 6,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 7,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 8,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 9,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 10,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 11,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 12,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 13,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 14,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 15,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 16,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 17,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 18,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 19,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 20,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 21,
+          "visible_through_real_hair_gap": false
+        },
+        {
+          "column": 22,
+          "visible_through_real_hair_gap": false
+        }
+      ]
+    }
+  ],
+  "brow_actual_skin_contact": [
+    {
+      "case": "neutral",
+      "samples": 390,
+      "nearest_max_mm": 0.23845092800911516,
+      "signed_min_mm": 0.21207631743891397,
+      "signed_max_mm": 0.23844380780246865
+    },
+    {
+      "case": "halfblink",
+      "samples": 390,
+      "nearest_max_mm": 0.2542136062402278,
+      "signed_min_mm": 0.16264726036752108,
+      "signed_max_mm": 0.2541676904002088
+    },
+    {
+      "case": "closed",
+      "samples": 390,
+      "nearest_max_mm": 0.25947956601157784,
+      "signed_min_mm": 0.20660039945141762,
+      "signed_max_mm": 0.25947000403903075
+    },
+    {
+      "case": "angry",
+      "samples": 390,
+      "nearest_max_mm": 0.23456783674191684,
+      "signed_min_mm": 0.2108452081301948,
+      "signed_max_mm": 0.2345209277336835
+    },
+    {
+      "case": "surprise",
+      "samples": 390,
+      "nearest_max_mm": 0.2371889422647655,
+      "signed_min_mm": 0.2068615990538092,
+      "signed_max_mm": 0.23714787312201224
+    }
+  ],
+  "idempotent": true,
+  "native_unchanged": true,
+  "native_saved": false,
+  "GPU_used": false,
+  "ART": "UNVERIFIED until actual source-paired hairOFF/ON views"
+}

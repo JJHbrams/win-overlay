@@ -1,0 +1,103 @@
+# Provisional source brow and rejected fringe trials
+
+The B brow correction has a bounded provisional thickness improvement. Both B
+and C fringe geometry remain **unselected / appearance FAIL**. This checkpoint
+is not finished hair, accepted face/body, a native scene or a garment gate.
+Root requested the checkpoint after C actual review; no further trial follows.
+
+Selected input is immutable R3b,
+`4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1`.
+Its canonical path is recorded in `current-inputs.json`. All changes were made
+only in fresh background Blender processes. No live scene, native save, source
+image, user settings, original data, network upload or push was performed.
+
+## Component API
+
+Import `apply_components.py` into the caller's current Blender scene:
+
+```python
+import sys
+sys.path.insert(0, r"<absolute-checkout>/asset/mia/blender/mia-fit-v003/brow-fringe")
+import apply_components
+apply_components.apply_brows()       # Independently usable provisional B brow.
+# Diagnostic only; root has NOT selected this fringe:
+# apply_components.apply_fringe('C')
+```
+
+The module needs `brow-contract.json`, `candidate-B.json`, and, for an explicitly
+requested fringe trial, its `candidate-X.json` + `fringe-X.npz`. It never opens
+or saves a scene, clears other keys, changes original material graphs, or
+changes Main for the brow-only call. It validates original brow raw/UV/42-key
+arrays. Unknown extra relative keys are retained. Width is evaluated on the
+current deformed center row before the existing final Shrinkwrap. Original
+centerline/arch/position are held: no lift, global symmetry or projected ink.
+
+The fringe API validates original Basis/topology/6 UVs/source IDs, adds one
+sparse relative key, preserves any additional UVs, material streams and unknown
+keys, and rejects stacking B/C. Coexistence preserves data; an overlapping key
+can still change combined appearance and requires root's actual integration
+review. The five complete foreground/backing families and exact source IDs are
+explicit in candidate JSON; no alpha gaps or partial foremost-skin shortcut.
+
+`apply_candidate.py` is the unchanged historical combined helper used for the
+actual B/C renders. `CPU-components-guard.json` proves the split module matches
+its actual evaluated Main and ten brow/state meshes bit for bit, with active
+unrelated sentinel keys present, and its brow-only call leaves Main exact.
+
+## Actual evidence and limits
+
+`actual-B-front4/` contains exactly four actual frames: baseline/candidate
+hair-OFF and hair-ON. Hair-OFF isolates true brow thickness from upper
+crease/liner. Root and producer found the right brow thinner/useful; hidden
+ends and complete brow styling remain uncertain. B fringe failed because its
+held distal cap rings left waisted clumps, broad ends and angular backing teeth.
+
+`actual-C-views5/` contains exactly five actual frames: two missing composed
+baselines (left oblique/profile), then C front/left oblique/profile. It reuses
+the B front baseline. Source boards preserve source aspect and use frozen
+uniform SRT without candidate refitting. C removes B's broad terminal caps,
+but the actual front/oblique now show long thin straight backing slats/needles
+crossing the eye and a blunt small right leaf. Profile retains visible volume;
+that alone does not establish natural source flow. See `REVIEW.md`.
+
+Each render has native/helper/payload hashes, actual camera matrix, clip .1/10,
+512-square/pixel-aspect 1, frame, pose, source lights/color and overlay-OFF
+records. Main key arrays/values were checked in the fresh CPU guard; the render
+hook records helper/payload/key name but did not independently hash every
+evaluated slot at every frame. No retrospective per-render slot-hash claim is
+made. No setup/reset operation occurs between C installation and the three
+candidate views in the actual driver.
+
+The full head reference gate is **UNVERIFIED**: right-oblique C, oblique
+hair-OFF isolated brow evidence and integrated actual pose images are absent.
+No candidate native was saved. The standard promotion validator would therefore
+fail mandatory coverage/native requirements; this is a curated rejected-trial
+checkpoint, not a promotion package. Root owns independent review, final
+composition/live/native/Git integration. Engram tools were unavailable; no sync
+is claimed.
+
+## Checks and reproduction
+
+Blender was `C:/Program Files/Blender Foundation/Blender 5.2/blender.exe`
+(5.2.3 LTS). Run from a fresh baseline with no GPU/render needed:
+
+```powershell
+& $blender --background $baseline --python-exit-code 2 --python "$folder/verify_components.py"
+```
+
+This regenerates the small brow contract and `CPU-components-guard.json`.
+`verify_candidate.py -- --variant C` additionally checks all original scene
+owners/materials, real whole-scene foreground rays and five brow skin-contact
+states. Its input caches can be regenerated by fresh CPU `probe_current.py`
+then `trace_occluders.py`; the regenerable full Main/triangle caches are
+excluded from Git. `build_candidate_B.py`/`build_candidate_C.py` document the
+failed construction; they are not intended to select a final result.
+
+Actual authorized GPU commands used the same CLI with
+`--python "$folder/render_front4.py"` (four B frames) and
+`--python "$folder/render_C_views5.py"` (five C frames). Both exited 0;
+GPU allocation was released immediately. Do not rerun those scripts without
+root's token; they deliberately reject overwriting existing evidence.
+
+`python verify_checkpoint.py` checks saved hashes, actual counts, camera/source
+registration consistency, helper lineage and API guard integrity without GPU.
