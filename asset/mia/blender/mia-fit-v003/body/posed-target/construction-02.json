@@ -1,0 +1,43 @@
+{
+  "method": "Area-weighted cotangent biharmonic final-position fairing on a connected original+refined anterior patch, with two fixed boundary rings and supported pole anchors. No topology or original data edit.",
+  "reference_metric": "Exact q0 posed cage minus inherited soft_G transported by empirical current-pose Jacobian; no raw-T/world shortcut.",
+  "physical_filter_length_mm": 12.0,
+  "roi_vertices": 617,
+  "free_vertices": 462,
+  "fixed_boundary_vertices": 145,
+  "pole_anchors": [
+    3681,
+    3682,
+    3683,
+    3696,
+    3697,
+    3698,
+    3705,
+    3706,
+    3721,
+    3722
+  ],
+  "patch_bounds_min": [
+    -0.15713348374514732,
+    -0.14762601546725507,
+    1.148054838180542
+  ],
+  "patch_bounds_max": [
+    0.1564370016919237,
+    0.008174198400417351,
+    1.4127101135283675
+  ],
+  "max_patch_move_mm": 23.225317029238543,
+  "outside_patch_bitexact": true,
+  "face690_bitexact": true,
+  "head_above1_425_bitexact": true,
+  "rig_keys_untouched": true,
+  "raw_common_triangle_reversals": 1,
+  "raw_reversed_body_triangle_ids": [
+    6986
+  ],
+  "signed_raw_volume01_l": 34.51521690904966,
+  "signed_raw_volume02_l": 34.55057028320955,
+  "base_target_sha256": "939505a12fec4a80e074a40a31ef19ca34e42ccc8e2b5226387ef9895addea6e",
+  "status": "CPU surface hypothesis; actual evaluated arc/tangent, source and visual gates required. Not ART or motion approval."
+}

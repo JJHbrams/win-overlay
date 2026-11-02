@@ -1,0 +1,33 @@
+{
+  "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\diagnostic05\\F2-source-pose-smooth-diagnostic.png",
+  "sha256": "85884d543081fcdc4f4380f66df2398ee27ec6db5f9d0649cbf012f1fd1a4c92",
+  "source_sha256": "31fa0da05c970e9b6d84a2569953b48636bd8d32df33d65901772f5664ad52b2",
+  "source_crop_original_pixels": [
+    887,
+    0,
+    1774,
+    887
+  ],
+  "source_resized": false,
+  "candidate_images": 4,
+  "same_camera_matrix_bitexact": true,
+  "clips": [
+    0.1,
+    10
+  ],
+  "projection": "ORTHO",
+  "light_reconstruction_matrix_component_max": [
+    5.960464477539063e-08,
+    5.960464477539063e-08,
+    1.4210854715202004e-14
+  ],
+  "light_energy_size_shadow_matches": true,
+  "existing05_vs_new_current_on_RGB": {
+    "changed_pixels": 129,
+    "total_pixels": 786769,
+    "max_channel_LSB": 1,
+    "mean_absolute_LSB": 7.160085531246572e-05,
+    "p99_channel_LSB": 0.0
+  },
+  "limits": "Source camera/skin-to-bone pose remain approximate. Camera matches existing05 exactly; privateinverse is within0.479um, not bit-exact. Light matrix reconstitution differences are recorded. This diagnostic does not approve anatomy."
+}

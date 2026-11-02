@@ -1,0 +1,113 @@
+{
+  "method": "Direct source-constrained continuous ordered sections + independent3D Gaussian branch transport. No old q0/q1 Y-shape seed, no10hardpoleanchors, no cylindrical chart on folded axilla.",
+  "source_constraint_sha256": "6db2664f265d243b0d5670d9929a93b2b8c82107ca032175ddcc51e00653d14d",
+  "source_used": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-low-view-axilla-reaffirmed-20261103.png",
+  "source_sections": 4,
+  "section_knots": 10,
+  "branch_observations": 201,
+  "source_fold_observations": [
+    {
+      "raw_id": 763,
+      "target": [
+        -0.13620159803753995,
+        -0.03297657497722554,
+        1.329078947368421
+      ],
+      "current_distance_m": 0.006586048198379935,
+      "allowed_band_m": 0.014,
+      "required_displacement": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "arm_weight": 0.8247087597846985
+    },
+    {
+      "raw_id": 764,
+      "target": [
+        -0.14138808273102246,
+        -0.025124999238752926,
+        1.3102631578947368
+      ],
+      "current_distance_m": 0.01266137574162435,
+      "allowed_band_m": 0.014,
+      "required_displacement": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "arm_weight": 0.8795478343963623
+    },
+    {
+      "raw_id": 772,
+      "target": [
+        -0.1415008323982721,
+        -0.016489001869220705,
+        1.29
+      ],
+      "current_distance_m": 0.013930344897584535,
+      "allowed_band_m": 0.014,
+      "required_displacement": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "arm_weight": 0.8427472114562988
+    },
+    {
+      "raw_id": 490,
+      "target": [
+        0.13620159803753995,
+        -0.03297657497722554,
+        1.329078947368421
+      ],
+      "current_distance_m": 0.004066306168058997,
+      "allowed_band_m": 0.014,
+      "required_displacement": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "arm_weight": 0.8223263621330261
+    },
+    {
+      "raw_id": 491,
+      "target": [
+        0.14138808273102246,
+        -0.025124999238752926,
+        1.3102631578947368
+      ],
+      "current_distance_m": 0.00915991125731554,
+      "allowed_band_m": 0.014,
+      "required_displacement": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "arm_weight": 0.8784729838371277
+    },
+    {
+      "raw_id": 499,
+      "target": [
+        0.1415008323982721,
+        -0.016489001869220705,
+        1.29
+      ],
+      "current_distance_m": 0.014013152679395069,
+      "allowed_band_m": 0.014,
+      "required_displacement": [
+        1.8471662225556385e-06,
+        -5.170369666951401e-08,
+        1.3022222503991638e-05
+      ],
+      "arm_weight": 0.8416155576705933
+    }
+  ],
+  "branch_fit_max_residual_mm": 10.174227714746683,
+  "max_patch_move_mm": 82.14425949067466,
+  "face690_exact": true,
+  "head_above1_425_exact": true,
+  "neck_branch": "Torso field closes below1.385; actualneck/chart remains current and separate, notdiscarded from totalbody scope.",
+  "original47_rig_uv_materials_untouched": true,
+  "status": "CPU source-bound hypothesis; final evaluated sections/contact/source-lowviews required. No anatomy/ART/rig approval."
+}

@@ -1,0 +1,32 @@
+{
+  "method": "One C2 tensor cubic surface in shared uncompressed posed-core circumferential-angle/ordered-height coordinates, evaluated back at original and refined controls. Smooth C2 boundary transport retains wholebody01 and the open axillary topology.",
+  "training_vertices": 541,
+  "spline_control_grid": [
+    13,
+    15
+  ],
+  "parameter_domain": {
+    "theta": [
+      -1.6,
+      1.6
+    ],
+    "core_height": [
+      1.105,
+      1.425
+    ]
+  },
+  "basis_partition_error": 4.440892098500626e-16,
+  "projection_restore": "Broad old-baseline profile-depth neighborhood with01 source-supported height/width; no isolated fixed pole points and no oldG Z/volume replay.",
+  "maximum_seed_depth_restore_mm": 28.262864858892844,
+  "maximum_move_from01_mm": 16.66117577176245,
+  "affected_vertices": 600,
+  "face690_exact": true,
+  "head_above1_425_exact": true,
+  "body_outside_gain_exact": true,
+  "original47_rig_topology_uv_materials_untouched": true,
+  "spline_grid_min_dworldZ_dcoreZ": 0.8783342503426715,
+  "spline_grid_min_oriented_radial_area": 0.04383335308230008,
+  "spline_grid_nonpositive_radial_orientation": 0,
+  "baseline01_sha256": "939505a12fec4a80e074a40a31ef19ca34e42ccc8e2b5226387ef9895addea6e",
+  "status": "CPU ordered-surface hypothesis. Final evaluated arcs/normal/source/actual visual judgment required; no anatomy or rig PASS."
+}

@@ -1,0 +1,397 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-low-view-axilla-reaffirmed-20261103.png",
+  "source_sha256": "31fa0da05c970e9b6d84a2569953b48636bd8d32df33d65901772f5664ad52b2",
+  "source_size": [
+    1774,
+    887
+  ],
+  "authority": "User reaffirmed E2/F2 upperbody fullness/lateralroot/axilla on2026-11-03. Originalv06 remains global proportion/height authority; no hip enlargement from E/F.",
+  "traces_original_pixels": {
+    "E2_cup_left": [
+      [
+        390,
+        317
+      ],
+      [
+        376,
+        336
+      ],
+      [
+        361,
+        359
+      ],
+      [
+        354,
+        382
+      ],
+      [
+        358,
+        401
+      ],
+      [
+        368,
+        418
+      ]
+    ],
+    "E2_cup_right": [
+      [
+        553,
+        318
+      ],
+      [
+        570,
+        338
+      ],
+      [
+        580,
+        363
+      ],
+      [
+        585,
+        387
+      ],
+      [
+        579,
+        410
+      ],
+      [
+        568,
+        429
+      ]
+    ],
+    "E2_band_bottom": [
+      [
+        369,
+        449
+      ],
+      [
+        391,
+        437
+      ],
+      [
+        417,
+        426
+      ],
+      [
+        444,
+        421
+      ],
+      [
+        469,
+        419
+      ],
+      [
+        497,
+        421
+      ],
+      [
+        524,
+        428
+      ],
+      [
+        550,
+        439
+      ],
+      [
+        568,
+        453
+      ]
+    ],
+    "E2_axilla_left": [
+      [
+        359,
+        327
+      ],
+      [
+        351,
+        338
+      ],
+      [
+        347,
+        351
+      ],
+      [
+        350,
+        365
+      ]
+    ],
+    "E2_axilla_right": [
+      [
+        586,
+        329
+      ],
+      [
+        594,
+        344
+      ],
+      [
+        597,
+        359
+      ],
+      [
+        593,
+        375
+      ]
+    ],
+    "F2_cup_outer": [
+      [
+        1219,
+        335
+      ],
+      [
+        1207,
+        345
+      ],
+      [
+        1198,
+        355
+      ],
+      [
+        1191,
+        365
+      ],
+      [
+        1186,
+        375
+      ],
+      [
+        1183,
+        385
+      ],
+      [
+        1183,
+        395
+      ],
+      [
+        1186,
+        405
+      ],
+      [
+        1191,
+        415
+      ],
+      [
+        1198,
+        425
+      ]
+    ],
+    "F2_axilla_near": [
+      [
+        1405,
+        339
+      ],
+      [
+        1420,
+        354
+      ],
+      [
+        1428,
+        374
+      ],
+      [
+        1433,
+        393
+      ]
+    ],
+    "F2_band_bottom": [
+      [
+        1208,
+        448
+      ],
+      [
+        1236,
+        434
+      ],
+      [
+        1267,
+        425
+      ],
+      [
+        1302,
+        425
+      ],
+      [
+        1335,
+        432
+      ],
+      [
+        1367,
+        442
+      ],
+      [
+        1394,
+        454
+      ]
+    ]
+  },
+  "cameras": {
+    "E2": {
+      "yaw_degrees": 0,
+      "pitch_degrees": -8,
+      "yaw_uncertainty_degrees": 4,
+      "pitch_uncertainty_degrees": 6,
+      "body_axis_pixel_x": 470,
+      "source_crop": [
+        0,
+        0,
+        887,
+        887
+      ]
+    },
+    "F2": {
+      "yaw_degrees": 40,
+      "pitch_degrees": -8,
+      "yaw_uncertainty_degrees": 8,
+      "pitch_uncertainty_degrees": 6,
+      "body_axis_pixel_x": 1336,
+      "source_crop": [
+        887,
+        0,
+        1774,
+        887
+      ]
+    }
+  },
+  "display_metric": {
+    "metres_per_pixel": 0.0011274966724961922,
+    "method": "One source-wide uniform display metric from originalv06 crown-to-crotch span430px and E2 corresponding704px. NOT calibrated dimensions; crown-to-band ratio differs, retained as registration residual.",
+    "global_vertical_limit": "v06 global Z stations retained. E2/F2 section correspondence is semantic cup-envelope fraction; no source image warp or per-feature mesh warp."
+  },
+  "section_support_bands": [
+    {
+      "station": 0,
+      "v06_source_y": 262,
+      "world_z": 1.3089242725233947,
+      "v06_outer_halfwidth": 0.11952,
+      "v06_front_profile_y": -0.11235999999999999,
+      "source_E2_y": 317,
+      "source_F2_y": 335,
+      "source_front_x_interval": [
+        390.0,
+        553.0
+      ],
+      "source_front_width_m": 0.18378195761687932,
+      "source_F2_outer_x": 1219.0,
+      "oblique_support_m": 0.13191711068205447,
+      "oblique_support_uncertainty_m": 0.014,
+      "inferred_lateral_x": 0.09189097880843966,
+      "inferred_peak_x": 0.071712,
+      "inferred_round_arc_radius": 0.04594548940421983,
+      "inferred_round_arc_sag": 0.004668415733211861,
+      "inferred_lateral_y_unclamped": -0.11371518813669801,
+      "chosen_lateral_y": -0.11371518813669801,
+      "chosen_broad_pole_y": -0.11838360386990987,
+      "actual_projected_F2_x": 1219.0,
+      "geometry_limit": "Clothed exterior support tangent constrains broad connected envelope. Arc/meridian placement is inference inside source/profile bands, not a recovered internal nakedroot or separate sphere; no tangent-point correspondence between views."
+    },
+    {
+      "station": 1,
+      "v06_source_y": 275,
+      "world_z": 1.2849269479962198,
+      "v06_outer_halfwidth": 0.122,
+      "v06_front_profile_y": -0.13,
+      "source_E2_y": 350,
+      "source_F2_y": 355,
+      "source_front_x_interval": [
+        366.8695652173913,
+        574.8
+      ],
+      "source_front_width_m": 0.23444087332807775,
+      "source_F2_outer_x": 1198.0,
+      "oblique_support_m": 0.15559454080447452,
+      "oblique_support_uncertainty_m": 0.014,
+      "inferred_lateral_x": 0.1098,
+      "inferred_peak_x": 0.0732,
+      "inferred_round_arc_radius": 0.05861021833201944,
+      "inferred_round_arc_sag": 0.012832519690355641,
+      "inferred_lateral_y_unclamped": -0.12920758999208143,
+      "chosen_lateral_y": -0.12920758999208143,
+      "chosen_broad_pole_y": -0.14204010968243708,
+      "actual_projected_F2_x": 1198.0,
+      "geometry_limit": "Clothed exterior support tangent constrains broad connected envelope. Arc/meridian placement is inference inside source/profile bands, not a recovered internal nakedroot or separate sphere; no tangent-point correspondence between views."
+    },
+    {
+      "station": 2,
+      "v06_source_y": 290,
+      "world_z": 1.2572377273879414,
+      "v06_outer_halfwidth": 0.125,
+      "v06_front_profile_y": -0.148,
+      "source_E2_y": 385,
+      "source_F2_y": 385,
+      "source_front_x_interval": [
+        354.63157894736844,
+        584.5833333333334
+      ],
+      "source_front_width_m": 0.2592698379048371,
+      "source_F2_outer_x": 1183.0,
+      "oblique_support_m": 0.1725069908919174,
+      "oblique_support_uncertainty_m": 0.014,
+      "inferred_lateral_x": 0.1125,
+      "inferred_peak_x": 0.075,
+      "inferred_round_arc_radius": 0.06481745947620927,
+      "inferred_round_arc_sag": 0.011949198175594977,
+      "inferred_lateral_y_unclamped": -0.15230095686369943,
+      "chosen_lateral_y": -0.15230095686369943,
+      "chosen_broad_pole_y": -0.1642501550392944,
+      "actual_projected_F2_x": 1183.0,
+      "geometry_limit": "Clothed exterior support tangent constrains broad connected envelope. Arc/meridian placement is inference inside source/profile bands, not a recovered internal nakedroot or separate sphere; no tangent-point correspondence between views."
+    },
+    {
+      "station": 3,
+      "v06_source_y": 310,
+      "world_z": 1.220318766576903,
+      "v06_outer_halfwidth": 0.122,
+      "v06_front_profile_y": -0.131,
+      "source_E2_y": 415,
+      "source_F2_y": 415,
+      "source_front_x_interval": [
+        366.2352941176471,
+        576.1052631578947
+      ],
+      "source_front_width_m": 0.23662769174975806,
+      "source_F2_outer_x": 1191.0,
+      "oblique_support_m": 0.16348701751194786,
+      "oblique_support_uncertainty_m": 0.014,
+      "inferred_lateral_x": 0.1098,
+      "inferred_peak_x": 0.0732,
+      "inferred_round_arc_radius": 0.059156922937439516,
+      "inferred_round_arc_sag": 0.012681321473594444,
+      "inferred_lateral_y_unclamped": -0.14148610405883852,
+      "chosen_lateral_y": -0.13831867852640556,
+      "chosen_broad_pole_y": -0.151,
+      "actual_projected_F2_x": 1192.8057542310482,
+      "geometry_limit": "Clothed exterior support tangent constrains broad connected envelope. Arc/meridian placement is inference inside source/profile bands, not a recovered internal nakedroot or separate sphere; no tangent-point correspondence between views."
+    }
+  ],
+  "anterior_fold_bands": [
+    {
+      "source_E2_y": 338,
+      "source_F2_y": 354,
+      "inferred_x": 0.13620159803753995,
+      "inferred_y": -0.03297657497722554,
+      "uncertainty_m": 0.014,
+      "world_z": 1.329078947368421,
+      "limit": "Short visible ink/skin fold, partly shadow and arm/cloth-occluded. Finite anterior branch band; posterior corridor is not inferred from it."
+    },
+    {
+      "source_E2_y": 351,
+      "source_F2_y": 374,
+      "inferred_x": 0.14138808273102246,
+      "inferred_y": -0.025124999238752926,
+      "uncertainty_m": 0.014,
+      "world_z": 1.3102631578947368,
+      "limit": "Short visible ink/skin fold, partly shadow and arm/cloth-occluded. Finite anterior branch band; posterior corridor is not inferred from it."
+    },
+    {
+      "source_E2_y": 365,
+      "source_F2_y": 393,
+      "inferred_x": 0.1415008323982721,
+      "inferred_y": -0.016489001869220705,
+      "uncertainty_m": 0.014,
+      "world_z": 1.29,
+      "limit": "Short visible ink/skin fold, partly shadow and arm/cloth-occluded. Finite anterior branch band; posterior corridor is not inferred from it."
+    }
+  ],
+  "uncertainty": "Observed cup contour\u00b13\u20138px; skinfold\u00b18px plus camera/pose uncertainty. Section heights use v06; E2/F2 are shape/support constraints. Hidden nakedroot/posterior depth are inferred.",
+  "status": "SOURCE_BINDING_DATA; actual fitter MUST consume these bands. Data/projection is not anatomy or ART approval."
+}

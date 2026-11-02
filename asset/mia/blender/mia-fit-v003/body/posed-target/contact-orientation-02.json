@@ -1,0 +1,49 @@
+{
+  "strict_crossing_positive_control": true,
+  "baseline4dc1": {
+    "selected_actual_triangles": 27686,
+    "strict_nonadjacent_pairs_tested": 0,
+    "strict_intersections": 0,
+    "first20": []
+  },
+  "rejected01": {
+    "selected_actual_triangles": 26496,
+    "strict_nonadjacent_pairs_tested": 0,
+    "strict_intersections": 0,
+    "first20": []
+  },
+  "candidate02": {
+    "selected_actual_triangles": 26496,
+    "strict_nonadjacent_pairs_tested": 0,
+    "strict_intersections": 0,
+    "first20": []
+  },
+  "triangle6986_normal_rotation": {
+    "raw_vertices": [
+      3583,
+      3600,
+      3599
+    ],
+    "normal_q0": [
+      0.08746668611827244,
+      -0.9745026235439298,
+      0.20662578620657565
+    ],
+    "normal_01": [
+      0.5675971661608749,
+      -0.25174289316287524,
+      0.7838743347680989
+    ],
+    "normal_02": [
+      -0.4733961843160078,
+      -0.8791961007034254,
+      0.05394691078214561
+    ],
+    "dot01_02": -0.005079363838389903,
+    "dot_q0_02": 0.8265193341357019,
+    "minimum_sampled_linear_path_area_mm2": 10.994428101443848,
+    "minimum_area_t": 0.695,
+    "note": "01-relative normal passes90degrees while retaining positive area and aligning the originalbaseline outwardnormal. The final evaluated ORIGINALbaseline guard is separately0 normal reversals. This sampled path is not an all-motion deformation proof."
+  },
+  "limits": "Expanded STATIC anterior thorax/root/axilla contact only. Shared-vertex neighbors and intentional nails excluded.0 contacts is not anatomical/source ART acceptance, and no rig motion has been tested."
+}
