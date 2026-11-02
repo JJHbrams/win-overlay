@@ -1,0 +1,156 @@
+{
+  "components": [
+    {
+      "created": [
+        {
+          "owner": "MIA_V27_SharedHeadBody",
+          "key": "Mia.v003.NeutralLowerLidBalance.1",
+          "vertices": 62,
+          "maximum_delta_mm": 1.1093522310256958
+        },
+        {
+          "owner": "V28G_InnerLid_1",
+          "key": "Mia.v003.NeutralLowerLidBalance.1",
+          "vertices": 294,
+          "maximum_delta_mm": 3.057927131652832
+        },
+        {
+          "owner": "V30_LowerLashes_1",
+          "key": "Mia.v003.NeutralLowerLidBalance.1",
+          "vertices": 456,
+          "maximum_delta_mm": 1.095133662223816
+        }
+      ],
+      "screen": "right",
+      "side": 1,
+      "method": "40% bounded lower-rim profile blend toward the other canthus-local lower curve at retained own width; maximum1.1mm. Corners/upperpath anchored. Depth follows same actual sclera shell. Lowerwall/lashes transported from evaluated skin frames. Original arrays remain unchanged.",
+      "native_replay": false,
+      "native_saved": false,
+      "scope": "Subtle lower-rim curvature; no eyeball scaling, original key-array edits, upper-lid/canthus/whole-face redesign."
+    },
+    {
+      "materials": [
+        {
+          "owner": "MIA_V27_SharedHeadBody",
+          "old_material": "MIA_v002_MIA_V27_SharedHeadBody_RefinedD2",
+          "new_material": "Mia_v003_AlignedCrease_MIA_V27_SharedHeadBody"
+        },
+        {
+          "owner": "V28G_InnerLid_-1",
+          "old_material": "MIA_v002_V28G_InnerLid_-1_RefinedD2",
+          "new_material": "Mia_v003_AlignedCrease_V28G_InnerLid_-1"
+        },
+        {
+          "owner": "V28G_InnerLid_1",
+          "old_material": "MIA_v002_V28G_InnerLid_1_RefinedD2",
+          "new_material": "Mia_v003_AlignedCrease_V28G_InnerLid_1"
+        }
+      ],
+      "config_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\eyes\\upper-crease-visible-C.json",
+      "scope": "Upper crease registration only;0.17mm half-width; gap and observed visibility limits in selected config. Source finesse requires actual review.",
+      "native_saved": false
+    },
+    {
+      "mode": "combined",
+      "material": "MIA_v003_Crown_RecoveredV29_FallbackAndRearGuide",
+      "slot": 2,
+      "faces": 4999,
+      "original6UV_exact": true,
+      "new_UV": "MIA_v003_RecoveredCrown_UV",
+      "new_generic_attributes": 0,
+      "active_generic_attributes": 9,
+      "active_UV_streams": 5,
+      "active_images": 14,
+      "guide_factor_source": "Math.102",
+      "guide_color_source": "Vector Math.007",
+      "guide_art_replacement": "Recovered fallback base across owned Crown; current live guide preserved outside bounded rear override, conservative front-guide hold",
+      "actual_normals_K_lights_preserved": true,
+      "old_normal_maps_reused": false,
+      "native_saved": false,
+      "ART": false,
+      "shader_compilation": "Must be checked by actual one-frame probe; stream count alone is not proof"
+    },
+    {
+      "material": "MIA_v003_UnsupportedCentralLoop_HIDDEN",
+      "slot": 3,
+      "whole_components": 27,
+      "backing_branch_faces": 438,
+      "masked_faces": 1781,
+      "artificial_attachment_cuts": 4,
+      "original_slots_preserved_on_new_material": true,
+      "geometry_UV_weights_keys_fields_normals_untouched": true,
+      "native_opened": false,
+      "native_saved": false,
+      "ART": false
+    },
+    {
+      "candidate": "A",
+      "frame": "MIA_v003_BrowInk_HeadFrame",
+      "target": "MIA_v003_BrowInk_FringeTarget",
+      "overlay_objects": [
+        "MiaHair_BrowInkProjection_-1",
+        "MiaHair_BrowInkProjection_1"
+      ],
+      "materials": [
+        "MIA_v003_BrowInk_PartialCharcoal_-1",
+        "MIA_v003_BrowInk_PartialCharcoal_1"
+      ],
+      "projection_groups": [
+        "MIA_v003_BrowInk_Project_-1",
+        "MIA_v003_BrowInk_Project_1"
+      ],
+      "payload_sha256": "1cac90c9b5f94abf9736eb3f1edd094d8139f7e2b5098b29586475783c59e08f",
+      "strength": 0.6,
+      "original_mesh_or_material_edited": false,
+      "source_supported_windows": {
+        "-1": {
+          "observed_original_portrait_x": [
+            410,
+            455
+          ],
+          "u_min": 0.22985639857035745,
+          "u_max": 0.718934880061363,
+          "feather": 0.04,
+          "covered_full_ends_inferred": true
+        },
+        "1": {
+          "observed_original_portrait_x": [
+            520,
+            551
+          ],
+          "u_min": 0.022267442441498097,
+          "u_max": 0.349072519337134,
+          "feather": 0.04,
+          "covered_full_ends_inferred": true
+        }
+      },
+      "scope": "Actual deforming brow geometry projected to foreground Fringe proxy. Semantic family is only an inherited hint; bounded first-hit/component/depth tests enforce the local projection. No rear/head projection target."
+    },
+    {
+      "diagnostic_guides": "MIA_v003_FullBodySourceScaffold_R4",
+      "neck": "MIA_v003_NeckGuide_R4Supplement",
+      "hidden": true
+    }
+  ],
+  "body_surface_changed": false,
+  "new_fine_fringe_applied": false,
+  "central_rear_fill_applied": false,
+  "provisional_brow_ink_is_geometry_completion": false,
+  "native_saved": false,
+  "art_approved": false,
+  "original_owners_checked": 618,
+  "changed_original_owners": [
+    "MIA_V17_PIXAL_DetailedHair",
+    "MIA_V27_SharedHeadBody",
+    "V28G_InnerLid_-1",
+    "V28G_InnerLid_1",
+    "V30_LowerLashes_1"
+  ],
+  "original_raw_geometry_keys_uv_weights_modifiers_point_fields_exact": true,
+  "undeclared_original_authored_fields_exact": true,
+  "original_material_graphs_held_except_declared_new_copies": true,
+  "original_driver_pose_camera_light_scene_exact": true,
+  "selected_baseline_unchanged": true,
+  "technical_composition_pass": true,
+  "actual_visual_integration_unverified": true
+}
