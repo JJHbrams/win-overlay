@@ -1,0 +1,94 @@
+{
+  "status": "SOURCE BINDING FAIL: manual curves were not constrained by source bands during construction. This is a diagnostic first look only.",
+  "source_sha256": "31fa0da05c970e9b6d84a2569953b48636bd8d32df33d65901772f5664ad52b2",
+  "prototype_sha256": "1a0edc6974935528a48a2de6562630ac75fcc9bb13158cbadcd22389af9b1eff",
+  "convention": "max cos40*absX - sin40*(Y+0.018); maximizer allowed to move. No fixed inferred lateral tangent point.",
+  "actual_selection_limit": "Approximate spatial cup/body-front section: material1, absX<v06halfwidth+15mm,Y<-35mm. Not final reviewed semantic garment region.",
+  "rows": [
+    {
+      "station": 0,
+      "v06_world_z": 1.3089242725233947,
+      "observed_support_m": 0.13191711068205447,
+      "declared_uncertainty_m": 0.014,
+      "manual_design_support_m": 0.12310272558758811,
+      "manual_design_residual_mm": -8.81438509446636,
+      "manual_maximizer_xy": [
+        0.10574125,
+        -0.0834963287751673
+      ],
+      "manual_profile_minY": -0.10138238851490053,
+      "v06_profile_y": -0.11235999999999999,
+      "actual_approx_support_m": 0.12097081176624468,
+      "actual_residual_mm": -10.946298915809797,
+      "actual_maximizer_world": [
+        -0.09341889048737816,
+        -0.09486487586489478,
+        1.3089242725233947
+      ]
+    },
+    {
+      "station": 1,
+      "v06_world_z": 1.2849269479962198,
+      "observed_support_m": 0.15559454080447452,
+      "declared_uncertainty_m": 0.014,
+      "manual_design_support_m": 0.1413122979712275,
+      "manual_design_residual_mm": -14.282242833247027,
+      "manual_maximizer_xy": [
+        0.09421375,
+        -0.12556333394796418
+      ],
+      "manual_profile_minY": -0.13809375687213463,
+      "v06_profile_y": -0.13,
+      "actual_approx_support_m": 0.1406680500163685,
+      "actual_residual_mm": -14.926490788106012,
+      "actual_maximizer_world": [
+        -0.09355871453366242,
+        -0.1253417029244684,
+        1.2849269479962198
+      ]
+    },
+    {
+      "station": 2,
+      "v06_world_z": 1.2572377273879414,
+      "observed_support_m": 0.1725069908919174,
+      "declared_uncertainty_m": 0.014,
+      "manual_design_support_m": 0.15386065369321517,
+      "manual_design_residual_mm": -18.646337198702234,
+      "manual_maximizer_xy": [
+        0.08921125,
+        -0.1510468572795331
+      ],
+      "manual_profile_minY": -0.1623235322497195,
+      "v06_profile_y": -0.148,
+      "actual_approx_support_m": 0.15232224695054308,
+      "actual_residual_mm": -20.184743941374318,
+      "actual_maximizer_world": [
+        -0.09248308768060313,
+        -0.14475429694431155,
+        1.2572377273879414
+      ]
+    },
+    {
+      "station": 3,
+      "v06_world_z": 1.220318766576903,
+      "observed_support_m": 0.16348701751194786,
+      "declared_uncertainty_m": 0.014,
+      "manual_design_support_m": 0.14597869388883633,
+      "manual_design_residual_mm": -17.508323623111526,
+      "manual_maximizer_xy": [
+        0.0883775,
+        -0.13977832916733035
+      ],
+      "manual_profile_minY": -0.1502231383200058,
+      "v06_profile_y": -0.131,
+      "actual_approx_support_m": 0.1443506277083964,
+      "actual_residual_mm": -19.136389803551452,
+      "actual_maximizer_world": [
+        0.09111011563472103,
+        -0.1339889033188565,
+        1.220318766576903
+      ]
+    }
+  ],
+  "provenance": "Manual3D design hypotheses. Reading sourceJSON after mesh creation was insufficient; source-bound construction remains pending. No geometry altered by this audit."
+}
