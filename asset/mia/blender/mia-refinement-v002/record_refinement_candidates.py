@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib,json
 P=Path(__file__).resolve().parent;statefile=P.parents[1]/'CURRENT_STATE.json'
 s=json.loads(statefile.read_text(encoding='utf-8'));v=s['in_progress_v002']
+assert not v.get('current_integrated_review'),'Archived pre-integration candidate recorder cannot replace later integrated findings. Read CURRENT_STATE and use the current review recorder.'
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 v.setdefault('superseded_cleanup_candidates',v['current_candidates'])
 v['current_candidates']={

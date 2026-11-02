@@ -1,0 +1,58 @@
+{
+  "fingerprint_version": "mia.scene-fingerprint.r3.1",
+  "helper_sha256": "e282d98bd8db32cdc9a56d444fce41e4cadd4aed10ae53337972f8dfc70c5e29",
+  "mutation_checks": 17,
+  "negative_controls": 3,
+  "fresh_reopen_equal": true,
+  "all_restored": true,
+  "canonical_files_edited": false,
+  "native_saved": false,
+  "gpu_used": false,
+  "patch_source_status": [
+    {
+      "file": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrate_components.py",
+      "matches_patch_source": false
+    },
+    {
+      "file": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\verify_integrated_scene.py",
+      "matches_patch_source": false
+    }
+  ],
+  "files": [
+    {
+      "path": "scene_fingerprint.py",
+      "sha256": "e282d98bd8db32cdc9a56d444fce41e4cadd4aed10ae53337972f8dfc70c5e29",
+      "bytes": 17214
+    },
+    {
+      "path": "coordinator-changes.patch",
+      "sha256": "ef45bccc1bc4969006f9ad24369329c2a8a0d5a925831f50f8284805e84bd261",
+      "bytes": 10761
+    },
+    {
+      "path": "coordinator-patch-guide.md",
+      "sha256": "d02e569498cf42e91250b93a4d7bcc14acd914b9ffd40e187d93307f6e118311",
+      "bytes": 4362
+    },
+    {
+      "path": "CPU-mutation-report.json",
+      "sha256": "2621ff74ae0bff01a7768ca9e4d20491f3f5de1a540a3c35851a681ed243e5ef",
+      "bytes": 3533
+    },
+    {
+      "path": "test_fingerprint_cpu.py",
+      "sha256": "2dedc95edb1dfbc69b129c6d00835c70d5a8578b8bd795492058d0ace2032d15",
+      "bytes": 10159
+    },
+    {
+      "path": "patch-source-hashes.json",
+      "sha256": "0bad78a25ecd4e942136d206962af572c7302c1de35c62c08ad5aea503694c9c",
+      "bytes": 806
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "a9984523abe6a62f7421d0ac1dc631279a0423a845e78cf331fbe52c43045896",
+      "bytes": 3442
+    }
+  ]
+}

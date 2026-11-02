@@ -1,0 +1,56 @@
+{
+  "selected_for_R3": false,
+  "root_decision": "S remains an isolated hybridUV/seed/fill experiment. R3 uses adoptedR and its original6UVs; authoredS bunches/creases on opposite core and is rejected. No secondimagegen/GPU/native.",
+  "exact_four_seed_runtime_files": [
+    {
+      "path": "apply_crown_S_uv.py",
+      "bytes": 4395,
+      "sha256": "ff7b4bd0e74391b50bcdc1628dcd75e03905c81bf64e4dd73a23e3bdfaa7abd5"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 1924,
+      "sha256": "34ac8b77cec9b977e194187e0807338268d3bea898d7aab88ecde3dcb89fb2ba"
+    },
+    {
+      "path": "crown-flow-frozen.npz",
+      "bytes": 126163,
+      "sha256": "2be8bb6bfd71ed84c1653a74a00a45cd9b9024df1d2162f62b771c5897a7735b"
+    },
+    {
+      "path": "Crown_S_ExistingPigment_Bake.png",
+      "bytes": 1435542,
+      "sha256": "cde86291dcfba0dd54574a4500bad27c808aa6d876877db6f004dcd9aa6dd339"
+    }
+  ],
+  "optional_five_authored_runtime_files": [
+    {
+      "path": "apply_crown_S_fill.py",
+      "bytes": 3566,
+      "sha256": "5991a1a92c843920a7528648babfba26711331081c9508a0ebc37082fb8e360c"
+    },
+    {
+      "path": "fill-runtime.json",
+      "bytes": 1097,
+      "sha256": "53d4e2a20258d01fc1ca9e638e002c37ea9f0461eefe615413a0d4acb369ccd2"
+    },
+    {
+      "path": "art/Crown_S_AuthoredFill_1254.png",
+      "bytes": 1626192,
+      "sha256": "5573374ef27c1485bdc30aab590ff0d528e5843588df417243676bab74082d38"
+    },
+    {
+      "path": "Crown_S_MissingPaintFill_MASK.png",
+      "bytes": 56044,
+      "sha256": "6c86a3f308a51d8af857384971f371fc1dbc5b9fdaaad19892ce26406a608ca1"
+    },
+    {
+      "path": "Crown_S_MissingPaintFeather_DATA.png",
+      "bytes": 77098,
+      "sha256": "64b9d610db7f27c94c4ec725c41fe10f0d1d11c0622d2f0929d5d47c210dff7d"
+    }
+  ],
+  "call_seed": "apply_crown_S_uv.apply(folder), ONLY on fresh MN+L+O+P+R matching manifest guards.",
+  "call_fill": "apply_crown_S_fill.apply(folder), ONLY after seed route, for isolated rejected-candidate review.",
+  "not_fully_migrated_or_export_ready": true
+}

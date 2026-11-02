@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "file": "apply_crown_O.py",
+      "bytes": 1543,
+      "sha256": "a396ec77087c75c376505def9d2921a018d6c9dba5b6feabb6e6a5c9fcd01b2d"
+    },
+    {
+      "file": "report.json",
+      "bytes": 2360,
+      "sha256": "176e569edb1d01cc0c30b05a27fd179130c9900ffb15aace4d67b9bb53feeb8d"
+    },
+    {
+      "file": "main-coordinate-delta.npz",
+      "bytes": 1896093,
+      "sha256": "083c74a4b556983a9c39b8679752e73ee934fdeb540c35457585a44e6d1182b8"
+    }
+  ],
+  "core_bytes": 1899996,
+  "base": "Exact MN main raw coordinate hash; works with either static or optionalL binding, no new rig/native import.",
+  "api": "import apply_crown_O; apply_crown_O.apply(folder)"
+}

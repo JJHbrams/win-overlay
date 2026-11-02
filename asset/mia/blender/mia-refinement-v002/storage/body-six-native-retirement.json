@@ -1,0 +1,56 @@
+{
+  "scope": "Exact single-file LiteralPath operations; no wildcard or recursive deletion; no tracked file removal.",
+  "c_free_before_bytes": 48178995200,
+  "prior_cleanup_transition": "Body D was protected as the then-current candidate during the earlier335-file cleanup. It is now superseded by verified G, not an original-art checkpoint.",
+  "deleted_files": [
+    {
+      "bytes": 196615196,
+      "sha256": "c1b8913515fff83a68c959cc446ee059cda79866e1ee4df32da3fc66e9151116",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\Mia_BodyUnderwear_v002_B.blend"
+    },
+    {
+      "bytes": 200714287,
+      "sha256": "c792b46574aedfb282fa166f6b1d6b6ef76fff7ce54060bc9d340f8f93d69b8c",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\anatomy-D\\Mia_BodyUnderwear_v002_D.blend"
+    },
+    {
+      "bytes": 201492441,
+      "sha256": "9f67cd81c154c0c30c29416f69eb427c484ffed0128a789b257530911838c8d7",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\paint-C\\Mia_BodyUnderwear_v002_C.blend"
+    },
+    {
+      "bytes": 203414043,
+      "sha256": "c5286af14c1d7540256a4ecedf34c6613489138a560d50e5330b337e5a494d70",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\surface-F\\Mia_BodyUnderwear_v002_F.blend"
+    },
+    {
+      "bytes": 203412761,
+      "sha256": "644336d881163d2d0ecfa6ba2503cc137ddccf4fdc12d306fde6d317df24d422",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\surface-F\\Mia_BodyUnderwear_v002_F.blend1"
+    },
+    {
+      "bytes": 206996010,
+      "sha256": "8b4ac1ed9e0371e78e1a19e275d42773975af7f830e35833541850856688b02b",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\surface-F2\\Mia_BodyUnderwear_v002_F2.blend"
+    }
+  ],
+  "c_free_after_bytes": 49391656960,
+  "user_authorization": "Explicit intermediate artifact cleanup request; six superseded untracked B/C/D/F/F2 scenes retired only after current G packed integration/fresh data/source review.",
+  "original_art_small_deltas_maps_proof_and_git_history_unchanged": true,
+  "deleted_bytes": 1212644738.0,
+  "deleted_count": 6,
+  "protected_current_natives": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_OP.blend",
+      "sha256": "69bb589a707ba07be9fe23356550935557c835ce71e61564bccddbe442b95a7e"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\Mia_BodyUnderwear_v002_G.blend",
+      "sha256": "e199c01b4c0a8fbc7942d5b667f8cdd0e1827d766d98cf28c99bd27ab12cf0da"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\..\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_Brows_Lashes.blend",
+      "sha256": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a"
+    }
+  ]
+}

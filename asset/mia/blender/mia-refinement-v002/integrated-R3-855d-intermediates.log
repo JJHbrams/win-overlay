@@ -1,0 +1,15 @@
+00:03.562  blend            | Read blend: "C:\Users\antio\.codex\worktrees\mia-body-head-v06\win-overlay\asset\mia\blender\mia-refinement-v002\integrated\Mia_v0.0.2_Review_R3.blend"
+BlenderMCP addon registered
+V30_ACTUAL_REVIEW_DONE integrated-R3-855d source 0
+00:18.125  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-body-head-v06\win-overlay\asset\mia\blender\mia-refinement-v002\review\integrated-R3-855d\intermediates\auto-half-hide.png'
+Traceback (most recent call last):
+  File "C:\Users\antio\.codex\worktrees\mia-body-head-v06\win-overlay\asset\mia\blender\mia-refinement-v002\render_integrated_review.py", line 100, in <module>
+    assert abs(ctrl['_EffectiveSmallMouthDentalHide']-expected)<1e-6,(label,ctrl['_EffectiveSmallMouthDentalHide'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('normalized-grin-blend', 0.0)
+
+Error: script failed, file: 'C:\Users\antio\.codex\worktrees\mia-body-head-v06\win-overlay\asset\mia\blender\mia-refinement-v002\render_integrated_review.py', exiting.
+BlenderMCP addon unregistered
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

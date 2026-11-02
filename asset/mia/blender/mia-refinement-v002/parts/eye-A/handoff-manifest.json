@@ -1,0 +1,118 @@
+{
+  "candidate": "A",
+  "selection": "Bounded producer-positive candidate; root actual review and final integrated acceptance pending",
+  "input_native_sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+  "required_files": [
+    {
+      "relative_path": "portable_expression_refine.py",
+      "bytes": 8283,
+      "sha256": "434a8b3f2e9465e06cdc23a5758b6fbe60b7e17e82724fbe6a6e96ac570e411b"
+    },
+    {
+      "relative_path": "payload/surprise-A.json",
+      "bytes": 96819,
+      "sha256": "7df2d49a59607d7a526b47a772d098ff436bc8239630700856467951d7237ab7"
+    },
+    {
+      "relative_path": "payload/surprise-A.npz",
+      "bytes": 83932,
+      "sha256": "28800963d89635d5c5ba6588a3adb649151fc6a567df534ce57d9a90b9bd13f0"
+    }
+  ],
+  "api": "portable_expression_refine.py:apply_to_current_scene()",
+  "native_opened_by_helper": false,
+  "native_saved": false,
+  "original42_and_MIA_grin_preserved": true,
+  "frozen_mouth_C_files_unchanged": {
+    "portable_mouth_delta.py": true,
+    "guard_helpers.py": true,
+    "payload/mouth-rig-C.json": true,
+    "payload/mouth-rig-C.npz": true,
+    "audit/input-guards.json": true,
+    "clean_oral_palette.py": true
+  },
+  "CPU_check_count": 208,
+  "CPU_all_checks_pass": true,
+  "CPU_states": 37,
+  "GPU_released": true,
+  "actual_proof_frames": 10,
+  "actual_records": {
+    "path": "review/A-quick10/render-records.json",
+    "sha256": "7d6b4f13efb63f4499545b75511906a36817d8ec15c95ad5f24661f0a74cd555"
+  },
+  "CPU_report": {
+    "path": "audit/CPU-guards-A.json",
+    "sha256": "dc44ec463e80068a655a419612f91cbf64e78891875e9ba1e4635ce95cdbc446"
+  },
+  "source_boards": [
+    {
+      "panel": 3,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-expression-refine-v003\\review\\A-quick10\\paired\\P03-source-baseline-A.png",
+      "sha256": "9b7282fd78f6702ef86da742ad0dfc3ea7fe35b49cca736a73d6dd4e1ad87eb7",
+      "source_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\expressions\\source-panels\\03-skeptical_question.png",
+      "source_sha256": "e898404d2a87a052114f07669e820ff41576385f57ef77799b1fec7012b37f0e",
+      "registration": "None applied; original source384x256 and as-rendered512. Qualitative source intent, not a calibrated absolute proportion claim."
+    },
+    {
+      "panel": 12,
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-expression-refine-v003\\review\\A-quick10\\paired\\P12-source-baseline-A.png",
+      "sha256": "51a5b7af55f1d19a18d480e6c51a5d8fab50f6b7696adc5f429a676caaf300b0",
+      "source_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\expressions\\source-panels\\12-surprised.png",
+      "source_sha256": "dda43e9992948eace39d96447e36316bbb55fa4a509abf204492bb93f6151948",
+      "registration": "None applied; original source384x256 and as-rendered512. Qualitative source intent, not a calibrated absolute proportion claim."
+    }
+  ],
+  "pixel_comparisons": [
+    {
+      "before": "baseline-neutral",
+      "after": "candidate-neutral",
+      "changed_pixels": 0,
+      "maximum_RGB_difference": 0,
+      "bbox": null,
+      "bit_exact": true
+    },
+    {
+      "before": "candidate-P03",
+      "after": "candidate-P03-objectHiddenEndpoint",
+      "changed_pixels": 0,
+      "maximum_RGB_difference": 0,
+      "bbox": null,
+      "bit_exact": true
+    },
+    {
+      "before": "baseline-P03",
+      "after": "candidate-P03",
+      "changed_pixels": 215,
+      "maximum_RGB_difference": 173,
+      "bbox": [
+        224,
+        346,
+        406,
+        493
+      ],
+      "bit_exact": false
+    },
+    {
+      "before": "baseline-P12",
+      "after": "candidate-P12",
+      "changed_pixels": 6997,
+      "maximum_RGB_difference": 218,
+      "bbox": [
+        119,
+        216,
+        436,
+        498
+      ],
+      "bit_exact": false
+    }
+  ],
+  "limits": [
+    "Source12 eye curvature/upper-band style and broader facial likeness remain imperfect; source tracing is approximate and source pose differs.",
+    "No new open-iris radius correction; inherited Surprise iris shrink remains and is disclosed.",
+    "Only selected close/wink endpoints were rendered; CPU37-state checks are not arbitrary combination or intermediate shader-alpha visual acceptance.",
+    "Full integrated16/source/critical/head-follow review remains root-owned.",
+    "Posterior-row negative Y overlap existed in R2 and is not an exposed-gap verdict."
+  ],
+  "whole_face_ART_approved": false,
+  "full16_approved": false
+}

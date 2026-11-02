@@ -1,0 +1,23 @@
+{
+  "payload_sha256": "fe6de6e75f25d505b2c522ae27f762983e711224908d8116cda21c7fe9158ebf",
+  "expected_coords_sha256": "16d192576cd8ecc1905f4eba96b4686c038e8c94a56e6eec7dee552e6eee0b2c",
+  "source_native_sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+  "fine_ink_gt_point1": 1,
+  "fine_ink_gt_point5": 0,
+  "limits": "Some valid fine marks have insufficient geometry correspondence and are intentionally withheld. Broad unresolved gray Crown/Rear_Waves blocks outside Side_Nape are not repaired. Neither shader polish nor quantitative guards make jagged boundary geometry pass.",
+  "ART": "Clean base challenger; fine ink, upper Crown/Rear_Waves and geometry remain open.",
+  "core_files": [
+    {
+      "name": "apply_surface_R.py",
+      "bytes": 2936,
+      "sha256": "f91a5b82712981254437548060f1660b72d72fb57e2997d245ab35c27b948ce1"
+    },
+    {
+      "name": "pigment-envelope.npz",
+      "bytes": 334006,
+      "sha256": "fe6de6e75f25d505b2c522ae27f762983e711224908d8116cda21c7fe9158ebf"
+    }
+  ],
+  "selected": false,
+  "outside_pixel_equality": "Opposite production/pigment exact0; profile1pixel max1/255 outside3px mask, strict profile equality false."
+}

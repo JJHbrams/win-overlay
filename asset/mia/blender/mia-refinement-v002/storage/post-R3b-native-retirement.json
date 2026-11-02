@@ -1,0 +1,35 @@
+{
+  "c_free_before_bytes": 48268288000,
+  "deleted_bytes": 503478634.0,
+  "deleted_count": 2,
+  "deleted_files": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_OP.blend",
+      "sha256": "69bb589a707ba07be9fe23356550935557c835ce71e61564bccddbe442b95a7e",
+      "bytes": 251678354,
+      "reason": "Superseded untracked full scene; OP abandoned, R3 failed mixed-state normalization. Exact small replays/maps/actual images/logs retained; currentR3b and replay baseR2 protected."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3.blend",
+      "sha256": "855d6b105df1afdef459df1cbd2847f84690c2daaf46854e2c5fa2d9c0ed8a5a",
+      "bytes": 251800280,
+      "reason": "Superseded untracked full scene; OP abandoned, R3 failed mixed-state normalization. Exact small replays/maps/actual images/logs retained; currentR3b and replay baseR2 protected."
+    }
+  ],
+  "protected_current_natives": [
+    {
+      "sha": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend"
+    },
+    {
+      "sha": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R2.blend"
+    },
+    {
+      "sha": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\..\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_Brows_Lashes.blend"
+    }
+  ],
+  "scope": "Two exact single-file LiteralPath deletes only; no recursive operation or Git history changes. Removed native references are historical, not available current files.",
+  "c_free_after_bytes": 48771768320
+}

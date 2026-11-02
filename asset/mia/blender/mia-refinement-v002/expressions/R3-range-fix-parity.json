@@ -1,0 +1,3996 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3.blend",
+  "sha256": "855d6b105df1afdef459df1cbd2847f84690c2daaf46854e2c5fa2d9c0ed8a5a",
+  "root_delta": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\expressions\\fix_preset_total_range.py",
+  "root_delta_sha256": "e79fdad980b5862b8a7402b9923caf76b72f9a3e6582ff66a5516e824fefdc2d",
+  "apply_report": {
+    "owner": "Mia_FacialControls_v002",
+    "property": "PresetTotal",
+    "before_UI": {
+      "subtype": "NONE",
+      "description": "",
+      "min": 0.0,
+      "max": 1.0,
+      "soft_min": 0.0,
+      "soft_max": 1.0,
+      "step": 1.0,
+      "precision": 3,
+      "default": 0.0
+    },
+    "after_UI": {
+      "subtype": "NONE",
+      "description": "",
+      "min": 0.0,
+      "max": 16.0,
+      "soft_min": 0.0,
+      "soft_max": 16.0,
+      "step": 1.0,
+      "precision": 3,
+      "default": 0.0
+    },
+    "driver_formula_changed": false,
+    "geometry_material_or_pose_changed": false,
+    "scope": "Runtime aggregate range only. Single presets/neutral unchanged; mixed presets require actual fresh verification."
+  },
+  "checks": {
+    "all17_single_preset_and_neutral_states_exact": true,
+    "all4_intermediates_repeat3_expected": true,
+    "all_existing_mesh_authored_records_exact": true,
+    "all_material_graphs_exact": true,
+    "all_images_exact": true,
+    "all_existing_driver_formulas_variables_FCurves_exact": true,
+    "hard_and_soft_max16": true,
+    "all_individual_preset_hard_max1": true,
+    "native_unchanged": true
+  },
+  "driver_count": 1433,
+  "single_preset_and_neutral_parity": [
+    {
+      "pose": "neutral",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "5fc2dc682eb0ee7fd4f5f70520f7c5cb9c7658853b8c5f8f0ecd1a9f7ec1ed26",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "Head_matrix_basis": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 0.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "5fc2dc682eb0ee7fd4f5f70520f7c5cb9c7658853b8c5f8f0ecd1a9f7ec1ed26",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Head_matrix_basis": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 0.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P01_neutral_observe",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "5fc2dc682eb0ee7fd4f5f70520f7c5cb9c7658853b8c5f8f0ecd1a9f7ec1ed26",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          -0.0,
+          0.0872664600610733
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9961947202682495,
+            -0.08715573698282242,
+            0.0,
+            0.0
+          ],
+          [
+            0.08715573698282242,
+            0.9961947202682495,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "5fc2dc682eb0ee7fd4f5f70520f7c5cb9c7658853b8c5f8f0ecd1a9f7ec1ed26",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.0872664600610733
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9961947202682495,
+            -0.08715573698282242,
+            0.0,
+            0.0
+          ],
+          [
+            0.08715573698282242,
+            0.9961947202682495,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P02_near_closed_weary",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.8799999952316284,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "ba6bde93926b26433bd44e6c31c0c6e903bafc44dd913107ed42088b11d0e6c0",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          -0.0,
+          0.22689279913902283
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9743700623512268,
+            -0.22495104372501373,
+            0.0,
+            0.0
+          ],
+          [
+            0.22495104372501373,
+            0.9743700623512268,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.8799999952316284,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "ba6bde93926b26433bd44e6c31c0c6e903bafc44dd913107ed42088b11d0e6c0",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.22689279913902283
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9743700623512268,
+            -0.22495104372501373,
+            0.0,
+            0.0
+          ],
+          [
+            0.22495104372501373,
+            0.9743700623512268,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P03_skeptical_question",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.18000000715255737,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "49681bb050b0a0194628d1b5f2cc59f6b5bd8d5287d76b14e633213cc47601a8",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          -0.03490658476948738,
+          0.1745329201221466
+        ],
+        "Head_matrix_basis": [
+          [
+            0.984207808971405,
+            -0.1736481785774231,
+            -0.034369293600320816,
+            0.0
+          ],
+          [
+            0.17354239523410797,
+            0.9848077297210693,
+            -0.0060602338053286076,
+            0.0
+          ],
+          [
+            0.03489949554204941,
+            0.0,
+            0.9993908405303955,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 1.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.18000000715255737,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "49681bb050b0a0194628d1b5f2cc59f6b5bd8d5287d76b14e633213cc47601a8",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          -0.03490658476948738,
+          0.1745329201221466
+        ],
+        "Head_matrix_basis": [
+          [
+            0.984207808971405,
+            -0.1736481785774231,
+            -0.034369293600320816,
+            0.0
+          ],
+          [
+            0.17354239523410797,
+            0.9848077297210693,
+            -0.0060602338053286076,
+            0.0
+          ],
+          [
+            0.03489949554204941,
+            0.0,
+            0.9993908405303955,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 1.0
+      }
+    },
+    {
+      "pose": "P04_aside_attention",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "bf597f646decb2232bb85a7bce58fd3f26f4bdb6d3c80b54083a7181f4287a07",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          -0.05235987901687622,
+          -0.3839724361896515,
+          0.31415924429893494
+        ],
+        "Head_matrix_basis": [
+          [
+            0.8818042278289795,
+            -0.28994762897491455,
+            -0.3719564974308014,
+            0.0
+          ],
+          [
+            0.28651556372642517,
+            0.9558115601539612,
+            -0.06582669913768768,
+            0.0
+          ],
+          [
+            0.37460657954216003,
+            -0.04852505400776863,
+            0.9259131550788879,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          -0.75,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.75,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.75,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "bf597f646decb2232bb85a7bce58fd3f26f4bdb6d3c80b54083a7181f4287a07",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          -0.05235987901687622,
+          -0.3839724361896515,
+          0.31415924429893494
+        ],
+        "Head_matrix_basis": [
+          [
+            0.8818042278289795,
+            -0.28994762897491455,
+            -0.3719564974308014,
+            0.0
+          ],
+          [
+            0.28651556372642517,
+            0.9558115601539612,
+            -0.06582669913768768,
+            0.0
+          ],
+          [
+            0.37460657954216003,
+            -0.04852505400776863,
+            0.9259131550788879,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          -0.75,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.75,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.75,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P05_downward_irritated",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.3499999940395355,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.18000000715255737,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "471d2689012ebdf6633d1b43bea37f7f12288716ca22f6c741c569f6ce6f76c1",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.12217304855585098,
+          0.0,
+          0.15707963705062866
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9876883625984192,
+            -0.15526843070983887,
+            0.019064566120505333,
+            0.0
+          ],
+          [
+            0.15643447637557983,
+            0.980326235294342,
+            -0.12036892771720886,
+            0.0
+          ],
+          [
+            0.0,
+            0.12186934798955917,
+            0.9925461411476135,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          -0.800000011920929
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.7040000557899475
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.7040000557899475
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.3499999940395355,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.18000000715255737,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "471d2689012ebdf6633d1b43bea37f7f12288716ca22f6c741c569f6ce6f76c1",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.12217304855585098,
+          0.0,
+          0.15707963705062866
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9876883625984192,
+            -0.15526843070983887,
+            0.019064566120505333,
+            0.0
+          ],
+          [
+            0.15643447637557983,
+            0.980326235294342,
+            -0.12036892771720886,
+            0.0
+          ],
+          [
+            0.0,
+            0.12186934798955917,
+            0.9925461411476135,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          -0.800000011920929
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.7040000557899475
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.7040000557899475
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P06_upward_uncertain",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.3499999940395355,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.12999999523162842,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "69fcbca3545c2e1fe22bf3ce44c6407705ff31e8d4b107db1f49ef7afce77f74",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          -0.10471975803375244,
+          -0.3141592741012573,
+          0.2617993950843811
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9186500310897827,
+            -0.22620077431201935,
+            -0.3239063024520874,
+            0.0
+          ],
+          [
+            0.24615155160427094,
+            0.9689944982528687,
+            0.021425392478704453,
+            0.0
+          ],
+          [
+            0.30901700258255005,
+            -0.0994124785065651,
+            0.9458464980125427,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          -0.375,
+          0.6000000238418579
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.375,
+            "Mia.Gaze.Up": 0.6000000238418579,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.375,
+            "Mia.Gaze.Up": 0.6000000238418579,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 1.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.3499999940395355,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.12999999523162842,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "69fcbca3545c2e1fe22bf3ce44c6407705ff31e8d4b107db1f49ef7afce77f74",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          -0.10471975803375244,
+          -0.3141592741012573,
+          0.2617993950843811
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9186500310897827,
+            -0.22620077431201935,
+            -0.3239063024520874,
+            0.0
+          ],
+          [
+            0.24615155160427094,
+            0.9689944982528687,
+            0.021425392478704453,
+            0.0
+          ],
+          [
+            0.30901700258255005,
+            -0.0994124785065651,
+            0.9458464980125427,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          -0.375,
+          0.6000000238418579
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.375,
+            "Mia.Gaze.Up": 0.6000000238418579,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.375,
+            "Mia.Gaze.Up": 0.6000000238418579,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 1.0
+      }
+    },
+    {
+      "pose": "P07_thinking",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.18000000715255737,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.05999999865889549,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.20000000298023224,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.07000000029802322,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "ab9d3c035f6c9937dfae9f7c1785e262dbb3b466ac170dfb89b6860c4dd50b07",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.05235987901687622,
+          0.0,
+          0.15707963705062866
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9876883625984192,
+            -0.15622007846832275,
+            0.008187147788703442,
+            0.0
+          ],
+          [
+            0.15643447637557983,
+            0.9863347411155701,
+            -0.05169161409139633,
+            0.0
+          ],
+          [
+            0.0,
+            0.0523359589278698,
+            0.9986295104026794,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          -0.4000000059604645
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.3760000169277191
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.3760000169277191
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.18000000715255737,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.05999999865889549,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.20000000298023224,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.07000000029802322,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "ab9d3c035f6c9937dfae9f7c1785e262dbb3b466ac170dfb89b6860c4dd50b07",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.05235987901687622,
+          0.0,
+          0.15707963705062866
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9876883625984192,
+            -0.15622007846832275,
+            0.008187147788703442,
+            0.0
+          ],
+          [
+            0.15643447637557983,
+            0.9863347411155701,
+            -0.05169161409139633,
+            0.0
+          ],
+          [
+            0.0,
+            0.0523359589278698,
+            0.9986295104026794,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          -0.4000000059604645
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.3760000169277191
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.3760000169277191
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P08_closed_smirk",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.6500000357627869,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "5de7f19ce2e8afb2ca6ac9ea0060a29ad79be60318e1133127bd500569be9f2f",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.15707963705062866
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9876883625984192,
+            -0.15643447637557983,
+            0.0,
+            0.0
+          ],
+          [
+            0.15643447637557983,
+            0.9876883625984192,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.6500000357627869,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "5de7f19ce2e8afb2ca6ac9ea0060a29ad79be60318e1133127bd500569be9f2f",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.15707963705062866
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9876883625984192,
+            -0.15643447637557983,
+            0.0,
+            0.0
+          ],
+          [
+            0.15643447637557983,
+            0.9876883625984192,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P09_concerned",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.4000000059604645,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.18000000715255737,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "d8d499940a264fdc8b90d4bb0957148b0468a4d37da9ac6fc96d905e2e7c751f",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.2617993950843811
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9659258127212524,
+            -0.258819043636322,
+            0.0,
+            0.0
+          ],
+          [
+            0.258819043636322,
+            0.9659258127212524,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.4000000059604645,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.18000000715255737,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "d8d499940a264fdc8b90d4bb0957148b0468a4d37da9ac6fc96d905e2e7c751f",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.2617993950843811
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9659258127212524,
+            -0.258819043636322,
+            0.0,
+            0.0
+          ],
+          [
+            0.258819043636322,
+            0.9659258127212524,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P10_toothy_grin",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.20000000298023224,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.15000000596046448,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 1.0
+        },
+        "all_mesh_key_values_sha256": "0fb5ed2eef587421148e030d003dbafa0d9776331c7c74e24574e1cbbe1ebdc0",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.24434609711170197
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9702957272529602,
+            -0.24192190170288086,
+            0.0,
+            0.0
+          ],
+          [
+            0.24192190170288086,
+            0.9702957272529602,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.20000000298023224,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.15000000596046448,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 1.0
+        },
+        "all_mesh_key_values_sha256": "0fb5ed2eef587421148e030d003dbafa0d9776331c7c74e24574e1cbbe1ebdc0",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.24434609711170197
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9702957272529602,
+            -0.24192190170288086,
+            0.0,
+            0.0
+          ],
+          [
+            0.24192190170288086,
+            0.9702957272529602,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P11_flustered_down",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.2499999850988388,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.15000000596046448,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "a168e448891e74b0ac9618e5caf2570f5a42e2e8c603e857a60131cfadc29167",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.10471975803375244,
+          0.0,
+          0.19198621809482574
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9816271662712097,
+            -0.18976372480392456,
+            0.019944971427321434,
+            0.0
+          ],
+          [
+            0.1908089965581894,
+            0.9762497544288635,
+            -0.10260798037052155,
+            0.0
+          ],
+          [
+            0.0,
+            0.10452846437692642,
+            0.9945219159126282,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          -1.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.8500000238418579
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.8500000238418579
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.2499999850988388,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.15000000596046448,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "a168e448891e74b0ac9618e5caf2570f5a42e2e8c603e857a60131cfadc29167",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.10471975803375244,
+          0.0,
+          0.19198621809482574
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9816271662712097,
+            -0.18976372480392456,
+            0.019944971427321434,
+            0.0
+          ],
+          [
+            0.1908089965581894,
+            0.9762497544288635,
+            -0.10260798037052155,
+            0.0
+          ],
+          [
+            0.0,
+            0.10452846437692642,
+            0.9945219159126282,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          -1.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.8500000238418579
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.8500000238418579
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P12_surprised",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.6000000238418579,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "e6e51f59140f47b64295ad09f6147016eaad9299989a2316284076698bc92f4a",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          -0.03490658476948738,
+          0.0,
+          0.24434609711170197
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9702957272529602,
+            -0.2417745292186737,
+            -0.008442952297627926,
+            0.0
+          ],
+          [
+            0.24192190170288086,
+            0.9697046279907227,
+            0.03386283293366432,
+            0.0
+          ],
+          [
+            0.0,
+            -0.03489949554204941,
+            0.9993908405303955,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 1.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.6000000238418579,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.800000011920929,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.2800000011920929,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "e6e51f59140f47b64295ad09f6147016eaad9299989a2316284076698bc92f4a",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          -0.03490658476948738,
+          0.0,
+          0.24434609711170197
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9702957272529602,
+            -0.2417745292186737,
+            -0.008442952297627926,
+            0.0
+          ],
+          [
+            0.24192190170288086,
+            0.9697046279907227,
+            0.03386283293366432,
+            0.0
+          ],
+          [
+            0.0,
+            -0.03489949554204941,
+            0.9993908405303955,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 1.0
+      }
+    },
+    {
+      "pose": "P13_sulky",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "c368c7f95b26476372918a4b76e2dd7f6328c5424f8a05af53843e15be34f30d",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.1745329201221466
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9848077297210693,
+            -0.1736481785774231,
+            0.0,
+            0.0
+          ],
+          [
+            0.1736481785774231,
+            0.9848077297210693,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.11999999731779099,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "c368c7f95b26476372918a4b76e2dd7f6328c5424f8a05af53843e15be34f30d",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.1745329201221466
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9848077297210693,
+            -0.1736481785774231,
+            0.0,
+            0.0
+          ],
+          [
+            0.1736481785774231,
+            0.9848077297210693,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P14_weary_speaking",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.20000000298023224,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.18000000715255737,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "b05e3f8f239edadca54d9da16ed614057be2e951fc8d2b6ebf9d5d000a39de1a",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.01745329238474369,
+          0.0,
+          0.12217304855585098
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9925461411476135,
+            -0.12185078114271164,
+            0.002126913284882903,
+            0.0
+          ],
+          [
+            0.12186934798955917,
+            0.9923949837684631,
+            -0.017322318628430367,
+            0.0
+          ],
+          [
+            0.0,
+            0.017452405765652657,
+            0.9998477101325989,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.20000000298023224,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.18000000715255737,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "b05e3f8f239edadca54d9da16ed614057be2e951fc8d2b6ebf9d5d000a39de1a",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.01745329238474369,
+          0.0,
+          0.12217304855585098
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9925461411476135,
+            -0.12185078114271164,
+            0.002126913284882903,
+            0.0
+          ],
+          [
+            0.12186934798955917,
+            0.9923949837684631,
+            -0.017322318628430367,
+            0.0
+          ],
+          [
+            0.0,
+            0.017452405765652657,
+            0.9998477101325989,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P15_stern",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.29999998211860657,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.15000000596046448,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.14000000059604645,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "380c5b247a6900f85e08fa0e85c687800b981f9068c95c5ae460f710cbaa4de8",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.03490658476948738,
+          0.0,
+          0.10471975803375244
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9945219159126282,
+            -0.10446479171514511,
+            0.003647990757599473,
+            0.0
+          ],
+          [
+            0.10452846437692642,
+            0.9939160346984863,
+            -0.03470831364393234,
+            0.0
+          ],
+          [
+            0.0,
+            0.03489949554204941,
+            0.9993908405303955,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.29999998211860657,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.15000000596046448,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.14000000059604645,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "380c5b247a6900f85e08fa0e85c687800b981f9068c95c5ae460f710cbaa4de8",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.03490658476948738,
+          0.0,
+          0.10471975803375244
+        ],
+        "Head_matrix_basis": [
+          [
+            0.9945219159126282,
+            -0.10446479171514511,
+            0.003647990757599473,
+            0.0
+          ],
+          [
+            0.10452846437692642,
+            0.9939160346984863,
+            -0.03470831364393234,
+            0.0
+          ],
+          [
+            0.0,
+            0.03489949554204941,
+            0.9993908405303955,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    },
+    {
+      "pose": "P16_gentle_smile",
+      "all_fields_exact": true,
+      "field_equal": {
+        "master_channels": true,
+        "all_mesh_key_values_sha256": true,
+        "all_mesh_shape_owner_count": true,
+        "Head_euler": true,
+        "Head_matrix_basis": true,
+        "Gaze_effective": true,
+        "iris_gaze": true,
+        "PresetTotal": true,
+        "dental_hide": true
+      },
+      "before": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.44999998807907104,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "ced8efc62dbb3bb8e50ed427e7b488af62d7786b009f53c00d02da8aade6c5cd",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.235619455575943
+        ],
+        "Head_matrix_basis": [
+          [
+            0.972369909286499,
+            -0.23344537615776062,
+            0.0,
+            0.0
+          ],
+          [
+            0.23344537615776062,
+            0.972369909286499,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      },
+      "after": {
+        "master_channels": {
+          "Basis": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy": 0.07999999821186066,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Up": 0.10000000149011612,
+          "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Fun": 0.44999998807907104,
+          "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+          "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+          "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+          "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+          "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0
+        },
+        "all_mesh_key_values_sha256": "ced8efc62dbb3bb8e50ed427e7b488af62d7786b009f53c00d02da8aade6c5cd",
+        "all_mesh_shape_owner_count": 44,
+        "Head_euler": [
+          0.0,
+          0.0,
+          0.235619455575943
+        ],
+        "Head_matrix_basis": [
+          [
+            0.972369909286499,
+            -0.23344537615776062,
+            0.0,
+            0.0
+          ],
+          [
+            0.23344537615776062,
+            0.972369909286499,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "Gaze_effective": [
+          0.0,
+          0.0
+        ],
+        "iris_gaze": {
+          "V28G_Iris_-1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          },
+          "V28G_Iris_1": {
+            "Mia.Gaze.Right": 0.0,
+            "Mia.Gaze.Left": 0.0,
+            "Mia.Gaze.Up": 0.0,
+            "Mia.Gaze.Down": 0.0
+          }
+        },
+        "PresetTotal": 1.0,
+        "dental_hide": 0.0
+      }
+    }
+  ],
+  "intermediates": [
+    {
+      "case": "auto-half-hide",
+      "controls": {
+        "P01_neutral_observe": 0.5,
+        "P12_surprised": 0.5,
+        "HeadPoseStrength": 0.0,
+        "GazeStrength": 0.0
+      },
+      "expected": {
+        "total": 1.0,
+        "grin": 0.0,
+        "surprise": 0.4,
+        "hide": 0.5
+      },
+      "repeats": [
+        {
+          "frame": 101,
+          "actual": {
+            "total": 1.0,
+            "grin": 0.0,
+            "surprise": 0.4000000059604645,
+            "hide": 0.4999999403953552
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.Aperture.1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+            }
+          }
+        },
+        {
+          "frame": 102,
+          "actual": {
+            "total": 1.0,
+            "grin": 0.0,
+            "surprise": 0.4000000059604645,
+            "hide": 0.4999999403953552
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.Aperture.1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+            }
+          }
+        },
+        {
+          "frame": 103,
+          "actual": {
+            "total": 1.0,
+            "grin": 0.0,
+            "surprise": 0.4000000059604645,
+            "hide": 0.4999999403953552
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.Aperture.1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case": "normalized-grin-blend",
+      "controls": {
+        "P12_surprised": 1.0,
+        "P10_toothy_grin": 1.0,
+        "HeadPoseStrength": 0.0,
+        "GazeStrength": 0.0
+      },
+      "expected": {
+        "total": 2.0,
+        "grin": 0.5,
+        "surprise": 0.4,
+        "hide": 0.25
+      },
+      "repeats": [
+        {
+          "frame": 104,
+          "actual": {
+            "total": 2.0,
+            "grin": 0.4999999403953552,
+            "surprise": 0.4000000059604645,
+            "hide": 0.2500000298023224
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.Aperture.1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+            }
+          }
+        },
+        {
+          "frame": 105,
+          "actual": {
+            "total": 2.0,
+            "grin": 0.4999999403953552,
+            "surprise": 0.4000000059604645,
+            "hide": 0.2500000298023224
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.Aperture.1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+            }
+          }
+        },
+        {
+          "frame": 106,
+          "actual": {
+            "total": 2.0,
+            "grin": 0.4999999403953552,
+            "surprise": 0.4000000059604645,
+            "hide": 0.2500000298023224
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.Aperture.1": 0.38461539149284363,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case": "surprise-right-half-close",
+      "controls": {
+        "Manual_EYE_Surprised": 0.8,
+        "Manual_EYE_Close_R": 0.5,
+        "Manual_MTH_A": 0.28,
+        "ManualSmallMouthDentalHide": 0.5,
+        "HeadPoseStrength": 0.0,
+        "GazeStrength": 0.0
+      },
+      "expected": {
+        "total": 0.0,
+        "grin": 0.0,
+        "surprise": 0.8,
+        "hide": 0.5
+      },
+      "repeats": [
+        {
+          "frame": 107,
+          "actual": {
+            "total": 0.0,
+            "grin": 0.0,
+            "surprise": 0.800000011920929,
+            "hide": 0.4999999403953552
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 0.5000000596046448,
+              "Mia.v003.SourceSurprise.Aperture.1": 1.0,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.3999999463558197,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+            }
+          }
+        },
+        {
+          "frame": 108,
+          "actual": {
+            "total": 0.0,
+            "grin": 0.0,
+            "surprise": 0.800000011920929,
+            "hide": 0.4999999403953552
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 0.5000000596046448,
+              "Mia.v003.SourceSurprise.Aperture.1": 1.0,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.3999999463558197,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+            }
+          }
+        },
+        {
+          "frame": 109,
+          "actual": {
+            "total": 0.0,
+            "grin": 0.0,
+            "surprise": 0.800000011920929,
+            "hide": 0.4999999403953552
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 0.5000000596046448,
+              "Mia.v003.SourceSurprise.Aperture.1": 1.0,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.3999999463558197,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "case": "surprise-left-three-quarter-close",
+      "controls": {
+        "Manual_EYE_Surprised": 0.8,
+        "Manual_EYE_Close_L": 0.75,
+        "HeadPoseStrength": 0.0,
+        "GazeStrength": 0.0
+      },
+      "expected": {
+        "total": 0.0,
+        "grin": 0.0,
+        "surprise": 0.8,
+        "hide": 0.0
+      },
+      "repeats": [
+        {
+          "frame": 110,
+          "actual": {
+            "total": 0.0,
+            "grin": 0.0,
+            "surprise": 0.800000011920929,
+            "hide": 0.0
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 1.0,
+              "Mia.v003.SourceSurprise.Aperture.1": 0.2499999850988388,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.6000000238418579
+            }
+          }
+        },
+        {
+          "frame": 111,
+          "actual": {
+            "total": 0.0,
+            "grin": 0.0,
+            "surprise": 0.800000011920929,
+            "hide": 0.0
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 1.0,
+              "Mia.v003.SourceSurprise.Aperture.1": 0.2499999850988388,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.6000000238418579
+            }
+          }
+        },
+        {
+          "frame": 112,
+          "actual": {
+            "total": 0.0,
+            "grin": 0.0,
+            "surprise": 0.800000011920929,
+            "hide": 0.0
+          },
+          "all_expected_within_1e_6": true,
+          "aperture_weights": {
+            "MIA_V27_SharedHeadBody": {
+              "Mia.v003.SourceSurprise.Aperture.-1": 1.0,
+              "Mia.v003.SourceSurprise.Aperture.1": 0.2499999850988388,
+              "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+              "Mia.v003.SourceSurprise.CloseGate.1": 0.6000000238418579
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "native_saved": false,
+  "GPU_used": false,
+  "settings_discarded_on_process_exit": true,
+  "scope": "Actual ephemeral CPU depsgraph test. No visual/ART claim. Root helper changes PresetTotal UI bounds plus its controller provenance string only."
+}

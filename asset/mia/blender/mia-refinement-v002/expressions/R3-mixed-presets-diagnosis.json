@@ -1,0 +1,528 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3.blend",
+  "sha256": "855d6b105df1afdef459df1cbd2847f84690c2daaf46854e2c5fa2d9c0ed8a5a",
+  "range_metadata": {
+    "PresetTotal": {
+      "subtype": "NONE",
+      "description": "",
+      "min": 0.0,
+      "max": 1.0,
+      "soft_min": 0.0,
+      "soft_max": 1.0,
+      "step": 1.0,
+      "precision": 3,
+      "default": 0.0
+    },
+    "Strength": {
+      "subtype": "NONE",
+      "description": "Facial source-preset intensity; original Manual channels are independent.",
+      "min": 0.0,
+      "max": 1.0,
+      "soft_min": 0.0,
+      "soft_max": 1.0,
+      "step": 1.0,
+      "precision": 3,
+      "default": 0.0
+    },
+    "Manual_MIA_ToothyGrin": {
+      "subtype": "NONE",
+      "description": "Original facial channel Face.M_F00_000_00_Fcl_MIA_ToothyGrin",
+      "min": 0.0,
+      "max": 1.0,
+      "soft_min": 0.0,
+      "soft_max": 1.0,
+      "step": 1.0,
+      "precision": 3,
+      "default": 0.0
+    },
+    "P12_surprised": {
+      "subtype": "NONE",
+      "description": "\ub180\ub77c\uc11c \ub208\uc744 \ud06c\uac8c \ub738",
+      "min": 0.0,
+      "max": 1.0,
+      "soft_min": 0.0,
+      "soft_max": 1.0,
+      "step": 1.0,
+      "precision": 3,
+      "default": 0.0
+    },
+    "P10_toothy_grin": {
+      "subtype": "NONE",
+      "description": "\uce58\uc544\uac00 \ub4dc\ub7ec\ub09c \uc7a5\ub09c\uc2a4\ub7ec\uc6b4 \uc6c3\uc74c",
+      "min": 0.0,
+      "max": 1.0,
+      "soft_min": 0.0,
+      "soft_max": 1.0,
+      "step": 1.0,
+      "precision": 3,
+      "default": 0.0
+    }
+  },
+  "drivers": {
+    "total": {
+      "path": "[\"PresetTotal\"]",
+      "type": "SUM",
+      "expression": "0.0",
+      "is_valid": true,
+      "extrapolation": "LINEAR",
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ]
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "p1",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P01_neutral_observe\"]"
+            }
+          ]
+        },
+        {
+          "name": "p2",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P02_near_closed_weary\"]"
+            }
+          ]
+        },
+        {
+          "name": "p3",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P03_skeptical_question\"]"
+            }
+          ]
+        },
+        {
+          "name": "p4",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P04_aside_attention\"]"
+            }
+          ]
+        },
+        {
+          "name": "p5",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P05_downward_irritated\"]"
+            }
+          ]
+        },
+        {
+          "name": "p6",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P06_upward_uncertain\"]"
+            }
+          ]
+        },
+        {
+          "name": "p7",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P07_thinking\"]"
+            }
+          ]
+        },
+        {
+          "name": "p8",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P08_closed_smirk\"]"
+            }
+          ]
+        },
+        {
+          "name": "p9",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P09_concerned\"]"
+            }
+          ]
+        },
+        {
+          "name": "p10",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P10_toothy_grin\"]"
+            }
+          ]
+        },
+        {
+          "name": "p11",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P11_flustered_down\"]"
+            }
+          ]
+        },
+        {
+          "name": "p12",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P12_surprised\"]"
+            }
+          ]
+        },
+        {
+          "name": "p13",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P13_sulky\"]"
+            }
+          ]
+        },
+        {
+          "name": "p14",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P14_weary_speaking\"]"
+            }
+          ]
+        },
+        {
+          "name": "p15",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P15_stern\"]"
+            }
+          ]
+        },
+        {
+          "name": "p16",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P16_gentle_smile\"]"
+            }
+          ]
+        }
+      ]
+    },
+    "grin": {
+      "path": "key_blocks[\"Face.M_F00_000_00_Fcl_MIA_ToothyGrin\"].value",
+      "type": "SCRIPTED",
+      "expression": "min(1,max(0,m+s*(1*p10)/max(1,t)))",
+      "is_valid": true,
+      "extrapolation": "LINEAR",
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ]
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "m",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"Manual_MIA_ToothyGrin\"]"
+            }
+          ]
+        },
+        {
+          "name": "s",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"Strength\"]"
+            }
+          ]
+        },
+        {
+          "name": "t",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"PresetTotal\"]"
+            }
+          ]
+        },
+        {
+          "name": "p10",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P10_toothy_grin\"]"
+            }
+          ]
+        }
+      ]
+    },
+    "hide": {
+      "path": "[\"_EffectiveSmallMouthDentalHide\"]",
+      "type": "SCRIPTED",
+      "expression": "min(1,max(0,m+strength*(p3+p6+p12)/max(1,t)))*(1-min(1,max(0,grin)))",
+      "is_valid": true,
+      "extrapolation": "LINEAR",
+      "keyframes": [
+        {
+          "co": [
+            0.0,
+            0.0
+          ],
+          "left": [
+            -0.3333333432674408,
+            -0.3333333432674408
+          ],
+          "right": [
+            0.3333333432674408,
+            0.3333333432674408
+          ]
+        },
+        {
+          "co": [
+            1.0,
+            1.0
+          ],
+          "left": [
+            0.6666666269302368,
+            0.6666666269302368
+          ],
+          "right": [
+            1.3333333730697632,
+            1.3333333730697632
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "m",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"ManualSmallMouthDentalHide\"]"
+            }
+          ]
+        },
+        {
+          "name": "t",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"PresetTotal\"]"
+            }
+          ]
+        },
+        {
+          "name": "strength",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"Strength\"]"
+            }
+          ]
+        },
+        {
+          "name": "p3",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P03_skeptical_question\"]"
+            }
+          ]
+        },
+        {
+          "name": "p6",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P06_upward_uncertain\"]"
+            }
+          ]
+        },
+        {
+          "name": "p12",
+          "targets": [
+            {
+              "id": "Mia_FacialControls_v002",
+              "path": "[\"P12_surprised\"]"
+            }
+          ]
+        },
+        {
+          "name": "grin",
+          "targets": [
+            {
+              "id": "Key.011",
+              "path": "key_blocks[\"Face.M_F00_000_00_Fcl_MIA_ToothyGrin\"].value"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "states": [
+    {
+      "label": "reset",
+      "frame": 1,
+      "active_presets": {},
+      "raw_driver_variable_sum": 0.0,
+      "actual_PresetTotal": 0.0,
+      "evaluated_PresetTotal": 0.0,
+      "total_FCurve_evaluate_raw_sum": 0.0,
+      "actual_grin": 0.0,
+      "actual_surprise": 0.0,
+      "actual_hide": 0.0,
+      "formula_using_actual_targets": 0,
+      "expected_formula_using_unclamped_total": 0
+    },
+    {
+      "label": "auto-half",
+      "frame": 101,
+      "active_presets": {
+        "P01_neutral_observe": 0.5,
+        "P12_surprised": 0.5
+      },
+      "raw_driver_variable_sum": 1.0,
+      "actual_PresetTotal": 1.0,
+      "evaluated_PresetTotal": 1.0,
+      "total_FCurve_evaluate_raw_sum": 1.0,
+      "actual_grin": 0.0,
+      "actual_surprise": 0.4000000059604645,
+      "actual_hide": 0.4999999403953552,
+      "formula_using_actual_targets": 0.5,
+      "expected_formula_using_unclamped_total": 0.5
+    },
+    {
+      "label": "normalized-mix",
+      "frame": 102,
+      "active_presets": {
+        "P10_toothy_grin": 1.0,
+        "P12_surprised": 1.0
+      },
+      "raw_driver_variable_sum": 2.0,
+      "actual_PresetTotal": 1.0,
+      "evaluated_PresetTotal": 1.0,
+      "total_FCurve_evaluate_raw_sum": 2.0,
+      "actual_grin": 1.0,
+      "actual_surprise": 0.800000011920929,
+      "actual_hide": 0.0,
+      "formula_using_actual_targets": 0,
+      "expected_formula_using_unclamped_total": 0.25
+    },
+    {
+      "label": "normalized-mix-repeat1",
+      "frame": 103,
+      "active_presets": {
+        "P10_toothy_grin": 1.0,
+        "P12_surprised": 1.0
+      },
+      "raw_driver_variable_sum": 2.0,
+      "actual_PresetTotal": 1.0,
+      "evaluated_PresetTotal": 1.0,
+      "total_FCurve_evaluate_raw_sum": 2.0,
+      "actual_grin": 1.0,
+      "actual_surprise": 0.800000011920929,
+      "actual_hide": 0.0,
+      "formula_using_actual_targets": 0,
+      "expected_formula_using_unclamped_total": 0.25
+    },
+    {
+      "label": "normalized-mix-repeat2",
+      "frame": 104,
+      "active_presets": {
+        "P10_toothy_grin": 1.0,
+        "P12_surprised": 1.0
+      },
+      "raw_driver_variable_sum": 2.0,
+      "actual_PresetTotal": 1.0,
+      "evaluated_PresetTotal": 1.0,
+      "total_FCurve_evaluate_raw_sum": 2.0,
+      "actual_grin": 1.0,
+      "actual_surprise": 0.800000011920929,
+      "actual_hide": 0.0,
+      "formula_using_actual_targets": 0,
+      "expected_formula_using_unclamped_total": 0.25
+    },
+    {
+      "label": "normalized-mix-half-inputs",
+      "frame": 105,
+      "active_presets": {
+        "P10_toothy_grin": 0.5,
+        "P12_surprised": 0.5
+      },
+      "raw_driver_variable_sum": 1.0,
+      "actual_PresetTotal": 1.0,
+      "evaluated_PresetTotal": 1.0,
+      "total_FCurve_evaluate_raw_sum": 1.0,
+      "actual_grin": 0.4999999403953552,
+      "actual_surprise": 0.4000000059604645,
+      "actual_hide": 0.2500000298023224,
+      "formula_using_actual_targets": 0.2500000298023224,
+      "expected_formula_using_unclamped_total": 0.25
+    }
+  ],
+  "no_driver_changes": true,
+  "no_native_saved": true,
+  "no_GPU": true,
+  "native_unchanged": true
+}

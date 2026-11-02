@@ -1,0 +1,50 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\Mia_BodyUnderwear_v002_G.blend",
+  "sha256": "e199c01b4c0a8fbc7942d5b667f8cdd0e1827d766d98cf28c99bd27ab12cf0da",
+  "completed_suites": [
+    {
+      "suite": "source",
+      "renders": 4,
+      "success_marker": "BODY_V002_RENDER_SUITE_OK candidate source 4"
+    },
+    {
+      "suite": "diagnostics",
+      "renders": 20,
+      "success_marker": "BODY_V002_RENDER_SUITE_OK candidate diagnostics 20"
+    },
+    {
+      "suite": "core",
+      "renders": 8,
+      "success_marker": "BODY_V002_RENDER_SUITE_OK candidate core 8"
+    },
+    {
+      "suite": "full-neutral",
+      "renders": 4,
+      "success_marker": "BODY_V002_RENDER_SUITE_OK candidate full-neutral 4"
+    },
+    {
+      "suite": "orbit-full",
+      "renders": 36,
+      "success_marker": "BODY_V002_RENDER_SUITE_OK candidate orbit-full 36"
+    },
+    {
+      "suite": "movedlight",
+      "renders": 4,
+      "success_marker": "BODY_V002_RENDER_SUITE_OK candidate movedlight 4"
+    },
+    {
+      "suite": "poses-valid",
+      "renders": 27,
+      "success_marker": "BODY_V002_RENDER_SUITE_OK candidate poses-valid 27"
+    },
+    {
+      "suite": "hands",
+      "renders": 6,
+      "success_marker": "BODY_V002_RENDER_SUITE_OK candidate hands 6"
+    }
+  ],
+  "render_count": 109,
+  "elapsed_seconds": 579.513888835907,
+  "native_saved_during_render": false,
+  "ART": "ACTUAL IMAGES REQUIRE PRODUCER AND INDEPENDENT REVIEW; suite completion is not anatomy/ART approval."
+}

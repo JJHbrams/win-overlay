@@ -9,7 +9,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument('--native', required=True)
 ap.add_argument('--sha256', required=True)
 ap.add_argument('--tag', required=True)
-ap.add_argument('--suite', choices=['source', 'expressions', 'orbit', 'critical'], required=True)
+ap.add_argument('--suite', choices=['source', 'expressions', 'orbit', 'critical', 'intermediates'], required=True)
 a = ap.parse_args(sys.argv[sys.argv.index('--')+1:])
 old = P.parent/'mia-visible-art-v30/render_native_review.py'
 sys.argv = [str(old), '--', '--native', a.native, '--sha256', a.sha256,
@@ -29,7 +29,7 @@ poses = []
 
 def reset():
     for name in ctrl.keys():
-        if name.startswith('P') and name[:3][1:].isdigit() or name.startswith('Manual_') or name in ['HeadPitch','HeadYaw','HeadRoll','GazeX','GazeY']:
+        if name.startswith('P') and name[:3][1:].isdigit() or name.startswith('Manual') or name in ['HeadPitch','HeadYaw','HeadRoll','GazeX','GazeY']:
             ctrl[name] = 0.
     ctrl['Strength'] = ctrl['HeadPoseStrength'] = ctrl['GazeStrength'] = 1.
     ctrl.update_tag()
@@ -47,6 +47,8 @@ def actual(label, spec=base, hair_off=False, neutral=False):
         head_local_euler=list(env['head'].rotation_euler),
         active_lights_before=[dict(name=o.name, watts=o.data.energy) for o in active],
         dental_objects_visible=[o.name for o in dental],
+        effective_dental_hide=ctrl.get('_EffectiveSmallMouthDentalHide'),
+        source_aperture={k.name:k.value for k in bpy.data.objects['MIA_V27_SharedHeadBody'].data.shape_keys.key_blocks if k.name.startswith('Mia.v003.SourceSurprise.')},
         iris_gaze={o.name:{k.name:k.value for k in o.data.shape_keys.key_blocks if k.name.startswith('Mia.Gaze.') and k.value} for o in bpy.context.scene.objects if o.name.startswith('V28G_Iris_')}))
 
 reset()
@@ -83,6 +85,20 @@ elif a.suite == 'expressions':
         reset(); row=rows[panel-1]; ctrl[f"P{panel:02}_{row['id']}"]=1.; ctrl.update_tag(); bpy.context.scene.frame_set(panel+1); bpy.context.view_layer.update()
         v=copy.deepcopy(env['pkg']['views'][1]['candidate_camera']);v['resolution']=[512,512]
         actual(f'head-pose-P{panel:02}-profile',v,False)
+elif a.suite == 'intermediates':
+    cases=[
+        ('auto-half-hide',{'P01_neutral_observe':.5,'P12_surprised':.5},.5),
+        ('normalized-grin-blend',{'P12_surprised':1.,'P10_toothy_grin':1.},.25),
+        ('surprise-right-half-close',{'Manual_EYE_Surprised':.8,'Manual_EYE_Close_R':.5,'Manual_MTH_A':.28,'ManualSmallMouthDentalHide':.5},.5),
+        ('surprise-left-three-quarter-close',{'Manual_EYE_Surprised':.8,'Manual_EYE_Close_L':.75},0.)]
+    for i,(label,values,expected) in enumerate(cases):
+        reset();ctrl['HeadPoseStrength']=ctrl['GazeStrength']=0.
+        for name,value in values.items():
+            assert name in ctrl,name
+            ctrl[name]=value
+        ctrl.update_tag();bpy.context.scene.frame_set(i+101);bpy.context.view_layer.update()
+        assert abs(ctrl['_EffectiveSmallMouthDentalHide']-expected)<1e-6,(label,ctrl['_EffectiveSmallMouthDentalHide'])
+        actual(label,base,True)
 elif a.suite in ['orbit','critical']:
     angles = [(f'{i:03}',i*15,8+17*math.sin(math.radians(i*30))) for i in range(24)] if a.suite=='orbit' else [
         ('highFront',0,45),('lowFront',0,-30),('lowRight',35,-30),('lowLeft',-35,-30),('highLeft',-35,40),('profileLow',85,-20)]

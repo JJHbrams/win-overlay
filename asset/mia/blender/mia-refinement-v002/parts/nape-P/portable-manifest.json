@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "file": "apply_nape_P.py",
+      "bytes": 3046,
+      "sha256": "e74fc8fd0aeaf5de526a08e3010840f6a98e9007cc4d67619f4b0e3873558257"
+    },
+    {
+      "file": "repair.json",
+      "bytes": 12498,
+      "sha256": "e779962816f38759a0393017d0ab0ed9598c3c110e5cf610f36312d1a5f0688c"
+    }
+  ],
+  "core_bytes": 15544,
+  "api": "import apply_nape_P; apply_nape_P.apply(folder)",
+  "order": "Apply MN, optionalL and O first, thenP. Two added faces make earlier120913-face source guards intentionallyfail on reapplication.",
+  "new_actors": 0,
+  "full_native": false,
+  "ART": "UNVERIFIED"
+}

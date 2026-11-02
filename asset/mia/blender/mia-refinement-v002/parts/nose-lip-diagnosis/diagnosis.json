@@ -1,0 +1,68 @@
+{
+  "status": "diagnosis_and_bounded_next_plan_only",
+  "native_probe_sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+  "probe_native_unchanged": true,
+  "R3_map_equivalence": "Root statement; independent current route probe used exact integrated R2/D2.",
+  "D2_actual_proof_hashes_verified": {
+    "count": 41,
+    "all_current": true
+  },
+  "old_optional_lip_proof_hashes_verified": {
+    "count": 8,
+    "all_current": true
+  },
+  "nose": {
+    "likely": "Pigment design/UV projected footprint; flecks exist in selected-color output and mostly disappear under aggregate NoseLip disable.",
+    "old_alpha_CPU_ROI": {
+      "uv_rectangle": [
+        0.455,
+        0.3,
+        0.545,
+        0.45
+      ],
+      "raster_size": [
+        186,
+        308
+      ],
+      "alpha_range": [
+        1.0,
+        1.0
+      ],
+      "fractions_above": {
+        "0.0001": 1.0,
+        "0.1": 1.0,
+        "0.5": 1.0,
+        "0.9": 1.0
+      },
+      "mask_source_sha256": "09b4bf935a2b60b3ca977575a87ef7d281c386e7eb5b0e2b4ae0abbe789e0919"
+    },
+    "raw_shared_nose_UV_edges_tested": 74,
+    "UV_seam_discontinuities_over_1e_6": 0,
+    "unproved": [
+      "Relative contributions of atlas design and native pixel/mip sampling",
+      "Independent GraphicNose light gain contribution; aggregate toggle is insufficient",
+      "Hidden full bridge target and clinical/source geometry acceptance"
+    ]
+  },
+  "lip": {
+    "likely": "Low contrast and/or ridge/support registration in the selected pigment; actual light is secondary.",
+    "Blue_core_texels_tested": 724,
+    "median_linear_luminance_ratio_to_measured_blank": 1.04338603,
+    "fraction_above_1_05": 0.4544198895,
+    "D_lip_actual_changed_pixels": 137,
+    "D_lip_actual_max_RGB255": 23,
+    "optional_gain_012_actual_changed_pixels": 80,
+    "optional_gain_012_actual_max_RGB255": 7,
+    "optional_gain_selected": 0.0,
+    "unproved": [
+      "Exact Blue-to-painted-ridge registration at evaluated128 border across views/expressions",
+      "Art contrast versus feather/projected sampling contribution",
+      "Inherited lip geometry conformity to source"
+    ]
+  },
+  "new_renders": 0,
+  "new_native_saves": 0,
+  "new_art_variants": 0,
+  "report": "DIAGNOSIS_AND_NEXT_PLAN.md",
+  "report_sha256": "6886bc4b79a86919b144c16e35a1b5ad593f214cde461ea6f50122216ed9bb61"
+}

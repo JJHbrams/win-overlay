@@ -1,0 +1,186 @@
+{
+  "bridges": [
+    {
+      "unique_vertices": [
+        43139,
+        42818,
+        43417
+      ],
+      "raw_vertices": [
+        53969,
+        59186,
+        53971
+      ],
+      "adjacent_faces": [
+        76077,
+        74254
+      ],
+      "fan_ids": [
+        0,
+        1
+      ],
+      "area_mm2": 0.9256901876142365,
+      "new_boundary_edge_mm": 3.606274025514722,
+      "normal_dot_adjacent": [
+        0.9998962879180908,
+        0.9955370426177979
+      ],
+      "adjacent_normals_dot": 0.9942800402641296,
+      "candidate_normal": [
+        -0.3157484829425812,
+        0.8926723003387451,
+        -0.3216194212436676
+      ],
+      "candidate_center": [
+        0.04534204676747322,
+        -0.04318443313241005,
+        1.5361276865005493
+      ],
+      "safe_geometry_heuristic": true,
+      "junction": 43139,
+      "skin_min_signed_mm": -11.037514137569815,
+      "skin_negative_halfmm_samples": 153,
+      "sample_count": 153
+    },
+    {
+      "unique_vertices": [
+        45347,
+        45205,
+        45485
+      ],
+      "raw_vertices": [
+        70975,
+        70973,
+        70979
+      ],
+      "adjacent_faces": [
+        80116,
+        79729
+      ],
+      "fan_ids": [
+        1,
+        0
+      ],
+      "area_mm2": 2.4360410861845594,
+      "new_boundary_edge_mm": 4.271851386874914,
+      "normal_dot_adjacent": [
+        0.9996806383132935,
+        0.9999991059303284
+      ],
+      "adjacent_normals_dot": 0.9996731281280518,
+      "candidate_normal": [
+        -0.887635350227356,
+        0.45328229665756226,
+        0.0814783126115799
+      ],
+      "candidate_center": [
+        0.05586785078048706,
+        -0.03637974336743355,
+        1.5319420099258423
+      ],
+      "safe_geometry_heuristic": true,
+      "junction": 45347,
+      "skin_min_signed_mm": -2.37942593957996,
+      "skin_negative_halfmm_samples": 153,
+      "sample_count": 153
+    },
+    {
+      "unique_vertices": [
+        45426,
+        45039,
+        45200
+      ],
+      "raw_vertices": [
+        70680,
+        70678,
+        71877
+      ],
+      "adjacent_faces": [
+        79900,
+        79381
+      ],
+      "fan_ids": [
+        0,
+        1
+      ],
+      "area_mm2": 2.4093267256830586,
+      "new_boundary_edge_mm": 2.7314284816384315,
+      "normal_dot_adjacent": [
+        0.5567195415496826,
+        0.999791145324707
+      ],
+      "adjacent_normals_dot": 0.5616834163665771,
+      "candidate_normal": [
+        -0.07112658023834229,
+        0.8578450679779053,
+        -0.5089626312255859
+      ],
+      "candidate_center": [
+        0.05837206169962883,
+        -0.013345926068723202,
+        1.5238685607910156
+      ],
+      "safe_geometry_heuristic": true,
+      "junction": 45426,
+      "skin_min_signed_mm": 0.8864748758696805,
+      "skin_negative_halfmm_samples": 0,
+      "sample_count": 153
+    },
+    {
+      "unique_vertices": [
+        47299,
+        48012,
+        47812
+      ],
+      "raw_vertices": [
+        56342,
+        56348,
+        56347
+      ],
+      "adjacent_faces": [
+        83885,
+        83886
+      ],
+      "fan_ids": [
+        0,
+        1
+      ],
+      "area_mm2": 9.353828318126034,
+      "new_boundary_edge_mm": 5.439767614006996,
+      "normal_dot_adjacent": [
+        0.9931803941726685,
+        0.9989000558853149
+      ],
+      "adjacent_normals_dot": 0.9937909245491028,
+      "candidate_normal": [
+        0.7520254254341125,
+        -0.6584210991859436,
+        0.030650626868009567
+      ],
+      "candidate_center": [
+        0.06548255681991577,
+        -0.022951262071728706,
+        1.5380288362503052
+      ],
+      "safe_geometry_heuristic": true,
+      "junction": 47299,
+      "skin_min_signed_mm": 1.0903359197982354,
+      "skin_negative_halfmm_samples": 0,
+      "sample_count": 153
+    }
+  ],
+  "layer_separation": {
+    "raw_vertex": 65222,
+    "position": [
+      0.05919765308499336,
+      -0.009343854151666164,
+      1.5260556936264038
+    ],
+    "signed_before_mm": 0.904941203771159,
+    "offset_outward_mm": [
+      0.22317184507846832,
+      -0.03833434358239174,
+      -0.10594727098941803
+    ]
+  }
+}

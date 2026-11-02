@@ -1,0 +1,584 @@
+[
+  {
+    "unique_junction": 43139,
+    "position_MN": [
+      0.04537900537252426,
+      -0.04329061880707741,
+      1.5357966423034668
+    ],
+    "incident_face_fans": [
+      [
+        76077
+      ],
+      [
+        74254,
+        74255
+      ]
+    ],
+    "physical_boundary_degree": 4,
+    "candidate_bridges": [
+      {
+        "unique_vertices": [
+          43139,
+          43465,
+          43227
+        ],
+        "raw_vertices": [
+          53969,
+          53972,
+          53970
+        ],
+        "adjacent_faces": [
+          74255,
+          76077
+        ],
+        "fan_ids": [
+          1,
+          0
+        ],
+        "area_mm2": 3.818450750259217,
+        "new_boundary_edge_mm": 3.7493249401450157,
+        "normal_dot_adjacent": [
+          0.9797960519790649,
+          0.9793208837509155
+        ],
+        "adjacent_normals_dot": 0.9805498719215393,
+        "candidate_normal": [
+          -0.2461542934179306,
+          0.9600552916526794,
+          -0.13304848968982697
+        ],
+        "candidate_center": [
+          0.04613857343792915,
+          -0.04333772137761116,
+          1.5340514183044434
+        ],
+        "safe_geometry_heuristic": true
+      },
+      {
+        "unique_vertices": [
+          43139,
+          42818,
+          43417
+        ],
+        "raw_vertices": [
+          53969,
+          59186,
+          53971
+        ],
+        "adjacent_faces": [
+          76077,
+          74254
+        ],
+        "fan_ids": [
+          0,
+          1
+        ],
+        "area_mm2": 0.9256901876142365,
+        "new_boundary_edge_mm": 3.606274025514722,
+        "normal_dot_adjacent": [
+          0.9998962879180908,
+          0.9955370426177979
+        ],
+        "adjacent_normals_dot": 0.9942800402641296,
+        "candidate_normal": [
+          -0.3157484829425812,
+          0.8926723003387451,
+          -0.3216194212436676
+        ],
+        "candidate_center": [
+          0.04534204676747322,
+          -0.04318443313241005,
+          1.5361276865005493
+        ],
+        "safe_geometry_heuristic": true
+      }
+    ]
+  },
+  {
+    "unique_junction": 45218,
+    "position_MN": [
+      0.05919765308499336,
+      -0.009343854151666164,
+      1.5260556936264038
+    ],
+    "incident_face_fans": [
+      [
+        79531,
+        79759
+      ],
+      [
+        79898,
+        79917,
+        79918,
+        79919,
+        79920
+      ]
+    ],
+    "physical_boundary_degree": 4,
+    "candidate_bridges": [
+      {
+        "unique_vertices": [
+          45218,
+          45200,
+          45049
+        ],
+        "raw_vertices": [
+          65222,
+          71877,
+          65216
+        ],
+        "adjacent_faces": [
+          79531,
+          79898
+        ],
+        "fan_ids": [
+          0,
+          1
+        ],
+        "area_mm2": 2.393931481492473,
+        "new_boundary_edge_mm": 1.445342437364161,
+        "normal_dot_adjacent": [
+          0.8428679704666138,
+          -0.9963173270225525
+        ],
+        "adjacent_normals_dot": -0.7977650165557861,
+        "candidate_normal": [
+          0.9715892672538757,
+          -0.2366693913936615,
+          -0.001379857654683292
+        ],
+        "candidate_center": [
+          0.058724354952573776,
+          -0.01128124538809061,
+          1.5250898599624634
+        ],
+        "safe_geometry_heuristic": false
+      },
+      {
+        "unique_vertices": [
+          45218,
+          45094,
+          45360
+        ],
+        "raw_vertices": [
+          65222,
+          65217,
+          71885
+        ],
+        "adjacent_faces": [
+          79920,
+          79759
+        ],
+        "fan_ids": [
+          1,
+          0
+        ],
+        "area_mm2": 1.114813017011329,
+        "new_boundary_edge_mm": 1.8708977149799466,
+        "normal_dot_adjacent": [
+          -0.9705670475959778,
+          0.9175194501876831
+        ],
+        "adjacent_normals_dot": -0.9134089946746826,
+        "candidate_normal": [
+          0.7395657300949097,
+          -0.2829160988330841,
+          -0.6107380986213684
+        ],
+        "candidate_center": [
+          0.05938198044896126,
+          -0.00858099851757288,
+          1.5259255170822144
+        ],
+        "safe_geometry_heuristic": false
+      }
+    ]
+  },
+  {
+    "unique_junction": 45347,
+    "position_MN": [
+      0.05587991327047348,
+      -0.036133281886577606,
+      1.5307022333145142
+    ],
+    "incident_face_fans": [
+      [
+        79729,
+        79730
+      ],
+      [
+        80116,
+        80117
+      ]
+    ],
+    "physical_boundary_degree": 4,
+    "candidate_bridges": [
+      {
+        "unique_vertices": [
+          45347,
+          45687,
+          45404
+        ],
+        "raw_vertices": [
+          70975,
+          70980,
+          70977
+        ],
+        "adjacent_faces": [
+          79730,
+          80117
+        ],
+        "fan_ids": [
+          0,
+          1
+        ],
+        "area_mm2": 6.003408088872675,
+        "new_boundary_edge_mm": 5.258339922875166,
+        "normal_dot_adjacent": [
+          0.9954938888549805,
+          0.9954378604888916
+        ],
+        "adjacent_normals_dot": 0.9900138974189758,
+        "candidate_normal": [
+          -0.922991931438446,
+          0.3830041289329529,
+          0.03733093664050102
+        ],
+        "candidate_center": [
+          0.05644821748137474,
+          -0.034720513969659805,
+          1.5302586555480957
+        ],
+        "safe_geometry_heuristic": true
+      },
+      {
+        "unique_vertices": [
+          45347,
+          45205,
+          45485
+        ],
+        "raw_vertices": [
+          70975,
+          70973,
+          70979
+        ],
+        "adjacent_faces": [
+          80116,
+          79729
+        ],
+        "fan_ids": [
+          1,
+          0
+        ],
+        "area_mm2": 2.4360410861845594,
+        "new_boundary_edge_mm": 4.271851386874914,
+        "normal_dot_adjacent": [
+          0.9996806383132935,
+          0.9999991059303284
+        ],
+        "adjacent_normals_dot": 0.9996731281280518,
+        "candidate_normal": [
+          -0.887635350227356,
+          0.45328229665756226,
+          0.0814783126115799
+        ],
+        "candidate_center": [
+          0.05586785078048706,
+          -0.03637974336743355,
+          1.5319420099258423
+        ],
+        "safe_geometry_heuristic": true
+      }
+    ]
+  },
+  {
+    "unique_junction": 45426,
+    "position_MN": [
+      0.059320367872714996,
+      -0.01368195004761219,
+      1.523169755935669
+    ],
+    "incident_face_fans": [
+      [
+        79900,
+        80123
+      ],
+      [
+        79381
+      ]
+    ],
+    "physical_boundary_degree": 4,
+    "candidate_bridges": [
+      {
+        "unique_vertices": [
+          45426,
+          45862,
+          45182
+        ],
+        "raw_vertices": [
+          70680,
+          71906,
+          70679
+        ],
+        "adjacent_faces": [
+          79381,
+          80123
+        ],
+        "fan_ids": [
+          1,
+          0
+        ],
+        "area_mm2": 4.47854745289078,
+        "new_boundary_edge_mm": 4.0570697747170925,
+        "normal_dot_adjacent": [
+          0.9871420860290527,
+          0.36289143562316895
+        ],
+        "adjacent_normals_dot": 0.3431704640388489,
+        "candidate_normal": [
+          -0.19911198318004608,
+          0.8775600790977478,
+          -0.43616819381713867
+        ],
+        "candidate_center": [
+          0.059585463255643845,
+          -0.014287869445979595,
+          1.521829605102539
+        ],
+        "safe_geometry_heuristic": false
+      },
+      {
+        "unique_vertices": [
+          45426,
+          45039,
+          45200
+        ],
+        "raw_vertices": [
+          70680,
+          70678,
+          71877
+        ],
+        "adjacent_faces": [
+          79900,
+          79381
+        ],
+        "fan_ids": [
+          0,
+          1
+        ],
+        "area_mm2": 2.4093267256830586,
+        "new_boundary_edge_mm": 2.7314284816384315,
+        "normal_dot_adjacent": [
+          0.5567195415496826,
+          0.999791145324707
+        ],
+        "adjacent_normals_dot": 0.5616834163665771,
+        "candidate_normal": [
+          -0.07112658023834229,
+          0.8578450679779053,
+          -0.5089626312255859
+        ],
+        "candidate_center": [
+          0.05837206169962883,
+          -0.013345926068723202,
+          1.5238685607910156
+        ],
+        "safe_geometry_heuristic": true
+      }
+    ]
+  },
+  {
+    "unique_junction": 47299,
+    "position_MN": [
+      0.06388561427593231,
+      -0.024753648787736893,
+      1.5384925603866577
+    ],
+    "incident_face_fans": [
+      [
+        82842,
+        83885
+      ],
+      [
+        83886
+      ]
+    ],
+    "physical_boundary_degree": 4,
+    "candidate_bridges": [
+      {
+        "unique_vertices": [
+          47299,
+          48012,
+          47812
+        ],
+        "raw_vertices": [
+          56342,
+          56348,
+          56347
+        ],
+        "adjacent_faces": [
+          83885,
+          83886
+        ],
+        "fan_ids": [
+          0,
+          1
+        ],
+        "area_mm2": 9.353828318126034,
+        "new_boundary_edge_mm": 5.439767614006996,
+        "normal_dot_adjacent": [
+          0.9931803941726685,
+          0.9989000558853149
+        ],
+        "adjacent_normals_dot": 0.9937909245491028,
+        "candidate_normal": [
+          0.7520254254341125,
+          -0.6584210991859436,
+          0.030650626868009567
+        ],
+        "candidate_center": [
+          0.06548255681991577,
+          -0.022951262071728706,
+          1.5380288362503052
+        ],
+        "safe_geometry_heuristic": true
+      },
+      {
+        "unique_vertices": [
+          47299,
+          46815,
+          47588
+        ],
+        "raw_vertices": [
+          56342,
+          56340,
+          56345
+        ],
+        "adjacent_faces": [
+          83886,
+          82842
+        ],
+        "fan_ids": [
+          1,
+          0
+        ],
+        "area_mm2": 6.9023672040202655,
+        "new_boundary_edge_mm": 7.239317987114191,
+        "normal_dot_adjacent": [
+          0.9673642516136169,
+          0.9985730648040771
+        ],
+        "adjacent_normals_dot": 0.9718984961509705,
+        "candidate_normal": [
+          0.5444531440734863,
+          -0.8344189524650574,
+          -0.0855323076248169
+        ],
+        "candidate_center": [
+          0.0635322630405426,
+          -0.024815380573272705,
+          1.5368455648422241
+        ],
+        "safe_geometry_heuristic": true
+      }
+    ]
+  },
+  {
+    "unique_junction": 48012,
+    "position_MN": [
+      0.06665028631687164,
+      -0.021752990782260895,
+      1.535118818283081
+    ],
+    "incident_face_fans": [
+      [
+        84838,
+        85173,
+        85174
+      ],
+      [
+        83886
+      ]
+    ],
+    "physical_boundary_degree": 4,
+    "candidate_bridges": [
+      {
+        "unique_vertices": [
+          48012,
+          47812,
+          47299
+        ],
+        "raw_vertices": [
+          56348,
+          56347,
+          56342
+        ],
+        "adjacent_faces": [
+          83886,
+          85173
+        ],
+        "fan_ids": [
+          1,
+          0
+        ],
+        "area_mm2": 9.353829227620736,
+        "new_boundary_edge_mm": 3.7186071276664734,
+        "normal_dot_adjacent": [
+          0.9989000558853149,
+          0.9539724588394165
+        ],
+        "adjacent_normals_dot": 0.9636139273643494,
+        "candidate_normal": [
+          0.7520254254341125,
+          -0.6584210395812988,
+          0.03065061755478382
+        ],
+        "candidate_center": [
+          0.06548254936933517,
+          -0.022951265797019005,
+          1.5380288362503052
+        ],
+        "safe_geometry_heuristic": true
+      },
+      {
+        "unique_vertices": [
+          48012,
+          47588,
+          48568
+        ],
+        "raw_vertices": [
+          56348,
+          56345,
+          56352
+        ],
+        "adjacent_faces": [
+          84838,
+          83886
+        ],
+        "fan_ids": [
+          0,
+          1
+        ],
+        "area_mm2": 11.093588909716345,
+        "new_boundary_edge_mm": 7.372213993221521,
+        "normal_dot_adjacent": [
+          0.9778415560722351,
+          0.9943030476570129
+        ],
+        "adjacent_normals_dot": 0.9625061750411987,
+        "candidate_normal": [
+          0.681573748588562,
+          -0.7278065085411072,
+          0.07586119323968887
+        ],
+        "candidate_center": [
+          0.06675869971513748,
+          -0.02199350856244564,
+          1.5318373441696167
+        ],
+        "safe_geometry_heuristic": true
+      }
+    ]
+  }
+]

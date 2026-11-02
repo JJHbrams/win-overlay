@@ -1,0 +1,49 @@
+{
+  "mode": "built-in image_gen edit",
+  "prompt_file": "imagegen-prompt.txt",
+  "prompt_sha256": "4344e9d8212001887b6943af3fe34bd0a8febfd604f138e6aff992bae63ca810",
+  "inputs": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-hair\\win-overlay\\asset\\mia\\blender\\mia-hair-refine-v002\\crown-S-paint\\Crown_S_ExistingPigment_Bake.png",
+      "sha256": "cde86291dcfba0dd54574a4500bad27c808aa6d876877db6f004dcd9aa6dd339",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-hair\\win-overlay\\asset\\mia\\blender\\mia-hair-refine-v002\\crown-S-paint\\Crown_S_FLOW_GUIDE_DATA_NOT_PAINT.png",
+      "sha256": "b3c1f4ea6632d67108465f6e9358a1632259a51106098328f35e97fec682ca8d",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-hair\\win-overlay\\asset\\mia\\blender\\mia-hair-refine-v002\\crown-S-paint\\Crown_S_MissingPaintFill_MASK.png",
+      "sha256": "6c86a3f308a51d8af857384971f371fc1dbc5b9fdaaad19892ce26406a608ca1",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-clean-master-v22.png",
+      "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19",
+      "size": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "output": {
+    "path": "Crown_S_AuthoredFill_Candidate.png",
+    "sha256": "5573374ef27c1485bdc30aab590ff0d528e5843588df417243676bab74082d38",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "adopted": false,
+  "scope": "One authored pigment-fill candidate for existing hybrid UV. Shader mask must protect original seed. Actual3D source/edge review pending; opposite-profile flow inferred."
+}

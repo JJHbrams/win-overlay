@@ -7,6 +7,9 @@ ap = argparse.ArgumentParser()
 ap.add_argument('--face', required=True)
 ap.add_argument('--body', required=True)
 ap.add_argument('--hair')
+ap.add_argument('--crown')
+ap.add_argument('--nape')
+ap.add_argument('--receipt', default='portable-copy-face-body.json')
 a = ap.parse_args()
 sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
 records = []
@@ -47,6 +50,16 @@ if a.hair:
         copy(bundle/actor['data'], P/'parts/hair-MN/bundle'/actor['data'], actor['data_sha256'])
     for name in ['HANDOFF.md', 'portable-MN-static/fresh-replay-verification.json']:
         copy(hair/name, P/'parts/hair-MN'/name)
-(P/'parts/portable-copy-face-body.json').write_text(json.dumps(dict(files=records, copied_bytes=sum(r['bytes'] for r in records),
+if a.crown:
+    for name in ['apply_crown_O.py','report.json','main-coordinate-delta.npz','fresh-verification.json','portable-manifest.json','stub-identification-board.png']:
+        copy(Path(a.crown)/name, P/'parts/crown-O'/name)
+if a.nape:
+    for name in ['apply_nape_P.py','repair.json','fresh-verification.json','portable-manifest.json','initial-clearance.json','junction-analysis.json']:
+        copy(Path(a.nape)/name, P/'parts/nape-P'/name)
+for name in ['HANDOFF.md','portable-manifest.json','final-image-inventory.json','final-render-completion.json','native-retirement-allowlist.json']:
+    if (body/name).exists():copy(body/name,P/'parts/body-G'/name)
+receipt=P/'parts'/a.receipt
+assert not receipt.exists(), 'Use a new copy receipt filename'
+receipt.write_text(json.dumps(dict(files=records, copied_bytes=sum(r['bytes'] for r in records),
     scope='Small explicit replay/data/map dependencies only; no full native snapshot.'), indent=2)+'\n', encoding='utf-8')
 print('SMALL_COMPONENT_INPUTS_COPIED', len(records), sum(r['bytes'] for r in records))

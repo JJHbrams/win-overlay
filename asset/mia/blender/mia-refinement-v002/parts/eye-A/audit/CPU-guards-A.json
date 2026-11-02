@@ -1,0 +1,2722 @@
+{
+  "input_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R2.blend",
+  "input_sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+  "apply_report": {
+    "eyes": {
+      "payload_sha256": "28800963d89635d5c5ba6588a3adb649151fc6a567df534ce57d9a90b9bd13f0",
+      "created": [
+        {
+          "owner": "MIA_V27_SharedHeadBody",
+          "key": "Mia.v003.SourceSurprise.Aperture.-1",
+          "role": "aperture",
+          "side": -1,
+          "driver": "max(0,min(1,(s-0.15)/0.65))*(1-min(1,max(0,c,j,r,q)))",
+          "changed_vertices": 85
+        },
+        {
+          "owner": "MIA_V27_SharedHeadBody",
+          "key": "Mia.v003.SourceSurprise.Aperture.1",
+          "role": "aperture",
+          "side": 1,
+          "driver": "max(0,min(1,(s-0.15)/0.65))*(1-min(1,max(0,c,j,r,q)))",
+          "changed_vertices": 82
+        },
+        {
+          "owner": "V28G_InnerLid_-1",
+          "key": "Mia.v003.SourceSurprise.Aperture.-1",
+          "role": "aperture",
+          "side": -1,
+          "driver": "max(0,min(1,(s-0.15)/0.65))*(1-min(1,max(0,c,j,r,q)))",
+          "changed_vertices": 576
+        },
+        {
+          "owner": "V30_UpperLashes_-1",
+          "key": "Mia.v003.SourceSurprise.Aperture.-1",
+          "role": "aperture",
+          "side": -1,
+          "driver": "max(0,min(1,(s-0.15)/0.65))*(1-min(1,max(0,c,j,r,q)))",
+          "changed_vertices": 450
+        },
+        {
+          "owner": "V30_LowerLashes_-1",
+          "key": "Mia.v003.SourceSurprise.Aperture.-1",
+          "role": "aperture",
+          "side": -1,
+          "driver": "max(0,min(1,(s-0.15)/0.65))*(1-min(1,max(0,c,j,r,q)))",
+          "changed_vertices": 456
+        },
+        {
+          "owner": "V28G_InnerLid_1",
+          "key": "Mia.v003.SourceSurprise.Aperture.1",
+          "role": "aperture",
+          "side": 1,
+          "driver": "max(0,min(1,(s-0.15)/0.65))*(1-min(1,max(0,c,j,r,q)))",
+          "changed_vertices": 576
+        },
+        {
+          "owner": "V30_UpperLashes_1",
+          "key": "Mia.v003.SourceSurprise.Aperture.1",
+          "role": "aperture",
+          "side": 1,
+          "driver": "max(0,min(1,(s-0.15)/0.65))*(1-min(1,max(0,c,j,r,q)))",
+          "changed_vertices": 450
+        },
+        {
+          "owner": "V30_LowerLashes_1",
+          "key": "Mia.v003.SourceSurprise.Aperture.1",
+          "role": "aperture",
+          "side": 1,
+          "driver": "max(0,min(1,(s-0.15)/0.65))*(1-min(1,max(0,c,j,r,q)))",
+          "changed_vertices": 456
+        },
+        {
+          "owner": "MIA_V27_SharedHeadBody",
+          "key": "Mia.v003.SourceSurprise.CloseGate.-1",
+          "role": "close_gate",
+          "side": -1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 52
+        },
+        {
+          "owner": "MIA_V27_SharedHeadBody",
+          "key": "Mia.v003.SourceSurprise.CloseGate.1",
+          "role": "close_gate",
+          "side": 1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 52
+        },
+        {
+          "owner": "V28G_InnerLid_-1",
+          "key": "Mia.v003.SourceSurprise.CloseGate.-1",
+          "role": "close_gate",
+          "side": -1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 543
+        },
+        {
+          "owner": "V28G_Iris_-1",
+          "key": "Mia.v003.SourceSurprise.CloseGate.-1",
+          "role": "close_gate",
+          "side": -1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 725
+        },
+        {
+          "owner": "V28G_Sclera_-1",
+          "key": "Mia.v003.SourceSurprise.CloseGate.-1",
+          "role": "close_gate",
+          "side": -1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 513
+        },
+        {
+          "owner": "V30_UpperLashes_-1",
+          "key": "Mia.v003.SourceSurprise.CloseGate.-1",
+          "role": "close_gate",
+          "side": -1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 450
+        },
+        {
+          "owner": "V30_LowerLashes_-1",
+          "key": "Mia.v003.SourceSurprise.CloseGate.-1",
+          "role": "close_gate",
+          "side": -1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 0
+        },
+        {
+          "owner": "V28G_InnerLid_1",
+          "key": "Mia.v003.SourceSurprise.CloseGate.1",
+          "role": "close_gate",
+          "side": 1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 543
+        },
+        {
+          "owner": "V28G_Iris_1",
+          "key": "Mia.v003.SourceSurprise.CloseGate.1",
+          "role": "close_gate",
+          "side": 1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 725
+        },
+        {
+          "owner": "V28G_Sclera_1",
+          "key": "Mia.v003.SourceSurprise.CloseGate.1",
+          "role": "close_gate",
+          "side": 1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 513
+        },
+        {
+          "owner": "V30_UpperLashes_1",
+          "key": "Mia.v003.SourceSurprise.CloseGate.1",
+          "role": "close_gate",
+          "side": 1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 450
+        },
+        {
+          "owner": "V30_LowerLashes_1",
+          "key": "Mia.v003.SourceSurprise.CloseGate.1",
+          "role": "close_gate",
+          "side": 1,
+          "driver": "max(0,min(1,s))*min(1,max(0,c,j,r,q))",
+          "changed_vertices": 43
+        }
+      ],
+      "scope": "Additive local skin/wall/lash opening; side-aware inherited Surprise cancellation under Close/Joy. Original arrays, iris radius, UV, weights, materials and all poses untouched."
+    },
+    "dental_display": {
+      "material": "MIA_v003_Enamel_DentalDisplay",
+      "archived": "MIA_v002_Enamel_ActualToon",
+      "settings": {
+        "surface_render_method": "DITHERED",
+        "use_transparent_shadow": true,
+        "use_transparency_overlap": false,
+        "use_backface_culling": true,
+        "use_backface_culling_shadow": false
+      },
+      "automatic_source_panels": [
+        3,
+        6,
+        12
+      ],
+      "manual_default": 0.0,
+      "geometry_changed": false,
+      "scope": "Stylized visibility, not anatomical tooth retraction. Actual EEVEE endpoints/shadow fringe require matched rendering."
+    },
+    "native_opened": false,
+    "native_saved": false
+  },
+  "checks": {
+    "all_eye_neutral_evaluated_bit_exact": true,
+    "original_material_graphs_unchanged": true,
+    "all_images_exact": true,
+    "original_native_unchanged": true,
+    "all_matching_closed_endpoint_differences_below_001mm": true,
+    "all_drivers_valid": true,
+    "all_original_eye_key_arrays_exact": true,
+    "ARCHIVED_R17_MIA_R15_RADIAL_GUIDE_+1_protected_fields": true,
+    "ARCHIVED_R17_MIA_R15_RADIAL_GUIDE_-1_protected_fields": true,
+    "MIA_V27_Foundation_Face_protected_fields": true,
+    "V27_Upper_BoundaryRibbon_-1_protected_fields": true,
+    "V27_Lower_BoundaryRibbon_-1_protected_fields": true,
+    "V27_Upper_BoundaryRibbon.001_1_protected_fields": true,
+    "V27_Lower_BoundaryRibbon.001_1_protected_fields": true,
+    "V27_HeadNeckBridge_protected_fields": true,
+    "MIA_V27_F4_RejectedNearestBridge_protected_fields": true,
+    "MIA_V27_PreGeometricTangent_Archive_protected_fields": true,
+    "V27_Upper_BoundaryRibbon_-1_Dense_protected_fields": true,
+    "V27_Lower_BoundaryRibbon_-1_Dense_protected_fields": true,
+    "V27_Upper_BoundaryRibbon.001_1_Dense_protected_fields": true,
+    "V27_Lower_BoundaryRibbon.001_1_Dense_protected_fields": true,
+    "MIA_V27_ContinuousSkin_protected_fields": true,
+    "MIA_V27_SharedHeadBody_protected_fields": true,
+    "V28_LashFan_-1_protected_fields": true,
+    "V28_LashFan_1_protected_fields": true,
+    "V28G_Sclera_-1_protected_fields": true,
+    "V28G_Iris_-1_protected_fields": true,
+    "V28G_InnerLid_-1_protected_fields": true,
+    "V28G_Sclera_1_protected_fields": true,
+    "V28G_Iris_1_protected_fields": true,
+    "V28G_InnerLid_1_protected_fields": true,
+    "V29_UpperLashes_-1_protected_fields": true,
+    "V29_LowerLashes_-1_protected_fields": true,
+    "V29_UpperLashes_1_protected_fields": true,
+    "V29_LowerLashes_1_protected_fields": true,
+    "V30_UpperLashes_-1_protected_fields": true,
+    "V30_LowerLashes_-1_protected_fields": true,
+    "V30_UpperLashes_1_protected_fields": true,
+    "V30_LowerLashes_1_protected_fields": true,
+    "V31_SourceBrow_-1_protected_fields": true,
+    "V31_SourceBrow_1_protected_fields": true,
+    "MIA_v002_UpperDentalCrowns_protected_fields": true,
+    "MIA_v002_LowerDentalCrowns_protected_fields": true,
+    "MIA_v002_EvaluatedLipCollar_protected_fields": true,
+    "Mia_Face_AnimeTopology_protected_fields": true,
+    "Mia_Body_Anatomy_Skin_protected_fields": true,
+    "Body_protected_fields": true,
+    "Face_protected_fields": true,
+    "Hair001_protected_fields": true,
+    "MiaHair_Concealed_Closed_DomeNape_protected_fields": true,
+    "MiaHair_CrownFringe_R_Outer_-1_protected_fields": true,
+    "MiaHair_CrownFringe_R_Outer_1_protected_fields": true,
+    "MiaHair_CrownFringe_R_Sweep_-1_protected_fields": true,
+    "MiaHair_CrownFringe_R_Sweep_1_protected_fields": true,
+    "MiaHair_CrownFringe_R_Short_-1_protected_fields": true,
+    "MiaHair_CrownFringe_R_Short_1_protected_fields": true,
+    "MiaHair_CrownFringe_Center_Slip_0_protected_fields": true,
+    "MiaHair_CrownFringe_L_Sweep_-1_protected_fields": true,
+    "MiaHair_CrownFringe_L_Sweep_1_protected_fields": true,
+    "MiaHair_CrownFringe_L_Outer_-1_protected_fields": true,
+    "MiaHair_CrownFringe_L_Outer_1_protected_fields": true,
+    "MiaHair_UnderFringe_R0_protected_fields": true,
+    "MiaHair_UnderFringe_R1_protected_fields": true,
+    "MiaHair_UnderFringe_R2_protected_fields": true,
+    "MiaHair_UnderFringe_Mid_protected_fields": true,
+    "MiaHair_UnderFringe_L0_protected_fields": true,
+    "MiaHair_UnderFringe_L1_protected_fields": true,
+    "MiaHair_UnderFringe_L2_protected_fields": true,
+    "MiaHair_UnderFringe_TempleR_protected_fields": true,
+    "MiaHair_UnderFringe_TempleL_protected_fields": true,
+    "MiaHair_Gather_R0_protected_fields": true,
+    "MiaHair_Gather_R1_protected_fields": true,
+    "MiaHair_Gather_R2_protected_fields": true,
+    "MiaHair_Gather_R3_protected_fields": true,
+    "MiaHair_Gather_L0_protected_fields": true,
+    "MiaHair_Gather_L1_protected_fields": true,
+    "MiaHair_Gather_L2_protected_fields": true,
+    "MiaHair_Gather_L3_protected_fields": true,
+    "MiaHair_Gather_BackPart0_protected_fields": true,
+    "MiaHair_Gather_BackPart1_protected_fields": true,
+    "MiaHair_Gather_BackPart2_protected_fields": true,
+    "MiaHair_Gather_TempleR_protected_fields": true,
+    "MiaHair_Gather_TempleL_protected_fields": true,
+    "MiaHair_Fringe_Split0_protected_fields": true,
+    "MiaHair_Fringe_Split1_protected_fields": true,
+    "MiaHair_Fringe_Split2_protected_fields": true,
+    "MiaHair_Crown_Flyaway_00_protected_fields": true,
+    "MiaHair_Crown_Flyaway_01_protected_fields": true,
+    "MiaHair_Crown_Flyaway_02_protected_fields": true,
+    "MiaHair_Crown_Flyaway_03_protected_fields": true,
+    "MiaHair_R_TempleWave0_-1_protected_fields": true,
+    "MiaHair_R_TempleWave0_1_protected_fields": true,
+    "MiaHair_R_TempleWave1_-1_protected_fields": true,
+    "MiaHair_R_TempleWave1_1_protected_fields": true,
+    "MiaHair_R_TempleWave2_-1_protected_fields": true,
+    "MiaHair_R_TempleWave2_1_protected_fields": true,
+    "MiaHair_R_SideNape0_-1_protected_fields": true,
+    "MiaHair_R_SideNape0_1_protected_fields": true,
+    "MiaHair_R_SideNape1_-1_protected_fields": true,
+    "MiaHair_R_SideNape1_1_protected_fields": true,
+    "MiaHair_R_LooseWisp0_protected_fields": true,
+    "MiaHair_R_LooseWisp1_protected_fields": true,
+    "MiaHair_R_LooseWisp2_protected_fields": true,
+    "MiaHair_L_TempleWave0_-1_protected_fields": true,
+    "MiaHair_L_TempleWave0_1_protected_fields": true,
+    "MiaHair_L_TempleWave1_-1_protected_fields": true,
+    "MiaHair_L_TempleWave1_1_protected_fields": true,
+    "MiaHair_L_TempleWave2_-1_protected_fields": true,
+    "MiaHair_L_TempleWave2_1_protected_fields": true,
+    "MiaHair_L_SideNape0_-1_protected_fields": true,
+    "MiaHair_L_SideNape0_1_protected_fields": true,
+    "MiaHair_L_SideNape1_-1_protected_fields": true,
+    "MiaHair_L_SideNape1_1_protected_fields": true,
+    "MiaHair_L_LooseWisp0_protected_fields": true,
+    "MiaHair_L_LooseWisp1_protected_fields": true,
+    "MiaHair_L_LooseWisp2_protected_fields": true,
+    "MiaHair_Rear_LongWave00_-1_protected_fields": true,
+    "MiaHair_Rear_LongWave00_0_protected_fields": true,
+    "MiaHair_Rear_LongWave00_1_protected_fields": true,
+    "MiaHair_Rear_LongWave01_-1_protected_fields": true,
+    "MiaHair_Rear_LongWave01_1_protected_fields": true,
+    "MiaHair_Rear_LongWave02_-1_protected_fields": true,
+    "MiaHair_Rear_LongWave02_0_protected_fields": true,
+    "MiaHair_Rear_LongWave02_1_protected_fields": true,
+    "MiaHair_Rear_LongWave03_-1_protected_fields": true,
+    "MiaHair_Rear_LongWave03_0_protected_fields": true,
+    "MiaHair_Rear_LongWave03_1_protected_fields": true,
+    "MiaHair_Rear_LongWave04_-1_protected_fields": true,
+    "MiaHair_Rear_LongWave04_1_protected_fields": true,
+    "MiaHair_Rear_LongWave05_-1_protected_fields": true,
+    "MiaHair_Rear_LongWave05_0_protected_fields": true,
+    "MiaHair_Rear_LongWave05_1_protected_fields": true,
+    "MiaHair_Rear_LongWave06_-1_protected_fields": true,
+    "MiaHair_Rear_LongWave06_1_protected_fields": true,
+    "MiaHair_Rear_ShortLayer00_-1_protected_fields": true,
+    "MiaHair_Rear_ShortLayer00_0_protected_fields": true,
+    "MiaHair_Rear_ShortLayer00_1_protected_fields": true,
+    "MiaHair_Rear_ShortLayer01_-1_protected_fields": true,
+    "MiaHair_Rear_ShortLayer01_0_protected_fields": true,
+    "MiaHair_Rear_ShortLayer01_1_protected_fields": true,
+    "MiaHair_Rear_ShortLayer02_-1_protected_fields": true,
+    "MiaHair_Rear_ShortLayer02_0_protected_fields": true,
+    "MiaHair_Rear_ShortLayer02_1_protected_fields": true,
+    "MiaHair_Rear_ShortLayer03_-1_protected_fields": true,
+    "MiaHair_Rear_ShortLayer03_0_protected_fields": true,
+    "MiaHair_Rear_ShortLayer03_1_protected_fields": true,
+    "MiaHair_HalfUp_OneClosedKnot_protected_fields": true,
+    "MiaHair_Knot_Wrap00_protected_fields": true,
+    "MiaHair_Knot_Wrap01_protected_fields": true,
+    "MiaHair_Knot_Wrap02_protected_fields": true,
+    "MiaHair_Knot_Wrap03_protected_fields": true,
+    "MiaHair_Knot_Wrap04_protected_fields": true,
+    "MiaHair_Knot_Wrap05_protected_fields": true,
+    "MiaHair_LEFT_OneBraid_Lane0_protected_fields": true,
+    "MiaHair_LEFT_OneBraid_Lane1_protected_fields": true,
+    "MiaHair_LEFT_OneBraid_Lane2_protected_fields": true,
+    "MiaHair_Braid_Tail_protected_fields": true,
+    "MIA_V06_BODY_SKIN_protected_fields": true,
+    "MIA_V06_FACE_SKIN_protected_fields": true,
+    "MIA_V12_CleanUpperLash_-1_protected_fields": true,
+    "MIA_V12_FineLowerLid_-1_protected_fields": true,
+    "MIA_V12_OuterLash_-1_protected_fields": true,
+    "MIA_V12_AngledBrow_-1_protected_fields": true,
+    "MIA_V12_CleanUpperLash_1_protected_fields": true,
+    "MIA_V12_FineLowerLid_1_protected_fields": true,
+    "MIA_V12_OuterLash_1_protected_fields": true,
+    "MIA_V12_AngledBrow_1_protected_fields": true,
+    "MIA_V13_BodyOutline_protected_fields": true,
+    "MIA_V13_FaceOutline_protected_fields": true,
+    "MIA_V14_SculptedSkin_protected_fields": true,
+    "MIA_V14_UpperLash_-1_protected_fields": true,
+    "MIA_V14_OuterWing_-1_protected_fields": true,
+    "MIA_V14_Brow_-1_protected_fields": true,
+    "MIA_V14_UpperLash_1_protected_fields": true,
+    "MIA_V14_OuterWing_1_protected_fields": true,
+    "MIA_V14_Brow_1_protected_fields": true,
+    "MIA_V14_MouthSeam_protected_fields": true,
+    "MIA_V14_SmoothJawInk_protected_fields": true,
+    "MIA_V14_EyeSurface_protected_fields": true,
+    "MIA_V16_PIXAL_UpperHair_protected_fields": true,
+    "MIA_V16_PIXAL_RecoveredRear_protected_fields": true,
+    "MIA_V16_PIXAL_LowerHair_protected_fields": true,
+    "MIA_V17_SingleUnderEyeCrease_-1_protected_fields": true,
+    "MIA_V17_SingleUnderEyeCrease_1_protected_fields": true,
+    "MIA_V17_LeftBraid_Tail_protected_fields": true,
+    "MIA_V17_LeftBraid_Lane2_protected_fields": true,
+    "MIA_V17_LeftBraid_Lane1_protected_fields": true,
+    "MIA_V17_LeftBraid_Lane0_protected_fields": true,
+    "MIA_V17_LeftBraid_Tie_protected_fields": true,
+    "MIA_V17_RootLining_MIA_V06_BODY_SKIN_protected_fields": true,
+    "MIA_V17_RootLining_MIA_V14_SculptedSkin_protected_fields": true,
+    "MIA_V17_PIXAL_DetailedHair_protected_fields": true,
+    "MIA_V20_HalfUp_Fold_Left_protected_fields": true,
+    "MIA_V20_HalfUp_Fold_Right_protected_fields": true,
+    "MIA_V20_HalfUp_Binder_protected_fields": true,
+    "MIA_V20_Crown_PixalDonorLock_protected_fields": true,
+    "MIA_V002_RimFlow_near_ear_protected_fields": true,
+    "MIA_V002_RimFlow_far_neck_protected_fields": true,
+    "MIA_V17_MiaHair_Knot_Wrap05_protected_fields": true,
+    "MIA_V17_MiaHair_Knot_Wrap04_protected_fields": true,
+    "MIA_V17_MiaHair_Knot_Wrap03_protected_fields": true,
+    "MIA_V17_MiaHair_Knot_Wrap02_protected_fields": true,
+    "MIA_V17_MiaHair_Knot_Wrap01_protected_fields": true,
+    "MIA_V17_MiaHair_Knot_Wrap00_protected_fields": true,
+    "MIA_V17_MiaHair_HalfUp_OneClosedKnot_protected_fields": true,
+    "MIA_V24_Gather_Main_protected_fields": true,
+    "MIA_V24_Gather_Tuck_protected_fields": true,
+    "MIA_V24_Gather_Upper_protected_fields": true
+  },
+  "neutral_exact": {
+    "MIA_V27_SharedHeadBody": true,
+    "V28G_InnerLid_-1": true,
+    "V28G_Iris_-1": true,
+    "V28G_Sclera_-1": true,
+    "V30_UpperLashes_-1": true,
+    "V30_LowerLashes_-1": true,
+    "V28G_InnerLid_1": true,
+    "V28G_Iris_1": true,
+    "V28G_Sclera_1": true,
+    "V30_UpperLashes_1": true,
+    "V30_LowerLashes_1": true
+  },
+  "baseline": {
+    "neutral": {
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.9251823425293,
+          "central_half_gap_mean_mm": 11.22428734488715,
+          "central_half_gap_ratio": 0.2959586804393013,
+          "central_half_upper_ratio": 0.1112331974517267,
+          "central_half_lower_ratio": 0.18472548298757457,
+          "maximum_gap_mm": 11.3330272542236
+        },
+        "1": {
+          "canthus_width_mm": 35.732723236083984,
+          "central_half_gap_mean_mm": 10.077588287860085,
+          "central_half_gap_ratio": 0.2820268712795007,
+          "central_half_upper_ratio": 0.15415142107187307,
+          "central_half_lower_ratio": 0.12787545020762758,
+          "maximum_gap_mm": 10.481669612323879
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.22848695516586304,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18894681852543727,
+          "q01_margin_mm": 0.23046192526817139
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.215550263722733,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20589104315149598,
+          "q01_margin_mm": 0.2203384786844223
+        }
+      }
+    },
+    "surprise08": {
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.92739486694336,
+          "central_half_gap_mean_mm": 13.113618287461442,
+          "central_half_gap_ratio": 0.3457558246701523,
+          "central_half_upper_ratio": 0.1502832918102815,
+          "central_half_lower_ratio": 0.1954725328598708,
+          "maximum_gap_mm": 13.384921183137042
+        },
+        "1": {
+          "canthus_width_mm": 35.72476577758789,
+          "central_half_gap_mean_mm": 12.02833471779562,
+          "central_half_gap_ratio": 0.3366945645435239,
+          "central_half_upper_ratio": 0.19661968142024616,
+          "central_half_lower_ratio": 0.14007488312327773,
+          "maximum_gap_mm": 12.597579296797276
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2262219786643982,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18883963434745965,
+          "q01_margin_mm": 0.22767534852027774
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2142886320749826,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.2054122483059473,
+          "q01_margin_mm": 0.21899490058422122
+        }
+      }
+    },
+    "P12": {
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.92739486694336,
+          "central_half_gap_mean_mm": 13.113618287461442,
+          "central_half_gap_ratio": 0.3457558246701523,
+          "central_half_upper_ratio": 0.1502832918102815,
+          "central_half_lower_ratio": 0.1954725328598708,
+          "maximum_gap_mm": 13.384921183137042
+        },
+        "1": {
+          "canthus_width_mm": 35.72476577758789,
+          "central_half_gap_mean_mm": 12.02833471779562,
+          "central_half_gap_ratio": 0.3366945645435239,
+          "central_half_upper_ratio": 0.19661968142024616,
+          "central_half_lower_ratio": 0.14007488312327773,
+          "maximum_gap_mm": 12.597579296797276
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.08158385753631592,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.07556575769740448,
+          "q01_margin_mm": 0.08591818809508725
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.09153783321380615,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.08458329466520809,
+          "q01_margin_mm": 0.09949853022892807
+        }
+      }
+    },
+    "close": {
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.213829040527344,
+          "central_half_gap_mean_mm": -1.2829188036540067,
+          "central_half_gap_ratio": -0.034474249447228975,
+          "central_half_upper_ratio": -0.1704255881792595,
+          "central_half_lower_ratio": 0.13595133873203052,
+          "maximum_gap_mm": -0.7176663432440387
+        },
+        "1": {
+          "canthus_width_mm": 35.310386657714844,
+          "central_half_gap_mean_mm": -1.2572365060883361,
+          "central_half_gap_ratio": -0.03560528759765927,
+          "central_half_upper_ratio": -0.12310623825881192,
+          "central_half_lower_ratio": 0.08750095066115264,
+          "maximum_gap_mm": -0.8060411817502788
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2251168092091832,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18321199172532943,
+          "q01_margin_mm": 0.22877206405003556
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21889805793762207,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20480701823544223,
+          "q01_margin_mm": 0.22042708098887837
+        }
+      }
+    },
+    "closeR": {
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.213829040527344,
+          "central_half_gap_mean_mm": -1.2829188036540067,
+          "central_half_gap_ratio": -0.034474249447228975,
+          "central_half_upper_ratio": -0.1704255881792595,
+          "central_half_lower_ratio": 0.13595133873203052,
+          "maximum_gap_mm": -0.7176663432440387
+        },
+        "1": {
+          "canthus_width_mm": 35.732723236083984,
+          "central_half_gap_mean_mm": 10.077588287860085,
+          "central_half_gap_ratio": 0.2820268712795007,
+          "central_half_upper_ratio": 0.15415142107187307,
+          "central_half_lower_ratio": 0.12787545020762758,
+          "maximum_gap_mm": 10.481669612323879
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.22479643424351547,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18321199172532943,
+          "q01_margin_mm": 0.22858728965123032
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21639714638391205,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.2073133709927788,
+          "q01_margin_mm": 0.22121188044548254
+        }
+      }
+    },
+    "closeL": {
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.9251823425293,
+          "central_half_gap_mean_mm": 11.22428734488715,
+          "central_half_gap_ratio": 0.2959586804393013,
+          "central_half_upper_ratio": 0.1112331974517267,
+          "central_half_lower_ratio": 0.18472548298757457,
+          "maximum_gap_mm": 11.3330272542236
+        },
+        "1": {
+          "canthus_width_mm": 35.310386657714844,
+          "central_half_gap_mean_mm": -1.2572365060883361,
+          "central_half_gap_ratio": -0.03560528759765927,
+          "central_half_upper_ratio": -0.12310623825881192,
+          "central_half_lower_ratio": 0.08750095066115264,
+          "maximum_gap_mm": -0.8060411817502788
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.22809207439422607,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.1909585075736686,
+          "q01_margin_mm": 0.23056089878082275
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21835416555404663,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20502955658230348,
+          "q01_margin_mm": 0.22012172142664155
+        }
+      }
+    },
+    "joy": {
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.17837905883789,
+          "central_half_gap_mean_mm": -17.99896340023565,
+          "central_half_gap_ratio": -0.48412448582084133,
+          "central_half_upper_ratio": -0.19177608685214803,
+          "central_half_lower_ratio": -0.29234839896869347,
+          "maximum_gap_mm": -17.302848928944897
+        },
+        "1": {
+          "canthus_width_mm": 35.06228256225586,
+          "central_half_gap_mean_mm": -17.015618351680125,
+          "central_half_gap_ratio": -0.4852969276702433,
+          "central_half_upper_ratio": -0.14767622378819678,
+          "central_half_lower_ratio": -0.3376207038820465,
+          "maximum_gap_mm": -15.780984550958793
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.22781143585839936,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.1852650650562282,
+          "q01_margin_mm": 0.22972846031189154
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2186720569928441,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20544339281514112,
+          "q01_margin_mm": 0.22095026075839533
+        }
+      }
+    }
+  },
+  "states": [
+    {
+      "label": "s0.0",
+      "controls": {
+        "Manual_EYE_Surprised": 0.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.9251823425293,
+          "central_half_gap_mean_mm": 11.22428734488715,
+          "central_half_gap_ratio": 0.2959586804393013,
+          "central_half_upper_ratio": 0.1112331974517267,
+          "central_half_lower_ratio": 0.18472548298757457,
+          "maximum_gap_mm": 11.3330272542236
+        },
+        "1": {
+          "canthus_width_mm": 35.732723236083984,
+          "central_half_gap_mean_mm": 10.077588287860085,
+          "central_half_gap_ratio": 0.2820268712795007,
+          "central_half_upper_ratio": 0.15415142107187307,
+          "central_half_lower_ratio": 0.12787545020762758,
+          "maximum_gap_mm": 10.481669612323879
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9459629654884338
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9140670299530029
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.22848695516586304,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18894681852543727,
+          "q01_margin_mm": 0.23046192526817139
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.215550263722733,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20589104315149598,
+          "q01_margin_mm": 0.2203384786844223
+        }
+      }
+    },
+    {
+      "label": "s0.15",
+      "controls": {
+        "Manual_EYE_Surprised": 0.15
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.92561340332031,
+          "central_half_gap_mean_mm": 11.579364897443776,
+          "central_half_gap_ratio": 0.3053178111417546,
+          "central_half_upper_ratio": 0.11857904501920508,
+          "central_half_lower_ratio": 0.1867387661225495,
+          "maximum_gap_mm": 11.717927307302235
+        },
+        "1": {
+          "canthus_width_mm": 35.730918884277344,
+          "central_half_gap_mean_mm": 10.443858042011946,
+          "central_half_gap_ratio": 0.29229188131870254,
+          "central_half_upper_ratio": 0.16212576822546224,
+          "central_half_lower_ratio": 0.1301661130932403,
+          "maximum_gap_mm": 10.877847055797162
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035763272899203,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9194537997245789
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003576472809072584,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8763223886489868
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.22519677877425037,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.1898641362458875,
+          "q01_margin_mm": 0.22860864798227173
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21535654862721298,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20625463366741315,
+          "q01_margin_mm": 0.22015107174714096
+        }
+      }
+    },
+    {
+      "label": "s0.25",
+      "controls": {
+        "Manual_EYE_Surprised": 0.25
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.926361083984375,
+          "central_half_gap_mean_mm": 12.242173125305412,
+          "central_half_gap_ratio": 0.3227879715819715,
+          "central_half_upper_ratio": 0.13231996602377472,
+          "central_half_lower_ratio": 0.1904680055581968,
+          "maximum_gap_mm": 12.379255257655782
+        },
+        "1": {
+          "canthus_width_mm": 35.729679107666016,
+          "central_half_gap_mean_mm": 11.122501815449171,
+          "central_half_gap_ratio": 0.31129586802813464,
+          "central_half_upper_ratio": 0.17702147550150188,
+          "central_half_lower_ratio": 0.13427439252663276,
+          "maximum_gap_mm": 11.58199574778235
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003577054594643414,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.899188220500946
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003577491152100265,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8689239621162415
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.22478997707367498,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.19256458426752943,
+          "q01_margin_mm": 0.22719368338585177
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21526465813317963,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20597116645149072,
+          "q01_margin_mm": 0.21978589395681092
+        }
+      }
+    },
+    {
+      "label": "s0.5",
+      "controls": {
+        "Manual_EYE_Surprised": 0.5
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.92830276489258,
+          "central_half_gap_mean_mm": 13.898322157136857,
+          "central_half_gap_ratio": 0.366436710385631,
+          "central_half_upper_ratio": 0.16665039792944072,
+          "central_half_lower_ratio": 0.1997863124561903,
+          "maximum_gap_mm": 14.10942672321124
+        },
+        "1": {
+          "canthus_width_mm": 35.7269401550293,
+          "central_half_gap_mean_mm": 12.81755925147776,
+          "central_half_gap_ratio": 0.3587645576891765,
+          "central_half_upper_ratio": 0.21422098020785485,
+          "central_half_lower_ratio": 0.1445435774813217,
+          "maximum_gap_mm": 13.347466385788012
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003580157062970102,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9023547172546387
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003577103198040277,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8923858404159546
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.22416114807127796,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.19375766123630456,
+          "q01_margin_mm": 0.22561752796173465
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2150312066078186,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.2055045142697054,
+          "q01_margin_mm": 0.2191543827454187
+        }
+      }
+    },
+    {
+      "label": "s0.8",
+      "controls": {
+        "Manual_EYE_Surprised": 0.8
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.93072509765625,
+          "central_half_gap_mean_mm": 15.883016143200383,
+          "central_half_gap_ratio": 0.41873749746540284,
+          "central_half_upper_ratio": 0.20778089251488782,
+          "central_half_lower_ratio": 0.2109566049505151,
+          "maximum_gap_mm": 16.191931690378343
+        },
+        "1": {
+          "canthus_width_mm": 35.7242546081543,
+          "central_half_gap_mean_mm": 14.849017243287369,
+          "central_half_gap_ratio": 0.41565644265000384,
+          "central_half_upper_ratio": 0.25878997540072846,
+          "central_half_lower_ratio": 0.1568664672492754,
+          "maximum_gap_mm": 15.47238494701404
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003606612153816968,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9046196937561035
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.000362101272912696,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8972063660621643
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.22659450769424438,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18958089572151948,
+          "q01_margin_mm": 0.2278223137060724
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2142886320749826,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.2054122483059473,
+          "q01_margin_mm": 0.21899490058422122
+        }
+      }
+    },
+    {
+      "label": "s1.0",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.931392669677734,
+          "central_half_gap_mean_mm": 16.351443170456783,
+          "central_half_gap_ratio": 0.4310794178271378,
+          "central_half_upper_ratio": 0.21743873782783998,
+          "central_half_lower_ratio": 0.21364067999929787,
+          "maximum_gap_mm": 16.67541305851645
+        },
+        "1": {
+          "canthus_width_mm": 35.722938537597656,
+          "central_half_gap_mean_mm": 15.333090677782161,
+          "central_half_gap_ratio": 0.4292225605948423,
+          "central_half_upper_ratio": 0.2693169862526782,
+          "central_half_lower_ratio": 0.1599055743421641,
+          "maximum_gap_mm": 15.991580851898563
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047689536586403847,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9070634841918945
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035983778070658445,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8903965353965759
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2307022611300058,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.193152599649693,
+          "q01_margin_mm": 0.23253802458444245
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21376212437947129,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.2054174556178623,
+          "q01_margin_mm": 0.21893980602422577
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close0.25",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close": 0.25
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.75199508666992,
+          "central_half_gap_mean_mm": 11.967189374957517,
+          "central_half_gap_ratio": 0.31699488639945944,
+          "central_half_upper_ratio": 0.12249020181788127,
+          "central_half_lower_ratio": 0.19450468458157824,
+          "maximum_gap_mm": 12.243658736720267
+        },
+        "1": {
+          "canthus_width_mm": 35.619781494140625,
+          "central_half_gap_mean_mm": 11.241381577543683,
+          "central_half_gap_ratio": 0.31559379211768246,
+          "central_half_upper_ratio": 0.17361940980968862,
+          "central_half_lower_ratio": 0.14197438230799378,
+          "maximum_gap_mm": 11.709148369275054
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.000476837158203125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -1.2748874425888062
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0004775932466145605,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9711757302284241
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.06305426359176636,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.058002619653052534,
+          "q01_margin_mm": 0.06895614167054032
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.0825648506482396,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.07593952955176064,
+          "q01_margin_mm": 0.08713211119174433
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close0.5",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close": 0.5
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.57262420654297,
+          "central_half_gap_mean_mm": 7.566311536800042,
+          "central_half_gap_ratio": 0.20137829950638447,
+          "central_half_upper_ratio": 0.026195722928846178,
+          "central_half_lower_ratio": 0.17518257657753827,
+          "maximum_gap_mm": 7.84383530347746
+        },
+        "1": {
+          "canthus_width_mm": 35.516666412353516,
+          "central_half_gap_mean_mm": 7.10838654893837,
+          "central_half_gap_ratio": 0.20014226916515332,
+          "central_half_upper_ratio": 0.07620637478685462,
+          "central_half_lower_ratio": 0.1239358943782987,
+          "maximum_gap_mm": 7.436132961136491
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003584999358281493,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -1.0968148708343506
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0004774188855662942,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -1.055195927619934
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.014215707778930664,
+          "below_skin_samples": 35,
+          "minimum_signed_surface_margin_mm": -0.013006114784275269,
+          "q01_margin_mm": -0.009457568327588955
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.011382003625229342,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.010558915676028846,
+          "q01_margin_mm": 0.019019221266106112
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close0.75",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close": 0.75
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.39324951171875,
+          "central_half_gap_mean_mm": 3.149336459775764,
+          "central_half_gap_ratio": 0.08422205868384776,
+          "central_half_upper_ratio": -0.07144340627965519,
+          "central_half_lower_ratio": 0.1556654649635029,
+          "maximum_gap_mm": 3.481925349306517
+        },
+        "1": {
+          "canthus_width_mm": 35.41348648071289,
+          "central_half_gap_mean_mm": 2.9395801282305425,
+          "central_half_gap_ratio": 0.08300736644634854,
+          "central_half_upper_ratio": -0.02277077233525241,
+          "central_half_lower_ratio": 0.10577813878160093,
+          "maximum_gap_mm": 3.214526309687768
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035772487171925604,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.7255114316940308
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003577054594643414,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9754784107208252
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.044296185175582425,
+          "below_skin_samples": 103,
+          "minimum_signed_surface_margin_mm": -0.04074922344443621,
+          "q01_margin_mm": -0.04013001918792877
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.008982916673033747,
+          "below_skin_samples": 13,
+          "minimum_signed_surface_margin_mm": -0.008319381834098749,
+          "q01_margin_mm": -0.0014147162437438965
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close1.0",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.213829040527344,
+          "central_half_gap_mean_mm": -1.2829188036540067,
+          "central_half_gap_ratio": -0.034474249447228975,
+          "central_half_upper_ratio": -0.1704255881792595,
+          "central_half_lower_ratio": 0.13595133873203052,
+          "maximum_gap_mm": -0.7176663432440387
+        },
+        "1": {
+          "canthus_width_mm": 35.310386657714844,
+          "central_half_gap_mean_mm": -1.2572365060883361,
+          "central_half_gap_ratio": -0.03560528759765927,
+          "central_half_upper_ratio": -0.12310623825881192,
+          "central_half_lower_ratio": 0.08750095066115264,
+          "maximum_gap_mm": -0.8060411817502788
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.32342225313186646
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011926748265977949,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.48906728625297546
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.04283338785171509,
+          "below_skin_samples": 118,
+          "minimum_signed_surface_margin_mm": -0.03937105788054396,
+          "q01_margin_mm": -0.03880447149276142
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.00968078772227432,
+          "below_skin_samples": 12,
+          "minimum_signed_surface_margin_mm": -0.008964467710370627,
+          "q01_margin_mm": -0.002014264464378357
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close_R0.25",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close_R": 0.25
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.75199508666992,
+          "central_half_gap_mean_mm": 11.967189374957517,
+          "central_half_gap_ratio": 0.31699488639945944,
+          "central_half_upper_ratio": 0.12249020181788127,
+          "central_half_lower_ratio": 0.19450468458157824,
+          "maximum_gap_mm": 12.243658736720267
+        },
+        "1": {
+          "canthus_width_mm": 35.722938537597656,
+          "central_half_gap_mean_mm": 15.333090677782161,
+          "central_half_gap_ratio": 0.4292225605948423,
+          "central_half_upper_ratio": 0.2693169862526782,
+          "central_half_lower_ratio": 0.1599055743421641,
+          "maximum_gap_mm": 15.991580851898563
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.000476837158203125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -1.2748874425888062
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035983778070658445,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8903965353965759
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.06305426359176636,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.058002619653052534,
+          "q01_margin_mm": 0.06895614167054032
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21368761857350205,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20495868284342578,
+          "q01_margin_mm": 0.2189330905675839
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close_R0.5",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close_R": 0.5
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.57262420654297,
+          "central_half_gap_mean_mm": 7.566311536800042,
+          "central_half_gap_ratio": 0.20137829950638447,
+          "central_half_upper_ratio": 0.026195722928846178,
+          "central_half_lower_ratio": 0.17518257657753827,
+          "maximum_gap_mm": 7.84383530347746
+        },
+        "1": {
+          "canthus_width_mm": 35.722938537597656,
+          "central_half_gap_mean_mm": 15.333090677782161,
+          "central_half_gap_ratio": 0.4292225605948423,
+          "central_half_upper_ratio": 0.2693169862526782,
+          "central_half_lower_ratio": 0.1599055743421641,
+          "maximum_gap_mm": 15.991580851898563
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003584999358281493,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -1.0968148708343506
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035983778070658445,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8903965353965759
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.014215707778930664,
+          "below_skin_samples": 35,
+          "minimum_signed_surface_margin_mm": -0.013006114784275269,
+          "q01_margin_mm": -0.009457568327588955
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21386146545410156,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20478691658354364,
+          "q01_margin_mm": 0.21891805529593744
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close_R0.75",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close_R": 0.75
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.39324951171875,
+          "central_half_gap_mean_mm": 3.149336459775764,
+          "central_half_gap_ratio": 0.08422205868384776,
+          "central_half_upper_ratio": -0.07144340627965519,
+          "central_half_lower_ratio": 0.1556654649635029,
+          "maximum_gap_mm": 3.481925349306517
+        },
+        "1": {
+          "canthus_width_mm": 35.722938537597656,
+          "central_half_gap_mean_mm": 15.333090677782161,
+          "central_half_gap_ratio": 0.4292225605948423,
+          "central_half_upper_ratio": 0.2693169862526782,
+          "central_half_lower_ratio": 0.1599055743421641,
+          "maximum_gap_mm": 15.991580851898563
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035772487171925604,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.7255114316940308
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035983778070658445,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8903965353965759
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.044296185175582425,
+          "below_skin_samples": 103,
+          "minimum_signed_surface_margin_mm": -0.04074922344443621,
+          "q01_margin_mm": -0.04013001918792877
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21422902743020722,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20489247617661022,
+          "q01_margin_mm": 0.21906757354736142
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close_R1.0",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close_R": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.213829040527344,
+          "central_half_gap_mean_mm": -1.2829188036540067,
+          "central_half_gap_ratio": -0.034474249447228975,
+          "central_half_upper_ratio": -0.1704255881792595,
+          "central_half_lower_ratio": 0.13595133873203052,
+          "maximum_gap_mm": -0.7176663432440387
+        },
+        "1": {
+          "canthus_width_mm": 35.722938537597656,
+          "central_half_gap_mean_mm": 15.333090677782161,
+          "central_half_gap_ratio": 0.4292225605948423,
+          "central_half_upper_ratio": 0.2693169862526782,
+          "central_half_lower_ratio": 0.1599055743421641,
+          "maximum_gap_mm": 15.991580851898563
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.32342225313186646
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035983778070658445,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8903965353965759
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.04283338785171509,
+          "below_skin_samples": 118,
+          "minimum_signed_surface_margin_mm": -0.03937105788054396,
+          "q01_margin_mm": -0.03880447149276142
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21465619405110214,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.205276281121769,
+          "q01_margin_mm": 0.2192668318748496
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close_L0.25",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close_L": 0.25
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.931392669677734,
+          "central_half_gap_mean_mm": 16.351443170456783,
+          "central_half_gap_ratio": 0.4310794178271378,
+          "central_half_upper_ratio": 0.21743873782783998,
+          "central_half_lower_ratio": 0.21364067999929787,
+          "maximum_gap_mm": 16.67541305851645
+        },
+        "1": {
+          "canthus_width_mm": 35.619781494140625,
+          "central_half_gap_mean_mm": 11.241381577543683,
+          "central_half_gap_ratio": 0.31559379211768246,
+          "central_half_upper_ratio": 0.17361940980968862,
+          "central_half_lower_ratio": 0.14197438230799378,
+          "maximum_gap_mm": 11.709148369275054
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047689536586403847,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9070634841918945
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0004775932466145605,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9711757302284241
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2307022611300058,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.1847934012175756,
+          "q01_margin_mm": 0.23308013876278885
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.0825648506482396,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.07593952955176064,
+          "q01_margin_mm": 0.08713211119174433
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close_L0.5",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close_L": 0.5
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.931392669677734,
+          "central_half_gap_mean_mm": 16.351443170456783,
+          "central_half_gap_ratio": 0.4310794178271378,
+          "central_half_upper_ratio": 0.21743873782783998,
+          "central_half_lower_ratio": 0.21364067999929787,
+          "maximum_gap_mm": 16.67541305851645
+        },
+        "1": {
+          "canthus_width_mm": 35.516666412353516,
+          "central_half_gap_mean_mm": 7.10838654893837,
+          "central_half_gap_ratio": 0.20014226916515332,
+          "central_half_upper_ratio": 0.07620637478685462,
+          "central_half_lower_ratio": 0.1239358943782987,
+          "maximum_gap_mm": 7.436132961136491
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047689536586403847,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9070634841918945
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0004774188855662942,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -1.055195927619934
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.23086369037628174,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18089823618083756,
+          "q01_margin_mm": 0.23354262113571542
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.011382003625229342,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.010558915676028846,
+          "q01_margin_mm": 0.019019221266106112
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close_L0.75",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close_L": 0.75
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.931392669677734,
+          "central_half_gap_mean_mm": 16.351443170456783,
+          "central_half_gap_ratio": 0.4310794178271378,
+          "central_half_upper_ratio": 0.21743873782783998,
+          "central_half_lower_ratio": 0.21364067999929787,
+          "maximum_gap_mm": 16.67541305851645
+        },
+        "1": {
+          "canthus_width_mm": 35.41348648071289,
+          "central_half_gap_mean_mm": 2.9395801282305425,
+          "central_half_gap_ratio": 0.08300736644634854,
+          "central_half_upper_ratio": -0.02277077233525241,
+          "central_half_lower_ratio": 0.10577813878160093,
+          "maximum_gap_mm": 3.214526309687768
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047689536586403847,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9070634841918945
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003577054594643414,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9754784107208252
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2314150333404541,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18340193628318957,
+          "q01_margin_mm": 0.23404543101787634
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.008982916673033747,
+          "below_skin_samples": 13,
+          "minimum_signed_surface_margin_mm": -0.008319381834098749,
+          "q01_margin_mm": -0.0014147162437438965
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close_L1.0",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Close_L": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.931392669677734,
+          "central_half_gap_mean_mm": 16.351443170456783,
+          "central_half_gap_ratio": 0.4310794178271378,
+          "central_half_upper_ratio": 0.21743873782783998,
+          "central_half_lower_ratio": 0.21364067999929787,
+          "maximum_gap_mm": 16.67541305851645
+        },
+        "1": {
+          "canthus_width_mm": 35.310386657714844,
+          "central_half_gap_mean_mm": -1.2572365060883361,
+          "central_half_gap_ratio": -0.03560528759765927,
+          "central_half_upper_ratio": -0.12310623825881192,
+          "central_half_lower_ratio": 0.08750095066115264,
+          "maximum_gap_mm": -0.8060411817502788
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047689536586403847,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9070634841918945
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011926748265977949,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.48906728625297546
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2316012978553772,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18424165295982675,
+          "q01_margin_mm": 0.2344345152378119
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.00968078772227432,
+          "below_skin_samples": 12,
+          "minimum_signed_surface_margin_mm": -0.008964467710370627,
+          "q01_margin_mm": -0.002014264464378357
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy0.25",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy": 0.25
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.701656341552734,
+          "central_half_gap_mean_mm": 7.756474861790718,
+          "central_half_gap_ratio": 0.205733006280774,
+          "central_half_upper_ratio": 0.11733173329757299,
+          "central_half_lower_ratio": 0.08840127298320101,
+          "maximum_gap_mm": 7.91935440278565
+        },
+        "1": {
+          "canthus_width_mm": 35.53667449951172,
+          "central_half_gap_mean_mm": 7.210667043171934,
+          "central_half_gap_ratio": 0.20290776965550103,
+          "central_half_upper_ratio": 0.16718011484791093,
+          "central_half_lower_ratio": 0.03572765480759011,
+          "maximum_gap_mm": 7.556203943352526
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003583450452424586,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -1.1723376512527466
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0004772589891217649,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8176937699317932
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.05225588877995346,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.04821245306629862,
+          "q01_margin_mm": 0.057600229978558015
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.07011989752450654,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.0640110370113689,
+          "q01_margin_mm": 0.07516072690487277
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy0.5",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy": 0.5
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.49930953979492,
+          "central_half_gap_mean_mm": -0.8329007564168525,
+          "central_half_gap_ratio": -0.022211096359390718,
+          "central_half_upper_ratio": 0.015581223211383414,
+          "central_half_lower_ratio": -0.03779231957077413,
+          "maximum_gap_mm": -0.688837097769296
+        },
+        "1": {
+          "canthus_width_mm": 35.364341735839844,
+          "central_half_gap_mean_mm": -0.8980350571801337,
+          "central_half_gap_ratio": -0.02539380155321484,
+          "central_half_upper_ratio": 0.06338844947948474,
+          "central_half_lower_ratio": -0.0887822510326996,
+          "maximum_gap_mm": -0.7323234438542418
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035865470999851823,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8533000946044922
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035875628236681223,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.7011294364929199
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.026623407999679105,
+          "below_skin_samples": 80,
+          "minimum_signed_surface_margin_mm": -0.02439803012066477,
+          "q01_margin_mm": -0.020829200744632292
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.001420577367142184,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.0013189414040937208,
+          "q01_margin_mm": 0.007825851440428494
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy0.75",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy": 0.75
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.324729919433594,
+          "central_half_gap_mean_mm": -9.415728161618677,
+          "central_half_gap_ratio": -0.25226513585517274,
+          "central_half_upper_ratio": -0.087515808298451,
+          "central_half_lower_ratio": -0.16474932755672175,
+          "maximum_gap_mm": -9.042911379607805
+        },
+        "1": {
+          "canthus_width_mm": 35.20615005493164,
+          "central_half_gap_mean_mm": -8.973543198532676,
+          "central_half_gap_ratio": -0.25488567001384965,
+          "central_half_upper_ratio": -0.04163047573645814,
+          "central_half_lower_ratio": -0.2132551942773914,
+          "maximum_gap_mm": -8.428589053272715
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047686626203358173,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.4687383770942688
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003576472809072584,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.4543289542198181
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.054302811622622404,
+          "below_skin_samples": 157,
+          "minimum_signed_surface_margin_mm": -0.050246388809682685,
+          "q01_margin_mm": -0.047179386019706726
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.019510587056487116,
+          "below_skin_samples": 41,
+          "minimum_signed_surface_margin_mm": -0.018076049713044995,
+          "q01_margin_mm": -0.011705557505292813
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy1.0",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.17837905883789,
+          "central_half_gap_mean_mm": -17.99896340023565,
+          "central_half_gap_ratio": -0.48412448582084133,
+          "central_half_upper_ratio": -0.19177608685214803,
+          "central_half_lower_ratio": -0.29234839896869347,
+          "maximum_gap_mm": -17.302848928944897
+        },
+        "1": {
+          "canthus_width_mm": 35.06228256225586,
+          "central_half_gap_mean_mm": -17.015618351680125,
+          "central_half_gap_ratio": -0.4852969276702433,
+          "central_half_upper_ratio": -0.14767622378819678,
+          "central_half_lower_ratio": -0.3376207038820465,
+          "maximum_gap_mm": -15.780984550958793
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -1.1661574840545654
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011926748265977949,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9602457284927368
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.050259133179991755,
+          "below_skin_samples": 131,
+          "minimum_signed_surface_margin_mm": -0.04671711940318346,
+          "q01_margin_mm": -0.043559476733207037
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.010979672273009333,
+          "below_skin_samples": 19,
+          "minimum_signed_surface_margin_mm": -0.010238930769901344,
+          "q01_margin_mm": -0.005095601081849949
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy_R0.25",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy_R": 0.25
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.701656341552734,
+          "central_half_gap_mean_mm": 7.756474861790718,
+          "central_half_gap_ratio": 0.205733006280774,
+          "central_half_upper_ratio": 0.11733173329757299,
+          "central_half_lower_ratio": 0.08840127298320101,
+          "maximum_gap_mm": 7.91935440278565
+        },
+        "1": {
+          "canthus_width_mm": 35.722938537597656,
+          "central_half_gap_mean_mm": 15.333090677782161,
+          "central_half_gap_ratio": 0.4292225605948423,
+          "central_half_upper_ratio": 0.2693169862526782,
+          "central_half_lower_ratio": 0.1599055743421641,
+          "maximum_gap_mm": 15.991580851898563
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003583450452424586,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -1.1723376512527466
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035983778070658445,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8903965353965759
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.05225588877995346,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.04821245306629862,
+          "q01_margin_mm": 0.057600229978558015
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21381427844364975,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.2048323003691621,
+          "q01_margin_mm": 0.21880711615085077
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy_R0.5",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy_R": 0.5
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.49930953979492,
+          "central_half_gap_mean_mm": -0.8329007564168525,
+          "central_half_gap_ratio": -0.022211096359390718,
+          "central_half_upper_ratio": 0.015581223211383414,
+          "central_half_lower_ratio": -0.03779231957077413,
+          "maximum_gap_mm": -0.688837097769296
+        },
+        "1": {
+          "canthus_width_mm": 35.722938537597656,
+          "central_half_gap_mean_mm": 15.333090677782161,
+          "central_half_gap_ratio": 0.4292225605948423,
+          "central_half_upper_ratio": 0.2693169862526782,
+          "central_half_lower_ratio": 0.1599055743421641,
+          "maximum_gap_mm": 15.991580851898563
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035865470999851823,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8533000946044922
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035983778070658445,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8903965353965759
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.026623407999679105,
+          "below_skin_samples": 80,
+          "minimum_signed_surface_margin_mm": -0.02439803012066477,
+          "q01_margin_mm": -0.020829200744632292
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21412471930185029,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20473461245273938,
+          "q01_margin_mm": 0.21873115499814133
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy_R0.75",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy_R": 0.75
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.324729919433594,
+          "central_half_gap_mean_mm": -9.415728161618677,
+          "central_half_gap_ratio": -0.25226513585517274,
+          "central_half_upper_ratio": -0.087515808298451,
+          "central_half_lower_ratio": -0.16474932755672175,
+          "maximum_gap_mm": -9.042911379607805
+        },
+        "1": {
+          "canthus_width_mm": 35.722938537597656,
+          "central_half_gap_mean_mm": 15.333090677782161,
+          "central_half_gap_ratio": 0.4292225605948423,
+          "central_half_upper_ratio": 0.2693169862526782,
+          "central_half_lower_ratio": 0.1599055743421641,
+          "maximum_gap_mm": 15.991580851898563
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047686626203358173,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.4687383770942688
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035983778070658445,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8903965353965759
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.054302811622622404,
+          "below_skin_samples": 157,
+          "minimum_signed_surface_margin_mm": -0.050246388809682685,
+          "q01_margin_mm": -0.047179386019706726
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21451960007348725,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.2051184187621402,
+          "q01_margin_mm": 0.21897580722967255
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy_R1.0",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy_R": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.17837905883789,
+          "central_half_gap_mean_mm": -17.99896340023565,
+          "central_half_gap_ratio": -0.48412448582084133,
+          "central_half_upper_ratio": -0.19177608685214803,
+          "central_half_lower_ratio": -0.29234839896869347,
+          "maximum_gap_mm": -17.302848928944897
+        },
+        "1": {
+          "canthus_width_mm": 35.722938537597656,
+          "central_half_gap_mean_mm": 15.333090677782161,
+          "central_half_gap_ratio": 0.4292225605948423,
+          "central_half_upper_ratio": 0.2693169862526782,
+          "central_half_lower_ratio": 0.1599055743421641,
+          "maximum_gap_mm": 15.991580851898563
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -1.1661574840545654
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035983778070658445,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8903965353965759
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.050259133179991755,
+          "below_skin_samples": 131,
+          "minimum_signed_surface_margin_mm": -0.04671711940318346,
+          "q01_margin_mm": -0.043559476733207037
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21541863679885864,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20602063568730955,
+          "q01_margin_mm": 0.21955301364262284
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy_L0.25",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy_L": 0.25
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.931392669677734,
+          "central_half_gap_mean_mm": 16.351443170456783,
+          "central_half_gap_ratio": 0.4310794178271378,
+          "central_half_upper_ratio": 0.21743873782783998,
+          "central_half_lower_ratio": 0.21364067999929787,
+          "maximum_gap_mm": 16.67541305851645
+        },
+        "1": {
+          "canthus_width_mm": 35.53667449951172,
+          "central_half_gap_mean_mm": 7.210667043171934,
+          "central_half_gap_ratio": 0.20290776965550103,
+          "central_half_upper_ratio": 0.16718011484791093,
+          "central_half_lower_ratio": 0.03572765480759011,
+          "maximum_gap_mm": 7.556203943352526
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047689536586403847,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9070634841918945
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0004772589891217649,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8176937699317932
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.23066004117329453,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.1847934012175756,
+          "q01_margin_mm": 0.2330614527066481
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.07011989752450654,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.0640110370113689,
+          "q01_margin_mm": 0.07516072690487277
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy_L0.5",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy_L": 0.5
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.931392669677734,
+          "central_half_gap_mean_mm": 16.351443170456783,
+          "central_half_gap_ratio": 0.4310794178271378,
+          "central_half_upper_ratio": 0.21743873782783998,
+          "central_half_lower_ratio": 0.21364067999929787,
+          "maximum_gap_mm": 16.67541305851645
+        },
+        "1": {
+          "canthus_width_mm": 35.364341735839844,
+          "central_half_gap_mean_mm": -0.8980350571801337,
+          "central_half_gap_ratio": -0.02539380155321484,
+          "central_half_upper_ratio": 0.06338844947948474,
+          "central_half_lower_ratio": -0.0887822510326996,
+          "maximum_gap_mm": -0.7323234438542418
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047689536586403847,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9070634841918945
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00035875628236681223,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.7011294364929199
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2308388551076207,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18089823618083756,
+          "q01_margin_mm": 0.23354458808899484
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.001420577367142184,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.0013189414040937208,
+          "q01_margin_mm": 0.007825851440428494
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy_L0.75",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy_L": 0.75
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.931392669677734,
+          "central_half_gap_mean_mm": 16.351443170456783,
+          "central_half_gap_ratio": 0.4310794178271378,
+          "central_half_upper_ratio": 0.21743873782783998,
+          "central_half_lower_ratio": 0.21364067999929787,
+          "maximum_gap_mm": 16.67541305851645
+        },
+        "1": {
+          "canthus_width_mm": 35.20615005493164,
+          "central_half_gap_mean_mm": -8.973543198532676,
+          "central_half_gap_ratio": -0.25488567001384965,
+          "central_half_upper_ratio": -0.04163047573645814,
+          "central_half_lower_ratio": -0.2132551942773914,
+          "maximum_gap_mm": -8.428589053272715
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047689536586403847,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9070634841918945
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003576472809072584,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.4543289542198181
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.23128092288970947,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18340193628318957,
+          "q01_margin_mm": 0.23397487898667038
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.019510587056487116,
+          "below_skin_samples": 41,
+          "minimum_signed_surface_margin_mm": -0.018076049713044995,
+          "q01_margin_mm": -0.011705557505292813
+        }
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy_L1.0",
+      "controls": {
+        "Manual_EYE_Surprised": 1.0,
+        "Manual_EYE_Joy_L": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.931392669677734,
+          "central_half_gap_mean_mm": 16.351443170456783,
+          "central_half_gap_ratio": 0.4310794178271378,
+          "central_half_upper_ratio": 0.21743873782783998,
+          "central_half_lower_ratio": 0.21364067999929787,
+          "maximum_gap_mm": 16.67541305851645
+        },
+        "1": {
+          "canthus_width_mm": 35.06228256225586,
+          "central_half_gap_mean_mm": -17.015618351680125,
+          "central_half_gap_ratio": -0.4852969276702433,
+          "central_half_upper_ratio": -0.14767622378819678,
+          "central_half_lower_ratio": -0.3376207038820465,
+          "maximum_gap_mm": -15.780984550958793
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047689536586403847,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9070634841918945
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011926748265977949,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9602457284927368
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.2315104007720864,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18424165295982675,
+          "q01_margin_mm": 0.23441828787326813
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": -0.010979672273009333,
+          "below_skin_samples": 19,
+          "minimum_signed_surface_margin_mm": -0.010238930769901344,
+          "q01_margin_mm": -0.005095601081849949
+        }
+      }
+    },
+    {
+      "label": "P03",
+      "controls": {
+        "P03_skeptical_question": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.91961669921875,
+          "central_half_gap_mean_mm": 10.928427665686199,
+          "central_half_gap_ratio": 0.2881998339519117,
+          "central_half_upper_ratio": 0.10359574177771606,
+          "central_half_lower_ratio": 0.18460409217419552,
+          "maximum_gap_mm": 11.090793981588392
+        },
+        "1": {
+          "canthus_width_mm": 35.72327423095703,
+          "central_half_gap_mean_mm": 9.807653232314664,
+          "central_half_gap_ratio": 0.2745452050725485,
+          "central_half_upper_ratio": 0.14672166236931578,
+          "central_half_lower_ratio": 0.1278235427032327,
+          "maximum_gap_mm": 10.22849745383403
+        }
+      },
+      "effective_dental_hide": 1.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003576472809072584,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9640529751777649
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003576472809072584,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9157806634902954
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.13112127780914862,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.0819908175344608,
+          "q01_margin_mm": 0.13303869962692352
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.1421108841895974,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.1324571294389898,
+          "q01_margin_mm": 0.14257441461086276
+        }
+      }
+    },
+    {
+      "label": "P06",
+      "controls": {
+        "P06_upward_uncertain": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.92538833618164,
+          "central_half_gap_mean_mm": 11.413708161420352,
+          "central_half_gap_ratio": 0.3009516464692806,
+          "central_half_upper_ratio": 0.11515149392396899,
+          "central_half_lower_ratio": 0.18580015254531163,
+          "maximum_gap_mm": 11.538317306922151
+        },
+        "1": {
+          "canthus_width_mm": 35.731746673583984,
+          "central_half_gap_mean_mm": 10.272996889586826,
+          "central_half_gap_ratio": 0.28750334191538124,
+          "central_half_upper_ratio": 0.15840677249663127,
+          "central_half_lower_ratio": 0.12909656941875,
+          "maximum_gap_mm": 10.693145942494018
+        }
+      },
+      "effective_dental_hide": 1.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003576472809072584,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9304061532020569
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00047690991777926683,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8994340896606445
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.067951530218123,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.034394342804944245,
+          "q01_margin_mm": 0.09551335871219452
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.13705343008041382,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.11752235786843812,
+          "q01_margin_mm": 0.13919274508952723
+        }
+      }
+    },
+    {
+      "label": "P12",
+      "controls": {
+        "P12_surprised": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.93072509765625,
+          "central_half_gap_mean_mm": 15.883016143200383,
+          "central_half_gap_ratio": 0.41873749746540284,
+          "central_half_upper_ratio": 0.20778089251488782,
+          "central_half_lower_ratio": 0.2109566049505151,
+          "maximum_gap_mm": 16.191931690378343
+        },
+        "1": {
+          "canthus_width_mm": 35.7242546081543,
+          "central_half_gap_mean_mm": 14.849017243287369,
+          "central_half_gap_ratio": 0.41565644265000384,
+          "central_half_upper_ratio": 0.25878997540072846,
+          "central_half_lower_ratio": 0.1568664672492754,
+          "maximum_gap_mm": 15.47238494701404
+        }
+      },
+      "effective_dental_hide": 1.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003606612153816968,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9046196937561035
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.000362101272912696,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.8972063660621643
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.08156895637512207,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.07556634477623447,
+          "q01_margin_mm": 0.08593785762786313
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.09153783321380615,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.08458329466520809,
+          "q01_margin_mm": 0.09949853022892807
+        }
+      }
+    },
+    {
+      "label": "P10_hide_manual",
+      "controls": {
+        "P10_toothy_grin": 1.0,
+        "ManualSmallMouthDentalHide": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.91472625732422,
+          "central_half_gap_mean_mm": 10.669556076392391,
+          "central_half_gap_ratio": 0.2814092821839017,
+          "central_half_upper_ratio": 0.09690749033980513,
+          "central_half_lower_ratio": 0.1845017918440965,
+          "maximum_gap_mm": 10.881006906515257
+        },
+        "1": {
+          "canthus_width_mm": 35.71498489379883,
+          "central_half_gap_mean_mm": 9.571853240978244,
+          "central_half_gap_ratio": 0.26800665113066474,
+          "central_half_upper_ratio": 0.14023038156901754,
+          "central_half_lower_ratio": 0.12777626956164723,
+          "maximum_gap_mm": 10.007937938989853
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00023854224127717316,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9734556078910828
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.0003576666640583426,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9407848119735718
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.19501646359761093,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.1711454560791026,
+          "q01_margin_mm": 0.199347987771029
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.20034859577813813,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.1854150737017335,
+          "q01_margin_mm": 0.20435954133668915
+        }
+      }
+    },
+    {
+      "label": "I_manual",
+      "controls": {
+        "Manual_MTH_I": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.9251823425293,
+          "central_half_gap_mean_mm": 11.22428734488715,
+          "central_half_gap_ratio": 0.2959586804393013,
+          "central_half_upper_ratio": 0.1112331974517267,
+          "central_half_lower_ratio": 0.18472548298757457,
+          "maximum_gap_mm": 11.3330272542236
+        },
+        "1": {
+          "canthus_width_mm": 35.732723236083984,
+          "central_half_gap_mean_mm": 10.077588287860085,
+          "central_half_gap_ratio": 0.2820268712795007,
+          "central_half_upper_ratio": 0.15415142107187307,
+          "central_half_lower_ratio": 0.12787545020762758,
+          "maximum_gap_mm": 10.481669612323879
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9459629654884338
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9140670299530029
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.228099524974823,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.1909585075736686,
+          "q01_margin_mm": 0.2308354973793067
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21561731894810532,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20654098898376105,
+          "q01_margin_mm": 0.2206024626890747
+        }
+      }
+    },
+    {
+      "label": "E_manual",
+      "controls": {
+        "Manual_MTH_E": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.9251823425293,
+          "central_half_gap_mean_mm": 11.22428734488715,
+          "central_half_gap_ratio": 0.2959586804393013,
+          "central_half_upper_ratio": 0.1112331974517267,
+          "central_half_lower_ratio": 0.18472548298757457,
+          "maximum_gap_mm": 11.3330272542236
+        },
+        "1": {
+          "canthus_width_mm": 35.732723236083984,
+          "central_half_gap_mean_mm": 10.077588287860085,
+          "central_half_gap_ratio": 0.2820268712795007,
+          "central_half_upper_ratio": 0.15415142107187307,
+          "central_half_lower_ratio": 0.12787545020762758,
+          "maximum_gap_mm": 10.481669612323879
+        }
+      },
+      "effective_dental_hide": 0.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9459629654884338
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9140670299530029
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.228099524974823,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.1909585075736686,
+          "q01_margin_mm": 0.2308354973793067
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.21561731894810532,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20654098898376105,
+          "q01_margin_mm": 0.2206024626890747
+        }
+      }
+    },
+    {
+      "label": "hide_manual",
+      "controls": {
+        "ManualSmallMouthDentalHide": 1.0
+      },
+      "openings": {
+        "-1": {
+          "canthus_width_mm": 37.9251823425293,
+          "central_half_gap_mean_mm": 11.22428734488715,
+          "central_half_gap_ratio": 0.2959586804393013,
+          "central_half_upper_ratio": 0.1112331974517267,
+          "central_half_lower_ratio": 0.18472548298757457,
+          "maximum_gap_mm": 11.3330272542236
+        },
+        "1": {
+          "canthus_width_mm": 35.732723236083984,
+          "central_half_gap_mean_mm": 10.077588287860085,
+          "central_half_gap_ratio": 0.2820268712795007,
+          "central_half_upper_ratio": 0.15415142107187307,
+          "central_half_lower_ratio": 0.12787545020762758,
+          "maximum_gap_mm": 10.481669612323879
+        }
+      },
+      "effective_dental_hide": 1.0,
+      "wall": {
+        "-1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9459629654884338
+        },
+        "1": {
+          "maximum_root_to_true_skin_sample_mm": 0.00011920928955078125,
+          "posterior_return_sclera_missing_hits": 0,
+          "posterior_return_min_y_overlap_mm": -0.9140670299530029
+        }
+      },
+      "brow": {
+        "-1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.22848695516586304,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.18894681852543727,
+          "q01_margin_mm": 0.23046192526817139
+        },
+        "1": {
+          "opaque_interior_samples": 768,
+          "minimum_front_margin_mm": 0.215550263722733,
+          "below_skin_samples": 0,
+          "minimum_signed_surface_margin_mm": 0.20589104315149598,
+          "q01_margin_mm": 0.2203384786844223
+        }
+      }
+    }
+  ],
+  "closure_endpoints": [
+    {
+      "label": "surprise1_EYE_Close1.0",
+      "maximum_matching_closed_difference_mm": 7.450580596923828e-06,
+      "differences_mm": {
+        "skin_rim_-1": 0.0,
+        "skin_rim_1": 0.0,
+        "V28G_InnerLid_-1": 3.725290298461914e-06,
+        "V28G_Iris_-1": 3.725290298461914e-06,
+        "V28G_Sclera_-1": 7.450580596923828e-06,
+        "V30_UpperLashes_-1": 3.725290298461914e-06,
+        "V30_LowerLashes_-1": 0.0,
+        "V28G_InnerLid_1": 3.725290298461914e-06,
+        "V28G_Iris_1": 3.725290298461914e-06,
+        "V28G_Sclera_1": 3.725290298461914e-06,
+        "V30_UpperLashes_1": 3.725290298461914e-06,
+        "V30_LowerLashes_1": 0.0
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close_R1.0",
+      "maximum_matching_closed_difference_mm": 7.450580596923828e-06,
+      "differences_mm": {
+        "skin_rim_-1": 0.0,
+        "V28G_InnerLid_-1": 3.725290298461914e-06,
+        "V28G_Iris_-1": 3.725290298461914e-06,
+        "V28G_Sclera_-1": 7.450580596923828e-06,
+        "V30_UpperLashes_-1": 3.725290298461914e-06,
+        "V30_LowerLashes_-1": 0.0
+      }
+    },
+    {
+      "label": "surprise1_EYE_Close_L1.0",
+      "maximum_matching_closed_difference_mm": 3.725290298461914e-06,
+      "differences_mm": {
+        "skin_rim_1": 0.0,
+        "V28G_InnerLid_1": 3.725290298461914e-06,
+        "V28G_Iris_1": 3.725290298461914e-06,
+        "V28G_Sclera_1": 3.725290298461914e-06,
+        "V30_UpperLashes_1": 3.725290298461914e-06,
+        "V30_LowerLashes_1": 0.0
+      }
+    },
+    {
+      "label": "surprise1_EYE_Joy1.0",
+      "maximum_matching_closed_difference_mm": 7.450580596923828e-06,
+      "differences_mm": {
+        "skin_rim_-1": 0.0,
+        "skin_rim_1": 0.0,
+        "V28G_InnerLid_-1": 3.725290298461914e-06,
+        "V28G_Iris_-1": 7.450580596923828e-06,
+        "V28G_Sclera_-1": 3.725290298461914e-06,
+        "V30_UpperLashes_-1": 7.450580596923828e-06,
+        "V30_LowerLashes_-1": 0.0,
+        "V28G_InnerLid_1": 7.450580596923828e-06,
+        "V28G_Iris_1": 7.450580596923828e-06,
+        "V28G_Sclera_1": 7.450580596923828e-06,
+        "V30_UpperLashes_1": 7.450580596923828e-06,
+        "V30_LowerLashes_1": 0.0
+      }
+    }
+  ],
+  "scope": "CPU guards, no actual shader-opacity/render or ART conclusion. Posterior return values include hidden stations and must be compared with their baseline before diagnosis.",
+  "native_saved": false
+}

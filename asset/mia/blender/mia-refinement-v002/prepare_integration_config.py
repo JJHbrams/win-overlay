@@ -2,7 +2,7 @@
 from pathlib import Path
 import argparse, hashlib, json, shutil
 P=Path(__file__).resolve().parent
-ap=argparse.ArgumentParser();ap.add_argument('--mouth',required=True);ap.add_argument('--variant',default='C');ap.add_argument('--config',default='integration-recipe.json');a=ap.parse_args()
+ap=argparse.ArgumentParser();ap.add_argument('--mouth',required=True);ap.add_argument('--variant',default='C');ap.add_argument('--config',default='integration-recipe.json');ap.add_argument('--hair-finish',action='store_true');ap.add_argument('--clean-mouth',action='store_true');a=ap.parse_args()
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 source=Path(a.mouth).resolve();target=P/'parts'/('mouth-'+a.variant)
 files=['portable_mouth_delta.py','guard_helpers.py','payload/mouth-rig-'+a.variant+'.json','payload/mouth-rig-'+a.variant+'.npz','audit/input-guards.json']
@@ -13,14 +13,23 @@ for name in files:
     else:shutil.copyfile(src,dst)
     assert sha(src)==sha(dst);rows.append(dict(source=str(src),path=name,sha256=sha(dst),bytes=dst.stat().st_size))
 (target/'portable-files.json').write_text(json.dumps(rows,indent=2)+'\n',encoding='utf-8')
+if a.clean_mouth:
+    src=source/'clean_oral_palette.py';dst=target/src.name
+    if dst.exists():assert sha(dst)==sha(src)
+    else:shutil.copyfile(src,dst)
 stages=[]
 def stage(id,entry,function,owners,kwargs=None,path_kwargs=None):
     stages.append(dict(id=id,entry=entry,entry_sha256=sha(P/entry),function=function,
                        allowed_existing_owners=owners,kwargs=kwargs or {},path_kwargs=path_kwargs or []))
 stage('mouth-'+a.variant,'parts/mouth-'+a.variant+'/portable_mouth_delta.py','apply_to_current_scene',['MIA_V27_Foundation_Face','MIA_V27_SharedHeadBody'],{'variant':a.variant})
+if a.clean_mouth:
+    stage('oral-depth-clean','parts/mouth-'+a.variant+'/clean_oral_palette.py','apply_to_current_scene',['MIA_V27_Foundation_Face','MIA_v002_EvaluatedLipCollar'],{'amount':1.0})
 stage('body-G','parts/body-G/replay_current_scene.py','apply',['MIA_V27_SharedHeadBody'])
 hair=json.loads((P/'parts/hair-MN/bundle/manifest.json').read_text())
 stage('hair-MN-bound','parts/hair-MN/apply_bundle_M.py','apply',[x['owner'] for x in hair['actors'] if x['existing']],{'folder':'parts/hair-MN/bundle','include_binding':True},['folder'])
+if a.hair_finish:
+    stage('crown-O','parts/crown-O/apply_crown_O.py','apply',['MIA_V17_PIXAL_DetailedHair'],{'folder':'parts/crown-O'},['folder'])
+    stage('nape-P','parts/nape-P/apply_nape_P.py','apply',['MIA_V17_PIXAL_DetailedHair'],{'folder':'parts/nape-P'},['folder'])
 stage('face-D2','parts/face-D2/portable_face_delta.py','apply_to_current_scene',['MIA_V27_SharedHeadBody','V28G_InnerLid_-1','V28G_InnerLid_1'])
 stage('source-controls-gaze','expressions/expression_control_delta.py','apply_to_current_scene',['V28G_Iris_-1','V28G_Iris_1'])
 cfg=dict(baseline='../mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Brows_Lashes.blend',
