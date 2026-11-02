@@ -1,0 +1,101 @@
+{
+  "parameters_sha256": "68ff589f0ae58e7b3d28ab0e98698c3ee8791cbbd6df7f8d654e57a4e7b5a49c",
+  "mesh_sha256": "148254cab1faf965ae86a5f0f7c4eb98aae1361ce3f43660f0554c06e18ef833",
+  "native_opened": false,
+  "native_saved": false,
+  "gpu_used": false,
+  "vertices": 68184,
+  "triangles": 136364,
+  "node_count": 808,
+  "resolution": [
+    225,
+    120,
+    175
+  ],
+  "grid_points": 4725000,
+  "actual_grid_step_m": [
+    0.002991071428571429,
+    0.002983193277310924,
+    0.002988505747126437
+  ],
+  "build_seconds": 2.538647174835205,
+  "field_probe_max_error_m": 0.0,
+  "probes": [
+    {
+      "point": [
+        0.0,
+        -0.009999999776482582,
+        1.25
+      ],
+      "cpu_field": -0.07475819438695908,
+      "native_node_field": -0.07475819438695908
+    },
+    {
+      "point": [
+        -0.06599999964237213,
+        -0.1550000011920929,
+        1.2569999694824219
+      ],
+      "cpu_field": -0.0008913379861041903,
+      "native_node_field": -0.0008913379861041903
+    },
+    {
+      "point": [
+        0.06599999964237213,
+        -0.1550000011920929,
+        1.2569999694824219
+      ],
+      "cpu_field": -0.0008913379861041903,
+      "native_node_field": -0.0008913379861041903
+    },
+    {
+      "point": [
+        0.14000000059604645,
+        -0.029999999329447746,
+        1.309999942779541
+      ],
+      "cpu_field": -0.004914415068924427,
+      "native_node_field": -0.004914415068924427
+    },
+    {
+      "point": [
+        0.18000000715255737,
+        0.0,
+        1.2999999523162842
+      ],
+      "cpu_field": -0.01797592267394066,
+      "native_node_field": -0.01797592267394066
+    },
+    {
+      "point": [
+        0.27000001072883606,
+        0.0,
+        1.1200000047683716
+      ],
+      "cpu_field": 0.007137024309486151,
+      "native_node_field": 0.007137024309486151
+    },
+    {
+      "point": [
+        0.0,
+        -0.1899999976158142,
+        1.25
+      ],
+      "cpu_field": 0.03990473225712776,
+      "native_node_field": 0.03990473225712776
+    },
+    {
+      "point": [
+        0.30000001192092896,
+        0.10000000149011612,
+        1.399999976158142
+      ],
+      "cpu_field": 0.09483233094215393,
+      "native_node_field": 0.09483233094215393
+    }
+  ],
+  "surface_field_abs_max_mm": 0.9827613830566406,
+  "surface_field_abs_p95_mm": 0.05176253616809845,
+  "field_is_exact_sdf": false,
+  "status": "DESIGN SCULPT first merged volume; actual4 visual review required. No anatomy or source ART pass."
+}

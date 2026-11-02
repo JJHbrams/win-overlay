@@ -1,0 +1,215 @@
+{
+  "checkpoint": "design-sculpt07-C",
+  "status": "CONVEX BOWL DESIGN IMPROVEMENT / UNSELECTED PENDING ROOT REVIEW",
+  "art_acceptance": false,
+  "actual_frames": 4,
+  "gpu_token_released": true,
+  "render_exit_code_observed": 0,
+  "render_error_pattern_matches": 0,
+  "native_saved": false,
+  "live_applied": false,
+  "uv_key_weight_migration": false,
+  "head_scale_changed": false,
+  "A_commit": "8d064d0",
+  "B_commit": "14600ec",
+  "B_diagnostic_commit": "74ee7e0",
+  "lower_F2_support_residual_mm": -16.00769273322311,
+  "source_support_uncertainty_mm": 14.0,
+  "files": [
+    {
+      "path": "actual-four-C\\gray-F2lowoblique-pre-render.json",
+      "bytes": 77785,
+      "sha256": "348901003e891f2ae013c203b6efacade0e066b80f51366d8016d10a88cdbdf0"
+    },
+    {
+      "path": "actual-four-C\\gray-F2lowoblique.png",
+      "bytes": 494972,
+      "sha256": "597fac045e740f7bbf6036b815ee3bcbde313126952fbfe86248b3ec0fe7768d"
+    },
+    {
+      "path": "actual-four-C\\gray-front-pre-render.json",
+      "bytes": 77650,
+      "sha256": "519e21ec7d09481c0be015c2857db8405d7477f589ca9ee1535c2d07da6eae65"
+    },
+    {
+      "path": "actual-four-C\\gray-front.png",
+      "bytes": 312916,
+      "sha256": "bd5602e85e43f7a3e81372ae6d58dacf201e3416b9cebdb8b476fab65c352deb"
+    },
+    {
+      "path": "actual-four-C\\gray-profile-pre-render.json",
+      "bytes": 77768,
+      "sha256": "04a6ab25efaa2118507e36de55b774a7c46aa1ca4bcac118b27f9983107bfa05"
+    },
+    {
+      "path": "actual-four-C\\gray-profile.png",
+      "bytes": 267278,
+      "sha256": "3e762d6a612e8f288d83c40a97e868e49da86c602de86626ab1091b666933409"
+    },
+    {
+      "path": "actual-four-C\\gray-rearoblique-pre-render.json",
+      "bytes": 77784,
+      "sha256": "909e9fd6f12755eeef1f31a98c921e977044def0bbf012df74f3ec8a9f816e5c"
+    },
+    {
+      "path": "actual-four-C\\gray-rearoblique.png",
+      "bytes": 291858,
+      "sha256": "46165cd8d436c0aa8879c11a358673d939b4b805aa3b9948de66033af69cf40f"
+    },
+    {
+      "path": "actual-four-C\\render-records.json",
+      "bytes": 352936,
+      "sha256": "4cdeddf9c1a64e285343e593865599d94db1cfd0b13a000cb788e795e6fbf366"
+    },
+    {
+      "path": "actual-four-C\\render.log",
+      "bytes": 2680,
+      "sha256": "3dd81650c15caad5e0b10a0ad840fff5031625877eb81236254e857d3ce37f85"
+    },
+    {
+      "path": "actual-four-contact-sheet.png",
+      "bytes": 711446,
+      "sha256": "6d03ee2dbfe01a6ed5d748f36a72f6a31a7c6fd8052fc657666313303e154cbc"
+    },
+    {
+      "path": "actual-section-audit.png",
+      "bytes": 29105,
+      "sha256": "cd82d87ca485975f9dd705069be8bb45dc18d54e937ddba6fb914ba49663e438"
+    },
+    {
+      "path": "actual-sections.npz",
+      "bytes": 25467,
+      "sha256": "ecb64bb832334e9d9d36ffbed4559e250f09fb55c2df3d47848ad36c518a8c80"
+    },
+    {
+      "path": "audit_convex_primitive.py",
+      "bytes": 2840,
+      "sha256": "42a954f5df506287d225cd63dcec90c87c3441704367d00bac988f1b89df277f"
+    },
+    {
+      "path": "audit_volume.py",
+      "bytes": 5205,
+      "sha256": "0cbb7701d6f8b232fb08d6fe23af48dd75f6f7012cdd4de37dae0444defeb934"
+    },
+    {
+      "path": "build-report.json",
+      "bytes": 2556,
+      "sha256": "95d376090fdeaee481eeffad6620997f571bfb2470a44c6f8b195e629181cb54"
+    },
+    {
+      "path": "build_volume.py",
+      "bytes": 4467,
+      "sha256": "97d57fb7caf98c5ea33f741eb2d8175bb4b9c2e15dff06501616449dd9752836"
+    },
+    {
+      "path": "compose_review.py",
+      "bytes": 3718,
+      "sha256": "dd5f11b8e2fe57a34dfc0c98d4e580485dae6da791ede356b08626980ba3e64b"
+    },
+    {
+      "path": "convex-primitive-audit.json",
+      "bytes": 1970,
+      "sha256": "2f53580dab02262d05a3214f3094e87973058488fe4613eb19a6956794d549a3"
+    },
+    {
+      "path": "cpu-audit.json",
+      "bytes": 7357,
+      "sha256": "c3d3116ff51b76a581efbf886fa187d91b1e855588147882897be03fd527d660"
+    },
+    {
+      "path": "diagnostic\\actual-meridian-audit.json",
+      "bytes": 94388,
+      "sha256": "27a55ff51644c29ec07d5c8c765d76bf0e26e84d1571b23d573f9f7c97fcb19e"
+    },
+    {
+      "path": "diagnostic\\actual-meridian-contour-tangent.png",
+      "bytes": 33448,
+      "sha256": "b8a606400bef3e5c42435838172724f65c5e07c95e26fc37a366747bf9cb7146"
+    },
+    {
+      "path": "diagnostic\\audit_meridian.py",
+      "bytes": 5142,
+      "sha256": "ccce16799e87095a618e932a16e74653eb068067abb152de59ffbcb917dc2a99"
+    },
+    {
+      "path": "field.py",
+      "bytes": 1537,
+      "sha256": "d47d262bcd3543b00b47e4709b10a7966d542d2b280670a203b25ddcee9a0aa1"
+    },
+    {
+      "path": "freeze_parameters.py",
+      "bytes": 1792,
+      "sha256": "123bf1557460ec9e3e9eb8b50523f08fa9d45ba050d6ed8576a8db54ccf7d284"
+    },
+    {
+      "path": "install_design.py",
+      "bytes": 3803,
+      "sha256": "d0bde9726dc262d45855d8bd3b08516f2c180353d6cfb408fd8ec207da438074"
+    },
+    {
+      "path": "namespace_recipes.py",
+      "bytes": 1198,
+      "sha256": "44b74f8ff481bde204b2cf09876b6c608fe74fc4d84176f9ec213d9e23e34447"
+    },
+    {
+      "path": "parameters.json",
+      "bytes": 14294,
+      "sha256": "68ff589f0ae58e7b3d28ab0e98698c3ee8791cbbd6df7f8d654e57a4e7b5a49c"
+    },
+    {
+      "path": "plot_sections.py",
+      "bytes": 1064,
+      "sha256": "b0d166a502e662c436bbc18072c3099c953bb939ef6f9392f44d5d31f87a64b1"
+    },
+    {
+      "path": "preservation.json",
+      "bytes": 21898,
+      "sha256": "42048dd5f24c1532bf09e8698b958721c03ce6d871a47119f3543c217e9b6fb0"
+    },
+    {
+      "path": "render-preparation.json",
+      "bytes": 205,
+      "sha256": "24cae30ae5298bedd4ce1b63fbe0f8d751d1596de8c9c70f1023b1659eb598d7"
+    },
+    {
+      "path": "render_four.py",
+      "bytes": 9527,
+      "sha256": "b6e4981b6cd82a854c64c2a2246b34280035470d31cd7f415425affddeb3504f"
+    },
+    {
+      "path": "review-records.json",
+      "bytes": 5180,
+      "sha256": "f1eda38f3cdb189e6a760092cd2a2ed3fcf233956b696a80cf3a794a58fabb6e"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 7841,
+      "sha256": "d5e9362fb5aecae2df267e05938e952f84e478519c0cacfe6976ddd787de4b06"
+    },
+    {
+      "path": "sculpt07-C.npz",
+      "bytes": 1056485,
+      "sha256": "148254cab1faf965ae86a5f0f7c4eb98aae1361ce3f43660f0554c06e18ef833"
+    },
+    {
+      "path": "source-F2lowoblique.png",
+      "bytes": 1305217,
+      "sha256": "8c22c171a475d0d503b075e2456f882d2bd26e89aaa3e690b0925cc274b8676e"
+    },
+    {
+      "path": "source-front.png",
+      "bytes": 820654,
+      "sha256": "bb8064ec084e21a4fb6fefa20f3194c8bbda6046adb74048e48700506d294612"
+    },
+    {
+      "path": "source-profile.png",
+      "bytes": 665478,
+      "sha256": "ca21b0c005ce33abd8dcb522fb4edb12c37171de6344a252bb3fcbd6f3be16fd"
+    },
+    {
+      "path": "source-rearoblique.png",
+      "bytes": 795601,
+      "sha256": "fc58c3694af074ff7c302bb6437915d5d6f1671d57068d3a82d1cf64e28cddbd"
+    }
+  ]
+}
