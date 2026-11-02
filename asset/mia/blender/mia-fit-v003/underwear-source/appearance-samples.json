@@ -1,0 +1,331 @@
+{
+  "source_sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+  "source_size_px": [
+    1536,
+    1024
+  ],
+  "encoding": "PNG RGB byte values interpreted as sRGB illustration; no inverse lighting or physical albedo recovery",
+  "use": "Illustrated appearance references only, not physical albedo, calibrated reflectance or medical model",
+  "samples": [
+    {
+      "id": "front.bra.midcup",
+      "view": "front",
+      "patch_xyxy": [
+        213,
+        299,
+        220,
+        306
+      ],
+      "pixel_count": 49,
+      "srgb_encoded_median_u8": [
+        103.0,
+        101.0,
+        106.0
+      ],
+      "srgb_encoded_median_0_1": [
+        0.403921568627451,
+        0.396078431372549,
+        0.41568627450980394
+      ],
+      "srgb_encoded_p10_u8": [
+        102.0,
+        100.0,
+        105.0
+      ],
+      "srgb_encoded_p90_u8": [
+        104.0,
+        102.0,
+        106.0
+      ],
+      "interpretation": "cloth shaded midtone, away from line/seam"
+    },
+    {
+      "id": "front.bra.lower_band",
+      "view": "front",
+      "patch_xyxy": [
+        235,
+        318,
+        242,
+        323
+      ],
+      "pixel_count": 35,
+      "srgb_encoded_median_u8": [
+        103.0,
+        100.0,
+        104.0
+      ],
+      "srgb_encoded_median_0_1": [
+        0.403921568627451,
+        0.39215686274509803,
+        0.40784313725490196
+      ],
+      "srgb_encoded_p10_u8": [
+        101.4,
+        99.0,
+        104.0
+      ],
+      "srgb_encoded_p90_u8": [
+        106.0,
+        102.6,
+        106.0
+      ],
+      "interpretation": "band illustrated tone, below cup/band line"
+    },
+    {
+      "id": "profile.bra.front_cup",
+      "view": "profile",
+      "patch_xyxy": [
+        509,
+        293,
+        516,
+        300
+      ],
+      "pixel_count": 49,
+      "srgb_encoded_median_u8": [
+        97.0,
+        95.0,
+        101.0
+      ],
+      "srgb_encoded_median_0_1": [
+        0.3803921568627451,
+        0.37254901960784315,
+        0.396078431372549
+      ],
+      "srgb_encoded_p10_u8": [
+        95.0,
+        93.0,
+        99.0
+      ],
+      "srgb_encoded_p90_u8": [
+        99.0,
+        97.0,
+        102.0
+      ],
+      "interpretation": "cloth illustrated shade under profile lighting"
+    },
+    {
+      "id": "front.briefs.front_panel",
+      "view": "front",
+      "patch_xyxy": [
+        219,
+        435,
+        226,
+        442
+      ],
+      "pixel_count": 49,
+      "srgb_encoded_median_u8": [
+        104.0,
+        102.0,
+        107.0
+      ],
+      "srgb_encoded_median_0_1": [
+        0.40784313725490196,
+        0.4,
+        0.4196078431372549
+      ],
+      "srgb_encoded_p10_u8": [
+        103.0,
+        102.0,
+        106.0
+      ],
+      "srgb_encoded_p90_u8": [
+        104.0,
+        103.0,
+        108.0
+      ],
+      "interpretation": "brief illustrated midtone away from opening"
+    },
+    {
+      "id": "back.briefs.back_panel",
+      "view": "back",
+      "patch_xyxy": [
+        915,
+        430,
+        922,
+        437
+      ],
+      "pixel_count": 49,
+      "srgb_encoded_median_u8": [
+        103.0,
+        101.0,
+        106.0
+      ],
+      "srgb_encoded_median_0_1": [
+        0.403921568627451,
+        0.396078431372549,
+        0.41568627450980394
+      ],
+      "srgb_encoded_p10_u8": [
+        102.0,
+        100.0,
+        105.0
+      ],
+      "srgb_encoded_p90_u8": [
+        104.0,
+        102.0,
+        106.0
+      ],
+      "interpretation": "rear brief illustrated tone; compare rather than force equal front/back colors"
+    },
+    {
+      "id": "front.skin.abdomen",
+      "view": "front",
+      "patch_xyxy": [
+        217,
+        345,
+        224,
+        352
+      ],
+      "pixel_count": 49,
+      "srgb_encoded_median_u8": [
+        254.0,
+        229.0,
+        221.0
+      ],
+      "srgb_encoded_median_0_1": [
+        0.996078431372549,
+        0.8980392156862745,
+        0.8666666666666667
+      ],
+      "srgb_encoded_p10_u8": [
+        253.0,
+        228.0,
+        219.0
+      ],
+      "srgb_encoded_p90_u8": [
+        254.0,
+        230.0,
+        222.0
+      ],
+      "interpretation": "illustrated skin tone; light and pigment are mixed"
+    },
+    {
+      "id": "front.neck.lit",
+      "view": "front",
+      "patch_xyxy": [
+        238,
+        207,
+        243,
+        213
+      ],
+      "pixel_count": 30,
+      "srgb_encoded_median_u8": [
+        253.5,
+        229.0,
+        220.5
+      ],
+      "srgb_encoded_median_0_1": [
+        0.9941176470588236,
+        0.8980392156862745,
+        0.8647058823529412
+      ],
+      "srgb_encoded_p10_u8": [
+        253.0,
+        228.0,
+        219.0
+      ],
+      "srgb_encoded_p90_u8": [
+        254.0,
+        230.0,
+        223.1
+      ],
+      "interpretation": "lit neck illustration, not measured albedo"
+    },
+    {
+      "id": "front.neck.shadow",
+      "view": "front",
+      "patch_xyxy": [
+        221,
+        190,
+        227,
+        196
+      ],
+      "pixel_count": 36,
+      "srgb_encoded_median_u8": [
+        214.5,
+        156.5,
+        145.0
+      ],
+      "srgb_encoded_median_0_1": [
+        0.8411764705882353,
+        0.6137254901960785,
+        0.5686274509803921
+      ],
+      "srgb_encoded_p10_u8": [
+        64.0,
+        48.0,
+        43.0
+      ],
+      "srgb_encoded_p90_u8": [
+        234.5,
+        182.0,
+        170.0
+      ],
+      "interpretation": "illustrated under-chin shadow"
+    },
+    {
+      "id": "front.clavicle.line_mixed",
+      "view": "front",
+      "patch_xyxy": [
+        222,
+        220,
+        228,
+        223
+      ],
+      "pixel_count": 18,
+      "srgb_encoded_median_u8": [
+        187.5,
+        152.5,
+        148.5
+      ],
+      "srgb_encoded_median_0_1": [
+        0.7352941176470589,
+        0.5980392156862745,
+        0.5823529411764706
+      ],
+      "srgb_encoded_p10_u8": [
+        116.0,
+        82.6,
+        76.9
+      ],
+      "srgb_encoded_p90_u8": [
+        254.0,
+        242.8,
+        236.2
+      ],
+      "interpretation": "thin antialiased graphic line plus underlying skin; mixed patch, not pure ink"
+    },
+    {
+      "id": "oblique.neck.shadow",
+      "view": "oblique",
+      "patch_xyxy": [
+        1307,
+        183,
+        1313,
+        189
+      ],
+      "pixel_count": 36,
+      "srgb_encoded_median_u8": [
+        207.0,
+        147.5,
+        133.5
+      ],
+      "srgb_encoded_median_0_1": [
+        0.8117647058823529,
+        0.5784313725490197,
+        0.5235294117647059
+      ],
+      "srgb_encoded_p10_u8": [
+        24.5,
+        15.0,
+        12.5
+      ],
+      "srgb_encoded_p90_u8": [
+        224.5,
+        173.0,
+        163.0
+      ],
+      "interpretation": "illustrated neck-shadow interior"
+    }
+  ]
+}
