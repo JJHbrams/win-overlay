@@ -37,6 +37,10 @@ Shape Key가 있는 메시의 기본 좌표 캐시, Basis 좌표, 활성 키·�
 
 v18 조사 당시 피부·헤어는 주로 색×노멀 기반 음영을 Emission으로 출력했고, Area light가 해당 음영을 제어하지 않았다. 이를 후속 버전의 현재 상태로 복사하지 않는다. v28 G2L 얼굴의 실제 활성 경로는 Diffuse→ShaderToRGB→ramp×packed pigment→Emission이며 장면 조명에 반응한다. v29 C는 이 경로를 보존하고 얼굴/안검 벽에 독립 cosmetic·shadow/specular/roughness controls와 실제 BSDF 반사 경로를 추가했다. 나머지 헤어/바디까지 같은 방식이라고 추정하지 않는다. 활성 Output ancestry와 actual fixed/moved-light 렌더로 판정하며, 이를 물리적으로 에너지가 보존되는 피부라고 부르지 않는다. 필요한 맵은 목표 셰이더가 결정하며 모든 PBR 맵을 일괄 추가하지 않는다.
 
+검토용 renderer를 재사용할 때는 실제 적용 상태도 확인한다. v003 crease-A에서는 setup 이후 새 재질 복사본을 적용했지만, render 함수가 이전에 캐시한 skin/wall 슬롯을 매 프레임 복원하여 구 재질을 촬영했다. 새 변경을 setup 후 적용했다면 복원 캐시와 실제 슬롯을 함께 갱신하고 촬영 전후 이름/해시를 검증한다. 새 hair/brow actors도 setup에서 수집한 hairOFF 목록에 자동으로 들어간다고 가정하지 않는다. PNG가 저장되고 프로세스가 성공해도 EEVEE shader compile 오류가 있으면 해당 후보 영상은 유효한 아트 검토 증거가 아니다. 정적 pigment를 bake해 shader 부하를 줄일 수 있지만, 속성 숫자만으로 컴파일 성공을 보장하지 않는다.
+
+상체는 흉곽·가슴 돌출부만 따로 맞추지 않는다. 원화의 관찰 가능한 피부 윤곽과 의상 외곽을 구분해 높이별 단면/3D 연결 가이드를 만들고, 흉곽–유방 뿌리–대흉근/겨드랑이–어깨의 연속적인 표면을 함께 본다. 팔 weight의 hard cutoff로 측면 연결을 끊지 않는다. 앞/뒤 겨드랑이 주름은 열린 통로의 양쪽이며 가이드의 bridge 면을 피부 막으로 채우면 안 된다. 명암선·속옷 밑단·내부 관절 pivot을 직접 피부/유방 뿌리 치수로 바꾸지 않는다. 새 imagegen 보조 뷰의 각도·포즈·치수도 프롬프트 값만으로 확정하지 않는다.
+
 엔진별 Material Output도 구분한다. v002 구강 조사에서 MToon 내부의 분홍 Shade Color가 보였으나 실제 EEVEE 출력은 별도의 CompatibleMaterialOutput→Principled 경로였고 Metallic1/Roughness1이었다. 내부 그룹이나 이름·활성 플래그만 보고 실제 치아색 원인으로 단정할 수 없다. 현재 엔진에 대해 API가 선택하는 출력과 실제 연결·UV·알파·면 방향·차폐를 추적하고, 제한된 재질 진단 렌더로 원인을 분리한다. 새 값이나 노드가 존재한다는 사실은 실제 출력에 반영됐다는 증거가 아니다.
 
 ## 단계와 통과 조건
