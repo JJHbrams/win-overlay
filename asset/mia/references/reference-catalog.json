@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "character": "Mia",
-  "updated_date": "2026-11-02",
+  "updated_date": "2026-11-03",
   "reference_selection": {
     "character_design": "MIA-DESIGN-MASTER-V22",
     "face_identity": "MIA-FACE-CONFIRMED-20261031",
@@ -13,7 +13,8 @@
     "side_volume_revision": "Historic v04 not delivered; latest whole-body design target is user-confirmed v06. No model PASS implied.",
     "latest_reaffirmed_face_and_hair_portrait": "MIA-FACE-PORTRAIT-REAFFIRMED-20261031",
     "latest_eye_lash_semantic_annotation": "MIA-EYE-LASH-USER-ANNOTATION-20261102",
-    "body_design_target": "MIA-BODY-V06-USER-CONFIRMED-20261102"
+    "body_design_target": "MIA-BODY-V06-USER-CONFIRMED-20261102",
+    "low_view_upper_body_axilla": "MIA-LOW-AXILLA-USER-REAFFIRMED-20261103"
   },
   "rules": [
     "Select by role and explicit user decision, never by largest version number alone.",
@@ -363,6 +364,19 @@
       "prompt": "body-foundation/v06/supplements/low-pelvis-E2-F2-v01.prompt.txt",
       "limits": "Illustrated inference, not measured projections or model renders. Prompt angles are not calibrated camera evidence; G/H arms appear closer to horizontal than requested60degrees. v06 remains authority. E/F initial narrow-pelvis feedback applies to reference art only, not model hip widening.",
       "provenance": "body-foundation/v06/supplements/low-pelvis-E2-F2-v01.provenance.json"
+    },
+    {
+      "id": "MIA-LOW-AXILLA-USER-REAFFIRMED-20261103",
+      "status": "user_reaffirmed_upper_body_axilla_comparison",
+      "role": "rounded_supported_mass_and_axillary_overlap",
+      "path": "received/mia-low-view-axilla-reaffirmed-20261103.png",
+      "sha256": "31fa0da05c970e9b6d84a2569953b48636bd8d32df33d65901772f5664ad52b2",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "provenance": "received/mia-low-view-axilla-reaffirmed-20261103.provenance.json"
     }
   ],
   "reaffirmed_front_pixel_equal_to_old_canonical": false

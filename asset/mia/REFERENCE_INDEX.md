@@ -40,6 +40,8 @@ v06은 선택 정면과 종아리 수정에서 파생했으며 현재 사용자�
 
 2026-11-02 추가 보조 원화: [상·하단/팔 전개 8뷰](references/body-foundation/v06/supplements/upper-body-8views-v01.png), [골반을 보정한 E2/F2 하단 2뷰](references/body-foundation/v06/supplements/low-pelvis-E2-F2-v01.png). 내장 imagegen으로 v06에서 파생했다. 원래 E/F의 좁은 골반에 대한 사용자 피드백은 **이 생성 원화에만 해당**하며 모델 골반 수정 지시가 아니다. E2/F2도 원안의 정확한 치수·투영을 대신하지 않는다. 생성 프롬프트의 각도를 실측 카메라 값으로 취급하지 않으며 G/H의 팔은 요청60도보다 수평에 가깝다. 각 파일 옆에 프롬프트와 provenance를 보관한다.
 
+2026-11-03 사용자가 [E2/F2를 다시 첨부](references/received/mia-low-view-axilla-reaffirmed-20261103.png)하며 **둥글고 충만한 유방 볼륨 및 유방 뿌리–겨드랑이–흉곽의 겹침을 비교할 기준**으로 명시했다. 이 상체 검토 역할을 단순 생성 보조라는 이유로 무시하면 안 된다. 기존 E2/F2와 픽셀 동일하며, 재첨부 원본 바이트와 새 역할을 별도 provenance에 저장했다. 전신 비율은 기존 v06을 유지하고, 그림의 숨겨진 구조·카메라 각도는 여전히 추정임을 기록한다. 이 지시가 모델 골반 전체의 확대를 뜻하지는 않는다.
+
 ## 보존 자료와 상세 기록
 
 - 기존 보조 원화: [정면 v22](references/mia-canonical-source-v22.png), [16표정 v22](references/mia-expressions-clean-16-v22.png).
