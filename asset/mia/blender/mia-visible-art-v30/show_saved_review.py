@@ -23,5 +23,5 @@ try:
 finally:
  for ob in hair:ob.hide_render=False
 bpy.context.view_layer.update();assert sha(native)==REVIEW_SHA
-report={'native':str(native),'native_sha256':REVIEW_SHA,'native_saved':False,'runtime_only_resolution512':True,'camera':{'name':cam.name,'projection':cam.data.type,'matrix':[list(r) for r in cam.matrix_world],'ortho_scale':cam.data.ortho_scale,'clip_start':cam.data.clip_start,'clip_end':cam.data.clip_end},'head_pivot':[0,0,1.55],'mesh_origins_changed':False,'images':records,'status':'Working review only. Closed lash style and full face/hair/body ART remain open.'}
+report={'native':str(native),'native_sha256':REVIEW_SHA,'native_saved':False,'runtime_only_resolution512':True,'camera':{'name':cam.name,'projection':cam.data.type,'matrix':[list(r) for r in cam.matrix_world],'ortho_scale':cam.data.ortho_scale,'clip_start':cam.data.clip_start,'clip_end':cam.data.clip_end},'head_pivot':[0,0,1.55],'mesh_origins_changed':False,'images':records,'status':globals().get('REVIEW_STATUS','Working review only. Full face/hair/body source ART remains open.')}
 (out/'live-review.json').write_text(json.dumps(report,indent=2),encoding='utf-8');print(json.dumps(report))

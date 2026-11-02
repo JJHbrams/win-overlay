@@ -3,6 +3,7 @@ import hashlib,json
 from pathlib import Path
 P=Path(__file__).resolve().parent;M=P.parents[1];statepath=M/'CURRENT_STATE.json'
 state=json.loads(statepath.read_text(encoding='utf-8'))
+assert state.get('active_working_correction',{}).get('sha256') in [None,'d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be','9dd072af38d52130aa693c561545b2b70b98f22c3b69145fc2b7211cd1632505'],'Archived recorder cannot overwrite a newer checkpoint; read CURRENT_STATE and current review.'
 native=P/'integrated/brows-C-outer-E/Mia_SourceLook_v31_Review_CleanHair.blend'
 sha=hashlib.sha256(native.read_bytes()).hexdigest();assert sha=='9dd072af38d52130aa693c561545b2b70b98f22c3b69145fc2b7211cd1632505'
 rel=str(native.relative_to(M)).replace('\\','/')

@@ -1,0 +1,19 @@
+{
+  "input": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_Review_CleanHair.blend",
+  "input_sha256": "9dd072af38d52130aa693c561545b2b70b98f22c3b69145fc2b7211cd1632505",
+  "output": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_Brows_Lashes.blend",
+  "output_sha256": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a",
+  "delta_native_sha256": "0dde1b1cf6da83ff6dea627890ab6d03342e0a968e762afe1d0986b3c89c188f",
+  "payload_sha256": "c3fb32e01552bcdacaac134bc43522a412ef85d9265bf3404a16333f1706430b",
+  "checks": {
+    "all_input_nonupper_mesh_records_exact": true,
+    "all_upper_input_noncoordinate_fields_exact": true,
+    "exact_selected_closed_delta": true,
+    "all_input_material_graphs_exact": true,
+    "all_input_images_maps_exact": true,
+    "all_input_scene_camera_lights_world_pose_exact": true,
+    "input_native_immutable": true
+  },
+  "scope": "Exactly4 existing upper-lash CLOSED key arrays: bilateralClose plusmatching sideCloseR/L, 2perowner. Raw/neutral/allotherkeys unchanged. No newkey/driver/material/topology/UV/weight; all inputnonupper geometry includingcurrentcleanedhair/body/E/brows/maps/scene settings preserved.",
+  "pending": "Parent actualsource/closedstyle review and integrated finalposes; no fullcharacterART."
+}

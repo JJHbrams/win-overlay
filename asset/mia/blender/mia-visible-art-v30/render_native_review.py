@@ -60,7 +60,7 @@ def render(label,v,hide=False,neutral=False):
  actual['head_eye_pose']={'armature':rig.name,'head_bone':head.name,'head_matrix_basis':[list(r) for r in head.matrix_basis],'eye_pose':'rest; master shape keys recorded above'}
  actual['lighting']['areas']=[dict(item,matrix=[list(r) for r in o.matrix_world],watts=o.data.energy,shape=o.data.shape,size=o.data.size,color=list(o.data.color)) for item,o in zip(v['lighting']['areas'],lamps)]
  actual['lighting']['world_linear']=list(bg.inputs['Color'].default_value)[:3];actual['lighting']['world_strength']=bg.inputs['Strength'].default_value
- records.append({'id':label,'native':str(native),'native_sha256':a.sha256,'path':str(file),'sha256':sha(file),'camera':actual,'material_mode':'neutral physical gray.23 rough.85' if neutral else 'actual default production','hair_temporarily_hidden':[o.name for o in hair] if hide else [],'native_saved':False})
+ records.append({'id':label,'native':str(native),'native_sha256':a.sha256,'renderer_sha256':sha(Path(__file__)),'path':str(file),'sha256':sha(file),'camera':actual,'material_mode':'neutral physical gray.23 rough.85' if neutral else 'actual default production','hair_temporarily_hidden':[o.name for o in hair] if hide else [],'native_saved':False})
  (out/'render-records.json').write_text(json.dumps(records,indent=2),encoding='utf-8')
 if a.preset=='source':
  for row in pkg['views']:

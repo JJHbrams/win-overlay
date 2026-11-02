@@ -9,6 +9,8 @@ This is an execution requirement, including after compaction, not an optional il
 3. Register a corresponding view before judging proportions. Record projection, camera matrix, lens or ortho scale, pixel aspect, shift, frame, active shape keys, lighting, material mode and color management. A drawing's side/three-quarter label is not proof of 90/45 degrees. Preserve the estimated yaw/pitch/roll and uncertainty.
 4. Use the same camera, pose, light and display transform for baseline and candidate. Registration allows only uniform scale, rotation and translation. Do not reshape a comparison image by feature or change the mesh per view.
 
+New review records must also state actual camera clip_start/clip_end (and distinguish viewport clipping). Do not silently use a temporary camera's default1000m far plane while the saved native uses10m: v31's actual unchanged brow was rasterized with pale flecks only in the wider range. Establish camera/depth precision and ordered surface visibility before changing geometry to hide a renderer artifact. Historical records without clipping are explicitly limited evidence, not retroactively labelled with new values.
+
 ## Required output for each candidate
 
 - Face/head: source-art | baseline | candidate for front, profile, left oblique and right oblique; include a subtle-angle expression panel when used to justify the edit. For a covered or non-matching reference, explicitly label the limit; do not silently substitute a front view.

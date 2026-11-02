@@ -1,0 +1,901 @@
+{
+  "input": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_Review.blend",
+  "input_sha256": "c3557e9eaa2163ae0d6f712a8c51362c0a6abdab628bcabe3e9673511323813c",
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-lash-pose-v31\\Mia_LashPose_v31_A.blend",
+  "sha256": "d98e80ceb438b3b4fab1028f2f4b5b4a85152a6de1930a538321f6cd732b2a24",
+  "checks": {
+    "all_nonupper_mesh_records_exact": true,
+    "all_upper_noncoordinate_fields_exact": true,
+    "all_material_graphs_exact": true,
+    "all_images_maps_exact": true,
+    "source_native_immutable": true,
+    "V30_UpperLashes_-1_neutral_raw_exact": true,
+    "V30_UpperLashes_-1_all_nontarget_keys_exact": true,
+    "V30_UpperLashes_1_neutral_raw_exact": true,
+    "V30_UpperLashes_1_all_nontarget_keys_exact": true
+  },
+  "source_expression_sheet": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+  "source_expression_sheet_sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+  "source_panel": "02; nearlyclosed eyes, source hidespartsunderbangs; guidesfinishnot exactfullyclosedanatomy",
+  "parameters": {
+    "outer_station_blend_start": 0.65,
+    "full_blend_by": 0.95,
+    "outward_closed_length_factor": 0.75,
+    "closed_crossfringe_width_factor": 0.35,
+    "normal_offset_factor": 0.3,
+    "outward_headspace_slopeZ": -0.2
+  },
+  "maximum_forward_contact_reseat_mm": 0.0,
+  "station_records": [
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        -0.6475712954259781,
+        0.7103289881495611,
+        -0.27583354751505723
+      ],
+      "skin_normal": [
+        -0.7373585104942322,
+        -0.6754501461982727,
+        -0.008337038569152355
+      ],
+      "maximum_coordinate_change_mm": 18.584560365799213,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        -0.6475712954259781,
+        0.7103289881495611,
+        -0.27583354751505723
+      ],
+      "skin_normal": [
+        -0.7373585104942322,
+        -0.6754501461982727,
+        -0.008337038569152355
+      ],
+      "maximum_coordinate_change_mm": 16.802257704747742,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        -0.6475712954259781,
+        0.7103289881495611,
+        -0.27583354751505723
+      ],
+      "skin_normal": [
+        -0.7373585104942322,
+        -0.6754501461982727,
+        -0.008337038569152355
+      ],
+      "maximum_coordinate_change_mm": 14.992956918902907,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        -0.6475712954259781,
+        0.7103289881495611,
+        -0.27583354751505723
+      ],
+      "skin_normal": [
+        -0.7373585104942322,
+        -0.6754501461982727,
+        -0.008337038569152355
+      ],
+      "maximum_coordinate_change_mm": 13.23449942434039,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        -0.6475712954259781,
+        0.7103289881495611,
+        -0.27583354751505723
+      ],
+      "skin_normal": [
+        -0.7373585104942322,
+        -0.6754501461982727,
+        -0.008337038569152355
+      ],
+      "maximum_coordinate_change_mm": 11.380189751183615,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        -0.6475712954259781,
+        0.7103289881495611,
+        -0.27583354751505723
+      ],
+      "skin_normal": [
+        -0.7373585104942322,
+        -0.6754501461982727,
+        -0.008337038569152355
+      ],
+      "maximum_coordinate_change_mm": 10.007843771797646,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        -0.6475712954259781,
+        0.7103289881495611,
+        -0.27583354751505723
+      ],
+      "skin_normal": [
+        -0.7373585104942322,
+        -0.6754501461982727,
+        -0.008337038569152355
+      ],
+      "maximum_coordinate_change_mm": 8.914544204235098,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        -0.6475712954259781,
+        0.7103289881495611,
+        -0.27583354751505723
+      ],
+      "skin_normal": [
+        -0.7373585104942322,
+        -0.6754501461982727,
+        -0.008337038569152355
+      ],
+      "maximum_coordinate_change_mm": 8.10330322269811,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        -0.6475712954259781,
+        0.7103289881495611,
+        -0.27583354751505723
+      ],
+      "skin_normal": [
+        -0.7373585104942322,
+        -0.6754501461982727,
+        -0.008337038569152355
+      ],
+      "maximum_coordinate_change_mm": 7.612760402704768,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        -0.6475712954259781,
+        0.7103289881495611,
+        -0.27583354751505723
+      ],
+      "skin_normal": [
+        -0.7373585104942322,
+        -0.6754501461982727,
+        -0.008337038569152355
+      ],
+      "maximum_coordinate_change_mm": 7.0664975863307244,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 0.9374329055764932,
+      "attached": true,
+      "blend": 0.9948826227120864,
+      "target_outward_tangent": [
+        -0.693103222126796,
+        0.7032682101991818,
+        -0.15818264127486492
+      ],
+      "skin_normal": [
+        -0.6936677694320679,
+        -0.7104015946388245,
+        -0.11897313594818115
+      ],
+      "maximum_coordinate_change_mm": 5.200575129032991,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 0.8911604806141755,
+      "attached": true,
+      "blend": 0.8996864878945443,
+      "target_outward_tangent": [
+        -0.6454770977281729,
+        0.7546879372424753,
+        -0.11749652628530051
+      ],
+      "skin_normal": [
+        -0.7381777763366699,
+        -0.6559110283851624,
+        -0.15771633386611938
+      ],
+      "maximum_coordinate_change_mm": 4.225423242736208,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 0.8559695513741998,
+      "attached": true,
+      "blend": 0.7668603720520211,
+      "target_outward_tangent": [
+        -0.6119743399594613,
+        0.7908521305389768,
+        -0.00634939785671856
+      ],
+      "skin_normal": [
+        -0.7666850090026855,
+        -0.5952059030532837,
+        -0.24067437648773193
+      ],
+      "maximum_coordinate_change_mm": 3.152640082404173,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 0.8243332895144109,
+      "attached": true,
+      "blend": 0.620599191335005,
+      "target_outward_tangent": [
+        -0.5830193034898292,
+        0.8106699262991929,
+        0.05387728976383007
+      ],
+      "skin_normal": [
+        -0.7894274592399597,
+        -0.5495681762695312,
+        -0.2734578251838684
+      ],
+      "maximum_coordinate_change_mm": 2.2560824303750953,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 0.7945470165413088,
+      "attached": true,
+      "blend": 0.47274709341906995,
+      "target_outward_tangent": [
+        -0.5552352020896257,
+        0.8217601797522508,
+        0.1281564564664645
+      ],
+      "skin_normal": [
+        -0.8100306987762451,
+        -0.4993751347064972,
+        -0.30736762285232544
+      ],
+      "maximum_coordinate_change_mm": 1.5113371473604142,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 0.7656325147069539,
+      "attached": true,
+      "blend": 0.33116940785020943,
+      "target_outward_tangent": [
+        -0.5854426987596607,
+        0.7977212747158808,
+        0.14456007171648616
+      ],
+      "skin_normal": [
+        -0.7889238595962524,
+        -0.5195143818855286,
+        -0.3281829059123993
+      ],
+      "maximum_coordinate_change_mm": 1.1294067759069024,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 0.7378517721383809,
+      "attached": true,
+      "blend": 0.20703970911085173,
+      "target_outward_tangent": [
+        -0.6569932065916844,
+        0.7287113730440657,
+        0.19323473106201405
+      ],
+      "skin_normal": [
+        -0.732162356376648,
+        -0.5556363463401794,
+        -0.39396271109580994
+      ],
+      "maximum_coordinate_change_mm": 0.6567260727334916,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 0.7115510406609278,
+      "attached": true,
+      "blend": 0.10901116825904285,
+      "target_outward_tangent": [
+        -0.7151209248509298,
+        0.6595451799287397,
+        0.23152152917842664
+      ],
+      "skin_normal": [
+        -0.6776754856109619,
+        -0.5729806423187256,
+        -0.46092212200164795
+      ],
+      "maximum_coordinate_change_mm": 0.3550864955089017,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 0.6867235392420081,
+      "attached": true,
+      "blend": 0.04128534905027269,
+      "target_outward_tangent": [
+        -0.7478609744109437,
+        0.6443801565989318,
+        0.15961884830636394
+      ],
+      "skin_normal": [
+        -0.6396981477737427,
+        -0.6352329850196838,
+        -0.43274161219596863
+      ],
+      "maximum_coordinate_change_mm": 0.13298627577086997,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_-1",
+      "station_t": 0.66348983942671,
+      "attached": true,
+      "blend": 0.005884020118864853,
+      "target_outward_tangent": [
+        -0.7597782182333832,
+        0.6499989181289925,
+        0.015442329139253275
+      ],
+      "skin_normal": [
+        -0.6217566132545471,
+        -0.7194101810455322,
+        -0.30962517857551575
+      ],
+      "maximum_coordinate_change_mm": 0.018162644727662106,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 0.6583926888154333,
+      "attached": true,
+      "blend": 0.002304118058046552,
+      "target_outward_tangent": [
+        0.762864981733464,
+        0.6461563858335608,
+        -0.022780357576479515
+      ],
+      "skin_normal": [
+        0.6172615885734558,
+        -0.7383323311805725,
+        -0.2717602252960205
+      ],
+      "maximum_coordinate_change_mm": 0.006995422987224019,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 0.6831943000769617,
+      "attached": true,
+      "blend": 0.03401942057285169,
+      "target_outward_tangent": [
+        0.7488334009097807,
+        0.6522701083447942,
+        0.11744038250006747
+      ],
+      "skin_normal": [
+        0.6372840404510498,
+        -0.6600000262260437,
+        -0.3978304862976074
+      ],
+      "maximum_coordinate_change_mm": 0.11111858983199766,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 0.7098341770441782,
+      "attached": true,
+      "blend": 0.10346991682417737,
+      "target_outward_tangent": [
+        0.7194356909725559,
+        0.6701290476857739,
+        0.18259065146550899
+      ],
+      "skin_normal": [
+        0.6716378331184387,
+        -0.6042453646659851,
+        -0.42870771884918213
+      ],
+      "maximum_coordinate_change_mm": 0.338106510068273,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 0.7381530848627279,
+      "attached": true,
+      "blend": 0.2082889043640741,
+      "target_outward_tangent": [
+        0.6701047236180048,
+        0.7288247365214681,
+        0.14062063440068068
+      ],
+      "skin_normal": [
+        0.7191096544265747,
+        -0.590490996837616,
+        -0.3663354814052582
+      ],
+      "maximum_coordinate_change_mm": 0.7678152100090756,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 0.7681946931247805,
+      "attached": true,
+      "blend": 0.34335669038393085,
+      "target_outward_tangent": [
+        0.6080855009580104,
+        0.7899749133867311,
+        0.07855991181430916
+      ],
+      "skin_normal": [
+        0.7707184553146362,
+        -0.5637284517288208,
+        -0.29699060320854187
+      ],
+      "maximum_coordinate_change_mm": 1.4115632088525452,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 0.7994509623908097,
+      "attached": true,
+      "blend": 0.49725482421354156,
+      "target_outward_tangent": [
+        0.6289662893554497,
+        0.7769166676442191,
+        0.028317810491610453
+      ],
+      "skin_normal": [
+        0.7532210350036621,
+        -0.5999546647071838,
+        -0.26965266466140747
+      ],
+      "maximum_coordinate_change_mm": 2.2309960630259713,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 0.8318828764252615,
+      "attached": true,
+      "blend": 0.6570136775564437,
+      "target_outward_tangent": [
+        0.700890005601838,
+        0.7132273169713083,
+        0.0077456034861233085
+      ],
+      "skin_normal": [
+        0.6868910193443298,
+        -0.6720037460327148,
+        -0.2767520248889923
+      ],
+      "maximum_coordinate_change_mm": 3.194997083007395,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 0.8666535168265418,
+      "attached": true,
+      "blend": 0.8113326952678188,
+      "target_outward_tangent": [
+        0.7319214439054452,
+        0.6735216181245044,
+        -0.10324548353471599
+      ],
+      "skin_normal": [
+        0.6526718735694885,
+        -0.7365049719810486,
+        -0.177707239985466
+      ],
+      "maximum_coordinate_change_mm": 4.3821323919976995,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 0.9077615209085457,
+      "attached": true,
+      "blend": 0.9461123784177841,
+      "target_outward_tangent": [
+        0.8012283481815403,
+        0.5789990564763916,
+        -0.15097425830163405
+      ],
+      "skin_normal": [
+        0.5653150081634521,
+        -0.8151770830154419,
+        -0.1261162906885147
+      ],
+      "maximum_coordinate_change_mm": 5.724421285586039,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 0.9750993518059637,
+      "attached": true,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        0.8110166342861387,
+        0.5333652682067948,
+        -0.24036120648282153
+      ],
+      "skin_normal": [
+        0.5518772602081299,
+        -0.8338417410850525,
+        0.011813423596322536
+      ],
+      "maximum_coordinate_change_mm": 8.095180480409912,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        0.7765366462418288,
+        0.5746221263304285,
+        -0.2584574413225314
+      ],
+      "skin_normal": [
+        0.5997375845909119,
+        -0.7998477220535278,
+        0.023632721975445747
+      ],
+      "maximum_coordinate_change_mm": 9.206158679079989,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        0.7765366462418288,
+        0.5746221263304285,
+        -0.2584574413225314
+      ],
+      "skin_normal": [
+        0.5997375845909119,
+        -0.7998477220535278,
+        0.023632721975445747
+      ],
+      "maximum_coordinate_change_mm": 9.48535741689051,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        0.7765366462418288,
+        0.5746221263304285,
+        -0.2584574413225314
+      ],
+      "skin_normal": [
+        0.5997375845909119,
+        -0.7998477220535278,
+        0.023632721975445747
+      ],
+      "maximum_coordinate_change_mm": 10.48442619043507,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        0.7765366462418288,
+        0.5746221263304285,
+        -0.2584574413225314
+      ],
+      "skin_normal": [
+        0.5997375845909119,
+        -0.7998477220535278,
+        0.023632721975445747
+      ],
+      "maximum_coordinate_change_mm": 11.592123779765123,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        0.7765366462418288,
+        0.5746221263304285,
+        -0.2584574413225314
+      ],
+      "skin_normal": [
+        0.5997375845909119,
+        -0.7998477220535278,
+        0.023632721975445747
+      ],
+      "maximum_coordinate_change_mm": 12.71507803626799,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        0.7765366462418288,
+        0.5746221263304285,
+        -0.2584574413225314
+      ],
+      "skin_normal": [
+        0.5997375845909119,
+        -0.7998477220535278,
+        0.023632721975445747
+      ],
+      "maximum_coordinate_change_mm": 13.904063583643484,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "owner": "V30_UpperLashes_1",
+      "station_t": 1.0,
+      "attached": false,
+      "blend": 1.0,
+      "target_outward_tangent": [
+        0.7765366462418288,
+        0.5746221263304285,
+        -0.2584574413225314
+      ],
+      "skin_normal": [
+        0.5997375845909119,
+        -0.7998477220535278,
+        0.023632721975445747
+      ],
+      "maximum_coordinate_change_mm": 15.380141124289988,
+      "paired_forward_contact_shifts_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "method": "Closedkeysonly: outerfan solidsections mappedfrom unchangedneutral design toclosedactualskin tangentframe withsideward/downlongaxis, no shortturntangentinheritance. Attachedrootcentres exact; pairedthickness preserved. Actualskin-enveloperecontactmovespairedfront/backtogether. Bilateral andmatchingunilateral endpointarrayssame. Neutral/allnonclosedkeys/Ewall/ocular/body/brows/mapsunchanged.",
+  "pending": "SmallactualGPUsource02/before/Afront/profile/grazingfullandHalf, manifold/volume/contactthroughglobalandunilateral interpolation. CandidateA isnotartPASS."
+}
