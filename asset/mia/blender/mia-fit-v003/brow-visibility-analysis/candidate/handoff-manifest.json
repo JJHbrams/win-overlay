@@ -1,0 +1,116 @@
+{
+  "required_files": [
+    {
+      "relative_path": "partial_brow_display.py",
+      "sha256": "5634fb67de4029d80ee3d41cbe18f69778ece11702f2ae134678d45f7ab1d70a",
+      "bytes": 15425
+    },
+    {
+      "relative_path": "fringe-target-A.json",
+      "sha256": "3cea5b49ac0df48292a2c9ba08d76c20b3fb63ba15039447fa2dfaad045f8a8b",
+      "bytes": 4655
+    },
+    {
+      "relative_path": "fringe-target-A.npz",
+      "sha256": "1cac90c9b5f94abf9736eb3f1edd094d8139f7e2b5098b29586475783c59e08f",
+      "bytes": 44551
+    }
+  ],
+  "entry": "partial_brow_display.py:apply_to_current_scene(strength=0.60)",
+  "reversible": "set_strength(0), or hide the two new overlay objects; original data is not replayed.",
+  "native_input_opened_by_helper": false,
+  "native_saved": false,
+  "allowed_existing_owners": [],
+  "new_scene_owners": [
+    "MIA_v003_BrowInk_HeadFrame",
+    "MIA_v003_BrowInk_FringeTarget",
+    "MiaHair_BrowInkProjection_-1",
+    "MiaHair_BrowInkProjection_1"
+  ],
+  "runtime_source_dependencies": [
+    "MIA_V06_RIG/J_Bip_C_Head",
+    "MIA_V17_PIXAL_DetailedHair",
+    "V31_SourceBrow_-1",
+    "V31_SourceBrow_1"
+  ],
+  "CPU_report": {
+    "path": "CPU-projection-guards-A.json",
+    "sha256": "ef3ac27a59ba053254469f70a61a1e193c74f8fcda13ebb0ee0f926f970198c6"
+  },
+  "actual_records": {
+    "path": "review/A-gate-corrected-front-oblique4/render-records.json",
+    "sha256": "d44ecd64c74cccff43d12cb8fa438626377e245d6b706c3f7a64cdd73b29efe3"
+  },
+  "comparisons": [
+    {
+      "view": "front",
+      "changed_pixels": 603,
+      "maximum_RGB255": 40,
+      "bbox_xyxy": [
+        145,
+        221,
+        438,
+        482
+      ],
+      "pixels_above1RGB": 438,
+      "bbox_above1RGB": [
+        160,
+        221,
+        291,
+        248
+      ]
+    },
+    {
+      "view": "left_oblique",
+      "changed_pixels": 520,
+      "maximum_RGB255": 39,
+      "bbox_xyxy": [
+        108,
+        237,
+        417,
+        349
+      ],
+      "pixels_above1RGB": 395,
+      "bbox_above1RGB": [
+        115,
+        237,
+        229,
+        269
+      ]
+    }
+  ],
+  "boards": [
+    {
+      "view": "front",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\brow-visibility-analysis\\candidate\\review\\A-gate-corrected-front-oblique4\\paired\\front-source-baseline-partial-brow.png",
+      "sha256": "7369cdd004e69c35f120b82c2b8fe9cf405bceea6bd2ec723beeffa76d52b2d9",
+      "reference_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+      "reference_sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44",
+      "reference_crop": [
+        340,
+        220,
+        700,
+        490
+      ],
+      "reference_uniform_display_scale": 1
+    },
+    {
+      "view": "left_oblique",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\brow-visibility-analysis\\candidate\\review\\A-gate-corrected-front-oblique4\\paired\\left_oblique-source-baseline-partial-brow.png",
+      "sha256": "29ea1fd75d7f6f22da6b63c87b06e81741501fae5cf5d30b3959c0905eb033f8",
+      "reference_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+      "reference_sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+      "reference_crop": [
+        1230,
+        45,
+        1405,
+        180
+      ],
+      "reference_uniform_display_scale": 2
+    }
+  ],
+  "GPU_released": true,
+  "selection": "Root provisionally selected after actual front board; expression, profile/back and live integration pending",
+  "ART_approved": false,
+  "text_encoding": "UTF-8 LF normalized for Git; PNG/payload bytes unchanged"
+}
