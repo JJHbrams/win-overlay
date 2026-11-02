@@ -1,0 +1,1453 @@
+{
+  "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+  "actual_eevee_output": "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+  "active_nodes": [
+    {
+      "name": "Math.028",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.082",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.112",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V002_FIXED_REST_UV_profile",
+      "type": "UVMAP",
+      "attribute": null,
+      "uv": "MIA_V002_RestProject_profile",
+      "image": null
+    },
+    {
+      "name": "Math.049",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V002_ACTUAL_DEFORMED_GEOMETRIC_NORMAL",
+      "type": "NEW_GEOMETRY",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.036",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.065",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_FineGuide_front"
+    },
+    {
+      "name": "Math.096",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.081",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.027",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.111",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.048",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Vector Math",
+      "type": "VECT_MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.125",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.035",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.064",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.019",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V002_FIXED_REST_UV_front",
+      "type": "UVMAP",
+      "attribute": null,
+      "uv": "MIA_V002_RestProject_front",
+      "image": null
+    },
+    {
+      "name": "Math.095",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.080",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.026",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.110",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.047",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.009",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.034",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.010",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.018",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.094",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.124",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.079",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.025",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.109",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.046",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.008",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "\ubc29\ucd9c",
+      "type": "EMISSION",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.033",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.063",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.017",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.093",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.123",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.078",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.024",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.108",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.008",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.007",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+      "type": "OUTPUT_MATERIAL",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V002_SOURCE_ASH_GRADE_OUTPUT",
+      "type": "COMBINE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.032",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.062",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.016",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.092",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.077",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.023",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.013",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.006",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V002_SOURCE_ASH_GRADE_INPUT",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Attribute.007",
+      "type": "ATTRIBUTE",
+      "attribute": "MIA_V002_RestViewWeight_rear_oblique",
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.061",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.015",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.091",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V002_COHERENT_AUTHORED_PIGMENT",
+      "type": "MIX_RGB",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.076",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.022",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.107",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.005",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.122",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Attribute.006",
+      "type": "ATTRIBUTE",
+      "attribute": "MIA_V002_RestDepth_rear_oblique",
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.060",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.014",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.090",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.075",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.021",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.106",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.004",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.121",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.007",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.059",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.013",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.089",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.074",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Attribute.005",
+      "type": "ATTRIBUTE",
+      "attribute": "MIA_V002_RestViewWeight_back",
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.105",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.003",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.120",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.006",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.058",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.012",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.088",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Vector Math.007",
+      "type": "VECT_MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.073",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Attribute.004",
+      "type": "ATTRIBUTE",
+      "attribute": "MIA_V002_RestDepth_back",
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.104",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.002",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Vector Math.008",
+      "type": "VECT_MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.119",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.011",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_ProjectiveData_rear_oblique"
+    },
+    {
+      "name": "Math.057",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.011",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.011",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.005",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.103",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.001",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Vector Math.006",
+      "type": "VECT_MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V002_RIM_TRUE_SURFACE_NORMAL",
+      "type": "MIX_RGB",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.118",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.010",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_ProjectiveData_rear_oblique"
+    },
+    {
+      "name": "Math.056",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.010",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.072",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.004",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.012",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Vector Math.005",
+      "type": "VECT_MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V22_FINAL_COLOR_TIMES_ACTUAL_LIGHT",
+      "type": "MIX_RGB",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Attribute.008",
+      "type": "ATTRIBUTE",
+      "attribute": "MIA_V002_RimNormalWeight",
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.015",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.009",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_FineGuide_rear_oblique"
+    },
+    {
+      "name": "Math.055",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Attribute.003",
+      "type": "ATTRIBUTE",
+      "attribute": "MIA_V002_RestViewWeight_profile",
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.071",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.008",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_ProjectiveData_back"
+    },
+    {
+      "name": "Attribute.001",
+      "type": "ATTRIBUTE",
+      "attribute": "MIA_V002_RestViewWeight_front",
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.102",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V22_SOFT_TOON_LIGHT",
+      "type": "VALTORGB",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Geometry",
+      "type": "NEW_GEOMETRY",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V002_FIXED_REST_UV_rear_oblique",
+      "type": "UVMAP",
+      "attribute": null,
+      "uv": "MIA_V002_RestProject_rear_oblique",
+      "image": null
+    },
+    {
+      "name": "Math.117",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.009",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Attribute.002",
+      "type": "ATTRIBUTE",
+      "attribute": "MIA_V002_RestDepth_profile",
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.041",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.070",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.007",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_ProjectiveData_back"
+    },
+    {
+      "name": "Attribute",
+      "type": "ATTRIBUTE",
+      "attribute": "MIA_V002_RestDepth_front",
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.101",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.116",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658",
+      "type": "SHADERTORGB",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.003",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.054",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Vector Math.004",
+      "type": "VECT_MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.040",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.006",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_FineGuide_back"
+    },
+    {
+      "name": "Math.069",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.001",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.100",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.086",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V22_SCENE_LIGHT_RESPONSE",
+      "type": "BSDF_DIFFUSE",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.115",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.002",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.053",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Vector Math.003",
+      "type": "VECT_MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.039",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "V002_FIXED_REST_UV_back",
+      "type": "UVMAP",
+      "attribute": null,
+      "uv": "MIA_V002_RestProject_back",
+      "image": null
+    },
+    {
+      "name": "Math.068",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.099",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.085",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.114",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.005",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_ProjectiveData_profile"
+    },
+    {
+      "name": "Math.052",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "MIA_R_SemanticPigmentOnly",
+      "type": "MIX_RGB",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.038",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.067",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.002",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_ProjectiveData_front"
+    },
+    {
+      "name": "Vector Math.002",
+      "type": "VECT_MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.098",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.084",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.113",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.030",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.004",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_ProjectiveData_profile"
+    },
+    {
+      "name": "Math.051",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "MIA_R_SourceAshAndScope",
+      "type": "ATTRIBUTE",
+      "attribute": "MIA_R_SourceAshAndScope",
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.037",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.066",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.001",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_ProjectiveData_front"
+    },
+    {
+      "name": "Vector Math.001",
+      "type": "VECT_MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.097",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.083",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Separate Color.014",
+      "type": "SEPARATE_COLOR",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Math.029",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    },
+    {
+      "name": "Image Texture.003",
+      "type": "TEX_IMAGE",
+      "attribute": null,
+      "uv": null,
+      "image": "MIA_V002_FineGuide_profile"
+    },
+    {
+      "name": "Math.050",
+      "type": "MATH",
+      "attribute": null,
+      "uv": null,
+      "image": null
+    }
+  ],
+  "all_POINT_attributes": [
+    {
+      "name": "MIA_V002_RestDepth_front",
+      "type": "FLOAT"
+    },
+    {
+      "name": "MIA_V002_RestViewWeight_front",
+      "type": "FLOAT"
+    },
+    {
+      "name": "MIA_V002_RestDepth_profile",
+      "type": "FLOAT"
+    },
+    {
+      "name": "MIA_V002_RestViewWeight_profile",
+      "type": "FLOAT"
+    },
+    {
+      "name": "MIA_V002_RestDepth_back",
+      "type": "FLOAT"
+    },
+    {
+      "name": "MIA_V002_RestViewWeight_back",
+      "type": "FLOAT"
+    },
+    {
+      "name": "MIA_V002_RestDepth_rear_oblique",
+      "type": "FLOAT"
+    },
+    {
+      "name": "MIA_V002_RestViewWeight_rear_oblique",
+      "type": "FLOAT"
+    },
+    {
+      "name": "MIA_V002_RimNormalWeight",
+      "type": "FLOAT"
+    },
+    {
+      "name": "MIA_V002_HeadBlend_Weight",
+      "type": "FLOAT"
+    },
+    {
+      "name": ".select_vert",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "position",
+      "type": "FLOAT_VECTOR"
+    },
+    {
+      "name": "MIA_R_SourceAshAndScope",
+      "type": "FLOAT_COLOR"
+    }
+  ],
+  "all_UVs": [
+    "UVMap",
+    "MIA_V17_PAINT_UV",
+    "MIA_V002_RestProject_front",
+    "MIA_V002_RestProject_profile",
+    "MIA_V002_RestProject_back",
+    "MIA_V002_RestProject_rear_oblique"
+  ],
+  "geometry_normal_links": [
+    {
+      "from_node": "Attribute",
+      "from_socket": "Factor",
+      "to_node": "Math.001",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.001",
+      "from_socket": "Factor",
+      "to_node": "Math.008",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.002",
+      "from_socket": "Factor",
+      "to_node": "Math.011",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.003",
+      "from_socket": "Factor",
+      "to_node": "Math.018",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.004",
+      "from_socket": "Factor",
+      "to_node": "Math.022",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.005",
+      "from_socket": "Factor",
+      "to_node": "Math.029",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.006",
+      "from_socket": "Factor",
+      "to_node": "Math.033",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.007",
+      "from_socket": "Factor",
+      "to_node": "Math.040",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.008",
+      "from_socket": "Factor",
+      "to_node": "V002_RIM_TRUE_SURFACE_NORMAL",
+      "to_socket": "Factor"
+    },
+    {
+      "from_node": "Geometry",
+      "from_socket": "Normal",
+      "to_node": "V002_RIM_TRUE_SURFACE_NORMAL",
+      "to_socket": "Color2"
+    },
+    {
+      "from_node": "Attribute.001",
+      "from_socket": "Factor",
+      "to_node": "Math.088",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.003",
+      "from_socket": "Factor",
+      "to_node": "Math.091",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.005",
+      "from_socket": "Factor",
+      "to_node": "Math.095",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "Attribute.007",
+      "from_socket": "Factor",
+      "to_node": "Math.099",
+      "to_socket": "Value"
+    },
+    {
+      "from_node": "V002_ACTUAL_DEFORMED_GEOMETRIC_NORMAL",
+      "from_socket": "Normal",
+      "to_node": "V002_RIM_TRUE_SURFACE_NORMAL",
+      "to_socket": "Color1"
+    },
+    {
+      "from_node": "MIA_R_SourceAshAndScope",
+      "from_socket": "Alpha",
+      "to_node": "MIA_R_SemanticPigmentOnly",
+      "to_socket": "Factor"
+    },
+    {
+      "from_node": "MIA_R_SourceAshAndScope",
+      "from_socket": "Color",
+      "to_node": "MIA_R_SemanticPigmentOnly",
+      "to_socket": "Color2"
+    }
+  ]
+}

@@ -1,0 +1,652 @@
+{
+  "collection": "MIA_v003_DetailedRearFill_B",
+  "created": [
+    "MIA_V003_RearCore_Core_Left",
+    "MIA_V003_RearCore_Core_Centre",
+    "MIA_V003_RearCore_Core_Right",
+    "MIA_V003_DetailedRear_Occipital_Left",
+    "MIA_V003_DetailedRear_Occipital_Centre",
+    "MIA_V003_DetailedRear_Occipital_Right",
+    "MIA_V003_DetailedRear_Mid_Left",
+    "MIA_V003_DetailedRear_Mid_Inner_Left",
+    "MIA_V003_DetailedRear_Mid_Inner_Right",
+    "MIA_V003_DetailedRear_Mid_Right",
+    "MIA_V003_DetailedRear_Long_Left",
+    "MIA_V003_DetailedRear_Long_Centre_Left",
+    "MIA_V003_DetailedRear_Long_Centre_Right",
+    "MIA_V003_DetailedRear_Long_Right",
+    "MIA_V003_DetailedRear_Shoulder_Turn_Left",
+    "MIA_V003_DetailedRear_Shoulder_Turn_Right",
+    "MIA_V003_DetailedRear_Mid_Fly_Left",
+    "MIA_V003_DetailedRear_Mid_Fly_Right"
+  ],
+  "core_count": 3,
+  "detailed_count": 15,
+  "new_detailed_data": [
+    {
+      "name": "MIA_V003_DetailedRear_Occipital_Left",
+      "source_faces": 304,
+      "new_caps": 24,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Occipital_Centre",
+      "source_faces": 237,
+      "new_caps": 19,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Occipital_Right",
+      "source_faces": 304,
+      "new_caps": 24,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Left",
+      "source_faces": 237,
+      "new_caps": 19,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Inner_Left",
+      "source_faces": 304,
+      "new_caps": 24,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Inner_Right",
+      "source_faces": 237,
+      "new_caps": 19,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Right",
+      "source_faces": 304,
+      "new_caps": 24,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Long_Left",
+      "source_faces": 237,
+      "new_caps": 19,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Long_Centre_Left",
+      "source_faces": 304,
+      "new_caps": 24,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Long_Centre_Right",
+      "source_faces": 237,
+      "new_caps": 19,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Long_Right",
+      "source_faces": 304,
+      "new_caps": 24,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Shoulder_Turn_Left",
+      "source_faces": 84,
+      "new_caps": 12,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Shoulder_Turn_Right",
+      "source_faces": 84,
+      "new_caps": 12,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Fly_Left",
+      "source_faces": 84,
+      "new_caps": 12,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Fly_Right",
+      "source_faces": 84,
+      "new_caps": 12,
+      "UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_v003_RecoveredCrown_UV"
+      ],
+      "POINT_fields": [
+        "MIA_V002_RestDepth_front",
+        "MIA_V002_RestViewWeight_front",
+        "MIA_V002_RestDepth_profile",
+        "MIA_V002_RestViewWeight_profile",
+        "MIA_V002_RestDepth_back",
+        "MIA_V002_RestViewWeight_back",
+        "MIA_V002_RestDepth_rear_oblique",
+        "MIA_V002_RestViewWeight_rear_oblique",
+        "MIA_V002_RimNormalWeight",
+        "MIA_V002_HeadBlend_Weight",
+        ".select_vert",
+        "MIA_R_SourceAshAndScope"
+      ],
+      "material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "source_corner_UV_and_POINT_fields_copied_by_ID": true
+    }
+  ],
+  "native_saved": false,
+  "old_owners_modified": false,
+  "ART": false,
+  "existing_owners_protected": 618,
+  "old_owner_changes": [],
+  "old_main_indices_and_corner_normals_exact": true,
+  "scene_exact": true,
+  "detail_checks": [
+    {
+      "name": "MIA_V003_DetailedRear_Occipital_Left",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Occipital_Centre",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Occipital_Right",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Left",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Inner_Left",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Inner_Right",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Right",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Long_Left",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Long_Centre_Left",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Long_Centre_Right",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Long_Right",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Shoulder_Turn_Left",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Shoulder_Turn_Right",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Fly_Left",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    },
+    {
+      "name": "MIA_V003_DetailedRear_Mid_Fly_Right",
+      "original_POINT_fields_bit_exact": true,
+      "all7_source_corner_UVs_bit_exact": true,
+      "render_UV_exact": true,
+      "actual_current_source_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+      "closed_authored_prototype": true,
+      "actual_normals": "New geometry recomputed; one subdivision level; no donor normal replay",
+      "finite_evaluated_surface": true,
+      "all_weights_sum1": true
+    }
+  ],
+  "scope": "Technical guard only; source likeness, core visibility, depth/lumbar contact and root overlap require actual views"
+}

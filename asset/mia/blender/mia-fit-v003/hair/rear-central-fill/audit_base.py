@@ -1,0 +1,11 @@
+"""Export exact accepted hair/skin evaluation for bounded new-volume design. No save/render."""
+from pathlib import Path
+import bpy,numpy as np,json,hashlib,sys
+P=Path(__file__).resolve().parent;H=P.parent;W=Path('C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay');N=W/'asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend';SHA='4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1';assert hashlib.sha256(N.read_bytes()).hexdigest()==SHA
+bpy.ops.wm.open_mainfile(filepath=str(N),use_scripts=False);s=bpy.context.scene;s.frame_set(1);sys.path.insert(0,str(H));import apply_baked_v29_crown;apply_baked_v29_crown.apply(H/'v29-pigment',mode='combined');sys.path.insert(0,str(H/'rear-loop-cleanup'));import apply_loop_mask;apply_loop_mask.apply(H/'rear-loop-cleanup');bpy.context.view_layer.update();dg=bpy.context.evaluated_depsgraph_get();arrays={};reports=[]
+for ob in s.objects:
+ if ob.type!='MESH' or ob.hide_render or not (ob.get('mia_component')=='hair' or ob.name=='MIA_V27_SharedHeadBody'):continue
+ e=ob.evaluated_get(dg);m=e.to_mesh();m.calc_loop_triangles();co=np.array([e.matrix_world@v.co for v in m.vertices],np.float32);tri=np.array([t.vertices[:] for t in m.loop_triangles],np.int32);pol=np.array([t.polygon_index for t in m.loop_triangles],np.int32);visible=np.ones(len(tri),bool)
+ if ob.name=='MIA_V17_PIXAL_DetailedHair':visible=~np.isin(pol,np.load(H/'rear-loop-cleanup/loop-mask.npz')['polygon_indices'])
+ key='part_'+str(len(reports));arrays[key+'_co']=co;arrays[key+'_faces']=tri[visible];reports.append(dict(key=key,name=ob.name,body=ob.name=='MIA_V27_SharedHeadBody',vertices=len(co),triangles=int(visible.sum()),bounds=[co.min(0).tolist(),co.max(0).tolist()],materials=[x.name for x in ob.data.materials]));e.to_mesh_clear()
+np.savez_compressed(P/'current-geometry.npz',**arrays);(P/'base-audit.json').write_text(json.dumps(dict(native=str(N),native_sha256=SHA,baseline='R3b + selected A+B Crown + selected U mask',objects=reports,head_bone=bpy.data.objects['MIA_V06_RIG'].data.bones['J_Bip_C_Head'].head_local[:],upper_chest_bone=bpy.data.objects['MIA_V06_RIG'].data.bones['J_Bip_C_UpperChest'].head_local[:],native_saved=False),indent=2)+'\n',encoding='utf-8');print('CENTRAL_FILL_BASE_AUDIT',[(r['name'],r['bounds']) for r in reports],flush=True)

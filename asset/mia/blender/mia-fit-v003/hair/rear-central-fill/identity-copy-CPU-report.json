@@ -1,0 +1,77 @@
+{
+  "purpose": "SAME_WORLD_IDENTITY_DIAGNOSTIC_ONLY; no morph, cap, smoothing or fit",
+  "object": "MIA_Identity_ExteriorLooseSide",
+  "source_faces": 15922,
+  "source_vertices": 13332,
+  "world_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "same_source_world_transform": true,
+  "evaluated_source_coordinates_bit_exact": true,
+  "all_cornerUVs_bit_exact": [
+    "UVMap",
+    "MIA_V17_PAINT_UV",
+    "MIA_V002_RestProject_front",
+    "MIA_V002_RestProject_profile",
+    "MIA_V002_RestProject_back",
+    "MIA_V002_RestProject_rear_oblique",
+    "MIA_v003_RecoveredCrown_UV"
+  ],
+  "all_paint_POINT_fields_bit_exact": [
+    "MIA_V002_RestDepth_front",
+    "MIA_V002_RestViewWeight_front",
+    "MIA_V002_RestDepth_profile",
+    "MIA_V002_RestViewWeight_profile",
+    "MIA_V002_RestDepth_back",
+    "MIA_V002_RestViewWeight_back",
+    "MIA_V002_RestDepth_rear_oblique",
+    "MIA_V002_RestViewWeight_rear_oblique",
+    "MIA_V002_RimNormalWeight",
+    "MIA_V002_HeadBlend_Weight",
+    ".select_vert",
+    "MIA_R_SourceAshAndScope"
+  ],
+  "original_actual_evaluated_corner_normals_max_decode_error": 0.0002728144754655659,
+  "active_render_UV": "MIA_V17_PAINT_UV",
+  "texture_space": {
+    "location": [
+      0.0025723278522491455,
+      0.029833171516656876,
+      1.4757661819458008
+    ],
+    "size": [
+      0.22258344292640686,
+      0.1236816942691803,
+      0.2171154022216797
+    ],
+    "source_original_bounds_preserved": true
+  },
+  "original_material_graphs_shared_unchanged": true,
+  "source_original_face_indices_temporarily_changed_only_in_offline_test": true,
+  "source_hidden_material_slot": 4,
+  "native_saved": false,
+  "ART": false
+}
