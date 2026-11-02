@@ -1,0 +1,182 @@
+{
+  "checkpoint": "design-sculpt07-A",
+  "status": "FIRST ACTUAL LOOK FAIL / UNSELECTED",
+  "art_acceptance": false,
+  "actual_frames": 4,
+  "gpu_token_released": true,
+  "render_exit_code_observed": 0,
+  "render_error_pattern_matches": 0,
+  "native_saved": false,
+  "live_applied": false,
+  "uv_key_weight_migration": false,
+  "source_broad_support_fail_stations": [
+    0
+  ],
+  "files": [
+    {
+      "path": "actual-four\\gray-F2lowoblique-pre-render.json",
+      "bytes": 77181,
+      "sha256": "19510a300ed907494ae79a783ab767de01d05e815897e9a559620be23424e597"
+    },
+    {
+      "path": "actual-four\\gray-F2lowoblique.png",
+      "bytes": 493962,
+      "sha256": "34a1f614a7aeaf11189ce4129a634d03aaa5f4c3b463bcb013831d69a58a9fb5"
+    },
+    {
+      "path": "actual-four\\gray-front-pre-render.json",
+      "bytes": 77046,
+      "sha256": "00d2387c6d6156f16b128c820281f67606b90b56f9a4f4a18951f028b27688ff"
+    },
+    {
+      "path": "actual-four\\gray-front.png",
+      "bytes": 315850,
+      "sha256": "62dd5e95b9c76edc66bbe5ba35fe0c4c25b7766b5026c2dd950258b632a37ec0"
+    },
+    {
+      "path": "actual-four\\gray-profile-pre-render.json",
+      "bytes": 77164,
+      "sha256": "ad13f7a7ec5d6214818a6974678eac928b1bec158aad030569a693c992ef15e4"
+    },
+    {
+      "path": "actual-four\\gray-profile.png",
+      "bytes": 268728,
+      "sha256": "453a14fb53f4346ea2d221a5bae98c19f645e939a6766b5f72641cbff4ec4a1a"
+    },
+    {
+      "path": "actual-four\\gray-rearoblique-pre-render.json",
+      "bytes": 77180,
+      "sha256": "3e8320228aababeebdedc51169ecfb940b02e7bb106a01aa0497ebeec9ca76a8"
+    },
+    {
+      "path": "actual-four\\gray-rearoblique.png",
+      "bytes": 289483,
+      "sha256": "579465fe3b7e9246deca7ad95c7f6ae2e428859d4c355da000c01cf78d29a8af"
+    },
+    {
+      "path": "actual-four\\render-records.json",
+      "bytes": 350384,
+      "sha256": "7dd15ccbe074bbf046b0c7d6f36b2f53d2726704b8b62c7de0a31fc6e94d6848"
+    },
+    {
+      "path": "actual-four\\render.log",
+      "bytes": 2656,
+      "sha256": "2f4ddc09da2042df95c4df3c44906e68214451a497e29b71451c7bfc5318863c"
+    },
+    {
+      "path": "actual-four-contact-sheet.png",
+      "bytes": 712778,
+      "sha256": "7ffaeed44468d3ad86d400d1c70b1f2f2cc463cc7cfa7a0b9c99924859300f4a"
+    },
+    {
+      "path": "actual-section-audit.png",
+      "bytes": 28479,
+      "sha256": "9a25a31499432d5ed84bd20f256f7e87823e9f71b95cad499677cadf4a310a34"
+    },
+    {
+      "path": "actual-sections.npz",
+      "bytes": 25062,
+      "sha256": "d498920aa0177dce862a80451be2c6ecc5a2839e45edd5c38eb6347c344f4530"
+    },
+    {
+      "path": "audit_volume.py",
+      "bytes": 5152,
+      "sha256": "47dedd8cc9110fd9d3788fe8a155d4ef264a25449b1e6657ae5f7013f4623325"
+    },
+    {
+      "path": "build-report.json",
+      "bytes": 2552,
+      "sha256": "efb2ddce81a349282cee62380cee06e3817426e8a8ced09eea9eceb550a44cce"
+    },
+    {
+      "path": "build_volume.py",
+      "bytes": 4429,
+      "sha256": "ee1b89fbfab7d5363b2c1ee2af90790c54ff5377c13877dadf21c95709bc6a05"
+    },
+    {
+      "path": "compose_review.py",
+      "bytes": 3686,
+      "sha256": "9361678722aabbeb3d638d36a04379c3c3784700ffa863d15bc4d580387e0c41"
+    },
+    {
+      "path": "cpu-audit.json",
+      "bytes": 7341,
+      "sha256": "24423816ab69a64efb5809c48013d298ed145144b6b492f3a0c2d2ef3c2e0ee5"
+    },
+    {
+      "path": "field.py",
+      "bytes": 4338,
+      "sha256": "94ff4d29ec7629de017281aef6fc63e3d681fd2da0dd7d9c6f6583b265f34bd0"
+    },
+    {
+      "path": "freeze_parameters.py",
+      "bytes": 4381,
+      "sha256": "679f24a1a6f95acd47534dde328d9b841530e14187f372cccbe75ebeb4ce2692"
+    },
+    {
+      "path": "install_design.py",
+      "bytes": 3097,
+      "sha256": "5df5d15de886e4e93fb6f3574a6f7ddcf8926709e385bbdc9ba1598d7d888dcd"
+    },
+    {
+      "path": "parameters.json",
+      "bytes": 13069,
+      "sha256": "129a326a3fa0be44671a7d6cd2ccfd248fa1d625c916953b50793d42ebe7d151"
+    },
+    {
+      "path": "plot_sections.py",
+      "bytes": 1049,
+      "sha256": "1165fbd4b06cb5e0e3ffbac96955f81f9abf55ec4c86b56c65f786b79962e4ce"
+    },
+    {
+      "path": "preservation.json",
+      "bytes": 21600,
+      "sha256": "1ca1500552bb9909ddd0b8ad0a4620183e8f5d638ca08d32ebe53415fd5d1ae9"
+    },
+    {
+      "path": "render-preparation.json",
+      "bytes": 205,
+      "sha256": "7b26b4ef258b86ca558108039e521ba1239cf97456b8e1d2faeb3aa59d244293"
+    },
+    {
+      "path": "render_four.py",
+      "bytes": 8604,
+      "sha256": "197a8c3957489077d234fc94a31fc8989641b86afbb27de8954cfddccc9c048b"
+    },
+    {
+      "path": "review-records.json",
+      "bytes": 5120,
+      "sha256": "5b49eeb69d49cfa785e6aca530cf0b49a5f05873c325e282ff8cc66ca95c6ba4"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 8366,
+      "sha256": "1eb3568ea6cc150a10a57b5909730ab8cd4fb1f283dd02fbe8bf6a8cee7ec62c"
+    },
+    {
+      "path": "sculpt07.npz",
+      "bytes": 1158415,
+      "sha256": "feb8927c0505f78c9b6be34ba75c808fcd24e5012405ef9dcd92b638757045ce"
+    },
+    {
+      "path": "source-F2lowoblique.png",
+      "bytes": 1414416,
+      "sha256": "f48535c9deb2bd56e4dc04d660d52f7bfc856ef8cebaecbca765ebb99bd3d6f2"
+    },
+    {
+      "path": "source-front.png",
+      "bytes": 886864,
+      "sha256": "5dc0aff23fd7079b83a017cee882c98f8ce8185f67772031460de947bbbe62bf"
+    },
+    {
+      "path": "source-profile.png",
+      "bytes": 721229,
+      "sha256": "cee0acfe8e21cffe0383767fed123e7847643973cba70aee8b60ca1d5cdf1544"
+    },
+    {
+      "path": "source-rearoblique.png",
+      "bytes": 919431,
+      "sha256": "3f55d41c752a450b4135c7a0169e59138926bb88b4bec1e75624aa8f88894264"
+    }
+  ]
+}
