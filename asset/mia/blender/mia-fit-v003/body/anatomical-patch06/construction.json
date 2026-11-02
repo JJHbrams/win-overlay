@@ -1,0 +1,892 @@
+{
+  "status": "STATIC DESIGN PROTOTYPE; migration/rig/UV/art UNVERIFIED",
+  "base_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "method": "Actual front control cross-curves + connected anterior/floor/posterior branch network; explicit local quad-star replacement. No radial torso chart/Gaussian/old05 interior restore.",
+  "source_constraints_sha256": "6db2664f265d243b0d5670d9929a93b2b8c82107ca032175ddcc51e00653d14d",
+  "source_notes": "v06 global height/profile and E2/F2 rounded supported envelope govern broad manually authored 3D curves; cloth edge is not a naked crease. Values are design hypothesis, not measured unique anatomy.",
+  "source_support_widths": [],
+  "design_heights": [
+    1.145,
+    1.17,
+    1.185,
+    1.2,
+    1.22,
+    1.245,
+    1.265,
+    1.285,
+    1.31,
+    1.335,
+    1.36,
+    1.385,
+    1.41
+  ],
+  "design_x": [
+    0.0,
+    0.025,
+    0.055,
+    0.08,
+    0.105,
+    0.125,
+    0.145
+  ],
+  "design_front_y": [
+    [
+      -0.104,
+      -0.1,
+      -0.09,
+      -0.065,
+      -0.028,
+      0.005,
+      0.025
+    ],
+    [
+      -0.103,
+      -0.102,
+      -0.098,
+      -0.08,
+      -0.04,
+      -0.005,
+      0.015
+    ],
+    [
+      -0.1,
+      -0.11,
+      -0.114,
+      -0.102,
+      -0.063,
+      -0.015,
+      0.01
+    ],
+    [
+      -0.099,
+      -0.125,
+      -0.132,
+      -0.125,
+      -0.086,
+      -0.035,
+      0.0
+    ],
+    [
+      -0.097,
+      -0.137,
+      -0.15,
+      -0.146,
+      -0.112,
+      -0.054,
+      -0.01
+    ],
+    [
+      -0.093,
+      -0.143,
+      -0.164,
+      -0.159,
+      -0.126,
+      -0.07,
+      -0.018
+    ],
+    [
+      -0.088,
+      -0.136,
+      -0.16,
+      -0.157,
+      -0.126,
+      -0.072,
+      -0.02
+    ],
+    [
+      -0.081,
+      -0.117,
+      -0.138,
+      -0.136,
+      -0.111,
+      -0.065,
+      -0.02
+    ],
+    [
+      -0.075,
+      -0.088,
+      -0.099,
+      -0.1,
+      -0.083,
+      -0.044,
+      -0.015
+    ],
+    [
+      -0.071,
+      -0.075,
+      -0.079,
+      -0.072,
+      -0.049,
+      -0.021,
+      -0.01
+    ],
+    [
+      -0.067,
+      -0.068,
+      -0.065,
+      -0.053,
+      -0.035,
+      -0.016,
+      -0.005
+    ],
+    [
+      -0.063,
+      -0.06,
+      -0.05,
+      -0.037,
+      -0.021,
+      -0.01,
+      0.0
+    ],
+    [
+      -0.045,
+      -0.04,
+      -0.027,
+      -0.015,
+      0.0,
+      0.005,
+      0.01
+    ]
+  ],
+  "semantic_rails": {
+    "anterior": [
+      [
+        76,
+        [
+          0.092,
+          -0.061,
+          1.35
+        ]
+      ],
+      [
+        585,
+        [
+          0.132,
+          -0.041,
+          1.339
+        ]
+      ],
+      [
+        490,
+        [
+          0.143,
+          -0.035,
+          1.341
+        ]
+      ],
+      [
+        484,
+        [
+          0.15,
+          -0.031,
+          1.351
+        ]
+      ],
+      [
+        477,
+        [
+          0.154,
+          -0.024,
+          1.367
+        ]
+      ],
+      [
+        481,
+        [
+          0.14,
+          -0.039,
+          1.367
+        ]
+      ],
+      [
+        482,
+        [
+          0.138,
+          -0.03,
+          1.386
+        ]
+      ]
+    ],
+    "floor": [
+      [
+        155,
+        [
+          0.112,
+          -0.004,
+          1.329
+        ]
+      ],
+      [
+        503,
+        [
+          0.118,
+          -0.002,
+          1.313
+        ]
+      ],
+      [
+        153,
+        [
+          0.106,
+          0.016,
+          1.337
+        ]
+      ]
+    ],
+    "posterior": [
+      [
+        555,
+        [
+          0.138,
+          0.029,
+          1.282
+        ]
+      ],
+      [
+        554,
+        [
+          0.128,
+          0.036,
+          1.315
+        ]
+      ],
+      [
+        568,
+        [
+          0.118,
+          0.034,
+          1.337
+        ]
+      ],
+      [
+        547,
+        [
+          0.134,
+          0.034,
+          1.35
+        ]
+      ],
+      [
+        549,
+        [
+          0.135,
+          0.033,
+          1.365
+        ]
+      ],
+      [
+        552,
+        [
+          0.127,
+          0.035,
+          1.38
+        ]
+      ],
+      [
+        553,
+        [
+          0.123,
+          0.033,
+          1.391
+        ]
+      ]
+    ]
+  },
+  "original_vertices": 4647,
+  "appended_vertices": 17,
+  "retired_faces": 45,
+  "new_quad_faces": 45,
+  "patches": [
+    {
+      "seed": 164,
+      "removed_faces": [
+        138,
+        2860,
+        4024,
+        4102,
+        4132,
+        4133,
+        4136,
+        4137,
+        4138,
+        4143
+      ],
+      "boundary": [
+        165,
+        3587,
+        3604,
+        3627,
+        3626,
+        3625,
+        3603,
+        3586,
+        3571,
+        169,
+        170,
+        168
+      ],
+      "boundary_edges": 12,
+      "grid": [
+        4,
+        2
+      ],
+      "new_vertices": [
+        4647,
+        4648,
+        4649
+      ],
+      "new_quads": 8,
+      "coons_quality_score": 19.425215490540552,
+      "parity_expansion_faces": [
+        138
+      ]
+    },
+    {
+      "seed": 158,
+      "removed_faces": [
+        124,
+        282,
+        344,
+        533,
+        859,
+        861,
+        1913
+      ],
+      "boundary": [
+        76,
+        157,
+        156,
+        155,
+        503,
+        502,
+        586,
+        585,
+        490,
+        489,
+        583,
+        584
+      ],
+      "boundary_edges": 12,
+      "grid": [
+        3,
+        3
+      ],
+      "new_vertices": [
+        4650,
+        4651,
+        4652,
+        4653
+      ],
+      "new_quads": 9,
+      "coons_quality_score": 35.51328433492523,
+      "parity_expansion_faces": [
+        859,
+        533
+      ]
+    },
+    {
+      "seed": 558,
+      "removed_faces": [
+        68,
+        479,
+        508,
+        510,
+        815,
+        816
+      ],
+      "boundary": [
+        151,
+        569,
+        568,
+        554,
+        555,
+        556,
+        501,
+        503,
+        155,
+        153
+      ],
+      "boundary_edges": 10,
+      "grid": [
+        3,
+        2
+      ],
+      "new_vertices": [
+        4654,
+        4655
+      ],
+      "new_quads": 6,
+      "coons_quality_score": 54.270475931000234,
+      "parity_expansion_faces": [
+        510
+      ]
+    },
+    {
+      "seed": 320,
+      "removed_faces": [
+        135,
+        254,
+        4027,
+        4038,
+        4068,
+        4070,
+        4071,
+        4073,
+        4074
+      ],
+      "boundary": [
+        285,
+        289,
+        288,
+        3573,
+        3590,
+        3611,
+        3610,
+        3609,
+        3608,
+        3589,
+        3572,
+        287
+      ],
+      "boundary_edges": 12,
+      "grid": [
+        2,
+        4
+      ],
+      "new_vertices": [
+        4656,
+        4657,
+        4658
+      ],
+      "new_quads": 8,
+      "coons_quality_score": 22.036754340183883,
+      "parity_expansion_faces": [
+        254
+      ]
+    },
+    {
+      "seed": 324,
+      "removed_faces": [
+        177,
+        283,
+        429,
+        535,
+        551,
+        858,
+        1442
+      ],
+      "boundary": [
+        321,
+        325,
+        626,
+        857,
+        762,
+        858,
+        859,
+        860,
+        775,
+        776,
+        323,
+        322
+      ],
+      "boundary_edges": 12,
+      "grid": [
+        2,
+        4
+      ],
+      "new_vertices": [
+        4659,
+        4660,
+        4661
+      ],
+      "new_quads": 8,
+      "coons_quality_score": 33.02761033161086,
+      "parity_expansion_faces": [
+        551,
+        858
+      ]
+    },
+    {
+      "seed": 830,
+      "removed_faces": [
+        487,
+        507,
+        544,
+        662,
+        814,
+        837
+      ],
+      "boundary": [
+        323,
+        776,
+        774,
+        831,
+        839,
+        828,
+        829,
+        843,
+        329,
+        327
+      ],
+      "boundary_edges": 10,
+      "grid": [
+        2,
+        3
+      ],
+      "new_vertices": [
+        4662,
+        4663
+      ],
+      "new_quads": 6,
+      "coons_quality_score": 51.61541486206746,
+      "parity_expansion_faces": [
+        837
+      ]
+    }
+  ],
+  "retained_cap_and_cup_verified_faces": {
+    "cup": [
+      3923,
+      3924,
+      3925,
+      3926,
+      3927,
+      3928,
+      3929,
+      3930,
+      3931,
+      3932,
+      3933,
+      3947,
+      3948,
+      3949,
+      3950
+    ],
+    "cap": [
+      874,
+      1872,
+      870,
+      2959
+    ]
+  },
+  "preserved_arm_cycle": [
+    459,
+    464,
+    466,
+    492,
+    496,
+    499,
+    501,
+    556,
+    555,
+    542,
+    540,
+    457
+  ],
+  "preserved_arm_cycle_edges_verified": true,
+  "preserved_arm_cycle_positions_exact_to01": true,
+  "distal_arm_pin_ids": [
+    453,
+    454,
+    455,
+    456,
+    457,
+    458,
+    459,
+    460,
+    464,
+    466,
+    492,
+    493,
+    494,
+    495,
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    504,
+    505,
+    521,
+    522,
+    523,
+    525,
+    526,
+    528,
+    540,
+    542,
+    555,
+    556,
+    557,
+    559,
+    561,
+    563,
+    564,
+    726,
+    727,
+    728,
+    729,
+    730,
+    731,
+    732,
+    733,
+    737,
+    739,
+    765,
+    766,
+    767,
+    768,
+    769,
+    770,
+    771,
+    772,
+    773,
+    774,
+    777,
+    778,
+    794,
+    795,
+    796,
+    798,
+    799,
+    801,
+    814,
+    816,
+    831,
+    832,
+    833,
+    835,
+    837,
+    838,
+    839
+  ],
+  "new_anterior_posterior_to_arm_paths": {
+    "158": [
+      4650,
+      4652,
+      502,
+      499
+    ],
+    "558": [
+      4654,
+      555
+    ]
+  },
+  "face690_raw_exact": true,
+  "all_new_edges_two_incidents": true,
+  "new_edge_winding_consistent": true,
+  "exterior_two_control_rings_exact_to_context01": true,
+  "context": "target01 exterior and25percent q1 positional bias in the branch harmonic solve. Rejected05 interior is not used.",
+  "new_vertex_correspondence": [
+    {
+      "new_id": 4647,
+      "semantic_patch_seed": 164,
+      "source_raw_triangle": 7827,
+      "source_raw_polygon": 4137,
+      "barycentric": [
+        0.42600342599481367,
+        0.010851341440560488,
+        0.5631452325646259
+      ],
+      "source_error_mm": 2.646501226116487
+    },
+    {
+      "new_id": 4648,
+      "semantic_patch_seed": 164,
+      "source_raw_triangle": 7692,
+      "source_raw_polygon": 4024,
+      "barycentric": [
+        0.7426464109224781,
+        0.0,
+        0.2573535890775219
+      ],
+      "source_error_mm": 2.0937549950065324
+    },
+    {
+      "new_id": 4649,
+      "semantic_patch_seed": 164,
+      "source_raw_triangle": 5469,
+      "source_raw_polygon": 2860,
+      "barycentric": [
+        0.3782988918870641,
+        0.30232747095135526,
+        0.3193736371615806
+      ],
+      "source_error_mm": 0.7850018526756632
+    },
+    {
+      "new_id": 4650,
+      "semantic_patch_seed": 158,
+      "source_raw_triangle": 536,
+      "source_raw_polygon": 282,
+      "barycentric": [
+        0.2587622120115275,
+        0.6753254693151347,
+        0.06591231867333777
+      ],
+      "source_error_mm": 2.2274285805934007
+    },
+    {
+      "new_id": 4651,
+      "semantic_patch_seed": 158,
+      "source_raw_triangle": 1623,
+      "source_raw_polygon": 859,
+      "barycentric": [
+        0.11263649399723563,
+        0.5854935716189921,
+        0.3018699343837723
+      ],
+      "source_error_mm": 7.040469677724364
+    },
+    {
+      "new_id": 4652,
+      "semantic_patch_seed": 158,
+      "source_raw_triangle": 3658,
+      "source_raw_polygon": 1913,
+      "barycentric": [
+        0.3153116208714146,
+        0.4984798657462117,
+        0.18620851338237362
+      ],
+      "source_error_mm": 3.606633951886758
+    },
+    {
+      "new_id": 4653,
+      "semantic_patch_seed": 158,
+      "source_raw_triangle": 1628,
+      "source_raw_polygon": 861,
+      "barycentric": [
+        0.41805170463181696,
+        0.0,
+        0.581948295368183
+      ],
+      "source_error_mm": 6.7878797237636865
+    },
+    {
+      "new_id": 4654,
+      "semantic_patch_seed": 558,
+      "source_raw_triangle": 963,
+      "source_raw_polygon": 508,
+      "barycentric": [
+        0.19306889531163207,
+        0.39951476804437125,
+        0.4074163366439967
+      ],
+      "source_error_mm": 5.432820465916138
+    },
+    {
+      "new_id": 4655,
+      "semantic_patch_seed": 558,
+      "source_raw_triangle": 126,
+      "source_raw_polygon": 68,
+      "barycentric": [
+        0.9463424061014759,
+        0.046356793333975334,
+        0.007300800564548749
+      ],
+      "source_error_mm": 1.4963455190839048
+    },
+    {
+      "new_id": 4656,
+      "semantic_patch_seed": 320,
+      "source_raw_triangle": 253,
+      "source_raw_polygon": 135,
+      "barycentric": [
+        0.4105150894808226,
+        0.26151425828432956,
+        0.32797065223484784
+      ],
+      "source_error_mm": 0.18614812845118436
+    },
+    {
+      "new_id": 4657,
+      "semantic_patch_seed": 320,
+      "source_raw_triangle": 7758,
+      "source_raw_polygon": 4068,
+      "barycentric": [
+        0.3999807851291092,
+        0.2595359490811034,
+        0.34048326578978744
+      ],
+      "source_error_mm": 2.930250474323184
+    },
+    {
+      "new_id": 4658,
+      "semantic_patch_seed": 320,
+      "source_raw_triangle": 7720,
+      "source_raw_polygon": 4038,
+      "barycentric": [
+        0.30807497102097847,
+        0.33489248260971055,
+        0.3570325463693109
+      ],
+      "source_error_mm": 3.0617956380448264
+    },
+    {
+      "new_id": 4659,
+      "semantic_patch_seed": 324,
+      "source_raw_triangle": 817,
+      "source_raw_polygon": 429,
+      "barycentric": [
+        0.19111466037328506,
+        0.5459334056904317,
+        0.26295193393628324
+      ],
+      "source_error_mm": 0.058486946935180195
+    },
+    {
+      "new_id": 4660,
+      "semantic_patch_seed": 324,
+      "source_raw_triangle": 334,
+      "source_raw_polygon": 177,
+      "barycentric": [
+        0.15412163608651097,
+        0.6268127312799562,
+        0.2190656326335329
+      ],
+      "source_error_mm": 0.8936705074315766
+    },
+    {
+      "new_id": 4661,
+      "semantic_patch_seed": 324,
+      "source_raw_triangle": 1012,
+      "source_raw_polygon": 535,
+      "barycentric": [
+        0.16544591049409907,
+        0.38719133030816394,
+        0.447362759197737
+      ],
+      "source_error_mm": 0.45024285510057155
+    },
+    {
+      "new_id": 4662,
+      "semantic_patch_seed": 830,
+      "source_raw_triangle": 925,
+      "source_raw_polygon": 487,
+      "barycentric": [
+        0.014609931556190503,
+        0.0418829736520506,
+        0.9435070947917589
+      ],
+      "source_error_mm": 1.4055288771914916
+    },
+    {
+      "new_id": 4663,
+      "semantic_patch_seed": 830,
+      "source_raw_triangle": 1541,
+      "source_raw_polygon": 814,
+      "barycentric": [
+        0.407659809189197,
+        0.3997996797130116,
+        0.1925405110977914
+      ],
+      "source_error_mm": 5.414121516802448
+    }
+  ],
+  "original47_UV_weights_archived_in_exact_current_native": true,
+  "migration": "UNVERIFIED; source_world seeds restricted to each removed local patch. New raw triangle/loop barycentric UV and freshArmature inverse are next gate.",
+  "prototype_sha256": "1a0edc6974935528a48a2de6562630ac75fcc9bb13158cbadcd22389af9b1eff",
+  "gpu_used": false,
+  "native_saved": false
+}

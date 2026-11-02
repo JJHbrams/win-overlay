@@ -1,0 +1,81 @@
+{
+  "prototype_sha256": "1a0edc6974935528a48a2de6562630ac75fcc9bb13158cbadcd22389af9b1eff",
+  "images": [
+    {
+      "view": "front",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\anatomical-patch06\\source-front.png",
+      "sha256": "859139ebae2714041805e98cff23125c45475abb1500cb8c8bde8231026947c9",
+      "source_crop": [
+        130.650039301046,
+        172.8328193965777,
+        347.34996069895396,
+        389.5327407944857
+      ],
+      "source_image_resized_uniformly": true,
+      "fixture": {
+        "camera_bitexact": true,
+        "color_management_exact": true,
+        "actual_light_energy_size_shadow_exact": true,
+        "actual_light_matrix_max": 0.0
+      },
+      "limits": "Frozen wholeheight uniform registration; no torso-only normalization."
+    },
+    {
+      "view": "profile",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\anatomical-patch06\\source-profile.png",
+      "sha256": "5a03cccb2bfe0295ecd95d2546e0fc3a3e597363d4633a2a67a79284f43b3872",
+      "source_crop": [
+        450.440292641635,
+        172.8328193965777,
+        667.1402140395429,
+        389.5327407944857
+      ],
+      "source_image_resized_uniformly": true,
+      "fixture": {
+        "camera_bitexact": true,
+        "color_management_exact": true,
+        "actual_light_energy_size_shadow_exact": true,
+        "actual_light_matrix_max": 0.0
+      },
+      "limits": "Profile85degree model versus illustrated nearprofile; residual camera/pose uncertainty retained."
+    },
+    {
+      "view": "F2lowoblique",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\anatomical-patch06\\source-F2lowoblique.png",
+      "sha256": "3eb8decee89aca38cc72d3c8119b6311627224e46c305678a90c12902e1c8039",
+      "source_crop": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "source_image_resized_uniformly": true,
+      "fixture": {
+        "camera_bitexact": true,
+        "color_management_exact": true,
+        "actual_light_energy_size_shadow_exact": true,
+        "actual_light_matrix_max": 0.0
+      },
+      "limits": "Same estimated40/-8 camera; arm/cloth/source metric uncertainty remains."
+    },
+    {
+      "view": "rearoblique",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\anatomical-patch06\\source-rearoblique.png",
+      "sha256": "246ef06b16b593f44de3b57bde221a716f1cbad4c848fb8be68a794ae03c0703",
+      "source_crop": [
+        826.650039301046,
+        172.8328193965777,
+        1043.349960698954,
+        389.5327407944857
+      ],
+      "source_image_resized_uniformly": true,
+      "fixture": null,
+      "limits": "Back source is context only, not corresponding rear-oblique calibration; covered posterior wall inferred."
+    }
+  ],
+  "static": true,
+  "selected": false,
+  "migration": "UNVERIFIED",
+  "source_binding": "FAIL",
+  "extra_gpu_frames": 0
+}
