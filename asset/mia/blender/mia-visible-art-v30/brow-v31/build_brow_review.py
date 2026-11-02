@@ -4,12 +4,12 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 P=Path(__file__).resolve().parent
 V=P.parent
-ap=argparse.ArgumentParser();ap.add_argument('--tag',required=True);a=ap.parse_args()
+ap=argparse.ArgumentParser();ap.add_argument('--tag',required=True);ap.add_argument('--baseline-tag',default='brows-v31-before-source4');a=ap.parse_args()
 O=V/'reviews'/a.tag/'paired';O.mkdir(parents=True,exist_ok=True)
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 oldpath=V.parent/'mia-face-finish-v29/final-review/source-boards/reference-review.json'
 old=json.loads(oldpath.read_text())
-before=json.loads((V/'reviews/brows-v31-before-source4/source/render-records.json').read_text())
+before=json.loads((V/'reviews'/a.baseline_tag/'source/render-records.json').read_text())
 after=json.loads((V/'reviews'/a.tag/'source/render-records.json').read_text())
 by=lambda rows,name:next(x for x in rows if x['id']==name)
 font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',20)

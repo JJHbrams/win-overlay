@@ -1,0 +1,17 @@
+{
+  "input": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_WorkingE.blend",
+  "input_sha256": "1a1072313c8a195419314aa196c61b11f94e9477b4e39da66c3378652bf4c20c",
+  "output": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_BrowDepthE.blend",
+  "sha256": "0c07fce76a02d28a10179fc1c4ba24173db0146ca3b540398413249bf59d0311",
+  "checks": {
+    "all_nonbrow_input_mesh_records_exact": true,
+    "brows_only_coordinates_changed": true,
+    "all_source_XZ_bitexact": true,
+    "all_input_material_graphs_exact": true,
+    "all_input_images_exact": true,
+    "input_native_unchanged": true
+  },
+  "maximum_brow_Y_change_mm": 0.8114278316497803,
+  "scope": "Only2existing brow Y arrays/raw+all42; exact sourceXZ/UV/materials/morphnames/drivers/weights. Reseat on final actual outer-wrap skin; no face/body/eye edits.",
+  "pending": "Fresh evaluated contact and actual pose/source proof required."
+}

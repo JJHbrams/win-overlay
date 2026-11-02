@@ -1,0 +1,27 @@
+{
+  "input": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_BrowDepthE.blend",
+  "input_sha256": "0c07fce76a02d28a10179fc1c4ba24173db0146ca3b540398413249bf59d0311",
+  "output": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_Review.blend",
+  "sha256": "c3557e9eaa2163ae0d6f712a8c51362c0a6abdab628bcabe3e9673511323813c",
+  "checks": {
+    "all_input_mesh_geometry_keys_UV_weights_drivers_modifiers_materials_matrices_exact": true,
+    "all_input_material_graphs_exact": true,
+    "all_input_images_exact": true,
+    "input_native_unchanged": true
+  },
+  "scope": "Only saved review cameras/source areas/world/render/display/navigation; previous lights hidden reversibly. No mesh origin move or model edits.",
+  "default_camera": "MIA_Review_front",
+  "other_cameras": [
+    "MIA_Review_profile",
+    "MIA_Review_left_oblique",
+    "MIA_Review_right_oblique",
+    "MIA_Review_FullBody"
+  ],
+  "head_pivot": [
+    0,
+    0,
+    1.55
+  ],
+  "navigation": "ORTHO",
+  "ART": "UNAPPROVED"
+}

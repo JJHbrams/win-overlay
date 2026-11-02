@@ -1,0 +1,115 @@
+{
+  "input": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-outer-orbit-v31\\Mia_OuterOrbit_v31_D.blend",
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-outer-orbit-v31\\Mia_OuterOrbit_v31_E.blend",
+  "sha256": "617f89c98141e969637b83a0df3ba0f56510ade7e657e2651855c4b0eb74cc9c",
+  "checks": {
+    "all_D_coordinates_exact_allowners": true,
+    "all_nonwall_mesh_records_exact_D": true,
+    "all_wall_nondriver_fields_exact_D": true,
+    "all_original42_drivers_exact_D": true,
+    "all_D_material_graphs_exact": true,
+    "all_D_images_exact": true
+  },
+  "changed_drivers": [
+    {
+      "owner": "V28G_InnerLid_-1",
+      "key": "V31_Return_Close_0125",
+      "before": "max(0.0, 1.0 - abs(v - 0.125) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.125) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_R"
+    },
+    {
+      "owner": "V28G_InnerLid_-1",
+      "key": "V31_Return_Close_0250",
+      "before": "max(0.0, 1.0 - abs(v - 0.25) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.25) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_R"
+    },
+    {
+      "owner": "V28G_InnerLid_-1",
+      "key": "V31_Return_Close_0375",
+      "before": "max(0.0, 1.0 - abs(v - 0.375) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.375) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_R"
+    },
+    {
+      "owner": "V28G_InnerLid_-1",
+      "key": "V31_Return_Close_0500",
+      "before": "max(0.0, 1.0 - abs(v - 0.5) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.5) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_R"
+    },
+    {
+      "owner": "V28G_InnerLid_-1",
+      "key": "V31_Return_Close_0625",
+      "before": "max(0.0, 1.0 - abs(v - 0.625) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.625) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_R"
+    },
+    {
+      "owner": "V28G_InnerLid_-1",
+      "key": "V31_Return_Close_0750",
+      "before": "max(0.0, 1.0 - abs(v - 0.75) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.75) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_R"
+    },
+    {
+      "owner": "V28G_InnerLid_-1",
+      "key": "V31_Return_Close_0875",
+      "before": "max(0.0, 1.0 - abs(v - 0.875) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.875) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_R"
+    },
+    {
+      "owner": "V28G_InnerLid_1",
+      "key": "V31_Return_Close_0125",
+      "before": "max(0.0, 1.0 - abs(v - 0.125) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.125) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_L"
+    },
+    {
+      "owner": "V28G_InnerLid_1",
+      "key": "V31_Return_Close_0250",
+      "before": "max(0.0, 1.0 - abs(v - 0.25) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.25) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_L"
+    },
+    {
+      "owner": "V28G_InnerLid_1",
+      "key": "V31_Return_Close_0375",
+      "before": "max(0.0, 1.0 - abs(v - 0.375) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.375) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_L"
+    },
+    {
+      "owner": "V28G_InnerLid_1",
+      "key": "V31_Return_Close_0500",
+      "before": "max(0.0, 1.0 - abs(v - 0.5) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.5) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_L"
+    },
+    {
+      "owner": "V28G_InnerLid_1",
+      "key": "V31_Return_Close_0625",
+      "before": "max(0.0, 1.0 - abs(v - 0.625) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.625) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_L"
+    },
+    {
+      "owner": "V28G_InnerLid_1",
+      "key": "V31_Return_Close_0750",
+      "before": "max(0.0, 1.0 - abs(v - 0.75) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.75) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_L"
+    },
+    {
+      "owner": "V28G_InnerLid_1",
+      "key": "V31_Return_Close_0875",
+      "before": "max(0.0, 1.0 - abs(v - 0.875) / 0.125)",
+      "after": "max(0.0, 1.0 - abs(max(v, u) - 0.875) / 0.125)",
+      "side_control": "Face.M_F00_000_00_Fcl_EYE_Close_L"
+    }
+  ],
+  "method": "Driver-only extension: max(globalClose, matching unilateralCloseRorL) feeds same seven sampled per-side contactcorrectives. Affected wall/cap/iris endpointgeometry is bit-exact tobilateral counterpart. Oppositeside remainsneutral up tofewmicrons. No coordinate/key/material/UV changes. Singleglobal or singleunilateral controls validated separately; no arbitraryadditivecontrolclaim.",
+  "pending": "Dense bilateral plusunilateral interpolatedactualevaluatedaudit andactual R/L .5/1 render. D remains superseded pendingthisgate, notblanketPASS."
+}

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated": "2026-11-02",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
-  "status": "v30_source_appearance_reopened_work_in_progress",
+  "status": "v31_brow_outer_seam_working_review_lash_style_still_in_progress",
   "in_progress_v29": {
     "baseline_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
     "eye_candidate_A": "C:/Users/antio/.codex/worktrees/mia-final-face-v12/win-overlay/asset/mia/blender/mia-eye-lash-v29/Mia_EyeLash_v29_A.blend",
@@ -25,11 +25,12 @@
     ]
   },
   "active_working_correction": {
-    "path": "blender/mia-face-finish-v29/surface-C/native/Mia_FaceFinish_v29_C.blend",
-    "sha256": "d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be",
-    "meaning": "Retained C rollback baseline only; current appearance rejected by user. Active v30 production must resolve source-visible eye/lash/paint/hair residuals.",
-    "face_review": "blender/mia-face-finish-v29/final-review/source-boards/reference-review.json",
-    "body_review": "blender/mia-orbit-thorax-review-v28/reviews/G2L-body/reference-review.json"
+    "path": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Review_CleanHair.blend",
+    "sha256": "9dd072af38d52130aa693c561545b2b70b98f22c3b69145fc2b7211cd1632505",
+    "meaning": "Current live working review: source-defined brows, outer-wrapE/unilateral contacts,1216classified facial fragments removed from canonical hair. NOT source/character ART completion; closed-lash style correction running.",
+    "source_review_before_hair_cleanup": "blender/mia-visible-art-v30/reviews/v31-final-depthfixed/paired/reference-review.json",
+    "source_package_applies_to_native_sha256": "c3557e9eaa2163ae0d6f712a8c51362c0a6abdab628bcabe3e9673511323813c",
+    "required_refresh": "After closed-lash correction on exact workinginput, create final actual source4/pose/live evidence. No stale-hash promotion."
   },
   "character_complete": false,
   "art_approved": false,
@@ -59,7 +60,7 @@
     "body_comparison": "blender/mia-body-reference-audit-v19/body_reference_comparison_4rows.png",
     "body_findings": "blender/mia-body-reference-audit-v19/BODY_AUDIT.md",
     "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md",
-    "current_live_viewing_setup": "blender/mia-face-finish-v29/surface-C/native/Mia_FaceFinish_v29_C.blend",
+    "current_live_viewing_setup": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Review_CleanHair.blend",
     "v28_live_review": "blender/mia-orbit-thorax-review-v28/integrated-G2L/live-review.json",
     "source_eye_layer_diagnosis": "blender/mia-orbit-thorax-review-v28/evidence/eye-H-layer-diagnosis/UPPER_H_REVIEW.md",
     "viewport_and_camera_audit": "blender/mia-reference-finish-v22/camera-audit.json",
@@ -72,7 +73,8 @@
     "current_eye_deformation": "blender/mia-reference-finish-v22/parts/face-finish8-f2-review/production/shape-f2/handoff/guard-summary.json",
     "surface_channel_audit": "blender/mia-reference-finish-v22/static-finish-8/integrated-surface-audit/surface-channel-audit.json",
     "face_anatomy9_current_review": "blender/mia-reference-finish-v22/face-rebuild-10/REVIEW.md",
-    "v29_live_review": "blender/mia-face-finish-v29/final-review/live-review.json"
+    "v29_live_review": "blender/mia-face-finish-v29/final-review/live-review.json",
+    "v31_live_review": "blender/mia-visible-art-v30/live/v31-brows-outer-working/live-review.json"
   },
   "correction_review": {
     "independent_round1": "blender/mia-correction-v20/acceptance-round-1.md",
@@ -93,11 +95,11 @@
     "reference_inventory": "organized; generated candidate approvals remain separate",
     "corresponding_view_camera_registration": "Frozen e9 source4 with c04 baseline, same cameras/pose/light/display and uniform SRT; supplementary matte/intermediate views; 6 actual MCP orthographic captures. IPD eye measurements separate from face-height-normalized boards. Package valid, not ART PASS.",
     "lookdev_diagnostic_rig": "built and fresh-reopen tested; source shaders unchanged",
-    "face_head_art": "FAIL source appearance by user. V29 canthus projection~1.6px, subpixel lowerlashes/old dominantink and weak genericpaint do not meet source red/green shapes. V30 source-look gates reopened; technical preservation evidence retained.",
+    "face_head_art": "Overall source appearance UNAPPROVED. Flatter/lower brows supported by2independent scoped visual reviews. End-to-end hidden brow shape inferred, ink/end finish too uniform, hairON exposure limited. Source facial length/paint/hair residuals remain.",
     "body_art": "Overall ART UNAPPROVED. Bounded L anatomy/arm-probe component supported after all36 actual orbit/critical/source/pose views: unchanged G3 core plus whole new convex soft field, resolving J/K boxlike lower envelope. Root G2L f0dead17 integrates exact42 targets and fresh matched views. J/K rejected; upper-eye correction H pending independently.",
     "hair_art": "FAIL source appearance: coarse washedout72percent ash fallback/disablededgeink, limitedrebakedpaintcoverage and root/ear/nape/bun/tip finishing remain. V30 hair producer working; no appearance PASS.",
     "uv_and_color": "Applied C: original scene-lit diffuse retained; masked1254sRGB cosmetic art,2048Non-Color float controls, active actual-light specular and roughness.32 controlled probes and fresh source/critical/orbit/live reviewed. No4K detail or physical-energy-conservation claim.",
-    "facial_deformation": "G independent upper/lower lashes:42 endpoint controls and sampled quarter/half/three-quarter lower-tuft interpolation volumes positive; actual bilateral/unilateral closure and headfollow reviewed. All expression combinations, loops/events and physics remain unvalidated.",
+    "facial_deformation": "Outer-wrapE tested73bilateral/endpoint+64unilateralstates with no exposed return seam gap; actual8unilateral images independently reviewed. Brow depth reseated on E,51states/1207986evaluatedsamples+.02313..+.47909mm. FullClosedlash angular outerhooks remain OPEN and are now being repaired separately. Arbitrary key combinations/head-follow/final events unvalidated.",
     "garments": "deferred until anatomy gate",
     "final_rig_and_events": "deferred until static art and deformation gates"
   },
@@ -119,11 +121,10 @@
     "v27 shared8c971/7ae354 drafts: numeric group index copying shifted Body weights. Superseded by e9 named-weight reconstruction; do not adopt draft renders as final evidence."
   ],
   "immediate_next": [
-    "Read v30 contract/progress and user annotation; all critical source-look criteria remain open.",
-    "Freeze corrected source framing and separate red opening/green lash targets; remove double-roll comparison error before source fitting.",
-    "Implement substantial coordinated source-contour geometry, source-sized independent lashes and iris/face articulation without losing continuous orbital/cheek volume.",
-    "Apply source-specific crisp makeup/fatigue/fold/nose graphics and finish dark fine hair geometry/UV/material details; default512visual result is required, not just map connectivity.",
-    "Integrate one immutable native, actual source4/high-low/orbit/deformation/live review and fresh appearance audit. Continue while any named face/hair residual remains unresolved."
+    "Read this state+v30PROGRESS+browREVIEW+outerHANDOFF_E before edits.",
+    "Finish bounded closedlash source-pose correction via exact guarded delta onto currentCleanHair workingnative.",
+    "Use only explicit clip.1/10 review cameras; preserve sourceaspect/frozenfrontIPDzeroextraRoll and declare provisionalnonfrontlimits.",
+    "After integration refresh actual pairedsource4/pose/live on exactnative; commit+push meaningful selectedwork, withoutclaimingfullART."
   ],
   "do_not_infer_pass_from": [
     "successful save",
@@ -192,15 +193,14 @@
     "face_finish7_r28_sha256": "c0f531689594f1c68cb6d7f4c582ea280cbf72f1384e74c9db44debcefa6469a"
   },
   "current_surface_wip": {
-    "path": "blender/mia-face-finish-v29/surface-C/native/Mia_FaceFinish_v29_C.blend",
-    "sha256": "d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be",
-    "selection_means": "Retained C rollback baseline only; current appearance rejected by user. Active v30 production must resolve source-visible eye/lash/paint/hair residuals."
+    "path": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Review_CleanHair.blend",
+    "sha256": "9dd072af38d52130aa693c561545b2b70b98f22c3b69145fc2b7211cd1632505",
+    "selection_means": "Current FaceA pigment/brow ink working review, not finished source makeup. Uniform fatigue band and compact nose graphic residuals remain open."
   },
   "current_face_candidate": {
-    "path": "blender/mia-face-finish-v29/surface-C/native/Mia_FaceFinish_v29_C.blend",
-    "sha256": "d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be",
-    "selection_means": "Current bounded canthus/lash/facial-surface working checkpoint; not full-character ART completion.",
-    "status": "C preserved as rejected-appearance rollback baseline; no v30 final candidate accepted yet."
+    "path": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Review_CleanHair.blend",
+    "sha256": "9dd072af38d52130aa693c561545b2b70b98f22c3b69145fc2b7211cd1632505",
+    "status": "WIP scoped eyebrow direction and tested outer-gap component; full face identity/lash appearance/paint/hair remain open."
   },
   "unselected_anatomy9_trials": "A1 wrong source; A2 weak; WB wrongaxis; A3 proxy wrongtransform; P1 mouth overshoot; P2 mistakenly moved mouth down4mm (now measured/repaired inQ9); Q4 reducedfiterror/worsecreases; Q6 allkeys1invalid; Q6bnewledge; Q8notbetter; E1doublehump; M1red/M2streak/M3ellipse; Q10new lowercheekhollow/crease REJECTED. Original natives retained. Q11globalX-only/Jacpositive also REJECTED for new visible horizontalcheekgrooves.",
   "in_progress_v30": {
@@ -220,5 +220,35 @@
     ],
     "front_registration_correction": "Source camera already has about6.6degree roll; old2D +5.314degree SRT flattened model against still-tilted source. Newfront displayrotation0 and IPDscalar/translation; do not warp anatomy to old wrong display.",
     "scope": "Face/head/eyes/lashes and face/hair source-look completion. Garments/final animation remain behind existing anatomy gate."
+  },
+  "in_progress_v31": {
+    "working_native": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Review_CleanHair.blend",
+    "working_sha256": "9dd072af38d52130aa693c561545b2b70b98f22c3b69145fc2b7211cd1632505",
+    "brow_source_review": "blender/mia-visible-art-v30/brow-v31/REVIEW.md",
+    "outer_component_handoff": "blender/mia-visible-art-v30/outer-wrap-v31/HANDOFF_E.md",
+    "latest_source_package": "blender/mia-visible-art-v30/reviews/v31-final-depthfixed/paired/reference-review.json",
+    "latest_package_integrity": "valid; NOT ART PASS; prehaircleanup C355 native only",
+    "live_review": "blender/mia-visible-art-v30/live/v31-brows-outer-working/live-review.json",
+    "native_saved_review_scene": "Four source ORTHO head cameras+FullBody, actual source areas/world; camera clip.1/10 and viewportheadpivot1.55/clipEnd10. No model origins moved.",
+    "camera_fleck_cause": "Actual identical-geometry AngryHalf C render: clipEnd1000 causes tiny pale brow flecks; disabling UVedgefade does not fix; changing onlyclipEnd10 fixes. Ordered1330camera rays firstopaqueBrow, densemeshcontactpositive. Temporary renderer default1000 was fixed and recorded; do not remodel brows for this artifact.",
+    "semantic_hair_cleanup": "Only1216confirmedrawfaceIDs deleted, actualforelocks82525/93291retained; otheractors/maps/UV/weights/sceneexact. Does not fix genuine bang style/exposure or adopt P8.",
+    "active_lash_producer": {
+      "task": "/root/outer_orbit_v31 follow-up",
+      "folder": "C:/Users/antio/.codex/worktrees/mia-final-face-v12/win-overlay/asset/mia/blender/mia-lash-pose-v31",
+      "scope": "Only source-informed upper CLOSED lash silhouette/corresponding controls, preserve neutral sourceopening/Econtacts/skin/body/brows/maps; inspect lower detail cause, no arbitrary thickening.",
+      "input_native": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay/asset/mia/blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Review.blend",
+      "input_sha256": "c3557e9eaa2163ae0d6f712a8c51362c0a6abdab628bcabe3e9673511323813c",
+      "replay_target": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Review_CleanHair.blend",
+      "replay_must_preserve_hair_cleanup": true
+    },
+    "critical_remaining": [
+      "FullClosed bilateral/unilateral outerlash hooks; solid upperband and weak lowerdetail512 separately identified byfreshreviewer.",
+      "Brow ink/end finish remains unusually uniform; sourcecoveredends inferred, hairON exposurelimited.",
+      "Source eye-to-mouth/chin length and broader facial identity still differ.",
+      "Source fatigue/fold/nose pigment specificity, rather than uniform band/sticker triangle.",
+      "Fine dark sourcehairlinework and front/side/rear/bun/root/nape finishing; P8/P12factorialprobes remain unadopted.",
+      "Body overallART/garments/finalphysics/events not approved.",
+      "Fresh exact finalnative/source4/pose/live andindependent visual judgment; evidencevalidity!=ART."
+    ]
   }
 }

@@ -1,0 +1,33 @@
+{
+  "input": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\brow-v31\\Mia_SourceBrows_v31_C.blend",
+  "input_sha256": "4fc5504b91c61aef4c48d5e54542fd9add38fd5c6a97b42b8d9b94efbe33ed7a",
+  "output": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_WorkingE.blend",
+  "output_sha256": "1a1072313c8a195419314aa196c61b11f94e9477b4e39da66c3378652bf4c20c",
+  "delta_native_sha256": "617f89c98141e969637b83a0df3ba0f56510ade7e657e2651855c4b0eb74cc9c",
+  "payload_sha256": "58f57c8b2f06b456b149e8cf6c734c159ce17fabb677d181926ee978c6b69ae5",
+  "owners": [
+    "MIA_V27_SharedHeadBody",
+    "V28G_InnerLid_-1",
+    "V28G_InnerLid_1",
+    "V28G_Iris_-1",
+    "V28G_Iris_1",
+    "V28G_Sclera_-1",
+    "V28G_Sclera_1",
+    "V30_LowerLashes_-1",
+    "V30_LowerLashes_1",
+    "V30_UpperLashes_-1",
+    "V30_UpperLashes_1"
+  ],
+  "checks": {
+    "all_input_nonowned_mesh_records_exact": true,
+    "all_owned_input_noncoordinate_nonextended_fields_exact": true,
+    "all_delta_coordinates_exact": true,
+    "all_target_key_names_drivers_exact": true,
+    "all_input_material_graphs_exact": true,
+    "all_input_images_packing_colorspace_exact": true,
+    "all_input_scene_object_camera_light_world_settings_exact": true,
+    "input_native_unchanged": true
+  },
+  "scope": "Raw+all42 original key coordinate arrays of11 existing skin/wall/sclera/iris/lash owners; variantsD/E alsoadd7named Close-contact correctivekeys/drivers to eachwall. E drives these fromglobal or matching unilateral Close. All original42 keys remain. All input material/maps/UV/topology/weights/originaldrivers/modifiers/IDs/bodyprefix/brows/hair/cameras/lights kept. Requires M or exactMgeometry integrated face/hair input.",
+  "pending": "Integrated actual source/critical/deformation/live art review required; payload integrity alone is not art PASS."
+}

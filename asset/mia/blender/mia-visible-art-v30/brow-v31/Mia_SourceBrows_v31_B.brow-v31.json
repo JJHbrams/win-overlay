@@ -1,0 +1,237 @@
+{
+  "input": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\eye-M-face-A\\Mia_VisibleArt_v30_EyeM_FaceA.blend",
+  "input_sha256": "11459e4df794ea30c15a5d8b067d68698bb491a508198fabf845fd102e6f03ab",
+  "output": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\brow-v31\\Mia_SourceBrows_v31_B.blend",
+  "sha256": "2327f358aeb271fde90b9c20baa82c04e233cec226d1f7de13749c5e12784f9f",
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+  "scope": "Two source-defined conforming brows,42 expression controls/Head binding; legacy slot4 alpha archived reversibly. No skin/eye/lash/facepaint/body/hair edit.",
+  "checks": {
+    "all_other_original_mesh_records_exact": true,
+    "master_only_brow_material_slot_changed": true,
+    "mouth_and_nonbrow_slots_exact": true,
+    "all_old_material_graphs_exact": true,
+    "all_old_images_exact": true,
+    "all_new_brow_coordinates_finite": true,
+    "input_native_unchanged": true
+  },
+  "owners": [
+    {
+      "owner": "V31_SourceBrow_-1",
+      "source_run_original1024": [
+        [
+          391.0,
+          288.8,
+          0.12
+        ],
+        [
+          401.0,
+          282.7,
+          1.2
+        ],
+        [
+          412.0,
+          278.7,
+          2.8
+        ],
+        [
+          428.0,
+          276.7,
+          3.4
+        ],
+        [
+          446.0,
+          275.6,
+          3.35
+        ],
+        [
+          462.0,
+          274.7,
+          2.9
+        ],
+        [
+          475.0,
+          274.5,
+          2.2
+        ],
+        [
+          481.0,
+          275.0,
+          0.12
+        ]
+      ],
+      "observed_x": [
+        410,
+        455
+      ],
+      "uncertain": "Hair-covered continuation and full neutral tail. Expression sheet supports flat broad ink rather than donor arch.",
+      "vertices": 195,
+      "faces": 128,
+      "semantic_keys": [
+        "Basis",
+        "Face.M_F00_000_00_Fcl_ALL_Angry",
+        "Face.M_F00_000_00_Fcl_ALL_Fun",
+        "Face.M_F00_000_00_Fcl_ALL_Joy",
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+        "Face.M_F00_000_00_Fcl_ALL_Surprised",
+        "Face.M_F00_000_00_Fcl_BRW_Angry",
+        "Face.M_F00_000_00_Fcl_BRW_Fun",
+        "Face.M_F00_000_00_Fcl_BRW_Joy",
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+        "Face.M_F00_000_00_Fcl_BRW_Surprised",
+        "Face.M_F00_000_00_Fcl_EYE_Natural",
+        "Face.M_F00_000_00_Fcl_EYE_Angry",
+        "Face.M_F00_000_00_Fcl_EYE_Close",
+        "Face.M_F00_000_00_Fcl_EYE_Close_R",
+        "Face.M_F00_000_00_Fcl_EYE_Close_L",
+        "Face.M_F00_000_00_Fcl_EYE_Joy",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+        "Face.M_F00_000_00_Fcl_EYE_Surprised",
+        "Face.M_F00_000_00_Fcl_EYE_Extra",
+        "Face.M_F00_000_00_Fcl_MTH_Up",
+        "Face.M_F00_000_00_Fcl_MTH_Down",
+        "Face.M_F00_000_00_Fcl_MTH_Angry",
+        "Face.M_F00_000_00_Fcl_MTH_Neutral",
+        "Face.M_F00_000_00_Fcl_MTH_Fun",
+        "Face.M_F00_000_00_Fcl_MTH_Joy",
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+        "Face.M_F00_000_00_Fcl_MTH_Surprised",
+        "Face.M_F00_000_00_Fcl_MTH_A",
+        "Face.M_F00_000_00_Fcl_MTH_I",
+        "Face.M_F00_000_00_Fcl_MTH_U",
+        "Face.M_F00_000_00_Fcl_MTH_E",
+        "Face.M_F00_000_00_Fcl_MTH_O",
+        "Face.M_F00_000_00_Fcl_HA_Fung1",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+        "Face.M_F00_000_00_Fcl_HA_Fung2",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On"
+      ],
+      "neutral_bounds_m": [
+        [
+          -0.06339479982852936,
+          -0.07425278425216675,
+          1.5617088079452515
+        ],
+        [
+          -0.015085174702107906,
+          -0.04698716849088669,
+          1.5676403045654297
+        ]
+      ]
+    },
+    {
+      "owner": "V31_SourceBrow_1",
+      "source_run_original1024": [
+        [
+          518.0,
+          272.8,
+          0.12
+        ],
+        [
+          524.0,
+          270.0,
+          3.6
+        ],
+        [
+          540.0,
+          265.3,
+          3.7
+        ],
+        [
+          554.0,
+          262.0,
+          3.3
+        ],
+        [
+          574.0,
+          258.6,
+          2.5
+        ],
+        [
+          591.0,
+          256.6,
+          1.7
+        ],
+        [
+          607.0,
+          255.7,
+          0.7
+        ],
+        [
+          615.0,
+          256.0,
+          0.12
+        ]
+      ],
+      "observed_x": [
+        520,
+        551
+      ],
+      "uncertain": "Hair-covered continuation and full neutral tail. Expression sheet supports flat broad ink rather than donor arch.",
+      "vertices": 195,
+      "faces": 128,
+      "semantic_keys": [
+        "Basis",
+        "Face.M_F00_000_00_Fcl_ALL_Angry",
+        "Face.M_F00_000_00_Fcl_ALL_Fun",
+        "Face.M_F00_000_00_Fcl_ALL_Joy",
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow",
+        "Face.M_F00_000_00_Fcl_ALL_Surprised",
+        "Face.M_F00_000_00_Fcl_BRW_Angry",
+        "Face.M_F00_000_00_Fcl_BRW_Fun",
+        "Face.M_F00_000_00_Fcl_BRW_Joy",
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow",
+        "Face.M_F00_000_00_Fcl_BRW_Surprised",
+        "Face.M_F00_000_00_Fcl_EYE_Natural",
+        "Face.M_F00_000_00_Fcl_EYE_Angry",
+        "Face.M_F00_000_00_Fcl_EYE_Close",
+        "Face.M_F00_000_00_Fcl_EYE_Close_R",
+        "Face.M_F00_000_00_Fcl_EYE_Close_L",
+        "Face.M_F00_000_00_Fcl_EYE_Joy",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L",
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow",
+        "Face.M_F00_000_00_Fcl_EYE_Surprised",
+        "Face.M_F00_000_00_Fcl_EYE_Extra",
+        "Face.M_F00_000_00_Fcl_MTH_Up",
+        "Face.M_F00_000_00_Fcl_MTH_Down",
+        "Face.M_F00_000_00_Fcl_MTH_Angry",
+        "Face.M_F00_000_00_Fcl_MTH_Neutral",
+        "Face.M_F00_000_00_Fcl_MTH_Fun",
+        "Face.M_F00_000_00_Fcl_MTH_Joy",
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow",
+        "Face.M_F00_000_00_Fcl_MTH_Surprised",
+        "Face.M_F00_000_00_Fcl_MTH_A",
+        "Face.M_F00_000_00_Fcl_MTH_I",
+        "Face.M_F00_000_00_Fcl_MTH_U",
+        "Face.M_F00_000_00_Fcl_MTH_E",
+        "Face.M_F00_000_00_Fcl_MTH_O",
+        "Face.M_F00_000_00_Fcl_HA_Fung1",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up",
+        "Face.M_F00_000_00_Fcl_HA_Fung2",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up",
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On"
+      ],
+      "neutral_bounds_m": [
+        [
+          0.0045591299422085285,
+          -0.07621729373931885,
+          1.5617402791976929
+        ],
+        [
+          0.05669249966740608,
+          -0.05517872795462608,
+          1.5678044557571411
+        ]
+      ]
+    }
+  ],
+  "surface_clearance_m": 0.00022,
+  "pending": "Source4 actual neutral/hair ON/OFF, expression contact and normal delivery scale visual review. Not ART approval."
+}

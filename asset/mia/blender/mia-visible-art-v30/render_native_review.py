@@ -41,7 +41,7 @@ for i,l in enumerate(spec['lighting']['areas']):
 w=bpy.data.worlds.new('V30_ActualReviewWorld');w.use_nodes=True;n=w.node_tree.nodes;n.clear();bg=n.new('ShaderNodeBackground');wo=n.new('ShaderNodeOutputWorld');wo.is_active_output=True;w.node_tree.links.new(bg.outputs[0],wo.inputs['Surface']);bg.inputs['Color'].default_value=(*spec['lighting']['world_linear'],1);bg.inputs['Strength'].default_value=spec['lighting']['world_strength'];s.world=w
 s.render.engine='BLENDER_EEVEE';s.render.use_freestyle=False;s.render.film_transparent=False;s.render.resolution_percentage=100;s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGBA'
 cm=spec['color_management'];s.view_settings.view_transform=cm['view_transform'];s.view_settings.look=cm['look'];s.view_settings.exposure=cm['exposure'];s.view_settings.gamma=cm['gamma']
-cam=bpy.data.objects.new('V30_ReviewCamera',bpy.data.cameras.new('V30_ReviewCamera'));s.collection.objects.link(cam);cam.data.type='ORTHO';s.camera=cam
+cam=bpy.data.objects.new('V30_ReviewCamera',bpy.data.cameras.new('V30_ReviewCamera'));s.collection.objects.link(cam);cam.data.type='ORTHO';cam.data.clip_start=.1;cam.data.clip_end=10.;s.camera=cam
 hair=[o for o in s.objects if o.type=='MESH' and not o.hide_render and
  (any(x in o.name for x in ['Hair','HAIR','Braid','Crown','Gather','RootLining','PIXAL']) or any('HAIR' in c.name.upper() for c in o.users_collection))]
 skin=bpy.data.objects['MIA_V27_SharedHeadBody'];walls=[o for o in s.objects if o.name.startswith('V28G_InnerLid_')]
@@ -56,7 +56,7 @@ def render(label,v,hide=False,neutral=False):
  cam.matrix_world=Matrix(v['matrix']);cam.data.ortho_scale=v['ortho_scale'];cam.data.shift_x,cam.data.shift_y=v['lens_shift'];s.render.resolution_x,s.render.resolution_y=v['resolution'];s.render.pixel_aspect_x,s.render.pixel_aspect_y=v['pixel_aspect'];bpy.context.view_layer.update()
  file=out/(label+'.png');assert not file.exists(),'Use a new immutable review tag'
  s.render.filepath=str(file);bpy.ops.render.render(write_still=True)
- actual=copy.deepcopy(v);actual.update(matrix=[list(r) for r in cam.matrix_world],ortho_scale=cam.data.ortho_scale,resolution=[s.render.resolution_x,s.render.resolution_y],pixel_aspect=[s.render.pixel_aspect_x,s.render.pixel_aspect_y],lens_shift=[cam.data.shift_x,cam.data.shift_y],frame=s.frame_current,active_shape_keys={k.name:k.value for k in master.data.shape_keys.key_blocks if k.value})
+ actual=copy.deepcopy(v);actual.update(matrix=[list(r) for r in cam.matrix_world],ortho_scale=cam.data.ortho_scale,clip_start=cam.data.clip_start,clip_end=cam.data.clip_end,resolution=[s.render.resolution_x,s.render.resolution_y],pixel_aspect=[s.render.pixel_aspect_x,s.render.pixel_aspect_y],lens_shift=[cam.data.shift_x,cam.data.shift_y],frame=s.frame_current,active_shape_keys={k.name:k.value for k in master.data.shape_keys.key_blocks if k.value})
  actual['head_eye_pose']={'armature':rig.name,'head_bone':head.name,'head_matrix_basis':[list(r) for r in head.matrix_basis],'eye_pose':'rest; master shape keys recorded above'}
  actual['lighting']['areas']=[dict(item,matrix=[list(r) for r in o.matrix_world],watts=o.data.energy,shape=o.data.shape,size=o.data.size,color=list(o.data.color)) for item,o in zip(v['lighting']['areas'],lamps)]
  actual['lighting']['world_linear']=list(bg.inputs['Color'].default_value)[:3];actual['lighting']['world_strength']=bg.inputs['Strength'].default_value

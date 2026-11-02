@@ -1,0 +1,734 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-outer-orbit-v31\\Mia_OuterOrbit_v31_D.blend",
+  "sha256": "29f4905abde7a4c88da4eb939e114ff15f87053fc033ea2b40e2abaefe379d88",
+  "raw_original42_endpoint_equivalence": {
+    "R": {
+      "-1": {
+        "InnerLid": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 14.651613442375414
+        },
+        "Sclera": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 3.209742478676866
+        },
+        "Iris": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 0.41307043950126615
+        }
+      },
+      "1": {
+        "InnerLid": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 13.277640640098143,
+          "max_unilateral_minus_neutral_mm": 2.9802322387695312e-05
+        },
+        "Sclera": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 3.1317790741301827,
+          "max_unilateral_minus_neutral_mm": 5.21540641784668e-05
+        },
+        "Iris": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.4161646489058897,
+          "max_unilateral_minus_neutral_mm": 2.2351741790771484e-05
+        }
+      }
+    },
+    "L": {
+      "-1": {
+        "InnerLid": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 14.651613442375414,
+          "max_unilateral_minus_neutral_mm": 2.9802322387695312e-05
+        },
+        "Sclera": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 3.209742478676866,
+          "max_unilateral_minus_neutral_mm": 0.0023543834686279297
+        },
+        "Iris": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.4130778897625804,
+          "max_unilateral_minus_neutral_mm": 2.2351741790771484e-05
+        }
+      },
+      "1": {
+        "InnerLid": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 13.277640640098143
+        },
+        "Sclera": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 3.1317790741301827
+        },
+        "Iris": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 0.41614974819119976
+        }
+      }
+    }
+  },
+  "states": [
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.25,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5632266402244568,
+            -0.5510912742465734,
+            0.10791420936584473
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5632266402244568,
+            -0.5523364525288343,
+            0.10791420936584473
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5521285347640514,
+            -0.5466148722916842,
+            -0.5305949598550797
+          ],
+          "positive_exposed_gap_count": 2,
+          "positive_exposed_gap_above25microns": 2,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": [
+            {
+              "segment": 30,
+              "u": 0.0,
+              "gap_mm": 0.10791420936584473,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                -0.04538637399673462,
+                -0.05576883256435394,
+                1.542089581489563
+              ]
+            },
+            {
+              "segment": 30,
+              "u": 0.125,
+              "gap_mm": 0.03841333091259003,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                -0.04551287600770593,
+                -0.0556215476244688,
+                1.5421064496040344
+              ]
+            }
+          ]
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.5,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5631614476442337,
+            -0.5489364266395569,
+            -0.07079541683197021
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5631614476442337,
+            -0.5533779039978981,
+            -0.07079541683197021
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5533238872885704,
+            -0.5439291708171368,
+            -0.4680901765823364
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.75,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5653863772749901,
+            -0.5460651591420174,
+            -0.127449631690979
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5653863772749901,
+            -0.5529746413230896,
+            -0.5445936694741249
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5512707866728306,
+            -0.529739074409008,
+            -0.127449631690979
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.25,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6035994738340378,
+            -0.5101300776004791,
+            0.2807416021823883
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6035994738340378,
+            -0.5470553878694773,
+            0.2807416021823883
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5301386117935181,
+            -0.4328782670199871,
+            -0.38349349051713943
+          ],
+          "positive_exposed_gap_count": 4,
+          "positive_exposed_gap_above25microns": 4,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": [
+            {
+              "segment": 30,
+              "u": 0.0,
+              "gap_mm": 0.2807416021823883,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                0.04412705823779106,
+                -0.05575427785515785,
+                1.5403506755828857
+              ]
+            },
+            {
+              "segment": 30,
+              "u": 0.125,
+              "gap_mm": 0.20962581038475037,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                0.044246052391827106,
+                -0.055605750530958176,
+                1.540353536605835
+              ]
+            },
+            {
+              "segment": 30,
+              "u": 0.25,
+              "gap_mm": 0.13851001858711243,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                0.04436504654586315,
+                -0.0554572232067585,
+                1.5403563976287842
+              ]
+            },
+            {
+              "segment": 30,
+              "u": 0.375,
+              "gap_mm": 0.06737932562828064,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                0.0444840406998992,
+                -0.05530869588255882,
+                1.5403592586517334
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.5,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6068339571356773,
+            -0.49033015966415405,
+            0.24268776178359985
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6068339571356773,
+            -0.5566403269767761,
+            0.24268776178359985
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5408069118857384,
+            -0.3400500863790512,
+            -0.13606995344161987
+          ],
+          "positive_exposed_gap_count": 6,
+          "positive_exposed_gap_above25microns": 5,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": [
+            {
+              "segment": 30,
+              "u": 0.0,
+              "gap_mm": 0.24268776178359985,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                0.044280316680669785,
+                -0.05530274659395218,
+                1.5372294187545776
+              ]
+            },
+            {
+              "segment": 30,
+              "u": 0.125,
+              "gap_mm": 0.19903481006622314,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                0.04439640836790204,
+                -0.05518007278442383,
+                1.537237361073494
+              ]
+            },
+            {
+              "segment": 30,
+              "u": 0.25,
+              "gap_mm": 0.15539675951004028,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                0.044512500055134296,
+                -0.05505739897489548,
+                1.5372453033924103
+              ]
+            },
+            {
+              "segment": 30,
+              "u": 0.375,
+              "gap_mm": 0.11174380779266357,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                0.04462859174236655,
+                -0.054934725165367126,
+                1.5372532457113266
+              ]
+            },
+            {
+              "segment": 30,
+              "u": 0.5,
+              "gap_mm": 0.06810575723648071,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                0.04474468342959881,
+                -0.054812051355838776,
+                1.537261188030243
+              ]
+            },
+            {
+              "segment": 30,
+              "u": 0.625,
+              "gap_mm": 0.024452805519104004,
+              "covered_by_actual_skin": false,
+              "ocular": "Sclera",
+              "point": [
+                0.044860775116831064,
+                -0.054689377546310425,
+                1.5372691303491592
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.75,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5925046280026436,
+            -0.5091093480587006,
+            0.024285167455673218
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5925046280026436,
+            -0.5601774901151657,
+            -0.5499124526977539
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5584694445133209,
+            -0.4382161423563957,
+            0.024285167455673218
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": [
+            {
+              "segment": 30,
+              "u": 0.0,
+              "gap_mm": 0.024285167455673218,
+              "covered_by_actual_skin": true,
+              "ocular": "Sclera",
+              "point": [
+                0.04443357512354851,
+                -0.054851215332746506,
+                1.534108281135559
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "method": "Fresh saved D. Original42 target arrays of each side wall/sclera/iris compared bitexact against bilateralClose and Basis. Six actual evaluated unilateral quarter/half/threequarter states, currentwallcorrectivedrivers naturallyevaluated.8subdivisions per outer70..100% return-end segment; actualalpha-aware first ocular Yhit and actualskin coverage. No GPU/native saves.",
+  "limits": "Endpoint equivalence plus direct unilateral contact only; no arbitrary additive combinations or ART certification. Equal named endpoint arrays do not automatically prove skin deformation equivalence.",
+  "native_unchanged": true,
+  "evaluated_skin_equivalence": [
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.25,
+      "affected_side": -1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1134,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.25,
+      "affected_side": 1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1134,
+        "bitexact": false,
+        "maximum_difference_mm": 0.012397775208224932
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.5,
+      "affected_side": -1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1134,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.5,
+      "affected_side": 1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1134,
+        "bitexact": false,
+        "maximum_difference_mm": 0.02503397388083329
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.75,
+      "affected_side": -1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1134,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.75,
+      "affected_side": 1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1134,
+        "bitexact": false,
+        "maximum_difference_mm": 0.03743174898875749
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 1.0,
+      "affected_side": -1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1134,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 1.0,
+      "affected_side": 1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1134,
+        "bitexact": false,
+        "maximum_difference_mm": 0.05006793795645559
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    }
+  ],
+  "evaluated_skin_region_definition": "Fixed neutral evaluated vertex IDs: signedX.041..080m, Y<\u2212.02m, Z1.523..1.570m. Outer rim uses fixed neutral lateral70..100% evaluated opening IDs. Controls.25/.5/.75/1 compared against bilateral samevalue and opposite neutral."
+}

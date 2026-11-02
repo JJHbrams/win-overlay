@@ -1,0 +1,3185 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-final-face-v12\\win-overlay\\asset\\mia\\blender\\mia-outer-orbit-v31\\Mia_OuterOrbit_v31_E.blend",
+  "sha256": "617f89c98141e969637b83a0df3ba0f56510ade7e657e2651855c4b0eb74cc9c",
+  "raw_original42_endpoint_equivalence": {
+    "R": {
+      "-1": {
+        "InnerLid": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 14.651613442375414
+        },
+        "Sclera": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 3.209742478676866
+        },
+        "Iris": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 0.41307043950126615
+        }
+      },
+      "1": {
+        "InnerLid": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 13.277640640098143,
+          "max_unilateral_minus_neutral_mm": 2.9802322387695312e-05
+        },
+        "Sclera": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 3.1317790741301827,
+          "max_unilateral_minus_neutral_mm": 5.21540641784668e-05
+        },
+        "Iris": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.4161646489058897,
+          "max_unilateral_minus_neutral_mm": 2.2351741790771484e-05
+        }
+      }
+    },
+    "L": {
+      "-1": {
+        "InnerLid": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 14.651613442375414,
+          "max_unilateral_minus_neutral_mm": 2.9802322387695312e-05
+        },
+        "Sclera": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 3.209742478676866,
+          "max_unilateral_minus_neutral_mm": 0.0023543834686279297
+        },
+        "Iris": {
+          "unilateral_endpoint_exact_bilateral_endpoint": false,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.4130778897625804,
+          "max_unilateral_minus_neutral_mm": 2.2351741790771484e-05
+        }
+      },
+      "1": {
+        "InnerLid": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 13.277640640098143
+        },
+        "Sclera": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 3.1317790741301827
+        },
+        "Iris": {
+          "unilateral_endpoint_exact_bilateral_endpoint": true,
+          "unilateral_endpoint_exact_neutral": false,
+          "max_unilateral_minus_bilateral_mm": 0.0,
+          "max_unilateral_minus_neutral_mm": 0.41614974819119976
+        }
+      }
+    }
+  },
+  "states": [
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.03125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5608154460787773,
+            -0.5501545965671539,
+            -0.5234703421592712
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5608154460787773,
+            -0.5501545965671539,
+            -0.5234703421592712
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.0625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5608098581433296,
+            -0.5503133870661259,
+            -0.5018748342990875
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5608098581433296,
+            -0.5503133870661259,
+            -0.5018748342990875
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.09375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5607744678854942,
+            -0.5504603032022715,
+            -0.4794299602508545
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5607744678854942,
+            -0.5504603032022715,
+            -0.4794299602508545
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5607809871435165,
+            -0.5505606532096863,
+            -0.46218186616897583
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5607809871435165,
+            -0.5505606532096863,
+            -0.46218186616897583
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.15625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5607884377241135,
+            -0.5506575107574463,
+            -0.2981610596179962
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5607884377241135,
+            -0.5506575107574463,
+            -0.2981610596179962
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.1875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5607679486274719,
+            -0.5507583264261484,
+            -0.28957054018974304
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5607679486274719,
+            -0.5508654285222292,
+            -0.28957054018974304
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5498547106981277,
+            -0.5383060779422522,
+            -0.5328729748725891
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.21875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5616210401058197,
+            -0.5509271286427975,
+            -0.2817101776599884
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5616210401058197,
+            -0.5518198013305664,
+            -0.2817101776599884
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5501252599060535,
+            -0.5437135696411133,
+            -0.5312133580446243
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.25,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5632266402244568,
+            -0.5510912742465734,
+            -0.3000013530254364
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5632266402244568,
+            -0.5523364525288343,
+            -0.3000013530254364
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5521285347640514,
+            -0.5466148722916842,
+            -0.5305949598550797
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.28125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5665849894285202,
+            -0.5515390075743198,
+            -0.28333067893981934
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5665849894285202,
+            -0.5530109629034996,
+            -0.28333067893981934
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5544805899262428,
+            -0.5472972989082336,
+            -0.5291788838803768
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.3125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5714111030101776,
+            -0.5514577496796846,
+            -0.2818107604980469
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5714111030101776,
+            -0.5530822090804577,
+            -0.2818107604980469
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5584815517067909,
+            -0.5497471429407597,
+            -0.5277511663734913
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.34375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5742567591369152,
+            -0.5513192154467106,
+            -0.295884907245636
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5742567591369152,
+            -0.5530240014195442,
+            -0.295884907245636
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5571222864091396,
+            -0.5476288497447968,
+            -0.5026385188102722
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5746819078922272,
+            -0.5512386560440063,
+            -0.3000013530254364
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5746819078922272,
+            -0.5527841858565807,
+            -0.3000013530254364
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5744416266679764,
+            -0.5477662198245525,
+            -0.4810616374015808
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.40625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5699526518583298,
+            -0.550061697140336,
+            -0.3003738820552826
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5649235099554062,
+            -0.5514367949217558,
+            -0.3003738820552826
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5699526518583298,
+            -0.5479166284203529,
+            -0.4739202558994293
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.4375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5631879903376102,
+            -0.5497587844729424,
+            -0.31212717294692993
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5622105672955513,
+            -0.5515012890100479,
+            -0.31212717294692993
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5631879903376102,
+            -0.5474267527461052,
+            -0.4745274782180786
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.46875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5626874044537544,
+            -0.5495715886354446,
+            -0.3130696713924408
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5626874044537544,
+            -0.5517005920410156,
+            -0.3130696713924408
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5567818880081177,
+            -0.5471548065543175,
+            -0.46969717368483543
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.5,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5631614476442337,
+            -0.5489364266395569,
+            -0.3000013530254364
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5631614476442337,
+            -0.5533779039978981,
+            -0.3000013530254364
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5533238872885704,
+            -0.5439291708171368,
+            -0.4680901765823364
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.53125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5636950954794884,
+            -0.5469410680234432,
+            -0.30206888914108276
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5636950954794884,
+            -0.5536458920687437,
+            -0.32899901270866394
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5527706816792488,
+            -0.5395109765231609,
+            -0.30206888914108276
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.5625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5642911419272423,
+            -0.5467671435326338,
+            -0.30797719955444336
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5642911419272423,
+            -0.5537893157452345,
+            -0.40205102413892746
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5535222589969635,
+            -0.5354296881705523,
+            -0.30797719955444336
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.59375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5648871883749962,
+            -0.5460530519485474,
+            -0.2860603854060173
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5648871883749962,
+            -0.5540600977838039,
+            -0.5432083271443844
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5543380975723267,
+            -0.5321726202964783,
+            -0.2860603854060173
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5655251443386078,
+            -0.5458351224660873,
+            -0.2893451601266861
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5655251443386078,
+            -0.5540726706385612,
+            -0.5441848188638687
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5552321672439575,
+            -0.5312692373991013,
+            -0.2893451601266861
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.65625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5656424909830093,
+            -0.5453843623399734,
+            -0.295490026473999
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5656424909830093,
+            -0.5538575351238251,
+            -0.5442565307021141
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5561970174312592,
+            -0.5300715565681458,
+            -0.295490026473999
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.6875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5655381828546524,
+            -0.5455790087580681,
+            -0.2992004156112671
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5655381828546524,
+            -0.5535376258194447,
+            -0.544324517250061
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5529895424842834,
+            -0.5293413996696472,
+            -0.2992004156112671
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.71875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5654338747262955,
+            -0.5457908846437931,
+            -0.2968534827232361
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5654338747262955,
+            -0.5532167851924896,
+            -0.5444670096039772
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5514873191714287,
+            -0.5296031013131142,
+            -0.2968534827232361
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.75,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5653863772749901,
+            -0.5460651591420174,
+            -0.3000013530254364
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5653863772749901,
+            -0.5529746413230896,
+            -0.5445936694741249
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5512707866728306,
+            -0.529739074409008,
+            -0.3000013530254364
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.78125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5655866116285324,
+            -0.5461666733026505,
+            -0.3047958016395569
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5655866116285324,
+            -0.5529336631298065,
+            -0.5447650328278542
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5527809262275696,
+            -0.5327132530510426,
+            -0.3047958016395569
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.8125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5664266645908356,
+            -0.5459338426589966,
+            -0.3047063946723938
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5664266645908356,
+            -0.5528181791305542,
+            -0.545131042599678
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5528964102268219,
+            -0.5361600778996944,
+            -0.3047063946723938
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.84375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5672518163919449,
+            -0.5459487438201904,
+            -0.3044120967388153
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.5672518163919449,
+            -0.5459487438201904,
+            -0.3044120967388153
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5681654438376427,
+            -0.5462430417537689,
+            -0.3000013530254364
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.5681654438376427,
+            -0.5462430417537689,
+            -0.3000013530254364
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.90625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5691074766218662,
+            -0.5468055605888367,
+            -0.29748305678367615
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.5691074766218662,
+            -0.5468055605888367,
+            -0.29748305678367615
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.9375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.570081640034914,
+            -0.5475692451000214,
+            -0.29451772570610046
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.570081640034914,
+            -0.5475692451000214,
+            -0.29451772570610046
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.96875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5710856057703495,
+            -0.5486141890287399,
+            -0.29307231307029724
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.5710856057703495,
+            -0.5486141890287399,
+            -0.29307231307029724
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 1.0,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5721468478441238,
+            -0.5500111728906631,
+            -0.3000013530254364
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.5721468478441238,
+            -0.5500111728906631,
+            -0.3000013530254364
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6473436951637268,
+            -0.5499944090843201,
+            -0.003680586814880371
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.03125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6613545119762421,
+            -0.5443631671369076,
+            -0.006483867764472961
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6613545119762421,
+            -0.5443631671369076,
+            -0.006483867764472961
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.0625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.7774569094181061,
+            -0.5392679013311863,
+            -0.1127501018345356
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.7774569094181061,
+            -0.5392679013311863,
+            -0.1127501018345356
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.09375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5873013287782669,
+            -0.53386390209198,
+            -0.1786351203918457
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5873013287782669,
+            -0.5350618157535791,
+            -0.1786351203918457
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.4935897886753082,
+            -0.49267709255218506,
+            -0.49177929759025574
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5920324474573135,
+            -0.5288086831569672,
+            -0.3000013530254364
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5920324474573135,
+            -0.5312745925039053,
+            -0.3000013530254364
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.47460198402404785,
+            -0.4732199013233185,
+            -0.47169066965579987
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.15625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5964972078800201,
+            -0.5238838493824005,
+            -0.29762834310531616
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5964972078800201,
+            -0.5345612298697233,
+            -0.29762834310531616
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5266126245260239,
+            -0.4551955498754978,
+            -0.4508607089519501
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.1875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6007514894008636,
+            -0.5191545933485031,
+            -0.28712302446365356
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6007514894008636,
+            -0.54195336997509,
+            -0.28712302446365356
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5250656977295876,
+            -0.435742549598217,
+            -0.4206825979053974
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.21875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6026364862918854,
+            -0.5145613104104996,
+            -0.29740482568740845
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6026364862918854,
+            -0.5444688722491264,
+            -0.29740482568740845
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5288892425596714,
+            -0.425104983150959,
+            -0.40205754339694977
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.25,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6035994738340378,
+            -0.5101300776004791,
+            -0.3000013530254364
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6035994738340378,
+            -0.5470553878694773,
+            -0.3000013530254364
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5301386117935181,
+            -0.4328782670199871,
+            -0.38349349051713943
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.28125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6042495369911194,
+            -0.505862757563591,
+            -0.28612930327653885
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6042495369911194,
+            -0.5477864760905504,
+            -0.28612930327653885
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5303490906953812,
+            -0.42619137093424797,
+            -0.36397576332092285
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.3125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6045997142791748,
+            -0.5017463117837906,
+            -0.29760226607322693
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6045997142791748,
+            -0.5493185017257929,
+            -0.29760226607322693
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.532420352101326,
+            -0.42067794129252434,
+            -0.34703686833381653
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.34375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6046667695045471,
+            -0.49779191613197327,
+            -0.2816319465637207
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6046667695045471,
+            -0.5492900963872671,
+            -0.2816319465637207
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5347765982151031,
+            -0.4114867188036442,
+            -0.3293096087872982
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6069676019251347,
+            -0.49399957060813904,
+            -0.2997536212205887
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6069676019251347,
+            -0.54986122995615,
+            -0.2997536212205887
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5356571637094021,
+            -0.3988058306276798,
+            -0.3121849149465561
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.40625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6092139519751072,
+            -0.4903748631477356,
+            -0.28508296236395836
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6092139519751072,
+            -0.552021898329258,
+            -0.28508296236395836
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5369340069591999,
+            -0.3817761316895485,
+            -0.3001568838953972
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.4375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6097308360040188,
+            -0.4892665892839432,
+            -0.27273595333099365
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6097308360040188,
+            -0.5547674372792244,
+            -0.27273595333099365
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5380283109843731,
+            -0.37314416840672493,
+            -0.28807902708649635
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.46875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6084307096898556,
+            -0.4896055907011032,
+            -0.27970410883426666
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6084307096898556,
+            -0.5553653463721275,
+            -0.28226152062416077
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5393349565565586,
+            -0.36340951919555664,
+            -0.27970410883426666
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.5,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6068339571356773,
+            -0.49033015966415405,
+            -0.27565285563468933
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6068339571356773,
+            -0.5566403269767761,
+            -0.29958225786685944
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5408069118857384,
+            -0.3417087718844414,
+            -0.27565285563468933
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.53125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6049391813576221,
+            -0.49141235649585724,
+            -0.2671442925930023
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6049391813576221,
+            -0.5579493008553982,
+            -0.2671442925930023
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5423640832304955,
+            -0.3096919972449541,
+            -0.26991963386535645
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.5625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6027449853718281,
+            -0.49286894500255585,
+            -0.27024373412132263
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6027449853718281,
+            -0.5589558277279139,
+            -0.5447892472147942
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5440195091068745,
+            -0.31181052327156067,
+            -0.27024373412132263
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.59375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.601806677877903,
+            -0.4946961998939514,
+            -0.27765845879912376
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.601806677877903,
+            -0.5590179935097694,
+            -0.5456386134028435
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5448590964078903,
+            -0.31091063283383846,
+            -0.27765845879912376
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.6020599976181984,
+            -0.49685314297676086,
+            -0.27839094400405884
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.6020599976181984,
+            -0.5585998296737671,
+            -0.5469229072332382
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5465038120746613,
+            -0.30786916613578796,
+            -0.27839094400405884
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.65625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5998555570840836,
+            -0.4993937909603119,
+            -0.26496872305870056
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5998555570840836,
+            -0.5588298663496971,
+            -0.5477564409375191
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5474453791975975,
+            -0.32022874802351,
+            -0.26496872305870056
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.6875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.596366822719574,
+            -0.5022790282964706,
+            -0.26051048189401627
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.596366822719574,
+            -0.5584172904491425,
+            -0.5474062636494637
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5488144233822823,
+            -0.340914586558938,
+            -0.26051048189401627
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.71875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5926117300987244,
+            -0.505523756146431,
+            -0.2712830901145935
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5926117300987244,
+            -0.5589164793491364,
+            -0.5470640026032925
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5583800375461578,
+            -0.40488457307219505,
+            -0.2712830901145935
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.75,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5925046280026436,
+            -0.5091093480587006,
+            -0.2823956310749054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5925046280026436,
+            -0.5601774901151657,
+            -0.5499124526977539
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5584694445133209,
+            -0.4382161423563957,
+            -0.2823956310749054
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.78125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.593516044318676,
+            -0.5130525678396225,
+            -0.26128441095352173
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.593516044318676,
+            -0.568455783650279,
+            -0.5472563207149506
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.574375968426466,
+            -0.48689544200897217,
+            -0.26128441095352173
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.8125,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5943179130554199,
+            -0.5173254758119583,
+            -0.23778900504112244
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5815709009766579,
+            -0.5796942859888077,
+            -0.5642548203468323
+          ],
+          "covered_gap_mm_min_median_max": [
+            -0.5943179130554199,
+            -0.515463063493371,
+            -0.23778900504112244
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.84375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5939258262515068,
+            -0.5219392478466034,
+            -0.2673827111721039
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.5939258262515068,
+            -0.5219392478466034,
+            -0.2673827111721039
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5909139290452003,
+            -0.5269087851047516,
+            -0.2989955246448517
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.5909139290452003,
+            -0.5269087851047516,
+            -0.2989955246448517
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.90625,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.587870366871357,
+            -0.5295164883136749,
+            -0.34987181425094604
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.587870366871357,
+            -0.5295164883136749,
+            -0.34987181425094604
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.9375,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5880496464669704,
+            -0.535961240530014,
+            -0.4058443009853363
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.5880496464669704,
+            -0.535961240530014,
+            -0.4058443009853363
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.96875,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5880808457732201,
+            -0.5409661680459976,
+            -0.46010687947273254
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.5880808457732201,
+            -0.5409661680459976,
+            -0.46010687947273254
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 1.0,
+      "sides": {
+        "-1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "exposed_gap_mm_min_median_max": [
+            -0.5613416433334351,
+            -0.550001859664917,
+            -0.5415529012680054
+          ],
+          "covered_gap_mm_min_median_max": null,
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        },
+        "1": {
+          "dense_end_gap_mm_min_median_max": [
+            -0.5879495292901993,
+            -0.5500093102455139,
+            -0.5107671022415161
+          ],
+          "exposed_gap_mm_min_median_max": null,
+          "covered_gap_mm_min_median_max": [
+            -0.5879495292901993,
+            -0.5500093102455139,
+            -0.5107671022415161
+          ],
+          "positive_exposed_gap_count": 0,
+          "positive_exposed_gap_above25microns": 0,
+          "nohit_samples": [],
+          "exposed_nohit_count": 0,
+          "worst_positive_samples": []
+        }
+      }
+    }
+  ],
+  "method": "Fresh saved E. Original42 target arrays of each side wall/sclera/iris compared bitexact against bilateralClose and Basis. 64 actual evaluated unilateral states n/32 for n1..32, currentwallcorrectivedrivers naturallyevaluated.8subdivisions per outer70..100% return-end segment; actualalpha-aware first ocular Yhit and actualskin coverage. No GPU/native saves.",
+  "limits": "Endpoint equivalence plus direct unilateral contact only; no arbitrary additive combinations or ART certification. Equal named endpoint arrays do not automatically prove skin deformation equivalence.",
+  "native_unchanged": true,
+  "evaluated_skin_equivalence": [
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.25,
+      "affected_side": -1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1134,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.25,
+      "affected_side": 1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1134,
+        "bitexact": false,
+        "maximum_difference_mm": 0.012397775208224932
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.5,
+      "affected_side": -1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1134,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.5,
+      "affected_side": 1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1134,
+        "bitexact": false,
+        "maximum_difference_mm": 0.02503397388083329
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 0.75,
+      "affected_side": -1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1134,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 0.75,
+      "affected_side": 1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1134,
+        "bitexact": false,
+        "maximum_difference_mm": 0.03743174898875749
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_R",
+      "value": 1.0,
+      "affected_side": -1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1134,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    },
+    {
+      "control": "Face.M_F00_000_00_Fcl_EYE_Close_L",
+      "value": 1.0,
+      "affected_side": 1,
+      "affected_evaluated_outer_skin_vs_bilateral": {
+        "vertices": 1079,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "affected_evaluated_outer_rim_vs_bilateral": {
+        "vertices": 36,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      },
+      "opposite_evaluated_outer_skin_vs_neutral": {
+        "vertices": 1134,
+        "bitexact": false,
+        "maximum_difference_mm": 0.05006793795645559
+      },
+      "opposite_evaluated_outer_rim_vs_neutral": {
+        "vertices": 37,
+        "bitexact": true,
+        "maximum_difference_mm": 0.0
+      }
+    }
+  ],
+  "evaluated_skin_region_definition": "Fixed neutral evaluated vertex IDs: signedX.041..080m, Y<\u2212.02m, Z1.523..1.570m. Outer rim uses fixed neutral lateral70..100% evaluated opening IDs. Controls.25/.5/.75/1 compared against bilateral samevalue and opposite neutral.",
+  "summary": {
+    "unilateral_states": 64,
+    "sampled_values_per_control": 32,
+    "maximum_exposed_end_gap_mm": -0.003680586814880371,
+    "exposed_positive_end_gap_samples": 0,
+    "exposed_missing_coverage_samples": 0,
+    "all_missing_coverage_samples": 0,
+    "controls": {
+      "R": {
+        "states": 32,
+        "maximum_exposed_end_gap_mm": -0.003680586814880371
+      },
+      "L": {
+        "states": 32,
+        "maximum_exposed_end_gap_mm": -0.006483867764472961
+      }
+    }
+  },
+  "audit_base_sha256": "ef2976f69229a4ec2da09b4a026aa4bd055fda8970b0872f34e2399b136b33c5"
+}
