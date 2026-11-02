@@ -12,4 +12,6 @@
 
 No obvious posterior cap exposure was seen. Hair-covered back anatomy remains inferred. Private arm/waist context seams are integration-unverified, not a finding that the round-bowl design itself failed. No broad thorax rewrite, head scaling, UV/key/weight migration, final maps or animation is approved here.
 
+Later source-correspondence correction: root and reviewer directly inspected `body/source-binding/observed-source-traces.png`. The upper E2 interval begins at interior cup/strap-start boundaries, not the whole breast-root/skin silhouette. Its numeric difference from the semantic skin/root extent is **not anatomical oversize**, an independent hard FAIL, or a target for shrinking the root. The recorded numbers remain; observable attachment concerns and uncertain correspondence are kept separate.
+
 Next D must retain the useful lower bowl while changing only upper root-to-thorax flow, followed by unchanged front/profile/F2/rear and high/low fixtures. Close single-actor gray and actual-normal views must expose both axillary branches/corridor. If outer-arm occlusion prevents inspection, a labelled per-face transparency diagnostic may expose the interior; it must not drill geometry or be represented as full-surface proof.

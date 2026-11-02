@@ -138,3 +138,16 @@ D is authorized for one upper-root correction retaining C lower bowl and all11 n
 `HEAD_SCALE_PLAN.md` records the latest user request, exact surface ownership and checks. Enlarge the whole head only after body form is valid, comparing provisional1.075/1.08 against original-aspect wholeheight art. Preserve internal face ratios, coherent eyes/brows/mouth/hair roots and neck continuity; do not double-transform carriers or projected brow proxies. No scale has been applied.
 
 Engram knowledge/activity tools are still unavailable in this session; repository evidence is recorded without claiming Wiki sync.
+
+
+## D upper-root checkpoint; head scaling remains queued
+
+D applies one upper-only posterior warp and local breast/thorax blend, retaining the C lower bowl and11 nonbreast component fields. Actual source4 plus matched high/low views show a visibly softer superior attachment; root/fresh reviewer detect no definite new major regression. Lower actual mesh away from crossing cells remains exact. Upper profile residual improves-12.34 to+4.04mm, while lower F2-16.01mm remains. Source/retopo adoption is not approved.
+
+Root and reviewer re-read the actual source-trace overlay: the upper E2Y317 interval begins at interior cup/strap boundaries, not the entire skin/root silhouette. C80.07/D86.77mm differences compare nonhomologous features; they are NOT anatomical oversize, an independent hard FAIL, or a fitting target. Raw numbers remain without forcing the anatomy to that interior garment landmark.
+
+The first lateral intact/outer-window4-shot diagnostic failed visibility: an inner arm shell remained. Two final intact low-up frames, selected using one fixed actual-BVH visibility test, expose small lower cavity-facing regions. Independent triangle raycasts reproduce the recorded first hits. The prominent oval is the temporary distal arm-end cap, not an axillary mass/hole. Thus LOWER_REGION_VISIBILITY passes narrowly; full AXILLA_LAYOUT remains UNVERIFIED, source/retopo adoption held. Equal-scale actual mesh sections give a13mm line-specific lower gap and superior closure; closure is not automatically bad anatomy. Twelve actual D frames total6+4+2, no shape changes after the first6, no more D camera/shape iteration. No new full native, head scale, maps or animation.
+
+A fresh read-only production plan confirms47 original expression keys have zero body delta on0..3956. After valid design, one broad connected upper-cage redistribution with targeted pole/junction rebuild is defensible; if it cannot stay single-valued through the axilla, use a new connected upper patch sharing certified boundaries. The waist boundary is not yet certified. See `body/design-sculpt07/PRODUCTION_TOPOLOGY_PLAN.md`; no execution before design acceptance. Later whole-head correction remains ordered after body form, with accepted internal face preserved.
+
+D checkpoint4ff4074 integrated. Canonical fresh integrity check verified78 manifest entries,12 actual image hashes,19 Python ASTs,6 exact C/D camera dictionaries, three logs with zero error patterns and unchanged R3b SHA. See `integration/design-sculpt07-import.json`. This is checkpoint integrity, not anatomy/ART or production native approval. No new head transform was applied.
