@@ -1,0 +1,190 @@
+{
+  "status": "PASS",
+  "native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "composition": {
+    "components": [
+      {
+        "created": [
+          {
+            "owner": "MIA_V27_SharedHeadBody",
+            "key": "Mia.v003.NeutralLowerLidBalance.1",
+            "vertices": 62,
+            "maximum_delta_mm": 1.1093522310256958
+          },
+          {
+            "owner": "V28G_InnerLid_1",
+            "key": "Mia.v003.NeutralLowerLidBalance.1",
+            "vertices": 294,
+            "maximum_delta_mm": 3.057927131652832
+          },
+          {
+            "owner": "V30_LowerLashes_1",
+            "key": "Mia.v003.NeutralLowerLidBalance.1",
+            "vertices": 456,
+            "maximum_delta_mm": 1.095133662223816
+          }
+        ],
+        "screen": "right",
+        "side": 1,
+        "method": "40% bounded lower-rim profile blend toward the other canthus-local lower curve at retained own width; maximum1.1mm. Corners/upperpath anchored. Depth follows same actual sclera shell. Lowerwall/lashes transported from evaluated skin frames. Original arrays remain unchanged.",
+        "native_replay": false,
+        "native_saved": false,
+        "scope": "Subtle lower-rim curvature; no eyeball scaling, original key-array edits, upper-lid/canthus/whole-face redesign."
+      },
+      {
+        "materials": [
+          {
+            "owner": "MIA_V27_SharedHeadBody",
+            "old_material": "MIA_v002_MIA_V27_SharedHeadBody_RefinedD2",
+            "new_material": "Mia_v003_AlignedCrease_MIA_V27_SharedHeadBody"
+          },
+          {
+            "owner": "V28G_InnerLid_-1",
+            "old_material": "MIA_v002_V28G_InnerLid_-1_RefinedD2",
+            "new_material": "Mia_v003_AlignedCrease_V28G_InnerLid_-1"
+          },
+          {
+            "owner": "V28G_InnerLid_1",
+            "old_material": "MIA_v002_V28G_InnerLid_1_RefinedD2",
+            "new_material": "Mia_v003_AlignedCrease_V28G_InnerLid_1"
+          }
+        ],
+        "config_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\eyes\\upper-crease-visible-C.json",
+        "scope": "Upper crease registration only;0.17mm half-width; gap and observed visibility limits in selected config. Source finesse requires actual review.",
+        "native_saved": false
+      },
+      {
+        "mode": "combined",
+        "material": "MIA_v003_Crown_RecoveredV29_FallbackAndRearGuide",
+        "slot": 2,
+        "faces": 4999,
+        "original6UV_exact": true,
+        "new_UV": "MIA_v003_RecoveredCrown_UV",
+        "new_generic_attributes": 0,
+        "active_generic_attributes": 9,
+        "active_UV_streams": 5,
+        "active_images": 14,
+        "guide_factor_source": "Math.102",
+        "guide_color_source": "Vector Math.007",
+        "guide_art_replacement": "Recovered fallback base across owned Crown; current live guide preserved outside bounded rear override, conservative front-guide hold",
+        "actual_normals_K_lights_preserved": true,
+        "old_normal_maps_reused": false,
+        "native_saved": false,
+        "ART": false,
+        "shader_compilation": "Must be checked by actual one-frame probe; stream count alone is not proof"
+      },
+      {
+        "material": "MIA_v003_UnsupportedCentralLoop_HIDDEN",
+        "slot": 3,
+        "whole_components": 27,
+        "backing_branch_faces": 438,
+        "masked_faces": 1781,
+        "artificial_attachment_cuts": 4,
+        "original_slots_preserved_on_new_material": true,
+        "geometry_UV_weights_keys_fields_normals_untouched": true,
+        "native_opened": false,
+        "native_saved": false,
+        "ART": false
+      }
+    ],
+    "body_surface_changed": false,
+    "new_fine_fringe_applied": false,
+    "central_rear_fill_applied": false,
+    "provisional_brow_ink_is_geometry_completion": false,
+    "native_saved": false,
+    "art_approved": false
+  },
+  "brow_only_leaves_Main_fingerprint_exact": true,
+  "unknown_relative_keys_and_values_exact": true,
+  "actual_Main_and_brow_equivalent_to_historical_C_helper": true,
+  "brow_evaluated_cases": [
+    {
+      "state": "neutral",
+      "owner": "V31_SourceBrow_-1",
+      "vertices": 195,
+      "actual_evaluated_bitexact_to_rendered_helper": true
+    },
+    {
+      "state": "neutral",
+      "owner": "V31_SourceBrow_1",
+      "vertices": 195,
+      "actual_evaluated_bitexact_to_rendered_helper": true
+    },
+    {
+      "state": "halfblink",
+      "owner": "V31_SourceBrow_-1",
+      "vertices": 195,
+      "actual_evaluated_bitexact_to_rendered_helper": true
+    },
+    {
+      "state": "halfblink",
+      "owner": "V31_SourceBrow_1",
+      "vertices": 195,
+      "actual_evaluated_bitexact_to_rendered_helper": true
+    },
+    {
+      "state": "closed",
+      "owner": "V31_SourceBrow_-1",
+      "vertices": 195,
+      "actual_evaluated_bitexact_to_rendered_helper": true
+    },
+    {
+      "state": "closed",
+      "owner": "V31_SourceBrow_1",
+      "vertices": 195,
+      "actual_evaluated_bitexact_to_rendered_helper": true
+    },
+    {
+      "state": "angry",
+      "owner": "V31_SourceBrow_-1",
+      "vertices": 195,
+      "actual_evaluated_bitexact_to_rendered_helper": true
+    },
+    {
+      "state": "angry",
+      "owner": "V31_SourceBrow_1",
+      "vertices": 195,
+      "actual_evaluated_bitexact_to_rendered_helper": true
+    },
+    {
+      "state": "surprise",
+      "owner": "V31_SourceBrow_-1",
+      "vertices": 195,
+      "actual_evaluated_bitexact_to_rendered_helper": true
+    },
+    {
+      "state": "surprise",
+      "owner": "V31_SourceBrow_1",
+      "vertices": 195,
+      "actual_evaluated_bitexact_to_rendered_helper": true
+    }
+  ],
+  "protected_owners_exact": 617,
+  "old_material_graphs_exact": true,
+  "idempotent": true,
+  "brow_result": {
+    "component": "B brow only",
+    "owners": [
+      "V31_SourceBrow_-1",
+      "V31_SourceBrow_1"
+    ],
+    "already_applied": false,
+    "centerline_lift": false,
+    "Main_changed": false,
+    "projected_overlay": false,
+    "ART": "provisional scoped thickness improvement"
+  },
+  "fringe_result": {
+    "component": "fringe C",
+    "key": "V003_SourceFringeFine_C",
+    "points": 1060,
+    "families": 5,
+    "maximum_move_mm": 18.01844601300154,
+    "ART": "UNVERIFIED: actual source-paired views required"
+  },
+  "native_saved": false,
+  "GPU_used": false,
+  "ART": "UNVERIFIED independently of this API equivalence guard",
+  "implementation_sha256": "1744e9e396ad08e8439e42d0500e778dd5cf02c6638f223c37bf0d7d06aca4c9",
+  "contract_sha256": "a5749d6095df38819be7fd72aa3983954358734ed58048d2f4888ffdd33829cb"
+}

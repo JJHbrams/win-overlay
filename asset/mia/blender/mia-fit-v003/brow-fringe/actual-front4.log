@@ -1,0 +1,17 @@
+00:01.734  blend            | Read blend: "C:\Users\antio\.codex\worktrees\mia-body-head-v06\win-overlay\asset\mia\blender\mia-refinement-v002\integrated\Mia_v0.0.2_Review_R3b.blend"
+C:\Users\antio\.codex\worktrees\mia-v002-face\win-overlay\asset\mia\blender\mia-fit-v003\brow-fringe\render_front4.py:22: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('BrowFringe_SourceWorld');world.use_nodes=True;n=world.node_tree.nodes;n.clear();bg=n.new('ShaderNodeBackground');out=n.new('ShaderNodeOutputWorld');world.node_tree.links.new(bg.outputs[0],out.inputs['Surface']);bg.inputs['Color'].default_value=(*spec['lighting']['world_linear'],1);bg.inputs['Strength'].default_value=spec['lighting']['world_strength'];scene.world=world
+00:15.046  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-v002-face\win-overlay\asset\mia\blender\mia-fit-v003\brow-fringe\actual-B-front4\baseline-front-hairOFF.png'
+BlenderMCP addon registered
+BROW_FRINGE_ACTUAL_FRAME baseline-front-hairOFF
+00:18.281  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-v002-face\win-overlay\asset\mia\blender\mia-fit-v003\brow-fringe\actual-B-front4\baseline-front-hairON.png'
+BROW_FRINGE_ACTUAL_FRAME baseline-front-hairON
+00:22.531  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-v002-face\win-overlay\asset\mia\blender\mia-fit-v003\brow-fringe\actual-B-front4\candidate-front-hairOFF.png'
+BROW_FRINGE_ACTUAL_FRAME candidate-front-hairOFF
+00:25.218  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-v002-face\win-overlay\asset\mia\blender\mia-fit-v003\brow-fringe\actual-B-front4\candidate-front-hairON.png'
+BROW_FRINGE_ACTUAL_FRAME candidate-front-hairON
+BROW_FRINGE_ACTUAL_FRONT4_DONE
+BlenderMCP addon unregistered
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

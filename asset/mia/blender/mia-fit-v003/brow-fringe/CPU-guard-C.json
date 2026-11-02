@@ -1,0 +1,1788 @@
+{
+  "status": "PASS",
+  "baseline_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "composition_without_fake_brow_overlay": {
+    "components": [
+      {
+        "created": [
+          {
+            "owner": "MIA_V27_SharedHeadBody",
+            "key": "Mia.v003.NeutralLowerLidBalance.1",
+            "vertices": 62,
+            "maximum_delta_mm": 1.1093522310256958
+          },
+          {
+            "owner": "V28G_InnerLid_1",
+            "key": "Mia.v003.NeutralLowerLidBalance.1",
+            "vertices": 294,
+            "maximum_delta_mm": 3.057927131652832
+          },
+          {
+            "owner": "V30_LowerLashes_1",
+            "key": "Mia.v003.NeutralLowerLidBalance.1",
+            "vertices": 456,
+            "maximum_delta_mm": 1.095133662223816
+          }
+        ],
+        "screen": "right",
+        "side": 1,
+        "method": "40% bounded lower-rim profile blend toward the other canthus-local lower curve at retained own width; maximum1.1mm. Corners/upperpath anchored. Depth follows same actual sclera shell. Lowerwall/lashes transported from evaluated skin frames. Original arrays remain unchanged.",
+        "native_replay": false,
+        "native_saved": false,
+        "scope": "Subtle lower-rim curvature; no eyeball scaling, original key-array edits, upper-lid/canthus/whole-face redesign."
+      },
+      {
+        "materials": [
+          {
+            "owner": "MIA_V27_SharedHeadBody",
+            "old_material": "MIA_v002_MIA_V27_SharedHeadBody_RefinedD2",
+            "new_material": "Mia_v003_AlignedCrease_MIA_V27_SharedHeadBody"
+          },
+          {
+            "owner": "V28G_InnerLid_-1",
+            "old_material": "MIA_v002_V28G_InnerLid_-1_RefinedD2",
+            "new_material": "Mia_v003_AlignedCrease_V28G_InnerLid_-1"
+          },
+          {
+            "owner": "V28G_InnerLid_1",
+            "old_material": "MIA_v002_V28G_InnerLid_1_RefinedD2",
+            "new_material": "Mia_v003_AlignedCrease_V28G_InnerLid_1"
+          }
+        ],
+        "config_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\eyes\\upper-crease-visible-C.json",
+        "scope": "Upper crease registration only;0.17mm half-width; gap and observed visibility limits in selected config. Source finesse requires actual review.",
+        "native_saved": false
+      },
+      {
+        "mode": "combined",
+        "material": "MIA_v003_Crown_RecoveredV29_FallbackAndRearGuide",
+        "slot": 2,
+        "faces": 4999,
+        "original6UV_exact": true,
+        "new_UV": "MIA_v003_RecoveredCrown_UV",
+        "new_generic_attributes": 0,
+        "active_generic_attributes": 9,
+        "active_UV_streams": 5,
+        "active_images": 14,
+        "guide_factor_source": "Math.102",
+        "guide_color_source": "Vector Math.007",
+        "guide_art_replacement": "Recovered fallback base across owned Crown; current live guide preserved outside bounded rear override, conservative front-guide hold",
+        "actual_normals_K_lights_preserved": true,
+        "old_normal_maps_reused": false,
+        "native_saved": false,
+        "ART": false,
+        "shader_compilation": "Must be checked by actual one-frame probe; stream count alone is not proof"
+      },
+      {
+        "material": "MIA_v003_UnsupportedCentralLoop_HIDDEN",
+        "slot": 3,
+        "whole_components": 27,
+        "backing_branch_faces": 438,
+        "masked_faces": 1781,
+        "artificial_attachment_cuts": 4,
+        "original_slots_preserved_on_new_material": true,
+        "geometry_UV_weights_keys_fields_normals_untouched": true,
+        "native_opened": false,
+        "native_saved": false,
+        "ART": false
+      }
+    ],
+    "body_surface_changed": false,
+    "new_fine_fringe_applied": false,
+    "central_rear_fill_applied": false,
+    "provisional_brow_ink_is_geometry_completion": false,
+    "native_saved": false,
+    "art_approved": false
+  },
+  "applied": {
+    "candidate": "C",
+    "key": "V003_SourceFringeFine_C",
+    "main_points": 1060,
+    "maximum_fringe_move_mm": 18.01844601300154,
+    "logical_clumps": 5,
+    "brow_owners": [
+      "V31_SourceBrow_-1",
+      "V31_SourceBrow_1"
+    ],
+    "original_raw_topology_UV_preserved": true,
+    "brow_centerline_lift": false,
+    "brow_overlay_used": false,
+    "native_saved": false,
+    "ART": "UNVERIFIED"
+  },
+  "original_owners_checked": 620,
+  "nonowned_owner_fingerprints_exact": 617,
+  "Main_original_raw_topology_UV_material_indices_POINT_sourceIDs_weights_preserved": true,
+  "all_original_material_graphs_exact": true,
+  "brow_original42_keys_UV_weights_drivers_raw_exact": true,
+  "actual_reversed_Main_triangles": 0,
+  "actual_evaluated_Main_max_move_mm": 18.01844822194169,
+  "Main_outside_sparse_field_evaluated_bitexact": true,
+  "visibility_scope": "Whole render-visible scene, all mesh owners except the two target brows; only provably pure Transparent material faces excluded. Other alpha routes are conservatively treated as blockers.",
+  "real_hair_gap_visibility_before": [
+    {
+      "side": -1,
+      "observed_samples": 32,
+      "unoccluded": 3,
+      "samples": [
+        {
+          "column": 15,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 47511,
+          "first_hit_world": [
+            -0.05252426862716675,
+            -0.07309314608573914,
+            1.5655661821365356
+          ],
+          "target_world": [
+            -0.05252426862716675,
+            -0.05915568768978119,
+            1.5655661821365356
+          ]
+        },
+        {
+          "column": 16,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 47925,
+          "first_hit_world": [
+            -0.05177944153547287,
+            -0.07322314381599426,
+            1.5657435655593872
+          ],
+          "target_world": [
+            -0.05177944153547287,
+            -0.05969308689236641,
+            1.5657435655593872
+          ]
+        },
+        {
+          "column": 17,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 47925,
+          "first_hit_world": [
+            -0.05101761966943741,
+            -0.07331299036741257,
+            1.5657813549041748
+          ],
+          "target_world": [
+            -0.05101761966943741,
+            -0.0602143295109272,
+            1.5657813549041748
+          ]
+        },
+        {
+          "column": 18,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 47925,
+          "first_hit_world": [
+            -0.050252027809619904,
+            -0.07339516282081604,
+            1.5657883882522583
+          ],
+          "target_world": [
+            -0.050252027809619904,
+            -0.06071953848004341,
+            1.5657883882522583
+          ]
+        },
+        {
+          "column": 19,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 47925,
+          "first_hit_world": [
+            -0.049479931592941284,
+            -0.07347764074802399,
+            1.5657939910888672
+          ],
+          "target_world": [
+            -0.049479931592941284,
+            -0.06120289862155914,
+            1.5657939910888672
+          ]
+        },
+        {
+          "column": 20,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 47925,
+          "first_hit_world": [
+            -0.04871433973312378,
+            -0.07355984300374985,
+            1.5658011436462402
+          ],
+          "target_world": [
+            -0.04871433973312378,
+            -0.061675384640693665,
+            1.5658011436462402
+          ]
+        },
+        {
+          "column": 21,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 47925,
+          "first_hit_world": [
+            -0.04794178530573845,
+            -0.0736423134803772,
+            1.56580650806427
+          ],
+          "target_world": [
+            -0.04794178530573845,
+            -0.06214258074760437,
+            1.56580650806427
+          ]
+        },
+        {
+          "column": 22,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 49700,
+          "first_hit_world": [
+            -0.047176193445920944,
+            -0.07371469587087631,
+            1.5658135414123535
+          ],
+          "target_world": [
+            -0.047176193445920944,
+            -0.06257513165473938,
+            1.5658135414123535
+          ]
+        },
+        {
+          "column": 23,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 49700,
+          "first_hit_world": [
+            -0.046410609036684036,
+            -0.07378239184617996,
+            1.565820574760437
+          ],
+          "target_world": [
+            -0.046410609036684036,
+            -0.06300917267799377,
+            1.565820574760437
+          ]
+        },
+        {
+          "column": 24,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 49703,
+          "first_hit_world": [
+            -0.04563681036233902,
+            -0.07387113571166992,
+            1.5658265352249146
+          ],
+          "target_world": [
+            -0.04563681036233902,
+            -0.06342773139476776,
+            1.5658265352249146
+          ]
+        },
+        {
+          "column": 25,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52556,
+          "first_hit_world": [
+            -0.04487122595310211,
+            -0.07799255847930908,
+            1.5658334493637085
+          ],
+          "target_world": [
+            -0.04487122595310211,
+            -0.06381921470165253,
+            1.5658334493637085
+          ]
+        },
+        {
+          "column": 26,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52556,
+          "first_hit_world": [
+            -0.04410563409328461,
+            -0.07864852249622345,
+            1.5658406019210815
+          ],
+          "target_world": [
+            -0.04410563409328461,
+            -0.06420831382274628,
+            1.5658406019210815
+          ]
+        },
+        {
+          "column": 27,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52556,
+          "first_hit_world": [
+            -0.0433400496840477,
+            -0.07930444180965424,
+            1.5658475160598755
+          ],
+          "target_world": [
+            -0.0433400496840477,
+            -0.0645972341299057,
+            1.5658475160598755
+          ]
+        },
+        {
+          "column": 28,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52557,
+          "first_hit_world": [
+            -0.04256502166390419,
+            -0.07994328439235687,
+            1.5658230781555176
+          ],
+          "target_world": [
+            -0.04256502166390419,
+            -0.06494708359241486,
+            1.5658230781555176
+          ]
+        },
+        {
+          "column": 29,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52557,
+          "first_hit_world": [
+            -0.041800521314144135,
+            -0.08046197891235352,
+            1.565781593322754
+          ],
+          "target_world": [
+            -0.041800521314144135,
+            -0.06528396904468536,
+            1.565781593322754
+          ]
+        },
+        {
+          "column": 30,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52902,
+          "first_hit_world": [
+            -0.04103602468967438,
+            -0.08097510784864426,
+            1.5657401084899902
+          ],
+          "target_world": [
+            -0.04103602468967438,
+            -0.06562049686908722,
+            1.5657401084899902
+          ]
+        },
+        {
+          "column": 31,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52902,
+          "first_hit_world": [
+            -0.04027152433991432,
+            -0.08148742467164993,
+            1.5656986236572266
+          ],
+          "target_world": [
+            -0.04027152433991432,
+            -0.06595136225223541,
+            1.5656986236572266
+          ]
+        },
+        {
+          "column": 32,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52902,
+          "first_hit_world": [
+            -0.03950262814760208,
+            -0.08200251311063766,
+            1.5656558275222778
+          ],
+          "target_world": [
+            -0.03950262814760208,
+            -0.06626740843057632,
+            1.5656558275222778
+          ]
+        },
+        {
+          "column": 33,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54633,
+          "first_hit_world": [
+            -0.03873813897371292,
+            -0.08195039629936218,
+            1.5656143426895142
+          ],
+          "target_world": [
+            -0.03873813897371292,
+            -0.06658003479242325,
+            1.5656143426895142
+          ]
+        },
+        {
+          "column": 34,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54632,
+          "first_hit_world": [
+            -0.037973638623952866,
+            -0.08172153681516647,
+            1.5655728578567505
+          ],
+          "target_world": [
+            -0.037973638623952866,
+            -0.06688699871301651,
+            1.5655728578567505
+          ]
+        },
+        {
+          "column": 35,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54632,
+          "first_hit_world": [
+            -0.03720521926879883,
+            -0.0814758688211441,
+            1.565529465675354
+          ],
+          "target_world": [
+            -0.03720521926879883,
+            -0.06718868762254715,
+            1.565529465675354
+          ]
+        },
+        {
+          "column": 36,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54665,
+          "first_hit_world": [
+            -0.03644071891903877,
+            -0.08117900788784027,
+            1.5654879808425903
+          ],
+          "target_world": [
+            -0.03644071891903877,
+            -0.06747926026582718,
+            1.5654879808425903
+          ]
+        },
+        {
+          "column": 37,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54665,
+          "first_hit_world": [
+            -0.035676222294569016,
+            -0.08073858171701431,
+            1.5654466152191162
+          ],
+          "target_world": [
+            -0.035676222294569016,
+            -0.06776995211839676,
+            1.5654466152191162
+          ]
+        },
+        {
+          "column": 38,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54873,
+          "first_hit_world": [
+            -0.03490805625915527,
+            -0.08030419796705246,
+            1.5654038190841675
+          ],
+          "target_world": [
+            -0.03490805625915527,
+            -0.06806221604347229,
+            1.5654038190841675
+          ]
+        },
+        {
+          "column": 39,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54873,
+          "first_hit_world": [
+            -0.034143563359975815,
+            -0.07995045930147171,
+            1.5653624534606934
+          ],
+          "target_world": [
+            -0.034143563359975815,
+            -0.06833752989768982,
+            1.5653624534606934
+          ]
+        },
+        {
+          "column": 40,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54873,
+          "first_hit_world": [
+            -0.03337910771369934,
+            -0.07959632575511932,
+            1.5653201341629028
+          ],
+          "target_world": [
+            -0.03337910771369934,
+            -0.06861260533332825,
+            1.5653201341629028
+          ]
+        },
+        {
+          "column": 41,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 55119,
+          "first_hit_world": [
+            -0.03261426463723183,
+            -0.07917577773332596,
+            1.5652775764465332
+          ],
+          "target_world": [
+            -0.03261426463723183,
+            -0.06888779997825623,
+            1.5652775764465332
+          ]
+        },
+        {
+          "column": 42,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 55885,
+          "first_hit_world": [
+            -0.031846608966588974,
+            -0.07822740077972412,
+            1.5652318000793457
+          ],
+          "target_world": [
+            -0.031846608966588974,
+            -0.06915439665317535,
+            1.5652318000793457
+          ]
+        },
+        {
+          "column": 43,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 55886,
+          "first_hit_world": [
+            -0.03108232468366623,
+            -0.07557737827301025,
+            1.565186619758606
+          ],
+          "target_world": [
+            -0.03108232468366623,
+            -0.0694122463464737,
+            1.565186619758606
+          ]
+        },
+        {
+          "column": 44,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.030318032950162888,
+            -0.06966991722583771,
+            1.5651414394378662
+          ]
+        },
+        {
+          "column": 45,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.029551342129707336,
+            -0.069928839802742,
+            1.5650955438613892
+          ]
+        },
+        {
+          "column": 46,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.028787052258849144,
+            -0.07017644494771957,
+            1.5650503635406494
+          ]
+        }
+      ]
+    },
+    {
+      "side": 1,
+      "observed_samples": 21,
+      "unoccluded": 2,
+      "samples": [
+        {
+          "column": 2,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.0061362311244010925,
+            -0.0759739801287651,
+            1.5629507303237915
+          ]
+        },
+        {
+          "column": 3,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.006911943666636944,
+            -0.0758574903011322,
+            1.5632061958312988
+          ]
+        },
+        {
+          "column": 4,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 66226,
+          "first_hit_world": [
+            0.007689263671636581,
+            -0.08026083558797836,
+            1.5634649991989136
+          ],
+          "target_world": [
+            0.007689263671636581,
+            -0.07574877142906189,
+            1.5634649991989136
+          ]
+        },
+        {
+          "column": 5,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 66506,
+          "first_hit_world": [
+            0.008488381281495094,
+            -0.0823461264371872,
+            1.5636370182037354
+          ],
+          "target_world": [
+            0.008488381281495094,
+            -0.0756201446056366,
+            1.5636370182037354
+          ]
+        },
+        {
+          "column": 6,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67024,
+          "first_hit_world": [
+            0.009300828911364079,
+            -0.08295033127069473,
+            1.563773512840271
+          ],
+          "target_world": [
+            0.009300828911364079,
+            -0.07548093050718307,
+            1.563773512840271
+          ]
+        },
+        {
+          "column": 7,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67024,
+          "first_hit_world": [
+            0.010108227841556072,
+            -0.08293457329273224,
+            1.5639126300811768
+          ],
+          "target_world": [
+            0.010108227841556072,
+            -0.07532673329114914,
+            1.5639126300811768
+          ]
+        },
+        {
+          "column": 8,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67263,
+          "first_hit_world": [
+            0.010915625840425491,
+            -0.08288778364658356,
+            1.564051628112793
+          ],
+          "target_world": [
+            0.010915625840425491,
+            -0.0751725360751152,
+            1.564051628112793
+          ]
+        },
+        {
+          "column": 9,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67279,
+          "first_hit_world": [
+            0.011723024770617485,
+            -0.08256492763757706,
+            1.5641907453536987
+          ],
+          "target_world": [
+            0.011723024770617485,
+            -0.07501839846372604,
+            1.5641907453536987
+          ]
+        },
+        {
+          "column": 10,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67279,
+          "first_hit_world": [
+            0.012535257264971733,
+            -0.08215902745723724,
+            1.5643280744552612
+          ],
+          "target_world": [
+            0.012535257264971733,
+            -0.07484638690948486,
+            1.5643280744552612
+          ]
+        },
+        {
+          "column": 11,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67279,
+          "first_hit_world": [
+            0.013344265520572662,
+            -0.0817573294043541,
+            1.5644700527191162
+          ],
+          "target_world": [
+            0.013344265520572662,
+            -0.07467463612556458,
+            1.5644700527191162
+          ]
+        },
+        {
+          "column": 12,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67279,
+          "first_hit_world": [
+            0.01415721233934164,
+            -0.08135119825601578,
+            1.5646077394485474
+          ],
+          "target_world": [
+            0.01415721233934164,
+            -0.07448477298021317,
+            1.5646077394485474
+          ]
+        },
+        {
+          "column": 13,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67279,
+          "first_hit_world": [
+            0.014964611269533634,
+            -0.08094903081655502,
+            1.5647468566894531
+          ],
+          "target_world": [
+            0.014964611269533634,
+            -0.07428169995546341,
+            1.5647468566894531
+          ]
+        },
+        {
+          "column": 14,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67279,
+          "first_hit_world": [
+            0.01577473245561123,
+            -0.08054566383361816,
+            1.5648868083953857
+          ],
+          "target_world": [
+            0.01577473245561123,
+            -0.07407782971858978,
+            1.5648868083953857
+          ]
+        },
+        {
+          "column": 15,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67279,
+          "first_hit_world": [
+            0.01658499240875244,
+            -0.0801403820514679,
+            1.5650230646133423
+          ],
+          "target_world": [
+            0.01658499240875244,
+            -0.07385541498661041,
+            1.5650230646133423
+          ]
+        },
+        {
+          "column": 16,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 68402,
+          "first_hit_world": [
+            0.017398465424776077,
+            -0.07958097010850906,
+            1.5651201009750366
+          ],
+          "target_world": [
+            0.017398465424776077,
+            -0.07361914217472076,
+            1.5651201009750366
+          ]
+        },
+        {
+          "column": 17,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 68402,
+          "first_hit_world": [
+            0.018212923780083656,
+            -0.07887017726898193,
+            1.5652154684066772
+          ],
+          "target_world": [
+            0.018212923780083656,
+            -0.07338148355484009,
+            1.5652154684066772
+          ]
+        },
+        {
+          "column": 18,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 69208,
+          "first_hit_world": [
+            0.01902667246758938,
+            -0.07789896428585052,
+            1.5653104782104492
+          ],
+          "target_world": [
+            0.01902667246758938,
+            -0.07314139604568481,
+            1.5653104782104492
+          ]
+        },
+        {
+          "column": 19,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 69392,
+          "first_hit_world": [
+            0.01984041929244995,
+            -0.0775628536939621,
+            1.5654056072235107
+          ],
+          "target_world": [
+            0.01984041929244995,
+            -0.07290118932723999,
+            1.5654056072235107
+          ]
+        },
+        {
+          "column": 20,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 69453,
+          "first_hit_world": [
+            0.020655056461691856,
+            -0.07733307778835297,
+            1.56549870967865
+          ],
+          "target_world": [
+            0.020655056461691856,
+            -0.07265833020210266,
+            1.56549870967865
+          ]
+        },
+        {
+          "column": 21,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 69452,
+          "first_hit_world": [
+            0.021469341591000557,
+            -0.07717148214578629,
+            1.5655956268310547
+          ],
+          "target_world": [
+            0.021469341591000557,
+            -0.07241429388523102,
+            1.5655956268310547
+          ]
+        },
+        {
+          "column": 22,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 69452,
+          "first_hit_world": [
+            0.02228308655321598,
+            -0.07709023356437683,
+            1.5656908750534058
+          ],
+          "target_world": [
+            0.02228308655321598,
+            -0.07216806709766388,
+            1.5656908750534058
+          ]
+        }
+      ]
+    }
+  ],
+  "real_hair_gap_visibility_after": [
+    {
+      "side": -1,
+      "observed_samples": 32,
+      "unoccluded": 10,
+      "samples": [
+        {
+          "column": 15,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 47925,
+          "first_hit_world": [
+            -0.05252426862716675,
+            -0.07352153211832047,
+            1.5655661821365356
+          ],
+          "target_world": [
+            -0.05252426862716675,
+            -0.05915568768978119,
+            1.5655661821365356
+          ]
+        },
+        {
+          "column": 16,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 47925,
+          "first_hit_world": [
+            -0.05177944153547287,
+            -0.0736544132232666,
+            1.5657435655593872
+          ],
+          "target_world": [
+            -0.05177944153547287,
+            -0.05969308689236641,
+            1.5657435655593872
+          ]
+        },
+        {
+          "column": 17,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 49700,
+          "first_hit_world": [
+            -0.05101761966943741,
+            -0.07373765856027603,
+            1.5657813549041748
+          ],
+          "target_world": [
+            -0.05101761966943741,
+            -0.0602143295109272,
+            1.5657813549041748
+          ]
+        },
+        {
+          "column": 18,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 49700,
+          "first_hit_world": [
+            -0.050252027809619904,
+            -0.07381302118301392,
+            1.5657883882522583
+          ],
+          "target_world": [
+            -0.050252027809619904,
+            -0.06071953848004341,
+            1.5657883882522583
+          ]
+        },
+        {
+          "column": 19,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 49703,
+          "first_hit_world": [
+            -0.049479931592941284,
+            -0.07398691028356552,
+            1.5657939910888672
+          ],
+          "target_world": [
+            -0.049479931592941284,
+            -0.06120289862155914,
+            1.5657939910888672
+          ]
+        },
+        {
+          "column": 20,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52230,
+          "first_hit_world": [
+            -0.04871433973312378,
+            -0.07069927453994751,
+            1.5658011436462402
+          ],
+          "target_world": [
+            -0.04871433973312378,
+            -0.061675384640693665,
+            1.5658011436462402
+          ]
+        },
+        {
+          "column": 21,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.04794178530573845,
+            -0.06214258074760437,
+            1.56580650806427
+          ]
+        },
+        {
+          "column": 22,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.047176193445920944,
+            -0.06257513165473938,
+            1.5658135414123535
+          ]
+        },
+        {
+          "column": 23,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.046410609036684036,
+            -0.06300917267799377,
+            1.565820574760437
+          ]
+        },
+        {
+          "column": 24,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.04563681036233902,
+            -0.06342773139476776,
+            1.5658265352249146
+          ]
+        },
+        {
+          "column": 25,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52112,
+          "first_hit_world": [
+            -0.04487122595310211,
+            -0.07777033001184464,
+            1.5658334493637085
+          ],
+          "target_world": [
+            -0.04487122595310211,
+            -0.06381921470165253,
+            1.5658334493637085
+          ]
+        },
+        {
+          "column": 26,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52556,
+          "first_hit_world": [
+            -0.04410563409328461,
+            -0.07883123308420181,
+            1.5658406019210815
+          ],
+          "target_world": [
+            -0.04410563409328461,
+            -0.06420831382274628,
+            1.5658406019210815
+          ]
+        },
+        {
+          "column": 27,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52556,
+          "first_hit_world": [
+            -0.0433400496840477,
+            -0.07983890920877457,
+            1.5658475160598755
+          ],
+          "target_world": [
+            -0.0433400496840477,
+            -0.0645972341299057,
+            1.5658475160598755
+          ]
+        },
+        {
+          "column": 28,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52902,
+          "first_hit_world": [
+            -0.04256502166390419,
+            -0.08057038486003876,
+            1.5658230781555176
+          ],
+          "target_world": [
+            -0.04256502166390419,
+            -0.06494708359241486,
+            1.5658230781555176
+          ]
+        },
+        {
+          "column": 29,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 52902,
+          "first_hit_world": [
+            -0.041800521314144135,
+            -0.08137722313404083,
+            1.565781593322754
+          ],
+          "target_world": [
+            -0.041800521314144135,
+            -0.06528396904468536,
+            1.565781593322754
+          ]
+        },
+        {
+          "column": 30,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.04103602468967438,
+            -0.06562049686908722,
+            1.5657401084899902
+          ]
+        },
+        {
+          "column": 31,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.04027152433991432,
+            -0.06595136225223541,
+            1.5656986236572266
+          ]
+        },
+        {
+          "column": 32,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.03950262814760208,
+            -0.06626740843057632,
+            1.5656558275222778
+          ]
+        },
+        {
+          "column": 33,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.03873813897371292,
+            -0.06658003479242325,
+            1.5656143426895142
+          ]
+        },
+        {
+          "column": 34,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 53127,
+          "first_hit_world": [
+            -0.037973638623952866,
+            -0.07792855054140091,
+            1.5655728578567505
+          ],
+          "target_world": [
+            -0.037973638623952866,
+            -0.06688699871301651,
+            1.5655728578567505
+          ]
+        },
+        {
+          "column": 35,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 53126,
+          "first_hit_world": [
+            -0.03720521926879883,
+            -0.0787256732583046,
+            1.565529465675354
+          ],
+          "target_world": [
+            -0.03720521926879883,
+            -0.06718868762254715,
+            1.565529465675354
+          ]
+        },
+        {
+          "column": 36,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 53643,
+          "first_hit_world": [
+            -0.03644071891903877,
+            -0.07925815880298615,
+            1.5654879808425903
+          ],
+          "target_world": [
+            -0.03644071891903877,
+            -0.06747926026582718,
+            1.5654879808425903
+          ]
+        },
+        {
+          "column": 37,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54633,
+          "first_hit_world": [
+            -0.035676222294569016,
+            -0.08191101998090744,
+            1.5654466152191162
+          ],
+          "target_world": [
+            -0.035676222294569016,
+            -0.06776995211839676,
+            1.5654466152191162
+          ]
+        },
+        {
+          "column": 38,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54632,
+          "first_hit_world": [
+            -0.03490805625915527,
+            -0.08161643147468567,
+            1.5654038190841675
+          ],
+          "target_world": [
+            -0.03490805625915527,
+            -0.06806221604347229,
+            1.5654038190841675
+          ]
+        },
+        {
+          "column": 39,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54632,
+          "first_hit_world": [
+            -0.034143563359975815,
+            -0.08131793886423111,
+            1.5653624534606934
+          ],
+          "target_world": [
+            -0.034143563359975815,
+            -0.06833752989768982,
+            1.5653624534606934
+          ]
+        },
+        {
+          "column": 40,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54665,
+          "first_hit_world": [
+            -0.03337910771369934,
+            -0.0807776227593422,
+            1.5653201341629028
+          ],
+          "target_world": [
+            -0.03337910771369934,
+            -0.06861260533332825,
+            1.5653201341629028
+          ]
+        },
+        {
+          "column": 41,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54873,
+          "first_hit_world": [
+            -0.03261426463723183,
+            -0.0802084356546402,
+            1.5652775764465332
+          ],
+          "target_world": [
+            -0.03261426463723183,
+            -0.06888779997825623,
+            1.5652775764465332
+          ]
+        },
+        {
+          "column": 42,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 54873,
+          "first_hit_world": [
+            -0.031846608966588974,
+            -0.07976482063531876,
+            1.5652318000793457
+          ],
+          "target_world": [
+            -0.031846608966588974,
+            -0.06915439665317535,
+            1.5652318000793457
+          ]
+        },
+        {
+          "column": 43,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 55119,
+          "first_hit_world": [
+            -0.03108232468366623,
+            -0.07930544018745422,
+            1.565186619758606
+          ],
+          "target_world": [
+            -0.03108232468366623,
+            -0.0694122463464737,
+            1.565186619758606
+          ]
+        },
+        {
+          "column": 44,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 55885,
+          "first_hit_world": [
+            -0.030318032950162888,
+            -0.07826555520296097,
+            1.5651414394378662
+          ],
+          "target_world": [
+            -0.030318032950162888,
+            -0.06966991722583771,
+            1.5651414394378662
+          ]
+        },
+        {
+          "column": 45,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.029551342129707336,
+            -0.069928839802742,
+            1.5650955438613892
+          ]
+        },
+        {
+          "column": 46,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            -0.028787052258849144,
+            -0.07017644494771957,
+            1.5650503635406494
+          ]
+        }
+      ]
+    },
+    {
+      "side": 1,
+      "observed_samples": 21,
+      "unoccluded": 11,
+      "samples": [
+        {
+          "column": 2,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.0061362311244010925,
+            -0.0759739801287651,
+            1.5629507303237915
+          ]
+        },
+        {
+          "column": 3,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.006911943666636944,
+            -0.0758574903011322,
+            1.5632061958312988
+          ]
+        },
+        {
+          "column": 4,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.007689263671636581,
+            -0.07574877142906189,
+            1.5634649991989136
+          ]
+        },
+        {
+          "column": 5,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.008488381281495094,
+            -0.0756201446056366,
+            1.5636370182037354
+          ]
+        },
+        {
+          "column": 6,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.009300828911364079,
+            -0.07548093050718307,
+            1.563773512840271
+          ]
+        },
+        {
+          "column": 7,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.010108227841556072,
+            -0.07532673329114914,
+            1.5639126300811768
+          ]
+        },
+        {
+          "column": 8,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.010915625840425491,
+            -0.0751725360751152,
+            1.564051628112793
+          ]
+        },
+        {
+          "column": 9,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.011723024770617485,
+            -0.07501839846372604,
+            1.5641907453536987
+          ]
+        },
+        {
+          "column": 10,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.012535257264971733,
+            -0.07484638690948486,
+            1.5643280744552612
+          ]
+        },
+        {
+          "column": 11,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.013344265520572662,
+            -0.07467463612556458,
+            1.5644700527191162
+          ]
+        },
+        {
+          "column": 12,
+          "visible_through_real_hair_gap": true,
+          "first_hit_owner": null,
+          "first_hit_polygon": null,
+          "first_hit_world": null,
+          "target_world": [
+            0.01415721233934164,
+            -0.07448477298021317,
+            1.5646077394485474
+          ]
+        },
+        {
+          "column": 13,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 65581,
+          "first_hit_world": [
+            0.014964611269533634,
+            -0.08135892450809479,
+            1.5647468566894531
+          ],
+          "target_world": [
+            0.014964611269533634,
+            -0.07428169995546341,
+            1.5647468566894531
+          ]
+        },
+        {
+          "column": 14,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 66225,
+          "first_hit_world": [
+            0.01577473245561123,
+            -0.08105383813381195,
+            1.5648868083953857
+          ],
+          "target_world": [
+            0.01577473245561123,
+            -0.07407782971858978,
+            1.5648868083953857
+          ]
+        },
+        {
+          "column": 15,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67024,
+          "first_hit_world": [
+            0.01658499240875244,
+            -0.0838465690612793,
+            1.5650230646133423
+          ],
+          "target_world": [
+            0.01658499240875244,
+            -0.07385541498661041,
+            1.5650230646133423
+          ]
+        },
+        {
+          "column": 16,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67520,
+          "first_hit_world": [
+            0.017398465424776077,
+            -0.08136967569589615,
+            1.5651201009750366
+          ],
+          "target_world": [
+            0.017398465424776077,
+            -0.07361914217472076,
+            1.5651201009750366
+          ]
+        },
+        {
+          "column": 17,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67280,
+          "first_hit_world": [
+            0.018212923780083656,
+            -0.08313152194023132,
+            1.5652154684066772
+          ],
+          "target_world": [
+            0.018212923780083656,
+            -0.07338148355484009,
+            1.5652154684066772
+          ]
+        },
+        {
+          "column": 18,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67280,
+          "first_hit_world": [
+            0.01902667246758938,
+            -0.08247470110654831,
+            1.5653104782104492
+          ],
+          "target_world": [
+            0.01902667246758938,
+            -0.07314139604568481,
+            1.5653104782104492
+          ]
+        },
+        {
+          "column": 19,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67280,
+          "first_hit_world": [
+            0.01984041929244995,
+            -0.08181794732809067,
+            1.5654056072235107
+          ],
+          "target_world": [
+            0.01984041929244995,
+            -0.07290118932723999,
+            1.5654056072235107
+          ]
+        },
+        {
+          "column": 20,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67280,
+          "first_hit_world": [
+            0.020655056461691856,
+            -0.08115947991609573,
+            1.56549870967865
+          ],
+          "target_world": [
+            0.020655056461691856,
+            -0.07265833020210266,
+            1.56549870967865
+          ]
+        },
+        {
+          "column": 21,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 67280,
+          "first_hit_world": [
+            0.021469341591000557,
+            -0.08050309866666794,
+            1.5655956268310547
+          ],
+          "target_world": [
+            0.021469341591000557,
+            -0.07241429388523102,
+            1.5655956268310547
+          ]
+        },
+        {
+          "column": 22,
+          "visible_through_real_hair_gap": false,
+          "first_hit_owner": "MIA_V17_PIXAL_DetailedHair",
+          "first_hit_polygon": 68402,
+          "first_hit_world": [
+            0.02228308655321598,
+            -0.07960467785596848,
+            1.5656908750534058
+          ],
+          "target_world": [
+            0.02228308655321598,
+            -0.07216806709766388,
+            1.5656908750534058
+          ]
+        }
+      ]
+    }
+  ],
+  "brow_actual_skin_contact": [
+    {
+      "case": "neutral",
+      "samples": 390,
+      "nearest_max_mm": 0.23845092800911516,
+      "signed_min_mm": 0.21207631743891397,
+      "signed_max_mm": 0.23844380780246865
+    },
+    {
+      "case": "halfblink",
+      "samples": 390,
+      "nearest_max_mm": 0.2542136062402278,
+      "signed_min_mm": 0.16264726036752108,
+      "signed_max_mm": 0.2541676904002088
+    },
+    {
+      "case": "closed",
+      "samples": 390,
+      "nearest_max_mm": 0.25947956601157784,
+      "signed_min_mm": 0.20660039945141762,
+      "signed_max_mm": 0.25947000403903075
+    },
+    {
+      "case": "angry",
+      "samples": 390,
+      "nearest_max_mm": 0.23456783674191684,
+      "signed_min_mm": 0.2108452081301948,
+      "signed_max_mm": 0.2345209277336835
+    },
+    {
+      "case": "surprise",
+      "samples": 390,
+      "nearest_max_mm": 0.2371889422647655,
+      "signed_min_mm": 0.2068615990538092,
+      "signed_max_mm": 0.23714787312201224
+    }
+  ],
+  "idempotent": true,
+  "native_unchanged": true,
+  "native_saved": false,
+  "GPU_used": false,
+  "ART": "UNVERIFIED until actual source-paired hairOFF/ON views"
+}
