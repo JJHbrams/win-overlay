@@ -1,0 +1,185 @@
+{
+  "checkpoint": "design-sculpt07-B",
+  "status": "BOUNDED ACTUAL4 ART FAIL / UNSELECTED",
+  "art_acceptance": false,
+  "actual_frames": 4,
+  "gpu_token_released": true,
+  "render_exit_code_observed": 0,
+  "render_error_pattern_matches": 0,
+  "native_saved": false,
+  "live_applied": false,
+  "uv_key_weight_migration": false,
+  "A_checkpoint_commit": "8d064d0",
+  "files": [
+    {
+      "path": "actual-four-B\\gray-F2lowoblique-pre-render.json",
+      "bytes": 77785,
+      "sha256": "4a79afdfd8663b96bf0c7233d98328cab84699104719ae08fc73056d12c47d2c"
+    },
+    {
+      "path": "actual-four-B\\gray-F2lowoblique.png",
+      "bytes": 495237,
+      "sha256": "606d40dd35cab4656dfad0b65c68b4d39c8debc2263a0f00e19d81e69de30bc0"
+    },
+    {
+      "path": "actual-four-B\\gray-front-pre-render.json",
+      "bytes": 77650,
+      "sha256": "c19eee5f49a49f9dcfe8446cee09284281735279e63d0f34618e317bbc985a13"
+    },
+    {
+      "path": "actual-four-B\\gray-front.png",
+      "bytes": 310688,
+      "sha256": "6097378735da9587862b3af77ba76f892e517b95c0aae8a1a33ff61757b6edac"
+    },
+    {
+      "path": "actual-four-B\\gray-profile-pre-render.json",
+      "bytes": 77768,
+      "sha256": "74426535aa38e5ec1d6543b07e6b9c2f08f22ed3daf4973a95c4d4cc3ff1810f"
+    },
+    {
+      "path": "actual-four-B\\gray-profile.png",
+      "bytes": 267335,
+      "sha256": "c2ac1bdb48ef5ba8fbaddda06786b5c28418ad81643b98871fe2be5632c56cec"
+    },
+    {
+      "path": "actual-four-B\\gray-rearoblique-pre-render.json",
+      "bytes": 77784,
+      "sha256": "ae26eb6be510cc3966b075c36bff6f7b2bc79cb0222219d6fbe856b7f794f993"
+    },
+    {
+      "path": "actual-four-B\\gray-rearoblique.png",
+      "bytes": 292815,
+      "sha256": "d96d1489127f8630329ebfd0d4ac66621a816b68394aecc1dc2de070cc3c84b2"
+    },
+    {
+      "path": "actual-four-B\\render-records.json",
+      "bytes": 352936,
+      "sha256": "3370d399254f8933f059c5e15788a1b4ed3c997a7618bf3da0e986c1fbb1122f"
+    },
+    {
+      "path": "actual-four-B\\render.log",
+      "bytes": 2680,
+      "sha256": "573615b40c7d4eca1a4efc92cd92e4a70ed6d9e3eb729888ff78a4d73981f8c9"
+    },
+    {
+      "path": "actual-four-contact-sheet.png",
+      "bytes": 709659,
+      "sha256": "88a2105770cdd632ad537cab725d6b4ae8869b7fa94b09629a8eacedc5134eca"
+    },
+    {
+      "path": "actual-section-audit.png",
+      "bytes": 28446,
+      "sha256": "78c5ee34e364a563ac9691ab09d4545a0604a0fc0ea45865875a69499b655b45"
+    },
+    {
+      "path": "actual-sections.npz",
+      "bytes": 24858,
+      "sha256": "4ce8459b27d16de90f450d094863ee1cad15f7d8e1ab90ecbc437902fbfcc8d2"
+    },
+    {
+      "path": "audit_volume.py",
+      "bytes": 5205,
+      "sha256": "521ab8d3e754d369f4ce6e96960fb7ebea3cd244c9cbb5c6cfefb37025505be1"
+    },
+    {
+      "path": "build-report.json",
+      "bytes": 2555,
+      "sha256": "19d53c92f4e6b164808973077dba93b40f8de2d743696c2be8538e70e92bf7c0"
+    },
+    {
+      "path": "build_volume.py",
+      "bytes": 4467,
+      "sha256": "82699c0a851a85a5af465e77e618bc31b3f39d40c01e4596ddc71f59215954af"
+    },
+    {
+      "path": "buried-closure-audit.json",
+      "bytes": 323,
+      "sha256": "be005ce57504abcb7a6065dd65de311e32dc0e58c54ab042ff106e117932288a"
+    },
+    {
+      "path": "compose_review.py",
+      "bytes": 3714,
+      "sha256": "ae7bb68551c84f6fc0de24c9df71b86629257a5eae6f23888cb346abf33c8a15"
+    },
+    {
+      "path": "cpu-audit.json",
+      "bytes": 7347,
+      "sha256": "1d538f4a9c4799ffe303f96a1c1d2c67786b9764a98657d8f34625d65b825da2"
+    },
+    {
+      "path": "field.py",
+      "bytes": 1740,
+      "sha256": "67c5187b49cf8ce014cfc176f428fbb0bb5607fb9eceef0e088d2e43418b2db7"
+    },
+    {
+      "path": "freeze_parameters.py",
+      "bytes": 3174,
+      "sha256": "0888ee2215b0b8c1d1e45726afd8ca5e737a961b3577e777e0e0fd83f0a89d8b"
+    },
+    {
+      "path": "install_design.py",
+      "bytes": 3803,
+      "sha256": "862ae31778b405059d79a8644446f6f385055f6c6dd248027bd9e8bec52c1c10"
+    },
+    {
+      "path": "parameters.json",
+      "bytes": 14940,
+      "sha256": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f"
+    },
+    {
+      "path": "plot_sections.py",
+      "bytes": 1064,
+      "sha256": "5f596067b3bafb4e9971fc70744faf35a4d02e505b2b18805e53e12ec502c4d3"
+    },
+    {
+      "path": "preservation.json",
+      "bytes": 21898,
+      "sha256": "42048dd5f24c1532bf09e8698b958721c03ce6d871a47119f3543c217e9b6fb0"
+    },
+    {
+      "path": "render-preparation.json",
+      "bytes": 205,
+      "sha256": "24cae30ae5298bedd4ce1b63fbe0f8d751d1596de8c9c70f1023b1659eb598d7"
+    },
+    {
+      "path": "render_four.py",
+      "bytes": 9527,
+      "sha256": "1eb18958589bbd8eaf5cc312fd1395ab5dbc54d89df9ce7301516e859100f18f"
+    },
+    {
+      "path": "review-records.json",
+      "bytes": 5160,
+      "sha256": "527abf0462204987f1ecc581c8e2d2a4a911f3c376840914ad87d48c3be5af27"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 7068,
+      "sha256": "ebd47d6aa8de7433b6a27f9f065abf99f93871478611079217505a1ebd18f1c2"
+    },
+    {
+      "path": "sculpt07-B.npz",
+      "bytes": 1054433,
+      "sha256": "8439b4585d944defab27a03930eec3ce7c1ee7068cac66321cc4cffa40a9c23b"
+    },
+    {
+      "path": "source-F2lowoblique.png",
+      "bytes": 1338772,
+      "sha256": "be4844443b6b64c6b4ac10d9585a2ae30cf8d9dbb7993a38cda125857e24d9cb"
+    },
+    {
+      "path": "source-front.png",
+      "bytes": 870143,
+      "sha256": "8392c8ef12bda69a264905e295352a89961d3de4f23ae782189d2996a071de6f"
+    },
+    {
+      "path": "source-profile.png",
+      "bytes": 708875,
+      "sha256": "457f11d4b427dd88e9670c34b7c1f19baa35811891c7582596728cbf53bf908f"
+    },
+    {
+      "path": "source-rearoblique.png",
+      "bytes": 888270,
+      "sha256": "ef9e605841e9c078da073bec31aaa1099f57d1d8142bef3c05c3a0ec7c4404ff"
+    }
+  ]
+}

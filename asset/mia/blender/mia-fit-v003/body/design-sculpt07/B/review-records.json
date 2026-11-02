@@ -1,0 +1,77 @@
+{
+  "status": "UNSELECTED DESIGN; requires root actual visual judgment",
+  "mesh_sha256": "8439b4585d944defab27a03930eec3ce7c1ee7068cac66321cc4cffa40a9c23b",
+  "parameters_sha256": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f",
+  "images": [
+    {
+      "view": "front",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\B\\source-front.png",
+      "sha256": "8392c8ef12bda69a264905e295352a89961d3de4f23ae782189d2996a071de6f",
+      "source_crop": [
+        130.650039301046,
+        172.8328193965777,
+        347.34996069895396,
+        389.5327407944857
+      ],
+      "registration": "Frozen wholeheight uniform scale/translation; source pixels unchanged in F2; no aspect warp.",
+      "limits": "Source clothed envelope; no local width/height normalization.",
+      "baseline": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\actual-four\\gray-front.png",
+      "baseline_sha256": "62dd5e95b9c76edc66bbe5ba35fe0c4c25b7766b5026c2dd950258b632a37ec0",
+      "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\B\\actual-four-B\\gray-front.png",
+      "candidate_sha256": "6097378735da9587862b3af77ba76f892e517b95c0aae8a1a33ff61757b6edac"
+    },
+    {
+      "view": "profile",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\B\\source-profile.png",
+      "sha256": "457f11d4b427dd88e9670c34b7c1f19baa35811891c7582596728cbf53bf908f",
+      "source_crop": [
+        450.440292641635,
+        172.8328193965777,
+        667.1402140395429,
+        389.5327407944857
+      ],
+      "registration": "Frozen wholeheight uniform scale/translation; source pixels unchanged in F2; no aspect warp.",
+      "limits": "Near-profile drawing vs85deg fixture; pose/cloth uncertainty.",
+      "baseline": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\actual-four\\gray-profile.png",
+      "baseline_sha256": "453a14fb53f4346ea2d221a5bae98c19f645e939a6766b5f72641cbff4ec4a1a",
+      "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\B\\actual-four-B\\gray-profile.png",
+      "candidate_sha256": "c2ac1bdb48ef5ba8fbaddda06786b5c28418ad81643b98871fe2be5632c56cec"
+    },
+    {
+      "view": "F2lowoblique",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\B\\source-F2lowoblique.png",
+      "sha256": "be4844443b6b64c6b4ac10d9585a2ae30cf8d9dbb7993a38cda125857e24d9cb",
+      "source_crop": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "registration": "Frozen wholeheight uniform scale/translation; source pixels unchanged in F2; no aspect warp.",
+      "limits": "Estimated40/-8; camera uncertainty yaw\uc9f98,pitch\uc9f96; global mpp retained.",
+      "baseline": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\actual-four\\gray-F2lowoblique.png",
+      "baseline_sha256": "34a1f614a7aeaf11189ce4129a634d03aaa5f4c3b463bcb013831d69a58a9fb5",
+      "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\B\\actual-four-B\\gray-F2lowoblique.png",
+      "candidate_sha256": "606d40dd35cab4656dfad0b65c68b4d39c8debc2263a0f00e19d81e69de30bc0"
+    },
+    {
+      "view": "rearoblique",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\B\\source-rearoblique.png",
+      "sha256": "ef9e605841e9c078da073bec31aaa1099f57d1d8142bef3c05c3a0ec7c4404ff",
+      "source_crop": [
+        826.650039301046,
+        172.8328193965777,
+        1043.349960698954,
+        389.5327407944857
+      ],
+      "registration": "Frozen wholeheight uniform scale/translation; source pixels unchanged in F2; no aspect warp.",
+      "limits": "Covered back is context, not matching rear140/-10 calibration; posterior inferred.",
+      "baseline": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\actual-four\\gray-rearoblique.png",
+      "baseline_sha256": "579465fe3b7e9246deca7ad95c7f6ae2e428859d4c355da000c01cf78d29a8af",
+      "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\B\\actual-four-B\\gray-rearoblique.png",
+      "candidate_sha256": "d96d1489127f8630329ebfd0d4ac66621a816b68394aecc1dc2de070cc3c84b2"
+    }
+  ],
+  "extra_gpu_frames": 0,
+  "native_saved": false
+}
