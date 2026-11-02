@@ -2,8 +2,8 @@
 from pathlib import Path
 import bpy,json,numpy as np,hashlib
 P=Path(__file__).resolve().parent
-def apply():
- cfg=json.loads((P/'upper-crease-vector.json').read_text());o=bpy.data.objects['MIA_V27_SharedHeadBody'];u=o.data.uv_layers['UVMap'];ar=np.empty(len(u.data)*2,np.float32);u.data.foreach_get('uv',ar);assert hashlib.sha256(ar.tobytes()).hexdigest()==cfg['original_face_UV_sha256']
+def apply(config_path=None):
+ cfg=json.loads((Path(config_path) if config_path else P/'upper-crease-vector.json').read_text());o=bpy.data.objects['MIA_V27_SharedHeadBody'];u=o.data.uv_layers['UVMap'];ar=np.empty(len(u.data)*2,np.float32);u.data.foreach_get('uv',ar);assert hashlib.sha256(ar.tobytes()).hexdigest()==cfg['original_face_UV_sha256']
  made=[]
  for name in ['MIA_V27_SharedHeadBody','V28G_InnerLid_-1','V28G_InnerLid_1']:
   ob=bpy.data.objects[name];old=ob.material_slots[0].material;ma=old.copy();ma.name='Mia_v003_AlignedCrease_'+name;n=ma.node_tree.nodes;l=ma.node_tree.links
@@ -37,4 +37,4 @@ def apply():
   for socket in targets:l.new(mix.outputs[0],socket)
   ma['Mia_v003_crease']='UV-registered vector pigment on actual upper-lid skin; oldmisregisteredfoldgainsoff. No bitmap blur/replace or globalUVwarp. Existingfatigue/nose/lip/bodyandactual light/specular branches kept.'
   ob.material_slots[0].material=ma;made.append(dict(owner=name,old_material=old.name,new_material=ma.name))
- return dict(materials=made,scope='Upper crease registration only;0.17mm half-width/gap1.3..1.8mm; source finesse requires actual review.',native_saved=False)
+ return dict(materials=made,config_path=str(config_path or P/'upper-crease-vector.json'),scope='Upper crease registration only;0.17mm half-width; gap and observed visibility limits in selected config. Source finesse requires actual review.',native_saved=False)
