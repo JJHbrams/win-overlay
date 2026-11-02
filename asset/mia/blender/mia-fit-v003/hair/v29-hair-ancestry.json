@@ -1,0 +1,770 @@
+{
+  "v29_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v29\\surface-C\\native\\Mia_FaceFinish_v29_C.blend",
+  "sha256": "d7e2f7d7027e7ce65746e18af25562ec25a19c61bca847d5363080259b27d3be",
+  "vertices": 100383,
+  "polygons": 122129,
+  "coordinates_sha256": "82b4f830073670b6e6e81652e3e0d999d785a7b2893c503fd02b2086a5cf8be8",
+  "uv_layers": [
+    "UVMap",
+    "MIA_V17_PAINT_UV"
+  ],
+  "materials": [
+    {
+      "name": "MIA_V17_ReferenceAshGray_PaintUV.001_V22_LightToon_GeneratedInk",
+      "nodes": [
+        {
+          "name": "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "type": "OUTPUT_MATERIAL",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ubc29\ucd9c",
+          "type": "EMISSION",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "REBAKED_PIXAL_COLOR_ATLAS",
+          "type": "TEX_IMAGE",
+          "image": "MIA_V17_Pixal_Repacked4096.003",
+          "attribute": null
+        },
+        {
+          "name": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "type": "RGBTOBW",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc0c9\uc0c1 \ub7a8\ud504",
+          "type": "VALTORGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc218\ud559",
+          "type": "MATH",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc218\ud559.001",
+          "type": "MATH",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc9c0\uc624\uba54\ud2b8\ub9ac",
+          "type": "NEW_GEOMETRY",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ubca1\ud130 \uc218\ud559",
+          "type": "VECT_MATH",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ub9f5 \ubc94\uc704",
+          "type": "MAP_RANGE",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc)",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "PAINT_UV_EXPLICIT",
+          "type": "UVMAP",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "MIA_V17_REFERENCE_ASH_TONE",
+          "type": "VALTORGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "RGB\ub97c BW\ub85c \ubcc0\ud658.001",
+          "type": "RGBTOBW",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_OwnedAshPalette",
+          "type": "VALTORGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_CLEAN_PALETTE_72_PERCENT",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "UV \ub9f5",
+          "type": "UVMAP",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_NEW_AUTHORED_SIGNALS",
+          "type": "TEX_IMAGE",
+          "image": "MIA_V22_AuthoredStrandSignals",
+          "attribute": null
+        },
+        {
+          "name": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "type": "SEPARATE_COLOR",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_DERIVED_OBJECT_NORMAL_MAP",
+          "type": "TEX_IMAGE",
+          "image": "MIA_V22_DerivedSmoothObjectNormal",
+          "attribute": null
+        },
+        {
+          "name": "\ub178\uba40 \ub9f5",
+          "type": "NORMAL_MAP",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_THIN_CLUMP_EDGE",
+          "type": "FRESNEL",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ub9f5 \ubc94\uc704.001",
+          "type": "MAP_RANGE",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_GRAZING_EDGE_INK",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_SCENE_LIGHT_RESPONSE",
+          "type": "BSDF_DIFFUSE",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658",
+          "type": "SHADERTORGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_SOFT_TOON_LIGHT",
+          "type": "VALTORGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_FINAL_COLOR_TIMES_ACTUAL_LIGHT",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_AREA_LIGHT_BROAD_SHEEN",
+          "type": "BSDF_GLOSSY",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658.001",
+          "type": "SHADERTORGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "RGB\ub97c BW\ub85c \ubcc0\ud658.002",
+          "type": "RGBTOBW",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ub9f5 \ubc94\uc704.002",
+          "type": "MAP_RANGE",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc218\ud559.002",
+          "type": "MATH",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_FINAL_BOUNDED_SHEEN",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "UV \ub9f5.001",
+          "type": "UVMAP",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_GENERATED_UV_PIGMENT",
+          "type": "TEX_IMAGE",
+          "image": "MIA_V22_GeneratedSelectiveLockPigment",
+          "attribute": null
+        },
+        {
+          "name": "V22_PROJECTED_PAINT_WITH_UNSEEN_FALLBACK",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        }
+      ],
+      "links": [
+        {
+          "source": "REBAKED_PIXAL_COLOR_ATLAS",
+          "output": "Color",
+          "target": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "input": "Color"
+        },
+        {
+          "source": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "output": "Val",
+          "target": "\uc0c9\uc0c1 \ub7a8\ud504",
+          "input": "Factor"
+        },
+        {
+          "source": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "output": "Val",
+          "target": "\uc218\ud559",
+          "input": "Value"
+        },
+        {
+          "source": "\uc218\ud559",
+          "output": "Value",
+          "target": "\uc218\ud559.001",
+          "input": "Value"
+        },
+        {
+          "source": "\uc9c0\uc624\uba54\ud2b8\ub9ac",
+          "output": "Normal",
+          "target": "\ubca1\ud130 \uc218\ud559",
+          "input": "Vector"
+        },
+        {
+          "source": "\ubca1\ud130 \uc218\ud559",
+          "output": "Value",
+          "target": "\ub9f5 \ubc94\uc704",
+          "input": "Value"
+        },
+        {
+          "source": "\ub9f5 \ubc94\uc704",
+          "output": "Result",
+          "target": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc)",
+          "input": "Color2"
+        },
+        {
+          "source": "PAINT_UV_EXPLICIT",
+          "output": "UV",
+          "target": "REBAKED_PIXAL_COLOR_ATLAS",
+          "input": "Vector"
+        },
+        {
+          "source": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "output": "Val",
+          "target": "MIA_V17_REFERENCE_ASH_TONE",
+          "input": "Factor"
+        },
+        {
+          "source": "MIA_V17_REFERENCE_ASH_TONE",
+          "output": "Color",
+          "target": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc)",
+          "input": "Color1"
+        },
+        {
+          "source": "REBAKED_PIXAL_COLOR_ATLAS",
+          "output": "Color",
+          "target": "RGB\ub97c BW\ub85c \ubcc0\ud658.001",
+          "input": "Color"
+        },
+        {
+          "source": "RGB\ub97c BW\ub85c \ubcc0\ud658.001",
+          "output": "Val",
+          "target": "V22_OwnedAshPalette",
+          "input": "Factor"
+        },
+        {
+          "source": "V22_OwnedAshPalette",
+          "output": "Color",
+          "target": "V22_CLEAN_PALETTE_72_PERCENT",
+          "input": "Color2"
+        },
+        {
+          "source": "UV \ub9f5",
+          "output": "UV",
+          "target": "V22_NEW_AUTHORED_SIGNALS",
+          "input": "Vector"
+        },
+        {
+          "source": "V22_NEW_AUTHORED_SIGNALS",
+          "output": "Color",
+          "target": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "input": "Color"
+        },
+        {
+          "source": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "output": "Red",
+          "target": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+          "input": "Factor"
+        },
+        {
+          "source": "V22_CLEAN_PALETTE_72_PERCENT",
+          "output": "Color",
+          "target": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+          "input": "Color1"
+        },
+        {
+          "source": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "output": "Green",
+          "target": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+          "input": "Factor"
+        },
+        {
+          "source": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+          "output": "Color",
+          "target": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+          "input": "Color1"
+        },
+        {
+          "source": "UV \ub9f5",
+          "output": "UV",
+          "target": "V22_DERIVED_OBJECT_NORMAL_MAP",
+          "input": "Vector"
+        },
+        {
+          "source": "V22_DERIVED_OBJECT_NORMAL_MAP",
+          "output": "Color",
+          "target": "\ub178\uba40 \ub9f5",
+          "input": "Color"
+        },
+        {
+          "source": "\ub178\uba40 \ub9f5",
+          "output": "Normal",
+          "target": "V22_THIN_CLUMP_EDGE",
+          "input": "Normal"
+        },
+        {
+          "source": "V22_THIN_CLUMP_EDGE",
+          "output": "Factor",
+          "target": "\ub9f5 \ubc94\uc704.001",
+          "input": "Value"
+        },
+        {
+          "source": "\ub9f5 \ubc94\uc704.001",
+          "output": "Result",
+          "target": "V22_GRAZING_EDGE_INK",
+          "input": "Factor"
+        },
+        {
+          "source": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+          "output": "Color",
+          "target": "V22_GRAZING_EDGE_INK",
+          "input": "Color1"
+        },
+        {
+          "source": "\ub178\uba40 \ub9f5",
+          "output": "Normal",
+          "target": "V22_SCENE_LIGHT_RESPONSE",
+          "input": "Normal"
+        },
+        {
+          "source": "V22_SCENE_LIGHT_RESPONSE",
+          "output": "BSDF",
+          "target": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658",
+          "input": "Shader"
+        },
+        {
+          "source": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658",
+          "output": "Color",
+          "target": "V22_SOFT_TOON_LIGHT",
+          "input": "Factor"
+        },
+        {
+          "source": "V22_SOFT_TOON_LIGHT",
+          "output": "Color",
+          "target": "V22_FINAL_COLOR_TIMES_ACTUAL_LIGHT",
+          "input": "Color2"
+        },
+        {
+          "source": "\ub178\uba40 \ub9f5",
+          "output": "Normal",
+          "target": "V22_AREA_LIGHT_BROAD_SHEEN",
+          "input": "Normal"
+        },
+        {
+          "source": "V22_AREA_LIGHT_BROAD_SHEEN",
+          "output": "BSDF",
+          "target": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658.001",
+          "input": "Shader"
+        },
+        {
+          "source": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658.001",
+          "output": "Color",
+          "target": "RGB\ub97c BW\ub85c \ubcc0\ud658.002",
+          "input": "Color"
+        },
+        {
+          "source": "RGB\ub97c BW\ub85c \ubcc0\ud658.002",
+          "output": "Val",
+          "target": "\ub9f5 \ubc94\uc704.002",
+          "input": "Value"
+        },
+        {
+          "source": "\ub9f5 \ubc94\uc704.002",
+          "output": "Result",
+          "target": "\uc218\ud559.002",
+          "input": "Value"
+        },
+        {
+          "source": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+          "output": "Green",
+          "target": "\uc218\ud559.002",
+          "input": "Value"
+        },
+        {
+          "source": "V22_FINAL_COLOR_TIMES_ACTUAL_LIGHT",
+          "output": "Color",
+          "target": "V22_FINAL_BOUNDED_SHEEN",
+          "input": "Color1"
+        },
+        {
+          "source": "\uc218\ud559.002",
+          "output": "Value",
+          "target": "V22_FINAL_BOUNDED_SHEEN",
+          "input": "Color2"
+        },
+        {
+          "source": "\ubc29\ucd9c",
+          "output": "Emission",
+          "target": "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "input": "Surface"
+        },
+        {
+          "source": "UV \ub9f5.001",
+          "output": "UV",
+          "target": "V22_GENERATED_UV_PIGMENT",
+          "input": "Vector"
+        },
+        {
+          "source": "V22_GENERATED_UV_PIGMENT",
+          "output": "Alpha",
+          "target": "V22_PROJECTED_PAINT_WITH_UNSEEN_FALLBACK",
+          "input": "Factor"
+        },
+        {
+          "source": "V22_GRAZING_EDGE_INK",
+          "output": "Color",
+          "target": "V22_PROJECTED_PAINT_WITH_UNSEEN_FALLBACK",
+          "input": "Color1"
+        },
+        {
+          "source": "V22_GENERATED_UV_PIGMENT",
+          "output": "Color",
+          "target": "V22_PROJECTED_PAINT_WITH_UNSEEN_FALLBACK",
+          "input": "Color2"
+        },
+        {
+          "source": "V22_PROJECTED_PAINT_WITH_UNSEEN_FALLBACK",
+          "output": "Color",
+          "target": "V22_FINAL_COLOR_TIMES_ACTUAL_LIGHT",
+          "input": "Color1"
+        },
+        {
+          "source": "V22_FINAL_COLOR_TIMES_ACTUAL_LIGHT",
+          "output": "Color",
+          "target": "\ubc29\ucd9c",
+          "input": "Color"
+        }
+      ]
+    },
+    {
+      "name": "MIA_V17_RecoveredBraidTie.002_V22_LightToon",
+      "nodes": [
+        {
+          "name": "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "type": "OUTPUT_MATERIAL",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ubc29\ucd9c",
+          "type": "EMISSION",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc0c9\uc0c1",
+          "type": "RGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_THIN_CLUMP_EDGE",
+          "type": "FRESNEL",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ub9f5 \ubc94\uc704",
+          "type": "MAP_RANGE",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_GRAZING_EDGE_INK",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_SCENE_LIGHT_RESPONSE",
+          "type": "BSDF_DIFFUSE",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658",
+          "type": "SHADERTORGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_SOFT_TOON_LIGHT",
+          "type": "VALTORGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_FINAL_COLOR_TIMES_ACTUAL_LIGHT",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_AREA_LIGHT_BROAD_SHEEN",
+          "type": "BSDF_GLOSSY",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658.001",
+          "type": "SHADERTORGB",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "type": "RGBTOBW",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\ub9f5 \ubc94\uc704.001",
+          "type": "MAP_RANGE",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "\uc218\ud559",
+          "type": "MATH",
+          "image": null,
+          "attribute": null
+        },
+        {
+          "name": "V22_FINAL_BOUNDED_SHEEN",
+          "type": "MIX_RGB",
+          "image": null,
+          "attribute": null
+        }
+      ],
+      "links": [
+        {
+          "source": "V22_THIN_CLUMP_EDGE",
+          "output": "Factor",
+          "target": "\ub9f5 \ubc94\uc704",
+          "input": "Value"
+        },
+        {
+          "source": "\ub9f5 \ubc94\uc704",
+          "output": "Result",
+          "target": "V22_GRAZING_EDGE_INK",
+          "input": "Factor"
+        },
+        {
+          "source": "\uc0c9\uc0c1",
+          "output": "Color",
+          "target": "V22_GRAZING_EDGE_INK",
+          "input": "Color1"
+        },
+        {
+          "source": "V22_SCENE_LIGHT_RESPONSE",
+          "output": "BSDF",
+          "target": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658",
+          "input": "Shader"
+        },
+        {
+          "source": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658",
+          "output": "Color",
+          "target": "V22_SOFT_TOON_LIGHT",
+          "input": "Factor"
+        },
+        {
+          "source": "V22_GRAZING_EDGE_INK",
+          "output": "Color",
+          "target": "V22_FINAL_COLOR_TIMES_ACTUAL_LIGHT",
+          "input": "Color1"
+        },
+        {
+          "source": "V22_SOFT_TOON_LIGHT",
+          "output": "Color",
+          "target": "V22_FINAL_COLOR_TIMES_ACTUAL_LIGHT",
+          "input": "Color2"
+        },
+        {
+          "source": "V22_AREA_LIGHT_BROAD_SHEEN",
+          "output": "BSDF",
+          "target": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658.001",
+          "input": "Shader"
+        },
+        {
+          "source": "\uc170\uc774\ub354\ub97c RGB\ub85c \ubcc0\ud658.001",
+          "output": "Color",
+          "target": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "input": "Color"
+        },
+        {
+          "source": "RGB\ub97c BW\ub85c \ubcc0\ud658",
+          "output": "Val",
+          "target": "\ub9f5 \ubc94\uc704.001",
+          "input": "Value"
+        },
+        {
+          "source": "\ub9f5 \ubc94\uc704.001",
+          "output": "Result",
+          "target": "\uc218\ud559",
+          "input": "Value"
+        },
+        {
+          "source": "V22_FINAL_COLOR_TIMES_ACTUAL_LIGHT",
+          "output": "Color",
+          "target": "V22_FINAL_BOUNDED_SHEEN",
+          "input": "Color1"
+        },
+        {
+          "source": "\uc218\ud559",
+          "output": "Value",
+          "target": "V22_FINAL_BOUNDED_SHEEN",
+          "input": "Color2"
+        },
+        {
+          "source": "V22_FINAL_BOUNDED_SHEEN",
+          "output": "Color",
+          "target": "\ubc29\ucd9c",
+          "input": "Color"
+        },
+        {
+          "source": "\ubc29\ucd9c",
+          "output": "Emission",
+          "target": "\uba38\ud2f0\ub9ac\uc5bc \ucd9c\ub825",
+          "input": "Surface"
+        }
+      ]
+    }
+  ],
+  "recorded_comparisons": [
+    {
+      "view": "000",
+      "old_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v29\\final-review\\orbit\\000.png",
+      "current_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\review\\integrated-R3b\\orbit\\000-production.png",
+      "camera_matrix_exact": true,
+      "ortho_scale_exact": true,
+      "lighting_record_exact": true,
+      "color_management_exact": true,
+      "old_material_mode": "production",
+      "current_material_mode": "actual default production"
+    },
+    {
+      "view": "009",
+      "old_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v29\\final-review\\orbit\\009.png",
+      "current_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\review\\integrated-R3b\\orbit\\009-production.png",
+      "camera_matrix_exact": true,
+      "ortho_scale_exact": true,
+      "lighting_record_exact": true,
+      "color_management_exact": true,
+      "old_material_mode": "production",
+      "current_material_mode": "actual default production"
+    },
+    {
+      "view": "012",
+      "old_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v29\\final-review\\orbit\\012.png",
+      "current_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\review\\integrated-R3b\\orbit\\012-production.png",
+      "camera_matrix_exact": true,
+      "ortho_scale_exact": true,
+      "lighting_record_exact": true,
+      "color_management_exact": true,
+      "old_material_mode": "production",
+      "current_material_mode": "actual default production"
+    },
+    {
+      "view": "015",
+      "old_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v29\\final-review\\orbit\\015.png",
+      "current_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\review\\integrated-R3b\\orbit\\015-production.png",
+      "camera_matrix_exact": true,
+      "ortho_scale_exact": true,
+      "lighting_record_exact": true,
+      "color_management_exact": true,
+      "old_material_mode": "production",
+      "current_material_mode": "actual default production"
+    },
+    {
+      "view": "018",
+      "old_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-face-finish-v29\\final-review\\orbit\\018.png",
+      "current_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\review\\integrated-R3b\\orbit\\018-production.png",
+      "camera_matrix_exact": true,
+      "ortho_scale_exact": true,
+      "lighting_record_exact": true,
+      "color_management_exact": true,
+      "old_material_mode": "production",
+      "current_material_mode": "actual default production"
+    }
+  ],
+  "native_saved": false,
+  "limits": "Read-only retained native/actual records. Matching camera/light metadata enables a stronger historical comparison but does not isolate every material/geometry change. Current pigment-only/gray diagnostic is the causal texture-vs-light ablation; no v29 pigment ablation rendered."
+}

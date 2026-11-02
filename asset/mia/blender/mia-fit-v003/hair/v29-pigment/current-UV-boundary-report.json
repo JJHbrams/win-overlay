@@ -1,0 +1,54 @@
+{
+  "current_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "current_coords_sha256": "16d192576cd8ecc1905f4eba96b4686c038e8c94a56e6eec7dee552e6eee0b2c",
+  "source_uv": "MIA_V17_PAINT_UV",
+  "all4999_corner_UVs_byte_exact": true,
+  "original_six_UV_hashes": {
+    "UVMap": "a905e058a1dc2c514ec7bb8fd3ce6f194c5cb2bc37406cb3d8b66bc3e50e88ed",
+    "MIA_V17_PAINT_UV": "d01efa4907f0527be532c1fcf61c73f2cd172e56cb2194568059746726cb54b3",
+    "MIA_V002_RestProject_front": "13f8ccb4099acde27d3cbc6789dc61422d050390a2e86cf4ddf6377873cbfebe",
+    "MIA_V002_RestProject_profile": "2b39df4ab83b11895f4e654153c32b1f475feab8510b5ca5d40a0da5518a1bac",
+    "MIA_V002_RestProject_back": "e350596e3da5de5838265e357f924c6a903b0bcb6c218297e4c10df3ec522419",
+    "MIA_V002_RestProject_rear_oblique": "3041c100dd62f1c82efb2b0502be79b0b3cde4f54ab6d8307a05cca0ce4835e6"
+  },
+  "new_UV_layers_needed": 0,
+  "old_UV_overlap": "Original source atlas may intentionally reuse regions; exact old paint/corner lineage, not a new overlapping atlas. New candidate adds no UV map and no generated color field.",
+  "real_surface_faces": 4999,
+  "full_boundary_vertices": 753,
+  "boundary_vertex_weight_exact_zero": true,
+  "interior_fade_distance_mm": 4,
+  "nonzero_weight_vertices": 3204,
+  "full_weight_vertices": 2356,
+  "current_active_attributes": [
+    "MIA_R_SourceAshAndScope",
+    "MIA_V002_RestDepth_back",
+    "MIA_V002_RestDepth_front",
+    "MIA_V002_RestDepth_profile",
+    "MIA_V002_RestDepth_rear_oblique",
+    "MIA_V002_RestViewWeight_back",
+    "MIA_V002_RestViewWeight_front",
+    "MIA_V002_RestViewWeight_profile",
+    "MIA_V002_RestViewWeight_rear_oblique",
+    "MIA_V002_RimNormalWeight"
+  ],
+  "current_active_UV_names": [
+    "MIA_V002_RestProject_back",
+    "MIA_V002_RestProject_front",
+    "MIA_V002_RestProject_profile",
+    "MIA_V002_RestProject_rear_oblique"
+  ],
+  "original_fallback_default": [
+    0.11999999731779099,
+    0.11500000208616257,
+    0.11999999731779099,
+    1.0
+  ],
+  "original_guide_factor_source": "Math.102",
+  "guide_input_source": "Vector Math.007",
+  "payload_sha256": "33ccc42a2607bfd1483ea6073c0e9b5f53f52bc1b14b4ff3f02eca2cd2650b2f",
+  "source_image_sha256": "c0315287ff0ed88ef97b0dd430e03caa73b181053621be07a124fae095c2632b",
+  "old_normal_map_reused": false,
+  "Main_modified": false,
+  "native_saved": false,
+  "limits": "CPU identity/boundary gate only. Old alpha and actual current-model pigment+production/source views still required. Texture may align numerically while hair strokes remain artistically wrong."
+}

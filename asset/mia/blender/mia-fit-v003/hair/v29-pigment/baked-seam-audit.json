@@ -1,0 +1,19 @@
+{
+  "boundary_uv_samples": 84196,
+  "boundary_bilinear_alpha_max": 0.0,
+  "interior_shared_edges": 7121,
+  "inside_edge_RGB_linear_absolute_error_p50_90_99_max": [
+    0.0004208271690337301,
+    0.0012294238607993696,
+    0.008510475481254071,
+    0.09340389944002442
+  ],
+  "added_seam_discontinuity_linear_p50_90_99_max": [
+    0.0003195947590770576,
+    0.001775719972907318,
+    0.014169696470577454,
+    0.13470129383630625
+  ],
+  "interior_field": "Numeric8bit static-color+physical-gate remap compared against direct old-data evaluation at inset physical-edge samples; current guide is not baked.",
+  "limits": "High tails at UV tips/quantization/forced-zero physical border must be checked in actual render. No shader/ART pass from numerical seams."
+}
