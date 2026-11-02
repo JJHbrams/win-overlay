@@ -1,0 +1,7 @@
+from pathlib import Path
+import numpy as np,json
+from PIL import Image,ImageDraw,ImageFont
+P=Path(__file__).resolve().parent;R=P.parent/'rear-loop-cleanup';ids=np.load(P/'identity-assembly.npz')['source_faces'];maps=np.load(R/'fullscene-family-ownership-DATA.npz');board=Image.new('RGB',(2048,630),(237,241,244));dr=ImageDraw.Draw(board);font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',18);sm=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',15)
+for col,view in enumerate(['000','003','021','back_full']):
+ f=maps[view+'_source_polygon'];n=maps[view+'_normal'];owner=maps[view+'_owner'];shade=np.clip(.35+.55*np.abs(n[:,:,1]),0,1);rgb=np.repeat(shade[:,:,None],3,2)*255;rgb[owner==0]=[42,48,53];rgb[np.isin(f,ids)]=[70,170,198];board.paste(Image.fromarray(rgb.astype(np.uint8)).resize((512,512),Image.Resampling.NEAREST),(512*col,40));dr.text((512*col+10,12),view+' / whole exterior identity assembly',font=font,fill=(20,30,40))
+dr.text((10,568),'15,922 source faces: connected loose-side root/backing branch plus135 complete co-located exterior paint skins. This is a SAME-WORLD benchmark, not new fitted hair.',font=sm,fill=(20,30,40));dr.text((10,600),'Ownership DATA uses recorded pre-U-removal first hits: visible samples remain a lower bound after U cleanup. Actual identity render will test the current complete route.',font=sm,fill=(20,30,40));board.save(P/'IDENTITY_EXTERIOR_OWNERSHIP_DATA.png')

@@ -1,0 +1,23 @@
+{
+  "status":"CPU_CONSTRUCTION_PLAN_NOT_ART_ACCEPTANCE",
+  "reference":"mia-body-v06-confirmed-20261102.png",
+  "mapping":"Same inverse whole-height registration as source_paths_v06.json; source controls are original full-image pixels. Short/medium/long fragments underlap into a distributed nape-rooted volume, not all tied to bun.",
+  "prototype_source":"detail-prototypes.npz; Main is read-only, all original UV/POINT inputs copied by source IDs; actual normals recalculated after fit",
+  "layers":[
+    {"name":"Occipital_Left","prototype":"RoundCurl","layer":"short_upper","source_uv":[[900,174],[892,210],[880,236]],"y":[0.108,0.143,0.160],"width_scale":1.10,"depth_scale":1.15,"mirror":false},
+    {"name":"Occipital_Centre","prototype":"SweptCurl","layer":"short_upper","source_uv":[[938,183],[930,216],[944,244]],"y":[0.110,0.155,0.175],"width_scale":1.05,"depth_scale":1.70,"mirror":true},
+    {"name":"Occipital_Right","prototype":"RoundCurl","layer":"short_upper","source_uv":[[970,175],[978,210],[987,239]],"y":[0.108,0.145,0.165],"width_scale":1.05,"depth_scale":1.30,"mirror":true},
+    {"name":"Mid_Left","prototype":"SweptCurl","layer":"medium","source_uv":[[891,225],[897,260],[881,291]],"y":[0.125,0.170,0.185],"width_scale":1.15,"depth_scale":1.55,"mirror":false},
+    {"name":"Mid_Inner_Left","prototype":"RoundCurl","layer":"medium","source_uv":[[915,233],[919,269],[907,305]],"y":[0.136,0.184,0.193],"width_scale":1.20,"depth_scale":1.05,"mirror":false},
+    {"name":"Mid_Inner_Right","prototype":"SweptCurl","layer":"medium","source_uv":[[952,231],[943,269],[957,310]],"y":[0.133,0.191,0.197],"width_scale":1.10,"depth_scale":1.90,"mirror":true},
+    {"name":"Mid_Right","prototype":"RoundCurl","layer":"medium","source_uv":[[974,229],[987,264],[974,298]],"y":[0.124,0.173,0.185],"width_scale":1.10,"depth_scale":1.35,"mirror":true},
+    {"name":"Long_Left","prototype":"SweptCurl","layer":"long_lower","source_uv":[[887,286],[894,332],[882,372]],"y":[0.143,0.180,0.165],"width_scale":1.05,"depth_scale":1.80,"mirror":false},
+    {"name":"Long_Centre_Left","prototype":"RoundCurl","layer":"long_lower","source_uv":[[914,286],[905,335],[916,382]],"y":[0.151,0.200,0.175],"width_scale":1.20,"depth_scale":1.20,"mirror":true},
+    {"name":"Long_Centre_Right","prototype":"SweptCurl","layer":"long_lower","source_uv":[[941,289],[953,334],[942,384]],"y":[0.147,0.205,0.172],"width_scale":1.10,"depth_scale":1.90,"mirror":false},
+    {"name":"Long_Right","prototype":"RoundCurl","layer":"long_lower","source_uv":[[965,284],[957,331],[966,373]],"y":[0.143,0.185,0.166],"width_scale":1.15,"depth_scale":1.15,"mirror":true},
+    {"name":"Shoulder_Turn_Left","prototype":"FineTip","layer":"outline_accent","source_uv":[[873,224],[859,242],[854,257]],"y":[0.123,0.162,0.173],"width_scale":1.4,"depth_scale":1.6,"mirror":false},
+    {"name":"Shoulder_Turn_Right","prototype":"FineTip","layer":"outline_accent","source_uv":[[997,222],[1011,240],[1014,256]],"y":[0.122,0.159,0.175],"width_scale":1.5,"depth_scale":1.7,"mirror":true},
+    {"name":"Mid_Fly_Left","prototype":"FineTip","layer":"outline_accent","source_uv":[[875,299],[865,318],[855,319]],"y":[0.145,0.175,0.181],"width_scale":1.5,"depth_scale":1.6,"mirror":false},
+    {"name":"Mid_Fly_Right","prototype":"FineTip","layer":"outline_accent","source_uv":[[996,293],[1008,309],[1015,304]],"y":[0.145,0.174,0.185],"width_scale":1.4,"depth_scale":1.7,"mirror":true}
+  ]
+}

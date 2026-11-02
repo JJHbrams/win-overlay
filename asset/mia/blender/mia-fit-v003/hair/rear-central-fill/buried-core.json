@@ -1,0 +1,61 @@
+{
+  "status": "BURIED_SUPPORT_ONLY_PENDING_ACTUAL_COVERAGE",
+  "payload_sha256": "361afd0e97b07668cca07c0f07c8c6c96e74f61ab6f4612e84ad5d1a21b35992",
+  "volumes": [
+    {
+      "name": "Core_Left",
+      "source": "held-first-six/Underlay_Left",
+      "scope": "Buried dark volume only; no engraved lines, no claim of accepted visible surface",
+      "skin_min_clearance_mm": 55.657945573329926,
+      "bounds": [
+        [
+          0.05111575650507395,
+          0.11152625626325607,
+          1.1109579801559448
+        ],
+        [
+          0.1474122976511717,
+          0.12276689803600312,
+          1.5168866777420045
+        ]
+      ]
+    },
+    {
+      "name": "Core_Centre",
+      "source": "held-first-six/Central_Cascade",
+      "scope": "Buried dark volume only; no engraved lines, no claim of accepted visible surface",
+      "skin_min_clearance_mm": 44.427036998968106,
+      "bounds": [
+        [
+          -0.06391274146735668,
+          0.11395123249292374,
+          1.0833173990249634
+        ],
+        [
+          0.044542036950588226,
+          0.13072089052200317,
+          1.5116333627700806
+        ]
+      ]
+    },
+    {
+      "name": "Core_Right",
+      "source": "held-first-six/Underlay_Right",
+      "scope": "Buried dark volume only; no engraved lines, no claim of accepted visible surface",
+      "skin_min_clearance_mm": 54.6054570004344,
+      "bounds": [
+        [
+          -0.1342937311530113,
+          0.11152901223301888,
+          1.1073042154312134
+        ],
+        [
+          -0.04207095008799616,
+          0.12378404980897904,
+          1.5151574277877808
+        ]
+      ]
+    }
+  ],
+  "ART": false
+}

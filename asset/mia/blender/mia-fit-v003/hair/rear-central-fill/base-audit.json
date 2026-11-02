@@ -1,0 +1,363 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+  "native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "baseline": "R3b + selected A+B Crown + selected U mask",
+  "objects": [
+    {
+      "key": "part_0",
+      "name": "MIA_V27_SharedHeadBody",
+      "body": true,
+      "vertices": 80771,
+      "triangles": 161184,
+      "bounds": [
+        [
+          -0.3785236179828644,
+          -0.15244443714618683,
+          0.03891202062368393
+        ],
+        [
+          0.37756848335266113,
+          0.10365677624940872,
+          1.6452091932296753
+        ]
+      ],
+      "materials": [
+        "MIA_v002_MIA_V27_SharedHeadBody_RefinedD2",
+        "MIA_V002_G_Body_ContinuousSupport",
+        "MIA_V23_Body_CommonLight",
+        "MIA_V23_Body_CommonLight",
+        "MIA_V23_Body_CommonLight",
+        "MIA_V22_Body_CommonLight_Preview.001",
+        "MIA_V13_PaintedBodySkin",
+        "MIA_V13_PaintedBodySkin",
+        "MIA_V13_PaintedBodySkin",
+        "V27_HeadBlend_MIA_V23_Body_CommonLight",
+        "V27_HeadBlend_MIA_V22_Body_CommonLight_Preview.001",
+        "V27_HeadBlend_MIA_V13_PaintedBodySkin"
+      ]
+    },
+    {
+      "key": "part_1",
+      "name": "MIA_V17_LeftBraid_Tail",
+      "body": false,
+      "vertices": 486,
+      "triangles": 848,
+      "bounds": [
+        [
+          0.10620000213384628,
+          -0.04049971327185631,
+          1.2690000534057617
+        ],
+        [
+          0.12720586359500885,
+          -0.03686608746647835,
+          1.3140000104904175
+        ]
+      ],
+      "materials": [
+        "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Tail"
+      ]
+    },
+    {
+      "key": "part_2",
+      "name": "MIA_V17_LeftBraid_Lane2",
+      "body": false,
+      "vertices": 1500,
+      "triangles": 2996,
+      "bounds": [
+        [
+          0.06101709231734276,
+          -0.05492003262042999,
+          1.3075168132781982
+        ],
+        [
+          0.12177169322967529,
+          0.006694577634334564,
+          1.5434393882751465
+        ]
+      ],
+      "materials": [
+        "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Lane2"
+      ]
+    },
+    {
+      "key": "part_3",
+      "name": "MIA_V17_LeftBraid_Lane1",
+      "body": false,
+      "vertices": 1500,
+      "triangles": 2996,
+      "bounds": [
+        [
+          0.06365974247455597,
+          -0.05318663269281387,
+          1.3083637952804565
+        ],
+        [
+          0.1224077120423317,
+          0.010396135970950127,
+          1.5393040180206299
+        ]
+      ],
+      "materials": [
+        "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Lane1"
+      ]
+    },
+    {
+      "key": "part_4",
+      "name": "MIA_V17_LeftBraid_Lane0",
+      "body": false,
+      "vertices": 1500,
+      "triangles": 2996,
+      "bounds": [
+        [
+          0.06014924496412277,
+          -0.05357244610786438,
+          1.3091727495193481
+        ],
+        [
+          0.1226285845041275,
+          0.009774977341294289,
+          1.5366982221603394
+        ]
+      ],
+      "materials": [
+        "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Lane0"
+      ]
+    },
+    {
+      "key": "part_5",
+      "name": "MIA_V17_LeftBraid_Tie",
+      "body": false,
+      "vertices": 480,
+      "triangles": 960,
+      "bounds": [
+        [
+          0.1023000031709671,
+          -0.04576001316308975,
+          1.3077999353408813
+        ],
+        [
+          0.12770000100135803,
+          -0.029250016435980797,
+          1.3121999502182007
+        ]
+      ],
+      "materials": [
+        "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Tie"
+      ]
+    },
+    {
+      "key": "part_6",
+      "name": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "body": false,
+      "vertices": 1192,
+      "triangles": 2272,
+      "bounds": [
+        [
+          -0.07715844362974167,
+          -0.03349117562174797,
+          1.5600616931915283
+        ],
+        [
+          0.07637505233287811,
+          0.09297529608011246,
+          1.6462091207504272
+        ]
+      ],
+      "materials": [
+        "MIA_V002_SourceAshGrade_MIA_V17_RootLining_MIA_V06_BODY"
+      ]
+    },
+    {
+      "key": "part_7",
+      "name": "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "body": false,
+      "vertices": 769,
+      "triangles": 1394,
+      "bounds": [
+        [
+          -0.07715660333633423,
+          -0.07817744463682175,
+          1.5802618265151978
+        ],
+        [
+          0.07637322694063187,
+          -0.009874681010842323,
+          1.6404805183410645
+        ]
+      ],
+      "materials": [
+        "MIA_V17_HairRootAsh.001_V22_LightToon.001"
+      ]
+    },
+    {
+      "key": "part_8",
+      "name": "MIA_V17_PIXAL_DetailedHair",
+      "body": false,
+      "vertices": 100383,
+      "triangles": 119134,
+      "bounds": [
+        [
+          -0.22001111507415771,
+          -0.09384851902723312,
+          1.258650779724121
+        ],
+        [
+          0.225155770778656,
+          0.15351486206054688,
+          1.692881464958191
+        ]
+      ],
+      "materials": [
+        "MIA_v002_R_SideNape_SourceAshEnvelope",
+        "MIA_V002_DeformNormals_MIA_V17_PIXAL_DetailedHair.001",
+        "MIA_v003_Crown_RecoveredV29_FallbackAndRearGuide",
+        "MIA_v003_UnsupportedCentralLoop_HIDDEN"
+      ]
+    },
+    {
+      "key": "part_9",
+      "name": "MIA_V20_Crown_PixalDonorLock",
+      "body": false,
+      "vertices": 359,
+      "triangles": 420,
+      "bounds": [
+        [
+          0.03428055718541145,
+          0.0551091767847538,
+          1.6032633781433105
+        ],
+        [
+          0.07319052517414093,
+          0.08393065631389618,
+          1.652228593826294
+        ]
+      ],
+      "materials": [
+        "MIA_V002_SourceAshGrade_MIA_V20_Crown_PixalDonorLock",
+        "MIA_V17_RecoveredBraidTie.002_V22_LightToon.001"
+      ]
+    },
+    {
+      "key": "part_10",
+      "name": "MIA_V002_RimFlow_near_ear",
+      "body": false,
+      "vertices": 401,
+      "triangles": 780,
+      "bounds": [
+        [
+          0.07113005965948105,
+          -0.022757669910788536,
+          1.4598021507263184
+        ],
+        [
+          0.07966148853302002,
+          -0.008515233173966408,
+          1.4920324087142944
+        ]
+      ],
+      "materials": [
+        "MIA_V002_DeformNormals_MIA_V002_RimFlow_near_ear"
+      ]
+    },
+    {
+      "key": "part_11",
+      "name": "MIA_V002_RimFlow_far_neck",
+      "body": false,
+      "vertices": 721,
+      "triangles": 1404,
+      "bounds": [
+        [
+          -0.0689001977443695,
+          -0.04507932439446449,
+          1.4165359735488892
+        ],
+        [
+          -0.05371858552098274,
+          -0.022426534444093704,
+          1.4555288553237915
+        ]
+      ],
+      "materials": [
+        "MIA_V002_DeformNormals_MIA_V002_RimFlow_far_neck"
+      ]
+    },
+    {
+      "key": "part_12",
+      "name": "MIA_V24_Gather_Main",
+      "body": false,
+      "vertices": 3890,
+      "triangles": 7776,
+      "bounds": [
+        [
+          -0.035051628947257996,
+          0.11503481864929199,
+          1.5358139276504517
+        ],
+        [
+          0.03276466578245163,
+          0.16549979150295258,
+          1.5964680910110474
+        ]
+      ],
+      "materials": [
+        "MIA_V002_SourceAshGrade_MIA_V24_Gather_Main"
+      ]
+    },
+    {
+      "key": "part_13",
+      "name": "MIA_V24_Gather_Tuck",
+      "body": false,
+      "vertices": 3890,
+      "triangles": 7776,
+      "bounds": [
+        [
+          -0.01971050351858139,
+          0.11635243147611618,
+          1.5383533239364624
+        ],
+        [
+          0.024421658366918564,
+          0.14703774452209473,
+          1.5769540071487427
+        ]
+      ],
+      "materials": [
+        "MIA_V002_SourceAshGrade_MIA_V24_Gather_Tuck"
+      ]
+    },
+    {
+      "key": "part_14",
+      "name": "MIA_V24_Gather_Upper",
+      "body": false,
+      "vertices": 3890,
+      "triangles": 7776,
+      "bounds": [
+        [
+          -0.02361103892326355,
+          0.11420779675245285,
+          1.5638971328735352
+        ],
+        [
+          0.031218543648719788,
+          0.1582356095314026,
+          1.6120967864990234
+        ]
+      ],
+      "materials": [
+        "MIA_V002_SourceAshGrade_MIA_V24_Gather_Upper"
+      ]
+    }
+  ],
+  "head_bone": [
+    -0.0003917289723176509,
+    0.004743414930999279,
+    1.4916651248931885
+  ],
+  "upper_chest_bone": [
+    -0.0004776836431119591,
+    -0.018231777474284172,
+    1.3060864210128784
+  ],
+  "native_saved": false
+}

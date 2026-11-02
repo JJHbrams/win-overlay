@@ -1,0 +1,3 @@
+from pathlib import Path
+import bpy,json,sys,numpy as np
+P=Path(__file__).resolve().parent;H=P.parent;W=Path('C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay');N=W/'asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend';bpy.ops.wm.open_mainfile(filepath=str(N),use_scripts=False);bpy.context.scene.frame_set(1);sys.path.insert(0,str(H));import apply_baked_v29_crown;apply_baked_v29_crown.apply(H/'v29-pigment',mode='combined');sys.path.insert(0,str(H/'rear-loop-cleanup'));import apply_loop_mask;apply_loop_mask.apply(H/'rear-loop-cleanup');sys.path.insert(0,str(P));import make_identity_copy;r=make_identity_copy.apply(P);print('IDENTITY_COPY_CPU_READY',r,flush=True)
