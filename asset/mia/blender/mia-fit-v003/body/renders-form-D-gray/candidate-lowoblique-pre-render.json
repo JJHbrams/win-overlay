@@ -1,0 +1,330 @@
+{
+  "variant": "candidate",
+  "view": "lowoblique",
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+  "native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\renders-form-D-gray\\candidate-lowoblique.png",
+  "camera": {
+    "projection": "ORTHO",
+    "matrix": [
+      [
+        0.8191520571708679,
+        -0.24240386486053467,
+        -0.5198367834091187,
+        -1.0396735668182373
+      ],
+      [
+        -0.5735764503479004,
+        -0.3461886942386627,
+        -0.7424038648605347,
+        -1.5198076963424683
+      ],
+      [
+        -6.184993850411047e-08,
+        0.9063077569007874,
+        -0.4226183295249939,
+        0.42976343631744385
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "ortho_scale": 0.4000000059604645,
+    "clip_start": 0.10000000149011612,
+    "clip_end": 10.0,
+    "resolution": [
+      640,
+      640
+    ],
+    "pixel_aspect": [
+      1,
+      1
+    ],
+    "lens_shift": [
+      0.0,
+      0.0
+    ],
+    "frame": 1,
+    "head_basis": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "active_original_keys": {},
+    "lighting": [
+      {
+        "name": "V003_BodyGray_0",
+        "watts": 110.0,
+        "matrix": [
+          [
+            0.8294633030891418,
+            0.21582023799419403,
+            -0.515181839466095,
+            -1.2000000476837158
+          ],
+          [
+            -0.5585612654685974,
+            0.32049307227134705,
+            -0.7650448083877563,
+            -1.7999999523162842
+          ],
+          [
+            6.215568504330804e-08,
+            0.9223371744155884,
+            0.38638606667518616,
+            2.0999999046325684
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "size": 1.2999999523162842,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "V003_BodyGray_1",
+        "watts": 38.0,
+        "matrix": [
+          [
+            0.7025168538093567,
+            -0.17530818283557892,
+            0.6897370219230652,
+            1.399999976158142
+          ],
+          [
+            0.7116671204566956,
+            0.1730540245771408,
+            -0.6808686852455139,
+            -1.399999976158142
+          ],
+          [
+            9.885129514941582e-08,
+            0.9691848754882812,
+            0.24633443355560303,
+            1.7000000476837158
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "size": 1.399999976158142,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "V003_BodyGray_2",
+        "watts": 22.0,
+        "matrix": [
+          [
+            -1.0,
+            -1.3717344415908883e-07,
+            1.0062080235684334e-07,
+            0.0
+          ],
+          [
+            1.5099580252808664e-07,
+            -0.44321998953819275,
+            0.8964128494262695,
+            1.600000023841858
+          ],
+          [
+            -7.836689519535867e-08,
+            0.8964128494262695,
+            0.44321998953819275,
+            2.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "size": 1.0,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "world": {
+      "color": [
+        0.18000000715255737,
+        0.18000000715255737,
+        0.18000000715255737,
+        1.0
+      ],
+      "strength": 0.20000000298023224
+    },
+    "color_management": {
+      "view_transform": "Standard",
+      "look": "None",
+      "exposure": 0.0,
+      "gamma": 1.0
+    }
+  },
+  "actual_light_flags_before_render": [
+    {
+      "name": "HeadKey",
+      "hidden": true,
+      "watts": 380.0
+    },
+    {
+      "name": "HeadFill",
+      "hidden": true,
+      "watts": 150.0
+    },
+    {
+      "name": "HeadRim",
+      "hidden": true,
+      "watts": 220.0
+    },
+    {
+      "name": "V22_Key",
+      "hidden": true,
+      "watts": 60.0
+    },
+    {
+      "name": "V22_Fill",
+      "hidden": true,
+      "watts": 15.0
+    },
+    {
+      "name": "V22_Rim",
+      "hidden": true,
+      "watts": 8.0
+    },
+    {
+      "name": "V22_Key.001",
+      "hidden": true,
+      "watts": 60.0
+    },
+    {
+      "name": "V22_Fill.001",
+      "hidden": true,
+      "watts": 15.0
+    },
+    {
+      "name": "V22_Rim.001",
+      "hidden": true,
+      "watts": 8.0
+    },
+    {
+      "name": "MIA_SourceReview_Key",
+      "hidden": true,
+      "watts": 60.0
+    },
+    {
+      "name": "MIA_SourceReview_Fill",
+      "hidden": true,
+      "watts": 15.0
+    },
+    {
+      "name": "MIA_SourceReview_Rim",
+      "hidden": true,
+      "watts": 8.0
+    },
+    {
+      "name": "Mia_v002_SourceLight_0",
+      "hidden": true,
+      "watts": 60.0
+    },
+    {
+      "name": "Mia_v002_SourceLight_1",
+      "hidden": true,
+      "watts": 15.0
+    },
+    {
+      "name": "Mia_v002_SourceLight_2",
+      "hidden": true,
+      "watts": 8.0
+    },
+    {
+      "name": "V003_BodyGray_0",
+      "hidden": false,
+      "watts": 110.0
+    },
+    {
+      "name": "V003_BodyGray_1",
+      "hidden": false,
+      "watts": 38.0
+    },
+    {
+      "name": "V003_BodyGray_2",
+      "hidden": false,
+      "watts": 22.0
+    },
+    {
+      "name": "MIA_REVIEW_Key",
+      "hidden": true,
+      "watts": 60.0
+    },
+    {
+      "name": "MIA_REVIEW_Fill",
+      "hidden": true,
+      "watts": 15.0
+    },
+    {
+      "name": "MIA_REVIEW_Rim",
+      "hidden": true,
+      "watts": 8.0
+    }
+  ],
+  "hair_temporarily_hidden": [
+    "MIA_V17_LeftBraid_Tail",
+    "MIA_V17_LeftBraid_Lane2",
+    "MIA_V17_LeftBraid_Lane1",
+    "MIA_V17_LeftBraid_Lane0",
+    "MIA_V17_LeftBraid_Tie",
+    "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+    "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+    "MIA_V17_PIXAL_DetailedHair",
+    "MIA_V20_Crown_PixalDonorLock",
+    "MIA_V002_RimFlow_near_ear",
+    "MIA_V002_RimFlow_far_neck",
+    "MIA_V24_Gather_Main",
+    "MIA_V24_Gather_Tuck",
+    "MIA_V24_Gather_Upper"
+  ],
+  "material_mode": "Body slot1 only neutral physical gray .23 rough.85; dedicated distant BODY110/38/22 DISK rig; world .18 strength .2, no generated/baked anatomy shade",
+  "body_correction": "Mia.v003.SupportedBody.FormD",
+  "native_saved": false
+}

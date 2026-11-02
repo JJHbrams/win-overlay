@@ -1,0 +1,296 @@
+{
+  "view": "oblique",
+  "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\scaffold-fullbody\\actual-ghost-guides\\oblique.png",
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+  "sha256_native": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "native_saved": false,
+  "full_current_head_body_attachments": true,
+  "hair_hidden_for_guide_visibility": true,
+  "guide_collection": "MIA_v003_FullBodySourceScaffold",
+  "guide_data_sha256": "e00c71958527cacc3c3c9f6f9bf1809b8c9104ffa20c89f946e37b22a8d6e70f",
+  "guide_kind": "Canonical frame1 low-A posed guide; source intervals/pose registration separate; no body edit",
+  "body_unchanged": true,
+  "camera": {
+    "projection": "ORTHO",
+    "matrix": [
+      [
+        0.8660253882408142,
+        2.1855697696082643e-08,
+        0.5000000596046448,
+        2.0
+      ],
+      [
+        0.5000000596046448,
+        -3.785517321830412e-08,
+        -0.8660253882408142,
+        -3.4821014404296875
+      ],
+      [
+        0.0,
+        1.0,
+        -4.371138828673793e-08,
+        0.8600000143051147
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "ortho_scale": 1.850000023841858,
+    "clip_start": 0.10000000149011612,
+    "clip_end": 10.0,
+    "resolution": [
+      800,
+      1000
+    ],
+    "pixel_aspect": [
+      1,
+      1
+    ],
+    "yaw": 30,
+    "frame": 1
+  },
+  "lighting": {
+    "actual_all_light_flags_before_render": [
+      {
+        "name": "HeadKey",
+        "hidden": true,
+        "energy": 380.0
+      },
+      {
+        "name": "HeadFill",
+        "hidden": true,
+        "energy": 150.0
+      },
+      {
+        "name": "HeadRim",
+        "hidden": true,
+        "energy": 220.0
+      },
+      {
+        "name": "V22_Key",
+        "hidden": true,
+        "energy": 60.0
+      },
+      {
+        "name": "V22_Fill",
+        "hidden": true,
+        "energy": 15.0
+      },
+      {
+        "name": "V22_Rim",
+        "hidden": true,
+        "energy": 8.0
+      },
+      {
+        "name": "V22_Key.001",
+        "hidden": true,
+        "energy": 60.0
+      },
+      {
+        "name": "V22_Fill.001",
+        "hidden": true,
+        "energy": 15.0
+      },
+      {
+        "name": "V22_Rim.001",
+        "hidden": true,
+        "energy": 8.0
+      },
+      {
+        "name": "MIA_SourceReview_Key",
+        "hidden": true,
+        "energy": 60.0
+      },
+      {
+        "name": "MIA_SourceReview_Fill",
+        "hidden": true,
+        "energy": 15.0
+      },
+      {
+        "name": "MIA_SourceReview_Rim",
+        "hidden": true,
+        "energy": 8.0
+      },
+      {
+        "name": "Mia_v002_SourceLight_0",
+        "hidden": true,
+        "energy": 60.0
+      },
+      {
+        "name": "Mia_v002_SourceLight_1",
+        "hidden": true,
+        "energy": 15.0
+      },
+      {
+        "name": "Mia_v002_SourceLight_2",
+        "hidden": true,
+        "energy": 8.0
+      },
+      {
+        "name": "V003_CurrentSource_0",
+        "hidden": false,
+        "energy": 60.0
+      },
+      {
+        "name": "V003_CurrentSource_1",
+        "hidden": false,
+        "energy": 15.0
+      },
+      {
+        "name": "V003_CurrentSource_2",
+        "hidden": false,
+        "energy": 8.0
+      },
+      {
+        "name": "MIA_REVIEW_Key",
+        "hidden": true,
+        "energy": 60.0
+      },
+      {
+        "name": "MIA_REVIEW_Fill",
+        "hidden": true,
+        "energy": 15.0
+      },
+      {
+        "name": "MIA_REVIEW_Rim",
+        "hidden": true,
+        "energy": 8.0
+      }
+    ],
+    "active_areas": [
+      {
+        "name": "V003_CurrentSource_0",
+        "matrix": [
+          [
+            0.8574928641319275,
+            0.25048428773880005,
+            -0.44940364360809326,
+            -0.6000000238418579
+          ],
+          [
+            -0.514495849609375,
+            0.4174734950065613,
+            -0.749005913734436,
+            -1.0
+          ],
+          [
+            -9.196212857887076e-08,
+            0.8734835386276245,
+            0.486853688955307,
+            2.200000047683716
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "size": 1.0,
+        "shape": "DISK",
+        "energy": 60.0,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "V003_CurrentSource_1",
+        "matrix": [
+          [
+            0.7071067690849304,
+            -0.1525694727897644,
+            0.6904509663581848,
+            0.800000011920929
+          ],
+          [
+            0.7071067094802856,
+            0.15256951749324799,
+            -0.6904510259628296,
+            -0.800000011920929
+          ],
+          [
+            -2.8799558293712835e-08,
+            0.9764451384544373,
+            0.2157658487558365,
+            1.7999999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "size": 1.5,
+        "shape": "DISK",
+        "energy": 15.0,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "V003_CurrentSource_2",
+        "matrix": [
+          [
+            -1.0,
+            -1.4013419047387288e-07,
+            9.488065444429594e-08,
+            0.0
+          ],
+          [
+            1.5099580252808664e-07,
+            -0.485642671585083,
+            0.8741572499275208,
+            0.8999999761581421
+          ],
+          [
+            -7.642124444373621e-08,
+            0.8741572499275208,
+            0.485642671585083,
+            2.049999952316284
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "size": 0.800000011920929,
+        "shape": "DISK",
+        "energy": 8.0,
+        "color": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "world_color": [
+      0.18000000715255737,
+      0.18000000715255737,
+      0.18000000715255737,
+      1.0
+    ],
+    "world_strength": 0.10000000149011612
+  },
+  "color_management": {
+    "view_transform": "Standard",
+    "look": "None",
+    "exposure": 0.0,
+    "gamma": 1.0
+  },
+  "source_target": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+    "sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+    "authority": "User reattached and explicitly selected v06 for body target; 2026-11-02",
+    "registered_not_warped": true
+  }
+}

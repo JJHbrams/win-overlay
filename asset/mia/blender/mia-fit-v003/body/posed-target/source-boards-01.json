@@ -1,0 +1,31 @@
+{
+  "registration": {
+    "method": "One global front sole-to-hair-crown uniform scale/vertical translation applied to ALL four current views; per-view horizontal pelvis centering only. No feature-specific normalization or aspect stretch.",
+    "source_crown_y": 54,
+    "source_sole_y": 950,
+    "current_alpha16_crown_y": 49,
+    "current_alpha16_sole_y": 943,
+    "scale": 1.0022371364653244,
+    "vertical_translation": 4.890380313199103,
+    "uncertainty": "Source hair flyaways and feet vary by about5px acrossviews; head/bust/shoulder landmarks require visible-run limits. This display normalization removes only total-height difference, not head/body ratio."
+  },
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+  "source_sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+  "boards": [
+    {
+      "view": "front",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posed-target\\v06-current-target01-front.png",
+      "sha256": "6d3af9adc559bc49be8d1bff04dc91147db1467c00480b330ea1d08beda7013d",
+      "baseline": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-source4\\front.png",
+      "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posed-target\\actual-01\\source-front.png"
+    },
+    {
+      "view": "profile",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posed-target\\v06-current-target01-profile.png",
+      "sha256": "596722063c6b0788f669129e0f9a5b36d008ebf4e711be5dfdc8b3f2b6629b5a",
+      "baseline": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-source4\\profile.png",
+      "candidate": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posed-target\\actual-01\\source-profile.png"
+    }
+  ],
+  "status": "REJECTED SURFACE; no body ART or garment approval"
+}

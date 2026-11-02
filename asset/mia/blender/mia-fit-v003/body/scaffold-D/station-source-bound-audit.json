@@ -1,0 +1,218 @@
+{
+  "method": "Manually read visible source intervals and original-pixel coordinates; actual Blender AUTO-curve extrema projected back through common height/origin assumptions. Interval checks validate guide bounds only, NOT anatomy or a recovered camera.",
+  "metres_per_pixel": 0.0018459480405519052,
+  "stations": [
+    {
+      "station": 0,
+      "source_y": 220,
+      "z": 1.3864540902265747,
+      "core": "INFERRED behind cloth or hair; not directly measured",
+      "posterior": "UNOBSERVED/inferred at all upper stations",
+      "observed": null,
+      "actual_Blender_curve_projection": {
+        "front_x": [
+          217.20918293275054,
+          260.79081908534
+        ],
+        "profile_front_x": 549.8442144692399
+      },
+      "source_origin_uncertainty_px": 8
+    },
+    {
+      "station": 1,
+      "source_y": 240,
+      "z": 1.3495351294155364,
+      "core": "INFERRED behind cloth or hair; not directly measured",
+      "posterior": "UNOBSERVED/inferred at all upper stations",
+      "observed": null,
+      "actual_Blender_curve_projection": {
+        "front_x": [
+          176.11851429110598,
+          301.8814897450751
+        ],
+        "profile_front_x": 538.5511432106111
+      },
+      "source_origin_uncertainty_px": 8
+    },
+    {
+      "station": 2,
+      "source_y": 265,
+      "z": 1.303386428401739,
+      "core": "INFERRED behind cloth or hair; not directly measured",
+      "posterior": "UNOBSERVED/inferred at all upper stations",
+      "observed": {
+        "front": [
+          176,
+          306
+        ],
+        "profile_front": 515,
+        "tolerance_px": 6,
+        "kind": "upper garment envelope; root underneath inferred"
+      },
+      "actual_Blender_curve_projection": {
+        "front_x": [
+          173.9122650493821,
+          304.0877349506179
+        ],
+        "profile_front_x": 513.5857849466761
+      },
+      "source_origin_uncertainty_px": 8,
+      "visible_bound_errors_px": [
+        -2.087734950617886,
+        -1.9122650493820856,
+        -1.4142150533239146
+      ],
+      "within_declared_pixel_interval": true
+    },
+    {
+      "station": 3,
+      "source_y": 290,
+      "z": 1.2572377273879414,
+      "core": "INFERRED behind cloth or hair; not directly measured",
+      "posterior": "UNOBSERVED/inferred at all upper stations",
+      "observed": {
+        "front": [
+          173,
+          307
+        ],
+        "profile_front": 500,
+        "tolerance_px": 5,
+        "kind": "cloth maxbust silhouette; no naked-core inference"
+      },
+      "actual_Blender_curve_projection": {
+        "front_x": [
+          171.19250459456828,
+          306.8074873330695
+        ],
+        "profile_front_x": 497.41284763196063
+      },
+      "source_origin_uncertainty_px": 8,
+      "visible_bound_errors_px": [
+        -1.8074954054317232,
+        -0.1925126669304973,
+        -2.5871523680393693
+      ],
+      "within_declared_pixel_interval": true
+    },
+    {
+      "station": 4,
+      "source_y": 310,
+      "z": 1.220318766576903,
+      "core": "INFERRED behind cloth or hair; not directly measured",
+      "posterior": "UNOBSERVED/inferred at all upper stations",
+      "observed": {
+        "front": [
+          172,
+          307
+        ],
+        "profile_front": 506,
+        "tolerance_px": 6,
+        "kind": "lower cloth envelope"
+      },
+      "actual_Blender_curve_projection": {
+        "front_x": [
+          172.64922289706982,
+          305.3507771029302
+        ],
+        "profile_front_x": 506.4161388628648
+      },
+      "source_origin_uncertainty_px": 8,
+      "visible_bound_errors_px": [
+        0.6492228970698193,
+        -1.6492228970698193,
+        0.4161388628647842
+      ],
+      "within_declared_pixel_interval": true
+    },
+    {
+      "station": 5,
+      "source_y": 328,
+      "z": 1.1870917018469689,
+      "core": "INFERRED behind cloth or hair; not directly measured",
+      "posterior": "UNOBSERVED/inferred at all upper stations",
+      "observed": {
+        "front": [
+          175,
+          302
+        ],
+        "profile_front": 515,
+        "tolerance_px": 6,
+        "kind": "underband cloth width/depth bound"
+      },
+      "actual_Blender_curve_projection": {
+        "front_x": [
+          177.02510110937726,
+          300.97490292680385
+        ],
+        "profile_front_x": 513.8336427919812
+      },
+      "source_origin_uncertainty_px": 8,
+      "visible_bound_errors_px": [
+        2.0251011093772604,
+        -1.0250970731961502,
+        -1.1663572080187805
+      ],
+      "within_declared_pixel_interval": true
+    },
+    {
+      "station": 6,
+      "source_y": 350,
+      "z": 1.146480844954827,
+      "core": "INFERRED behind cloth or hair; not directly measured",
+      "posterior": "UNOBSERVED/inferred at all upper stations",
+      "observed": {
+        "front": [
+          190,
+          290
+        ],
+        "profile_front": 516,
+        "tolerance_px": 5,
+        "kind": "visible anterior/waist skin; posterior remains hidden"
+      },
+      "actual_Blender_curve_projection": {
+        "front_x": [
+          188.65863433442954,
+          289.3413616293894
+        ],
+        "profile_front_x": 515.1821995133059
+      },
+      "source_origin_uncertainty_px": 8,
+      "visible_bound_errors_px": [
+        -1.3413656655704642,
+        -0.6586383706106176,
+        -0.8178004866940682
+      ],
+      "within_declared_pixel_interval": true
+    },
+    {
+      "station": 7,
+      "source_y": 365,
+      "z": 1.1187916243465486,
+      "core": "INFERRED behind cloth or hair; not directly measured",
+      "posterior": "UNOBSERVED/inferred at all upper stations",
+      "observed": {
+        "front": [
+          194,
+          288
+        ],
+        "profile_front": 518,
+        "tolerance_px": 5,
+        "kind": "visible waist skin runs; pose/line width uncertainty"
+      },
+      "actual_Blender_curve_projection": {
+        "front_x": [
+          190.17782061184982,
+          287.8221834243313
+        ],
+        "profile_front_x": 517.9662361521723
+      },
+      "source_origin_uncertainty_px": 8,
+      "visible_bound_errors_px": [
+        -3.8221793881501753,
+        -0.17781657566871445,
+        -0.03376384782768582
+      ],
+      "within_declared_pixel_interval": true
+    }
+  ]
+}
