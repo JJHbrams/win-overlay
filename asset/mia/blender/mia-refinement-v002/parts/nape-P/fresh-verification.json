@@ -1,0 +1,44 @@
+{
+  "actual_fresh_MN_O_L_replay": true,
+  "P": {
+    "variant": "nape-P",
+    "added_faces": 2,
+    "removed_faces": 0,
+    "existing_vertex_edits": 1,
+    "new_custom_normal_corners": 6,
+    "old_corners_auto_normals": true,
+    "no_original_UV_changes": true,
+    "resolved_free_layer_junctions": [
+      45426,
+      47299,
+      48012
+    ],
+    "deferred_buried_fans": {
+      "43139": "All153 samples buried; minimum\u221211.04mm. No blind cap or11mm push. Needs original part/emergence reconstruction.",
+      "45347": "All153 samples buried; minimum\u22122.38mm. No hidden fill presented as visible improvement."
+    },
+    "ART": "UNVERIFIED; no whole-nape PASS"
+  },
+  "nonhair_and_all_other_hair_materials_images_world_scene_delta": {},
+  "existing_semantic_and_deform_weights_exact": true,
+  "all_old_loop_vertex_indices_and_UVs_exact": true,
+  "all_other_POINT_float_attributes_exact": true,
+  "changed_original_vertices": [
+    65222
+  ],
+  "maximum_original_vertex_shift_mm": 0.2500118613243103,
+  "repaired_physical_boundary_degrees": {
+    "45426": 2,
+    "47299": 2,
+    "48012": 2,
+    "45218": 2
+  },
+  "new_poly_count": 120915,
+  "new_vertex_count": 100383,
+  "normal_policy": "Only6 appended corners have explicit adjacent normals; all existing corners remain automatic. Existing OBJECT maps archived, L uses geometric/deformed normals.",
+  "deferred_buried_junctions": [
+    43139,
+    45347
+  ],
+  "ART": "UNVERIFIED actual profile/rear/oblique required; no whole nape PASS."
+}

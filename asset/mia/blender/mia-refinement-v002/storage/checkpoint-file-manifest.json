@@ -1,0 +1,2206 @@
+{
+  "files": [
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/ACCEPTANCE.json",
+      "bytes": 6705,
+      "sha256": "c4f94b83663b9415da635532ee68b156eeb5fbc67688e04420d362bb549f5e5e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/art/crown-S/actual-board-manifest.json",
+      "bytes": 658,
+      "sha256": "6f61ad9fe9ea578daabfd7bf3227748ac7b1b24292d07cbc127a2114481e5838"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/art/crown-S/Crown_S_AuthoredFill_Candidate.png",
+      "bytes": 1626192,
+      "sha256": "5573374ef27c1485bdc30aab590ff0d528e5843588df417243676bab74082d38"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/art/crown-S/front-bake-actual-comparison.png",
+      "bytes": 365244,
+      "sha256": "bbee79c44ae850437d9a4bfde3685e32ac48aaa4849be2303ebe2516d1549abd"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/art/crown-S/front-fill-actual-comparison.png",
+      "bytes": 300548,
+      "sha256": "30f9be55a554f5aefb2ed7551d6d549126fe706d438dace5881c7fb5339bd5bd"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/art/crown-S/imagegen-prompt.txt",
+      "bytes": 1982,
+      "sha256": "4344e9d8212001887b6943af3fe34bd0a8febfd604f138e6aff992bae63ca810"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/art/crown-S/opposite018-bake-actual-comparison.png",
+      "bytes": 317065,
+      "sha256": "aa70b968c1a0f4f987f97a3585793daee6ca36039e48986b7c1c33e8a13a2a31"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/art/crown-S/opposite018-fill-actual-comparison.png",
+      "bytes": 289839,
+      "sha256": "e473d3ec365adce16e9072042e826ceb169142dcfdc677de0c5a6af749ad4745"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/art/crown-S/provenance.json",
+      "bytes": 1883,
+      "sha256": "2450104bbaeac4e5a6c8b2ea931b4c8f11b65aa4e39fd3100f3251aaea91b07a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/art/crown-S/ROOT_REVIEW.md",
+      "bytes": 2364,
+      "sha256": "35de11dd9b6667e5152a3876aad8e9e754bce7018547084244f3e2ff6f66cf08"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/compose_diagnostic_review.py",
+      "bytes": 1227,
+      "sha256": "9c66bd05da60a1c608184c4e4d317c19bb3d7af90778823bd19d627abb5ed64b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/compose_expression_review.py",
+      "bytes": 2920,
+      "sha256": "733dd8b63c82957915336dd8778d8c4dbb51a4c790701b38a50c4250e099e45a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/compose_source_review.py",
+      "bytes": 5114,
+      "sha256": "b4f615d5cb4d92f2f64e6219f0c56602427fade3a7f99ef87882f12a1bd75ac7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/execute_storage_cleanup.ps1",
+      "bytes": 3279,
+      "sha256": "7bcf981b9781b4b578932e72eabef609c6b3b616239a38d6cef2a7cd5695b3ae"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/actual-projected-pose-axes.json",
+      "bytes": 3452,
+      "sha256": "7e4b9002dd5080e60bea11de72e3bd56a7706eb6177a9eab1f236e657c0f04af"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/add_source_grin.py",
+      "bytes": 7399,
+      "sha256": "db488e3517bb299254090a871d6f7a325109f8187ab364c8aaf12dd4012ab5f6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/apply_pose_calibration_r3.py",
+      "bytes": 1992,
+      "sha256": "7be096593da30f9620237ba609af482d448b1177f504eff9061cfc0a5339540d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/apply_smile_preset_calibration.py",
+      "bytes": 1219,
+      "sha256": "064a6fb996f958888cd5fc89f35a7ec18d3e4263aa34beaedf7638f59fef2382"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/audit_mouth_visibility.py",
+      "bytes": 2754,
+      "sha256": "a38c4ff2d9401dabd47a0cb3f01100812c71463a74a734cb5b9ea906ed7c22b4"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/audit_projected_pose.py",
+      "bytes": 1934,
+      "sha256": "f660ac96ef0710ddeb9b1ba96019011a80198e05f650826d1ffcf9b685ec9871"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/baseline-facial-inventory.json",
+      "bytes": 485177,
+      "sha256": "a0a8d6381721145bc9dd4782457e2f89330741c3b6072c242c40fc8295ff6e62"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/build_expression_controls.py",
+      "bytes": 4391,
+      "sha256": "745d5edd0462992f60188530fac6e0284315fe3ce3cb3e11bce7843f9e31d921"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/diagnose_grin_occlusion.py",
+      "bytes": 3363,
+      "sha256": "9a4f98a2a10825db18b6b528d7b20c9e7af83121e1e6b377b8dab92b5b9316c5"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/expression-intents.json",
+      "bytes": 13205,
+      "sha256": "a94362e744a1447a460fc417e1378435999ca30470efc2c5927c7a59c39a4707"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/expression_control_delta.py",
+      "bytes": 6881,
+      "sha256": "74e6d1f568a377c0fa01a52dbe0f772e91960ebf3da05742db46760a05cc0abe"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/fix_preset_total_range.py",
+      "bytes": 1407,
+      "sha256": "e79fdad980b5862b8a7402b9923caf76b72f9a3e6582ff66a5516e824fefdc2d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/grin-C-ordered-occlusion.json",
+      "bytes": 686,
+      "sha256": "753165fae6108f66b1dc23ed79c1ce907c6a3d0796872ddd3a050804b10b65b9"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/head-eye-binding-audit.json",
+      "bytes": 3232,
+      "sha256": "3f5027dad8b3e1b1af0f3337ee9b87a2043e3e57034a0e34238f7563080ed859"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/head-gaze-transient-audit.json",
+      "bytes": 6609,
+      "sha256": "ccdb8da189cb4fcdda18a6a816c3c27ab87695b568afcabf1901e4d16cb3dc2c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/lip-boundary-topology.json",
+      "bytes": 18335,
+      "sha256": "ed9df769ae4b4c94e578f112d5d68672daa63064ee394180282f6745f65e8bd7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/mouth-components.json",
+      "bytes": 23932,
+      "sha256": "66e44e2ec376fe6817cd1a30cb65fac7b9ea18710dadb26f997577812168f11a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/mouth-existing-structure.json",
+      "bytes": 21331,
+      "sha256": "10aaca9db4fc9bb15d0ad925d5b94bbd275dd4c9d2aa01e2e13c4ea4f6550416"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/mouth-line-of-sight.json",
+      "bytes": 2594,
+      "sha256": "5369d3acb3ebb236f321f498c1d823781a2fa2552a77f6f8fda4b113d49be4a6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/plot_source_pose_anchors.py",
+      "bytes": 2666,
+      "sha256": "6d23c966ce6dcde436d85e401cf9c38e0d9b88633067852ba7bbaf569cd52d5e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/pose-calibration-r3/source-eye-axis-markers-provisional.json",
+      "bytes": 11139,
+      "sha256": "5059973480fb9947edc0d387bf8cbe9bc86a45459fc3b242284869c48e363385"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/pose-calibration-r3/source-eye-axis-markers-provisional.png",
+      "bytes": 627760,
+      "sha256": "3b99b2db3a65ecc0c88bd1b479c86943d18f47ca5bb1ac06bd340eca582ada64"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/pose-calibration-r3/source-marker-review-detail.png",
+      "bytes": 161614,
+      "sha256": "ca480769431a507389bdd8a62840f0763f3b744830835ba17fd575d4a5ad0e3c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/prepare_expression_intents.py",
+      "bytes": 4006,
+      "sha256": "aef95b46c68ffb2fb4db4d93ae87b6e490508487d136e7a42984253198638357"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/probe_expression_controls.py",
+      "bytes": 2334,
+      "sha256": "d05da28be9741d0058d3591410fe12ee9c3b30888e93a788bb8c810899c716fc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/probe_head_gaze_delta.py",
+      "bytes": 2363,
+      "sha256": "81507f9f544d94a7055f3497e64e3af978a5b231df70ecdcc81c11a67115a9f1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/R3-mixed-presets-diagnosis.json",
+      "bytes": 13319,
+      "sha256": "ac9367efd8269ded0efd70857812f4f6cf33aa853276226261a07e033f463a94"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/R3-range-fix-parity.json",
+      "bytes": 141206,
+      "sha256": "9b963fdcf86c77022077daf041a7ddbecdcb7d8deb55262c1b4a2644aaf41c41"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/render_expression_probes.py",
+      "bytes": 3005,
+      "sha256": "5a9664b06551bb9707071438395d0ce10fe825250ed1fc9fab1a7d29c84d8404"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/render_mouth_variants.py",
+      "bytes": 1749,
+      "sha256": "3b53ecff1f972cd604fa5ea64b5ee2c0629d53e4e36b36d1fb3b948c659fbcbc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/render_smile_calibration.py",
+      "bytes": 1996,
+      "sha256": "873d0c07773ea4c3ac21ee9676c95bc3e5cd9a593f68405553d4b1e5d1ac2f11"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/render_teeth_diagnostic.py",
+      "bytes": 2412,
+      "sha256": "7a30f22d3d8cad758a3a54a1addf4f7b9eb85964c813b897e4b99442d4282af9"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/smile-calibration-r3/P08-Fun0.65-hairOFF.png",
+      "bytes": 219822,
+      "sha256": "5253c0ff6f2b494bea0d0e2287f8978798254c3ba9cbc8e4c0dad310a6b05fc7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/smile-calibration-r3/P08-Fun0.65-hairON.png",
+      "bytes": 397633,
+      "sha256": "77857c757082fc874298e358fec5098ff192fd6b57fd0b0e8b06b06165bef2fc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/smile-calibration-r3/P16-Fun0.45-hairOFF.png",
+      "bytes": 219662,
+      "sha256": "dcee6483e29d5a0200a0f078bcb6ebfe2970ece1ffa7a215e827377ac5f6122d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/smile-calibration-r3/P16-Fun0.45-hairON.png",
+      "bytes": 397798,
+      "sha256": "1be97f75a59863f23efe9945422de6cd035660c7ea58d35033aa2d8c451af241"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/smile-calibration-r3/parameter-delta.json",
+      "bytes": 1180,
+      "sha256": "fdfb8d5ea0f69ed4b0af4092a1d31410f10a4305a04a91009b800c8a3916a678"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/smile-calibration-r3/render-records.json",
+      "bytes": 24481,
+      "sha256": "a2667b244260a2ad8bcd3631f89496801b3c6d48e6ceeb51d09c23139e142e42"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/01-neutral_observe.png",
+      "bytes": 163678,
+      "sha256": "68b83136a2c2b2635f976266b63bafb7a531108e4b0674831d5c8269776f9e05"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/02-near_closed_weary.png",
+      "bytes": 167927,
+      "sha256": "a6d0193119fe4cdadd921d9eb38f8069e2b43b8fddc5c97f097e7713fcef172b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/03-skeptical_question.png",
+      "bytes": 166621,
+      "sha256": "e898404d2a87a052114f07669e820ff41576385f57ef77799b1fec7012b37f0e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/04-aside_attention.png",
+      "bytes": 169478,
+      "sha256": "87045a0b6d5608ff74b8cc3c1cf2fdb9e0858ac4f51baf742628762a4e9278cf"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/05-downward_irritated.png",
+      "bytes": 174553,
+      "sha256": "d80a72487d3f780eb77491af69571c750c5be25f788aee670b60ef2c9442b8ec"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/06-upward_uncertain.png",
+      "bytes": 174593,
+      "sha256": "cd5aabf4b675b304f56c6c2fbe7e228b70b42fa5674e440fc9e4deec570ce0f3"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/07-thinking.png",
+      "bytes": 172084,
+      "sha256": "27b860ed986a8263fff52adf0f867099bd1679917301cfb47266f4507828edda"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/08-closed_smirk.png",
+      "bytes": 170098,
+      "sha256": "195e8fde3122a659be1e7530f64ecd255b3aab4afe4272b7243d28dffea8731e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/09-concerned.png",
+      "bytes": 173143,
+      "sha256": "44651fa776d57709c01a74415943345b604679f940e54b20233bd74960550780"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/10-toothy_grin.png",
+      "bytes": 178428,
+      "sha256": "c89726880ecc3dea7772e7a997b82953f77e0e99a99cad4a23204882e5efa523"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/11-flustered_down.png",
+      "bytes": 177004,
+      "sha256": "e590f80c2cecd9b8e22c3884f15c609ca774550f79fc81171fa66fb552e723e8"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/12-surprised.png",
+      "bytes": 172057,
+      "sha256": "dda43e9992948eace39d96447e36316bbb55fa4a509abf204492bb93f6151948"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/13-sulky.png",
+      "bytes": 175138,
+      "sha256": "e73c804c6d8fb42e0b4b35b4288f3db432996dc147f1ecc2cd3755c87be501e4"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/14-weary_speaking.png",
+      "bytes": 173829,
+      "sha256": "d391522ca898e55d9226fac106fb67e3942cff344db03b87bc62e84e0bb35ae3"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/15-stern.png",
+      "bytes": 173683,
+      "sha256": "4392c6841ca5a26fa9049d46987664d3f462774adfafb7e91514b16a64941833"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/source-panels/16-gentle_smile.png",
+      "bytes": 169238,
+      "sha256": "f59e26a5dfb624412d4554f94f3ca5210a3b54c131ade7d89470b515ee1e82ed"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/teeth-UV-classification.json",
+      "bytes": 4819,
+      "sha256": "27fa770c5196894febef8b8c36b21f471c048224a0e2b674e52120315c0f7b99"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/tooth-connected-arches.json",
+      "bytes": 3909,
+      "sha256": "d9b810c9ae1c53baac50b93e88075ab5ec0af9f4416dca3969e7dfb2fc4468ed"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/expressions/verify_source_grin.py",
+      "bytes": 2302,
+      "sha256": "f6b5ec76de4a4d5936f14a3e89311c6c845ccc56c24927c897a5872eee942388"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/final-R2-driver.log",
+      "bytes": 227,
+      "sha256": "fca057550a0e9ee6b502a5a8212c49e0da567ab719e461a113ac3d7302ed364b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/final-R3-driver.log",
+      "bytes": 2304,
+      "sha256": "e5e5512a208a2eb86928c0688f5c8209cd5e37cc3eb72c20589f25f78b0db42a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/final-R3b-driver.log",
+      "bytes": 273,
+      "sha256": "ce304a22e463c1c92e48eb22f8a0973f23bd692a53bda57062236f3887c3d938"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/INDEPENDENT_R3B_REVIEW.md",
+      "bytes": 2831,
+      "sha256": "f12ca23105b8283697f6af203f48dabf8b0ef819cb9a0c392f2bcc33d1f1bd71"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrate_components.py",
+      "bytes": 7522,
+      "sha256": "720d4a0a38251d4819fe25df676a74a3f8165bc8ad98d328324420170ae5494b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/fresh-reopen-OP.json",
+      "bytes": 8215,
+      "sha256": "e25d6586f99e9a8f2ddd1437e427c2d4783e6eea92430e75c8f52f3d0ca80812"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_OP.integration.json",
+      "bytes": 841805,
+      "sha256": "4590682f05f6538e4e9f9368b65b623b270320f4cbbc36e7cbb8e982ccaf6f40"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R2.blend",
+      "bytes": 251685271,
+      "sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R2.fresh-reopen.json",
+      "bytes": 8215,
+      "sha256": "e509c3f8ee0d694921bac6329a0b663e3f781abfce042a6f9f5bfda49ca4e3ec"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R2.integration.json",
+      "bytes": 846450,
+      "sha256": "2b8ca0052a19e81f848376b5afa290a04323e82835f208e9d6f25ab8d0857000"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3.fresh-reopen.json",
+      "bytes": 8255,
+      "sha256": "7b16d994e13b15eec57d5c4b44ab6b507656a2e8729f8f71eed74150345e49a8"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3.integration.json",
+      "bytes": 10914462,
+      "sha256": "766ddd75b965915bed76414704adb030c2012007d51d3539757febb8ef3f4f63"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend",
+      "bytes": 251770982,
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.fresh-reopen.json",
+      "bytes": 8256,
+      "sha256": "eec5a6e20a47253fcdabd96c0a1dede9641b9e650b1898b51a79c4b9ba0b063a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.integration.json",
+      "bytes": 11146219,
+      "sha256": "61fbbf86700b1ed1f8511f8b8f3d6526a5389b327f8247e71c95702bafd22d79"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated/Preflight_R3.integration.json",
+      "bytes": 815057,
+      "sha256": "57a194239974c09f84a8e203d04e7b49bfded3d253ef6e3cc1a288b2e4cde8b4"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R2-eed4-critical.log",
+      "bytes": 2775,
+      "sha256": "176b770ccb675d7e07b90ffd531671af4ce6bb1b95dc7db6e803e1db7be9cafe"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R2-eed4-expressions.log",
+      "bytes": 8819,
+      "sha256": "331dff52924332fbcfbfc221ed32654cbcde174530c18eba2ffa63adf9a8597b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R2-eed4-fresh.log",
+      "bytes": 354,
+      "sha256": "fdd27a62ac72b1a61ee11ddd4c16c4e2c3c25130dc793aca04663ecbf13854ce"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R2-eed4-orbit.log",
+      "bytes": 4970,
+      "sha256": "30446e6773ace3af4a3bca2d14c20060191eddee53735dc12dfa1be79092a613"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R2-eed4-source.log",
+      "bytes": 4332,
+      "sha256": "ce025ea9f99fccf923ca9b4162a0c0a64a92760a744ac5bb5b565609fec7fb12"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3-855d-critical.log",
+      "bytes": 2775,
+      "sha256": "6a5aea21cfd140a97b924fe9b09a5268d086f77291b1b1f34317687789069d20"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3-855d-expressions.log",
+      "bytes": 8819,
+      "sha256": "17925b0ad5df85da58a145efe991f5c30664c8de587cc5d896bf46c61a787a9d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3-855d-fresh.log",
+      "bytes": 354,
+      "sha256": "509d9c47a07d4ef9c0efb0bca59c989d8377461b2c074b49c26bcfe7ad488e99"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3-855d-intermediates.log",
+      "bytes": 1171,
+      "sha256": "8f913a60fd8398cf01c946450bfb6175b6878f0416863595dccb2fac27b5c25e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3-855d-orbit.log",
+      "bytes": 4970,
+      "sha256": "147714a5527cff471969791d012a16cb0687eac96e02161bedd485f3b222d7bf"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3-855d-source.log",
+      "bytes": 4332,
+      "sha256": "b3a5c74c9f514233737118998fa76be0f3e46f8f9854d438c322be0c3627e62c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3b-critical.log",
+      "bytes": 2724,
+      "sha256": "2332df2c701541c476f81f61d95625de31be651f33b0f2dd1b8f36e9662d9a6b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3b-expressions.log",
+      "bytes": 8652,
+      "sha256": "226a0a5aa22b8f136fe9a749b51c81c0eed9798e82c8eecfa5d55b4230dfb1bf"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3b-fresh.log",
+      "bytes": 355,
+      "sha256": "3516cf628632aee1ab8e11264ab9bf544ae5ab72e245a08876a5bc57ae123ff2"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3b-intermediates.log",
+      "bytes": 1227,
+      "sha256": "6ceee381f4dc5986149e666cde979856993b3282ae3be2d5c449bf044abe061a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3b-orbit.log",
+      "bytes": 4871,
+      "sha256": "2dfc2f5b6739500e1803cb1a90f98a8ea1075570ca473e601c74a7a92813eab4"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integrated-R3b-source.log",
+      "bytes": 4249,
+      "sha256": "adefa882e8a2acf6495987cf143baf8c81a6e5141bc71f42526b30766999a9c1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integration-OP.log",
+      "bytes": 1726,
+      "sha256": "e6b948a7aabb929624771185b2078d911bb25a4633994cc1df8785bc627bd0d4"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integration-R2.log",
+      "bytes": 1823,
+      "sha256": "5ffa3b90815c2058fcf8a0cda59fc072462850a3233e7f371ae4a3b095e26922"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integration-R3-observed.log",
+      "bytes": 1574,
+      "sha256": "b6bfa099157688bfc677d9dbfd7f5dbed3b0b0ac87e750140dc01e1088ba79e7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integration-R3b.log",
+      "bytes": 1652,
+      "sha256": "b6effdbd757a8ab1834c3494eb498912691e0ba61855375187f05e2dc4f6c685"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integration-recipe-OP.json",
+      "bytes": 3610,
+      "sha256": "9aaae497130e3847c6e664f1aeb33ebd7517886a1010b352000eb6b8a0209ff0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integration-recipe-R2.json",
+      "bytes": 4047,
+      "sha256": "ed213acc6b45273f4f2a6a3d8b77990e7a844b08d9b75fa32daf5ca1ab34f2ae"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integration-recipe-R3-observed.json",
+      "bytes": 3337,
+      "sha256": "f91d706c856a2f8e25ed7d1db30520746fe0b3590a02795e386b1077898070ed"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integration-recipe-R3-preflight.json",
+      "bytes": 2749,
+      "sha256": "d1e56aa5a3e3e03c9e233d856e9477d05f542060aba077689607209ea3a2c51f"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integration-recipe-R3.json",
+      "bytes": 3082,
+      "sha256": "dc0ea4d241c1788510f733d4380ba2c0b4f8874f415458c8b82d7afe30b40177"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/integration-recipe-R3b.json",
+      "bytes": 3816,
+      "sha256": "6e677fa76b6de15bfdf2ba8c3ed249f9cebfef5ad512cf9c7eec52ffaac28866"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/body-final-delta.npz",
+      "bytes": 264439,
+      "sha256": "48a7a4f3eed550c6503f78c074c5b1a779cfc2a023666059420bf00464d82fcb"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/body-weight-delta.json",
+      "bytes": 52000,
+      "sha256": "e418ca656ddf00dc6dc2cec97f31d8f70530d10d6fc5d3b40628774597693428"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/current-scene-replay-guard.json",
+      "bytes": 978,
+      "sha256": "e153ea626af00b93bc16c6a075f0e238a4c51c72abaeea7f62290459b342b3d7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/final-image-inventory.json",
+      "bytes": 84081,
+      "sha256": "2801c9e93fbdf5a268f6cddc0ff6c54ac8679c1b5e147bd1e44ab29121347ffd"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/final-render-completion.json",
+      "bytes": 1621,
+      "sha256": "d7d14d940f1514ad3def5c834f3692f7651bd970f69be989860c8f646e9142fd"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/HANDOFF.md",
+      "bytes": 7038,
+      "sha256": "24d981ec439ea01d1260f776e78f2c9961c108b1e4a8948a20338b5c7ef44db8"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/Mia_Body_Roughness_2048.png",
+      "bytes": 86387,
+      "sha256": "d72580fab82095111d614cc5584e79d108120973b28b0af9c2eb32f3c7184241"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/Mia_Body_SeamHeight_2048.png",
+      "bytes": 466214,
+      "sha256": "a609a269c7f6e52233001e784de2745c13e63c51614c12ea51e54bbb07d3a035"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/Mia_BodyPigment_B_2048.png",
+      "bytes": 1232714,
+      "sha256": "09b333a754cb6f4e84a8a05daf64e7683c9e195dffc9ec6bba3a442955d43595"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/Mia_BodyPigment_G_2048.png",
+      "bytes": 1220487,
+      "sha256": "858fa8a687437ce7ae65454eae4b1575d7d8c31940f6958505d869eaa9989825"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/Mia_BodyPigment_R_2048.png",
+      "bytes": 1129522,
+      "sha256": "10e365ca508ea61e7c3992ff9353bdedefabc1e5d706b8b605ff3b4a170b3d79"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/Mia_BodyUnderwear_Color_2048.png",
+      "bytes": 2150989,
+      "sha256": "f67736081765233bd45db8ccab4f9b1bd501d24a8d401560ea0beac61c475c03"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/native-retirement-allowlist.json",
+      "bytes": 4153,
+      "sha256": "d5682f0365509cf96032992893ebe930c0aa12e4c8dd9539fa20e6c9cad41d73"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/portable-manifest.json",
+      "bytes": 4448,
+      "sha256": "5430a508442478224f533636835d5054b85cd8233adff4cc941efa23176b734b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/replay_current_scene.py",
+      "bytes": 10179,
+      "sha256": "ca43e4c046972a0d2a7b0835f2fe14c56a70256ea8b207d7ef830ba5af262d28"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/body-G/underwear-uv.npy",
+      "bytes": 161312,
+      "sha256": "323d73add378d534a3247cf54857a08f2d42e35e0e2cad7f497105c3af9e85d2"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/brow-support/actual-image-comparison.json",
+      "bytes": 5462,
+      "sha256": "9ea74866a03f5292236d93d6e692497a0cc02fc14c69cbb75708dc888a28d606"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/brow-support/brow-support-metadata.json",
+      "bytes": 4667,
+      "sha256": "c21ea7a06bb6ede3c688b45c31237cc8592ad8679ff063634aed913bc46b8173"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/brow-support/brow_support_guard.py",
+      "bytes": 3057,
+      "sha256": "35387b7b50745a7495861e79db2e9688d702edd48e2af1e99b63394d034d1266"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/brow-support/HANDOFF.md",
+      "bytes": 6564,
+      "sha256": "5e7399b9fdac7e1b329cdc5ca6635a1759e7a0b390cc4a8472f15bd72956efb1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/brow-support/P05-source-before-after.png",
+      "bytes": 339542,
+      "sha256": "b064679d761a53c44605e7b5b87ae33192d22157af066277bc6f89d8ea0d6f6e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/brow-support/P15-source-before-after.png",
+      "bytes": 337774,
+      "sha256": "f7e0110cfb8535056a42c6e863e16e82101c78442e55557d656e609ef7f280c6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/brow-support/portable-support-manifest.json",
+      "bytes": 843,
+      "sha256": "809fde631591e2a70315ebd51fdae1a008624f3cbaeba01d3b1cd342337a2d49"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/brow-support/replay_brow_support.py",
+      "bytes": 3036,
+      "sha256": "1882ec0698db383d1c06f9ca677eca6b921847eb96296cea2f76fbcb86f673bb"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-O/apply_crown_O.py",
+      "bytes": 1543,
+      "sha256": "a396ec77087c75c376505def9d2921a018d6c9dba5b6feabb6e6a5c9fcd01b2d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-O/fresh-verification.json",
+      "bytes": 4740,
+      "sha256": "b7e2bb717c735dbdcb8d1648cb008e2fd35f1ea1f1eaac5e019d7a7f93d8ec5c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-O/main-coordinate-delta.npz",
+      "bytes": 1896093,
+      "sha256": "083c74a4b556983a9c39b8679752e73ee934fdeb540c35457585a44e6d1182b8"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-O/portable-manifest.json",
+      "bytes": 708,
+      "sha256": "dc1f34df353e46b91e5fcfd95ebcce38202b2ab82b5c790daf0d8b8d43af6fea"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-O/report.json",
+      "bytes": 2360,
+      "sha256": "176e569edb1d01cc0c30b05a27fd179130c9900ffb15aace4d67b9bb53feeb8d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-O/stub-identification-board.png",
+      "bytes": 222005,
+      "sha256": "79e0660e8c8e780ff79eb409dcb837576facebbba8fe4a8f68805a42df5c7a9c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/active-UV-hybrid-proposal.json",
+      "bytes": 126103,
+      "sha256": "695b23c55d4a22c4bb85e7867af3e1d111d11e23b3e8962adeab3c47e5751620"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/actual-pair-metrics.json",
+      "bytes": 1792,
+      "sha256": "e20011cb1c2d215492161e72e011bc1bf18853eec8f3aff8d0673980c03527e2"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/apply_crown_S_fill.py",
+      "bytes": 3566,
+      "sha256": "5991a1a92c843920a7528648babfba26711331081c9508a0ebc37082fb8e360c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/apply_crown_S_uv.py",
+      "bytes": 4395,
+      "sha256": "ff7b4bd0e74391b50bcdc1628dcd75e03905c81bf64e4dd73a23e3bdfaa7abd5"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/art/Crown_S_AuthoredFill_1254.png",
+      "bytes": 1626192,
+      "sha256": "5573374ef27c1485bdc30aab590ff0d528e5843588df417243676bab74082d38"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/copy-receipt.json",
+      "bytes": 2548,
+      "sha256": "c25c0652d5085cae00a17b52e754a5bef4b3a1dd2fbf8499b4d47e43300d84cd"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/crown-flow-frozen.npz",
+      "bytes": 126163,
+      "sha256": "2be8bb6bfd71ed84c1653a74a00a45cd9b9024df1d2162f62b771c5897a7735b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/Crown_S_ExistingPigment_Bake.png",
+      "bytes": 1435542,
+      "sha256": "cde86291dcfba0dd54574a4500bad27c808aa6d876877db6f004dcd9aa6dd339"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/Crown_S_MissingPaintFeather_DATA.png",
+      "bytes": 77098,
+      "sha256": "64b9d610db7f27c94c4ec725c41fe10f0d1d11c0622d2f0929d5d47c210dff7d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/Crown_S_MissingPaintFill_MASK.png",
+      "bytes": 56044,
+      "sha256": "6c86a3f308a51d8af857384971f371fc1dbc5b9fdaaad19892ce26406a608ca1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/fill-runtime.json",
+      "bytes": 1097,
+      "sha256": "53d4e2a20258d01fc1ca9e638e002c37ea9f0461eefe615413a0d4acb369ccd2"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/fresh-UV-routing-guards.json",
+      "bytes": 1460,
+      "sha256": "3d73e690737b5e6192b9b1549a3fe8dc82f084110b0ecbc0fe4a5a6b93f1d557"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/HANDOFF.md",
+      "bytes": 6287,
+      "sha256": "e9e4bac14f3bab8e4443773144e21cd19f102815802a4ba4b3700fe30d45e5db"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/manifest.json",
+      "bytes": 1924,
+      "sha256": "34ac8b77cec9b977e194187e0807338268d3bea898d7aab88ecde3dcb89fb2ba"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/RUNTIME_FILES.json",
+      "bytes": 2090,
+      "sha256": "71c34e71663fc946263c4c856a405328fe86c9d71ff46ea2d64db0176b46bd91"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/crown-S-unselected/UV-distortion-and-limit.json",
+      "bytes": 971,
+      "sha256": "9f36402c9d6517e4e71720dfb4761e2ec76c2a11e5a115e9c0ba3bd02623b3d2"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/eye-A/audit/CPU-guards-A.json",
+      "bytes": 104944,
+      "sha256": "dc44ec463e80068a655a419612f91cbf64e78891875e9ba1e4635ce95cdbc446"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/eye-A/handoff-manifest.json",
+      "bytes": 4790,
+      "sha256": "fc024efef24a7a925f7a1a31a7dde3b6f71591579391c0feb3eef0d44509b04b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/eye-A/HANDOFF.md",
+      "bytes": 7095,
+      "sha256": "23723216e45f4365333136953b0e22bf0946c7d1e7d8b07a381383af7a830f39"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/eye-A/payload/surprise-A.json",
+      "bytes": 96819,
+      "sha256": "7df2d49a59607d7a526b47a772d098ff436bc8239630700856467951d7237ab7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/eye-A/payload/surprise-A.npz",
+      "bytes": 83932,
+      "sha256": "28800963d89635d5c5ba6588a3adb649151fc6a567df534ce57d9a90b9bd13f0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/eye-A/portable_expression_refine.py",
+      "bytes": 8283,
+      "sha256": "434a8b3f2e9465e06cdc23a5758b6fbe60b7e17e82724fbe6a6e96ac570e411b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/eye-A/review/A-quick10/paired/actual-diagnostics.json",
+      "bytes": 3889,
+      "sha256": "f2addb442b1cbd800894e21e4002271d3fa4364417c3df55c2a79bbdc14d38b0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/eye-A/review/A-quick10/paired/closure-wink-depth.png",
+      "bytes": 293148,
+      "sha256": "2952b3dbf4441828a28bb95f65c7f1d244a8ced1c8715c740a0be9db7bf69609"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/eye-A/review/A-quick10/paired/P03-source-baseline-A.png",
+      "bytes": 367016,
+      "sha256": "9b7282fd78f6702ef86da742ad0dfc3ea7fe35b49cca736a73d6dd4e1ad87eb7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/eye-A/review/A-quick10/paired/P12-source-baseline-A.png",
+      "bytes": 386343,
+      "sha256": "51a5b7af55f1d19a18d480e6c51a5d8fab50f6b7696adc5f429a676caaf300b0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/art/Mia_FatigueCreaseNose_A.png",
+      "bytes": 1479342,
+      "sha256": "27eaffd7f6b53537389b61f7f0f3b7109c71fba340af5be54fcf8c3295155cf8"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/art/Mia_GrayMauve_Lip_C.png",
+      "bytes": 1443300,
+      "sha256": "dbd9e6747fa911fe375ae3c327e75b93456d6b7eea1b6590f0c7a009f5fe1035"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/art/Mia_Nose_B.png",
+      "bytes": 1478511,
+      "sha256": "b34942233d1da6576b657588c947f5fc12cbb35e83b78f7622874bd1ed8071a0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/art/Mia_SmoothFatigue_TracedLip_D.png",
+      "bytes": 1477985,
+      "sha256": "fe89c84c093186c37e1f7eb51abfcefa49f3ed042c51324ef734faf731cf80a0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/art/provenance-D.json",
+      "bytes": 4112,
+      "sha256": "9a2a5ed4d9bdf3a2ccaadf3d31bc0166b9055c64cef622321a3ac74e9b4cecd0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/audit/A-material-preconditions.json",
+      "bytes": 687,
+      "sha256": "072d63ae797a04659f6537ebc5b9b56f664b2ccd8f4599084c6a484b7e9f7cb6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/audit/B-material-preconditions.json",
+      "bytes": 681,
+      "sha256": "098654adb7beb9814813c3b8c5ba78622d84c13d9f1c456b8c76203e974be379"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/audit/baseline-guards.json",
+      "bytes": 946553,
+      "sha256": "0343e85446db87b851f828e70d959827333853a4c8131c547bc39470eb50e139"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/audit/C-material-preconditions.json",
+      "bytes": 690,
+      "sha256": "9770b60f23f4dedce0a76f4d130d75e84f66a065f90fdd0e688785e102bd7550"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/audit/D2-portable-manifest.json",
+      "bytes": 8250,
+      "sha256": "43aaa662b17b3a2ebfb0446ceee4420471dbd4906f1e4d9f5aed35dfaccd4dc8"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/audit/D2-portable-replay-guard.json",
+      "bytes": 1334,
+      "sha256": "24f63ed9dc15c50ae5a3eb2bc8a7a7d9660841dcda29658c6e73239295a227b6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/controls-D/actual32-mouth-UV.json",
+      "bytes": 9366,
+      "sha256": "a58447b6d6cf81fd6bc83adba8822be756bb5f05b1475a70cb970ef92bcefcba"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/controls-D/D_Actual32Lip_FatigueControls_RGBA.exr",
+      "bytes": 532642,
+      "sha256": "fe66cab9f5b0a73e3893947e9a752a8085c23cf5bd65a4e451ba12ec39690c36"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/controls-D/paint-background-samples.json",
+      "bytes": 1392,
+      "sha256": "21451c9bcbf8050a4ed699539cb18e84ac0d6fffc0b39b78f80d07247321ae10"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/guard_helpers.py",
+      "bytes": 4416,
+      "sha256": "38eb075f8da45f66a6c05555177201782ea617c22566351a7e67f9f04059e4bc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/HANDOFF_D2.md",
+      "bytes": 5862,
+      "sha256": "24cb9022840c42c57ada24f5bfa01b14a924a467e75d4f6bcdea0db218426dd6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/portable_face_delta.py",
+      "bytes": 1074,
+      "sha256": "c86070a13718bf82a21d663e27a45931bdb8717e430a26fbd51bb1e395ce8c4a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/replay_eyes_lip_C.py",
+      "bytes": 6356,
+      "sha256": "e4d696fd7ee67c3eec3e67ec10c44d0c9df66db8b3dbe0dc8f8779ea3a35ebc0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/replay_material_delta.py",
+      "bytes": 8995,
+      "sha256": "fc01575177d492f50cdcfb7fb45274d657aeb8714f1d2de8d6c7f49a523507bc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/replay_nose_B.py",
+      "bytes": 6152,
+      "sha256": "4274ee7a0a76a550a582d4d340bd70a8a12e6b8e65b1c32589841e0e7012687d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/replay_smooth_D.py",
+      "bytes": 9921,
+      "sha256": "1d1dae6455e8a7d4bf9802a6e7c9b815b62971c99e8571713f582d8bad477d34"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/face-D2/REVIEW_D2.md",
+      "bytes": 3917,
+      "sha256": "93bb550a96f30937b73ee3f76ebd6187b0fee0b5b1c4b08686358d5b8ed92018"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/apply_bundle_M.py",
+      "bytes": 5385,
+      "sha256": "e51dee54f19e61767c5df3cb4003d9757dcbbb599f372909a2506c52e505b039"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-00.npz",
+      "bytes": 8437,
+      "sha256": "c3d893b59ba6c3ac7e8c6ad20c61cd826595516e5e764d6f55bc819bf92b53ce"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-01.npz",
+      "bytes": 37480,
+      "sha256": "a0e20fb10363cf1fd178ac385e108f4f0221e39a9ddf533d6babcdf51041aa74"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-02.npz",
+      "bytes": 37571,
+      "sha256": "6e8e6b9d67e181d74e5e4648e68c1597838d5412fe1ff2d5632bb850dfd3999b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-03.npz",
+      "bytes": 37596,
+      "sha256": "1e819b0295c77d26976d9aed39a8ef785d47fa259643a42724071f1890c46b8d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-04.npz",
+      "bytes": 4802,
+      "sha256": "2c592f60a48c5a964e61f476a5a485aa529234618878f1eaec8b74436c6e0858"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-05.npz",
+      "bytes": 98792,
+      "sha256": "faef56340e9f01c7b09f28d06790d2d2f30f9d1affdfbcc4657e0bac743660f6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-06.npz",
+      "bytes": 8601,
+      "sha256": "ce454f482b462e311754e2c3ed6e308eb329f66a32a570027719f3d32c2aaad3"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-07.npz",
+      "bytes": 8531040,
+      "sha256": "45f47592bc0295505b8d10e84c7512d2aa853c563ba0589f01407994c138f859"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-08.npz",
+      "bytes": 26279,
+      "sha256": "6327c04d1c132348774ab425b702d5a545e03fea6b476659ce8f7d9fd8a9a6a9"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-09.npz",
+      "bytes": 61083,
+      "sha256": "932149dffdf9f4ac8a3d51b6b281a4413c3b3752d956c29bb7c59b53f3c865ab"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-10.npz",
+      "bytes": 107286,
+      "sha256": "c1f40f6ee4e898809c1befbadb155db22811c0ea45e3a7210a51253bc272ef45"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-11.npz",
+      "bytes": 295749,
+      "sha256": "20f8a08100693ff23e5621616f4567cfbe4f1f3b70e03557c8e47bfb6b711d90"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-12.npz",
+      "bytes": 286513,
+      "sha256": "efa110eca0d1bd57027e3d86321515bb5a72f60501fb6cb71f0032c7319d344d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/actor-13.npz",
+      "bytes": 289773,
+      "sha256": "8573b1cd7b9ea2e50e1d5926698204c88a8f11936ccc69d80ff773839438838f"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/hair-materials.blend",
+      "bytes": 39876910,
+      "sha256": "a7f92fe5e3aff9678981eb00f79a9604f5d3ddb45f9b7e784196c5caa0c5c80f"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/bundle/manifest.json",
+      "bytes": 87437,
+      "sha256": "af060a2b35b5f567ea1a8739c19bf68f550e5ce5134b1c5d41bf1ffe65a4c0ef"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/HANDOFF.md",
+      "bytes": 7870,
+      "sha256": "20d996b12bdfbe458d8586c93c970700f06a748bc9cf0f4da2f4ffc7c6000522"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-MN/portable-MN-static/fresh-replay-verification.json",
+      "bytes": 12148,
+      "sha256": "51a676ce49c899b06bf0d9e59b0a1c3827d05aa53f6bfca6f13bb63e5b8b62f1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-surface-R/apply_surface_R.py",
+      "bytes": 2936,
+      "sha256": "f91a5b82712981254437548060f1660b72d72fb57e2997d245ab35c27b948ce1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-surface-R/fresh-guards.json",
+      "bytes": 1772,
+      "sha256": "18214f6830a30ca9ba1330f29bca00027a2ed6d83dfcd4ce5fb242d429e57ac2"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-surface-R/HANDOFF.md",
+      "bytes": 5769,
+      "sha256": "765ba2a5c48a2a992f21dde4f23579cadc2dc2b08608eee41ae4109c070d7ba6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-surface-R/manifest.json",
+      "bytes": 1216,
+      "sha256": "9915ad21672043fda9165b6639a0e06e1de282a2834573a555306b92201597e3"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-surface-R/opposite018-production-gray-board.png",
+      "bytes": 400418,
+      "sha256": "ab8e443cf3ed25db20b3e6aa0018492c3d848767595b0007ffecdaadfe5fcc6a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-surface-R/pigment-envelope.npz",
+      "bytes": 334006,
+      "sha256": "fe6de6e75f25d505b2c522ae27f762983e711224908d8116cda21c7fe9158ebf"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-surface-R/pixel-difference-report.json",
+      "bytes": 4860,
+      "sha256": "d6b9b0f805fbaf4975e0ce6050393df23e5b2df34f6e8834c2c85f02dad643a0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-surface-R/profile-production-gray-board.png",
+      "bytes": 338419,
+      "sha256": "95cb392ac0e3a8333bde7dc4330cfc362d30bfd358522ddc3fa872cdc7550bbc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/hair-surface-R/rejected-first-compile.json",
+      "bytes": 753,
+      "sha256": "ba8a5d97cb91135fa7e03affd4fa8c13e9f0444bad2b8d0bb5ca6e5872eac6f8"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/coordinator-patch-guide.md",
+      "bytes": 4362,
+      "sha256": "d02e569498cf42e91250b93a4d7bcc14acd914b9ffd40e187d93307f6e118311"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/CPU-id-property-ui-r32-report.json",
+      "bytes": 1661,
+      "sha256": "cc9b28bdc14419dc4f085c2e79e11b67c93b8235392fc6f7293a38fc7c7ae954"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/CPU-mutation-report.json",
+      "bytes": 3533,
+      "sha256": "2621ff74ae0bff01a7768ca9e4d20491f3f5de1a540a3c35851a681ed243e5ef"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/handoff-manifest.json",
+      "bytes": 1941,
+      "sha256": "c51c0da44fa15972b9e1aae1d612c16bec0f9cd0b64ee637835ae70e08ef0939"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/handoff-r32-manifest.json",
+      "bytes": 1250,
+      "sha256": "a00acac2a2c0ca9f299805ab0ea968e6e5b9614fe7a17d38bd27295efad57b61"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/HANDOFF-r32.md",
+      "bytes": 2135,
+      "sha256": "faba829e46b2d716e15d2572e4f2a0308b264f1a7b5a9536616781c8f6c5b58e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/HANDOFF.md",
+      "bytes": 3442,
+      "sha256": "a9984523abe6a62f7421d0ac1dc631279a0423a845e78cf331fbe52c43045896"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/scene_fingerprint.py",
+      "bytes": 18154,
+      "sha256": "694d0b0f5e0b649d20e8c036fdca16a2396a23b08a05d3ad6630d9943b20541c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/scene_fingerprint_r31.py",
+      "bytes": 17214,
+      "sha256": "e282d98bd8db32cdc9a56d444fce41e4cadd4aed10ae53337972f8dfc70c5e29"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/test_fingerprint_cpu.py",
+      "bytes": 10159,
+      "sha256": "2dedc95edb1dfbc69b129c6d00835c70d5a8578b8bd795492058d0ace2032d15"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/integration-guard-R3/test_id_property_ui_r32.py",
+      "bytes": 3575,
+      "sha256": "35e424f38c3c9ab43f3178c689335eaa7da3687f92daa42153f3b26f1ee14223"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/mouth-C/audit/input-guards.json",
+      "bytes": 947125,
+      "sha256": "b967e61d3430fca5508ffc8822ab4f718285d8021ccbd180f4ace9ca65b584cc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/mouth-C/clean_oral_palette.py",
+      "bytes": 7070,
+      "sha256": "b19fbb03b0d6c0f74d344ff86900b1b7b47ca205228ee1d3c65c7a76f06e0d80"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/mouth-C/guard_helpers.py",
+      "bytes": 4416,
+      "sha256": "38eb075f8da45f66a6c05555177201782ea617c22566351a7e67f9f04059e4bc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/mouth-C/payload/mouth-rig-C.json",
+      "bytes": 223363,
+      "sha256": "d11b7bb6d8c98f0fd106609e90df5e7148c33982f75de71ab0b8af0bae0d70f0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/mouth-C/payload/mouth-rig-C.npz",
+      "bytes": 172960,
+      "sha256": "f31c24cf0535e6110b935ff0c187b631aa46e3ac8d51d3283f26231c54646d48"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/mouth-C/portable-files.json",
+      "bytes": 1508,
+      "sha256": "d9703a3b6e819ccec53d0b8b44d36ce6170bf52f6481f85e9736ddd94e972a63"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/mouth-C/portable_mouth_delta.py",
+      "bytes": 11154,
+      "sha256": "2da5ded93b069b268451359abb83280b7e50fe0f9856d804336b6630f9d70cc6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nape-P/apply_nape_P.py",
+      "bytes": 3046,
+      "sha256": "e74fc8fd0aeaf5de526a08e3010840f6a98e9007cc4d67619f4b0e3873558257"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nape-P/fresh-verification.json",
+      "bytes": 1544,
+      "sha256": "574e1ed5b8911de7377878225b8b7bf139a43b79203c84a9edea5641d6b41130"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nape-P/initial-clearance.json",
+      "bytes": 4286,
+      "sha256": "f0933b9dc2e2334c0c852808ac6debbbb5af08dc7f536543c7c5adb9d98614df"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nape-P/junction-analysis.json",
+      "bytes": 13130,
+      "sha256": "4e287fc6dedd9e494d18860ba52cb55d6ffcfb1f6c51bcaf872410bf22e5cfa3"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nape-P/portable-manifest.json",
+      "bytes": 628,
+      "sha256": "5b131eada4f4433182e8fe9e1682d7fb90b8216623e8543831c830830771fc79"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nape-P/repair.json",
+      "bytes": 12498,
+      "sha256": "e779962816f38759a0393017d0ab0ed9598c3c110e5cf610f36312d1a5f0688c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nose-lip-diagnosis/audit_current_routes.py",
+      "bytes": 3965,
+      "sha256": "4199e84cd715afa551fb96d6d3dd37d9993ed244153b7f358651ecbfe1bab778"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nose-lip-diagnosis/current-active-routes.json",
+      "bytes": 550984,
+      "sha256": "7a6fafa0a2341a97e3ef76c5870606134117a0a886675a5208cec7863e432658"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nose-lip-diagnosis/diagnosis.json",
+      "bytes": 2424,
+      "sha256": "8e6ee8c8b5eaba233a96bf8e050f4cebcb18fb325e9bcc1096ba82a6938ca376"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nose-lip-diagnosis/DIAGNOSIS_AND_NEXT_PLAN.md",
+      "bytes": 9162,
+      "sha256": "6886bc4b79a86919b144c16e35a1b5ad593f214cde461ea6f50122216ed9bb61"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nose-lip-diagnosis/existing-nose-alpha-samples.npz",
+      "bytes": 694,
+      "sha256": "fa182c9ba0a112d2f22f9d5f10ce42ae5ebd8c4f26c9cd3c195f9f9f1450c186"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nose-lip-diagnosis/existing-nose-alpha.png",
+      "bytes": 1399,
+      "sha256": "813c7cf11dfd3faedfc50478a27cd24321911b60be4994e32430eacd0afa83ac"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nose-lip-diagnosis/existing-nose-evidence-crops.png",
+      "bytes": 44118,
+      "sha256": "91d9b4b12772a56c4d0ffce037b625666d899bb2f43bf2274d035150a201faec"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nose-lip-diagnosis/route-alpha-audit.log",
+      "bytes": 900,
+      "sha256": "389c49ed3f5f336a01aa1a0a4c0416e23d14e1dea65f10b9bb7bfadf7cab59d1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/nose-lip-diagnosis/route-audit.log",
+      "bytes": 900,
+      "sha256": "8f4e2775491f76c5fed4bd734aeff19597f976534cad4e4851264a1e73bdd76a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/portable-copy-face-body.json",
+      "bytes": 23708,
+      "sha256": "1a726740002b15196fc39ffa46b4cb20f0f8009fbf1b026ab3668df0541f369b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/portable-copy-OP.json",
+      "bytes": 31325,
+      "sha256": "9f0720b283644b6ebd142e7c59c3eea4f44733d30c342e9f35b895ad0155620c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/parts/portable-copy-R3.json",
+      "bytes": 9635,
+      "sha256": "49db2139c9e860646866ac0af3689f53be40abc07e7bb1a0513affe0b8507f7b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/PLAN.md",
+      "bytes": 2354,
+      "sha256": "89a9440e1ce68a9a43880363051ab856d89d5e38d1800e553a8bf8057ccb919e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/preflight-C-fixed.log",
+      "bytes": 1449,
+      "sha256": "54ef91d548a1dd125c199cf6134a5df5d939e9a08f3319e8cae5189016b55ab4"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/preflight-C-not-a-native.integration.json",
+      "bytes": 835737,
+      "sha256": "407c8371abff52892b17eb741d681d29cea34e8142036b6f53833250fe12ac78"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/preflight-C.log",
+      "bytes": 1732,
+      "sha256": "2ecab9b5f4b815b7b899161cbaf32d4fbc59d0a6b4f1312843181e2b37452243"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/preflight-R3.log",
+      "bytes": 1297,
+      "sha256": "962f4f22108e1916202f9e21d2901ff916229093bad57db7aff1b76cb7c8cc40"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/preflight-recipe-C.json",
+      "bytes": 2800,
+      "sha256": "0ddb959dc0626b461a9d79212371e4e66c570fa2462b84a339667a4023d01aa3"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/prepare_component_package.py",
+      "bytes": 3645,
+      "sha256": "e3aa132ff846d0fe48b6df2b5b7c79201187fe52adaebb1805d3d3e2653ceebf"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/prepare_followup_r3.py",
+      "bytes": 4554,
+      "sha256": "08d7f91a5b14b90872c6f7caf4b6dffed4675dfbc4b631663e791565bf20fd43"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/prepare_integration_config.py",
+      "bytes": 3432,
+      "sha256": "20e3c558030f7457803eef14bd90109d6f1f4b661726fe16c592d92d6f8e9807"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/prepare_storage_cleanup.py",
+      "bytes": 5661,
+      "sha256": "323b46fd8fdc18989ca7bf9ecd96cee0f74e5c59417d2ec818f9ca1d55967fd6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/producer-native-storage.json",
+      "bytes": 2197,
+      "sha256": "bc1fb61e578ac28d044659ce8ac37979d2f87f343d3158fecd958c95e59f0795"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/PROGRESS.md",
+      "bytes": 6273,
+      "sha256": "ab698b61f2f4d6db00a546538318bf264bb6f74a29c5bf680033670cca987be1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/R3B_WORKING_REVIEW.json",
+      "bytes": 1333,
+      "sha256": "25c59cbe586bd6142be062b51a15461106f6af148342258efacdfc572a3803c4"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/record_cleanup_and_current_r2.py",
+      "bytes": 4271,
+      "sha256": "d017c3a1175624ff5831450fc5c06aaa53c2c08422f7c9a759886160d29972df"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/record_phase_start.py",
+      "bytes": 9766,
+      "sha256": "bc5cc9b167e2688cfee1059230e1cc53f546ee89f592f51aad6c93eb7d88ab91"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/record_r3_review.py",
+      "bytes": 5145,
+      "sha256": "79242c15f2eb645b77e94bc8f80cd05cbde6fcad1254773a1a5b92dd896d3469"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/record_refinement_candidates.py",
+      "bytes": 3061,
+      "sha256": "72b35c88cd1ae58de0642dbdbb320c24952b1cb306e090b9656137693668342c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/remaining-R3-driver.log",
+      "bytes": 78,
+      "sha256": "840a303e40b36b4d6614f8c835a40144ed0a138e2c1c92dba993e20d95eba46e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/render_integrated_review.py",
+      "bytes": 7299,
+      "sha256": "b7e7933f0f9a2956ee88b4323a29eba6f0d11c3716f0ef1570c5db456f2d96f9"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/retire_post_r3b_candidates.ps1",
+      "bytes": 3116,
+      "sha256": "a70d5360abcc2d46957f84a7c9f01d63cabbe2d76f1a479fb90dd02ef804f480"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/retire_verified_body_natives.ps1",
+      "bytes": 3960,
+      "sha256": "b33f5d560baba65c20285a1d9533d9509f2b9f73591b1b6526ce6b33ef44a4e1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3-855d/intermediates/auto-half-hide.png",
+      "bytes": 221506,
+      "sha256": "6904ac7340467fc10ee671c84e70a308aeb2d7d406eeb797d7666dee6af27148"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3-855d/intermediates/render-records.json",
+      "bytes": 6356,
+      "sha256": "3ce647471d71723b595117eb1f4f74191b7ef8d8213721fd0573abff261206b2"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/highFront-neutral.png",
+      "bytes": 192701,
+      "sha256": "c4449b9ca0fe92f48c5d93244d9ac7b20078221f475c5575fae24a7b1324af99"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/highFront-production.png",
+      "bytes": 234378,
+      "sha256": "315670d5b74fc6b518c6d28bcf2f0de4ea8f2b65631eec75dfb2ff92b426755d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/highLeft-neutral.png",
+      "bytes": 192017,
+      "sha256": "7853d9d4d998d8106e67483a584c0f1f97c95ec3f5e9c04503f5aec6c1f5e027"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/highLeft-production.png",
+      "bytes": 234405,
+      "sha256": "db791fea5a04aebbbf9094468241396142597f106ad3779c4c974eca23370600"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/lowFront-neutral.png",
+      "bytes": 187079,
+      "sha256": "a58b5b5cb64208bf76238d22452eb292e28d0bdfbf4f7ff7b3b42c483229667a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/lowFront-production.png",
+      "bytes": 225248,
+      "sha256": "de072c927cffd4e657b551b27e0e5a92562a8bc6281eb74e0032ba7938285778"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/lowLeft-neutral.png",
+      "bytes": 188550,
+      "sha256": "9800eeec8b7faed8f1d0a62c839b1974ef2d4ac33537825b0dc21612dac6f9ab"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/lowLeft-production.png",
+      "bytes": 226514,
+      "sha256": "09e4a9d2891529b4f5d83367cdb24c59f3a3ae4132603bc76b463a58c1b24e7e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/lowRight-neutral.png",
+      "bytes": 188476,
+      "sha256": "aa968c6d0fa4f09b86f1552a331d0d7f3cbf4236e7e4199422585ebd851c4aab"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/lowRight-production.png",
+      "bytes": 227398,
+      "sha256": "e368c703e1f4e6ffca4f6c94bad18adb5c0c33258aa802d2ba266a71e47d8058"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/pose-control-records.json",
+      "bytes": 12997,
+      "sha256": "a048f1a4eac9b96618b9b86d03ac34ab1b630fba1adea0f1c1528ed5605123e0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/profileLow-neutral.png",
+      "bytes": 177727,
+      "sha256": "93fe0daebb2f75c353c3dbf28e2f0fffe498756e10e8b1999fd4a59862fbdae4"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/profileLow-production.png",
+      "bytes": 216291,
+      "sha256": "ec421c9bdc9e47e88eb4a0442bdb1a38ca7ea8831c4f9d5d12b12ccdde017d2a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical/render-records.json",
+      "bytes": 74867,
+      "sha256": "66ddc18e9741cdd6fa571636eb6ef1c93e77c3acb0e9af673c8869e5824a962f"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/critical-actual-contact.png",
+      "bytes": 646321,
+      "sha256": "3316ad85650a3977d1bb7020688493d3357f3aa9244c3a02d5eab264a900eb98"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P01-neutral_observe.png",
+      "bytes": 378783,
+      "sha256": "de9670d7a19003f5ebc3e5a2c3a1c5cbf5554af0302ff754a80dd51050eb7381"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P02-near_closed_weary.png",
+      "bytes": 378545,
+      "sha256": "cb7cb52a8d713f23adfc5af7fdd403a41ad2cf9eea0eab387fb0e23868ae0a50"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P03-skeptical_question.png",
+      "bytes": 380364,
+      "sha256": "0da5502bc57df15b6d21ebb2b52d955a6651b233afaa5dd659b970e74dd08d19"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P04-aside_attention.png",
+      "bytes": 379652,
+      "sha256": "dd6faa096faa55e2105df6696a1df22f19337953877bdabac96ad6ba76ee6ebd"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P05-downward_irritated.png",
+      "bytes": 389895,
+      "sha256": "966b072535623cac122a9bad6ec2e165aa7575f87f75dcc12fd06af631c052ba"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P06-upward_uncertain.png",
+      "bytes": 384450,
+      "sha256": "7082e31ca81578d3620a82bdb061bb388e1d313fddddededec56a22cd3df8de3"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P07-thinking.png",
+      "bytes": 386529,
+      "sha256": "998a6f0842d6e33f287ae36ed55cc13aafbc244f102338944a8e926b8b943d4a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P08-closed_smirk.png",
+      "bytes": 384374,
+      "sha256": "3640bd916438a4b8bb68af13ad47a7836498e2502b2096a413a18230a0a6e0a7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P09-concerned.png",
+      "bytes": 386724,
+      "sha256": "64ff6eaa615ec310cdcc86638765adf3eb7eeffa902b06e7687b8f1c48c8eb88"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P10-toothy_grin.png",
+      "bytes": 393216,
+      "sha256": "6afac020a3354a1a43c50115a97cc6761a097651ae37c24b10fe4f937e5c8747"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P11-flustered_down.png",
+      "bytes": 392511,
+      "sha256": "5d43f4bcc2ada4a7be12854cb3b29be7606c9e82dfa11185e219e49a07870a35"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P12-surprised.png",
+      "bytes": 385114,
+      "sha256": "05263e537e6695e773744e9d92aa87653842448ec8a4b6a95c60fdcf4bed3b76"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P13-sulky.png",
+      "bytes": 389445,
+      "sha256": "b4ba803a9a7e573813807dca300c2f9c4e2cdfa4938fdf3748d9c336c917aec2"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P14-weary_speaking.png",
+      "bytes": 388816,
+      "sha256": "b987b4aa8d67caeb331ca6fc18e7fb61c021362dd7e9e0303972aa3da431f46d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P15-stern.png",
+      "bytes": 389544,
+      "sha256": "21f70d27bd62b008514121451156063127f98855b169e947900914cc74fe7331"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/P16-gentle_smile.png",
+      "bytes": 382756,
+      "sha256": "8345d56a7f85efee168decee3066f18c875c2902e8c4301913e1a2515755d24a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expression-panels/panels.json",
+      "bytes": 240392,
+      "sha256": "67c099a12eb5ae2f4ebac4b8bcf5ca0079138dae6b249231b2359ad2a8fb2f39"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/head-pose-P04-profile.png",
+      "bytes": 325467,
+      "sha256": "bd5db925252c3ae34b58495d540ab95b7b672a84b3dbe4f4badded4b2b20820d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/head-pose-P06-profile.png",
+      "bytes": 323336,
+      "sha256": "f270c765ce26a598c94c985ca8dc187a1d85db42c1dc82a9cd71c759b2eeeb27"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/head-pose-P10-profile.png",
+      "bytes": 330330,
+      "sha256": "19d7aea6ab6fc0c1c55164ee56b9bbebea1f4a56ab99f42ed3ff7e0868c143b6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P01-neutral_observe-hairOFF.png",
+      "bytes": 221986,
+      "sha256": "bb818ec6f0fb8047fdfcd8f14f546138b5f58000c8fd672a69b031a9af6ccdef"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P01-neutral_observe-hairON.png",
+      "bytes": 365756,
+      "sha256": "4519152a6c207a9d4abf4ed8ddfd47fb095756eea74eb4b13ca8215543759efc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P02-near_closed_weary-hairOFF.png",
+      "bytes": 221089,
+      "sha256": "43db8fb4bbe15806611766cb2811b98612e2a040694b0b154c182ba3c4968331"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P02-near_closed_weary-hairON.png",
+      "bytes": 361122,
+      "sha256": "c39714cd92d41c89d3df7659438ab66908bf14e5b3f558952377fa33cf379c7b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P03-skeptical_question-hairOFF.png",
+      "bytes": 224311,
+      "sha256": "e34e111a894be953df2371d3d06cbd787866edf239e2d50e2a253f0741a8404b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P03-skeptical_question-hairON.png",
+      "bytes": 364631,
+      "sha256": "e5241196173f4b13bb3a7db201ef28cf073157ebfbea5656620913b4cd7863ed"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P04-aside_attention-hairOFF.png",
+      "bytes": 224999,
+      "sha256": "f77ed780d9de0dd8efb5046f166a8139705b89f0770bc89afde80b416e29c9dc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P04-aside_attention-hairON.png",
+      "bytes": 352261,
+      "sha256": "f54fc43b6afe0459e6d26a907b1dda89b018447e90d885be0b6e15926da54424"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P05-downward_irritated-hairOFF.png",
+      "bytes": 223242,
+      "sha256": "7b397c681e36e4127105d001cce60b97a443682a84cea394ebe41c39e7eebf28"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P05-downward_irritated-hairON.png",
+      "bytes": 366066,
+      "sha256": "68a92e1318dac1c4bf2a7db36481fd53b1f12341e740a50bdee288347ba9b019"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P06-upward_uncertain-hairOFF.png",
+      "bytes": 225639,
+      "sha256": "96aec8287e55f4740018244b60b3c6bc5c765100f244539b5bf3f547d49a53e0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P06-upward_uncertain-hairON.png",
+      "bytes": 354223,
+      "sha256": "c31f94067f01c16b7b1a7f91930a13901c7745a31f9c641b6aeafa019cc091c0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P07-thinking-hairOFF.png",
+      "bytes": 223367,
+      "sha256": "01b9e9b954e32384938078a9b07784afc73064252edec8977e1ea8ebbb9d26ef"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P07-thinking-hairON.png",
+      "bytes": 365115,
+      "sha256": "7ba0483eef105e932789721d64a9a2ab91025870e8ffea90c2c61fb928f6e501"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P08-closed_smirk-hairOFF.png",
+      "bytes": 223014,
+      "sha256": "b112cec84b55cf0544e7924405b94206c1812ba9e31e48343eeda553c4efd6cf"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P08-closed_smirk-hairON.png",
+      "bytes": 365224,
+      "sha256": "d1338ff1f057a204d2e54cff049068c9b3cadf008a5b18dcfc92d61d13ee6c82"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P09-concerned-hairOFF.png",
+      "bytes": 225652,
+      "sha256": "996917420992c71bcf02b00964d45cd7ced77e14fcfebf1ff5a0f4408a904135"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P09-concerned-hairON.png",
+      "bytes": 363850,
+      "sha256": "149c513d61e156e4471e54b19cf188c662d6af3ede238252baa08426589b2db6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P10-toothy_grin-hairOFF.png",
+      "bytes": 226843,
+      "sha256": "5273654c418af021136b733653fc4b9982b2d4513787b3c9595982015c41f797"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P10-toothy_grin-hairON.png",
+      "bytes": 364503,
+      "sha256": "a709447ded94bbd669a4fd18c2baa90412435443b241f272eb2a4c19595a9023"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P11-flustered_down-hairOFF.png",
+      "bytes": 223374,
+      "sha256": "db64451e75429dbdf8cc86e44e8ceab02c167a2cd2b732135c20962b08c17109"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P11-flustered_down-hairON.png",
+      "bytes": 364430,
+      "sha256": "567464f0d5fddf96f9317b10cf5eb46098c871e3e23aedb732f1526322d515ce"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P12-surprised-hairOFF.png",
+      "bytes": 227004,
+      "sha256": "54414fe2b423bab0821fa04960e1cbe30c924e98d4481b71e5d0df92d7eccc2b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P12-surprised-hairON.png",
+      "bytes": 362283,
+      "sha256": "73598d85fbe6f8577dd20c1ca2347c0bf2420e5a666c0f2d77f8da57d2145c8e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P13-sulky-hairOFF.png",
+      "bytes": 223487,
+      "sha256": "4d2f60d5db99c434112fbe3e2dcfe3ebb53a2b1b3f0572ce551c1d7950daf580"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P13-sulky-hairON.png",
+      "bytes": 364560,
+      "sha256": "1f2654d35812ed492a632b978bc7186e1164936e38830e7c2b6e79a1ce64e10a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P14-weary_speaking-hairOFF.png",
+      "bytes": 223128,
+      "sha256": "e5ad2d5f3f3c451006531c36dc8e07c42a03a9c6ce07a97c3016d2d5c5052977"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P14-weary_speaking-hairON.png",
+      "bytes": 366048,
+      "sha256": "984f34a7f623170314c98b33b75a0759e4f64c6f39ef31ddd59664143c38c053"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P15-stern-hairOFF.png",
+      "bytes": 222218,
+      "sha256": "bafd27264645e395383676ad2bb4daa8863bef3f7ae9064d708f3d92e54dc737"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P15-stern-hairON.png",
+      "bytes": 366235,
+      "sha256": "ea0f2070bee16a78fa880a68f7679785f7a0b2dabc2a887d1d003841103007a5"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P16-gentle_smile-hairOFF.png",
+      "bytes": 225227,
+      "sha256": "0220285af0c91578cb2954e2dc70d1ce4d48f545416836a1fb31a563d387a840"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/P16-gentle_smile-hairON.png",
+      "bytes": 363406,
+      "sha256": "4375184864b2277f72b542c6e188d94ee4c43d0b4905c506b83305fe718480f0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/pose-control-records.json",
+      "bytes": 49537,
+      "sha256": "9c313ca4d275d0786e1fbe9f38354b166919aa3d03c4d9d0e7e2b16a09046941"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/probe-GazeX--1.0.png",
+      "bytes": 220758,
+      "sha256": "f74c2878cedab19170b756fc0ac2ffbe30ca7ff2f2017c779ccbdc3722da29ff"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/probe-GazeX-1.0.png",
+      "bytes": 220660,
+      "sha256": "3322bab78c3cb005bd7cd46b623cdccb7eba799ed40d8b0f5c2cfd20d579e556"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/probe-GazeY--1.0.png",
+      "bytes": 220546,
+      "sha256": "b4367dcb5febd9bc33ee9a6c61caede7c3e9f261ace1a8aacd62e70f0edc660f"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/probe-GazeY-1.0.png",
+      "bytes": 220903,
+      "sha256": "0de656f7329e2e2f177ff2e232cce947c6564ef7b2a9f7f6a76e649c893d2183"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/probe-Manual_EYE_Close-0.5.png",
+      "bytes": 218996,
+      "sha256": "dddf605b0853ece2e6762de6db4172500acb6e6a7eadeb72e49daaa5dd0f12b7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/probe-Manual_EYE_Close-1.0.png",
+      "bytes": 216513,
+      "sha256": "260a220e84cc47051003c90e7580913cecea97097b069072770e119efa158935"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions/render-records.json",
+      "bytes": 253047,
+      "sha256": "309f6515a1779da9bab4e9a7cc17cdb7bc69e94b27098a7c2ae6dbf27c95aa65"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/expressions-source16-overview.png",
+      "bytes": 1725215,
+      "sha256": "11f1a19133cf884c371bc9ee4777a9286ca09d864f8953214629d95ad233e991"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/intermediates/auto-half-hide.png",
+      "bytes": 221507,
+      "sha256": "716a4f7952147a34b891c74056a5281d7ad7d8fb2829578e9d5049de4424c038"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/intermediates/normalized-grin-blend.png",
+      "bytes": 222119,
+      "sha256": "a3caf4c8d8cfda83112c9fad317122ddef643312bd940271a64ec9745c486598"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/intermediates/pose-control-records.json",
+      "bytes": 5253,
+      "sha256": "f354775c1bdbbf1fb683c4d9001830e8b5951b7e78666ce866e1b1ab960a6af8"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/intermediates/render-records.json",
+      "bytes": 25590,
+      "sha256": "b114c379880515328e4d7f63d5eaff737cf1630357ed44eaa14c44ef21f690c6"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/intermediates/surprise-left-three-quarter-close.png",
+      "bytes": 219860,
+      "sha256": "6675fa26167051bac218dfedfd9030a03f970e198922ab8f3dcf36f6146f4eb0"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/intermediates/surprise-right-half-close.png",
+      "bytes": 221061,
+      "sha256": "30ae3d60df6cea9f69b4785c561ec9d05d7fc39c9fa95ff04c3c0b6341bc6bde"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/intermediates-actual-contact.png",
+      "bytes": 134084,
+      "sha256": "c896d04239d5bcf0fb95c8ae9f26a08d11c1867aeb80f200d2bce8a505f7a6da"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/live/live-review.json",
+      "bytes": 1468,
+      "sha256": "a18e2720ae8d140f4b773b811fb1569aba31630525ed8dd81c4bd8931e0c25f4"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/live/viewport.png",
+      "bytes": 726009,
+      "sha256": "ff2eee7b36896e333777e6ec4aa7d03637b764cef92387167caa1fce907a0ceb"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/Mia-v002-head-orbit.gif",
+      "bytes": 3411840,
+      "sha256": "a809c0103533ca3f883cd0516e92198ebb556c8f3c40fd86540a40ae82e6ea8f"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/000-production.png",
+      "bytes": 325365,
+      "sha256": "608685040e06afe586067f593dc0a7813361e2ee2292715c5a7d21f55fc7f107"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/001-production.png",
+      "bytes": 327567,
+      "sha256": "ea0212cec585793decde9ae52954de86b68adf3921b8a06d5de00a0b45092495"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/002-production.png",
+      "bytes": 324361,
+      "sha256": "aa8acad317993760477c2a49e5555876b3073c0313fbd04e47c822e3cd32b9ef"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/003-production.png",
+      "bytes": 313774,
+      "sha256": "198a75e5ba75013233adfed0b280a14c7e5dbbf3748bd0e2337563cdc3adfa24"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/004-production.png",
+      "bytes": 303713,
+      "sha256": "34c3d8c23ceba70a9e546d0f69235afb6aff677addb129d7cf5682549ff61981"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/005-production.png",
+      "bytes": 297354,
+      "sha256": "8f86e943a630c73028e9b9740f738d9a88a6197649feb99534d9862e45492b62"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/006-production.png",
+      "bytes": 296089,
+      "sha256": "48e0275cf830ba1e38e16f4e58aed381d4e8009c140226d4134fd62744e61c1e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/007-production.png",
+      "bytes": 292949,
+      "sha256": "2b8e938c05a061edc22ce06c0714e7026e08964cd9dd76a2c3e33060c8c0a9ab"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/008-production.png",
+      "bytes": 300000,
+      "sha256": "3814ec45cee4ff1981ebacd38f0e60acd6fc7fb25844d2dd7301a90f4710d937"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/009-production.png",
+      "bytes": 308894,
+      "sha256": "98998aa0153332c6137ce1404df777761c73f279b1591ef94e3f455626091faf"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/010-production.png",
+      "bytes": 317059,
+      "sha256": "f615d348fa198cd7ae5cdf1824059ffdb4362105fca5c771581edba8a8bc6c62"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/011-production.png",
+      "bytes": 323117,
+      "sha256": "3ca56efa328b4f2c73f88eb11c4871079584dabcc6241a1edcf9b0a3c8d14678"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/012-production.png",
+      "bytes": 326547,
+      "sha256": "459e43c8f972d14908308a74014e2800f362004c2a29299f064ea4e093b49eab"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/013-production.png",
+      "bytes": 323078,
+      "sha256": "41eaab2b815cbd02956891b529fc14c3183d02250952ecbe7a4b37b71a0d8e75"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/014-production.png",
+      "bytes": 315499,
+      "sha256": "989d1cb265dbef320927497261b899f2044416269eb178a13752b70384ce74c1"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/015-production.png",
+      "bytes": 309731,
+      "sha256": "9538c9cadae7a1dc6ba5a13df7699b7e7a0987a3f57007140a6cf08a9c330694"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/016-production.png",
+      "bytes": 304503,
+      "sha256": "37697393c26714af0019d1dee6e52de79cf746c15c695cbf57a4b821170ee712"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/017-production.png",
+      "bytes": 294452,
+      "sha256": "22e5b1f20e1108fad01df9c3cacbf43042ae0ad7cde4c9149129996cf219c0f5"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/018-production.png",
+      "bytes": 290303,
+      "sha256": "649a740637102cf7782af477845ad4590b038b6b9b5e56e5d6b12a15176b2b2e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/019-production.png",
+      "bytes": 287450,
+      "sha256": "a0ba0f9a6cfbb9a12e834aa0bfd78f79fc6df6a390189a8f703784ab72ede821"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/020-production.png",
+      "bytes": 291347,
+      "sha256": "48d01f0b5d57f8e67ce0f9b0fa2a6b3adae5db585e039c38128cc94fe108753d"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/021-production.png",
+      "bytes": 299672,
+      "sha256": "42b459188e1552a52b6fb2156c608135322699447a9375a04feddaa09d60e146"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/022-production.png",
+      "bytes": 309953,
+      "sha256": "9f8d752419524531757db5de397c46ba29a08a72ae024c28240647d974d4731c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/023-production.png",
+      "bytes": 318194,
+      "sha256": "f03a61113ebdf0c85595f3df45e6a4fd77304e4dd7f69552361185196578e208"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/pose-control-records.json",
+      "bytes": 25332,
+      "sha256": "7e5167407a137c010e3a26b56910d03fb74fa02d466db20f4da64157f77bbff8"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit/render-records.json",
+      "bytes": 138104,
+      "sha256": "5af2ceff857affd9ca9fc7cc6a48102eefe191753197dd4e885cd2aed7d38089"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/orbit-actual-contact.png",
+      "bytes": 1536075,
+      "sha256": "e0076b472070e7b169cfa51ff791558b9ce008ddb52cacdc81a979f1e7561fc2"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/paired-source/evidence-validation.json",
+      "bytes": 6251,
+      "sha256": "74503a2b1468e49cee36ec764d9d01387d2b20c4abb6095b34ae5531ebd02139"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/paired-source/front-source-v001-v002.png",
+      "bytes": 1184718,
+      "sha256": "83d38198693e20bf29688070786e88be699bf8069062bee32df82fbd8aaea0bb"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/paired-source/left_oblique-source-v001-v002.png",
+      "bytes": 1210426,
+      "sha256": "19c51e3ec1840b5e017e1cf8314154e74dff80c52ffc295c11bbb0027bf041bc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/paired-source/profile-source-v001-v002.png",
+      "bytes": 950143,
+      "sha256": "3062fbaf1b357709be1a073bd7465f584ce68f42fb02c29a4c20f8ca18bb82d7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/paired-source/reference-review.json",
+      "bytes": 60283,
+      "sha256": "58f431e5231f9155470d98291cd5f52816f50d7acc6f8e3bb1cc4e0a2c805f40"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/paired-source/right_oblique-source-v001-v002.png",
+      "bytes": 1233013,
+      "sha256": "097f70183509ceec28c18ce5160b7965251bbdb020606740bd17311eb53ed86f"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/front-hairOFF.png",
+      "bytes": 470528,
+      "sha256": "aff1106a54da0cb8a8d5604fdaa7f0deeaaf695f9f84262a509ab560666404cb"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/front-hairON.png",
+      "bytes": 778948,
+      "sha256": "f5e6abd5b0585f7e4cecc6895aaabbb89ade36ba7101b4f95ab7b9b49dd5d3bb"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/front-hairWide-neutral.png",
+      "bytes": 209682,
+      "sha256": "37c969f1219f5d2b3baa68ec89a1252c52181a3beb188d6c11af178fa71326c2"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/front-hairWide.png",
+      "bytes": 250580,
+      "sha256": "ac6f3b40c10de7aee1cff6381d951760ca44d973a3c73790ce08d850834b196f"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/front-neutral.png",
+      "bytes": 397384,
+      "sha256": "5a3365b74a20a9230ef02c9809a74503dee3dd4bad1f100b9ffac4a3f0b55dc4"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/left_oblique-hairOFF.png",
+      "bytes": 477916,
+      "sha256": "8e843edef8d521899f5bee8143b6ec76d70a9e30db4fd6892bb778db82cb3f7a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/left_oblique-hairON.png",
+      "bytes": 746189,
+      "sha256": "f8e74ccbaabfe95f876a7a794a2a5fa4b28ee97bcf0afe31bcbd4c8110e200b5"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/left_oblique-hairWide-neutral.png",
+      "bytes": 204969,
+      "sha256": "c1cb964c8f33cd124bf38b2c8bd32d4e0b14b5a0189276286e69605f135c53cc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/left_oblique-hairWide.png",
+      "bytes": 246964,
+      "sha256": "b48f26db0231245cfc364dec482ebfd80dabadd0e593e18b820d3728f6f3f232"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/left_oblique-neutral.png",
+      "bytes": 396749,
+      "sha256": "dab816f40dd81634a7ae66cc2f0b5447dcd97e0e49bb4d87dcd532b19647d88b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/pose-control-records.json",
+      "bytes": 21306,
+      "sha256": "8f7055c257890c7bbd3ef05365dc7e43b69bc88b90c2a3ad25329e37d936430a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/profile-hairOFF.png",
+      "bytes": 457079,
+      "sha256": "c5f072a235cdfc3c0a9a61032e4fa5027e0267134c807da9fba2df78d0d24f78"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/profile-hairON.png",
+      "bytes": 703098,
+      "sha256": "31f46fe67391eb0b608aa21a58d1a79b5e8406e48b935f45511bfe5f3af6fb30"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/profile-hairWide-neutral.png",
+      "bytes": 184011,
+      "sha256": "02e9f777b80f6c9e9e024be799f8a69361f571b68487c618ba7a09241681d12b"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/profile-hairWide.png",
+      "bytes": 218808,
+      "sha256": "d35dae28c5835f782ef2f580b36e7d4b5cc2233e906750699353dba202f7058f"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/profile-neutral.png",
+      "bytes": 379986,
+      "sha256": "01cd764df68d73ec6bd3570144986c18fac4e4d3183645a70adc7696b2cfafbd"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/render-records.json",
+      "bytes": 117422,
+      "sha256": "7e95779a08a442be4f1e414d6ae64df81ca19ac9486899eecde8a2959cac6214"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/right_oblique-hairOFF.png",
+      "bytes": 477863,
+      "sha256": "fa8f522a32e76e4d73e0451c860d512c80a4e81e16c3e0014131414dfe7f517a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/right_oblique-hairON.png",
+      "bytes": 760614,
+      "sha256": "aa7c0bf3224c508bbc162ebbf1b44cb73ff9f5aad75ebfce917a788e40649195"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/right_oblique-hairWide-neutral.png",
+      "bytes": 210004,
+      "sha256": "7644d6053c208a3d22c2fe45d0bddf17b1d459706254180185f451dde9a2579a"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/right_oblique-hairWide.png",
+      "bytes": 251070,
+      "sha256": "f69929649d39e63eeb631449cfaf20c701d5edcc09e75cae4b9df8e4ae778d82"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/source/right_oblique-neutral.png",
+      "bytes": 405068,
+      "sha256": "8c01e6f4d8c3f334f9c2a3918b366741f2184d52543d798a59ba6531545d4041"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/review/integrated-R3b/verification-completion.json",
+      "bytes": 1107,
+      "sha256": "523b2c368f9939c880c49638dc55ffaebbf79f8337e8427298a0e7d37d073ec5"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/root-native-storage.json",
+      "bytes": 2451,
+      "sha256": "4322ca1b399ad6f76bc2985fb535dc2dd9550beae0022baa699b18df6c289fc9"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/run_integrated_verification.py",
+      "bytes": 3668,
+      "sha256": "be4b84bb0748623a3f62931e5f095a75efea4a5dc8c94949f0560a27214e479c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/scene_fingerprint.py",
+      "bytes": 18154,
+      "sha256": "694d0b0f5e0b649d20e8c036fdca16a2396a23b08a05d3ad6630d9943b20541c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/source-OP.log",
+      "bytes": 4356,
+      "sha256": "07de16db55915884ef5776b132cb3427c6f0deed1306d24a6821e9799806d723"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/stage_checkpoint.py",
+      "bytes": 3220,
+      "sha256": "eb21c9e4bdaf1d208a8822b3ad5d4e1a4b9db9e8f12fe06fa21b658d4882ded7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/storage/body-six-native-retirement.json",
+      "bytes": 3408,
+      "sha256": "c6bb9fc84fb3cf0da6c07d845201e87423bf47c4091d72ef7064823f14a96738"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/storage/canonical-before.json",
+      "bytes": 3341673,
+      "sha256": "a2bb7c81cff442365e17057911606e56ba6b3994bd9e500ddd39cfcabb8a653e"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/storage/cleanup-consolidated.json",
+      "bytes": 1855,
+      "sha256": "e72e898e90c86331ebc9900d53befdde6530e83cc896f4bfc00c0520cea0e47c"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/storage/cleanup-manifest.json",
+      "bytes": 218355,
+      "sha256": "05919ca759414b31b2b147093a5ee9954a3bfed1cd50117cdc1a603e4bcd8d24"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/storage/cleanup-result.json",
+      "bytes": 134828,
+      "sha256": "860b5187005ad7b32937a4484ca1d44c9aba6fa5599ee5ad66a726674d4c98bb"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/storage/face-candidates.json",
+      "bytes": 233474,
+      "sha256": "b3041c38395bd4e922f9be05f961a93ee1f000e770d028a26ad304af23b18591"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/storage/hair-candidates.json",
+      "bytes": 32410,
+      "sha256": "79d00d98d233117abdaa5b1862a7b95117703283f4b4e8531b7e67456b5bb026"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/storage/post-R3b-native-retirement.json",
+      "bytes": 2215,
+      "sha256": "7616c10e1620f276721cb8fe5e7ce4ea5743a8bfa10133ce8c53a0936f0b2349"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/storage/reference-before.json",
+      "bytes": 1431257,
+      "sha256": "a3433df35b73391405c48c4a2c2d73a46eee60055e2ff6956b6d68fc1e2aeb86"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/storage_inventory.py",
+      "bytes": 2441,
+      "sha256": "ec3b3147877cfd4eceadaefe86da7bd9e30eba509cee3b27b1136959741ce0cc"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/TRIAL_LOG.md",
+      "bytes": 9250,
+      "sha256": "9c1b9f6d85f0c6e3f2c772c96dbf369e05f1a3286fa7a99241567708af87c1d7"
+    },
+    {
+      "path": "asset/mia/blender/mia-refinement-v002/verify_integrated_scene.py",
+      "bytes": 3402,
+      "sha256": "7d562e1348caf35004c833384fa957e9a7914a7a459da8ea5df728c76e72e917"
+    },
+    {
+      "path": "asset/mia/CURRENT_STATE.json",
+      "bytes": 35359,
+      "sha256": "c0cc381b59276ca24172b2020d97b8b780384dd93c041d60732ba2e7f997129e"
+    },
+    {
+      "path": "asset/mia/WORKING_PROTOCOL.md",
+      "bytes": 11441,
+      "sha256": "7806716a412c7a88537e9d6f4738d9712684c9772f000332136788b9bf349692"
+    }
+  ],
+  "total_bytes": 669006814,
+  "scope": "Explicit refinement/runtime/maps/current101proof plus R2dependency and currentR3b. No OP/failedR3 full scenes, expression/native junction caches, unselected producer full scenes or unrelated project files."
+}

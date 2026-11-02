@@ -1,0 +1,271 @@
+{
+  "input_native": "D:\\MiaArtifacts\\v002\\root-expression-native-20261102\\Mia_v002_SourceGrin_Prototype_C.blend",
+  "input_sha256": "09bc62297940e702aa3d76caa0c1553d317ba4fac6a496ad89402adc339daa0c",
+  "installation": {
+    "controller": "Mia_FacialControls_v002",
+    "master": "MIA_V27_Foundation_Face",
+    "rig": "MIA_V06_RIG",
+    "gaze": [
+      {
+        "owner": "V28G_Iris_-1",
+        "key": "Mia.Gaze.Right",
+        "dx_m": 0.0018,
+        "dz_m": 0,
+        "uncovered_vertices": 0,
+        "max_depth_adjustment_m": 0.000981554388999939
+      },
+      {
+        "owner": "V28G_Iris_-1",
+        "key": "Mia.Gaze.Left",
+        "dx_m": -0.0018,
+        "dz_m": 0,
+        "uncovered_vertices": 0,
+        "max_depth_adjustment_m": 0.0012054145336151123
+      },
+      {
+        "owner": "V28G_Iris_-1",
+        "key": "Mia.Gaze.Up",
+        "dx_m": 0,
+        "dz_m": 0.0012,
+        "uncovered_vertices": 0,
+        "max_depth_adjustment_m": 0.00036332011222839355
+      },
+      {
+        "owner": "V28G_Iris_-1",
+        "key": "Mia.Gaze.Down",
+        "dx_m": 0,
+        "dz_m": -0.0012,
+        "uncovered_vertices": 0,
+        "max_depth_adjustment_m": 0.00036685168743133545
+      },
+      {
+        "owner": "V28G_Iris_1",
+        "key": "Mia.Gaze.Right",
+        "dx_m": 0.0018,
+        "dz_m": 0,
+        "uncovered_vertices": 0,
+        "max_depth_adjustment_m": 0.0013264864683151245
+      },
+      {
+        "owner": "V28G_Iris_1",
+        "key": "Mia.Gaze.Left",
+        "dx_m": -0.0018,
+        "dz_m": 0,
+        "uncovered_vertices": 0,
+        "max_depth_adjustment_m": 0.0010852962732315063
+      },
+      {
+        "owner": "V28G_Iris_1",
+        "key": "Mia.Gaze.Up",
+        "dx_m": 0,
+        "dz_m": 0.0012,
+        "uncovered_vertices": 0,
+        "max_depth_adjustment_m": 0.00036562979221343994
+      },
+      {
+        "owner": "V28G_Iris_1",
+        "key": "Mia.Gaze.Down",
+        "dx_m": 0,
+        "dz_m": -0.0012,
+        "uncovered_vertices": 0,
+        "max_depth_adjustment_m": 0.00036625564098358154
+      }
+    ],
+    "default_head_unchanged": true,
+    "scope": "Source expressions with local head axes and small surface-projected iris motion. No old eye-bone pivot reuse, no full-globe claim, no final motion/physics."
+  },
+  "states": [
+    {
+      "property": "HeadPitch",
+      "value": 8.0,
+      "head_local_euler": [
+        0.13962633907794952,
+        -0.0,
+        0.0
+      ],
+      "effective_gaze": [
+        0.0,
+        0.0
+      ],
+      "iris_gaze_values": {
+        "V28G_Iris_-1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 0.0
+        },
+        "V28G_Iris_1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 0.0
+        }
+      }
+    },
+    {
+      "property": "HeadYaw",
+      "value": -12.0,
+      "head_local_euler": [
+        0.0,
+        -0.20943951606750488,
+        0.0
+      ],
+      "effective_gaze": [
+        0.0,
+        0.0
+      ],
+      "iris_gaze_values": {
+        "V28G_Iris_-1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 0.0
+        },
+        "V28G_Iris_1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 0.0
+        }
+      }
+    },
+    {
+      "property": "HeadRoll",
+      "value": 12.0,
+      "head_local_euler": [
+        0.0,
+        0.0,
+        0.2094395011663437
+      ],
+      "effective_gaze": [
+        0.0,
+        0.0
+      ],
+      "iris_gaze_values": {
+        "V28G_Iris_-1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 0.0
+        },
+        "V28G_Iris_1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 0.0
+        }
+      }
+    },
+    {
+      "property": "GazeX",
+      "value": 1.0,
+      "head_local_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "effective_gaze": [
+        1.0,
+        0.0
+      ],
+      "iris_gaze_values": {
+        "V28G_Iris_-1": {
+          "Mia.Gaze.Right": 1.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 0.0
+        },
+        "V28G_Iris_1": {
+          "Mia.Gaze.Right": 1.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 0.0
+        }
+      }
+    },
+    {
+      "property": "GazeX",
+      "value": -1.0,
+      "head_local_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "effective_gaze": [
+        -1.0,
+        0.0
+      ],
+      "iris_gaze_values": {
+        "V28G_Iris_-1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 1.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 0.0
+        },
+        "V28G_Iris_1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 1.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 0.0
+        }
+      }
+    },
+    {
+      "property": "GazeY",
+      "value": 1.0,
+      "head_local_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "effective_gaze": [
+        0.0,
+        1.0
+      ],
+      "iris_gaze_values": {
+        "V28G_Iris_-1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 1.0,
+          "Mia.Gaze.Down": 0.0
+        },
+        "V28G_Iris_1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 1.0,
+          "Mia.Gaze.Down": 0.0
+        }
+      }
+    },
+    {
+      "property": "GazeY",
+      "value": -1.0,
+      "head_local_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "effective_gaze": [
+        0.0,
+        -1.0
+      ],
+      "iris_gaze_values": {
+        "V28G_Iris_-1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 1.0
+        },
+        "V28G_Iris_1": {
+          "Mia.Gaze.Right": 0.0,
+          "Mia.Gaze.Left": 0.0,
+          "Mia.Gaze.Up": 0.0,
+          "Mia.Gaze.Down": 1.0
+        }
+      }
+    }
+  ],
+  "original_key_arrays_exact": true,
+  "native_saved": false,
+  "art": "NOT_EVALUATED"
+}

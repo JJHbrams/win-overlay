@@ -1,0 +1,1834 @@
+{
+  "input_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+  "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "helper_sha256": "5634fb67de4029d80ee3d41cbe18f69778ece11702f2ae134678d45f7ab1d70a",
+  "apply_report": {
+    "candidate": "A",
+    "frame": "MIA_v003_BrowInk_HeadFrame",
+    "target": "MIA_v003_BrowInk_FringeTarget",
+    "overlay_objects": [
+      "MiaHair_BrowInkProjection_-1",
+      "MiaHair_BrowInkProjection_1"
+    ],
+    "materials": [
+      "MIA_v003_BrowInk_PartialCharcoal_-1",
+      "MIA_v003_BrowInk_PartialCharcoal_1"
+    ],
+    "projection_groups": [
+      "MIA_v003_BrowInk_Project_-1",
+      "MIA_v003_BrowInk_Project_1"
+    ],
+    "payload_sha256": "1cac90c9b5f94abf9736eb3f1edd094d8139f7e2b5098b29586475783c59e08f",
+    "strength": 0.6,
+    "original_mesh_or_material_edited": false,
+    "source_supported_windows": {
+      "-1": {
+        "observed_original_portrait_x": [
+          410,
+          455
+        ],
+        "u_min": 0.22985639857035745,
+        "u_max": 0.718934880061363,
+        "feather": 0.04,
+        "covered_full_ends_inferred": true
+      },
+      "1": {
+        "observed_original_portrait_x": [
+          520,
+          551
+        ],
+        "u_min": 0.022267442441498097,
+        "u_max": 0.349072519337134,
+        "feather": 0.04,
+        "covered_full_ends_inferred": true
+      }
+    },
+    "scope": "Actual deforming brow geometry projected to foreground Fringe proxy. Semantic family is only an inherited hint; bounded first-hit/component/depth tests enforce the local projection. No rear/head projection target."
+  },
+  "checks": {
+    "all_original_mesh_records_exact": true,
+    "all_original_material_graphs_exact": true,
+    "all_original_images_exact": true,
+    "all_head_frames_follow_expected": true,
+    "all_proxy_vertices_follow_current_Main": true,
+    "all_states_both_nonempty": true,
+    "no_cross_component_faces": true,
+    "all_used_hits_valid": true,
+    "offset_errors_below_1um": true,
+    "strength_zero_reaches_both_new_materials": true,
+    "input_native_unchanged": true,
+    "both_new_materials_use_viewer_facing_minusY": true
+  },
+  "states": [
+    {
+      "state": "neutral",
+      "controls": {},
+      "head_frame_matrix_max_error": 1.1892645090938458e-07,
+      "proxy_sample_max_world_error_m": 1.2293457984924316e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1024,
+          "rendered_faces": 849,
+          "used_vertices": 1011,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            44,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.00692526251077652,
+            0.015767816454172134
+          ],
+          "max_surface_offset_error_m": 5.729285366963976e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.67578125,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 642,
+          "rendered_faces": 489,
+          "used_vertices": 622,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127,
+            128,
+            129,
+            132,
+            135
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.0035820864140987396,
+            0.008286852389574051
+          ],
+          "max_surface_offset_error_m": 5.78304838735e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.05859375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "P05",
+      "controls": {
+        "P05_downward_irritated": 1.0
+      },
+      "head_frame_matrix_max_error": 7.450580596923828e-08,
+      "proxy_sample_max_world_error_m": 2.50787024924648e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 913,
+          "rendered_faces": 734,
+          "used_vertices": 908,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            44,
+            54,
+            57,
+            67
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.00766875222325325,
+            0.01579798385500908
+          ],
+          "max_surface_offset_error_m": 5.6702041234511994e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.62890625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 516,
+          "rendered_faces": 396,
+          "used_vertices": 496,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            127,
+            128,
+            131,
+            132
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.0007916726171970367,
+            0.006845530122518539
+          ],
+          "max_surface_offset_error_m": 5.8600505250834005e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.0859375,
+              0.0
+            ],
+            [
+              0.3125,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "P12",
+      "controls": {
+        "P12_surprised": 1.0
+      },
+      "head_frame_matrix_max_error": 7.450580596923828e-08,
+      "proxy_sample_max_world_error_m": 2.470393383191549e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1131,
+          "rendered_faces": 961,
+          "used_vertices": 1125,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.005255270749330521,
+            0.015933752059936523
+          ],
+          "max_surface_offset_error_m": 5.747877576656728e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.71875,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 756,
+          "rendered_faces": 585,
+          "used_vertices": 738,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127,
+            135
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.005369123071432114,
+            0.009259186685085297
+          ],
+          "max_surface_offset_error_m": 5.693142850556022e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.0234375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "Close",
+      "controls": {
+        "Manual_EYE_Close": 1.0
+      },
+      "head_frame_matrix_max_error": 1.1892645090938458e-07,
+      "proxy_sample_max_world_error_m": 1.2293457984924316e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1028,
+          "rendered_faces": 849,
+          "used_vertices": 1011,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            44,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.006643287837505341,
+            0.015558350831270218
+          ],
+          "max_surface_offset_error_m": 5.729285366963976e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.67578125,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 643,
+          "rendered_faces": 493,
+          "used_vertices": 626,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127,
+            128,
+            129,
+            132,
+            135
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.0034053921699523926,
+            0.008101485669612885
+          ],
+          "max_surface_offset_error_m": 5.78304838735e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.05859375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "WinkRhalf",
+      "controls": {
+        "Manual_EYE_Close_R": 0.5
+      },
+      "head_frame_matrix_max_error": 1.1892645090938458e-07,
+      "proxy_sample_max_world_error_m": 1.2293457984924316e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1026,
+          "rendered_faces": 851,
+          "used_vertices": 1011,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            44,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.006554257124662399,
+            0.015649234876036644
+          ],
+          "max_surface_offset_error_m": 5.729285366963976e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.67578125,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 641,
+          "rendered_faces": 482,
+          "used_vertices": 618,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127,
+            128,
+            129,
+            132,
+            135
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.003635179251432419,
+            0.008279934525489807
+          ],
+          "max_surface_offset_error_m": 5.78304838735e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.05859375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "Angry1",
+      "controls": {
+        "Manual_BRW_Angry": 1.0
+      },
+      "head_frame_matrix_max_error": 1.1892645090938458e-07,
+      "proxy_sample_max_world_error_m": 1.2293457984924316e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 747,
+          "rendered_faces": 616,
+          "used_vertices": 740,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            44,
+            54,
+            57,
+            62,
+            67
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.007926955819129944,
+            0.015391567721962929
+          ],
+          "max_surface_offset_error_m": 5.633337720974884e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.5625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 256,
+          "rendered_faces": 196,
+          "used_vertices": 248,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            127,
+            132
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.0005198679864406586,
+            0.003539562225341797
+          ],
+          "max_surface_offset_error_m": 5.706852349907759e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.15625,
+              0.0
+            ],
+            [
+              0.2890625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "BrowSurprise1",
+      "controls": {
+        "Manual_BRW_Surprised": 1.0
+      },
+      "head_frame_matrix_max_error": 1.1892645090938458e-07,
+      "proxy_sample_max_world_error_m": 1.2293457984924316e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1134,
+          "rendered_faces": 966,
+          "used_vertices": 1129,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.008723679929971695,
+            0.015611603856086731
+          ],
+          "max_surface_offset_error_m": 5.944539711257826e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.71875,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 756,
+          "rendered_faces": 633,
+          "used_vertices": 747,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.00670493021607399,
+            0.009571928530931473
+          ],
+          "max_surface_offset_error_m": 5.898564517330532e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.0234375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "HeadYaw22",
+      "controls": {
+        "HeadYaw": 22.0
+      },
+      "head_frame_matrix_max_error": 1.1895529894445644e-07,
+      "proxy_sample_max_world_error_m": 1.862645149230957e-08,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1024,
+          "rendered_faces": 849,
+          "used_vertices": 1011,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            44,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.006925281137228012,
+            0.015767816454172134
+          ],
+          "max_surface_offset_error_m": 5.7174606037662884e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.67578125,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 642,
+          "rendered_faces": 489,
+          "used_vertices": 622,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127,
+            128,
+            129,
+            132,
+            135
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.003582082688808441,
+            0.008286852389574051
+          ],
+          "max_surface_offset_error_m": 5.7677047200036816e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.05859375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "HeadYawMinus22",
+      "controls": {
+        "HeadYaw": -22.0
+      },
+      "head_frame_matrix_max_error": 1.1893879303670474e-07,
+      "proxy_sample_max_world_error_m": 2.2660056941958828e-08,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1024,
+          "rendered_faces": 849,
+          "used_vertices": 1011,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            44,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.006925255060195923,
+            0.015767816454172134
+          ],
+          "max_surface_offset_error_m": 5.7338423966987205e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.67578125,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 642,
+          "rendered_faces": 489,
+          "used_vertices": 622,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127,
+            128,
+            129,
+            132,
+            135
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.0035820938646793365,
+            0.008286852389574051
+          ],
+          "max_surface_offset_error_m": 5.7841500130938154e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.05859375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "HeadRoll18",
+      "controls": {
+        "HeadRoll": 18.0
+      },
+      "head_frame_matrix_max_error": 7.549790126404332e-08,
+      "proxy_sample_max_world_error_m": 1.6340399611181056e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1024,
+          "rendered_faces": 849,
+          "used_vertices": 1011,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            44,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.006925508379936218,
+            0.015767857432365417
+          ],
+          "max_surface_offset_error_m": 5.7735047479461655e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.67578125,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 642,
+          "rendered_faces": 489,
+          "used_vertices": 622,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127,
+            128,
+            129,
+            132,
+            135
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.0035821720957756042,
+            0.008286844938993454
+          ],
+          "max_surface_offset_error_m": 5.84406464185669e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.05859375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "HeadPitch20",
+      "controls": {
+        "HeadPitch": 20.0
+      },
+      "head_frame_matrix_max_error": 5.960464477539063e-08,
+      "proxy_sample_max_world_error_m": 2.5463114639023843e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1024,
+          "rendered_faces": 849,
+          "used_vertices": 1011,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            44,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.006925530731678009,
+            0.015767738223075867
+          ],
+          "max_surface_offset_error_m": 5.635681929676299e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.67578125,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 642,
+          "rendered_faces": 489,
+          "used_vertices": 622,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127,
+            128,
+            129,
+            132,
+            135
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.0035821199417114258,
+            0.008286915719509125
+          ],
+          "max_surface_offset_error_m": 5.567529024712239e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.05859375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "HeadPitchMinus20",
+      "controls": {
+        "HeadPitch": -20.0
+      },
+      "head_frame_matrix_max_error": 5.960464477539063e-08,
+      "proxy_sample_max_world_error_m": 3.8194673379621236e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1024,
+          "rendered_faces": 849,
+          "used_vertices": 1011,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            44,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.006925512105226517,
+            0.015767792239785194
+          ],
+          "max_surface_offset_error_m": 5.57092525558826e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.67578125,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 642,
+          "rendered_faces": 489,
+          "used_vertices": 622,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127,
+            128,
+            129,
+            132,
+            135
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.0035819895565509796,
+            0.008286863565444946
+          ],
+          "max_surface_offset_error_m": 5.6831780626680607e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.05859375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    },
+    {
+      "state": "P04",
+      "controls": {
+        "P04_aside_attention": 1.0
+      },
+      "head_frame_matrix_max_error": 8.940696716308594e-08,
+      "proxy_sample_max_world_error_m": 2.69511303940817e-07,
+      "overlays": [
+        {
+          "owner": "MiaHair_BrowInkProjection_-1",
+          "evaluated_vertices": 1024,
+          "rendered_faces": 849,
+          "used_vertices": 1010,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            20,
+            44,
+            57,
+            67,
+            68
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.006961219012737274,
+            0.015765808522701263
+          ],
+          "max_surface_offset_error_m": 5.769896035737847e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.23046875,
+              0.0
+            ],
+            [
+              0.67578125,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              410,
+              455
+            ],
+            "u_min": 0.22985639857035745,
+            "u_max": 0.718934880061363,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        },
+        {
+          "owner": "MiaHair_BrowInkProjection_1",
+          "evaluated_vertices": 642,
+          "rendered_faces": 489,
+          "used_vertices": 622,
+          "UV_layers": [
+            "BrowParamUV"
+          ],
+          "attribute_names": [
+            ".corner_edge",
+            "position",
+            ".select_vert",
+            "MIA_BrowInk_Component",
+            "MIA_BrowInk_Hit",
+            "MIA_BrowInk_Normal",
+            "MIA_BrowInk_ForegroundDepth",
+            "MIA_BrowInk_SourcePosition",
+            "MIA_BrowInk_Valid",
+            ".edge_verts",
+            ".select_edge",
+            ".select_poly",
+            "sharp_face",
+            ".corner_vert",
+            "BrowParamUV",
+            "material_index"
+          ],
+          "component_ids": [
+            106,
+            117,
+            127,
+            128,
+            129,
+            132,
+            135
+          ],
+          "each_face_single_component": true,
+          "all_used_hit_valid": true,
+          "foreground_depth_m": [
+            0.0035972967743873596,
+            0.008285868912935257
+          ],
+          "max_surface_offset_error_m": 5.75796546014016e-08,
+          "max_ray_XZ_drift_m": 0.0,
+          "UV_bounds": [
+            [
+              0.05859375,
+              0.0
+            ],
+            [
+              0.34765625,
+              1.0
+            ]
+          ],
+          "source_window": {
+            "observed_original_portrait_x": [
+              520,
+              551
+            ],
+            "u_min": 0.022267442441498097,
+            "u_max": 0.349072519337134,
+            "feather": 0.04,
+            "covered_full_ends_inferred": true
+          }
+        }
+      ]
+    }
+  ],
+  "strength_zero": {
+    "MIA_v003_BrowInk_PartialCharcoal_-1": 0.0,
+    "MIA_v003_BrowInk_PartialCharcoal_1": 0.0
+  },
+  "actual_material_gate_axes": {
+    "MIA_v003_BrowInk_PartialCharcoal_-1": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "MIA_v003_BrowInk_PartialCharcoal_1": [
+      0.0,
+      -1.0,
+      0.0
+    ]
+  },
+  "material_incoming_angle_note": "Blender Geometry.Incoming points toward viewer: head-local-Y is front. Earlier A +Y gate produced an actual zero-effect failure, retained in history. This polarity-corrected helper still requires an allocated actual diagnostic. No GPU/native save.",
+  "native_saved": false,
+  "GPU_used": false
+}

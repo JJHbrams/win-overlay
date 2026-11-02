@@ -1,0 +1,68 @@
+{
+  "status": "TECHNICAL_EVIDENCE_VALID; ROOT_ART_SELECTION_REQUIRED",
+  "pairs": [
+    {
+      "folder": "actual-first4",
+      "view": "back_full",
+      "resolution": [
+        640,
+        640
+      ],
+      "pixels_max_channel_difference_over8": 2980,
+      "max_channel_difference": 141,
+      "paired_fixture_exact": true,
+      "shader_runtime_error_free": true
+    },
+    {
+      "folder": "actual-first4",
+      "view": "oblique_low_full",
+      "resolution": [
+        640,
+        640
+      ],
+      "pixels_max_channel_difference_over8": 2368,
+      "max_channel_difference": 133,
+      "paired_fixture_exact": true,
+      "shader_runtime_error_free": true
+    },
+    {
+      "folder": "actual-final6",
+      "view": "000",
+      "resolution": [
+        512,
+        512
+      ],
+      "pixels_max_channel_difference_over8": 4,
+      "max_channel_difference": 10,
+      "paired_fixture_exact": true,
+      "shader_runtime_error_free": true
+    },
+    {
+      "folder": "actual-final6",
+      "view": "018",
+      "resolution": [
+        512,
+        512
+      ],
+      "pixels_max_channel_difference_over8": 183,
+      "max_channel_difference": 45,
+      "paired_fixture_exact": true,
+      "shader_runtime_error_free": true
+    },
+    {
+      "folder": "actual-final6",
+      "view": "021",
+      "resolution": [
+        512,
+        512
+      ],
+      "pixels_max_channel_difference_over8": 31,
+      "max_channel_difference": 36,
+      "paired_fixture_exact": true,
+      "shader_runtime_error_free": true
+    }
+  ],
+  "scope": "Bounded unsupported U cleanup only",
+  "native_saved": false,
+  "ART": false
+}

@@ -1,0 +1,84 @@
+{
+  "baseline": "../mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Brows_Lashes.blend",
+  "baseline_sha256": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a",
+  "stages": [
+    {
+      "id": "mouth-C",
+      "entry": "parts/mouth-C/portable_mouth_delta.py",
+      "entry_sha256": "2da5ded93b069b268451359abb83280b7e50fe0f9856d804336b6630f9d70cc6",
+      "function": "apply_to_current_scene",
+      "allowed_existing_owners": [
+        "MIA_V27_Foundation_Face",
+        "MIA_V27_SharedHeadBody"
+      ],
+      "kwargs": {
+        "variant": "C"
+      },
+      "path_kwargs": []
+    },
+    {
+      "id": "body-G",
+      "entry": "parts/body-G/replay_current_scene.py",
+      "entry_sha256": "ca43e4c046972a0d2a7b0835f2fe14c56a70256ea8b207d7ef830ba5af262d28",
+      "function": "apply",
+      "allowed_existing_owners": [
+        "MIA_V27_SharedHeadBody"
+      ],
+      "kwargs": {},
+      "path_kwargs": []
+    },
+    {
+      "id": "hair-MN-bound",
+      "entry": "parts/hair-MN/apply_bundle_M.py",
+      "entry_sha256": "e51dee54f19e61767c5df3cb4003d9757dcbbb599f372909a2506c52e505b039",
+      "function": "apply",
+      "allowed_existing_owners": [
+        "MIA_V17_LeftBraid_Tail",
+        "MIA_V17_LeftBraid_Lane2",
+        "MIA_V17_LeftBraid_Lane1",
+        "MIA_V17_LeftBraid_Lane0",
+        "MIA_V17_LeftBraid_Tie",
+        "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+        "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+        "MIA_V17_PIXAL_DetailedHair",
+        "MIA_V20_Crown_PixalDonorLock",
+        "MIA_V24_Gather_Main",
+        "MIA_V24_Gather_Tuck",
+        "MIA_V24_Gather_Upper"
+      ],
+      "kwargs": {
+        "folder": "parts/hair-MN/bundle",
+        "include_binding": true
+      },
+      "path_kwargs": [
+        "folder"
+      ]
+    },
+    {
+      "id": "face-D2",
+      "entry": "parts/face-D2/portable_face_delta.py",
+      "entry_sha256": "c86070a13718bf82a21d663e27a45931bdb8717e430a26fbd51bb1e395ce8c4a",
+      "function": "apply_to_current_scene",
+      "allowed_existing_owners": [
+        "MIA_V27_SharedHeadBody",
+        "V28G_InnerLid_-1",
+        "V28G_InnerLid_1"
+      ],
+      "kwargs": {},
+      "path_kwargs": []
+    },
+    {
+      "id": "source-controls-gaze",
+      "entry": "expressions/expression_control_delta.py",
+      "entry_sha256": "74e6d1f568a377c0fa01a52dbe0f772e91960ebf3da05742db46760a05cc0abe",
+      "function": "apply_to_current_scene",
+      "allowed_existing_owners": [
+        "V28G_Iris_-1",
+        "V28G_Iris_1"
+      ],
+      "kwargs": {},
+      "path_kwargs": []
+    }
+  ],
+  "scope": "Technical integration candidate. Optional hair binding requires actual pose review. No source ART or final animation approval."
+}

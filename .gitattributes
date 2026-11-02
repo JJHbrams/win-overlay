@@ -65,3 +65,7 @@ asset/mia/blender/mia-orbit-thorax-review-v28/**/*.exr filter=lfs diff=lfs merge
 # v29 frozen native/UV/control evidence retains hashes.
 asset/mia/blender/mia-face-finish-v29/** -text
 asset/mia/blender/mia-face-finish-v29/**/*.exr filter=lfs diff=lfs merge=lfs -text
+
+# v002 replay manifests and actual evidence use byte-exact hashes across checkout.
+asset/mia/blender/mia-refinement-v002/** -text
+asset/mia/blender/mia-refinement-v002/**/*.exr filter=lfs diff=lfs merge=lfs -text

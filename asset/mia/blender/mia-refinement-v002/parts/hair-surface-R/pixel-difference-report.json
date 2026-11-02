@@ -1,0 +1,203 @@
+{
+  "native_sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+  "actual_valid_frames": 10,
+  "first_attempt_candidate_compile_errors_rejected": true,
+  "corrected_candidate_log_shader_errors": [],
+  "views": {
+    "profile": {
+      "actual_side_nape_pixels": 24613,
+      "pairs": {
+        "production": {
+          "changed_pixels_total": 25728,
+          "changed_pixels_inside": 24408,
+          "inside_rgb_MAE_255": 13.521174447107898,
+          "outside_3px_AA_dilation_changed_pixels": 1,
+          "outside_max_channel_delta_255": 1,
+          "exact_outside_scope": false,
+          "baseline_RGB_p10_50_90": [
+            [
+              48.0,
+              39.0,
+              39.0
+            ],
+            [
+              77.0,
+              69.0,
+              69.0
+            ],
+            [
+              107.0,
+              100.0,
+              100.0
+            ]
+          ],
+          "R_RGB_p10_50_90": [
+            [
+              74.0,
+              66.0,
+              66.0
+            ],
+            [
+              88.0,
+              79.0,
+              79.0
+            ],
+            [
+              109.0,
+              98.0,
+              98.0
+            ]
+          ],
+          "outside_changed_xy": [
+            [
+              325,
+              437
+            ]
+          ]
+        },
+        "pigment": {
+          "changed_pixels_total": 25898,
+          "changed_pixels_inside": 24447,
+          "inside_rgb_MAE_255": 15.846707024743022,
+          "outside_3px_AA_dilation_changed_pixels": 1,
+          "outside_max_channel_delta_255": 1,
+          "exact_outside_scope": false,
+          "baseline_RGB_p10_50_90": [
+            [
+              61.0,
+              50.0,
+              50.0
+            ],
+            [
+              92.0,
+              83.0,
+              83.0
+            ],
+            [
+              112.0,
+              102.0,
+              101.0
+            ]
+          ],
+          "R_RGB_p10_50_90": [
+            [
+              98.0,
+              88.0,
+              88.0
+            ],
+            [
+              104.0,
+              93.0,
+              93.0
+            ],
+            [
+              109.0,
+              99.0,
+              99.0
+            ]
+          ],
+          "outside_changed_xy": [
+            [
+              325,
+              437
+            ]
+          ]
+        }
+      }
+    },
+    "opposite018": {
+      "actual_side_nape_pixels": 47199,
+      "pairs": {
+        "production": {
+          "changed_pixels_total": 47853,
+          "changed_pixels_inside": 46855,
+          "inside_rgb_MAE_255": 7.884051215774345,
+          "outside_3px_AA_dilation_changed_pixels": 0,
+          "outside_max_channel_delta_255": 0,
+          "exact_outside_scope": true,
+          "baseline_RGB_p10_50_90": [
+            [
+              63.0,
+              55.0,
+              56.0
+            ],
+            [
+              91.0,
+              85.0,
+              87.0
+            ],
+            [
+              110.0,
+              102.0,
+              104.0
+            ]
+          ],
+          "R_RGB_p10_50_90": [
+            [
+              77.0,
+              69.0,
+              69.0
+            ],
+            [
+              101.0,
+              90.0,
+              91.0
+            ],
+            [
+              113.0,
+              102.0,
+              102.0
+            ]
+          ],
+          "outside_changed_xy": []
+        },
+        "pigment": {
+          "changed_pixels_total": 47972,
+          "changed_pixels_inside": 46874,
+          "inside_rgb_MAE_255": 8.711575810221968,
+          "outside_3px_AA_dilation_changed_pixels": 0,
+          "outside_max_channel_delta_255": 0,
+          "exact_outside_scope": true,
+          "baseline_RGB_p10_50_90": [
+            [
+              76.0,
+              67.0,
+              67.0
+            ],
+            [
+              98.0,
+              94.0,
+              97.0
+            ],
+            [
+              109.0,
+              100.0,
+              101.0
+            ]
+          ],
+          "R_RGB_p10_50_90": [
+            [
+              101.0,
+              90.0,
+              91.0
+            ],
+            [
+              104.0,
+              93.0,
+              94.0
+            ],
+            [
+              109.0,
+              98.0,
+              98.0
+            ]
+          ],
+          "outside_changed_xy": []
+        }
+      }
+    }
+  },
+  "actual_records": "valid-render-records.json",
+  "no_actual_PNG_modified": true,
+  "ART": "Clean base challenger only; no full hair ART pass; fine ink and out-of-scope crown/rear surfaces remain open."
+}

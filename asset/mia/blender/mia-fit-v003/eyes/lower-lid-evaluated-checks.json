@@ -1,0 +1,406 @@
+{
+  "baseline_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "applied": {
+    "created": [
+      {
+        "owner": "MIA_V27_SharedHeadBody",
+        "key": "Mia.v003.NeutralLowerLidBalance.1",
+        "vertices": 62,
+        "maximum_delta_mm": 1.1093522310256958
+      },
+      {
+        "owner": "V28G_InnerLid_1",
+        "key": "Mia.v003.NeutralLowerLidBalance.1",
+        "vertices": 294,
+        "maximum_delta_mm": 3.057927131652832
+      },
+      {
+        "owner": "V30_LowerLashes_1",
+        "key": "Mia.v003.NeutralLowerLidBalance.1",
+        "vertices": 456,
+        "maximum_delta_mm": 1.095133662223816
+      }
+    ],
+    "screen": "right",
+    "side": 1,
+    "method": "40% bounded lower-rim profile blend toward the other canthus-local lower curve at retained own width; maximum1.1mm. Corners/upperpath anchored. Depth follows same actual sclera shell. Lowerwall/lashes transported from evaluated skin frames. Original arrays remain unchanged.",
+    "native_replay": false,
+    "native_saved": false,
+    "scope": "Subtle lower-rim curvature; no eyeball scaling, original key-array edits, upper-lid/canthus/whole-face redesign."
+  },
+  "original_raw_key_arrays_exact": true,
+  "outsideROI_and_protected_eyes_exact": true,
+  "support_definition": "Raw corrective POINT marker through Weld/Subsurf, six evaluated rings: four actual position-Smooth iterations plus two conservative rings for downstream normal-derived outlines. Zero-marker-only omitted position smoothing (0.092943mm); four rings omitted derived outline influence (0.002401mm). Both failed logs retained.",
+  "cases": [
+    {
+      "case": "neutral",
+      "manual": {},
+      "corrective_weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "movement_mm": {
+        "MIA_V27_SharedHeadBody": 1.095936894416809,
+        "V28G_InnerLid_1": 3.057927131652832,
+        "V30_LowerLashes_1": 1.095133662223816,
+        "V28G_Sclera_-1": 0.0,
+        "V28G_Sclera_1": 0.0,
+        "V28G_Iris_-1": 0.0,
+        "V28G_Iris_1": 0.0,
+        "V28G_InnerLid_-1": 0.0,
+        "V30_LowerLashes_-1": 0.0
+      },
+      "skin_outside_evaluated_support_mm": 0.0,
+      "before": {
+        "wall_root_nearest_rim_mm_max": 0.00011920928955078125,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.471823692321777,
+          -0.9913593530654907
+        ]
+      },
+      "after": {
+        "wall_root_nearest_rim_mm_max": 0.04825158044695854,
+        "wall_root_nearest_rim_mm_p95": 0.004002264700829983,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.472497940063477,
+          -0.9538829326629639
+        ]
+      }
+    },
+    {
+      "case": "half",
+      "manual": {
+        "EYE_Close": 0.5
+      },
+      "corrective_weights": [
+        0.5000000596046448,
+        0.5000000596046448,
+        0.5000000596046448
+      ],
+      "movement_mm": {
+        "MIA_V27_SharedHeadBody": 0.5481459498405457,
+        "V28G_InnerLid_1": 1.5290042161941528,
+        "V30_LowerLashes_1": 0.5475673079490662,
+        "V28G_Sclera_-1": 0.0,
+        "V28G_Sclera_1": 0.0,
+        "V28G_Iris_-1": 0.0,
+        "V28G_Iris_1": 0.0,
+        "V28G_InnerLid_-1": 0.0,
+        "V30_LowerLashes_-1": 0.0
+      },
+      "skin_outside_evaluated_support_mm": 0.0,
+      "before": {
+        "wall_root_nearest_rim_mm_max": 0.00023856404004618526,
+        "wall_root_nearest_rim_mm_p95": 0.00023842585505917668,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.597645282745361,
+          -1.0451823472976685
+        ]
+      },
+      "after": {
+        "wall_root_nearest_rim_mm_max": 0.023898307234048843,
+        "wall_root_nearest_rim_mm_p95": 0.001973550533875823,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.597146034240723,
+          -1.050673484802246
+        ]
+      }
+    },
+    {
+      "case": "closed",
+      "manual": {
+        "EYE_Close": 1.0
+      },
+      "corrective_weights": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_mm": {
+        "MIA_V27_SharedHeadBody": 0.0,
+        "V28G_InnerLid_1": 0.0,
+        "V30_LowerLashes_1": 0.0,
+        "V28G_Sclera_-1": 0.0,
+        "V28G_Sclera_1": 0.0,
+        "V28G_Iris_-1": 0.0,
+        "V28G_Iris_1": 0.0,
+        "V28G_InnerLid_-1": 0.0,
+        "V30_LowerLashes_-1": 0.0
+      },
+      "skin_outside_evaluated_support_mm": 0.0,
+      "before": {
+        "wall_root_nearest_rim_mm_max": 0.00011920928955078125,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.608094692230225,
+          -1.1324212551116943
+        ]
+      },
+      "after": {
+        "wall_root_nearest_rim_mm_max": 0.00011920928955078125,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.608094692230225,
+          -1.1324212551116943
+        ]
+      }
+    },
+    {
+      "case": "winkL",
+      "manual": {
+        "EYE_Close_L": 1.0
+      },
+      "corrective_weights": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_mm": {
+        "MIA_V27_SharedHeadBody": 0.0,
+        "V28G_InnerLid_1": 0.0,
+        "V30_LowerLashes_1": 0.0,
+        "V28G_Sclera_-1": 0.0,
+        "V28G_Sclera_1": 0.0,
+        "V28G_Iris_-1": 0.0,
+        "V28G_Iris_1": 0.0,
+        "V28G_InnerLid_-1": 0.0,
+        "V30_LowerLashes_-1": 0.0
+      },
+      "skin_outside_evaluated_support_mm": 0.0,
+      "before": {
+        "wall_root_nearest_rim_mm_max": 0.00011920928955078125,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.608094692230225,
+          -1.1324212551116943
+        ]
+      },
+      "after": {
+        "wall_root_nearest_rim_mm_max": 0.00011920928955078125,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.608094692230225,
+          -1.1324212551116943
+        ]
+      }
+    },
+    {
+      "case": "winkR",
+      "manual": {
+        "EYE_Close_R": 1.0
+      },
+      "corrective_weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "movement_mm": {
+        "MIA_V27_SharedHeadBody": 1.095936894416809,
+        "V28G_InnerLid_1": 3.057927131652832,
+        "V30_LowerLashes_1": 1.095133662223816,
+        "V28G_Sclera_-1": 0.0,
+        "V28G_Sclera_1": 0.0,
+        "V28G_Iris_-1": 0.0,
+        "V28G_Iris_1": 0.0,
+        "V28G_InnerLid_-1": 0.0,
+        "V30_LowerLashes_-1": 0.0
+      },
+      "skin_outside_evaluated_support_mm": 0.0,
+      "before": {
+        "wall_root_nearest_rim_mm_max": 0.00011920928955078125,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.471823692321777,
+          -0.9913742542266846
+        ]
+      },
+      "after": {
+        "wall_root_nearest_rim_mm_max": 0.04825158044695854,
+        "wall_root_nearest_rim_mm_p95": 0.004002264700829983,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.472497940063477,
+          -0.9538829326629639
+        ]
+      }
+    },
+    {
+      "case": "surprise",
+      "manual": {
+        "EYE_Surprised": 0.8
+      },
+      "corrective_weights": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "movement_mm": {
+        "MIA_V27_SharedHeadBody": 0.6578212380409241,
+        "V28G_InnerLid_1": 1.834741234779358,
+        "V30_LowerLashes_1": 0.6570801734924316,
+        "V28G_Sclera_-1": 0.0,
+        "V28G_Sclera_1": 0.0,
+        "V28G_Iris_-1": 0.0,
+        "V28G_Iris_1": 0.0,
+        "V28G_InnerLid_-1": 0.0,
+        "V30_LowerLashes_-1": 0.0
+      },
+      "skin_outside_evaluated_support_mm": 0.0,
+      "before": {
+        "wall_root_nearest_rim_mm_max": 0.000362101272912696,
+        "wall_root_nearest_rim_mm_p95": 0.00024038403353188187,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -5.48261022567749,
+          -0.9264126420021057
+        ]
+      },
+      "after": {
+        "wall_root_nearest_rim_mm_max": 0.028862273320555687,
+        "wall_root_nearest_rim_mm_p95": 0.0023037614300847054,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -5.483154296875,
+          -0.9465962648391724
+        ]
+      }
+    },
+    {
+      "case": "surpriseClosed",
+      "manual": {
+        "EYE_Surprised": 0.8,
+        "EYE_Close": 1.0
+      },
+      "corrective_weights": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_mm": {
+        "MIA_V27_SharedHeadBody": 0.0,
+        "V28G_InnerLid_1": 0.0,
+        "V30_LowerLashes_1": 0.0,
+        "V28G_Sclera_-1": 0.0,
+        "V28G_Sclera_1": 0.0,
+        "V28G_Iris_-1": 0.0,
+        "V28G_Iris_1": 0.0,
+        "V28G_InnerLid_-1": 0.0,
+        "V30_LowerLashes_-1": 0.0
+      },
+      "skin_outside_evaluated_support_mm": 0.0,
+      "before": {
+        "wall_root_nearest_rim_mm_max": 0.00011926748265977949,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.608094692230225,
+          -1.1324212551116943
+        ]
+      },
+      "after": {
+        "wall_root_nearest_rim_mm_max": 0.00011926748265977949,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.608094692230225,
+          -1.1324212551116943
+        ]
+      }
+    },
+    {
+      "case": "angry",
+      "manual": {
+        "EYE_Angry": 1.0
+      },
+      "corrective_weights": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "movement_mm": {
+        "MIA_V27_SharedHeadBody": 0.21911658346652985,
+        "V28G_InnerLid_1": 0.6115532517433167,
+        "V30_LowerLashes_1": 0.21902680397033691,
+        "V28G_Sclera_-1": 0.0,
+        "V28G_Sclera_1": 0.0,
+        "V28G_Iris_-1": 0.0,
+        "V28G_Iris_1": 0.0,
+        "V28G_InnerLid_-1": 0.0,
+        "V30_LowerLashes_-1": 0.0
+      },
+      "skin_outside_evaluated_support_mm": 0.0,
+      "before": {
+        "wall_root_nearest_rim_mm_max": 0.00011920928955078125,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.448816299438477,
+          -0.8459761738777161
+        ]
+      },
+      "after": {
+        "wall_root_nearest_rim_mm_max": 0.009695515036582947,
+        "wall_root_nearest_rim_mm_p95": 0.0007995109190233052,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.4489426612854,
+          -0.8603930473327637
+        ]
+      }
+    },
+    {
+      "case": "joy",
+      "manual": {
+        "EYE_Joy": 1.0
+      },
+      "corrective_weights": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_mm": {
+        "MIA_V27_SharedHeadBody": 0.0,
+        "V28G_InnerLid_1": 0.0,
+        "V30_LowerLashes_1": 0.0,
+        "V28G_Sclera_-1": 0.0,
+        "V28G_Sclera_1": 0.0,
+        "V28G_Iris_-1": 0.0,
+        "V28G_Iris_1": 0.0,
+        "V28G_InnerLid_-1": 0.0,
+        "V30_LowerLashes_-1": 0.0
+      },
+      "skin_outside_evaluated_support_mm": 0.0,
+      "before": {
+        "wall_root_nearest_rim_mm_max": 0.00011920928955078125,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.239078521728516,
+          -0.4038400948047638
+        ]
+      },
+      "after": {
+        "wall_root_nearest_rim_mm_max": 0.00011920928955078125,
+        "wall_root_nearest_rim_mm_p95": 0.00011920928955078125,
+        "lower_sclera_ray_misses": [],
+        "lower_ray_y_difference_mm_range": [
+          -4.239078521728516,
+          -0.4038400948047638
+        ]
+      }
+    }
+  ],
+  "native_saved": false,
+  "scope": "Endpoint/region regression check, not source ART or arbitrary combinations PASS. Wall nearest-vertex and Y-ray coverage are diagnostic metrics, not full collision proof."
+}

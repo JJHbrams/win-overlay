@@ -1,0 +1,100 @@
+{
+  "candidate": "Same A projection with only incorrect Incoming axis sign fixed",
+  "all4_hashes_current": true,
+  "helper_sha256": "5634fb67de4029d80ee3d41cbe18f69778ece11702f2ae134678d45f7ab1d70a",
+  "only_one_axis_sign_differs_from_failed_A": true,
+  "CPU_checks": {
+    "all_original_mesh_records_exact": true,
+    "all_original_material_graphs_exact": true,
+    "all_original_images_exact": true,
+    "all_head_frames_follow_expected": true,
+    "all_proxy_vertices_follow_current_Main": true,
+    "all_states_both_nonempty": true,
+    "no_cross_component_faces": true,
+    "all_used_hits_valid": true,
+    "offset_errors_below_1um": true,
+    "strength_zero_reaches_both_new_materials": true,
+    "input_native_unchanged": true,
+    "both_new_materials_use_viewer_facing_minusY": true
+  },
+  "CPU_states": 13,
+  "comparisons": [
+    {
+      "view": "front",
+      "changed_pixels": 603,
+      "maximum_RGB255": 40,
+      "bbox_xyxy": [
+        145,
+        221,
+        438,
+        482
+      ],
+      "pixels_above1RGB": 438,
+      "bbox_above1RGB": [
+        160,
+        221,
+        291,
+        248
+      ]
+    },
+    {
+      "view": "left_oblique",
+      "changed_pixels": 520,
+      "maximum_RGB255": 39,
+      "bbox_xyxy": [
+        108,
+        237,
+        417,
+        349
+      ],
+      "pixels_above1RGB": 395,
+      "bbox_above1RGB": [
+        115,
+        237,
+        229,
+        269
+      ]
+    }
+  ],
+  "boards": [
+    {
+      "view": "front",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\brow-visibility-analysis\\candidate\\review\\A-gate-corrected-front-oblique4\\paired\\front-source-baseline-partial-brow.png",
+      "sha256": "7369cdd004e69c35f120b82c2b8fe9cf405bceea6bd2ec723beeffa76d52b2d9",
+      "reference_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+      "reference_sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44",
+      "reference_crop": [
+        340,
+        220,
+        700,
+        490
+      ],
+      "reference_uniform_display_scale": 1
+    },
+    {
+      "view": "left_oblique",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\brow-visibility-analysis\\candidate\\review\\A-gate-corrected-front-oblique4\\paired\\left_oblique-source-baseline-partial-brow.png",
+      "sha256": "29ea1fd75d7f6f22da6b63c87b06e81741501fae5cf5d30b3959c0905eb033f8",
+      "reference_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\mia-expression-style-confirmed-20261031.png",
+      "reference_sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52",
+      "reference_crop": [
+        1230,
+        45,
+        1405,
+        180
+      ],
+      "reference_uniform_display_scale": 2
+    }
+  ],
+  "observed": "Producer inspected actual front and oblique. Partial brow strokes now remain readable on the fringe; natural oblique occlusion remains. Source fragment visibility improves; full brow/source-expression ART is not claimed.",
+  "actual_live_viewport": false,
+  "actual_profile_back_render": false,
+  "render_depsgraph_handler_capture": "No RENDER callback captured in one-frame diagnostic. Do not label viewport CPU samples as render-DG proof.",
+  "limitations": [
+    "Current selected strength0.60; source-specific ink contrast/ends remain a bounded style choice.",
+    "Original brow shape is retained. Full expression appearance, back/profile fade and same-file live viewport remain root integration checks.",
+    "Low-level outside-region render deltas reach only1 RGB; changes above1 RGB are brow-local.",
+    "Inherited Fringe family is a spatial hint; actual foreground/depth/normal/component checks bound the projection.",
+    "Failed A zero-effect proof and old helper retained in history."
+  ]
+}

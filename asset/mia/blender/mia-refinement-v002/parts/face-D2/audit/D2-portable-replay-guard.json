@@ -1,0 +1,23 @@
+{
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_Brows_Lashes.blend",
+  "source_sha256": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a",
+  "challenger": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\native\\Mia_v002_FacialPaint_D2.blend",
+  "challenger_sha256": "8b150df1eac3144aa496f5b57fea125c390eb19daa102fcd25f2afcdc44b1657",
+  "checks": {
+    "all_original_mesh_geometry_topology_UV_keys_weights_drivers_modifiers_exact": true,
+    "only_three_slot0_materials_changed": true,
+    "all_original_graphs_and_images_retained": true,
+    "portable_final_graphs_match_actual_D2_native": true,
+    "scene_pose_camera_light_world_color_exact": true,
+    "source_and_D2_inputs_unchanged": true
+  },
+  "all_checks_pass": true,
+  "final_materials": {
+    "MIA_V27_SharedHeadBody": "MIA_v002_MIA_V27_SharedHeadBody_RefinedD2",
+    "V28G_InnerLid_-1": "MIA_v002_V28G_InnerLid_-1_RefinedD2",
+    "V28G_InnerLid_1": "MIA_v002_V28G_InnerLid_1_RefinedD2"
+  },
+  "native_saved": false,
+  "historical_A_B_C_natives_opened": false,
+  "art_acceptance": "NOT_EVALUATED; CPU integrity does not decide source appearance."
+}

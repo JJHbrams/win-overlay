@@ -1,0 +1,582 @@
+{
+  "bundle": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-hair\\win-overlay\\asset\\mia\\blender\\mia-hair-refine-v002\\portable-MN-static",
+  "manifest_sha256": "af060a2b35b5f567ea1a8739c19bf68f550e5ce5134b1c5d41bf1ffe65a4c0ef",
+  "fresh_canonical_reopen": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_Brows_Lashes.blend",
+  "source_sha256": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a",
+  "portable_replay": {
+    "applied_bundle": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-hair\\win-overlay\\asset\\mia\\blender\\mia-hair-refine-v002\\portable-MN-static",
+    "manifest_sha256": "af060a2b35b5f567ea1a8739c19bf68f550e5ce5134b1c5d41bf1ffe65a4c0ef",
+    "new_actors": [
+      "MIA_V002_RimFlow_near_ear",
+      "MIA_V002_RimFlow_far_neck"
+    ],
+    "binding": false,
+    "binding_neutral_evaluated_world_max_errors_m": {},
+    "no_full_scene_replay": true,
+    "ART": "UNVERIFIED"
+  },
+  "preserved_nonhair_original_objects_materials_images_world_scene_delta": {},
+  "hair_checks": [
+    {
+      "owner": "MIA_V17_LeftBraid_Tail",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 486,
+      "polys": 424,
+      "actual_UV_names": [
+        "MIA_V17_Tail_UV"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V17_LeftBraid_Lane2",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 1500,
+      "polys": 1492,
+      "actual_UV_names": [
+        "MIA_V17_Braid_Longitudinal"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V17_LeftBraid_Lane1",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 1500,
+      "polys": 1492,
+      "actual_UV_names": [
+        "MIA_V17_Braid_Longitudinal"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V17_LeftBraid_Lane0",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 1500,
+      "polys": 1492,
+      "actual_UV_names": [
+        "MIA_V17_Braid_Longitudinal"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V17_LeftBraid_Tie",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.11500000208616257
+        ],
+        [
+          0.0,
+          0.6499999761581421,
+          0.0,
+          -0.03750501573085785
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.309999942779541
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 480,
+      "polys": 480,
+      "actual_UV_names": [
+        "UVMap"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 1192,
+      "polys": 1136,
+      "actual_UV_names": [
+        "UVMap",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 769,
+      "polys": 697,
+      "actual_UV_names": [
+        "UVMap"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V17_PIXAL_DetailedHair",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 100383,
+      "polys": 120913,
+      "actual_UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V20_Crown_PixalDonorLock",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 359,
+      "polys": 420,
+      "actual_UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V002_RimFlow_near_ear",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          1.2369133495226947e-10,
+          5.820768173014912e-11,
+          0.0
+        ],
+        [
+          -1.2369133495226947e-10,
+          1.0,
+          -4.569557532363433e-08,
+          -4.656156848970028e-10
+        ],
+        [
+          -5.820768866904302e-11,
+          4.569557532363433e-08,
+          1.0,
+          -1.1920928955078125e-07
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 401,
+      "polys": 400,
+      "actual_UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_V002_TerminalUV"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V002_RimFlow_far_neck",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          1.2369133495226947e-10,
+          5.820768173014912e-11,
+          0.0
+        ],
+        [
+          -1.2369133495226947e-10,
+          1.0,
+          -4.569557532363433e-08,
+          -4.656156848970028e-10
+        ],
+        [
+          -5.820768866904302e-11,
+          4.569557532363433e-08,
+          1.0,
+          -1.1920928955078125e-07
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 721,
+      "polys": 720,
+      "actual_UV_names": [
+        "UVMap",
+        "MIA_V17_PAINT_UV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique",
+        "MIA_V002_TerminalUV"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V24_Gather_Main",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 3890,
+      "polys": 3936,
+      "actual_UV_names": [
+        "MIA_V20_LongitudinalUV",
+        "V24_GatherPaintUV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V24_Gather_Tuck",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 3890,
+      "polys": 3936,
+      "actual_UV_names": [
+        "MIA_V20_LongitudinalUV",
+        "V24_GatherPaintUV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    },
+    {
+      "owner": "MIA_V24_Gather_Upper",
+      "coords_exact": true,
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "verts": 3890,
+      "polys": 3936,
+      "actual_UV_names": [
+        "MIA_V20_LongitudinalUV",
+        "V24_GatherPaintUV",
+        "MIA_V002_RestProject_front",
+        "MIA_V002_RestProject_profile",
+        "MIA_V002_RestProject_back",
+        "MIA_V002_RestProject_rear_oblique"
+      ],
+      "actual_parent": null,
+      "actual_modifiers": []
+    }
+  ],
+  "all_technical_checks": true,
+  "ART": "UNVERIFIED; actual replayed-camera renders and source/deformation judgment required, not inferred from technical guards."
+}

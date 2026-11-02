@@ -1,0 +1,573 @@
+{
+  "baseline_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "side": 1,
+  "screen": "right",
+  "entries": [
+    {
+      "owner": "MIA_V27_SharedHeadBody",
+      "prefix": "d0",
+      "key": "Mia.v003.NeutralLowerLidBalance.1",
+      "vertices": 62,
+      "maximum_delta_mm": 1.1093522310256958,
+      "vertex_count": 4647,
+      "original_key_ROI_hashes": {
+        "Basis": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_ALL_Angry": "7c4d7ac2f222d244de503c6b6f2d3c87b9fda28e24ecea6eb6a79bdf2d432d3d",
+        "Face.M_F00_000_00_Fcl_ALL_Fun": "d84d6007799ac157c588c54e0d07a94dd08ecc8d24ffdaeac576c11062bc0933",
+        "Face.M_F00_000_00_Fcl_ALL_Joy": "eecba35f11a18cc354ebad34748d4022ebc2c5a593b3304c19da129488d46b70",
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": "351b07feee90029e113333345c6157c12bb931953ee6e6173d05d1d6d31935c4",
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": "f9f1fc9fa0c5599624d52878785a760fdb3ba0a271a90a2df1bf1ddd79f71f16",
+        "Face.M_F00_000_00_Fcl_BRW_Angry": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_BRW_Fun": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_BRW_Joy": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_EYE_Natural": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_EYE_Angry": "78cb05c5a328e60eb198fdf9dc5949df803d81bb7403c9c481c727e6b6cf1e4c",
+        "Face.M_F00_000_00_Fcl_EYE_Close": "7df314e567cf18ee923441f057b2f008eef3737bb2f0ebd3cafddd70fcd4f1f7",
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": "7df314e567cf18ee923441f057b2f008eef3737bb2f0ebd3cafddd70fcd4f1f7",
+        "Face.M_F00_000_00_Fcl_EYE_Joy": "eecba35f11a18cc354ebad34748d4022ebc2c5a593b3304c19da129488d46b70",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": "eecba35f11a18cc354ebad34748d4022ebc2c5a593b3304c19da129488d46b70",
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": "351b07feee90029e113333345c6157c12bb931953ee6e6173d05d1d6d31935c4",
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": "f9f1fc9fa0c5599624d52878785a760fdb3ba0a271a90a2df1bf1ddd79f71f16",
+        "Face.M_F00_000_00_Fcl_EYE_Extra": "f80cdd51668b7396481677db0d6bf24c8b5540399be5efa50d0b1d0d9df9a1a4",
+        "Face.M_F00_000_00_Fcl_MTH_Up": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_MTH_Down": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_MTH_Angry": "2ed691f426b5936ad656009793a3bbf2ce1766abaaceef3e3416e70b1935a062",
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": "2ed691f426b5936ad656009793a3bbf2ce1766abaaceef3e3416e70b1935a062",
+        "Face.M_F00_000_00_Fcl_MTH_Fun": "2ed691f426b5936ad656009793a3bbf2ce1766abaaceef3e3416e70b1935a062",
+        "Face.M_F00_000_00_Fcl_MTH_Joy": "2ed691f426b5936ad656009793a3bbf2ce1766abaaceef3e3416e70b1935a062",
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": "2ed691f426b5936ad656009793a3bbf2ce1766abaaceef3e3416e70b1935a062",
+        "Face.M_F00_000_00_Fcl_MTH_A": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_MTH_I": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_MTH_U": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_MTH_E": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_MTH_O": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_HA_Fung1": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_HA_Fung2": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Mia.v003.SourceSurprise.Aperture.-1": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Mia.v003.SourceSurprise.Aperture.1": "dba97b95e1f78c5aa392a2f60cc47bd6ea870a08d4279709a16c514a01acc631",
+        "Mia.v003.SourceSurprise.CloseGate.-1": "49681ed290529677915a1dcb68235d83a06b5d13770315d961104c9060f1add7",
+        "Mia.v003.SourceSurprise.CloseGate.1": "c7d59f50b05011d5670e40612f22c1f9e3ad82c97b3de01e019a51f4e9d19cf2"
+      }
+    },
+    {
+      "owner": "V28G_InnerLid_1",
+      "prefix": "d1",
+      "key": "Mia.v003.NeutralLowerLidBalance.1",
+      "vertices": 294,
+      "maximum_delta_mm": 3.057927131652832,
+      "vertex_count": 576,
+      "original_key_ROI_hashes": {
+        "Basis": "f63f782e225d00c3b2b33c0dc967bebb898cb03e562d6bd16e92d5cf2ddeeeae",
+        "Face.M_F00_000_00_Fcl_ALL_Angry": "8ed1569a57567c23d92f7b3d832b144f6e740a120e4d2a8fb81d5badd377d579",
+        "Face.M_F00_000_00_Fcl_ALL_Fun": "eeeffbcbbaf8912a628ea98df880e330721af59449365a665562ca3f03e26319",
+        "Face.M_F00_000_00_Fcl_ALL_Joy": "b1929099be3162c0923c264f6ec2baeb44c9dddceef6cefd712d894be1a5a993",
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": "4f402a946962a42d10761601729158613e74ecabbb33b41daa49eefbdb1873c4",
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": "7e903d2d4a977521dc897062c42285bf5018620b3edc24e35ac6a93e248a0e7c",
+        "Face.M_F00_000_00_Fcl_BRW_Angry": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_BRW_Fun": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_BRW_Joy": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_EYE_Natural": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_EYE_Angry": "41402d436227d4934a496813ef3327afdf5a4a792c85b80932f170f2e1b2fa68",
+        "Face.M_F00_000_00_Fcl_EYE_Close": "eb3e58a13df3527612e8d6c12c6c689494e39f1b6ee954ade306ce67724e5f18",
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": "eb3e58a13df3527612e8d6c12c6c689494e39f1b6ee954ade306ce67724e5f18",
+        "Face.M_F00_000_00_Fcl_EYE_Joy": "ac04db03911065ef7a80bde9a6b22c7499a5df70b37da9125bfeeefa54214974",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": "ac04db03911065ef7a80bde9a6b22c7499a5df70b37da9125bfeeefa54214974",
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": "97f373dc91617281a631effcbf024e4c487f0c18d3376895a2c421c92b68a1fd",
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": "7e903d2d4a977521dc897062c42285bf5018620b3edc24e35ac6a93e248a0e7c",
+        "Face.M_F00_000_00_Fcl_EYE_Extra": "14be25b05f7a70a6b74326402886ac9d3f0ef5f9d3e1dedaa000e27c7260b34d",
+        "Face.M_F00_000_00_Fcl_MTH_Up": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_MTH_Down": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_MTH_Angry": "f15e5b360e3ff163c8a1383a503608f73320d1dc501c7e15317f842398c9795e",
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": "f15e5b360e3ff163c8a1383a503608f73320d1dc501c7e15317f842398c9795e",
+        "Face.M_F00_000_00_Fcl_MTH_Fun": "f15e5b360e3ff163c8a1383a503608f73320d1dc501c7e15317f842398c9795e",
+        "Face.M_F00_000_00_Fcl_MTH_Joy": "f15e5b360e3ff163c8a1383a503608f73320d1dc501c7e15317f842398c9795e",
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": "f15e5b360e3ff163c8a1383a503608f73320d1dc501c7e15317f842398c9795e",
+        "Face.M_F00_000_00_Fcl_MTH_A": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_MTH_I": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_MTH_U": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_MTH_E": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_MTH_O": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_HA_Fung1": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_HA_Fung2": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": "82d71d452b28876f0ae7f1b84e72813fc102a8092ffeaf751fe6d012e6e71281",
+        "V31_Return_Close_0125": "d5ba7d5eef8fbe48fd4414a4b99ca61b5d1368a30f06b8845664b00fa4005370",
+        "V31_Return_Close_0250": "b9270fa2b46a546c24b4dcaf33bd59626a6b335f671b23b0b5457a7528b94410",
+        "V31_Return_Close_0375": "68cf235c36bf187b4a7518cb1dfa0debb14e2684cc8ad7985b63e8201f9abcd2",
+        "V31_Return_Close_0500": "d349520fd165d089842c49f36ec7f31e82543a4eb4de47b049beceebc127c165",
+        "V31_Return_Close_0625": "b7128c87e7fc81c9be297fe437fbead945b0359d0fe4e3fea614e83af6e5d23e",
+        "V31_Return_Close_0750": "e05ec08625d270e89f5195a4477e150bb62e750250a3a3333b17fe7452d34ecb",
+        "V31_Return_Close_0875": "30d54cff8577ad3af5927dbdb3bcb35804f9a07292f7e5fcae5f67331a30a533",
+        "Mia.v003.SourceSurprise.Aperture.1": "22e9cef5e979e4416e2fbdebc30e21dce6c1395933a405da22a85bfc89132357",
+        "Mia.v003.SourceSurprise.CloseGate.1": "0aa9193012f4266db4453da1a85e94bc3fc3d92c8f1a7a6f2fe731900c9cc198"
+      }
+    },
+    {
+      "owner": "V30_LowerLashes_1",
+      "prefix": "d2",
+      "key": "Mia.v003.NeutralLowerLidBalance.1",
+      "vertices": 456,
+      "maximum_delta_mm": 1.095133662223816,
+      "vertex_count": 456,
+      "original_key_ROI_hashes": {
+        "Basis": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_ALL_Angry": "5b7db574f5dabd3a0c501cf32f10aaacf8c48a8268fb83881351793f5e5a5199",
+        "Face.M_F00_000_00_Fcl_ALL_Fun": "d2050577f8b0849833f1d52160228c97045d8eb1b131d9cb9b25446d062d0b06",
+        "Face.M_F00_000_00_Fcl_ALL_Joy": "5b2893fd51be5385e0e5d30260f86e0940759a3d1fbf086292b7b200795222db",
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": "1e55d2b6391424b3f1b0226d41fb3258ebb72a4fb0ed3f424b571fc58119f933",
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": "f5b1b9e46f5c206428823aa4cc1888767648dea939131fbec1fcd03397a6e2a2",
+        "Face.M_F00_000_00_Fcl_BRW_Angry": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_BRW_Fun": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_BRW_Joy": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_EYE_Natural": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_EYE_Angry": "2586cc16447779ce98800781b43ca5ca17b77ec9d8e6fa7fdb8ab545b7c431dc",
+        "Face.M_F00_000_00_Fcl_EYE_Close": "9cf7f59e1d8a2696d39d12b2c9debdd0fc99a15eea2f3dcda99cac68974e8e5c",
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": "9cf7f59e1d8a2696d39d12b2c9debdd0fc99a15eea2f3dcda99cac68974e8e5c",
+        "Face.M_F00_000_00_Fcl_EYE_Joy": "5b2893fd51be5385e0e5d30260f86e0940759a3d1fbf086292b7b200795222db",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": "5b2893fd51be5385e0e5d30260f86e0940759a3d1fbf086292b7b200795222db",
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": "1e55d2b6391424b3f1b0226d41fb3258ebb72a4fb0ed3f424b571fc58119f933",
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": "f5b1b9e46f5c206428823aa4cc1888767648dea939131fbec1fcd03397a6e2a2",
+        "Face.M_F00_000_00_Fcl_EYE_Extra": "c6d792d5655405df3c5502c076d866e8fd07217c4d956931e6282b61edcc7119",
+        "Face.M_F00_000_00_Fcl_MTH_Up": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_MTH_Down": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_MTH_Angry": "abb56672bd7b5c7ba49d015707da348546e10d4513496cdeb611d10176e5fc08",
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": "abb56672bd7b5c7ba49d015707da348546e10d4513496cdeb611d10176e5fc08",
+        "Face.M_F00_000_00_Fcl_MTH_Fun": "abb56672bd7b5c7ba49d015707da348546e10d4513496cdeb611d10176e5fc08",
+        "Face.M_F00_000_00_Fcl_MTH_Joy": "abb56672bd7b5c7ba49d015707da348546e10d4513496cdeb611d10176e5fc08",
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": "abb56672bd7b5c7ba49d015707da348546e10d4513496cdeb611d10176e5fc08",
+        "Face.M_F00_000_00_Fcl_MTH_A": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_MTH_I": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_MTH_U": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_MTH_E": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_MTH_O": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_HA_Fung1": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_HA_Fung2": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": "1644e29b38571392d54c11d4f2162ab59dfa171e801a48860cc69f828d5c18ad",
+        "Mia.v003.SourceSurprise.Aperture.1": "b6237cf4e5a35a12bdf063de4f7fe2d299dc2e58c9a8e15bf22fdd519cf19c26",
+        "Mia.v003.SourceSurprise.CloseGate.1": "533ed172a73653f1956528c1055a604c2baf286a911a7a0200d15c207d3601f4"
+      }
+    }
+  ],
+  "depth_samples": [
+    {
+      "vertex": 4452,
+      "delta_mm": [
+        -0.0,
+        0.0,
+        0.0
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4456,
+      "delta_mm": [
+        0.018463336136321822,
+        0.03872811794281006,
+        -0.14281200755429907
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4457,
+      "delta_mm": [
+        0.06140060026656322,
+        0.06687641143798828,
+        -0.47492733297839373
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4460,
+      "delta_mm": [
+        0.13749684761514494,
+        0.015422701835632324,
+        -1.0635239858780048
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4461,
+      "delta_mm": [
+        0.1408897078922822,
+        -0.15237927436828613,
+        -1.0897674114405171
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4465,
+      "delta_mm": [
+        0.13895151383021798,
+        0.022709369659423828,
+        -1.0747756795568795
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4464,
+      "delta_mm": [
+        0.10663837478125768,
+        0.03637373447418213,
+        -0.8248368698048869
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4469,
+      "delta_mm": [
+        0.06798697996268263,
+        0.04367530345916748,
+        -0.5258723030516661
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4468,
+      "delta_mm": [
+        0.08058934307083743,
+        0.010952353477478027,
+        -0.6233502865599254
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4471,
+      "delta_mm": [
+        0.10593674588385821,
+        0.06285309791564941,
+        -0.8194098423892613
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4472,
+      "delta_mm": [
+        0.10432937474262464,
+        0.06411969661712646,
+        -0.8069769917998802
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4474,
+      "delta_mm": [
+        0.07154600402444153,
+        0.06750226020812988,
+        -0.553400988411727
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4476,
+      "delta_mm": [
+        0.005173127273283688,
+        0.005245208740234375,
+        -0.040013607821295816
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    },
+    {
+      "vertex": 4438,
+      "delta_mm": [
+        -0.0,
+        0.0,
+        0.0
+      ],
+      "sclera_hit_before": true,
+      "after": true
+    }
+  ],
+  "wall_bindings": [
+    {
+      "station": 47,
+      "t": 0.98,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 48,
+      "t": 0.96,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 49,
+      "t": 0.94,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 50,
+      "t": 0.92,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 51,
+      "t": 0.9,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 52,
+      "t": 0.88,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 53,
+      "t": 0.86,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 54,
+      "t": 0.84,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 55,
+      "t": 0.82,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 56,
+      "t": 0.8,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 57,
+      "t": 0.78,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 58,
+      "t": 0.76,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 59,
+      "t": 0.74,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 60,
+      "t": 0.72,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 61,
+      "t": 0.7,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 62,
+      "t": 0.68,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 63,
+      "t": 0.66,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 64,
+      "t": 0.64,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 65,
+      "t": 0.62,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 66,
+      "t": 0.6,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 67,
+      "t": 0.58,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 68,
+      "t": 0.56,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 69,
+      "t": 0.54,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 70,
+      "t": 0.52,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 71,
+      "t": 0.5,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 72,
+      "t": 0.48,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 73,
+      "t": 0.46,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 74,
+      "t": 0.44,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 75,
+      "t": 0.42,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 76,
+      "t": 0.4,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 77,
+      "t": 0.38,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 78,
+      "t": 0.36,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 79,
+      "t": 0.34,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 80,
+      "t": 0.32,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 81,
+      "t": 0.3,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 82,
+      "t": 0.28,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 83,
+      "t": 0.26,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 84,
+      "t": 0.24,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 85,
+      "t": 0.22,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 86,
+      "t": 0.2,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 87,
+      "t": 0.18,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 88,
+      "t": 0.16,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 89,
+      "t": 0.14,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 90,
+      "t": 0.12,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 91,
+      "t": 0.1,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 92,
+      "t": 0.08,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 93,
+      "t": 0.06,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 94,
+      "t": 0.04,
+      "old_root_distance_mm": 0.00011920928955078125
+    },
+    {
+      "station": 95,
+      "t": 0.02,
+      "old_root_distance_mm": 0.00011920928955078125
+    }
+  ],
+  "geodesic_radius_mm": 7.5,
+  "method": "40% bounded lower-rim profile blend toward the other canthus-local lower curve at retained own width; maximum1.1mm. Corners/upperpath anchored. Depth follows same actual sclera shell. Lowerwall/lashes transported from evaluated skin frames. Original arrays remain unchanged.",
+  "activation": "Neutral correction fades under matching Close/Joy, half under Surprise,80percent under Angry. Other-side iris/sclera/face contour unchanged.",
+  "payload_sha256": "d5cf8e2a6c81390b004722a0c8fa1151bdff9ec72e6e0f065821231eb7e1543d",
+  "native_saved": false
+}

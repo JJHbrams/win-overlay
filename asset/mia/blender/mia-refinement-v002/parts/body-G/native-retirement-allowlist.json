@@ -1,0 +1,66 @@
+{
+  "deletion_performed": false,
+  "authorization_condition": "NO deletion until root verifies final integration. Root named superseded unselected B/C/D/F/F2 only. Current G and all G family files untouched.",
+  "allowed_after_root_verification": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\Mia_BodyUnderwear_v002_B.blend",
+      "bytes": 196615196,
+      "sha256": "c1b8913515fff83a68c959cc446ee059cda79866e1ee4df32da3fc66e9151116"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\anatomy-D\\Mia_BodyUnderwear_v002_D.blend",
+      "bytes": 200714287,
+      "sha256": "c792b46574aedfb282fa166f6b1d6b6ef76fff7ce54060bc9d340f8f93d69b8c"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\paint-C\\Mia_BodyUnderwear_v002_C.blend",
+      "bytes": 201492441,
+      "sha256": "9f67cd81c154c0c30c29416f69eb427c484ffed0128a789b257530911838c8d7"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\surface-F\\Mia_BodyUnderwear_v002_F.blend",
+      "bytes": 203414043,
+      "sha256": "c5286af14c1d7540256a4ecedf34c6613489138a560d50e5330b337e5a494d70"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\surface-F\\Mia_BodyUnderwear_v002_F.blend1",
+      "bytes": 203412761,
+      "sha256": "644336d881163d2d0ecfa6ba2503cc137ddccf4fdc12d306fde6d317df24d422"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\surface-F2\\Mia_BodyUnderwear_v002_F2.blend",
+      "bytes": 206996010,
+      "sha256": "8b4ac1ed9e0371e78e1a19e275d42773975af7f830e35833541850856688b02b"
+    }
+  ],
+  "allowed_total_bytes": 1212644738,
+  "held_not_in_authorized_set": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\Mia_BodyUnderwear_v002_A.blend",
+      "bytes": 196614497,
+      "sha256": "c5e439268fb9130648a654f7baa6cb7b0dd0aa4db492179fcb95550c0eb03179"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\Mia_BodyUnderwear_v002_G.blend",
+      "bytes": 205323810,
+      "sha256": "e199c01b4c0a8fbc7942d5b667f8cdd0e1827d766d98cf28c99bd27ab12cf0da"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\Mia_BodyUnderwear_v002_G_geometry.blend",
+      "bytes": 199042505,
+      "sha256": "46e258cb0ea39f47ce829b2933391fad8def68dcb0a8b6ec7adacac8bfc2fa73"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\weights-E\\Mia_BodyUnderwear_v002_E_Weights.blend",
+      "bytes": 200716894,
+      "sha256": "1f0454bfa0868b1b3e08dcd0837637b908d883e49c210a548dd1f77dec653ca3"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-body-underwear-v002\\support-G\\replay-check\\Mia_v002_G_ReplayVerified.blend",
+      "bytes": 199043883,
+      "sha256": "d62538a5a1da504ecca182f813e4980e344e2f67a03056346fa2540b5e545548"
+    }
+  ],
+  "preserve": "All scripts/NPZ/maps/art/reference/render PNGs/logs/JSON/CSV/SVG remain. Original457 and all canonical/native/reference inputs are outside this deletion list.",
+  "dependency_note": "Current G portable replay requires only its own final payload/weightJSON/newUV/sixmaps, not B/C/D/F/F2 native. F2 native is historical comparison/rollback and G geometry-build convenience input; keep F2 portable arrays/maps/scripts if retiring it. Stage A/E and G geometry/replay-check were not included in root authorized deletion set."
+}

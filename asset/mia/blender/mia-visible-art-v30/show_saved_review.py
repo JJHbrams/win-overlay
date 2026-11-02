@@ -13,7 +13,10 @@ for window in bpy.context.window_manager.windows:
  for area in window.screen.areas:
   if area.type=='VIEW_3D':
    v=area.spaces.active;v.clip_start=.001;v.clip_end=10;v.region_3d.view_location=(0,0,1.55);v.region_3d.view_distance=.45;v.region_3d.view_perspective='ORTHO';v.region_3d.view_rotation=cam.rotation_euler.to_quaternion();v.shading.type='MATERIAL';v.shading.use_scene_lights=True;v.shading.use_scene_world=True;v.overlay.show_overlays=False
-hair=[ob for ob in s.objects if ob.type=='MESH' and not ob.hide_render and (any(t in ob.name for t in ['Hair','HAIR','Braid','Crown','Gather','RootLining','PIXAL']) or any('HAIR' in c.name.upper() for c in ob.users_collection))]
+import importlib.util
+ownership_spec=importlib.util.spec_from_file_location('mia_review_ownership',P/'component_ownership.py')
+ownership=importlib.util.module_from_spec(ownership_spec);ownership_spec.loader.exec_module(ownership)
+hair=[ob for ob in s.objects if ob.type=='MESH' and not ob.hide_render and ownership.is_hair_object(ob)]
 records=[]
 try:
  for hide in [False,True]:

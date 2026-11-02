@@ -1,0 +1,143 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R2.blend",
+  "sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+  "fingerprint_version": "mia.scene-fingerprint.r3.1",
+  "helper_sha256": "e282d98bd8db32cdc9a56d444fce41e4cadd4aed10ae53337972f8dfc70c5e29",
+  "legacy_core_compatible": true,
+  "legacy_owners": 618,
+  "deterministic_repeat": true,
+  "tests": [
+    {
+      "id": "head-roll-expression-at-neutral",
+      "detected_fields": [
+        "drivers"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "smile-shapekey-expression-at-neutral",
+      "detected_fields": [
+        "drivers"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "driver-target-path",
+      "detected_fields": [
+        "drivers"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "custom-property-object",
+      "detected_fields": [
+        "custom_properties"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "custom-property-mesh-data",
+      "detected_fields": [
+        "custom_properties"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "custom-property-shape-key-data",
+      "detected_fields": [
+        "custom_properties"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "same-name-material-socket",
+      "detected_fields": [
+        "material_signatures"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "same-name-embedded-node-tree-cache",
+      "detected_fields": [
+        "material_signatures"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "recursive-nodegroup-interface",
+      "detected_fields": [
+        "material_signatures"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "existing-numeric-POINT-value",
+      "detected_fields": [
+        "point_attributes"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "POINT-FLOAT_COLOR-content",
+      "detected_fields": [
+        "point_attributes"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "same-name-type-shrinkwrap-offset",
+      "detected_fields": [
+        "modifier_settings"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "same-name-type-shrinkwrap-target",
+      "detected_fields": [
+        "modifier_settings"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "camera-clip-data",
+      "detected_fields": [
+        "camera_spec"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "light-energy-data",
+      "detected_fields": [
+        "light_spec"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "world-envelope-graph",
+      "detected_fields": [
+        "world"
+      ],
+      "exact_restore": true
+    },
+    {
+      "id": "render-fps-envelope",
+      "detected_fields": [
+        "render"
+      ],
+      "exact_restore": true
+    }
+  ],
+  "exact_driver_exception_accepted": true,
+  "negative_controls_rejected": [
+    "no-exception",
+    "wrong-index",
+    "pose-change-even-with-driver-exception"
+  ],
+  "all_mutations_restored": true,
+  "full_snapshot_sha256": "3db051fb761e969d1f1751085b56baafcfda1ff6eb700f57b98f489fd813d218",
+  "fresh_reopen_equal_same_helper_version": true,
+  "native_saved": false,
+  "gpu_used": false,
+  "native_unchanged": true,
+  "elapsed_seconds": 60.310478925704956
+}

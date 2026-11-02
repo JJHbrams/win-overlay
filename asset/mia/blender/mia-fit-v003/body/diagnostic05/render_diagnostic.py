@@ -62,7 +62,7 @@ for pose in ['current','source-like']:
         state.update(path=str(path),native_sha256=d['sha256'],target_sha256=diag.digest(P/'posed-target/target-05.npz'),
             diagnostic_module_sha256=diag.digest(O/'rigged05.py'),cpu_guard_sha256=diag.digest(O/'cpu-guard.json'),
             camera=c,camera_exact_existing05_F2=True,hair_off=True,body_material=mat.name,
-            actual_lights_before_render=[dict(name=ob.name,hidden=ob.hide_render,energy=ob.data.energy,size=ob.data.size,color=list(ob.data.color),matrix=[list(r) for r in ob.matrix_world]) for ob in s.objects if ob.type=='LIGHT'],
+            actual_lights_before_render=[dict(name=ob.name,hidden=ob.hide_render,energy=ob.data.energy,size=ob.data.size,use_shadow=ob.data.use_shadow,color=list(ob.data.color),matrix=[list(r) for r in ob.matrix_world]) for ob in s.objects if ob.type=='LIGHT'],
             world=dict(color=[.18,.18,.18],strength=.2),gray=dict(base_color=[.23,.23,.23,1],roughness=.85),
             color_management=record['color_management'],head_evaluated_bitexact=True,
             scope='Rejected05 diagnostic; pose and scoped Smooth changed independently. No anatomical improvement or motion-rig claim.',native_saved=False)

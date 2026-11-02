@@ -1,0 +1,13 @@
+00:04.422  blend            | Read blend: "C:\Users\antio\.codex\worktrees\mia-body-head-v06\win-overlay\asset\mia\blender\mia-refinement-v002\integrated\Mia_v0.0.2_Review_R3b.blend"
+C:\Users\antio\.codex\worktrees\mia-v002-hair\win-overlay\asset\mia\blender\mia-fit-v003\hair\render_crown_flow_data.py:8: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  ma=bpy.data.materials.new('V003_CROWN_FLOW_DATA_NOT_ART');ma.use_nodes=True;n=ma.node_tree.nodes;n.clear();uv=n.new('ShaderNodeUVMap');uv.uv_map=uvname;tex=n.new('ShaderNodeTexImage');tex.image=bpy.data.images.load(str(P/'crown-strip-A/FLOW_FIELD_TEXTURE_DATA.png'),check_existing=False);tex.image.colorspace_settings.name='sRGB';tex.interpolation='Linear';em=n.new('ShaderNodeEmission');out=n.new('ShaderNodeOutputMaterial');l=ma.node_tree.links;l.new(uv.outputs[0],tex.inputs['Vector']);l.new(tex.outputs['Color'],em.inputs['Color']);l.new(em.outputs[0],out.inputs['Surface']);slot=len(copy.data.materials);copy.data.materials.append(ma)
+00:13.953  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-v002-hair\win-overlay\asset\mia\blender\mia-fit-v003\hair\crown-strip-A\on-model-flow-DATA\000-flow-DATA.png'
+BlenderMCP addon registered
+CROWN_FLOW_DATA 000
+00:17.828  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-v002-hair\win-overlay\asset\mia\blender\mia-fit-v003\hair\crown-strip-A\on-model-flow-DATA\012-flow-DATA.png'
+CROWN_FLOW_DATA 012
+CROWN_FLOW_DATA_DONE 2
+BlenderMCP addon unregistered
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

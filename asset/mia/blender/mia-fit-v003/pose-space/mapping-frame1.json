@@ -1,0 +1,168 @@
+{
+  "armature_flags": {
+    "invert_vertex_group": false,
+    "show_in_editmode": false,
+    "show_on_cage": false,
+    "show_render": true,
+    "show_viewport": true,
+    "use_bone_envelopes": false,
+    "use_deform_preserve_volume": false,
+    "use_multi_modifier": false,
+    "use_vertex_groups": true,
+    "vertex_group": ""
+  },
+  "blender_version": "5.2.3 LTS",
+  "conditioning": {
+    "condition_limit": 1000000.0,
+    "determinant_max": 1.0000108816643143,
+    "determinant_min": 0.7356616252041138,
+    "max_condition": 1.1659027636066917,
+    "max_singular_value": 1.0000086982303988,
+    "min_singular_value": 0.8577043219529561,
+    "p95_condition": 1.0460605361121833
+  },
+  "disabled_post_modifiers_on_copy": [
+    {
+      "name": "V14 Stitch coincident skin seams",
+      "original_render": true,
+      "original_viewport": true,
+      "type": "WELD"
+    },
+    {
+      "name": "V14 Continuous skin curvature",
+      "original_render": true,
+      "original_viewport": true,
+      "type": "SUBSURF"
+    },
+    {
+      "name": "V14 Local transition relaxation",
+      "original_render": true,
+      "original_viewport": true,
+      "type": "SMOOTH"
+    },
+    {
+      "name": "MToon Outline (F00_002_01_Shoes_01_CLOTH)",
+      "original_render": true,
+      "original_viewport": true,
+      "type": "NODES"
+    },
+    {
+      "name": "MToon Outline (F00_002_02_Body_00_SKIN)",
+      "original_render": true,
+      "original_viewport": true,
+      "type": "NODES"
+    },
+    {
+      "name": "MToon Outline (F00_002_01_Tops_01_CLOTH)",
+      "original_render": true,
+      "original_viewport": true,
+      "type": "NODES"
+    }
+  ],
+  "frame": 1,
+  "limitations": [
+    "Fixed pose/weights/key state only; rebuild when state changes.",
+    "No post-Armature surface inverse, body fit, rig retarget, render, or art acceptance.",
+    "Envelope response may depend on location; finite field test covers this field only."
+  ],
+  "npz_sha256": "c36230677c7491af3ec35f1cd0dce579647ce3bad9e4c5db5495304fbd567045",
+  "owner": "MIA_V27_SharedHeadBody",
+  "pose_guard_summary": {
+    "active_keys": {},
+    "active_shape_key_index": 0,
+    "frame": 1,
+    "matrix_world": [
+      [
+        -1.0,
+        8.742277657347586e-08,
+        0.0,
+        0.0
+      ],
+      [
+        -8.742277657347586e-08,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "owner": "MIA_V27_SharedHeadBody",
+    "rig": "MIA_V06_RIG",
+    "rig_matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "rig_pose_position": "POSE",
+    "show_only_shape_key": false,
+    "subframe": 0.0
+  },
+  "pose_sha256": "2e8c4c55daebd63e457d6bedd5196f5b223f6fd76e38bd49bc03ec4a47b03425",
+  "probe_m": 0.01,
+  "rig": "MIA_V06_RIG",
+  "schema_version": 1,
+  "scope": "current shape-key state + sole Armature control cage; pre-Weld/Subsurf/Smooth/outline",
+  "semantics": "q_world = q0_world + J_world_from_local @ additive_pre_armature_local_delta",
+  "shape_key_count": 47,
+  "status": "PASS",
+  "verification": {
+    "actual_re_evaluated_roundtrip": {
+      "max_m": 5.584457427698094e-07,
+      "p95_m": 2.4586915971296424e-07,
+      "rms_m": 1.097198753408459e-07
+    },
+    "central_midpoint_max_m_by_axis": [
+      1.3329305247493283e-07,
+      1.862646604401182e-07,
+      1.8627382791498211e-07
+    ],
+    "field_amplitude_max_m": 0.0399999998167599,
+    "field_amplitude_min_m": 0.02306166466319607,
+    "field_definition": "smooth nonuniform trigonometric direction and amplitude; independent of basis probes",
+    "forward_prediction": {
+      "max_m": 5.696532364260796e-07,
+      "p95_m": 2.4617306044104854e-07,
+      "rms_m": 1.1300564920503617e-07
+    },
+    "tolerance_m": 2e-05,
+    "world_to_local_delta": {
+      "max_m": 5.845789069697716e-07,
+      "p95_m": 2.478197412229133e-07,
+      "rms_m": 1.1456686203791159e-07
+    },
+    "zero_offset_node_vs_no_node_max_m": 0.0
+  },
+  "vertex_count": 4647
+}

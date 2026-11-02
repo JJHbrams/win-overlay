@@ -1,0 +1,128 @@
+{
+  "actual_fresh_MN_replay": true,
+  "binding": true,
+  "O_report": {
+    "variant": "crown-O",
+    "report": {
+      "source_MN_manifest_sha256": "af060a2b35b5f567ea1a8739c19bf68f550e5ce5134b1c5d41bf1ffe65a4c0ef",
+      "source_main_coords_sha256": "d060da1ecbce1ebef9755f3019b14951029802147fd71e7722d9247a458256fc",
+      "target_main_coords_sha256": "551ce1ed829cc2e85f6f6b8a162a1e8a626ed4069446992854d6fbfaaf12b76f",
+      "main_changed_vertices": 780,
+      "main_maximum_delta_mm": 11.74822413132796,
+      "assemblies": [
+        {
+          "assembly": "tall_flyaway_AB",
+          "seed_unique_vertices": 159,
+          "affected_unique_vertices": 259,
+          "before_bbox": [
+            [
+              -0.023852,
+              -0.033331,
+              1.651304
+            ],
+            [
+              0.017872,
+              0.001909,
+              1.692882
+            ]
+          ],
+          "after_bbox": [
+            [
+              -0.0230635998897105,
+              -0.033331,
+              1.651304
+            ],
+            [
+              0.017871190131664633,
+              0.001080594782928989,
+              1.692882
+            ]
+          ],
+          "max_delta_mm": 11.74822413132796,
+          "geodesic_limit_mm": 20.0,
+          "intent": "Taper two surface banks of one curved flyaway, retaining curved XYZ centerline and nonzero thickness."
+        },
+        {
+          "assembly": "neighbor_crown_arc_C",
+          "seed_unique_vertices": 107,
+          "affected_unique_vertices": 211,
+          "before_bbox": [
+            [
+              -0.079114,
+              -0.040715,
+              1.648056
+            ],
+            [
+              0.000279,
+              -0.013759,
+              1.670145
+            ]
+          ],
+          "after_bbox": [
+            [
+              -0.079114,
+              -0.03613405062123523,
+              1.648056
+            ],
+            [
+              0.000279,
+              -0.01381865337686958,
+              1.670145
+            ]
+          ],
+          "max_delta_mm": 9.879791331537493,
+          "geodesic_limit_mm": 18.0,
+          "intent": "Thin the cross-section of an existing crown arc; this is not a free cut terminal and is not removed."
+        }
+      ],
+      "topology_original_UV_semantic_weights_unchanged": true,
+      "all_points_below_1point650m_exact": true,
+      "scope": "Only connected terminal crown assemblies with geodesic parent fade. Main scalp coverage/root volume and third already-slender flyaway are not replaced. No generic cap, hidden geometry, normal blur or source-image scaling.",
+      "ART": "UNVERIFIED until actual front/profile/back/high-low/orbit proof."
+    },
+    "source_and_target_hash_guards": true,
+    "static_shader_rule": "Changed crown uses existing geometric-normal blend attribute only; skinned L already uses deformed geometry normals. Original maps/UVs are unedited.",
+    "ART": "UNVERIFIED"
+  },
+  "all_other_hair_face_body_rig_maps_materials_world_scene_preservation_delta": {},
+  "main_topology_semantic_weights_oldUV_unchanged": true,
+  "normal_status": {
+    "main_has_custom_normals": false,
+    "object_normal_maps": [
+      {
+        "material": "MIA_V002_DeformNormals_MIA_V17_PIXAL_DetailedHair",
+        "node": "\ub178\uba40 \ub9f5",
+        "outgoing_links": []
+      }
+    ],
+    "diffuse_normal_sources": [
+      {
+        "material": "MIA_V002_DeformNormals_MIA_V17_PIXAL_DetailedHair",
+        "node": "V22_SCENE_LIGHT_RESPONSE",
+        "sources": [
+          [
+            "Vector Math.008",
+            "Vector"
+          ]
+        ]
+      },
+      {
+        "material": "MIA_V002_DeformNormals_MIA_V17_PIXAL_DetailedHair.001",
+        "node": "V22_SCENE_LIGHT_RESPONSE",
+        "sources": []
+      }
+    ],
+    "all_six_actual_UV_hashes": {
+      "UVMap": "7444e853ee6ef7574c32336f4f5f283fcd9b3ebf35ca7f996f894ea9fd05e478",
+      "MIA_V17_PAINT_UV": "e27925a61c7297c1c7f55bfed042754ef856953318681543247fca74d9477847",
+      "MIA_V002_RestProject_front": "af42a65ad88d93d7c052956c572549bc376192057b6c7a52c223f49a4ca8baab",
+      "MIA_V002_RestProject_profile": "57033d6d7ed455d73219e5f91fc86d786caf8ada8e2c1fbe6e8dbaffff5331b4",
+      "MIA_V002_RestProject_back": "2d99f4760a01ce9daa5d50bac9ec9395f5d48f412b6d2d84f225e180898b31ef",
+      "MIA_V002_RestProject_rear_oblique": "b1e5e9f76c336d7e5fe5c3eba8d6c4edaecb1dc87390f5b59cf9e5d9944b0bcb"
+    }
+  },
+  "all_coords_below_1point65m_exact": true,
+  "third_already_slender_flyaway_exact": true,
+  "no_new_native": true,
+  "ART": "UNVERIFIED until actual integrated multi-view rendering."
+}

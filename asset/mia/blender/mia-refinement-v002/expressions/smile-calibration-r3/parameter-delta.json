@@ -1,0 +1,32 @@
+{
+  "native": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R2.blend",
+  "sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+  "probes": [
+    {
+      "panel": 8,
+      "old_recipe": {
+        "MTH_Fun": 0.35,
+        "MTH_Up": 0.12
+      },
+      "tested_MTH_Fun": 0.65,
+      "manual_addition": 0.30000000000000004,
+      "source_panel": "source-panels\\08-closed_smirk.png",
+      "scope": "Same source-preset head/gaze and camera; existing smile amplitude only, not geometry/key/texture edits."
+    },
+    {
+      "panel": 16,
+      "old_recipe": {
+        "MTH_Fun": 0.22,
+        "MTH_Up": 0.1,
+        "EYE_Joy": 0.08
+      },
+      "tested_MTH_Fun": 0.45,
+      "manual_addition": 0.23,
+      "source_panel": "source-panels\\16-gentle_smile.png",
+      "scope": "Same source-preset head/gaze and camera; existing smile amplitude only, not geometry/key/texture edits."
+    }
+  ],
+  "wrapper_sha256": "873d0c07773ea4c3ac21ee9676c95bc3e5cd9a593f68405553d4b1e5d1ac2f11",
+  "native_saved": false,
+  "art_approved": false
+}

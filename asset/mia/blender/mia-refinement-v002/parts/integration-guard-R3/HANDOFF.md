@@ -1,0 +1,17 @@
+# Shared R3 integration fingerprint
+
+Owned isolated folder only. Canonical coordinators, live Blender, Git and native files were not edited. No GPU was used and no `.blend` snapshot was saved.
+
+Copy `scene_fingerprint.py` beside the root coordinators. `coordinator-changes.patch` is the proposed narrow diff; `coordinator-patch-guide.md` includes the exact stage declarations. The diff was generated against the source hashes in `patch-source-hashes.json`, compiled in memory, and leaves root's preview reuse/fps30 changes untouched. Root applies/reviews it.
+
+Public functions: `object_fingerprint(ob)`, `snapshot_scene()`, `scene_envelope()`, `assert_existing_driver_preservation(before_objects, after_objects, stage)`, and `assert_scene_pose_owners_protected(...)`. `snapshot_scene()` returns separate `objects` and `scene` records plus the schema version. The integration report records this same version and helper-byte SHA; fresh verification requires both and compares every saved field with the same helper.
+
+Legacy vertices/loop_vertices/polygon_sizes/UV/materials/keys/weight_hash/modifiers/pose_basis fields remain compatible with the R2 metadata. Additional fields observe object/data/key drivers and targets, JSON custom properties, material/node-group sockets/defaults/image bindings/EEVEE outputs, packed image hashes/color spaces, numeric POINT attributes, modifier configuration including Shrinkwrap, camera/light data and the separate world/camera/render/color/fps envelope. POINT selection/edit-hide flags, node UI locations and runtime driver validity are not fingerprints. Unsupported JSON/RNA value types fail explicitly; no unstable `repr()` fallback is used.
+
+Embedded material node trees can share the same RNA name. Cache identity therefore uses pointers **internally only**, never in JSON; an actual copied-material collision regression proves a shared cache equals independently computed signatures. Persisted ID references use type/name/library, with sorted authored records and explicit mathutils values.
+
+Original drivers cannot be removed or modified without a declared exact owner/scope/path/index. The narrow head-roll exception has `scope:'object'`, owner `MIA_V06_RIG`, Head `rotation_euler`, index2. It cannot excuse any pose/transform/rest-data change, other rig driver, camera or light edit. Smile requires its separate `scope:'shape_keys'` MTH_Fun declaration. New driver additions remain observable and subject to owner rules; rig additions require an explicit path exception too.
+
+`test_fingerprint_cpu.py` opens exact immutable R2 SHA `eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82`, performs17 mutation/cache checks, restores every edit exactly, compares all618 legacy owners' core fields, repeats the full fingerprint, then freshly reopens R2 and compares the whole same-version snapshot. It also rejects an undeclared roll change, a wrong-index exception and a pose change despite a valid driver exception. `CPU-mutation-report.json` is the actual small result; native SHA and helper-byte immutability are checked. The success marker is `R3_FINGERPRINT_MUTATION_GUARD_DONE`.
+
+This proves the new observations/restoration on R2. Root still runs the updated R3 component preflight and the actual newly saved R3 fresh verifier; old R2 metadata lacks the new schema fields and is not silently treated as a full new-schema verification. These are technical guards, not ART approval.

@@ -1,0 +1,98 @@
+{
+  "baseline": "integrated/Mia_v0.0.2_Review_R2.blend",
+  "baseline_sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+  "stages": [
+    {
+      "id": "eye-A-dental-display",
+      "entry": "parts/eye-A/portable_expression_refine.py",
+      "entry_sha256": "434a8b3f2e9465e06cdc23a5758b6fbe60b7e17e82724fbe6a6e96ac570e411b",
+      "function": "apply_to_current_scene",
+      "allowed_existing_owners": [
+        "MIA_V27_SharedHeadBody",
+        "Mia_FacialControls_v002",
+        "MIA_v002_UpperDentalCrowns",
+        "MIA_v002_LowerDentalCrowns",
+        "V28G_InnerLid_-1",
+        "V28G_InnerLid_1",
+        "V30_UpperLashes_-1",
+        "V30_UpperLashes_1",
+        "V30_LowerLashes_-1",
+        "V30_LowerLashes_1",
+        "V28G_Iris_-1",
+        "V28G_Iris_1",
+        "V28G_Sclera_-1",
+        "V28G_Sclera_1"
+      ],
+      "kwargs": {},
+      "path_kwargs": []
+    },
+    {
+      "id": "brow-final-support",
+      "entry": "parts/brow-support/replay_brow_support.py",
+      "entry_sha256": "1882ec0698db383d1c06f9ca677eca6b921847eb96296cea2f76fbcb86f673bb",
+      "function": "apply",
+      "allowed_existing_owners": [
+        "V31_SourceBrow_-1",
+        "V31_SourceBrow_1"
+      ],
+      "kwargs": {},
+      "path_kwargs": []
+    },
+    {
+      "id": "hair-surface-R",
+      "entry": "parts/hair-surface-R/apply_surface_R.py",
+      "entry_sha256": "f91a5b82712981254437548060f1660b72d72fb57e2997d245ab35c27b948ce1",
+      "function": "apply",
+      "allowed_existing_owners": [
+        "MIA_V17_PIXAL_DetailedHair"
+      ],
+      "kwargs": {
+        "folder": "parts/hair-surface-R"
+      },
+      "path_kwargs": [
+        "folder"
+      ]
+    },
+    {
+      "id": "smile-preset-calibration",
+      "entry": "expressions/apply_smile_preset_calibration.py",
+      "entry_sha256": "064a6fb996f958888cd5fc89f35a7ec18d3e4263aa34beaedf7638f59fef2382",
+      "function": "apply_to_current_scene",
+      "allowed_existing_owners": [
+        "MIA_V27_Foundation_Face",
+        "Mia_FacialControls_v002"
+      ],
+      "kwargs": {},
+      "path_kwargs": [],
+      "allowed_driver_changes": [
+        {
+          "owner": "MIA_V27_Foundation_Face",
+          "scope": "shape_keys",
+          "data_path": "key_blocks[\"Face.M_F00_000_00_Fcl_MTH_Fun\"].value",
+          "array_index": 0
+        }
+      ]
+    },
+    {
+      "id": "source-pose-calibration",
+      "entry": "expressions/apply_pose_calibration_r3.py",
+      "entry_sha256": "7be096593da30f9620237ba609af482d448b1177f504eff9061cfc0a5339540d",
+      "function": "apply_to_current_scene",
+      "allowed_existing_owners": [
+        "MIA_V06_RIG",
+        "Mia_FacialControls_v002"
+      ],
+      "kwargs": {},
+      "path_kwargs": [],
+      "allowed_driver_changes": [
+        {
+          "owner": "MIA_V06_RIG",
+          "scope": "object",
+          "data_path": "pose.bones[\"J_Bip_C_Head\"].rotation_euler",
+          "array_index": 2
+        }
+      ]
+    }
+  ],
+  "scope": "Selected post-R2 bounded corrections: EyeA dental-display, final brow support, Side_Nape R, existing smile calibration and source-roll estimate. CrownS authored fill/UV experiment is UNSELECTED after actual mapped-flow review. No whole ART or animation approval."
+}

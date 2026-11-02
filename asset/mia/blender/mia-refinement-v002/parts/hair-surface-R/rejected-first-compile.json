@@ -1,0 +1,19 @@
+{
+  "run": "review/",
+  "valid_original_frames": [
+    "profile-baseline-production",
+    "opposite018-baseline-production",
+    "profile-baseline-pigment",
+    "opposite018-baseline-pigment",
+    "profile-geometry-gray",
+    "opposite018-geometry-gray"
+  ],
+  "rejected_candidate_frames": [
+    "profile-R-production",
+    "opposite018-R-production",
+    "profile-R-pigment",
+    "opposite018-R-pigment"
+  ],
+  "reason": "Actual EEVEE Material uses too many attributes / GLSL compile errors. Candidate image files exist but are invalid, never compare as ART. Same palette compressed to ONE FLOAT_COLOR attribute, corrective rerender review-corrected/. Original invalid run retained as failure evidence.",
+  "geometry_changed": false
+}

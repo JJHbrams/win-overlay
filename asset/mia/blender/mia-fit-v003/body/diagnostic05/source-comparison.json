@@ -1,5 +1,5 @@
 {
-  "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\diagnostic05\\F2-source-pose-smooth-diagnostic.png",
+  "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\diagnostic05\\F2-source-pose-smooth-diagnostic.png",
   "sha256": "85884d543081fcdc4f4380f66df2398ee27ec6db5f9d0649cbf012f1fd1a4c92",
   "source_sha256": "31fa0da05c970e9b6d84a2569953b48636bd8d32df33d65901772f5664ad52b2",
   "source_crop_original_pixels": [
@@ -21,7 +21,8 @@
     5.960464477539063e-08,
     1.4210854715202004e-14
   ],
-  "light_energy_size_shadow_matches": true,
+  "light_energy_size_matches_measured": true,
+  "light_shadow_verification": "Copied from existing05 by the render recipe; these four actual light records omit use_shadow, so independent actual shadow-state equality is unverified. No rerender or anatomy approval follows this reporting correction.",
   "existing05_vs_new_current_on_RGB": {
     "changed_pixels": 129,
     "total_pixels": 786769,

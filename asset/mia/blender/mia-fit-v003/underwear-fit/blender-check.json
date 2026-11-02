@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "baseline_native_sha256_before": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "baseline_native_sha256_after": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "actual_evaluated_readback_equal_existing_checkpoint": {
+    "world": true,
+    "triangles": true,
+    "triangle_uv": true,
+    "triangle_materials": true
+  },
+  "surface_guards": {
+    "geometry_sha256": "a04d23a61e39a4ccaa701aa532090e0f84075a45857f098e8e2cfb042af8de25",
+    "triangles_sha256": "9f49d035d774880653c8b1dbad0ddd98f54dfc59bb03a5d773567f94d7d3352a",
+    "triangle_uv_sha256": "05ba0f6a1b4f42659c13267479271623db9327ad85cc98f484d97d78e585d950",
+    "vertices": 80771,
+    "triangles": 161184,
+    "uv_layer": "MIA_V002_UnderwearUV"
+  },
+  "actual_uv_layers": [
+    "UVMap",
+    "MIA_BODY_V23_UV",
+    "MIA_V002_UnderwearUV"
+  ],
+  "read_only_material_uv_nodes": [
+    {
+      "index": 0,
+      "name": "MIA_v002_MIA_V27_SharedHeadBody_RefinedD2",
+      "uv_nodes": [
+        {
+          "node": "UV \ub9f5.001",
+          "uv_map": "UVMap"
+        },
+        {
+          "node": "V30_ActualFaceUV",
+          "uv_map": "UVMap"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "MIA_V002_G_Body_ContinuousSupport",
+      "uv_nodes": [
+        {
+          "node": "UV \ub9f5",
+          "uv_map": "UVMap"
+        },
+        {
+          "node": "V002_UnderwearUV",
+          "uv_map": "MIA_V002_UnderwearUV"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "MIA_V23_Body_CommonLight",
+      "uv_nodes": [
+        {
+          "node": "UV \ub9f5",
+          "uv_map": "UVMap"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "MIA_V23_Body_CommonLight",
+      "uv_nodes": [
+        {
+          "node": "UV \ub9f5",
+          "uv_map": "UVMap"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "name": "MIA_V23_Body_CommonLight",
+      "uv_nodes": [
+        {
+          "node": "UV \ub9f5",
+          "uv_map": "UVMap"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "name": "MIA_V22_Body_CommonLight_Preview.001",
+      "uv_nodes": [
+        {
+          "node": "UV \ub9f5",
+          "uv_map": "UVMap"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "name": "MIA_V13_PaintedBodySkin",
+      "uv_nodes": []
+    },
+    {
+      "index": 7,
+      "name": "MIA_V13_PaintedBodySkin",
+      "uv_nodes": []
+    },
+    {
+      "index": 8,
+      "name": "MIA_V13_PaintedBodySkin",
+      "uv_nodes": []
+    },
+    {
+      "index": 9,
+      "name": "V27_HeadBlend_MIA_V23_Body_CommonLight",
+      "uv_nodes": [
+        {
+          "node": "UV \ub9f5",
+          "uv_map": "UVMap"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "name": "V27_HeadBlend_MIA_V22_Body_CommonLight_Preview.001",
+      "uv_nodes": [
+        {
+          "node": "UV \ub9f5",
+          "uv_map": "UVMap"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "name": "V27_HeadBlend_MIA_V13_PaintedBodySkin",
+      "uv_nodes": []
+    }
+  ],
+  "camera_projection_max_error_px": {
+    "front": 3.450990435586696e-05,
+    "profile": 2.721446089599713e-05,
+    "back": 3.424342874283753e-05,
+    "oblique": 6.627989003913708e-05
+  },
+  "original_owners_exact": 620,
+  "scene_envelope_exact": true,
+  "original_id_inventory_exact": true,
+  "temporary_ids_remaining": [],
+  "render_called": false,
+  "native_save_called": false,
+  "target01_or_target02_used": false,
+  "body_garment_art_acceptance": "NOT_EVALUATED"
+}

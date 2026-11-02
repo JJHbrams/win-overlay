@@ -1,0 +1,2268 @@
+{
+  "schema_version": 1,
+  "source": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+    "sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+    "size_px": [
+      1536,
+      1024
+    ],
+    "authority": "Exact user-confirmed v06; quantitative garment design anchor",
+    "coordinates": "Original full-sheet pixels, x right/y down; crop bounds XYXY, upper inclusive/lower exclusive"
+  },
+  "body_source_contours": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\scaffold-D\\source-contours.json",
+    "sha256": "52799d5bfe663f10284fcde75a0c1f4bbab83cbcb0c7a8be0f0074652f1d6f86",
+    "source_sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+    "relationship": "Read as coarser context only. These visible-pixel garment/graphic fragments refine coverage; old coarse endpoints do not override observed hair occlusion."
+  },
+  "view_crops_xyxy": {
+    "front": [
+      150,
+      175,
+      325,
+      500
+    ],
+    "profile": [
+      490,
+      200,
+      640,
+      510
+    ],
+    "back": [
+      845,
+      300,
+      1015,
+      515
+    ],
+    "oblique": [
+      1220,
+      165,
+      1400,
+      505
+    ]
+  },
+  "paths": [
+    {
+      "id": "front.bra.scoop",
+      "label": "P01",
+      "component": "bra",
+      "role": "bra.neckline",
+      "view": "front",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          194,
+          263
+        ],
+        [
+          200,
+          272
+        ],
+        [
+          210,
+          280
+        ],
+        [
+          220,
+          285
+        ],
+        [
+          230,
+          288
+        ],
+        [
+          240,
+          290
+        ],
+        [
+          250,
+          289
+        ],
+        [
+          260,
+          286
+        ],
+        [
+          270,
+          281
+        ],
+        [
+          280,
+          275
+        ],
+        [
+          286,
+          267
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Visible scoop only. Both upper strap continuations enter hair/braid; do not extend across occlusion.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.bra.cup_band_transition",
+      "label": "P02",
+      "component": "bra",
+      "role": "bra.band_top",
+      "view": "front",
+      "kind": "cloth_internal_transition",
+      "points_px": [
+        [
+          180,
+          313
+        ],
+        [
+          188,
+          319
+        ],
+        [
+          198,
+          321
+        ],
+        [
+          210,
+          320
+        ],
+        [
+          224,
+          316
+        ],
+        [
+          235,
+          313
+        ],
+        [
+          244,
+          313
+        ],
+        [
+          257,
+          316
+        ],
+        [
+          270,
+          320
+        ],
+        [
+          284,
+          321
+        ],
+        [
+          296,
+          317
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Drawn cup-to-band transition. Sewing construction is not uniquely established; this is not an anatomical inframammary fold.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.bra.band_lower_edge",
+      "label": "P03",
+      "component": "bra",
+      "role": "bra.band_bottom",
+      "view": "front",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          190,
+          333
+        ],
+        [
+          200,
+          331
+        ],
+        [
+          210,
+          329
+        ],
+        [
+          220,
+          327
+        ],
+        [
+          230,
+          326
+        ],
+        [
+          240,
+          325
+        ],
+        [
+          250,
+          325
+        ],
+        [
+          260,
+          326
+        ],
+        [
+          270,
+          328
+        ],
+        [
+          280,
+          330
+        ],
+        [
+          290,
+          333
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Visible cloth-to-skin edge. Lateral ends are hair-occluded; separate from the upper cup/band line.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.bra.left_inner_strap_fragment",
+      "label": "P04",
+      "component": "bra",
+      "role": "bra.strap",
+      "view": "front",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          193,
+          248
+        ],
+        [
+          192,
+          255
+        ],
+        [
+          194,
+          263
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Short visible inner strap edge only. Shoulder attachment and outer boundary are hidden by hair.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.bra.right_inner_strap_fragment",
+      "label": "P05",
+      "component": "bra",
+      "role": "bra.strap",
+      "view": "front",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          289,
+          256
+        ],
+        [
+          289,
+          260
+        ],
+        [
+          286,
+          267
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Short visible edge at braid overlap; do not infer hidden strap width or shoulder route.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.briefs.dipped_waist",
+      "label": "P06",
+      "component": "briefs",
+      "role": "brief.waist",
+      "view": "front",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          164,
+          413
+        ],
+        [
+          179,
+          416
+        ],
+        [
+          195,
+          421
+        ],
+        [
+          211,
+          425
+        ],
+        [
+          226,
+          428
+        ],
+        [
+          241,
+          429
+        ],
+        [
+          256,
+          427
+        ],
+        [
+          272,
+          424
+        ],
+        [
+          289,
+          420
+        ],
+        [
+          306,
+          415
+        ],
+        [
+          314,
+          412
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Upper cloth edge dips centrally. Different from the leg openings; trace does not prescribe body hip width.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.briefs.left_leg_opening",
+      "label": "P07",
+      "component": "briefs",
+      "role": "brief.leg",
+      "view": "front",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          159,
+          425
+        ],
+        [
+          173,
+          430
+        ],
+        [
+          188,
+          438
+        ],
+        [
+          201,
+          447
+        ],
+        [
+          214,
+          459
+        ],
+        [
+          226,
+          473
+        ],
+        [
+          236,
+          485
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "High curved visible cloth/skin boundary, ending at narrow front crotch. Body-side left/right is not inferred from screen labels.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.briefs.right_leg_opening",
+      "label": "P08",
+      "component": "briefs",
+      "role": "brief.leg",
+      "view": "front",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          319,
+          425
+        ],
+        [
+          304,
+          431
+        ],
+        [
+          290,
+          440
+        ],
+        [
+          276,
+          451
+        ],
+        [
+          263,
+          464
+        ],
+        [
+          250,
+          479
+        ],
+        [
+          245,
+          485
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Visible high curved leg boundary. No hidden underbody return is supplied.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.briefs.crotch_turn_visible",
+      "label": "P09",
+      "component": "briefs",
+      "role": "brief.crotch",
+      "view": "front",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          236,
+          485
+        ],
+        [
+          239,
+          483
+        ],
+        [
+          242,
+          483
+        ],
+        [
+          245,
+          485
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Only the tiny visible crotch turn above the inter-leg opening; underside pattern and seam remain unobserved.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.neck.left_clavicle_line",
+      "label": "P10",
+      "component": "neck_clavicle",
+      "role": "neck.line",
+      "view": "front",
+      "kind": "illustrated_graphic_line",
+      "points_px": [
+        [
+          211,
+          221
+        ],
+        [
+          219,
+          221
+        ],
+        [
+          225,
+          220
+        ],
+        [
+          231,
+          222
+        ],
+        [
+          236,
+          225
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Thin illustrated clavicle cue, partly emerging from hair. Not a measured bone or a geometric groove.",
+      "seating_target": "FINAL posed neck/clavicle skin; cosmetic line/shadow channels after geometry fit",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.neck.right_clavicle_line",
+      "label": "P11",
+      "component": "neck_clavicle",
+      "role": "neck.line",
+      "view": "front",
+      "kind": "illustrated_graphic_line",
+      "points_px": [
+        [
+          249,
+          225
+        ],
+        [
+          255,
+          221
+        ],
+        [
+          263,
+          220
+        ],
+        [
+          272,
+          221
+        ],
+        [
+          280,
+          220
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Thin source graphic cue; right continuation under braid/hair is unobserved.",
+      "seating_target": "FINAL posed neck/clavicle skin; cosmetic line/shadow channels after geometry fit",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "front.neck.under_chin_shadow",
+      "label": "P12",
+      "component": "neck_clavicle",
+      "role": "neck.shadow",
+      "view": "front",
+      "kind": "illustrated_shadow_boundary",
+      "points_px": [
+        [
+          218,
+          185
+        ],
+        [
+          230,
+          188
+        ],
+        [
+          249,
+          181
+        ],
+        [
+          247,
+          190
+        ],
+        [
+          237,
+          199
+        ],
+        [
+          226,
+          204
+        ],
+        [
+          218,
+          208
+        ]
+      ],
+      "closed": true,
+      "crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          3,
+          6
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Approximate illustrated shadow region below chin. Soft boundary, lighting/paint mixture; not physical albedo, anatomy or a medical model.",
+      "seating_target": "FINAL posed neck/clavicle skin; cosmetic line/shadow channels after geometry fit",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "profile.bra.scoop_visible",
+      "label": "P13",
+      "component": "bra",
+      "role": "bra.neckline",
+      "view": "profile",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          505,
+          281
+        ],
+        [
+          516,
+          278
+        ],
+        [
+          529,
+          273
+        ],
+        [
+          541,
+          267
+        ],
+        [
+          552,
+          260
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Skin/cloth neckline in profile, terminating under braid. Does not reveal the hidden opposite cup or root.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "profile.bra.cup_outer_silhouette",
+      "label": "P14",
+      "component": "bra",
+      "role": "bra.outer",
+      "view": "profile",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          505,
+          281
+        ],
+        [
+          500,
+          286
+        ],
+        [
+          498,
+          294
+        ],
+        [
+          499,
+          303
+        ],
+        [
+          502,
+          311
+        ],
+        [
+          508,
+          317
+        ],
+        [
+          516,
+          320
+        ],
+        [
+          523,
+          321
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Observed clothed outer projection; cannot be imposed as naked skin or increase-depth instruction.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "profile.bra.cup_band_transition_fragment",
+      "label": "P15",
+      "component": "bra",
+      "role": "bra.band_top",
+      "view": "profile",
+      "kind": "cloth_internal_transition",
+      "points_px": [
+        [
+          520,
+          320
+        ],
+        [
+          530,
+          320
+        ],
+        [
+          540,
+          318
+        ],
+        [
+          547,
+          316
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Only visible anterior cup/band line before hair occlusion. Do not join through braid shadow.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "profile.bra.band_lower_edge",
+      "label": "P16",
+      "component": "bra",
+      "role": "bra.band_bottom",
+      "view": "profile",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          520,
+          328
+        ],
+        [
+          532,
+          328
+        ],
+        [
+          545,
+          329
+        ],
+        [
+          559,
+          332
+        ],
+        [
+          571,
+          335
+        ],
+        [
+          577,
+          337
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Band skin edge follows sloped torso perspective and ends at arm occlusion.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "profile.bra.side_return_upper_fragment",
+      "label": "P17",
+      "component": "bra",
+      "role": "bra.side_return",
+      "view": "profile",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          562,
+          298
+        ],
+        [
+          567,
+          303
+        ],
+        [
+          573,
+          306
+        ],
+        [
+          577,
+          307
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Small side-return top edge between hair and upper arm; hidden back/strap topology is not recovered.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "profile.briefs.front_waist",
+      "label": "P18",
+      "component": "briefs",
+      "role": "brief.waist",
+      "view": "profile",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          513,
+          437
+        ],
+        [
+          522,
+          430
+        ],
+        [
+          532,
+          422
+        ],
+        [
+          544,
+          416
+        ],
+        [
+          555,
+          412
+        ],
+        [
+          566,
+          410
+        ],
+        [
+          575,
+          409
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Visible anterior-to-near-side upper edge, ending at foreground arm. Same garment as front dipped waist, different projection.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "profile.briefs.front_outer_turn",
+      "label": "P19",
+      "component": "briefs",
+      "role": "brief.crotch",
+      "view": "profile",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          513,
+          437
+        ],
+        [
+          515,
+          451
+        ],
+        [
+          519,
+          466
+        ],
+        [
+          523,
+          477
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Visible anterior cloth silhouette/turn only; does not determine underbody thickness or hidden crotch seam.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "profile.briefs.near_leg_opening",
+      "label": "P20",
+      "component": "briefs",
+      "role": "brief.leg",
+      "view": "profile",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          523,
+          477
+        ],
+        [
+          524,
+          462
+        ],
+        [
+          528,
+          449
+        ],
+        [
+          535,
+          438
+        ],
+        [
+          545,
+          430
+        ],
+        [
+          557,
+          425
+        ],
+        [
+          567,
+          422
+        ],
+        [
+          575,
+          421
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "High leg opening rising toward side hip, interrupted by arm.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "profile.briefs.rear_waist_fragment",
+      "label": "P21",
+      "component": "briefs",
+      "role": "brief.waist",
+      "view": "profile",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          609,
+          422
+        ],
+        [
+          615,
+          430
+        ],
+        [
+          620,
+          437
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Small posterior fragment beyond foreground arm. Connection behind arm is unobserved.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "profile.briefs.rear_leg_fragment",
+      "label": "P22",
+      "component": "briefs",
+      "role": "brief.leg",
+      "view": "profile",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          608,
+          432
+        ],
+        [
+          617,
+          438
+        ],
+        [
+          625,
+          447
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Short posterior cloth/skin edge only. Do not reconstruct full back coverage from this fragment.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "back.bra.left_band_lower_fragment",
+      "label": "P23",
+      "component": "bra",
+      "role": "bra.band_bottom",
+      "view": "back",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          879,
+          335
+        ],
+        [
+          884,
+          335
+        ],
+        [
+          889,
+          334
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        845,
+        300,
+        1015,
+        515
+      ],
+      "confidence": {
+        "level": "low",
+        "pixel_uncertainty_range": [
+          2,
+          5
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Tiny cloth/skin lower-edge fragment only; upper boundary/straps hidden by rear hair.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "back.bra.right_band_lower_fragment",
+      "label": "P24",
+      "component": "bra",
+      "role": "bra.band_bottom",
+      "view": "back",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          971,
+          334
+        ],
+        [
+          977,
+          335
+        ],
+        [
+          984,
+          335
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        845,
+        300,
+        1015,
+        515
+      ],
+      "confidence": {
+        "level": "low",
+        "pixel_uncertainty_range": [
+          2,
+          5
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Tiny visible lower band edge, heavily occluded. Does not authorize invented back strap topology.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "back.briefs.dipped_waist",
+      "label": "P25",
+      "component": "briefs",
+      "role": "brief.waist",
+      "view": "back",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          860,
+          414
+        ],
+        [
+          878,
+          415
+        ],
+        [
+          898,
+          418
+        ],
+        [
+          919,
+          419
+        ],
+        [
+          939,
+          419
+        ],
+        [
+          961,
+          417
+        ],
+        [
+          982,
+          415
+        ],
+        [
+          994,
+          413
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        845,
+        300,
+        1015,
+        515
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Observed back upper edge with shallow central dip. Hair obscures upper back, not this brief edge.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "back.briefs.left_leg_opening",
+      "label": "P26",
+      "component": "briefs",
+      "role": "brief.leg",
+      "view": "back",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          856,
+          426
+        ],
+        [
+          867,
+          429
+        ],
+        [
+          880,
+          434
+        ],
+        [
+          892,
+          440
+        ],
+        [
+          903,
+          449
+        ],
+        [
+          914,
+          461
+        ],
+        [
+          923,
+          474
+        ],
+        [
+          930,
+          486
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        845,
+        300,
+        1015,
+        515
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "High cut rear coverage narrowing into central crotch. Glute shading below is not a garment boundary.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "back.briefs.right_leg_opening",
+      "label": "P27",
+      "component": "briefs",
+      "role": "brief.leg",
+      "view": "back",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          999,
+          426
+        ],
+        [
+          987,
+          429
+        ],
+        [
+          974,
+          435
+        ],
+        [
+          962,
+          442
+        ],
+        [
+          949,
+          454
+        ],
+        [
+          939,
+          468
+        ],
+        [
+          931,
+          486
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        845,
+        300,
+        1015,
+        515
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Visible rear cloth/skin boundary; do not replace with front triangle coverage.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "back.briefs.crotch_visible_bridge",
+      "label": "P28",
+      "component": "briefs",
+      "role": "brief.crotch",
+      "view": "back",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          930,
+          486
+        ],
+        [
+          926,
+          491
+        ],
+        [
+          923,
+          494
+        ],
+        [
+          940,
+          494
+        ],
+        [
+          935,
+          490
+        ],
+        [
+          931,
+          486
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        845,
+        300,
+        1015,
+        515
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Tiny rear cloth bridge above inter-leg opening; lower underbody continuation is hidden.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "back.briefs.center_fold_cue",
+      "label": "P29",
+      "component": "briefs",
+      "role": "brief.fold",
+      "view": "back",
+      "kind": "cloth_internal_transition",
+      "points_px": [
+        [
+          930,
+          442
+        ],
+        [
+          929,
+          455
+        ],
+        [
+          930,
+          468
+        ],
+        [
+          931,
+          481
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        845,
+        300,
+        1015,
+        515
+      ],
+      "confidence": {
+        "level": "low",
+        "pixel_uncertainty_range": [
+          2,
+          5
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Illustrated central cloth fold/cleft cue; stitching is not established. Cosmetic detail only.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.bra.scoop",
+      "label": "P30",
+      "component": "bra",
+      "role": "bra.neckline",
+      "view": "oblique",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          1252,
+          268
+        ],
+        [
+          1251,
+          279
+        ],
+        [
+          1260,
+          285
+        ],
+        [
+          1270,
+          288
+        ],
+        [
+          1280,
+          288
+        ],
+        [
+          1290,
+          286
+        ],
+        [
+          1300,
+          282
+        ],
+        [
+          1310,
+          275
+        ],
+        [
+          1320,
+          268
+        ],
+        [
+          1330,
+          259
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Observed scoop including foreshortening. Both strap continuations meet hair/braid; no symmetry-normalized reconstruction.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.bra.cup_outer_silhouette",
+      "label": "P31",
+      "component": "bra",
+      "role": "bra.outer",
+      "view": "oblique",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          1252,
+          268
+        ],
+        [
+          1243,
+          281
+        ],
+        [
+          1235,
+          292
+        ],
+        [
+          1234,
+          301
+        ],
+        [
+          1237,
+          311
+        ],
+        [
+          1244,
+          318
+        ],
+        [
+          1254,
+          321
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Visible near/far combined cloth silhouette, partly adjacent to hair; it is an outer support bound.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.bra.cup_band_transition",
+      "label": "P32",
+      "component": "bra",
+      "role": "bra.band_top",
+      "view": "oblique",
+      "kind": "cloth_internal_transition",
+      "points_px": [
+        [
+          1244,
+          315
+        ],
+        [
+          1255,
+          320
+        ],
+        [
+          1267,
+          320
+        ],
+        [
+          1277,
+          316
+        ],
+        [
+          1284,
+          313
+        ],
+        [
+          1292,
+          314
+        ],
+        [
+          1304,
+          318
+        ],
+        [
+          1318,
+          320
+        ],
+        [
+          1330,
+          320
+        ],
+        [
+          1341,
+          318
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Drawn cup/band transition, with hair-interrupted lateral end; not a naked breast-root curve.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.bra.band_lower_edge",
+      "label": "P33",
+      "component": "bra",
+      "role": "bra.band_bottom",
+      "view": "oblique",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          1255,
+          332
+        ],
+        [
+          1267,
+          329
+        ],
+        [
+          1280,
+          326
+        ],
+        [
+          1291,
+          326
+        ],
+        [
+          1304,
+          328
+        ],
+        [
+          1320,
+          331
+        ],
+        [
+          1336,
+          333
+        ],
+        [
+          1352,
+          337
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Observed lower band cloth/skin edge, clipped at lateral hair intersection. No continuation across hair.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.bra.near_inner_strap_fragment",
+      "label": "P34",
+      "component": "bra",
+      "role": "bra.strap",
+      "view": "oblique",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          1330,
+          259
+        ],
+        [
+          1335,
+          252
+        ],
+        [
+          1338,
+          246
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Visible short inner strap fragment below braid; shoulder connection hidden.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.bra.side_return_upper_fragment",
+      "label": "P35",
+      "component": "bra",
+      "role": "bra.side_return",
+      "view": "oblique",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          1346,
+          300
+        ],
+        [
+          1355,
+          305
+        ],
+        [
+          1364,
+          308
+        ],
+        [
+          1369,
+          309
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          2,
+          4
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Upper side-return segment beneath axilla, with braid and arm occlusion; does not mark skin axillary root.",
+      "seating_target": "FINAL posed supported torso/shoulder surface; garment edge/seam paths",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.briefs.dipped_waist",
+      "label": "P36",
+      "component": "briefs",
+      "role": "brief.waist",
+      "view": "oblique",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          1252,
+          420
+        ],
+        [
+          1260,
+          427
+        ],
+        [
+          1270,
+          433
+        ],
+        [
+          1280,
+          436
+        ],
+        [
+          1288,
+          436
+        ],
+        [
+          1298,
+          433
+        ],
+        [
+          1310,
+          427
+        ],
+        [
+          1323,
+          420
+        ],
+        [
+          1338,
+          413
+        ],
+        [
+          1352,
+          408
+        ],
+        [
+          1364,
+          407
+        ],
+        [
+          1375,
+          409
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Observed waist dip with strong near/far projection. No per-view width or feature normalization.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.briefs.far_leg_opening",
+      "label": "P37",
+      "component": "briefs",
+      "role": "brief.leg",
+      "view": "oblique",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          1252,
+          429
+        ],
+        [
+          1261,
+          443
+        ],
+        [
+          1272,
+          456
+        ],
+        [
+          1284,
+          470
+        ],
+        [
+          1296,
+          482
+        ],
+        [
+          1305,
+          487
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Visible far/front cloth boundary narrowing into crotch; depth behind leg remains unknown.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.briefs.near_leg_opening",
+      "label": "P38",
+      "component": "briefs",
+      "role": "brief.leg",
+      "view": "oblique",
+      "kind": "observed_cloth_edge",
+      "points_px": [
+        [
+          1380,
+          420
+        ],
+        [
+          1368,
+          420
+        ],
+        [
+          1354,
+          423
+        ],
+        [
+          1340,
+          429
+        ],
+        [
+          1327,
+          439
+        ],
+        [
+          1317,
+          450
+        ],
+        [
+          1310,
+          463
+        ],
+        [
+          1307,
+          479
+        ],
+        [
+          1307,
+          490
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "high",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "High curved near leg opening. Final path must sit on final pelvis/thigh topology, not a z-height mask.",
+      "seating_target": "FINAL posed pelvis/upper-thigh/crotch surface; garment coverage boundaries",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.neck.left_clavicle_line",
+      "label": "P39",
+      "component": "neck_clavicle",
+      "role": "neck.line",
+      "view": "oblique",
+      "kind": "illustrated_graphic_line",
+      "points_px": [
+        [
+          1288,
+          225
+        ],
+        [
+          1295,
+          224
+        ],
+        [
+          1300,
+          224
+        ],
+        [
+          1305,
+          228
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Short illustrated cue emerging from hair; not a physical furrow.",
+      "seating_target": "FINAL posed neck/clavicle skin; cosmetic line/shadow channels after geometry fit",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.neck.right_clavicle_line",
+      "label": "P40",
+      "component": "neck_clavicle",
+      "role": "neck.line",
+      "view": "oblique",
+      "kind": "illustrated_graphic_line",
+      "points_px": [
+        [
+          1310,
+          228
+        ],
+        [
+          1316,
+          223
+        ],
+        [
+          1322,
+          221
+        ],
+        [
+          1330,
+          221
+        ]
+      ],
+      "closed": false,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          1,
+          3
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Visible clavicle graphic stopping beneath braid.",
+      "seating_target": "FINAL posed neck/clavicle skin; cosmetic line/shadow channels after geometry fit",
+      "anatomical_root_claim": false
+    },
+    {
+      "id": "oblique.neck.under_chin_shadow",
+      "label": "P41",
+      "component": "neck_clavicle",
+      "role": "neck.shadow",
+      "view": "oblique",
+      "kind": "illustrated_shadow_boundary",
+      "points_px": [
+        [
+          1301,
+          181
+        ],
+        [
+          1323,
+          169
+        ],
+        [
+          1331,
+          168
+        ],
+        [
+          1321,
+          185
+        ],
+        [
+          1310,
+          196
+        ],
+        [
+          1303,
+          200
+        ]
+      ],
+      "closed": true,
+      "crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "confidence": {
+        "level": "medium",
+        "pixel_uncertainty_range": [
+          3,
+          6
+        ],
+        "interpretation": "Manual visible-pixel tracing; qualitative confidence, not calibrated probability"
+      },
+      "observed_limits": "Broad illustrated under-chin shadow, soft/painted boundary; not physical albedo or a geometry contour.",
+      "seating_target": "FINAL posed neck/clavicle skin; cosmetic line/shadow channels after geometry fit",
+      "anatomical_root_claim": false
+    }
+  ],
+  "unobserved": [
+    {
+      "region": "bra rear neckline/straps/central band construction",
+      "reason": "rear hair occludes it",
+      "points_px": [],
+      "policy": "No invented path, symmetry completion, or generated-view dimensional substitution"
+    },
+    {
+      "region": "strap shoulder attachment and outer edges beneath front hair/braid",
+      "reason": "hair occlusion",
+      "points_px": [],
+      "policy": "Keep endpoints open; reconcile only after final body and evidence review"
+    },
+    {
+      "region": "anatomical breast root/inframammary fold behind bra",
+      "reason": "clothing occludes skin anatomy",
+      "points_px": [],
+      "policy": "Cloth neckline/band edges are not naked skin roots"
+    },
+    {
+      "region": "brief underbody gusset/hidden crotch seam",
+      "reason": "not visible in v06",
+      "points_px": [],
+      "policy": "Visible turns constrain coverage only; underside remains construction inference"
+    }
+  ],
+  "integration_order": [
+    "Wait for selected FINAL POSED whole-body target; this pack does not approve or advance garment production.",
+    "Seat corresponding scoop/strap/side-return/band and waist/leg/crotch paths onto final posed surfaces using source camera correspondence and local surface constraints.",
+    "Keep cup-to-band transition and lower band edge distinct; preserve front and back brief coverage differences.",
+    "Record each seated path as mesh triangle ID plus barycentric weights; transfer to final UV through that same surface correspondence.",
+    "Use path-relative distances/coverage on the actual surface for later garment/color/normal/roughness work; do not use world-height thresholds or raw T-pose coordinates.",
+    "Seat neck/clavicle graphic and illustrated shadow cues after shoulder/trapezius/neck fit; keep graphic ink, pigment and scene-light shadow roles explicit.",
+    "Review actual source4/high-low and bounded poses after fitting; original arrays, face form and unrelated materials remain protected."
+  ],
+  "supplements_policy": "Generated 8-view/E2F2 supplements are qualitative construction aids only; none supplied dimensions, points or colors in this pack.",
+  "status": "SOURCE_PREPARATION_ONLY; body/garment/UV/shader/ART acceptance NOT_EVALUATED"
+}

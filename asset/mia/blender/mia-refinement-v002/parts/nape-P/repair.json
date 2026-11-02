@@ -1,0 +1,446 @@
+{
+  "base_vertices": 100383,
+  "base_polys": 120913,
+  "loop_vertices_sha256": "4aacd9bc1316d9d18b4a7df2e90c54b3480c2cd986161d54c8fd577148d54c14",
+  "region_guard": [
+    {
+      "vertex": 56342,
+      "position": [
+        0.06388561427593231,
+        -0.024753648787736893,
+        1.5384925603866577
+      ]
+    },
+    {
+      "vertex": 56347,
+      "position": [
+        0.06591176241636276,
+        -0.02234715037047863,
+        1.5404753684997559
+      ]
+    },
+    {
+      "vertex": 56348,
+      "position": [
+        0.06665028631687164,
+        -0.021752990782260895,
+        1.535118818283081
+      ]
+    },
+    {
+      "vertex": 65222,
+      "position": [
+        0.05919765308499336,
+        -0.009343854151666164,
+        1.5260556936264038
+      ]
+    },
+    {
+      "vertex": 70678,
+      "position": [
+        0.05736887454986572,
+        -0.013852524571120739,
+        1.5231549739837646
+      ]
+    },
+    {
+      "vertex": 70680,
+      "position": [
+        0.059320367872714996,
+        -0.01368195004761219,
+        1.523169755935669
+      ]
+    },
+    {
+      "vertex": 71877,
+      "position": [
+        0.05842694267630577,
+        -0.01250330451875925,
+        1.5252811908721924
+      ]
+    }
+  ],
+  "old_UV_hashes": {
+    "UVMap": "7444e853ee6ef7574c32336f4f5f283fcd9b3ebf35ca7f996f894ea9fd05e478",
+    "MIA_V17_PAINT_UV": "e27925a61c7297c1c7f55bfed042754ef856953318681543247fca74d9477847",
+    "MIA_V002_RestProject_front": "af42a65ad88d93d7c052956c572549bc376192057b6c7a52c223f49a4ca8baab",
+    "MIA_V002_RestProject_profile": "57033d6d7ed455d73219e5f91fc86d786caf8ada8e2c1fbe6e8dbaffff5331b4",
+    "MIA_V002_RestProject_back": "2d99f4760a01ce9daa5d50bac9ec9395f5d48f412b6d2d84f225e180898b31ef",
+    "MIA_V002_RestProject_rear_oblique": "b1e5e9f76c336d7e5fe5c3eba8d6c4edaecb1dc87390f5b59cf9e5d9944b0bcb"
+  },
+  "coordinate_edits": [
+    {
+      "vertex": 65222,
+      "before": [
+        0.05919765308499336,
+        -0.009343854151666164,
+        1.5260556936264038
+      ],
+      "target": [
+        0.05942082405090332,
+        -0.009382188320159912,
+        1.5259497165679932
+      ],
+      "offset_mm": [
+        0.22317184507846832,
+        -0.03833434358239174,
+        -0.10594727098941803
+      ],
+      "signed_before_mm": 0.904941203771159,
+      "signed_after_mm": 1.1549633181857644
+    }
+  ],
+  "new_faces": [
+    {
+      "vertices": [
+        70680,
+        70678,
+        71877
+      ],
+      "raw_source_id": -20001,
+      "source_adjacent_raw_ids": [
+        133285,
+        132386
+      ],
+      "material_index": 0,
+      "corners": [
+        {
+          "source_loop": 238143,
+          "UV": {
+            "UVMap": [
+              0.4892165958881378,
+              0.6619278788566589
+            ],
+            "MIA_V17_PAINT_UV": [
+              0.9716513752937317,
+              0.058405667543411255
+            ],
+            "MIA_V002_RestProject_front": [
+              0.7026922106742859,
+              0.434320867061615
+            ],
+            "MIA_V002_RestProject_profile": [
+              0.48925966024398804,
+              0.4114592969417572
+            ],
+            "MIA_V002_RestProject_back": [
+              0.35949501395225525,
+              0.5608082413673401
+            ],
+            "MIA_V002_RestProject_rear_oblique": [
+              0.3775376081466675,
+              0.5568845272064209
+            ]
+          },
+          "custom_normal": [
+            -0.07010327279567719,
+            0.8473133444786072,
+            -0.5264463424682617
+          ]
+        },
+        {
+          "source_loop": 238145,
+          "UV": {
+            "UVMap": [
+              0.4895400106906891,
+              0.6611281037330627
+            ],
+            "MIA_V17_PAINT_UV": [
+              0.9716513752937317,
+              0.05922467261552811
+            ],
+            "MIA_V002_RestProject_front": [
+              0.6974287033081055,
+              0.43379005789756775
+            ],
+            "MIA_V002_RestProject_profile": [
+              0.48763805627822876,
+              0.4115369915962219
+            ],
+            "MIA_V002_RestProject_back": [
+              0.36333000659942627,
+              0.5608645677566528
+            ],
+            "MIA_V002_RestProject_rear_oblique": [
+              0.379883348941803,
+              0.5570960640907288
+            ]
+          },
+          "custom_normal": [
+            -0.07010327279567719,
+            0.8473133444786072,
+            -0.5264463424682617
+          ]
+        },
+        {
+          "source_loop": 239700,
+          "UV": {
+            "UVMap": [
+              0.5368496775627136,
+              0.4531733989715576
+            ],
+            "MIA_V17_PAINT_UV": [
+              0.7843214273452759,
+              0.14724990725517273
+            ],
+            "MIA_V002_RestProject_front": [
+              0.6985338926315308,
+              0.4423728883266449
+            ],
+            "MIA_V002_RestProject_profile": [
+              0.4935186505317688,
+              0.4199359118938446
+            ],
+            "MIA_V002_RestProject_back": [
+              0.3618188798427582,
+              0.5669537782669067
+            ],
+            "MIA_V002_RestProject_rear_oblique": [
+              0.38168761134147644,
+              0.5629786849021912
+            ]
+          },
+          "custom_normal": [
+            -0.9118835926055908,
+            0.14386732876300812,
+            -0.3844093084335327
+          ]
+        }
+      ],
+      "clearance": {
+        "unique_vertices": [
+          45426,
+          45039,
+          45200
+        ],
+        "raw_vertices": [
+          70680,
+          70678,
+          71877
+        ],
+        "adjacent_faces": [
+          79900,
+          79381
+        ],
+        "fan_ids": [
+          0,
+          1
+        ],
+        "area_mm2": 2.4093267256830586,
+        "new_boundary_edge_mm": 2.7314284816384315,
+        "normal_dot_adjacent": [
+          0.5567195415496826,
+          0.999791145324707
+        ],
+        "adjacent_normals_dot": 0.5616834163665771,
+        "candidate_normal": [
+          -0.07112658023834229,
+          0.8578450679779053,
+          -0.5089626312255859
+        ],
+        "candidate_center": [
+          0.05837206169962883,
+          -0.013345926068723202,
+          1.5238685607910156
+        ],
+        "safe_geometry_heuristic": true,
+        "junction": 45426,
+        "skin_min_signed_mm": 0.8864748758696805,
+        "skin_negative_halfmm_samples": 0,
+        "sample_count": 153
+      },
+      "normal_policy": "Only new6 corners use matched adjacent rest corner normals. Existing corners use zero/auto, not frozen wholesale normals."
+    },
+    {
+      "vertices": [
+        56342,
+        56348,
+        56347
+      ],
+      "raw_source_id": -20002,
+      "source_adjacent_raw_ids": [
+        139784,
+        139785
+      ],
+      "material_index": 0,
+      "corners": [
+        {
+          "source_loop": 251656,
+          "UV": {
+            "UVMap": [
+              0.08300977945327759,
+              0.81775963306427
+            ],
+            "MIA_V17_PAINT_UV": [
+              0.7602459192276001,
+              0.786604642868042
+            ],
+            "MIA_V002_RestProject_front": [
+              0.7233961820602417,
+              0.4859013259410858
+            ],
+            "MIA_V002_RestProject_profile": [
+              0.45419538021087646,
+              0.46031826734542847
+            ],
+            "MIA_V002_RestProject_back": [
+              0.3402859568595886,
+              0.5962309837341309
+            ],
+            "MIA_V002_RestProject_rear_oblique": [
+              0.34330663084983826,
+              0.5926185846328735
+            ]
+          },
+          "custom_normal": [
+            0.6650862097740173,
+            -0.7457574009895325,
+            -0.03881073370575905
+          ]
+        },
+        {
+          "source_loop": 251660,
+          "UV": {
+            "UVMap": [
+              0.08251060545444489,
+              0.8206972479820251
+            ],
+            "MIA_V17_PAINT_UV": [
+              0.6740226149559021,
+              0.9223408699035645
+            ],
+            "MIA_V002_RestProject_front": [
+              0.7342035174369812,
+              0.4754405617713928
+            ],
+            "MIA_V002_RestProject_profile": [
+              0.4660407304763794,
+              0.4486846625804901
+            ],
+            "MIA_V002_RestProject_back": [
+              0.3333742618560791,
+              0.5877966284751892
+            ],
+            "MIA_V002_RestProject_rear_oblique": [
+              0.3437238037586212,
+              0.5836808681488037
+            ]
+          },
+          "custom_normal": [
+            0.5901322364807129,
+            -0.807295024394989,
+            -0.004322766792029142
+          ]
+        },
+        {
+          "source_loop": 251657,
+          "UV": {
+            "UVMap": [
+              0.0809461921453476,
+              0.8180821537971497
+            ],
+            "MIA_V17_PAINT_UV": [
+              0.759054958820343,
+              0.7855163812637329
+            ],
+            "MIA_V002_RestProject_front": [
+              0.7295507788658142,
+              0.493496298789978
+            ],
+            "MIA_V002_RestProject_profile": [
+              0.46358081698417664,
+              0.4671555161476135
+            ],
+            "MIA_V002_RestProject_back": [
+              0.3352205753326416,
+              0.6011880040168762
+            ],
+            "MIA_V002_RestProject_rear_oblique": [
+              0.34397900104522705,
+              0.5971739888191223
+            ]
+          },
+          "custom_normal": [
+            0.6490548253059387,
+            -0.7584025859832764,
+            -0.05961087346076965
+          ]
+        }
+      ],
+      "clearance": {
+        "unique_vertices": [
+          47299,
+          48012,
+          47812
+        ],
+        "raw_vertices": [
+          56342,
+          56348,
+          56347
+        ],
+        "adjacent_faces": [
+          83885,
+          83886
+        ],
+        "fan_ids": [
+          0,
+          1
+        ],
+        "area_mm2": 9.353828318126034,
+        "new_boundary_edge_mm": 5.439767614006996,
+        "normal_dot_adjacent": [
+          0.9931803941726685,
+          0.9989000558853149
+        ],
+        "adjacent_normals_dot": 0.9937909245491028,
+        "candidate_normal": [
+          0.7520254254341125,
+          -0.6584210991859436,
+          0.030650626868009567
+        ],
+        "candidate_center": [
+          0.06548255681991577,
+          -0.022951262071728706,
+          1.5380288362503052
+        ],
+        "safe_geometry_heuristic": true,
+        "junction": 47299,
+        "skin_min_signed_mm": 1.0903359197982354,
+        "skin_negative_halfmm_samples": 0,
+        "sample_count": 153
+      },
+      "normal_policy": "Only new6 corners use matched adjacent rest corner normals. Existing corners use zero/auto, not frozen wholesale normals."
+    }
+  ],
+  "force_geometric_normal_vertices": [
+    56342,
+    56347,
+    56348,
+    70678,
+    70680,
+    71877
+  ],
+  "old_normal_weights": {
+    "56342": 0.0,
+    "56347": 0.0,
+    "56348": 0.0,
+    "65222": 1.0,
+    "70678": 1.0,
+    "70680": 1.0,
+    "71877": 1.0
+  },
+  "original_polys_removed": 0,
+  "body_support_evidence": "actual-support-G-skin.json",
+  "resolved_junctions": [
+    45426,
+    47299,
+    48012
+  ],
+  "separated_existing_layer_junction": 45218,
+  "deferred_buried_fans": {
+    "43139": "All153 samples buried; minimum\u221211.04mm. No blind cap or11mm push. Needs original part/emergence reconstruction.",
+    "45347": "All153 samples buried; minimum\u22122.38mm. No hidden fill presented as visible improvement."
+  },
+  "bounds": "Two exterior triangles, total11.763mm\u00b2, one existing point on one complete incident face fan moved0.25mm outward. Neighboring UV-seam points stay exact. No whole nape smoothing, cap object or true-lock deletion.",
+  "ART": "UNVERIFIED actual profile/rear/oblique inspection required; topology checks cannot approve source likeness."
+}

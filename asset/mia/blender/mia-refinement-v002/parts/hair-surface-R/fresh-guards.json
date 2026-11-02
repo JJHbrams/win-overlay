@@ -1,0 +1,25 @@
+{
+  "actual_R2_reopened": true,
+  "native_sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+  "delta": {
+    "variant": "R Side_Nape source-ash low-frequency envelope",
+    "old_material": "MIA_V002_DeformNormals_MIA_V17_PIXAL_DetailedHair",
+    "new_material": "MIA_v002_R_SideNape_SourceAshEnvelope",
+    "payload_sha256": "fe6de6e75f25d505b2c522ae27f762983e711224908d8116cda21c7fe9158ebf",
+    "scope": "Main Side_Nape weight only in COLOR alpha; factor0 sends exact original pigment through unchanged K/light/normal output.",
+    "new_POINT_attributes": [
+      "MIA_R_SourceAshAndScope"
+    ],
+    "geometry_UV_rig_original_maps_unchanged": true,
+    "fine_ink_constraint": "No sufficiently supported continuous geometric/guide-correspondent fine marks were found (1weakpoint>0.1,none>0.5); all unsupported projected ink withheld. Existing physical strand geometry and all outside-scope ink remain. Fine authored strand paint is explicitly OPEN.",
+    "limits": "Some valid fine marks have insufficient geometry correspondence and are intentionally withheld. Broad unresolved gray Crown/Rear_Waves blocks outside Side_Nape are not repaired. Neither shader polish nor quantitative guards make jagged boundary geometry pass.",
+    "ART": "CHALLENGER_UNVERIFIED"
+  },
+  "all_nonmain_actors_materials_images_world_scene_preservation_delta": {},
+  "main_coords_topology_sixUV_shapes_weights_normals_all_original_POINT_fields_exact": true,
+  "old_Main_material_graph_unchanged": true,
+  "opacity_route_unchanged": true,
+  "native_saved": false,
+  "limits": "Actual outside-scope pixel equality still requires paired raw frames. Immutable arrays do not establish appearance or ART pass.",
+  "ART": "CHALLENGER_UNVERIFIED"
+}

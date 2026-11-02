@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "source_sha256_before": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+  "source_sha256_after": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+  "source_size_px": [
+    1536,
+    1024
+  ],
+  "source_unchanged": true,
+  "path_count": 41,
+  "all_points_in_declared_original_crop": true,
+  "all_points_integer_original_pixels": true,
+  "all_paths_have_confidence_and_observed_limits": true,
+  "sample_count": 10,
+  "hidden_regions_have_no_invented_points": true,
+  "original_aspect_preserved": true,
+  "boards": [
+    {
+      "path": "front-pattern-board.png",
+      "sha256": "af02399dbdf1efe98c97c671160607214823c714ab279b5011f7effb5d7f57ca",
+      "source_crop_xyxy": [
+        150,
+        175,
+        325,
+        500
+      ],
+      "source_crop_size_px": [
+        175,
+        325
+      ],
+      "uniform_scale": 2,
+      "two_panels_same_crop": true,
+      "board_size_px": [
+        724,
+        986
+      ],
+      "labels": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12"
+      ]
+    },
+    {
+      "path": "profile-pattern-board.png",
+      "sha256": "3a3cdf046b7296925a6207195e5f8c7218b62ee297c747ddd358fc54b035ff3e",
+      "source_crop_xyxy": [
+        490,
+        200,
+        640,
+        510
+      ],
+      "source_crop_size_px": [
+        150,
+        310
+      ],
+      "uniform_scale": 2,
+      "two_panels_same_crop": true,
+      "board_size_px": [
+        624,
+        912
+      ],
+      "labels": [
+        "P13",
+        "P14",
+        "P15",
+        "P16",
+        "P17",
+        "P18",
+        "P19",
+        "P20",
+        "P21",
+        "P22"
+      ]
+    },
+    {
+      "path": "back-pattern-board.png",
+      "sha256": "43c6db8c4a7b22c1a0db535b37eb15bc3d7a3e4ec2d5f4bb0a66eed4f51260cb",
+      "source_crop_xyxy": [
+        845,
+        300,
+        1015,
+        515
+      ],
+      "source_crop_size_px": [
+        170,
+        215
+      ],
+      "uniform_scale": 2,
+      "two_panels_same_crop": true,
+      "board_size_px": [
+        704,
+        656
+      ],
+      "labels": [
+        "P23",
+        "P24",
+        "P25",
+        "P26",
+        "P27",
+        "P28",
+        "P29"
+      ]
+    },
+    {
+      "path": "oblique-pattern-board.png",
+      "sha256": "5efc041fa283ac1179a2236f105499c3bb51f732a3ab0cdc18b91ef7e49782bf",
+      "source_crop_xyxy": [
+        1220,
+        165,
+        1400,
+        505
+      ],
+      "source_crop_size_px": [
+        180,
+        340
+      ],
+      "uniform_scale": 2,
+      "two_panels_same_crop": true,
+      "board_size_px": [
+        744,
+        1016
+      ],
+      "labels": [
+        "P30",
+        "P31",
+        "P32",
+        "P33",
+        "P34",
+        "P35",
+        "P36",
+        "P37",
+        "P38",
+        "P39",
+        "P40",
+        "P41"
+      ]
+    }
+  ],
+  "source_paths_sha256": "4a98e8a8bab69fe814752c2401046332a8d45a576adbdd94d89276c02d550d5d",
+  "appearance_samples_sha256": "da9a69b7f0938a091f9ee901a0ac6b4b6e782b56bc008c21bf36e5f4195dd88e",
+  "overlay_sha256": "4c73b6f8d1bac85be84bffc069b516b85790948ee811749e0c88ee09e513d99e",
+  "visual_overlay_review": "Actual four boards inspected; see visual-review.json",
+  "body_garment_uv_shader_art_acceptance": "NOT_EVALUATED",
+  "native_render_or_model_edits": false,
+  "actual_source_panel_checks": [
+    {
+      "board": "front-pattern-board.png",
+      "actual_original_panel_matches_uniform_source_crop": true
+    },
+    {
+      "board": "profile-pattern-board.png",
+      "actual_original_panel_matches_uniform_source_crop": true
+    },
+    {
+      "board": "back-pattern-board.png",
+      "actual_original_panel_matches_uniform_source_crop": true
+    },
+    {
+      "board": "oblique-pattern-board.png",
+      "actual_original_panel_matches_uniform_source_crop": true
+    }
+  ],
+  "appearance_patch_medians_recomputed_exact": true,
+  "visual_review_sha256": "2fd496dac3b8e24c77ba22ffe5054987cb1b5fd3de10af2a715bf0f81375e390"
+}

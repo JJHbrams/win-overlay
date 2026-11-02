@@ -1,0 +1,49 @@
+{
+  "method": "built-in imagegen precise-object-edit; local designed repaint, not whole-image blur/gain attenuation",
+  "imagegen_original": "C:/Users/antio/.codex/generated_images/01a199db-b9f4-7f33-b8b8-5e322d31bf16/exec-8cd4cc40-83b9-41f8-aa76-816daa6eab27.png",
+  "project_copy": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\art\\Mia_SmoothFatigue_TracedLip_D.png",
+  "sha256": "fe89c84c093186c37e1f7eb51abfcefa49f3ed042c51324ef734faf731cf80a0",
+  "size": [
+    1254,
+    1254
+  ],
+  "prompt": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\art\\prompt-D-smooth-fatigue-traced-lip.txt",
+  "prompt_sha256": "eb45a8a0c3a1a1b5a6809b22a0938a32adf863520b940ff0982810c84e26caeb",
+  "inputs": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\art\\Mia_GrayMauve_Lip_C.png",
+      "sha256": "dbd9e6747fa911fe375ae3c327e75b93456d6b7eea1b6590f0c7a009f5fe1035"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\audit\\source-targets\\front-eye-paint.png",
+      "sha256": "88c5c0afa3a4f334d6c8c6c91a9cc172468d4c8a25b28bd5a32ef74296f5162a"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\audit\\source-targets\\front-lip-paint.png",
+      "sha256": "fe5db2487235151f329594b75a77cb131ee9106b09ddd9acd87073acb92a4791"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-face-reaffirmed-20261031.png",
+      "sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44"
+    }
+  ],
+  "prior_review": "C independently failed for granular fatigue and broad pale lip patch.",
+  "selection": "New painted lower fatigue through existing actual-lid support; lip ownership replaced with exact32boundary seam/lower-edge support. B nose/A fold retained. C coarse/pale-patch route bypassed.",
+  "source_limit": "Original portrait nose is partly obscured by bangs. Observed profile pointed bridge paint still differs from current small B plane; no nose ART acceptance.",
+  "status": "D2_FULL41_PRODUCER_REVIEWED_NOT_ART_ACCEPTED",
+  "native_save_status": "D2 saved on native junction and fresh CPU guard passed; full41 evidence complete. First D remains rejected.",
+  "controls": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\controls-D\\D_Actual32Lip_FatigueControls_RGBA.exr",
+    "sha256": "fe66cab9f5b0a73e3893947e9a752a8085c23cf5bd65a4e451ba12ec39690c36",
+    "artwork_authored": false
+  },
+  "current_native": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\native\\Mia_v002_FacialPaint_D2.blend",
+  "current_native_sha256": "8b150df1eac3144aa496f5b57fea125c390eb19daa102fcd25f2afcdc44b1657",
+  "native_variant": "D2: same authored D image; measured blank-skin contrast transfer; actual32 lip support; dark-only fatigue; B nose and A fold retained.",
+  "rejected_native_variant": "D: raw D color caused pale under-eye ovals in actual quick views.",
+  "actual_quick_evidence": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\review\\D2-quick-source3\\paired\\quick-source-records.json",
+  "producer_review": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\REVIEW_D2_QUICK.md",
+  "art_acceptance": false,
+  "actual_full_evidence": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\review\\D2-source512\\paired\\reference-review.json",
+  "producer_full_review": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\REVIEW_D2.md"
+}

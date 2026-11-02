@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated": "2026-11-02",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
-  "status": "v31_scoped_brow_closed_lash_reviewed_overall_source_art_open",
+  "status": "v002_refinement_active_v001_frozen_overall_art_open",
   "in_progress_v29": {
     "baseline_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
     "eye_candidate_A": "C:/Users/antio/.codex/worktrees/mia-final-face-v12/win-overlay/asset/mia/blender/mia-eye-lash-v29/Mia_EyeLash_v29_A.blend",
@@ -25,13 +25,14 @@
     ]
   },
   "active_working_correction": {
-    "path": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Brows_Lashes.blend",
-    "sha256": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a",
-    "meaning": "Current packed/live component working review. Lower/straighter brows, Eposterior gap correction, fullCloseBupper-lash cleanup and1216semantic hair-fragment removal. Overall face/body/hair/source ART remains open.",
-    "face_review": "blender/mia-visible-art-v30/reviews/v31-brows-lashes-source4/paired/reference-review.json",
-    "source_integrity_validation": "blender/mia-visible-art-v30/reviews/v31-brows-lashes-source4/paired/evidence-validation.json",
-    "scoped_visual_review": "blender/mia-visible-art-v30/FINAL_SCOPED_REVIEW.md",
-    "live_review": "blender/mia-visible-art-v30/live/v31-brows-lashes-reviewed/live-review.json"
+    "path": "blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend",
+    "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+    "fresh_data": "blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.fresh-reopen.json",
+    "actual_review": "blender/mia-refinement-v002/review/integrated-R3b/verification-completion.json",
+    "source_review": "blender/mia-refinement-v002/review/integrated-R3b/paired-source/reference-review.json",
+    "live_review": "blender/mia-refinement-v002/review/integrated-R3b/live/live-review.json",
+    "independent_review": "blender/mia-refinement-v002/INDEPENDENT_R3B_REVIEW.md",
+    "meaning": "R3b current WIP; exact prior457 remains frozen v0.0.1. Source/overall ART and final animation remain open."
   },
   "character_complete": false,
   "art_approved": false,
@@ -41,9 +42,9 @@
     "REFERENCE_REVIEW_GATE.md"
   ],
   "selected_static_wip": {
-    "path": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Brows_Lashes.blend",
-    "sha256": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a",
-    "selection_means": "Current component working review only; not completed Mia/source ART/animation."
+    "path": "blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend",
+    "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+    "selection_means": "Current working review only; no whole source ART or animation approval."
   },
   "preserved_baseline": {
     "path": "blender/mia-reference-finish-v17/integrated-v18/Mia_HeadHair_v18.blend",
@@ -60,12 +61,12 @@
     "body_comparison": "blender/mia-body-reference-audit-v19/body_reference_comparison_4rows.png",
     "body_findings": "blender/mia-body-reference-audit-v19/BODY_AUDIT.md",
     "shader_findings": "blender/mia-lookdev-audit-v19/LOOKDEV_AUDIT.md",
-    "current_live_viewing_setup": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Brows_Lashes.blend",
+    "current_live_viewing_setup": "blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend",
     "v28_live_review": "blender/mia-orbit-thorax-review-v28/integrated-G2L/live-review.json",
     "source_eye_layer_diagnosis": "blender/mia-orbit-thorax-review-v28/evidence/eye-H-layer-diagnosis/UPPER_H_REVIEW.md",
     "viewport_and_camera_audit": "blender/mia-reference-finish-v22/camera-audit.json",
     "integration_wip_v22": "blender/mia-reference-finish-v22/face-rebuild-10/selected-v27/reference-review.json",
-    "current_live_evidence": "blender/mia-visible-art-v30/live/v31-brows-lashes-reviewed/live-review.json",
+    "current_live_evidence": "blender/mia-refinement-v002/review/integrated-R3b/live/live-review.json",
     "body_registration_correction": "blender/mia-reference-finish-v22/parts/body-candidate12-rejected/supplements",
     "face_aperture_retraction": "blender/mia-reference-finish-v22/evidence/face-aperture/README.md",
     "hair_rejected_terminal": "blender/mia-reference-finish-v22/evidence/rejected-earlock-volume/failure-package.json",
@@ -90,15 +91,16 @@
     "face_angles_and_expressions": "references/mia-expression-style-confirmed-20261031.png",
     "clothed_turnaround": "references/mia-clean-master-v22.png",
     "body_turnaround_candidate": "references/body-foundation/v06/mia-body-turnaround-v06.png",
-    "body_visibility_supplement": "references/body-foundation/v06/mia-body-visibility-guide-v06.png"
+    "body_visibility_supplement": "references/body-foundation/v06/mia-body-visibility-guide-v06.png",
+    "body_target": "references/received/mia-body-v06-confirmed-20261102.png"
   },
   "stage_status": {
     "reference_inventory": "organized; generated candidate approvals remain separate",
     "corresponding_view_camera_registration": "Actual matchedsource4 on current457 native; frozenfrontIPDscale/translation, zeroextra2Droll, sourceaspectunchanged. NonfrontoldfrozenSRTprovisional andnormalizedproportions/roll excluded. Sourceareas/world,camera.1/10+headcentredORTHOsaved. Evidencevalid; overallARTnotapproved.",
     "lookdev_diagnostic_rig": "built and fresh-reopen tested; source shaders unchanged",
-    "face_head_art": "Overall sourceART UNAPPROVED. Lower/straighter eyebrowdirection and boundedfullCloseupperfan/hookcleanup supportedbyfreshactualimages. Cleanuniformink/inferredends/hairONexposure,Halfband/temporalfinish,sourcefaciallength/width/paint residuals remain.",
-    "body_art": "Overall ART UNAPPROVED. Bounded L anatomy/arm-probe component supported after all36 actual orbit/critical/source/pose views: unchanged G3 core plus whole new convex soft field, resolving J/K boxlike lower envelope. Root G2L f0dead17 integrates exact42 targets and fresh matched views. J/K rejected; upper-eye correction H pending independently.",
-    "hair_art": "FAIL source appearance: coarse washedout72percent ash fallback/disablededgeink, limitedrebakedpaintcoverage and root/ear/nape/bun/tip finishing remain. V30 hair producer working; no appearance PASS.",
+    "face_head_art": "User accepts current4dc1 facialsculpt; preserve contour/identity, only requested lower-right lid/crease/browvisibility. Earlier broad-face revision requests must not override this latest acceptance. Surface/fullMia approval separate.",
+    "body_art": "User rejects current4dc1 wholebody: breasts too small/saggy, thorax too small/straight, shoulders narrow and headratio unlike user-confirmed v06. FixedG3core revoked; wholeheight corresponding views precede local edits.",
+    "hair_art": "UNAPPROVED overall. MN+L/O/P/R bounded improvement. S newUV/generatedfill held and not in R3; source fineink and crown/nape geometry/surface remain open.",
     "uv_and_color": "Applied C: original scene-lit diffuse retained; masked1254sRGB cosmetic art,2048Non-Color float controls, active actual-light specular and roughness.32 controlled probes and fresh source/critical/orbit/live reviewed. No4K detail or physical-energy-conservation claim.",
     "facial_deformation": "Eposteriorseam73bilateral/endpoint+64unilateralscopedchecks; Brow51states/1207986samples+.02313..+.47909mm; ClosedB25stateswith0burial/nonpositivevolumes. Exactintegrated17poses+4aftermacros reviewed, bilateral/unilateralfullClose improved. Arbitrarycombinations,Extra/half style,headfollow/finaleventsunapproved.",
     "garments": "deferred until anatomy gate",
@@ -122,10 +124,12 @@
     "v27 shared8c971/7ae354 drafts: numeric group index copying shifted Body weights. Superseded by e9 named-weight reconstruction; do not adopt draft renders as final evidence."
   ],
   "immediate_next": [
-    "Read exact457 native/hash, FINAL_SCOPED_REVIEW and all criticalremainingbefore edits; neverrestore oldv29boundedPASS.",
-    "Use currentpairedsource4/actualsourceaspect andfrozenfrontIPDframe; keepnonfrontnormalizationlimits explicit.",
-    "Next sourcecorrections mustaddress observedHalf/inkfinish andbroaderfaceidentity/paint/hair in boundedmultiviewsteps; no finalgarment/eventpromotion.",
-    "Keep selectedassets/proofs onGit andrecordresiduals; sourcepackagevalidity doesnotgrantART."
+    "Read v002 acceptance and exact v0.0.1 manifest after compaction; do not rerun archived v31 recorders.",
+    "Inspect actual face paint A source4/color/toggle/light evidence before selecting; preserve fixed baseline.",
+    "Repair and visually review supported body and inherited axillary fold with intactaspect fullheight references.",
+    "Refine current cleaned hair by guarded portable deltas; preserve source detail and diagnose normals/UV separately.",
+    "Build16expression panel/control inventory and actual missing anatomy; implement after dependent topology/UV stabilizes.",
+    "Integrate only selected deltas and freshreopen/source/live/independent review; commit+push meaningful checkpoints without overallARTclaim."
   ],
   "do_not_infer_pass_from": [
     "successful save",
@@ -265,5 +269,147 @@
     "sha256": "e9c8654121307b61fb75d73789c9b2443a3e42c53420dfdfada927d194b475d4",
     "selection_means": "Adopted whole-face reconstruction working candidate after actual source4/matte/blink/head-follow review and independent structural audit. Not complete Mia or ART approval.",
     "prior_baseline": "blender/mia-correction-v20/integrated-r2/Mia_Corrected_v20.blend"
+  },
+  "version_baseline": "versions/v0.0.1/manifest.json",
+  "in_progress_v002": {
+    "status": "active",
+    "contract": "blender/mia-refinement-v002/ACCEPTANCE.json",
+    "baseline_native": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Brows_Lashes.blend",
+    "baseline_sha256": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a",
+    "baseline_version": "0.0.1",
+    "baseline_tag": "mia/v0.0.1",
+    "art_approved": false,
+    "owners": {
+      "root": "codex/mia-v002-refinement",
+      "face": "codex/mia-v002-face",
+      "body": "codex/mia-v002-body",
+      "hair": "codex/mia-v002-hair"
+    },
+    "latest_findings": [
+      "Source facial nose bridge/tip graphic and lower-lip edge; D2 fatigue improvement does not complete source makeup/line hierarchy.",
+      "Source eye/brow/upper-crease hierarchy and broader continuous identity remain open; calibrated nonfront proportions not proved.",
+      "Supported-body inferior return/upper-pole-to-thorax transition, shoulder/clavicle and extremities remain open. No clothing promotion.",
+      "Crown/nape coarse/folded/scuffed hair and source-coherent fine ink; rejected CrownS positiveUV had substantial anisotropy and bunched paint.",
+      "Source07 hand gesture, arbitrary expression/head contacts, final garments/secondary motion/events/commonidle/loops/30fps bake remain gated."
+    ],
+    "required_order": "Face surface comparison; parallel bounded body/hair audits and fixes; expression design inventory now, final expression production after relevant topology/UV stability; exact integration/review.",
+    "body_target": "Fixed anatomical thorax with coherent breast soft mass and source charcoal underwear support/fit; texture alone cannot fake support.",
+    "source_registration": "Original aspect, uniformSRT only. Front frozenIPD and zeroextraRoll; oldnonfront normalized proportions/roll excluded.",
+    "downstream": "Independent garments/finalphysics/events/commonidle/30fps remain pending behind static/deformation gates.",
+    "storage_cleanup": "blender/mia-refinement-v002/storage/cleanup-consolidated.json",
+    "current_candidates": {
+      "face_D2": {
+        "replay": "blender/mia-refinement-v002/parts/face-D2/portable_face_delta.py",
+        "producer_native_sha256": "8b150df1eac3144aa496f5b57fea125c390eb19daa102fcd25f2afcdc44b1657",
+        "meaning": "Independent source4 observes smoother muted fatigue; source lip bright edge/nose accents remain incomplete.",
+        "art_approved": false
+      },
+      "body_G": {
+        "replay": "blender/mia-refinement-v002/parts/body-G/replay_current_scene.py",
+        "producer_native_sha256": "e199c01b4c0a8fbc7942d5b667f8cdd0e1827d766d98cf28c99bd27ab12cf0da",
+        "meaning": "109actual frames; independent source/gray continuity improvement; valid19poses0 continuous-skin crossings, mechanical straight-arm-20 invalid1055. Inferior attachment crease and extremity finish remain explicit.",
+        "art_approved": false
+      },
+      "hair_MN": {
+        "replay": "blender/mia-refinement-v002/parts/hair-MN/apply_bundle_M.py",
+        "manifest_sha256": "af060a2b35b5f567ea1a8739c19bf68f550e5ce5134b1c5d41bf1ffe65a4c0ef",
+        "meaning": "Bounded source pigment/root/tip improvement. Optional L binding needs actual integrated pose review. Crown O bounded shape correction in progress; jagged nape/source ink hierarchy remains open.",
+        "art_approved": false
+      },
+      "mouth_C": {
+        "replay": "blender/mia-refinement-v002/parts/mouth-C/portable_mouth_delta.py",
+        "payload_sha256": "f31c24cf0535e6110b935ff0c187b631aa46e3ac8d51d3283f26231c54646d48",
+        "meaning": "Closed crown arches and continuous collar; source grin/closure actual proof under review. Installs sparse43rd key on original42 baseline without old-scene replay.",
+        "art_approved": false
+      },
+      "source_controls_gaze": {
+        "replay": "blender/mia-refinement-v002/expressions/expression_control_delta.py",
+        "meaning": "16source-intent presets plus verified head axes and bounded surface-projected iris motion. CPU controls pass; actual integrated16 poses/gaze/head contacts remain required.",
+        "art_approved": false
+      }
+    },
+    "gpu_coordination": "One local GPU batch at a time, root-owned queue. Latest producer mouth8 completed; root integrated suite next after stable crown/lip handoff. Check root/agent latest message before rendering.",
+    "superseded_cleanup_candidates": {
+      "face_C": {
+        "path": "C:/Users/antio/.codex/worktrees/mia-v002-face/win-overlay/asset/mia/blender/mia-facial-maps-v002/native/Mia_v002_FacialPaint_C.blend",
+        "sha256": "548c945e53fca91ef90e57fad2043b9f5c7034d308ef89958f4ef51b66f1b118",
+        "selected": false
+      },
+      "face_D": {
+        "sha256": "32e4d3cd8374ebc3686c391e4da7cf6b85ef5b94fd87472a0eadf20721506448",
+        "selected": false
+      },
+      "body_D": {
+        "sha256": "c792b46574aedfb282fa166f6b1d6b6ef76fff7ce54060bc9d340f8f93d69b8c",
+        "selected": false
+      },
+      "hair_E": {
+        "sha256": "7adb7ed1ed3c97f78edcb95288cc46bc6ebedeba1d172478eed6d4dc2ebf1781",
+        "selected": false
+      },
+      "grin_C": {
+        "path": "blender/mia-refinement-v002/expressions/native/Mia_v002_SourceGrin_Prototype_C.blend",
+        "sha256": "09bc62297940e702aa3d76caa0c1553d317ba4fac6a496ad89402adc339daa0c",
+        "selected": false
+      }
+    },
+    "integration_preflight": "R3b saved and fresh-reopened with matching shared fingerprint helper. Actual original drivers preserved except declared Fun and HeadZ recipe changes; new keys/POINT/brow modifiers and aggregate UImax16 observed, all source scenes protected during component replay. Prior855d failed mixed-preset test; retained as a superseded trial, not selected.",
+    "current_integrated_review": {
+      "path": "blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+      "fresh_data": "blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.fresh-reopen.json",
+      "actual_review": "blender/mia-refinement-v002/review/integrated-R3b/verification-completion.json",
+      "source_review": "blender/mia-refinement-v002/review/integrated-R3b/paired-source/reference-review.json",
+      "live_review": "blender/mia-refinement-v002/review/integrated-R3b/live/live-review.json",
+      "independent_review": "blender/mia-refinement-v002/INDEPENDENT_R3B_REVIEW.md",
+      "meaning": "Bounded working integration only, not completed Mia. Six post-R2 corrections including aggregate-preset range fix,101actual frames with4mix/intermediate cases, fresh full authored-data/UI-bound fingerprint. CrownS excluded; old6hairUVs retained."
+    },
+    "next_corrections": [
+      "Source facial nose bridge/tip graphic and lower-lip edge; D2 fatigue improvement does not complete source makeup/line hierarchy.",
+      "Source eye/brow/upper-crease hierarchy and broader continuous identity remain open; calibrated nonfront proportions not proved.",
+      "Supported-body inferior return/upper-pole-to-thorax transition, shoulder/clavicle and extremities remain open. No clothing promotion.",
+      "Crown/nape coarse/folded/scuffed hair and source-coherent fine ink; rejected CrownS positiveUV had substantial anisotropy and bunched paint.",
+      "Source07 hand gesture, arbitrary expression/head contacts, final garments/secondary motion/events/commonidle/loops/30fps bake remain gated."
+    ],
+    "previous_integrated_review_R2": {
+      "path": "blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R2.blend",
+      "sha256": "eed408b82e9a6160377e92e97fe94ce9619a51393e1ec1d4c928f4a4fd498d82",
+      "fresh_data": "blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R2.fresh-reopen.json",
+      "actual_review": "blender/mia-refinement-v002/review/integrated-R2-eed4/verification-completion.json",
+      "source_review": "blender/mia-refinement-v002/review/integrated-R2-eed4/paired-source/reference-review.json",
+      "meaning": "Current reviewed integration WIP,97 actual frames; D2/G/MN+L/O/P/C clean palette. Bounded improvements only; overall ART remains open."
+    },
+    "held_crown_S": "blender/mia-refinement-v002/art/crown-S/ROOT_REVIEW.md"
+  },
+  "in_progress_v003": {
+    "status": "active",
+    "contract": "blender/mia-fit-v003/PLAN.md",
+    "baseline_native": "blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend",
+    "baseline_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+    "body_target": "references/received/mia-body-v06-confirmed-20261102.png",
+    "user_accepts_face_sculpt": true,
+    "eye_request": "Small screen-right lower-lid curvature/height correction, not eyeball scaling; upper crease registration to real upper lid; source-supported brow visibility through bangs.",
+    "body_request": "Wholeheight original-aspect v06 comparison FIRST. Larger/higher supported breasts and correctly sized/tapered thorax/shoulders/headratio; breast->trapezius->underwearUV->neck/clavicle pigment. Old fixedG3core constraint revoked.",
+    "hair_request": "Rear locks/nape/tips and broken-color cause versus v29; braid source cleanup deferred until body/face fit, not removed. Partial source brow display requires isolated truebrow/crease/lash evidence.",
+    "new_full_native_saved": false,
+    "live_unsaved_preview": "blender/mia-fit-v003/live/head-preview-application.json",
+    "latest_live_runtime": "Blender process absent at latest check; MCP disconnected. Prior unsaved head/hair/R4guide previews are historical runtime evidence and are replayable from committed deltas; they are not an active saved v003 native.",
+    "live_preview_scope": "Lower-right lid + lash-cleared crease C + partial source brow display applied via MCP, original raw keys exact. Body/hair/native on disk unchanged; no full live expressive gate yet.",
+    "body_method": "Source-bound05 rejected (boxy lateral wall/deep axillary void/inferior lip). Primary tutorial study and actual4 pose x body-ROI Smooth diagnosis completed: private05 max surface reproduction0.000479mm, accepted head bit-exact; source-like arms reduce gap but box/lip remain; Smooth OFF<=1.062mm does not fix them. Stale/custom normals already excluded. Read AXILLA_RESEARCH.md, then construct connected local shoulder/pec/lat/teres volumes/core loops or bounded retopo with explicit transfer. No further one-fold radial/Gaussian pull, pose or Smooth coefficient sweep as substitute. No production body/native approved.",
+    "axilla_diagnostic": "blender/mia-fit-v003/body/diagnostic05/F2-source-pose-smooth-diagnostic.png",
+    "axilla_research": "blender/mia-fit-v003/AXILLA_RESEARCH.md",
+    "axilla_research_access": "Primary ChiChaArt/FacepalmeDev/Dikko relevant public captions and selected actual frames; Proko public lesson notes, not full continuous video viewing. Repository record only; kg tools unavailable, no Wiki sync claimed.",
+    "selected_component_composition": "blender/mia-fit-v003/integration/selected-components-cpu.json",
+    "selected_component_composition_scope": "Private fresh CPU replay of selected small lid/crease/pigment/U-mask/provisional ink plus hidden guides checked618 original owners. Five declared owners changed, old arrays/fields/pose/scene held. No new body/finefringe/centralfill, no native save, actual integrated visual review still unverified.",
+    "standalone_construction_guide": "blender/mia-fit-v003/fullbody-review/Mia_v003_BelowHead_Scaffold_R4.blend",
+    "standalone_guide_scope": "186220-byte construction-only file:207curves/17hiddennets, no production body or rig. Fresh counts/guide hashes verified; actual front/oblique regional-coverage review only. Original selected R3b unchanged; this is not a new complete Mia native.",
+    "generated_supplements": [
+      "references/body-foundation/v06/supplements/upper-body-8views-v01.png",
+      "references/body-foundation/v06/supplements/low-pelvis-E2-F2-v01.png"
+    ],
+    "pelvis_feedback_scope": "User clarified narrow pelvis concerns generated E/F reference panels only. No model hip enlargement authorized by that observation; corrected E2/F2 remains auxiliary, original v06 authority.",
+    "art_approved": false,
+    "latest_low_view_body_reference": "references/received/mia-low-view-axilla-reaffirmed-20261103.png",
+    "latest_user_feedback": "2026-11-03: user again rejects unnatural axilla and explicitly requires learning female body modelling from tutorials. E2/F2 rounded full mass/root/axillary overlap remains required,05 rejected despite actual source binding. Source brow thickness/fine fringe gaps and actual new central rear mesh remain open; U deletion alone is not completion."
   }
 }

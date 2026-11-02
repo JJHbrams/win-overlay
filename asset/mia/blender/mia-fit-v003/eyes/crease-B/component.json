@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "created": [
+        {
+          "owner": "MIA_V27_SharedHeadBody",
+          "key": "Mia.v003.NeutralLowerLidBalance.1",
+          "vertices": 62,
+          "maximum_delta_mm": 1.1093522310256958
+        },
+        {
+          "owner": "V28G_InnerLid_1",
+          "key": "Mia.v003.NeutralLowerLidBalance.1",
+          "vertices": 294,
+          "maximum_delta_mm": 3.057927131652832
+        },
+        {
+          "owner": "V30_LowerLashes_1",
+          "key": "Mia.v003.NeutralLowerLidBalance.1",
+          "vertices": 456,
+          "maximum_delta_mm": 1.095133662223816
+        }
+      ],
+      "screen": "right",
+      "side": 1,
+      "method": "40% bounded lower-rim profile blend toward the other canthus-local lower curve at retained own width; maximum1.1mm. Corners/upperpath anchored. Depth follows same actual sclera shell. Lowerwall/lashes transported from evaluated skin frames. Original arrays remain unchanged.",
+      "native_replay": false,
+      "native_saved": false,
+      "scope": "Subtle lower-rim curvature; no eyeball scaling, original key-array edits, upper-lid/canthus/whole-face redesign."
+    },
+    {
+      "materials": [
+        {
+          "owner": "MIA_V27_SharedHeadBody",
+          "old_material": "MIA_v002_MIA_V27_SharedHeadBody_RefinedD2",
+          "new_material": "Mia_v003_AlignedCrease_MIA_V27_SharedHeadBody"
+        },
+        {
+          "owner": "V28G_InnerLid_-1",
+          "old_material": "MIA_v002_V28G_InnerLid_-1_RefinedD2",
+          "new_material": "Mia_v003_AlignedCrease_V28G_InnerLid_-1"
+        },
+        {
+          "owner": "V28G_InnerLid_1",
+          "old_material": "MIA_v002_V28G_InnerLid_1_RefinedD2",
+          "new_material": "Mia_v003_AlignedCrease_V28G_InnerLid_1"
+        }
+      ],
+      "scope": "Upper crease registration only;0.17mm half-width/gap1.3..1.8mm; source finesse requires actual review.",
+      "native_saved": false
+    }
+  ],
+  "material_slots_asserted": {
+    "MIA_V27_SharedHeadBody": [
+      "Mia_v003_AlignedCrease_MIA_V27_SharedHeadBody",
+      "MIA_V002_G_Body_ContinuousSupport",
+      "MIA_V23_Body_CommonLight",
+      "MIA_V23_Body_CommonLight",
+      "MIA_V23_Body_CommonLight",
+      "MIA_V22_Body_CommonLight_Preview.001",
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin",
+      "MIA_V13_PaintedBodySkin",
+      "V27_HeadBlend_MIA_V23_Body_CommonLight",
+      "V27_HeadBlend_MIA_V22_Body_CommonLight_Preview.001",
+      "V27_HeadBlend_MIA_V13_PaintedBodySkin"
+    ],
+    "V28G_InnerLid_-1": [
+      "Mia_v003_AlignedCrease_V28G_InnerLid_-1"
+    ],
+    "V28G_InnerLid_1": [
+      "Mia_v003_AlignedCrease_V28G_InnerLid_1"
+    ]
+  },
+  "failed_previous": "crease-A restored original captured materials: its neutral image was pixel-exact old-fold. Retained as failed evidence.",
+  "scope": "Aligned UVvector crease actual neutral/oblique/half/full. No physical fold-groove or wholeART claim."
+}
