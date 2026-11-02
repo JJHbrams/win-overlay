@@ -1,0 +1,73 @@
+{
+  "mesh_sha256": "148254cab1faf965ae86a5f0f7c4eb98aae1361ce3f43660f0554c06e18ef833",
+  "quadric_Q": [
+    [
+      168.66250632484397,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      64.0,
+      -16.0
+    ],
+    [
+      0.0,
+      -16.0,
+      160.25
+    ]
+  ],
+  "quadric_eigenvalues": [
+    61.40995662034784,
+    162.84004337965214,
+    168.66250632484397
+  ],
+  "each_breast_primitive_strictly_convex_before_buried_cap": true,
+  "posterior_cap_intersection_preserves_convexity": true,
+  "anterior_meridian_formula": "y=cy+k*(z-cz)-ry*sqrt(1-((z-cz)/rz)^2)",
+  "anterior_meridian_second_derivative": "ry/rz^2 * (1-((z-cz)/rz)^2)^(-3/2) > 0 inside vertical extent; one convex primitive arc, no independent interpolation wobble",
+  "B_nonbreast_parameter_arrays_exact": {
+    "thorax": true,
+    "shoulder": true,
+    "upper_arm": true,
+    "anterior_fan": true,
+    "posterior_wall": true,
+    "trapezius": true,
+    "pose": true,
+    "mesher": true,
+    "context_mask_B": true
+  },
+  "B_nonbreast_component_field_exact_at_256_probes": {
+    "curved_tapered_thorax_neck": true,
+    "shoulder_L": true,
+    "upper_arm_L": true,
+    "anterior_fan_L": true,
+    "posterior_wall_L": true,
+    "trapezius_L": true,
+    "shoulder_R": true,
+    "upper_arm_R": true,
+    "anterior_fan_R": true,
+    "posterior_wall_R": true,
+    "trapezius_R": true
+  },
+  "primitive_terminal_points": [
+    [
+      0.06611380866573346,
+      -0.05,
+      1.186
+    ],
+    [
+      0.06611380866573346,
+      -0.009999999999999998,
+      1.346
+    ]
+  ],
+  "terminal_torso_field_m": [
+    -0.017873034715065995,
+    -0.04288784410307289
+  ],
+  "terminal_points_inside_torso": true,
+  "posterior_cap_near_plane_mesh_samples": 316,
+  "exposed_cap_control_samples": 0,
+  "status": "CPU primitive/form construction evidence only. Union is not globally convex and still requires actual source4/branch/curvature review."
+}

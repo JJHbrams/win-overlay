@@ -1,0 +1,14 @@
+"""Convex quadric and preserved B component-field audit; no ART inference."""
+from pathlib import Path
+import json,hashlib,sys,importlib.util
+import numpy as np
+P=Path(__file__).resolve().parent;B=P.parent/'B';sys.path.insert(0,str(P));import field
+p=json.loads((P/'parameters.json').read_text(encoding='utf-8'));pb=json.loads((B/'parameters.json').read_text(encoding='utf-8'));breast=p['breast'];rx,ry,rz=breast['radii'];k=breast['yz_shear']
+Q=np.array([[1/rx**2,0,0],[0,1/ry**2,-k/ry**2],[0,-k/ry**2,k*k/ry**2+1/rz**2]])
+eigen=np.linalg.eigvalsh(Q);assert (eigen>0).all()
+fc,regc=field.make(p);spec=importlib.util.spec_from_file_location('frozen_B_compare_field',B/'field.py');old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old);fb,regb=old.make(pb)
+points=np.random.default_rng(7).uniform(p['mesher']['bounds_min'],p['mesher']['bounds_max'],(256,3));unchanged={name:bool(np.array_equal(field.evaluate(expr,points),old.evaluate(regb[name],points))) for name,expr in regc.items() if name!='breast_pair'};assert all(unchanged.values())
+terminal=np.array([[breast['center_x'],breast['center_y']+k*dz,breast['center_z']+dz] for dz in [-rz,rz]]);terminal_torso=field.evaluate(regc['curved_tapered_thorax_neck'],terminal);assert (terminal_torso<0).all()
+v=np.load(P/'sculpt07-C.npz')['world'];q=v[(abs(v[:,1]-breast['posterior_cap_y'])<.001)&(v[:,2]>breast['center_z']-rz)&(v[:,2]<breast['center_z']+rz)];bv=field.evaluate(regc['breast_pair'],q);other=np.minimum.reduce([field.evaluate(expr,q) for name,expr in regc.items() if name!='breast_pair']);exposed=int(((bv<.001)&(other>0)).sum())
+report=dict(mesh_sha256=hashlib.sha256((P/'sculpt07-C.npz').read_bytes()).hexdigest(),quadric_Q=Q.tolist(),quadric_eigenvalues=eigen.tolist(),each_breast_primitive_strictly_convex_before_buried_cap=True,posterior_cap_intersection_preserves_convexity=True,anterior_meridian_formula='y=cy+k*(z-cz)-ry*sqrt(1-((z-cz)/rz)^2)',anterior_meridian_second_derivative='ry/rz^2 * (1-((z-cz)/rz)^2)^(-3/2) > 0 inside vertical extent; one convex primitive arc, no independent interpolation wobble',B_nonbreast_parameter_arrays_exact={name:p[name]==pb[name] for name in ['thorax','shoulder','upper_arm','anterior_fan','posterior_wall','trapezius','pose','mesher','context_mask_B']},B_nonbreast_component_field_exact_at_256_probes=unchanged,primitive_terminal_points=terminal.tolist(),terminal_torso_field_m=terminal_torso.tolist(),terminal_points_inside_torso=True,posterior_cap_near_plane_mesh_samples=len(q),exposed_cap_control_samples=exposed,status='CPU primitive/form construction evidence only. Union is not globally convex and still requires actual source4/branch/curvature review.')
+(P/'convex-primitive-audit.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print('C_CONVEX_PRIMITIVE_CPU',json.dumps(report),flush=True)
