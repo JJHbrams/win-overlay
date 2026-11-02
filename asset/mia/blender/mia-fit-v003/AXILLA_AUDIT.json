@@ -1,0 +1,31 @@
+{
+  "reviewer": "fresh read-only axilla_research_audit agent, inherited main model",
+  "date": "2026-11-03",
+  "criteria": {
+    "AXILLA_LEARNING": {
+      "status": "PASS",
+      "scope": "Primary authored-source links, public captions versus selected actual frames and public lesson notes are distinguished. No continuous full-view claim."
+    },
+    "AXILLA_DIAGNOSIS": {
+      "status": "PASS_LIMITED_DIAGNOSTIC",
+      "scope": "Four actual image hashes and fixture records plus source/closeup boards independently read. Closer arms reduce gap but both poses retain box/lip; tested Smooth OFF does not repair. Reproduction tolerance and exact accepted-head protection distinguished."
+    },
+    "AXILLA_STRUCTURE": {
+      "status": "FAIL",
+      "scope": "The actual rejected05 form remains wrong. New connected anatomical construction/retopology and deformation review have not been completed."
+    }
+  },
+  "overall": "PARTIAL",
+  "reporting_issue": {
+    "found": "The original compose helper hardcoded light_energy_size_shadow_matches=True, while completed actual light records omitted use_shadow.",
+    "resolution": "Actual energy/size arrays are now compared. Shadow is expressly copied-by-recipe with independent actual-state equality UNVERIFIED. Old observations remain untouched; future recorder includes use_shadow.",
+    "followup_independent_review": "Reporting correction verified; no remaining reporting error identified. AXILLA_STRUCTURE remains FAIL.",
+    "rerender_required": false,
+    "source_board_sha256_unchanged": "85884d543081fcdc4f4380f66df2398ee27ec6db5f9d0649cbf012f1fd1a4c92"
+  },
+  "selected_native": "../mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend",
+  "selected_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "new_body_selected": false,
+  "new_native_saved": false,
+  "wiki_sync_performed": false
+}

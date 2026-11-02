@@ -30,11 +30,17 @@ now=np.asarray(Image.open(A/'current-smooth-on.png').convert('RGB'),np.int16)
 delta=np.abs(now-before);changed=np.max(delta,axis=2)>0
 oldlights=[r for r in old['actual_all_light_flags_before_render'] if not r['hidden']]
 newlights=[r for r in records[0]['actual_lights_before_render'] if not r['hidden']]
+assert len(oldlights)==len(newlights)==3
+for row in records:
+    active=[r for r in row['actual_lights_before_render'] if not r['hidden']]
+    assert len(active)==3
+    assert [(r['energy'],r['size']) for r in active]==[(r['energy'],r['size']) for r in oldlights]
 light_error=[float(np.max(np.abs(np.array(a['matrix'])-np.array(b['matrix'])))) for a,b in zip(oldlights,newlights)]
 report=dict(board=str(out),sha256=sha(out),source_sha256=sha(src),source_crop_original_pixels=[887,0,1774,887],source_resized=False,
     candidate_images=len(records),same_camera_matrix_bitexact=True,clips=[.1,10],projection='ORTHO',
-    light_reconstruction_matrix_component_max=light_error,light_energy_size_shadow_matches=True,
+    light_reconstruction_matrix_component_max=light_error,light_energy_size_matches_measured=True,
+    light_shadow_verification='Copied from existing05 by the render recipe; these four actual light records omit use_shadow, so independent actual shadow-state equality is unverified. No rerender or anatomy approval follows this reporting correction.',
     existing05_vs_new_current_on_RGB=dict(changed_pixels=int(changed.sum()),total_pixels=int(changed.size),max_channel_LSB=int(delta.max()),mean_absolute_LSB=float(delta.mean()),p99_channel_LSB=float(np.percentile(delta,99))),
     limits='Source camera/skin-to-bone pose remain approximate. Camera matches existing05 exactly; privateinverse is within0.479um, not bit-exact. Light matrix reconstitution differences are recorded. This diagnostic does not approve anatomy.')
-(O/'source-comparison.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+(O/'source-comparison.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
 print('REJECTED05_DIAGNOSTIC_BOARD_DONE',json.dumps(report),flush=True)

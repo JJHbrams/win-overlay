@@ -41,6 +41,19 @@ root는 `body/source-binding/actual05-F2-source-gray-guides.png`와 실제 `gray
 4. 기존 제어점의 분포가 이 연결을 허용하면 재배치한다. 허용하지 않으면 **국소 quad patch/retopology**로 가고, 경계/승인 얼굴을 고정한 채 내부 UV·47 keys·weights 전이 및 원본 보존을 명시한다. 나쁜 topology의 영구 보존이 목표가 아니다.
 5. 실제 subdivision 결과를 source front/profile/back/oblique 및 고·저·후사선/orbit에서 확인한 다음 modest arm pose 변형을 검사한다. 원화 cup/band 외곽은 옷의 외곽이라는 한계를 유지한다. 속옷 UV/표면, 목·쇄골맵, 최종 의상/애니메이션은 이 형상 검토를 대체하지 않는다.
 
+## 실행한 네 상태의 결과
+
+`body/diagnostic05/actual-four/`의 current/source-like × Smooth body-ROI ON/OFF **4개 실제 이미지**를 root가 모두 직접 보았다. source-like는 원화 관찰 방향에 가까운 진단 자세이며 정확한 pose 정합이나 형상 수정본이 아니다.
+
+- private rigged05의 전체 평가 표면 재현 최대 오차는 **0.000479mm**(부동소수점 허용치)이고, 승인된 head18825 정점은 bit-exact다. 원본620 데이터/47 key와 R3b native는 보존된다.
+- 카메라는 기존05의 생성 recipe를 그대로 재사용해 기록된 matrix와 exact equality를 확인했다. matrix_world 재할당의 분해/재합성 오차로 첫 준비 실행이 중단됐으나 이미지 생성 전 실패이며, 허용치를 몰래 넓히지 않았다. 조명 matrix의 재구성 오차는 최대5.96e-8로 별도 기록한다.
+- 독립 검토가 조명 보고의 한계를 발견했다. energy/size는 실제 기록으로 대조했으나 use_shadow는 recipe에서 복사하고도 네 프레임의 실제 light record에 빠져 있다. **shadow 상태를 독립적으로 실측 확인했다고 주장하지 않는다.** 기존 그림의 기록을 사후에 채우지 않고, 다음 촬영의 recorder에만 항목을 추가했다.
+- 원래 자세/ON의 새 프레임과 기존05는786769픽셀 중129픽셀만1LSB 이하 차이여서 기존05의 실제 모습을 재현한다.
+- 팔을 내리면 노출되는 겨드랑이 틈은 줄어든다. 그러나 **두 자세 모두 사각 옆벽과 얇은 하부 단차가 남는다.** 자세 차이를 주원인으로 삼아 형상 문제를 닫을 수 없다.
+- body-ROI Smooth OFF의 평가 표면 이동은 최대약1.062mm이며 문제 형상을 제거하지 못했다. **이 범위의 ablation에서 Smooth는 주요 설명이 아니다.** 모든 스무딩 방식이 무관하다고 일반화하지 않는다.
+
+결론: 이번 진단은 기존 target/연결 조형을 다시 만들어야 한다는 근거다. 근본 형상을 그대로 두고 노멀·스무딩 계수·팔 자세를 반복 조절하는 것은 다음 제작 방법으로 채택하지 않는다. 실제 해부학적 국소 연결 재구성은 아직 미완료다.
+
 ## 기록 상태
 
 이 문서는 제작 저장소의 근거/실패 기록이다. 현재 세션에 Engram `kg_*` 도구가 제공되지 않아 Wiki MCP 검색·수정·sync/lint는 실행하지 못했다. **Wiki 동기화 완료로 보고하지 않는다.** 조사 성공, CPU 보존, 정상 렌더는 모델 ART PASS와 별개다.

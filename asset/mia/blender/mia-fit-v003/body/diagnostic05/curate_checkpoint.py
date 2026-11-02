@@ -43,7 +43,7 @@ payload=dict(status='02/03/04/05 rejected; diagnostic only. R3b remains selected
     included='Frozen small target fields, producers/reproduction, selected actual failures, source binding and normals/pose/operator diagnostics.',
     excluded='All full natives/captions, pycache/log spam, new evaluated surface caches and repeated historical variants.',
     dependencies=dependencies,files=manifest,total_bytes=sum(row['bytes'] for row in manifest),source_constraints_sha256=sha(source))
-(O/'checkpoint-02-05-files.json').write_text(json.dumps(payload,indent=2)+'\n',encoding='utf-8')
+(O/'checkpoint-02-05-files.json').write_text(json.dumps(payload,indent=2)+'\n',encoding='utf-8',newline='\n')
 repo=P.parents[4]
 paths=[str(f.relative_to(repo)).replace('\\','/') for f in sorted(files|{O/'checkpoint-02-05-files.json'})]
 (O/'checkpoint-pathspec.nul').write_bytes(('\0'.join(paths)+'\0').encode('utf-8'))

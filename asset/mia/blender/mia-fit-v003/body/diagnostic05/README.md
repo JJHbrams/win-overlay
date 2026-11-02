@@ -23,7 +23,7 @@ Four states cross current/source-like pose with original/body-scoped post-Subsur
 
 The initial reset through `matrix_basis` decomposition introduced0.000239mm roundoff on the private copy. Reset now restores the original authored transform channels exactly; its CPU restoration guard is bit-exact.
 
-`render_diagnostic.py` requires root's exclusive GPU token. It emits exactly four F2 gray frames using the existing05 camera matrix, clip range, resolution, material values, three-light fixture and color management. It records actual pose and all light flags before every render. Every image remains a diagnosis of rejected05, not an anatomy improvement.
+`render_diagnostic.py` requires root's exclusive GPU token. It emits exactly four F2 gray frames using the existing05 camera matrix, clip range, resolution, material values, three-light fixture and color management. The completed four actuals record pose and light energy/size/color/matrix, but omit actual use_shadow. The recipe copied use_shadow from05; independent actual shadow-state equality is therefore unverified. The recorder now includes use_shadow for future runs, without retroactively filling old observations. Every image remains a diagnosis of rejected05, not an anatomy improvement.
 
 ## Checkpoint scope
 
