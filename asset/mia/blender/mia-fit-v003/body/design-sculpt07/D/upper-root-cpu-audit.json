@@ -1,0 +1,75 @@
+{
+  "D_mesh_sha256": "2a562dd1428dfcbad6a85068313154642112e54d1f26a7b3a00cb8f53a2ce5ef",
+  "C_mesh_sha256": "148254cab1faf965ae86a5f0f7c4eb98aae1361ce3f43660f0554c06e18ef833",
+  "C_nonbreast_parameter_arrays_exact": {
+    "thorax": true,
+    "shoulder": true,
+    "upper_arm": true,
+    "anterior_fan": true,
+    "posterior_wall": true,
+    "trapezius": true,
+    "pose": true,
+    "mesher": true,
+    "context_mask_B": true
+  },
+  "C_nonbreast_11_component_fields_exact_at_512_probes": {
+    "curved_tapered_thorax_neck": true,
+    "shoulder_L": true,
+    "upper_arm_L": true,
+    "anterior_fan_L": true,
+    "posterior_wall_L": true,
+    "trapezius_L": true,
+    "shoulder_R": true,
+    "upper_arm_R": true,
+    "anterior_fan_R": true,
+    "posterior_wall_R": true,
+    "trapezius_R": true
+  },
+  "whole_field_below_cz_exact_at_512_probes": true,
+  "whole_field_below_cz_max_difference_m": 0.0,
+  "lower_mesh_z_margin_m": 0.005982142857142858,
+  "lower_mesh_vertices_below_cz_minus_two_cells": 34932,
+  "lower_mesh_coordinate_set_bitexact": true,
+  "full_mesh_below_cz_coordinate_set_bitexact": false,
+  "full_low_C_D_counts": [
+    36236,
+    36236
+  ],
+  "mesher_limit": "A voxel cell crossing cz may react to upper changes; exact analytic field belowcz plus actual lower source stations and lower mesh away from two cells are checked separately.",
+  "warp_C2": true,
+  "warp_H1_endpoints": [
+    0.0,
+    1.0
+  ],
+  "warp_H2_min": 0.0,
+  "warp_H2_endpoints": [
+    0.0,
+    0.0
+  ],
+  "front_convexity": "Original convex front graph y=Cfront(x,z)+f(z), with fsecond>=0; front-hemisphere Hessian remains positive. D is no longer an affine quadric, no claim that whole union or hidden posterior surface is globally convex.",
+  "source_station_warp_and_local_blend": [
+    {
+      "z": 1.3089242725233947,
+      "upper_posterior_shift_m": 0.017290922635527613,
+      "breast_thorax_blend_m": 0.034
+    },
+    {
+      "z": 1.2849269479962198,
+      "upper_posterior_shift_m": 0.006492126598298885,
+      "breast_thorax_blend_m": 0.024096348371466573
+    },
+    {
+      "z": 1.2572377273879414,
+      "upper_posterior_shift_m": 0.0,
+      "breast_thorax_blend_m": 0.016
+    },
+    {
+      "z": 1.220318766576903,
+      "upper_posterior_shift_m": 0.0,
+      "breast_thorax_blend_m": 0.016
+    }
+  ],
+  "posterior_cap_near_plane_samples": 316,
+  "exposed_cap_control_samples": 0,
+  "status": "CPU bounded upper-root construction/preservation only; actual visible root/axilla review required."
+}

@@ -1,0 +1,439 @@
+{
+  "version": "design-sculpt07-D",
+  "status": "NEW STATIC DESIGN HYPOTHESIS; UNSELECTED; NO UV/KEY/WEIGHT MIGRATION",
+  "sources": {
+    "v06_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+    "v06_sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+    "low_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-low-view-axilla-reaffirmed-20261103.png",
+    "low_sha256": "31fa0da05c970e9b6d84a2569953b48636bd8d32df33d65901772f5664ad52b2",
+    "constraints_sha256": "6db2664f265d243b0d5670d9929a93b2b8c82107ca032175ddcc51e00653d14d"
+  },
+  "source_consumed_before_geometry": {
+    "section_support_bands": [
+      {
+        "station": 0,
+        "v06_source_y": 262,
+        "world_z": 1.3089242725233947,
+        "v06_outer_halfwidth": 0.11952,
+        "v06_front_profile_y": -0.11235999999999999,
+        "source_E2_y": 317,
+        "source_F2_y": 335,
+        "source_front_x_interval": [
+          390.0,
+          553.0
+        ],
+        "source_front_width_m": 0.18378195761687932,
+        "source_F2_outer_x": 1219.0,
+        "oblique_support_m": 0.13191711068205447,
+        "oblique_support_uncertainty_m": 0.014,
+        "inferred_lateral_x": 0.09189097880843966,
+        "inferred_peak_x": 0.071712,
+        "inferred_round_arc_radius": 0.04594548940421983,
+        "inferred_round_arc_sag": 0.004668415733211861,
+        "inferred_lateral_y_unclamped": -0.11371518813669801,
+        "chosen_lateral_y": -0.11371518813669801,
+        "chosen_broad_pole_y": -0.11838360386990987,
+        "actual_projected_F2_x": 1219.0,
+        "geometry_limit": "Clothed exterior support tangent constrains broad connected envelope. Arc/meridian placement is inference inside source/profile bands, not a recovered internal nakedroot or separate sphere; no tangent-point correspondence between views."
+      },
+      {
+        "station": 1,
+        "v06_source_y": 275,
+        "world_z": 1.2849269479962198,
+        "v06_outer_halfwidth": 0.122,
+        "v06_front_profile_y": -0.13,
+        "source_E2_y": 350,
+        "source_F2_y": 355,
+        "source_front_x_interval": [
+          366.8695652173913,
+          574.8
+        ],
+        "source_front_width_m": 0.23444087332807775,
+        "source_F2_outer_x": 1198.0,
+        "oblique_support_m": 0.15559454080447452,
+        "oblique_support_uncertainty_m": 0.014,
+        "inferred_lateral_x": 0.1098,
+        "inferred_peak_x": 0.0732,
+        "inferred_round_arc_radius": 0.05861021833201944,
+        "inferred_round_arc_sag": 0.012832519690355641,
+        "inferred_lateral_y_unclamped": -0.12920758999208143,
+        "chosen_lateral_y": -0.12920758999208143,
+        "chosen_broad_pole_y": -0.14204010968243708,
+        "actual_projected_F2_x": 1198.0,
+        "geometry_limit": "Clothed exterior support tangent constrains broad connected envelope. Arc/meridian placement is inference inside source/profile bands, not a recovered internal nakedroot or separate sphere; no tangent-point correspondence between views."
+      },
+      {
+        "station": 2,
+        "v06_source_y": 290,
+        "world_z": 1.2572377273879414,
+        "v06_outer_halfwidth": 0.125,
+        "v06_front_profile_y": -0.148,
+        "source_E2_y": 385,
+        "source_F2_y": 385,
+        "source_front_x_interval": [
+          354.63157894736844,
+          584.5833333333334
+        ],
+        "source_front_width_m": 0.2592698379048371,
+        "source_F2_outer_x": 1183.0,
+        "oblique_support_m": 0.1725069908919174,
+        "oblique_support_uncertainty_m": 0.014,
+        "inferred_lateral_x": 0.1125,
+        "inferred_peak_x": 0.075,
+        "inferred_round_arc_radius": 0.06481745947620927,
+        "inferred_round_arc_sag": 0.011949198175594977,
+        "inferred_lateral_y_unclamped": -0.15230095686369943,
+        "chosen_lateral_y": -0.15230095686369943,
+        "chosen_broad_pole_y": -0.1642501550392944,
+        "actual_projected_F2_x": 1183.0,
+        "geometry_limit": "Clothed exterior support tangent constrains broad connected envelope. Arc/meridian placement is inference inside source/profile bands, not a recovered internal nakedroot or separate sphere; no tangent-point correspondence between views."
+      },
+      {
+        "station": 3,
+        "v06_source_y": 310,
+        "world_z": 1.220318766576903,
+        "v06_outer_halfwidth": 0.122,
+        "v06_front_profile_y": -0.131,
+        "source_E2_y": 415,
+        "source_F2_y": 415,
+        "source_front_x_interval": [
+          366.2352941176471,
+          576.1052631578947
+        ],
+        "source_front_width_m": 0.23662769174975806,
+        "source_F2_outer_x": 1191.0,
+        "oblique_support_m": 0.16348701751194786,
+        "oblique_support_uncertainty_m": 0.014,
+        "inferred_lateral_x": 0.1098,
+        "inferred_peak_x": 0.0732,
+        "inferred_round_arc_radius": 0.059156922937439516,
+        "inferred_round_arc_sag": 0.012681321473594444,
+        "inferred_lateral_y_unclamped": -0.14148610405883852,
+        "chosen_lateral_y": -0.13831867852640556,
+        "chosen_broad_pole_y": -0.151,
+        "actual_projected_F2_x": 1192.8057542310482,
+        "geometry_limit": "Clothed exterior support tangent constrains broad connected envelope. Arc/meridian placement is inference inside source/profile bands, not a recovered internal nakedroot or separate sphere; no tangent-point correspondence between views."
+      }
+    ],
+    "anterior_fold_bands": [
+      {
+        "source_E2_y": 338,
+        "source_F2_y": 354,
+        "inferred_x": 0.13620159803753995,
+        "inferred_y": -0.03297657497722554,
+        "uncertainty_m": 0.014,
+        "world_z": 1.329078947368421,
+        "limit": "Short visible ink/skin fold, partly shadow and arm/cloth-occluded. Finite anterior branch band; posterior corridor is not inferred from it."
+      },
+      {
+        "source_E2_y": 351,
+        "source_F2_y": 374,
+        "inferred_x": 0.14138808273102246,
+        "inferred_y": -0.025124999238752926,
+        "uncertainty_m": 0.014,
+        "world_z": 1.3102631578947368,
+        "limit": "Short visible ink/skin fold, partly shadow and arm/cloth-occluded. Finite anterior branch band; posterior corridor is not inferred from it."
+      },
+      {
+        "source_E2_y": 365,
+        "source_F2_y": 393,
+        "inferred_x": 0.1415008323982721,
+        "inferred_y": -0.016489001869220705,
+        "uncertainty_m": 0.014,
+        "world_z": 1.29,
+        "limit": "Short visible ink/skin fold, partly shadow and arm/cloth-occluded. Finite anterior branch band; posterior corridor is not inferred from it."
+      }
+    ],
+    "display_metric": {
+      "metres_per_pixel": 0.0011274966724961922,
+      "method": "One source-wide uniform display metric from originalv06 crown-to-crotch span430px and E2 corresponding704px. NOT calibrated dimensions; crown-to-band ratio differs, retained as registration residual.",
+      "global_vertical_limit": "v06 global Z stations retained. E2/F2 section correspondence is semantic cup-envelope fraction; no source image warp or per-feature mesh warp."
+    },
+    "cameras": {
+      "E2": {
+        "yaw_degrees": 0,
+        "pitch_degrees": -8,
+        "yaw_uncertainty_degrees": 4,
+        "pitch_uncertainty_degrees": 6,
+        "body_axis_pixel_x": 470,
+        "source_crop": [
+          0,
+          0,
+          887,
+          887
+        ]
+      },
+      "F2": {
+        "yaw_degrees": 40,
+        "pitch_degrees": -8,
+        "yaw_uncertainty_degrees": 8,
+        "pitch_uncertainty_degrees": 6,
+        "body_axis_pixel_x": 1336,
+        "source_crop": [
+          887,
+          0,
+          1774,
+          887
+        ]
+      }
+    },
+    "excluded_as_hard_targets": [
+      "inferred_lateral_x",
+      "chosen_lateral_y",
+      "inferred_x",
+      "inferred_y"
+    ],
+    "interpretation": "Observed support/pixel intervals and v06 Z/profile constrain envelope; naked root and posterior wall remain anatomical inference. Actual support maximizer may move."
+  },
+  "pose": {
+    "name": "static low-A",
+    "upper_arm_outward_from_vertical_degrees": 25.0,
+    "note": "One declared design pose. Original rig/head not edited; source skin axes are not internal bone axes."
+  },
+  "mesher": {
+    "voxel_m": 0.003,
+    "bounds_min": [
+      -0.335,
+      -0.205,
+      1.025
+    ],
+    "bounds_max": [
+      0.335,
+      0.15,
+      1.545
+    ],
+    "density_scale_m": 0.012,
+    "threshold": 0.5,
+    "background": 0.0,
+    "field": "Approximate implicit radial/ellipsoid field, NOT an exact SDF. Density=max(0,0.5-field/0.012). Native VolumeCube / VolumeToMesh."
+  },
+  "thorax": {
+    "z_min": 1.035,
+    "z_max": 1.525,
+    "x_radius": [
+      [
+        1.035,
+        0.105
+      ],
+      [
+        1.12,
+        0.108
+      ],
+      [
+        1.18,
+        0.12
+      ],
+      [
+        1.25,
+        0.134
+      ],
+      [
+        1.32,
+        0.145
+      ],
+      [
+        1.35,
+        0.155
+      ],
+      [
+        1.38,
+        0.153
+      ],
+      [
+        1.4,
+        0.108
+      ],
+      [
+        1.435,
+        0.055
+      ],
+      [
+        1.47,
+        0.037
+      ],
+      [
+        1.525,
+        0.034
+      ]
+    ],
+    "y_radius": [
+      [
+        1.035,
+        0.065
+      ],
+      [
+        1.12,
+        0.07
+      ],
+      [
+        1.2,
+        0.076
+      ],
+      [
+        1.3,
+        0.078
+      ],
+      [
+        1.365,
+        0.073
+      ],
+      [
+        1.4,
+        0.061
+      ],
+      [
+        1.435,
+        0.045
+      ],
+      [
+        1.47,
+        0.036
+      ],
+      [
+        1.525,
+        0.033
+      ]
+    ],
+    "center_y": [
+      [
+        1.035,
+        -0.006
+      ],
+      [
+        1.2,
+        -0.01
+      ],
+      [
+        1.365,
+        -0.008
+      ],
+      [
+        1.435,
+        -0.006
+      ],
+      [
+        1.525,
+        -0.004
+      ]
+    ]
+  },
+  "breast": {
+    "center_x": 0.06611380866573346,
+    "center_y": -0.03,
+    "center_z": 1.266,
+    "radii": [
+      0.077,
+      0.125,
+      0.08
+    ],
+    "yz_shear": 0.25,
+    "posterior_cap_y": 0.012,
+    "interbreast_blend": 0.003,
+    "thorax_blend": 0.016,
+    "manual_justification": "One convex triaxial ellipsoid sheared Y by0.25*(Z\u2212centerZ). Center is behind thorax skin. Vertical extent1.186..1.346m straddles observed v06 stations1.220..1.309. Nominal front at center\u2212155mm; shear shifts actual front maximum slightly lower. Width and F2 support are weak source priors to be measured, not exact fitted cloth or fixed inferred tangent targets. Parameters are a bounded anatomical hypothesis; actual residuals retained. D adds at most a linear posterior upper shift after9mm C2 onset; explicit anatomical hypothesis to reduce excess upper profile and ball-like root, not source-station forcing. Lower bowl remains C.",
+    "upper_posterior_warp": {
+      "k": 0.45,
+      "width_m": 0.009,
+      "formula": "u=z-cz;v=clamp(u/w,0,1);H=w*(v^3\u22120.5v^4)+max(u\u2212w,0); f=kH; evaluate C quadric at y\u2212f. f=0 belowcz, f is C2, fsecond>=0."
+    },
+    "upper_thorax_blend": {
+      "lower_m": 0.016,
+      "upper_m": 0.034,
+      "ramp_height_m": 0.04,
+      "ramp": "C2 quintic10t^3\u221215t^4+6t^5, clamped overcz..cz+.040. Breast\u2013thorax union only; other component blends fixed."
+    }
+  },
+  "shoulder": {
+    "center": [
+      0.146,
+      0.008,
+      1.361
+    ],
+    "radii": [
+      0.037,
+      0.043,
+      0.054
+    ],
+    "angle_y_degrees": -12.0,
+    "blend": 0.014
+  },
+  "upper_arm": {
+    "center": [
+      0.195,
+      0.007,
+      1.255
+    ],
+    "radii": [
+      0.032,
+      0.036,
+      0.133
+    ],
+    "angle_y_degrees": -25.0,
+    "blend": 0.012
+  },
+  "anterior_fan": {
+    "center": [
+      0.128,
+      -0.014,
+      1.336
+    ],
+    "radii": [
+      0.05,
+      0.025,
+      0.049
+    ],
+    "angle_y_degrees": -24.0,
+    "blend": 0.012
+  },
+  "posterior_wall": {
+    "center": [
+      0.126,
+      0.016,
+      1.321
+    ],
+    "radii": [
+      0.048,
+      0.022,
+      0.064
+    ],
+    "angle_y_degrees": -27.0,
+    "blend": 0.01
+  },
+  "trapezius": {
+    "center": [
+      0.08,
+      0.01,
+      1.405
+    ],
+    "radii": [
+      0.076,
+      0.04,
+      0.035
+    ],
+    "angle_y_degrees": 12.0,
+    "blend": 0.016
+  },
+  "construction_limits": [
+    "All components are buried positive volumes merged into one field; no drilled holes/collider subtraction/flat axillary membrane.",
+    "Fresh continuous radial profiles are derived from observed priors, not compressed rows or coordinates from01/05/06.",
+    "No nipple, garment, pigment, final sculpt detail, retopology, keys, weights or UV authored.",
+    "Lower abdomen/neck/arm cut boundaries are private context seams, not watertight final body integration.",
+    "B root/shoulder widths are manual anatomical hypotheses checked against source actuals, not exact recovered shoulder/hidden root dimensions. Positive posterior cap must remain buried; report any exposed cap."
+  ],
+  "parent_failed_A_parameters_sha256": "129a326a3fa0be44671a7d6cd2ccfd248fa1d625c916953b50793d42ebe7d151",
+  "hypothesis": "UPPER ROOT ONLY: posterior C2 breast-field warp abovecz and locally increased upper breast\u2013thorax blend. C lower field, convex lower bowl, nonbreast11 fields, context, original head/keys held.",
+  "context_mask_B": "Private source polygon arms use semantic arm/hand bone weights and resume belowZ1.18; torso context resumes belowZ1.075. Face690 excluded. Context seams remain UNVERIFIED.",
+  "parent_failed_B_parameters_sha256": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f",
+  "B_preserved_components": {
+    "thorax": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f",
+    "shoulder": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f",
+    "upper_arm": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f",
+    "anterior_fan": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f",
+    "posterior_wall": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f",
+    "trapezius": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f",
+    "pose": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f",
+    "mesher": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f",
+    "context_mask_B": "012e5ae722526d8d6004980c365b668cc89f4a838332949dfef8ae507db1673f"
+  },
+  "parent_C_parameters_sha256": "68ff589f0ae58e7b3d28ab0e98698c3ee8791cbbd6df7f8d654e57a4e7b5a49c"
+}

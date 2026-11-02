@@ -1,0 +1,77 @@
+{
+  "planned_actuals": 4,
+  "masked_polygons": 4783,
+  "camera": {
+    "projection": "ORTHO",
+    "matrix": [
+      [
+        -4.371138828673793e-08,
+        0.0871557667851448,
+        0.9961947202682495,
+        1.3454335927963257
+      ],
+      [
+        1.0,
+        -2.7145970804554054e-08,
+        4.625332650221026e-08,
+        -0.004999999888241291
+      ],
+      [
+        3.1073916773038945e-08,
+        0.9961947202682495,
+        -0.0871557667851448,
+        1.2104132175445557
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "ortho_scale": 0.2199999988079071,
+    "clip_start": 0.10000000149011612,
+    "clip_end": 10.0,
+    "resolution": [
+      640,
+      640
+    ],
+    "pixel_aspect": [
+      1,
+      1
+    ],
+    "frame": 1,
+    "yaw": 90.0,
+    "pitch": -5.0,
+    "target": [
+      0.15000000596046448,
+      -0.004999999888241291,
+      1.315000057220459
+    ]
+  },
+  "single_actor": true,
+  "geometry_changed": false,
+  "prior_D_files_unchanged": true,
+  "plans": [
+    {
+      "phase": "intact",
+      "mode": "gray",
+      "state_sha256": "f3859fc8267877945da97c34abd9035acbfdb1b64657e0a872d0915c124c077a"
+    },
+    {
+      "phase": "intact",
+      "mode": "normal",
+      "state_sha256": "f008c54240fea48f680a56b75bc4294f4d51ff0e2371acb38a24bd584b4e29e4"
+    },
+    {
+      "phase": "cutaway",
+      "mode": "gray",
+      "state_sha256": "da62bae9426a6e58ebfdf169c67c889e5ab4f908636cb10cb8b4320937a2bc67"
+    },
+    {
+      "phase": "cutaway",
+      "mode": "normal",
+      "state_sha256": "aafed1b3723bba05c1b861e3cffcfbeb4fb7ebb7c8449b3f2fee874ad7519467"
+    }
+  ]
+}
