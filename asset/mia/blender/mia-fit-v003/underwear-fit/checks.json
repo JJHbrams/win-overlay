@@ -1,0 +1,236 @@
+{
+  "status": "PASS",
+  "scope": "Actual baseline CPU camera rays and per-corner UV correspondence only",
+  "positive_actual_triangle_probes": [
+    {
+      "view": "front",
+      "triangle_id": 280,
+      "barycentric": [
+        0.20999999999746805,
+        0.3200000000006978,
+        0.47000000000183423
+      ],
+      "world_error_m": 3.3879997739887654e-15,
+      "uv_error": 2.0471501066083613e-15
+    },
+    {
+      "view": "front",
+      "triangle_id": 4369,
+      "barycentric": [
+        0.20999999999847951,
+        0.3199999999989367,
+        0.4700000000025838
+      ],
+      "world_error_m": 7.823728268079196e-15,
+      "uv_error": 4.971270767759186e-15
+    },
+    {
+      "view": "front",
+      "triangle_id": 7732,
+      "barycentric": [
+        0.20999999999998586,
+        0.3199999999986061,
+        0.47000000000140807
+      ],
+      "world_error_m": 7.995897331762954e-15,
+      "uv_error": 5.117875266520904e-15
+    },
+    {
+      "view": "front",
+      "triangle_id": 10754,
+      "barycentric": [
+        0.2099999999979117,
+        0.3199999999980685,
+        0.4700000000040198
+      ],
+      "world_error_m": 1.9951162617502285e-14,
+      "uv_error": 1.3258219955793491e-14
+    },
+    {
+      "view": "profile",
+      "triangle_id": 64,
+      "barycentric": [
+        0.21000000000008023,
+        0.31999999999981377,
+        0.470000000000106
+      ],
+      "world_error_m": 1.2471925900383243e-16,
+      "uv_error": 2.0014830212433605e-16
+    },
+    {
+      "view": "profile",
+      "triangle_id": 8517,
+      "barycentric": [
+        0.21000000000013175,
+        0.3200000000000816,
+        0.4699999999997867
+      ],
+      "world_error_m": 9.457282200365136e-16,
+      "uv_error": 7.447602459741819e-16
+    },
+    {
+      "view": "profile",
+      "triangle_id": 10921,
+      "barycentric": [
+        0.21000000000040453,
+        0.31999999999968126,
+        0.46999999999991426
+      ],
+      "world_error_m": 1.988866449469556e-15,
+      "uv_error": 1.324147507406233e-15
+    },
+    {
+      "view": "profile",
+      "triangle_id": 13579,
+      "barycentric": [
+        0.2099999999999087,
+        0.3200000000000165,
+        0.4700000000000748
+      ],
+      "world_error_m": 9.046146325204653e-16,
+      "uv_error": 4.440892098500626e-16
+    },
+    {
+      "view": "back",
+      "triangle_id": 64,
+      "barycentric": [
+        0.2100000000095235,
+        0.31999999999110185,
+        0.46999999999937464
+      ],
+      "world_error_m": 1.2508044959329683e-14,
+      "uv_error": 6.252832847199451e-15
+    },
+    {
+      "view": "back",
+      "triangle_id": 3187,
+      "barycentric": [
+        0.21000000000415903,
+        0.31999999999503265,
+        0.47000000000080827
+      ],
+      "world_error_m": 2.0068597165436426e-14,
+      "uv_error": 1.0346540002765181e-14
+    },
+    {
+      "view": "back",
+      "triangle_id": 4839,
+      "barycentric": [
+        0.20999999999300417,
+        0.3199999999961412,
+        0.4700000000108547
+      ],
+      "world_error_m": 8.514648400321012e-15,
+      "uv_error": 6.153730977099957e-15
+    },
+    {
+      "view": "back",
+      "triangle_id": 7162,
+      "barycentric": [
+        0.21000000000104996,
+        0.3199999999944819,
+        0.4700000000044681
+      ],
+      "world_error_m": 9.072743750230574e-15,
+      "uv_error": 5.551115123125783e-15
+    },
+    {
+      "view": "oblique",
+      "triangle_id": 280,
+      "barycentric": [
+        0.21000638323121557,
+        0.31999200782339143,
+        0.470001608945393
+      ],
+      "world_error_m": 9.610756645030506e-09,
+      "uv_error": 6.540027724730256e-09
+    },
+    {
+      "view": "oblique",
+      "triangle_id": 5491,
+      "barycentric": [
+        0.2100005176514083,
+        0.32000043558868596,
+        0.4699990467599057
+      ],
+      "world_error_m": 1.7633888654642411e-09,
+      "uv_error": 1.0662881199632353e-09
+    },
+    {
+      "view": "oblique",
+      "triangle_id": 8073,
+      "barycentric": [
+        0.21000004798090482,
+        0.3200003096926938,
+        0.4699996423264014
+      ],
+      "world_error_m": 2.0923831009099726e-09,
+      "uv_error": 1.3276061438645734e-09
+    },
+    {
+      "view": "oblique",
+      "triangle_id": 12426,
+      "barycentric": [
+        0.2099989085042065,
+        0.31999963534109604,
+        0.4700014561546974
+      ],
+      "world_error_m": 6.702037865639576e-09,
+      "uv_error": 4.391783557793654e-09
+    }
+  ],
+  "max_world_error_m": 9.610756645030506e-09,
+  "max_uv_error": 6.540027724730256e-09,
+  "max_registration_roundtrip_error_px": 1.797546735911271e-13,
+  "negative_controls": {
+    "wrong_region": "WRONG_REGION_FRONT_HIT",
+    "changed_uv": "REJECTED",
+    "coincident_uv_seam": "UV_SEAM_AMBIGUOUS",
+    "offbody_ray": "MISSED_RAY",
+    "anisotropic_source_registration": "REJECTED",
+    "production_on_unselected_body": "REJECTED"
+  },
+  "source_path_diagnostics": {
+    "front": {
+      "source_samples": 36,
+      "status_counts": {
+        "UNVERIFIED_ANATOMICAL_REGION": 20,
+        "MISSED_RAY": 16
+      },
+      "accepted_pattern_points": 0,
+      "reason": "Baseline unselected; illustration-camera registration provisional; anatomical path regions not authored"
+    },
+    "profile": {
+      "source_samples": 30,
+      "status_counts": {
+        "MISSED_RAY": 6,
+        "UNVERIFIED_ANATOMICAL_REGION": 24
+      },
+      "accepted_pattern_points": 0,
+      "reason": "Baseline unselected; illustration-camera registration provisional; anatomical path regions not authored"
+    },
+    "back": {
+      "source_samples": 21,
+      "status_counts": {
+        "MISSED_RAY": 12,
+        "UNVERIFIED_ANATOMICAL_REGION": 9
+      },
+      "accepted_pattern_points": 0,
+      "reason": "Baseline unselected; illustration-camera registration provisional; anatomical path regions not authored"
+    },
+    "oblique": {
+      "source_samples": 36,
+      "status_counts": {
+        "UNVERIFIED_ANATOMICAL_REGION": 30,
+        "MISSED_RAY": 6
+      },
+      "accepted_pattern_points": 0,
+      "reason": "Baseline unselected; illustration-camera registration provisional; anatomical path regions not authored"
+    }
+  },
+  "source_pack_sha256": "4a98e8a8bab69fe814752c2401046332a8d45a576adbdd94d89276c02d550d5d",
+  "baseline_inputs_sha256": "9b209d13ad3ddeee93e92f7eeee19dcdf10fd13e1635987fd2040e7e57c797e8",
+  "final_seated_pattern_exported": false,
+  "target01_or_target02_used": false,
+  "body_garment_uv_shader_art_acceptance": "NOT_EVALUATED"
+}
