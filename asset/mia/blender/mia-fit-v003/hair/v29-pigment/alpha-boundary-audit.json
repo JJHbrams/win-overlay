@@ -1,0 +1,51 @@
+{
+  "source_image_size": [
+    4096,
+    4096
+  ],
+  "target_triangles": 4999,
+  "samples_per_triangle": 4,
+  "alpha_p0_10_50_90_100": [
+    0.0,
+    0.0,
+    0.42905868237801215,
+    1.0,
+    1.0
+  ],
+  "alpha_gt_point98_fraction": 0.3709241848369674,
+  "slate_core_target_faces": 335,
+  "slate_core_alpha_p0_10_50_90_100": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0
+  ],
+  "slate_core_alpha_gt_point98_fraction": 0.1328358208955224,
+  "slate_core_interior_weight_p0_10_50_90_100": [
+    0.0,
+    0.3333333432674408,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "slate_core_source_sRGB_p10_50_90": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.47042907232608494,
+      0.42403986497112356,
+      0.41625810467334134
+    ]
+  ],
+  "boundary_fade": "Exact0 at all753physical layer-border vertices; smoothstep geodesic0..4mm inside. Keeps current fallback at shared edges.",
+  "limits": "Alpha/lineage/edge checks, not proof actual strand style matches current geometry. No light/normal map sampled. Actual paired current-model render remains required."
+}

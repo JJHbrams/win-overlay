@@ -1,0 +1,342 @@
+{
+  "nodes": [
+    {
+      "name": "PAINT_UV_EXPLICIT",
+      "bl_idname": "ShaderNodeUVMap",
+      "type": "UVMAP",
+      "inputs": {},
+      "uv_map": "MIA_V17_PAINT_UV"
+    },
+    {
+      "name": "REBAKED_PIXAL_COLOR_ATLAS",
+      "bl_idname": "ShaderNodeTexImage",
+      "type": "TEX_IMAGE",
+      "inputs": {
+        "0": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "interpolation": "Linear",
+      "extension": "REPEAT",
+      "image": "MIA_V17_Pixal_Repacked4096.003"
+    },
+    {
+      "name": "RGB\ub97c BW\ub85c \ubcc0\ud658.001",
+      "bl_idname": "ShaderNodeRGBToBW",
+      "type": "RGBTOBW",
+      "inputs": {
+        "0": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "UV \ub9f5",
+      "bl_idname": "ShaderNodeUVMap",
+      "type": "UVMAP",
+      "inputs": {},
+      "uv_map": "MIA_V17_PAINT_UV"
+    },
+    {
+      "name": "UV \ub9f5.001",
+      "bl_idname": "ShaderNodeUVMap",
+      "type": "UVMAP",
+      "inputs": {},
+      "uv_map": "MIA_V17_PAINT_UV"
+    },
+    {
+      "name": "V22_CLEAN_PALETTE_72_PERCENT",
+      "bl_idname": "ShaderNodeMixRGB",
+      "type": "MIX_RGB",
+      "inputs": {
+        "0": 0.2800000011920929,
+        "1": [
+          0.1550000011920929,
+          0.12300000339746475,
+          0.125,
+          1.0
+        ],
+        "2": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ]
+      },
+      "blend_type": "MIX",
+      "use_alpha": false,
+      "use_clamp": false
+    },
+    {
+      "name": "V22_GENERATED_UV_PIGMENT",
+      "bl_idname": "ShaderNodeTexImage",
+      "type": "TEX_IMAGE",
+      "inputs": {
+        "0": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "interpolation": "Linear",
+      "extension": "REPEAT",
+      "image": "MIA_V22_GeneratedSelectiveLockPigment"
+    },
+    {
+      "name": "V22_NEW_AUTHORED_SIGNALS",
+      "bl_idname": "ShaderNodeTexImage",
+      "type": "TEX_IMAGE",
+      "inputs": {
+        "0": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "interpolation": "Linear",
+      "extension": "REPEAT",
+      "image": "MIA_V22_AuthoredStrandSignals"
+    },
+    {
+      "name": "V22_OwnedAshPalette",
+      "bl_idname": "ShaderNodeValToRGB",
+      "type": "VALTORGB",
+      "inputs": {
+        "0": 0.5
+      },
+      "ramp": {
+        "color_mode": "RGB",
+        "hue_interpolation": "NEAR",
+        "interpolation": "EASE",
+        "elements": [
+          {
+            "position": 0.0,
+            "color": [
+              0.029999999329447746,
+              0.02500000037252903,
+              0.024000000208616257,
+              1.0
+            ]
+          },
+          {
+            "position": 0.014999999664723873,
+            "color": [
+              0.10499999672174454,
+              0.08399999886751175,
+              0.07800000160932541,
+              1.0
+            ]
+          },
+          {
+            "position": 0.04500000178813934,
+            "color": [
+              0.20499999821186066,
+              0.1770000010728836,
+              0.16500000655651093,
+              1.0
+            ]
+          },
+          {
+            "position": 0.11999999731779099,
+            "color": [
+              0.2800000011920929,
+              0.24699999392032623,
+              0.23000000417232513,
+              1.0
+            ]
+          },
+          {
+            "position": 0.4000000059604645,
+            "color": [
+              0.3100000023841858,
+              0.2800000011920929,
+              0.25999999046325684,
+              1.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+      "bl_idname": "ShaderNodeMixRGB",
+      "type": "MIX_RGB",
+      "inputs": {
+        "0": 0.5,
+        "1": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "2": [
+          0.02500000037252903,
+          0.02199999988079071,
+          0.023000000044703484,
+          1.0
+        ]
+      },
+      "blend_type": "MIX",
+      "use_alpha": false,
+      "use_clamp": false
+    },
+    {
+      "name": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+      "bl_idname": "ShaderNodeMixRGB",
+      "type": "MIX_RGB",
+      "inputs": {
+        "0": 0.5,
+        "1": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "2": [
+          0.04500000178813934,
+          0.03799999877810478,
+          0.03200000151991844,
+          1.0
+        ]
+      },
+      "blend_type": "ADD",
+      "use_alpha": false,
+      "use_clamp": false
+    },
+    {
+      "name": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+      "bl_idname": "ShaderNodeSeparateColor",
+      "type": "SEPARATE_COLOR",
+      "inputs": {
+        "0": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1.0
+        ]
+      },
+      "mode": "RGB"
+    }
+  ],
+  "links": [
+    {
+      "source": "PAINT_UV_EXPLICIT",
+      "output": 0,
+      "target": "REBAKED_PIXAL_COLOR_ATLAS",
+      "input": 0
+    },
+    {
+      "source": "REBAKED_PIXAL_COLOR_ATLAS",
+      "output": 0,
+      "target": "RGB\ub97c BW\ub85c \ubcc0\ud658.001",
+      "input": 0
+    },
+    {
+      "source": "RGB\ub97c BW\ub85c \ubcc0\ud658.001",
+      "output": 0,
+      "target": "V22_OwnedAshPalette",
+      "input": 0
+    },
+    {
+      "source": "V22_OwnedAshPalette",
+      "output": 0,
+      "target": "V22_CLEAN_PALETTE_72_PERCENT",
+      "input": 2
+    },
+    {
+      "source": "UV \ub9f5",
+      "output": 0,
+      "target": "V22_NEW_AUTHORED_SIGNALS",
+      "input": 0
+    },
+    {
+      "source": "V22_NEW_AUTHORED_SIGNALS",
+      "output": 0,
+      "target": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+      "input": 0
+    },
+    {
+      "source": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+      "output": 0,
+      "target": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+      "input": 0
+    },
+    {
+      "source": "V22_CLEAN_PALETTE_72_PERCENT",
+      "output": 0,
+      "target": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+      "input": 1
+    },
+    {
+      "source": "\ubcc4\ub3c4\uc758 \uc0c9\uc0c1",
+      "output": 1,
+      "target": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+      "input": 0
+    },
+    {
+      "source": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).001",
+      "output": 0,
+      "target": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+      "input": 1
+    },
+    {
+      "source": "UV \ub9f5.001",
+      "output": 0,
+      "target": "V22_GENERATED_UV_PIGMENT",
+      "input": 0
+    }
+  ],
+  "images": {
+    "MIA_V17_Pixal_Repacked4096.003": {
+      "file": "StaticSource_0.png",
+      "sha256": "c85baae88ab8e09e0762bd0db923ea9c690d4ec2c52e505315ee40c397fe4c2f",
+      "name": "MIA_V17_Pixal_Repacked4096.003",
+      "size": [
+        4096,
+        4096
+      ],
+      "colorspace": "sRGB",
+      "alpha_mode": "STRAIGHT"
+    },
+    "MIA_V22_GeneratedSelectiveLockPigment": {
+      "file": "StaticSource_1.png",
+      "sha256": "c0315287ff0ed88ef97b0dd430e03caa73b181053621be07a124fae095c2632b",
+      "name": "MIA_V22_GeneratedSelectiveLockPigment",
+      "size": [
+        4096,
+        4096
+      ],
+      "colorspace": "sRGB",
+      "alpha_mode": "STRAIGHT"
+    },
+    "MIA_V22_AuthoredStrandSignals": {
+      "file": "StaticSource_2.png",
+      "sha256": "1fb24b23b83a34fe9d3cd0e79f22f4a79ff14cd9aa363b67b40dd2d47164ce99",
+      "name": "MIA_V22_AuthoredStrandSignals",
+      "size": [
+        4096,
+        4096
+      ],
+      "colorspace": "Non-Color",
+      "alpha_mode": "STRAIGHT"
+    }
+  },
+  "static_base_output": {
+    "node": "\ubbf9\uc2a4 (\ub808\uac70\uc2dc).002",
+    "socket": 0
+  },
+  "generated_image_node": "V22_GENERATED_UV_PIGMENT",
+  "UV_names": [
+    "MIA_V17_PAINT_UV"
+  ],
+  "UV_payload_sha256": "f7c0677df56c54d9a070886d1922cfe852d96d0f72feb503ca8a2d1b8aac0c8f",
+  "source": "Retained v29 pure diffuse pigment ancestry BEFORE V22_GRAZING_EDGE_INK. Combine static base with retained generated overlay alpha; no Fresnel/object-normal/light/BSDF/geometry nodes allowed.",
+  "forbidden_old_geometry_normal_light_nodes_reused": false,
+  "current_Main_modified": false,
+  "native_saved": false
+}

@@ -1,0 +1,9 @@
+# Frozen numeric payload/manifest hashes retain exact captured bytes.
+* -text
+*.log -diff -whitespace
+*.json -whitespace
+*.npz binary
+*.png binary
+# Large captured per-bone/key tables remain inspectable as files, not code diffs.
+record.json -diff
+records.json -diff
