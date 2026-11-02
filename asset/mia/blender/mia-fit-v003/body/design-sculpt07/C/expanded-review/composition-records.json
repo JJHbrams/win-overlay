@@ -1,0 +1,47 @@
+{
+  "actual_frame_count": 15,
+  "orbit_actual_frames": 12,
+  "gif_frame_durations_ms": [
+    330,
+    330,
+    340,
+    330,
+    330,
+    340,
+    330,
+    330,
+    340,
+    330,
+    330,
+    340
+  ],
+  "gif_duration_ms": 4000,
+  "actual_no_interpolation": true,
+  "static_geometry_held": true,
+  "not_final_30fps_animation": true,
+  "source_back_crop": [
+    826.650039301046,
+    167.41532136162996,
+    1043.349960698954,
+    384.115242759538
+  ],
+  "source_back_limit": "Outer observable contour only; hair-covered posterior wall inferred; no naked-back calibration.",
+  "outputs": [
+    {
+      "path": "actual-orbit-4sec.gif",
+      "sha256": "cb2c79563312ea40ab8d4b0cabbafccc86d1cb629c269ce89b85af6eba0441b6"
+    },
+    {
+      "path": "actual-orbit-contact-sheet.png",
+      "sha256": "02974fc9a64d1c2a4085db7420946d046489cbfc8ca8c813795ea728770df1c6"
+    },
+    {
+      "path": "actual-critical-three.png",
+      "sha256": "b565476ff9e1cece94e727193c38889fa3afab34af7bc2704003906602a4424e"
+    },
+    {
+      "path": "source-back-context.png",
+      "sha256": "720c079b6da600f5be6bc22a33a61415dde6b395b8b31c020792f2b126f27df4"
+    }
+  ]
+}

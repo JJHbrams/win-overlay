@@ -1,0 +1,208 @@
+{
+  "planned_frames": 15,
+  "jobs": [
+    {
+      "view": "back",
+      "yaw": 180,
+      "pitch": 0,
+      "resolution": 640,
+      "scale": 0.4,
+      "target": [
+        0,
+        -0.035,
+        1.285
+      ],
+      "role": "v06 corresponding back orientation; covered back inferred; outer contour only"
+    },
+    {
+      "view": "upperoblique",
+      "yaw": 40,
+      "pitch": 30,
+      "resolution": 640,
+      "scale": 0.4,
+      "target": [
+        0,
+        -0.035,
+        1.285
+      ],
+      "role": "Extra actual upper surface/root inspection; no calibrated source panel"
+    },
+    {
+      "view": "loweropposite",
+      "yaw": -40,
+      "pitch": -25,
+      "resolution": 640,
+      "scale": 0.4,
+      "target": [
+        0,
+        -0.035,
+        1.285
+      ],
+      "role": "Extra actual inferior/root/axilla inspection; no calibrated source panel"
+    },
+    {
+      "view": "orbit-00",
+      "yaw": 0,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-01",
+      "yaw": 30,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-02",
+      "yaw": 60,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-03",
+      "yaw": 90,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-04",
+      "yaw": 120,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-05",
+      "yaw": 150,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-06",
+      "yaw": 180,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-07",
+      "yaw": 210,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-08",
+      "yaw": 240,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-09",
+      "yaw": 270,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-10",
+      "yaw": 300,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    },
+    {
+      "view": "orbit-11",
+      "yaw": 330,
+      "pitch": 8,
+      "resolution": 384,
+      "scale": 0.38,
+      "target": [
+        0,
+        -0.025,
+        1.29
+      ],
+      "role": "Held static design actual orbit; torso-centric, not fullbody/art/animation validation"
+    }
+  ],
+  "body_geometry_held": true,
+  "head_scale_unchanged": true,
+  "prior_C_files_unchanged": true,
+  "camera_clip": [
+    0.10000000149011612,
+    10.0
+  ],
+  "shared_state_sha256": "1b60c3a127588c409f983ce09a4b4a43028497ca9417d6fe1105cca4f82bedac"
+}
