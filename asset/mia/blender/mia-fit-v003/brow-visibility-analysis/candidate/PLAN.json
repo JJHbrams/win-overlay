@@ -1,0 +1,12 @@
+{
+  "candidate": "A: partial actual-brow projection onto foreground fringe",
+  "input_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "authorization": "Root selected source-supported partial display production after the annotated audit; CPU only until a four-frame GPU token.",
+  "owner_scope": "Only new files in mia-fit-v003/brow-visibility-analysis/candidate. Only new scene objects/node groups/materials/control properties; no original geometry/key/UV/material replay.",
+  "acceptance_criteria": [
+    {"id":"AC1","criterion":"All original authored geometry, keys, UVs, weights, materials and controls remain unchanged.","user_visible_outcome":"Accepted face and full fringe remain intact.","intended_runtime":"Blender5.2 CPU current-scene apply","verification":"Before/after original-data fingerprints and default/off-state checks.","evidence":"CPU preservation report","critical":true},
+    {"id":"AC2","criterion":"Projection reads actual evaluated V31 brows and hits only explicitly audited foreground-fringe geometry within a bounded front depth range.","user_visible_outcome":"Partial brow expression appears on real foreground hair without rear/head x-ray or a universal strip.","intended_runtime":"Blender5.2 evaluated Geometry Nodes","verification":"Target IDs, hit distances, misses/gaps, cross-owner/large-depth-edge rejection and source-parameter masks.","evidence":"Projection audit and portable helper","critical":true},
+    {"id":"AC3","criterion":"Display follows expression and head pose and stays reversible with view-angle limits.","user_visible_outcome":"The same 3D candidate works in live EEVEE and sprite views.","intended_runtime":"Blender5.2 CPU plus allocated actual EEVEE proof","verification":"Neutral/tension/surprise/closure and head-pose bounds, off control, front/profile/back angular behavior.","evidence":"CPU state audit; later four actual frames","critical":true},
+    {"id":"AC4","criterion":"Actual front/oblique before/after and source fragments support only the chosen partial visibility.","user_visible_outcome":"Expression becomes readable without exposing a complete invented brow through all hair.","intended_runtime":"Root-allocated actual EEVEE4frames","verification":"Same geometry/camera/light before/after; original-aspect source crops; inspect actual images.","evidence":"Four-frame source review; NOT_RUN until token","critical":true}
+  ]
+}
