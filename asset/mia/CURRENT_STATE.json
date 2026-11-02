@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-body-head-v06/win-overlay",
   "status": "v002_refinement_active_v001_frozen_overall_art_open",
   "in_progress_v29": {
@@ -388,6 +388,7 @@
     "baseline_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
     "body_target": "references/received/mia-body-v06-confirmed-20261102.png",
     "user_accepts_face_sculpt": true,
+    "head_body_scale_latest_user_request": "2026-11-03 user explicitly reiterates: AFTER body correction, source art shows head/body ratio mismatch; enlarge head above neck. Preserve accepted INTERNAL facial form. Whole-height source4 first; approx1.075–1.08 is a prior TEST, not adopted scale. Coordinate head/skull/eye/lid/lash/brow/mouth/root-hair attachments once, blend neck to stable body and check contacts/limited head motion. Long body-draped hair and foreground brow proxies require coherent root-follow handling, not blind doublescale. Do not scale head during current body diagnostics.",
     "eye_request": "Small screen-right lower-lid curvature/height correction, not eyeball scaling; upper crease registration to real upper lid; source-supported brow visibility through bangs.",
     "body_request": "Wholeheight original-aspect v06 comparison FIRST. Larger/higher supported breasts and correctly sized/tapered thorax/shoulders/headratio; breast->trapezius->underwearUV->neck/clavicle pigment. Old fixedG3core constraint revoked.",
     "hair_request": "Rear locks/nape/tips and broken-color cause versus v29; braid source cleanup deferred until body/face fit, not removed. Partial source brow display requires isolated truebrow/crease/lash evidence.",
@@ -395,9 +396,9 @@
     "live_unsaved_preview": "blender/mia-fit-v003/live/head-preview-application.json",
     "latest_live_runtime": "Blender process absent at latest check; MCP disconnected. Prior unsaved head/hair/R4guide previews are historical runtime evidence and are replayable from committed deltas; they are not an active saved v003 native.",
     "live_preview_scope": "Lower-right lid + lash-cleared crease C + partial source brow display applied via MCP, original raw keys exact. Body/hair/native on disk unchanged; no full live expressive gate yet.",
-    "body_method": "05 and06 rejected. Primary tutorial study and actual pose/Smooth diagnosis completed.06 really rewired45faces/+17controls but actual4 still shows column/flattenedmass, doubleinferiorlip and anteriorpinch. Local C0Coons repair on failed01/05 context is not a valid design. Next NEW private anatomical DESIGN SCULPT first (body/design-sculpt07): curved/taperedthorax + broad supportedsoftbreast masses + shoulder/upperarm + anterior/posterior roots as merged positivevolume, short actualsource4 review before retopo. Do not reuse failed01/05/06 coordinates/compressedrows as its form seed. Small per-region blend; no drilled axillahole/flatmembrane. SDF/voxel is an applied construction hypothesis, not a technique claimed in the cited videos. No anatomy/native approved.",
+    "body_method": "New private design-sculpt07, not old01/05/06 coordinates. A exposed caps and shoulder balls; B buried caps but retained flat lower shelf. Actual B design-only gray/normal and meridian/first-hit diagnostics rule out old context/maps as primary shelf cause. C convex bowl materially improves round fullness and lower return; actual source4 plus15 expanded frames retain upper/lateral dome attachment and pointed axillary recess. C is a bounded useful volume guide, NOT selected anatomy or retopo approval. D upper-root-only correction active; lower C bowl and11nonbreast fields held. Voxel/implicit field is our implementation hypothesis, not claimed tutorial technique.",
     "axilla_diagnostic": "blender/mia-fit-v003/body/diagnostic05/F2-source-pose-smooth-diagnostic.png",
-    "axilla_next_construction": "Fresh private upperbody design-sculpt07 before retopology. Approved face/head and lowerbody are reference context, not sculpted anew. Sourcev06 governs global proportions/profile; E2F2 round/fullness projections are weak observed envelopes, inferred fixed tangent coordinates are not hard targets. Source4 gray first; key/UV/weights/migration deferred and unverified. New design must be visually valid before local cage/retopo.",
+    "axilla_next_construction": "D retains useful C roundbowl, changes only upper breast/thorax connection; actual source4/highlow then close singleactor gray+normal axilla diagnostics before further changes.11nonbreast fields held means breast-only D cannot by itself claim arm/posterior-wall corridor repair. Field value is not exact distance. Per-face outer-arm transparency diagnostic may expose obscured walls, not drill or approve a hidden geometry hole.",
     "rejected_anatomical_patch06": "blender/mia-fit-v003/body/anatomical-patch06/REVIEW.md",
     "rejected_anatomical_patch06_scope": "9f78a75 integrated:35files/6.08MB, actual4/sourceboards/cage/normal-sections. RawFace690 exact; evaluatedheadmax0.000119mm/normalvector5.10e-6 via independent spatial correspondence, not globalindexidentity. New manualcurves initiallydidnotconsume sourceJSON; nominalF2supportresiduals up to20.18mm exceeddeclared14mm. No new bodyselected/native/livechanges.",
     "axilla_independent_review": "blender/mia-fit-v003/AXILLA_AUDIT.json",
@@ -418,6 +419,10 @@
     "pelvis_feedback_scope": "User clarified narrow pelvis concerns generated E/F reference panels only. No model hip enlargement authorized by that observation; corrected E2/F2 remains auxiliary, original v06 authority.",
     "art_approved": false,
     "latest_low_view_body_reference": "references/received/mia-low-view-axilla-reaffirmed-20261103.png",
-    "latest_user_feedback": "2026-11-03: user again rejects unnatural axilla and explicitly requires learning female body modelling from tutorials. E2/F2 rounded full mass/root/axillary overlap remains required,05 rejected despite actual source binding. Source brow thickness/fine fringe gaps and actual new central rear mesh remain open; U deletion alone is not completion."
+    "latest_user_feedback": "2026-11-03: user again rejects unnatural axilla and explicitly requires learning female body modelling from tutorials. E2/F2 rounded full mass/root/axillary overlap remains required,05 rejected despite actual source binding. Source brow thickness/fine fringe gaps and actual new central rear mesh remain open; U deletion alone is not completion.",
+    "head_body_scale_plan": "blender/mia-fit-v003/HEAD_SCALE_PLAN.md",
+    "design_sculpt07_C_review": "blender/mia-fit-v003/body/design-sculpt07/C/ROOT_ART_REVIEW.md",
+    "design_sculpt07_C_status": "DESIGN_VOLUME bounded PASS; SOURCE_LIKENESS FAIL; AXILLA_LAYOUT UNVERIFIED; READY_FOR_RETOPO_DESIGN FAIL. LowerF2support-16.01mm outside14mm, profile8-17mm and semantic widths23-80mm remain. Original47raw/Face690/evaluated80771 recorded exact; no independent reviewer Blenderreopen. No head/native/UV/key/weight changes.",
+    "design_sculpt07_C_actual_orbit": "blender/mia-fit-v003/body/design-sculpt07/C/expanded-review/actual-orbit-4sec.gif"
   }
 }
