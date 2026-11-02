@@ -1,5 +1,12 @@
 # Complete below-head scaffold review
 
+`Mia_v003_BelowHead_Scaffold_R4.blend` is a small standalone construction-only
+file (186,220 bytes):207 curves and17 hidden control nets, no production body
+and no armature. It opens with an orthographic fullbody orbit center and
+0.01..10m viewport clipping. The original selected R3b was not resaved or
+replaced. `guide-scene.json` records its exact hash and fresh-reopen counts;
+`save_guide_scene.py` reproduces it in a private factory-startup process.
+
 `actual-R4-neck/front.png` and `oblique.png` are actual Blender5.2.3 renders of
 the combined R4 fullbody and explicit neck guides: 207 actual 3D curves. They contain no
 rendered production body, no construction control-net faces and no generated
