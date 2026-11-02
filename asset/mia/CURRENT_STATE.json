@@ -91,14 +91,15 @@
     "face_angles_and_expressions": "references/mia-expression-style-confirmed-20261031.png",
     "clothed_turnaround": "references/mia-clean-master-v22.png",
     "body_turnaround_candidate": "references/body-foundation/v06/mia-body-turnaround-v06.png",
-    "body_visibility_supplement": "references/body-foundation/v06/mia-body-visibility-guide-v06.png"
+    "body_visibility_supplement": "references/body-foundation/v06/mia-body-visibility-guide-v06.png",
+    "body_target": "references/received/mia-body-v06-confirmed-20261102.png"
   },
   "stage_status": {
     "reference_inventory": "organized; generated candidate approvals remain separate",
     "corresponding_view_camera_registration": "Actual matchedsource4 on current457 native; frozenfrontIPDscale/translation, zeroextra2Droll, sourceaspectunchanged. NonfrontoldfrozenSRTprovisional andnormalizedproportions/roll excluded. Sourceareas/world,camera.1/10+headcentredORTHOsaved. Evidencevalid; overallARTnotapproved.",
     "lookdev_diagnostic_rig": "built and fresh-reopen tested; source shaders unchanged",
-    "face_head_art": "UNAPPROVED overall. BoundedEyeA/browcontact/closedsmile corrections; nose/lipgraphic and global source hierarchy remain open.",
-    "body_art": "UNAPPROVED overall. G supported-body/lowerbody improvement inherited without R3body changes. Inferiorhook/upperpole transition, shoulder/clavicle and hands/feet remain open.",
+    "face_head_art": "User accepts current4dc1 facialsculpt; preserve contour/identity, only requested lower-right lid/crease/browvisibility. Earlier broad-face revision requests must not override this latest acceptance. Surface/fullMia approval separate.",
+    "body_art": "User rejects current4dc1 wholebody: breasts too small/saggy, thorax too small/straight, shoulders narrow and headratio unlike user-confirmed v06. FixedG3core revoked; wholeheight corresponding views precede local edits.",
     "hair_art": "UNAPPROVED overall. MN+L/O/P/R bounded improvement. S newUV/generatedfill held and not in R3; source fineink and crown/nape geometry/surface remain open.",
     "uv_and_color": "Applied C: original scene-lit diffuse retained; masked1254sRGB cosmetic art,2048Non-Color float controls, active actual-light specular and roughness.32 controlled probes and fresh source/critical/orbit/live reviewed. No4K detail or physical-energy-conservation claim.",
     "facial_deformation": "Eposteriorseam73bilateral/endpoint+64unilateralscopedchecks; Brow51states/1207986samples+.02313..+.47909mm; ClosedB25stateswith0burial/nonpositivevolumes. Exactintegrated17poses+4aftermacros reviewed, bilateral/unilateralfullClose improved. Arbitrarycombinations,Extra/half style,headfollow/finaleventsunapproved.",
@@ -379,5 +380,18 @@
       "meaning": "Current reviewed integration WIP,97 actual frames; D2/G/MN+L/O/P/C clean palette. Bounded improvements only; overall ART remains open."
     },
     "held_crown_S": "blender/mia-refinement-v002/art/crown-S/ROOT_REVIEW.md"
+  },
+  "in_progress_v003": {
+    "status": "active",
+    "contract": "blender/mia-fit-v003/PLAN.md",
+    "baseline_native": "blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend",
+    "baseline_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+    "body_target": "references/received/mia-body-v06-confirmed-20261102.png",
+    "user_accepts_face_sculpt": true,
+    "eye_request": "Small screen-right lower-lid curvature/height correction, not eyeball scaling; upper crease registration to real upper lid; source-supported brow visibility through bangs.",
+    "body_request": "Wholeheight original-aspect v06 comparison FIRST. Larger/higher supported breasts and correctly sized/tapered thorax/shoulders/headratio; breast->trapezius->underwearUV->neck/clavicle pigment. Old fixedG3core constraint revoked.",
+    "hair_request": "Rear locks/nape/tips and broken-color cause versus v29; braid source cleanup deferred until body/face fit, not removed. Partial source brow display requires isolated truebrow/crease/lash evidence.",
+    "new_full_native_saved": false,
+    "art_approved": false
   }
 }

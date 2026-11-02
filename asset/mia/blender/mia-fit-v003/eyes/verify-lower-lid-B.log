@@ -1,0 +1,13 @@
+00:03.922  blend            | Read blend: "C:\Users\antio\.codex\worktrees\mia-body-head-v06\win-overlay\asset\mia\blender\mia-refinement-v002\integrated\Mia_v0.0.2_Review_R3b.blend"
+Traceback (most recent call last):
+BlenderMCP addon registered
+  File "C:\Users\antio\.codex\worktrees\mia-body-head-v06\win-overlay\asset\mia\blender\mia-fit-v003\eyes\verify_lower_lid.py", line 68, in <module>
+    assert outside_mm<1e-5,(label,'outsideROI',outside_mm)
+           ^^^^^^^^^^^^^^^
+AssertionError: ('neutral', 'outsideROI', 0.0024013796355575323)
+
+Error: script failed, file: 'asset/mia/blender/mia-fit-v003/eyes/verify_lower_lid.py', exiting.
+BlenderMCP addon unregistered
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

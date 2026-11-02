@@ -10,15 +10,16 @@
     "latest_requested_front_revision": "MIA-BODY-FRONT-CALF-V01",
     "latest_available_four_view_study": "MIA-BODY-V06",
     "body_visibility_modeling_supplement": "MIA-BODY-V06-VISIBILITY-GUIDE",
-    "side_volume_revision": "blocked_no_v04_image",
+    "side_volume_revision": "Historic v04 not delivered; latest whole-body design target is user-confirmed v06. No model PASS implied.",
     "latest_reaffirmed_face_and_hair_portrait": "MIA-FACE-PORTRAIT-REAFFIRMED-20261031",
-    "latest_eye_lash_semantic_annotation": "MIA-EYE-LASH-USER-ANNOTATION-20261102"
+    "latest_eye_lash_semantic_annotation": "MIA-EYE-LASH-USER-ANNOTATION-20261102",
+    "body_design_target": "MIA-BODY-V06-USER-CONFIRMED-20261102"
   },
   "rules": [
     "Select by role and explicit user decision, never by largest version number alone.",
     "Existing source files/paths are preserved.",
     "Generated views are illustrative reconstructions and do not certify model geometry or dimensions.",
-    "V06 is an illustrated four-view candidate derived from the selected front/calf revision; it remains pending user review and does not certify geometry or dimensions.",
+    "V06 was explicitly reattached and selected as the body design target on2026-11-02. Its illustrated views still have pose/projection uncertainty; this does not certify any model or exact dimensions.",
     "The separately requested v04 side-volume revision remains blocked and is not fulfilled by v05.",
     "The latest reaffirmed face portrait supplements the existing expression and design roles; generated body studies remain candidates unless explicitly approved."
   ],
@@ -215,7 +216,7 @@
     },
     {
       "id": "MIA-BODY-V06",
-      "status": "completed_requested_art_pending_user_review",
+      "status": "pixel_equivalent_to_user_confirmed_target_20261102",
       "role": "latest_available_four_view_study",
       "path": "body-foundation/v06/mia-body-turnaround-v06.png",
       "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a",
@@ -225,7 +226,8 @@
       ],
       "mode": "RGB",
       "provenance": "body-foundation/v06/provenance.json",
-      "review": "body-foundation/v06/review.ko.md"
+      "review": "body-foundation/v06/review.ko.md",
+      "confirmation": "MIA-BODY-V06-USER-CONFIRMED-20261102"
     },
     {
       "id": "MIA-BODY-V06-VISIBILITY-GUIDE",
@@ -314,6 +316,19 @@
       "mode": "RGBA",
       "semantics": "User red=source actual eye opening; green=source lashes; orange/yellow=old model opening/lash appearance. Makeup also rejected as unlike source.",
       "limits": "Manual display annotation, not a texture, exact orthographic blueprint or approval of current model. Original unmarked portrait remains the design source."
+    },
+    {
+      "id": "MIA-BODY-V06-USER-CONFIRMED-20261102",
+      "status": "user_selected_body_design_target",
+      "role": "whole_body_shape_underwear_neck_clavicle",
+      "path": "received/mia-body-v06-confirmed-20261102.png",
+      "sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "provenance": "received/mia-body-v06-confirmed-20261102.provenance.json"
     }
   ],
   "reaffirmed_front_pixel_equal_to_old_canonical": false

@@ -1,0 +1,22 @@
+# v003 fit corrections — user feedback 2026-11-02
+
+Baseline: exact R3b `4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1`.
+User accepts the current facial sculpt. Preserve it except the explicitly requested small screen-right lower-lid correction. Do not reopen broad cheek/chin/nose/head redesign. This approval does not accept all textures, body, hair or final animation.
+
+User clarified EYE_SIZE: the screen-right lower lid is too high/straight, giving a smaller displeased-looking eye; this is **not a request to scale both eyeballs or symmetrize the whole face**. The upper fold also needs registration to the real upper lid, using source art. Do not confuse true opening, lashes, liner and crease.
+
+| ID | Criterion / user-visible outcome | Runtime verification / evidence | Critical |
+|---|---|---|---|
+| FACE_LOCK | Accepted face identity and all unrequested areas stay unchanged. | Exact protected geometry/key/UV/map records plus matching actual source4/high-low images; scoped shader changes must preserve unrelated face color. | yes |
+| BODY_FORM | Whole-body v06 proportions first: larger/higher supported breasts, correct tapered thorax/shoulder widths and head/body ratio; then natural root/return. The old fixedG3core constraint is revoked by explicit new user feedback. | Fullheight original-aspect front/profile/back/oblique with uniformheightregistration before local edits; gray high-low, sections and bounded arms. No torso-only normalization hiding the overall mismatch. | yes |
+| UNDERWEAR_FIT | Bra cup/band/straps and briefs track the corrected form with coherent UV/color/normal/roughness. | Actual UV/color-only/gray/production views and connected map ancestry, not a painted shape hiding a geometry defect. | yes |
+| EYE_SIZE | Small screen-right lower-lid curve adjustment reduces the conspicuous L/R aperture difference. | Canthus-local measurements separate actual opening/lashes/iris; neutral/half/full/wink/surprise and oblique actual comparisons. | yes |
+| EYE_FOLD | Upper crease aligns to actual upper-lid structure in neutral and deformation, with source line hierarchy. | Existing active-route/UV registration diagnosis, actual toggle/closeups and closure/surprise comparisons. | yes |
+| REAR_HAIR | Crown/rear waves/nape/tips look finished and have continuous source-like strand flow. | Explicit logical ownership, gray vs pigment causes, source rear/profile/obliques/high-low/orbit, UV distortion/edge evidence before new paint. Preserve accepted front/forelocks/braid/gathered-hair bun. | yes |
+| INTEGRATION | Only selected small current-scene deltas are combined into one packed working native. | Fresh data/control-bound checks, actual source packages, same-file live MCP and independent visual audit. No whole-Mia pass from technical checks. | yes |
+
+Root owns canonical files/Git/live/final integration and the eye component. Body and hair workers use their existing isolated worktrees/new v003 folders; they are not alone and must not revert other edits. Body and eye edits share one skin owner, so portable deltas must accept unrelated keys and protect their disjoint vertex regions. Prefer additive corrective fields, not reapplication of an old whole scene/material.
+
+One GPU batch at a time with root tokens. Keep small replay/UV/map/proof data; do not save full scenes per trial. One integrated candidate only after useful actual component comparisons. Original v001/current R3b remain protected. No new automation. Prior garments/final rig/limited secondary motion/events/commonidle/loops/30fps requirements and unresolved defects remain in scope behind their existing gates.
+
+Latest user steering explicitly selects reattached v06 as the body target. Order: breasts and supporting thorax -> shoulders/trapezius -> correct source underwear fit/UV -> neck/clavicle source line/shadow maps. Preserve accepted facial sculpt; any head/body ratio change must be justified with wholeheight measurements and coordinated complete head attachments, not a facial redesign. User also requires v29-vs-current hair color cause comparison and source-supported eyebrow visibility. Braided hair cleanup remains required after face/body fit.
