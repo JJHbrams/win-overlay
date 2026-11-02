@@ -1,0 +1,219 @@
+{
+  "status": "CPU BOTH-REGION VISIBILITY READY",
+  "ready_for_two_renders": true,
+  "one_fixed_candidate_only": true,
+  "geometry_unchanged": true,
+  "intact_no_material_mask": true,
+  "mesh_sha256": "2a562dd1428dfcbad6a85068313154642112e54d1f26a7b3a00cb8f53a2ce5ef",
+  "camera": {
+    "yaw": 90.0,
+    "pitch": -75.0,
+    "target": [
+      0.14000000059604645,
+      0.0,
+      1.309999942779541
+    ],
+    "distance": 1.2,
+    "matrix": [
+      [
+        7.549790126404332e-08,
+        0.9659258723258972,
+        0.25881892442703247,
+        0.4505828619003296
+      ],
+      [
+        1.0,
+        -4.873534109606226e-08,
+        -1.0981876386040312e-07,
+        -1.9017714426290335e-17
+      ],
+      [
+        -9.346315721359133e-08,
+        0.25881892442703247,
+        -0.9659258723258972,
+        0.15088891983032227
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "projection": "ORTHO",
+    "ortho_scale": 0.20000000298023224,
+    "clip_start": 0.10000000149011612,
+    "clip_end": 10.0,
+    "resolution": [
+      640,
+      640
+    ]
+  },
+  "regions": {
+    "anterior-side": {
+      "candidate_nonarm_region_triangles": 35,
+      "first_hit_visible_triangles": 35,
+      "visible_pixel_span": [
+        24.70337599515915,
+        34.30476188659668
+      ],
+      "representative_samples": [
+        {
+          "point": [
+            0.13973748683929443,
+            -0.00857072789222002,
+            1.2377415895462036
+          ],
+          "triangle": 113682,
+          "first_hit_triangle": 113682,
+          "first_hit_point": [
+            0.13973748683929443,
+            -0.00857072789222002,
+            1.2377417087554932
+          ],
+          "normal": [
+            0.9448206424713135,
+            0.10273798555135727,
+            -0.31106090545654297
+          ],
+          "nearest_construction_field_term": "breast_pair",
+          "pixel": [
+            292.57327139377594,
+            380.6576919555664
+          ]
+        },
+        {
+          "point": [
+            0.14043284952640533,
+            -0.0020815811585634947,
+            1.242859959602356
+          ],
+          "triangle": 113718,
+          "first_hit_triangle": 113718,
+          "first_hit_point": [
+            0.14043286442756653,
+            -0.0020815811585634947,
+            1.2428600788116455
+          ],
+          "normal": [
+            0.9352642893791199,
+            0.18111412227153778,
+            -0.3041028082370758
+          ],
+          "nearest_construction_field_term": "breast_pair",
+          "pixel": [
+            313.33853870630264,
+            374.2691707611084
+          ]
+        },
+        {
+          "point": [
+            0.14195339381694794,
+            -0.005623236298561096,
+            1.2466474771499634
+          ],
+          "triangle": 113772,
+          "first_hit_triangle": 113772,
+          "first_hit_point": [
+            0.14195337891578674,
+            -0.005623236298561096,
+            1.246647596359253
+          ],
+          "normal": [
+            0.9626169204711914,
+            0.12245796620845795,
+            -0.24160459637641907
+          ],
+          "nearest_construction_field_term": "breast_pair",
+          "pixel": [
+            302.00524151325226,
+            366.43239974975586
+          ]
+        }
+      ]
+    },
+    "posterior-side": {
+      "candidate_nonarm_region_triangles": 50,
+      "first_hit_visible_triangles": 50,
+      "visible_pixel_span": [
+        35.982197523117065,
+        37.39337734878063
+      ],
+      "representative_samples": [
+        {
+          "point": [
+            0.1438884288072586,
+            0.0033938416745513678,
+            1.256272792816162
+          ],
+          "triangle": 116890,
+          "first_hit_triangle": 116890,
+          "first_hit_point": [
+            0.1438884437084198,
+            0.0033938416745513678,
+            1.256272792816162
+          ],
+          "normal": [
+            0.9355894923210144,
+            -0.10380510985851288,
+            -0.33748582005500793
+          ],
+          "nearest_construction_field_term": "breast_pair",
+          "pixel": [
+            330.85988879203796,
+            352.4793338775635
+          ]
+        },
+        {
+          "point": [
+            0.15005208551883698,
+            0.003945218399167061,
+            1.263210654258728
+          ],
+          "triangle": 116910,
+          "first_hit_triangle": 116910,
+          "first_hit_point": [
+            0.15005213022232056,
+            0.003945218399167061,
+            1.263210654258728
+          ],
+          "normal": [
+            0.20097889006137848,
+            -0.5887202024459839,
+            -0.7829533815383911
+          ],
+          "nearest_construction_field_term": "posterior_wall_R",
+          "pixel": [
+            332.6242935657501,
+            327.6816566288471
+          ]
+        },
+        {
+          "point": [
+            0.15005208551883698,
+            0.002345781773328781,
+            1.2645853757858276
+          ],
+          "triangle": 117175,
+          "first_hit_triangle": 117175,
+          "first_hit_point": [
+            0.15005213022232056,
+            0.0023457815404981375,
+            1.2645853757858276
+          ],
+          "normal": [
+            0.2087106704711914,
+            -0.6664274334907532,
+            -0.7157614231109619
+          ],
+          "nearest_construction_field_term": "posterior_wall_R",
+          "pixel": [
+            327.50609561800957,
+            326.54306411743164
+          ]
+        }
+      ]
+    }
+  },
+  "limits": "Spatial anterior/posterior cavity-facing triangle regions with oppositeY normals; nearest field term only excludes arm/cap-only samples and is NOT proof of anatomical correctness. First-hit visibility is technical visibility only."
+}
