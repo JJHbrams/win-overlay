@@ -284,9 +284,11 @@
       "hair": "codex/mia-v002-hair"
     },
     "latest_findings": [
-      "Current body has no active bra/brief material; BodyL was bounded unapproved nude inference.",
-      "Inherited bilateral axillary crossings discovered beyond old Z1.340 test limit; repair pending.",
-      "Face paint A is a single imagegen candidate; actual source/light renders pending, not accepted."
+      "Independent source4 observes smoother muted fatigue; source lip bright edge/nose accents remain incomplete.",
+      "109actual frames; independent source/gray continuity improvement; valid19poses0 continuous-skin crossings, mechanical straight-arm-20 invalid1055. Inferior attachment crease and extremity finish remain explicit.",
+      "Bounded source pigment/root/tip improvement. Optional L binding needs actual integrated pose review. Crown O bounded shape correction in progress; jagged nape/source ink hierarchy remains open.",
+      "Closed crown arches and continuous collar; source grin/closure actual proof under review. Installs sparse43rd key on original42 baseline without old-scene replay.",
+      "16source-intent presets plus verified head axes and bounded surface-projected iris motion. CPU controls pass; actual integrated16 poses/gaze/head contacts remain required."
     ],
     "required_order": "Face surface comparison; parallel bounded body/hair audits and fixes; expression design inventory now, final expression production after relevant topology/UV stability; exact integration/review.",
     "body_target": "Fixed anatomical thorax with coherent breast soft mass and source charcoal underwear support/fit; texture alone cannot fake support.",
@@ -302,6 +304,63 @@
       "historical_deleted_native_paths": "Historical execution references only; small deltas/maps/images/recorded hashes remain. Do not assume full rejected snapshots still exist.",
       "lfs_cache_pruned": false,
       "current_candidates_preserved": true
-    }
+    },
+    "current_candidates": {
+      "face_D2": {
+        "replay": "blender/mia-refinement-v002/parts/face-D2/portable_face_delta.py",
+        "producer_native_sha256": "8b150df1eac3144aa496f5b57fea125c390eb19daa102fcd25f2afcdc44b1657",
+        "meaning": "Independent source4 observes smoother muted fatigue; source lip bright edge/nose accents remain incomplete.",
+        "art_approved": false
+      },
+      "body_G": {
+        "replay": "blender/mia-refinement-v002/parts/body-G/replay_current_scene.py",
+        "producer_native_sha256": "e199c01b4c0a8fbc7942d5b667f8cdd0e1827d766d98cf28c99bd27ab12cf0da",
+        "meaning": "109actual frames; independent source/gray continuity improvement; valid19poses0 continuous-skin crossings, mechanical straight-arm-20 invalid1055. Inferior attachment crease and extremity finish remain explicit.",
+        "art_approved": false
+      },
+      "hair_MN": {
+        "replay": "blender/mia-refinement-v002/parts/hair-MN/apply_bundle_M.py",
+        "manifest_sha256": "af060a2b35b5f567ea1a8739c19bf68f550e5ce5134b1c5d41bf1ffe65a4c0ef",
+        "meaning": "Bounded source pigment/root/tip improvement. Optional L binding needs actual integrated pose review. Crown O bounded shape correction in progress; jagged nape/source ink hierarchy remains open.",
+        "art_approved": false
+      },
+      "mouth_C": {
+        "replay": "blender/mia-refinement-v002/parts/mouth-C/portable_mouth_delta.py",
+        "payload_sha256": "f31c24cf0535e6110b935ff0c187b631aa46e3ac8d51d3283f26231c54646d48",
+        "meaning": "Closed crown arches and continuous collar; source grin/closure actual proof under review. Installs sparse43rd key on original42 baseline without old-scene replay.",
+        "art_approved": false
+      },
+      "source_controls_gaze": {
+        "replay": "blender/mia-refinement-v002/expressions/expression_control_delta.py",
+        "meaning": "16source-intent presets plus verified head axes and bounded surface-projected iris motion. CPU controls pass; actual integrated16 poses/gaze/head contacts remain required.",
+        "art_approved": false
+      }
+    },
+    "gpu_coordination": "One local GPU batch at a time, root-owned queue. Latest producer mouth8 completed; root integrated suite next after stable crown/lip handoff. Check root/agent latest message before rendering.",
+    "superseded_cleanup_candidates": {
+      "face_C": {
+        "path": "C:/Users/antio/.codex/worktrees/mia-v002-face/win-overlay/asset/mia/blender/mia-facial-maps-v002/native/Mia_v002_FacialPaint_C.blend",
+        "sha256": "548c945e53fca91ef90e57fad2043b9f5c7034d308ef89958f4ef51b66f1b118",
+        "selected": false
+      },
+      "face_D": {
+        "sha256": "32e4d3cd8374ebc3686c391e4da7cf6b85ef5b94fd87472a0eadf20721506448",
+        "selected": false
+      },
+      "body_D": {
+        "sha256": "c792b46574aedfb282fa166f6b1d6b6ef76fff7ce54060bc9d340f8f93d69b8c",
+        "selected": false
+      },
+      "hair_E": {
+        "sha256": "7adb7ed1ed3c97f78edcb95288cc46bc6ebedeba1d172478eed6d4dc2ebf1781",
+        "selected": false
+      },
+      "grin_C": {
+        "path": "blender/mia-refinement-v002/expressions/native/Mia_v002_SourceGrin_Prototype_C.blend",
+        "sha256": "09bc62297940e702aa3d76caa0c1553d317ba4fac6a496ad89402adc339daa0c",
+        "selected": false
+      }
+    },
+    "integration_preflight": "MouthC→BodyG→HairMN(L)→FaceD2→source controls/gaze completed owner/original-array/scene guards without a native save. Exact review file and fresh actual/source/live checks still required."
   }
 }

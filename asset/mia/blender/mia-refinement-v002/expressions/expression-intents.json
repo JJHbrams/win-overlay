@@ -77,7 +77,7 @@
       "estimated_head_delta_xyz_deg": [
         0,
         -2,
-        -3
+        3
       ],
       "estimated_gaze_xy_deg": [
         0,
@@ -102,15 +102,15 @@
         "MTH_Down": 0.1
       },
       "estimated_head_delta_xyz_deg": [
-        0,
-        18,
-        0
+        -3,
+        -22,
+        18
       ],
       "estimated_gaze_xy_deg": [
-        -8,
+        -6,
         0
       ],
-      "observation": "Gaze/head turn, not a different face mesh.",
+      "observation": "Viewer-left head turn; verified head localY maps to worldZ. Angles are source-pose estimates, not new mesh fitting.",
       "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
     },
     {
@@ -160,15 +160,15 @@
         "MTH_A": 0.13
       },
       "estimated_head_delta_xyz_deg": [
-        -7,
+        -6,
         -18,
-        0
+        15
       ],
       "estimated_gaze_xy_deg": [
-        6,
+        -3,
         3
       ],
-      "observation": "Pose/gaze and small opening are independent.",
+      "observation": "Viewer-left/upward pose and small opening are independent; inferred angles need actual pose review.",
       "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
     },
     {
@@ -271,21 +271,20 @@
       "source_panel": "source-panels\\10-toothy_grin.png",
       "panel_sha256": "c89726880ecc3dea7772e7a997b82953f77e0e99a99cad4a23204882e5efa523",
       "initial_key_recipe": {
-        "MTH_Fun": 0.9,
-        "MTH_Joy": 0.15,
+        "MIA_ToothyGrin": 1.0,
         "BRW_Fun": 0.2,
         "EYE_Angry": 0.15
       },
       "estimated_head_delta_xyz_deg": [
         0,
         0,
-        -4
+        14
       ],
       "estimated_gaze_xy_deg": [
         0,
         0
       ],
-      "observation": "Wide oblique tooth band; generic donor laugh/fangs may need actual correction.",
+      "observation": "Clenched two-row tooth band. Additional roll estimated from the visible source eye line; actual pose/geometry review required.",
       "acceptance": "UNVERIFIED initial rig hypothesis, not a calibrated drawing measurement"
     },
     {

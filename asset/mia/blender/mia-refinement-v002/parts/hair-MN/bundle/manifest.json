@@ -1,0 +1,2890 @@
+{
+  "schema": 1,
+  "source": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-visible-art-v30\\integrated\\brows-C-outer-E\\Mia_SourceLook_v31_Brows_Lashes.blend",
+  "source_sha256": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a",
+  "challenger_source_F_sha256": "73741fdbaab9d98fd5423026c2f7110fac350d33224169400291ea9a95539128",
+  "library": {
+    "file": "hair-materials.blend",
+    "sha256": "a7f92fe5e3aff9678981eb00f79a9604f5d3ddb45f9b7e784196c5caa0c5c80f"
+  },
+  "actors": [
+    {
+      "owner": "MIA_V17_LeftBraid_Tail",
+      "existing": true,
+      "data": "actor-00.npz",
+      "static_materials": [
+        "MIA_V17_BraidAsh_Strata.001_ReferenceAsh.001_V22_LightToon"
+      ],
+      "bound_materials": [
+        "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Tail"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CHEST_WEIGHTS",
+      "new_attributes": {
+        "MIA_V002_HeadBlend_Weight": "attr_0"
+      },
+      "new_uvs": [],
+      "new_groups": {
+        "J_Bip_C_Head": "group_0",
+        "J_Bip_C_UpperChest": "group_1"
+      },
+      "data_sha256": "c3d893b59ba6c3ac7e8c6ad20c61cd826595516e5e764d6f55bc819bf92b53ce",
+      "expected": {
+        "verts": 486,
+        "polys": 424,
+        "coords": "e739c1be007273e8fb01cfc35b7256528e7f6bf1773036c36687a73941e97d47",
+        "loop_vertices": "42c7854b3419b08cf4b95a268f37c0d6c37aaea3979254fddd0b246471cb2450",
+        "polygon_sizes": "0f970c5bc630c47c3a489c5c8ddf6f18f3b52ac77b2a1c4c9f52a613afaadd9b",
+        "old_uvs": {
+          "MIA_V17_Tail_UV": "cc5d58f1b4ae51f0b2964ed4cca6d25c00843c9f1b888c7f0f37a632259b361c"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "MIA_V17_Tail_UV",
+            true,
+            false
+          ]
+        ]
+      },
+      "groups_before": {
+        "Loose_Tips": "1ca1fa9ff670290e232ca4906fc872de85644216314f5b0c20c66ca76f41a20e"
+      },
+      "output_coords_sha256": "e739c1be007273e8fb01cfc35b7256528e7f6bf1773036c36687a73941e97d47"
+    },
+    {
+      "owner": "MIA_V17_LeftBraid_Lane2",
+      "existing": true,
+      "data": "actor-01.npz",
+      "static_materials": [
+        "MIA_V002_Braid_SourceAsh_OriginalUV"
+      ],
+      "bound_materials": [
+        "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Lane2"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CHEST_WEIGHTS",
+      "new_attributes": {
+        "MIA_V002_HeadBlend_Weight": "attr_0"
+      },
+      "new_uvs": [],
+      "new_groups": {
+        "J_Bip_C_Head": "group_0",
+        "J_Bip_C_UpperChest": "group_1"
+      },
+      "data_sha256": "a0e20fb10363cf1fd178ac385e108f4f0221e39a9ddf533d6babcdf51041aa74",
+      "expected": {
+        "verts": 1500,
+        "polys": 1492,
+        "coords": "465bb9ab195b6b54fe1348a4ffe7b8259153fe6c6da7c6d072d12be8fc15c3ce",
+        "loop_vertices": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+        "polygon_sizes": "9c952305c99a6f06d9aae80e1a6e076a7659045e1e734b5377447ce5fbf40999",
+        "old_uvs": {
+          "MIA_V17_Braid_Longitudinal": "97d0c5329ae08c40ef803d91676f1a14d379208f933615cb1564615f1dd79795"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "MIA_V17_Braid_Longitudinal",
+            true,
+            false
+          ]
+        ]
+      },
+      "groups_before": {
+        "Left_Braid": "48545f9fb8a799d6dd020e805fae8576caf4e8c129ab76be7484dc7f2b9ef261"
+      },
+      "output_coords_sha256": "465bb9ab195b6b54fe1348a4ffe7b8259153fe6c6da7c6d072d12be8fc15c3ce"
+    },
+    {
+      "owner": "MIA_V17_LeftBraid_Lane1",
+      "existing": true,
+      "data": "actor-02.npz",
+      "static_materials": [
+        "MIA_V002_Braid_SourceAsh_OriginalUV"
+      ],
+      "bound_materials": [
+        "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Lane1"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CHEST_WEIGHTS",
+      "new_attributes": {
+        "MIA_V002_HeadBlend_Weight": "attr_0"
+      },
+      "new_uvs": [],
+      "new_groups": {
+        "J_Bip_C_Head": "group_0",
+        "J_Bip_C_UpperChest": "group_1"
+      },
+      "data_sha256": "6e8e6b9d67e181d74e5e4648e68c1597838d5412fe1ff2d5632bb850dfd3999b",
+      "expected": {
+        "verts": 1500,
+        "polys": 1492,
+        "coords": "034ddeccc449f317c36e02ebad4d8627cc4c5db73655b545ba79a2a151585ca5",
+        "loop_vertices": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+        "polygon_sizes": "9c952305c99a6f06d9aae80e1a6e076a7659045e1e734b5377447ce5fbf40999",
+        "old_uvs": {
+          "MIA_V17_Braid_Longitudinal": "97d0c5329ae08c40ef803d91676f1a14d379208f933615cb1564615f1dd79795"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "MIA_V17_Braid_Longitudinal",
+            true,
+            false
+          ]
+        ]
+      },
+      "groups_before": {
+        "Left_Braid": "48545f9fb8a799d6dd020e805fae8576caf4e8c129ab76be7484dc7f2b9ef261"
+      },
+      "output_coords_sha256": "034ddeccc449f317c36e02ebad4d8627cc4c5db73655b545ba79a2a151585ca5"
+    },
+    {
+      "owner": "MIA_V17_LeftBraid_Lane0",
+      "existing": true,
+      "data": "actor-03.npz",
+      "static_materials": [
+        "MIA_V002_Braid_SourceAsh_OriginalUV"
+      ],
+      "bound_materials": [
+        "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Lane0"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CHEST_WEIGHTS",
+      "new_attributes": {
+        "MIA_V002_HeadBlend_Weight": "attr_0"
+      },
+      "new_uvs": [],
+      "new_groups": {
+        "J_Bip_C_Head": "group_0",
+        "J_Bip_C_UpperChest": "group_1"
+      },
+      "data_sha256": "1e819b0295c77d26976d9aed39a8ef785d47fa259643a42724071f1890c46b8d",
+      "expected": {
+        "verts": 1500,
+        "polys": 1492,
+        "coords": "f5ce8303e620f6771292a2b1d0f8ec0d364c15b43a7750da3ce14d6a86c735cd",
+        "loop_vertices": "b4a133c39c6b56092fc65a9ec88892b402f01fd3158f8c6cf8f2d747daf28eb2",
+        "polygon_sizes": "9c952305c99a6f06d9aae80e1a6e076a7659045e1e734b5377447ce5fbf40999",
+        "old_uvs": {
+          "MIA_V17_Braid_Longitudinal": "97d0c5329ae08c40ef803d91676f1a14d379208f933615cb1564615f1dd79795"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "MIA_V17_Braid_Longitudinal",
+            true,
+            false
+          ]
+        ]
+      },
+      "groups_before": {
+        "Left_Braid": "48545f9fb8a799d6dd020e805fae8576caf4e8c129ab76be7484dc7f2b9ef261"
+      },
+      "output_coords_sha256": "f5ce8303e620f6771292a2b1d0f8ec0d364c15b43a7750da3ce14d6a86c735cd"
+    },
+    {
+      "owner": "MIA_V17_LeftBraid_Tie",
+      "existing": true,
+      "data": "actor-04.npz",
+      "static_materials": [
+        "MIA_V17_MutedTealTie.001_V22_LightToon"
+      ],
+      "bound_materials": [
+        "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Tie"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.11500000208616257
+        ],
+        [
+          0.0,
+          0.6499999761581421,
+          0.0,
+          -0.03750501573085785
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.309999942779541
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CHEST_WEIGHTS",
+      "new_attributes": {
+        "MIA_V002_HeadBlend_Weight": "attr_0"
+      },
+      "new_uvs": [],
+      "new_groups": {
+        "J_Bip_C_Head": "group_0",
+        "J_Bip_C_UpperChest": "group_1"
+      },
+      "data_sha256": "2c592f60a48c5a964e61f476a5a485aa529234618878f1eaec8b74436c6e0858",
+      "expected": {
+        "verts": 480,
+        "polys": 480,
+        "coords": "4b024e2ad282d660c2d7ce9a90857342a329d6a774dd019e6b1bd540b7ef4aa3",
+        "loop_vertices": "9dba79c49524f4ed9cb8b68ffc31ee071a35b8e8075195de4f6e4c41e8b50341",
+        "polygon_sizes": "094b9a05523390aa96e8c69bcd89e2ccaef1de4799be2c7f145fe17be5cde9f6",
+        "old_uvs": {
+          "UVMap": "c630a4137d6279e71ccc2abfd244ddbdec0291573f25765d3381afa6489925c1"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "UVMap",
+            true,
+            false
+          ]
+        ]
+      },
+      "groups_before": {},
+      "output_coords_sha256": "4b024e2ad282d660c2d7ce9a90857342a329d6a774dd019e6b1bd540b7ef4aa3"
+    },
+    {
+      "owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+      "existing": true,
+      "data": "actor-05.npz",
+      "static_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V17_RootLining_MIA_V06_BODY"
+      ],
+      "bound_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V17_RootLining_MIA_V06_BODY"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CARRIER",
+      "new_attributes": {
+        "MIA_V002_RestDepth_front": "attr_0",
+        "MIA_V002_RestViewWeight_front": "attr_1",
+        "MIA_V002_RestDepth_profile": "attr_2",
+        "MIA_V002_RestViewWeight_profile": "attr_3",
+        "MIA_V002_RestDepth_back": "attr_4",
+        "MIA_V002_RestViewWeight_back": "attr_5",
+        "MIA_V002_RestDepth_rear_oblique": "attr_6",
+        "MIA_V002_RestViewWeight_rear_oblique": "attr_7"
+      },
+      "new_uvs": [
+        {
+          "name": "MIA_V002_RestProject_front",
+          "key": "uv_0"
+        },
+        {
+          "name": "MIA_V002_RestProject_profile",
+          "key": "uv_1"
+        },
+        {
+          "name": "MIA_V002_RestProject_back",
+          "key": "uv_2"
+        },
+        {
+          "name": "MIA_V002_RestProject_rear_oblique",
+          "key": "uv_3"
+        }
+      ],
+      "new_groups": {},
+      "data_sha256": "faef56340e9f01c7b09f28d06790d2d2f30f9d1affdfbcc4657e0bac743660f6",
+      "expected": {
+        "verts": 1192,
+        "polys": 1136,
+        "coords": "4ed8a4af5f3cbc45484d251987bd6c351631db07febe55b3768ab61efd3b0cf2",
+        "loop_vertices": "76672d9ab009f426ce0f364a3cecafd22972950c003e287e12d2dae5c0f54dcb",
+        "polygon_sizes": "51e1632fb72b591807cd91ae8ccecb80bc85f5d0eb9e43bcfafb7b00e85ca5be",
+        "old_uvs": {
+          "UVMap": "910817be84b6a6acc222f25c65b4ce8f57bbf9c15c95e9e917ad923ee56d83dd"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "UVMap",
+            true,
+            false
+          ]
+        ]
+      },
+      "groups_before": {
+        "Roots_Locked": "c3782d6405cb6e9b3580f2f183c5e7291d2a709a191ef6301568a492a2061436"
+      },
+      "output_coords_sha256": "4ed8a4af5f3cbc45484d251987bd6c351631db07febe55b3768ab61efd3b0cf2"
+    },
+    {
+      "owner": "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+      "existing": true,
+      "data": "actor-06.npz",
+      "static_materials": [
+        "MIA_V17_HairRootAsh.001_V22_LightToon"
+      ],
+      "bound_materials": [
+        "MIA_V17_HairRootAsh.001_V22_LightToon"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CARRIER",
+      "new_attributes": {},
+      "new_uvs": [],
+      "new_groups": {},
+      "data_sha256": "ce454f482b462e311754e2c3ed6e308eb329f66a32a570027719f3d32c2aaad3",
+      "expected": {
+        "verts": 769,
+        "polys": 697,
+        "coords": "ed9a5ab6042dba095f94943f5061834fb383591b34520dc9149a14fa5eb15977",
+        "loop_vertices": "9340f6464d9a571c9c6f9713f86a399e0739f42d9fc9914ab768d5df0572018d",
+        "polygon_sizes": "20329ca0baac213afc0f9dfb2aee181c0e99523b940fc2bc1384f5494177c132",
+        "old_uvs": {
+          "UVMap": "203d5f01c3deaed407461ea4b5a602a727dbf1a7c9e0977b067610bd4f9cd04b"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "UVMap",
+            true,
+            false
+          ]
+        ]
+      },
+      "groups_before": {
+        "Roots_Locked": "3bc5afd94c9c8e7249c7628b599b23717664be621887c41ecbc2b44b204743a3"
+      },
+      "output_coords_sha256": "ed9a5ab6042dba095f94943f5061834fb383591b34520dc9149a14fa5eb15977"
+    },
+    {
+      "owner": "MIA_V17_PIXAL_DetailedHair",
+      "existing": true,
+      "data": "actor-07.npz",
+      "static_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V17_PIXAL_DetailedHair",
+        "MIA_V17_RecoveredBraidTie.002_V22_LightToon"
+      ],
+      "bound_materials": [
+        "MIA_V002_DeformNormals_MIA_V17_PIXAL_DetailedHair",
+        "MIA_V002_DeformNormals_MIA_V17_PIXAL_DetailedHair.001"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CHEST_WEIGHTS",
+      "new_attributes": {
+        "MIA_V002_RestDepth_front": "attr_0",
+        "MIA_V002_RestViewWeight_front": "attr_1",
+        "MIA_V002_RestDepth_profile": "attr_2",
+        "MIA_V002_RestViewWeight_profile": "attr_3",
+        "MIA_V002_RestDepth_back": "attr_4",
+        "MIA_V002_RestViewWeight_back": "attr_5",
+        "MIA_V002_RestDepth_rear_oblique": "attr_6",
+        "MIA_V002_RestViewWeight_rear_oblique": "attr_7",
+        "MIA_V002_RimNormalWeight": "attr_8",
+        "MIA_V002_HeadBlend_Weight": "attr_9"
+      },
+      "new_uvs": [
+        {
+          "name": "MIA_V002_RestProject_front",
+          "key": "uv_0"
+        },
+        {
+          "name": "MIA_V002_RestProject_profile",
+          "key": "uv_1"
+        },
+        {
+          "name": "MIA_V002_RestProject_back",
+          "key": "uv_2"
+        },
+        {
+          "name": "MIA_V002_RestProject_rear_oblique",
+          "key": "uv_3"
+        }
+      ],
+      "new_groups": {
+        "J_Bip_C_Head": "group_0",
+        "J_Bip_C_UpperChest": "group_1"
+      },
+      "data_sha256": "45f47592bc0295505b8d10e84c7512d2aa853c563ba0589f01407994c138f859",
+      "expected": {
+        "verts": 100383,
+        "polys": 120913,
+        "coords": "82b4f830073670b6e6e81652e3e0d999d785a7b2893c503fd02b2086a5cf8be8",
+        "loop_vertices": "4aacd9bc1316d9d18b4a7df2e90c54b3480c2cd986161d54c8fd577148d54c14",
+        "polygon_sizes": "e77fb939a249bd17601f0444e46bc2aaa11636b8b723c68a3ad8abde624b1c14",
+        "old_uvs": {
+          "UVMap": "7444e853ee6ef7574c32336f4f5f283fcd9b3ebf35ca7f996f894ea9fd05e478",
+          "MIA_V17_PAINT_UV": "e27925a61c7297c1c7f55bfed042754ef856953318681543247fca74d9477847"
+        },
+        "active_uv": 1,
+        "uv_flags": [
+          [
+            "UVMap",
+            false,
+            false
+          ],
+          [
+            "MIA_V17_PAINT_UV",
+            true,
+            false
+          ]
+        ]
+      },
+      "groups_before": {
+        "Crown": "13c720686060e862a21e6593fbdc096d1692dce38a3e39e280e118fcbef61a67",
+        "Fringe": "5d978203e41205ac012fd65be4dec155c1d6dafb58572aa9bfccebc14ef29c68",
+        "Side_Nape": "02a0ea90d398f8028870e0a6ffb914dc616596cfe5d0d883fd3589166033f3d8",
+        "Rear_Waves": "64545cbe891c8230cd18d6c45a59df282c37fbe54214ca75986040ef2c76ab9e",
+        "Left_Braid": "35df993b0d9e1676624654bdce2977e5ae8002f243b58c2fa735f2c5a64842d0",
+        "Loose_Tips": "48133929fa0019f9a99a1de29c33a7763a9d76ec5a4b1c4390adce889210bd66",
+        "Roots_Locked": "6089c0dfb702c7676d9d4c8f36c3786d1ab977c1ff5356113559ff315def3727"
+      },
+      "output_coords_sha256": "d060da1ecbce1ebef9755f3019b14951029802147fd71e7722d9247a458256fc"
+    },
+    {
+      "owner": "MIA_V20_Crown_PixalDonorLock",
+      "existing": true,
+      "data": "actor-08.npz",
+      "static_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V20_Crown_PixalDonorLock",
+        "MIA_V17_RecoveredBraidTie.002_V22_LightToon"
+      ],
+      "bound_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V20_Crown_PixalDonorLock",
+        "MIA_V17_RecoveredBraidTie.002_V22_LightToon"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CARRIER",
+      "new_attributes": {
+        "MIA_V002_RestDepth_front": "attr_0",
+        "MIA_V002_RestViewWeight_front": "attr_1",
+        "MIA_V002_RestDepth_profile": "attr_2",
+        "MIA_V002_RestViewWeight_profile": "attr_3",
+        "MIA_V002_RestDepth_back": "attr_4",
+        "MIA_V002_RestViewWeight_back": "attr_5",
+        "MIA_V002_RestDepth_rear_oblique": "attr_6",
+        "MIA_V002_RestViewWeight_rear_oblique": "attr_7"
+      },
+      "new_uvs": [
+        {
+          "name": "MIA_V002_RestProject_front",
+          "key": "uv_0"
+        },
+        {
+          "name": "MIA_V002_RestProject_profile",
+          "key": "uv_1"
+        },
+        {
+          "name": "MIA_V002_RestProject_back",
+          "key": "uv_2"
+        },
+        {
+          "name": "MIA_V002_RestProject_rear_oblique",
+          "key": "uv_3"
+        }
+      ],
+      "new_groups": {},
+      "data_sha256": "6327c04d1c132348774ab425b702d5a545e03fea6b476659ce8f7d9fd8a9a6a9",
+      "expected": {
+        "verts": 359,
+        "polys": 420,
+        "coords": "b78498ab66a16ad759c9e45cdf21321b9e23d94ee02691136580dee2d54c9b44",
+        "loop_vertices": "ec3b788d09fa7303be45506c4831ad6b388e17222b368d05e2f411c6f6241aaa",
+        "polygon_sizes": "b3e6d6fe5ede9925e06e23d7e04b441225b7fabf5694706d4fc7cdb0093c1a03",
+        "old_uvs": {
+          "UVMap": "f91ddf88fcdd0a66310f48445914450e73f635842b669391548d89f84ee50554",
+          "MIA_V17_PAINT_UV": "b0028cd2b348510dd2920fd53eb0b281a5cc091ffc1cdaab6e0e20269bfdd46f"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "UVMap",
+            true,
+            false
+          ],
+          [
+            "MIA_V17_PAINT_UV",
+            false,
+            false
+          ]
+        ]
+      },
+      "groups_before": {},
+      "output_coords_sha256": "b78498ab66a16ad759c9e45cdf21321b9e23d94ee02691136580dee2d54c9b44"
+    },
+    {
+      "owner": "MIA_V002_RimFlow_near_ear",
+      "existing": false,
+      "data": "actor-09.npz",
+      "static_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V002_RimFlow_near_ear"
+      ],
+      "bound_materials": [
+        "MIA_V002_DeformNormals_MIA_V002_RimFlow_near_ear"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          1.2369133495226947e-10,
+          5.820768173014912e-11,
+          0.0
+        ],
+        [
+          -1.2369133495226947e-10,
+          1.0,
+          -4.569557532363433e-08,
+          -4.656156848970028e-10
+        ],
+        [
+          -5.820768866904302e-11,
+          4.569557532363433e-08,
+          1.0,
+          -1.1920928955078125e-07
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CHEST_WEIGHTS",
+      "new_attributes": {
+        "MIA_V002_RestDepth_front": "attr_0",
+        "MIA_V002_RestViewWeight_front": "attr_1",
+        "MIA_V002_RestDepth_profile": "attr_2",
+        "MIA_V002_RestViewWeight_profile": "attr_3",
+        "MIA_V002_RestDepth_back": "attr_4",
+        "MIA_V002_RestViewWeight_back": "attr_5",
+        "MIA_V002_RestDepth_rear_oblique": "attr_6",
+        "MIA_V002_RestViewWeight_rear_oblique": "attr_7",
+        "MIA_V002_RimNormalWeight": "attr_8",
+        "MIA_V002_HeadBlend_Weight": "attr_9"
+      },
+      "new_uvs": [
+        {
+          "name": "UVMap",
+          "key": "uv_0"
+        },
+        {
+          "name": "MIA_V17_PAINT_UV",
+          "key": "uv_1"
+        },
+        {
+          "name": "MIA_V002_RestProject_front",
+          "key": "uv_2"
+        },
+        {
+          "name": "MIA_V002_RestProject_profile",
+          "key": "uv_3"
+        },
+        {
+          "name": "MIA_V002_RestProject_back",
+          "key": "uv_4"
+        },
+        {
+          "name": "MIA_V002_RestProject_rear_oblique",
+          "key": "uv_5"
+        },
+        {
+          "name": "MIA_V002_TerminalUV",
+          "key": "uv_6"
+        }
+      ],
+      "new_groups": {
+        "Roots_Locked": "group_0",
+        "Loose_Tips": "group_1",
+        "J_Bip_C_Head": "group_2",
+        "J_Bip_C_UpperChest": "group_3"
+      },
+      "data_sha256": "932149dffdf9f4ac8a3d51b6b281a4413c3b3752d956c29bb7c59b53f3c865ab",
+      "active_uv": 0,
+      "uv_flags": [
+        [
+          "UVMap",
+          true,
+          false
+        ],
+        [
+          "MIA_V17_PAINT_UV",
+          false,
+          false
+        ],
+        [
+          "MIA_V002_RestProject_front",
+          false,
+          false
+        ],
+        [
+          "MIA_V002_RestProject_profile",
+          false,
+          false
+        ],
+        [
+          "MIA_V002_RestProject_back",
+          false,
+          false
+        ],
+        [
+          "MIA_V002_RestProject_rear_oblique",
+          false,
+          false
+        ],
+        [
+          "MIA_V002_TerminalUV",
+          false,
+          false
+        ]
+      ],
+      "output_coords_sha256": "8d6602811f12652afaf29c96949da0de01576a7d73f3accb0be0bd1f68a8b664"
+    },
+    {
+      "owner": "MIA_V002_RimFlow_far_neck",
+      "existing": false,
+      "data": "actor-10.npz",
+      "static_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V002_RimFlow_far_neck"
+      ],
+      "bound_materials": [
+        "MIA_V002_DeformNormals_MIA_V002_RimFlow_far_neck"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          1.2369133495226947e-10,
+          5.820768173014912e-11,
+          0.0
+        ],
+        [
+          -1.2369133495226947e-10,
+          1.0,
+          -4.569557532363433e-08,
+          -4.656156848970028e-10
+        ],
+        [
+          -5.820768866904302e-11,
+          4.569557532363433e-08,
+          1.0,
+          -1.1920928955078125e-07
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CHEST_WEIGHTS",
+      "new_attributes": {
+        "MIA_V002_RestDepth_front": "attr_0",
+        "MIA_V002_RestViewWeight_front": "attr_1",
+        "MIA_V002_RestDepth_profile": "attr_2",
+        "MIA_V002_RestViewWeight_profile": "attr_3",
+        "MIA_V002_RestDepth_back": "attr_4",
+        "MIA_V002_RestViewWeight_back": "attr_5",
+        "MIA_V002_RestDepth_rear_oblique": "attr_6",
+        "MIA_V002_RestViewWeight_rear_oblique": "attr_7",
+        "MIA_V002_RimNormalWeight": "attr_8",
+        "MIA_V002_HeadBlend_Weight": "attr_9"
+      },
+      "new_uvs": [
+        {
+          "name": "UVMap",
+          "key": "uv_0"
+        },
+        {
+          "name": "MIA_V17_PAINT_UV",
+          "key": "uv_1"
+        },
+        {
+          "name": "MIA_V002_RestProject_front",
+          "key": "uv_2"
+        },
+        {
+          "name": "MIA_V002_RestProject_profile",
+          "key": "uv_3"
+        },
+        {
+          "name": "MIA_V002_RestProject_back",
+          "key": "uv_4"
+        },
+        {
+          "name": "MIA_V002_RestProject_rear_oblique",
+          "key": "uv_5"
+        },
+        {
+          "name": "MIA_V002_TerminalUV",
+          "key": "uv_6"
+        }
+      ],
+      "new_groups": {
+        "Roots_Locked": "group_0",
+        "Loose_Tips": "group_1",
+        "J_Bip_C_Head": "group_2",
+        "J_Bip_C_UpperChest": "group_3"
+      },
+      "data_sha256": "c1f40f6ee4e898809c1befbadb155db22811c0ea45e3a7210a51253bc272ef45",
+      "active_uv": 0,
+      "uv_flags": [
+        [
+          "UVMap",
+          true,
+          false
+        ],
+        [
+          "MIA_V17_PAINT_UV",
+          false,
+          false
+        ],
+        [
+          "MIA_V002_RestProject_front",
+          false,
+          false
+        ],
+        [
+          "MIA_V002_RestProject_profile",
+          false,
+          false
+        ],
+        [
+          "MIA_V002_RestProject_back",
+          false,
+          false
+        ],
+        [
+          "MIA_V002_RestProject_rear_oblique",
+          false,
+          false
+        ],
+        [
+          "MIA_V002_TerminalUV",
+          false,
+          false
+        ]
+      ],
+      "output_coords_sha256": "aba259d4f111e12e7a5af15a20c7dfc47d191c7ab265a5bd935bf948960418f1"
+    },
+    {
+      "owner": "MIA_V24_Gather_Main",
+      "existing": true,
+      "data": "actor-11.npz",
+      "static_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V24_Gather_Main"
+      ],
+      "bound_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V24_Gather_Main"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CARRIER",
+      "new_attributes": {
+        "MIA_V002_RestDepth_front": "attr_0",
+        "MIA_V002_RestViewWeight_front": "attr_1",
+        "MIA_V002_RestDepth_profile": "attr_2",
+        "MIA_V002_RestViewWeight_profile": "attr_3",
+        "MIA_V002_RestDepth_back": "attr_4",
+        "MIA_V002_RestViewWeight_back": "attr_5",
+        "MIA_V002_RestDepth_rear_oblique": "attr_6",
+        "MIA_V002_RestViewWeight_rear_oblique": "attr_7"
+      },
+      "new_uvs": [
+        {
+          "name": "MIA_V002_RestProject_front",
+          "key": "uv_0"
+        },
+        {
+          "name": "MIA_V002_RestProject_profile",
+          "key": "uv_1"
+        },
+        {
+          "name": "MIA_V002_RestProject_back",
+          "key": "uv_2"
+        },
+        {
+          "name": "MIA_V002_RestProject_rear_oblique",
+          "key": "uv_3"
+        }
+      ],
+      "new_groups": {},
+      "data_sha256": "20f8a08100693ff23e5621616f4567cfbe4f1f3b70e03557c8e47bfb6b711d90",
+      "expected": {
+        "verts": 3890,
+        "polys": 3936,
+        "coords": "4642d79aee584e5d57b0ebbb6ab2c800f6a615074f34f887382d9005e2f54d65",
+        "loop_vertices": "7b5fe503a1fbf5f5ae61ed7270ae2992d4090053090cfe32d124faa7fad0e38b",
+        "polygon_sizes": "820d06aaa1a54103bb514e2aa897513a53397d8bde9199b0c1d65977c7b665fd",
+        "old_uvs": {
+          "MIA_V20_LongitudinalUV": "870cb4327a358c4eb6bb96231bfe899eaf334d07634bd85d14e2ce7c22b94467",
+          "V24_GatherPaintUV": "1e28993fdc83d6f27017d4d54399821d5e67ec2d172b03e72aeefd95eeb22889"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "MIA_V20_LongitudinalUV",
+            true,
+            false
+          ],
+          [
+            "V24_GatherPaintUV",
+            false,
+            false
+          ]
+        ]
+      },
+      "groups_before": {},
+      "output_coords_sha256": "4642d79aee584e5d57b0ebbb6ab2c800f6a615074f34f887382d9005e2f54d65"
+    },
+    {
+      "owner": "MIA_V24_Gather_Tuck",
+      "existing": true,
+      "data": "actor-12.npz",
+      "static_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V24_Gather_Tuck"
+      ],
+      "bound_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V24_Gather_Tuck"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CARRIER",
+      "new_attributes": {
+        "MIA_V002_RestDepth_front": "attr_0",
+        "MIA_V002_RestViewWeight_front": "attr_1",
+        "MIA_V002_RestDepth_profile": "attr_2",
+        "MIA_V002_RestViewWeight_profile": "attr_3",
+        "MIA_V002_RestDepth_back": "attr_4",
+        "MIA_V002_RestViewWeight_back": "attr_5",
+        "MIA_V002_RestDepth_rear_oblique": "attr_6",
+        "MIA_V002_RestViewWeight_rear_oblique": "attr_7"
+      },
+      "new_uvs": [
+        {
+          "name": "MIA_V002_RestProject_front",
+          "key": "uv_0"
+        },
+        {
+          "name": "MIA_V002_RestProject_profile",
+          "key": "uv_1"
+        },
+        {
+          "name": "MIA_V002_RestProject_back",
+          "key": "uv_2"
+        },
+        {
+          "name": "MIA_V002_RestProject_rear_oblique",
+          "key": "uv_3"
+        }
+      ],
+      "new_groups": {},
+      "data_sha256": "efa110eca0d1bd57027e3d86321515bb5a72f60501fb6cb71f0032c7319d344d",
+      "expected": {
+        "verts": 3890,
+        "polys": 3936,
+        "coords": "a04da5e60f18beb1e3d4ecfb4bc4303ed16534591acb71caf39a64546e68916e",
+        "loop_vertices": "7b5fe503a1fbf5f5ae61ed7270ae2992d4090053090cfe32d124faa7fad0e38b",
+        "polygon_sizes": "820d06aaa1a54103bb514e2aa897513a53397d8bde9199b0c1d65977c7b665fd",
+        "old_uvs": {
+          "MIA_V20_LongitudinalUV": "870cb4327a358c4eb6bb96231bfe899eaf334d07634bd85d14e2ce7c22b94467",
+          "V24_GatherPaintUV": "1e28993fdc83d6f27017d4d54399821d5e67ec2d172b03e72aeefd95eeb22889"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "MIA_V20_LongitudinalUV",
+            true,
+            false
+          ],
+          [
+            "V24_GatherPaintUV",
+            false,
+            false
+          ]
+        ]
+      },
+      "groups_before": {},
+      "output_coords_sha256": "a04da5e60f18beb1e3d4ecfb4bc4303ed16534591acb71caf39a64546e68916e"
+    },
+    {
+      "owner": "MIA_V24_Gather_Upper",
+      "existing": true,
+      "data": "actor-13.npz",
+      "static_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V24_Gather_Upper"
+      ],
+      "bound_materials": [
+        "MIA_V002_SourceAshGrade_MIA_V24_Gather_Upper"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_mode": "HEAD_CARRIER",
+      "new_attributes": {
+        "MIA_V002_RestDepth_front": "attr_0",
+        "MIA_V002_RestViewWeight_front": "attr_1",
+        "MIA_V002_RestDepth_profile": "attr_2",
+        "MIA_V002_RestViewWeight_profile": "attr_3",
+        "MIA_V002_RestDepth_back": "attr_4",
+        "MIA_V002_RestViewWeight_back": "attr_5",
+        "MIA_V002_RestDepth_rear_oblique": "attr_6",
+        "MIA_V002_RestViewWeight_rear_oblique": "attr_7"
+      },
+      "new_uvs": [
+        {
+          "name": "MIA_V002_RestProject_front",
+          "key": "uv_0"
+        },
+        {
+          "name": "MIA_V002_RestProject_profile",
+          "key": "uv_1"
+        },
+        {
+          "name": "MIA_V002_RestProject_back",
+          "key": "uv_2"
+        },
+        {
+          "name": "MIA_V002_RestProject_rear_oblique",
+          "key": "uv_3"
+        }
+      ],
+      "new_groups": {},
+      "data_sha256": "8573b1cd7b9ea2e50e1d5926698204c88a8f11936ccc69d80ff773839438838f",
+      "expected": {
+        "verts": 3890,
+        "polys": 3936,
+        "coords": "502dc13fb04cbd28c8bb173584227809cc48580f743c5d7c3442cf799042503a",
+        "loop_vertices": "7b5fe503a1fbf5f5ae61ed7270ae2992d4090053090cfe32d124faa7fad0e38b",
+        "polygon_sizes": "820d06aaa1a54103bb514e2aa897513a53397d8bde9199b0c1d65977c7b665fd",
+        "old_uvs": {
+          "MIA_V20_LongitudinalUV": "870cb4327a358c4eb6bb96231bfe899eaf334d07634bd85d14e2ce7c22b94467",
+          "V24_GatherPaintUV": "1e28993fdc83d6f27017d4d54399821d5e67ec2d172b03e72aeefd95eeb22889"
+        },
+        "active_uv": 0,
+        "uv_flags": [
+          [
+            "MIA_V20_LongitudinalUV",
+            true,
+            false
+          ],
+          [
+            "V24_GatherPaintUV",
+            false,
+            false
+          ]
+        ]
+      },
+      "groups_before": {},
+      "output_coords_sha256": "502dc13fb04cbd28c8bb173584227809cc48580f743c5d7c3442cf799042503a"
+    }
+  ],
+  "components": {
+    "G": {
+      "source_F_sha256": "73741fdbaab9d98fd5423026c2f7110fac350d33224169400291ea9a95539128",
+      "main_changed_vertices": 1887,
+      "main_maximum_delta_m": 0.010562439601564767,
+      "scope_rule": "Verified cutring physicalconnectivity +geodesic28..50mm fade and12mm smoothmaximum; no unrelated overlapping lockbank field.",
+      "main_skin_penetrations_before": 29,
+      "main_skin_penetrations_after": 20,
+      "main_new_penetrating_sample_count": 0,
+      "negative_contact_samples": [
+        {
+          "vertex": 70678,
+          "position": [
+            0.054876249737633144,
+            -0.013280846645427715,
+            1.5243459939956665
+          ],
+          "before_signed_skin_distance_mm": -2.0235674292052863,
+          "after_signed_skin_distance_mm": -1.8380651090410538,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 70679,
+          "position": [
+            0.055255021185530925,
+            -0.01438954651580947,
+            1.5225070714950562
+          ],
+          "before_signed_skin_distance_mm": -0.6929783245368526,
+          "after_signed_skin_distance_mm": -0.6485187366251921,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 71877,
+          "position": [
+            0.055277484123608285,
+            -0.011655644399656497,
+            1.526781678199768
+          ],
+          "before_signed_skin_distance_mm": -2.670751873665722,
+          "after_signed_skin_distance_mm": -2.6660689327400178,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 71880,
+          "position": [
+            0.05558012352858413,
+            -0.009311814594718623,
+            1.5229887962341309
+          ],
+          "before_signed_skin_distance_mm": -1.0409140013507567,
+          "after_signed_skin_distance_mm": -0.9516434201941593,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 71881,
+          "position": [
+            0.055511655872488574,
+            -0.010361468293021,
+            1.5262762308120728
+          ],
+          "before_signed_skin_distance_mm": -2.4176712468033656,
+          "after_signed_skin_distance_mm": -2.414819464320317,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73086,
+          "position": [
+            0.05856016852243475,
+            -0.01017387820145076,
+            1.5290371179580688
+          ],
+          "before_signed_skin_distance_mm": -1.1644916930890759,
+          "after_signed_skin_distance_mm": -0.9050491398738814,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73091,
+          "position": [
+            0.05865128608474677,
+            -0.007459793729877944,
+            1.529284119606018
+          ],
+          "before_signed_skin_distance_mm": -1.4326887685456313,
+          "after_signed_skin_distance_mm": -1.2606809250428341,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73092,
+          "position": [
+            0.058526722571541255,
+            -0.008453251363629493,
+            1.5302424430847168
+          ],
+          "before_signed_skin_distance_mm": -1.7293206637987169,
+          "after_signed_skin_distance_mm": -1.6781557169451844,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73094,
+          "position": [
+            0.05965177437663538,
+            -0.0007712423075533019,
+            1.5277005434036255
+          ],
+          "before_signed_skin_distance_mm": -2.6459154614713043,
+          "after_signed_skin_distance_mm": -1.6722387808840722,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73095,
+          "position": [
+            0.05876257899824907,
+            -0.007070873935591365,
+            1.531072974205017
+          ],
+          "before_signed_skin_distance_mm": -2.0511405236902647,
+          "after_signed_skin_distance_mm": -2.0508018278633244,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73096,
+          "position": [
+            0.0588366284530314,
+            -0.0022795839154058474,
+            1.5312950611114502
+          ],
+          "before_signed_skin_distance_mm": -3.172669355990365,
+          "after_signed_skin_distance_mm": -3.1713643693365157,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73109,
+          "position": [
+            0.059476418917105756,
+            -0.007606386507066336,
+            1.5310509204864502
+          ],
+          "before_signed_skin_distance_mm": -1.3426617788354633,
+          "after_signed_skin_distance_mm": -1.3426253808574984,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73226,
+          "position": [
+            0.05856016852243475,
+            -0.01017387820145076,
+            1.5290371179580688
+          ],
+          "before_signed_skin_distance_mm": -1.1644916930890759,
+          "after_signed_skin_distance_mm": -0.9050491398738814,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73228,
+          "position": [
+            0.05865128608474677,
+            -0.007459793729877944,
+            1.529284119606018
+          ],
+          "before_signed_skin_distance_mm": -1.4326887685456313,
+          "after_signed_skin_distance_mm": -1.2606809250428341,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73229,
+          "position": [
+            0.058526722571541255,
+            -0.008453251363629493,
+            1.5302424430847168
+          ],
+          "before_signed_skin_distance_mm": -1.7293206637987169,
+          "after_signed_skin_distance_mm": -1.6781557169451844,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73294,
+          "position": [
+            0.05865128608474677,
+            -0.007459793729877944,
+            1.529284119606018
+          ],
+          "before_signed_skin_distance_mm": -1.4326887685456313,
+          "after_signed_skin_distance_mm": -1.2606809250428341,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73295,
+          "position": [
+            0.058526722571541255,
+            -0.008453251363629493,
+            1.5302424430847168
+          ],
+          "before_signed_skin_distance_mm": -1.7293206637987169,
+          "after_signed_skin_distance_mm": -1.6781557169451844,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73298,
+          "position": [
+            0.05876257899824907,
+            -0.007070873935591365,
+            1.531072974205017
+          ],
+          "before_signed_skin_distance_mm": -2.0511405236902647,
+          "after_signed_skin_distance_mm": -2.0508018278633244,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73305,
+          "position": [
+            0.059476418917105756,
+            -0.007606386507066336,
+            1.5310509204864502
+          ],
+          "before_signed_skin_distance_mm": -1.3426617788354633,
+          "after_signed_skin_distance_mm": -1.3426253808574984,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        },
+        {
+          "vertex": 73346,
+          "position": [
+            0.05965177437663538,
+            -0.0007712423075533019,
+            1.5277005434036255
+          ],
+          "before_signed_skin_distance_mm": -2.6459154614713043,
+          "after_signed_skin_distance_mm": -1.6722387808840722,
+          "semantic_weights": [
+            [
+              "Side_Nape",
+              1.0
+            ]
+          ],
+          "classification": "Inherited/contactsample requiring semanticroot vs freehair review; not automaticPASS."
+        }
+      ],
+      "main_alloldUV_topology_groups_retained": true,
+      "new_actors": [
+        {
+          "owner": "MIA_V002_RimFlow_near_ear",
+          "root_n": 20,
+          "root_match_m": 0.0,
+          "original_root_vertexIDs": [
+            76390,
+            76396,
+            76397,
+            76399,
+            77052,
+            77056,
+            77057,
+            79932,
+            79935,
+            80003,
+            80000,
+            80002,
+            79997,
+            79999,
+            77513,
+            77509,
+            77504,
+            77502,
+            77500,
+            76382
+          ],
+          "verts": 401,
+          "polys": 400,
+          "minimum_newtip_signed_skin_clearance_m": 0.028703555930405855,
+          "all_inherited_UV_routes_explicit": [
+            "UVMap",
+            "MIA_V17_PAINT_UV",
+            "MIA_V002_RestProject_front",
+            "MIA_V002_RestProject_profile",
+            "MIA_V002_RestProject_back",
+            "MIA_V002_RestProject_rear_oblique"
+          ],
+          "new_tip_UV": "MIA_V002_TerminalUV",
+          "UV_source_limit": "Ownupperparentpanel pigment extension. Newgeometryinferred, actualsourceviewsrequired."
+        },
+        {
+          "owner": "MIA_V002_RimFlow_far_neck",
+          "root_n": 36,
+          "root_match_m": 0.0,
+          "original_root_vertexIDs": [
+            35649,
+            35652,
+            35650,
+            35653,
+            14676,
+            14686,
+            14690,
+            14703,
+            14741,
+            38312,
+            38329,
+            38333,
+            43699,
+            43701,
+            43057,
+            43064,
+            43065,
+            43078,
+            45211,
+            45216,
+            45217,
+            45672,
+            45669,
+            41513,
+            41515,
+            41516,
+            41518,
+            41517,
+            41507,
+            40699,
+            40695,
+            39556,
+            35922,
+            35917,
+            35904,
+            35902
+          ],
+          "verts": 721,
+          "polys": 720,
+          "minimum_newtip_signed_skin_clearance_m": 0.01780201333167497,
+          "all_inherited_UV_routes_explicit": [
+            "UVMap",
+            "MIA_V17_PAINT_UV",
+            "MIA_V002_RestProject_front",
+            "MIA_V002_RestProject_profile",
+            "MIA_V002_RestProject_back",
+            "MIA_V002_RestProject_rear_oblique"
+          ],
+          "new_tip_UV": "MIA_V002_TerminalUV",
+          "UV_source_limit": "Ownupperparentpanel pigment extension. Newgeometryinferred, actualsourceviewsrequired."
+        }
+      ],
+      "nonhair_preservation_delta": {},
+      "normal_rule": "Actualgeometricnormals only in bounded changedpanel/newtip; originalnormaltexture/light route outsidefield untouched. Newroot customnormals match actualparentcorner normals.",
+      "ART": "UNVERIFIED",
+      "limits": "Source4/back/highlow/skincontact visualproof required. No newhair physics/globalheadbinding/wholehairART claim."
+    },
+    "H": [
+      {
+        "owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+        "attribute": "MIA_V002_RestViewWeight_front",
+        "old_minmax": [
+          0.20000000298023224,
+          1.194469928741455
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          0.9800625443458557
+        ]
+      },
+      {
+        "owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+        "attribute": "MIA_V002_RestViewWeight_profile",
+        "old_minmax": [
+          0.20000000298023224,
+          1.1959736347198486
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          0.9859915971755981
+        ]
+      },
+      {
+        "owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+        "attribute": "MIA_V002_RestViewWeight_back",
+        "old_minmax": [
+          0.20000000298023224,
+          1.1944698095321655
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          0.9800620675086975
+        ]
+      },
+      {
+        "owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+        "attribute": "MIA_V002_RestViewWeight_rear_oblique",
+        "old_minmax": [
+          0.20000000298023224,
+          1.1995965242385864
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          1.0003870725631714
+        ]
+      },
+      {
+        "owner": "MIA_V17_PIXAL_DetailedHair",
+        "attribute": "MIA_V002_RestViewWeight_front",
+        "old_minmax": [
+          0.20000000298023224,
+          1.1999704837799072
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          1.0018819570541382
+        ]
+      },
+      {
+        "owner": "MIA_V17_PIXAL_DetailedHair",
+        "attribute": "MIA_V002_RestViewWeight_profile",
+        "old_minmax": [
+          0.20000000298023224,
+          1.199995517730713
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          1.0019820928573608
+        ]
+      },
+      {
+        "owner": "MIA_V17_PIXAL_DetailedHair",
+        "attribute": "MIA_V002_RestViewWeight_back",
+        "old_minmax": [
+          0.20000000298023224,
+          1.1999704837799072
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          1.0018819570541382
+        ]
+      },
+      {
+        "owner": "MIA_V17_PIXAL_DetailedHair",
+        "attribute": "MIA_V002_RestViewWeight_rear_oblique",
+        "old_minmax": [
+          0.20000000298023224,
+          1.1999729871749878
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          1.0018919706344604
+        ]
+      },
+      {
+        "owner": "MIA_V20_Crown_PixalDonorLock",
+        "attribute": "MIA_V002_RestViewWeight_front",
+        "old_minmax": [
+          0.2864668071269989,
+          0.7222534418106079
+        ],
+        "new_minmax": [
+          0.0020558983087539673,
+          0.07639183104038239
+        ]
+      },
+      {
+        "owner": "MIA_V20_Crown_PixalDonorLock",
+        "attribute": "MIA_V002_RestViewWeight_profile",
+        "old_minmax": [
+          0.23956166207790375,
+          0.6632485389709473
+        ],
+        "new_minmax": [
+          0.002002449706196785,
+          0.0480528250336647
+        ]
+      },
+      {
+        "owner": "MIA_V20_Crown_PixalDonorLock",
+        "attribute": "MIA_V002_RestViewWeight_back",
+        "old_minmax": [
+          0.2864667773246765,
+          0.7222533226013184
+        ],
+        "new_minmax": [
+          0.0020558983087539673,
+          0.07639176398515701
+        ]
+      },
+      {
+        "owner": "MIA_V20_Crown_PixalDonorLock",
+        "attribute": "MIA_V002_RestViewWeight_rear_oblique",
+        "old_minmax": [
+          0.8820807933807373,
+          1.1725670099258423
+        ],
+        "new_minmax": [
+          0.2184428870677948,
+          0.896701455116272
+        ]
+      },
+      {
+        "owner": "MIA_V002_RimFlow_near_ear",
+        "attribute": "MIA_V002_RestViewWeight_front",
+        "old_minmax": [
+          0.2408846765756607,
+          0.4148266911506653
+        ],
+        "new_minmax": [
+          0.0020027942955493927,
+          0.004129869397729635
+        ]
+      },
+      {
+        "owner": "MIA_V002_RimFlow_near_ear",
+        "attribute": "MIA_V002_RestViewWeight_profile",
+        "old_minmax": [
+          0.8496109843254089,
+          1.1040525436401367
+        ],
+        "new_minmax": [
+          0.18007931113243103,
+          0.6699972748756409
+        ]
+      },
+      {
+        "owner": "MIA_V002_RimFlow_near_ear",
+        "attribute": "MIA_V002_RestViewWeight_back",
+        "old_minmax": [
+          0.2408846616744995,
+          0.4148266613483429
+        ],
+        "new_minmax": [
+          0.0020027942955493927,
+          0.004129868000745773
+        ]
+      },
+      {
+        "owner": "MIA_V002_RimFlow_near_ear",
+        "attribute": "MIA_V002_RestViewWeight_rear_oblique",
+        "old_minmax": [
+          0.20144763588905334,
+          0.2616170346736908
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          0.0020144146401435137
+        ]
+      },
+      {
+        "owner": "MIA_V002_RimFlow_far_neck",
+        "attribute": "MIA_V002_RestViewWeight_front",
+        "old_minmax": [
+          0.27093419432640076,
+          0.6840693354606628
+        ],
+        "new_minmax": [
+          0.002025317633524537,
+          0.056907329708337784
+        ]
+      },
+      {
+        "owner": "MIA_V002_RimFlow_far_neck",
+        "attribute": "MIA_V002_RestViewWeight_profile",
+        "old_minmax": [
+          0.25880464911460876,
+          0.6686304211616516
+        ],
+        "new_minmax": [
+          0.002011957811191678,
+          0.05023052170872688
+        ]
+      },
+      {
+        "owner": "MIA_V002_RimFlow_far_neck",
+        "attribute": "MIA_V002_RestViewWeight_back",
+        "old_minmax": [
+          0.27093416452407837,
+          0.6840692162513733
+        ],
+        "new_minmax": [
+          0.002025317633524537,
+          0.056907277554273605
+        ]
+      },
+      {
+        "owner": "MIA_V002_RimFlow_far_neck",
+        "attribute": "MIA_V002_RestViewWeight_rear_oblique",
+        "old_minmax": [
+          0.9575117230415344,
+          1.1416447162628174
+        ],
+        "new_minmax": [
+          0.33127403259277344,
+          0.7882276177406311
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Main",
+        "attribute": "MIA_V002_RestViewWeight_front",
+        "old_minmax": [
+          1.0640262365341187,
+          1.1999870538711548
+        ],
+        "new_minmax": [
+          0.5593239665031433,
+          1.0019482374191284
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Main",
+        "attribute": "MIA_V002_RestViewWeight_profile",
+        "old_minmax": [
+          0.20000000298023224,
+          0.2950444519519806
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          0.002081603277474642
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Main",
+        "attribute": "MIA_V002_RestViewWeight_back",
+        "old_minmax": [
+          1.064026117324829,
+          1.1999870538711548
+        ],
+        "new_minmax": [
+          0.5593236684799194,
+          1.0019482374191284
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Main",
+        "attribute": "MIA_V002_RestViewWeight_rear_oblique",
+        "old_minmax": [
+          0.3024187386035919,
+          0.8529948592185974
+        ],
+        "new_minmax": [
+          0.0021100316662341356,
+          0.18381892144680023
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Tuck",
+        "attribute": "MIA_V002_RestViewWeight_front",
+        "old_minmax": [
+          1.132994294166565,
+          1.1999973058700562
+        ],
+        "new_minmax": [
+          0.7597326040267944,
+          1.0019892454147339
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Tuck",
+        "attribute": "MIA_V002_RestViewWeight_profile",
+        "old_minmax": [
+          0.20000000298023224,
+          0.2437221109867096
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          0.00200365437194705
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Tuck",
+        "attribute": "MIA_V002_RestViewWeight_back",
+        "old_minmax": [
+          1.132994294166565,
+          1.1999973058700562
+        ],
+        "new_minmax": [
+          0.7597326040267944,
+          1.0019892454147339
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Tuck",
+        "attribute": "MIA_V002_RestViewWeight_rear_oblique",
+        "old_minmax": [
+          0.38030755519866943,
+          0.7925982475280762
+        ],
+        "new_minmax": [
+          0.0030569531954824924,
+          0.12532226741313934
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Upper",
+        "attribute": "MIA_V002_RestViewWeight_front",
+        "old_minmax": [
+          1.0474154949188232,
+          1.198194146156311
+        ],
+        "new_minmax": [
+          0.5176863074302673,
+          0.9947961568832397
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Upper",
+        "attribute": "MIA_V002_RestViewWeight_profile",
+        "old_minmax": [
+          0.20000000298023224,
+          0.24712662398815155
+        ],
+        "new_minmax": [
+          0.0020000000949949026,
+          0.00200493261218071
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Upper",
+        "attribute": "MIA_V002_RestViewWeight_back",
+        "old_minmax": [
+          1.0474153757095337,
+          1.1981940269470215
+        ],
+        "new_minmax": [
+          0.5176860094070435,
+          0.9947956800460815
+        ]
+      },
+      {
+        "owner": "MIA_V24_Gather_Upper",
+        "attribute": "MIA_V002_RestViewWeight_rear_oblique",
+        "old_minmax": [
+          0.37266331911087036,
+          0.8987045288085938
+        ],
+        "new_minmax": [
+          0.0028887924272567034,
+          0.24032756686210632
+        ]
+      }
+    ],
+    "I": {
+      "source": "F + G in-memory",
+      "owner": "MIA_V17_PIXAL_DetailedHair",
+      "seed_vertices": [
+        70678,
+        70679,
+        71877,
+        71880,
+        71881,
+        73086,
+        73091,
+        73092,
+        73094,
+        73095,
+        73096,
+        73109,
+        73226,
+        73228,
+        73229,
+        73294,
+        73295,
+        73298,
+        73305,
+        73346
+      ],
+      "original_seed_contact_results": [
+        {
+          "unique_vertex": 45087,
+          "position_after": [
+            0.05736862599917838,
+            -0.013852677125623184,
+            1.5231549651831477
+          ],
+          "before_signed_mm": -1.8382889165877714,
+          "after_signed_mm": 0.9595504066055582
+        },
+        {
+          "unique_vertex": 45197,
+          "position_after": [
+            0.05773013106607588,
+            -0.014960162519329313,
+            1.5213247672292043
+          ],
+          "before_signed_mm": -0.6484747699460058,
+          "after_signed_mm": 2.1158120173367934
+        },
+        {
+          "unique_vertex": 45202,
+          "position_after": [
+            0.05842645909300255,
+            -0.012503659991697919,
+            1.5252815313488415
+          ],
+          "before_signed_mm": -2.666615127964178,
+          "after_signed_mm": 0.8859105180363258
+        },
+        {
+          "unique_vertex": 45258,
+          "position_after": [
+            0.05879659829596288,
+            -0.011290242568449651,
+            1.5247148351704274
+          ],
+          "before_signed_mm": -2.41447523876559,
+          "after_signed_mm": 1.3112647120578913
+        },
+        {
+          "unique_vertex": 45271,
+          "position_after": [
+            0.05794964491072588,
+            -0.010150063388659694,
+            1.5218865926593501
+          ],
+          "before_signed_mm": -0.9518459301034454,
+          "after_signed_mm": 1.746755713611492
+        },
+        {
+          "unique_vertex": 46013,
+          "position_after": [
+            0.06087443623525371,
+            -0.009088202124263069,
+            1.5291301888671727
+          ],
+          "before_signed_mm": -1.6777019227447454,
+          "after_signed_mm": 0.9723993607622106
+        },
+        {
+          "unique_vertex": 46023,
+          "position_after": [
+            0.060184759229858546,
+            -0.010613418638384088,
+            1.5282481433308281
+          ],
+          "before_signed_mm": -0.9051704109879211,
+          "after_signed_mm": 0.9353587565783528
+        },
+        {
+          "unique_vertex": 46035,
+          "position_after": [
+            0.060738898006416256,
+            -0.00810131622214589,
+            1.5283026985383286
+          ],
+          "before_signed_mm": -1.2608060060301796,
+          "after_signed_mm": 1.1202781242900528
+        },
+        {
+          "unique_vertex": 46071,
+          "position_after": [
+            0.061720639733557604,
+            -0.007948638395827353,
+            1.5297069603944207
+          ],
+          "before_signed_mm": -2.050494425930083,
+          "after_signed_mm": 1.2933980342495488
+        },
+        {
+          "unique_vertex": 46091,
+          "position_after": [
+            0.06238986538801084,
+            -0.003707227934481717,
+            1.5297075874868848
+          ],
+          "before_signed_mm": -3.1708756287116557,
+          "after_signed_mm": 0.9545437278575264
+        },
+        {
+          "unique_vertex": 46227,
+          "position_after": [
+            0.061900589717668104,
+            -0.008247735102345447,
+            1.5299197976665913
+          ],
+          "before_signed_mm": -1.3431031384243397,
+          "after_signed_mm": 1.3874371907149907
+        },
+        {
+          "unique_vertex": 46273,
+          "position_after": [
+            0.06204953599490434,
+            -0.001941250239266504,
+            1.5266168598067191
+          ],
+          "before_signed_mm": -1.6719377599656582,
+          "after_signed_mm": 1.1520124899107032
+        }
+      ],
+      "remaining_neighbors_not_auto_pass": [
+        {
+          "unique_vertex": 44055,
+          "position": [
+            0.05000888343703723,
+            -0.0002766311601415546,
+            1.5131420890905833
+          ],
+          "signed_mm": -1.636638553463854,
+          "geodesic_distance_mm": 21.636880989537644,
+          "fade": 0.0015218021338502252
+        },
+        {
+          "unique_vertex": 44188,
+          "position": [
+            0.05085827798210051,
+            0.00019348797530936734,
+            1.5158235235663042
+          ],
+          "signed_mm": -3.6440918047446758,
+          "geodesic_distance_mm": 20.875467235353376,
+          "fade": 0.01412486313616823
+        },
+        {
+          "unique_vertex": 44653,
+          "position": [
+            0.05615082711501633,
+            -0.0024450261691031715,
+            1.5186673803201698
+          ],
+          "signed_mm": -1.1698200796672609,
+          "geodesic_distance_mm": 16.98990747008015,
+          "fade": 0.23274715973691418
+        },
+        {
+          "unique_vertex": 44705,
+          "position": [
+            0.05379360541894669,
+            -0.0006406065600095842,
+            1.5230357711968785
+          ],
+          "signed_mm": -5.2226067637093365,
+          "geodesic_distance_mm": 20.54965535441112,
+          "fade": 0.023160737702603296
+        },
+        {
+          "unique_vertex": 44754,
+          "position": [
+            0.053727673729358855,
+            -0.000837706498077667,
+            1.5132993406757227
+          ],
+          "signed_mm": -0.5148130858287914,
+          "geodesic_distance_mm": 17.844512600259016,
+          "fade": 0.1673225304812127
+        },
+        {
+          "unique_vertex": 45132,
+          "position": [
+            0.05829291516199845,
+            -0.0017911873224603584,
+            1.5229774853771063
+          ],
+          "signed_mm": -1.144408193340496,
+          "geodesic_distance_mm": 17.131106335889136,
+          "fade": 0.22144746483887723
+        },
+        {
+          "unique_vertex": 47034,
+          "position": [
+            0.06675505111133291,
+            -0.002730686064152218,
+            1.5459029002470477
+          ],
+          "signed_mm": -1.5552771728835069,
+          "geodesic_distance_mm": 17.511934110035774,
+          "fade": 0.19190611648337508
+        },
+        {
+          "unique_vertex": 47100,
+          "position": [
+            0.0672087296401341,
+            0.0011076535105698396,
+            1.5456688180783762
+          ],
+          "signed_mm": -2.137169984052889,
+          "geodesic_distance_mm": 17.703069428765268,
+          "fade": 0.1776317557240421
+        },
+        {
+          "unique_vertex": 47182,
+          "position": [
+            0.06512327203160934,
+            0.0016461296040969557,
+            1.5490411868837295
+          ],
+          "signed_mm": -5.198376020416617,
+          "geodesic_distance_mm": 19.798490056211616,
+          "fade": 0.05158670182987779
+        },
+        {
+          "unique_vertex": 47183,
+          "position": [
+            0.06440910029307252,
+            -0.009132033058406559,
+            1.5403977845488661
+          ],
+          "signed_mm": -1.1287227425782476,
+          "geodesic_distance_mm": 19.155582630879216,
+          "fade": 0.08357601930603886
+        },
+        {
+          "unique_vertex": 47222,
+          "position": [
+            0.06536805871507367,
+            -0.006452930108149562,
+            1.5489784338621677
+          ],
+          "signed_mm": -3.3719689963618293,
+          "geodesic_distance_mm": 19.451592431493477,
+          "fade": 0.06802481308962305
+        },
+        {
+          "unique_vertex": 47233,
+          "position": [
+            0.06711158875141934,
+            -0.006933520008633933,
+            1.5457039796351562
+          ],
+          "signed_mm": -0.6179528168104298,
+          "geodesic_distance_mm": 16.943201204882083,
+          "fade": 0.23652375629093148
+        },
+        {
+          "unique_vertex": 47242,
+          "position": [
+            0.0643313326215407,
+            0.0034655313114910595,
+            1.5498336499820868
+          ],
+          "signed_mm": -6.832158716861159,
+          "geodesic_distance_mm": 20.875483809012685,
+          "fade": 0.014124457020747494
+        },
+        {
+          "unique_vertex": 47315,
+          "position": [
+            0.06417058455379952,
+            -0.004481309451688547,
+            1.550732911456187
+          ],
+          "signed_mm": -5.2650638681370765,
+          "geodesic_distance_mm": 21.66900962273204,
+          "fade": 0.001266137494136732
+        },
+        {
+          "unique_vertex": 47408,
+          "position": [
+            0.06793822641991741,
+            0.000783546070259546,
+            1.5453158031550729
+          ],
+          "signed_mm": -1.2687461130553856,
+          "geodesic_distance_mm": 17.40469367897639,
+          "fade": 0.2000809644722591
+        },
+        {
+          "unique_vertex": 47493,
+          "position": [
+            0.06505229991987271,
+            0.003908066571924039,
+            1.549757051509362
+          ],
+          "signed_mm": -6.394941243343055,
+          "geodesic_distance_mm": 21.3254018973535,
+          "fade": 0.005183097921724222
+        },
+        {
+          "unique_vertex": 47500,
+          "position": [
+            0.06700940595940767,
+            0.002318247384948357,
+            1.5467939755944058
+          ],
+          "signed_mm": -3.149203723296523,
+          "geodesic_distance_mm": 18.97916533639034,
+          "fade": 0.09347859269847092
+        },
+        {
+          "unique_vertex": 47805,
+          "position": [
+            0.06681428029381879,
+            0.003184128584998904,
+            1.5478437434988157
+          ],
+          "signed_mm": -4.004231217550114,
+          "geodesic_distance_mm": 20.30088618437607,
+          "fade": 0.031436711629272196
+        },
+        {
+          "unique_vertex": 47869,
+          "position": [
+            0.0665498667473077,
+            0.002609932501616104,
+            1.5487362309562427
+          ],
+          "signed_mm": -4.248508834280074,
+          "geodesic_distance_mm": 21.19632074225853,
+          "fade": 0.007315679526588625
+        },
+        {
+          "unique_vertex": 47905,
+          "position": [
+            0.06657745094853663,
+            0.0010549033308366632,
+            1.5493182216904942
+          ],
+          "signed_mm": -3.7934777210466564,
+          "geodesic_distance_mm": 21.488221471826442,
+          "fade": 0.00300389192128403
+        },
+        {
+          "unique_vertex": 48002,
+          "position": [
+            0.06757332066499808,
+            -0.005706650699880519,
+            1.5484835196276008
+          ],
+          "signed_mm": -1.2065749233443057,
+          "geodesic_distance_mm": 19.618654055704656,
+          "fade": 0.05986096060364543
+        },
+        {
+          "unique_vertex": 48014,
+          "position": [
+            0.06816951274599121,
+            0.001072221637151224,
+            1.5465663716645364
+          ],
+          "signed_mm": -1.5743130206828937,
+          "geodesic_distance_mm": 19.046521449301068,
+          "fade": 0.08964333730189289
+        },
+        {
+          "unique_vertex": 48276,
+          "position": [
+            0.06850868653846014,
+            0.000608559977205204,
+            1.5450350949594385
+          ],
+          "signed_mm": -0.6193282606545836,
+          "geodesic_distance_mm": 19.22038614692826,
+          "fade": 0.08005570106580351
+        },
+        {
+          "unique_vertex": 48403,
+          "position": [
+            0.06857230857286585,
+            0.0011264434373008444,
+            1.5465382939628112
+          ],
+          "signed_mm": -1.2441782600944862,
+          "geodesic_distance_mm": 20.53193048387704,
+          "fade": 0.023711645419943972
+        },
+        {
+          "unique_vertex": 48670,
+          "position": [
+            0.06931418883735223,
+            0.0021283927103327924,
+            1.546314557899517
+          ],
+          "signed_mm": -0.9592699934728444,
+          "geodesic_distance_mm": 21.877968744848825,
+          "fade": 0.00017362393049213942
+        }
+      ],
+      "scope": "Physical connected mesh within22mm geodesic,6mm core/16mm fade. Smooth displacement with actual skin-nearest constraints. No skin edit, deletion, UV or topology change.",
+      "changed_vertices": 456,
+      "max_delta_mm": 6.988361885905398,
+      "affected_before_signed_negative_halfmm": 100,
+      "affected_after_signed_negative_halfmm": 25,
+      "new_negative_halfmm": 0,
+      "min_after_signed_mm": -6.832158716861159,
+      "bbox_original": [
+        [
+          0.05,
+          -0.018596,
+          1.505018
+        ],
+        [
+          0.073488,
+          0.003992,
+          1.550745
+        ]
+      ],
+      "limits": "Nearest-normal contact diagnostic only; actual profile/highlow renders required before adoption. No ART PASS."
+    },
+    "K": {
+      "fits_linear_RGB": [
+        [
+          1.1338076688874674,
+          -0.01263669809715162
+        ],
+        [
+          1.1530775251320236,
+          -0.018559254425519606
+        ],
+        [
+          1.1696187172659402,
+          -0.0195068950144511
+        ]
+      ],
+      "source_evidence": "audit/forelock-palette-F-H-source.json",
+      "scope": "Same four guide RGB inputs, no image regeneration. Three quantiles of manually matched semantic forelocks, not pixel alignment. Grade affects pigment before original actual light/normal route.",
+      "changes": [
+        {
+          "owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+          "old_material": "MIA_V002_SemanticGuideGuard_MIA_V17_RootLining_MIA_V06_B",
+          "new_material": "MIA_V002_SourceAshGrade_MIA_V17_RootLining_MIA_V06_BODY"
+        },
+        {
+          "owner": "MIA_V17_PIXAL_DetailedHair",
+          "old_material": "MIA_V002_SemanticGuideGuard_MIA_V17_PIXAL_DetailedHair",
+          "new_material": "MIA_V002_SourceAshGrade_MIA_V17_PIXAL_DetailedHair"
+        },
+        {
+          "owner": "MIA_V20_Crown_PixalDonorLock",
+          "old_material": "MIA_V002_SemanticGuideGuard_MIA_V20_Crown_PixalDonorLock",
+          "new_material": "MIA_V002_SourceAshGrade_MIA_V20_Crown_PixalDonorLock"
+        },
+        {
+          "owner": "MIA_V002_RimFlow_near_ear",
+          "old_material": "MIA_V002_SemanticGuideGuard_MIA_V002_RimFlow_near_ear",
+          "new_material": "MIA_V002_SourceAshGrade_MIA_V002_RimFlow_near_ear"
+        },
+        {
+          "owner": "MIA_V002_RimFlow_far_neck",
+          "old_material": "MIA_V002_SemanticGuideGuard_MIA_V002_RimFlow_far_neck",
+          "new_material": "MIA_V002_SourceAshGrade_MIA_V002_RimFlow_far_neck"
+        },
+        {
+          "owner": "MIA_V24_Gather_Main",
+          "old_material": "MIA_V002_SemanticGuideGuard_MIA_V24_Gather_Main",
+          "new_material": "MIA_V002_SourceAshGrade_MIA_V24_Gather_Main"
+        },
+        {
+          "owner": "MIA_V24_Gather_Tuck",
+          "old_material": "MIA_V002_SemanticGuideGuard_MIA_V24_Gather_Tuck",
+          "new_material": "MIA_V002_SourceAshGrade_MIA_V24_Gather_Tuck"
+        },
+        {
+          "owner": "MIA_V24_Gather_Upper",
+          "old_material": "MIA_V002_SemanticGuideGuard_MIA_V24_Gather_Upper",
+          "new_material": "MIA_V002_SourceAshGrade_MIA_V24_Gather_Upper"
+        }
+      ],
+      "limits": "Small palette/contrast hypothesis; not a universal darkening, not proof of fine ink or correct sculpture. Actual front/profile/source4 and unseen surfaces required."
+    },
+    "N": {
+      "rule": "Per-guide mean linearRGB<0.4 required, multiplied into the existing depth/owner/skin confidence; all old weight consumers reconnected, including normalized RGB denominator and H opacity coverage.",
+      "actual_input_audit": "audit/guide-main-bright-contamination-audit.json: front55 cold bright pixels on generated eye-edge/hair boundaries; other views0. Current clean hair guide channel maxima~0.32, so this is not arbitrary highlight crushing.",
+      "images_unchanged": true,
+      "changes": [
+        {
+          "owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+          "guide_weight_routes_guarded": 4
+        },
+        {
+          "owner": "MIA_V17_PIXAL_DetailedHair",
+          "guide_weight_routes_guarded": 4
+        },
+        {
+          "owner": "MIA_V20_Crown_PixalDonorLock",
+          "guide_weight_routes_guarded": 4
+        },
+        {
+          "owner": "MIA_V002_RimFlow_near_ear",
+          "guide_weight_routes_guarded": 4
+        },
+        {
+          "owner": "MIA_V002_RimFlow_far_neck",
+          "guide_weight_routes_guarded": 4
+        },
+        {
+          "owner": "MIA_V24_Gather_Main",
+          "guide_weight_routes_guarded": 4
+        },
+        {
+          "owner": "MIA_V24_Gather_Tuck",
+          "guide_weight_routes_guarded": 4
+        },
+        {
+          "owner": "MIA_V24_Gather_Upper",
+          "guide_weight_routes_guarded": 4
+        }
+      ],
+      "limits": "Specific current-guide semantic guard, not a universal color-based geometry classifier. No geometry deletion or new generation."
+    },
+    "J": {
+      "carrier": "MIA_V002_HeadHair_Carrier",
+      "parent_rig": "MIA_V06_RIG",
+      "parent_bone": "J_Bip_C_Head",
+      "neutral_head_world": [
+        [
+          0.9999999403953552,
+          -2.9103830456733704e-11,
+          2.3283064365386963e-10,
+          -0.0003917289723176509
+        ],
+        [
+          1.1641532182693481e-10,
+          0.0,
+          -0.9999998807907104,
+          0.004743410274386406
+        ],
+        [
+          2.764863893389702e-10,
+          0.9999998807907104,
+          5.960464477539063e-08,
+          1.4916651248931885
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "actors": [
+        {
+          "owner": "MIA_V17_LeftBraid_Tail",
+          "neutral_evaluated_world_max_error_m": 1.5597359492858232e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V17_LeftBraid_Lane2",
+          "neutral_evaluated_world_max_error_m": 1.6703067728940368e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V17_LeftBraid_Lane1",
+          "neutral_evaluated_world_max_error_m": 1.6694914961590257e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V17_LeftBraid_Lane0",
+          "neutral_evaluated_world_max_error_m": 1.6662347945839429e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V17_LeftBraid_Tie",
+          "neutral_evaluated_world_max_error_m": 1.2036781527058338e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V17_RootLining_MIA_V06_BODY_SKIN",
+          "neutral_evaluated_world_max_error_m": 1.739361721320165e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V17_RootLining_MIA_V14_SculptedSkin",
+          "neutral_evaluated_world_max_error_m": 1.739361721320165e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V17_PIXAL_DetailedHair",
+          "neutral_evaluated_world_max_error_m": 1.7529720253151027e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V20_Crown_PixalDonorLock",
+          "neutral_evaluated_world_max_error_m": 1.7393556106526376e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V002_RimFlow_near_ear",
+          "neutral_evaluated_world_max_error_m": 1.6468354147036735e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V002_RimFlow_far_neck",
+          "neutral_evaluated_world_max_error_m": 1.6340399611181056e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V24_Gather_Main",
+          "neutral_evaluated_world_max_error_m": 1.6858803064678796e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V24_Gather_Tuck",
+          "neutral_evaluated_world_max_error_m": 1.6858803064678796e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        },
+        {
+          "owner": "MIA_V24_Gather_Upper",
+          "neutral_evaluated_world_max_error_m": 1.6858803064678796e-07,
+          "parent": "MIA_V002_HeadHair_Carrier"
+        }
+      ],
+      "no_previous_binding_or_double_transform": true,
+      "limits": "Rigid Head coupling only. Long locks contact during large source pose still needs actual audit; no spring physics."
+    },
+    "L": {
+      "rig": "MIA_V06_RIG",
+      "head": "J_Bip_C_Head",
+      "chest": "J_Bip_C_UpperChest",
+      "actors": [
+        {
+          "owner": "MIA_V17_LeftBraid_Tail",
+          "neutral_world_max_error_m": 4.0978193283081055e-08,
+          "head_weight_minmax": [
+            0.02,
+            0.020842126850179263
+          ],
+          "weights_sum_exact": true,
+          "normal_route": [
+            {
+              "material": "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Tail",
+              "object_map_links_replaced": 0
+            }
+          ],
+          "existing_semantic_groups_retained": true
+        },
+        {
+          "owner": "MIA_V17_LeftBraid_Lane2",
+          "neutral_world_max_error_m": 1.2764556345246092e-07,
+          "head_weight_minmax": [
+            0.02,
+            0.9998709351066479
+          ],
+          "weights_sum_exact": true,
+          "normal_route": [
+            {
+              "material": "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Lane2",
+              "object_map_links_replaced": 0
+            }
+          ],
+          "existing_semantic_groups_retained": true
+        },
+        {
+          "owner": "MIA_V17_LeftBraid_Lane1",
+          "neutral_world_max_error_m": 1.2764556345246092e-07,
+          "head_weight_minmax": [
+            0.02,
+            0.9983007558282687
+          ],
+          "weights_sum_exact": true,
+          "normal_route": [
+            {
+              "material": "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Lane1",
+              "object_map_links_replaced": 0
+            }
+          ],
+          "existing_semantic_groups_retained": true
+        },
+        {
+          "owner": "MIA_V17_LeftBraid_Lane0",
+          "neutral_world_max_error_m": 1.2764556345246092e-07,
+          "head_weight_minmax": [
+            0.02,
+            0.9964174603999554
+          ],
+          "weights_sum_exact": true,
+          "normal_route": [
+            {
+              "material": "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Lane0",
+              "object_map_links_replaced": 0
+            }
+          ],
+          "existing_semantic_groups_retained": true
+        },
+        {
+          "owner": "MIA_V17_LeftBraid_Tie",
+          "neutral_world_max_error_m": 1.5359765015432458e-08,
+          "head_weight_minmax": [
+            0.02,
+            0.02
+          ],
+          "weights_sum_exact": true,
+          "normal_route": [
+            {
+              "material": "MIA_V002_DeformNormals_MIA_V17_LeftBraid_Tie",
+              "object_map_links_replaced": 0
+            }
+          ],
+          "existing_semantic_groups_retained": true
+        },
+        {
+          "owner": "MIA_V17_PIXAL_DetailedHair",
+          "neutral_world_max_error_m": 1.3011963062581344e-07,
+          "head_weight_minmax": [
+            0.020000000000000018,
+            1.0
+          ],
+          "weights_sum_exact": true,
+          "normal_route": [
+            {
+              "material": "MIA_V002_DeformNormals_MIA_V17_PIXAL_DetailedHair",
+              "object_map_links_replaced": 1
+            },
+            {
+              "material": "MIA_V002_DeformNormals_MIA_V17_PIXAL_DetailedHair.001",
+              "object_map_links_replaced": 0
+            }
+          ],
+          "existing_semantic_groups_retained": true
+        },
+        {
+          "owner": "MIA_V002_RimFlow_near_ear",
+          "neutral_world_max_error_m": 1.2731557319511921e-07,
+          "head_weight_minmax": [
+            0.7074551107426152,
+            0.8730849319673719
+          ],
+          "weights_sum_exact": true,
+          "normal_route": [
+            {
+              "material": "MIA_V002_DeformNormals_MIA_V002_RimFlow_near_ear",
+              "object_map_links_replaced": 1
+            }
+          ],
+          "existing_semantic_groups_retained": true
+        },
+        {
+          "owner": "MIA_V002_RimFlow_far_neck",
+          "neutral_world_max_error_m": 1.2731557319511921e-07,
+          "head_weight_minmax": [
+            0.44207019994806196,
+            0.6820052529858713
+          ],
+          "weights_sum_exact": true,
+          "normal_route": [
+            {
+              "material": "MIA_V002_DeformNormals_MIA_V002_RimFlow_far_neck",
+              "object_map_links_replaced": 1
+            }
+          ],
+          "existing_semantic_groups_retained": true
+        }
+      ],
+      "blend_scope": "Main eligible Side_Nape/Rear_Waves/Left_Braid only; Crown/Fringe/Roots_Locked suppress chest blend. Hanging length smooth at Z1.31..1.545 with98%maximum Chest; separatebraid same length coordinate; actual main-root weights copied to new tip root rings.",
+      "normal_scope": "Skinned actors use actual deformed geometry normals instead of stale OBJECT-map vectors. Original map/material retained, pure Head parent crown/bun map unchanged. Requires actual pose lighting proof.",
+      "limits": "Bounded static skinning test, no physics. New vertex groups/POINT data/modifier are deliberate. Source pose contacts still unverified."
+    }
+  },
+  "new_carrier": {
+    "name": "MIA_V002_HeadHair_Carrier",
+    "rig": "MIA_V06_RIG",
+    "bone": "J_Bip_C_Head"
+  },
+  "scope": "Guarded material/UV/attribute/coordinate delta and two new tip meshes only. No imported face/body/rig/camera/light/world or source scene. Binding optional and separately reviewed.",
+  "ART": "UNVERIFIED until selected actual static and bound-pose proof; technical roundtrip is not style approval."
+}

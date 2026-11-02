@@ -21,7 +21,9 @@ for row in rows:
  for n in ['MIA_V27_SharedHeadBody','V30_UpperLashes_-1','V30_LowerLashes_1','V31_SourceBrow_1','V28G_InnerLid_1']:
   sk=bpy.data.objects[n].data.shape_keys
   values={k.name.split('_Fcl_')[-1]:float(k.value) for k in sk.key_blocks[1:]}
-  assert all(abs(values[s]-v)<1e-5 for s,v in expected.items()),(row['id'],n,values,expected)
+  missing=set(expected)-set(values)
+  assert not missing or (missing=={'MIA_ToothyGrin'} and n!='MIA_V27_SharedHeadBody'),(n,missing)
+  assert all(abs(values[s]-v)<1e-5 for s,v in expected.items() if s in values),(row['id'],n,values,expected)
   followers[n]=True
  results.append(dict(panel=row['panel'],preset=prop,master_values=actual,followers=followers))
 for name in list(c.keys()):
@@ -29,6 +31,6 @@ for name in list(c.keys()):
 c.update_tag();bpy.context.scene.frame_set(1);bpy.context.view_layer.update()
 assert all(abs(k.value)<1e-7 for k in master.data.shape_keys.key_blocks[1:])
 assert hashlib.sha256(p.read_bytes()).hexdigest()==a.sha256
-(p.parent/'expression-controls-runtime.json').write_text(json.dumps(dict(native=str(p),sha256=a.sha256,
+p.with_suffix('.runtime.json').write_text(json.dumps(dict(native=str(p),sha256=a.sha256,
   panel_runtime=results,neutral_restored=True,asset_saved=False,art='NOT_EVALUATED'),indent=2)+'\n',encoding='utf-8')
 print('EXPRESSION_CONTROLS_RUNTIME_16_OK',flush=True)

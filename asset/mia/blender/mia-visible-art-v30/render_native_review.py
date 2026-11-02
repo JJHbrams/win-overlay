@@ -42,8 +42,13 @@ w=bpy.data.worlds.new('V30_ActualReviewWorld');w.use_nodes=True;n=w.node_tree.no
 s.render.engine='BLENDER_EEVEE';s.render.use_freestyle=False;s.render.film_transparent=False;s.render.resolution_percentage=100;s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGBA'
 cm=spec['color_management'];s.view_settings.view_transform=cm['view_transform'];s.view_settings.look=cm['look'];s.view_settings.exposure=cm['exposure'];s.view_settings.gamma=cm['gamma']
 cam=bpy.data.objects.new('V30_ReviewCamera',bpy.data.cameras.new('V30_ReviewCamera'));s.collection.objects.link(cam);cam.data.type='ORTHO';cam.data.clip_start=.1;cam.data.clip_end=10.;s.camera=cam
+# Ownership is semantic. A substring such as Crown also matches DentalCrowns.
+import importlib.util
+ownership_spec=importlib.util.spec_from_file_location('mia_review_ownership',P/'component_ownership.py')
+ownership=importlib.util.module_from_spec(ownership_spec);ownership_spec.loader.exec_module(ownership)
 hair=[o for o in s.objects if o.type=='MESH' and not o.hide_render and
- (any(x in o.name for x in ['Hair','HAIR','Braid','Crown','Gather','RootLining','PIXAL']) or any('HAIR' in c.name.upper() for c in o.users_collection))]
+      ownership.is_hair_object(o)]
+assert not any(o.get('mia_component')=='mouth' or 'DentalCrowns' in o.name for o in hair)
 skin=bpy.data.objects['MIA_V27_SharedHeadBody'];walls=[o for o in s.objects if o.name.startswith('V28G_InnerLid_')]
 original={o.name:list(o.data.materials) for o in [skin]+walls}
 gray=bpy.data.materials.new('V30_ActualNeutralGray');gray.use_nodes=True;gn=gray.node_tree.nodes;gn.clear();bs=gn.new('ShaderNodeBsdfPrincipled');bs.inputs['Base Color'].default_value=(.23,.23,.23,1);bs.inputs['Roughness'].default_value=.85;go=gn.new('ShaderNodeOutputMaterial');go.is_active_output=True;gray.node_tree.links.new(bs.outputs[0],go.inputs['Surface'])

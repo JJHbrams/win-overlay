@@ -66,6 +66,6 @@ record=dict(input_native=str(native),input_sha256=a.sha256,native=str(output),na
     geometry_unchanged=True,original_key_arrays_unchanged=True,controller=ctrl.name,
     master=master.name,presets=rows,driver_specs=driver_specs,art_approved=False,
     pose_limits='Head/gaze/hand gestures are not encoded as face distortion; no final motion/action/physics is added.')
-(output.parent/'expression-controls-build.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+output.with_suffix('.controls.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 assert sha(native)==a.sha256
 print('EXPRESSION_CONTROLS_BUILT',sha(output),flush=True)

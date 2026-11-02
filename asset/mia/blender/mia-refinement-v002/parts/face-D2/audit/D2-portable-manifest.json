@@ -1,0 +1,140 @@
+{
+  "candidate": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\native\\Mia_v002_FacialPaint_D2.blend",
+    "sha256": "8b150df1eac3144aa496f5b57fea125c390eb19daa102fcd25f2afcdc44b1657"
+  },
+  "native_physical_directory": "D:/MiaArtifacts/v002/face-native-20261102",
+  "entry": "portable_face_delta.py:apply_to_current_scene()",
+  "target_slot": 0,
+  "target_owners": [
+    "MIA_V27_SharedHeadBody",
+    "V28G_InnerLid_-1",
+    "V28G_InnerLid_1"
+  ],
+  "portable_files": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\art\\Mia_FatigueCreaseNose_A.png",
+      "relative_path": "art/Mia_FatigueCreaseNose_A.png",
+      "bytes": 1479342,
+      "sha256": "27eaffd7f6b53537389b61f7f0f3b7109c71fba340af5be54fcf8c3295155cf8",
+      "role": "A upper crease and retained graph input; A lower-eye/nose branches are superseded by selected later passes."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\art\\Mia_Nose_B.png",
+      "relative_path": "art/Mia_Nose_B.png",
+      "bytes": 1478511,
+      "sha256": "b34942233d1da6576b657588c947f5fc12cbb35e83b78f7622874bd1ed8071a0",
+      "role": "Selected bounded nose pigment; nose ART remains WIP."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\art\\Mia_GrayMauve_Lip_C.png",
+      "relative_path": "art/Mia_GrayMauve_Lip_C.png",
+      "bytes": 1443300,
+      "sha256": "dbd9e6747fa911fe375ae3c327e75b93456d6b7eea1b6590f0c7a009f5fe1035",
+      "role": "Retained dependency of C construction; C coarse paint route is bypassed by D2 and C is rejected."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\art\\Mia_SmoothFatigue_TracedLip_D.png",
+      "relative_path": "art/Mia_SmoothFatigue_TracedLip_D.png",
+      "bytes": 1477985,
+      "sha256": "fe89c84c093186c37e1f7eb51abfcefa49f3ed042c51324ef734faf731cf80a0",
+      "role": "D2 authored smooth lower fatigue and narrow lip pigment, sampled on original UVMap with measured blank-skin contrast transfer."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\controls-D\\D_Actual32Lip_FatigueControls_RGBA.exr",
+      "relative_path": "controls-D/D_Actual32Lip_FatigueControls_RGBA.exr",
+      "bytes": 532642,
+      "sha256": "fe66cab9f5b0a73e3893947e9a752a8085c23cf5bd65a4e451ba12ec39690c36",
+      "role": "Non-Color numeric control: R original fatigue support; G actual32 seam; B lower-edge trace; A max(G,B). Not painted art."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\controls-D\\actual32-mouth-UV.json",
+      "relative_path": "controls-D/actual32-mouth-UV.json",
+      "bytes": 9366,
+      "sha256": "a58447b6d6cf81fd6bc83adba8822be756bb5f05b1475a70cb970ef92bcefcba",
+      "role": "Original32 mouth-boundary UV trace and selector provenance."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\controls-D\\paint-background-samples.json",
+      "relative_path": "controls-D/paint-background-samples.json",
+      "bytes": 1392,
+      "sha256": "21451c9bcbf8050a4ed699539cb18e84ac0d6fffc0b39b78f80d07247321ae10",
+      "role": "Read-only measured D blank-skin colors used by the contrast-transfer graph."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\audit\\baseline-guards.json",
+      "relative_path": "audit/baseline-guards.json",
+      "bytes": 946553,
+      "sha256": "0343e85446db87b851f828e70d959827333853a4c8131c547bc39470eb50e139",
+      "role": "Exact original active graph and owner UV preconditions."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\audit\\A-material-preconditions.json",
+      "relative_path": "audit/A-material-preconditions.json",
+      "bytes": 687,
+      "sha256": "072d63ae797a04659f6537ebc5b9b56f664b2ccd8f4599084c6a484b7e9f7cb6",
+      "role": "A graph preconditions for B replay."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\audit\\B-material-preconditions.json",
+      "relative_path": "audit/B-material-preconditions.json",
+      "bytes": 681,
+      "sha256": "098654adb7beb9814813c3b8c5ba78622d84c13d9f1c456b8c76203e974be379",
+      "role": "B graph preconditions for C replay."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\audit\\C-material-preconditions.json",
+      "relative_path": "audit/C-material-preconditions.json",
+      "bytes": 690,
+      "sha256": "9770b60f23f4dedce0a76f4d130d75e84f66a065f90fdd0e688785e102bd7550",
+      "role": "C graph preconditions for D2 replay."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\guard_helpers.py",
+      "relative_path": "guard_helpers.py",
+      "bytes": 4416,
+      "sha256": "38eb075f8da45f66a6c05555177201782ea617c22566351a7e67f9f04059e4bc",
+      "role": "Read-only array, graph and scene snapshot helpers."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\replay_material_delta.py",
+      "relative_path": "replay_material_delta.py",
+      "bytes": 8995,
+      "sha256": "fc01575177d492f50cdcfb7fb45274d657aeb8714f1d2de8d6c7f49a523507bc",
+      "role": "Guarded A material apply; apply() opens no native."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\replay_nose_B.py",
+      "relative_path": "replay_nose_B.py",
+      "bytes": 6152,
+      "sha256": "4274ee7a0a76a550a582d4d340bd70a8a12e6b8e65b1c32589841e0e7012687d",
+      "role": "Guarded B nose apply; apply() opens no native."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\replay_eyes_lip_C.py",
+      "relative_path": "replay_eyes_lip_C.py",
+      "bytes": 6356,
+      "sha256": "e4d696fd7ee67c3eec3e67ec10c44d0c9df66db8b3dbe0dc8f8779ea3a35ebc0",
+      "role": "Guarded C construction apply; rejected C route retained but bypassed by D2."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\replay_smooth_D.py",
+      "relative_path": "replay_smooth_D.py",
+      "bytes": 9921,
+      "sha256": "1d1dae6455e8a7d4bf9802a6e7c9b815b62971c99e8571713f582d8bad477d34",
+      "role": "Current D2 smooth contrast transfer and actual32 lip apply; apply() opens no native."
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\portable_face_delta.py",
+      "relative_path": "portable_face_delta.py",
+      "bytes": 1074,
+      "sha256": "c86070a13718bf82a21d663e27a45931bdb8717e430a26fbd51bb1e395ce8c4a",
+      "role": "Root entry point: apply_to_current_scene() runs A through D2 without opening/saving a scene."
+    }
+  ],
+  "native_A_B_C_needed_by_apply": false,
+  "historical_build_or_audit_main_functions_may_require_their_native_inputs": true,
+  "original_geometry_UV_keys_weights_maps_retained": true,
+  "technical_proof": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-face\\win-overlay\\asset\\mia\\blender\\mia-facial-maps-v002\\audit\\D2-portable-replay-guard.json",
+  "appearance_status": "D2 bounded fatigue cleanup challenger. Lips lower light and B nose remain WIP. Overall ART unapproved."
+}

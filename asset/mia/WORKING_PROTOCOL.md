@@ -37,6 +37,8 @@ Shape Key가 있는 메시의 기본 좌표 캐시, Basis 좌표, 활성 키·�
 
 v18 조사 당시 피부·헤어는 주로 색×노멀 기반 음영을 Emission으로 출력했고, Area light가 해당 음영을 제어하지 않았다. 이를 후속 버전의 현재 상태로 복사하지 않는다. v28 G2L 얼굴의 실제 활성 경로는 Diffuse→ShaderToRGB→ramp×packed pigment→Emission이며 장면 조명에 반응한다. v29 C는 이 경로를 보존하고 얼굴/안검 벽에 독립 cosmetic·shadow/specular/roughness controls와 실제 BSDF 반사 경로를 추가했다. 나머지 헤어/바디까지 같은 방식이라고 추정하지 않는다. 활성 Output ancestry와 actual fixed/moved-light 렌더로 판정하며, 이를 물리적으로 에너지가 보존되는 피부라고 부르지 않는다. 필요한 맵은 목표 셰이더가 결정하며 모든 PBR 맵을 일괄 추가하지 않는다.
 
+엔진별 Material Output도 구분한다. v002 구강 조사에서 MToon 내부의 분홍 Shade Color가 보였으나 실제 EEVEE 출력은 별도의 CompatibleMaterialOutput→Principled 경로였고 Metallic1/Roughness1이었다. 내부 그룹이나 이름·활성 플래그만 보고 실제 치아색 원인으로 단정할 수 없다. 현재 엔진에 대해 API가 선택하는 출력과 실제 연결·UV·알파·면 방향·차폐를 추적하고, 제한된 재질 진단 렌더로 원인을 분리한다. 새 값이나 노드가 존재한다는 사실은 실제 출력에 반영됐다는 증거가 아니다.
+
 ## 단계와 통과 조건
 
 1. **참조/검토 장면 준비:** 원화-뷰 대응, 카메라·빛·컬러 관리·측정 정의와 불확실성을 고정한다.
