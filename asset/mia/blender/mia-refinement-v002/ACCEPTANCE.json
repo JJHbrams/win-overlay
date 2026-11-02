@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "phase": "v0.0.2 refinement",
+  "request_date": "2026-11-02",
+  "acceptance_criteria": [
+    {
+      "id": "BASELINE",
+      "criterion": "Freeze exact packed457 as v0.0.1; preserve all source and rejection history; version is not ART approval.",
+      "user_visible_outcome": "The same prior model can be reopened and compared or restored.",
+      "intended_runtime": "Blender5.2.3 and Git",
+      "verification": "Native SHA, existing packed dependency audit and a7d0170 Git tag; no duplicate/re-save.",
+      "evidence": "versions/v0.0.1/manifest.json and mia/v0.0.1",
+      "critical": true
+    },
+    {
+      "id": "FACE_MAPS",
+      "criterion": "Source-specific fatigue, makeup, eyelid crease, nose and lip surface with meaningful reflection/roughness.",
+      "user_visible_outcome": "Mia has the source tired impression rather than a generic red band or nose sticker.",
+      "intended_runtime": "Actual Blender toon shader, normal512 and closeup",
+      "verification": "Source4, baseline/candidate, color-only, feature toggles and fixed/moved light; actual active UV/map ancestry; no geometry substitution.",
+      "evidence": "Exact packed native, portable material delta, imagegen provenance, reference-review.json, independently inspected PNGs",
+      "critical": true
+    },
+    {
+      "id": "FACE_IDENTITY",
+      "criterion": "Preserve and refine continuous orbit/cheek/chin, true red eye opening and iris; do not make cheeks gaunt.",
+      "user_visible_outcome": "Identity and volume remain coherent from front, profile, both obliques, high/low and orbit.",
+      "intended_runtime": "Blender geometry and toon renders",
+      "verification": "Actual geometry isolates plus source4 and orbit; no eye-chin normalization counted as proportion success.",
+      "evidence": "Per-view named residuals and actual evaluated-surface evidence",
+      "critical": true
+    },
+    {
+      "id": "BROWS_LASHES",
+      "criterion": "Retain independent upper/lower lashes and source brows, tested Ewall returns and ClosedB; address named residuals.",
+      "user_visible_outcome": "No gap, buried lash or broken brow in the tested expressions; source-like visible strokes.",
+      "intended_runtime": "Blender neutral/bilateral/unilateral/grazing512",
+      "verification": "Half/full and unilateral intermediate poses, source neutral and closeups; no arbitrary lower enlargement.",
+      "evidence": "Actual pose images, root/contact checks, source judgments",
+      "critical": true
+    },
+    {
+      "id": "SUPPORTED_BODY",
+      "criterion": "Anatomical thorax distinct from breast soft volume, fitted support from charcoal bra, underwear-textured base.",
+      "user_visible_outcome": "Supported breast shape belongs to the ribcage, and bra/briefs follow actual anatomy.",
+      "intended_runtime": "Actual Blender evaluated body/shader",
+      "verification": "Current baseline and candidate fullheight original-aspect source4 plus high/low/orbit, core-only/core+soft/supported sections and bounded arms; generated v06 limits stated.",
+      "evidence": "Current-native source package, explicit fit hypothesis, intersection/UV/material evidence and independent actual-render inspection",
+      "critical": true
+    },
+    {
+      "id": "BODY_ANATOMY",
+      "criterion": "Continuous neck/shoulder/axilla/abdomen/pelvis/limbs and missing anatomy corrected before final clothing.",
+      "user_visible_outcome": "No inherited root fold or broken silhouette is concealed by paint or a garment.",
+      "intended_runtime": "Blender neutral and relevant bounded poses",
+      "verification": "Named defect inventory, evaluated nonadjacent intersections and visual fullbody/torso/arm checks.",
+      "evidence": "Before/after source and geometry images, exact changes and remaining untested poses",
+      "critical": true
+    },
+    {
+      "id": "HAIR",
+      "criterion": "Source-faithful bangs/waves/braid/gathered bun, roots/ear/nape/tips; purposeful UV/normals and connected fine dark paint.",
+      "user_visible_outcome": "Detailed hair retains volume and source identity from all sides without broken clumps or transferred face scraps.",
+      "intended_runtime": "Blender source4/back/orbit512 and closeup",
+      "verification": "Preserve adopted1216-fragment cleanup and realforelocks; separate shape/color/normals/light causes; binding and neck/shoulder contacts where changed.",
+      "evidence": "Portable guarded delta, actual source package, map provenance and named defect closure",
+      "critical": true
+    },
+    {
+      "id": "EXPRESSIONS_16",
+      "criterion": "Use all16 confirmed art panels to build source impressions and missing facial anatomy on stable topology/UV.",
+      "user_visible_outcome": "Source expressions combine eye/lid/brow/mouth controls with appropriate gaze/head poses.",
+      "intended_runtime": "Blender facial deformation and head follow",
+      "verification": "Panel-to-control inventory, endpoints/intermediates/combinations; distinguish hand gesture/gaze/pose from pure facial morph; actual mouth/eyes/lashes checked.",
+      "evidence": "16 actual panel comparisons, pose definitions, missing-model corrections, clipping and continuity evidence",
+      "critical": true
+    },
+    {
+      "id": "INTEGRATION",
+      "criterion": "One exact packed native integrates selected deltas, matching default/live/source review and protected owners.",
+      "user_visible_outcome": "The file opened by the user is the model actually reviewed.",
+      "intended_runtime": "Fresh Blender reopen and live MCP",
+      "verification": "Guard actual geometry/UV/keys/weights/materials/maps/cameras/lights, run source-review validator and independent visual audit.",
+      "evidence": "Final native hash, exact source/live evidence and criterion audit",
+      "critical": true
+    },
+    {
+      "id": "RETAINED_DOWNSTREAM",
+      "criterion": "Existing independent garments, final rig, limited secondary motion, event mapping, loops/common idle/30fps remain required behind stage gates.",
+      "user_visible_outcome": "Current refinement does not silently erase the intended animated Mia.",
+      "intended_runtime": "Future Blender sprite bake and overlay runtime",
+      "verification": "No promotion based on static/key/hash tests. Preserve later clip transitions, idle calibration, preroll/cache/bake/loop and runtime acceptance.",
+      "evidence": "Prior contracts retained; current static phase must explicitly report downstream unresolved",
+      "critical": true
+    }
+  ],
+  "scope_deltas": [],
+  "art_approved": false
+}

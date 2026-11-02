@@ -3,6 +3,7 @@ from pathlib import Path
 import json,hashlib
 P=Path(__file__).resolve().parent;M=P.parents[1];sp=M/'CURRENT_STATE.json'
 state=json.loads(sp.read_text(encoding='utf-8'))
+assert not state.get('in_progress_v002'), 'Archived v31 recorder cannot overwrite active v002 phase'
 expected='4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a'
 assert state['active_working_correction']['sha256'] in ['9dd072af38d52130aa693c561545b2b70b98f22c3b69145fc2b7211cd1632505',expected],'Do not overwrite a newer working state'
 native=P/'integrated/brows-C-outer-E/Mia_SourceLook_v31_Brows_Lashes.blend'

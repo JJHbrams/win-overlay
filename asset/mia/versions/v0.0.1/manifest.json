@@ -1,0 +1,37 @@
+{
+  "version": "0.0.1",
+  "kind": "user-named working baseline",
+  "commit": "a7d0170a955f3e38cb7f1bf3b0a269dee10a5586",
+  "tag": "mia/v0.0.1",
+  "native": {
+    "path": "blender/mia-visible-art-v30/integrated/brows-C-outer-E/Mia_SourceLook_v31_Brows_Lashes.blend",
+    "sha256": "4572616f3457eb76707af19993b862b9711ad5ca303c097475021e3054b0216a"
+  },
+  "source_references": [
+    {
+      "path": "references/received/mia-face-reaffirmed-20261031.png",
+      "sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44"
+    },
+    {
+      "path": "references/mia-expression-style-confirmed-20261031.png",
+      "sha256": "bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52"
+    },
+    {
+      "path": "references/mia-clean-master-v22.png",
+      "sha256": "3c760f1c276f343258ac38c6abbe370a511b9a148f4ffa37a08f8a277fa05d19"
+    },
+    {
+      "path": "references/body-foundation/anchors/mia-body-front-user-selected-20261031.png",
+      "sha256": "09238b027687c7cd16f99d781c1d79ef081769c7258b49bb840d1badf11c6d42"
+    },
+    {
+      "path": "references/body-foundation/v06/mia-body-turnaround-v06.png",
+      "sha256": "158c389a1e51a05fd088440361c890878948992c02fb74f9c41beeb2da72799a"
+    }
+  ],
+  "art_approved": false,
+  "character_complete": false,
+  "prior_scoped_review": "blender/mia-visible-art-v30/FINAL_SCOPED_REVIEW.md",
+  "source_package": "blender/mia-visible-art-v30/reviews/v31-brows-lashes-source4/paired/reference-review.json",
+  "limitations": "Version freezes the existing reviewed component WIP. Face identity/maps, hair, body, final expressions and downstream animation remain open."
+}
