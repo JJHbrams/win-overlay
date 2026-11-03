@@ -26,6 +26,8 @@ def verify(surface_file, map_dir):
     bake = read_json(p/'bake-report.json')
     if bake['surface_input_sha256'] != sha(surface_file):
         raise ValueError('Final map target fingerprint is stale')
+    if bake.get('surface_metadata_sha256') and bake['surface_metadata_sha256']!=sha(Path(surface_file).with_suffix('.json')):
+        raise ValueError('Final map anatomical/source metadata fingerprint differs')
     if bake['surface_guards'] != surface['guards']:
         raise ValueError('Final map geometry/UV/semantic fingerprints differ')
     files = {}

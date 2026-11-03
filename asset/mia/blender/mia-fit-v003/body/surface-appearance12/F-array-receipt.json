@@ -1,0 +1,59 @@
+{
+  "status": "PASS independent ARRAY receipt only; anatomical metadata and actual gray/material/source review still required",
+  "inputs": [
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\appearance12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\inputs\\e8d4d505e661.npz",
+      "sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\surface12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\proportion-F-lattice\\surface.npz",
+      "sha256": "5d94181bb38d16cc6aadf26c22afb009eb0de37a039179ec6c8af7b9f8c3f4d0"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\surface12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\surface12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\proportion-F-lattice\\geometry.npz",
+      "sha256": "2f0790ce921feca48c4fa2baa028b713fe1bffade45b5f07fe0d690f7e59ba6d"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\surface12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\proportion-F-lattice\\support.npz",
+      "sha256": "dc02a51e6c4c19068254b90a3d91baf53a8e6fc21f5b45684950a7aea6df7a60"
+    }
+  ],
+  "source_camera_registration_held": true,
+  "full_nonworld_arrays_byte_exact": true,
+  "vertices": 139005,
+  "changed_vertices": 32726,
+  "declared_editable_vertices": 32726,
+  "protected_vertices": 106279,
+  "forbidden_changed_vertices": 0,
+  "retained_actual_head_interface_vertices": 18948,
+  "retained_actual_head_interface_byte_exact": true,
+  "Y_byte_exact": true,
+  "protected_named_domains": [
+    "compression_pin_ids",
+    "head_pin_ids",
+    "lower_pin_ids"
+  ],
+  "maximum_delta_m": 0.019621215899057007,
+  "changed_old_world_bounds": [
+    [
+      -0.27131783962249756,
+      -0.08241856098175049,
+      1.083428144454956
+    ],
+    [
+      0.27053147554397583,
+      0.06719520688056946,
+      1.4566667079925537
+    ]
+  ],
+  "minimum_projected_oriented_area_ratio": 0.25743152989336343,
+  "ratio_limit": "Actual triangle affine projected area check; not an interior-volume diffeomorphism claim.",
+  "producer_data_changed": false,
+  "GPU_used": false,
+  "ART_pass": false,
+  "actual_geometry_disposition": "ART UNSELECTED: F actual gray front/high/low failed cap corrugation/lumps/flattened roof. CPU evidence only; no F map bake or concealment."
+}

@@ -77,6 +77,7 @@ def prepare(surface, inputs):
     result[domain]=angular(angle)*(1-smooth01(fraction))
     result[interface]=alpha;result[lower]=0
     report=dict(scope='Actual slot10 PRELIGHT pigment only; no light/specular bake or face edit',
+                surface_input_sha256=surface['input_sha256'],surface_guards=surface['guards'],
                 inputs={name:dict(path=str(Path(inputs[name]).resolve()),sha256=hashes[name]) for name in names},
                 source_native_sha256='4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1',
                 formula='(1-alpha)*CommonBase + alpha*HeadConstant, then original actual-light ramp',
