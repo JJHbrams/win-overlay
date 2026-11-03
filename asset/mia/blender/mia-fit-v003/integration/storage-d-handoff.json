@@ -35,5 +35,25 @@
     "C": 21065728,
     "D": 49073582080
   },
-  "scope": "Explicit owned-artifact handoffs only; source files/settings/processes preserved. Final native/render/GIF not yet complete."
+  "scope": "Explicit owned-artifact handoffs only; source files/settings/processes preserved. Final native/render/GIF not yet complete.",
+  "lfs_cache_cleanup_20261104": {
+    "authorization": "User explicitly requested Git LFS cleanup for workspace waste.",
+    "head_payloads_before": "110paths/104uniqueOIDs/6,875,450,771bytes; unchanged sinceNov3 inventory. Historicpayloads stillHEAD-reachable.",
+    "D_duplicate_objects_removed": 104,
+    "D_duplicate_bytes_removed": 6875450771,
+    "D_method": "Official git lfs prune --force after independent SHA256 verification of every duplicate in C LocalReferenceDirs;104-object dry-run matched manifest. Materialized current inputs preserved.",
+    "C_remote_verified_objects_removed": 2,
+    "C_remote_verified_bytes_removed": 15441993,
+    "C_method": "Official prune --verify-remote --verify-unreachable --when-unverified=continue; only2verified objects deleted.",
+    "unverified_orphans_retained": 94,
+    "C_retained_objects": 199,
+    "C_retained_bytes": 15603961988,
+    "C_reference_root": "C:/Users/antio/Desktop/Workspace/projects/win-overlay/.git/lfs/objects",
+    "D_cache_after": 0,
+    "total_payload_bytes_removed": 6890892764,
+    "protected_materialized_input_hashes_unchanged": true,
+    "local_raw_evidence": ".mia-cache/storage-lfs-20261104/{duplicate-verification,C-before,cleanup-result}.json",
+    "history_refs_models_settings_unchanged": true,
+    "continuity": "D still requires C Git alternates AND the preserved C LFS reference cache. Do not remove that common Git metadata. Materialize individual declared inputs on demand; avoid bulk rehydration/fetch of historic Mia candidates."
+  }
 }
