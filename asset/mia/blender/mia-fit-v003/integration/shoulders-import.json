@@ -1,0 +1,44 @@
+{
+  "evidence_integrity": "PASS",
+  "canonical_worktree": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay",
+  "packages": {
+    "shoulder10": {
+      "manifest_payload_files": 78,
+      "actual_images": 16,
+      "source_views": 4,
+      "python_ASTs": 9,
+      "required_validator": "PASS evidence only",
+      "proofs_rewritten": false
+    },
+    "shoulder11": {
+      "manifest_payload_files": 90,
+      "actual_images": 16,
+      "source_views": 4,
+      "python_ASTs": 13,
+      "required_validator": "PASS evidence only",
+      "proofs_rewritten": false
+    }
+  },
+  "protected_inputs_verified": {
+    "shoulder10": 304,
+    "shoulder11": 338
+  },
+  "canonical_fresh_Blender_reopen": {
+    "exit_code": 0,
+    "vertices": 67410,
+    "triangles": 134816,
+    "exact_FINAL_payload": true,
+    "check": "integration/verify_native11_cpu.py"
+  },
+  "native_sha256": "462cb972ab37aff1cffe9763e8d46923a4be7453c0e6efe8546ea7b38b84e0ad",
+  "native_bytes": 2827750,
+  "raw_and_FINAL_retained": true,
+  "four_nanometre_roundoff_repairs_explicit": true,
+  "original_full_R3b_unchanged": true,
+  "full_body_native_or_head_scale_promoted": false,
+  "GPU_used_by_import_verification": false,
+  "independent_art_review": "../SHOULDER11_REVIEW.md",
+  "art_scope": "Bounded static shoulder improvement only. Full source proportions/headneck/body integration/topology/UV/rig/animation OPEN.",
+  "rejected10_art": "FAIL AC1/2; never selected",
+  "knowledge_activity_tools": "Unavailable; repository records only, no Wiki sync claimed"
+}
