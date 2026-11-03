@@ -484,7 +484,13 @@
       "guard_rules": "Read-only preflight: C/D free>=20GiB plus anticipated D write reserve; combined Review12 component outputs across3Dworktrees plus presentation GIFdir and runtime-temp<=2GiB including reserve. Root allows one heavy writer; estimates are not atomic quota. No auto-deletion; guard called before heavy mesh/bake/native/render.",
       "new_outputs": "D only; no extra whole-source/backup copies, unchanged inputs referenced by hash.",
       "model_request_unchanged": "Original native/two materials/GIF/source4 still required; storage checks are not ART acceptance.",
-      "completed_D_worktree_removed": "appearance12-producer removed normally after clean+fullymerged+no executable/config dependency; approximately327MB redundant checkout, branch/ref and all changes preserved in canonical. Surface producer still active; old dirty C worktrees retained."
+      "completed_D_worktree_removed": [
+        "appearance12-producer: normal clean fullymerged removal, priorinventoryapprox327MB; branch/ref/history preserved",
+        "surface12-producer: normal clean fullymerged removal, preinventory444,102,901B/1942files; branch/ref/history preserved"
+      ],
+      "current_production_workspace": "Canonical D only; component worker paths in frozen receipts are historical and map by same relative path+hash to canonical. Do not attempt to open removed worker paths as active inputs.",
+      "approx_total_logical_removed_bytes": 787571078,
+      "total_note": "16,307,864 exact C duplicate bytes +approximately327,160,313 appearance checkout +444,102,901 surface checkout; metadata/allocation may differ. Rejected6.764GB backup removal is excluded."
     },
     "proportion_G_RAM_status": "UNSELECTED: heuristic half-residual calibration reduces33 source-rail median35.138->19.876mm but leaves13-32mm. Root does not grant meshing; a fixed fraction is not source fitting. One hardZ1.36 source-band conflict and3 chosen-halo conflicts do not justify global residual. Source left/right pose intervals conflict byup to5.98px, so next fit must account for view uncertainty and real component floors, not force every raw pixel. Actual E headcut123pointsZ1.465 held. No Gmesh/GPU/native/bake. Small RAM/conflict witnesses retained in surface producer; original request remains active."
   },

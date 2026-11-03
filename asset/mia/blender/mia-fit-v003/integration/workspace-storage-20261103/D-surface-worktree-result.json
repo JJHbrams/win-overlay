@@ -1,0 +1,16 @@
+{
+  "action": "Normal git worktree remove, no force, after clean status and full branch integration",
+  "removed_worktree": "D:\\MiaWorkCache\\mia-reference-work\\surface12-producer",
+  "removed_worktree_absent": true,
+  "verified_before_inventory_bytes": 444102901,
+  "verified_before_inventory_files": 1942,
+  "branch_preserved": "codex/mia-surface12-disk",
+  "branch_tip": "f23316bd36209298bcc1560d13993b3a131c25c3",
+  "all_commits_integrated": true,
+  "historical_path_map": {
+    "from": "D:\\MiaWorkCache\\mia-reference-work\\surface12-producer",
+    "to": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay",
+    "meaning": "Previously captured producer absolute paths are historical. Relative files and their immutable bytes/receipts remain in canonical. Replays use current script location, not vanished worktree."
+  },
+  "blocked_backup_roots_untouched": true
+}
