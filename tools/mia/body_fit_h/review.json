@@ -1,7 +1,7 @@
 {
-  "status": "RAM_FIXED_FLOOR_STOP_INDEPENDENT_CONFIRMED",
+  "status": "ONE_H_GUIDE_CPU_READY_UNSELECTED_NOT_ART",
   "shape_solve_run": true,
-  "mesh_created": false,
+  "mesh_created": true,
   "GPU_used": false,
   "native_saved": false,
   "inputs_copied": false,
@@ -43,7 +43,31 @@
   "independent_reviewer": "/root/body_h_acceptance",
   "independent_scope": "Confirmed projected ellipse/frozenfield/tangency and6.104/1.999mm conditional all-camera+trace bounds; H artifacts still unverified",
   "second_phase_status": "ROOT_STOPPED_SINGLE_FIVE_SHAPE_RAM_ATTEMPT_REGISTRATION_AUDIT_PENDING",
-  "shape_solve_attempts": 1,
-  "final_candidate_verification_complete": false,
-  "second_phase_limits": "No anatomyimpossibilityclaim: profileaxis568isdeclared/provisionalmainv06displaycentertransferredtotiedguidewithoutlandmarkvalidation. No SRT/posecorrectionorAPnecktranslation."
+  "shape_solve_attempts": 2,
+  "final_candidate_verification_complete": true,
+  "second_phase_limits": "No anatomyimpossibilityclaim: profileaxis568isdeclared/provisionalmainv06displaycentertransferredtotiedguidewithoutlandmarkvalidation. No SRT/posecorrectionorAPnecktranslation.",
+  "roof_only_phase": {
+    "status": "ONE_NEUTRAL_RAM_ROOF_FIT_COMPLETE_UNSELECTED",
+    "source_only_script": "roof_fit.py",
+    "source_candidate_config": "roof_candidate.json",
+    "raw_report_path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\roof-fit.json",
+    "raw_report_sha256": "b4ccdc0b6c87157268abc8957092dd6f0a91186d19b47734849415aed7751f15",
+    "profile_fieldfit_removed_by_explicit_root_grant_not_silently_dropped": true,
+    "mesh_created": true
+  },
+  "final_candidate_verification_scope": "Technical H guide only; no actual assembly/source ART gate.",
+  "guide_phase": {
+    "source_builder": "build_mesh.py",
+    "source_halo_diagnostic": "diagnose_halo.py",
+    "source_finalizer": "finalize_guide.py",
+    "artifact_receipt": "guide_artifact_receipt.json",
+    "notes": "H_GUIDE.md",
+    "explicit_constrained_lower_boundary_not_roundoff": true,
+    "mesh_runs": 1,
+    "final_sha256": "098b13d96c880a701218f003b92c0c13254979639b5a8b9d1bea318dc891ac04",
+    "final_proof_sha256": "fedd6a3df5cd0817c3fcc2e0281fc487d53bd206dc6785e7683eb668ac963507",
+    "ART": "UNVERIFIED",
+    "GPU_used": false,
+    "native_saved": false
+  }
 }

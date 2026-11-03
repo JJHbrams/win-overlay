@@ -1,0 +1,62 @@
+{
+  "status": "FROZEN_UNSELECTED_RAM_ROOF_CANDIDATE_NO_MESH",
+  "params5": [
+    0.5803312572846511,
+    0.4786577627283577,
+    0.02723908554595509,
+    0.0,
+    0.9394607109453785
+  ],
+  "field_param_names": [
+    "cap_scale",
+    "trap_scale",
+    "RXshift_m",
+    "RYshift_m",
+    "fan_scale"
+  ],
+  "shared_source_camera_estimates": {
+    "front": [
+      -0.30738532447433675,
+      -4.88385100918177
+    ],
+    "back": [
+      184.0,
+      5.731583908080674
+    ]
+  },
+  "source_reference_sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+  "source_registration": {
+    "metres_per_pixel": 0.001845870535714286,
+    "front_axis_pixel": 239.0,
+    "zero_world_z_pixel": 971.9137795513633,
+    "source_crop_front": [
+      130.650039301046,
+      172.8328193965777,
+      347.34996069895396,
+      389.5327407944857
+    ],
+    "method": "Exact frozen E/09 wholeheight uniform registration. Same1536x1024 canvas and body panels; no shoulder normalization or aspect warp."
+  },
+  "raw_report_path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\roof-fit.json",
+  "raw_report_sha256": "b4ccdc0b6c87157268abc8957092dd6f0a91186d19b47734849415aed7751f15",
+  "raw_report_bytes": 261692,
+  "roof_interval_summary": {
+    "intersecting_boxes": 27,
+    "total": 33,
+    "max_excess_mm": 5.827839655497364,
+    "median_excess_mm": 0.0
+  },
+  "shape_notes": "All-three-radii contraction, not only height; cap and current11trap volume factors are scale^3, not final-union volume. No collapse to exploratory .15 bound. RY roof-unobservable and neutral0.",
+  "primitive_volume_factors": {
+    "shoulder": 0.19544649582063542,
+    "trapezius": 0.10966683748495144,
+    "anterior_fan": 0.8291552725653366
+  },
+  "protection_notes": "Field lower<=1.34 exact; trueanteriorY roots sampled maxchange.164884mm; actualmeshed physicalholds notyetproved. Existinglocalroofclosuresunchanged.",
+  "profile_status": "FULLPROFILEEDGECONSTRAINTSDEFERREDTOFRESHNECKLOFTBYROOT; previousfailedrunpreserved, no globalCY/headmove; this is not a profile fit",
+  "actual_art_status": "UNVERIFIED until source4/highlow/joins; sixintervalconflicts and numericalgradient/upturnrisksremain",
+  "mesh_created": false,
+  "GPU_used": false,
+  "native_saved": false,
+  "inputs_copied": false
+}
