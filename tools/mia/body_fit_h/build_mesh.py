@@ -13,7 +13,7 @@ from mathutils.bvhtree import BVHTree
 sys.dont_write_bytecode=True
 P=Path(__file__).resolve().parent;sys.path.insert(0,str(P))
 from field_numpy import Model
-C=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');A=C/'asset/mia/blender/mia-fit-v003';O=C/'.mia-cache/body-h/shape'
+C=Path(__file__).resolve().parents[3];A=C/'asset/mia/blender/mia-fit-v003';O=C/'.mia-cache/body-h/shape'
 ROOF_SHA='b4ccdc0b6c87157268abc8957092dd6f0a91186d19b47734849415aed7751f15'
 SOURCE_SHA='9382e21638e35ce36e3818cc0eb8e060994cc05227a5c56b262dcea7f4b843e9'
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()

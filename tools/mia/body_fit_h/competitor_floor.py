@@ -8,7 +8,7 @@ from pathlib import Path
 import argparse, json, hashlib, importlib.util, sys
 import numpy as np
 sys.dont_write_bytecode=True
-DEFAULT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+DEFAULT=Path(__file__).resolve().parents[3]
 
 def load(name,path):
     s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m

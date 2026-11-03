@@ -14,7 +14,7 @@ import sys
 import numpy as np
 
 sys.dont_write_bytecode = True
-DEFAULT_CANONICAL = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+DEFAULT_CANONICAL = Path(__file__).resolve().parents[3]
 PARAMETER_NAMES = ('cap_scale', 'trap_scale', 'rx_shift_m', 'ry_shift_m', 'fan_scale')
 LOWER_BOUNDS = np.array([.15, .15, 0., 0., .8])
 UPPER_BOUNDS = np.array([1., 1., .08, .06, 1.])

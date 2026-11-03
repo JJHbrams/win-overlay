@@ -12,7 +12,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parent))
 from field_numpy import Model
 from ram_fit import Projection,GUIDE_CUT
 from diagnostics import analyze
-C=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');A=C/'asset/mia/blender/mia-fit-v003';CACHE=C/'.mia-cache/body-h/shape'
+C=Path(__file__).resolve().parents[3];A=C/'asset/mia/blender/mia-fit-v003';CACHE=C/'.mia-cache/body-h/shape'
 LO=np.array([.15,.15,0.,0.,.8,-4.,-6.,176.,-6.]);HI=np.array([1.,1.,.08,.06,1.,4.,6.,184.,6.]);NEUTRAL=np.array([1.,1.,0.,0.,1.,0.,0.,180.,0.]);X0=(NEUTRAL-LO)/(HI-LO)
 NAMES=['cap_scale','trap_scale','RXshift_m','RYshift_m','fan_scale','front_yaw','front_pitch','back_yaw','back_pitch']
 REG=.05

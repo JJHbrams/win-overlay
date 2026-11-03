@@ -9,7 +9,7 @@ import numpy as np
 sys.dont_write_bytecode=True
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from field_numpy import Model
-C=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');A=C/'asset/mia/blender/mia-fit-v003';O=C/'.mia-cache/body-h/shape'
+C=Path(__file__).resolve().parents[3];A=C/'asset/mia/blender/mia-fit-v003';O=C/'.mia-cache/body-h/shape'
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def load(name,path):
     s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
