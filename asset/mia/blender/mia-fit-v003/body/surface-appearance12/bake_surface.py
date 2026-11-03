@@ -45,13 +45,17 @@ def derive_config(surface, overrides=None):
     central = eligible[(abs(eligible[:, 0]) < .004) & (eligible[:, 2] < 1.035)]
     if not len(central): raise ValueError('Cannot derive current crotch bridge from body target')
     crotch = float(central[:, 2].min())
-    guide_ring = meta['landmarks']['neck_guide_ring_center']
-    if 'clavicle_graphic_anchor_world' in meta['landmarks']:
+    if 'clavicle_source_graphic_support_world' in meta['landmarks']:
+        anchor_z=float(meta['landmarks']['clavicle_source_graphic_support_world'][2])
+        anchor_method='Actual current source-registered graphic support ray/barycentric landmark; not a recovered skeletal notch'
+    elif 'clavicle_graphic_anchor_world' in meta['landmarks']:
         anchor_z=float(meta['landmarks']['clavicle_graphic_anchor_world'][2])
         anchor_method='Explicit current anatomical/source-aligned graphic landmark from target metadata'
     elif 'clavicle_anchor_z' in meta['landmarks']:
         anchor_z=float(meta['landmarks']['clavicle_anchor_z']);anchor_method='Explicit current target graphic anchor'
     else:
+        if 'F_CPU_proof' in meta:raise ValueError('F requires actual current source graphic support metadata; no E ring-height fallback')
+        guide_ring=meta['landmarks']['neck_guide_ring_center']
         anchor_z=float(guide_ring[2])-.036
         anchor_method='LEGACY E heuristic only; not accepted as final F anatomical/source anchor'
     config['landmarks'] = dict(crotch_z=crotch, clavicle_anchor_z=anchor_z)
@@ -139,6 +143,7 @@ def paint_fields(raster, config, curves, clavicles, straps):
 def bake(surface_path, output, *, size=2048, config_path=None, neck_inputs_path=None):
     start = time.time(); out = Path(output); out.mkdir(parents=True, exist_ok=True)
     surface = load_surface(surface_path)
+    metadata_path=Path(surface_path).with_suffix('.json');metadata_sha256=sha(metadata_path)
     overrides = read_json(config_path) if config_path else None
     config = derive_config(surface, overrides)
     neck_inputs=read_json(neck_inputs_path) if neck_inputs_path else surface['meta'].get('neck_pigment_inputs')
@@ -184,7 +189,9 @@ def bake(surface_path, output, *, size=2048, config_path=None, neck_inputs_path=
                           active_use='body-only pigment' if name.endswith('BaseColor') else 'body-only material control'))
     diagnostic = out/'UV_ValidMask_DIAGNOSTIC.png'
     Image.fromarray(raster['valid'].astype(np.uint8)*255).save(diagnostic)
+    if sha(surface_path)!=surface['input_sha256'] or sha(metadata_path)!=metadata_sha256:raise ValueError('Frozen target arrays/metadata changed during bake')
     report = dict(status='CPU UV-map bake complete; actual shader/native/source appearance review remains required',
+                  surface_metadata_sha256=metadata_sha256,
                   surface_input=surface['input_path'], surface_input_sha256=surface['input_sha256'], surface_guards=surface['guards'],
                   UV_numeric_quality=surface['uv_numeric_stats'],
                   raster=raster['report'], field_stats=stats, files=files,

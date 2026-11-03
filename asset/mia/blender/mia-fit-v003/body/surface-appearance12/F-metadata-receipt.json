@@ -1,0 +1,19 @@
+{
+  "surface_sha256": "5d94181bb38d16cc6aadf26c22afb009eb0de37a039179ec6c8af7b9f8c3f4d0",
+  "metadata_sha256": "fda19266b4e08ecc5457f9d9c169ae68efd98278da01e3eddd91b2454925754f",
+  "source": "D:\\MiaWorkCache\\mia-reference-work\\surface12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\proportion-F-lattice\\surface.npz",
+  "snapshot": "D:\\MiaWorkCache\\mia-reference-work\\appearance12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\inputs\\5d94181bb38d.npz",
+  "clavicle_landmark": {
+    "crotch_z": 0.921796441078186,
+    "clavicle_anchor_z": 1.37778
+  },
+  "landmark_method": {
+    "crotch": "Actual lowest central(|X|<4mm) body surface below waist; supported pose, not body dimensions recovered from source.",
+    "clavicle": "Actual current source-registered graphic support ray/barycentric landmark; not a recovered skeletal notch"
+  },
+  "source_registered_graphic_not_skeleton": true,
+  "final_ART": false,
+  "prior_metadata_sha256": "2a5e27696518a3f0123fbbd3fda4be4234564b6df3db590a722daefdfab93309",
+  "metadata_revision": "Final adds explicit skeletal-notched-unmodeled/current F proof masks and marks all old E collar/correspondence data reference-only. Actual authoring/geometry/UV/source fields unchanged.",
+  "actual_geometry_disposition": "ART UNSELECTED: F actual gray front/high/low failed cap corrugation/lumps/flattened roof. CPU evidence only; no F map bake or concealment."
+}
