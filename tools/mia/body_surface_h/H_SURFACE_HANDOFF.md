@@ -16,6 +16,41 @@ reusing the E neck-ring-height fallback. Its 3D XY position is not invented.
 The source graphic must still seat successfully on the actual H surface and
 pass actual source/material comparison.
 
+The root may explicitly select the orientation-corrected candidate by writing
+canonical `.mia-cache/body-h/selected-candidate.json`. The helper only reads it;
+it never selects/promotes a candidate. Optional `--selection <absolute file>`
+can choose another root-authored selection inside the same H cache. Every
+selected input path must be absolute, inside the assembly cache and hash-current:
+
+```json
+{
+  "geometry": {"path": "absolute winding-fixed/geometry.npz", "sha256": "actual SHA"},
+  "surface": {"path": "absolute winding-fixed/atlas/surface.npz", "sha256": "actual SHA"},
+  "atlas": {"path": "absolute winding-fixed/atlas/atlas.npz", "sha256": "actual SHA"}
+}
+```
+
+Metadata is read beside the selected surface NPZ and `assembly.json` beside its
+geometry. The selection file itself is hash-bound into the preparation receipt.
+When no default/explicit selection exists, original H paths remain the backward
+compatible default. Selection is not a gray/ART approval. Original `prepared-H`
+is stale for the corrected candidate and remains preserved. Use a separate output:
+
+```powershell
+python tools/mia/body_surface_h/h_surface.py prepare --output D:/MiaWorkCache/mia-reference-work/win-overlay/.mia-cache/body-h/appearance/prepared-H-oriented
+```
+
+For that candidate's later authorized bake, pass
+`--prepared D:/MiaWorkCache/mia-reference-work/win-overlay/.mia-cache/body-h/appearance/prepared-H-oriented`
+and a new map output such as `--output D:/MiaWorkCache/mia-reference-work/win-overlay/.mia-cache/body-h/appearance/maps-H-oriented`.
+Use the same optional `--selection` in prepare and bake if not using the default
+selection file. Original arrays and metadata are still never copied or modified.
+Selection guard fixtures verified default compatibility, explicit path/hash
+binding, rejection of stale hashes, relative/out-of-cache inputs and out-of-cache
+selection files. A read-only actual original-H binding also passed. No actual
+oriented candidate selection or preparation was written by this worker; the root
+chooses it and invokes the new preparation separately.
+
 ```powershell
 C:/Users/antio/miniconda3/python.exe -X utf8 tools/mia/body_surface_h/h_surface.py prepare
 ```
