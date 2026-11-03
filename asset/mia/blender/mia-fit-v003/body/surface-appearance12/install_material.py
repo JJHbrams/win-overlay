@@ -160,6 +160,44 @@ def set_controls(material, *, variant=None, clavicle_strength=None, color_only=N
         nodes['ColorOnly'].outputs[0].default_value = float(color_only)
 
 
+def pack_material_images(material, *, relative_prefix=None):
+    """Pack ONLY this new material's five PNGs; never save/change a native file.
+
+    An optional Blender-relative prefix removes machine-local display paths.
+    Packed PNG bytes retain the source SHA even if external paths are absent.
+    The producer still owns save/fresh-reopen portability validation.
+    """
+    if relative_prefix is not None:
+        relative_prefix = str(relative_prefix).replace('\\', '/')
+        if not relative_prefix.startswith('//') or '..' in relative_prefix.split('/'):
+            raise ValueError('relative_prefix must be a Blender-relative folder without parent traversal')
+    records = []
+    for node in material.node_tree.nodes:
+        if node.type != 'TEX_IMAGE' or not node.get('mia12_role'):
+            continue
+        image = node.image
+        expected = image.get('mia12_source_sha256')
+        if not expected:
+            raise ValueError('Only newly authored Review12 images may be packed')
+        original_path = image.get('mia12_original_filepath', image.filepath)
+        if image.packed_file is None:
+            image.pack()
+        if image.packed_file is None:
+            raise ValueError('Image failed to pack: '+image.name)
+        digest = hashlib.sha256(image.packed_file.data).hexdigest()
+        if digest != expected:
+            raise ValueError('Packed PNG bytes differ from verified source: '+image.name)
+        image['mia12_original_filepath'] = original_path
+        if relative_prefix is not None:
+            folder = relative_prefix[2:].strip('/')
+            image.filepath = '//'+(folder+'/' if folder else '')+Path(original_path).name
+        records.append(dict(role=node.get('mia12_role'), packed_sha256=digest,
+                            packed_bytes=len(image.packed_file.data), filepath=image.filepath))
+    if len(records) != 5:
+        raise ValueError('Expected exactly five Review12 images to pack')
+    return sorted(records, key=lambda row: row['role'])
+
+
 def audit_material(material):
     outputs = [node for node in material.node_tree.nodes if node.type == 'OUTPUT_MATERIAL' and node.is_active_output]
     if len(outputs) != 1: raise ValueError('Exactly one active material output required')
@@ -176,6 +214,8 @@ def audit_material(material):
             images.append(dict(role=node.get('mia12_role'), image=node.image.name,
                                filepath=node.image.filepath, color_space=node.image.colorspace_settings.name,
                                expected_file_sha256=node.image.get('mia12_source_sha256'),
+                               packed=bool(node.image.packed_file),
+                               packed_sha256=hashlib.sha256(node.image.packed_file.data).hexdigest() if node.image.packed_file else None,
                                UV_vector_linked=bool(node.inputs['Vector'].links)))
     roles = {node.get('mia12_role') for node in seen}
     required = {'BodyUV', 'SkinBase', 'UnderwearColor', 'UnderwearCoverage', 'ClavicleInk', 'ClavicleShade',

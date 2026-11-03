@@ -9,10 +9,27 @@
   "maps_C": {
     "surface_sha256": "3a82c54af44ceb6ea5b1875d76d6b744617f2eb26ee2f9a47d275a52e3af47bb",
     "world_f32_sha256": "434bb612288c669625df1078308ba6910875e3b601ad7841fdf3aeb3f232cc66",
-    "status": "Current C material evidence: fresh target seating/bake and CPU footprint/actual Blender-node checks complete. Actual seam4/material/native review remains required.",
+    "status": "Preserved C material evidence; actual C4 bare geometry review failed waist endpoint breaks/belt and arm band. Not selected for native appearance delivery.",
+    "actual_geometry_gate": "FB-AC2 FAIL, confirmed geometric rather than map or normal artifact. Frozen C maps/proofs remain unchanged.",
     "independent_receipt": "11,528 interior collar vertices changed, max7.8568mm; exact topology/UV/semantics/source-camera hold, shared endpoints and retained/core vertices held.",
     "PNG_bytes_equal_B": true,
     "PNG_identity_reason": "Fresh bake on new target; only uniform-skin collar areas moved, while UVs and source-pattern areas stayed held. No old fitting report was reused."
+  },
+  "maps_D": {
+    "status": "Initial D09c353 held by producer before receipt/bake due concentrated interior-ring turns. Superseded by separately versioned D2, never adopted here.",
+    "initial_D_received_or_baked": false
+  },
+  "maps_D2": {
+    "surface_sha256": "e2b05be547484c1552cf6dcb9e6560bcbc41e1b72d883ec4491a6bca14a51923",
+    "world_f32_sha256": "2629d9a6dcb177684d0fd7437abaca5a6f175eda5a9e8a7e3e0e1ecd070bd6a4",
+    "status": "Preserved D2 CPU material evidence: fresh seating/bake, footprint and actual Blender-node/packing/independent-control checks complete; unselected while producer prepares D3. No D2 actual frames/material/native approval.",
+    "independent_receipt": "11,528 exact producer interior collar rows changed vs B, max5.65145mm; endpoints/core/head/lower/topology/UV/semantics/source cameras held.",
+    "PNG_bytes_equal_B_and_C": true,
+    "PNG_identity_reason": "Fresh D2 bake; moved collar areas carry uniform skin and source-pattern surfaces/UVs remain held."
+  },
+  "maps_D3": {
+    "status": "Await immutable producer D3 periodic endpoint-field regularization target; no extra bake before receipt.",
+    "D2_installer_note": "Producer clarified lower-neck packing concerns mean CUSTOM corner-normal Mesh API encoding, not PNG/image/UV/material packing. Protected face readback held; producer owns localized neck stats."
   },
   "current_native_art_pass": false,
   "body_geometry_owned_or_changed_by_appearance_worker": false
