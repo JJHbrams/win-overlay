@@ -38,14 +38,21 @@ def verify(surface_file, map_dir):
             raise ValueError('Baked PNG size differs: '+str(path))
         files[path.stem] = np.asarray(image)
     skin = files['SkinBaseColor']
-    skin_unique = np.unique(skin.reshape(-1, 3), axis=0)
-    if len(skin_unique) != 1:
-        raise ValueError('Initial plain-skin map is not uniform R3b-compatible skin')
+    uniform=bool(np.all(skin==skin[0,0]))
+    skin_unique=[skin[0,0].tolist()] if uniform else None
+    config=read_json(p/'authoring-config.json')
+    if not uniform and not config.get('neck_pigment_inputs') and not config.get('neck_tint_srgb'):
+        raise ValueError('Varying body skin requires an explicit neck/source pigment recipe')
     # Actual triangle-centroid UV lookup. Tiny faces may fall between texels;
     # both count and physical surface area are reported rather than hidden.
     world, tri, uv, region = [surface[k] for k in ['world', 'triangles', 'triangle_uv', 'face_region']]
     points = world[tri].mean(axis=1)
     center_uv = uv.mean(axis=1)
+    sampled_skin=bilinear(skin,center_uv)
+    ordinary_skin=~np.isin(region,[3,12])
+    ordinary_error=float(np.max(abs(sampled_skin[ordinary_skin]-np.rint(np.asarray(config['skin_base_srgb'])*255)/255)))
+    if ordinary_error>1.01/255:
+        raise ValueError('Body pigment changed outside authorized neck continuation')
     area = np.linalg.norm(np.cross(world[tri[:, 1]]-world[tri[:, 0]],
                                    world[tri[:, 2]]-world[tri[:, 0]]), axis=1)/2
     coverage = bilinear(files['UnderwearCoverage'], center_uv)
@@ -64,15 +71,14 @@ def verify(surface_file, map_dir):
     # Ownership alone cannot detect a peach puncture on a correctly labelled
     # torso triangle. Independently compare PNG lookup with deep fixed-world
     # garment interiors at every actual triangle centroid.
-    from pattern_fields import make_recipe, distance_to_polyline
-    config=read_json(p/'authoring-config.json')
+    from pattern_fields import make_recipe, distance_to_polyline, brief_leg_height
     curves,_,_=make_recipe(config)
     theta=np.arctan2(points[:,0]-config['torso_center_xy'][0],-(points[:,1]-config['torso_center_xy'][1]))
     z=points[:,2];margin=.004
     upper=np.isin(region,config['allowed_region_ids']['upper'])
     pelvis=np.isin(region,config['allowed_region_ids']['pelvis'])
     deep=(upper&(z>curves['bra_bottom'](theta)+margin)&(z<curves['bra_top'](theta)-margin))
-    deep|=(pelvis&(z>curves['brief_leg'](theta)+margin)&(z<curves['brief_waist'](theta)-margin))
+    deep|=(pelvis&(z>brief_leg_height(points,config,curves)+margin)&(z<curves['brief_waist'](theta)-margin))
     for strap in read_json(p/'seated-straps.json')['straps']:
         selected=upper&(points[:,0]*strap['side']>0)&(abs(points[:,0])>.025)&(abs(points[:,0])<.145)&(z>1.235)
         distance=distance_to_polyline(points[selected],strap['world'])
@@ -99,7 +105,8 @@ def verify(surface_file, map_dir):
                                  max_barycentric_world_error_m=max(errors)))
     report = dict(status='PASS CPU footprint / file guards only; actual native appearance remains pending',
                   surface_sha256=sha(surface_file), surface_guards=surface['guards'],
-                  PNG_hashes_match=True, plain_skin_unique_RGB_u8=skin_unique.tolist(),
+                  PNG_hashes_match=True, plain_skin_unique_RGB_u8=skin_unique,
+                  body_skin_outside_neck_max_sRGB_error=ordinary_error,
                   old_underwear_used=False,
                   triangle_centroid_samples=len(tri), actual_body_surface_area_m2=float(area.sum()),
                   forbidden_underwear_triangles=int(wrong.sum()),

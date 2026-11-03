@@ -1,0 +1,101 @@
+{
+  "scope": "CPU construction on E only; no final F/appearance approval",
+  "clavicle": [
+    {
+      "source_path_id": "front.neck.left_clavicle_line",
+      "samples": 79,
+      "all_seated": true,
+      "fit": {
+        "common_z_translation_m": 0.031218186991306185,
+        "anchor_z": 1.409,
+        "original_observed_anchors": [
+          [
+            211,
+            221
+          ],
+          [
+            219,
+            221
+          ],
+          [
+            225,
+            220
+          ],
+          [
+            231,
+            222
+          ],
+          [
+            236,
+            225
+          ]
+        ],
+        "curve": "Source-anchor-preserving C1 shape-preserving cubic; dense actual source-camera rays to semantic upper surface",
+        "maximum_source_curve_step_px": 0.35,
+        "horizontal_calibration": "Actual recorded original-pixel source camera/SRT, no independent X warp"
+      }
+    },
+    {
+      "source_path_id": "front.neck.right_clavicle_line",
+      "samples": 97,
+      "all_seated": true,
+      "fit": {
+        "common_z_translation_m": 0.031218186991306185,
+        "anchor_z": 1.409,
+        "original_observed_anchors": [
+          [
+            249,
+            225
+          ],
+          [
+            255,
+            221
+          ],
+          [
+            263,
+            220
+          ],
+          [
+            272,
+            221
+          ],
+          [
+            280,
+            220
+          ]
+        ],
+        "curve": "Source-anchor-preserving C1 shape-preserving cubic; dense actual source-camera rays to semantic upper surface",
+        "maximum_source_curve_step_px": 0.35,
+        "horizontal_calibration": "Actual recorded original-pixel source camera/SRT, no independent X warp"
+      }
+    }
+  ],
+  "straps": [
+    {
+      "width_m": 0.013,
+      "authoring_sigma_m": 0.0039,
+      "sample_spacing_m": 0.0004994336103958679,
+      "maximum_local_projection_m": 0.001029540251434232,
+      "maximum_route_delta_m": 0.004000798781171191,
+      "exact_source_anchor_endpoints": true,
+      "geometry_UV_unchanged": true,
+      "method": "Endpoint-preserved arc Gaussian +C1 shape-preserving author curve; dense projection ONLY into connected semantic vertex-star patches of original route.",
+      "continuity_limit": "C1 authoring interpolant before dense projection; no exact analytic C1 claim on a polyhedral surface.",
+      "side": -1,
+      "inferred": "Continuous shoulder/back strap construction; source endpoints/width held, raw graph stairs faired without geometry changes."
+    },
+    {
+      "width_m": 0.013,
+      "authoring_sigma_m": 0.0039,
+      "sample_spacing_m": 0.0004996684907804114,
+      "maximum_local_projection_m": 0.0020932960986801055,
+      "maximum_route_delta_m": 0.0031449341574145535,
+      "exact_source_anchor_endpoints": true,
+      "geometry_UV_unchanged": true,
+      "method": "Endpoint-preserved arc Gaussian +C1 shape-preserving author curve; dense projection ONLY into connected semantic vertex-star patches of original route.",
+      "continuity_limit": "C1 authoring interpolant before dense projection; no exact analytic C1 claim on a polyhedral surface.",
+      "side": 1,
+      "inferred": "Continuous shoulder/back strap construction; source endpoints/width held, raw graph stairs faired without geometry changes."
+    }
+  ]
+}
