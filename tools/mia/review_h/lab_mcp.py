@@ -39,7 +39,7 @@ async def run(args):
                TMP='D:/MiaWorkCache/mia-reference-work/runtime-temp')
     params = StdioServerParameters(command=configured['command'], args=configured.get('args', []), env=env)
     report = args.report.resolve()
-    allowed = [(ROOT/p).resolve() for p in ['.mia-cache/body-h/live', '.mia-cache/face-live/live']]
+    allowed = [(ROOT/p).resolve() for p in ['.mia-cache/body-h/live', '.mia-cache/face-live/live', '.mia-cache/body-connected/live']]
     assert any(p == report.parent or p in report.parents for p in allowed)
     report.parent.mkdir(parents=True, exist_ok=True)
     async with stdio_client(params) as (reader, writer):

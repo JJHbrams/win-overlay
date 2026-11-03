@@ -8,7 +8,7 @@ User resumes production after storage discussion; legacy cleanup is deferred unt
 |---|---|---|
 | M1 | Source brows readable between source-like fringe locks under expressions | Source/expression sheet, actual brow/fringe together; neutral plus expressions. Hair owner; accepted internal face held. Hiding all hair or raising brows alone is not completion. |
 | M2 | Missing central rear hair is genuinely filled with layered gathered/descending hair | Back, profile, rear obliques and high/low, source/before/after. Same hair owner with separate additive part/explicit original-face ownership. |
-| M3 | Source-like neck–trap–shoulder line | Connected live body refinement and source4/high/low. Root. |
+| M3 | Source-like neck–trap–shoulder, clavicle and shallow surrounding depressions | Connected live body refinement and source4/high/low. Include suprasternal notch, clavicular plane/fossa and acromion transitions; avoid a featureless cone or deeply etched collar line. Root. |
 | M4 | Credible supported breast–thorax–anterior/posterior axilla–lat continuity | Source v06 and reaffirmed E2/F2, open passage, all-around bare geometry. Root; no independent coefficient owners across these boundaries. |
 | M5 | Source-like upper/lower body and pelvic balance | Whole-height source4 with uniform image registration, measured now and integrated before final maps. Root; no assumed hip expansion. |
 | M6 | Source-like body–head/hair balance | Whole-height source4 plus attached-actor/neck checks after any global scale change. Root; no assumed 1.078 adoption. |
