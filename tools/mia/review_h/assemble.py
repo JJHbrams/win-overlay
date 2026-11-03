@@ -222,6 +222,42 @@ def _row_reuse_provider(Mesh, kind, axis, e, erows, emeta):
     return provider
 
 
+def collar_orientation_flips(faces, parts):
+    """Unique coherent collar winding anchored to the retained source faces.
+
+    A curved collar cannot orient each triangle by one fixed radial center.
+    Only corner order may change; positions, undirected connectivity, all
+    retained-source triangles, and material/semantic ownership stay held.
+    """
+    from collections import deque
+    f = np.asarray(faces, np.int32); part = np.asarray(parts)
+    directed = np.concatenate([f[:, [0, 1]], f[:, [1, 2]], f[:, [2, 0]]])
+    _, inverse, counts = np.unique(np.sort(directed, axis=1), axis=0, return_inverse=True, return_counts=True)
+    order = np.argsort(inverse, kind='stable')
+    owners = np.tile(np.arange(len(f)), 3)[order]
+    signs = (directed[:, 0] < directed[:, 1])[order]
+    starts = np.r_[0, np.cumsum(counts[:-1])]
+    collar = np.flatnonzero(part == 3); index = np.full(len(f), -1, np.int32); index[collar] = np.arange(len(collar))
+    adjacency = [[] for _ in collar]; flip = np.full(len(collar), -1, np.int8); queue = deque()
+    for start in starts[counts == 2]:
+        a, b = map(int, owners[start:start+2]); ca, cb = int(index[a]), int(index[b])
+        same = bool(signs[start] == signs[start+1])
+        if ca >= 0 and cb >= 0:
+            adjacency[ca].append((cb, same)); adjacency[cb].append((ca, same))
+        elif ca >= 0 or cb >= 0:
+            local = ca if ca >= 0 else cb; expected = int(same)
+            assert flip[local] < 0 or flip[local] == expected, 'Incompatible retained source winding at collar endpoint'
+            if flip[local] < 0: flip[local] = expected; queue.append(local)
+    while queue:
+        a = queue.popleft()
+        for b, same in adjacency[a]:
+            expected = int(flip[a]) ^ int(same)
+            assert flip[b] < 0 or flip[b] == expected, 'Nonorientable collar connectivity'
+            if flip[b] < 0: flip[b] = expected; queue.append(b)
+    assert np.all(flip >= 0), 'A collar component is not anchored to a retained source endpoint'
+    return collar[flip == 1]
+
+
 def assemble(guide_path, *, cuts, canonical=CANONICAL, donor_path=None,
              neck_guides=None, headneck_delta=None, protected_donor_vertices=None):
     """Return arrays/report in RAM. No writes, mesher, bpy, save, or render.
@@ -328,6 +364,9 @@ def assemble(guide_path, *, cuts, canonical=CANONICAL, donor_path=None,
         ranges[kind] = [start, len(mesh.faces)]
     after, _ = mesh.boundary_loops(); assert len(after) == len(inherited), 'New open seam'
     faces = np.asarray(mesh.faces, np.int32); attrs = np.asarray(mesh.attrs, np.float32)
+    flips = collar_orientation_flips(faces, mesh.part)
+    faces[flips] = faces[flips][:, [0, 2, 1]]
+    attrs[flips] = attrs[flips][:, [0, 2, 1]]
     world = np.asarray(mesh.xyz, np.float32); used = np.unique(faces)
     remap = np.full(len(world), -1, np.int32); remap[used] = np.arange(len(used))
     source_vertex = np.full(len(used), -1, np.int32)
@@ -346,6 +385,9 @@ def assemble(guide_path, *, cuts, canonical=CANONICAL, donor_path=None,
                   vertices=len(arrays['world']), triangles=len(arrays['triangles']), cuts=cuts.__dict__,
                   cut_loops=records, collars=collars, collar_triangle_ranges=ranges,
                   cervical_donor_edit=edit, inherited_boundary_edges=len(mesh.inherited_boundary),
+                  collar_orientation=dict(method='Coherent shared-edge winding anchored to unchanged retained source triangles',
+                                          flipped_collar_faces=flips.tolist(), coordinate_changes=0,
+                                          retained_source_face_changes=0),
                   inherited_nonmanifold_edges=len(mesh.inherited_nonmanifold), new_open_seams=0,
                   old_UV_layers=meta['uv_layers'], GPU_used=False, native_saved=False)
     return arrays, row_arrays, report
