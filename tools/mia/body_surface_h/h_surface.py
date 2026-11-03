@@ -78,7 +78,7 @@ def capacity(root, mib):
     return report
 
 
-def prepared_metadata(original, surface_path, geometry_path):
+def prepared_metadata(original, surface_path, geometry_path, atlas_path=None):
     if original.get('payload_version') != 'H':
         raise ValueError('Only the actual fresh H atlas metadata is supported')
     result = copy.deepcopy(original)
@@ -89,17 +89,53 @@ def prepared_metadata(original, surface_path, geometry_path):
         'limit': 'Re-seat the original source graphic on the current H surface; actual four-view material review remains required.',
     }
     result['prepared_surface_npz'] = str(Path(surface_path).resolve())
+    result['surface_npz_path'] = str(Path(surface_path).resolve())
     result['assembly_geometry_path'] = str(Path(geometry_path).resolve())
+    if atlas_path is not None:
+        result['atlas_path'] = str(Path(atlas_path).resolve())
     result['preparation_scope'] = 'Metadata overlay only; same immutable H NPZ/UV. No geometry copy, source warp or art acceptance.'
     return result
 
 
-def target_binding(root):
+def target_paths(root, selection=None):
+    """Read a root-authored candidate selection; never write/select one here."""
+    root = Path(root).resolve(); base = (root/ASSEMBLY).resolve()
+    chosen = Path(selection) if selection is not None else root/'.mia-cache/body-h/selected-candidate.json'
+    chosen = (root/chosen).resolve() if not chosen.is_absolute() else chosen.resolve()
+    result = dict(surface=base/'atlas/surface.npz', geometry=base/'geometry.npz', atlas=base/'atlas/atlas.npz')
+    selection_record = None
+    if selection is not None or chosen.exists():
+        if root/'.mia-cache/body-h' not in chosen.parents:
+            raise ValueError('Candidate selection must stay in this canonical H cache')
+        selection_sha = sha(chosen)
+        record = read(chosen)
+        for role in ('geometry', 'surface', 'atlas'):
+            item = record.get(role, {})
+            if not isinstance(item, dict) or not item.get('path') or not item.get('sha256'):
+                raise ValueError('Selection requires path and sha256: '+role)
+            path = Path(item['path'])
+            if not path.is_absolute():
+                raise ValueError('Selected candidate paths must be absolute: '+role)
+            path = path.resolve()
+            if base not in path.parents:
+                raise ValueError('Selected candidate input must stay in assembly cache: '+role)
+            if sha(path) != item['sha256']:
+                raise ValueError('Selected candidate input hash differs: '+role)
+            result[role] = path
+        if sha(chosen) != selection_sha:
+            raise ValueError('Candidate selection changed while binding inputs')
+        selection_record = dict(path=str(chosen), sha256=selection_sha)
+    result['original_metadata'] = result['surface'].with_suffix('.json')
+    result['assembly'] = result['geometry'].with_name('assembly.json')
+    return result, selection_record
+
+
+def target_binding(root, selection=None):
     from surface_api import load_surface, array_sha
-    root = Path(root).resolve(); base = root/ASSEMBLY
-    surface_path = base/'atlas/surface.npz'
-    metadata_path = surface_path.with_suffix('.json')
-    geometry_path, atlas_path = base/'geometry.npz', base/'atlas/atlas.npz'
+    root = Path(root).resolve()
+    paths, selection_record = target_paths(root, selection)
+    surface_path = paths['surface']
+    geometry_path, atlas_path = paths['geometry'], paths['atlas']
     surface = load_surface(surface_path)
     meta = surface['meta']
     if meta.get('payload_version') != 'H':
@@ -111,7 +147,7 @@ def target_binding(root):
                         ('loop_uv_sha256', array_sha(surface['triangle_uv']))]:
         if meta.get(key) != actual:
             raise ValueError('H exported array mismatch: '+key)
-    assembly = read(base/'assembly.json')
+    assembly = read(paths['assembly'])
     if assembly['assembly_geometry_sha256'] != sha(geometry_path):
         raise ValueError('H assembly geometry changed after export')
     with np.load(geometry_path, allow_pickle=False) as geometry, np.load(atlas_path, allow_pickle=False) as atlas:
@@ -121,16 +157,16 @@ def target_binding(root):
             raise ValueError('H surface triangle ownership differs from assembly')
         if not np.array_equal(surface['triangle_uv'], atlas['loop_uv'][surface['meshfaceid']]):
             raise ValueError('H surface UV differs from installed atlas')
-    paths = dict(surface=surface_path, original_metadata=metadata_path,
-                 geometry=geometry_path, atlas=atlas_path, assembly=base/'assembly.json')
     binding = {name: dict(path=str(path.resolve()), sha256=sha(path)) for name, path in paths.items()}
+    if selection_record is not None:
+        binding['candidate_selection'] = selection_record
     return surface, binding
 
 
-def prepare(root=CANONICAL, output=None):
+def prepare(root=CANONICAL, output=None, selection=None):
     root = Path(root).resolve(); out = output_path(root, output or root/CACHE/'prepared-H')
     baker = api(root)
-    surface, binding = target_binding(root)
+    surface, binding = target_binding(root, selection)
     if (out/'prepare-report.json').exists():
         previous = read(out/'prepare-report.json')
         if previous['binding'] != binding:
@@ -146,7 +182,10 @@ def prepare(root=CANONICAL, output=None):
         raise ValueError('Do not overwrite an incomplete H preparation')
     budget = capacity(root, 2)
     geometry_path = Path(binding['geometry']['path'])
-    meta = prepared_metadata(surface['meta'], binding['surface']['path'], geometry_path)
+    meta = prepared_metadata(surface['meta'], binding['surface']['path'], geometry_path,
+                             binding['atlas']['path'])
+    if 'candidate_selection' in binding:
+        meta['root_candidate_selection'] = binding['candidate_selection']
     surface['meta'] = meta
     neck_paths = dict(head_source_npz=geometry_path, donor_npz=root/REVIEW/'donor.npz',
                       attributes_npz=root/REVIEW/'head-attributes.npz')
@@ -206,7 +245,7 @@ def validate_root_gray(root, gate_path, binding):
     return dict(path=str(gate_path), sha256=sha(gate_path), declared_scope=gate.get('scope'))
 
 
-def bake(root=CANONICAL, prepared=None, output=None, gray_decision=None):
+def bake(root=CANONICAL, prepared=None, output=None, gray_decision=None, selection=None):
     root = Path(root).resolve()
     if gray_decision is None:
         raise ValueError('bake requires a separate --root-gray-decision; prepare never approves it')
@@ -214,7 +253,7 @@ def bake(root=CANONICAL, prepared=None, output=None, gray_decision=None):
     out = output_path(root, output or root/CACHE/'maps-H')
     baker = api(root)
     report = read(prepared/'prepare-report.json')
-    _, current_binding = target_binding(root)
+    _, current_binding = target_binding(root, selection)
     if current_binding != report['binding']:
         raise ValueError('Prepared H target binding is stale')
     if api_provenance(root) != report['appearance_implementation']:
@@ -267,7 +306,7 @@ def bake(root=CANONICAL, prepared=None, output=None, gray_decision=None):
                           color_space='sRGB' if name.endswith('BaseColor') else 'Non-Color',
                           active_use='body-only pigment' if name.endswith('BaseColor') else 'body-only material control'))
     Image.fromarray(raster['valid'].astype(np.uint8)*255).save(out/'UV_ValidMask_DIAGNOSTIC.png')
-    _, final_binding = target_binding(root)
+    _, final_binding = target_binding(root, selection)
     if final_binding != current_binding:
         raise ValueError('Target surface/UV/metadata changed during bake')
     if api_provenance(root) != report['appearance_implementation']:
@@ -298,11 +337,13 @@ def main():
     parser.add_argument('--prepared', type=Path)
     parser.add_argument('--output', type=Path)
     parser.add_argument('--root-gray-decision', type=Path)
+    parser.add_argument('--selection', type=Path,
+                        help='Root-authored selection; default canonical .mia-cache/body-h/selected-candidate.json when present')
     args = parser.parse_args()
     if args.command == 'prepare':
-        result = prepare(args.root, args.output)
+        result = prepare(args.root, args.output, args.selection)
     else:
-        result = bake(args.root, args.prepared, args.output, args.root_gray_decision)
+        result = bake(args.root, args.prepared, args.output, args.root_gray_decision, args.selection)
     print(json.dumps(dict(status=result['status'], resolution=result.get('resolution', SIZE)), indent=2), flush=True)
 
 
