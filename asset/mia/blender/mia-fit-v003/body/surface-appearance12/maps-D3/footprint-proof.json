@@ -1,0 +1,57 @@
+{
+  "status": "PASS CPU footprint / file guards only; actual native appearance remains pending",
+  "surface_sha256": "c5c5177af0cbe71c1f3f612e5ec58e3ad8dd9b046e202e11d82440c932f7be5d",
+  "surface_guards": {
+    "world_f32_sha256": "ac5914b2ed80388c56179b96ebba3dac587cefc72f0ffa41ac702f1a68a8fc90",
+    "triangles_i32_sha256": "fd0096040df4b4f6b8685399d87ed63ec87e5bbada1ee8bed57a6f91c6d5575d",
+    "triangle_uv_f32_sha256": "8dbcb1c99355d086c3b63a6c5aca24033982830442484e6cca7bd0072d85c0a7",
+    "face_region_i16_sha256": "16096617671a58577cee9ef0b1a66e62e9b85460f33d174642a36d394f1cf624",
+    "vertices": 126845,
+    "body_triangles": 215875,
+    "uv_layer": "MIA_Review12UV"
+  },
+  "PNG_hashes_match": true,
+  "plain_skin_unique_RGB_u8": [
+    [
+      246,
+      216,
+      203
+    ]
+  ],
+  "old_underwear_used": false,
+  "triangle_centroid_samples": 215875,
+  "actual_body_surface_area_m2": 1.1587214469909668,
+  "forbidden_underwear_triangles": 0,
+  "forbidden_underwear_surface_area_m2": 0.0,
+  "forbidden_clavicle_triangles": 0,
+  "texture_coverage_surface_area_m2": 0.10352487862110138,
+  "clavicle_ink_surface_area_m2": 0.0005051257903687656,
+  "clavicle_shade_surface_area_m2": 0.0021974751725792885,
+  "boundary_checks": [
+    {
+      "name": "bra_top",
+      "accepted": 128,
+      "max_barycentric_world_error_m": 0.0
+    },
+    {
+      "name": "bra_bottom",
+      "accepted": 128,
+      "max_barycentric_world_error_m": 0.0
+    },
+    {
+      "name": "brief_waist",
+      "accepted": 128,
+      "max_barycentric_world_error_m": 0.0
+    },
+    {
+      "name": "brief_leg",
+      "accepted": 128,
+      "max_barycentric_world_error_m": 0.0
+    }
+  ],
+  "limits": [
+    "Centroid tests are ownership/route checks, not a continuous texture filtering proof.",
+    "UV subtexel triangles and declared overlap tolerance remain in bake-report.json.",
+    "No geometry, native scene, renderer, source image or face/hair material was changed."
+  ]
+}
