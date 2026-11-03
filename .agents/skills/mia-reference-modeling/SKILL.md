@@ -44,13 +44,43 @@ reason to keep repeating an ineffective coefficient change. A preservation
 boundary that prevents the requested change must be explained and re-scoped
 explicitly; never silently erase the protected feature or redefine success.
 
-## Small, visible edits
+## Choose the execution mode by the operation
 
-Use the existing Blender MCP if connected: inspect the actual scene, show the
-selection/mask, make a bounded edit, then return actual images and change data.
-Discover the installed tool schema; do not invent tool names. CLI/bpy batch
-work remains valid for reproducible capture/bakes. Do not install/switch MCP,
-change settings/origins, or interrupt the main Blender process as a repair shortcut.
+Use **background Blender** for rough blockout/proportion candidates and repeatable
+batch work: technical checks, a previously reviewed deterministic mesh delta,
+UV processing, texture baking, matched-camera renders, orbit frames and export.
+A blockout still needs actual multi-angle visual review before further shaping;
+the background process is not evidence that the visible Blender contains it.
+
+Use **live Blender through the existing MCP** for anatomy-sensitive refinement:
+connected cheek/orbit/jaw or neck/shoulder/axilla volumes, eyelid/eyeball contact,
+breast-to-thorax transitions, hair silhouette/strand spacing and local clipping.
+These edits need immediate inspection of the actual surface and adjacent angles.
+The current upper-body refinement belongs here; do not return to unattended
+coefficient searches as the default way to resolve its remaining shape defects.
+
+MCP may execute Python/bpy, polygon/cage edits or supported sculpt operations.
+The distinction is the feedback loop, not mouse clicks versus code. Read the
+installed schemas, identify the actual working file/object/evaluated geometry,
+inspect and show the affected selection, make one hypothesis-sized edit, then
+inspect actual before/after matte/wire and source views before the next decision.
+An addon-status response alone is not a scene inspection or a modeling action.
+Record the retained/undone decision briefly in the existing trial log; keep a
+checkpoint/undo path without saving another full native for every small edit.
+
+At background-to-live handoff, identify the exact candidate and verify it is
+the scene being viewed. Do not overwrite another working scene or discard
+unrelated unsaved edits. At live-to-batch handoff, capture the reviewed state
+with the existing checkpoint procedure, then batch-render/bake that same state.
+Batch validation can reject a reviewed candidate; it cannot replace the live
+refinement step or automatically promote the candidate.
+
+If live MCP is unavailable, report that limit and inspect the existing connection
+without changing settings or interrupting Blender. Background diagnostics can
+continue, but do not silently substitute another blind fine-shaping solve or
+claim live review. Do not install/switch MCP or change origins as a shortcut.
+
+## Small, visible edits
 
 Compare source / baseline / candidate at matched camera, pose, visibility and
 review lighting. Hide occluding hair temporarily for eye/axilla diagnosis and

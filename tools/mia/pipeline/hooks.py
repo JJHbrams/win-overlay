@@ -35,6 +35,11 @@ def respond(event: dict) -> dict:
             'character_complete', 'art_approved', 'read_first')}
         brief['face_status'] = str(data.get('face_status', ''))[:300]
         brief['body_status'] = str(data.get('active_body_status', ''))[:650]
+        brief['execution_policy'] = (
+            'Anatomical/fine shaping: live Blender MCP inspect-edit-image-review loop. '
+            'Background: blockout candidates, reviewed deltas, checks, batch renders/bakes/export. '
+            'Read the skill execution-mode section; verify the actual scene at handoff. '
+            'Addon status alone is not live modeling; this advisory does not enforce tool use.')
         brief['next'] = ('Read the current stage plan linked by CURRENT_STATE; preserve accepted work. '
                          'Plan index includes rejected history. Review actual source/baseline/candidate images.')
         message = 'For Mia work only, resume index (not art approval): ' + json.dumps(brief, ensure_ascii=False)
