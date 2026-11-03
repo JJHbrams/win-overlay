@@ -76,7 +76,8 @@ for name, mode in [('SkinOnly', 0.), ('Underwear', 1.)]:
         assert node.inputs['Vector'].links[0].from_node == roles['BodyUV']
         images.append(dict(role=node.get('mia12_role'), filename=filename, packed_sha256=packed_sha,
                            color_space=image.colorspace_settings.name, size=list(image.size)))
-    assert len(images) == 5
+    assert len(images) == len(expected_images)
+    assert {i['filename'] for i in images} == set(expected_images)
     assert scene.objects['MIA_V27_SharedHeadBody'].hide_render
     states[name] = dict(body_object=body.name, shared_mesh=body.data.name, world_sha256=ah(actual),
                        triangles_sha256=ah(triangles), review_uv_sha256=ah(actual_uv),

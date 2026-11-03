@@ -1,0 +1,58 @@
+{
+  "status": "BLOCKED",
+  "meaning": "Capacity only; no cleanup or model/art approval.",
+  "coordination": "Root grants only one heavy writer; this estimate is not an atomic reservation.",
+  "reserve_bytes": 1048574951424,
+  "free_bytes": {
+    "C:/": 37256957952,
+    "D:/": 49035149312
+  },
+  "component_bytes": 338568463,
+  "component_limit_bytes": 2147483648,
+  "outputs": [
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12",
+      "bytes": 111344169,
+      "files": 225
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12",
+      "bytes": 36308594,
+      "files": 157
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\surface12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12",
+      "bytes": 133750951,
+      "files": 282
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\surface12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12",
+      "bytes": 19513697,
+      "files": 88
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\appearance12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12",
+      "bytes": 0,
+      "files": 0
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\appearance12-producer\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12",
+      "bytes": 36400883,
+      "files": 161
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\integration\\surface12-presentation",
+      "bytes": 1250169,
+      "files": 4
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\runtime-temp",
+      "bytes": 0,
+      "files": 0
+    }
+  ],
+  "violations": [
+    "D:/ below 20 GiB free plus reservation",
+    "Review12 component outputs plus reservation exceed 2 GiB"
+  ]
+}

@@ -448,7 +448,7 @@
     "shoulder11_import_integrity": "blender/mia-fit-v003/integration/shoulders-import.json",
     "review12_contract": "blender/mia-fit-v003/FULLBODY_SURFACE12_PLAN.md",
     "review12_user_request": "2026-11-03 userrequests actualrotatingbodyGIF, plain-skin nude +sourceunderweartextureversions onsamegeometry, clavicleink/shadow, andtruthfulface/hair/headratio status. Explicitstaticpreview/surfaceauthorization now: buildfullbodyR3bhead/hair/lower+11upper withrealneck/waist/armcollars/actualUVmaps, notanotherheadlesssubsetormaskseam. No fullMiaART/rigapproval, noautomatic1.075headscale.",
-    "review12_status": "E bare4 boundedPASS; material AA fixedpunctures butstrap/clavicleroute styleOPEN. Newuserrequests sourcepartproportions: Fbody-onlyshoulder/lowerneckcorrectionactive, hipsnotgloballyexpanded, headscaleunapplied. No fullReview12native/64GIFyet.",
+    "review12_status": "E bare4 boundedPASS; E-AA actual2 removes cloth punctures, fair-straps/source-clavicle/neck pigment authoring not yet final. F actual12 ART FAIL: cap scallops/terraces and renewed arm rings despite positive projected area; F maps/native/orbit held. G construction-space RAM source-rail calibration only, no G mesh/ART approval. No full Review12 native/64GIF yet.",
     "review12_preflight_notes": "InitialzeroUV133241trianglesandhand/innerarmregionerrors FIXED withactualUVreadback+semanticbranchfields. SourceLocal->WORLDheadnormalerrorfixed; suppliedvectors/oldUV3/V27HeadMaterialBlendexact; evaluatednormalpacking.041959deg matchedINDEPENDENTsame-topologyAPIcontrol, notbitexactoutputclaim. Firstgray8 actualFB-AC2FAIL waistband/armbulb; correctedCcollarrowONLY11528verts max7.8568mm, endpoints/head/core/lower/UV/topologyheld, awaiting4grayactuals. CurrentappearanceMaps-C478c1bf binds3a82c54/world434bb/UV8dbc; BfrozenSTALE. Actualmaterial/native/GIFNOTapprovedyet. Originaldonor4nonmanifoldhandedges/320boundaries distinguishedfromnewcollarseams. C4actualsFAIL: realwaist/armbands. FreshCPU auto-vs-headcustom bodycollarnormalsagree<.00001deg, rulingoutstalenormals. Cgeometricfacetturnsworsened21degwaist/41-42degarms. AnalyticendpointdirectionwasnotsampledG1. Dconstrainedfinite-rowfairingauthorized, bareactualgatebeforemaps/native/orbit; nofinalReview12native/GIFyet. D/D2CPUunselected; D3actual4FAIL despiteangularnoiseimprovement: residualshelf/armpinch independentlyraylocalizedtonewcollars. Ewidenswaist/armphysicalbands, D3neck/head/coreheld; newtopology/UV/retainedcorrespondence/seatingrequired. CutneckcustomnormalAPIboundlocalizedseparately(.409875deg), protectedheadstill.041959deg. Active/renderUVMaprestoredexplicitly. Alloutcomes/FBAC2unchanged; no paintconcealment.",
     "review12_appearance_component": "blender/mia-fit-v003/body/surface-appearance12/revision-status.json",
     "review12_face_hair_head_status": "blender/mia-fit-v003/REVIEW12_STATUS_AUDIT.md",
@@ -470,7 +470,21 @@
     },
     "proportion_F_contract": "blender/mia-fit-v003/PROPORTION_F_PLAN.md",
     "proportion_F_diagnosis": "Source/Efronthipwidth≈172/178/182 vs178.9/182.6/183.6px atsameheights; pelvicexpansionunsupported. Shoulderroof~20pxhigh,caps196–202vssource181–189;lowerneckflareearly,uppernecknotwide. Back/profileconfirmflare;headhair-crown13.6vs14.6percent remainsopen. Fonebroad3Dcage/warp,lowerroof~25mm/capsin8–10mmpersidetentative, preserveface/breast/axilla/hips. 10inside-capXfadefailuremustnotrepeat.",
-    "review12_material_failure": "Eactual10bra punctures+steppedstrapsFAIL. Actualpixel→triangle/UV proof:coveragefield1but2KPNGbilinear0. Analytic4Kbilinearsupportseedingfix recapturedAA2 removespunctures; no4Kupscale. Strapgraphpathstillstepped,C1surfacefairingandFrebindingpending. BODYColorOnlyheadremainslit, notbyitselfproofpigmentmismatch."
+    "review12_material_failure": "Eactual10bra punctures+steppedstrapsFAIL. Actualpixel→triangle/UV proof:coveragefield1but2KPNGbilinear0. Analytic4Kbilinearsupportseedingfix recapturedAA2 removespunctures; no4Kupscale. Strapgraphpathstillstepped,C1surfacefairingandFrebindingpending. BODYColorOnlyheadremainslit, notbyitselfproofpigmentmismatch.",
+    "proportion_F_status": "REJECTED by root/producer/fresh reviewer actual E/F12; ordinary3.5mm cap edge turn4.77->40.70deg, no final maps/native. CPU protected coordinates/UV do not prove source/continuity.",
+    "proportion_G_contract": "blender/mia-fit-v003/PROPORTION_G_PLAN.md",
+    "storage_cleanup_20261103": {
+      "evidence": "blender/mia-fit-v003/integration/workspace-storage-20261103/",
+      "actual_C_deleted_files": 25,
+      "actual_C_deleted_bytes": 16307864,
+      "retained_canonical_D_matches": 25,
+      "D_backup_delete": "REJECTED before process start: blocked by policy;0files deleted,6,764,548,435B remain. No same-action/tool retry. C originals unchanged.",
+      "whole_worktrees": "Not removed: unique/untracked content and unmerged branch remain. C shared Git objects still required by D alternate.",
+      "guard": "blender/mia-fit-v003/integration/workspace-storage-20261103/storage_guard.py",
+      "guard_rules": "Read-only preflight: C/D free>=20GiB plus anticipated D write reserve; combined Review12 component outputs across3Dworktrees plus presentation GIFdir and runtime-temp<=2GiB including reserve. Root allows one heavy writer; estimates are not atomic quota. No auto-deletion; guard called before heavy mesh/bake/native/render.",
+      "new_outputs": "D only; no extra whole-source/backup copies, unchanged inputs referenced by hash.",
+      "model_request_unchanged": "Original native/two materials/GIF/source4 still required; storage checks are not ART acceptance."
+    }
   },
   "storage_handoff_20261103": {
     "reason": "C drive nearly full; new code/objects/model/render writes continue on D",
