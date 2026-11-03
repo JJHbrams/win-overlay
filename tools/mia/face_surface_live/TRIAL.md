@@ -191,10 +191,71 @@ body/head proportions. The new long-center paths are a provisional length
 hypothesis requiring v22 identity/profile review; no global side extension has
 been adopted.
 
+## M1 source brow and local fringe criteria (2026-11-04 user steering)
+
+The annotated source separates the true brow from upper-lid crease, lash and
+eyeliner. Source brow inclination and partial exposed spans between frontal
+clumps are the next priority after this M2 modular checkpoint. Existing brow
+centerlines follow the source-visible fragments; covered full ends are inferred.
+The earlier B width case changes only observed spans (screen-left factor 1.04,
+screen-right 0.84, with smooth end fades). It is not evidence for raising the
+brow, moving it forward, or symmetrizing its shape.
+
+- Keep each true brow a separate forehead-conforming mesh, including its
+  occluded portions. Check source thickness, inclination and distance from the
+  eye, with genuine medial/center/tail expression deformation.
+- Inspect all co-located foreground and backing hair at brow height. Refine
+  local clump width, overlap, depth and fine gaps while preserving the large
+  bang silhouette. Do not repeat the failed nine-island bend, make every hair
+  independent, or expose the entire brow in every pose.
+- Do not raise the brows or push them toward the camera to evade occlusion;
+  those moves alter source ratios and oblique depth.
+- Only if physical gaps cannot reproduce the drawn visibility, consider a
+  selective forelock render/composite. Rear/side hair and hands must still
+  occlude correctly. Whole-hair transparency and universal through-object brow
+  display are excluded. Blender-to-sprite output is the actual target.
+- Final M1 evidence must use hairON neutral, frown, surprise and **smile**, with
+  front, both obliques, profile, high/low and turn inspection. HairOFF remains a
+  structural diagnostic. Static body-D has no expression deformation and cannot
+  be used to claim this validation.
+
+Root's existing provisional 0.6 graphic display was tested with genuine source
+head keys, but its four expressions include blink rather than smile. This is
+bounded graphic-option evidence, not completion of source brow form or physical
+fine-gap requirements. Its proxy samples original Main, so it must not be used
+to conceal an unexamined foreground/backing defect in the current derived Main.
+
+The side investigator read public bodies of mclelun's 2015 Blender layer/mask
+example (https://www.mclelun.com/2015/10/rendering-anime-eyebrow-in-front-of-hair.html)
+and ZLZ's Unity-oriented fringe visibility discussion
+(https://zlz-studio.github.io/setup-character/advanced-hair-setup/). These support
+the selective visibility principle only. The former UI is outdated and the
+latter runtime is not the sprite pipeline. No whole video viewing or verified
+timestamps are claimed here. Physical source-like clump gaps and true brow
+shape remain the first implementation route.
+
+## One owned-lock toon look prototype prepared, not installed
+
+`hair_tone_prototype.py` prepares one small, reversible actual-light look for the
+eighteen new locks only. It uses real `LockParamUV`, explicit sRGB-to-linear
+conversion of a disclosed warm-gray appearance swatch from the unchanged R3b
+target render, restrained flow ink and a Diffuse/ShaderToRGB light path. Original
+Main, its maps and material graphs are untouched. The source swatch is not a
+recovered physical albedo, and this is not final paint, normal/specular maps or
+hair ART. Installation verifies body and lock coordinates, and restoration
+returns material slots and removes only the owned prototype material.
+
+Factory Blender 5.2.3 CPU node/API construction passed (19 nodes, 19 links;
+`curved-rear03/tone-prototype/cpu-nodes.json`). Its ShaderToRGB runtime type is
+`SHADERTORGB`, checked through the actual node `bl_idname`. No EEVEE image, actual
+light-response comparison or live material installation has been performed.
+Body owner currently holds live MCP and GPU priority; this prototype waits for
+an explicit handoff instead of competing for the scene.
+
 ## Still required
 
 - Actual whole-front ownership/forelock refinement with source-visible brow
-  thickness and curved gaps, then neutral/angry/surprised/blink expression
+  thickness and curved gaps, then neutral/frown/surprise/smile expression
   evidence on a genuinely deforming head.
 - Rear central silhouette/volume and closure in back/profile/both obliques and
   high/low, with actual source/before/after. Check the underlap cut and body
