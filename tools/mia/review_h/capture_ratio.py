@@ -6,6 +6,8 @@ import sys
 import bpy
 
 ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import recorded_atlas
 P = ROOT/'asset/mia/blender/mia-fit-v003/body/surface-review12'
 sys.path.insert(0, str(P))
 import install_review
@@ -21,7 +23,7 @@ out = ROOT/'.mia-cache/body-h/ratio-baseline'
 assert not out.exists(); out.mkdir(parents=True)
 base = ROOT/'.mia-cache/body-h/shape/assembly/live-D'
 meta = json.loads((base/'assembly.json').read_text())
-ob, proof = install_review.apply(geometry_path=base/'geometry.npz', atlas_path=Path(meta['atlas_path']),
+ob, proof = install_review.apply(geometry_path=base/'geometry.npz', atlas_path=recorded_atlas(base, meta),
     proof_path=out/'installed.json', packing_path=out/'normal-packing.json')
 scene = bpy.context.scene
 fixture.setup(scene); fixture.hair_visibility(scene, True)

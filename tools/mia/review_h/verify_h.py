@@ -16,7 +16,7 @@ from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
 sys.dont_write_bytecode = True
-ROOT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT = Path(__file__).resolve().parents[3]
 REL = Path('asset/mia/blender/mia-fit-v003/body/surface-review12')
 CACHE = ROOT/'.mia-cache/body-h/shape/assembly'
 

@@ -12,7 +12,7 @@ import sys
 import bpy
 import numpy as np
 
-ROOT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT/'tools/mia/review_h'))
 import assemble
 import live_relax

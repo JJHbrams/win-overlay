@@ -12,7 +12,7 @@ import numpy as np
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 OUT=ROOT/'.mia-cache/face-live/curved-rear03'
 ns=bpy.app.driver_namespace
 state=ns['MIA_CurvedRear03Base']

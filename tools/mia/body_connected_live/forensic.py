@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib,json
 import numpy as np
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');CACHE=ROOT/'.mia-cache/body-connected'
+ROOT=Path(__file__).resolve().parents[3];CACHE=ROOT/'.mia-cache/body-connected'
 path=CACHE/'charted-design.npz'
 assert hashlib.sha256(path.read_bytes()).hexdigest()=='615278e7e1f8549558cc702c6fd656e42220e60d26748f785acc0edd2a54d0d7'
 d=dict(np.load(path));q=d['world'];old=d['original_control_id'];mapping={int(v):i for i,v in enumerate(old)if v>=0}

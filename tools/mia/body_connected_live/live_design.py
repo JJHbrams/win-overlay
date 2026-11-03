@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib,json
 import bpy,numpy as np
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');CACHE=ROOT/'.mia-cache/body-connected';NAME='MIA_ChartedBody_Design'
+ROOT=Path(__file__).resolve().parents[3];CACHE=ROOT/'.mia-cache/body-connected';NAME='MIA_ChartedBody_Design'
 ns=bpy.app.driver_namespace;source=bpy.data.objects['MIA_V27_SharedHeadBody']
 assert NAME not in bpy.data.objects and bpy.context.mode=='OBJECT'
 p=dict(np.load(CACHE/'charted-design.npz'));oldid=p['original_control_id'];held=oldid>=0

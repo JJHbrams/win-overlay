@@ -4,7 +4,7 @@ import json
 import bpy
 import numpy as np
 
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 body=bpy.data.objects['MIA_Review12_H_LiveRepair']
 assert body.mode=='OBJECT'
 original=body.data

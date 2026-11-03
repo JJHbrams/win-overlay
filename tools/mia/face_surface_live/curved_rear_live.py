@@ -5,7 +5,7 @@ import json
 import bpy
 import numpy as np
 
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 FOLDER=Path(globals().get('MIA_CURVED_REAR_FOLDER',ROOT/'.mia-cache/face-live/curved-rear02'))
 PREFIX=globals().get('MIA_CURVED_REAR_KEY','MIA_CurvedRear02')
 ACTOR_PREFIX=globals().get('MIA_CURVED_REAR_ACTOR_PREFIX','MIA_Hair_CurvedRear02')

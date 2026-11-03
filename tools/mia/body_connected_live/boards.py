@@ -2,7 +2,7 @@
 from pathlib import Path
 import importlib.util,json
 from PIL import Image,ImageDraw
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');OUT=ROOT/'.mia-cache/body-connected/actual-gray'
+ROOT=Path(__file__).resolve().parents[3];OUT=ROOT/'.mia-cache/body-connected/actual-gray'
 spec=importlib.util.spec_from_file_location('common_gray_boards',ROOT/'tools/mia/review_h/gray_boards.py')
 common=importlib.util.module_from_spec(spec);spec.loader.exec_module(common)
 capture=json.loads((OUT/'capture.json').read_text());rows={(r['state'],r['view']):r for r in capture['records']}

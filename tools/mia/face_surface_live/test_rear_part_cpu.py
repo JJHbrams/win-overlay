@@ -6,7 +6,7 @@ import json
 import bpy
 import numpy as np
 
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 FOLDER=ROOT/'.mia-cache/face-live/rear-part01'
 path=Path(__file__).with_name('rear_part.py')
 spec=importlib.util.spec_from_file_location('mia_rear_part01',path);mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)

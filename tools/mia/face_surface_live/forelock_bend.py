@@ -9,7 +9,7 @@ import json
 import bpy
 import numpy as np
 
-ROOT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT/'.mia-cache/face-live/live'
 ns = bpy.app.driver_namespace
 review = ns['MIA_HairReviewState']

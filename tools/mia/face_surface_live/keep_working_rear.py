@@ -23,6 +23,6 @@ report=dict(selection='PROVISIONAL EDITABLE WORKING PART ONLY',
             actual_geometry_payload='.mia-cache/face-live/curved-rear03/actual-emergence/geometry.npz',
             payload_sha256='2b1a8508dfdcd7dc0d74958aaed4899f64486270a457b973fa9822ee98044de3',
             source_native_saved=False,ART=False)
-p=Path('D:/MiaWorkCache/mia-reference-work/win-overlay/.mia-cache/face-live/curved-rear03/actual-emergence/working-part.json')
+p=(Path(__file__).resolve().parents[3]/'.mia-cache/face-live/curved-rear03/actual-emergence/working-part.json')
 p.write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
 print(json.dumps(report))

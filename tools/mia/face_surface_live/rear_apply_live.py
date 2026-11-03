@@ -3,7 +3,7 @@ from pathlib import Path
 import importlib.util
 import json
 import bpy
-path=Path('D:/MiaWorkCache/mia-reference-work/face-live-author/tools/mia/face_surface_live/rear_part.py')
+path=Path(__file__).with_name('rear_part.py')
 spec=importlib.util.spec_from_file_location('mia_live_rear_part01',path)
 module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 report=module.apply(runtime='live_mcp')

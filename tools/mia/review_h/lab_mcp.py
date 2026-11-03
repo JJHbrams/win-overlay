@@ -21,22 +21,32 @@ from mcp.client.stdio import stdio_client
 ROOT = Path(__file__).resolve().parents[3]
 
 
+def code_arguments(args):
+    """MCP exec has no filename; make scoped scripts relocate like CLI scripts."""
+    path = args.code_file.resolve()
+    prefix = '__file__ = '+repr(str(path))+'\n'
+    if args.view:
+        prefix += 'MIA_VIEW_REQUEST = '+repr(args.view)+'\n'
+    if args.phase:
+        prefix += 'MIA_EDIT_PHASE = '+repr(args.phase)+'\n'
+    return {'code': prefix+path.read_text(encoding='utf8')}
+
+
 async def run(args):
     arguments = json.loads(args.arguments.read_text(encoding='utf8')) if args.arguments else {}
     if args.code_file:
         assert args.command == 'call' and args.tool == 'execute_blender_code'
         assert not args.arguments
-        arguments = {'code': args.code_file.read_text(encoding='utf8')}
-        if args.view:
-            arguments['code'] = 'MIA_VIEW_REQUEST = '+repr(args.view)+'\n'+arguments['code']
-        if args.phase:
-            arguments['code'] = 'MIA_EDIT_PHASE = '+repr(args.phase)+'\n'+arguments['code']
+        arguments = code_arguments(args)
     configured = tomllib.loads(Path('C:/Users/antio/.codex/config.toml').read_text(encoding='utf8'))['mcp_servers']['blender']
-    expected = Path('D:/MiaWorkCache/tools/blender-lab-mcp-venv/Scripts/blender-mcp.exe')
+    expected = Path('C:/Users/antio/.codex/tools/blender-lab-mcp-venv/Scripts/python.exe')
+    expected_args = ['-m', 'blmcp', '--transport', 'stdio']
     assert Path(configured['command']) == expected and configured.get('enabled', True)
+    assert configured.get('args') == expected_args
+    runtime_temp = Path('C:/Users/antio/.codex/tmp/mia-runtime')
+    runtime_temp.mkdir(parents=True, exist_ok=True)
     env = dict(os.environ, **configured.get('env', {}), PYTHONDONTWRITEBYTECODE='1',
-               TEMP='D:/MiaWorkCache/mia-reference-work/runtime-temp',
-               TMP='D:/MiaWorkCache/mia-reference-work/runtime-temp')
+               TEMP=str(runtime_temp), TMP=str(runtime_temp))
     params = StdioServerParameters(command=configured['command'], args=configured.get('args', []), env=env)
     report = args.report.resolve()
     allowed = [(ROOT/p).resolve() for p in ['.mia-cache/body-h/live', '.mia-cache/face-live/live', '.mia-cache/body-connected/live', '.mia-cache/eye-roi/live']]

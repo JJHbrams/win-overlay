@@ -5,7 +5,7 @@ import json
 import hashlib
 import bpy
 import numpy as np
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 sys.path.insert(0,str(ROOT/'asset/mia/blender/mia-fit-v003/body/surface-review12'))
 import review_fixture as fixture
 assert bpy.app.driver_namespace['MIA_CurvedRear03Base']['provisional_keep']

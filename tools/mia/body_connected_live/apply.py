@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib,json
 import bpy,numpy as np
 
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');CACHE=ROOT/'.mia-cache/body-connected'
+ROOT=Path(__file__).resolve().parents[3];CACHE=ROOT/'.mia-cache/body-connected'
 ns=bpy.app.driver_namespace;ob=bpy.data.objects['MIA_ConnectedBody_Design'];source=bpy.data.objects['MIA_V27_SharedHeadBody']
 if ob.mode!='OBJECT':bpy.ops.object.mode_set(mode='OBJECT')
 proposal=dict(np.load(CACHE/'proposal.npz'))

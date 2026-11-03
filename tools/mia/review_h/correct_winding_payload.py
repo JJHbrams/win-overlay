@@ -11,7 +11,7 @@ import sys
 import numpy as np
 
 sys.dont_write_bytecode = True
-ROOT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT = Path(__file__).resolve().parents[3]
 BASE = ROOT/'.mia-cache/body-h/shape/assembly'
 OUT = BASE/'winding-fixed'
 

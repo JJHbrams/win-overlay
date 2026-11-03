@@ -10,6 +10,8 @@ import bpy
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import recorded_atlas
 COMPONENT = ROOT/'asset/mia/blender/mia-fit-v003/body/surface-review12'
 sys.path.insert(0, str(COMPONENT))
 import install_review
@@ -36,7 +38,7 @@ def main():
     assert (ROOT/'.mia-cache/body-h/shape/assembly').resolve() == assembly or (ROOT/'.mia-cache/body-h/shape/assembly').resolve() in assembly.parents
     payloads = dict(E=COMPONENT/'joined-expanded-E.npz', H=assembly/'geometry.npz')
     assembly_meta = json.loads((assembly/'assembly.json').read_text())
-    atlases = dict(E=COMPONENT/'atlas-E.npz', H=Path(assembly_meta.get('atlas_path',assembly/'atlas/atlas.npz')))
+    atlases = dict(E=COMPONENT/'atlas-E.npz', H=recorded_atlas(assembly, assembly_meta))
     objects, proofs = {}, {}
     for state in ['E', 'H']:
         ob, proof = install_review.apply(

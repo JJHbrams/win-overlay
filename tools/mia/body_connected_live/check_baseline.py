@@ -2,7 +2,7 @@
 from pathlib import Path
 import json,hashlib
 import bpy,numpy as np
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 def ev(o):
  d=bpy.context.evaluated_depsgraph_get();e=o.evaluated_get(d);m=e.to_mesh(preserve_all_data_layers=True,depsgraph=d)
  v=np.array([e.matrix_world@p.co for p in m.vertices],np.float32)

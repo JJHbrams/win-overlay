@@ -12,7 +12,7 @@ import bpy
 import numpy as np
 
 sys.dont_write_bytecode = True
-ROOT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT/'.mia-cache/face-live/source-audit'
 SOURCE_SHA = '4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1'
 
