@@ -1,0 +1,39 @@
+{
+  "time": "2026-11-03T19:06:40.641182+09:00",
+  "original_canonical": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay",
+  "new_canonical": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay",
+  "git_common_new": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.git",
+  "shared_object_alternate": "C:/Users/antio/Desktop/Workspace/projects/win-overlay/.git/objects",
+  "new_git_objects_and_LFS": "D repo default storage, no C metadata relocation",
+  "branch": "codex/mia-v003-fit",
+  "backups": [
+    {
+      "manifest": "D:\\MiaWorkCache\\review12-storage-relief-20261103\\archive-relocation.json",
+      "sha256": "ab6b15888ef665b716ae1ed30cd761960a51a662b60ed6a09ecfa9321080bf4a",
+      "status": "VERIFIED_COPY_SOURCE_NOT_YET_REMOVED",
+      "file_count": 9282,
+      "bytes": 5799663553,
+      "source_removed": false
+    },
+    {
+      "manifest": "D:\\MiaWorkCache\\review12-storage-relief-20261103\\prototype-relocation.json",
+      "sha256": "3e4094acb9ea6c4d1b76260645b2de1717bac1b95362f0b2fe9e5249d86b6ed2",
+      "status": "VERIFIED_COPY_SOURCE_NOT_YET_REMOVED",
+      "file_count": 5,
+      "bytes": 964884882,
+      "source_removed": false
+    }
+  ],
+  "deletion_automatic_review": {
+    "action": "Remove verified archived C copies, keeping D backups",
+    "result": "REJECTED before process start",
+    "reason": "blocked by policy",
+    "deleted_files": 0,
+    "alternate_delete_retry": false
+  },
+  "free_bytes": {
+    "C": 21065728,
+    "D": 49073582080
+  },
+  "scope": "Explicit owned-artifact handoffs only; source files/settings/processes preserved. Final native/render/GIF not yet complete."
+}

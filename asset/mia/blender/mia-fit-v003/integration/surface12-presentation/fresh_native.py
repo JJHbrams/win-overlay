@@ -80,6 +80,7 @@ for name, mode in [('SkinOnly', 0.), ('Underwear', 1.)]:
     assert scene.objects['MIA_V27_SharedHeadBody'].hide_render
     states[name] = dict(body_object=body.name, shared_mesh=body.data.name, world_sha256=ah(actual),
                        triangles_sha256=ah(triangles), review_uv_sha256=ah(actual_uv),
+                       body_only_review_uv_sha256=ah(actual_uv[~head]),
                        old_head_UV_layers=[u.name for u in list(body.data.uv_layers)[:3]],
                        body_material=mat.name, variant_mode=mode, packed_images=images,
                        frame=scene.frame_current, render_engine=scene.render.engine)
