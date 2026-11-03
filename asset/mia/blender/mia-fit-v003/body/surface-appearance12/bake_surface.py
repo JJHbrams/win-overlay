@@ -6,7 +6,7 @@ import time
 import numpy as np
 from PIL import Image
 from surface_api import load_surface, read_json, write_json, rasterize_world, pad_images, sha
-from pattern_fields import make_recipe, TargetAuthor, distance_to_polyline, smooth01, seat
+from pattern_fields import make_recipe, TargetAuthor, distance_to_polyline, smooth01, seat, brief_leg_height
 
 
 def linear_to_srgb(value):
@@ -19,7 +19,9 @@ def derive_config(surface, overrides=None):
     config = dict(source_axes_px=dict(front=239., back=935., profile=568.),
                   source_halfwidth_px=dict(bra=dict(front=80., back=80.), briefs=dict(front=80., back=85.)),
                   torso_center_xy=[0., -.006], strap_width_m=.013,
-                  allowed_region_ids=dict(upper=meta['allowed_regions']['bra'], pelvis=meta['allowed_regions']['briefs']),
+                  allowed_region_ids=dict(upper=meta['allowed_regions']['bra'], pelvis=meta['allowed_regions']['briefs'],
+                                          clavicle=meta['allowed_regions']['clavicle']),
+                  fair_straps=True,clavicle_ink_sigma_m=.00065,fit_brief_leg_from_source=True,
                   skin_base_srgb=linear_to_srgb([.92, .69, .60]).tolist(),
                   lighting_config=dict(light_scale=.25, interpolation='EASE',
                                        ramp_stops=[[.025, [.48,.36,.34,1]], [.175,[.72,.63,.60,1]], [.55,[1,1,1,1]], [.95,[1.06,1.04,1.02,1]]]))
@@ -44,9 +46,17 @@ def derive_config(surface, overrides=None):
     if not len(central): raise ValueError('Cannot derive current crotch bridge from body target')
     crotch = float(central[:, 2].min())
     guide_ring = meta['landmarks']['neck_guide_ring_center']
-    config['landmarks'] = dict(crotch_z=crotch, clavicle_anchor_z=float(guide_ring[2])-.036)
+    if 'clavicle_graphic_anchor_world' in meta['landmarks']:
+        anchor_z=float(meta['landmarks']['clavicle_graphic_anchor_world'][2])
+        anchor_method='Explicit current anatomical/source-aligned graphic landmark from target metadata'
+    elif 'clavicle_anchor_z' in meta['landmarks']:
+        anchor_z=float(meta['landmarks']['clavicle_anchor_z']);anchor_method='Explicit current target graphic anchor'
+    else:
+        anchor_z=float(guide_ring[2])-.036
+        anchor_method='LEGACY E heuristic only; not accepted as final F anatomical/source anchor'
+    config['landmarks'] = dict(crotch_z=crotch, clavicle_anchor_z=anchor_z)
     config['landmark_method'] = dict(crotch='Actual lowest central(|X|<4mm) body surface below waist; supported pose, not body dimensions recovered from source.',
-                                    clavicle='Authored suprasternal graphic anchor36mm below actual guide-neck join ring, rayseated on current front skin; inferred placement reviewed by closeup.')
+                                    clavicle=anchor_method)
     if overrides:
         for key, value in overrides.items():
             if isinstance(value, dict) and isinstance(config.get(key), dict): config[key].update(value)
@@ -68,7 +78,7 @@ def paint_fields(raster, config, curves, clavicles, straps):
     # seated source-relative paths; it is not a uniform world-height belt.
     aa = .0011
     bra_bottom, bra_top = curves['bra_bottom'](theta), curves['bra_top'](theta)
-    brief_bottom, brief_top = curves['brief_leg'](theta), curves['brief_waist'](theta)
+    brief_bottom, brief_top = brief_leg_height(points,config,curves), curves['brief_waist'](theta)
     upper = _mask_regions(region, config['allowed_region_ids']['upper'])
     pelvis = _mask_regions(region, config['allowed_region_ids']['pelvis'])
     bra = smooth01((z-bra_bottom+aa)/(2*aa))*smooth01((bra_top-z+aa)/(2*aa))*upper
@@ -81,11 +91,13 @@ def paint_fields(raster, config, curves, clavicles, straps):
         strap_alpha[selected] = np.maximum(strap_alpha[selected], smooth01((strap['width_m']/2+aa-distance)/(2*aa)))
     coverage = np.maximum.reduce([bra, brief, strap_alpha])
     ink, shade = np.zeros(len(points)), np.zeros(len(points))
-    clavicle_roi = upper & (y < .0) & (abs(x) < .13) & (z > 1.36) & (z < 1.445)
+    clavicle_domain=_mask_regions(region,config['allowed_region_ids'].get('clavicle',[1,3,4,12]))
     for path in clavicles:
         line = np.array([hit['world'] for hit in path['points']])
+        # Bound by CURRENT surface-seated curves, never old E world-height bands.
+        clavicle_roi=clavicle_domain & (points>=line.min(0)-.020).all(1)&(points<=line.max(0)+.020).all(1)
         distance = distance_to_polyline(points[clavicle_roi], line)
-        ink[clavicle_roi] = np.maximum(ink[clavicle_roi], np.exp(-.5*(distance/.00085)**2))
+        ink[clavicle_roi] = np.maximum(ink[clavicle_roi], np.exp(-.5*(distance/config.get('clavicle_ink_sigma_m',.00065))**2))
         # Authored soft warmth below the graphic, not a geometric groove or
         # a claim that the source under-chin lighting was physically recovered.
         shifted = line.copy(); shifted[:, 2] -= .0025
@@ -93,7 +105,11 @@ def paint_fields(raster, config, curves, clavicles, straps):
         shade[clavicle_roi] = np.maximum(shade[clavicle_roi], np.exp(-.5*(distance/.0035)**2))
     skin_rgb = np.asarray(config['skin_base_srgb'], float)
     skin = np.broadcast_to(skin_rgb, (len(points), 3)).copy()
-    if config.get('neck_tint_srgb') is not None:
+    if 'neck_alpha' in raster:
+        from neck_pigment import COMMON, HEAD
+        a=raster['neck_alpha'][occupied].astype(float)
+        skin=linear_to_srgb(COMMON[None,:]*(1-a[:,None])+HEAD[None,:]*a[:,None])
+    elif config.get('neck_tint_srgb') is not None:
         bounds = config.get('neck_tint_z', [1.425, 1.465])
         factor = smooth01((z-bounds[0])/(bounds[1]-bounds[0]))
         skin = skin*(1-factor[:, None]) + np.asarray(config['neck_tint_srgb'])*factor[:, None]
@@ -116,17 +132,30 @@ def paint_fields(raster, config, curves, clavicles, straps):
                  underwear_coverage_range=[float(coverage.min()),float(coverage.max())],
                  same_fixed_world_fields_for_all_views=True, base_skin_srgb=skin_rgb.tolist(),
                  old_underwear_texture_used=False)
+    stats['neck_boundary_prelight_continuation']='neck_alpha' in raster
     return images, stats
 
 
-def bake(surface_path, output, *, size=2048, config_path=None):
+def bake(surface_path, output, *, size=2048, config_path=None, neck_inputs_path=None):
     start = time.time(); out = Path(output); out.mkdir(parents=True, exist_ok=True)
     surface = load_surface(surface_path)
     overrides = read_json(config_path) if config_path else None
     config = derive_config(surface, overrides)
+    neck_inputs=read_json(neck_inputs_path) if neck_inputs_path else surface['meta'].get('neck_pigment_inputs')
+    if neck_inputs is not None:config['neck_pigment_inputs']=neck_inputs
     write_json(out/'authoring-config.json', config)
     curves, recipe, paths = make_recipe(config)
     author = TargetAuthor(surface, config)
+    if config.get('fit_brief_leg_from_source'):
+        charts,brief_proof=author.fit_brief_leg_source(paths)
+        config['brief_leg_source_charts']=charts
+        # Legacy polar curve is retained solely as diagnostic metadata.
+        config['brief_leg_surface_pairs']=brief_proof['polar_pairs_DIAGNOSTIC_ONLY']
+        config['brief_source_fit_proof']=brief_proof
+        config['brief_leg_surface_target_sha256']=surface['input_sha256']
+        curves,recipe,paths=make_recipe(config)
+        write_json(out/'brief-source-fit.json',brief_proof)
+        write_json(out/'authoring-config.json',config)
     boundaries = author.seat_boundaries(curves)
     clavicles = author.clavicle(paths)
     write_json(out/'seated-boundaries.json', dict(surface_guards=surface['guards'], boundaries=boundaries, clavicles=clavicles,
@@ -139,6 +168,11 @@ def bake(surface_path, output, *, size=2048, config_path=None):
     write_json(out/'pattern-recipe.json', recipe)
     print('MIA12_SEATING_COMPLETE', flush=True)
     raster = rasterize_world(surface, size=size)
+    if neck_inputs is not None:
+        from neck_pigment import prepare, sample_alpha
+        vertex_alpha,neck_report=prepare(surface,neck_inputs)
+        raster['neck_alpha']=sample_alpha(raster,surface,vertex_alpha)
+        write_json(out/'neck-prelight-field.json',neck_report)
     images, stats = paint_fields(raster, config, curves, clavicles, straps)
     padded, padding = pad_images(images, raster['valid'], pixels=4)
     files = []
@@ -171,5 +205,6 @@ if __name__ == '__main__':
     parser.add_argument('--output', required=True)
     parser.add_argument('--size', type=int, default=2048)
     parser.add_argument('--config')
+    parser.add_argument('--neck-inputs')
     args = parser.parse_args()
-    bake(args.surface, args.output, size=args.size, config_path=args.config)
+    bake(args.surface, args.output, size=args.size, config_path=args.config, neck_inputs_path=args.neck_inputs)
