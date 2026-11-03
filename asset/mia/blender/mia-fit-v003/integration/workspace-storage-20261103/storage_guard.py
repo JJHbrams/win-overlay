@@ -43,6 +43,7 @@ def inspect(reserve_bytes):
             roots.append(TASK_ROOT / workspace / RELATIVE / component)
     roots.extend([
         TASK_ROOT / 'win-overlay/asset/mia/blender/mia-fit-v003/integration/surface12-presentation',
+        TASK_ROOT / 'win-overlay/.mia-cache',
         TASK_ROOT / 'runtime-temp',
     ])
     for path in roots:
