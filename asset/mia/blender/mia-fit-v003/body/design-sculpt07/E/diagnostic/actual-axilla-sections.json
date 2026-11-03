@@ -1,0 +1,672 @@
+{
+  "mesh_sha256": "4c4b8c74baf3daedc86866a3cd2c7db90dfa1d22ed95c15e4e20afb08992f9da",
+  "sections": [
+    {
+      "z": 1.26,
+      "actual_segments": 1174,
+      "line_samples": [
+        {
+          "y": -0.035,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.14407750599390842,
+                -0.035,
+                1.26
+              ],
+              "triangle": 116025,
+              "actual_geometric_normal": [
+                0.9918803241953751,
+                -0.10372199919844743,
+                -0.07358783429585836
+              ],
+              "nearest_field_term": "breast_pair",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.008354483660129136,
+                "breast_pair": 0.001207014148855435,
+                "shoulder_L": 0.27110600938847884,
+                "upper_arm_L": 0.27752090404224544,
+                "anterior_fan_L": 0.11786031337956714,
+                "posterior_wall_L": 0.11319349992088788,
+                "trapezius_L": 0.1762604021321296,
+                "shoulder_R": 0.0432346689972536,
+                "upper_arm_R": 0.02607276232497367,
+                "anterior_fan_R": 0.0198231280909255,
+                "posterior_wall_R": 0.03360253161816066,
+                "trapezius_R": 0.106040201825264
+              }
+            }
+          ],
+          "actual_air_intervals": [],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        },
+        {
+          "y": 0.0,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.1448723969465361,
+                0.0,
+                1.26
+              ],
+              "triangle": 117299,
+              "actual_geometric_normal": [
+                0.9139089728036219,
+                -0.15311952625276049,
+                -0.37593190887334743
+              ],
+              "nearest_field_term": "breast_pair",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.005653052744776327,
+                "breast_pair": 0.0043190080423081605,
+                "shoulder_L": 0.2697184768896931,
+                "upper_arm_L": 0.2760489229997084,
+                "anterior_fan_L": 0.1173820178329027,
+                "posterior_wall_L": 0.10456252046087502,
+                "trapezius_L": 0.1730430422315642,
+                "shoulder_R": 0.03438833906931211,
+                "upper_arm_R": 0.012197787059269842,
+                "anterior_fan_R": 0.01708524866824428,
+                "posterior_wall_R": 0.005361467211543759,
+                "trapezius_R": 0.10067167296801932
+              }
+            },
+            {
+              "point": [
+                0.15787326658268194,
+                0.0,
+                1.26
+              ],
+              "triangle": 117377,
+              "actual_geometric_normal": [
+                -0.7901117716895614,
+                -0.33725046599240427,
+                -0.5118452026008338
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.012798053054398234,
+                "breast_pair": 0.016966291606151186,
+                "shoulder_L": 0.28224043213570454,
+                "upper_arm_L": 0.28790320477816045,
+                "anterior_fan_L": 0.12363883299206505,
+                "posterior_wall_L": 0.11011918683795552,
+                "trapezius_L": 0.17799499295671442,
+                "shoulder_R": 0.03335234769740958,
+                "upper_arm_R": 0.0005093004179552665,
+                "anterior_fan_R": 0.018951190937506152,
+                "posterior_wall_R": 0.006561823204949766,
+                "trapezius_R": 0.10012759527541201
+              }
+            },
+            {
+              "point": [
+                0.22716196252741844,
+                0.0,
+                1.26
+              ],
+              "triangle": 128418,
+              "actual_geometric_normal": [
+                0.902653587468649,
+                -0.1537223051774083,
+                0.4019775540013668
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.05096265666656565,
+                "breast_pair": 0.08531566068391847,
+                "shoulder_L": 0.34934131869795126,
+                "upper_arm_L": 0.3510836522965579,
+                "anterior_fan_L": 0.15729929169605283,
+                "posterior_wall_L": 0.13988256063636176,
+                "trapezius_L": 0.2055871922687282,
+                "shoulder_R": 0.06168044488308222,
+                "upper_arm_R": -5.059963509996379e-05,
+                "anterior_fan_R": 0.03998049256414074,
+                "posterior_wall_R": 0.025574097665324255,
+                "trapezius_R": 0.10239607755781271
+              }
+            }
+          ],
+          "actual_air_intervals": [
+            {
+              "x_interval_m": [
+                0.1448723969465361,
+                0.15787326658268194
+              ],
+              "width_m": 0.013000869636145856,
+              "boundary_triangle_ids": [
+                117299,
+                117377
+              ]
+            }
+          ],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        },
+        {
+          "y": 0.035,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.1109931031651481,
+                0.035,
+                1.26
+              ],
+              "triangle": 108588,
+              "actual_geometric_normal": [
+                0.6030305673573891,
+                0.7874216476904898,
+                -0.1277547790926801
+              ],
+              "nearest_field_term": "curved_tapered_thorax_neck",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 2.725250719368133e-05,
+                "breast_pair": 0.023000000000000003,
+                "shoulder_L": 0.23812650493678036,
+                "upper_arm_L": 0.2462042259924282,
+                "anterior_fan_L": 0.10965652495651082,
+                "posterior_wall_L": 0.09060930149108647,
+                "trapezius_L": 0.16157455076680186,
+                "shoulder_R": 0.049736173705610745,
+                "upper_arm_R": 0.046687007614019865,
+                "anterior_fan_R": 0.03790938473276117,
+                "posterior_wall_R": 0.009341354403612268,
+                "trapezius_R": 0.10494157489095472
+              }
+            },
+            {
+              "point": [
+                0.1709120406087117,
+                0.035,
+                1.26
+              ],
+              "triangle": 122872,
+              "actual_geometric_normal": [
+                -0.6047850491650042,
+                0.7565152436813382,
+                -0.2488367544882566
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.02889589474271883,
+                "breast_pair": 0.035667960571647284,
+                "shoulder_L": 0.2955652422862139,
+                "upper_arm_L": 0.3006662288445397,
+                "anterior_fan_L": 0.13689544583830876,
+                "posterior_wall_L": 0.11608320209684361,
+                "trapezius_L": 0.1839598833879528,
+                "shoulder_R": 0.03800858235001354,
+                "upper_arm_R": -5.0261679526947493e-05,
+                "anterior_fan_R": 0.04120554758696239,
+                "posterior_wall_R": 0.010449864991051756,
+                "trapezius_R": 0.10137164936535584
+              }
+            },
+            {
+              "point": [
+                0.2147355468013253,
+                0.035,
+                1.26
+              ],
+              "triangle": 130154,
+              "actual_geometric_normal": [
+                0.605008120272782,
+                0.7453833850385211,
+                0.279944251079587
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.051342269514898904,
+                "breast_pair": 0.07727190595647815,
+                "shoulder_L": 0.33792744072654296,
+                "upper_arm_L": 0.34053271131347146,
+                "anterior_fan_L": 0.15737978491597393,
+                "posterior_wall_L": 0.13486484467035578,
+                "trapezius_L": 0.20135924843535213,
+                "shoulder_R": 0.056172132231660156,
+                "upper_arm_R": -5.81850351451152e-05,
+                "anterior_fan_R": 0.051411913111544416,
+                "posterior_wall_R": 0.02242571306790144,
+                "trapezius_R": 0.10282176546385115
+              }
+            }
+          ],
+          "actual_air_intervals": [
+            {
+              "x_interval_m": [
+                0.1109931031651481,
+                0.1709120406087117
+              ],
+              "width_m": 0.05991893744356361,
+              "boundary_triangle_ids": [
+                108588,
+                122872
+              ]
+            }
+          ],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        }
+      ]
+    },
+    {
+      "z": 1.28,
+      "actual_segments": 1048,
+      "line_samples": [
+        {
+          "y": -0.035,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.14491749445866497,
+                -0.035,
+                1.28
+              ],
+              "triangle": 116116,
+              "actual_geometric_normal": [
+                0.9728610469497238,
+                -0.21920124928756118,
+                -0.07410934919873295
+              ],
+              "nearest_field_term": "breast_pair",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.007304822377961217,
+                "breast_pair": 0.0033338283409366505,
+                "shoulder_L": 0.26693515836294085,
+                "upper_arm_L": 0.2704960638440556,
+                "anterior_fan_L": 0.1160067736516106,
+                "posterior_wall_L": 0.11098638356823105,
+                "trapezius_L": 0.16020537988682085,
+                "shoulder_R": 0.030968954012199637,
+                "upper_arm_R": 0.020131697606945012,
+                "anterior_fan_R": 0.01148663408571245,
+                "posterior_wall_R": 0.031312338066102174,
+                "trapezius_R": 0.08780058861660683
+              }
+            }
+          ],
+          "actual_air_intervals": [],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        },
+        {
+          "y": 0.0,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.2177658736751177,
+                0.0,
+                1.28
+              ],
+              "triangle": 128636,
+              "actual_geometric_normal": [
+                0.8706075018922155,
+                -0.15556709444972996,
+                0.46673488917528455
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.0433513624352796,
+                "breast_pair": 0.07586385110604307,
+                "shoulder_L": 0.33572929261947493,
+                "upper_arm_L": 0.3346603846685617,
+                "anterior_fan_L": 0.15092907351681806,
+                "posterior_wall_L": 0.13330896217627677,
+                "trapezius_L": 0.1861829499394697,
+                "shoulder_R": 0.04699985622100587,
+                "upper_arm_R": -3.297108255823744e-05,
+                "anterior_fan_R": 0.030441018078102546,
+                "posterior_wall_R": 0.02061697365396895,
+                "trapezius_R": 0.0846756331489923
+              }
+            }
+          ],
+          "actual_air_intervals": [],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        },
+        {
+          "y": 0.035,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.11824852841418121,
+                0.035,
+                1.28
+              ],
+              "triangle": 114859,
+              "actual_geometric_normal": [
+                0.2471736120836737,
+                0.9440498433564125,
+                -0.21834628173670037
+              ],
+              "nearest_field_term": "curved_tapered_thorax_neck",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.002031560256298637,
+                "breast_pair": 0.023000000000000003,
+                "shoulder_L": 0.23979421450800475,
+                "upper_arm_L": 0.2449883455505257,
+                "anterior_fan_L": 0.11053351684440008,
+                "posterior_wall_L": 0.09086360916060626,
+                "trapezius_L": 0.1471732512353192,
+                "shoulder_R": 0.033767211653563195,
+                "upper_arm_R": 0.03338793518111074,
+                "anterior_fan_R": 0.0318483095993623,
+                "posterior_wall_R": 0.003031780020119532,
+                "trapezius_R": 0.0849967718736836
+              }
+            },
+            {
+              "point": [
+                0.16175848984869873,
+                0.035,
+                1.28
+              ],
+              "triangle": 118315,
+              "actual_geometric_normal": [
+                -0.41934752128938196,
+                0.8713514212441311,
+                -0.2547437086255204
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.02252598984195282,
+                "breast_pair": 0.02582064707027995,
+                "shoulder_L": 0.28189303500447,
+                "upper_arm_L": 0.2845188528860051,
+                "anterior_fan_L": 0.13063049620134837,
+                "posterior_wall_L": 0.1095103306913559,
+                "trapezius_L": 0.16410404123291372,
+                "shoulder_R": 0.024136464590062023,
+                "upper_arm_R": 0.0008650078177298752,
+                "anterior_fan_R": 0.0342732058928283,
+                "posterior_wall_R": 0.004960257432766375,
+                "trapezius_R": 0.08307408234719708
+              }
+            },
+            {
+              "point": [
+                0.20488196596876526,
+                0.035,
+                1.28
+              ],
+              "triangle": 126990,
+              "actual_geometric_normal": [
+                0.5730237041031019,
+                0.7583928767837366,
+                0.3106188644941726
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.04397068033416229,
+                "breast_pair": 0.06680814269935821,
+                "shoulder_L": 0.3238295991085445,
+                "upper_arm_L": 0.32373125177892315,
+                "anterior_fan_L": 0.1509566596724934,
+                "posterior_wall_L": 0.12808431563568493,
+                "trapezius_L": 0.1817025197669139,
+                "shoulder_R": 0.0412871582053245,
+                "upper_arm_R": -5.753961361252991e-05,
+                "anterior_fan_R": 0.04379497890788628,
+                "posterior_wall_R": 0.017246256132373274,
+                "trapezius_R": 0.08503081358908943
+              }
+            }
+          ],
+          "actual_air_intervals": [
+            {
+              "x_interval_m": [
+                0.11824852841418121,
+                0.16175848984869873
+              ],
+              "width_m": 0.04350996143451752,
+              "boundary_triangle_ids": [
+                114859,
+                118315
+              ]
+            }
+          ],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        }
+      ]
+    },
+    {
+      "z": 1.3,
+      "actual_segments": 887,
+      "line_samples": [
+        {
+          "y": -0.035,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.14833998432260875,
+                -0.035,
+                1.3
+              ],
+              "triangle": 116397,
+              "actual_geometric_normal": [
+                0.7939892445678909,
+                -0.5929889944956918,
+                -0.13395944131526719
+              ],
+              "nearest_field_term": "anterior_fan_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.007603958085006596,
+                "breast_pair": 0.013022785069755054,
+                "shoulder_L": 0.2658609993512582,
+                "upper_arm_L": 0.265905916395928,
+                "anterior_fan_L": 0.11614217475039523,
+                "posterior_wall_L": 0.11019118358043074,
+                "trapezius_L": 0.1458789942967567,
+                "shoulder_R": 0.01935435568281815,
+                "upper_arm_R": 0.014337950954447266,
+                "anterior_fan_R": 0.004763952947111311,
+                "posterior_wall_R": 0.030172489996379476,
+                "trapezius_R": 0.0701182139784255
+              }
+            }
+          ],
+          "actual_air_intervals": [],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        },
+        {
+          "y": 0.0,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.2072733681980883,
+                0.0,
+                1.3
+              ],
+              "triangle": 125238,
+              "actual_geometric_normal": [
+                0.865375231148886,
+                -0.15813410595497837,
+                0.47552004568454515
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.03540639046855659,
+                "breast_pair": 0.06799178358765173,
+                "shoulder_L": 0.3214266725108542,
+                "upper_arm_L": 0.3173229789735777,
+                "anterior_fan_L": 0.14450645991034902,
+                "posterior_wall_L": 0.1265447484901034,
+                "trapezius_L": 0.16675731443419278,
+                "shoulder_R": 0.03185819034866476,
+                "upper_arm_R": -5.370444398451469e-05,
+                "anterior_fan_R": 0.021203837987829745,
+                "posterior_wall_R": 0.01610545601499373,
+                "trapezius_R": 0.06712982449001291
+              }
+            }
+          ],
+          "actual_air_intervals": [],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        },
+        {
+          "y": 0.035,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.19314741126889765,
+                0.035,
+                1.3
+              ],
+              "triangle": 127107,
+              "actual_geometric_normal": [
+                0.5246306324922201,
+                0.7844320279401473,
+                0.33080068469173557
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.035983856475024355,
+                "breast_pair": 0.05685603327044561,
+                "shoulder_L": 0.30828149883698297,
+                "upper_arm_L": 0.30531197789244774,
+                "anterior_fan_L": 0.14413716274286958,
+                "posterior_wall_L": 0.12078321269642191,
+                "trapezius_L": 0.16168258254893858,
+                "shoulder_R": 0.025636477804967986,
+                "upper_arm_R": -6.081362522354539e-05,
+                "anterior_fan_R": 0.03682555759818087,
+                "posterior_wall_R": 0.012327365029591277,
+                "trapezius_R": 0.06733201867925022
+              }
+            }
+          ],
+          "actual_air_intervals": [],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        }
+      ]
+    },
+    {
+      "z": 1.32,
+      "actual_segments": 807,
+      "line_samples": [
+        {
+          "y": -0.035,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.15659029990313456,
+                -0.035,
+                1.32
+              ],
+              "triangle": 116651,
+              "actual_geometric_normal": [
+                0.3253276772112461,
+                -0.9269225465519415,
+                -0.18702003939150202
+              ],
+              "nearest_field_term": "anterior_fan_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.009878266624267029,
+                "breast_pair": 0.03032324945878002,
+                "shoulder_L": 0.27013988609544,
+                "upper_arm_L": 0.26577734123095326,
+                "anterior_fan_L": 0.11942419560639675,
+                "posterior_wall_L": 0.11173494620289724,
+                "trapezius_L": 0.1345641489696556,
+                "shoulder_R": 0.01003863619036462,
+                "upper_arm_R": 0.010125187142261013,
+                "anterior_fan_R": 0.0017666181537663917,
+                "posterior_wall_R": 0.030704012394833287,
+                "trapezius_R": 0.05380803441825438
+              }
+            }
+          ],
+          "actual_air_intervals": [],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        },
+        {
+          "y": 0.0,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.195555341868203,
+                0.0,
+                1.32
+              ],
+              "triangle": 125412,
+              "actual_geometric_normal": [
+                0.8390464455061628,
+                -0.166966586767946,
+                0.517806161788884
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.02650719318141787,
+                "breast_pair": 0.06253195418099049,
+                "shoulder_L": 0.30633887823389333,
+                "upper_arm_L": 0.29896866378234327,
+                "anterior_fan_L": 0.1380125389611059,
+                "posterior_wall_L": 0.11957037564216379,
+                "trapezius_L": 0.14735017147384316,
+                "shoulder_R": 0.016255274795484134,
+                "upper_arm_R": -5.422272535510686e-05,
+                "anterior_fan_R": 0.012672220234737831,
+                "posterior_wall_R": 0.012287429314991915,
+                "trapezius_R": 0.04982033896064661
+              }
+            }
+          ],
+          "actual_air_intervals": [],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        },
+        {
+          "y": 0.035,
+          "starting_x0_inside_torso_assumption": true,
+          "positive_x_surface_hits": [
+            {
+              "point": [
+                0.17912316633866318,
+                0.035,
+                1.32
+              ],
+              "triangle": 123484,
+              "actual_geometric_normal": [
+                0.4425656475771927,
+                0.8624753005889159,
+                0.24550357117288413
+              ],
+              "nearest_field_term": "upper_arm_R",
+              "field_term_values_approximate": {
+                "curved_tapered_thorax_neck": 0.02689605608345752,
+                "breast_pair": 0.048684562112489234,
+                "shoulder_L": 0.2909097845142561,
+                "upper_arm_L": 0.2849240203849458,
+                "anterior_fan_L": 0.13677630799029908,
+                "posterior_wall_L": 0.11282500490344423,
+                "trapezius_L": 0.1411911382970837,
+                "shoulder_R": 0.009329644105726011,
+                "upper_arm_R": 0.00024646909320176746,
+                "anterior_fan_R": 0.03095819823658219,
+                "posterior_wall_R": 0.007942634411907946,
+                "trapezius_R": 0.04970982528564838
+              }
+            }
+          ],
+          "actual_air_intervals": [],
+          "limit": "Widths are actual mesh intersections ALONG this declared horizontal line, not shortest 3D clearance or mandated anatomical gaps. Primitive field nearest-label is only a construction diagnostic, not anatomical ownership proof."
+        }
+      ]
+    }
+  ],
+  "diagram_x_pixels_per_metre": 1600,
+  "diagram_y_pixels_per_metre": 1600,
+  "diagram_axes_equal_scale": true,
+  "arbitrary_airpoints_not_targets": true,
+  "field_values_not_exact_distances": true,
+  "component_field_invariance_not_final_surface_invariance": true,
+  "status": "Actual section/line geometry only; intact/cutaway visual anatomy review required."
+}

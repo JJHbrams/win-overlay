@@ -1,0 +1,92 @@
+{
+  "breast_step_sha256": "1ea39f3ee1f56b32bc52c05263f5a4c74c11d5f849d2843a8db69907133d5e9e",
+  "final_mesh_sha256": "4c4b8c74baf3daedc86866a3cd2c7db90dfa1d22ed95c15e4e20afb08992f9da",
+  "input_parameters_sha256_at_breast_build": "5458ab40b9ae8b796ad472dc38ca1c5f06b752011fc652d02296b8c18396c9ce",
+  "actual_active_vertices": 236,
+  "fixed_band_vertices": 42,
+  "opposite_guard_D_triangle": 116925,
+  "opposite_guard_vertices_exact": true,
+  "outside_mask_vertices_exact": true,
+  "max_displacement_mm": 0.5261464802396153,
+  "median_active_displacement_mm": 0.027774612438400688,
+  "volume_before_m3": 0.015483039156973313,
+  "volume_before_compensation_m3": 0.015483040524029741,
+  "volume_after_m3": 0.015483039156973313,
+  "relative_volume_change": 0.0,
+  "triangle_orientation_flips": 0,
+  "normal_turn_before": {
+    "n": 443,
+    "quantiles_degrees": [
+      3.168980643021635,
+      10.077670092750312,
+      11.645457404614055,
+      16.834813613219787,
+      23.294386627677284
+    ]
+  },
+  "normal_turn_after": {
+    "n": 443,
+    "quantiles_degrees": [
+      3.3813084295179725,
+      9.58909815480359,
+      12.2673958987038,
+      16.08290802625318,
+      23.62636647065106
+    ]
+  },
+  "ownership": [
+    {
+      "side_sign": 1,
+      "seed_D_triangles": [
+        117439,
+        117681,
+        117690,
+        117699
+      ],
+      "fixed_D_triangles": [
+        117879,
+        114437,
+        114428,
+        117614,
+        117927,
+        117923,
+        117735
+      ],
+      "monitored_bottom_D_triangles": [
+        117704,
+        117634
+      ],
+      "connected_candidate_vertices": 261,
+      "active_vertices": 121,
+      "normal_guard": "Actual E vertex nY>.25; same-sheet geodesic connectivity; opposite/anterior shell excluded.",
+      "fixed_band": "Actual inner/outer/top rails plus connected-domain outer boundary; C2 distance taper. Apex allowed bounded motion; lower passage measured, not locked to arbitraryZ."
+    },
+    {
+      "side_sign": -1,
+      "seed_D_triangles": [
+        14739,
+        14856,
+        14864,
+        14871
+      ],
+      "fixed_D_triangles": [
+        15128,
+        20929,
+        20922,
+        20894,
+        15086,
+        15083,
+        14812
+      ],
+      "monitored_bottom_D_triangles": [
+        14830,
+        14899
+      ],
+      "connected_candidate_vertices": 261,
+      "active_vertices": 115,
+      "normal_guard": "Actual E vertex nY>.25; same-sheet geodesic connectivity; opposite/anterior shell excluded.",
+      "fixed_band": "Actual inner/outer/top rails plus connected-domain outer boundary; C2 distance taper. Apex allowed bounded motion; lower passage measured, not locked to arbitraryZ."
+    }
+  ],
+  "limits": "Triangle normal turns include tessellation; component labels/technical checks do not grant anatomy acceptance. No global Smooth. Lower air passage requires actual post-fair sections, not a hard13mm invariant."
+}

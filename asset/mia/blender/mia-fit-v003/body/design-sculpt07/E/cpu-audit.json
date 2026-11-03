@@ -1,0 +1,210 @@
+{
+  "parameters_sha256": "1ca4bd3a6e23c37160ef91326af89bb6db0a70974f8a7208dfb8ad7d463e1a7e",
+  "mesh_sha256": "4c4b8c74baf3daedc86866a3cd2c7db90dfa1d22ed95c15e4e20afb08992f9da",
+  "finite": true,
+  "connected_components": 1,
+  "component_vertex_counts": [
+    68048
+  ],
+  "boundary_edges": 0,
+  "nonmanifold_edges": 0,
+  "zero_area_triangles": 0,
+  "euler_characteristic": 2,
+  "signed_volume_m3": 0.015483039159405887,
+  "source_support_rows": [
+    {
+      "z": 1.3089242725233947,
+      "source_v06_y": 262,
+      "source_E2_y": 317,
+      "source_F2_y": 335,
+      "actual_F2_support_m": 0.13045571205655632,
+      "source_F2_support_m": 0.13191711068205447,
+      "support_residual_mm": -1.461398625498156,
+      "support_uncertainty_mm": 14.0,
+      "within_support_band": true,
+      "actual_support_maximizer": [
+        -0.09871403953500106,
+        -0.10331024834110143,
+        1.3089242725233947
+      ],
+      "actual_front_x_interval_m": [
+        -0.13681517104427934,
+        0.13686739904079903
+      ],
+      "observed_E2_width_m": 0.18378195761687932,
+      "front_width_residual_mm": 89.90061246819903,
+      "actual_front_profile_y_m": -0.12083835881164419,
+      "source_v06_front_profile_y_m": -0.11235999999999999,
+      "profile_residual_mm": -8.4783588116442,
+      "semantic_breast_support_m": 0.13045571205655632,
+      "semantic_breast_support_residual_mm": -1.461398625498156,
+      "semantic_breast_support_maximizer": [
+        -0.09871403953500106,
+        -0.10331024834110143,
+        1.3089242725233947
+      ],
+      "semantic_region_definition": "Actual mesh intersection where breast_pair primitive field <= other positive primitive minimum +2mm; broad ROI retained separately, not silently replaced.",
+      "semantic_breast_width_m": 0.27054973954810513
+    },
+    {
+      "z": 1.2849269479962198,
+      "source_v06_y": 275,
+      "source_E2_y": 350,
+      "source_F2_y": 355,
+      "actual_F2_support_m": 0.14889976233524493,
+      "source_F2_support_m": 0.15559454080447452,
+      "support_residual_mm": -6.694778469229584,
+      "support_uncertainty_mm": 14.0,
+      "within_support_band": true,
+      "actual_support_maximizer": [
+        -0.10484630095617728,
+        -0.12469595224405515,
+        1.2849269479962198
+      ],
+      "actual_front_x_interval_m": [
+        -0.14095812060321225,
+        0.14095812060321225
+      ],
+      "observed_E2_width_m": 0.23444087332807775,
+      "front_width_residual_mm": 47.475367878346745,
+      "actual_front_profile_y_m": -0.14685176907257655,
+      "source_v06_front_profile_y_m": -0.13,
+      "profile_residual_mm": -16.851769072576545,
+      "semantic_breast_support_m": 0.14889976233524493,
+      "semantic_breast_support_residual_mm": -6.694778469229584,
+      "semantic_breast_support_maximizer": [
+        -0.10484630095617728,
+        -0.12469595224405515,
+        1.2849269479962198
+      ],
+      "semantic_region_definition": "Actual mesh intersection where breast_pair primitive field <= other positive primitive minimum +2mm; broad ROI retained separately, not silently replaced.",
+      "semantic_breast_width_m": 0.2819162412064245
+    },
+    {
+      "z": 1.2572377273879414,
+      "source_v06_y": 290,
+      "source_E2_y": 385,
+      "source_F2_y": 385,
+      "actual_F2_support_m": 0.1581013001334972,
+      "source_F2_support_m": 0.1725069908919174,
+      "support_residual_mm": -14.405690758420187,
+      "support_uncertainty_mm": 14.0,
+      "within_support_band": false,
+      "actual_support_maximizer": [
+        -0.114114438687414,
+        -0.1279656674026936,
+        1.2572377273879414
+      ],
+      "actual_front_x_interval_m": [
+        -0.1418346285736756,
+        0.1419191269423962
+      ],
+      "observed_E2_width_m": 0.2592698379048371,
+      "front_width_residual_mm": 24.483917611234695,
+      "actual_front_profile_y_m": -0.15652528806558175,
+      "source_v06_front_profile_y_m": -0.148,
+      "profile_residual_mm": -8.525288065581755,
+      "semantic_breast_support_m": 0.1581013001334972,
+      "semantic_breast_support_residual_mm": -14.405690758420187,
+      "semantic_breast_support_maximizer": [
+        -0.114114438687414,
+        -0.1279656674026936,
+        1.2572377273879414
+      ],
+      "semantic_region_definition": "Actual mesh intersection where breast_pair primitive field <= other positive primitive minimum +2mm; broad ROI retained separately, not silently replaced.",
+      "semantic_breast_width_m": 0.2837537555160718
+    },
+    {
+      "z": 1.220318766576903,
+      "source_v06_y": 310,
+      "source_E2_y": 415,
+      "source_F2_y": 415,
+      "actual_F2_support_m": 0.14642026735395441,
+      "source_F2_support_m": 0.16348701751194786,
+      "support_residual_mm": -17.066750157993443,
+      "support_uncertainty_mm": 14.0,
+      "within_support_band": false,
+      "actual_support_maximizer": [
+        -0.10450225407034854,
+        -0.1212485619352879,
+        1.220318766576903
+      ],
+      "actual_front_x_interval_m": [
+        -0.1296952224893335,
+        0.12960015671947395
+      ],
+      "observed_E2_width_m": 0.23662769174975806,
+      "front_width_residual_mm": 22.667687459049347,
+      "actual_front_profile_y_m": -0.14355001955272198,
+      "source_v06_front_profile_y_m": -0.131,
+      "profile_residual_mm": -12.550019552721976,
+      "semantic_breast_support_m": 0.14642026735395441,
+      "semantic_breast_support_residual_mm": -17.066750157993443,
+      "semantic_breast_support_maximizer": [
+        -0.10450225407034854,
+        -0.1212485619352879,
+        1.220318766576903
+      ],
+      "semantic_region_definition": "Actual mesh intersection where breast_pair primitive field <= other positive primitive minimum +2mm; broad ROI retained separately, not silently replaced.",
+      "semantic_breast_width_m": 0.2592953792088074
+    }
+  ],
+  "air_corridor_probes": [
+    {
+      "point": [
+        0.151,
+        0.0,
+        1.28
+      ],
+      "field_m": -0.0030999994723174724,
+      "outside_positive_volume": false
+    },
+    {
+      "point": [
+        0.157,
+        0.0,
+        1.26
+      ],
+      "field_m": 0.0005309895014603506,
+      "outside_positive_volume": true
+    },
+    {
+      "point": [
+        0.165,
+        0.0,
+        1.24
+      ],
+      "field_m": 0.002101692722669469,
+      "outside_positive_volume": true
+    },
+    {
+      "point": [
+        0.17,
+        0.0,
+        1.22
+      ],
+      "field_m": 0.006302438078864668,
+      "outside_positive_volume": true
+    },
+    {
+      "point": [
+        -0.151,
+        0.0,
+        1.28
+      ],
+      "field_m": -0.0030999994723174724,
+      "outside_positive_volume": false
+    },
+    {
+      "point": [
+        -0.157,
+        0.0,
+        1.26
+      ],
+      "field_m": 0.0005309895014603506,
+      "outside_positive_volume": true
+    }
+  ],
+  "status": "CPU construction evidence only. Actual4/source art review required; no anatomy PASS.",
+  "limits": "Cup/band drawings are clothed envelope priors; global v06 height and E2/F2 support may disagree. No inferred 3D tangent point is audited as recovered anatomy. Mesh is a new design volume, private context seams UNVERIFIED."
+}
