@@ -13,3 +13,5 @@ Whole old C worktrees retain unique/untracked data; old body also has an unmerge
 New large outputs stay on D. Use existing immutable inputs by path+hash, scoped deltas and a small set of actual witnesses rather than whole-scene or backup duplication. The original full-body two-material native/GIF/source4 deliverables remain open.
 
 The integrated native/render main paths and analytic texture bake now call the guard before production output creation (800/100/100MiB). The helper normal/denied paths were executed; entrypoint ordering was independently read. No final native/render/bake was produced to test storage control. Standalone custom helpers are not automatically intercepted.
+
+The completed clean D `appearance12-producer` worktree was subsequently removed using normal `git worktree remove` without force, after branch ancestry/clean status/no active dependency checks. Its prior full inventory was approximately327MB; the branch and all changes remain in canonical Git. This is separate from the rejected D backup directories, which remain. `D-merged-worktree-result.json` records the result and retained bake-file Git blob.
