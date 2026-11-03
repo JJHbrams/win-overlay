@@ -305,6 +305,67 @@ is one geometry hypothesis with corrected data handling, not selected evidence
 from a rendered variant search. First actual front/oblique proof remains pending
 the body owner's exclusive MCP handoff.
 
+## Terminal01 actual trial: rejected and restored
+
+Before the live trial, a factory Blender 5.2.3 RNA select/apply/restore test used
+the frozen actual Main coordinates/faces and retained nineteen M2 coordinate
+arrays in a synthetic scene. It first caught a useful side effect: entering
+EDIT only to show selection creates/reorders UV-selection attributes. The live
+helper now stays in OBJECT for its scope selection. The final synthetic RNA
+test returned exactly the initial object/mesh/group/material sets, Main/M2/brow
+coordinate hashes, fixture UV, existing rear mask/modifier, graphic visibility
+and strength. It did not load the native, use MCP/GPU, or test genuine 47-key
+deformation and production maps/normals/drivers. Its receipts are isolated in
+`fringe-terminal01-ready/cpu-restore-objectmode-baseline-off`; they are not live
+evidence. The prior EDIT-mode CPU receipt is a failure and is not selected.
+
+Root granted one actual live physical front/oblique proof. The existing derived
+Main received only the additional 498-face mask and three new leaves. Its
+evaluated face count was 118,636 (120,915 original minus 1,781 rear U and 498
+frontal faces); there was one visible derived Main. Body-D, all nineteen M2
+raw coordinate arrays, original Main and true brows held their coordinate
+hashes. The old graphic proxy was OFF before the baseline and candidate shots.
+
+`live/terminal01-{front,oblique}-{before,after}-0.png` are actual fixed-view solid
+screenshots. They show curved terminal leaves but a conspicuous horizontal
+backing shelf exposed behind their roots, pasted-strip integration and retained
+thin needles over the eye. The dark workbench material identifies the new
+leaves; it is not a final pigment/texture comparison. Both producer and root
+judged the actual candidate **FAIL**. The neutral Main-only CPU prediction
+(5/53 clear centers to 8/53, with a shifted partial left span) did not establish
+an acceptable source gap or hairstyle. No expression batch, extra renders or
+final maps were pursued for this rejected state.
+
+`live/terminal01-restored.json` confirms removal of the three trial actors,
+owned modifier/attribute/group/material and return of the prior graphic state.
+`live/terminal01-left.json` confirms borrowed camera/viewport/visibility return
+and body-D SHA `69d4...bf25a`. All retained nineteen M2 coordinates remained
+exact. No full native was saved. The live guard compared the named coordinate
+arrays; it is not an additional claim of a full production-map/driver audit.
+LIVE/GPU token was returned to root before its eye batch. Do not repeat another
+partial terminal resculpt: the upstream foreground mass/root integration must
+be resolved first.
+
+## Read-only full LEFT root-to-tip guide after the failed trial
+
+`full-left-guide/source-root-to-tip.png` compares broad observed source flow
+with measured Main semantic bands. Fringe>0.5 reaches only Z1.605562, while
+RootsLocked>0.5 starts at Z1.630013: the thresholded fields leave a 24.451 mm
+untagged transition before the real upper roots. The small rejected module did
+not address that upstream ownership. These measured bands are labels on the
+original mesh, not proposed cut lines or proof of a literal hole.
+
+The descriptive left-front inventory in `full-left-guide/ownership.json` covers
+327 disconnected components/9,937 faces and records full-component bounds,
+semantic memberships and boundary crossing. Its spatial filter is deliberately
+**not an edit mask**. No new geometry or next candidate was created. The guide
+is a CPU Main projection, not a complete all-actor render or registered source
+proportion measurement. The separate native Crown donor lies posterior to this
+forehead region. Later live RootLining actors are missing from the old native
+audit and require actual ownership/coverage inspection before any whole-left
+edit. Source eyebrow graphic display remains a separate, bounded option; its
+proxy must be rebound to the real changed foreground if that option is reused.
+
 ## Still required
 
 - Actual whole-front ownership/forelock refinement with source-visible brow
