@@ -2,7 +2,10 @@
 from pathlib import Path
 import argparse
 import hashlib
+import sys
 import numpy as np
+sys.path.insert(0, str(Path(__file__).resolve().parents[6] / 'tools/mia/review_h'))
+from paths import recorded_path
 from surface_api import load_surface, read_json, write_json, sha, array_sha
 from topology_revision_guard import certify_retained_correspondence, physical_replacement_mask
 
@@ -58,8 +61,9 @@ def receive(previous_path, incoming_path, proof_path, destination):
     meta, proof = target['meta'], read_json(proof_path)
     if meta['surface_npz_sha256'] != digest:
         raise ValueError('Incoming surface metadata SHA mismatch')
-    old_path, new_path = Path(proof['previous_joined_path']), Path(proof['new_joined_path'])
-    corr_path = Path(meta['retained_correspondence_path'])
+    old_path = recorded_path(proof['previous_joined_path'], expected_sha256=proof['previous_joined_sha256'])
+    new_path = recorded_path(proof['new_joined_path'], expected_sha256=proof['new_joined_sha256'])
+    corr_path = recorded_path(meta['retained_correspondence_path'], expected_sha256=meta['retained_correspondence_sha256'])
     expected_files = {str(old_path): proof['previous_joined_sha256'],
                       str(new_path): proof['new_joined_sha256'],
                       str(corr_path): meta['retained_correspondence_sha256']}

@@ -55,5 +55,54 @@
     "local_raw_evidence": ".mia-cache/storage-lfs-20261104/{duplicate-verification,C-before,cleanup-result}.json",
     "history_refs_models_settings_unchanged": true,
     "continuity": "D still requires C Git alternates AND the preserved C LFS reference cache. Do not remove that common Git metadata. Materialize individual declared inputs on demand; avoid bulk rehydration/fetch of historic Mia candidates."
+  },
+  "historical_handoff_superseded_by": "2026-11-04 closure below; active work is C, not original new_canonical D.",
+  "C_return_cleanup_20261104": {
+    "canonical": "C:/Users/antio/.codex/worktrees/mia-current/win-overlay",
+    "branch": "codex/mia-current",
+    "current_native": {
+      "path": ".mia-cache/migration-to-C/Mia_Current_STATIC_WIP.blend",
+      "bytes": 277711083,
+      "sha256": "0d62eff09b4e95809a9f852d3e68654c1bb5a9e35fe70c065a939bc433e017ed"
+    },
+    "runtime": "Official MCP C Python -m blmcp, C temp, original localhost/port; native freshly reopened and restored after original D root renamed away.",
+    "source_inputs": "Original R3b4dc117 andshoulder11462cb9 unchanged; currentD69d4body/19M2actors retained as STATIC WIP, noART.",
+    "git_preservation": "All13977 D-visible OIDs/11heads present C; legacy8worktree statuses and noncandidate files held. Non-expiring C repack preserves all12904pre-repackOIDs.",
+    "accounting": {
+      "C_old_worktree_exports": 5847966338,
+      "C_pip_cache": 4856644713,
+      "C_git_repack": 1479642203,
+      "C_session_allocated_saved": 138209242,
+      "D_retired_exports": 2420739836,
+      "D_source_workers": 842214,
+      "this_phase_gross_sum": 14744044546,
+      "previous_phase_LFS_C": 15441993,
+      "previous_phase_LFS_D": 6875450771,
+      "all_phases_gross_sum": 21634937310,
+      "accounting": "Action-level byte reductions; logical bytes except NTFS compression. Excludes user uninstall, does not equal drive-free delta; new C migration footprint not netted."
+    },
+    "D": {
+      "original_path_absent": true,
+      "retired_path": "D:/MiaWorkCache/mia-reference-work/win-overlay-retired-20261104",
+      "whole_removal": "Automatic review rejected before execution: blocked by policy. Not retried by another route.",
+      "narrower_action": "4312clean tracked renders,2420739836B sparse-evicted with C Git copies verified; allothermetadata/native/ignoredcacheheld.",
+      "fully_deleted": false,
+      "previous_blocked_backups_retained_bytes": 6764548435
+    },
+    "exclusions": "User-uninstalled100GB excluded; unavailable baseline means no attribution of entire yesterday100GB. Voice-model caches and current/untracked work preserved. No history rewrite, reflog expiration, remote object deletion, forcepush or CUA.",
+    "evidence": [
+      ".mia-cache/migration-to-C/",
+      ".mia-cache/git-storage-20261104/",
+      ".mia-cache/storage-lfs-20261104/"
+    ],
+    "recovery": "git sparse-checkout add/select explicit old artifact when actually needed with GIT_LFS_SKIP_SMUDGE=1; hydrate only declared LFS input via retained C cache. No bulk sparse disable/LFS fetch-all.",
+    "model_acceptance": "M1..M6/FB remain open or failed; this storage continuity check is not model completion.",
+    "observed_footprints_bytes": {
+      "C_current_checkout": 1518367377,
+      "D_retired_checkout": 835301279,
+      "D_unused_tool_archives": 212758318,
+      "D_previously_blocked_backups": 6764548435
+    },
+    "git_fsck": "git fsck --full --no-dangling exit0 after D object import; no object expiry"
   }
 }

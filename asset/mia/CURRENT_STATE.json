@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "updated": "2026-11-04",
-  "canonical_worktree": "D:/MiaWorkCache/mia-reference-work/win-overlay",
+  "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-current/win-overlay",
   "status": "v002_refinement_active_v001_frozen_overall_art_open",
   "in_progress_v29": {
     "baseline_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
@@ -507,8 +507,8 @@
       "source_review": "HbaseactualARTFAIL; validatedpackageintegrityonly. LiveMCPneck/upperfairingreviewactive, noartpass."
     },
     "live_mcp_20261104": {
-      "server": "Official Blender Lab via configured standard MCP ClientSession",
-      "scene": "ProtectedR3b remainsdiskinput; D static69d4 is again visibleworkingrepairbaseline. Bothprivatebodycages and terminal01 removed.19modularrearactors remainprovisionalhairOFF. No newnative saved.",
+      "server": "Official Blender Lab via C Python/module standard MCP ClientSession",
+      "scene": "Actual live file is C active_live_checkpoint; body69d4,19M2provisional actors andcamera/visibility exact afterfreshreopen. Original R3b/shoulder11 unchanged; no artadoption.",
       "neck_scope": "D neckruts/S repair held; sourcehead/Ejoins protected. M3clavicle/notch/fossae/acromion remainsFAIL/OPEN. Originalcage888map, new1014face/894interiorreplacement and collar01directproportionalstudy allrejected. No topology/UV/rig adoption.",
       "current_operation": "RESTORED D69d4 exactly after collar01 alsoFAILed actualfront/high/profile. Bothbroadoriginalcage888 and newCoonscharteddesign rejected/removed. Source47keys and acceptedfaceheld. Collar01 moved5066points<=3.082mm but producedisolatedovalsternaldent and retainedcap/neckcone; independentvisualFAIL. STOPrepeatinglocaldepression/ridgecoefficients. Nextrequires continuousneck-acromionmacroplane beforeclavicle/fossa. No finalmaps/native/orbit/headscale.",
       "native_saved": false,
@@ -543,5 +543,42 @@
     "record": "blender/mia-fit-v003/integration/storage-d-handoff.json",
     "deletion_review": "Automatic approval rejected C archived-copy removal with only blocked by policy. No deletion executed or retried through another tool. Both verified D backup and original C copies remain.",
     "native_materialization": "Protected R3b and11 materialized byte-identically from local C assets into D; no network regeneration."
+  },
+  "active_live_checkpoint": {
+    "path": ".mia-cache/migration-to-C/Mia_Current_STATIC_WIP.blend",
+    "sha256": "0d62eff09b4e95809a9f852d3e68654c1bb5a9e35fe70c065a939bc433e017ed",
+    "bytes": 277711083,
+    "runtime_manifest": ".mia-cache/migration-to-C/runtime.json",
+    "restore_helper": "tools/mia/migration_c/restore_live_checkpoint.py",
+    "verification": ".mia-cache/migration-to-C/reopen-verification.json",
+    "meaning": "C-only migration checkpoint for current D69d4 static body and19M2 working actors; unchanged source R3b remains protected. Not ART/model completion."
+  },
+  "storage_handoff_20261104": {
+    "reason": "User explicitly requests C work and D cleanup; user-freed100GB from program removal must not count as our recovery. Approx200GB expectation is not a measured attribution baseline.",
+    "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-current/win-overlay",
+    "branch": "codex/mia-current",
+    "git_common": "C:/Users/antio/Desktop/Workspace/projects/win-overlay/.git",
+    "prior_D": "D:/MiaWorkCache/mia-reference-work/win-overlay",
+    "D_branches_preserved_as": "refs/remotes/mia-d/* in C common Git",
+    "inputs": "R3b4dc1 andshoulder11 SHAexact; activecachecopied166,584,223B exact; C savednative0d62eff0 freshreopen+ownership/visibility/camera verified.",
+    "MCP": "C:/Users/antio/.codex/tools/blender-lab-mcp-venv/Scripts/python.exe -m blmcp --transport stdio; Ctmp; original host/port unchanged.",
+    "metadata_path_rule": "Known former D prefixes resolved to current ROOT; frozenreceiptbytes/hashes held.",
+    "raw_proof": ".mia-cache/migration-to-C/",
+    "storage_proof": ".mia-cache/git-storage-20261104/",
+    "model_art_status": "M1..M6/FB criteria remainOPEN orFAIL; migration is continuity notsourceART.",
+    "D_production_retired": true,
+    "D_full_checkout_removed": false,
+    "D_retired_path": "D:/MiaWorkCache/mia-reference-work/win-overlay-retired-20261104",
+    "D_retirement_status": "Original path absent. Full removal rejected before execution: blocked by policy. Git metadata/native/ignored data retained; only4312clean tracked exports reversibly sparse-evicted.",
+    "D_recovery_preservation": "All13977 D-visible object IDs and11head refs independently present in C; no C objects/info/alternates dependency.",
+    "actual_C_without_old_D": ".mia-cache/body-h/live/C-after-D-retired.json; execute_blender_code status ok; 19rearactors/body/visibility/camera/rows exact",
+    "current_capacity": "C-only guard512MiB reservation passed; component bytes620635908, ceiling2147483648. Capacity only.",
+    "paths_tests": "4review_h paths +16pipeline tests pass from C with old D root absent; unittest discover per directory.",
+    "whole_D_delete_automatic_review": {
+      "result": "REJECTED before execution",
+      "reason": "blocked by policy",
+      "equivalent_retry": false
+    },
+    "legacy_backups": "Previous rejected archive/prototype removal remains untouched;6,764,548,435B D backups retained. Do not repeat deletion via another tool."
   }
 }

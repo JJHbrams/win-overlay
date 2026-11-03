@@ -7,9 +7,11 @@ import shutil
 import sys
 
 GIB = 1024 ** 3
-TASK_ROOT = Path('D:/MiaWorkCache/mia-reference-work')
+WORKTREE_ROOT = Path(__file__).resolve().parents[6]
+TASK_ROOT = WORKTREE_ROOT.parent
 RELATIVE = Path('asset/mia/blender/mia-fit-v003/body')
-MIN_FREE = {'C:/': 20 * GIB, 'D:/': 20 * GIB}
+WRITE_DRIVE = WORKTREE_ROOT.anchor.replace('\\', '/')
+MIN_FREE = {WRITE_DRIVE: 20 * GIB}
 OUTPUT_LIMIT = 2 * GIB
 
 
@@ -38,13 +40,12 @@ def inspect(reserve_bytes):
         raise ValueError('Reservation must be nonnegative')
     outputs = []
     roots = []
-    for workspace in ('win-overlay', 'surface12-producer', 'appearance12-producer'):
-        for component in ('surface-review12', 'surface-appearance12'):
-            roots.append(TASK_ROOT / workspace / RELATIVE / component)
+    for component in ('surface-review12', 'surface-appearance12'):
+        roots.append(WORKTREE_ROOT / RELATIVE / component)
     roots.extend([
-        TASK_ROOT / 'win-overlay/asset/mia/blender/mia-fit-v003/integration/surface12-presentation',
-        TASK_ROOT / 'win-overlay/.mia-cache',
-        TASK_ROOT / 'runtime-temp',
+        WORKTREE_ROOT / 'asset/mia/blender/mia-fit-v003/integration/surface12-presentation',
+        WORKTREE_ROOT / '.mia-cache',
+        Path.home() / '.codex/tmp/mia-runtime',
     ])
     for path in roots:
         count_bytes, count_files = measured_bytes(path)
@@ -52,7 +53,7 @@ def inspect(reserve_bytes):
     capacity = {drive: shutil.disk_usage(drive).free for drive in MIN_FREE}
     violations = [f'{drive} below 20 GiB free plus reservation'
                   for drive, floor in MIN_FREE.items()
-                  if capacity[drive] < floor + (reserve_bytes if drive == 'D:/' else 0)]
+                  if capacity[drive] < floor + (reserve_bytes if drive == WRITE_DRIVE else 0)]
     total = sum(row['bytes'] for row in outputs)
     if total + reserve_bytes > OUTPUT_LIMIT:
         violations.append('Review12 component outputs plus reservation exceed 2 GiB')
@@ -75,7 +76,7 @@ def main():
     text = json.dumps(result, indent=2)
     if args.report:
         destination = args.report.resolve()
-        allowed = TASK_ROOT / 'win-overlay/asset/mia/blender/mia-fit-v003/integration'
+        allowed = WORKTREE_ROOT / 'asset/mia/blender/mia-fit-v003/integration'
         if not destination.is_relative_to(allowed.resolve()):
             parser.error('Report must remain inside canonical Mia integration evidence')
         destination.write_text(text + '\n', encoding='utf8')

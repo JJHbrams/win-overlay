@@ -76,6 +76,7 @@ def context(root: Path) -> dict:
     return {
         'canonical_worktree': data.get('canonical_worktree', str(root)),
         'selected_static_wip': data.get('selected_static_wip', data.get('active_working_correction')),
+        'active_live_checkpoint': data.get('active_live_checkpoint'),
         'character_complete': data.get('character_complete', False),
         'art_approved': data.get('art_approved', False),
         'read_first': paths,

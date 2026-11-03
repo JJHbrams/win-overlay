@@ -69,7 +69,7 @@ v18 조사 당시 피부·헤어는 주로 색×노멀 기반 음영을 Emission
 
 신규 Git 보관에는 `ARTIFACT_POLICY.md`를 먼저 적용한다. 자주 커밋하는 대상은 소스·설정·의도·선별 검토 기록이며, 모든 후보의 전체 씬·프레임·NPZ·베이크를 포함시키는 것이 아니다. 신규 blender 연구 폴더의 export는 기본 ignore하고, 고유 수작업/선택 checkpoint/선별 review는 지정 경로에 보존한다. ignore는 기존 tracked 파일이나 이력을 줄이지 않으며 삭제 허가도 아니다. 원화 다각도 검증 자체는 기존 기준대로 계속 수행한다.
 
-2026-11-03 후속 관리 기준: 큰 메시 출력·텍스처 베이크·native 저장·렌더 배치 전에는 `blender/mia-fit-v003/integration/workspace-storage-20261103/storage_guard.py --reserve-mib <예상 추가 MiB>`를 실행해 C/D 각각20GiB 여유와 D 예상 쓰기 여유를 확인한다. 현재 Review12의 세 D 작업트리에 있는 두 component 폴더, 최종 GIF를 두는 presentation 폴더, runtime-temp와 예약량 합계는2GiB를 넘기지 않는다. 조정자만 한 번에 한 대용량 쓰기를 허가하며, 예상량 검사는 동시 쓰기를 잠그는 원자적 할당량이 아니다. 초과 시 먼저 범위를 확인하고 고유 자료를 보호한 정리 결정을 한다. 이 도구는 삭제하지 않으며 용량 통과가 모델 검수 통과를 뜻하지 않는다. 공통 입력을 에이전트마다 복사하지 말고 기존 불변 파일과 해시를 참조하며, 새 전체 씬은 기준·현재·검토 후보 범위로 제한한다.
+2026-11-04 현재 관리 기준(D에서 작업하던 11-03 기준을 대체): 큰 메시 출력·텍스처 베이크·native 저장·렌더 배치 전에는 `blender/mia-fit-v003/integration/workspace-storage-20261103/storage_guard.py --reserve-mib <예상 추가 MiB>`를 실행한다. 실제 C 출력 드라이브에20GiB 이상 여유가 있어야 한다. C canonical의 두 component 폴더·presentation·`.mia-cache`·`C:/Users/antio/.codex/tmp/mia-runtime`과 예약량 합계는2GiB를 넘기지 않는다. D의 보관본은 용량 검사나 활성 작업 의존성이 아니다. 조정자만 한 번에 한 대용량 쓰기를 허가하며, 예상량 검사는 동시 쓰기를 잠그는 원자적 할당량이 아니다. 초과 시 먼저 범위를 확인하고 고유 자료를 보호한 정리 결정을 한다. 이 도구는 삭제하지 않으며 용량 통과가 모델 검수 통과를 뜻하지 않는다. 공통 입력을 에이전트마다 복사하지 말고 기존 불변 파일과 해시를 참조하며, 새 전체 씬은 기준·현재·검토 후보 범위로 제한한다.
 
 같은 날 실제 정리는 C의 과거 audit 중복25개16,307,864bytes이며 현재 D의 동일25개를 해시 재확인했다. D 임시 백업6.76GB는 전수 중복 확인 후 삭제를 시도했으나 자동 검토가 실행 전에 `blocked by policy`로 거절하여 남아 있다. 복사·이동·삭제 예정·거절을 실제 공간 회수로 보고하지 않는다. 해당 삭제나 이전에 거절된 C 원본 삭제를 다른 도구로 재시도하지 않는다. 세부 결과는 `blender/mia-fit-v003/integration/workspace-storage-20261103/`에 있다.
 
@@ -80,3 +80,14 @@ v18 조사 당시 피부·헤어는 주로 색×노멀 기반 음영을 Emission
 같은 정리의 후속으로, 당시 보호했던 BodyD가 검증된 G로 대체된 뒤 미채택6개 씬/백업을 추가 정리했다. 총341개49,331,569,802bytes이며 `blender/mia-refinement-v002/storage/cleanup-consolidated.json`이 실제 부재 확인과 현재 보호본 해시를 기록한다. 첫335개 정리 당시의 보호 목록과 현재 선택본을 혼동하지 않는다.
 
 R3b의101프레임 검증 뒤 OP·실패한 R3 전체 씬2개도 같은 절차로 정리했다. 최종 누적343개49,835,048,436bytes다. 원본v001·재현 기준R2·현재R3b와 작은 델타/맵/실제 비교 자료를 유지하며, 삭제한 OP/855d 경로는 과거 기록으로만 읽는다. 한도/드라이버 검증에는 속성의 값·수식뿐 아니라 hard/soft 범위도 포함한다. PresetTotal의 max1이 SUM2를 실제1로 잘랐던 실패를 단일 표정 성공으로 덮지 않는다.
+
+
+## 2026-11-04 C 작업 경로 복귀
+
+현재 canonical은 `C:/Users/antio/.codex/worktrees/mia-current/win-overlay`다. D는 이관 전 provenance이며 신규 출력 경로가 아니다. `CURRENT_STATE.json`의 `active_live_checkpoint`는 현재 미승인 D69d4 바디/19개 M2 actor를 C에서 저장·재열기한 작업본이다. 기존 R3b/shoulder11 원본은 변경하지 않는다. 파일 재열기 후 `tools/mia/migration_c/restore_live_checkpoint.py`를 C MCP로 실행해 최소 row/파트 소유권을 복원하고 검증한다. 이전 실패 작업의 전체 driver namespace는 복원하지 않는다.
+
+활성 helper ROOT는 소스 위치에서 구하고, 과거 D/구 C metadata는 명시 prefix 해석과 SHA 검증으로 읽는다. 과거 receipt 자체를 다시 쓰지 않는다. 용량 guard는 실제 C 작업 출력과 `.codex/tmp/mia-runtime`을 포함한다. 원시 scene 전수 덤프·전체 worktree 복제·대량 LFS 재물질화를 반복하지 않는다. Git에 기록하는 것은 소스와 작은 검증 요약이며 현재 이관 native와 raw 증거는 지정 cache에 둔다.
+
+사용자가 프로그램을 제거해 확보한 여유 공간과 이번 작업이 회수한 바이트를 합산하지 않는다. 삭제·압축·이동별 실제 결과를 분리하고, 논리 합계를 과거 하루의 증가량 또는 원격 요금으로 해석하지 않는다.
+
+이관 검증 후 기존 D checkout은 `D:/MiaWorkCache/mia-reference-work/win-overlay-retired-20261104`로 이름을 바꿨다. 원래 D 경로가 없는 상태에서 C의 MCP 재연결·native/소유권 복원과 경로 검사20개가 통과했다. D 전체 폴더 삭제는 자동 검토가 `blocked by policy`로 거절했다. 전체 삭제를 다른 수단으로 재시도하지 않는다. 대신 Git metadata/native/ignored cache를 보존하는 더 좁은 범위에서, C Git에 보존된 clean tracked render4312개(2,420,739,836bytes)만 정확한 파일 목록으로 sparse 제외했다. D 보관본이 완전히 삭제됐다고 보고하지 않는다. 이전6.76GB 백업의 삭제 거절도 여전히 유효하다.

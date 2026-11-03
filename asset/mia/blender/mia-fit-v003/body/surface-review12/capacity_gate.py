@@ -2,7 +2,7 @@
 from pathlib import Path
 import os, importlib.util, json
 
-DEFAULT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay/asset/mia/blender/mia-fit-v003/integration/workspace-storage-20261103/storage_guard.py')
+DEFAULT = Path(__file__).resolve().parents[6] / 'asset/mia/blender/mia-fit-v003/integration/workspace-storage-20261103/storage_guard.py'
 
 def check(reserve_mib):
     path = Path(os.environ.get('MIA_STORAGE_GUARD_PATH', str(DEFAULT)))
