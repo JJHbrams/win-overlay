@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "canonical_worktree": "D:/MiaWorkCache/mia-reference-work/win-overlay",
   "status": "v002_refinement_active_v001_frozen_overall_art_open",
   "in_progress_v29": {
@@ -394,7 +394,7 @@
     "hair_request": "Rear locks/nape/tips and broken-color cause versus v29; braid source cleanup deferred until body/face fit, not removed. Partial source brow display requires isolated truebrow/crease/lash evidence.",
     "new_full_native_saved": false,
     "live_unsaved_preview": "blender/mia-fit-v003/live/head-preview-application.json",
-    "latest_live_runtime": "Blender process absent at latest check; MCP disconnected. Prior unsaved head/hair/R4guide previews are historical runtime evidence and are replayable from committed deltas; they are not an active saved v003 native.",
+    "latest_live_runtime": "2026-11-04 official Blender Lab MCP connected,26tools and actual scene queried. Active MIA_Review12_H_LiveRepair contains live-D static body repair; disk R3b unchanged. Current raw export is not a saved v003 native.",
     "live_preview_scope": "Lower-right lid + lash-cleared crease C + partial source brow display applied via MCP, original raw keys exact. Body/hair/native on disk unchanged; no full live expressive gate yet.",
     "body_method": "CurrentSTATIC upperbody guide11 retains E supported breasts/09 lowerjoint and reduces overbuilttrap toward user-designated tiedhairv06.10wholeZmap rejected forcaplip/shelf.11nestedfield accepted byroot/freshactual16/source4 boundedonly: sourceheightresidual/capfullness/headneckratio remainOPEN. Lower/Ebreast/upperneckphysicaltriangles exact afterexplicit4point nanometreroundoffrestoration. Staticnative source4validatorPASS; production/body/fullMia sourcegateOPEN. ProtectedfullR3b unchanged,noheadscale.",
     "axilla_diagnostic": "blender/mia-fit-v003/body/diagnostic05/F2-source-pose-smooth-diagnostic.png",
@@ -448,7 +448,7 @@
     "shoulder11_import_integrity": "blender/mia-fit-v003/integration/shoulders-import.json",
     "review12_contract": "blender/mia-fit-v003/FULLBODY_SURFACE12_PLAN.md",
     "review12_user_request": "2026-11-03 userrequests actualrotatingbodyGIF, plain-skin nude +sourceunderweartextureversions onsamegeometry, clavicleink/shadow, andtruthfulface/hair/headratio status. Explicitstaticpreview/surfaceauthorization now: buildfullbodyR3bhead/hair/lower+11upper withrealneck/waist/armcollars/actualUVmaps, notanotherheadlesssubsetormaskseam. No fullMiaART/rigapproval, noautomatic1.075headscale.",
-    "review12_status": "H one65k-vertex guide and137341-vertex fullbody assembly plus actual236867positivebodyUV triangles ready inignoredDcache. OriginalR3b source4 actualbaseline complete. Roof27/33intervals intersect/max5.828mm remaining, neck195/205softloft; actualgray6/source4 pending. NoHnative/material/GIF orARTpass yet; allFBACremainrequired.",
+    "review12_status": "H actual16+source4 ART FAIL: posteriorS-neck/capscallops, noappearanceapproval/native/orbit. OfficialBlenderLabMCP recovered2026-11-04; actualR3bopenedlive, neck-onlyoperationnowunderreview; sourceacceptedfaceheld. Legacycleanupdeferred; allFBACremainrequired.",
     "review12_preflight_notes": "InitialzeroUV133241trianglesandhand/innerarmregionerrors FIXED withactualUVreadback+semanticbranchfields. SourceLocal->WORLDheadnormalerrorfixed; suppliedvectors/oldUV3/V27HeadMaterialBlendexact; evaluatednormalpacking.041959deg matchedINDEPENDENTsame-topologyAPIcontrol, notbitexactoutputclaim. Firstgray8 actualFB-AC2FAIL waistband/armbulb; correctedCcollarrowONLY11528verts max7.8568mm, endpoints/head/core/lower/UV/topologyheld, awaiting4grayactuals. CurrentappearanceMaps-C478c1bf binds3a82c54/world434bb/UV8dbc; BfrozenSTALE. Actualmaterial/native/GIFNOTapprovedyet. Originaldonor4nonmanifoldhandedges/320boundaries distinguishedfromnewcollarseams. C4actualsFAIL: realwaist/armbands. FreshCPU auto-vs-headcustom bodycollarnormalsagree<.00001deg, rulingoutstalenormals. Cgeometricfacetturnsworsened21degwaist/41-42degarms. AnalyticendpointdirectionwasnotsampledG1. Dconstrainedfinite-rowfairingauthorized, bareactualgatebeforemaps/native/orbit; nofinalReview12native/GIFyet. D/D2CPUunselected; D3actual4FAIL despiteangularnoiseimprovement: residualshelf/armpinch independentlyraylocalizedtonewcollars. Ewidenswaist/armphysicalbands, D3neck/head/coreheld; newtopology/UV/retainedcorrespondence/seatingrequired. CutneckcustomnormalAPIboundlocalizedseparately(.409875deg), protectedheadstill.041959deg. Active/renderUVMaprestoredexplicitly. Alloutcomes/FBAC2unchanged; no paintconcealment.",
     "review12_appearance_component": "blender/mia-fit-v003/body/surface-appearance12/revision-status.json",
     "review12_face_hair_head_status": "blender/mia-fit-v003/REVIEW12_STATUS_AUDIT.md",
@@ -504,7 +504,14 @@
       "lower_repair": "Explicit10-Z VDBboundaryconstraintrepair,notroundoff;49658lowerpoints98928orientedtrisexact. OneGNmeshonly.",
       "actual_appearance_bake": false,
       "saved_native": false,
-      "source_review": "Pendingactualgray/sourceboards; roofmath/UV/provenancearenotART."
+      "source_review": "HbaseactualARTFAIL; validatedpackageintegrityonly. LiveMCPneck/upperfairingreviewactive, noartpass."
+    },
+    "live_mcp_20261104": {
+      "server": "Official Blender Lab via configured standard MCP ClientSession",
+      "scene": "Protected R3b loaded in live Blender; H static component installed for localized repair, unsaved",
+      "neck_scope": "5888interiorvertices;131453outsidecoordinates+Zheld. Scurve reduced inactualMCPshots;fluting/capscallopsopen.",
+    "current_operation": "Frozen live-D after actual neck correction, upperfairing, scopedcapfairing and oval necksections. World69d4d4f0; geometry81a9b03a.16,325changedvertices/18,948headexact/Ejoinsheld. ExpandedCPUcollar+allchangedfaces audit passes. Actual neckruts gone; cap/trap lobe/trough and head-cutband stillOPEN. Source4/highlow capture running before next liveedit.",
+      "native_saved": false
     }
   },
   "storage_handoff_20261103": {

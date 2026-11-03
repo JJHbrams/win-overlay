@@ -2,6 +2,25 @@
 
 User resumes production after storage discussion; legacy cleanup is deferred until this production stage is finished. Original `FULLBODY_SURFACE12_PLAN.md` outcomes remain required. Root uses the established plan/producer/independent-review procedure and the prospective artifact policy.
 
+## Current six requested corrections, retained through parallel work
+
+| ID | Static user-visible outcome | Verification / responsibility |
+|---|---|---|
+| M1 | Source brows readable between source-like fringe locks under expressions | Source/expression sheet, actual brow/fringe together; neutral plus expressions. Hair owner; accepted internal face held. Hiding all hair or raising brows alone is not completion. |
+| M2 | Missing central rear hair is genuinely filled with layered gathered/descending hair | Back, profile, rear obliques and high/low, source/before/after. Same hair owner with separate additive part/explicit original-face ownership. |
+| M3 | Source-like neck–trap–shoulder line | Connected live body refinement and source4/high/low. Root. |
+| M4 | Credible supported breast–thorax–anterior/posterior axilla–lat continuity | Source v06 and reaffirmed E2/F2, open passage, all-around bare geometry. Root; no independent coefficient owners across these boundaries. |
+| M5 | Source-like upper/lower body and pelvic balance | Whole-height source4 with uniform image registration, measured now and integrated before final maps. Root; no assumed hip expansion. |
+| M6 | Source-like body–head/hair balance | Whole-height source4 plus attached-actor/neck checks after any global scale change. Root; no assumed 1.078 adoption. |
+
+All six are critical and remain open until actual source comparisons support them. They supplement, rather than replace, the FB criteria below. One live MCP owner retains the complete edit/review/keep-or-restore bundle. Other tracks prepare bounded deltas or inspect immutable exports; no concurrent live calls or competing native saves. No new automation or framework is needed.
+
+## Live D checkpoint, 2026-11-04
+
+Actual official Blender Lab MCP replaced the H neck's forced S-curve, locally faired the upper region, then treated the lateral cap and oval neck sections. The cap domain explicitly extends below the earlier implementation plane to Z1.31 only within |X|.13..24, excluding the lower/medial axillary walls and front breast root. This is a declared editing-domain expansion, not reduced anatomy/source verification. The frozen D export changes16,325 points, keeps18,948 head points and all E waist/arm rows exact, and retains topology/UV. No native is saved or model promoted.
+
+Read-only CPU verification now includes every collar AND every triangle incident to a live-changed point against the whole mesh (85,756 faces); no new boundaries, winding errors or nonadjacent intersections were found. Actual MCP profile/oblique/high images show the deep parallel cervical ruts gone. Root and independent reviewer still find a cap/trap macroform lobe/valley and head-cut band. Matching D source4 is required before the next shape decision; inspect head/body normals and geometric tangents at the cut before moving that boundary. No material/native/orbit approval follows from this technical check.
+
 ## Acceptance contract
 
 | ID | User-visible result / runtime | Verification and evidence | Critical |

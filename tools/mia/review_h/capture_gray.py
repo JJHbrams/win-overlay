@@ -1,5 +1,6 @@
 """Actual E/H gray pairs on saved R3b. No scene/native save or model promotion."""
 from pathlib import Path
+import argparse
 import importlib.util
 import json
 import sys
@@ -16,6 +17,10 @@ import review_fixture as fixture
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--assembly', type=Path, default=ROOT/'.mia-cache/body-h/shape/assembly')
+    parser.add_argument('--output', type=Path, default=ROOT/'.mia-cache/body-h/gray')
+    args = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
     spec = importlib.util.spec_from_file_location('h_gray_guard', ROOT/'asset/mia/blender/mia-fit-v003/integration/workspace-storage-20261103/storage_guard.py')
     guard = importlib.util.module_from_spec(spec); spec.loader.exec_module(guard)
     budget = guard.inspect(100*1024**2)
@@ -23,12 +28,15 @@ def main():
     source = Path(bpy.data.filepath)
     native_sha = fixture.sha(source)
     assert native_sha == '4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1'
-    out = ROOT/'.mia-cache/body-h/gray'
+    out = args.output.resolve()
+    assert (ROOT/'.mia-cache/body-h').resolve() in out.parents
     assert not out.exists(), 'Do not overwrite an actual candidate review'
     out.mkdir(parents=True)
-    assembly = ROOT/'.mia-cache/body-h/shape/assembly'
+    assembly = args.assembly.resolve()
+    assert (ROOT/'.mia-cache/body-h/shape/assembly').resolve() == assembly or (ROOT/'.mia-cache/body-h/shape/assembly').resolve() in assembly.parents
     payloads = dict(E=COMPONENT/'joined-expanded-E.npz', H=assembly/'geometry.npz')
-    atlases = dict(E=COMPONENT/'atlas-E.npz', H=assembly/'atlas/atlas.npz')
+    assembly_meta = json.loads((assembly/'assembly.json').read_text())
+    atlases = dict(E=COMPONENT/'atlas-E.npz', H=Path(assembly_meta.get('atlas_path',assembly/'atlas/atlas.npz')))
     objects, proofs = {}, {}
     for state in ['E', 'H']:
         ob, proof = install_review.apply(

@@ -4,6 +4,7 @@ Estimated front/back camera poses are explicitly separate from nominal views.
 This does not infer a calibrated camera from a drawing or grant art acceptance.
 """
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import math
@@ -78,6 +79,12 @@ def actual(row, matrix):
 
 
 def main():
+    global OUT
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--directory', type=Path, default=OUT)
+    args = parser.parse_args()
+    OUT = args.directory.resolve()
+    assert (ROOT/'.mia-cache/body-h').resolve() in OUT.parents
     capture = json.loads((OUT/'capture.json').read_text())
     rows = {(r['state'], r['name']): r for r in capture['frames']}
     views = []

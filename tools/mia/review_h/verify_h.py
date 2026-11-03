@@ -52,7 +52,7 @@ def stats(x):
                 maximum=float(x.max()) if len(x) else None)
 
 
-def run(geometry, surface, output, canonical=ROOT):
+def run(geometry, surface, output, canonical=ROOT, delta=None):
     root = Path(canonical); p = root/REL
     start = time.time()
     assert not Path(output).exists(), 'Never overwrite a recorded verification'
@@ -71,13 +71,23 @@ def run(geometry, surface, output, canonical=ROOT):
     newproblem = {key: c for key, c in problems.items() if oldproblem.get(key) != c}
     newwind = badwind-oldbadwind
     newfaces = np.flatnonzero(part == 3)
+    # Live refinement also changes original guide faces near the shoulder cap.
+    # Testing only generated collars would miss those newly edited surfaces.
+    changed_ids = np.empty(0, dtype=np.int32)
+    if delta is not None:
+        live_delta = dict(np.load(delta))
+        changed_ids = live_delta['vertex_ids']
+        assert np.array_equal(v[changed_ids], live_delta['after']), 'Stale live delta'
+        assert np.all(np.any(live_delta['before'] != live_delta['after'], axis=1))
+    changed_faces = np.flatnonzero(np.isin(f, changed_ids).any(axis=1))
+    tested_faces = np.union1d(newfaces, changed_faces)
     tree = BVHTree.FromPolygons([Vector(x) for x in v], f.tolist(), all_triangles=True)
-    collar_tree = BVHTree.FromPolygons([Vector(x) for x in v], f[newfaces].tolist(), all_triangles=True)
+    collar_tree = BVHTree.FromPolygons([Vector(x) for x in v], f[tested_faces].tolist(), all_triangles=True)
     narrow = load('h_triangle_narrow_phase', p.parent/'posterior-continuity08/geometry.py')
     seen = set(); intersections = []; tested = 0; shared = 0
-    print('H_VERIFY_COLLAR_BVH_READY', len(newfaces), flush=True)
+    print('H_VERIFY_EDITED_SURFACE_BVH_READY', len(tested_faces), flush=True)
     for local, j in collar_tree.overlap(tree):
-        i, j = int(newfaces[local]), int(j)
+        i, j = int(tested_faces[local]), int(j)
         key = (min(i, j), max(i, j))
         if i == j or key in seen: continue
         seen.add(key)
@@ -122,7 +132,7 @@ def run(geometry, surface, output, canonical=ROOT):
     body_uv_nonzero = bool((uvarea > 0).all())
     errors = []
     for ok, label in [(not newproblem, 'new boundary/nonmanifold'), (not newwind, 'new winding'),
-                      (not intersections, 'new nonadjacent collar intersection'),
+                      (not intersections, 'nonadjacent collar/edited-surface intersection'),
                       (head_uv, 'old head UV'), (head_n, 'old head WORLD normal'),
                       (headcoords, 'protected donor head coordinates'), (lowercoords, 'donor lower coordinates'),
                       (surface_world and surface_faces, 'surface/geometry binding'), (body_uv_nonzero, 'nonzero body UV')]:
@@ -132,12 +142,14 @@ def run(geometry, surface, output, canonical=ROOT):
                   errors=errors, seconds=time.time()-start, geometry_path=str(geometry), geometry_sha256=sha(geometry),
                   surface_path=str(surface), surface_sha256=sha(surface), world_sha256=ah(v), triangles_sha256=ah(f),
                   vertices=len(v), triangles=len(f), new_collar_faces=len(newfaces),
+                  changed_vertices=len(changed_ids), changed_faces=len(changed_faces), collision_faces=len(tested_faces),
+                  live_delta=dict(path=str(delta), sha256=sha(delta)) if delta else None,
                   inherited_boundary_edges=int((count == 1).sum()), inherited_nonmanifold_edges=int((count > 2).sum()),
                   original_boundary_edges=int((oldcount == 1).sum()), original_nonmanifold_edges=int((oldcount > 2).sum()),
                   new_problem_edge_count=len(newproblem), new_winding_edge_count=len(newwind),
                   new_nonadjacent_collar_intersections=[list(pair) for pair in intersections], narrow_phase_pairs=tested,
                   graph_neighbor_pairs_excluded=shared,
-                  collision_scope='Every actual collar triangle against entire actual joined mesh. Shared-vertex graph neighbors excluded; inherited donor-only collisions are not relabelled as new. This is not whole-guide SI or an art test.',
+                  collision_scope='Every actual collar and explicitly edited live surface triangle against entire actual joined mesh. Shared-vertex graph neighbors excluded; unchanged donor/guide-only collisions are outside this test. This is not whole-mesh SI or an art test.',
                   minimum_double_area_m2=float(area.min()), collar_dihedral=seam_groups,
                   worst_collar_edge=dict(angle_degrees=float(angles[worst]), edge=edges[edgeids[worst]].tolist(),
                                          world=v[edges[edgeids[worst]]].tolist(), faces=pairs[worst].tolist()),
@@ -161,5 +173,6 @@ if __name__ == '__main__':
     parser.add_argument('--geometry', type=Path, default=CACHE/'geometry.npz')
     parser.add_argument('--surface', type=Path, default=CACHE/'atlas/surface.npz')
     parser.add_argument('--output', type=Path, default=CACHE/'verify.json')
+    parser.add_argument('--delta', type=Path)
     a = parser.parse_args(args)
-    run(a.geometry, a.surface, a.output)
+    run(a.geometry, a.surface, a.output, delta=a.delta)
