@@ -1,0 +1,3652 @@
+[
+  {
+    "job": {
+      "name": "SkinOnly-front",
+      "state": "SkinOnly",
+      "yaw": 0,
+      "hair": false
+    },
+    "scene": "SkinOnly",
+    "actual_source_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    "saved_review_native": false,
+    "unsaved_component_payload": {
+      "path": "joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    "geometry": {
+      "geometry_file_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+      "surface_file_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+      "body_triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+      "ReviewUV_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0"
+    },
+    "fixture": {
+      "projection": "ORTHO",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -3.015000104904175
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          0.8700000047683716
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "view_frame_camera_local": [
+        [
+          0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ],
+        [
+          0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ]
+      ],
+      "target_world": [
+        0.0,
+        -0.014999999664723873,
+        0.8700000047683716
+      ],
+      "ortho_scale": 1.899999976158142,
+      "clip": [
+        0.10000000149011612,
+        10.0
+      ],
+      "resolution": [
+        640,
+        900
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "lens": 50.0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.-1": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "lights": [
+        {
+          "name": "MIA12_Review_Key",
+          "matrix": [
+            [
+              0.800000011920929,
+              0.3086974620819092,
+              -0.5144957304000854,
+              -3.0
+            ],
+            [
+              -0.6000000238418579,
+              0.4115966558456421,
+              -0.6859943270683289,
+              -4.0
+            ],
+            [
+              2.568879331477092e-08,
+              0.8574929237365723,
+              0.5144957900047302,
+              4.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 650.0,
+          "size": 3.0
+        },
+        {
+          "name": "MIA12_Review_Fill",
+          "matrix": [
+            [
+              0.5547001957893372,
+              -0.31959936022758484,
+              0.7682212591171265,
+              3.0
+            ],
+            [
+              0.8320502638816833,
+              0.21306629478931427,
+              -0.5121475458145142,
+              -2.0
+            ],
+            [
+              -3.755420863171821e-08,
+              0.9232870936393738,
+              0.3841106593608856,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 280.0,
+          "size": 4.0
+        },
+        {
+          "name": "MIA12_Review_Rim",
+          "matrix": [
+            [
+              -0.9486833214759827,
+              -0.19611607491970062,
+              0.24806950986385345,
+              1.0
+            ],
+            [
+              0.3162277638912201,
+              -0.5883482694625854,
+              0.7442085146903992,
+              3.0
+            ],
+            [
+              4.845054579760699e-09,
+              0.7844646573066711,
+              0.6201735138893127,
+              3.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 450.0,
+          "size": 3.0
+        }
+      ],
+      "world": {
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.20000000298023224
+      },
+      "pose_sha256": "6915c00d9f7cc2bba79928cd4b104b52f61b33d6aca5c9a72ab9bef0a199ddc0"
+    },
+    "material": {
+      "material": "MIA12_Review_SkinOnly",
+      "variant": "skin",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "packed": true,
+          "packed_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "packed": true,
+          "packed_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "packed": true,
+          "packed_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "packed": true,
+          "packed_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "packed": true,
+          "packed_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "UnderwearMode": 0.0,
+        "ColorOnly": 0.0,
+        "ClavicleStrength": 1.0,
+        "ShadeStrength": 0.1599999964237213,
+        "InkStrength": 0.550000011920929
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "scope": "Static fullbody review, no head scaling or production rig claim",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\SkinOnly-front.png",
+    "sha256": "373ed1a2c559d2aac4ca6a2297ff9ca9a50f4df4766a34920b92197259a3f7bc"
+  },
+  {
+    "job": {
+      "name": "SkinOnly-back",
+      "state": "SkinOnly",
+      "yaw": 180,
+      "hair": false
+    },
+    "scene": "SkinOnly",
+    "actual_source_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    "saved_review_native": false,
+    "unsaved_component_payload": {
+      "path": "joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    "geometry": {
+      "geometry_file_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+      "surface_file_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+      "body_triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+      "ReviewUV_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0"
+    },
+    "fixture": {
+      "projection": "ORTHO",
+      "camera_matrix": [
+        [
+          -1.0,
+          1.5099580252808664e-07,
+          -1.1399865765455465e-14,
+          3.6739402930577075e-16
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          1.0,
+          2.984999895095825
+        ],
+        [
+          1.5099580252808664e-07,
+          1.0,
+          -7.549790126404332e-08,
+          0.8700000047683716
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "view_frame_camera_local": [
+        [
+          0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ],
+        [
+          0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ]
+      ],
+      "target_world": [
+        0.0,
+        -0.014999999664723873,
+        0.8700000047683716
+      ],
+      "ortho_scale": 1.899999976158142,
+      "clip": [
+        0.10000000149011612,
+        10.0
+      ],
+      "resolution": [
+        640,
+        900
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "lens": 50.0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.-1": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "lights": [
+        {
+          "name": "MIA12_Review_Key",
+          "matrix": [
+            [
+              0.800000011920929,
+              0.3086974322795868,
+              -0.5144957900047302,
+              -3.0
+            ],
+            [
+              -0.6000000238418579,
+              0.41159653663635254,
+              -0.6859943866729736,
+              -4.0
+            ],
+            [
+              -3.388983671470669e-08,
+              0.857492983341217,
+              0.5144956707954407,
+              4.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 650.0,
+          "size": 3.0
+        },
+        {
+          "name": "MIA12_Review_Fill",
+          "matrix": [
+            [
+              0.5547001957893372,
+              -0.31959936022758484,
+              0.7682212591171265,
+              3.0
+            ],
+            [
+              0.8320502638816833,
+              0.21306629478931427,
+              -0.5121475458145142,
+              -2.0
+            ],
+            [
+              -3.755420863171821e-08,
+              0.9232870936393738,
+              0.3841106593608856,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 280.0,
+          "size": 4.0
+        },
+        {
+          "name": "MIA12_Review_Rim",
+          "matrix": [
+            [
+              -0.9486833214759827,
+              -0.19611607491970062,
+              0.24806950986385345,
+              1.0
+            ],
+            [
+              0.3162277638912201,
+              -0.5883482694625854,
+              0.7442085146903992,
+              3.0
+            ],
+            [
+              4.845054579760699e-09,
+              0.7844646573066711,
+              0.6201735138893127,
+              3.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 450.0,
+          "size": 3.0
+        }
+      ],
+      "world": {
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.20000000298023224
+      },
+      "pose_sha256": "6915c00d9f7cc2bba79928cd4b104b52f61b33d6aca5c9a72ab9bef0a199ddc0"
+    },
+    "material": {
+      "material": "MIA12_Review_SkinOnly",
+      "variant": "skin",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "packed": true,
+          "packed_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "packed": true,
+          "packed_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "packed": true,
+          "packed_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "packed": true,
+          "packed_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "packed": true,
+          "packed_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "UnderwearMode": 0.0,
+        "ColorOnly": 0.0,
+        "ClavicleStrength": 1.0,
+        "ShadeStrength": 0.1599999964237213,
+        "InkStrength": 0.550000011920929
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "scope": "Static fullbody review, no head scaling or production rig claim",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\SkinOnly-back.png",
+    "sha256": "57ba8ddbb11ece74fa1b9268d9344157ba2c1f6c60d6df822ce803f7f3c99387"
+  },
+  {
+    "job": {
+      "name": "SkinOnly-oblique",
+      "state": "SkinOnly",
+      "yaw": 45,
+      "hair": false
+    },
+    "scene": "SkinOnly",
+    "actual_source_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    "saved_review_native": false,
+    "unsaved_component_payload": {
+      "path": "joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    "geometry": {
+      "geometry_file_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+      "surface_file_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+      "body_triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+      "ReviewUV_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0"
+    },
+    "fixture": {
+      "projection": "ORTHO",
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          2.1213202476501465
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -2.1363203525543213
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          0.8700000047683716
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "view_frame_camera_local": [
+        [
+          0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ],
+        [
+          0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ]
+      ],
+      "target_world": [
+        0.0,
+        -0.014999999664723873,
+        0.8700000047683716
+      ],
+      "ortho_scale": 1.899999976158142,
+      "clip": [
+        0.10000000149011612,
+        10.0
+      ],
+      "resolution": [
+        640,
+        900
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "lens": 50.0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.-1": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "lights": [
+        {
+          "name": "MIA12_Review_Key",
+          "matrix": [
+            [
+              0.7999999523162842,
+              0.30869749188423157,
+              -0.514495849609375,
+              -3.0
+            ],
+            [
+              -0.6000000834465027,
+              0.41159647703170776,
+              -0.6859943270683289,
+              -4.0
+            ],
+            [
+              -7.212231878384046e-08,
+              0.857492983341217,
+              0.5144956707954407,
+              4.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 650.0,
+          "size": 3.0
+        },
+        {
+          "name": "MIA12_Review_Fill",
+          "matrix": [
+            [
+              0.5547001957893372,
+              -0.31959936022758484,
+              0.7682212591171265,
+              3.0
+            ],
+            [
+              0.8320502638816833,
+              0.21306629478931427,
+              -0.5121475458145142,
+              -2.0
+            ],
+            [
+              -3.755420863171821e-08,
+              0.9232870936393738,
+              0.3841106593608856,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 280.0,
+          "size": 4.0
+        },
+        {
+          "name": "MIA12_Review_Rim",
+          "matrix": [
+            [
+              -0.9486833214759827,
+              -0.19611607491970062,
+              0.24806950986385345,
+              1.0
+            ],
+            [
+              0.3162277638912201,
+              -0.5883482694625854,
+              0.7442085146903992,
+              3.0
+            ],
+            [
+              4.845054579760699e-09,
+              0.7844646573066711,
+              0.6201735138893127,
+              3.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 450.0,
+          "size": 3.0
+        }
+      ],
+      "world": {
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.20000000298023224
+      },
+      "pose_sha256": "6915c00d9f7cc2bba79928cd4b104b52f61b33d6aca5c9a72ab9bef0a199ddc0"
+    },
+    "material": {
+      "material": "MIA12_Review_SkinOnly",
+      "variant": "skin",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "packed": true,
+          "packed_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "packed": true,
+          "packed_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "packed": true,
+          "packed_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "packed": true,
+          "packed_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "packed": true,
+          "packed_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "UnderwearMode": 0.0,
+        "ColorOnly": 0.0,
+        "ClavicleStrength": 1.0,
+        "ShadeStrength": 0.1599999964237213,
+        "InkStrength": 0.550000011920929
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "scope": "Static fullbody review, no head scaling or production rig claim",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\SkinOnly-oblique.png",
+    "sha256": "eb2c4943fad873ff56a708c5ac7fe181d6b9a5963a3d5780b1458537880bc065"
+  },
+  {
+    "job": {
+      "name": "Underwear-front",
+      "state": "Underwear",
+      "yaw": 0,
+      "hair": false
+    },
+    "scene": "Underwear",
+    "actual_source_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    "saved_review_native": false,
+    "unsaved_component_payload": {
+      "path": "joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    "geometry": {
+      "geometry_file_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+      "surface_file_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+      "body_triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+      "ReviewUV_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0"
+    },
+    "fixture": {
+      "projection": "ORTHO",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -3.015000104904175
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          0.8700000047683716
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "view_frame_camera_local": [
+        [
+          0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ],
+        [
+          0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ]
+      ],
+      "target_world": [
+        0.0,
+        -0.014999999664723873,
+        0.8700000047683716
+      ],
+      "ortho_scale": 1.899999976158142,
+      "clip": [
+        0.10000000149011612,
+        10.0
+      ],
+      "resolution": [
+        640,
+        900
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "lens": 50.0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.-1": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "lights": [
+        {
+          "name": "MIA12_Review_Key",
+          "matrix": [
+            [
+              0.7999998927116394,
+              0.30869752168655396,
+              -0.514495849609375,
+              -3.0
+            ],
+            [
+              -0.6000001430511475,
+              0.4115964472293854,
+              -0.6859943270683289,
+              -4.0
+            ],
+            [
+              -7.53793045760176e-08,
+              0.857492983341217,
+              0.5144956707954407,
+              4.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 650.0,
+          "size": 3.0
+        },
+        {
+          "name": "MIA12_Review_Fill",
+          "matrix": [
+            [
+              0.5547001957893372,
+              -0.31959936022758484,
+              0.7682212591171265,
+              3.0
+            ],
+            [
+              0.8320502638816833,
+              0.21306629478931427,
+              -0.5121475458145142,
+              -2.0
+            ],
+            [
+              -3.755420863171821e-08,
+              0.9232870936393738,
+              0.3841106593608856,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 280.0,
+          "size": 4.0
+        },
+        {
+          "name": "MIA12_Review_Rim",
+          "matrix": [
+            [
+              -0.9486833214759827,
+              -0.19611607491970062,
+              0.24806950986385345,
+              1.0
+            ],
+            [
+              0.3162277638912201,
+              -0.5883482694625854,
+              0.7442085146903992,
+              3.0
+            ],
+            [
+              4.845054579760699e-09,
+              0.7844646573066711,
+              0.6201735138893127,
+              3.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 450.0,
+          "size": 3.0
+        }
+      ],
+      "world": {
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.20000000298023224
+      },
+      "pose_sha256": "6915c00d9f7cc2bba79928cd4b104b52f61b33d6aca5c9a72ab9bef0a199ddc0"
+    },
+    "material": {
+      "material": "MIA12_Review_Underwear",
+      "variant": "underwear",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "packed": true,
+          "packed_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "packed": true,
+          "packed_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "packed": true,
+          "packed_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "packed": true,
+          "packed_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "packed": true,
+          "packed_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "ColorOnly": 0.0,
+        "ShadeStrength": 0.1599999964237213,
+        "ClavicleStrength": 1.0,
+        "InkStrength": 0.550000011920929,
+        "UnderwearMode": 1.0
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "scope": "Static fullbody review, no head scaling or production rig claim",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\Underwear-front.png",
+    "sha256": "738396762a3683ad48a492827824e3508ad0bec43b5c33ad4e8068725f6b7880"
+  },
+  {
+    "job": {
+      "name": "Underwear-back",
+      "state": "Underwear",
+      "yaw": 180,
+      "hair": false
+    },
+    "scene": "Underwear",
+    "actual_source_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    "saved_review_native": false,
+    "unsaved_component_payload": {
+      "path": "joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    "geometry": {
+      "geometry_file_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+      "surface_file_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+      "body_triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+      "ReviewUV_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0"
+    },
+    "fixture": {
+      "projection": "ORTHO",
+      "camera_matrix": [
+        [
+          -1.0,
+          1.5099580252808664e-07,
+          -1.1399865765455465e-14,
+          3.6739402930577075e-16
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          1.0,
+          2.984999895095825
+        ],
+        [
+          1.5099580252808664e-07,
+          1.0,
+          -7.549790126404332e-08,
+          0.8700000047683716
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "view_frame_camera_local": [
+        [
+          0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ],
+        [
+          0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ]
+      ],
+      "target_world": [
+        0.0,
+        -0.014999999664723873,
+        0.8700000047683716
+      ],
+      "ortho_scale": 1.899999976158142,
+      "clip": [
+        0.10000000149011612,
+        10.0
+      ],
+      "resolution": [
+        640,
+        900
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "lens": 50.0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.-1": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "lights": [
+        {
+          "name": "MIA12_Review_Key",
+          "matrix": [
+            [
+              0.7999998927116394,
+              0.30869755148887634,
+              -0.514495849609375,
+              -3.0
+            ],
+            [
+              -0.6000001430511475,
+              0.4115964472293854,
+              -0.6859943270683289,
+              -4.0
+            ],
+            [
+              -1.032394223443589e-07,
+              0.857492983341217,
+              0.5144956707954407,
+              4.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 650.0,
+          "size": 3.0
+        },
+        {
+          "name": "MIA12_Review_Fill",
+          "matrix": [
+            [
+              0.5547001957893372,
+              -0.31959936022758484,
+              0.7682212591171265,
+              3.0
+            ],
+            [
+              0.8320502638816833,
+              0.21306629478931427,
+              -0.5121475458145142,
+              -2.0
+            ],
+            [
+              -3.755420863171821e-08,
+              0.9232870936393738,
+              0.3841106593608856,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 280.0,
+          "size": 4.0
+        },
+        {
+          "name": "MIA12_Review_Rim",
+          "matrix": [
+            [
+              -0.9486833214759827,
+              -0.19611607491970062,
+              0.24806950986385345,
+              1.0
+            ],
+            [
+              0.3162277638912201,
+              -0.5883482694625854,
+              0.7442085146903992,
+              3.0
+            ],
+            [
+              4.845054579760699e-09,
+              0.7844646573066711,
+              0.6201735138893127,
+              3.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 450.0,
+          "size": 3.0
+        }
+      ],
+      "world": {
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.20000000298023224
+      },
+      "pose_sha256": "6915c00d9f7cc2bba79928cd4b104b52f61b33d6aca5c9a72ab9bef0a199ddc0"
+    },
+    "material": {
+      "material": "MIA12_Review_Underwear",
+      "variant": "underwear",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "packed": true,
+          "packed_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "packed": true,
+          "packed_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "packed": true,
+          "packed_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "packed": true,
+          "packed_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "packed": true,
+          "packed_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "ColorOnly": 0.0,
+        "ShadeStrength": 0.1599999964237213,
+        "ClavicleStrength": 1.0,
+        "InkStrength": 0.550000011920929,
+        "UnderwearMode": 1.0
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "scope": "Static fullbody review, no head scaling or production rig claim",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\Underwear-back.png",
+    "sha256": "aa36b54e1c4789a1ddd1aee3fd809b7c565ae1dcf05e8509ae26f7861d9e7c5e"
+  },
+  {
+    "job": {
+      "name": "Underwear-oblique",
+      "state": "Underwear",
+      "yaw": 45,
+      "hair": false
+    },
+    "scene": "Underwear",
+    "actual_source_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    "saved_review_native": false,
+    "unsaved_component_payload": {
+      "path": "joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    "geometry": {
+      "geometry_file_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+      "surface_file_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+      "body_triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+      "ReviewUV_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0"
+    },
+    "fixture": {
+      "projection": "ORTHO",
+      "camera_matrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          2.1213202476501465
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -2.1363203525543213
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          0.8700000047683716
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "view_frame_camera_local": [
+        [
+          0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ],
+        [
+          0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          -0.949999988079071,
+          -1.0
+        ],
+        [
+          -0.6755555868148804,
+          0.949999988079071,
+          -1.0
+        ]
+      ],
+      "target_world": [
+        0.0,
+        -0.014999999664723873,
+        0.8700000047683716
+      ],
+      "ortho_scale": 1.899999976158142,
+      "clip": [
+        0.10000000149011612,
+        10.0
+      ],
+      "resolution": [
+        640,
+        900
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "lens": 50.0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.-1": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "lights": [
+        {
+          "name": "MIA12_Review_Key",
+          "matrix": [
+            [
+              0.7999998927116394,
+              0.30869758129119873,
+              -0.514495849609375,
+              -3.0
+            ],
+            [
+              -0.6000001430511475,
+              0.411596417427063,
+              -0.6859943270683289,
+              -4.0
+            ],
+            [
+              -1.2784255432052305e-07,
+              0.857492983341217,
+              0.5144956707954407,
+              4.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 650.0,
+          "size": 3.0
+        },
+        {
+          "name": "MIA12_Review_Fill",
+          "matrix": [
+            [
+              0.5547001957893372,
+              -0.31959936022758484,
+              0.7682212591171265,
+              3.0
+            ],
+            [
+              0.8320502638816833,
+              0.21306629478931427,
+              -0.5121475458145142,
+              -2.0
+            ],
+            [
+              -3.755420863171821e-08,
+              0.9232870936393738,
+              0.3841106593608856,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 280.0,
+          "size": 4.0
+        },
+        {
+          "name": "MIA12_Review_Rim",
+          "matrix": [
+            [
+              -0.9486833214759827,
+              -0.19611607491970062,
+              0.24806950986385345,
+              1.0
+            ],
+            [
+              0.3162277638912201,
+              -0.5883482694625854,
+              0.7442085146903992,
+              3.0
+            ],
+            [
+              4.845054579760699e-09,
+              0.7844646573066711,
+              0.6201735138893127,
+              3.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 450.0,
+          "size": 3.0
+        }
+      ],
+      "world": {
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.20000000298023224
+      },
+      "pose_sha256": "6915c00d9f7cc2bba79928cd4b104b52f61b33d6aca5c9a72ab9bef0a199ddc0"
+    },
+    "material": {
+      "material": "MIA12_Review_Underwear",
+      "variant": "underwear",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "packed": true,
+          "packed_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "packed": true,
+          "packed_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "packed": true,
+          "packed_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "packed": true,
+          "packed_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "packed": true,
+          "packed_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "ColorOnly": 0.0,
+        "ShadeStrength": 0.1599999964237213,
+        "ClavicleStrength": 1.0,
+        "InkStrength": 0.550000011920929,
+        "UnderwearMode": 1.0
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "scope": "Static fullbody review, no head scaling or production rig claim",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\Underwear-oblique.png",
+    "sha256": "855fb4ab3fa2df4a206405ab75e30d98a58b0d8bb0bb0ee7db01faae0eb797b8"
+  },
+  {
+    "job": {
+      "name": "neck-BODYcolorOnly-clavicleOFF",
+      "state": "SkinOnly",
+      "yaw": 35,
+      "hair": false,
+      "close": "neck",
+      "color_only": true,
+      "clavicle": 0
+    },
+    "scene": "SkinOnly",
+    "actual_source_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    "saved_review_native": false,
+    "unsaved_component_payload": {
+      "path": "joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    "geometry": {
+      "geometry_file_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+      "surface_file_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+      "body_triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+      "ReviewUV_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0"
+    },
+    "fixture": {
+      "projection": "ORTHO",
+      "camera_matrix": [
+        [
+          0.8191520571708679,
+          -0.0499904565513134,
+          0.5713937878608704,
+          1.7141814231872559
+        ],
+        [
+          0.5735764503479004,
+          0.07139375060796738,
+          -0.8160349130630493,
+          -2.4531049728393555
+        ],
+        [
+          1.3008852661755554e-08,
+          0.9961947202682495,
+          0.08715568482875824,
+          1.6914671659469604
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "view_frame_camera_local": [
+        [
+          0.12999999523162842,
+          0.12999999523162842,
+          -1.0
+        ],
+        [
+          0.12999999523162842,
+          -0.12999999523162842,
+          -1.0
+        ],
+        [
+          -0.12999999523162842,
+          -0.12999999523162842,
+          -1.0
+        ],
+        [
+          -0.12999999523162842,
+          0.12999999523162842,
+          -1.0
+        ]
+      ],
+      "target_world": [
+        0.0,
+        -0.004999999888241291,
+        1.4299999475479126
+      ],
+      "ortho_scale": 0.25999999046325684,
+      "clip": [
+        0.10000000149011612,
+        10.0
+      ],
+      "resolution": [
+        800,
+        800
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "lens": 50.0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.-1": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "lights": [
+        {
+          "name": "MIA12_Review_Key",
+          "matrix": [
+            [
+              0.7999998927116394,
+              0.30869758129119873,
+              -0.514495849609375,
+              -3.0
+            ],
+            [
+              -0.6000001430511475,
+              0.411596417427063,
+              -0.6859943270683289,
+              -4.0
+            ],
+            [
+              -1.2784255432052305e-07,
+              0.857492983341217,
+              0.5144956707954407,
+              4.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 650.0,
+          "size": 3.0
+        },
+        {
+          "name": "MIA12_Review_Fill",
+          "matrix": [
+            [
+              0.5547001957893372,
+              -0.31959936022758484,
+              0.7682212591171265,
+              3.0
+            ],
+            [
+              0.8320502638816833,
+              0.21306629478931427,
+              -0.5121475458145142,
+              -2.0
+            ],
+            [
+              -3.755420863171821e-08,
+              0.9232870936393738,
+              0.3841106593608856,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 280.0,
+          "size": 4.0
+        },
+        {
+          "name": "MIA12_Review_Rim",
+          "matrix": [
+            [
+              -0.9486833214759827,
+              -0.19611607491970062,
+              0.24806950986385345,
+              1.0
+            ],
+            [
+              0.3162277638912201,
+              -0.5883482694625854,
+              0.7442085146903992,
+              3.0
+            ],
+            [
+              4.845054579760699e-09,
+              0.7844646573066711,
+              0.6201735138893127,
+              3.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 450.0,
+          "size": 3.0
+        }
+      ],
+      "world": {
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.20000000298023224
+      },
+      "pose_sha256": "6915c00d9f7cc2bba79928cd4b104b52f61b33d6aca5c9a72ab9bef0a199ddc0"
+    },
+    "material": {
+      "material": "MIA12_Review_SkinOnly",
+      "variant": "skin",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "packed": true,
+          "packed_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "packed": true,
+          "packed_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "packed": true,
+          "packed_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "packed": true,
+          "packed_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "packed": true,
+          "packed_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "UnderwearMode": 0.0,
+        "ColorOnly": 1.0,
+        "ClavicleStrength": 0.0,
+        "ShadeStrength": 0.1599999964237213,
+        "InkStrength": 0.550000011920929
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "scope": "Static fullbody review, no head scaling or production rig claim",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\neck-BODYcolorOnly-clavicleOFF.png",
+    "sha256": "4c8d47d01531d647e1599347ec84208ad1bce897e3961a581b728265e1754705"
+  },
+  {
+    "job": {
+      "name": "clavicle-on",
+      "state": "Underwear",
+      "yaw": 0,
+      "hair": false,
+      "close": "clavicle",
+      "clavicle": 1
+    },
+    "scene": "Underwear",
+    "actual_source_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    "saved_review_native": false,
+    "unsaved_component_payload": {
+      "path": "joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    "geometry": {
+      "geometry_file_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+      "surface_file_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+      "body_triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+      "ReviewUV_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0"
+    },
+    "fixture": {
+      "projection": "ORTHO",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.08715568482875824,
+          -0.9961947202682495,
+          -3.0085840225219727
+        ],
+        [
+          0.0,
+          0.9961947202682495,
+          0.08715568482875824,
+          1.6564671993255615
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "view_frame_camera_local": [
+        [
+          0.17000000178813934,
+          0.17000000178813934,
+          -1.0
+        ],
+        [
+          0.17000000178813934,
+          -0.17000000178813934,
+          -1.0
+        ],
+        [
+          -0.17000000178813934,
+          -0.17000000178813934,
+          -1.0
+        ],
+        [
+          -0.17000000178813934,
+          0.17000000178813934,
+          -1.0
+        ]
+      ],
+      "target_world": [
+        0.0,
+        -0.019999999552965164,
+        1.3949999809265137
+      ],
+      "ortho_scale": 0.3400000035762787,
+      "clip": [
+        0.10000000149011612,
+        10.0
+      ],
+      "resolution": [
+        800,
+        800
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "lens": 50.0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.-1": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "lights": [
+        {
+          "name": "MIA12_Review_Key",
+          "matrix": [
+            [
+              0.7999998927116394,
+              0.30869758129119873,
+              -0.514495849609375,
+              -3.0
+            ],
+            [
+              -0.6000001430511475,
+              0.411596417427063,
+              -0.6859943270683289,
+              -4.0
+            ],
+            [
+              -1.2784255432052305e-07,
+              0.857492983341217,
+              0.5144956707954407,
+              4.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 650.0,
+          "size": 3.0
+        },
+        {
+          "name": "MIA12_Review_Fill",
+          "matrix": [
+            [
+              0.5547001957893372,
+              -0.31959936022758484,
+              0.7682212591171265,
+              3.0
+            ],
+            [
+              0.8320502638816833,
+              0.21306629478931427,
+              -0.5121475458145142,
+              -2.0
+            ],
+            [
+              -3.755420863171821e-08,
+              0.9232870936393738,
+              0.3841106593608856,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 280.0,
+          "size": 4.0
+        },
+        {
+          "name": "MIA12_Review_Rim",
+          "matrix": [
+            [
+              -0.9486833214759827,
+              -0.19611607491970062,
+              0.24806950986385345,
+              1.0
+            ],
+            [
+              0.3162277638912201,
+              -0.5883482694625854,
+              0.7442085146903992,
+              3.0
+            ],
+            [
+              4.845054579760699e-09,
+              0.7844646573066711,
+              0.6201735138893127,
+              3.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 450.0,
+          "size": 3.0
+        }
+      ],
+      "world": {
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.20000000298023224
+      },
+      "pose_sha256": "6915c00d9f7cc2bba79928cd4b104b52f61b33d6aca5c9a72ab9bef0a199ddc0"
+    },
+    "material": {
+      "material": "MIA12_Review_Underwear",
+      "variant": "underwear",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "packed": true,
+          "packed_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "packed": true,
+          "packed_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "packed": true,
+          "packed_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "packed": true,
+          "packed_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "packed": true,
+          "packed_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "ColorOnly": 0.0,
+        "ShadeStrength": 0.1599999964237213,
+        "ClavicleStrength": 1.0,
+        "InkStrength": 0.550000011920929,
+        "UnderwearMode": 1.0
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "scope": "Static fullbody review, no head scaling or production rig claim",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\clavicle-on.png",
+    "sha256": "a51bb2e093f44d0184120431f07c975c37cde6efdfd9b968705aa5ec3d0c9eb5"
+  },
+  {
+    "job": {
+      "name": "clavicle-off",
+      "state": "Underwear",
+      "yaw": 0,
+      "hair": false,
+      "close": "clavicle",
+      "clavicle": 0
+    },
+    "scene": "Underwear",
+    "actual_source_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    "saved_review_native": false,
+    "unsaved_component_payload": {
+      "path": "joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    "geometry": {
+      "geometry_file_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+      "surface_file_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+      "body_triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+      "ReviewUV_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0"
+    },
+    "fixture": {
+      "projection": "ORTHO",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.08715568482875824,
+          -0.9961947202682495,
+          -3.0085840225219727
+        ],
+        [
+          0.0,
+          0.9961947202682495,
+          0.08715568482875824,
+          1.6564671993255615
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "view_frame_camera_local": [
+        [
+          0.17000000178813934,
+          0.17000000178813934,
+          -1.0
+        ],
+        [
+          0.17000000178813934,
+          -0.17000000178813934,
+          -1.0
+        ],
+        [
+          -0.17000000178813934,
+          -0.17000000178813934,
+          -1.0
+        ],
+        [
+          -0.17000000178813934,
+          0.17000000178813934,
+          -1.0
+        ]
+      ],
+      "target_world": [
+        0.0,
+        -0.019999999552965164,
+        1.3949999809265137
+      ],
+      "ortho_scale": 0.3400000035762787,
+      "clip": [
+        0.10000000149011612,
+        10.0
+      ],
+      "resolution": [
+        800,
+        800
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "lens": 50.0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.-1": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "lights": [
+        {
+          "name": "MIA12_Review_Key",
+          "matrix": [
+            [
+              0.7999998927116394,
+              0.30869758129119873,
+              -0.514495849609375,
+              -3.0
+            ],
+            [
+              -0.6000001430511475,
+              0.411596417427063,
+              -0.6859943270683289,
+              -4.0
+            ],
+            [
+              -1.2784255432052305e-07,
+              0.857492983341217,
+              0.5144956707954407,
+              4.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 650.0,
+          "size": 3.0
+        },
+        {
+          "name": "MIA12_Review_Fill",
+          "matrix": [
+            [
+              0.5547001957893372,
+              -0.31959936022758484,
+              0.7682212591171265,
+              3.0
+            ],
+            [
+              0.8320502638816833,
+              0.21306629478931427,
+              -0.5121475458145142,
+              -2.0
+            ],
+            [
+              -3.755420863171821e-08,
+              0.9232870936393738,
+              0.3841106593608856,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 280.0,
+          "size": 4.0
+        },
+        {
+          "name": "MIA12_Review_Rim",
+          "matrix": [
+            [
+              -0.9486833214759827,
+              -0.19611607491970062,
+              0.24806950986385345,
+              1.0
+            ],
+            [
+              0.3162277638912201,
+              -0.5883482694625854,
+              0.7442085146903992,
+              3.0
+            ],
+            [
+              4.845054579760699e-09,
+              0.7844646573066711,
+              0.6201735138893127,
+              3.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 450.0,
+          "size": 3.0
+        }
+      ],
+      "world": {
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.20000000298023224
+      },
+      "pose_sha256": "6915c00d9f7cc2bba79928cd4b104b52f61b33d6aca5c9a72ab9bef0a199ddc0"
+    },
+    "material": {
+      "material": "MIA12_Review_Underwear",
+      "variant": "underwear",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "packed": true,
+          "packed_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "packed": true,
+          "packed_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "packed": true,
+          "packed_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "packed": true,
+          "packed_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "packed": true,
+          "packed_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "ColorOnly": 0.0,
+        "ShadeStrength": 0.1599999964237213,
+        "ClavicleStrength": 0.0,
+        "InkStrength": 0.550000011920929,
+        "UnderwearMode": 1.0
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "scope": "Static fullbody review, no head scaling or production rig claim",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\clavicle-off.png",
+    "sha256": "39f00fa1613908936412d1ae8454d4d2c3d4e1f59664c93bd25d6f54ef9756c1"
+  },
+  {
+    "job": {
+      "name": "clavicle-moved-light",
+      "state": "Underwear",
+      "yaw": 0,
+      "hair": false,
+      "close": "clavicle",
+      "clavicle": 1,
+      "moved_light": true
+    },
+    "scene": "Underwear",
+    "actual_source_native": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-refinement-v002\\integrated\\Mia_v0.0.2_Review_R3b.blend",
+      "sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1"
+    },
+    "saved_review_native": false,
+    "unsaved_component_payload": {
+      "path": "joined-expanded-E.npz",
+      "sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0"
+    },
+    "geometry": {
+      "geometry_file_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+      "surface_file_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+      "body_triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+      "ReviewUV_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0"
+    },
+    "fixture": {
+      "projection": "ORTHO",
+      "camera_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.08715568482875824,
+          -0.9961947202682495,
+          -3.0085840225219727
+        ],
+        [
+          0.0,
+          0.9961947202682495,
+          0.08715568482875824,
+          1.6564671993255615
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "view_frame_camera_local": [
+        [
+          0.17000000178813934,
+          0.17000000178813934,
+          -1.0
+        ],
+        [
+          0.17000000178813934,
+          -0.17000000178813934,
+          -1.0
+        ],
+        [
+          -0.17000000178813934,
+          -0.17000000178813934,
+          -1.0
+        ],
+        [
+          -0.17000000178813934,
+          0.17000000178813934,
+          -1.0
+        ]
+      ],
+      "target_world": [
+        0.0,
+        -0.019999999552965164,
+        1.3949999809265137
+      ],
+      "ortho_scale": 0.3400000035762787,
+      "clip": [
+        0.10000000149011612,
+        10.0
+      ],
+      "resolution": [
+        800,
+        800
+      ],
+      "pixel_aspect": [
+        1.0,
+        1.0
+      ],
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "lens": 50.0,
+      "frame": 1,
+      "active_shape_keys": {
+        "Basis": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_ALL_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_BRW_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Natural": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Close_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_R": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Joy_L": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_EYE_Extra": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Down": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Angry": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Neutral": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Fun": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Joy": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Sorrow": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_Surprised": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_A": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_I": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_U": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_E": 0.0,
+        "Face.M_F00_000_00_Fcl_MTH_O": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung1_Up": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Low": 0.0,
+        "Face.M_F00_000_00_Fcl_HA_Fung2_Up": 0.0,
+        "EyeExtra_01.M_F00_000_00_EyeExtra_On": 0.0,
+        "Face.M_F00_000_00_Fcl_MIA_ToothyGrin": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.-1": 0.0,
+        "Mia.v003.SourceSurprise.Aperture.1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.-1": 0.0,
+        "Mia.v003.SourceSurprise.CloseGate.1": 0.0
+      },
+      "color_management": {
+        "view_transform": "Standard",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "lights": [
+        {
+          "name": "MIA12_Review_Key",
+          "matrix": [
+            [
+              0.800000011920929,
+              -0.3086974620819092,
+              0.5144957304000854,
+              3.0
+            ],
+            [
+              0.6000000238418579,
+              0.4115966558456421,
+              -0.6859943270683289,
+              -4.0
+            ],
+            [
+              -2.568879331477092e-08,
+              0.8574929237365723,
+              0.5144957900047302,
+              4.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 650.0,
+          "size": 3.0
+        },
+        {
+          "name": "MIA12_Review_Fill",
+          "matrix": [
+            [
+              0.5547001957893372,
+              -0.31959936022758484,
+              0.7682212591171265,
+              3.0
+            ],
+            [
+              0.8320502638816833,
+              0.21306629478931427,
+              -0.5121475458145142,
+              -2.0
+            ],
+            [
+              -3.755420863171821e-08,
+              0.9232870936393738,
+              0.3841106593608856,
+              2.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 280.0,
+          "size": 4.0
+        },
+        {
+          "name": "MIA12_Review_Rim",
+          "matrix": [
+            [
+              -0.9486833214759827,
+              -0.19611607491970062,
+              0.24806950986385345,
+              1.0
+            ],
+            [
+              0.3162277638912201,
+              -0.5883482694625854,
+              0.7442085146903992,
+              3.0
+            ],
+            [
+              4.845054579760699e-09,
+              0.7844646573066711,
+              0.6201735138893127,
+              3.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "energy": 450.0,
+          "size": 3.0
+        }
+      ],
+      "world": {
+        "color": [
+          0.18000000715255737,
+          0.18000000715255737,
+          0.18000000715255737,
+          1.0
+        ],
+        "strength": 0.20000000298023224
+      },
+      "pose_sha256": "6915c00d9f7cc2bba79928cd4b104b52f61b33d6aca5c9a72ab9bef0a199ddc0"
+    },
+    "material": {
+      "material": "MIA12_Review_Underwear",
+      "variant": "underwear",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "packed": true,
+          "packed_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "packed": true,
+          "packed_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "packed": true,
+          "packed_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "packed": true,
+          "packed_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "packed": true,
+          "packed_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "ColorOnly": 0.0,
+        "ShadeStrength": 0.1599999964237213,
+        "ClavicleStrength": 1.0,
+        "InkStrength": 0.550000011920929,
+        "UnderwearMode": 1.0
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "scope": "Static fullbody review, no head scaling or production rig claim",
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\clavicle-moved-light.png",
+    "sha256": "3d64a36054f1c987635a851c3867549529971e3415412042739615053333c11a"
+  }
+]

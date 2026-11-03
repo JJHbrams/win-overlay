@@ -1,0 +1,123 @@
+{
+  "supplied_WORLD_vectors_exact_to_captured_source": true,
+  "actual_max_vector_error": 0.007153651082698623,
+  "actual_max_angle_degrees": 0.4098748825672529,
+  "protected_face_max_angle_degrees": 0.04195938221834286,
+  "groups": {
+    "protected_ge_1_469": {
+      "faces": 37145,
+      "max_angle_degrees": 0.04195938221834286,
+      "max_vector_error": 0.0007323293847868976,
+      "corners_over_05deg": 0,
+      "bounds": [
+        [
+          -0.08709105849266052,
+          -0.08932605385780334,
+          1.4694147109985352
+        ],
+        [
+          0.08627159893512726,
+          0.09197547286748886,
+          1.6452091932296753
+        ]
+      ]
+    },
+    "original_unclipped_head": {
+      "faces": 37273,
+      "max_angle_degrees": 0.04195938221834286,
+      "max_vector_error": 0.0007323293847868976,
+      "corners_over_05deg": 0,
+      "bounds": [
+        [
+          -0.08709105849266052,
+          -0.08932605385780334,
+          1.4651179313659668
+        ],
+        [
+          0.08627159893512726,
+          0.09197547286748886,
+          1.6452091932296753
+        ]
+      ]
+    },
+    "clipped_interpolated_neck": {
+      "faces": 184,
+      "max_angle_degrees": 0.4098748825672529,
+      "max_vector_error": 0.007153651082698623,
+      "corners_over_05deg": 76,
+      "bounds": [
+        [
+          -0.027489393949508667,
+          -0.026740046218037605,
+          1.465000033378601
+        ],
+        [
+          0.026670044288039207,
+          0.03707708418369293,
+          1.4694288969039917
+        ]
+      ]
+    },
+    "neck_cut_adjacent": {
+      "faces": 184,
+      "max_angle_degrees": 0.4098748825672529,
+      "max_vector_error": 0.007153651082698623,
+      "corners_over_05deg": 76,
+      "bounds": [
+        [
+          -0.027489393949508667,
+          -0.026740046218037605,
+          1.465000033378601
+        ],
+        [
+          0.026670044288039207,
+          0.03707708418369293,
+          1.4694288969039917
+        ]
+      ]
+    }
+  },
+  "worst_corner": {
+    "joined_face": 114266,
+    "corner": 2,
+    "source_face": 4238,
+    "world_position": [
+      0.0238351970911026,
+      -0.004308838862925768,
+      1.465000033378601
+    ],
+    "triangle_world": [
+      [
+        0.023923877626657486,
+        -0.005433518439531326,
+        1.4669780731201172
+      ],
+      [
+        0.023390529677271843,
+        -0.005962676368653774,
+        1.465000033378601
+      ],
+      [
+        0.0238351970911026,
+        -0.004308838862925768,
+        1.465000033378601
+      ]
+    ],
+    "source_barycentric": [
+      0.640308678150177,
+      0.0,
+      0.359691321849823
+    ],
+    "expected_normal": [
+      0.9516451745998814,
+      -0.25315878758991756,
+      -0.1740174989096337
+    ],
+    "actual_normal": [
+      0.9530276656150818,
+      -0.24644781649112701,
+      -0.17607329785823822
+    ]
+  },
+  "limit": "Protected original face aboveZ1.469 customnormal readback <.05degree and8e-4vector, matching unchanged-topology source roundtrip. Changed clipped lower-neck/collar packing reported separately; no falsebitexactoutput or exactnecklook claim. Actualface/neckLOOK stillreviewed."
+}

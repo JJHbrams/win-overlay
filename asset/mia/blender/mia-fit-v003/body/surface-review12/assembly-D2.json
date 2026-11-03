@@ -1,0 +1,191 @@
+{
+  "status": "Static joined CPU candidate; actualseamART pending",
+  "vertices": 126845,
+  "triangles": 253332,
+  "body_material_index": 12,
+  "collars": {
+    "neck": {
+      "first_loop": 267,
+      "second_loop": 123,
+      "resample_count": 272,
+      "bands": 12,
+      "bounds": [
+        [
+          -0.04769412128733545,
+          -0.04744699730516497,
+          1.445
+        ],
+        [
+          0.04769397000061129,
+          0.037052938756419525,
+          1.465
+        ]
+      ],
+      "geometric_section_tangents": {
+        "method": "One constrained minimum discrete bending solve; no handle/grid sweep",
+        "fixed_rows": [
+          0,
+          1,
+          11,
+          12
+        ],
+        "free_rows": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "objective": "sum squared physical row second differences",
+        "endpoint_rule": "Quadratic extrapolation of endpoint plus actual retained sections at one/two collar physical row spacings",
+        "continuity": "Actual finite-row secants audited separately; no analytic or discrete C1 guarantee",
+        "physical_row_spacing_m": 0.0016666666666673529
+      }
+    },
+    "waist": {
+      "first_loop": 481,
+      "second_loop": 228,
+      "resample_count": 488,
+      "bands": 12,
+      "bounds": [
+        [
+          -0.13275701359547207,
+          -0.09811333101138354,
+          1.035
+        ],
+        [
+          0.13177615365210793,
+          0.07861668663585818,
+          1.115
+        ]
+      ],
+      "geometric_section_tangents": {
+        "method": "One constrained minimum discrete bending solve; no handle/grid sweep",
+        "fixed_rows": [
+          0,
+          1,
+          11,
+          12
+        ],
+        "free_rows": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "objective": "sum squared physical row second differences",
+        "endpoint_rule": "Quadratic extrapolation of endpoint plus actual retained sections at one/two collar physical row spacings",
+        "continuity": "Actual finite-row secants audited separately; no analytic or discrete C1 guarantee",
+        "physical_row_spacing_m": 0.006666666666667431
+      }
+    },
+    "armR": {
+      "first_loop": 140,
+      "second_loop": 96,
+      "resample_count": 144,
+      "bands": 12,
+      "bounds": [
+        [
+          0.207797978638197,
+          -0.04145544882713459,
+          1.1103208742493704
+        ],
+        [
+          0.2578481321381435,
+          0.032266402124579686,
+          1.1789699723020504
+        ]
+      ],
+      "geometric_section_tangents": {
+        "method": "One constrained minimum discrete bending solve; no handle/grid sweep",
+        "fixed_rows": [
+          0,
+          1,
+          11,
+          12
+        ],
+        "free_rows": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "objective": "sum squared physical row second differences",
+        "endpoint_rule": "Quadratic extrapolation of endpoint plus actual retained sections at one/two collar physical row spacings",
+        "continuity": "Actual finite-row secants audited separately; no analytic or discrete C1 guarantee",
+        "physical_row_spacing_m": 0.0035140805954863457
+      }
+    },
+    "armL": {
+      "first_loop": 140,
+      "second_loop": 98,
+      "resample_count": 144,
+      "bands": 12,
+      "bounds": [
+        [
+          -0.2586223871141985,
+          -0.04141356870754786,
+          1.1106681736130928
+        ],
+        [
+          -0.20854276452718792,
+          0.032277937648472615,
+          1.1789702445643349
+        ]
+      ],
+      "geometric_section_tangents": {
+        "method": "One constrained minimum discrete bending solve; no handle/grid sweep",
+        "fixed_rows": [
+          0,
+          1,
+          11,
+          12
+        ],
+        "free_rows": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "objective": "sum squared physical row second differences",
+        "endpoint_rule": "Quadratic extrapolation of endpoint plus actual retained sections at one/two collar physical row spacings",
+        "continuity": "Actual finite-row secants audited separately; no analytic or discrete C1 guarantee",
+        "physical_row_spacing_m": 0.003514080595486291
+      }
+    }
+  },
+  "retained_head_vertices_exact": 18761,
+  "retained_lower_vertices_exact": 39697,
+  "breast_core_vertices_exact": 11962,
+  "inherited_source_boundary_edges": 320,
+  "inherited_hand_nonmanifold_edges": 4,
+  "new_body_seam_boundaries": 0,
+  "original_uv_layers": [
+    "UVMap",
+    "MIA_BODY_V23_UV",
+    "MIA_V002_UnderwearUV"
+  ],
+  "retained_corner_normals_space": "WORLD: sourceLOCALnormals transformed inverse-transpose ofactual180degZowner matrix",
+  "joined_sha256": "78b9782781e85c753516ebc4ed378998dd8554e7b86f67aa5268151a40dcb9c4",
+  "native_saved": false,
+  "GPU_used": false
+}
