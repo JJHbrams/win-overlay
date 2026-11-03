@@ -16,7 +16,7 @@ import numpy as np
 from PIL import Image
 
 sys.dont_write_bytecode = True
-CANONICAL = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+CANONICAL = Path(__file__).resolve().parents[3]
 APPEARANCE = Path('asset/mia/blender/mia-fit-v003/body/surface-appearance12')
 REVIEW = Path('asset/mia/blender/mia-fit-v003/body/surface-review12')
 CACHE = Path('.mia-cache/body-h/appearance')
@@ -107,6 +107,7 @@ def target_paths(root, selection=None):
     if selection is not None or chosen.exists():
         if root/'.mia-cache/body-h' not in chosen.parents:
             raise ValueError('Candidate selection must stay in this canonical H cache')
+        migrated = load('mia_h_selected_paths', Path(__file__).resolve().parents[1]/'review_h/paths.py')
         selection_sha = sha(chosen)
         record = read(chosen)
         for role in ('geometry', 'surface', 'atlas'):
@@ -116,7 +117,9 @@ def target_paths(root, selection=None):
             path = Path(item['path'])
             if not path.is_absolute():
                 raise ValueError('Selected candidate paths must be absolute: '+role)
-            path = path.resolve()
+            # Keep frozen selection bytes; bind known former roots to this
+            # worktree before enforcing the existing assembly-cache/hash guard.
+            path = migrated.migrated_path(path, root=root).resolve()
             if base not in path.parents:
                 raise ValueError('Selected candidate input must stay in assembly cache: '+role)
             if sha(path) != item['sha256']:

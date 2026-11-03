@@ -7,7 +7,7 @@ from pathlib import Path
 import sys,json,hashlib,importlib.util
 import numpy as np
 sys.dont_write_bytecode=True
-C=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+C=Path(__file__).resolve().parents[3]
 A=C/'asset/mia/blender/mia-fit-v003';P=A/'body/surface-review12'
 
 def load(name,path):

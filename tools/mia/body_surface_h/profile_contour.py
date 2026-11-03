@@ -11,7 +11,7 @@ import sys
 import numpy as np
 
 sys.dont_write_bytecode = True
-CANONICAL = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+CANONICAL = Path(__file__).resolve().parents[3]
 APPEARANCE = CANONICAL / 'asset/mia/blender/mia-fit-v003/body/surface-appearance12'
 BODY = CANONICAL / 'asset/mia/blender/mia-fit-v003/body/surface-review12'
 CACHE = CANONICAL / '.mia-cache/body-h/appearance'

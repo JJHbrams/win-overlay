@@ -9,7 +9,7 @@ import numpy as np
 sys.dont_write_bytecode=True
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from field_numpy import Model
-CANONICAL=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+CANONICAL=Path(__file__).resolve().parents[3]
 ASSET=CANONICAL/'asset/mia/blender/mia-fit-v003'
 TARGET=np.array([0.,-.018,.86]);GUIDE_CUT=1.445
 LOW=np.array([.15,.15,0.,0.,.8,-4.,-6.,176.,-6.,77.,-6.])

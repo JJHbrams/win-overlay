@@ -12,7 +12,7 @@ sys.dont_write_bytecode=True
 P=Path(__file__).resolve().parent;sys.path.insert(0,str(P))
 from build_mesh import section,outer_roof,topology
 from field_numpy import Model
-C=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');A=C/'asset/mia/blender/mia-fit-v003';O=C/'.mia-cache/body-h/shape'
+C=Path(__file__).resolve().parents[3];A=C/'asset/mia/blender/mia-fit-v003';O=C/'.mia-cache/body-h/shape'
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def load(name,path):
     s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
