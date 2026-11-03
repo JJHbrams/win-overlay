@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "source": {
+    "path": "asset/mia/references/body-foundation/v06/mia-body-visibility-guide-v06.png",
+    "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+    "original_size": [1536, 1024],
+    "access": "Actual original image directly viewed; manual approximate visible-pixel paths, not hidden construction recovery.",
+    "pixel_uncertainty": "approximately2–4px; straps and illustration lighting remain local limitations"
+  },
+  "paths": [
+    {
+      "id": "tied.back.bra.scoop",
+      "view": "back",
+      "component": "bra",
+      "points_px": [[881, 295], [890, 305], [906, 310], [921, 312], [936, 312], [951, 312], [967, 310], [979, 305], [984, 295]],
+      "role": "observed back cloth/skin scoop exposed in tied-hair guide",
+      "limits": "Directly visible illustrative neckline; side and strap joins are inferred surface construction, not calibrated dimensions."
+    },
+    {
+      "id": "tied.back.bra.band_bottom",
+      "view": "back",
+      "component": "bra",
+      "points_px": [[881, 324], [899, 327], [918, 328], [936, 329], [955, 328], [971, 327], [984, 324]],
+      "role": "observed back band lower edge",
+      "limits": "Source guide is supplemental body visibility art; tiny closure details are not traced."
+    },
+    {
+      "id": "tied.front.strap_left",
+      "view": "front",
+      "component": "bra",
+      "points_px": [[192, 221], [190, 236], [188, 252], [194, 263]],
+      "role": "visible source strap route",
+      "limits": "Guide route supports an inferred continuous geodesic strap; no recovered cloth thickness."
+    },
+    {
+      "id": "tied.front.strap_right",
+      "view": "front",
+      "component": "bra",
+      "points_px": [[288, 221], [289, 237], [290, 252], [286, 267]],
+      "role": "visible source strap route",
+      "limits": "Surface-fitted route; source pose/camera differ."
+    }
+  ],
+  "not_observed": ["Hidden underbody gusset seam", "Exact back closure hardware", "Garment thickness/compression"]
+}

@@ -1,0 +1,377 @@
+{
+  "status": "PASS actual Blender node API only",
+  "materials": [
+    {
+      "initial": {
+        "material": "MIA12_Body_skin",
+        "variant": "skin",
+        "images": [
+          {
+            "role": "ClavicleInk",
+            "image": "ClavicleInk.png",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\ClavicleInk.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "ClavicleShade",
+            "image": "ClavicleShade.png",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\ClavicleShade.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "SkinBase",
+            "image": "SkinBaseColor.png",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\SkinBaseColor.png",
+            "color_space": "sRGB",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "UnderwearColor",
+            "image": "UnderwearBaseColor.png",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\UnderwearBaseColor.png",
+            "color_space": "sRGB",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "UnderwearCoverage",
+            "image": "UnderwearCoverage.png",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\UnderwearCoverage.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          }
+        ],
+        "active_roles": [
+          "ActualOutput",
+          "ActualRoughness",
+          "ActualSceneDiffuse",
+          "ActualSceneLightLuminance",
+          "ActualSceneLightRGB",
+          "ActualSceneSpecular",
+          "ActualSpecularLevel",
+          "AuthoredClavicleInk",
+          "AuthoredSoftPigment",
+          "BodyUV",
+          "ClavicleInk",
+          "ClavicleShade",
+          "ClavicleStrength",
+          "ClothRoughnessDelta",
+          "ClothSpecularDelta",
+          "ColorOnly",
+          "ColorOnlyDiagnosticSwitch",
+          "ColorOnlyPigment",
+          "CompatibleLightNormalization",
+          "CompatibleToonTransfer",
+          "CoverageTimesMode",
+          "FinalBodyPigment",
+          "InkStrength",
+          "InkTimesGain",
+          "InkTimesStrength",
+          "SceneLitBodyPigment",
+          "SceneLitToonEmission",
+          "ShadeStrength",
+          "ShadeTimesGain",
+          "ShadeTimesStrength",
+          "SkinBase",
+          "ToonPlusActualSpecular",
+          "UnderwearColor",
+          "UnderwearCoverage",
+          "UnderwearMode"
+        ],
+        "controls": {
+          "ColorOnly": 0.0,
+          "ClavicleStrength": 1.0,
+          "ShadeStrength": 0.1599999964237213,
+          "InkStrength": 0.550000011920929,
+          "UnderwearMode": 0.0
+        },
+        "UV_layer": "MIA_Review12UV"
+      },
+      "toggle": {
+        "material": "MIA12_Body_skin",
+        "variant": "skin",
+        "images": [
+          {
+            "role": "ClavicleInk",
+            "image": "ClavicleInk.png",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\ClavicleInk.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "ClavicleShade",
+            "image": "ClavicleShade.png",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\ClavicleShade.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "SkinBase",
+            "image": "SkinBaseColor.png",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\SkinBaseColor.png",
+            "color_space": "sRGB",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "UnderwearColor",
+            "image": "UnderwearBaseColor.png",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\UnderwearBaseColor.png",
+            "color_space": "sRGB",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "UnderwearCoverage",
+            "image": "UnderwearCoverage.png",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\UnderwearCoverage.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          }
+        ],
+        "active_roles": [
+          "ActualOutput",
+          "ActualRoughness",
+          "ActualSceneDiffuse",
+          "ActualSceneLightLuminance",
+          "ActualSceneLightRGB",
+          "ActualSceneSpecular",
+          "ActualSpecularLevel",
+          "AuthoredClavicleInk",
+          "AuthoredSoftPigment",
+          "BodyUV",
+          "ClavicleInk",
+          "ClavicleShade",
+          "ClavicleStrength",
+          "ClothRoughnessDelta",
+          "ClothSpecularDelta",
+          "ColorOnly",
+          "ColorOnlyDiagnosticSwitch",
+          "ColorOnlyPigment",
+          "CompatibleLightNormalization",
+          "CompatibleToonTransfer",
+          "CoverageTimesMode",
+          "FinalBodyPigment",
+          "InkStrength",
+          "InkTimesGain",
+          "InkTimesStrength",
+          "SceneLitBodyPigment",
+          "SceneLitToonEmission",
+          "ShadeStrength",
+          "ShadeTimesGain",
+          "ShadeTimesStrength",
+          "SkinBase",
+          "ToonPlusActualSpecular",
+          "UnderwearColor",
+          "UnderwearCoverage",
+          "UnderwearMode"
+        ],
+        "controls": {
+          "ColorOnly": 1.0,
+          "ClavicleStrength": 0.0,
+          "ShadeStrength": 0.1599999964237213,
+          "InkStrength": 0.550000011920929,
+          "UnderwearMode": 0.0
+        },
+        "UV_layer": "MIA_Review12UV"
+      }
+    },
+    {
+      "initial": {
+        "material": "MIA12_Body_underwear",
+        "variant": "underwear",
+        "images": [
+          {
+            "role": "ClavicleInk",
+            "image": "ClavicleInk.png.001",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\ClavicleInk.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "ClavicleShade",
+            "image": "ClavicleShade.png.001",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\ClavicleShade.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "SkinBase",
+            "image": "SkinBaseColor.png.001",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\SkinBaseColor.png",
+            "color_space": "sRGB",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "UnderwearColor",
+            "image": "UnderwearBaseColor.png.001",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\UnderwearBaseColor.png",
+            "color_space": "sRGB",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "UnderwearCoverage",
+            "image": "UnderwearCoverage.png.001",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\UnderwearCoverage.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          }
+        ],
+        "active_roles": [
+          "ActualOutput",
+          "ActualRoughness",
+          "ActualSceneDiffuse",
+          "ActualSceneLightLuminance",
+          "ActualSceneLightRGB",
+          "ActualSceneSpecular",
+          "ActualSpecularLevel",
+          "AuthoredClavicleInk",
+          "AuthoredSoftPigment",
+          "BodyUV",
+          "ClavicleInk",
+          "ClavicleShade",
+          "ClavicleStrength",
+          "ClothRoughnessDelta",
+          "ClothSpecularDelta",
+          "ColorOnly",
+          "ColorOnlyDiagnosticSwitch",
+          "ColorOnlyPigment",
+          "CompatibleLightNormalization",
+          "CompatibleToonTransfer",
+          "CoverageTimesMode",
+          "FinalBodyPigment",
+          "InkStrength",
+          "InkTimesGain",
+          "InkTimesStrength",
+          "SceneLitBodyPigment",
+          "SceneLitToonEmission",
+          "ShadeStrength",
+          "ShadeTimesGain",
+          "ShadeTimesStrength",
+          "SkinBase",
+          "ToonPlusActualSpecular",
+          "UnderwearColor",
+          "UnderwearCoverage",
+          "UnderwearMode"
+        ],
+        "controls": {
+          "ColorOnly": 0.0,
+          "ShadeStrength": 0.1599999964237213,
+          "ClavicleStrength": 1.0,
+          "InkStrength": 0.550000011920929,
+          "UnderwearMode": 1.0
+        },
+        "UV_layer": "MIA_Review12UV"
+      },
+      "toggle": {
+        "material": "MIA12_Body_underwear",
+        "variant": "underwear",
+        "images": [
+          {
+            "role": "ClavicleInk",
+            "image": "ClavicleInk.png.001",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\ClavicleInk.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "ClavicleShade",
+            "image": "ClavicleShade.png.001",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\ClavicleShade.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "SkinBase",
+            "image": "SkinBaseColor.png.001",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\SkinBaseColor.png",
+            "color_space": "sRGB",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "UnderwearColor",
+            "image": "UnderwearBaseColor.png.001",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\UnderwearBaseColor.png",
+            "color_space": "sRGB",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          },
+          {
+            "role": "UnderwearCoverage",
+            "image": "UnderwearCoverage.png.001",
+            "filepath": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\_smoke\\UnderwearCoverage.png",
+            "color_space": "Non-Color",
+            "expected_file_sha256": "6bb55e3e6d60364da63be33ea81bd0f593991730997721ffb5d4ee7561d0075f",
+            "UV_vector_linked": true
+          }
+        ],
+        "active_roles": [
+          "ActualOutput",
+          "ActualRoughness",
+          "ActualSceneDiffuse",
+          "ActualSceneLightLuminance",
+          "ActualSceneLightRGB",
+          "ActualSceneSpecular",
+          "ActualSpecularLevel",
+          "AuthoredClavicleInk",
+          "AuthoredSoftPigment",
+          "BodyUV",
+          "ClavicleInk",
+          "ClavicleShade",
+          "ClavicleStrength",
+          "ClothRoughnessDelta",
+          "ClothSpecularDelta",
+          "ColorOnly",
+          "ColorOnlyDiagnosticSwitch",
+          "ColorOnlyPigment",
+          "CompatibleLightNormalization",
+          "CompatibleToonTransfer",
+          "CoverageTimesMode",
+          "FinalBodyPigment",
+          "InkStrength",
+          "InkTimesGain",
+          "InkTimesStrength",
+          "SceneLitBodyPigment",
+          "SceneLitToonEmission",
+          "ShadeStrength",
+          "ShadeTimesGain",
+          "ShadeTimesStrength",
+          "SkinBase",
+          "ToonPlusActualSpecular",
+          "UnderwearColor",
+          "UnderwearCoverage",
+          "UnderwearMode"
+        ],
+        "controls": {
+          "ColorOnly": 1.0,
+          "ShadeStrength": 0.1599999964237213,
+          "ClavicleStrength": 0.0,
+          "InkStrength": 0.550000011920929,
+          "UnderwearMode": 1.0
+        },
+        "UV_layer": "MIA_Review12UV"
+      }
+    }
+  ],
+  "render_called": false,
+  "source_native_loaded": false,
+  "source_or_geometry_changed": false,
+  "limits": "Synthetic8x8 image controls; actual target maps/native appearance remain unverified."
+}

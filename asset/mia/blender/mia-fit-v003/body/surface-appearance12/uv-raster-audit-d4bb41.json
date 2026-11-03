@@ -1,0 +1,23 @@
+{
+  "status": "UV CPU raster actualnonoverlap PASS; semanticfitting pendingrevision",
+  "surface_sha": "d4bb41e067d868b5e9b439b760f7d468f3327db5d715bedd27b5a84f03c6daa4",
+  "geometry_uv_guards": {
+    "world_f32_sha256": "523d4d820501abea38d4ade94fe7578b526b80ad8fc61cc616fdefb7409aa631",
+    "triangles_i32_sha256": "fd0096040df4b4f6b8685399d87ed63ec87e5bbada1ee8bed57a6f91c6d5575d",
+    "triangle_uv_f32_sha256": "8dbcb1c99355d086c3b63a6c5aca24033982830442484e6cca7bd0072d85c0a7",
+    "face_region_i16_sha256": "0179f5e62bb956f69b54e66f4ae4a84c4cf4e2a62cec45ac10ad42a38507028a",
+    "vertices": 126845,
+    "body_triangles": 215875,
+    "uv_layer": "MIA_Review12UV"
+  },
+  "raster": {
+    "size": 2048,
+    "occupied_texels": 1321288,
+    "uv_cohits": 5,
+    "skipped_subtexel_triangles": 14464,
+    "different_world_overlap_count": 0,
+    "overlap_tolerance_m": 0.002,
+    "texel_center_convention": "u=(x+.5)/N,v=1-(y+.5)/N"
+  },
+  "elapsed_seconds": 19.38387894630432
+}
