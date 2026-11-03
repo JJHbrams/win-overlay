@@ -1,12 +1,35 @@
 """Bake fixed3D body appearance into actual target UVs; CPU only."""
 from pathlib import Path
 import argparse
+import importlib.util
 import json
 import time
 import numpy as np
 from PIL import Image
 from surface_api import load_surface, read_json, write_json, rasterize_world, pad_images, sha
 from pattern_fields import make_recipe, TargetAuthor, distance_to_polyline, smooth01, seat, brief_leg_height
+
+
+STORAGE_GUARD_PATH = Path('D:/MiaWorkCache/mia-reference-work/win-overlay/asset/mia/blender/mia-fit-v003/integration/workspace-storage-20261103/storage_guard.py')
+
+
+def check_storage_capacity():
+    """Require the canonical read-only gate; its estimate is not a writer grant."""
+    if not STORAGE_GUARD_PATH.is_file():
+        raise FileNotFoundError('Required canonical storage guard is missing: '+str(STORAGE_GUARD_PATH))
+    spec = importlib.util.spec_from_file_location('mia_canonical_storage_guard', STORAGE_GUARD_PATH)
+    if spec is None or spec.loader is None:
+        raise ImportError('Cannot load required canonical storage guard: '+str(STORAGE_GUARD_PATH))
+    guard = importlib.util.module_from_spec(spec)
+    # Read source through importlib without creating a bytecode cache.
+    source = spec.loader.get_source(spec.name)
+    if source is None:
+        raise ImportError('Canonical storage guard source is unavailable: '+str(STORAGE_GUARD_PATH))
+    exec(compile(source, str(STORAGE_GUARD_PATH), 'exec'), guard.__dict__)
+    report = guard.inspect(100 * 1024 ** 2)
+    if report['violations']:
+        raise RuntimeError('Body appearance bake blocked by canonical storage guard: '+json.dumps(report['violations']))
+    return report
 
 
 def linear_to_srgb(value):
@@ -141,6 +164,7 @@ def paint_fields(raster, config, curves, clavicles, straps):
 
 
 def bake(surface_path, output, *, size=2048, config_path=None, neck_inputs_path=None):
+    check_storage_capacity()
     start = time.time(); out = Path(output); out.mkdir(parents=True, exist_ok=True)
     surface = load_surface(surface_path)
     metadata_path=Path(surface_path).with_suffix('.json');metadata_sha256=sha(metadata_path)
