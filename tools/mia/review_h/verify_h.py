@@ -148,7 +148,7 @@ def run(geometry, surface, output, canonical=ROOT):
                   actual_body_UV_nonzero=body_uv_nonzero, body_triangles=len(uvbody),
                   native_saved=False, GPU_used=False, mesh_modified=False, capacity=capacity)
     out = Path(output).resolve(); allowed = (root/'.mia-cache/body-h/shape/assembly').resolve()
-    assert out.parent == allowed, 'Verification output must stay in canonical assembly cache'
+    assert out.parent == allowed or allowed in out.parents, 'Verification output must stay in canonical assembly cache'
     out.write_text(json.dumps(report, indent=2)+'\n', encoding='utf8', newline='\n')
     print('H_VERIFY_FINISHED', json.dumps(dict(status=report['status'], errors=errors, intersections=len(intersections), seconds=report['seconds'])), flush=True)
     if errors: raise RuntimeError('H CPU verification failed: '+', '.join(errors))
