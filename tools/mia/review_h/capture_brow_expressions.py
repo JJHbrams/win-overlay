@@ -21,7 +21,9 @@ guard_path = ROOT/'asset/mia/blender/mia-fit-v003/integration/workspace-storage-
 spec = importlib.util.spec_from_file_location('brow_expr_capacity', guard_path)
 guard = importlib.util.module_from_spec(spec); spec.loader.exec_module(guard)
 capacity = guard.inspect(80*1024**2); assert not capacity['violations'], capacity
-out = ROOT/'.mia-cache/face-live/brow-expression4'
+tag = globals().get('MIA_BROW_DIAGNOSTIC_TAG', 'brow-expression4')
+assert tag in ['brow-expression4', 'brow-smile1']
+out = ROOT/'.mia-cache/face-live'/tag
 assert not out.exists(); out.mkdir(parents=True)
 old = ROOT/'asset/mia/blender/mia-visible-art-v30/render_native_review.py'
 sys.argv = [str(old), '--', '--native', str(native), '--sha256', source_sha,
@@ -59,8 +61,8 @@ brow = importlib.util.module_from_spec(spec); spec.loader.exec_module(brow)
 installed = brow.apply_to_current_scene(.60)
 names = ['MIA_V27_SharedHeadBody', 'V31_SourceBrow_-1', 'V31_SourceBrow_1']
 records = []
-states = [('neutral', 'P01_neutral_observe'), ('irritated', 'P05_downward_irritated'),
-          ('surprised', 'P12_surprised'), ('blink', 'Manual_EYE_Close')]
+states = globals().get('MIA_BROW_DIAGNOSTIC_STATES', [('neutral', 'P01_neutral_observe'), ('irritated', 'P05_downward_irritated'),
+          ('surprised', 'P12_surprised'), ('blink', 'Manual_EYE_Close')])
 for i, (label, key) in enumerate(states):
     reset(); assert key in ctrl; ctrl[key] = 1.; ctrl.update_tag()
     bpy.context.scene.frame_set(20+i); bpy.context.view_layer.update()
@@ -80,7 +82,8 @@ for i, (label, key) in enumerate(states):
             overlay_geometry=actual_geometry(installed['overlay_objects']),
             render=g['records'][-1]))
         (out/'expression-evidence.json').write_text(json.dumps(dict(scope='Provisional graphic brow display readability, head/gaze held neutral; source pose likeness and physical fringe remain open',
-            native_sha256=source_sha, installed=installed, states=records, capacity=capacity, native_saved=False), indent=2)+'\n', encoding='utf8')
+            native_sha256=source_sha, installed=installed, states=records, capacity=capacity, native_saved=False,
+            helper_sha256=sha(ROOT/'tools/mia/review_h/capture_brow_expressions.py'), diagnostic_tag=tag), indent=2)+'\n', encoding='utf8')
         print('ACTUAL_BROW_EXPRESSION', name, flush=True)
 reset(); assert sha(native) == source_sha
-print('BROW_EXPRESSION_EIGHT_COMPLETE_GPU_RELEASE', flush=True)
+print('BROW_EXPRESSION_COMPLETE_GPU_RELEASE', len(records), flush=True)

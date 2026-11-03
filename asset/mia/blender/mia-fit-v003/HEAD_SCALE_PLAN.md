@@ -6,11 +6,13 @@ The user's latest 2026-11-03 request is to compare the completed body with the o
 
 Use original-aspect v06 whole-height front/profile/back/oblique, retaining one uniform crown-to-sole registration. Compare baseline scale1.0 against provisional1.075 and1.08 only after the body form is valid. Neither test factor is an adopted dimension. Record head-height/body-height, head-width/shoulder-width, chin/clavicle/neck gap, profile depth and hair extent separately. Do not normalize by eye distance or resize the body to conceal the mismatch.
 
+2026-11-04 continuation: actual unchanged-hair/D-body source-camera front/profile/back/oblique now exists in `.mia-cache/body-h/ratio-baseline/`. A crown-fixed enlargement may lower the chin excessively; the prior neck audit found a smaller chin-height discrepancy. After body selection, test ONE uniform affine fitted jointly to corresponding crown and chin intervals, allowing its pivot near the mid-head rather than fixing the crown by assumption. A nominal scale around1.085 is only a preliminary hypothesis within uncertain hair-tip/pose traces, not another grid or selected dimension. Source-v06 long-hair differences are not a substitute for checking v22 grooming authority. No whole-hair scale or side extension has been adopted.
+
 Fresh R3b read-only measurements put the Head-bone origin near(-0.000392,0.004743,1.491665)m and the previously recorded crown atZ1.692881m. Remeasure actual crown/hair bounds after body selection. Earlier chin predictions belong to an older registration and are not current targets.
 
 ## One coherent transform, explicit ownership
 
-Transport a reference crown pivot by the current Head-bone delta. For the fully head-owned surfaces use the same world affine `q' = p(t) + s * (q - p(t))` exactly once, preserving internal proportions, existing rest/pose and object parenting. Do not independently scale the facial features.
+Transport the jointly reviewed reference pivot by the current Head-bone delta. For the fully head-owned surfaces use the same world affine `q' = p(t) + s * (q - p(t))` exactly once, preserving internal proportions, existing rest/pose and object parenting. The old crown pivot is historical, not an immutable anatomical constraint. Do not independently scale the facial features.
 
 | Surface group | Ownership and order |
 |---|---|
