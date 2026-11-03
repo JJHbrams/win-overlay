@@ -1,0 +1,42 @@
+{
+  "status": "PASS read-only numerical restoration check; tiny/subtexel limitation retained",
+  "raw_atlas_sha256": "2a4780022fc253edea328ac2163821bdb0fa0b3759365f5015cbc5e75b9f13be",
+  "restored_atlas_sha256": "c78a4cde22e136048824e163423f7c55c232449596d5975cd103f03969f82c44",
+  "body_UV_matches_actual_restored_atlas": true,
+  "changed_corner_components": [
+    [
+      218348,
+      1,
+      0
+    ],
+    [
+      218348,
+      2,
+      1
+    ],
+    [
+      218349,
+      1,
+      1
+    ],
+    [
+      218349,
+      2,
+      0
+    ]
+  ],
+  "changed_full_triangle_ids": [
+    218348,
+    218349
+  ],
+  "changed_body_triangle_ids": [
+    180891,
+    180892
+  ],
+  "each_changed_float32_component_delta_ULP": 1,
+  "raw_zero_area_body_triangles": 2,
+  "restored_zero_area_body_triangles": 0,
+  "minimum_positive_double_area": 1.1102230246251565e-16,
+  "worker_UV_edits": false,
+  "authorization": "Producer reports root approved these two one-ULP face restorations; worker only verifies actual arrays."
+}

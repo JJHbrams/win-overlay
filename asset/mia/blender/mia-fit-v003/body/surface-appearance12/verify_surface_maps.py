@@ -61,6 +61,31 @@ def verify(surface_file, map_dir):
         raise ValueError('PNG footprint crossed anatomical ownership: '+repr(dict(
             underwear=surface['meshfaceid'][wrong].tolist(),
             clavicle=surface['meshfaceid'][wrong_clav].tolist())))
+    # Ownership alone cannot detect a peach puncture on a correctly labelled
+    # torso triangle. Independently compare PNG lookup with deep fixed-world
+    # garment interiors at every actual triangle centroid.
+    from pattern_fields import make_recipe, distance_to_polyline
+    config=read_json(p/'authoring-config.json')
+    curves,_,_=make_recipe(config)
+    theta=np.arctan2(points[:,0]-config['torso_center_xy'][0],-(points[:,1]-config['torso_center_xy'][1]))
+    z=points[:,2];margin=.004
+    upper=np.isin(region,config['allowed_region_ids']['upper'])
+    pelvis=np.isin(region,config['allowed_region_ids']['pelvis'])
+    deep=(upper&(z>curves['bra_bottom'](theta)+margin)&(z<curves['bra_top'](theta)-margin))
+    deep|=(pelvis&(z>curves['brief_leg'](theta)+margin)&(z<curves['brief_waist'](theta)-margin))
+    for strap in read_json(p/'seated-straps.json')['straps']:
+        selected=upper&(points[:,0]*strap['side']>0)&(abs(points[:,0])>.025)&(abs(points[:,0])<.145)&(z>1.235)
+        distance=distance_to_polyline(points[selected],strap['world'])
+        deep[selected]|=distance<strap['width_m']/2-margin
+    missing_cloth=deep&(coverage<.95)
+    interior=dict(deep_interior_margin_m=margin,deep_cloth_triangle_centroids=int(deep.sum()),
+                  minimum_bilinear_coverage=float(coverage[deep].min()) if deep.any() else None,
+                  below_point95=int(missing_cloth.sum()),
+                  offending_body_triangle_ids=np.flatnonzero(missing_cloth).tolist(),
+                  offending_surface_area_m2=float(area[missing_cloth].sum()))
+    write_json(p/'interior-coverage-proof.json',interior)
+    if missing_cloth.any():
+        raise ValueError('PNG deep cloth interiors contain gaps; see interior-coverage-proof.json ('+str(int(missing_cloth.sum()))+' triangles)')
     seats = read_json(p/'seated-boundaries.json')
     route_checks = []
     for name, route in seats['boundaries'].items():
@@ -84,6 +109,7 @@ def verify(surface_file, map_dir):
                   clavicle_ink_surface_area_m2=float(area[ink>.1].sum()),
                   clavicle_shade_surface_area_m2=float(area[shade>.1].sum()),
                   boundary_checks=route_checks,
+                  deep_interior_coverage=interior,
                   limits=['Centroid tests are ownership/route checks, not a continuous texture filtering proof.',
                           'UV subtexel triangles and declared overlap tolerance remain in bake-report.json.',
                           'No geometry, native scene, renderer, source image or face/hair material was changed.'])

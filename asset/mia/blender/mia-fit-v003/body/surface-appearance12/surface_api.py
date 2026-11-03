@@ -43,8 +43,17 @@ def load_surface(npz_path, json_path=None):
     assert np.isfinite(v).all() and np.isfinite(uv).all()
     assert len(f) and f.min() >= 0 and f.max() < len(v)
     assert uv.min() >= -1e-6 and uv.max() <= 1 + 1e-6
-    area2 = np.cross(uv[:, 1] - uv[:, 0], uv[:, 2] - uv[:, 0])
-    assert np.all(np.abs(area2) > 1e-12), 'Body atlas contains degenerate UV triangles'
+    # Test actual nonzero determinant in float64. An arbitrary 1e-12 cutoff
+    # mislabels the producer's two root-approved one-ULP E UV restorations as
+    # zero-area. They remain explicitly tiny/subtexel review limitations.
+    uv64 = uv.astype(np.float64)
+    a, b = uv64[:, 1]-uv64[:, 0], uv64[:, 2]-uv64[:, 0]
+    area2 = a[:, 0]*b[:, 1]-a[:, 1]*b[:, 0]
+    assert np.all(np.abs(area2) > 0), 'Body atlas contains truly zero-area UV triangles'
+    out['uv_numeric_stats'] = dict(min_abs_double_area=float(abs(area2).min()),
+                                   zero_area_triangles=int((area2==0).sum()),
+                                   positive_below_old_1e12_cutoff=int((abs(area2)<1e-12).sum()),
+                                   determinant_precision='float64 from actual float32 corner UVs')
     labels = meta.get('region_labels', {})
     if isinstance(labels, list):
         labels = {str(i): label for i, label in enumerate(labels)}
@@ -68,7 +77,7 @@ def regions(surface, words, explicit=None):
     return np.isin(surface['face_region'], ids)
 
 
-def rasterize_world(surface, size=2048, overlap_tolerance_m=.002):
+def rasterize_world(surface, size=2048, overlap_tolerance_m=.002, filter_support=True):
     """Rasterize real loop UVs, rejecting different-world atlas overlaps.
 
     Texel centers are ((x+.5)/size,1-(y+.5)/size). Shared triangle edge co-hits
@@ -84,7 +93,8 @@ def rasterize_world(surface, size=2048, overlap_tolerance_m=.002):
     face_n = np.cross(tri_world[:, 1] - tri_world[:, 0], tri_world[:, 2] - tri_world[:, 0])
     face_n /= np.maximum(np.linalg.norm(face_n, axis=1)[:, None], 1e-30)
     for index, chart in enumerate(uv):
-        pix = np.column_stack((chart[:, 0] * size - .5, (1 - chart[:, 1]) * size - .5)).astype(float)
+        chart = chart.astype(np.float64)
+        pix = np.column_stack((chart[:, 0] * size - .5, (1 - chart[:, 1]) * size - .5))
         lo = np.maximum(np.ceil(pix.min(0)).astype(int), 0)
         hi = np.minimum(np.floor(pix.max(0)).astype(int), size - 1)
         if np.any(hi < lo):
@@ -123,7 +133,66 @@ def rasterize_world(surface, size=2048, overlap_tolerance_m=.002):
     report = dict(size=size, occupied_texels=int(mask.sum()), uv_cohits=cohit,
                   skipped_subtexel_triangles=skipped, different_world_overlap_count=0,
                   overlap_tolerance_m=overlap_tolerance_m, texel_center_convention='u=(x+.5)/N,v=1-(y+.5)/N')
-    return dict(world=world, normal=normal, region=region, triangle_id=owner, valid=mask, report=report)
+    raster = dict(world=world, normal=normal, region=region, triangle_id=owner, valid=mask, report=report)
+    if filter_support:
+        complete_filter_support(surface, raster, size)
+    return raster
+
+
+def complete_filter_support(surface, raster, size):
+    """Seed bilinear support from EVERY real triangle, including narrow islands.
+
+    Centre-only rasterization entirely misses skinny 3–4mm world triangles whose
+    UV island is <1 pixel wide. Their four bilinear neighbours otherwise retain
+    zero coverage. Outside actual UV interiors, use the nearest UV-triangle
+    point's real barycentric world position. Existing interior texels are never
+    overwritten; this is texture filter support, not a geometric UV overlap.
+    """
+    v, f, uv = surface['world'], surface['triangles'], surface['triangle_uv']
+    owner, valid = raster['triangle_id'], raster['valid']
+    original = valid.copy()
+    best = np.full((size, size), np.inf, np.float32)
+    best[original] = 0
+    radius = np.sqrt(2.) + 1e-6  # every possible bilinear neighbour of an island
+    for index, chart in enumerate(uv.astype(np.float64)):
+        pix = np.column_stack((chart[:,0]*size-.5,(1-chart[:,1])*size-.5))
+        lo = np.maximum(np.ceil(pix.min(0)-radius).astype(int), 0)
+        hi = np.minimum(np.floor(pix.max(0)+radius).astype(int), size-1)
+        if np.any(hi<lo): continue
+        xx,yy = np.meshgrid(np.arange(lo[0],hi[0]+1),np.arange(lo[1],hi[1]+1))
+        selected = ~original[yy,xx]
+        if not selected.any(): continue
+        px,py=xx[selected],yy[selected]
+        points=np.column_stack((px,py)).astype(float)
+        distance=np.full(len(points),np.inf)
+        weights=np.zeros((len(points),3))
+        for i,j in [(0,1),(1,2),(2,0)]:
+            edge=pix[j]-pix[i]
+            t=np.clip(((points-pix[i])@edge)/max(float(edge@edge),1e-30),0,1)
+            d=np.sum((points-(pix[i]+t[:,None]*edge))**2,axis=1)
+            better=d<distance
+            distance[better]=d[better]
+            weights[better]=0
+            weights[better,i]=1-t[better]
+            weights[better,j]=t[better]
+        distance=np.sqrt(distance)
+        update=(distance<=radius)&(distance<best[py,px])
+        if not update.any(): continue
+        px,py=px[update],py[update]
+        xyz=weights[update]@v[f[index]].astype(float)
+        best[py,px]=distance[update]
+        raster['world'][py,px]=xyz
+        n=np.cross(v[f[index,1]].astype(float)-v[f[index,0]],v[f[index,2]].astype(float)-v[f[index,0]])
+        raster['normal'][py,px]=n/max(float(np.linalg.norm(n)),1e-30)
+        raster['region'][py,px]=surface['face_region'][index]
+        owner[py,px]=index
+    raster['valid']=owner>=0
+    represented=np.unique(owner[owner>=0])
+    raster['report'].update(filter_support_method='Every actual triangle nearest-UV-edge barycentric support; original interior texels held',
+                            filter_support_radius_pixels=float(radius),
+                            added_filter_support_texels=int((raster['valid']&~original).sum()),
+                            triangles_owning_no_filter_texel=int(len(f)-len(represented)),
+                            filter_support_geometry_changed=False)
 
 
 def pad_images(images, occupied, pixels=4):

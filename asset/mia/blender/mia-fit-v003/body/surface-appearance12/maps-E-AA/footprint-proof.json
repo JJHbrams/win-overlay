@@ -1,0 +1,65 @@
+{
+  "status": "PASS CPU footprint / file guards only; actual native appearance remains pending",
+  "surface_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+  "surface_guards": {
+    "world_f32_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+    "triangles_i32_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+    "triangle_uv_f32_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0",
+    "face_region_i16_sha256": "a050e19536f944bb05353ecf4d4d4ffedc09529713322581c51f157c1a64ac55",
+    "vertices": 139005,
+    "body_triangles": 240195,
+    "uv_layer": "MIA_Review12UV"
+  },
+  "PNG_hashes_match": true,
+  "plain_skin_unique_RGB_u8": [
+    [
+      246,
+      216,
+      203
+    ]
+  ],
+  "old_underwear_used": false,
+  "triangle_centroid_samples": 240195,
+  "actual_body_surface_area_m2": 1.1566016674041748,
+  "forbidden_underwear_triangles": 0,
+  "forbidden_underwear_surface_area_m2": 0.0,
+  "forbidden_clavicle_triangles": 0,
+  "texture_coverage_surface_area_m2": 0.1034599095582962,
+  "clavicle_ink_surface_area_m2": 0.00046922353794798255,
+  "clavicle_shade_surface_area_m2": 0.0021875309757888317,
+  "boundary_checks": [
+    {
+      "name": "bra_top",
+      "accepted": 128,
+      "max_barycentric_world_error_m": 0.0
+    },
+    {
+      "name": "bra_bottom",
+      "accepted": 128,
+      "max_barycentric_world_error_m": 0.0
+    },
+    {
+      "name": "brief_waist",
+      "accepted": 128,
+      "max_barycentric_world_error_m": 0.0
+    },
+    {
+      "name": "brief_leg",
+      "accepted": 128,
+      "max_barycentric_world_error_m": 0.0
+    }
+  ],
+  "deep_interior_coverage": {
+    "deep_interior_margin_m": 0.004,
+    "deep_cloth_triangle_centroids": 25911,
+    "minimum_bilinear_coverage": 1.0,
+    "below_point95": 0,
+    "offending_body_triangle_ids": [],
+    "offending_surface_area_m2": 0.0
+  },
+  "limits": [
+    "Centroid tests are ownership/route checks, not a continuous texture filtering proof.",
+    "UV subtexel triangles and declared overlap tolerance remain in bake-report.json.",
+    "No geometry, native scene, renderer, source image or face/hair material was changed."
+  ]
+}
