@@ -1,0 +1,112 @@
+{
+  "source_axes_px": {
+    "front": 239.0,
+    "back": 935.0,
+    "profile": 568.0
+  },
+  "source_halfwidth_px": {
+    "bra": {
+      "front": 80.0,
+      "back": 80.0
+    },
+    "briefs": {
+      "front": 80.0,
+      "back": 85.0
+    }
+  },
+  "torso_center_xy": [
+    0.0,
+    -0.006
+  ],
+  "strap_width_m": 0.013,
+  "allowed_region_ids": {
+    "upper": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      12
+    ],
+    "pelvis": [
+      8,
+      9,
+      10,
+      11,
+      13
+    ]
+  },
+  "skin_base_srgb": [
+    0.9639762327436437,
+    0.8488705729837295,
+    0.7977377330312598
+  ],
+  "lighting_config": {
+    "light_scale": 0.25,
+    "interpolation": "EASE",
+    "ramp_stops": [
+      [
+        0.025,
+        [
+          0.48,
+          0.36,
+          0.34,
+          1
+        ]
+      ],
+      [
+        0.175,
+        [
+          0.72,
+          0.63,
+          0.6,
+          1
+        ]
+      ],
+      [
+        0.55,
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      [
+        0.95,
+        [
+          1.06,
+          1.04,
+          1.02,
+          1
+        ]
+      ]
+    ]
+  },
+  "source_z_affine": {
+    "front": [
+      -0.001845870559502974,
+      1.793102688896863
+    ],
+    "profile": [
+      -0.0018458705595029285,
+      1.7931022101045846
+    ],
+    "back": [
+      -0.0018458705595029356,
+      1.793102336484345
+    ],
+    "oblique": [
+      -0.0018458705595029285,
+      1.7931022106869177
+    ]
+  },
+  "landmarks": {
+    "crotch_z": 0.921796441078186,
+    "clavicle_anchor_z": 1.409
+  },
+  "landmark_method": {
+    "crotch": "Actual lowest central(|X|<4mm) body surface below waist; supported pose, not body dimensions recovered from source.",
+    "clavicle": "Authored suprasternal graphic anchor36mm below actual guide-neck join ring, rayseated on current front skin; inferred placement reviewed by closeup."
+  }
+}
