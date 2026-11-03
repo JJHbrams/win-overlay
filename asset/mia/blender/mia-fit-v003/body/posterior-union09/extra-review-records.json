@@ -1,0 +1,334 @@
+{
+  "additional_actual_frames": 3,
+  "initial_actual_frames": 8,
+  "geometry_variants": 1,
+  "boards": [
+    {
+      "view": "F2lowoblique",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\source-E-09-F2lowoblique.png",
+      "sha256": "e77e1c9b502b57c3ddba267ab7a07dcdba0efdbcf336133d1763fdd3bbf78117",
+      "baseline_E": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-E\\gray-F2lowoblique.png",
+        "sha256": "898aa33ad69d95411b678572f03e408d2ec7dea45c247453ea374f0eb746259a"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual-extra3\\09-gray-F2lowoblique.png",
+        "sha256": "d45b78635b7ad2da9525101156c61ee942b3353df2320dfb695b6809fcb191b9"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-low-view-axilla-reaffirmed-20261103.png",
+        "sha256": "31fa0da05c970e9b6d84a2569953b48636bd8d32df33d65901772f5664ad52b2",
+        "crop_xyxy": [
+          887,
+          0,
+          1774,
+          887
+        ],
+        "original_size": [
+          1774,
+          887
+        ]
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.7660444974899292,
+            0.08945869654417038,
+            0.6365320086479187,
+            1.5865797996520996
+          ],
+          [
+            0.6427875757217407,
+            -0.10661277920007706,
+            -0.7585893869400024,
+            -1.9184595346450806
+          ],
+          [
+            2.682008926058188e-08,
+            0.9902680516242981,
+            -0.13917307555675507,
+            0.8505762219429016
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 1.0000895261764526,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          887,
+          887
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "frame": 1,
+        "yaw": 40,
+        "pitch": -8
+      }
+    },
+    {
+      "view": "upperoblique",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\E-09-gray-upperoblique.png",
+      "sha256": "d95507b2a6dd222e6a585276ce17ff39091bd29823df044103a6b0e8fb88349a",
+      "baseline_E": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-E\\gray-upperoblique.png",
+        "sha256": "269f9c5db72cc860007313bb5a286aa3d0441ee7c42bbab5b314e095f787bea7"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual-extra3\\09-gray-upperoblique.png",
+        "sha256": "a350ce1f43d10b0fe03c840999d22523a545c6613c58b3e856e1a3c30267f048"
+      },
+      "source": null,
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.7660443186759949,
+            -0.32139378786087036,
+            0.556670606136322,
+            1.1133408546447754
+          ],
+          [
+            0.642787754535675,
+            0.3830219507217407,
+            -0.663413941860199,
+            -1.3618278503417969
+          ],
+          [
+            6.514022032888533e-08,
+            0.8660255670547485,
+            0.4999997615814209,
+            2.2849998474121094
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "frame": 1,
+        "yaw": 40,
+        "pitch": 30
+      }
+    },
+    {
+      "view": "loweropposite",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\E-09-gray-loweropposite.png",
+      "sha256": "4a89300ed5c3617ff2c429ffd05079e2a800cf436bfd0b683d2cd3bf62d124a0",
+      "baseline_E": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-E\\gray-loweropposite.png",
+        "sha256": "8f2aefaa6183b42ede6b62df304fcee06d0866056531f7a555bee751a7923665"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual-extra3\\09-gray-loweropposite.png",
+        "sha256": "6082ec6423749ed5a068b5bae2d12012f78357a722fe64fffd02d11ef3a87b6a"
+      },
+      "source": null,
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.7660443186759949,
+            -0.27165406942367554,
+            -0.5825634598731995,
+            -1.1651268005371094
+          ],
+          [
+            -0.642787754535675,
+            -0.3237445056438446,
+            -0.6942718029022217,
+            -1.4235440492630005
+          ],
+          [
+            5.3390962762023264e-08,
+            0.9063076376914978,
+            -0.4226185381412506,
+            0.4397634267807007
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "frame": 1,
+        "yaw": -40,
+        "pitch": -25
+      }
+    },
+    {
+      "view": "front",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\source-D-09-front.png",
+      "sha256": "0df9ae8ae760d461b241726e258447fad60749e969b45f5689441fb8dbf3a674",
+      "baseline_D": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\D\\actual-six-D\\gray-front.png",
+        "sha256": "e1857882baf84d5ac02495f22d57b0b359f772b623268d9cf0d77bd1a907f5ab"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual8\\09-gray-front.png",
+        "sha256": "ebe12705557f7593ef7ae28f7d095bf34f414fdd5372690b8b51e227a13053fc"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+        "sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+        "crop_xyxy": [
+          130.650039301046,
+          172.8328193965777,
+          347.34996069895396,
+          389.5327407944857
+        ],
+        "original_size": [
+          1536,
+          1024
+        ]
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.6292068494294654e-07,
+            -1.0,
+            -2.0350000858306885
+          ],
+          [
+            0.0,
+            1.0,
+            -1.6292068494294654e-07,
+            1.274999976158142
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "frame": 1,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "registration": "Frozen wholeheight uniform scale/translation; source pixels unchanged in F2; no aspect warp."
+    },
+    {
+      "view": "profile",
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\source-D-09-profile.png",
+      "sha256": "42513f915529b7671f8121f8ebf1b8386e4694d3baa28e791a78574caacab344",
+      "baseline_D": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\D\\actual-six-D\\gray-profile.png",
+        "sha256": "88577ae4ab4a554a37c4d86962164628d2bdde170671e71c8d21176586dc7358"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual8\\09-gray-profile.png",
+        "sha256": "cc09e449ee38bb551f79e12ca6427f3e0fa9afad954ab9daa87264a73389d909"
+      },
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+        "sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+        "crop_xyxy": [
+          450.440292641635,
+          172.8328193965777,
+          667.1402140395429,
+          389.5327407944857
+        ],
+        "original_size": [
+          1536,
+          1024
+        ]
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.08715568482875824,
+            4.083678817323744e-08,
+            0.9961947202682495,
+            1.992389440536499
+          ],
+          [
+            0.9961947202682495,
+            -3.4765363920996606e-08,
+            -0.08715568482875824,
+            -0.20931148529052734
+          ],
+          [
+            3.1073913220325267e-08,
+            1.0,
+            -4.371138828673793e-08,
+            1.274999976158142
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "frame": 1,
+        "yaw": 85,
+        "pitch": 0
+      },
+      "registration": "Frozen wholeheight uniform scale/translation; source pixels unchanged in F2; no aspect warp."
+    }
+  ],
+  "source_facts": "v06 wholeheight authority; F2 clothed support/root evidence with estimated camera. No new source dimensions inferred."
+}
