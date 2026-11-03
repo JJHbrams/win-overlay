@@ -140,6 +140,57 @@ attachment improvement, not overall hair ART or final deformation approval.
 Current live state is the separate03Base trial pending root keep/restore review;
 body-D and original Main raw remain exact. No full native was saved.
 
+## Provisional editable checkpoint and wider diagnostics
+
+Root inspected the actual emergence pair and retained it as a **provisional
+working part only**. Original Main stays in the scene with exact raw mesh/UV/
+materials, hidden reversibly. Nineteen new modular actors are installed: one
+derived Main with only the traced U omitted, and eighteen independent locks.
+Their actual edited coordinates are frozen at
+`.mia-cache/face-live/curved-rear03/actual-emergence/geometry.npz`, SHA
+`2b1a8508dfdcd7dc0d74958aaed4899f64486270a457b973fa9822ee98044de3`.
+`capture.json` and `working-part.json` distinguish this from an adopted native.
+The new locks are static and have no production armature/secondary-motion
+binding. Their root/chest/head-follow treatment remains required before motion
+or root-owned global head-scale integration.
+
+`keep_working_rear.py` records the original fixture flag and excludes preserved
+Main from hairON while the replacement is active. New actors explicitly have
+`MIA12_source_hair_hide_render=False`; the original has True. The owned restore
+helper removes the new actors and restores the old source flag=False. Camera,
+viewport and prior hairOFF context were returned at
+`live/working-handoff-leave.json`; the installed working part is hidden during
+body inspection. Body-D world SHA remains `69d4...bf25a`.
+
+Actual wider front/profile/high/low solid frames are
+`live/framed-{front,profile,high,low}-0.png`. Use those camera-framed images:
+earlier `whole-*` navigation images clipped crown/feet despite correct render
+cameras and are excluded as whole-height evidence. A first framing read hit
+Blender5.2's tuple-valued camera-offset API; this caused no mesh change and was
+fixed. Original ORTHO navigation and actual camera transform were returned.
+
+Actual640x900 EEVEE back/profile diagnostics use the same ratio-baseline
+camera/light/pose and frozen working geometry. They show the temporary
+Principled locks washed pale against original R3b hair. That is an explicit
+temporary material-path failure, not final pigment/toon/maps. Original material
+graphs remain unchanged. GPU was released before root's brow batch.
+
+`target-diagnostic/source-{back,profile}.png` place original-aspect v22 grooming
+authority, original-pixel v06 body target, actual R3b+D baseline, and actual
+working part together. The v22 figure gets one disclosed uniform whole-height
+display SRT; no local feature warp or substituted body authority. Existing v06
+registration is reused unchanged. Small camera-matrix float decomposition
+residue is explicitly recorded, not silently labelled bit-exact. This is a
+preliminary two-view package: required front/oblique source review, final
+surface maps and contact/deformation gates remain open.
+
+The previously quoted ~20cm shortfall applies only to current Main versus the
+v06 body-sheet hair under its frozen body SRT. It is **not** a definitive v22
+hair-design measurement. v22 remains hair/grooming authority and has different
+body/head proportions. The new long-center paths are a provisional length
+hypothesis requiring v22 identity/profile review; no global side extension has
+been adopted.
+
 ## Still required
 
 - Actual whole-front ownership/forelock refinement with source-visible brow

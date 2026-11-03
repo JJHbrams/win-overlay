@@ -13,5 +13,10 @@ for group in state['groups']:
 for mat in state['materials']:
     if mat.users==0:bpy.data.materials.remove(mat)
 source.hide_set(state['source_visibility'][0]);source.hide_render=state['source_visibility'][1]
+if 'source_fixture_flag_before_keep' in state:
+    previous=state['source_fixture_flag_before_keep']
+    if previous is None:
+        if 'MIA12_source_hair_hide_render' in source:del source['MIA12_source_hair_hide_render']
+    else:source['MIA12_source_hair_hide_render']=previous
 bpy.context.view_layer.update();del bpy.app.driver_namespace[prefix]
 print(json.dumps(dict(owned_probe_actors_removed=True,source_original_raw_exact=True,native_saved=False)))
