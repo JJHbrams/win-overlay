@@ -18,7 +18,15 @@ ah = lambda a: hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest()
 before = sha(native)
 assert Path(bpy.data.filepath).resolve() == native.resolve()
 g, uv = np.load(geometry), np.load(atlas)
-source_uv_names = json.loads((geometry.parent / 'donor.json').read_text(encoding='utf-8'))['uv_layers']
+donor_metadata = geometry.parent / 'donor.json'
+if donor_metadata.is_file():
+    source_uv_names = json.loads(donor_metadata.read_text(encoding='utf-8'))['uv_layers']
+else:
+    # H cache keeps immutable inputs in place rather than copying donor metadata.
+    # The actual assembly records the original three UV names explicitly.
+    assembly_metadata = geometry.parent / 'assembly.json'
+    source_uv_names = json.loads(assembly_metadata.read_text(encoding='utf-8'))['old_UV_layers']
+assert len(source_uv_names) == 3
 bake = json.loads(bake_path.read_text(encoding='utf-8'))
 expected_images = {Path(f['path']).name: f for f in bake['files']}
 objects, states = {}, {}
