@@ -32,7 +32,7 @@
 |---|---|---|
 | 요청한 국소 정면 수정 | [종아리 v01](references/body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png) | 선택 정면에서 파생한 수정 후보. 최종 승인·정확한 감소율은 보증하지 않음 |
 | v06의 기존 보관본 | [v06 메인 턴어라운드](references/body-foundation/v06/mia-body-turnaround-v06.png) | 재첨부된 현재 목표와 픽셀 동일. 최초 생성 시 후보였으나 2026-11-02 사용자 지시로 바디 수정의 기준이 됨. 실제 모델 렌더·정확한 치수 도면은 아님 |
-| 헤어 가림 해제 보조 | [v06 visibility guide](references/body-foundation/v06/mia-body-visibility-guide-v06.png) | 목·어깨·등을 검토하기 위한 보조 후보. 헤어 디자인을 교체하지 않음 |
+| 헤어 가림 해제 보조 | [v06 visibility guide](references/body-foundation/v06/mia-body-visibility-guide-v06.png) | 2026-11-03 사용자가 묶음머리 바디 원화를 직접 지목하며 승모근·어깨 비교 기준으로 재확인. FRONT/PROFILE/BACK/3⁄4의 드러난 목–어깨 윤곽을 사용하되, 포즈·투영 차이를 기록한다. 헤어 디자인 교체나 정확한 치수 도면을 뜻하지 않음 |
 
 ![현재 바디 수정의 기준인 Mia v06 4뷰](references/received/mia-body-v06-confirmed-20261102.png)
 
