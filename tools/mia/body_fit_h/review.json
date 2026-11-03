@@ -1,6 +1,6 @@
 {
   "status": "RAM_FIXED_FLOOR_STOP_INDEPENDENT_CONFIRMED",
-  "shape_solve_run": false,
+  "shape_solve_run": true,
   "mesh_created": false,
   "GPU_used": false,
   "native_saved": false,
@@ -33,8 +33,17 @@
       "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\floor-math-verification.json",
       "bytes": 882,
       "sha256": "10a82340923eed738a3867dd1ec6765f4052b3f7d1697254642e3dd1426fa123"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\solve1-stopped.json",
+      "bytes": 20292,
+      "sha256": "5b27ddbc012b9e40ce51bc115ae01ad949eaa368241e6f28aab019d33ea168ac"
     }
   ],
   "independent_reviewer": "/root/body_h_acceptance",
-  "independent_scope": "Confirmed projected ellipse/frozenfield/tangency and6.104/1.999mm conditional all-camera+trace bounds; H artifacts still unverified"
+  "independent_scope": "Confirmed projected ellipse/frozenfield/tangency and6.104/1.999mm conditional all-camera+trace bounds; H artifacts still unverified",
+  "second_phase_status": "ROOT_STOPPED_SINGLE_FIVE_SHAPE_RAM_ATTEMPT_REGISTRATION_AUDIT_PENDING",
+  "shape_solve_attempts": 1,
+  "final_candidate_verification_complete": false,
+  "second_phase_limits": "No anatomyimpossibilityclaim: profileaxis568isdeclared/provisionalmainv06displaycentertransferredtotiedguidewithoutlandmarkvalidation. No SRT/posecorrectionorAPnecktranslation."
 }
