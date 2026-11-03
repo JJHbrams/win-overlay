@@ -1,0 +1,56 @@
+{
+  "scope": "Bounded eye-ROI configuration and existing-recipe diagnostic, completed; no new correction adopted",
+  "canonical_root": "D:/MiaWorkCache/mia-reference-work/win-overlay",
+  "protected_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "actual_frames": 12,
+  "actual_views": ["front", "profile", "left_oblique", "right_oblique"],
+  "compositions": ["saved_R3b", "lower_only", "lower_plus_crease_C"],
+  "visibility": "hairOFF; existing four source-camera hypotheses and their uncertainties retained",
+  "source_display": "Original source pixels, frozen global uniform SRT; identical global crop for ROI panels",
+  "evidence": [
+    {
+      "path": ".mia-cache/eye-roi/live/stage-a-call.json",
+      "sha256": "3a5d3c535d1d92a9ccb21b9d310f087468f2a88b1dd1f4e239636865dadc6132"
+    },
+    {
+      "path": ".mia-cache/eye-roi/input-ledger.json",
+      "sha256": "c32e5ae8157676a276327b6c8bcaf0e886ed4adecdc902cd736066d9c8643af0"
+    },
+    {
+      "path": ".mia-cache/eye-roi/cpu-components02/component-evidence.json",
+      "sha256": "a4f57728f7852644341a26e5e52316ad3aa712018b2a463e149a38973c76016e"
+    },
+    {
+      "path": ".mia-cache/eye-roi/actual-components-source4-01/component-evidence.json",
+      "sha256": "f3deb09a2c0bbfe5d86500a8535c7a17a8f8269c96b7986602f521129be0c2e7"
+    },
+    {
+      "path": ".mia-cache/eye-roi/actual-components-source4-01/render-records.json",
+      "sha256": "487b0ba0900fc856733d96970f7bf3a15d8e0b164f5b91f0ba706bb865b2eb91"
+    },
+    {
+      "path": ".mia-cache/eye-roi/actual-components-source4-01/paired/reference-review.json",
+      "sha256": "1ae8b5f044852cca8ebf0db3c7b8ef01b44f50ea37b4b9a90025e151bc314844"
+    },
+    {
+      "path": ".mia-cache/eye-roi/actual-components-source4-01/paired/reference-review-validation.json",
+      "sha256": "c079ce8de32e1a08e3d7a301bea32c189c5b89c0e4e727cd2a3f4a2f5a2eb6f3"
+    }
+  ],
+  "verification": {
+    "original_raw_key_UV_arrays_exact": true,
+    "crease_material_slots_asserted_before_after_each_frame": true,
+    "evidence_valid": true,
+    "art_acceptance": "NOT_EVALUATED",
+    "GPU_released": true,
+    "live_read_token_returned": true,
+    "native_saved": false
+  },
+  "review": {
+    "producer": "All four ROI views and front/profile whole boards inspected. Lower-only produces a small screen-right lower-curve improvement; source upper/lower distribution and corner correspondence remain unaccepted. CreaseC removes the floating old line without establishing full source crease alignment.",
+    "root": "Root independently inspected front/right-oblique ROI and agrees the replay is not automatic adoption. Accepted face stays protected; no new mirror, enlargement or shape edit is selected.",
+    "rejected_measurement": "cpu-components01 used the setup-only camera default frame; its projections are rejected. cpu-components02 explicitly installs the recorded front camera and reproduces the saved audit.",
+    "remaining": "Actual aperture-only source analysis must precede new narrow geometry. HairON, matte, high/low/turn and expression visual gates remain open. No whole-face/M1/Mia ART completion is claimed."
+  },
+  "retention": "Raw receipts/frames/boards remain local ignored cache; this small source checkpoint records their hashes. Git clone alone does not contain those raw outputs."
+}
