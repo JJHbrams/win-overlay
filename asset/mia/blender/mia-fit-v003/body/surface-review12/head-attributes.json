@@ -1,0 +1,3115 @@
+{
+  "attributes": [
+    {
+      "name": "V27_HeadMaterialBlend",
+      "domain": "POINT",
+      "data_type": "FLOAT",
+      "property": "value",
+      "dimension": 1,
+      "npz_key": "attribute_0"
+    }
+  ],
+  "shader_attribute_usage": [
+    {
+      "material": "V27_HeadBlend_MIA_V23_Body_CommonLight",
+      "node": "\uc18d\uc131",
+      "attribute": "V27_HeadMaterialBlend",
+      "type": "GEOMETRY"
+    },
+    {
+      "material": "V27_HeadBlend_MIA_V22_Body_CommonLight_Preview.001",
+      "node": "\uc18d\uc131",
+      "attribute": "V27_HeadMaterialBlend",
+      "type": "GEOMETRY"
+    },
+    {
+      "material": "V27_HeadBlend_MIA_V13_PaintedBodySkin",
+      "node": "\uc18d\uc131",
+      "attribute": "V27_HeadMaterialBlend",
+      "type": "GEOMETRY"
+    }
+  ],
+  "shader_transfer_config": {
+    "MIA_v002_MIA_V27_SharedHeadBody_RefinedD2": [
+      {
+        "name": "\uc218\ud559",
+        "type": "ShaderNodeMath",
+        "operation": "DIVIDE",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 4.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.001",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.002",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.003",
+        "type": "ShaderNodeMath",
+        "operation": "SUBTRACT",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 1.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.004",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.005",
+        "type": "ShaderNodeMath",
+        "operation": "ADD",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.006",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.007",
+        "type": "ShaderNodeMath",
+        "operation": "MAXIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.008",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.009",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.010",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.011",
+        "type": "ShaderNodeMath",
+        "operation": "MAXIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.012",
+        "type": "ShaderNodeMath",
+        "operation": "MAXIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.013",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.014",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.015",
+        "type": "ShaderNodeMath",
+        "operation": "SUBTRACT",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 1.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.016",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.017",
+        "type": "ShaderNodeMath",
+        "operation": "SUBTRACT",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 1.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.018",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.019",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.020",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.021",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.022",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.023",
+        "type": "ShaderNodeMath",
+        "operation": "SUBTRACT",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 1.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.024",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.025",
+        "type": "ShaderNodeMath",
+        "operation": "ADD",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.026",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.027",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.028",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.029",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.030",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.031",
+        "type": "ShaderNodeMath",
+        "operation": "MAXIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.032",
+        "type": "ShaderNodeMath",
+        "operation": "MAXIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.033",
+        "type": "ShaderNodeMath",
+        "operation": "MAXIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.034",
+        "type": "ShaderNodeMath",
+        "operation": "MINIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 1.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.035",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.036",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.037",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002B_GREATER_THAN",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.45500001311302185
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002B_LESS_THAN",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5450000166893005
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002B_MULTIPLY",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002B_GREATER_THAN.001",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.30000001192092896
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002B_LESS_THAN.001",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.44999998807907104
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002B_MULTIPLY.001",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002B_MULTIPLY.002",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002B_MULTIPLY.003",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_GREATER_THAN",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.20000000298023224
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_LESS_THAN",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.4399999976158142
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_GREATER_THAN.001",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.30000001192092896
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_LESS_THAN.001",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.47999998927116394
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY.001",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY.002",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_GREATER_THAN.002",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5600000023841858
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_LESS_THAN.002",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.800000011920929
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY.003",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_GREATER_THAN.003",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.30000001192092896
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_LESS_THAN.003",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.47999998927116394
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY.004",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY.005",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MAXIMUM",
+        "type": "ShaderNodeMath",
+        "operation": "MAXIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY.006",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_GREATER_THAN.004",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.41999998688697815
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_LESS_THAN.004",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5799999833106995
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY.007",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_GREATER_THAN.005",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.20499999821186066
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_LESS_THAN.005",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.28200000524520874
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY.008",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY.009",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MULTIPLY.010",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002C_MAXIMUM.001",
+        "type": "ShaderNodeMath",
+        "operation": "MAXIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_GREATER_THAN",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.20000000298023224
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_LESS_THAN",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.4399999976158142
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_GREATER_THAN.001",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.30000001192092896
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_LESS_THAN.001",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.47999998927116394
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.001",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.002",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_GREATER_THAN.002",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5600000023841858
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_LESS_THAN.002",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.800000011920929
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.003",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_GREATER_THAN.003",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.30000001192092896
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_LESS_THAN.003",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.47999998927116394
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.004",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.005",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MAXIMUM",
+        "type": "ShaderNodeMath",
+        "operation": "MAXIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_GREATER_THAN.004",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 9.999999747378752e-05
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.006",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.007",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.008",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_GREATER_THAN.005",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 9.999999747378752e-05
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_LESS_THAN.004",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MAXIMUM.001",
+        "type": "ShaderNodeMath",
+        "operation": "MAXIMUM",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 9.999999974752427e-07
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_DIVIDE",
+        "type": "ShaderNodeMath",
+        "operation": "DIVIDE",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_GREATER_THAN.006",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.4212770164012909
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_LESS_THAN.005",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5787230134010315
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.009",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_GREATER_THAN.007",
+        "type": "ShaderNodeMath",
+        "operation": "GREATER_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.20276202261447906
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_LESS_THAN.006",
+        "type": "ShaderNodeMath",
+        "operation": "LESS_THAN",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.28469201922416687
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.010",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.011",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.012",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.013",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_SUBTRACT",
+        "type": "ShaderNodeMath",
+        "operation": "SUBTRACT",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 1.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.014",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_MULTIPLY.015",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002D_ADD",
+        "type": "ShaderNodeMath",
+        "operation": "ADD",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      }
+    ],
+    "MIA_V002_G_Body_ContinuousSupport": [
+      {
+        "name": "\uc218\ud559",
+        "type": "ShaderNodeMath",
+        "operation": "DIVIDE",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 4.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "MIA_CommonSkinBaseLinear",
+        "type": "ShaderNodeRGB",
+        "operation": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "Color",
+            "value": [
+              0.9200000166893005,
+              0.6899999976158142,
+              0.6000000238418579,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.001",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 2.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.002",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 2.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559.003",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 2.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002_Fabric_Reflection_Weight",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.03999999910593033
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002_C_Skin_Reflection_Weight",
+        "type": "ShaderNodeMath",
+        "operation": "ADD",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.014999999664723873
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "V002_F2_FadedReflectionWeight",
+        "type": "ShaderNodeMath",
+        "operation": "MULTIPLY",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      }
+    ],
+    "MIA_V23_Body_CommonLight": [
+      {
+        "name": "\uc218\ud559",
+        "type": "ShaderNodeMath",
+        "operation": "DIVIDE",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 4.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "MIA_CommonSkinBaseLinear",
+        "type": "ShaderNodeRGB",
+        "operation": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "Color",
+            "value": [
+              0.9200000166893005,
+              0.6899999976158142,
+              0.6000000238418579,
+              1.0
+            ]
+          }
+        ]
+      }
+    ],
+    "MIA_V22_Body_CommonLight_Preview.001": [
+      {
+        "name": "\uc218\ud559",
+        "type": "ShaderNodeMath",
+        "operation": "DIVIDE",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 4.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "MIA_CommonSkinBaseLinear",
+        "type": "ShaderNodeRGB",
+        "operation": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "Color",
+            "value": [
+              0.9200000166893005,
+              0.6899999976158142,
+              0.6000000238418579,
+              1.0
+            ]
+          }
+        ]
+      }
+    ],
+    "V27_HeadBlend_MIA_V23_Body_CommonLight": [
+      {
+        "name": "\uc218\ud559",
+        "type": "ShaderNodeMath",
+        "operation": "DIVIDE",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 4.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "MIA_CommonSkinBaseLinear",
+        "type": "ShaderNodeRGB",
+        "operation": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "Color",
+            "value": [
+              0.9200000166893005,
+              0.6899999976158142,
+              0.6000000238418579,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "\uc218\ud559",
+        "type": "ShaderNodeMath",
+        "operation": "DIVIDE",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 4.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      }
+    ],
+    "V27_HeadBlend_MIA_V22_Body_CommonLight_Preview.001": [
+      {
+        "name": "\uc218\ud559",
+        "type": "ShaderNodeMath",
+        "operation": "DIVIDE",
+        "inputs": [
+          {
+            "name": "Value",
+            "value": 0.5
+          },
+          {
+            "name": "Value",
+            "value": 4.0
+          },
+          {
+            "name": "Value",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "name": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "MIA_CommonSkinBaseLinear",
+        "type": "ShaderNodeRGB",
+        "operation": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "Color",
+            "value": [
+              0.9200000166893005,
+              0.6899999976158142,
+              0.6000000238418579,
+              1.0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "all_oldUV_layers": [
+    "MIA_BODY_V23_UV",
+    "MIA_V002_UnderwearUV",
+    "UVMap"
+  ],
+  "original_evaluated_geometry_equal_donor": true,
+  "source_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "GPU_used": false,
+  "native_saved": false
+}

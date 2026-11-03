@@ -1,0 +1,25 @@
+{
+  "geometry": "joined-expanded-E.npz",
+  "geometry_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+  "surface": "surface-v10-expanded-E-source-branches.npz",
+  "surface_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+  "atlas": "atlas-E.npz",
+  "atlas_sha256": "c78a4cde22e136048824e163423f7c55c232449596d5975cd103f03969f82c44",
+  "bare_seam_approved": true,
+  "bare_gate_scope": "Root +independent reviewer Ebare4 bounded static join PASS. No fullMia/source anatomy/production rig approval.",
+  "bare_gate_evidence": "seam-preflight-E-4/render-records.json",
+  "material_preflight_approved": false,
+  "appearance_api": "../surface-appearance12/install_material.py",
+  "maps": "../surface-appearance12/maps-E",
+  "appearance_fallback_root": "C:/Users/antio/.codex/worktrees/mia-v003-design-sculpt/win-overlay/asset/mia/blender/mia-fit-v003/body/surface-appearance12",
+  "source4_yaw_degrees": {
+    "front": 0,
+    "profile": 90,
+    "back": 180,
+    "oblique": 30
+  },
+  "head_scale_applied": 1.0,
+  "scope": "Static fullbody review, original savedR3b head/hair/47keys/source native held; two scenes share one joined body mesh.",
+  "proportion_review_approved": false,
+  "proportion_hold": "Latest user neck/hip proportion feedback; root source-ratio audit pending. No arbitrary transform/native/orbit."
+}

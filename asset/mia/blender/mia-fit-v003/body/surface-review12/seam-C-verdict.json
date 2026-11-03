@@ -1,0 +1,240 @@
+{
+  "status": "ACTUAL SEAM ART FAIL; no native/color/orbit promotion",
+  "geometry": {
+    "path": "joined-geometric-C.npz",
+    "sha256": "666c90ca0e6762eb95a9ba38b716b4a2c6374cb3f9824ad201de7d9394e9ddf6",
+    "world_sha256": "434bb612288c669625df1078308ba6910875e3b601ad7841fdf3aeb3f232cc66"
+  },
+  "actuals": [
+    {
+      "view": "neck-oblique",
+      "path": "seam-preflight-C4/neck-oblique.png",
+      "sha256": "05284aa27dc949df0ebde0bcd7d856fc6ff5db6d10f516cde08a26976fd32d7b"
+    },
+    {
+      "view": "waist-profile",
+      "path": "seam-preflight-C4/waist-profile.png",
+      "sha256": "104666e972bafabf25f40fd317c7e7177415ba275c1d95ae0a245141b9cf0dd4"
+    },
+    {
+      "view": "arm-rear",
+      "path": "seam-preflight-C4/arm-rear.png",
+      "sha256": "33a01e5472322dd43f83f4a10b042eb901f9bda6b30c94696e5d707cd51717d9"
+    },
+    {
+      "view": "full-oblique",
+      "path": "seam-preflight-C4/full-oblique.png",
+      "sha256": "64d2dd15d642b7a5488bdeeba9ecbb3886624f091871ca5c678d18e28608775e"
+    }
+  ],
+  "observations": {
+    "waist": "Conspicuous bright straight-sided belt and both endpoint breaks remain in waist-profile and full-oblique.",
+    "arms": "Arm-rear retains sleeve-like band/notch; not a credible bare continuous arm.",
+    "neck": "No hole; broad base transition remains visible; graybody/painthead color boundary is deliberately distinct in this diagnostic.",
+    "coverage": "Full belowhead body, head/hair/hands/feet present; static joined coverage alone passed."
+  },
+  "cause": {
+    "confirmed": "Actual waist section slope reversals remain at both cut boundaries.",
+    "mechanism": "One-adjacent-section Bezier handles are short relative to 80mm gap. Analytic endpoint derivatives do not imply discrete G1 with 12 sampled bands. This diagnosis is specific to the actual sampled surface, not a shader or map concealment request.",
+    "claim_correction": "assembly-C geometricG1/tangent-aware language describes analytic endpoint direction only; the sampled mesh has not achieved G1 or credible ART continuity."
+  },
+  "physical_front_X0_samples": [
+    {
+      "z_m": 1.025,
+      "y_m": -0.09536521454262051,
+      "triangle_id": 10825,
+      "source_part": 0
+    },
+    {
+      "z_m": 1.032,
+      "y_m": -0.0972844602318289,
+      "triangle_id": 79293,
+      "source_part": 0
+    },
+    {
+      "z_m": 1.034,
+      "y_m": -0.09782781238218825,
+      "triangle_id": 79293,
+      "source_part": 0
+    },
+    {
+      "z_m": 1.035,
+      "y_m": -0.09809947517835879,
+      "triangle_id": 246347,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.036,
+      "y_m": -0.09799365280004753,
+      "triangle_id": 246346,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.038,
+      "y_m": -0.0976888607473509,
+      "triangle_id": 245567,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.04,
+      "y_m": -0.09726014076088862,
+      "triangle_id": 245566,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.045,
+      "y_m": -0.09609535005768023,
+      "triangle_id": 244590,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.055,
+      "y_m": -0.09357981432859394,
+      "triangle_id": 243614,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.065,
+      "y_m": -0.0909576649588328,
+      "triangle_id": 242636,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.075,
+      "y_m": -0.08829265521006809,
+      "triangle_id": 241660,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.085,
+      "y_m": -0.08561642938515113,
+      "triangle_id": 239709,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.095,
+      "y_m": -0.08295461185933213,
+      "triangle_id": 238733,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.105,
+      "y_m": -0.08035040910066651,
+      "triangle_id": 237755,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.11,
+      "y_m": -0.07910782146927503,
+      "triangle_id": 236779,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.113,
+      "y_m": -0.07841007675725983,
+      "triangle_id": 235805,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.114,
+      "y_m": -0.07824756949931178,
+      "triangle_id": 235806,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.115,
+      "y_m": -0.07808476096978116,
+      "triangle_id": 235807,
+      "source_part": 3
+    },
+    {
+      "z_m": 1.116,
+      "y_m": -0.07817974658133306,
+      "triangle_id": 227739,
+      "source_part": 2
+    },
+    {
+      "z_m": 1.118,
+      "y_m": -0.07837078343582476,
+      "triangle_id": 170864,
+      "source_part": 2
+    },
+    {
+      "z_m": 1.125,
+      "y_m": -0.07905880391426559,
+      "triangle_id": 170892,
+      "source_part": 2
+    }
+  ],
+  "physical_front_X0_secant_angles": [
+    {
+      "z_m": 1.034,
+      "central_window_m": 0.001,
+      "angle_degrees": -15.1990442876708,
+      "definition": "atan2(dY,dZ), positiveZ; physical triangle intersections atX0"
+    },
+    {
+      "z_m": 1.035,
+      "central_window_m": 0.001,
+      "angle_degrees": -4.7434068672351914,
+      "definition": "atan2(dY,dZ), positiveZ; physical triangle intersections atX0"
+    },
+    {
+      "z_m": 1.036,
+      "central_window_m": 0.001,
+      "angle_degrees": 6.0606662925077615,
+      "definition": "atan2(dY,dZ), positiveZ; physical triangle intersections atX0"
+    },
+    {
+      "z_m": 1.038,
+      "central_window_m": 0.001,
+      "angle_degrees": 12.093751434138593,
+      "definition": "atan2(dY,dZ), positiveZ; physical triangle intersections atX0"
+    },
+    {
+      "z_m": 1.04,
+      "central_window_m": 0.001,
+      "angle_degrees": 12.101976537481082,
+      "definition": "atan2(dY,dZ), positiveZ; physical triangle intersections atX0"
+    },
+    {
+      "z_m": 1.11,
+      "central_window_m": 0.001,
+      "angle_degrees": 13.29855135367777,
+      "definition": "atan2(dY,dZ), positiveZ; physical triangle intersections atX0"
+    },
+    {
+      "z_m": 1.113,
+      "central_window_m": 0.001,
+      "angle_degrees": 10.678716296885975,
+      "definition": "atan2(dY,dZ), positiveZ; physical triangle intersections atX0"
+    },
+    {
+      "z_m": 1.114,
+      "central_window_m": 0.001,
+      "angle_degrees": 9.230762233583748,
+      "definition": "atan2(dY,dZ), positiveZ; physical triangle intersections atX0"
+    },
+    {
+      "z_m": 1.115,
+      "central_window_m": 0.001,
+      "angle_degrees": 1.950536139792613,
+      "definition": "atan2(dY,dZ), positiveZ; physical triangle intersections atX0"
+    },
+    {
+      "z_m": 1.116,
+      "central_window_m": 0.001,
+      "angle_degrees": -5.4375451808290745,
+      "definition": "atan2(dY,dZ), positiveZ; physical triangle intersections atX0"
+    }
+  ],
+  "proof_scope": {
+    "topology_and_protected_source_CPU": "PASS recorded separately; not ART",
+    "source_saved_native_unchanged": true,
+    "no_final_native_saved": true,
+    "no_color_orbit_rendered": true,
+    "GPU_release": "C4 batch exited cleanly, exactly4",
+    "next_geometry_variant_authorized": false
+  },
+  "limits": "No claim that all arm or neck defects share precisely the same cause; this front waist section demonstrates the endpoint-tangent failure in the actual mesh. No further geometry was generated."
+}

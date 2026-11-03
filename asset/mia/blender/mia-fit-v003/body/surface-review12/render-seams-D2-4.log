@@ -1,0 +1,16 @@
+00:01.704  blend            | Read blend: "C:\Users\antio\.codex\worktrees\mia-body-head-v06\win-overlay\asset\mia\blender\mia-refinement-v002\integrated\Mia_v0.0.2_Review_R3b.blend"
+Traceback (most recent call last):
+BlenderMCP addon registered
+  File "C:\Users\antio\.codex\worktrees\mia-v002-body\win-overlay\asset\mia\blender\mia-fit-v003\body\surface-review12\render_seams_D2_4.py", line 11, in <module>
+    body,proof=install_review.apply(proof_path=O/'installed-source-proof.json',geometry_path=P/'joined-discrete-D2.npz',packing_path=O/'head-normal-packing.json');scene=bpy.context.scene;original=bpy.data.objects['MIA_V27_SharedHeadBody'];rig=bpy.data.objects['MIA_V06_RIG'];pose={b.name:[list(r) for r in b.matrix_basis] for b in rig.pose.bones};keys={k.name:k.value for k in original.data.shape_keys.key_blocks}
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\antio\.codex\worktrees\mia-v002-body\win-overlay\asset\mia\blender\mia-fit-v003\body\surface-review12\install_review.py", line 49, in apply
+    assert angles.max()<.05,('HeadWORLDnormal packingreadback',packing)
+           ^^^^^^^^^^^^^^^^
+AssertionError: ('HeadWORLDnormal packingreadback', {'supplied_WORLD_vectors_exact_to_captured_source': True, 'actual_max_vector_error': 0.007368798374271613, 'actual_max_angle_degrees': 0.4222020113645086, 'protected_face_max_angle_degrees': 0.04195938221834286, 'limit': 'Customnormal encodedMesh API readback numericbound .05degree; no falsebitexactoutput claim. SourceWORLDvectors/positions/UV/attributeinput held; actualfaceLOOK stillreviewed.'})
+
+Error: script failed, file: 'asset/mia/blender/mia-fit-v003/body/surface-review12/render_seams_D2_4.py', exiting.
+BlenderMCP addon unregistered
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

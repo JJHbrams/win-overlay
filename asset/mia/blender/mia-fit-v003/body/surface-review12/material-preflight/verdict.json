@@ -1,0 +1,19 @@
+{
+  "status": "Functional two-state/clavicle demonstration complete; material quality NOT approved",
+  "actual_frame_count": 10,
+  "source": "UNSAVED E static component opened from originalR3b4dc1, not a saved Review12 native",
+  "geometry_payload_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+  "surface_payload_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+  "findings": {
+    "states": "Same geometry skin/underwear states work; old body underwear removed in SkinOnly.",
+    "joins": "E broad joins remain continuous in color actuals.",
+    "material_defects": "Skin-colored bra punctures and stair-stepped strap edges need actual raster/UV-sampling correction.",
+    "confirmed_cpu_cause": "Appearance worker projected actual pixels166,644/215,696/640,696 to body triangles100459/106910/150789: analytic3D cloth coverage1.0, baked PNG bilinear0.0; not a geometry/specular cause.",
+    "clavicle": "ON/OFF isolates fixed graphics and moved-light shows actual scene-light response. No final source ART approval.",
+    "colorOnly": "BODY-only emission/pigment diagnostic; original face remains lit. Not a global pure-pigment neck comparison."
+  },
+  "root_hold": "Latest neck/hip proportion audit pending. No head/hip/neck transform here; no full review native/64 orbit.",
+  "native_saved": false,
+  "final_orbit_rendered": false,
+  "GPU_released": true
+}

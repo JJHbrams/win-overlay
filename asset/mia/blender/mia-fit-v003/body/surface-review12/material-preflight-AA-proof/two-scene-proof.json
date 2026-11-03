@@ -1,0 +1,291 @@
+{
+  "source_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "geometry": "joined-expanded-E.npz",
+  "geometry_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+  "surface_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+  "shared_mesh": "Review12_StaticJoined_WORLD",
+  "body_objects": {
+    "Underwear": "MIA_Review12_StaticJoinedBody",
+    "SkinOnly": "MIA_Review12_StaticJoinedBody_SkinOnly"
+  },
+  "body_slot": 12,
+  "head_slots_DATA_unchanged": true,
+  "UV_active": {
+    "active": "UVMap",
+    "render": [
+      "UVMap"
+    ]
+  },
+  "materials": {
+    "SkinOnly": {
+      "material": "MIA12_Review_SkinOnly",
+      "variant": "skin",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "afdc48ed9be412327900e0f9547c4537baf66ad518c6182076d16d3ece5bb6be",
+          "packed": true,
+          "packed_sha256": "afdc48ed9be412327900e0f9547c4537baf66ad518c6182076d16d3ece5bb6be",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "35a3cc92c52f2d3ba71011fbb621e8d8ec99104aeeffddb8952be2ca45eb3773",
+          "packed": true,
+          "packed_sha256": "35a3cc92c52f2d3ba71011fbb621e8d8ec99104aeeffddb8952be2ca45eb3773",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "52b1621fe3cf1f2d88ca9d7bf73a3ececd1374ff5530cdd467f20bc61bf33abd",
+          "packed": true,
+          "packed_sha256": "52b1621fe3cf1f2d88ca9d7bf73a3ececd1374ff5530cdd467f20bc61bf33abd",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "55c83f9d8304a0011168c7f80d8bd64c77d24dc324ed605a4f55d8fe9350fb93",
+          "packed": true,
+          "packed_sha256": "55c83f9d8304a0011168c7f80d8bd64c77d24dc324ed605a4f55d8fe9350fb93",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "ad162aad87a74d0f20596ce00b339d612e8f6a53f6df5f8a36898e51dbfdccb0",
+          "packed": true,
+          "packed_sha256": "ad162aad87a74d0f20596ce00b339d612e8f6a53f6df5f8a36898e51dbfdccb0",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "UnderwearMode": 0.0,
+        "ColorOnly": 0.0,
+        "ShadeStrength": 0.1599999964237213,
+        "ClavicleStrength": 1.0,
+        "InkStrength": 0.550000011920929
+      },
+      "UV_layer": "MIA_Review12UV"
+    },
+    "Underwear": {
+      "material": "MIA12_Review_Underwear",
+      "variant": "underwear",
+      "images": [
+        {
+          "role": "ClavicleInk",
+          "image": "ClavicleInk.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleInk.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "afdc48ed9be412327900e0f9547c4537baf66ad518c6182076d16d3ece5bb6be",
+          "packed": true,
+          "packed_sha256": "afdc48ed9be412327900e0f9547c4537baf66ad518c6182076d16d3ece5bb6be",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "ClavicleShade",
+          "image": "ClavicleShade.png.001",
+          "filepath": "//MIA_Review12Maps/ClavicleShade.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "35a3cc92c52f2d3ba71011fbb621e8d8ec99104aeeffddb8952be2ca45eb3773",
+          "packed": true,
+          "packed_sha256": "35a3cc92c52f2d3ba71011fbb621e8d8ec99104aeeffddb8952be2ca45eb3773",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "SkinBase",
+          "image": "SkinBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/SkinBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "52b1621fe3cf1f2d88ca9d7bf73a3ececd1374ff5530cdd467f20bc61bf33abd",
+          "packed": true,
+          "packed_sha256": "52b1621fe3cf1f2d88ca9d7bf73a3ececd1374ff5530cdd467f20bc61bf33abd",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearColor",
+          "image": "UnderwearBaseColor.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png",
+          "color_space": "sRGB",
+          "expected_file_sha256": "55c83f9d8304a0011168c7f80d8bd64c77d24dc324ed605a4f55d8fe9350fb93",
+          "packed": true,
+          "packed_sha256": "55c83f9d8304a0011168c7f80d8bd64c77d24dc324ed605a4f55d8fe9350fb93",
+          "UV_vector_linked": true
+        },
+        {
+          "role": "UnderwearCoverage",
+          "image": "UnderwearCoverage.png.001",
+          "filepath": "//MIA_Review12Maps/UnderwearCoverage.png",
+          "color_space": "Non-Color",
+          "expected_file_sha256": "ad162aad87a74d0f20596ce00b339d612e8f6a53f6df5f8a36898e51dbfdccb0",
+          "packed": true,
+          "packed_sha256": "ad162aad87a74d0f20596ce00b339d612e8f6a53f6df5f8a36898e51dbfdccb0",
+          "UV_vector_linked": true
+        }
+      ],
+      "active_roles": [
+        "ActualOutput",
+        "ActualRoughness",
+        "ActualSceneDiffuse",
+        "ActualSceneLightLuminance",
+        "ActualSceneLightRGB",
+        "ActualSceneSpecular",
+        "ActualSpecularLevel",
+        "AuthoredClavicleInk",
+        "AuthoredSoftPigment",
+        "BodyUV",
+        "ClavicleInk",
+        "ClavicleShade",
+        "ClavicleStrength",
+        "ClothRoughnessDelta",
+        "ClothSpecularDelta",
+        "ColorOnly",
+        "ColorOnlyDiagnosticSwitch",
+        "ColorOnlyPigment",
+        "CompatibleLightNormalization",
+        "CompatibleToonTransfer",
+        "CoverageTimesMode",
+        "FinalBodyPigment",
+        "InkStrength",
+        "InkTimesGain",
+        "InkTimesStrength",
+        "SceneLitBodyPigment",
+        "SceneLitToonEmission",
+        "ShadeStrength",
+        "ShadeTimesGain",
+        "ShadeTimesStrength",
+        "SkinBase",
+        "ToonPlusActualSpecular",
+        "UnderwearColor",
+        "UnderwearCoverage",
+        "UnderwearMode"
+      ],
+      "controls": {
+        "ShadeStrength": 0.1599999964237213,
+        "InkStrength": 0.550000011920929,
+        "ClavicleStrength": 1.0,
+        "UnderwearMode": 1.0,
+        "ColorOnly": 0.0
+      },
+      "UV_layer": "MIA_Review12UV"
+    }
+  },
+  "packed_images": {
+    "SkinOnly": [
+      {
+        "role": "ClavicleInk",
+        "packed_sha256": "afdc48ed9be412327900e0f9547c4537baf66ad518c6182076d16d3ece5bb6be",
+        "packed_bytes": 21093,
+        "filepath": "//MIA_Review12Maps/ClavicleInk.png"
+      },
+      {
+        "role": "ClavicleShade",
+        "packed_sha256": "35a3cc92c52f2d3ba71011fbb621e8d8ec99104aeeffddb8952be2ca45eb3773",
+        "packed_bytes": 28822,
+        "filepath": "//MIA_Review12Maps/ClavicleShade.png"
+      },
+      {
+        "role": "SkinBase",
+        "packed_sha256": "52b1621fe3cf1f2d88ca9d7bf73a3ececd1374ff5530cdd467f20bc61bf33abd",
+        "packed_bytes": 58638,
+        "filepath": "//MIA_Review12Maps/SkinBaseColor.png"
+      },
+      {
+        "role": "UnderwearColor",
+        "packed_sha256": "55c83f9d8304a0011168c7f80d8bd64c77d24dc324ed605a4f55d8fe9350fb93",
+        "packed_bytes": 142027,
+        "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png"
+      },
+      {
+        "role": "UnderwearCoverage",
+        "packed_sha256": "ad162aad87a74d0f20596ce00b339d612e8f6a53f6df5f8a36898e51dbfdccb0",
+        "packed_bytes": 89060,
+        "filepath": "//MIA_Review12Maps/UnderwearCoverage.png"
+      }
+    ],
+    "Underwear": [
+      {
+        "role": "ClavicleInk",
+        "packed_sha256": "afdc48ed9be412327900e0f9547c4537baf66ad518c6182076d16d3ece5bb6be",
+        "packed_bytes": 21093,
+        "filepath": "//MIA_Review12Maps/ClavicleInk.png"
+      },
+      {
+        "role": "ClavicleShade",
+        "packed_sha256": "35a3cc92c52f2d3ba71011fbb621e8d8ec99104aeeffddb8952be2ca45eb3773",
+        "packed_bytes": 28822,
+        "filepath": "//MIA_Review12Maps/ClavicleShade.png"
+      },
+      {
+        "role": "SkinBase",
+        "packed_sha256": "52b1621fe3cf1f2d88ca9d7bf73a3ececd1374ff5530cdd467f20bc61bf33abd",
+        "packed_bytes": 58638,
+        "filepath": "//MIA_Review12Maps/SkinBaseColor.png"
+      },
+      {
+        "role": "UnderwearColor",
+        "packed_sha256": "55c83f9d8304a0011168c7f80d8bd64c77d24dc324ed605a4f55d8fe9350fb93",
+        "packed_bytes": 142027,
+        "filepath": "//MIA_Review12Maps/UnderwearBaseColor.png"
+      },
+      {
+        "role": "UnderwearCoverage",
+        "packed_sha256": "ad162aad87a74d0f20596ce00b339d612e8f6a53f6df5f8a36898e51dbfdccb0",
+        "packed_bytes": 89060,
+        "filepath": "//MIA_Review12Maps/UnderwearCoverage.png"
+      }
+    ]
+  },
+  "scope": "STATIC fullbody review. No production UV/rig/animation/fullMia ART approval. Saved R3b head/hair, no head scaling.",
+  "native_saved": false
+}

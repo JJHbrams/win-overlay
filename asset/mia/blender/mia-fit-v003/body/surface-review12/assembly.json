@@ -1,0 +1,95 @@
+{
+  "status": "Static joined CPU candidate; actualseamART pending",
+  "vertices": 126845,
+  "triangles": 253332,
+  "body_material_index": 12,
+  "collars": {
+    "neck": {
+      "first_loop": 267,
+      "second_loop": 123,
+      "resample_count": 272,
+      "bands": 12,
+      "bounds": [
+        [
+          -0.04769412128733545,
+          -0.04744699730516497,
+          1.445
+        ],
+        [
+          0.04769397000061129,
+          0.037052938756419525,
+          1.465
+        ]
+      ]
+    },
+    "waist": {
+      "first_loop": 481,
+      "second_loop": 228,
+      "resample_count": 488,
+      "bands": 12,
+      "bounds": [
+        [
+          -0.13275701359547207,
+          -0.09811333101138354,
+          1.035
+        ],
+        [
+          0.13177615365210793,
+          0.07861668663585818,
+          1.115
+        ]
+      ]
+    },
+    "armR": {
+      "first_loop": 140,
+      "second_loop": 96,
+      "resample_count": 144,
+      "bands": 12,
+      "bounds": [
+        [
+          0.207797978638197,
+          -0.04145544882713459,
+          1.1103208742493704
+        ],
+        [
+          0.2578481321381435,
+          0.032266402124579686,
+          1.1789699723020504
+        ]
+      ]
+    },
+    "armL": {
+      "first_loop": 140,
+      "second_loop": 98,
+      "resample_count": 144,
+      "bands": 12,
+      "bounds": [
+        [
+          -0.2586223871141985,
+          -0.04141356870754786,
+          1.1106681736130928
+        ],
+        [
+          -0.20854276452718792,
+          0.032277937648472615,
+          1.1789702445643349
+        ]
+      ]
+    }
+  },
+  "retained_head_vertices_exact": 18761,
+  "retained_lower_vertices_exact": 39697,
+  "breast_core_vertices_exact": 11962,
+  "inherited_source_boundary_edges": 320,
+  "inherited_hand_nonmanifold_edges": 4,
+  "new_body_seam_boundaries": 0,
+  "original_uv_layers": [
+    "UVMap",
+    "MIA_BODY_V23_UV",
+    "MIA_V002_UnderwearUV"
+  ],
+  "retained_corner_normals_space": "WORLD: sourceLOCALnormals transformed inverse-transpose ofactual180degZowner matrix",
+  "joined_sha256": "9cdef209a5e30a44be89204f376b825910dd28f52b9da3ad8310a615af7abdec",
+  "native_saved": false,
+  "GPU_used": false
+}

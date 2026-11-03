@@ -1,0 +1,909 @@
+{
+  "schema_version": 1,
+  "scope": "NEW staticjoined fullbodyreview BODY-only faces; originalhead/face excluded. NotproductionUV/rig.",
+  "uv_layer": "MIA_Review12UV",
+  "world_shape": [
+    139005,
+    3
+  ],
+  "triangles_shape": [
+    240195,
+    3
+  ],
+  "loop_uv_shape": [
+    240195,
+    3,
+    2
+  ],
+  "geometry_world_sha256": "9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8",
+  "triangles_sha256": "7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270",
+  "loop_uv_sha256": "1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0",
+  "surface_npz_sha256": "fe8c2e3cb1c05809d64d50758ccaa980c8ddc50a1379c3944cc10b2ac2006a55",
+  "surface_npz_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\surface-v9-expanded-E-branches.npz",
+  "assembly_geometry_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\joined-expanded-E.npz",
+  "atlas_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\atlas-E.npz",
+  "payload_version": "v9-expanded-E-branches",
+  "region_labels": {
+    "1": "torso_front",
+    "2": "torso_back",
+    "3": "neck",
+    "4": "shoulder_front",
+    "5": "shoulder_back",
+    "6": "arm_positiveX_characterL",
+    "7": "arm_negativeX_characterR",
+    "8": "pelvis_front",
+    "9": "pelvis_back",
+    "10": "leg_positiveX_characterL",
+    "11": "leg_negativeX_characterR",
+    "12": "neck_join_collar",
+    "13": "waist_join_collar",
+    "14": "arm_join_positiveX",
+    "15": "arm_join_negativeX"
+  },
+  "region_counts": {
+    "1": 37814,
+    "2": 22507,
+    "3": 7458,
+    "4": 6721,
+    "5": 7979,
+    "6": 14872,
+    "7": 14862,
+    "8": 30433,
+    "9": 3061,
+    "10": 17768,
+    "11": 17772,
+    "12": 6374,
+    "13": 35000,
+    "14": 9000,
+    "15": 8574
+  },
+  "meshfaceid_definition": "Indexofpoly/triangle in joined-static.npz/nativejoinedbody; source_part1excludedhead.",
+  "allowed_regions": {
+    "bra": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      12
+    ],
+    "briefs": [
+      8,
+      9,
+      10,
+      11,
+      13
+    ],
+    "clavicle": [
+      1,
+      3,
+      4,
+      12
+    ]
+  },
+  "uv_method": {
+    "method": "ActualBlenderSmartUVprojection, bodyfacesonly; packedrealcornerUV atlas, no oldheadUV edits.",
+    "angle_limit_degrees": 66,
+    "island_margin_requested": 0.004,
+    "seconds": 3.395134210586548,
+    "chart_layout": "Packedactualislands, no hardcodedrectangles; fixed3Dmaskbake crossesverifiedchartseams. Nonoverlap/pixelconflicts must becheckedbybaker."
+  },
+  "collar_bounds": {
+    "neck": {
+      "first_loop": 267,
+      "second_loop": 123,
+      "resample_count": 272,
+      "bands": 12,
+      "bounds": [
+        [
+          -0.04769412128733545,
+          -0.04744699730516497,
+          1.445
+        ],
+        [
+          0.04769397000061129,
+          0.037052938756419525,
+          1.465
+        ]
+      ],
+      "geometric_section_tangents": {
+        "method": "Reuse accepted-for-comparison D3 neck rows EXACTLY; E changes only expanded waist/arm collars",
+        "source_geometry_sha256": "e518f78d18e21a7959f763aae4b7519690ad8a8d1e986f1e7435c33591672a33",
+        "source_rows": "collar-rows-D3.npz:neck"
+      }
+    },
+    "waist": {
+      "first_loop": 501,
+      "second_loop": 227,
+      "resample_count": 504,
+      "bands": 35,
+      "bounds": [
+        [
+          -0.14576402118352622,
+          -0.08937276993078552,
+          1.005
+        ],
+        [
+          0.14480728247222216,
+          0.09298286424586748,
+          1.145
+        ]
+      ],
+      "geometric_section_tangents": {
+        "method": "One constrained minimum discrete bending solve; no handle/grid sweep",
+        "fixed_rows": [
+          0,
+          1,
+          34,
+          35
+        ],
+        "free_rows": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "objective": "sum squared physical row second differences",
+        "endpoint_rule": "Quadratic extrapolation of endpoint plus actual retained sections at one/two collar physical row spacings",
+        "angular_regularization": {
+          "field": "ONLY Q1-P0 and Pm-Qm-1 derivative/displacement, not absolute ring coordinates",
+          "sigma_m": 0.010243859117060836,
+          "kernel": "Gaussian actual periodic physical ring-arc distance; truncated at3sigma",
+          "maximum_displacement_field_change_m": 0.0002777464989943141
+        },
+        "continuity": "Actual finite-row secants audited separately; no analytic or discrete C1 guarantee",
+        "physical_row_spacing_m": 0.003999999999999858,
+        "angular_scale_basis": {
+          "rule": "One sigma equals two upper-quartile actual source cut-section facet chords; no sweep",
+          "section_chord_spacing": {
+            "guide": {
+              "median_m": 0.0010406133569904816,
+              "p75_m": 0.0016294665216598405
+            },
+            "donor": {
+              "median_m": 0.002861888327698685,
+              "p75_m": 0.005121929558530418
+            }
+          }
+        }
+      }
+    },
+    "armR": {
+      "first_loop": 166,
+      "second_loop": 98,
+      "resample_count": 168,
+      "bands": 27,
+      "bounds": [
+        [
+          0.2024457866975372,
+          -0.044161231524112624,
+          1.073263101252963
+        ],
+        [
+          0.27450693091059253,
+          0.03678865076124872,
+          1.1987845183647925
+        ]
+      ],
+      "geometric_section_tangents": {
+        "method": "One constrained minimum discrete bending solve; no handle/grid sweep",
+        "fixed_rows": [
+          0,
+          1,
+          26,
+          27
+        ],
+        "free_rows": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "objective": "sum squared physical row second differences",
+        "endpoint_rule": "Quadratic extrapolation of endpoint plus actual retained sections at one/two collar physical row spacings",
+        "angular_regularization": {
+          "field": "ONLY Q1-P0 and Pm-Qm-1 derivative/displacement, not absolute ring coordinates",
+          "sigma_m": 0.0050524454284939365,
+          "kernel": "Gaussian actual periodic physical ring-arc distance; truncated at3sigma",
+          "maximum_displacement_field_change_m": 0.00020040057675458172
+        },
+        "continuity": "Actual finite-row secants audited separately; no analytic or discrete C1 guarantee",
+        "physical_row_spacing_m": 0.003969221005401317,
+        "angular_scale_basis": {
+          "rule": "One sigma equals two upper-quartile actual source cut-section facet chords; no sweep",
+          "section_chord_spacing": {
+            "guide": {
+              "median_m": 0.0009319832582405769,
+              "p75_m": 0.0015525191953321754
+            },
+            "donor": {
+              "median_m": 0.0011511254690161046,
+              "p75_m": 0.0025262227142469683
+            }
+          }
+        }
+      }
+    },
+    "armL": {
+      "first_loop": 156,
+      "second_loop": 98,
+      "resample_count": 160,
+      "bands": 27,
+      "bounds": [
+        [
+          -0.2753208677075084,
+          -0.044149310115755076,
+          1.0735904222757122
+        ],
+        [
+          -0.20244811907892618,
+          0.03678724330325697,
+          1.1987849162473654
+        ]
+      ],
+      "geometric_section_tangents": {
+        "method": "One constrained minimum discrete bending solve; no handle/grid sweep",
+        "fixed_rows": [
+          0,
+          1,
+          26,
+          27
+        ],
+        "free_rows": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "objective": "sum squared physical row second differences",
+        "endpoint_rule": "Quadratic extrapolation of endpoint plus actual retained sections at one/two collar physical row spacings",
+        "angular_regularization": {
+          "field": "ONLY Q1-P0 and Pm-Qm-1 derivative/displacement, not absolute ring coordinates",
+          "sigma_m": 0.005216267775274329,
+          "kernel": "Gaussian actual periodic physical ring-arc distance; truncated at3sigma",
+          "maximum_displacement_field_change_m": 0.00019133814331710275
+        },
+        "continuity": "Actual finite-row secants audited separately; no analytic or discrete C1 guarantee",
+        "physical_row_spacing_m": 0.003969221005401352,
+        "angular_scale_basis": {
+          "rule": "One sigma equals two upper-quartile actual source cut-section facet chords; no sweep",
+          "section_chord_spacing": {
+            "guide": {
+              "median_m": 0.0010786454804631543,
+              "p75_m": 0.0016090411434077922
+            },
+            "donor": {
+              "median_m": 0.0011403250541245488,
+              "p75_m": 0.0026081338876371646
+            }
+          }
+        }
+      }
+    }
+  },
+  "landmarks": {
+    "neck_donor_ring_center": [
+      9.5e-05,
+      0.004961,
+      1.465
+    ],
+    "neck_guide_ring_center": [
+      4.9e-05,
+      -0.006494,
+      1.445
+    ],
+    "clavicle_field_region": "Actualneck/shoulder/fronttorso partlabels; sourcepixelmisses requiredeclaredanatomicalartistfit, notheightmask.",
+    "hip_waist_join_z": [
+      1.005,
+      1.145
+    ],
+    "body_center_x": 0.0,
+    "front_direction": [
+      0,
+      -1,
+      0
+    ],
+    "up": [
+      0,
+      0,
+      1
+    ]
+  },
+  "source_context": {
+    "schema_version": 1,
+    "surface_cache": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-body-limit.npz",
+    "surface_cache_sha256": "988d90510c561cfdf954e1071a2e5ce7078fa4c5dfc9fb1395b067eab1585696",
+    "uv_layer": "MIA_V002_UnderwearUV",
+    "baseline_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+    "selection_status": "BASELINE_DIAGNOSTIC",
+    "surface_guards": {
+      "geometry_sha256": "a04d23a61e39a4ccaa701aa532090e0f84075a45857f098e8e2cfb042af8de25",
+      "triangles_sha256": "9f49d035d774880653c8b1dbad0ddd98f54dfc59bb03a5d773567f94d7d3352a",
+      "triangle_uv_sha256": "05ba0f6a1b4f42659c13267479271623db9327ad85cc98f484d97d78e585d950",
+      "vertices": 80771,
+      "triangles": 161184,
+      "uv_layer": "MIA_V002_UnderwearUV"
+    },
+    "views": {
+      "front": {
+        "camera": {
+          "projection": "ORTHO",
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.6292068494294654e-07,
+              -1.0,
+              -4.01800012588501
+            ],
+            [
+              0.0,
+              1.0,
+              -1.6292068494294654e-07,
+              0.8600000143051147
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 1.850000023841858,
+          "clip_start": 0.10000000149011612,
+          "clip_end": 10.0,
+          "resolution": [
+            800,
+            1000
+          ],
+          "pixel_aspect": [
+            1,
+            1
+          ],
+          "yaw": 0,
+          "frame": 1,
+          "view_frame_local": [
+            [
+              0.7400000095367432,
+              0.925000011920929,
+              -1.0
+            ],
+            [
+              0.7400000095367432,
+              -0.925000011920929,
+              -1.0
+            ],
+            [
+              -0.7400000095367432,
+              -0.925000011920929,
+              -1.0
+            ],
+            [
+              -0.7400000095367432,
+              0.925000011920929,
+              -1.0
+            ]
+          ],
+          "actual_blender_projection_max_error_px": 3.450990435586696e-05
+        },
+        "registration": {
+          "view": "front",
+          "source_sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+          "source_size_px": [
+            1536,
+            1024
+          ],
+          "source_to_render": [
+            [
+              0.9977678571428571,
+              0,
+              161.53348214285714
+            ],
+            [
+              0,
+              0.9977678571428571,
+              -4.879464285714283
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "quality": "PROVISIONAL",
+          "source_crop_xyxy": [
+            0,
+            0,
+            440,
+            1024
+          ],
+          "method": "Inverse of declared common whole-height uniform scale/translation, per-view pelvis-center translation only",
+          "scale_render_to_source": 1.0022371364653244,
+          "vertical_translation_render_to_source": 4.890380313199103,
+          "source_center_x": 239,
+          "evidence_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-v06-boards.json",
+          "evidence_sha256": "d889d0aa1a4edf43fb5b7306712af6861cf13bab5cd65d50357b3f45a6d7acee",
+          "limits": "Actual current camera, provisionally corresponding illustration; source pose/occlusion and true camera uncertainty remain. Not a reviewed final garment registration."
+        }
+      },
+      "profile": {
+        "camera": {
+          "projection": "ORTHO",
+          "matrix": [
+            [
+              -4.371138828673793e-08,
+              4.371138828673793e-08,
+              1.0,
+              4.0
+            ],
+            [
+              1.0,
+              1.910685676922942e-15,
+              4.371138828673793e-08,
+              -0.017999999225139618
+            ],
+            [
+              0.0,
+              1.0,
+              -4.371138828673793e-08,
+              0.8600000143051147
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 1.850000023841858,
+          "clip_start": 0.10000000149011612,
+          "clip_end": 10.0,
+          "resolution": [
+            800,
+            1000
+          ],
+          "pixel_aspect": [
+            1,
+            1
+          ],
+          "yaw": 90,
+          "frame": 1,
+          "view_frame_local": [
+            [
+              0.7400000095367432,
+              0.925000011920929,
+              -1.0
+            ],
+            [
+              0.7400000095367432,
+              -0.925000011920929,
+              -1.0
+            ],
+            [
+              -0.7400000095367432,
+              -0.925000011920929,
+              -1.0
+            ],
+            [
+              -0.7400000095367432,
+              0.925000011920929,
+              -1.0
+            ]
+          ],
+          "actual_blender_projection_max_error_px": 2.721446089599713e-05
+        },
+        "registration": {
+          "view": "profile",
+          "source_sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+          "source_size_px": [
+            1536,
+            1024
+          ],
+          "source_to_render": [
+            [
+              0.9977678571428571,
+              0,
+              -166.7321428571429
+            ],
+            [
+              0,
+              0.9977678571428571,
+              -4.879464285714283
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "quality": "PROVISIONAL",
+          "source_crop_xyxy": [
+            440,
+            0,
+            750,
+            1024
+          ],
+          "method": "Inverse of declared common whole-height uniform scale/translation, per-view pelvis-center translation only",
+          "scale_render_to_source": 1.0022371364653244,
+          "vertical_translation_render_to_source": 4.890380313199103,
+          "source_center_x": 568,
+          "evidence_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-v06-boards.json",
+          "evidence_sha256": "d889d0aa1a4edf43fb5b7306712af6861cf13bab5cd65d50357b3f45a6d7acee",
+          "limits": "Actual current camera, provisionally corresponding illustration; source pose/occlusion and true camera uncertainty remain. Not a reviewed final garment registration."
+        }
+      },
+      "back": {
+        "camera": {
+          "projection": "ORTHO",
+          "matrix": [
+            [
+              -1.0,
+              1.5099580252808664e-07,
+              -1.1399865765455465e-14,
+              4.898587410340671e-16
+            ],
+            [
+              0.0,
+              7.549790126404332e-08,
+              1.0,
+              3.9820001125335693
+            ],
+            [
+              1.5099580252808664e-07,
+              1.0,
+              -7.549790126404332e-08,
+              0.8600000143051147
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 1.850000023841858,
+          "clip_start": 0.10000000149011612,
+          "clip_end": 10.0,
+          "resolution": [
+            800,
+            1000
+          ],
+          "pixel_aspect": [
+            1,
+            1
+          ],
+          "yaw": 180,
+          "frame": 1,
+          "view_frame_local": [
+            [
+              0.7400000095367432,
+              0.925000011920929,
+              -1.0
+            ],
+            [
+              0.7400000095367432,
+              -0.925000011920929,
+              -1.0
+            ],
+            [
+              -0.7400000095367432,
+              -0.925000011920929,
+              -1.0
+            ],
+            [
+              -0.7400000095367432,
+              0.925000011920929,
+              -1.0
+            ]
+          ],
+          "actual_blender_projection_max_error_px": 3.424342874283753e-05
+        },
+        "registration": {
+          "view": "back",
+          "source_sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+          "source_size_px": [
+            1536,
+            1024
+          ],
+          "source_to_render": [
+            [
+              0.9977678571428571,
+              0,
+              -532.9129464285714
+            ],
+            [
+              0,
+              0.9977678571428571,
+              -4.879464285714283
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "quality": "PROVISIONAL",
+          "source_crop_xyxy": [
+            750,
+            0,
+            1120,
+            1024
+          ],
+          "method": "Inverse of declared common whole-height uniform scale/translation, per-view pelvis-center translation only",
+          "scale_render_to_source": 1.0022371364653244,
+          "vertical_translation_render_to_source": 4.890380313199103,
+          "source_center_x": 935,
+          "evidence_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-v06-boards.json",
+          "evidence_sha256": "d889d0aa1a4edf43fb5b7306712af6861cf13bab5cd65d50357b3f45a6d7acee",
+          "limits": "Actual current camera, provisionally corresponding illustration; source pose/occlusion and true camera uncertainty remain. Not a reviewed final garment registration."
+        }
+      },
+      "oblique": {
+        "camera": {
+          "projection": "ORTHO",
+          "matrix": [
+            [
+              0.8660253882408142,
+              2.1855697696082643e-08,
+              0.5000000596046448,
+              2.0
+            ],
+            [
+              0.5000000596046448,
+              -3.785517321830412e-08,
+              -0.8660253882408142,
+              -3.4821014404296875
+            ],
+            [
+              0.0,
+              1.0,
+              -4.371138828673793e-08,
+              0.8600000143051147
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "ortho_scale": 1.850000023841858,
+          "clip_start": 0.10000000149011612,
+          "clip_end": 10.0,
+          "resolution": [
+            800,
+            1000
+          ],
+          "pixel_aspect": [
+            1,
+            1
+          ],
+          "yaw": 30,
+          "frame": 1,
+          "view_frame_local": [
+            [
+              0.7400000095367432,
+              0.925000011920929,
+              -1.0
+            ],
+            [
+              0.7400000095367432,
+              -0.925000011920929,
+              -1.0
+            ],
+            [
+              -0.7400000095367432,
+              -0.925000011920929,
+              -1.0
+            ],
+            [
+              -0.7400000095367432,
+              0.925000011920929,
+              -1.0
+            ]
+          ],
+          "actual_blender_projection_max_error_px": 6.627989003913708e-05
+        },
+        "registration": {
+          "view": "oblique",
+          "source_sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+          "source_size_px": [
+            1536,
+            1024
+          ],
+          "source_to_render": [
+            [
+              0.9977678571428571,
+              0,
+              -914.0602678571429
+            ],
+            [
+              0,
+              0.9977678571428571,
+              -4.879464285714283
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "quality": "PROVISIONAL",
+          "source_crop_xyxy": [
+            1120,
+            0,
+            1536,
+            1024
+          ],
+          "method": "Inverse of declared common whole-height uniform scale/translation, per-view pelvis-center translation only",
+          "scale_render_to_source": 1.0022371364653244,
+          "vertical_translation_render_to_source": 4.890380313199103,
+          "source_center_x": 1317,
+          "evidence_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-v06-boards.json",
+          "evidence_sha256": "d889d0aa1a4edf43fb5b7306712af6861cf13bab5cd65d50357b3f45a6d7acee",
+          "limits": "Actual current camera, provisionally corresponding illustration; source pose/occlusion and true camera uncertainty remain. Not a reviewed final garment registration."
+        }
+      }
+    },
+    "camera_records_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\current-source4\\render-records.json",
+    "camera_records_sha256": "ccaf651b00c3642c44336b2a22f23c2ba7428b49aa6df55e6e58f38cbac4d345",
+    "cast_material_indices": [
+      0,
+      1,
+      9,
+      10
+    ],
+    "excluded_material_indices": [],
+    "cast_scope": "All triangles of evaluated original skin/body owner, including headblend materials9/10. No guessed material exclusions. Hair/other owners are not included, so complete scene visibility is unverified"
+  },
+  "source_registration_limit": "Oldbaselinefourcameras/wholeheightSRT are referenceprojection context only, notacceptedseatedpaths. Newartistfit/residuals required.",
+  "retained_old_UV_layers_exact": true,
+  "head_faces_in_surface_payload": 0,
+  "native_saved": false,
+  "GPU_used": false,
+  "region_policy": "Donor limb branch weights, actual guide component ownership, and exact construction collar face ancestry; no worldheight underwear mask",
+  "expanded_collar_sections": [
+    {
+      "name": "expanded_waist",
+      "axis_world": [
+        0,
+        0,
+        1
+      ],
+      "origin_world": [
+        0,
+        0,
+        0
+      ],
+      "min_m": 1.005,
+      "max_m": 1.145,
+      "allowed_old_face_regions": [
+        1,
+        2,
+        8,
+        9,
+        13
+      ],
+      "deny_old_face_regions": [
+        6,
+        7,
+        14,
+        15
+      ]
+    },
+    {
+      "name": "expanded_arm_positive",
+      "axis_world": [
+        0.42261826174069944,
+        0.0,
+        -0.9063077870366499
+      ],
+      "origin_world": [
+        0.236,
+        0,
+        1.17
+      ],
+      "min_m": -0.02,
+      "max_m": 0.0871689671458359,
+      "allowed_old_face_regions": [
+        6,
+        14
+      ]
+    },
+    {
+      "name": "expanded_arm_negative",
+      "axis_world": [
+        -0.42261826174069944,
+        0.0,
+        -0.9063077870366499
+      ],
+      "origin_world": [
+        -0.236,
+        0,
+        1.17
+      ],
+      "min_m": -0.02,
+      "max_m": 0.0871689671458359,
+      "allowed_old_face_regions": [
+        7,
+        15
+      ]
+    }
+  ],
+  "retained_correspondence_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\retained-correspondence-E.npz",
+  "retained_correspondence_sha256": "5ec48afdf31d59590b84e3a11736e8e356a26d95eda2de5f199b0ae422a99a22",
+  "mixed_axilla_field_tie_faces": 1820
+}

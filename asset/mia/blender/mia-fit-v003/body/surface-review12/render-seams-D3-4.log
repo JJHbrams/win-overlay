@@ -1,0 +1,17 @@
+00:01.641  blend            | Read blend: "C:\Users\antio\.codex\worktrees\mia-body-head-v06\win-overlay\asset\mia\blender\mia-refinement-v002\integrated\Mia_v0.0.2_Review_R3b.blend"
+C:\Users\antio\.codex\worktrees\mia-v002-body\win-overlay\asset\mia\blender\mia-fit-v003\body\surface-review12\render_seams_D3_4.py:16: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Review12_GrayWorld');world.use_nodes=True;bg=next(n for n in world.node_tree.nodes if n.type=='BACKGROUND');bg.inputs['Color'].default_value=(.18,.18,.18,1);bg.inputs['Strength'].default_value=.2;scene.world=world
+00:46.641  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-v002-body\win-overlay\asset\mia\blender\mia-fit-v003\body\surface-review12\seam-preflight-D3-4\neck-oblique.png'
+BlenderMCP addon registered
+REVIEW12_D3_4_ACTUAL neck-oblique
+00:49.141  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-v002-body\win-overlay\asset\mia\blender\mia-fit-v003\body\surface-review12\seam-preflight-D3-4\waist-profile.png'
+REVIEW12_D3_4_ACTUAL waist-profile
+00:51.547  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-v002-body\win-overlay\asset\mia\blender\mia-fit-v003\body\surface-review12\seam-preflight-D3-4\arm-rear.png'
+REVIEW12_D3_4_ACTUAL arm-rear
+00:54.469  render           | Saved: 'C:\Users\antio\.codex\worktrees\mia-v002-body\win-overlay\asset\mia\blender\mia-fit-v003\body\surface-review12\seam-preflight-D3-4\full-oblique.png'
+REVIEW12_D3_4_ACTUAL full-oblique
+REVIEW12_D3_4_DONE_GPU_RELEASE
+BlenderMCP addon unregistered
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
