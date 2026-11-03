@@ -36,6 +36,8 @@ def protected():
 body,m2,source,derived=protected()
 if bpy.context.mode!='OBJECT':bpy.ops.object.mode_set(mode='OBJECT')
 cfg=json.loads((FOLDER/'candidate.json').read_text())
+if phase in ('select','apply'):
+    assert not cfg.get('install_forbidden',False), 'This actual trial was rejected; restore remains available'
 payload=FOLDER/'geometry.npz'
 assert hashlib.sha256(payload.read_bytes()).hexdigest()==cfg['payload_sha256']
 data=np.load(payload)
@@ -51,23 +53,8 @@ if phase=='select':
         overlay=[],frame_strength=None,
         selection={domain:np.array([x.select for x in getattr(derived.data,domain)]) for domain in ('vertices','edges','polygons')})
     ns[KEY]=state
-    for ob in bpy.context.selected_objects:ob.select_set(False)
-    derived.select_set(True);bpy.context.view_layer.objects.active=derived
-    for domain in ('vertices','edges','polygons'):
-        for item in getattr(derived.data,domain):item.select=False
-    for i in data['hidden_faces']:derived.data.polygons[int(i)].select=True
-    bpy.context.tool_settings.mesh_select_mode=(False,False,True)
-    for screen in bpy.data.screens:
-        for area in screen.areas:
-            if area.type=='VIEW_3D':area.spaces.active.overlay.show_overlays=True
-    bpy.ops.object.mode_set(mode='EDIT')
-    report=dict(phase=phase,selected_faces=len(data['hidden_faces']),selected_vertices=cfg['hidden_vertices'],
-        complete_disconnected_shell_islands=len(cfg['hidden_component_roots']),
-        original_Main_and_retained_M2_preserved=True,geometry_modified=False,ART=False)
-elif phase=='apply':
-    state=ns[KEY]
-    assert not state['objects'] and state['modifier'] is None
-    for name,expected in state['retained_m2_sha'].items():assert co_sha(bpy.data.objects[name])==expected,name
+    # Turn the old proxy OFF before the baseline image as well as the candidate.
+    # Capture once here so restore returns the actual incoming graphic state.
     for ob in bpy.data.objects:
         if ob.get('mia_role')=='brow_display' or ob.name.startswith('MiaHair_BrowInkProjection_'):
             flag=ob.get('MIA12_source_hair_hide_render')
@@ -77,7 +64,27 @@ elif phase=='apply':
     if frame:
         state['frame_strength']=(frame,float(frame['Strength']))
         frame['Strength']=0.;frame.update_tag()
-    attr=derived.data.attributes.new(KEY+'_RemoveFace','BOOLEAN','FACE');state['attribute']=attr
+    for ob in bpy.context.selected_objects:ob.select_set(False)
+    derived.select_set(True);bpy.context.view_layer.objects.active=derived
+    for domain in ('vertices','edges','polygons'):
+        for item in getattr(derived.data,domain):item.select=False
+    for i in data['hidden_faces']:derived.data.polygons[int(i)].select=True
+    bpy.context.tool_settings.mesh_select_mode=(False,False,True)
+    for screen in bpy.data.screens:
+        for area in screen.areas:
+            if area.type=='VIEW_3D':area.spaces.active.overlay.show_overlays=True
+    # Object-mode selection is intentional: entering EDIT just for a highlight
+    # adds/reorders Blender UV-selection attributes on this textured derived
+    # mesh. The scoped ownership image provides the detailed selection view.
+    report=dict(phase=phase,selected_faces=len(data['hidden_faces']),selected_vertices=cfg['hidden_vertices'],
+        complete_disconnected_shell_islands=len(cfg['hidden_component_roots']),
+        original_Main_and_retained_M2_preserved=True,object_mode_scope_selection=True,
+        partial_display_overlay_OFF=True,geometry_modified=False,ART=False)
+elif phase=='apply':
+    state=ns[KEY]
+    assert not state['objects'] and state['modifier'] is None
+    for name,expected in state['retained_m2_sha'].items():assert co_sha(bpy.data.objects[name])==expected,name
+    attr=derived.data.attributes.new(name=KEY+'_RemoveFace',type='BOOLEAN',domain='FACE');state['attribute']=attr
     mask=np.zeros(len(faces),np.int32);mask[data['hidden_faces']]=1;attr.data.foreach_set('value',mask)
     group=bpy.data.node_groups.new(KEY+'_CombinedFrontUnderlap','GeometryNodeTree');state['groups'].append(group)
     group.interface.new_socket(name='Geometry',in_out='INPUT',socket_type='NodeSocketGeometry')
