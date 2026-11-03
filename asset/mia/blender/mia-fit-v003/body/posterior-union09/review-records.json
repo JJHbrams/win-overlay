@@ -1,0 +1,578 @@
+{
+  "candidate_sha256": "d5bf574ea958923fc70fe6ade4de7e0b64ec970c3cf15156be5f135af3c9cdd2",
+  "actual_frames": 8,
+  "extra_frames": 0,
+  "boards": [
+    {
+      "view": "rear140",
+      "mode": "gray",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\E-09-gray-rear140.png",
+      "board_sha256": "ddf5613d86569fef2e51a4ba04867932c737dce68323e9c16e8da9b5ad531d9f",
+      "baseline": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-audit\\E-gray-rear140.png",
+        "sha256": "0266e23dad25d1c0ea97597982b2481989a1b20526f9d9db4e9adc078140033f"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual8\\09-gray-rear140.png",
+        "sha256": "3a0c78df2106fdaf1ca0d8513655a2880ab6e04d88fcf6ca4f1fca67e40e8733"
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -0.7660444378852844,
+            -5.678319681123867e-08,
+            0.6427876353263855,
+            1.285575270652771
+          ],
+          [
+            0.6427876353263855,
+            -5.090874921620525e-08,
+            0.7660444378852844,
+            1.49708890914917
+          ],
+          [
+            -1.077493649859207e-08,
+            1.0,
+            7.549790126404332e-08,
+            1.274999976158142
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "frame": 1,
+        "yaw": 140,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.03500000014901161,
+          1.274999976158142
+        ]
+      },
+      "same_material": true,
+      "scope": "Posterior component comparison only; E breast exact; broad surfaces bounded; ART unselected"
+    },
+    {
+      "view": "rear140",
+      "mode": "normal",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\E-09-normal-rear140.png",
+      "board_sha256": "e5ab71fd59a37f0f9cf7aa4a63e2b5487f2be6dc4b641f1d916d38f0751392cc",
+      "baseline": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-audit\\E-normal-rear140.png",
+        "sha256": "ff7f28d8a07ae3f52b6c515b01ab3d73b2618e77711f6e41f14b292d04389f52"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual8\\09-normal-rear140.png",
+        "sha256": "58542c1db51b6a77a6cb1c7b863b0a9599e69945b0391de82349f29f820fa13d"
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -0.7660444378852844,
+            -5.678319681123867e-08,
+            0.6427876353263855,
+            1.285575270652771
+          ],
+          [
+            0.6427876353263855,
+            -5.090874921620525e-08,
+            0.7660444378852844,
+            1.49708890914917
+          ],
+          [
+            -1.077493649859207e-08,
+            1.0,
+            7.549790126404332e-08,
+            1.274999976158142
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "frame": 1,
+        "yaw": 140,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.03500000014901161,
+          1.274999976158142
+        ]
+      },
+      "same_material": true,
+      "scope": "Posterior component comparison only; E breast exact; broad surfaces bounded; ART unselected"
+    },
+    {
+      "view": "back180",
+      "mode": "gray",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\E-09-gray-back180.png",
+      "board_sha256": "041a5ea20673ac7d9c382991def63fae7a7f6aab68cc41cd6ba6e4743f5aeebe",
+      "baseline": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-audit\\E-gray-back180.png",
+        "sha256": "2446fe2e6d7f8e5da6d0cc0111ee4701eed858b1e381f1da1d765e9ba4a19517"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual8\\09-gray-back180.png",
+        "sha256": "ceaa9b0b5350d5c3ace19c98c731eac2f4f10f468e42e8fe65dfc2a3de53d9a2"
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -1.0,
+            1.5099580252808664e-07,
+            -1.1399865765455465e-14,
+            2.4492937051703357e-16
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            1.0,
+            1.965000033378601
+          ],
+          [
+            1.5099580252808664e-07,
+            1.0,
+            -7.549790126404332e-08,
+            1.274999976158142
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "frame": 1,
+        "yaw": 180,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.03500000014901161,
+          1.274999976158142
+        ]
+      },
+      "same_material": true,
+      "scope": "Posterior component comparison only; E breast exact; broad surfaces bounded; ART unselected"
+    },
+    {
+      "view": "rear220",
+      "mode": "gray",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\E-09-gray-rear220.png",
+      "board_sha256": "aad7a6cbf574c1dad5f3797ed46a4de65a907428e7bbd154b2431f86bf007594",
+      "baseline": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-audit\\E-gray-rear220.png",
+        "sha256": "2954ad9e106192c394b054e6c7d27f1dc4d3e0760e9d8ce140784e7e383f9fcb"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual8\\09-gray-rear220.png",
+        "sha256": "7809597a5dad1adface8e0379b324f7c90f09453e1b5dc3c461d1ea89c9d16b2"
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -0.7660444378852844,
+            5.678319681123867e-08,
+            -0.6427876353263855,
+            -1.285575270652771
+          ],
+          [
+            -0.6427876353263855,
+            -5.090874921620525e-08,
+            0.7660444378852844,
+            1.49708890914917
+          ],
+          [
+            1.077493649859207e-08,
+            1.0,
+            7.549790126404332e-08,
+            1.274999976158142
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "frame": 1,
+        "yaw": 220,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.03500000014901161,
+          1.274999976158142
+        ]
+      },
+      "same_material": true,
+      "scope": "Posterior component comparison only; E breast exact; broad surfaces bounded; ART unselected"
+    },
+    {
+      "view": "rearhigh140",
+      "mode": "gray",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\E-09-gray-rearhigh140.png",
+      "board_sha256": "bbb53ff6c926bd4f755aec06a57c19532deab8b1937ceb6cac0ac86f97b4726d",
+      "baseline": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-audit\\E-gray-rearhigh140.png",
+        "sha256": "9b9081e4da3e9e8fb9a8df301911cac7c1fc9a2e340acdcc2d06c3802113ec9e"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual8\\09-gray-rearhigh140.png",
+        "sha256": "245e0e9c5b7a14fc6c072c4ef119470913a35e2a4eb4e697fb7ce511ce5da58d"
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -0.7660444378852844,
+            -0.2716537117958069,
+            0.5825634598731995,
+            1.1651268005371094
+          ],
+          [
+            0.6427876353263855,
+            -0.3237442672252655,
+            0.6942721009254456,
+            1.3535441160202026
+          ],
+          [
+            -2.1584350307080058e-08,
+            0.9063078165054321,
+            0.42261815071105957,
+            2.120236396789551
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "frame": 1,
+        "yaw": 140,
+        "pitch": 25,
+        "target": [
+          0.0,
+          -0.03500000014901161,
+          1.274999976158142
+        ]
+      },
+      "same_material": true,
+      "scope": "Posterior component comparison only; E breast exact; broad surfaces bounded; ART unselected"
+    },
+    {
+      "view": "rearlow140",
+      "mode": "gray",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\E-09-gray-rearlow140.png",
+      "board_sha256": "05180f5ebf8d05766babd6599516637351d53f4a46f0c9ce40e20a5eaed93261",
+      "baseline": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-audit\\E-gray-rearlow140.png",
+        "sha256": "bb246c6795a47f4ba9d542f54979fd78e743ef25064fbfb3bd962fd0fe65be5b"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual8\\09-gray-rearlow140.png",
+        "sha256": "7f6bd0c30d1e379f9d8c8d08f48067933a18a79aaaa65cfe507b8ed4a69f97f1"
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -0.7660444378852844,
+            0.21984653174877167,
+            0.6040226817131042,
+            1.2080456018447876
+          ],
+          [
+            0.6427876353263855,
+            0.26200270652770996,
+            0.719846248626709,
+            1.4046926498413086
+          ],
+          [
+            1.188124230111498e-07,
+            0.9396925568580627,
+            -0.34202033281326294,
+            0.5909596681594849
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "frame": 1,
+        "yaw": 140,
+        "pitch": -20,
+        "target": [
+          0.0,
+          -0.03500000014901161,
+          1.274999976158142
+        ]
+      },
+      "same_material": true,
+      "scope": "Posterior component comparison only; E breast exact; broad surfaces bounded; ART unselected"
+    },
+    {
+      "view": "front",
+      "mode": "gray",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\E-09-gray-front.png",
+      "board_sha256": "d6ec5f1f79dbee784a1791e334eedace8eb5734de1aa16d448283e614e8c3981",
+      "baseline": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-E\\gray-front.png",
+        "sha256": "f6294253b65ed123f996bdfb9c5f256b2539d91553990723c3ef48ff3131f003"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual8\\09-gray-front.png",
+        "sha256": "ebe12705557f7593ef7ae28f7d095bf34f414fdd5372690b8b51e227a13053fc"
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.6292068494294654e-07,
+            -1.0,
+            -2.0350000858306885
+          ],
+          [
+            0.0,
+            1.0,
+            -1.6292068494294654e-07,
+            1.274999976158142
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "frame": 1,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "same_material": true,
+      "scope": "Posterior component comparison only; E breast exact; broad surfaces bounded; ART unselected"
+    },
+    {
+      "view": "profile",
+      "mode": "gray",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\E-09-gray-profile.png",
+      "board_sha256": "dd55519cb800a57c3214b1f6f3d66f2c2e810adea282f74fea23807cffc778d1",
+      "baseline": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\actual-E\\gray-profile.png",
+        "sha256": "0c208da25820ee01d5f40b77dd97d94b5d0ebac3b4d493232bc951d240259d45"
+      },
+      "candidate": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\actual8\\09-gray-profile.png",
+        "sha256": "cc09e449ee38bb551f79e12ca6427f3e0fa9afad954ab9daa87264a73389d909"
+      },
+      "camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.08715568482875824,
+            4.083678817323744e-08,
+            0.9961947202682495,
+            1.992389440536499
+          ],
+          [
+            0.9961947202682495,
+            -3.4765363920996606e-08,
+            -0.08715568482875824,
+            -0.20931148529052734
+          ],
+          [
+            3.1073913220325267e-08,
+            1.0,
+            -4.371138828673793e-08,
+            1.274999976158142
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "frame": 1,
+        "yaw": 85,
+        "pitch": 0
+      },
+      "same_material": true,
+      "scope": "Posterior component comparison only; E breast exact; broad surfaces bounded; ART unselected"
+    },
+    {
+      "view": "front",
+      "mode": "source_context",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\source-E-09-front.png",
+      "board_sha256": "e8ac06abc0ecdeb91a19134ed796f0bf538db1be7e6755a09fa5bbe917cfc7e4",
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+        "sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+        "crop_xyxy": [
+          130.650039301046,
+          172.8328193965777,
+          347.34996069895396,
+          389.5327407944857
+        ],
+        "original_size": [
+          1536,
+          1024
+        ]
+      },
+      "registration": "Frozen wholeheight uniform scale/translation; source pixels unchanged in F2; no aspect warp.",
+      "scope": "Frozen E wholeheight source registration reused, no local fit or aspect warp; posterior component only"
+    },
+    {
+      "view": "profile",
+      "mode": "source_context",
+      "board": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\source-E-09-profile.png",
+      "board_sha256": "9580e593713aca4587b75ef588695fe58ae328c25aa44bb70353a093aa04b981",
+      "source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+        "sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1",
+        "crop_xyxy": [
+          450.440292641635,
+          172.8328193965777,
+          667.1402140395429,
+          389.5327407944857
+        ],
+        "original_size": [
+          1536,
+          1024
+        ]
+      },
+      "registration": "Frozen wholeheight uniform scale/translation; source pixels unchanged in F2; no aspect warp.",
+      "scope": "Frozen E wholeheight source registration reused, no local fit or aspect warp; posterior component only"
+    }
+  ],
+  "ART": "PENDING actual09 review; no adoption from CPU or renders"
+}
