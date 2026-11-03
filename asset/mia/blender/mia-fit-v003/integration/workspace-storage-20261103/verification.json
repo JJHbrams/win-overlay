@@ -9,5 +9,13 @@
   "scope": "Storage/runtime capacity only; no model/art completion.",
   "guard_scope_count": 8,
   "guard_sha256": "8472df1a967e0a2b4381b4c98d595fc047697fc044622b5e2d31101fd2c42c49",
-  "guard_heavy_entrypoints": "Wiring delegated, not yet acceptance-verified"
+  "guard_heavy_entrypoints": {
+    "native": "check800MiB BEFORE mkdir/build/save",
+    "render": "check100MiB BEFORE mkdir/setup/render",
+    "bake": "inspect100MiB BEFORE map-output mkdir/input/bake",
+    "verification": "Independent code ordering + actual helper normal/deny invocation; no production native/render/bake was run."
+  },
+  "integrated_F_checkpoint_files_verified": 61,
+  "F_adoption": "ART_FAIL_UNSELECTED; preservation of hashes is not adoption",
+  "latest_guard_component_bytes": 360977765
 }
