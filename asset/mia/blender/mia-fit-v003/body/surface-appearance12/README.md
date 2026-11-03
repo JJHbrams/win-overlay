@@ -4,19 +4,19 @@ This folder supplies the **body-only static review material** for root's Review1
 
 ## Adopted input and output
 
-Use `maps-B/`. `maps-A/` and the d4bb41 diagnostic files are rejected earlier seating evidence, not alternate final maps. The old d4bb41 NPZ copy was removed to avoid retaining a redundant 3.9 MB intermediate; its receipt/metadata and failure data remain. The final immutable target snapshot is `inputs/21f67202861b.npz`, received from `surface-review12/surface-v3-branch-regions.npz`.
+Use **`maps-C/` for the collar-revised C target**, subject to root's actual seam/material review. `maps-B/` is frozen completed material evidence for the pre-collar-revision target, whose gray8 review failed the geometric waist/arm seam gate. Its inputs/proofs remain unchanged. `maps-A/` and the d4bb41 diagnostic files are rejected earlier seating evidence, not alternate final maps. The old d4bb41 NPZ copy was removed to avoid retaining a redundant 3.9 MB intermediate; its receipt/metadata and failure data remain. The current immutable target snapshot is `inputs/3a82c54af44c.npz`, received from `surface-review12/surface-v4-geometric-C.npz`.
 
 | Input | SHA256 |
 | --- | --- |
-| Final NPZ / semantic v3 | `21f67202861be45105fb9e977e052b8e69b6c867243d385078da5294922bc9e5` |
-| World float32 coordinates | `523d4d820501abea38d4ade94fe7578b526b80ad8fc61cc616fdefb7409aa631` |
+| C NPZ / geometric collars, semantic v3 held | `3a82c54af44ceb6ea5b1875d76d6b744617f2eb26ee2f9a47d275a52e3af47bb` |
+| C world float32 coordinates | `434bb612288c669625df1078308ba6910875e3b601ad7841fdf3aeb3f232cc66` |
 | Ordered body triangles | `fd0096040df4b4f6b8685399d87ed63ec87e5bbada1ee8bed57a6f91c6d5575d` |
 | Actual per-corner body atlas | `8dbcb1c99355d086c3b63a6c5aca24033982830442484e6cca7bd0072d85c0a7` |
 | Final face-region ownership | `16096617671a58577cee9ef0b1a66e62e9b85460f33d174642a36d394f1cf624` |
 
 The final input has 126,845 joined vertices and 215,875 **body-only** triangles. Its atlas is the producer's real packed `MIA_Review12UV`, not the initial proposed cylinder rectangles. Accepted face/head triangles are excluded. `meshfaceid` maps body triangles to the producer's full joined mesh polygons.
 
-`maps-B/bake-report.json` contains all five 2048² PNG hashes. Actual shader channels:
+`maps-C/bake-report.json` contains all five 2048² PNG hashes. Actual shader channels:
 
 | PNG | Color space | Actual use |
 | --- | --- | --- |
@@ -39,7 +39,7 @@ p = Path('/absolute/path/to/surface-appearance12')
 sys.path.insert(0, str(p))
 import install_material
 material = install_material.create_material(
-    p / 'maps-B', uv_layer='MIA_Review12UV', variant='skin',
+    p / 'maps-C', uv_layer='MIA_Review12UV', variant='skin',
     clavicle_strength=1.0)
 # The integration producer assigns this new material ONLY to its body faces.
 # Preserve original head/face/hair materials and their existing UV routes.
@@ -64,22 +64,24 @@ Brief lower openings are fitted to the actual central crotch bridge while retain
 
 ## Verification and unresolved actual review
 
-`maps-B/footprint-proof.json`: final PNG SHA/size checks; 215,875 triangle-centroid UV footprint samples; zero underwear on arm/low-leg ownership; zero clavicle outside allowed front/neck regions; all 512 seated boundary barycentrics reconstruct exactly. This is an ownership/route test, not a continuous texture filtering or anatomy certificate.
+`maps-C/footprint-proof.json`: final PNG SHA/size checks; 215,875 triangle-centroid UV footprint samples; zero underwear on arm/low-leg ownership; zero clavicle outside allowed front/neck regions; all 512 seated boundary barycentrics reconstruct exactly. This is an ownership/route test, not a continuous texture filtering or anatomy certificate.
 
-`maps-B/material-route-proof.json`: actual Blender 5.2.3 loads the five **final** PNGs, verifies connected UV/Image/output ancestry, color spaces and material mode/clavicle/color-only toggles without loading/saving the source native or rendering. The older `material-api-smoke.json` only tests synthetic images and is not used as final-map proof.
+`maps-C/material-route-proof.json`: actual Blender 5.2.3 loads the five **final** PNGs, verifies connected UV/Image/output ancestry, color spaces and material mode/clavicle/color-only toggles without loading/saving the source native or rendering. The older `material-api-smoke.json` only tests synthetic images and is not used as final-map proof.
+
+`inputs/3a82c54af44c-receipt.json`: independent bytewise B→C comparison. Exactly 11,528 interior collar-row vertices moved, maximum 7.8568 mm. Body triangles, review UV, semantic ownership, mesh-face IDs and source cameras are held. Every retained/core/head/lower vertex and shared collar endpoint remains held. The producer changed the geometric tangent basis of its collars; this worker did not edit geometry. The C map bake was freshly rerun, including seating, even though all five resulting PNG byte hashes equal B: moved collar areas have uniform skin and the supported source-pattern areas did not move. `maps-C/revision-crosscheck.json` compares producer/worker exact changed IDs and the B/C PNG files. `revision-status.json` distinguishes stale B proof from current C material evidence; neither is an actual native ART approval.
 
 The UV raster reports 1,321,288 occupied texels, 5 coincident shared-edge co-hits, zero different-world overlaps at the explicitly declared 2 mm check tolerance, and 14,464 triangles without a texel center. This is not a production UV approval. Body material assignment, actual neck continuity, source-underwear resemblance, strap continuity/filtering, moved-light/clavicle toggles and orbit appearance **remain for the producer's saved-native review**. None of these CPU checks mark Mia or body anatomy ART PASS.
 
-Rejected earlier evidence is retained: the first producer atlas contained zero-UV triangles and was refused; the next corrected atlas needed world-normal/collar correction; then eight bra-side rays revealed inner-arm faces in a broad torso label. The producer's semantic v3 corrected 3,085 ownership labels using actual component fields; geometry and UV did not change. Final maps use only that v3 snapshot.
+Rejected earlier evidence is retained: the first producer atlas contained zero-UV triangles and was refused; the next corrected atlas needed world-normal/collar correction; then eight bra-side rays revealed inner-arm faces in a broad torso label. The producer's semantic v3 corrected 3,085 ownership labels using actual component fields. Subsequently gray8 exposed geometric collar defects, so root authorized the C geometric-tangent correction. C keeps the semantic-v3 ownership and exact UVs; current material evidence binds to C's updated world fingerprint. Actual seam4/material review remains separate.
 
 Engram knowledge/activity MCP tools were unavailable to this worker; these records are repository evidence only, not a claimed Wiki sync. No paid tool, install, settings change, model upload, GPU render or protected-source modification was performed.
 
 Reproduce CPU bake and final checks from this worktree:
 
 ```text
-python bake_surface.py inputs/21f67202861b.npz --output maps-B --size 2048
-python verify_surface_maps.py inputs/21f67202861b.npz maps-B
-blender -b --python-exit-code 2 --python verify_material.py -- /absolute/path/to/maps-B
+python bake_surface.py inputs/3a82c54af44c.npz --output maps-C --size 2048
+python verify_surface_maps.py inputs/3a82c54af44c.npz maps-C
+blender -b --python-exit-code 2 --python verify_material.py -- /absolute/path/to/maps-C
 ```
 
 Coordinate with the producer before regenerating a map folder currently in use; preserve target fingerprints and do not overwrite a running capture's inputs.

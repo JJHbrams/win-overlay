@@ -1,0 +1,103 @@
+{
+  "status": "CPU UV-map bake complete; actual shader/native/source appearance review remains required",
+  "surface_input": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\inputs\\3a82c54af44c.npz",
+  "surface_input_sha256": "3a82c54af44ceb6ea5b1875d76d6b744617f2eb26ee2f9a47d275a52e3af47bb",
+  "surface_guards": {
+    "world_f32_sha256": "434bb612288c669625df1078308ba6910875e3b601ad7841fdf3aeb3f232cc66",
+    "triangles_i32_sha256": "fd0096040df4b4f6b8685399d87ed63ec87e5bbada1ee8bed57a6f91c6d5575d",
+    "triangle_uv_f32_sha256": "8dbcb1c99355d086c3b63a6c5aca24033982830442484e6cca7bd0072d85c0a7",
+    "face_region_i16_sha256": "16096617671a58577cee9ef0b1a66e62e9b85460f33d174642a36d394f1cf624",
+    "vertices": 126845,
+    "body_triangles": 215875,
+    "uv_layer": "MIA_Review12UV"
+  },
+  "raster": {
+    "size": 2048,
+    "occupied_texels": 1321288,
+    "uv_cohits": 5,
+    "skipped_subtexel_triangles": 14464,
+    "different_world_overlap_count": 0,
+    "overlap_tolerance_m": 0.002,
+    "texel_center_convention": "u=(x+.5)/N,v=1-(y+.5)/N"
+  },
+  "field_stats": {
+    "occupied_texels": 1321288,
+    "underwear_texels_over_half": 116178,
+    "clavicle_ink_texels_over_tenth": 543,
+    "clavicle_shade_texels_over_tenth": 2469,
+    "underwear_coverage_range": [
+      0.0,
+      1.0
+    ],
+    "same_fixed_world_fields_for_all_views": true,
+    "base_skin_srgb": [
+      0.9639762327436437,
+      0.8488705729837295,
+      0.7977377330312598
+    ],
+    "old_underwear_texture_used": false
+  },
+  "files": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\maps-C\\SkinBaseColor.png",
+      "sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "sRGB",
+      "active_use": "body-only pigment"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\maps-C\\UnderwearBaseColor.png",
+      "sha256": "2110a03c55648e8e3ce329a8f0ec9899dab37782deb9cb28585144cab12f83a7",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "sRGB",
+      "active_use": "body-only pigment"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\maps-C\\UnderwearCoverage.png",
+      "sha256": "e72ef73f611dcbaee813a632da5578c70ed486042231c8c67270253a8d290d4e",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "active_use": "body-only material control"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\maps-C\\ClavicleInk.png",
+      "sha256": "15f061e2ca6e961365d74eb85e0c5f74893120020070b49c8b097b2d032b568f",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "active_use": "body-only material control"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-appearance12\\maps-C\\ClavicleShade.png",
+      "sha256": "60fc024127ece79e08833a5a292fbd179aa21e5fc4cc0c26beaa1d3bcd3a81c8",
+      "size": [
+        2048,
+        2048
+      ],
+      "color_space": "Non-Color",
+      "active_use": "body-only material control"
+    }
+  ],
+  "island_padding_pixels": 4,
+  "padded_texels": 290972,
+  "geometry_unchanged": true,
+  "GPU_used": false,
+  "elapsed_seconds": 32.295302867889404,
+  "source_fit": "Source-relative anatomical chart, actual radial first hits and triangle/barycentric UV bindings; inferred construction labelled.",
+  "limits": [
+    "Same supported body shape in both material versions; no new unsupported-anatomy sculpt.",
+    "Underwear is a surface texture, not cloth thickness/compression or production rigging.",
+    "Skin tone/light transfer is cloned from saved R3b common skin; actual neck color-only seam review is still required."
+  ]
+}

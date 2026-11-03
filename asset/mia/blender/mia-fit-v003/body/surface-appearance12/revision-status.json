@@ -1,0 +1,19 @@
+{
+  "scope": "Body material / UV-map work only; saved-native geometry and actual appearance gates belong to root/integrator.",
+  "maps_B": {
+    "surface_sha256": "21f67202861be45105fb9e977e052b8e69b6c867243d385078da5294922bc9e5",
+    "status": "Preserved completed CPU material evidence for the pre-collar-revision target; not current native ART approval.",
+    "actual_geometry_gate": "Root/producer gray8 review failed FB-AC2: horizontal waist band and arm collar bulb/notch.",
+    "frozen_proofs_changed": false
+  },
+  "maps_C": {
+    "surface_sha256": "3a82c54af44ceb6ea5b1875d76d6b744617f2eb26ee2f9a47d275a52e3af47bb",
+    "world_f32_sha256": "434bb612288c669625df1078308ba6910875e3b601ad7841fdf3aeb3f232cc66",
+    "status": "Current C material evidence: fresh target seating/bake and CPU footprint/actual Blender-node checks complete. Actual seam4/material/native review remains required.",
+    "independent_receipt": "11,528 interior collar vertices changed, max7.8568mm; exact topology/UV/semantics/source-camera hold, shared endpoints and retained/core vertices held.",
+    "PNG_bytes_equal_B": true,
+    "PNG_identity_reason": "Fresh bake on new target; only uniform-skin collar areas moved, while UVs and source-pattern areas stayed held. No old fitting report was reused."
+  },
+  "current_native_art_pass": false,
+  "body_geometry_owned_or_changed_by_appearance_worker": false
+}
