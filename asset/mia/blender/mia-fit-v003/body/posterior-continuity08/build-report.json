@@ -1,0 +1,453 @@
+{
+  "status": "ONE CPU-built form hypothesis; ART UNVERIFIED",
+  "source_breast_step": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\breast-step.npz",
+    "sha256": "1ea39f3ee1f56b32bc52c05263f5a4c74c11d5f849d2843a8db69907133d5e9e"
+  },
+  "failed_Taubin_comparison": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\sculpt07-E.npz",
+    "sha256": "4c4b8c74baf3daedc86866a3cd2c7db90dfa1d22ed95c15e4e20afb08992f9da"
+  },
+  "candidate_sha256": "ad9cbb324a1f7b4a2ae8713c1f623c690d65bfe80ba5c6338c6a16ca29e32905",
+  "delta_sha256": "e6043b08cc3a705077113e17c2ed2d95e01b0800ecf92ab057e86cd89c87a7c3",
+  "vertices": 68048,
+  "triangles": 136092,
+  "active_vertices": 354,
+  "maximum_displacement_mm": 1.7000044584274292,
+  "median_active_displacement_mm": 0.4573044180870056,
+  "volume_before_m3": 0.015483039156973313,
+  "volume_after_m3": 0.015483643232627584,
+  "volume_delta_m3": 6.040756542705777e-07,
+  "ownership": [
+    {
+      "side_sign": 1,
+      "source_D_seed_triangles": [
+        117439,
+        117681,
+        117690,
+        117699
+      ],
+      "source_D_fixed_triangles": [
+        117879,
+        114437,
+        114428,
+        117614,
+        117927,
+        117923,
+        117735
+      ],
+      "domain_vertices": 261,
+      "active_vertices": 179,
+      "fixed_boundary_vertices": 82,
+      "actual_section_y": 0.02,
+      "inner_roof_anchor": {
+        "triangle": 117801,
+        "world": [
+          0.1425,
+          0.02,
+          1.2581258921587608
+        ],
+        "normal": [
+          0.24306625703626136,
+          0.7773042247851173,
+          -0.5802731570748296
+        ]
+      },
+      "outer_roof_anchor": {
+        "triangle": 117903,
+        "world": [
+          0.1575,
+          0.02,
+          1.25865549428317
+        ],
+        "normal": [
+          -0.5947291684187843,
+          0.4553964214910314,
+          -0.6625038230267537
+        ]
+      },
+      "target_direction_world": [
+        -0.16665122620138692,
+        0.0,
+        -0.9860159069739058
+      ],
+      "C2_profile": "1.7mm * compact((sideX-.151)/.020) * compact((Z-1.268)/.022) * quintic(distance_to_fixed_band/.003), normalized once per side; compact(t)=(1-t\u00b2)^3 for|t|<1, else0",
+      "direction_reason": "Unit XZ-normal bisector of actual roof legs; moves mainly down with a small medial component. No posterior-Y inflation or Laplacian/Taubin passes.",
+      "actual_source_roof_rail": [
+        {
+          "triangle": 117799,
+          "world": [
+            0.145,
+            0.018,
+            1.2579964067425295
+          ],
+          "normal": [
+            0.6323765149615078,
+            0.42568803092359514,
+            -0.6472168443833413
+          ]
+        },
+        {
+          "triangle": 117834,
+          "world": [
+            0.15,
+            0.018,
+            1.2598657245483098
+          ],
+          "normal": [
+            0.1942939647961173,
+            0.39521642614591196,
+            -0.8978050076426719
+          ]
+        },
+        {
+          "triangle": 117874,
+          "world": [
+            0.155,
+            0.018,
+            1.2592790539640397
+          ],
+          "normal": [
+            -0.3847133664415018,
+            0.3742629298976153,
+            -0.8437552281234763
+          ]
+        },
+        {
+          "triangle": 117799,
+          "world": [
+            0.145,
+            0.02,
+            1.2593118484978478
+          ],
+          "normal": [
+            0.6323765149615078,
+            0.42568803092359514,
+            -0.6472168443833413
+          ]
+        },
+        {
+          "triangle": 117836,
+          "world": [
+            0.15,
+            0.02,
+            1.2609253173878063
+          ],
+          "normal": [
+            0.1646937810233772,
+            0.5607160549175854,
+            -0.8114637787664234
+          ]
+        },
+        {
+          "triangle": 117876,
+          "world": [
+            0.155,
+            0.02,
+            1.2603083917479443
+          ],
+          "normal": [
+            -0.42093756750458605,
+            0.6238106308152005,
+            -0.658537668736773
+          ]
+        },
+        {
+          "triangle": 118024,
+          "world": [
+            0.145,
+            0.025,
+            1.2654122321931307
+          ],
+          "normal": [
+            0.10131988415105646,
+            0.8355901504928381,
+            -0.5399290522605472
+          ]
+        },
+        {
+          "triangle": 118071,
+          "world": [
+            0.15,
+            0.025,
+            1.2659963697806444
+          ],
+          "normal": [
+            0.04589424168900391,
+            0.8189720573882866,
+            -0.5719951816204297
+          ]
+        },
+        {
+          "triangle": 118121,
+          "world": [
+            0.155,
+            0.025,
+            1.2652056132376455
+          ],
+          "normal": [
+            -0.32283719636584274,
+            0.7524290478417741,
+            -0.5741312329133151
+          ]
+        },
+        {
+          "triangle": 118036,
+          "world": [
+            0.145,
+            0.03,
+            1.2751413088135068
+          ],
+          "normal": [
+            0.0800994107783171,
+            0.9197173715280178,
+            -0.38432283421956676
+          ]
+        },
+        {
+          "triangle": 118080,
+          "world": [
+            0.15,
+            0.03,
+            1.2756380965724183
+          ],
+          "normal": [
+            0.0023532028309336513,
+            0.9200902744481501,
+            -0.39169930980583095
+          ]
+        },
+        {
+          "triangle": 118131,
+          "world": [
+            0.155,
+            0.03,
+            1.274089434932799
+          ],
+          "normal": [
+            -0.2721157498580387,
+            0.8744363447099882,
+            -0.401639263182065
+          ]
+        }
+      ]
+    },
+    {
+      "side_sign": -1,
+      "source_D_seed_triangles": [
+        14739,
+        14856,
+        14864,
+        14871
+      ],
+      "source_D_fixed_triangles": [
+        15128,
+        20929,
+        20922,
+        20894,
+        15086,
+        15083,
+        14812
+      ],
+      "domain_vertices": 261,
+      "active_vertices": 175,
+      "fixed_boundary_vertices": 86,
+      "actual_section_y": 0.02,
+      "inner_roof_anchor": {
+        "triangle": 20662,
+        "world": [
+          -0.1425,
+          0.02,
+          1.2581835602297915
+        ],
+        "normal": [
+          -0.31502685872592723,
+          0.760534709402791,
+          -0.5677543782965366
+        ]
+      },
+      "outer_roof_anchor": {
+        "triangle": 14702,
+        "world": [
+          -0.1575,
+          0.02,
+          1.2586267248850984
+        ],
+        "normal": [
+          0.6809265245791964,
+          0.3404840554991246,
+          -0.6483900647568298
+        ]
+      },
+      "target_direction_world": [
+        0.151068872601307,
+        0.0,
+        -0.9885232398537579
+      ],
+      "C2_profile": "1.7mm * compact((sideX-.151)/.020) * compact((Z-1.268)/.022) * quintic(distance_to_fixed_band/.003), normalized once per side; compact(t)=(1-t\u00b2)^3 for|t|<1, else0",
+      "direction_reason": "Unit XZ-normal bisector of actual roof legs; moves mainly down with a small medial component. No posterior-Y inflation or Laplacian/Taubin passes.",
+      "actual_source_roof_rail": [
+        {
+          "triangle": 14774,
+          "world": [
+            -0.145,
+            0.018,
+            1.257860231194097
+          ],
+          "normal": [
+            -0.5130272237353745,
+            0.3888221180009277,
+            -0.7652584061999231
+          ]
+        },
+        {
+          "triangle": 14752,
+          "world": [
+            -0.15,
+            0.018,
+            1.25991061303097
+          ],
+          "normal": [
+            -0.18670558665926346,
+            0.4348740915531521,
+            -0.8809231228694367
+          ]
+        },
+        {
+          "triangle": 14724,
+          "world": [
+            -0.155,
+            0.018,
+            1.2593119700845055
+          ],
+          "normal": [
+            0.379252507202585,
+            0.40535435623679295,
+            -0.8317784450563794
+          ]
+        },
+        {
+          "triangle": 14775,
+          "world": [
+            -0.145,
+            0.02,
+            1.2592946952332091
+          ],
+          "normal": [
+            -0.5519657063894372,
+            0.5113634600772409,
+            -0.6586662817146797
+          ]
+        },
+        {
+          "triangle": 14754,
+          "world": [
+            -0.15,
+            0.02,
+            1.2609277887637311
+          ],
+          "normal": [
+            -0.16488312677938283,
+            0.5633663967135907,
+            -0.8095874613390445
+          ]
+        },
+        {
+          "triangle": 14726,
+          "world": [
+            -0.155,
+            0.02,
+            1.2602718051611277
+          ],
+          "normal": [
+            0.4211690672652301,
+            0.5206897566911362,
+            -0.742629647977955
+          ]
+        },
+        {
+          "triangle": 20897,
+          "world": [
+            -0.145,
+            0.025,
+            1.2654130346472567
+          ],
+          "normal": [
+            -0.09490974248945783,
+            0.8361209603597366,
+            -0.540272042981771
+          ]
+        },
+        {
+          "triangle": 14879,
+          "world": [
+            -0.15,
+            0.025,
+            1.266021473465319
+          ],
+          "normal": [
+            -0.04705734678469958,
+            0.7930500729905524,
+            -0.6073361407353132
+          ]
+        },
+        {
+          "triangle": 14833,
+          "world": [
+            -0.155,
+            0.025,
+            1.2653083271746555
+          ],
+          "normal": [
+            0.3206388977018535,
+            0.7115269944466688,
+            -0.6252359822133005
+          ]
+        },
+        {
+          "triangle": 20907,
+          "world": [
+            -0.145,
+            0.03,
+            1.2751410030599324
+          ],
+          "normal": [
+            -0.08184263804827746,
+            0.9195867050275314,
+            -0.3842682325328322
+          ]
+        },
+        {
+          "triangle": 14889,
+          "world": [
+            -0.15,
+            0.03,
+            1.2756515152703283
+          ],
+          "normal": [
+            0.002657721745751336,
+            0.9200892786620378,
+            -0.3916997010546383
+          ]
+        },
+        {
+          "triangle": 14843,
+          "world": [
+            -0.155,
+            0.03,
+            1.2740424235011634
+          ],
+          "normal": [
+            0.2568349809908748,
+            0.8987748189737665,
+            -0.35530214932939824
+          ]
+        }
+      ]
+    }
+  ],
+  "topology_unchanged": true,
+  "input": "E breast-step only; replaces failed Taubin, never stacks it",
+  "native_saved": false,
+  "GPU_used": false
+}
