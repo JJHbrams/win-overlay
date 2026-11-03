@@ -25,6 +25,7 @@ def fingerprint(ob):
 
 def apply(runtime='live_mcp'):
     assert runtime in ('live_mcp','background_cpu')
+    if bpy.context.mode!='OBJECT':bpy.ops.object.mode_set(mode='OBJECT')
     ns=bpy.app.driver_namespace
     assert 'MIA_HairReviewState' in ns, 'Needs the exclusive borrowed live bundle'
     assert PREFIX not in ns and bpy.data.objects.get(PREFIX) is None

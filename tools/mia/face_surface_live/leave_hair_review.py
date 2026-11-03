@@ -8,6 +8,10 @@ state = bpy.app.driver_namespace['MIA_HairReviewState']
 body = bpy.data.objects['MIA_Review12_H_LiveRepair']
 assert hashlib.sha256(np.array([v.co[:] for v in body.data.vertices], np.float32).tobytes()).hexdigest() == state['body_sha256']
 if bpy.context.mode != 'OBJECT': bpy.ops.object.mode_set(mode='OBJECT')
+main=bpy.data.objects['MIA_V17_PIXAL_DetailedHair']
+for domain,values in state.get('main_selection',{}).items():
+    for item,value in zip(getattr(main.data,domain),values):item.select=bool(value)
+if 'mesh_select_mode' in state:bpy.context.tool_settings.mesh_select_mode=state['mesh_select_mode']
 for name, (hidden, render, selected) in state['objects'].items():
     ob = bpy.data.objects.get(name)
     if ob is not None:

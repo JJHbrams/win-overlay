@@ -50,7 +50,7 @@ justify raising brows, switching to an opaque projected overlay as completion,
 or rebuilding the accepted face. Actual expressions are still unverified;
 the visible static review head has no47-key deformation, unlike hidden R3b.
 
-## Rear part01: prepared, not adopted
+## Rear part01: actual live FAIL, restored
 
 One separate intact exterior assembly is prepared from the previous verified
 13,332-point/15,922-face source donor. It is rotated65degrees toward the rear,
@@ -75,8 +75,70 @@ from the prepared affine by at most0.119micrometres; all object/mesh/node-group
 inventories restore exactly. They do not establish visual likeness. An initial
 CPU run wrote a wrongly named `live-install.json` receipt; it was corrected to
 `cpu-install-before-explicit-runtime.json`, explicitly labelled CPU-only. The
-helper now records its actual live/CPU runtime separately. No rear part has
-been installed in live Blender or selected at this checkpoint.
+helper now records its actual live/CPU runtime separately.
+
+Subsequently, actual official-MCP selection, installation, back and135-degree
+rear-oblique screenshots were performed on body-E without moving its geometry.
+The visible result failed: a ragged horizontal cut under the bun, an open
+left-central hole, and the copied side's broad flat slab. The original data
+route survived but its orientation/placement did not reproduce source grooming.
+Root and implementer agreed. All owned objects/meshes/node groups were removed,
+original Main restored, and the borrowed review state returned. Actual proofs
+are `rear-mask-0.png`, `rear-back-after-0.png`, `rear-oblique-after-0.png`,
+`rear-restored.json` and `rear-leave.json` in the same ignored live cache.
+No rigid/affine side-donor tuning is the next step.
+
+## Curved rear02: actual live FAIL, restored
+
+The next representation used18 separate closed curve sweeps with distributed
+roots, unequal short/mid/long source-guided ends, varying depth/twist, upturned
+tips and small longitudinal relief. The original source scale stayed uniform.
+Prepared size1.19MB; no batch renders/native/maps. Main's upper cape was retained
+down to Z1.49; only an explicit lower underlap patch was omitted on its copy.
+
+Actual back and135-degree rear-oblique views showed that inferred root Y was
+outside the cape: conspicuous cut caps and rounded cable-like sections. More
+curves and more wave variation did not establish hair likeness. Root and
+implementer rejected it; `curved-restored.json`/`curved-leave.json` verify owned
+actor removal and body-D preservation. Root's diagnostic neck custom normals
+were never reset or modified by this hair work.
+
+The next structural correction seats each primary root against the actual
+posterior source hair surface, and secondary roots against actual previously
+built primary-lock surfaces. Tiny roots are buried6mm behind their actual
+parent, with an actual per-ring root-cap exposure check, then broaden into a
+rounded flattened lancet and taper. This changes root attachment and profile;
+it does not retune the wave paths. `prepare_rooted_rear.py` prepares03. Actual
+live source/adjacent review remains required before any adoption.
+
+## Rooted03 and backing isolation
+
+The first rooted03 back/oblique trial removed the round root caps but still
+showed apparent square/ragged starts and regular broad strips. It was restored.
+The subsequent semantic visibility test retained the continuous original
+posterior fin/base and omitted only the previously traced1,781-face unsupported
+U family, using exactly the same03 outer locks. The apparent starts remained.
+Hiding only the new outer locks showed that the retained backing was continuous
+(`supported-base-only-0.png`). This disproved the initial claim that patch
+deletion alone caused those starts: the already-broad outer sections were
+emerging through/behind the original base. Root-cap-only burial was insufficient.
+
+With root's explicit live token, `follow_root_surface.py` corrected the existing
+03 initial stem sections in Y against actual evaluated parent triangles, with
+each section's own thickness plus0.35mm clearance. Short/accent roots use the
+already corrected parent-lock exterior. A constrained local smooth follows
+the contact lower bound; source X/Z, the entire width/profile and later
+free-hanging coordinates remain exact. No wave-path search or new whole-hair
+variant was generated. Some initial stems need up to27.51mm of contact
+correction, which is a significant placement defect in the prior inferred Y.
+
+Actual `emergence-back-after-0.png` and `emergence-oblique-after-0.png` show the
+broad cut starts removed and continuous supported attachment. Root tips still
+read as conspicuous sprigs; clump hierarchy/regularity, old scuffed side layers,
+and the source's greater side-hair length remain unresolved. This is a bounded
+attachment improvement, not overall hair ART or final deformation approval.
+Current live state is the separate03Base trial pending root keep/restore review;
+body-D and original Main raw remain exact. No full native was saved.
 
 ## Still required
 
