@@ -1,0 +1,16 @@
+{
+  "evidence_integrity": "PASS",
+  "manifest_files": 83,
+  "actual_images": 11,
+  "boards": 15,
+  "protected_inputs": 219,
+  "python_ASTs": 13,
+  "canonical_native_bytes": 2841748,
+  "subset_native_sha256": "7bc207b804775b9637858fed8e9faf5d831f6ae034d62da6792522fe1e9c4158",
+  "original_R3b_unchanged": true,
+  "frozen_proof_files_rewritten": false,
+  "GPU_used": false,
+  "visual_review": "../UPPERBODY_SUPPORT_09_REVIEW.md",
+  "art_scope": "Bounded static upper-body shape guide; not production or whole-Mia ART.",
+  "full_native_source_review_gate": "OPEN; actual images predate subset export and retain R3b-plus-NPZ provenance."
+}
