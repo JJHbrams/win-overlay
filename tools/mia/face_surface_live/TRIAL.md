@@ -50,7 +50,7 @@ justify raising brows, switching to an opaque projected overlay as completion,
 or rebuilding the accepted face. Actual expressions are still unverified;
 the visible static review head has no47-key deformation, unlike hidden R3b.
 
-## Rear part01: prepared, not adopted
+## Rear part01: actual live FAIL, restored
 
 One separate intact exterior assembly is prepared from the previous verified
 13,332-point/15,922-face source donor. It is rotated65degrees toward the rear,
@@ -75,8 +75,121 @@ from the prepared affine by at most0.119micrometres; all object/mesh/node-group
 inventories restore exactly. They do not establish visual likeness. An initial
 CPU run wrote a wrongly named `live-install.json` receipt; it was corrected to
 `cpu-install-before-explicit-runtime.json`, explicitly labelled CPU-only. The
-helper now records its actual live/CPU runtime separately. No rear part has
-been installed in live Blender or selected at this checkpoint.
+helper now records its actual live/CPU runtime separately.
+
+Subsequently, actual official-MCP selection, installation, back and135-degree
+rear-oblique screenshots were performed on body-E without moving its geometry.
+The visible result failed: a ragged horizontal cut under the bun, an open
+left-central hole, and the copied side's broad flat slab. The original data
+route survived but its orientation/placement did not reproduce source grooming.
+Root and implementer agreed. All owned objects/meshes/node groups were removed,
+original Main restored, and the borrowed review state returned. Actual proofs
+are `rear-mask-0.png`, `rear-back-after-0.png`, `rear-oblique-after-0.png`,
+`rear-restored.json` and `rear-leave.json` in the same ignored live cache.
+No rigid/affine side-donor tuning is the next step.
+
+## Curved rear02: actual live FAIL, restored
+
+The next representation used18 separate closed curve sweeps with distributed
+roots, unequal short/mid/long source-guided ends, varying depth/twist, upturned
+tips and small longitudinal relief. The original source scale stayed uniform.
+Prepared size1.19MB; no batch renders/native/maps. Main's upper cape was retained
+down to Z1.49; only an explicit lower underlap patch was omitted on its copy.
+
+Actual back and135-degree rear-oblique views showed that inferred root Y was
+outside the cape: conspicuous cut caps and rounded cable-like sections. More
+curves and more wave variation did not establish hair likeness. Root and
+implementer rejected it; `curved-restored.json`/`curved-leave.json` verify owned
+actor removal and body-D preservation. Root's diagnostic neck custom normals
+were never reset or modified by this hair work.
+
+The next structural correction seats each primary root against the actual
+posterior source hair surface, and secondary roots against actual previously
+built primary-lock surfaces. Tiny roots are buried6mm behind their actual
+parent, with an actual per-ring root-cap exposure check, then broaden into a
+rounded flattened lancet and taper. This changes root attachment and profile;
+it does not retune the wave paths. `prepare_rooted_rear.py` prepares03. Actual
+live source/adjacent review remains required before any adoption.
+
+## Rooted03 and backing isolation
+
+The first rooted03 back/oblique trial removed the round root caps but still
+showed apparent square/ragged starts and regular broad strips. It was restored.
+The subsequent semantic visibility test retained the continuous original
+posterior fin/base and omitted only the previously traced1,781-face unsupported
+U family, using exactly the same03 outer locks. The apparent starts remained.
+Hiding only the new outer locks showed that the retained backing was continuous
+(`supported-base-only-0.png`). This disproved the initial claim that patch
+deletion alone caused those starts: the already-broad outer sections were
+emerging through/behind the original base. Root-cap-only burial was insufficient.
+
+With root's explicit live token, `follow_root_surface.py` corrected the existing
+03 initial stem sections in Y against actual evaluated parent triangles, with
+each section's own thickness plus0.35mm clearance. Short/accent roots use the
+already corrected parent-lock exterior. A constrained local smooth follows
+the contact lower bound; source X/Z, the entire width/profile and later
+free-hanging coordinates remain exact. No wave-path search or new whole-hair
+variant was generated. Some initial stems need up to27.51mm of contact
+correction, which is a significant placement defect in the prior inferred Y.
+
+Actual `emergence-back-after-0.png` and `emergence-oblique-after-0.png` show the
+broad cut starts removed and continuous supported attachment. Root tips still
+read as conspicuous sprigs; clump hierarchy/regularity, old scuffed side layers,
+and the source's greater side-hair length remain unresolved. This is a bounded
+attachment improvement, not overall hair ART or final deformation approval.
+Current live state is the separate03Base trial pending root keep/restore review;
+body-D and original Main raw remain exact. No full native was saved.
+
+## Provisional editable checkpoint and wider diagnostics
+
+Root inspected the actual emergence pair and retained it as a **provisional
+working part only**. Original Main stays in the scene with exact raw mesh/UV/
+materials, hidden reversibly. Nineteen new modular actors are installed: one
+derived Main with only the traced U omitted, and eighteen independent locks.
+Their actual edited coordinates are frozen at
+`.mia-cache/face-live/curved-rear03/actual-emergence/geometry.npz`, SHA
+`2b1a8508dfdcd7dc0d74958aaed4899f64486270a457b973fa9822ee98044de3`.
+`capture.json` and `working-part.json` distinguish this from an adopted native.
+The new locks are static and have no production armature/secondary-motion
+binding. Their root/chest/head-follow treatment remains required before motion
+or root-owned global head-scale integration.
+
+`keep_working_rear.py` records the original fixture flag and excludes preserved
+Main from hairON while the replacement is active. New actors explicitly have
+`MIA12_source_hair_hide_render=False`; the original has True. The owned restore
+helper removes the new actors and restores the old source flag=False. Camera,
+viewport and prior hairOFF context were returned at
+`live/working-handoff-leave.json`; the installed working part is hidden during
+body inspection. Body-D world SHA remains `69d4...bf25a`.
+
+Actual wider front/profile/high/low solid frames are
+`live/framed-{front,profile,high,low}-0.png`. Use those camera-framed images:
+earlier `whole-*` navigation images clipped crown/feet despite correct render
+cameras and are excluded as whole-height evidence. A first framing read hit
+Blender5.2's tuple-valued camera-offset API; this caused no mesh change and was
+fixed. Original ORTHO navigation and actual camera transform were returned.
+
+Actual640x900 EEVEE back/profile diagnostics use the same ratio-baseline
+camera/light/pose and frozen working geometry. They show the temporary
+Principled locks washed pale against original R3b hair. That is an explicit
+temporary material-path failure, not final pigment/toon/maps. Original material
+graphs remain unchanged. GPU was released before root's brow batch.
+
+`target-diagnostic/source-{back,profile}.png` place original-aspect v22 grooming
+authority, original-pixel v06 body target, actual R3b+D baseline, and actual
+working part together. The v22 figure gets one disclosed uniform whole-height
+display SRT; no local feature warp or substituted body authority. Existing v06
+registration is reused unchanged. Small camera-matrix float decomposition
+residue is explicitly recorded, not silently labelled bit-exact. This is a
+preliminary two-view package: required front/oblique source review, final
+surface maps and contact/deformation gates remain open.
+
+The previously quoted ~20cm shortfall applies only to current Main versus the
+v06 body-sheet hair under its frozen body SRT. It is **not** a definitive v22
+hair-design measurement. v22 remains hair/grooming authority and has different
+body/head proportions. The new long-center paths are a provisional length
+hypothesis requiring v22 identity/profile review; no global side extension has
+been adopted.
 
 ## Still required
 

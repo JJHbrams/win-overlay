@@ -12,7 +12,8 @@ import review_fixture as fixture
 
 body = bpy.data.objects['MIA_Review12_H_LiveRepair']
 coords = np.array([v.co[:] for v in body.data.vertices], np.float32)
-assert hashlib.sha256(coords.tobytes()).hexdigest() == '69d4d4f0ea907da2474bc74f4b55312971d137f0911bdf9089fc02509a6bf25a'
+token=json.loads((ROOT/'.mia-cache/face-live/live/token.json').read_text())
+assert hashlib.sha256(coords.tobytes()).hexdigest() == token['body_sha256']
 ns = bpy.app.driver_namespace
 assert 'MIA_HairReviewState' not in ns
 scene = bpy.context.scene
@@ -24,6 +25,8 @@ state = dict(body_sha256=hashlib.sha256(coords.tobytes()).hexdigest(),
              resolution=(scene.render.resolution_x, scene.render.resolution_y),
              objects={o.name: (o.hide_get(), o.hide_render, o.select_get()) for o in scene.objects},
              active=bpy.context.view_layer.objects.active,
+             mesh_select_mode=tuple(bpy.context.tool_settings.mesh_select_mode),
+             main_selection={domain:np.array([x.select for x in getattr(bpy.data.objects['MIA_V17_PIXAL_DetailedHair'].data,domain)]) for domain in ('vertices','edges','polygons')},
              viewport=[])
 for screen in bpy.data.screens:
     for area in screen.areas:
