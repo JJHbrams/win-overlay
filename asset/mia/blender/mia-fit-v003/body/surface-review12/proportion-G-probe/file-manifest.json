@@ -1,0 +1,33 @@
+{
+  "status": "UNSELECTED_RAM_ONLY_NO_MESH",
+  "files": [
+    {
+      "path": "probe_proportion_G.py",
+      "bytes": 13448,
+      "sha256": "bfe56424f6b43d4e2c0e974bbb760a05c80b81d94d6e16b32bda243d75b1237a"
+    },
+    {
+      "path": "proportion-G-probe/fixed-domain-conflicts.json",
+      "bytes": 5386,
+      "sha256": "b903cab1aad9f4e846f981ef8915e45c0ea18521b406621cea00c8ff7e058f51"
+    },
+    {
+      "path": "proportion-G-probe/RAM-calibration.json",
+      "bytes": 32549,
+      "sha256": "ec9f77ac81b421930e484e237429932125c96b5011bb3d712ae31970a6dc1d2e"
+    },
+    {
+      "path": "proportion-G-probe/RAM-sections.json",
+      "bytes": 5014,
+      "sha256": "73528cc56d22b56487447f51b2413074e3033394bac68dc52a4d5c05fc0cdac5"
+    },
+    {
+      "path": "proportion-G-probe/README.md",
+      "bytes": 2819,
+      "sha256": "25f02243ca86883a8b2b54c8024737069ab34d832b0d3f0c22d0acbb63e890d5"
+    }
+  ],
+  "file_count": 5,
+  "bytes": 59216,
+  "scope": "Initial rejected partial-source proposal plus read-only fixed-domain conflict analysis; no solve/retune after rejection, no mesh/GPU/native/bake"
+}
