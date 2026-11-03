@@ -1,0 +1,53 @@
+{
+  "scope": "UNSAVED E component material preflight, not final native or art approval",
+  "actual_record_file": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\render-records.json",
+    "sha256": "ebc7ab0edd1b7070fe3cf802e0972a71952fa15752073fe882ce2f7fede868c9"
+  },
+  "actual_render": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight\\Underwear-front.png",
+    "sha256": "738396762a3683ad48a492827824e3508ad0bec43b5c33ad4e8068725f6b7880"
+  },
+  "sources": [
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\received\\mia-body-v06-confirmed-20261102.png",
+      "sha256": "6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1"
+    },
+    {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png",
+      "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f"
+    }
+  ],
+  "registration": {
+    "uniform_scale": 1.1436940005092553,
+    "translation_xy": [
+      -115.9820801629617,
+      25.929244045131778
+    ],
+    "rotation_degrees": 0.0,
+    "normalization_basis": "Frozen common whole-height source SRT transported by actual ORTHO mpp/camera center. Total height is normalization, not a tested proportion.",
+    "notes": "No per-view anatomical refit, feature stretching, perspective reconstruction or anisotropic resize."
+  },
+  "matrix": [
+    [
+      1.1436940005092553,
+      0.0,
+      -115.9820801629617
+    ],
+    [
+      0.0,
+      1.1436940005092553,
+      -14.070755954868222
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "board": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\integration\\surface12-presentation\\E-front-proportion-diagnostic.png",
+    "sha256": "75efdda12e313211829b855b4b30f86534a7beca909edb0e41f7ff39681fdc41"
+  },
+  "reference": "Unchanged source pixels; old common whole-height SRT transported through actual camera. No anatomical refit or anisotropic scaling."
+}
