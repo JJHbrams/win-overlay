@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import math
 import os
@@ -12,6 +13,10 @@ import struct
 import sys
 import tempfile
 
+_path_spec = importlib.util.spec_from_file_location(
+    'mia_review_input_paths', Path(__file__).resolve().parents[1]/'review_h/paths.py')
+_paths = importlib.util.module_from_spec(_path_spec)
+_path_spec.loader.exec_module(_paths)
 
 CACHE = Path('.mia-cache/mia-pipeline')
 STATE = Path('asset/mia/CURRENT_STATE.json')
@@ -35,8 +40,7 @@ def sha256(path: Path) -> str:
 
 
 def resolve(root: Path, value: str | Path) -> Path:
-    path = Path(value)
-    return (path if path.is_absolute() else root / path).resolve()
+    return _paths.migrated_path(value, root=root).resolve()
 
 
 def atomic_json(path: Path, data):

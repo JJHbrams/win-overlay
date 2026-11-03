@@ -13,7 +13,7 @@ import bpy
 import numpy as np
 
 assert bpy.app.background and not bpy.data.filepath
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 READY=ROOT/'.mia-cache/face-live/fringe-terminal01-ready'
 OUT=READY/'cpu-restore-objectmode-baseline-off'
 assert not OUT.exists()

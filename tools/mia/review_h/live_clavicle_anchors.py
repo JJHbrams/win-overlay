@@ -7,7 +7,7 @@ import numpy as np
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
-ROOT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT = Path(__file__).resolve().parents[3]
 ob = bpy.data.objects['MIA_Review12_H_LiveRepair']
 v = np.array([p.co[:] for p in ob.data.vertices], np.float32)
 before = hashlib.sha256(v.tobytes()).hexdigest()

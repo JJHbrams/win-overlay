@@ -10,7 +10,7 @@ import json
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont
 
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 OUT=ROOT/'.mia-cache/face-live/curved-rear03/target-diagnostic'
 spec=importlib.util.spec_from_file_location('mia_existing_boards',ROOT/'tools/mia/review_h/gray_boards.py')
 boards=importlib.util.module_from_spec(spec);spec.loader.exec_module(boards)

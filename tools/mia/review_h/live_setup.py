@@ -10,7 +10,7 @@ import bpy
 import numpy as np
 
 sys.dont_write_bytecode = True
-ROOT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT = Path(__file__).resolve().parents[3]
 COMPONENT = ROOT/'asset/mia/blender/mia-fit-v003/body/surface-review12'
 PAYLOAD = ROOT/'.mia-cache/body-h/shape/assembly/winding-fixed'
 SOURCE = ROOT/'asset/mia/blender/mia-refinement-v002/integrated/Mia_v0.0.2_Review_R3b.blend'

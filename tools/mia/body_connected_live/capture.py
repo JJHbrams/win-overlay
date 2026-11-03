@@ -2,7 +2,7 @@
 from pathlib import Path
 import importlib.util,json,sys
 import bpy,numpy as np
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');CACHE=ROOT/'.mia-cache/body-connected'
+ROOT=Path(__file__).resolve().parents[3];CACHE=ROOT/'.mia-cache/body-connected'
 sys.path.insert(0,str(ROOT/'asset/mia/blender/mia-fit-v003/body/surface-review12'))
 import review_fixture as fixture
 spec=importlib.util.spec_from_file_location('connected_storage_guard',ROOT/'asset/mia/blender/mia-fit-v003/integration/workspace-storage-20261103/storage_guard.py')

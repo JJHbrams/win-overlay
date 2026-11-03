@@ -5,7 +5,7 @@ import json
 import bpy
 import numpy as np
 
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 OUT=ROOT/'.mia-cache/face-live/curved-rear03/actual-emergence'
 assert not OUT.exists()
 state=bpy.app.driver_namespace['MIA_CurvedRear03Base']

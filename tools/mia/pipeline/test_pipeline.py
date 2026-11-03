@@ -71,6 +71,19 @@ class PipelineTest(unittest.TestCase):
         return pipeline.inspect(self.root, self.capture, candidate, [str(self.source)],
                                 views or ['front', 'profile', 'back', 'oblique'])
 
+    def test_migrated_capture_paths_are_read_locally_without_rewriting_receipt(self):
+        old = 'D:/MiaWorkCache/mia-reference-work/win-overlay/'
+        data = copy.deepcopy(self.data)
+        data['native']['path'] = old+'baseline.blend'
+        for row in data['frames']:
+            row['path'] = old+Path(row['path']).name
+        pipeline.atomic_json(self.capture, data)
+        original = self.capture.read_bytes()
+        result = self.inspect()
+        self.assertTrue(result['evidence_integrity_valid'])
+        self.assertEqual(self.capture.read_bytes(), original)
+        self.assertTrue(all(Path(row['path']).is_relative_to(self.root) for row in result['watched_files']))
+
     def test_existing_baseline_is_integrity_only(self):
         result = self.inspect()
         self.assertTrue(result['evidence_integrity_valid'])
@@ -193,6 +206,9 @@ class PipelineTest(unittest.TestCase):
         destination.mkdir(parents=True)
         for name in ['hooks.py', 'mia_pipeline.py']:
             shutil.copyfile(Path(__file__).parent / name, destination / name)
+        input_paths = destination.parent/'review_h'
+        input_paths.mkdir()
+        shutil.copyfile(Path(__file__).resolve().parents[1]/'review_h/paths.py', input_paths/'paths.py')
         output = self.root / pipeline.CACHE / 'review.json'
         report = self.inspect()
         pipeline.atomic_json(output, report)

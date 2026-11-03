@@ -9,7 +9,7 @@ import json
 import math
 import numpy as np
 
-ROOT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT/'.mia-cache/face-live/rear-part01'
 SOURCE = ROOT/'asset/mia/blender/mia-fit-v003/hair/rear-central-fill'
 

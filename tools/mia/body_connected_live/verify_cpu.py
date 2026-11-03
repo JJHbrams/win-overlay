@@ -5,7 +5,7 @@ import json
 import bpy
 import numpy as np
 HERE=Path(__file__).resolve().parent
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');CACHE=ROOT/'.mia-cache/body-connected/cpu'
+ROOT=Path(__file__).resolve().parents[3];CACHE=ROOT/'.mia-cache/body-connected/cpu'
 assert bpy.app.background
 source_path=Path(bpy.data.filepath)
 assert hashlib.sha256(source_path.read_bytes()).hexdigest()=='4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1'

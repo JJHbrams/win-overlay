@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-ROOT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / '.mia-cache/face-live/fringe-ownership'
 OUT.mkdir(parents=True, exist_ok=True)
 assert not (OUT / 'ownership.json').exists(), 'Keep the first diagnosis immutable'

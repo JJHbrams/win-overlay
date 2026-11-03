@@ -9,7 +9,7 @@ import json
 import bpy
 import numpy as np
 
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 source=ROOT/'.mia-cache/body-h/shape/assembly/winding-fixed'
 revision=globals().get('MIA_LIVE_EXPORT_REVISION','live-D')
 assert revision in ['live-D','live-E']

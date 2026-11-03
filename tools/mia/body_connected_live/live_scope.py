@@ -5,7 +5,7 @@ import json
 import bpy
 import numpy as np
 
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT=Path(__file__).resolve().parents[3]
 CACHE=ROOT/'.mia-cache/body-connected'
 NAME='MIA_ConnectedBody_Design'
 source=bpy.data.objects['MIA_V27_SharedHeadBody']; ns=bpy.app.driver_namespace

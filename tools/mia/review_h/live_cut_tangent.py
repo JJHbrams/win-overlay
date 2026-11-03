@@ -5,7 +5,7 @@ import json
 import bpy
 import numpy as np
 
-ROOT = Path('D:/MiaWorkCache/mia-reference-work/win-overlay')
+ROOT = Path(__file__).resolve().parents[3]
 ob = bpy.data.objects['MIA_Review12_H_LiveRepair']
 if ob.mode != 'OBJECT': bpy.ops.object.mode_set(mode='OBJECT')
 v = np.array([p.co[:] for p in ob.data.vertices], np.float32)

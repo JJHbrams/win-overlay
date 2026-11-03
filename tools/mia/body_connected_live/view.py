@@ -2,7 +2,7 @@
 from pathlib import Path
 import sys,json,hashlib
 import bpy,numpy as np
-ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');ns=bpy.app.driver_namespace
+ROOT=Path(__file__).resolve().parents[3];ns=bpy.app.driver_namespace
 sys.path.insert(0,str(ROOT/'asset/mia/blender/mia-fit-v003/body/surface-review12'))
 import review_fixture as fixture
 object_name='MIA_ChartedBody_Design' if 'MIA_ChartedBody_Design' in bpy.data.objects else 'MIA_ConnectedBody_Design'
