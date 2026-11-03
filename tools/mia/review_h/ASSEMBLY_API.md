@@ -67,3 +67,25 @@ and map seating. No actual H unwrap or texture bake has run in this worker.
 
 No model/native/rig/UV/image source was modified. Engram reminder/activity tools
 were not exposed, so no Wiki synchronization or activity call is claimed.
+
+## Actual H collision audit and winding defect
+
+Root later authorized a read-only Blender-CPU audit of its exported first H
+assembly/UV. `verify_h.py` found zero new boundary/nonmanifold edges and zero
+nonadjacent collar/whole-mesh collisions. Original320 open edges and4 inherited
+hand nonmanifold edges remain distinguished from new defects. Head UV/WORLD
+normals, protected head/lower coordinates and actual surface/UV binding passed.
+However the gate **failed9 new winding edges**, all enclosing only3 neck faces
+`212463,212757,213493` in that frozen payload. The original failure proof is
+canonical `.mia-cache/body-h/shape/assembly/verify.json`; it is not overwritten.
+
+Cause: the legacy collar helper oriented each triangle using one fixed radial
+center. A bowed cervical centerline made3 faces flip independently. The new
+`collar_orientation_flips()` derives coherent edge orientation from the retained
+source endpoints instead. A RAM-only correction of exactly those3 corner orders
+eliminated all winding defects, without changing a world coordinate or undirected
+connectivity. The assembler now applies that ordering to its new faces and all
+corresponding per-corner attributes. The already-exported root payload remains
+unchanged by this worker; a root-authorized corrected payload and fresh audit are
+required. Fresh geometry must reverse UV corner order for those same triangles,
+including both atlas and body-surface exchange, to preserve the UV mapping.
