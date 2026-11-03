@@ -1,0 +1,40 @@
+{
+  "status": "ART_FAIL_UNSELECTED",
+  "decision": "Root actual gray front/high/low review rejects roof flattening/raised edge, cap scallops and cap-to-arm lumps; producer multi-angle inspection agrees.",
+  "candidate_geometry_sha256": "2f0790ce921feca48c4fa2baa028b713fe1bffade45b5f07fe0d690f7e59ba6d",
+  "surface_npz_sha256": "5d94181bb38d16cc6aadf26c22afb009eb0de37a039179ec6c8af7b9f8c3f4d0",
+  "frozen_metadata_sha256": "fda19266b4e08ecc5457f9d9c169ae68efd98278da01e3eddd91b2454925754f",
+  "actual_evidence": "gray-actuals/render-records.json",
+  "actual_count": 12,
+  "actual_scope": "Fresh matching E/F unsaved component pairs from immutable saved R3b, not an F saved native.",
+  "source_native_sha256": "4dc117364643078827f1f1b05288c086c1b6279689634087809e50e4a06d4fc1",
+  "selected_amplitude_scale": 0.7415935940499285,
+  "applied_nominal_down_mm": 18.539839851248213,
+  "applied_nominal_inward_mm": 6.674342346449356,
+  "technical_checks_are_not_ART": {
+    "protected_vertices_exact": 106279,
+    "changed_vertices": 32726,
+    "minimum_projected_oriented_area_ratio": 0.25743152989336343,
+    "new_nonadjacent_intersections": 0,
+    "meaning": "No local projected foldover, not a proof of curvature continuity or global volume diffeomorphism."
+  },
+  "actual_geometry_diagnosis": {
+    "selection": "21997 shared cap-region edges: Z1.35..1.445, absX.065...195, touches free set, old length1..6mm, both old double areas>=1e-7m2.",
+    "old_turn_degrees_P95_P99_max": [6.490,10.035,31.458],
+    "F_turn_degrees_P95_P99_max": [8.518,15.083,40.702],
+    "ordinary_edge_example": {
+      "vertices": [100959,100972],
+      "old_midpoint_world": [0.1494944,-0.0265968,1.3921207],
+      "old_length_mm": 3.465,
+      "old_turn_degrees": 4.766,
+      "F_turn_degrees": 40.702,
+      "old_double_areas_m2": [0.000002957549017185523,0.00000796842075412037]
+    },
+    "interpretation": "True anisotropic compression/curvature concentration under pin-distance-weighted lattice, not microtriangle normal packing or lighting alone. Smooth5 of nearest-feature distances does not imply smooth curvature across nearest-feature changes."
+  },
+  "source_limits": "Illustrated source pose/camera are estimates; global whole-height uniform registration was held. Hips and head were not scaled.",
+  "native_saved": false,
+  "final_F_maps_baked": false,
+  "orbit_rendered": false,
+  "next_work": "G RAM construction-space calibration is separate and is not included in this checkpoint."
+}

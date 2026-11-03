@@ -44,6 +44,8 @@ def build_scenes(config,proof_dir):
     return dict(Underwear=scene,SkinOnly=skin),dict(Underwear=body,SkinOnly=skinbody),mats,api,result
 def main():
     config=read_config();assert config['bare_seam_approved'] and config['material_preflight_approved'] and config.get('proportion_review_approved',False),'Root actual material/proportion gates pending'
+    from capacity_gate import check
+    check(800)
     out=P/'native/Mia_v0.0.3_SurfaceReview12.blend';out.parent.mkdir(exist_ok=True);assert not out.exists(),'Do not overwrite frozen review native'
     scenes,bodies,mats,api,proof=build_scenes(config,P/'native-build-proof')
     bpy.ops.wm.save_as_mainfile(filepath=str(out),compress=True)

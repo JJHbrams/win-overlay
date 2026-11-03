@@ -1,0 +1,16 @@
+00:03.953  object.modifier  | WARNING Object: "F_AnatomicalCagePatch", Modifier: "F_OneLaplacianCage", The system did not find a solution
+00:04.234  object.modifier  | WARNING Object: "F_AnatomicalCagePatch", Modifier: "F_OneLaplacianCage", The system did not find a solution
+00:04.500  object.modifier  | WARNING Object: "F_AnatomicalCagePatch", Modifier: "F_OneLaplacianCage", The system did not find a solution
+Traceback (most recent call last):
+  File "D:\MiaWorkCache\mia-reference-work\surface12-producer\asset\mia\blender\mia-fit-v003\body\surface-review12\build_proportion_F.py", line 141, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\MiaWorkCache\mia-reference-work\surface12-producer\asset\mia\blender\mia-fit-v003\body\surface-review12\build_proportion_F.py", line 123, in main
+    local_j=np.einsum('ij,ij->i',newcross,oldcross)/np.einsum('ij,ij->i',oldcross,oldcross);assert np.all(local_j>0),('Local surface/prism orientation failed',float(local_j.min()))
+                                                                                                   ~~~~~~^^^^^^^^^^^
+AssertionError: ('Local surface/prism orientation failed', -199.64392221487128)
+
+Error: script failed, file: 'asset/mia/blender/mia-fit-v003/body/surface-review12/build_proportion_F.py', exiting.
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
