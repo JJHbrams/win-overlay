@@ -191,10 +191,124 @@ body/head proportions. The new long-center paths are a provisional length
 hypothesis requiring v22 identity/profile review; no global side extension has
 been adopted.
 
+## M1 source brow and local fringe criteria (2026-11-04 user steering)
+
+The annotated source separates the true brow from upper-lid crease, lash and
+eyeliner. Source brow inclination and partial exposed spans between frontal
+clumps are the next priority after this M2 modular checkpoint. Existing brow
+centerlines follow the source-visible fragments; covered full ends are inferred.
+The earlier B width case changes only observed spans (screen-left factor 1.04,
+screen-right 0.84, with smooth end fades). It is not evidence for raising the
+brow, moving it forward, or symmetrizing its shape.
+
+- Keep each true brow a separate forehead-conforming mesh, including its
+  occluded portions. Check source thickness, inclination and distance from the
+  eye, with genuine medial/center/tail expression deformation.
+- Inspect all co-located foreground and backing hair at brow height. Refine
+  local clump width, overlap, depth and fine gaps while preserving the large
+  bang silhouette. Do not repeat the failed nine-island bend, make every hair
+  independent, or expose the entire brow in every pose.
+- Do not raise the brows or push them toward the camera to evade occlusion;
+  those moves alter source ratios and oblique depth.
+- Only if physical gaps cannot reproduce the drawn visibility, consider a
+  selective forelock render/composite. Rear/side hair and hands must still
+  occlude correctly. Whole-hair transparency and universal through-object brow
+  display are excluded. Blender-to-sprite output is the actual target.
+- Final M1 evidence must use hairON neutral, frown, surprise and **smile**, with
+  front, both obliques, profile, high/low and turn inspection. HairOFF remains a
+  structural diagnostic. Static body-D has no expression deformation and cannot
+  be used to claim this validation.
+
+Root's existing provisional 0.6 graphic display was tested with genuine source
+head keys, but its four expressions include blink rather than smile. This is
+bounded graphic-option evidence, not completion of source brow form or physical
+fine-gap requirements. Its proxy samples original Main, so it must not be used
+to conceal an unexamined foreground/backing defect in the current derived Main.
+
+The side investigator read public bodies of mclelun's 2015 Blender layer/mask
+example (https://www.mclelun.com/2015/10/rendering-anime-eyebrow-in-front-of-hair.html)
+and ZLZ's Unity-oriented fringe visibility discussion
+(https://zlz-studio.github.io/setup-character/advanced-hair-setup/). These support
+the selective visibility principle only. The former UI is outdated and the
+latter runtime is not the sprite pipeline. No whole video viewing or verified
+timestamps are claimed here. Physical source-like clump gaps and true brow
+shape remain the first implementation route.
+
+## One owned-lock toon look prototype prepared, not installed
+
+`hair_tone_prototype.py` prepares one small, reversible actual-light look for the
+eighteen new locks only. It uses real `LockParamUV`, explicit sRGB-to-linear
+conversion of a disclosed warm-gray appearance swatch from the unchanged R3b
+target render, restrained flow ink and a Diffuse/ShaderToRGB light path. Original
+Main, its maps and material graphs are untouched. The source swatch is not a
+recovered physical albedo, and this is not final paint, normal/specular maps or
+hair ART. Installation verifies body and lock coordinates, and restoration
+returns material slots and removes only the owned prototype material.
+
+Factory Blender 5.2.3 CPU node/API construction passed (19 nodes, 19 links;
+`curved-rear03/tone-prototype/cpu-nodes.json`). Its ShaderToRGB runtime type is
+`SHADERTORGB`, checked through the actual node `bl_idname`. No EEVEE image, actual
+light-response comparison or live material installation has been performed.
+Body owner currently holds live MCP and GPU priority; this prototype waits for
+an explicit handoff instead of competing for the scene.
+
+## M1 complete backing diagnosis and one terminal replacement prepared
+
+Read-only rays through the frozen true neutral brow centers confirm that all
+Main blockers in the observed intervals belong to five known logical families:
+25 disconnected open-shell islands, 1,103 points and 1,411 faces. Among the 53
+observed samples, 32 meet four distinct shell islands, 16 meet two, and five are
+clear of Main. Each island has open boundary edges. A family is therefore a
+laminated collection of branch planes, not a closed strand with one coherent
+cross section. This explains why a small nine-island bend exposed backing teeth
+and why whole-family taper produced long straight slats. The frozen ownership
+projection at `fringe-ownership/source-ownership.png` is explicitly a CPU mesh
+projection, not a Blender render or source-aligned proportion comparison.
+
+The manually marked source crop also shows eyebrow ink crossing some visible
+hair shafts. Physical refinement should create modest curved gaps while keeping
+the large bang silhouette; exposing the entire drawn bar geometrically would
+alter the design. The existing graphic option must stay OFF while evaluating
+physical gaps, because its proxy samples hidden original Main rather than the
+new foreground. Genuine source-head smile coverage is now available in root's
+`brow-smile1`; this adds technical expression evidence to the earlier four
+states, not full M1 source-shape acceptance.
+
+Root authorized one local terminal replacement after this diagnosis. The ready
+CPU hypothesis is `fringe-terminal01-ready`, using the complete left fine+inner
+scope: eight co-located shells, 389 points and 498 faces. Three closed flattened
+curved leaves replace that module. Outer fringe, right diagonal, crown, true
+brow placement and all retained M2 geometry remain unchanged. The 498-face mask
+is disjoint from the retained 1,781-face rear U mask. `fringe_terminal_live.py`
+adds only an owned mask modifier/attribute to the existing derived Main, without
+rendering a second Main. It snapshots/forces the projection OFF and has explicit
+scoped restoration of the old mask, actors, graphic state and raw coordinates.
+
+`source-curve-goal.png` marks the manually interpreted leaf paths/widths on an
+original-aspect source crop. One disclosed uniform similarity maps source XY
+from four existing true-brow anchors (0.531058 mm/pixel, 0.758511 degrees; maximum
+anchor residual 0.107161 mm). These are not recovered artist curves or a unique
+3D reconstruction. Depth is inferred from the declared frontal shells. The
+whole widening initial sections meet the retained actual parent, using the M2
+root-emergence lesson rather than burying only a cap. One leaf requires up to
+10.625 mm of lateral nearest-surface depth inference; this needs actual oblique
+review. Three leaves are closed, nonzero-area meshes with real `LockParamUV`,
+but no rig/contact/appearance approval follows from those construction checks.
+
+Two CPU preparation errors were rejected before any live installation: snapping
+every widening section backward to an exposed parent surface distorted depth;
+then sampling unfiltered Main rays allowed a fallback onto rear-head geometry.
+The ready payload seats only the point-like root backward, constrains wider
+sections against penetration, and infers free depth only from declared frontal
+shells. The earlier payloads are marked rejected and must not be installed. This
+is one geometry hypothesis with corrected data handling, not selected evidence
+from a rendered variant search. First actual front/oblique proof remains pending
+the body owner's exclusive MCP handoff.
+
 ## Still required
 
 - Actual whole-front ownership/forelock refinement with source-visible brow
-  thickness and curved gaps, then neutral/angry/surprised/blink expression
+  thickness and curved gaps, then neutral/frown/surprise/smile expression
   evidence on a genuinely deforming head.
 - Rear central silhouette/volume and closure in back/profile/both obliques and
   high/low, with actual source/before/after. Check the underlap cut and body

@@ -1,0 +1,20 @@
+{
+  "source": "asset/mia/references/received/mia-face-reaffirmed-20261031.png",
+  "source_sha256": "179d3ee9ebfea9c7f4b5725d487bf32a91b37397687cdef1d8c7b301cfee0a44",
+  "source_interpretation": "Manually interpreted left-brow terminal clump centerlines and full widths. Hidden roots/depth are inferred; these are not recovered artist splines. Source eyebrow ink crosses some opaque-looking shafts, so complete physical brow exposure is not the target.",
+  "scope": "One left-brow terminal forelock module, replacing the complete fine+inner co-located shells only. Outer fringe, right diagonal forelock, crown, accepted face/brows and retained M2 rear locks stay unchanged.",
+  "hidden_component_roots": [47790, 47982, 48443, 48868, 48535, 41036, 49058, 48600],
+  "source_brow_anchors": [
+    {"pixel": [410, 276], "side": -1, "u": 0.22985639857035745},
+    {"pixel": [455, 272], "side": -1, "u": 0.718934880061363},
+    {"pixel": [520, 270], "side": 1, "u": 0.022267442441498097},
+    {"pixel": [551, 261], "side": 1, "u": 0.349072519337134}
+  ],
+  "leaves": [
+    {"name": "LeftFine", "pixels": [[427, 205], [422, 240], [424, 270], [433, 292], [445, 303]], "full_width_pixels": [0, 12, 14, 10, 0], "maximum_half_depth_m": 0.00065},
+    {"name": "LeftMiddle", "pixels": [[446, 195], [443, 232], [446, 266], [459, 294], [473, 310]], "full_width_pixels": [0, 14, 16, 13, 0], "maximum_half_depth_m": 0.00085},
+    {"name": "LeftInner", "pixels": [[464, 188], [467, 228], [473, 267], [488, 298], [502, 318]], "full_width_pixels": [0, 20, 21, 16, 0], "maximum_half_depth_m": 0.0010}
+  ],
+  "required_physical_proof": "Partial display overlay OFF; one active derived Main with combined rear+front mask, 3 new leaves, retained M2 locks. Actual hairON front/oblique first; no expression or ART claim from CPU rays. Then genuine neutral/frown/surprise/smile and specified adjacent angles.",
+  "restore_scope": "Remove only the owned frontal mask modifier/attribute and three terminal actors; return the retained M2 derived Main and previous graphic-option visibility exactly. Do not replace or hide the retained M2 module with another Main copy."
+}
