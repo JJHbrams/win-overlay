@@ -573,12 +573,18 @@
     "D_recovery_preservation": "All13977 D-visible object IDs and11head refs independently present in C; no C objects/info/alternates dependency.",
     "actual_C_without_old_D": ".mia-cache/body-h/live/C-after-D-retired.json; execute_blender_code status ok; 19rearactors/body/visibility/camera/rows exact",
     "current_capacity": "C-only guard512MiB reservation passed; component bytes620635908, ceiling2147483648. Capacity only.",
-    "paths_tests": "4review_h paths +16pipeline tests pass from C with old D root absent; unittest discover per directory.",
+    "paths_tests": "24 pass:4review_h paths,16pipeline,4body migration tests; run from actual C canonical after old D root absent.",
     "whole_D_delete_automatic_review": {
       "result": "REJECTED before execution",
       "reason": "blocked by policy",
       "equivalent_retry": false
     },
-    "legacy_backups": "Previous rejected archive/prototype removal remains untouched;6,764,548,435B D backups retained. Do not repeat deletion via another tool."
+    "legacy_backups": "Previous rejected archive/prototype removal remains untouched;6,764,548,435B D backups retained. Do not repeat deletion via another tool.",
+    "source_path_commits": [
+      "4efb110",
+      "a47a973"
+    ],
+    "push_destination": "origin HEAD:codex/mia-v003-fit (local codex/mia-current is the active C branch)",
+    "independent_review": "C continuity/accounting/source-path migration accepted within scope; allDobjects/11heads/status/inputSHAs independently checked. D full deletion incomplete; no ART judgment."
   }
 }
