@@ -1,0 +1,50 @@
+{
+  "status": "PASS independent D3 revision ID and actual file crosscheck; no native ART approval",
+  "producer_proof": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\collar-revision-D3-proof.json",
+  "producer_proof_sha256": "1b9be3076c92d71dba37e85b88e818184825d09e50bc6058453b0c030029c123",
+  "changed_IDs_match_producer": true,
+  "all_changed_IDs_exact_producer_interior_collar_rows": true,
+  "changed_vertices": 11528,
+  "D3_target_sha256": "c5c5177af0cbe71c1f3f612e5ec58e3ad8dd9b046e202e11d82440c932f7be5d",
+  "PNG_bytes": {
+    "SkinBaseColor": {
+      "B_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+      "C_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+      "D2_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+      "D3_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+      "byte_identical": true
+    },
+    "UnderwearBaseColor": {
+      "B_sha256": "2110a03c55648e8e3ce329a8f0ec9899dab37782deb9cb28585144cab12f83a7",
+      "C_sha256": "2110a03c55648e8e3ce329a8f0ec9899dab37782deb9cb28585144cab12f83a7",
+      "D2_sha256": "2110a03c55648e8e3ce329a8f0ec9899dab37782deb9cb28585144cab12f83a7",
+      "D3_sha256": "2110a03c55648e8e3ce329a8f0ec9899dab37782deb9cb28585144cab12f83a7",
+      "byte_identical": true
+    },
+    "UnderwearCoverage": {
+      "B_sha256": "e72ef73f611dcbaee813a632da5578c70ed486042231c8c67270253a8d290d4e",
+      "C_sha256": "e72ef73f611dcbaee813a632da5578c70ed486042231c8c67270253a8d290d4e",
+      "D2_sha256": "e72ef73f611dcbaee813a632da5578c70ed486042231c8c67270253a8d290d4e",
+      "D3_sha256": "e72ef73f611dcbaee813a632da5578c70ed486042231c8c67270253a8d290d4e",
+      "byte_identical": true
+    },
+    "ClavicleInk": {
+      "B_sha256": "15f061e2ca6e961365d74eb85e0c5f74893120020070b49c8b097b2d032b568f",
+      "C_sha256": "15f061e2ca6e961365d74eb85e0c5f74893120020070b49c8b097b2d032b568f",
+      "D2_sha256": "15f061e2ca6e961365d74eb85e0c5f74893120020070b49c8b097b2d032b568f",
+      "D3_sha256": "15f061e2ca6e961365d74eb85e0c5f74893120020070b49c8b097b2d032b568f",
+      "byte_identical": true
+    },
+    "ClavicleShade": {
+      "B_sha256": "60fc024127ece79e08833a5a292fbd179aa21e5fc4cc0c26beaa1d3bcd3a81c8",
+      "C_sha256": "60fc024127ece79e08833a5a292fbd179aa21e5fc4cc0c26beaa1d3bcd3a81c8",
+      "D2_sha256": "60fc024127ece79e08833a5a292fbd179aa21e5fc4cc0c26beaa1d3bcd3a81c8",
+      "D3_sha256": "60fc024127ece79e08833a5a292fbd179aa21e5fc4cc0c26beaa1d3bcd3a81c8",
+      "byte_identical": true
+    }
+  },
+  "B_C_D2_preserved": true,
+  "D3_fresh_bake": true,
+  "initial_D_09c353_received_or_baked": false,
+  "identity_reason": "Only uniform-skin collars moved; held UV/source-pattern surfaces produce identical PNGs after fresh D3 seating/bake."
+}
