@@ -1,0 +1,348 @@
+{
+  "status": "ONE_H_GUIDE_CPU_READY_UNSELECTED_NOT_ART",
+  "artifacts_local_ignored_not_in_Git": [
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\roof-fit.json",
+      "bytes": 261692,
+      "sha256": "b4ccdc0b6c87157268abc8957092dd6f0a91186d19b47734849415aed7751f15"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\H-guide-raw.npz",
+      "bytes": 1018515,
+      "sha256": "44cea9c517121d2ea09ae4fee652f637a1b7390cbb956b36a4cd450fcaac5b71"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\H-guide-build.json",
+      "bytes": 20156,
+      "sha256": "502b7d09692388650ac6f9723f3a6ba440647070bc55836ef384ccdc289c0be3"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\H-halo-diagnostic.json",
+      "bytes": 18301,
+      "sha256": "9a9fe1142f781dae4535ed24d6458d34d7929defc6d686c34d0e7c170d58820f"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\H-guide.npz",
+      "bytes": 1018516,
+      "sha256": "098b13d96c880a701218f003b92c0c13254979639b5a8b9d1bea318dc891ac04"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\H-lower-correspondence.npz",
+      "bytes": 138204,
+      "sha256": "3775c9a26939274a548e90d4ff7284df33d32c03c6646c6b58a6afa31ca6ba98"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\H-guide-final.json",
+      "bytes": 29316,
+      "sha256": "fedd6a3df5cd0817c3fcc2e0281fc487d53bd206dc6785e7683eb668ac963507"
+    }
+  ],
+  "immutable_inputs": [
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder11\\shoulder11-canonical.npz",
+      "bytes": 1046781,
+      "sha256": "9382e21638e35ce36e3818cc0eb8e060994cc05227a5c56b262dcea7f4b843e9"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder11\\field.py",
+      "bytes": 897,
+      "sha256": "47765af87056ec1222b1582949df4adb15b2bb79ffa48cf74ed0d390c93d9395"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder11\\parameters.json",
+      "bytes": 17097,
+      "sha256": "548f90fd0a8220db6d2e691f2c52c668545510cfc3ba996e9d7efbbf71fcc3e1"
+    }
+  ],
+  "source_transitive_field_sha256": [
+    "6bd907200a1ed082daf81fd2abde77e229890ecce405b415e3ca5b8e1e76f20d",
+    "94ff4d29ec7629de017281aef6fc63e3d681fd2da0dd7d9c6f6583b265f34bd0"
+  ],
+  "final_world_sha256": "05a3a24f0627dfba6645f993c399196248b3757ee2ab23c8df42f93685642c2f",
+  "final_triangles_sha256": "c356244070a48d199bcf59210ed5a328ceeaa51c5096a44a3564ca747f800b0e",
+  "topology": {
+    "vertices": 65362,
+    "triangles": 130720,
+    "finite": true,
+    "zero_area_faces": 0,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "inconsistent_oriented_edges": 0,
+    "connected_components": 1,
+    "signed_volume_m3": 0.014431099888632774,
+    "minimum_double_area_m2": 1.7170171907611945e-08
+  },
+  "source_physical_retention": {
+    "vertices": 49658,
+    "oriented_triangles": 98928,
+    "coordinates_and_oriented_triplets_exact": true,
+    "spatial_correspondence_not_same_indices": true
+  },
+  "repair": {
+    "kind": "Explicit root-authorized constrained lower VDB boundary; NOT roundoff",
+    "count": 10,
+    "only_Z_changed": true,
+    "max_m": 3.325939178466797e-05,
+    "source11_ids": [
+      4593,
+      5624,
+      5659,
+      10920,
+      10933,
+      57681,
+      57692,
+      60258,
+      61281,
+      61302
+    ],
+    "H_ids": [
+      4590,
+      5431,
+      5456,
+      10511,
+      10524,
+      57577,
+      57589,
+      59869,
+      60731,
+      60748
+    ],
+    "normal_change_max_degrees": 0.2760289596906506,
+    "edge_turn_change_max_degrees": 0.3446592532903132,
+    "field_membership_sign_changes": 0,
+    "restored_H_equals_source11_field": true
+  },
+  "whole_guide_intersections": {
+    "nonadjacent": 0,
+    "BVH_overlap_candidates": 0,
+    "adjacent_shared_vertex_pairs_excluded": true
+  },
+  "outer_cap_roof": {
+    "threshold_absX_m": 0.085,
+    "max_Z": 1.3972944892122516,
+    "witness": {
+      "point": [
+        -0.085,
+        0.01128152571618557,
+        1.3972944892122516
+      ],
+      "triangle": 35892,
+      "side": -1,
+      "type": "triangleclippedatabsXthreshold"
+    },
+    "meaning": "Maximum actual triangle surface outsideabsX>=.085, including clippededgeintersections; stronger than vertices-only cap test."
+  },
+  "sections": {
+    "1.397": {
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "offset": 1.397,
+      "segment_count": 391,
+      "loop_count": 1,
+      "closed": true,
+      "loops": [
+        {
+          "vertices": 391,
+          "closed": true,
+          "bounds": [
+            [
+              -0.08626423390266039,
+              -0.0693321096787792,
+              1.397
+            ],
+            [
+              0.08626423390266039,
+              0.0550152314837325,
+              1.397
+            ]
+          ],
+          "bbox_center": [
+            0.0,
+            -0.00715843909752335,
+            1.397
+          ],
+          "mean": [
+            0.0012236306018343153,
+            -0.005156601159930057,
+            1.3969999999999976
+          ]
+        }
+      ],
+      "meaning": "Actual evaluated mesh/plane intersections;1nm endpoint-key rounding only for connectivity, no mesh coordinate edits."
+    },
+    "1.4": {
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "offset": 1.4,
+      "segment_count": 367,
+      "loop_count": 1,
+      "closed": true,
+      "loops": [
+        {
+          "vertices": 367,
+          "closed": true,
+          "bounds": [
+            [
+              -0.07120359789385261,
+              -0.0680203866846628,
+              1.4
+            ],
+            [
+              0.07118855174075886,
+              0.05389855758649283,
+              1.4
+            ]
+          ],
+          "bbox_center": [
+            -7.52307654687534e-06,
+            -0.007060914549084984,
+            1.4
+          ],
+          "mean": [
+            0.0003964530980399453,
+            -0.006978542194340199,
+            1.3999999999999906
+          ]
+        }
+      ],
+      "meaning": "Actual evaluated mesh/plane intersections;1nm endpoint-key rounding only for connectivity, no mesh coordinate edits."
+    },
+    "1.415": {
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "offset": 1.415,
+      "segment_count": 308,
+      "loop_count": 1,
+      "closed": true,
+      "loops": [
+        {
+          "vertices": 308,
+          "closed": true,
+          "bounds": [
+            [
+              -0.05012433051892992,
+              -0.0605233999520537,
+              1.415
+            ],
+            [
+              0.05012433681957121,
+              0.047364123615800564,
+              1.415
+            ]
+          ],
+          "bbox_center": [
+            3.1503206432415e-09,
+            -0.006579638168126567,
+            1.415
+          ],
+          "mean": [
+            -4.936283853207381e-06,
+            -0.0065974459963593895,
+            1.415000000000007
+          ]
+        }
+      ],
+      "meaning": "Actual evaluated mesh/plane intersections;1nm endpoint-key rounding only for connectivity, no mesh coordinate edits."
+    },
+    "1.42": {
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "offset": 1.42,
+      "segment_count": 269,
+      "loop_count": 1,
+      "closed": true,
+      "loops": [
+        {
+          "vertices": 269,
+          "closed": true,
+          "bounds": [
+            [
+              -0.04675134061275477,
+              -0.05784496462232888,
+              1.42
+            ],
+            [
+              0.04675135551391597,
+              0.044996921110475305,
+              1.42
+            ]
+          ],
+          "bbox_center": [
+            7.450580596923828e-09,
+            -0.006424021755926788,
+            1.42
+          ],
+          "mean": [
+            -0.00026123318718625796,
+            -0.0063585011801747075,
+            1.4200000000000015
+          ]
+        }
+      ],
+      "meaning": "Actual evaluated mesh/plane intersections;1nm endpoint-key rounding only for connectivity, no mesh coordinate edits."
+    },
+    "1.434": {
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "offset": 1.434,
+      "segment_count": 231,
+      "loop_count": 1,
+      "closed": true,
+      "loops": [
+        {
+          "vertices": 231,
+          "closed": true,
+          "bounds": [
+            [
+              -0.03959015395399884,
+              -0.05132682460670365,
+              1.434
+            ],
+            [
+              0.03959015395399884,
+              0.03926162820656823,
+              1.434
+            ]
+          ],
+          "bbox_center": [
+            0.0,
+            -0.0060325982000677125,
+            1.434
+          ],
+          "mean": [
+            -0.00047488172067496417,
+            -0.00625022398293345,
+            1.4340000000000042
+          ]
+        }
+      ],
+      "meaning": "Actual evaluated mesh/plane intersections;1nm endpoint-key rounding only for connectivity, no mesh coordinate edits."
+    }
+  },
+  "upperguide_volume_delta_m3": -0.0008558929575716179,
+  "volume_scope": "Closedstaticupperguideincludingtemporaryneckstub, notfullbodyormedicalvolume",
+  "mesher_runs": 1,
+  "finalizer_ran_mesher": false,
+  "GPU_used": false,
+  "native_saved": false,
+  "neck_AP_RY_or_head_transform_applied": false,
+  "input_copies": false,
+  "actual_art_status": "UNVERIFIED: roof27of33; max5.828mm excess,1.3405mm midY upturn and posterior normal turn risks. Needs source4/highlow and fresh-neck assembly review.",
+  "raw_STOP_and_raw_geometry_preserved": true,
+  "workflow_activity_sync": "Unavailable tools; no sync claimed"
+}
