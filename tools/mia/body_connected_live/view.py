@@ -5,15 +5,17 @@ import bpy,numpy as np
 ROOT=Path('D:/MiaWorkCache/mia-reference-work/win-overlay');ns=bpy.app.driver_namespace
 sys.path.insert(0,str(ROOT/'asset/mia/blender/mia-fit-v003/body/surface-review12'))
 import review_fixture as fixture
-ob=bpy.data.objects['MIA_ConnectedBody_Design']
+object_name='MIA_ChartedBody_Design' if 'MIA_ChartedBody_Design' in bpy.data.objects else 'MIA_ConnectedBody_Design'
+prefix='MIA_Charted_' if object_name=='MIA_ChartedBody_Design' else 'MIA_Connected_'
+ob=bpy.data.objects[object_name]
 mode=ob.mode
 if mode!='OBJECT':bpy.ops.object.mode_set(mode='OBJECT')
 scene=bpy.context.scene;cam=scene.camera
-if 'MIA_Connected_Camera' not in ns:
-    ns['MIA_Connected_Camera']=dict(matrix=cam.matrix_world.copy(),type=cam.data.type,ortho_scale=cam.data.ortho_scale,lens=cam.data.lens,
+if prefix+'Camera' not in ns:
+    ns[prefix+'Camera']=dict(matrix=cam.matrix_world.copy(),type=cam.data.type,ortho_scale=cam.data.ortho_scale,lens=cam.data.lens,
         clip_start=cam.data.clip_start,clip_end=cam.data.clip_end,resolution_x=scene.render.resolution_x,resolution_y=scene.render.resolution_y,
         resolution_percentage=scene.render.resolution_percentage,pixel_aspect_x=scene.render.pixel_aspect_x,pixel_aspect_y=scene.render.pixel_aspect_y)
-    ns['MIA_Connected_Viewport']=[(area.spaces.active,dict(location=area.spaces.active.region_3d.view_location.copy(),
+    ns[prefix+'Viewport']=[(area.spaces.active,dict(location=area.spaces.active.region_3d.view_location.copy(),
         rotation=area.spaces.active.region_3d.view_rotation.copy(),distance=area.spaces.active.region_3d.view_distance,
         perspective=area.spaces.active.region_3d.view_perspective,clip_start=area.spaces.active.clip_start,clip_end=area.spaces.active.clip_end,
         shading_type=area.spaces.active.shading.type,color_type=area.spaces.active.shading.color_type,
