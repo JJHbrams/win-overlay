@@ -89,3 +89,27 @@ corresponding per-corner attributes. The already-exported root payload remains
 unchanged by this worker; a root-authorized corrected payload and fresh audit are
 required. Fresh geometry must reverse UV corner order for those same triangles,
 including both atlas and body-surface exchange, to preserve the UV mapping.
+
+Root subsequently authorized the separate `winding-fixed/` cache variant.
+`correct_winding_payload.py` reversed only those3 triangle corner orders and
+the matching geometry attributes/atlas/surface UV orders. World coordinates,
+vertex IDs, undirected connectivity, UV mapping and every other array remained
+exact. Original failed files and proof were hash-checked unchanged. The new
+payload wrote12,618,802bytes plus compact proof; collar rows reference the
+original path instead of duplicating it.
+
+Fresh Blender5.2.3 CPU verification completed1.83s with zero new winding,
+boundary/nonmanifold or nonadjacent collar intersections. Head UV/WORLD normals,
+protected head/lower coordinates and actual surface binding/nonzero UV passed.
+The corrected geometry SHA is
+`b36c0f78f495ebb252ab01dc525b38b005e60a12b6799157b6ba6d3ef8e1dd1a`;
+surface SHA is
+`d981def8cb68103a0092d3e53ddf74423c0d05117825ef6e7416abd50cede9f2`.
+Raw proof lives in canonical assembly `winding-fixed/verify.json` and
+`winding-correction.json`; not committed or promised in a fresh clone.
+
+**The neck curvature remains a warning:** after the winding correction,
+ordinary2–6mm edge maximum96.88degrees (p95=6.06). This is real geometry rather
+than a normal-map artifact. Source205 centerline residual14.7mm and steep
+centerline slope2.77 also remain. Root's first actual gray/source diagnostic
+must judge these; the CPU gate is not an appearance/native/ART approval.
