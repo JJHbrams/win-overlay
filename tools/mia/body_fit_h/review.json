@@ -1,0 +1,40 @@
+{
+  "status": "RAM_FIXED_FLOOR_STOP_INDEPENDENT_CONFIRMED",
+  "shape_solve_run": false,
+  "mesh_created": false,
+  "GPU_used": false,
+  "native_saved": false,
+  "inputs_copied": false,
+  "raw_cache_ignored_not_staged": true,
+  "final_source_camera_trace_report": "fixed-floor-camera-box-2d-trace.json",
+  "superseded_report": "fixed-floor-camera-box.json was vertical-trace-only; do not use its third back certificate",
+  "certified_front_fan_excess_mm": [
+    6.104005397608248,
+    1.9987433258097376
+  ],
+  "limits": "Declared rigid-camera yaw/pitch and2Dtrace boxes only; not arbitrary source limb articulation or drawing deformation. No fixedcomponent edit is adopted.",
+  "cache_receipts": [
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\competitor-floor.json",
+      "bytes": 69390,
+      "sha256": "47f16651a87037c67d43875946ecc5cc415d8561b2a0a661cdd02115ab801593"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\upper-window-diagnostic.json",
+      "bytes": 8702,
+      "sha256": "e28fa7e3d3476aa75e3bf9a7992d57a316edc6674570bff7fa72af6abf56620c"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\fixed-floor-camera-box-2d-trace.json",
+      "bytes": 118343,
+      "sha256": "1e04c4b06ff1bf6b1b83a278396cbd0948f398bf31b854d64e73fd13baa2b4d1"
+    },
+    {
+      "path": "D:\\MiaWorkCache\\mia-reference-work\\win-overlay\\.mia-cache\\body-h\\shape\\floor-math-verification.json",
+      "bytes": 882,
+      "sha256": "10a82340923eed738a3867dd1ec6765f4052b3f7d1697254642e3dd1426fa123"
+    }
+  ],
+  "independent_reviewer": "/root/body_h_acceptance",
+  "independent_scope": "Confirmed projected ellipse/frozenfield/tangency and6.104/1.999mm conditional all-camera+trace bounds; H artifacts still unverified"
+}
