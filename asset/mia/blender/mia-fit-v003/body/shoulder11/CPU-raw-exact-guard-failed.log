@@ -1,0 +1,13 @@
+BlenderMCP addon registered
+Traceback (most recent call last):
+  File "C:\Users\antio\.codex\worktrees\mia-v002-body\win-overlay\asset\mia\blender\mia-fit-v003\body\shoulder11\audit_cpu.py", line 23, in <module>
+    exec(compile(code,str(SOURCE)+'::own11baseline_adaptation','exec'),globals())
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\antio\.codex\worktrees\mia-v002-body\win-overlay\asset\mia\blender\mia-fit-v003\body\posterior-union09\audit_mesh.py::own11baseline_adaptation", line 48, in <module>
+AssertionError: ('STOP protectedphysicalhold failed; no postmesh correction', {'breast': {'region': 'E supported front breast: |X|<=.125,Y<=-.030,Z1.18..1.35', 'source_vertices': 11962, 'unmatched_vertices': 0, 'source_triangles': 23520, 'unmatched_triangles': 0, 'exact': True}, 'lower': {'region': 'Entire09 lower protected surfaceZ<=1.36', 'source_vertices': 52448, 'unmatched_vertices': 0, 'source_triangles': 104536, 'unmatched_triangles': 0, 'exact': True}, 'upper_neck': {'region': 'Entire design neck aboveZ1.465', 'source_vertices': 2398, 'unmatched_vertices': 4, 'source_triangles': 4699, 'unmatched_triangles': 14, 'exact': False}})
+
+Error: script failed, file: 'asset/mia/blender/mia-fit-v003/body/shoulder11/audit_cpu.py', exiting.
+BlenderMCP addon unregistered
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

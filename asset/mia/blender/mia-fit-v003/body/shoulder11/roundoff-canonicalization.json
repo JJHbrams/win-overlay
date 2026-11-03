@@ -1,0 +1,103 @@
+{
+  "status": "EXPLICIT exact4 nanometre roundoff restoration, ONE field/meshing only",
+  "raw_NPZ_sha256": "61c655d1916776940b1a29d32fe1dd9fbd5633007fa465a58d36394e3efde94b",
+  "final_NPZ_sha256": "9382e21638e35ce36e3818cc0eb8e060994cc05227a5c56b262dcea7f4b843e9",
+  "raw_world_f32_sha256": "10f77f618e3b3c892b2e6d330abfd1731968a84d0f211e73c3d2e02f349185e4",
+  "final_world_f32_sha256": "24b95cb52edb62df2121b12ddb02bb1a1286908f81a092bda8040c9a71eb92eb",
+  "bijective_mapping": [
+    {
+      "old09_vertex": 38790,
+      "raw11_vertex": 38493,
+      "before": [
+        -0.036173075437545776,
+        0.0052248891443014145,
+        1.4655691385269165
+      ],
+      "after": [
+        -0.03617314621806145,
+        0.0052248891443014145,
+        1.4655691385269165
+      ],
+      "delta_m": [
+        -7.078051567077637e-08,
+        0.0,
+        0.0
+      ],
+      "distance_m": 7.078051567077637e-08
+    },
+    {
+      "old09_vertex": 39130,
+      "raw11_vertex": 38870,
+      "before": [
+        -0.033546775579452515,
+        0.011420735158026218,
+        1.4657306671142578
+      ],
+      "after": [
+        -0.033546824008226395,
+        0.011420735158026218,
+        1.4657306671142578
+      ],
+      "delta_m": [
+        -4.842877388000488e-08,
+        0.0,
+        0.0
+      ],
+      "distance_m": 4.842877388000488e-08
+    },
+    {
+      "old09_vertex": 42310,
+      "raw11_vertex": 42051,
+      "before": [
+        0.03617309033870697,
+        0.005224908702075481,
+        1.4655691385269165
+      ],
+      "after": [
+        0.03617316111922264,
+        0.005224908702075481,
+        1.4655691385269165
+      ],
+      "delta_m": [
+        7.078051567077637e-08,
+        0.0,
+        0.0
+      ],
+      "distance_m": 7.078051567077637e-08
+    },
+    {
+      "old09_vertex": 42699,
+      "raw11_vertex": 42477,
+      "before": [
+        0.03354678303003311,
+        0.011420735158026218,
+        1.4657306671142578
+      ],
+      "after": [
+        0.03354682773351669,
+        0.011420735158026218,
+        1.4657306671142578
+      ],
+      "delta_m": [
+        4.470348358154297e-08,
+        0.0,
+        0.0
+      ],
+      "distance_m": 4.470348358154297e-08
+    }
+  ],
+  "changed_points": 4,
+  "maximum_distance_m": 7.078051567077637e-08,
+  "Y_Z_already_exact": true,
+  "all_other_coordinates_bitexact": true,
+  "triangles_bitexact": true,
+  "actual_incident_triangles": 30,
+  "actual_maximum_face_normal_change_degrees": 0.0031414050499119256,
+  "actual_incident_normal_change_degrees": [
+    0.0014093509332956068,
+    0.0030296313706021736,
+    0.0031414050499119256
+  ],
+  "authority": "Root explicitly authorized only4 unique old09 upperprotected counterpart restorations <=1e-7m after raw exactguardFAIL. No tolerance relaxation: final exacttriangle/coordinate guards must pass.",
+  "limitation": "Not a physical C0 sculpt mask; no remesh, new field/gate, width variant, GPU or native save. Savednative/actuals must useFINAL hash only."
+}
