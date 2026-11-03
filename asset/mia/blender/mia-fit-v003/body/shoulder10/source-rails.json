@@ -1,0 +1,203 @@
+{
+  "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png",
+  "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+  "original_size": [
+    1536,
+    1024
+  ],
+  "role": "User-designated tied-hair shoulder/neck contour; mainv06 remains global body reference.",
+  "registration": {
+    "metres_per_pixel": 0.001845870535714286,
+    "front_axis_pixel": 239.0,
+    "zero_world_z_pixel": 971.9137795513633,
+    "source_crop_front": [
+      130.650039301046,
+      172.8328193965777,
+      347.34996069895396,
+      389.5327407944857
+    ],
+    "method": "Exact frozen E/09 wholeheight uniform registration. Same1536x1024 canvas and body panels; no shoulder normalization or aspect warp."
+  },
+  "traces_original_pixels": {
+    "front_left_skin": [
+      [
+        153,
+        231
+      ],
+      [
+        158,
+        226
+      ],
+      [
+        163,
+        224
+      ],
+      [
+        168,
+        223
+      ],
+      [
+        173,
+        223
+      ],
+      [
+        178,
+        222
+      ],
+      [
+        183,
+        221
+      ],
+      [
+        188,
+        220
+      ],
+      [
+        198,
+        219
+      ],
+      [
+        203,
+        215
+      ],
+      [
+        208,
+        212
+      ],
+      [
+        213,
+        209
+      ],
+      [
+        218,
+        205
+      ]
+    ],
+    "front_right_skin": [
+      [
+        258,
+        201
+      ],
+      [
+        263,
+        206
+      ],
+      [
+        268,
+        210
+      ],
+      [
+        273,
+        213
+      ],
+      [
+        278,
+        216
+      ],
+      [
+        293,
+        221
+      ],
+      [
+        298,
+        223
+      ],
+      [
+        303,
+        223
+      ],
+      [
+        308,
+        224
+      ],
+      [
+        313,
+        225
+      ],
+      [
+        318,
+        227
+      ],
+      [
+        323,
+        235
+      ],
+      [
+        328,
+        238
+      ]
+    ],
+    "back_left_skin": [
+      [
+        840,
+        237
+      ],
+      [
+        845,
+        232
+      ],
+      [
+        850,
+        229
+      ],
+      [
+        855,
+        227
+      ],
+      [
+        865,
+        226
+      ],
+      [
+        870,
+        224
+      ],
+      [
+        875,
+        224
+      ],
+      [
+        890,
+        217
+      ],
+      [
+        895,
+        214
+      ],
+      [
+        900,
+        211
+      ],
+      [
+        905,
+        208
+      ]
+    ]
+  },
+  "uncertainty": "Manual visible boundary runs \u00b12px; strap crossings omitted around frontX190..196,284..290 and backX878..886. Left/right are separately observed; a symmetric map does not claim symmetric source identity. Pose, illustrated camera and source construction differ.",
+  "source_camera_estimates": {
+    "front": [
+      0,
+      0
+    ],
+    "profile": [
+      85,
+      0
+    ],
+    "back": [
+      180,
+      0
+    ],
+    "oblique": [
+      40,
+      0
+    ]
+  },
+  "camera_uncertainty_degrees": {
+    "front_yaw": 4,
+    "profile_yaw": 8,
+    "back_yaw": 4,
+    "oblique_yaw": 10,
+    "pitch": 6
+  }
+}

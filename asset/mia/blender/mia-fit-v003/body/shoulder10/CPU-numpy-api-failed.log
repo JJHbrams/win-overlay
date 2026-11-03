@@ -1,0 +1,13 @@
+BlenderMCP addon registered
+Traceback (most recent call last):
+  File "C:\Users\antio\.codex\worktrees\mia-v002-body\win-overlay\asset\mia\blender\mia-fit-v003\body\shoulder10\audit_cpu.py", line 16, in <module>
+    transport=np.linalg.solve(jc.transpose(0,2,1),n0);transport/=np.linalg.norm(transport,axis=1)[:,None]
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\numpy\linalg\_linalg.py", line 471, in solve
+    r = gufunc(a, b, signature=signature)
+ValueError: solve: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (m,m),(m,n)->(m,n) (size 135980 is different from 3)
+
+Error: script failed, file: 'asset/mia/blender/mia-fit-v003/body/shoulder10/audit_cpu.py', exiting.
+BlenderMCP addon unregistered
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
