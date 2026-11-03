@@ -14,3 +14,18 @@ TestResults/
 __pycache__/
 *.py[cod]
 
+# Mia: new experiment exports stay local. Existing tracked files are unaffected.
+# Authored inputs/checkpoints and curated reviews use the explicit directories
+# documented in asset/mia/ARTIFACT_POLICY.md, outside blender/ research caches.
+/.mia-cache/
+/asset/mia/_work/
+/asset/mia/blender/**/*.blend
+/asset/mia/blender/**/*.blend[0-9]*
+/asset/mia/blender/**/*.npz
+/asset/mia/blender/**/*.exr
+/asset/mia/blender/**/*.png
+/asset/mia/blender/**/*.gif
+/asset/mia/blender/**/*.webp
+/asset/mia/blender/**/*.mp4
+/asset/mia/blender/**/render-records.json
+
