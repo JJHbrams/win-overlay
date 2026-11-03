@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\MiaWorkCache\mia-reference-work\surface12-producer\asset\mia\blender\mia-fit-v003\body\surface-review12\build_proportion_F_lattice.py", line 77, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\MiaWorkCache\mia-reference-work\surface12-producer\asset\mia\blender\mia-fit-v003\body\surface-review12\build_proportion_F_lattice.py", line 62, in main
+    assert np.isfinite(out).all() and np.all(localJ>0),('F local orientation failed',float(localJ.min()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('F local orientation failed', -0.012480795730006948)
+
+Error: script failed, file: 'asset/mia/blender/mia-fit-v003/body/surface-review12/build_proportion_F_lattice.py', exiting.
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

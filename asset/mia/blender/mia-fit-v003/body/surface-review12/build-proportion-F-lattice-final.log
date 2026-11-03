@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\MiaWorkCache\mia-reference-work\surface12-producer\asset\mia\blender\mia-fit-v003\body\surface-review12\build_proportion_F_lattice.py", line 112, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\MiaWorkCache\mia-reference-work\surface12-producer\asset\mia\blender\mia-fit-v003\body\surface-review12\build_proportion_F_lattice.py", line 88, in main
+    assert np.linalg.norm(oldcross[limiting])>=1e-7,('Numerical/support sliver remains limiting; stop, no amplitude mask',limiting,float(np.linalg.norm(oldcross[limiting])))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Numerical/support sliver remains limiting; stop, no amplitude mask', 218165, 2.0949218106129077e-08)
+
+Error: script failed, file: 'asset/mia/blender/mia-fit-v003/body/surface-review12/build_proportion_F_lattice.py', exiting.
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

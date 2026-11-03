@@ -1,0 +1,207 @@
+{
+  "method": "ONE small Blender B-spline lattice grid, separable X/Z components and predeclared anatomical VG supports",
+  "source_component_limit": "Primitive scores classify existing construction ownership, not measured anatomical bone boundaries or clearance.",
+  "down_hypothesis_m": 0.025,
+  "inward_hypothesis_m": 0.009,
+  "geodesic_patch_padding_m": 0.065,
+  "down_core_transition_m": 0.065,
+  "inward_core_transition_m": 0.025,
+  "component_names": [
+    "curved_tapered_thorax_neck",
+    "breast_pair",
+    "shoulder_R",
+    "shoulder_L",
+    "upper_arm_R",
+    "upper_arm_L",
+    "anterior_fan_R",
+    "anterior_fan_L",
+    "posterior_wall_R",
+    "posterior_wall_L",
+    "trapezius_R",
+    "trapezius_L"
+  ],
+  "free_vertices": 32726,
+  "hard_core_vertices": 17648,
+  "protected_vertices": 106279,
+  "roof_handles": 4294,
+  "crest_handles": 180,
+  "patch_vertices": 35794,
+  "patch_triangles": 70123,
+  "handle_bounds": [
+    [
+      -0.19499920308589935,
+      -0.047446995973587036,
+      1.3221019506454468
+    ],
+    [
+      0.19513699412345886,
+      0.04908221960067749,
+      1.4450000524520874
+    ]
+  ],
+  "roof_core_distance_percentiles_m": [
+    0.006033008208374239,
+    0.015277998772817367,
+    0.062398419092591265,
+    0.12094501220508722,
+    0.15899940389868503
+  ],
+  "crest_inward_requested_percentiles_m": [
+    0.0009108057680567068,
+    0.001388534355663452,
+    0.0051812240631027885,
+    0.009,
+    0.009
+  ],
+  "upper_head_cut_fixed": true,
+  "hips_and_original_forearms_fixed": true,
+  "neck_guide_loop_is_not_skeletal_notch": true,
+  "lattice_points": [
+    13,
+    5,
+    12
+  ],
+  "head_stretch_transition_m": 0.02,
+  "core_vertical_compression_transition_m": 0.065,
+  "core_transverse_transition_m": 0.025,
+  "lower_join_transition_m": 0.035,
+  "Y_identity": true,
+  "posthoc_pin_restore": false,
+  "solver_seconds": 0.34168362617492676,
+  "changed_vertices": 32726,
+  "maximum_delta_m": 0.016623107822082865,
+  "maximum_y_delta_m": 0.0,
+  "protected_vertices_byte_exact": true,
+  "topology_UV_head_exact": true,
+  "actual_lattice_rest_bounds": [
+    [
+      -6.0,
+      -2.0,
+      -5.5
+    ],
+    [
+      6.0,
+      2.0,
+      5.5
+    ]
+  ],
+  "actual_lattice_control_world_bounds": [
+    [
+      -3.7799999713897705,
+      -0.5324999690055847,
+      -1.7000000476837158
+    ],
+    [
+      3.7799999713897705,
+      0.48749998211860657,
+      4.350000381469727
+    ]
+  ],
+  "intended_physical_control_bounds": [
+    [
+      -0.315,
+      -0.15,
+      1.05
+    ],
+    [
+      0.315,
+      0.105,
+      1.6
+    ]
+  ],
+  "local_J_scope": "Per-triangle affine prism extension keeps original normal direction; positive projected oriented area, not an interior-volume diffeomorphism claim",
+  "local_J_min": -0.012480795730006948,
+  "negative_or_zero_J_faces": 1,
+  "negative_faces": [
+    {
+      "face": 158316,
+      "source_part": 2,
+      "source_face": -108291,
+      "vertex_ids": [
+        79104,
+        79093,
+        79094
+      ],
+      "world_before": [
+        [
+          -0.031205354258418083,
+          0.06359510868787766,
+          1.3640670776367188
+        ],
+        [
+          -0.034280821681022644,
+          0.06361253559589386,
+          1.361093282699585
+        ],
+        [
+          -0.03320613130927086,
+          0.06352019309997559,
+          1.362985372543335
+        ]
+      ],
+      "world_after": [
+        [
+          -0.030759746208786964,
+          0.06359510868787766,
+          1.3573769330978394
+        ],
+        [
+          -0.03379133343696594,
+          0.06361253559589386,
+          1.3544485569000244
+        ],
+        [
+          -0.032731980085372925,
+          0.06352019309997559,
+          1.3554444313049316
+        ]
+      ],
+      "old_double_area_m2": 2.6475800289590215e-06,
+      "local_J": -0.012480795730006948,
+      "x_weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "z_weights": [
+        0.4837967540104199,
+        0.4840205671338099,
+        0.5467652051336507
+      ],
+      "fixed": [
+        false,
+        false,
+        false
+      ],
+      "core_distance_m": [
+        0.03193817555306228,
+        0.0319459389835131,
+        0.03412389456352622
+      ],
+      "head_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ],
+      "lower_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ]
+    }
+  ],
+  "actual_handle_down_percentiles_m": [
+    1.7881393432617188e-06,
+    0.00016231536865234374,
+    0.01467275619506836,
+    0.016309022903442383,
+    0.016504883766174316
+  ],
+  "actual_handle_inward_percentiles_m": [
+    3.807246685028076e-06,
+    0.00021157171577215194,
+    0.0012987032532691956,
+    0.002334162592887878,
+    0.002485617995262146
+  ]
+}

@@ -14,6 +14,8 @@ mode=args[0];native=Path(bpy.data.filepath);native_sha=fixture.sha(native);saved
 outputName=args[1] if len(args)>1 else {'prefly':'material-preflight','orbit':'actual-orbit','diagnostics':'actual-diagnostics','baseline':'actual-baseline4'}[mode]
 assert Path(outputName).name==outputName and '..' not in outputName
 if len(args)>3:assert mode=='prefly';config['maps']=args[3]
+from capacity_gate import check
+check(100)
 O=P/outputName;O.mkdir(exist_ok=True);assert not (O/'render-records.json').exists(),'Never overwrite frozen actuals'
 api=None;bodies={};material_proof=None
 surfaceMeta=json.loads((P/config['surface']).with_suffix('.json').read_text());geometrySpec=dict(geometry_file_sha256=config['geometry_sha256'],surface_file_sha256=config['surface_sha256'],world_sha256=surfaceMeta['geometry_world_sha256'],body_triangles_sha256=surfaceMeta['triangles_sha256'],ReviewUV_sha256=surfaceMeta['loop_uv_sha256'])

@@ -1,0 +1,156 @@
+{
+  "method": "ONE small Blender B-spline lattice grid, separable X/Z components and predeclared anatomical VG supports",
+  "source_component_limit": "Primitive scores classify existing construction ownership, not measured anatomical bone boundaries or clearance.",
+  "down_hypothesis_m": 0.025,
+  "inward_hypothesis_m": 0.009,
+  "geodesic_patch_padding_m": 0.065,
+  "down_core_transition_m": 0.065,
+  "inward_core_transition_m": 0.025,
+  "component_names": [
+    "curved_tapered_thorax_neck",
+    "breast_pair",
+    "shoulder_R",
+    "shoulder_L",
+    "upper_arm_R",
+    "upper_arm_L",
+    "anterior_fan_R",
+    "anterior_fan_L",
+    "posterior_wall_R",
+    "posterior_wall_L",
+    "trapezius_R",
+    "trapezius_L"
+  ],
+  "free_vertices": 32726,
+  "hard_core_vertices": 17648,
+  "protected_vertices": 106279,
+  "roof_handles": 4294,
+  "crest_handles": 180,
+  "patch_vertices": 35794,
+  "patch_triangles": 70123,
+  "handle_bounds": [
+    [
+      -0.19499920308589935,
+      -0.047446995973587036,
+      1.3221019506454468
+    ],
+    [
+      0.19513699412345886,
+      0.04908221960067749,
+      1.4450000524520874
+    ]
+  ],
+  "roof_core_distance_percentiles_m": [
+    0.006033008208374239,
+    0.015277998772817367,
+    0.062398419092591265,
+    0.12094501220508722,
+    0.15899940389868503
+  ],
+  "crest_inward_requested_percentiles_m": [
+    0.0009108057680567068,
+    0.001388534355663452,
+    0.0051812240631027885,
+    0.009,
+    0.009
+  ],
+  "upper_head_cut_fixed": true,
+  "hips_and_original_forearms_fixed": true,
+  "neck_guide_loop_is_not_skeletal_notch": true,
+  "lattice_points": [
+    13,
+    5,
+    12
+  ],
+  "head_stretch_transition_m": 0.02,
+  "core_vertical_compression_transition_m": 0.065,
+  "core_transverse_transition_m": 0.025,
+  "lower_join_transition_m": 0.035,
+  "support_scalar_conditioning": {
+    "metric": "Euclidean distance to actual protected triangles and isolated pin vertices, BVH/KD; smooth5 physical transitions",
+    "graph_geodesic_support_replaced_due_to_skinny_face_alias": true,
+    "graph_heat_filter_applied": false,
+    "position_projection": false
+  },
+  "Y_identity": true,
+  "posthoc_pin_restore": false,
+  "raw_full_amplitude_min_J": 0.00010538145545939652,
+  "raw_full_amplitude_nonpositive_faces": 0,
+  "analytic_amplitude_limit": {
+    "projected_J_floor": 0.25,
+    "nearest_positive_root": 0.7490844384342712,
+    "limiting_face": 201839,
+    "limiting_old_double_area_m2": 2.957549017185523e-06,
+    "selected_scale": 0.7415935940499285,
+    "safety_margin_of_root": 0.01,
+    "selected_nominal_down_m": 0.018539839851248213,
+    "selected_nominal_inward_m": 0.006674342346449356,
+    "rule": "Nearest positive root of1+aA+a\u00b2B=.25 over actual E triangles, one99% root-margin scale, no grid search"
+  },
+  "solver_seconds": 0.6129987239837646,
+  "changed_vertices": 32726,
+  "maximum_delta_m": 0.019621215899057007,
+  "maximum_y_delta_m": 0.0,
+  "protected_vertices_byte_exact": true,
+  "topology_UV_head_exact": true,
+  "actual_lattice_rest_bounds": [
+    [
+      -6.0,
+      -2.0,
+      -5.5
+    ],
+    [
+      6.0,
+      2.0,
+      5.5
+    ]
+  ],
+  "actual_lattice_control_world_bounds": [
+    [
+      -0.3149999976158142,
+      -0.15000000596046448,
+      1.0500000715255737
+    ],
+    [
+      0.3149999976158142,
+      0.10499999672174454,
+      1.600000023841858
+    ]
+  ],
+  "intended_physical_control_bounds": [
+    [
+      -0.315,
+      -0.15,
+      1.05
+    ],
+    [
+      0.315,
+      0.105,
+      1.6
+    ]
+  ],
+  "unweighted_actual_X_translation_max_m": 0.009000271558761597,
+  "unweighted_actual_Z_translation_max_m": 0.025001049041748047,
+  "local_J_scope": "Per-triangle affine prism extension keeps original normal direction; positive projected oriented area, not an interior-volume diffeomorphism claim",
+  "local_J_min": 0.25743152989336343,
+  "negative_or_zero_J_faces": 0,
+  "negative_faces": [],
+  "actual_handle_down_percentiles_m": [
+    1.1920928955078125e-07,
+    0.00017011165618896493,
+    0.01636350154876709,
+    0.018540024757385254,
+    0.018540382385253906
+  ],
+  "actual_handle_inward_percentiles_m": [
+    1.5497207641601562e-06,
+    0.00030823647975921633,
+    0.004396699368953705,
+    0.006674334406852722,
+    0.006674423813819885
+  ],
+  "new_nonadjacent_intersections": [],
+  "geometry_sha256": "2f0790ce921feca48c4fa2baa028b713fe1bffade45b5f07fe0d690f7e59ba6d",
+  "surface_sha256": "5d94181bb38d16cc6aadf26c22afb009eb0de37a039179ec6c8af7b9f8c3f4d0",
+  "native_saved": false,
+  "GPU_used": false
+}

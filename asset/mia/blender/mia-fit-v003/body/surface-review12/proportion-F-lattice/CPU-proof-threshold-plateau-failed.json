@@ -1,0 +1,615 @@
+{
+  "method": "ONE small Blender B-spline lattice grid, separable X/Z components and predeclared anatomical VG supports",
+  "source_component_limit": "Primitive scores classify existing construction ownership, not measured anatomical bone boundaries or clearance.",
+  "down_hypothesis_m": 0.025,
+  "inward_hypothesis_m": 0.009,
+  "geodesic_patch_padding_m": 0.065,
+  "down_core_transition_m": 0.065,
+  "inward_core_transition_m": 0.025,
+  "component_names": [
+    "curved_tapered_thorax_neck",
+    "breast_pair",
+    "shoulder_R",
+    "shoulder_L",
+    "upper_arm_R",
+    "upper_arm_L",
+    "anterior_fan_R",
+    "anterior_fan_L",
+    "posterior_wall_R",
+    "posterior_wall_L",
+    "trapezius_R",
+    "trapezius_L"
+  ],
+  "free_vertices": 32726,
+  "hard_core_vertices": 17648,
+  "protected_vertices": 106279,
+  "roof_handles": 4294,
+  "crest_handles": 180,
+  "patch_vertices": 35794,
+  "patch_triangles": 70123,
+  "handle_bounds": [
+    [
+      -0.19499920308589935,
+      -0.047446995973587036,
+      1.3221019506454468
+    ],
+    [
+      0.19513699412345886,
+      0.04908221960067749,
+      1.4450000524520874
+    ]
+  ],
+  "roof_core_distance_percentiles_m": [
+    0.006033008208374239,
+    0.015277998772817367,
+    0.062398419092591265,
+    0.12094501220508722,
+    0.15899940389868503
+  ],
+  "crest_inward_requested_percentiles_m": [
+    0.0009108057680567068,
+    0.001388534355663452,
+    0.0051812240631027885,
+    0.009,
+    0.009
+  ],
+  "upper_head_cut_fixed": true,
+  "hips_and_original_forearms_fixed": true,
+  "neck_guide_loop_is_not_skeletal_notch": true,
+  "lattice_points": [
+    13,
+    5,
+    12
+  ],
+  "head_stretch_transition_m": 0.02,
+  "core_vertical_compression_transition_m": 0.065,
+  "core_transverse_transition_m": 0.025,
+  "lower_join_transition_m": 0.035,
+  "support_scalar_conditioning": {
+    "Z": {
+      "iterations": 31,
+      "neighbor_blend": 0.35,
+      "target_median_sigma_m": 0.006,
+      "effective_sigma_percentiles_m": [
+        0.0043351437310105104,
+        0.006052010586447076,
+        0.007835880494855386
+      ],
+      "plateau_constraints": 9779,
+      "maximum_weight_change": 0.1507595698107318
+    },
+    "X": {
+      "iterations": 31,
+      "neighbor_blend": 0.35,
+      "target_median_sigma_m": 0.006,
+      "effective_sigma_percentiles_m": [
+        0.0043351437310105104,
+        0.006052010586447076,
+        0.007835880494855386
+      ],
+      "plateau_constraints": 22116,
+      "maximum_weight_change": 0.29728268373983013
+    }
+  },
+  "Y_identity": true,
+  "posthoc_pin_restore": false,
+  "solver_seconds": 0.5209364891052246,
+  "changed_vertices": 32726,
+  "maximum_delta_m": 0.02657071604089817,
+  "maximum_y_delta_m": 0.0,
+  "protected_vertices_byte_exact": true,
+  "topology_UV_head_exact": true,
+  "actual_lattice_rest_bounds": [
+    [
+      -6.0,
+      -2.0,
+      -5.5
+    ],
+    [
+      6.0,
+      2.0,
+      5.5
+    ]
+  ],
+  "actual_lattice_control_world_bounds": [
+    [
+      -0.3149999976158142,
+      -0.15000000596046448,
+      1.0500000715255737
+    ],
+    [
+      0.3149999976158142,
+      0.10499999672174454,
+      1.600000023841858
+    ]
+  ],
+  "intended_physical_control_bounds": [
+    [
+      -0.315,
+      -0.15,
+      1.05
+    ],
+    [
+      0.315,
+      0.105,
+      1.6
+    ]
+  ],
+  "unweighted_actual_X_translation_max_m": 0.009000271558761597,
+  "unweighted_actual_Z_translation_max_m": 0.025001049041748047,
+  "local_J_scope": "Per-triangle affine prism extension keeps original normal direction; positive projected oriented area, not an interior-volume diffeomorphism claim",
+  "local_J_min": -1.036990937625182,
+  "negative_or_zero_J_faces": 6,
+  "negative_faces": [
+    {
+      "face": 136541,
+      "source_part": 2,
+      "source_face": -139444,
+      "vertex_ids": [
+        68123,
+        68115,
+        68129
+      ],
+      "world_before": [
+        [
+          -0.13602511584758759,
+          0.048811301589012146,
+          1.3729145526885986
+        ],
+        [
+          -0.13498233258724213,
+          0.04848450422286987,
+          1.373746395111084
+        ],
+        [
+          -0.133384108543396,
+          0.048142172396183014,
+          1.3729145526885986
+        ]
+      ],
+      "world_after": [
+        [
+          -0.12712113559246063,
+          0.048811301589012146,
+          1.3602463006973267
+        ],
+        [
+          -0.1260930448770523,
+          0.04848450422286987,
+          1.360512375831604
+        ],
+        [
+          -0.12452010065317154,
+          0.048142172396183014,
+          1.3610765933990479
+        ]
+      ],
+      "old_double_area_m2": 2.2723385847733093e-06,
+      "local_J": -0.07359995739174188,
+      "x_weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "z_weights": [
+        0.5081360688861765,
+        0.5306987449372298,
+        0.4748246376225265
+      ],
+      "fixed": [
+        false,
+        false,
+        false
+      ],
+      "core_distance_m": [
+        0.03239098105682136,
+        0.033151186599518996,
+        0.03131720923059185
+      ],
+      "head_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ],
+      "lower_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ]
+    },
+    {
+      "face": 136610,
+      "source_part": 2,
+      "source_face": -139375,
+      "vertex_ids": [
+        68155,
+        68163,
+        68171
+      ],
+      "world_before": [
+        [
+          -0.12703843414783478,
+          0.04588188976049423,
+          1.3791491985321045
+        ],
+        [
+          -0.12415798008441925,
+          0.04535786435008049,
+          1.3791491985321045
+        ],
+        [
+          -0.12517400085926056,
+          0.045663829892873764,
+          1.3781605958938599
+        ]
+      ],
+      "world_after": [
+        [
+          -0.11831256002187729,
+          0.04588188976049423,
+          1.366694688796997
+        ],
+        [
+          -0.11551740765571594,
+          0.04535786435008049,
+          1.3670018911361694
+        ],
+        [
+          -0.1165015771985054,
+          0.045663829892873764,
+          1.3670642375946045
+        ]
+      ],
+      "old_double_area_m2": 2.9153172262664714e-06,
+      "local_J": -0.15347187215555888,
+      "x_weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "z_weights": [
+        0.4988088093321146,
+        0.4865086688119439,
+        0.4445099215235015
+      ],
+      "fixed": [
+        false,
+        false,
+        false
+      ],
+      "core_distance_m": [
+        0.031203295675397452,
+        0.030120096862500712,
+        0.029081740403962233
+      ],
+      "head_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ],
+      "lower_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ]
+    },
+    {
+      "face": 194032,
+      "source_part": 2,
+      "source_face": -52154,
+      "vertex_ids": [
+        97081,
+        97073,
+        97087
+      ],
+      "world_before": [
+        [
+          0.09741692990064621,
+          0.049032557755708694,
+          1.3611242771148682
+        ],
+        [
+          0.09855202585458755,
+          0.04851126670837402,
+          1.3620654344558716
+        ],
+        [
+          0.09995341300964355,
+          0.0480390228331089,
+          1.3611242771148682
+        ]
+      ],
+      "world_after": [
+        [
+          0.0905078575015068,
+          0.049032557755708694,
+          1.3490339517593384
+        ],
+        [
+          0.09153077006340027,
+          0.04851126670837402,
+          1.349435567855835
+        ],
+        [
+          0.09279777854681015,
+          0.0480390228331089,
+          1.3499584197998047
+        ]
+      ],
+      "old_double_area_m2": 2.5711966715996476e-06,
+      "local_J": -0.015887307219716786,
+      "x_weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "z_weights": [
+        0.4875780254329044,
+        0.5090442332185792,
+        0.4502610697872179
+      ],
+      "fixed": [
+        false,
+        false,
+        false
+      ],
+      "core_distance_m": [
+        0.031530322140520754,
+        0.031886131463775925,
+        0.03013322605371924
+      ],
+      "head_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ],
+      "lower_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ]
+    },
+    {
+      "face": 203906,
+      "source_part": 2,
+      "source_face": -42280,
+      "vertex_ids": [
+        102001,
+        101993,
+        102015
+      ],
+      "world_before": [
+        [
+          0.16302040219306946,
+          0.043236102908849716,
+          1.3758646249771118
+        ],
+        [
+          0.16402208805084229,
+          0.04224244877696037,
+          1.3766709566116333
+        ],
+        [
+          0.16587430238723755,
+          0.041008058935403824,
+          1.3758559226989746
+        ]
+      ],
+      "world_after": [
+        [
+          0.15402041375637054,
+          0.043236102908849716,
+          1.358543038368225
+        ],
+        [
+          0.15502212941646576,
+          0.04224244877696037,
+          1.3588347434997559
+        ],
+        [
+          0.15687429904937744,
+          0.041008058935403824,
+          1.3594828844070435
+        ]
+      ],
+      "old_double_area_m2": 2.993189321100762e-06,
+      "local_J": -0.04459440721697115,
+      "x_weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "z_weights": [
+        0.6942219663818257,
+        0.7147185188331978,
+        0.6562023831402142
+      ],
+      "fixed": [
+        false,
+        false,
+        false
+      ],
+      "core_distance_m": [
+        0.04124166051946164,
+        0.04130529562352354,
+        0.03893491664376737
+      ],
+      "head_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ],
+      "lower_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ]
+    },
+    {
+      "face": 208482,
+      "source_part": 2,
+      "source_face": -37704,
+      "vertex_ids": [
+        104272,
+        104266,
+        104287
+      ],
+      "world_before": [
+        [
+          0.16891661286354065,
+          0.03804616257548332,
+          1.3759466409683228
+        ],
+        [
+          0.1701774150133133,
+          0.03625982627272606,
+          1.3768523931503296
+        ],
+        [
+          0.17130951583385468,
+          0.03521808609366417,
+          1.3759734630584717
+        ]
+      ],
+      "world_after": [
+        [
+          0.15991659462451935,
+          0.03804616257548332,
+          1.3610877990722656
+        ],
+        [
+          0.1611773818731308,
+          0.03625982627272606,
+          1.3618236780166626
+        ],
+        [
+          0.16230957210063934,
+          0.03521808609366417,
+          1.362489104270935
+        ]
+      ],
+      "old_double_area_m2": 3.3723724418744162e-06,
+      "local_J": -0.050180448361355226,
+      "x_weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "z_weights": [
+        0.5955032453783551,
+        0.6021742768451837,
+        0.540406025332143
+      ],
+      "fixed": [
+        false,
+        false,
+        false
+      ],
+      "core_distance_m": [
+        0.03603168518090883,
+        0.035391600565509516,
+        0.03361976734115805
+      ],
+      "head_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ],
+      "lower_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ]
+    },
+    {
+      "face": 218165,
+      "source_part": 2,
+      "source_face": -76899,
+      "vertex_ids": [
+        88584,
+        109986,
+        109988
+      ],
+      "world_before": [
+        [
+          0.04506521672010422,
+          0.010172288864850998,
+          1.4436497688293457
+        ],
+        [
+          0.043473657220602036,
+          0.011469217948615551,
+          1.4450000524520874
+        ],
+        [
+          0.04347951337695122,
+          0.011457451619207859,
+          1.4450000524520874
+        ]
+      ],
+      "world_after": [
+        [
+          0.043740469962358475,
+          0.010172288864850998,
+          1.4186500310897827
+        ],
+        [
+          0.04226042330265045,
+          0.011469217948615551,
+          1.420192837715149
+        ],
+        [
+          0.04226451739668846,
+          0.011457451619207859,
+          1.4201641082763672
+        ]
+      ],
+      "old_double_area_m2": 2.0949218106129077e-08,
+      "local_J": -1.036990937625182,
+      "x_weights": [
+        1.0,
+        0.9922975712376456,
+        0.9934353129970412
+      ],
+      "z_weights": [
+        1.0,
+        0.9922975712376456,
+        0.9934353129970412
+      ],
+      "fixed": [
+        false,
+        false,
+        false
+      ],
+      "core_distance_m": [
+        0.09890415210339719,
+        0.101361458057204,
+        0.10135146987179532
+      ],
+      "head_distance_m": [
+        0.021953067379924054,
+        0.019495761426117232,
+        0.01950890452601476
+      ],
+      "lower_distance_m": [
+        Infinity,
+        Infinity,
+        Infinity
+      ]
+    }
+  ],
+  "actual_handle_down_percentiles_m": [
+    4.38690185546875e-05,
+    0.0007564067840576173,
+    0.02331411838531494,
+    0.02500021457672119,
+    0.025000691413879395
+  ],
+  "actual_handle_inward_percentiles_m": [
+    1.1502066627144814e-05,
+    0.0007504254579544068,
+    0.005936823785305023,
+    0.008999988436698914,
+    0.009000107645988464
+  ]
+}

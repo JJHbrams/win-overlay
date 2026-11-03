@@ -1,0 +1,59 @@
+{
+  "method": "Blender built-in Laplacian Deform, connected anatomical surface patch, hard source boundary/core and whole roof/crest controls",
+  "source_component_limit": "Primitive scores classify existing construction ownership, not measured anatomical bone boundaries or clearance.",
+  "down_hypothesis_m": 0.025,
+  "inward_hypothesis_m": 0.009,
+  "geodesic_patch_padding_m": 0.065,
+  "down_core_transition_m": 0.065,
+  "inward_core_transition_m": 0.025,
+  "component_names": [
+    "curved_tapered_thorax_neck",
+    "breast_pair",
+    "shoulder_R",
+    "shoulder_L",
+    "upper_arm_R",
+    "upper_arm_L",
+    "anterior_fan_R",
+    "anterior_fan_L",
+    "posterior_wall_R",
+    "posterior_wall_L",
+    "trapezius_R",
+    "trapezius_L"
+  ],
+  "free_vertices": 32726,
+  "hard_core_vertices": 17648,
+  "protected_vertices": 106279,
+  "roof_handles": 4294,
+  "crest_handles": 180,
+  "patch_vertices": 35794,
+  "patch_triangles": 70123,
+  "handle_bounds": [
+    [
+      -0.19499920308589935,
+      -0.047446995973587036,
+      1.3221019506454468
+    ],
+    [
+      0.19513699412345886,
+      0.04908221960067749,
+      1.4450000524520874
+    ]
+  ],
+  "roof_core_distance_percentiles_m": [
+    0.006033008208374239,
+    0.015277998772817367,
+    0.062398419092591265,
+    0.12094501220508722,
+    0.15899940389868503
+  ],
+  "crest_inward_requested_percentiles_m": [
+    0.0009108057680567068,
+    0.001388534355663452,
+    0.0051812240631027885,
+    0.009,
+    0.009
+  ],
+  "upper_head_cut_fixed": true,
+  "hips_and_original_forearms_fixed": true,
+  "neck_guide_loop_is_not_skeletal_notch": true
+}
