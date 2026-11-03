@@ -1,0 +1,77 @@
+{
+  "status": "PASS bounded actual puncture regression; remaining strap/style/proportion work open",
+  "actual_records": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\material-preflight-AA\\render-records.json",
+  "actual_records_sha256": "b7dd214e0a3126e0c02369cfe811112ebfbd237c5cd143c0e65b1522cdd0a70d",
+  "comparisons": [
+    {
+      "name": "Underwear-back",
+      "old_image_sha256": "aa36b54e1c4789a1ddd1aee3fd809b7c565ae1dcf05e8509ae26f7861d9e7c5e",
+      "new_image_sha256": "0d86f1414daf49422b4a7f6ed7af0179fe2453a3380ac82bfec77c2b26818b29",
+      "geometry_and_camera_held": true,
+      "light_parameters_held": true,
+      "max_light_matrix_float32_drift": 2.086162567138672e-07
+    },
+    {
+      "name": "clavicle-on",
+      "old_image_sha256": "a51bb2e093f44d0184120431f07c975c37cde6efdfd9b968705aa5ec3d0c9eb5",
+      "new_image_sha256": "2e559cbd91184eb18d9bb8aad03f81d940aecead09e84f0e9c7e30bde95e5086",
+      "geometry_and_camera_held": true,
+      "light_parameters_held": true,
+      "max_light_matrix_float32_drift": 1.4901161193847656e-07
+    }
+  ],
+  "puncture_pixels": [
+    {
+      "pixel": [
+        166,
+        644
+      ],
+      "old_RGB": [
+        206,
+        183,
+        175
+      ],
+      "new_RGB": [
+        107,
+        105,
+        110
+      ]
+    },
+    {
+      "pixel": [
+        215,
+        696
+      ],
+      "old_RGB": [
+        242,
+        214,
+        202
+      ],
+      "new_RGB": [
+        106,
+        104,
+        109
+      ]
+    },
+    {
+      "pixel": [
+        640,
+        696
+      ],
+      "old_RGB": [
+        215,
+        191,
+        182
+      ],
+      "new_RGB": [
+        107,
+        104,
+        109
+      ]
+    }
+  ],
+  "visual_access": "Worker directly inspected both actual AA PNGs; cup punctures gone, strap waviness/steps remain.",
+  "native_saved": false,
+  "GPU_used_by_worker": false,
+  "whole_character_ART_pass": false
+}

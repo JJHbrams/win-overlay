@@ -9,7 +9,7 @@ sys.path.insert(0, str(P))
 import install_material
 
 args = sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
-folder = Path(args[0]) if args else P/'maps-D3'
+folder = Path(args[0]) if args else P/'maps-E-AA'
 report_file = Path(args[1]) if len(args)>1 else folder/'material-route-proof.json'
 bake = json.loads((folder/'bake-report.json').read_text(encoding='utf-8'))
 expected = {Path(row['path']).stem: row for row in bake['files']}

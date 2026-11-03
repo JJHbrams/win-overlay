@@ -152,6 +152,7 @@ def bake(surface_path, output, *, size=2048, config_path=None):
     Image.fromarray(raster['valid'].astype(np.uint8)*255).save(diagnostic)
     report = dict(status='CPU UV-map bake complete; actual shader/native/source appearance review remains required',
                   surface_input=surface['input_path'], surface_input_sha256=surface['input_sha256'], surface_guards=surface['guards'],
+                  UV_numeric_quality=surface['uv_numeric_stats'],
                   raster=raster['report'], field_stats=stats, files=files,
                   island_padding_pixels=4, padded_texels=int(padding.sum()-raster['valid'].sum()),
                   geometry_unchanged=True, GPU_used=False, elapsed_seconds=time.time()-start,

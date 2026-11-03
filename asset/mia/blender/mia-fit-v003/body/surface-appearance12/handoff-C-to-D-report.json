@@ -1,0 +1,398 @@
+{
+  "status": "PASS exact owned pending-artifact handoff before D edits",
+  "source_root": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay",
+  "destination_root": "D:\\MiaWorkCache\\mia-reference-work\\appearance12-producer",
+  "destination_branch": "codex/mia-appearance12-disk",
+  "destination_base_commit": "dc5a186141f5746e0b090a1483b92e6dda96905d",
+  "source_base_commit": "ec6347c",
+  "source_manifest_sha256": "ea97916c09504747c31a636fe9c5edbe379f7079b850606189a55c14e2b369ae",
+  "file_count": 54,
+  "total_bytes": 10985860,
+  "files": [
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/README.md",
+      "bytes": 10976,
+      "source_sha256": "2a40f15cf68ab259e9f8b687c1f15c5a450b47d637d56a8b5b86c1d39fe19cf9",
+      "destination_sha256": "2a40f15cf68ab259e9f8b687c1f15c5a450b47d637d56a8b5b86c1d39fe19cf9",
+      "destination_before_sha256": "50a688cedcd601c1fca1e8e0912f918cd51ca1786e2d0ac19b15ed82e56a7def"
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/bake_surface.py",
+      "bytes": 11037,
+      "source_sha256": "adff2a7581a37c96ae7ad5a07c1f49c1dd510971c948ef46719c7d07b37fc44a",
+      "destination_sha256": "adff2a7581a37c96ae7ad5a07c1f49c1dd510971c948ef46719c7d07b37fc44a",
+      "destination_before_sha256": "3a473864f5e6968b82abc2add78b3ec853c7a96be0daf881e360d856769c28b3"
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/revision-status.json",
+      "bytes": 4948,
+      "source_sha256": "f9b11e944e41bbe1261227d26d49b5b54973fcf4c8deea4a873c422486cd8279",
+      "destination_sha256": "f9b11e944e41bbe1261227d26d49b5b54973fcf4c8deea4a873c422486cd8279",
+      "destination_before_sha256": "dd347f981aa6e22d768900da8d18aa6f6d3941a870bcc58308402f1823fc5d81"
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/surface_api.py",
+      "bytes": 11049,
+      "source_sha256": "d6dea9bc6e86068a2a8b0305d12698dcc1c1a65e4e4333e8d48ef62eed46d69e",
+      "destination_sha256": "d6dea9bc6e86068a2a8b0305d12698dcc1c1a65e4e4333e8d48ef62eed46d69e",
+      "destination_before_sha256": "e8a958cc9ef64d1bc4677c61a05766c5c88e6c2adb199129f1db7fe09a2eb67a"
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/verify_material.py",
+      "bytes": 3466,
+      "source_sha256": "263a70cf9d8694c7c572ff391c25d6507be43009697e610c27180402a21961a7",
+      "destination_sha256": "263a70cf9d8694c7c572ff391c25d6507be43009697e610c27180402a21961a7",
+      "destination_before_sha256": "1026495563ac31d7b79f84232593e53c333c5f2a9ce2438677946c9f97d6c07b"
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/verify_surface_maps.py",
+      "bytes": 6944,
+      "source_sha256": "dc9b1b4b5639addeaf92eca94059dcfe88c696015b00b500effe1522eec20514",
+      "destination_sha256": "dc9b1b4b5639addeaf92eca94059dcfe88c696015b00b500effe1522eec20514",
+      "destination_before_sha256": "c54c95d789a3b3c59093d07ac6246a2df63d2c626b630a2bb215e59ba969afcd"
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/E-AA-actual-validation.json",
+      "bytes": 1975,
+      "source_sha256": "041b9ebbe753819a6584b2271a54d738370042809da4f14afa800f08b0ec34ae",
+      "destination_sha256": "041b9ebbe753819a6584b2271a54d738370042809da4f14afa800f08b0ec34ae",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/E-clavicle-local-contrast.json",
+      "bytes": 3806,
+      "source_sha256": "a46db237c5ff4c2ced98051596c3e8df3ffa4ce414a4c68b9078aa61c791e9e9",
+      "destination_sha256": "a46db237c5ff4c2ced98051596c3e8df3ffa4ce414a4c68b9078aa61c791e9e9",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/E-material-pixel-diagnosis.json",
+      "bytes": 4493,
+      "source_sha256": "6f802039ecf45feaa2c30f8fa58c00e27d232f23b2a792adf3a46c8f4e985a2d",
+      "destination_sha256": "6f802039ecf45feaa2c30f8fa58c00e27d232f23b2a792adf3a46c8f4e985a2d",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/diagnose_material_E.py",
+      "bytes": 3048,
+      "source_sha256": "7729962e85743cb137fbc3161d6914af1e6c29ded9e8c1fabb8fde67828bbe68",
+      "destination_sha256": "7729962e85743cb137fbc3161d6914af1e6c29ded9e8c1fabb8fde67828bbe68",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/fair_paths.py",
+      "bytes": 6168,
+      "source_sha256": "55ea4e424284ec4758059ee1644b03a658581799c9be76ffa19bb94dace48c6c",
+      "destination_sha256": "55ea4e424284ec4758059ee1644b03a658581799c9be76ffa19bb94dace48c6c",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/inputs/E-branch-independent-proof.json",
+      "bytes": 497,
+      "source_sha256": "df7d657bc5615f4394ba24dc145f974985821059e7223b3b06a303700da85283",
+      "destination_sha256": "df7d657bc5615f4394ba24dc145f974985821059e7223b3b06a303700da85283",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/inputs/E-correspondence-5ec48afdf31d.npz",
+      "bytes": 649274,
+      "source_sha256": "5ec48afdf31d59590b84e3a11736e8e356a26d95eda2de5f199b0ae422a99a22",
+      "destination_sha256": "5ec48afdf31d59590b84e3a11736e8e356a26d95eda2de5f199b0ae422a99a22",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/inputs/E-producer-proof-bba0a37c788c.json",
+      "bytes": 3805,
+      "source_sha256": "bba0a37c788cfaef03e881c2ab79f7403a40d6205542794a14c3f31e54162ce7",
+      "destination_sha256": "bba0a37c788cfaef03e881c2ab79f7403a40d6205542794a14c3f31e54162ce7",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/inputs/E-v9-semantic-rejection.json",
+      "bytes": 493,
+      "source_sha256": "df752104d514f535fc809827ff6a5999c9aeded554620fa46903fec19ff5eb15",
+      "destination_sha256": "df752104d514f535fc809827ff6a5999c9aeded554620fa46903fec19ff5eb15",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/inputs/e8d4d505e661-expanded-receipt.json",
+      "bytes": 12170,
+      "source_sha256": "c46ff16a2d6a43d75d9d1de11666b1fe84077ad065690a6dbae4e9b80636e2d2",
+      "destination_sha256": "c46ff16a2d6a43d75d9d1de11666b1fe84077ad065690a6dbae4e9b80636e2d2",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/inputs/e8d4d505e661.json",
+      "bytes": 26290,
+      "source_sha256": "04eefbd394d9652ef6858c81cb5417b33c3bbc9e64e3630652257bdebb2558a5",
+      "destination_sha256": "04eefbd394d9652ef6858c81cb5417b33c3bbc9e64e3630652257bdebb2558a5",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/inputs/e8d4d505e661.npz",
+      "bytes": 4244825,
+      "source_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "destination_sha256": "e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/inputs/fe8c2e3cb1c0-expanded-receipt.json",
+      "bytes": 11821,
+      "source_sha256": "85f94fabe1cc930c7b871a933ac68a468fb66c2d8af7de9e166b4dc762ed6d8e",
+      "destination_sha256": "85f94fabe1cc930c7b871a933ac68a468fb66c2d8af7de9e166b4dc762ed6d8e",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/inputs/fe8c2e3cb1c0.json",
+      "bytes": 25939,
+      "source_sha256": "35e41a505e77f1481bb77a64d6fbaa7bdd8442746a1bbcdb89408b737a00edce",
+      "destination_sha256": "35e41a505e77f1481bb77a64d6fbaa7bdd8442746a1bbcdb89408b737a00edce",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/inputs/fe8c2e3cb1c0.npz",
+      "bytes": 4245167,
+      "source_sha256": "fe8c2e3cb1c05809d64d50758ccaa980c8ddc50a1379c3944cc10b2ac2006a55",
+      "destination_sha256": "fe8c2e3cb1c05809d64d50758ccaa980c8ddc50a1379c3944cc10b2ac2006a55",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA-actual-pixel-diagnosis.json",
+      "bytes": 4902,
+      "source_sha256": "8b597c23bdb8d5477f64a1e28c5a8ca7047a93b7b793da9ee5f2771f939f56c3",
+      "destination_sha256": "8b597c23bdb8d5477f64a1e28c5a8ca7047a93b7b793da9ee5f2771f939f56c3",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/ClavicleInk.png",
+      "bytes": 21093,
+      "source_sha256": "afdc48ed9be412327900e0f9547c4537baf66ad518c6182076d16d3ece5bb6be",
+      "destination_sha256": "afdc48ed9be412327900e0f9547c4537baf66ad518c6182076d16d3ece5bb6be",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/ClavicleShade.png",
+      "bytes": 28822,
+      "source_sha256": "35a3cc92c52f2d3ba71011fbb621e8d8ec99104aeeffddb8952be2ca45eb3773",
+      "destination_sha256": "35a3cc92c52f2d3ba71011fbb621e8d8ec99104aeeffddb8952be2ca45eb3773",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/SkinBaseColor.png",
+      "bytes": 58638,
+      "source_sha256": "52b1621fe3cf1f2d88ca9d7bf73a3ececd1374ff5530cdd467f20bc61bf33abd",
+      "destination_sha256": "52b1621fe3cf1f2d88ca9d7bf73a3ececd1374ff5530cdd467f20bc61bf33abd",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/UV_ValidMask_DIAGNOSTIC.png",
+      "bytes": 110172,
+      "source_sha256": "8fedd9739d255370cecd4d36e84c8efcc85a8aed5af233807be5f69a1bd5eadb",
+      "destination_sha256": "8fedd9739d255370cecd4d36e84c8efcc85a8aed5af233807be5f69a1bd5eadb",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/UnderwearBaseColor.png",
+      "bytes": 142027,
+      "source_sha256": "55c83f9d8304a0011168c7f80d8bd64c77d24dc324ed605a4f55d8fe9350fb93",
+      "destination_sha256": "55c83f9d8304a0011168c7f80d8bd64c77d24dc324ed605a4f55d8fe9350fb93",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/UnderwearCoverage.png",
+      "bytes": 89060,
+      "source_sha256": "ad162aad87a74d0f20596ce00b339d612e8f6a53f6df5f8a36898e51dbfdccb0",
+      "destination_sha256": "ad162aad87a74d0f20596ce00b339d612e8f6a53f6df5f8a36898e51dbfdccb0",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/authoring-config.json",
+      "bytes": 1886,
+      "source_sha256": "72a5545514c38b019bcf8d1fcc4d0265bfef934f4f840c7a4740e82b3b1271c6",
+      "destination_sha256": "72a5545514c38b019bcf8d1fcc4d0265bfef934f4f840c7a4740e82b3b1271c6",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/bake-report.json",
+      "bytes": 4826,
+      "source_sha256": "99011bfc293527274ae9a05fbdbf8b8fdafc8e582846c6ecdfa94a065673b482",
+      "destination_sha256": "99011bfc293527274ae9a05fbdbf8b8fdafc8e582846c6ecdfa94a065673b482",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/footprint-proof.json",
+      "bytes": 2208,
+      "source_sha256": "a59ece0783e69f57e9789c82202c04540c018b1381802731c3bde174bc971173",
+      "destination_sha256": "a59ece0783e69f57e9789c82202c04540c018b1381802731c3bde174bc971173",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/interior-coverage-proof.json",
+      "bytes": 211,
+      "source_sha256": "32d48c0868b0bc49b3419c0cc9d25139c820d395fa31d5e031227bd5f6c3e516",
+      "destination_sha256": "32d48c0868b0bc49b3419c0cc9d25139c820d395fa31d5e031227bd5f6c3e516",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/material-route-proof.json",
+      "bytes": 28065,
+      "source_sha256": "08b8fec281111c129136837bb8cce728caf211baa83c5f9d8ca1e1ff984f50a3",
+      "destination_sha256": "08b8fec281111c129136837bb8cce728caf211baa83c5f9d8ca1e1ff984f50a3",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/pattern-recipe.json",
+      "bytes": 9680,
+      "source_sha256": "316873f8b255e203abe643efffde333b46be37420f4b7eadfa222437a5ee8971",
+      "destination_sha256": "316873f8b255e203abe643efffde333b46be37420f4b7eadfa222437a5ee8971",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/seated-boundaries.json",
+      "bytes": 439390,
+      "source_sha256": "4d804a7baa24ac9e1a28e9c580e23602bf5014b5dbc2c9dd47f1448d3c4eda78",
+      "destination_sha256": "4d804a7baa24ac9e1a28e9c580e23602bf5014b5dbc2c9dd47f1448d3c4eda78",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E-AA/seated-straps.json",
+      "bytes": 44139,
+      "source_sha256": "f8f105daf2da049d45d2fb22494de8a11a2382ae54d2d4ea5ddd5769bb9b5016",
+      "destination_sha256": "f8f105daf2da049d45d2fb22494de8a11a2382ae54d2d4ea5ddd5769bb9b5016",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/ClavicleInk.png",
+      "bytes": 5723,
+      "source_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+      "destination_sha256": "d0694f65764fc4f805ffd62bf5bb262185df7744430160c0f5aa25e714beb574",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/ClavicleShade.png",
+      "bytes": 8863,
+      "source_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+      "destination_sha256": "f9c52c2d90daddaaf8a869a2108602c8a93d7c19963b7edc27774ba1c7c8696b",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/SkinBaseColor.png",
+      "bytes": 16918,
+      "source_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+      "destination_sha256": "24c361f591cd8fd5d683c490f89f2d0e6ac5a4caaa1b19b0daef6a0ba9cfcb0b",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/UV-numeric-restoration-proof.json",
+      "bytes": 1005,
+      "source_sha256": "dd4e081c0829e8a2aafe519dac9c8f256ad9de5f6ae6e362b6cba6f1f53967a4",
+      "destination_sha256": "dd4e081c0829e8a2aafe519dac9c8f256ad9de5f6ae6e362b6cba6f1f53967a4",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/UV_ValidMask_DIAGNOSTIC.png",
+      "bytes": 47463,
+      "source_sha256": "0addf07e6fa775b51d7d1745cc53af0811a49ad0cf3da1fd0912fce8f04df444",
+      "destination_sha256": "0addf07e6fa775b51d7d1745cc53af0811a49ad0cf3da1fd0912fce8f04df444",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/UnderwearBaseColor.png",
+      "bytes": 47986,
+      "source_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+      "destination_sha256": "214c3193752efc8e72b207b460c4665576b9bf770787e65da06840127891672c",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/UnderwearCoverage.png",
+      "bytes": 30875,
+      "source_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+      "destination_sha256": "73b29e868a4b87ff96be8a1edd93e97b79d47714c22aa492b7e00319fa5241fc",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/authoring-config.json",
+      "bytes": 1886,
+      "source_sha256": "72a5545514c38b019bcf8d1fcc4d0265bfef934f4f840c7a4740e82b3b1271c6",
+      "destination_sha256": "72a5545514c38b019bcf8d1fcc4d0265bfef934f4f840c7a4740e82b3b1271c6",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/bake-report.json",
+      "bytes": 4499,
+      "source_sha256": "3adf3a10bda1e7aae2be5dc69d3fd2fc44e3000069c0c0a19be95d9a286022ea",
+      "destination_sha256": "3adf3a10bda1e7aae2be5dc69d3fd2fc44e3000069c0c0a19be95d9a286022ea",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/footprint-proof.json",
+      "bytes": 1952,
+      "source_sha256": "e204b68ef56aa2a80025046d12e0174e56b438113bfa32b2b2551aa6b79d2d55",
+      "destination_sha256": "e204b68ef56aa2a80025046d12e0174e56b438113bfa32b2b2551aa6b79d2d55",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/interior-coverage-proof.json",
+      "bytes": 665,
+      "source_sha256": "ed2571b7d4ae34e9fefe62e56b29635fcaa3f1575922f4ac43c31e10ba2356cd",
+      "destination_sha256": "ed2571b7d4ae34e9fefe62e56b29635fcaa3f1575922f4ac43c31e10ba2356cd",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/material-route-proof.json",
+      "bytes": 27999,
+      "source_sha256": "ae0d686521f8a5adad35b62b9a418981d41309d6d6c00d4fde45198c3bd22d26",
+      "destination_sha256": "ae0d686521f8a5adad35b62b9a418981d41309d6d6c00d4fde45198c3bd22d26",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/pattern-recipe.json",
+      "bytes": 9680,
+      "source_sha256": "316873f8b255e203abe643efffde333b46be37420f4b7eadfa222437a5ee8971",
+      "destination_sha256": "316873f8b255e203abe643efffde333b46be37420f4b7eadfa222437a5ee8971",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/seated-boundaries.json",
+      "bytes": 439390,
+      "source_sha256": "4d804a7baa24ac9e1a28e9c580e23602bf5014b5dbc2c9dd47f1448d3c4eda78",
+      "destination_sha256": "4d804a7baa24ac9e1a28e9c580e23602bf5014b5dbc2c9dd47f1448d3c4eda78",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/maps-E/seated-straps.json",
+      "bytes": 44139,
+      "source_sha256": "f8f105daf2da049d45d2fb22494de8a11a2382ae54d2d4ea5ddd5769bb9b5016",
+      "destination_sha256": "f8f105daf2da049d45d2fb22494de8a11a2382ae54d2d4ea5ddd5769bb9b5016",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/receive_expanded.py",
+      "bytes": 10701,
+      "source_sha256": "ba8024ca7d0d577ba354837a17899fd3f41d48ce5227ab1e83b4dfc1a5612016",
+      "destination_sha256": "ba8024ca7d0d577ba354837a17899fd3f41d48ce5227ab1e83b4dfc1a5612016",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/topology-guard-selfcheck.json",
+      "bytes": 586,
+      "source_sha256": "824bc2a9627c16cbd0c994dfaa29dcbd3a790522d8fbda5c293fda1aa800fb4c",
+      "destination_sha256": "824bc2a9627c16cbd0c994dfaa29dcbd3a790522d8fbda5c293fda1aa800fb4c",
+      "destination_before_sha256": null
+    },
+    {
+      "path": "asset/mia/blender/mia-fit-v003/body/surface-appearance12/topology_revision_guard.py",
+      "bytes": 12220,
+      "source_sha256": "517ebcd3b3d102b951656cb873c14f76a02ab49aa5a07e06fadd3647a3c5cdc2",
+      "destination_sha256": "517ebcd3b3d102b951656cb873c14f76a02ab49aa5a07e06fadd3647a3c5cdc2",
+      "destination_before_sha256": null
+    }
+  ],
+  "all_source_and_destination_hashes_verified": true,
+  "source_C_artifact_writes": false,
+  "unrelated_files_copied": false,
+  "ignored_caches_copied": false,
+  "frozen_D3_base_recopied": false,
+  "baseline_staged_deletions": 0,
+  "scope": "This report certifies the copy instant; later D-owned implementation edits may intentionally diverge from C."
+}

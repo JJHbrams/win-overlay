@@ -1,38 +1,60 @@
 # Body surface appearance12
 
-This folder supplies the **body-only static review material** for root's Review12 assembly. It does not change body geometry, head/face/hair materials, original UV channels, production rigging or protected R3b/upper11 files. The integration producer owns native assembly, actual EEVEE review, source comparisons and orbit captures.
+This worker owns only body texture authoring and CPU/material API checks. Root/integrator own geometry, native scenes, actual captures, source comparison and final acceptance. No face/head/hair pigment or UV, protected source native, rig, settings or GPU work is performed here.
 
-**Current selection note:** actual B and C bare-skin geometry reviews failed the waist/arm seam gate. Their material proofs are preserved, not adopted as finished appearance delivery. Initial D09c353 was held before receipt/bake; D2 remains unselected without actual frames. **D3** has fresh CPU material evidence after periodic endpoint-field regularization, still awaiting actual bare4/material/native review. See `revision-status.json`. No material hides geometric failures.
+## Current selection and limits
 
-## Component input and output
+`maps-E-AA/` is the checked **4096px analytic/filter-support candidate** on E-v10. Root/producer's two actual AA recaptures confirm the peach cup punctures are gone. Strap outlines still show path waviness/steps. Clavicle stroke style and rear brief coverage need source comparison; F shoulder/lower-neck proportions are authorized separately. This is component evidence, not a final native or whole-Mia ART pass. E geometry and all previous variants remain frozen.
 
-**`maps-D3/` is the latest component material candidate**, not an adopted native appearance delivery. `maps-B/`, `maps-C/` and `maps-D2/` are frozen earlier material evidence. Their inputs/proofs remain unchanged. `maps-A/` and the d4bb41 diagnostic files are rejected earlier seating evidence, not alternate final maps. The old d4bb41 NPZ copy was removed to avoid retaining a redundant 3.9 MB intermediate; its receipt/metadata and failure data remain. The latest immutable snapshot is `inputs/c5c5177af0cb.npz`, received from `surface-review12/surface-v7-discrete-D3.npz`.
+| Version | Evidence status |
+| --- | --- |
+| B/C/D3 | Actual geometry seam gates failed; frozen inputs/maps/proofs preserved |
+| D2 | CPU component evidence, unselected without actual frames |
+| Initial D09c353 | Held before receipt/bake; never adopted here |
+| E-v9 | Physical receipt only; wrong hand/pelvis semantics rejected before paint |
+| E-v10 / `maps-E` | Correct branches/new atlas; 2K centre-only raster produced actual cup punctures |
+| `maps-E-AA` | Fresh 4K analytic support bake; puncture regression fixed in actuals; strap/style/proportion work remains |
+| F | Await authorized actual F surface and anatomical anchors before final seating/bake |
+
+The E-v9 NPZ is retained only as a wrong-semantic guard regression input; no map was baked from it. B/C/D2/D3 snapshots/proofs were not removed or rewritten.
+
+## E input contract
 
 | Input | SHA256 |
 | --- | --- |
-| D3 NPZ / regularized discrete collars, semantic v3 held | `c5c5177af0cbe71c1f3f612e5ec58e3ad8dd9b046e202e11d82440c932f7be5d` |
-| D3 world float32 coordinates | `ac5914b2ed80388c56179b96ebba3dac587cefc72f0ffa41ac702f1a68a8fc90` |
-| Ordered body triangles | `fd0096040df4b4f6b8685399d87ed63ec87e5bbada1ee8bed57a6f91c6d5575d` |
-| Actual per-corner body atlas | `8dbcb1c99355d086c3b63a6c5aca24033982830442484e6cca7bd0072d85c0a7` |
-| Final face-region ownership | `16096617671a58577cee9ef0b1a66e62e9b85460f33d174642a36d394f1cf624` |
+| E-v10 body NPZ | `e8d4d505e661a752ca3c1f9f7841d2109add1835b9e5ea333ac047a6fb759130` |
+| World float32 | `9f48277cddd5d9173f4c138eec4aebbfec8b376815c99404399a353c03b3a7d8` |
+| Body triangles | `7c34d1ca14482a387fad61f7d85533c32fd285510e234e2eb8552699bb7fb270` |
+| New corner UV | `1423a2b49abf807947927ae32b30630336acf4ea34d11ee296164c1d920e17b0` |
+| Branch ownership | `a050e19536f944bb05353ecf4d4d4ffedc09529713322581c51f157c1a64ac55` |
 
-The final input has 126,845 joined vertices and 215,875 **body-only** triangles. Its atlas is the producer's real packed `MIA_Review12UV`, not the initial proposed cylinder rectangles. Accepted face/head triangles are excluded. `meshfaceid` maps body triangles to the producer's full joined mesh polygons.
+E legitimately changes topology: 139,005 world vertices / 240,195 body triangles. The body-only export excludes accepted head faces; `meshfaceid` refers to full joined polygons. `MIA_Review12UV` is the actual newly packed body atlas, not a dummy/proposed cylinder layout. Original head UV routes are separate.
 
-`maps-D3/bake-report.json` contains all five 2048² PNG hashes. Actual shader channels:
+`receive_expanded.py` uses complete physical correspondence, not D's same-ID assumption: 111,861 strict retained vertices plus 200 obsolete artificial forearm cut points cover all 112,061 required outside-band points. The latter have `source_vertex=-1`, old split Z1.035 and arm ownership; they are represented on the SAME original source_face using actual new triangles and source barycentrics. Maximum physical rounding residual is 3.65e-8m, source barycentric residual2.89e-8, largest-area fragment normal difference0.0067deg. This is representation-only, not permission to move original donor geometry. All 37,457 ordered head triangles/three old UVs/material/source-corner data and 2,992 D3 neck rows are exact. The 14,784 replaced old points must lie within authorized section/branch bounds; head/neck/core are protected. Full joined inputs are read-only and fingerprinted. Native POINT reconstruction/active UVs still require producer checks.
+
+E-v9 incorrectly labelled lateral hands as pelvis. This worker rejected it. E-v10 inherits validated D3 donor arm labels via the SAME source_part/source_face; an independent check confirms all41,011 matching retained donor faces with no mismatch. This is not a global X/Z correction. Positional hand extents are diagnostic only.
+
+Two tiny E UV faces were restored by the producer with root-approved one-ULP changes: four scalar components across two faces. Read-only `UV-numeric-restoration-proof.json` verifies raw/corrected arrays and exact export binding. No zero determinants remain; minimum positive double-area1.11e-16 is explicitly tiny/subtexel. The loader tests nonzero determinants in float64 rather than mislabelling every area<1e-12 as degenerate. This worker never edited UVs.
+
+## Raster defect and common correction
+
+`E-material-pixel-diagnosis.json` traces exact recorded clavicle-on camera pixels to actual E triangles. Three peach defects hit torso region1 with analytic coverage1.0 but PNG bilinear coverage0.0. The triangles are3.5–4.2mm in world yet less than one pixel wide in the2K atlas: centre-only rasterization supplied no seed, so zero coverage survived padding. Geometry/specular/semantics did not cause these holes.
+
+`complete_filter_support` now supplies every actual UV triangle's bilinear neighbours using nearest-UV-edge barycentrics and real world points, preserving existing interior texels. This fills filter support, not geometry or per-view overlays. Padding remains4px. `maps-E-AA` is newly evaluated at4096, not upscaled from2K. The three defect lookups become1.0. A new independent deep-interior check finds37 failing cloth triangles in old2K versus zero among25,911 deep-cloth triangle centroids in the candidate, minimum coverage1.0. Original output-ancestry/ownership checks alone were insufficient and are not presented as interior-coverage proof.
+
+The4K raster has5,224,691 actual centre texels plus179,178 filter-support texels, zero different-world overlaps at the declared2mm check tolerance, and4,108 triangles without a centre texel. Tiny faces remain a review-atlas limitation, not production-UV approval. Actual AA recapture is the visual evidence for the puncture fix. Remaining strap waviness requires a source-endpoint-preserving surface-constrained fair path, not another resolution claim.
+
+## Five actual shader channels
 
 | PNG | Color space | Actual use |
 | --- | --- | --- |
-| SkinBaseColor | sRGB | New body skin pigment; old body underwear paint entirely excluded |
-| UnderwearBaseColor | sRGB | Illustrated charcoal pigment and subtle band seam tint |
-| UnderwearCoverage | Non-Color | Skin/underwear pigment mixing and restrained roughness/specular control |
-| ClavicleInk | Non-Color | Thin warm graphic line with independent strength |
-| ClavicleShade | Non-Color | Separate soft authored pigment below the line |
+| SkinBaseColor | sRGB | New body skin; all old underwear paint excluded |
+| UnderwearBaseColor | sRGB | Illustrated matte charcoal and restrained band seam pigment |
+| UnderwearCoverage | Non-Color | Material mixing plus actual roughness/specular control |
+| ClavicleInk | Non-Color | Independent warm line weight |
+| ClavicleShade | Non-Color | Separate authored soft pigment |
 
-There is no unused normal/displacement/specular PNG presented as a completed map. Actual specular and roughness are shader controls derived from coverage. The maps have 4-pixel island padding and fixed-world edge smoothing. Tiny/subtexel triangles remain a reported review-atlas limitation.
-
-## Installer API
-
-Run inside **EEVEE**, after the producer has assigned the exact final body UV atlas:
+No unused normal/displacement/specular PNG is labelled finished. The actual EEVEE graph is white Diffuse roughness0 → ShaderToRGB → luminance/4 → saved-R3b-compatible EASE ramp → pigment/Emission, plus restrained actual specular. Skin uses common linear[.92,.69,.60] encoded[246,216,203]. Source illustration RGBs are authored appearance, not recovered physical albedo. The same supported body geometry is used for skin/underwear; texture clothing adds no thickness/compression or invented nipple/genital detail.
 
 ```python
 import sys
@@ -40,61 +62,34 @@ from pathlib import Path
 p = Path('/absolute/path/to/surface-appearance12')
 sys.path.insert(0, str(p))
 import install_material
-material = install_material.create_material(
-    p / 'maps-D3', uv_layer='MIA_Review12UV', variant='skin',
-    clavicle_strength=1.0)
-# The integration producer assigns this new material ONLY to its body faces.
-# Preserve original head/face/hair materials and their existing UV routes.
-install_material.set_controls(material, variant='underwear')
-install_material.set_controls(material, clavicle_strength=0, color_only=True)
-proof = install_material.audit_material(material)
-# Optional packing, before the producer's native save (no save is performed here):
-packed = install_material.pack_material_images(
-    material, relative_prefix='//MIA_Review12Maps/')
+mat = install_material.create_material(p/'maps-E-AA', variant='skin')
+# Producer assigns ONLY actual body faces; original head materials are retained.
+install_material.set_controls(mat, variant='underwear', clavicle_strength=1)
+install_material.pack_material_images(mat, relative_prefix='//MIA_Review12Maps/')
+proof = install_material.audit_material(mat)
 ```
 
-The API creates a new material; it does not assign it or mutate any existing material. `variant='skin'` zeroes the underwear coverage factor; `variant='underwear'` enables it on the **same geometry and UVs**. Separate named materials or two scenes may share one body mesh. The integration producer must store the actual runtime mode and assignments in the native/manifest.
+Each call owns independent nodes/controls. Two scenes need two body Object instances sharing ONE Mesh, each with body slot12 OBJECT-linked to its own material. One Object shared across scenes would share its override. Other head slots remain untouched. Packing verifies original PNG byte hashes, is idempotent, and never saves native. Producer must save/freshly reopen to prove portability.
 
-Each `create_material` call owns independent material/node controls. For two scenes, use two body **Object** instances sharing the same Mesh datablock, with their body slot12 set to `OBJECT` linkage and assigned different material instances. The same Object linked into both scenes would share its material override. Keep other head material slots/UV channels untouched. `pack_material_images` packs only this new material's five PNGs, verifies their original-byte SHA, and optionally converts display paths to Blender-relative paths. It is idempotent and never loads/saves a native file. The producer must still save and freshly reopen the packed native, with no dependency on this worker's absolute path.
+The body graph explicitly names `MIA_Review12UV`; do not switch the global active/render-active UV if retained head nodes use implicit UV inputs. Preserve original head UV routing, then check actual color-only/clavicleOFF neck continuity. Do not repaint the face to hide a body seam.
 
-The body shader names `MIA_Review12UV` explicitly and does not need it to become the mesh's globally active/render-active UV. Preserve the original active UV when retained head image nodes use implicit UV inputs; unchanged UV arrays alone do not protect an implicit input from a changed active index. This is an integration check, not an observed material defect. Audit actual head routes and color-only/clavicleOFF neck continuity before delivery.
+Fresh reviewer inspection establishes an actual small neck pigment residual: source cutslot10 mixes common[.92,.69,.60] with head[.82,.63,.55] by POINT `V27_HeadMaterialBlend`, near-cut alpha.0486–.3751, followed by the same actual-light ramp. Source UV pigment is neutral there. Constant commonRGB alone is therefore not a boundary-match proof. F needs body-only continuation from exact boundary alpha, fading C1 by actual neck-surface distance; no fixed-light bake or face edit. Slot10 has no specular while the new body has specular; any remaining lit residual needs a shared-unlit/common-ramp probe before changing controls. BODYColorOnly with a still-lit head is not that probe.
 
-The active light route matches the saved R3b common skin response: white Diffuse roughness0 → ShaderToRGB → luminance /4 → matching EASE ramp → authored pigment → Emission. A black-base BSDF adds a restrained actual-light specular lobe. `ColorOnly` bypasses light/specular; `ClavicleStrength` bypasses authored ink and soft shade. The skin PNG encodes R3b common linear RGB `[.92,.69,.60]` as byte RGB `[246,216,203]`; this avoids treating the source illustration's lit skin pixel as measured albedo. A real hair-hidden color-only neck seam review is still required. Face pigment is never changed to conceal a body color mismatch.
+## Source authoring and pending style
 
-## Source observations and inference
+Original body-v06 source SHA`6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1`; tied-hair guide SHA`3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f`. Original-pixel source paths and ten illustrated color samples are in `underwear-source/`. Guide back scoop/band fragments have approximately2–4px manual uncertainty. Source images were never warped or edited.
 
-The original 1536×1024 body-v06 source is SHA `6d88d1bc6b579d1ac53436d9f1fa50f903117ac244e307b8e08a9d1e270080e1`; original-pixel paths and the ten illustrated RGB sample records are in `underwear-source/`. The tied-hair visibility guide is SHA `3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f`. Its visible back bra scoop/band were manually observed with approximately 2–4 source-pixel uncertainty, recorded in `tied-guide-paths.json`. Original source images were neither warped nor edited.
+Coverage uses declared source-relative anatomical chart fitting with original source-camera height calibration. Front/back brief paths remain distinct; hidden closure/gusset/continuous strap route are inferred. No global nearest-body projection across axillary sheets is used. All four current boundaries have128 newly seated actual-surface points each; straps are actual semantic upper-surface paths. These are authoring bindings, not art approval.
 
-The selected source pack paths feed independent front scoop/band, profile side return/band, back scoop/band, distinct front/back brief waist and leg curves. They produce a source-relative anatomical angular chart with recorded source-camera Z calibration. **This is a declared artist fit, not exact source-pixel projection or reconstructed hidden garment dimensions.** The source chart width/side interpolation and continuous strap route are inferred. The source pose/form differs from this assembly, so exact source ray hits were not substituted with global nearest-surface picks.
+The original clavicle implementation was a five-point C0 polyline. Local contrast measurements are confounded but indicate source deficit≈.49 versus actual≈.22, so blind opacity reduction is unsupported. Root accepted a separate source-anchor-preserving C1/reseated curve and sigma.85→.65mm finer-stroke candidate, keeping gain.55 initially. Final curve/strap/style maps wait for actual F geometry and anatomical root anchors: E's1.445 guide-root/1.409 graphic height must not be blindly carried into F. Rear brief coverage also needs an original-aspect frozen-SRT source comparison, not ownership-only approval.
 
-All four final closed boundaries were newly seated with 128 actual anatomical-submesh first hits each. No wrong physical sheet is skipped; arm-occluded torso paths use an explicitly scoped torso authoring chart. Two shoulder straps are constrained shortest paths along actual torso/shoulder edges. Their width/hidden continuation is inferred. The two visible source clavicle lines were seated on the actual neck-front surface after a common anatomical-anchor translation, with separate soft pigment underneath. The common translation is explicit in `seated-boundaries.json`; it is not a warped source comparison. Other neck-shadow fragments are palette/context evidence, not a claim that all source lighting was physically recovered.
+`material-route-proof.json` verifies actual Blender5.2.3 image paths/colorspaces, output ancestry, independent controls and original-byte packing without GPU/native. `footprint-proof.json` additionally includes deep interior coverage. No receipt/ray count/map count alone marks anatomy, native assignment, rigging or Mia ART PASS. Engram tools were unavailable; these are repository records, not claimed Wiki synchronization.
 
-Brief lower openings are fitted to the actual central crotch bridge while retaining independent front/back and side-opening intent. Hidden gusset/closure construction is inferred. Underwear is texture coverage on supported skin geometry: it adds no cloth thickness, compression, cleavage bridge, nipple/genital detail or new unsupported-breast sculpt. Both material modes retain the same supported shape.
-
-## Verification and unresolved actual review
-
-`maps-D3/footprint-proof.json`: final PNG SHA/size checks; 215,875 triangle-centroid UV footprint samples; zero underwear on arm/low-leg ownership; zero clavicle outside allowed front/neck regions; all 512 seated boundary barycentrics reconstruct exactly. This is an ownership/route test, not a continuous texture filtering or anatomy certificate.
-
-`maps-D3/material-route-proof.json`: actual Blender 5.2.3 loads the five **final** PNGs, verifies connected UV/Image/output ancestry, color spaces, material mode/clavicle/color-only toggles, independent controls, and idempotent original-byte image packing without loading/saving the source native or rendering. The older `material-api-smoke.json` only tests synthetic images and is not used as final-map proof.
-
-`inputs/3a82c54af44c-receipt.json`: historical independent bytewise B→C comparison. Exactly 11,528 interior collar-row vertices moved, maximum 7.8568 mm. Body triangles, review UV, semantic ownership, mesh-face IDs and source cameras are held. Every retained/core/head/lower vertex and shared collar endpoint remains held. The producer changed the geometric tangent basis of its collars; this worker did not edit geometry. The C map bake was freshly rerun, including seating, even though all five resulting PNG byte hashes equal B: moved collar areas have uniform skin and the supported source-pattern areas did not move. `maps-C/revision-crosscheck.json` compares producer/worker exact changed IDs and the B/C PNG files. C subsequently failed its actual geometry gate; it is preserved evidence, not current native delivery.
-
-`inputs/e2b05be54748-receipt.json`: historical B→D2 comparison. Exactly 11,528 producer-declared interior collar rows moved, maximum 5.65145 mm, with endpoints/core/head/lower/topology/UV/semantics/source cameras held. `maps-D2/revision-crosscheck.json` compares exact producer/worker IDs and confirms fresh D2 maps happen to equal the B/C PNG bytes because only uniform-skin collars changed. Initial D09c353 was held before this worker received or baked it. D2 remains unselected without actual frames.
-
-`inputs/c5c5177af0cb-receipt.json`: independent B→D3 comparison. Exactly 11,528 producer-declared interior collar rows moved, maximum 5.08702 mm; all protected endpoints/core/head/lower/topology/UV/semantics/cameras remain held. `maps-D3/revision-crosscheck.json` compares exact IDs with the producer and fresh D3 PNG bytes with B/C/D2. Only uniform-skin collar geometry changed, so the images remain byte-identical after a fresh bake, while the new D3 world fingerprint is bound in every D3 report. This does not approve geometry, native assignment or appearance.
-
-The UV raster reports 1,321,288 occupied texels, 5 coincident shared-edge co-hits, zero different-world overlaps at the explicitly declared 2 mm check tolerance, and 14,464 triangles without a texel center. This is not a production UV approval. Body material assignment, actual neck continuity, source-underwear resemblance, strap continuity/filtering, moved-light/clavicle toggles and orbit appearance **remain for the producer's saved-native review**. None of these CPU checks mark Mia or body anatomy ART PASS.
-
-Rejected earlier evidence is retained: the first producer atlas contained zero-UV triangles and was refused; the next corrected atlas needed world-normal/collar correction; then eight bra-side rays revealed inner-arm faces in a broad torso label. The producer's semantic v3 corrected 3,085 ownership labels using actual component fields. Subsequently B/C actual views exposed geometric collar defects. D2 fixed sampled endpoint rows/minimum discrete bending; D3 additionally regularizes periodic endpoint derivative/displacement fields. D3 holds semantic-v3 ownership and exact UVs; current material evidence binds to its updated world fingerprint. Actual seam4/material review remains separate.
-
-Engram knowledge/activity MCP tools were unavailable to this worker; these records are repository evidence only, not a claimed Wiki sync. No paid tool, install, settings change, model upload, GPU render or protected-source modification was performed.
-
-Reproduce CPU bake and final checks from this worktree:
+Reproduce the current CPU candidate without overwriting a running capture:
 
 ```text
-python bake_surface.py inputs/c5c5177af0cb.npz --output maps-D3 --size 2048
-python verify_surface_maps.py inputs/c5c5177af0cb.npz maps-D3
-blender -b --python-exit-code 2 --python verify_material.py -- /absolute/path/to/maps-D3
+python receive_expanded.py inputs/c5c5177af0cb.npz /immutable/E-v10.npz /producer/expanded-E-protection-proof.json inputs
+python bake_surface.py inputs/e8d4d505e661.npz --output maps-E-AA --size 4096
+python verify_surface_maps.py inputs/e8d4d505e661.npz maps-E-AA
+blender -b --python-exit-code 2 --python verify_material.py -- /absolute/path/to/maps-E-AA
 ```
-
-Coordinate with the producer before regenerating a map folder currently in use; preserve target fingerprints and do not overwrite a running capture's inputs.

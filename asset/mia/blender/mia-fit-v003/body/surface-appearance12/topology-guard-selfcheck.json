@@ -1,0 +1,19 @@
+{
+  "status": "PASS guard selfcheck only; no E target received or approved",
+  "source_sha256": "c5c5177af0cbe71c1f3f612e5ec58e3ad8dd9b046e202e11d82440c932f7be5d",
+  "identity_retained": 126845,
+  "negative_cases": [
+    {
+      "case": "missing-retained-head",
+      "rejected": true,
+      "reason": "Missing protected/outside-band old physical vertices: [0]"
+    },
+    {
+      "case": "moved-retained-head",
+      "rejected": true,
+      "reason": "Retained physical correspondence moved vertices: [0]"
+    }
+  ],
+  "in_memory_negative_data_only": true,
+  "source_changed": false
+}

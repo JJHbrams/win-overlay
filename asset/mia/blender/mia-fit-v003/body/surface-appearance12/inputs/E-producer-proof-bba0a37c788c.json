@@ -1,0 +1,99 @@
+{
+  "previous_joined_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\joined-discrete-D3.npz",
+  "previous_joined_sha256": "e518f78d18e21a7959f763aae4b7519690ad8a8d1e986f1e7435c33591672a33",
+  "new_joined_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\joined-expanded-E.npz",
+  "new_joined_sha256": "4ddfc843920f11b3d8e49efff0f36794684f3ab6505ee8812b17b76e4f653bc0",
+  "previous_surface_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\surface-v7-discrete-D3.npz",
+  "previous_surface_sha256": "c5c5177af0cbe71c1f3f612e5ec58e3ad8dd9b046e202e11d82440c932f7be5d",
+  "new_surface_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\surface-v9-expanded-E-branches.npz",
+  "new_surface_sha256": "fe8c2e3cb1c05809d64d50758ccaa980c8ddc50a1379c3944cc10b2ac2006a55",
+  "section_predicates": [
+    {
+      "name": "expanded_waist",
+      "axis_world": [
+        0,
+        0,
+        1
+      ],
+      "origin_world": [
+        0,
+        0,
+        0
+      ],
+      "min_m": 1.005,
+      "max_m": 1.145,
+      "allowed_old_face_regions": [
+        1,
+        2,
+        8,
+        9,
+        13
+      ],
+      "deny_old_face_regions": [
+        6,
+        7,
+        14,
+        15
+      ]
+    },
+    {
+      "name": "expanded_arm_positive",
+      "axis_world": [
+        0.42261826174069944,
+        0.0,
+        -0.9063077870366499
+      ],
+      "origin_world": [
+        0.236,
+        0,
+        1.17
+      ],
+      "min_m": -0.02,
+      "max_m": 0.0871689671458359,
+      "allowed_old_face_regions": [
+        6,
+        14
+      ]
+    },
+    {
+      "name": "expanded_arm_negative",
+      "axis_world": [
+        -0.42261826174069944,
+        0.0,
+        -0.9063077870366499
+      ],
+      "origin_world": [
+        -0.236,
+        0,
+        1.17
+      ],
+      "min_m": -0.02,
+      "max_m": 0.0871689671458359,
+      "allowed_old_face_regions": [
+        7,
+        15
+      ]
+    }
+  ],
+  "correspondence_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\retained-correspondence-E.npz",
+  "correspondence_sha256": "5ec48afdf31d59590b84e3a11736e8e356a26d95eda2de5f199b0ae422a99a22",
+  "all_required_outside_band_vertices_covered": 112061,
+  "mapped_old_vertices_exact": 111861,
+  "allowed_replacement_old_vertices": 14784,
+  "all_old_head_triangles_UV3_normals_attributes_source_corner_exact": 37457,
+  "D3_neck_rows_exact": 2992,
+  "source_cameras_held": true,
+  "protected_core_ids_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\surface-review12\\retained-correspondence-E.npz:protected_core_old_ids",
+  "obsolete_forearm_subdivision_representation": {
+    "count": 200,
+    "namespace": "interpolated_new_triangle_id indexes joined-expanded-E.npz triangles, NOT body-only payload triangles",
+    "same_original_source_face_and_source_triangle_vertices_exact": true,
+    "maximum_old_rounded_point_residual_m": 3.649296680212732e-08,
+    "maximum_old_rounded_point_plane_residual_m": 2.9328902294692982e-08,
+    "maximum_old_subdivision_facet_normal_difference_deg": 0.014971658389783642,
+    "new_original_source_triangle_normal_difference_deg": 0.0,
+    "scope": "Root-authorized representation-only change of200 old source_vertex=-1 forearm split points atZ1.035; not geometry displacement/exemption of original donor/head/core vertices"
+  },
+  "native_saved": false,
+  "ART_status": "UNVERIFIED until Egray actuals"
+}
