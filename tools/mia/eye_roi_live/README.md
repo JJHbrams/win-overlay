@@ -104,3 +104,25 @@ The screen-right lower depth at mid-width changes13.451→15.448% of its own
 width; the upper changes15.546→15.633% through evaluated smoothing. CreaseC
 changes no aperture coordinates. This is a diagnostic effect, not a source fit.
 No image or source-ART claim follows from this CPU result.
+
+## Declared12-frame actual comparison
+
+Root granted the12-frame GPU batch after the CPU checkpoint. The actual output
+is canonical `.mia-cache/eye-roi/actual-components-source4-01/`; GPU was released
+after Blender exited. It contains three existing recipes under four recorded
+source-camera hypotheses, all hairOFF. Original raw/key/UV arrays stayed exact;
+the renderer asserted the new crease material slots before/after every frame.
+
+`compose_source4.py` reuses the saved R3b source package's frozen uniform SRT for
+all three models. Its optional eye-band boards use one identical global tile
+crop for every column, never per-eye alignment. `paired/reference-review.json`
+passed the existing package validator with ART `NOT_EVALUATED`.
+
+Producer inspected all four ROI boards plus front/profile whole boards. The
+existing lower corrective slightly opens/curves the screen-right lower rim,
+but it does not establish the source upper/lower run and corner distribution.
+CreaseC changes no opening geometry and greatly suppresses the visible old
+floating crease; its source alignment and strength are still unaccepted.
+Oblique source pose/gaze differences remain material. No additional eye shape,
+mirroring, width expansion or face redesign was selected. Root's independent
+judgment and the remaining matte/hairON/high-low/turn/expression gates are open.
