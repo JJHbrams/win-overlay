@@ -1,0 +1,1554 @@
+{
+  "schema_version": 1,
+  "part": "body",
+  "required_views": [
+    "front",
+    "profile",
+    "back",
+    "oblique"
+  ],
+  "baseline_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\posterior-union09\\native\\Mia_PosteriorUnion09_STATIC_ShapeGuide.blend",
+    "sha256": "7bc207b804775b9637858fed8e9faf5d831f6ae034d62da6792522fe1e9c4158"
+  },
+  "candidate_native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\native\\Mia_Shoulder10_STATIC_ShapeGuide.blend",
+    "sha256": "920f68dc3477db3c0a51fc7c22f2e086602f341f85daf183eadf9e1866167cf4"
+  },
+  "views": [
+    {
+      "id": "front",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png",
+        "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+        "crop_xyxy": [
+          130.65003930104604,
+          143.0365802043653,
+          347.34996069895396,
+          359.7365016022733
+        ],
+        "original_size": [
+          1536,
+          1024
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\actual\\09-gray-front.png",
+        "sha256": "bcf8af7ce291e53c0725f1427c34c791097e107fecda1d5c0ca948d5902a47e5"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\actual\\10-gray-front.png",
+        "sha256": "87e3b48f4e3a0aae1b37b73c7983715ebd54014a3380f2a065a5ba356597e98c"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\source-09-10-front.png",
+        "sha256": "4b8bbb25362fb7fb595daa2e897d4800882ea7de46d0bed75439990be2c50561"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.6292068494294654e-07,
+            -1.0,
+            -2.0350000858306885
+          ],
+          [
+            0.0,
+            1.0,
+            -1.6292068494294654e-07,
+            1.3300000429153442
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": [
+          {
+            "name": "09_Review_Area_0",
+            "type": "AREA",
+            "energy": 110.0,
+            "size": 1.2999999523162842,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.8294633030891418,
+                0.21582022309303284,
+                -0.515181839466095,
+                -1.2000000476837158
+              ],
+              [
+                -0.5585612654685974,
+                0.32049307227134705,
+                -0.7650447487831116,
+                -1.7999999523162842
+              ],
+              [
+                6.660580709194619e-08,
+                0.9223371744155884,
+                0.38638606667518616,
+                2.0999999046325684
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_1",
+            "type": "AREA",
+            "energy": 38.0,
+            "size": 1.399999976158142,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.7025167942047119,
+                -0.17530816793441772,
+                0.6897370219230652,
+                1.399999976158142
+              ],
+              [
+                0.7116671800613403,
+                0.173054039478302,
+                -0.6808686256408691,
+                -1.399999976158142
+              ],
+              [
+                4.6766118089180964e-08,
+                0.9691848754882812,
+                0.24633441865444183,
+                1.7000000476837158
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_2",
+            "type": "AREA",
+            "energy": 22.0,
+            "size": 1.0,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                -1.0,
+                -1.3717345836994355e-07,
+                1.0062080235684334e-07,
+                0.0
+              ],
+              [
+                1.5099580252808664e-07,
+                -0.44321998953819275,
+                0.8964128494262695,
+                1.600000023841858
+              ],
+              [
+                -7.836690230078602e-08,
+                0.8964128494262695,
+                0.44321998953819275,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "yaw": 0,
+        "pitch": 0
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.6292068494294654e-07,
+            -1.0,
+            -2.0350000858306885
+          ],
+          [
+            0.0,
+            1.0,
+            -1.6292068494294654e-07,
+            1.3300000429153442
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": [
+          {
+            "name": "09_Review_Area_0",
+            "type": "AREA",
+            "energy": 110.0,
+            "size": 1.2999999523162842,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.8294633030891418,
+                0.21582022309303284,
+                -0.515181839466095,
+                -1.2000000476837158
+              ],
+              [
+                -0.5585612654685974,
+                0.32049307227134705,
+                -0.7650447487831116,
+                -1.7999999523162842
+              ],
+              [
+                6.660580709194619e-08,
+                0.9223371744155884,
+                0.38638606667518616,
+                2.0999999046325684
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_1",
+            "type": "AREA",
+            "energy": 38.0,
+            "size": 1.399999976158142,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.7025167942047119,
+                -0.17530816793441772,
+                0.6897370219230652,
+                1.399999976158142
+              ],
+              [
+                0.7116671800613403,
+                0.173054039478302,
+                -0.6808686256408691,
+                -1.399999976158142
+              ],
+              [
+                4.6766118089180964e-08,
+                0.9691848754882812,
+                0.24633441865444183,
+                1.7000000476837158
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_2",
+            "type": "AREA",
+            "energy": 22.0,
+            "size": 1.0,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                -1.0,
+                -1.3717345836994355e-07,
+                1.0062080235684334e-07,
+                0.0
+              ],
+              [
+                1.5099580252808664e-07,
+                -0.44321998953819275,
+                0.8964128494262695,
+                1.600000023841858
+              ],
+              [
+                -7.836690230078602e-08,
+                0.8964128494262695,
+                0.44321998953819275,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "yaw": 0,
+        "pitch": 0
+      },
+      "reference_registration": {
+        "uniform_scale": 2.9533928571428576,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          -385.86089285714297,
+          -422.44321428571385
+        ],
+        "normalization_basis": "Frozen E/09 wholeheight metric; crop shift only for camera targetZ1.33. Shoulder proportions excluded from registration.",
+        "notes": "Same original1536x1024 panel canvas. Oblique independent pelvis/crotchX1326 +/-8px, screenoffset+12.19px from heldyaw40/targetY-.035; cropcenter1313.81 +/-8px, never shoulder-fitted. This assumes inferred pelvis centreline corresponds to worldX0/Y0; visiblecrotch is not recovered3Dcentre/AP landmark. Bounded display registration only, not calibrated sourcecamera or exactshoulder residuals."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "normalization_basis": "Actual native render640x640 pasted unchanged; no silhouette normalization."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "normalization_basis": "Actual native render640x640 pasted unchanged; no silhouette normalization."
+      },
+      "pose_uncertainty": "Exposed skin roof; straps omitted. Illustrated lowA differs from static09; no recovered joint positions.",
+      "observed_differences": "ART FAIL: root/fresh reviewer confirmed S10-AC1/AC2 failure. Lowered roof introduces outer cap lip/front shoulder bar and profile cap-neck step. No promotion.",
+      "unresolved": "Shoulder10 unselected. Neckside pinch/shelf, cap ridge, APbulk and lowerfixed transition require actual review. No production UV/rig/fullMia scope.",
+      "material_mode": "Actual simple gray PrincipledBSDF output; base.23,roughness.85; same inherited saved09 lights/world/display."
+    },
+    {
+      "id": "profile",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png",
+        "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+        "crop_xyxy": [
+          450.440292641635,
+          143.0365802043653,
+          667.1402140395429,
+          359.7365016022733
+        ],
+        "original_size": [
+          1536,
+          1024
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\actual\\09-gray-profile.png",
+        "sha256": "d9da1779671842a08ae06dfd12b06ab326456a2dacecb854728efbcaafaaee14"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\actual\\10-gray-profile.png",
+        "sha256": "0a2972f2b341cc5689ed8a9b9dd413d2ea3665a0b502b1592fc3212b515dcdc5"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\source-09-10-profile.png",
+        "sha256": "1a58526ac658d419a8c5eefbc549f621925ee6beaa08a5e2cf0bcd2cb3714fea"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.08715568482875824,
+            4.083678817323744e-08,
+            0.9961947202682495,
+            1.992389440536499
+          ],
+          [
+            0.9961947202682495,
+            -3.4765363920996606e-08,
+            -0.08715568482875824,
+            -0.20931148529052734
+          ],
+          [
+            3.1073913220325267e-08,
+            1.0,
+            -4.371138828673793e-08,
+            1.3300000429153442
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": [
+          {
+            "name": "09_Review_Area_0",
+            "type": "AREA",
+            "energy": 110.0,
+            "size": 1.2999999523162842,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.8294633030891418,
+                0.21582022309303284,
+                -0.515181839466095,
+                -1.2000000476837158
+              ],
+              [
+                -0.5585612654685974,
+                0.32049307227134705,
+                -0.7650447487831116,
+                -1.7999999523162842
+              ],
+              [
+                6.660580709194619e-08,
+                0.9223371744155884,
+                0.38638606667518616,
+                2.0999999046325684
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_1",
+            "type": "AREA",
+            "energy": 38.0,
+            "size": 1.399999976158142,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.7025167942047119,
+                -0.17530816793441772,
+                0.6897370219230652,
+                1.399999976158142
+              ],
+              [
+                0.7116671800613403,
+                0.173054039478302,
+                -0.6808686256408691,
+                -1.399999976158142
+              ],
+              [
+                4.6766118089180964e-08,
+                0.9691848754882812,
+                0.24633441865444183,
+                1.7000000476837158
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_2",
+            "type": "AREA",
+            "energy": 22.0,
+            "size": 1.0,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                -1.0,
+                -1.3717345836994355e-07,
+                1.0062080235684334e-07,
+                0.0
+              ],
+              [
+                1.5099580252808664e-07,
+                -0.44321998953819275,
+                0.8964128494262695,
+                1.600000023841858
+              ],
+              [
+                -7.836690230078602e-08,
+                0.8964128494262695,
+                0.44321998953819275,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "yaw": 85,
+        "pitch": 0
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.08715568482875824,
+            4.083678817323744e-08,
+            0.9961947202682495,
+            1.992389440536499
+          ],
+          [
+            0.9961947202682495,
+            -3.4765363920996606e-08,
+            -0.08715568482875824,
+            -0.20931148529052734
+          ],
+          [
+            3.1073913220325267e-08,
+            1.0,
+            -4.371138828673793e-08,
+            1.3300000429153442
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": [
+          {
+            "name": "09_Review_Area_0",
+            "type": "AREA",
+            "energy": 110.0,
+            "size": 1.2999999523162842,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.8294633030891418,
+                0.21582022309303284,
+                -0.515181839466095,
+                -1.2000000476837158
+              ],
+              [
+                -0.5585612654685974,
+                0.32049307227134705,
+                -0.7650447487831116,
+                -1.7999999523162842
+              ],
+              [
+                6.660580709194619e-08,
+                0.9223371744155884,
+                0.38638606667518616,
+                2.0999999046325684
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_1",
+            "type": "AREA",
+            "energy": 38.0,
+            "size": 1.399999976158142,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.7025167942047119,
+                -0.17530816793441772,
+                0.6897370219230652,
+                1.399999976158142
+              ],
+              [
+                0.7116671800613403,
+                0.173054039478302,
+                -0.6808686256408691,
+                -1.399999976158142
+              ],
+              [
+                4.6766118089180964e-08,
+                0.9691848754882812,
+                0.24633441865444183,
+                1.7000000476837158
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_2",
+            "type": "AREA",
+            "energy": 22.0,
+            "size": 1.0,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                -1.0,
+                -1.3717345836994355e-07,
+                1.0062080235684334e-07,
+                0.0
+              ],
+              [
+                1.5099580252808664e-07,
+                -0.44321998953819275,
+                0.8964128494262695,
+                1.600000023841858
+              ],
+              [
+                -7.836690230078602e-08,
+                0.8964128494262695,
+                0.44321998953819275,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "yaw": 85,
+        "pitch": 0
+      },
+      "reference_registration": {
+        "uniform_scale": 2.9533928571428576,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          -1330.3271428571431,
+          -422.44321428571385
+        ],
+        "normalization_basis": "Frozen E/09 wholeheight metric; crop shift only for camera targetZ1.33. Shoulder proportions excluded from registration.",
+        "notes": "Same original1536x1024 panel canvas. Oblique independent pelvis/crotchX1326 +/-8px, screenoffset+12.19px from heldyaw40/targetY-.035; cropcenter1313.81 +/-8px, never shoulder-fitted. This assumes inferred pelvis centreline corresponds to worldX0/Y0; visiblecrotch is not recovered3Dcentre/AP landmark. Bounded display registration only, not calibrated sourcecamera or exactshoulder residuals."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "normalization_basis": "Actual native render640x640 pasted unchanged; no silhouette normalization."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "normalization_basis": "Actual native render640x640 pasted unchanged; no silhouette normalization."
+      },
+      "pose_uncertainty": "Near profile estimate85deg, uncertainty8deg; cap/arm overlap and strap remain local limits.",
+      "observed_differences": "ART FAIL: root/fresh reviewer confirmed S10-AC1/AC2 failure. Lowered roof introduces outer cap lip/front shoulder bar and profile cap-neck step. No promotion.",
+      "unresolved": "Shoulder10 unselected. Neckside pinch/shelf, cap ridge, APbulk and lowerfixed transition require actual review. No production UV/rig/fullMia scope.",
+      "material_mode": "Actual simple gray PrincipledBSDF output; base.23,roughness.85; same inherited saved09 lights/world/display."
+    },
+    {
+      "id": "back",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png",
+        "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+        "crop_xyxy": [
+          826.650039301046,
+          143.0365802043653,
+          1043.349960698954,
+          359.7365016022733
+        ],
+        "original_size": [
+          1536,
+          1024
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\actual\\09-gray-back.png",
+        "sha256": "ba90d0de9b6d166d317a998dd9139d7c82940612d1bab67d072fdce21e44eb10"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\actual\\10-gray-back.png",
+        "sha256": "ef0b294e468d0b8cddf3023715875d291a4ddad60e8ea48a15473fa7e7a6c836"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\source-09-10-back.png",
+        "sha256": "2e957426805e39e10a44e087aaaa913a405c1be56157e50f22a3fe28463e9560"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -1.0,
+            1.5099580252808664e-07,
+            -1.1399865765455465e-14,
+            2.4492937051703357e-16
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            1.0,
+            1.965000033378601
+          ],
+          [
+            1.5099580252808664e-07,
+            1.0,
+            -7.549790126404332e-08,
+            1.3300000429153442
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": [
+          {
+            "name": "09_Review_Area_0",
+            "type": "AREA",
+            "energy": 110.0,
+            "size": 1.2999999523162842,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.8294633030891418,
+                0.21582022309303284,
+                -0.515181839466095,
+                -1.2000000476837158
+              ],
+              [
+                -0.5585612654685974,
+                0.32049307227134705,
+                -0.7650447487831116,
+                -1.7999999523162842
+              ],
+              [
+                6.660580709194619e-08,
+                0.9223371744155884,
+                0.38638606667518616,
+                2.0999999046325684
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_1",
+            "type": "AREA",
+            "energy": 38.0,
+            "size": 1.399999976158142,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.7025167942047119,
+                -0.17530816793441772,
+                0.6897370219230652,
+                1.399999976158142
+              ],
+              [
+                0.7116671800613403,
+                0.173054039478302,
+                -0.6808686256408691,
+                -1.399999976158142
+              ],
+              [
+                4.6766118089180964e-08,
+                0.9691848754882812,
+                0.24633441865444183,
+                1.7000000476837158
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_2",
+            "type": "AREA",
+            "energy": 22.0,
+            "size": 1.0,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                -1.0,
+                -1.3717345836994355e-07,
+                1.0062080235684334e-07,
+                0.0
+              ],
+              [
+                1.5099580252808664e-07,
+                -0.44321998953819275,
+                0.8964128494262695,
+                1.600000023841858
+              ],
+              [
+                -7.836690230078602e-08,
+                0.8964128494262695,
+                0.44321998953819275,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "yaw": 180,
+        "pitch": 0
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            -1.0,
+            1.5099580252808664e-07,
+            -1.1399865765455465e-14,
+            2.4492937051703357e-16
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            1.0,
+            1.965000033378601
+          ],
+          [
+            1.5099580252808664e-07,
+            1.0,
+            -7.549790126404332e-08,
+            1.3300000429153442
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": [
+          {
+            "name": "09_Review_Area_0",
+            "type": "AREA",
+            "energy": 110.0,
+            "size": 1.2999999523162842,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.8294633030891418,
+                0.21582022309303284,
+                -0.515181839466095,
+                -1.2000000476837158
+              ],
+              [
+                -0.5585612654685974,
+                0.32049307227134705,
+                -0.7650447487831116,
+                -1.7999999523162842
+              ],
+              [
+                6.660580709194619e-08,
+                0.9223371744155884,
+                0.38638606667518616,
+                2.0999999046325684
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_1",
+            "type": "AREA",
+            "energy": 38.0,
+            "size": 1.399999976158142,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.7025167942047119,
+                -0.17530816793441772,
+                0.6897370219230652,
+                1.399999976158142
+              ],
+              [
+                0.7116671800613403,
+                0.173054039478302,
+                -0.6808686256408691,
+                -1.399999976158142
+              ],
+              [
+                4.6766118089180964e-08,
+                0.9691848754882812,
+                0.24633441865444183,
+                1.7000000476837158
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_2",
+            "type": "AREA",
+            "energy": 22.0,
+            "size": 1.0,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                -1.0,
+                -1.3717345836994355e-07,
+                1.0062080235684334e-07,
+                0.0
+              ],
+              [
+                1.5099580252808664e-07,
+                -0.44321998953819275,
+                0.8964128494262695,
+                1.600000023841858
+              ],
+              [
+                -7.836690230078602e-08,
+                0.8964128494262695,
+                0.44321998953819275,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "yaw": 180,
+        "pitch": 0
+      },
+      "reference_registration": {
+        "uniform_scale": 2.9533928571428576,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          -2441.422321428572,
+          -422.44321428571385
+        ],
+        "normalization_basis": "Frozen E/09 wholeheight metric; crop shift only for camera targetZ1.33. Shoulder proportions excluded from registration.",
+        "notes": "Same original1536x1024 panel canvas. Oblique independent pelvis/crotchX1326 +/-8px, screenoffset+12.19px from heldyaw40/targetY-.035; cropcenter1313.81 +/-8px, never shoulder-fitted. This assumes inferred pelvis centreline corresponds to worldX0/Y0; visiblecrotch is not recovered3Dcentre/AP landmark. Bounded display registration only, not calibrated sourcecamera or exactshoulder residuals."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "normalization_basis": "Actual native render640x640 pasted unchanged; no silhouette normalization."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "normalization_basis": "Actual native render640x640 pasted unchanged; no silhouette normalization."
+      },
+      "pose_uncertainty": "Exposed posterior roof; straps obscure short runs; no exact scapular relief inferred.",
+      "observed_differences": "ART FAIL: root/fresh reviewer confirmed S10-AC1/AC2 failure. Lowered roof introduces outer cap lip/front shoulder bar and profile cap-neck step. No promotion.",
+      "unresolved": "Shoulder10 unselected. Neckside pinch/shelf, cap ridge, APbulk and lowerfixed transition require actual review. No production UV/rig/fullMia scope.",
+      "material_mode": "Actual simple gray PrincipledBSDF output; base.23,roughness.85; same inherited saved09 lights/world/display."
+    },
+    {
+      "id": "oblique",
+      "reference": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png",
+        "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
+        "crop_xyxy": [
+          1205.4619871577665,
+          143.0365802043653,
+          1422.1619085556745,
+          359.7365016022733
+        ],
+        "original_size": [
+          1536,
+          1024
+        ]
+      },
+      "baseline_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\actual\\09-gray-oblique.png",
+        "sha256": "84f8884ba46261961447d3db44fd4ebabe4eb7ff8831f36dacfd1ad865868d04"
+      },
+      "candidate_render": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\actual\\10-gray-oblique.png",
+        "sha256": "322bf62289c95309d2f8029c114d8a3017ac8d4c7a1f172023d71fff414c2971"
+      },
+      "comparison_board": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-v002-body\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\shoulder10\\source-09-10-oblique.png",
+        "sha256": "42fce9dcb71d850fa93eb55d39602fe77a4e6102a58587868fd3d1d4deac2261"
+      },
+      "baseline_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.7660443782806396,
+            2.809714239049299e-08,
+            0.6427876949310303,
+            1.285575270652771
+          ],
+          [
+            0.6427876949310303,
+            -3.348486288246022e-08,
+            -0.7660443782806396,
+            -1.5670888423919678
+          ],
+          [
+            0.0,
+            1.0,
+            -4.371138828673793e-08,
+            1.3300000429153442
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": [
+          {
+            "name": "09_Review_Area_0",
+            "type": "AREA",
+            "energy": 110.0,
+            "size": 1.2999999523162842,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.8294633030891418,
+                0.21582022309303284,
+                -0.515181839466095,
+                -1.2000000476837158
+              ],
+              [
+                -0.5585612654685974,
+                0.32049307227134705,
+                -0.7650447487831116,
+                -1.7999999523162842
+              ],
+              [
+                6.660580709194619e-08,
+                0.9223371744155884,
+                0.38638606667518616,
+                2.0999999046325684
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_1",
+            "type": "AREA",
+            "energy": 38.0,
+            "size": 1.399999976158142,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.7025167942047119,
+                -0.17530816793441772,
+                0.6897370219230652,
+                1.399999976158142
+              ],
+              [
+                0.7116671800613403,
+                0.173054039478302,
+                -0.6808686256408691,
+                -1.399999976158142
+              ],
+              [
+                4.6766118089180964e-08,
+                0.9691848754882812,
+                0.24633441865444183,
+                1.7000000476837158
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_2",
+            "type": "AREA",
+            "energy": 22.0,
+            "size": 1.0,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                -1.0,
+                -1.3717345836994355e-07,
+                1.0062080235684334e-07,
+                0.0
+              ],
+              [
+                1.5099580252808664e-07,
+                -0.44321998953819275,
+                0.8964128494262695,
+                1.600000023841858
+              ],
+              [
+                -7.836690230078602e-08,
+                0.8964128494262695,
+                0.44321998953819275,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "yaw": 40,
+        "pitch": 0
+      },
+      "candidate_camera": {
+        "projection": "ORTHO",
+        "matrix": [
+          [
+            0.7660443782806396,
+            2.809714239049299e-08,
+            0.6427876949310303,
+            1.285575270652771
+          ],
+          [
+            0.6427876949310303,
+            -3.348486288246022e-08,
+            -0.7660443782806396,
+            -1.5670888423919678
+          ],
+          [
+            0.0,
+            1.0,
+            -4.371138828673793e-08,
+            1.3300000429153442
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "ortho_scale": 0.4000000059604645,
+        "clip_start": 0.10000000149011612,
+        "clip_end": 10.0,
+        "frame": 1,
+        "active_shape_keys": {},
+        "lighting": [
+          {
+            "name": "09_Review_Area_0",
+            "type": "AREA",
+            "energy": 110.0,
+            "size": 1.2999999523162842,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.8294633030891418,
+                0.21582022309303284,
+                -0.515181839466095,
+                -1.2000000476837158
+              ],
+              [
+                -0.5585612654685974,
+                0.32049307227134705,
+                -0.7650447487831116,
+                -1.7999999523162842
+              ],
+              [
+                6.660580709194619e-08,
+                0.9223371744155884,
+                0.38638606667518616,
+                2.0999999046325684
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_1",
+            "type": "AREA",
+            "energy": 38.0,
+            "size": 1.399999976158142,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                0.7025167942047119,
+                -0.17530816793441772,
+                0.6897370219230652,
+                1.399999976158142
+              ],
+              [
+                0.7116671800613403,
+                0.173054039478302,
+                -0.6808686256408691,
+                -1.399999976158142
+              ],
+              [
+                4.6766118089180964e-08,
+                0.9691848754882812,
+                0.24633441865444183,
+                1.7000000476837158
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "name": "09_Review_Area_2",
+            "type": "AREA",
+            "energy": 22.0,
+            "size": 1.0,
+            "shape": "DISK",
+            "use_shadow": true,
+            "hidden": false,
+            "matrix": [
+              [
+                -1.0,
+                -1.3717345836994355e-07,
+                1.0062080235684334e-07,
+                0.0
+              ],
+              [
+                1.5099580252808664e-07,
+                -0.44321998953819275,
+                0.8964128494262695,
+                1.600000023841858
+              ],
+              [
+                -7.836690230078602e-08,
+                0.8964128494262695,
+                0.44321998953819275,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        ],
+        "color_management": {
+          "view_transform": "Standard",
+          "look": "None",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "resolution": [
+          640,
+          640
+        ],
+        "pixel_aspect": [
+          1,
+          1
+        ],
+        "lens_shift": [
+          0.0,
+          0.0
+        ],
+        "yaw": 40,
+        "pitch": 0
+      },
+      "reference_registration": {
+        "uniform_scale": 2.9533928571428576,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          -3560.202822428983,
+          -422.44321428571385
+        ],
+        "normalization_basis": "Frozen E/09 wholeheight metric; crop shift only for camera targetZ1.33. Shoulder proportions excluded from registration.",
+        "notes": "Same original1536x1024 panel canvas. Oblique independent pelvis/crotchX1326 +/-8px, screenoffset+12.19px from heldyaw40/targetY-.035; cropcenter1313.81 +/-8px, never shoulder-fitted. This assumes inferred pelvis centreline corresponds to worldX0/Y0; visiblecrotch is not recovered3Dcentre/AP landmark. Bounded display registration only, not calibrated sourcecamera or exactshoulder residuals."
+      },
+      "baseline_registration": {
+        "uniform_scale": 1.0,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "normalization_basis": "Actual native render640x640 pasted unchanged; no silhouette normalization."
+      },
+      "candidate_registration": {
+        "uniform_scale": 1.0,
+        "rotation_degrees": 0,
+        "translation_xy": [
+          0,
+          0
+        ],
+        "normalization_basis": "Actual native render640x640 pasted unchanged; no silhouette normalization."
+      },
+      "pose_uncertainty": "Front3/4 estimate40deg +/-10deg. Independent wholebody pelvis/crotch axis1326 +/-8px; nominal cropcenter1313.81. No shoulder fit or width scale.",
+      "observed_differences": "ART FAIL: root/fresh reviewer confirmed S10-AC1/AC2 failure. Lowered roof introduces outer cap lip/front shoulder bar and profile cap-neck step. No promotion.",
+      "unresolved": "Shoulder10 unselected. Neckside pinch/shelf, cap ridge, APbulk and lowerfixed transition require actual review. No production UV/rig/fullMia scope.",
+      "material_mode": "Actual simple gray PrincipledBSDF output; base.23,roughness.85; same inherited saved09 lights/world/display."
+    }
+  ],
+  "scope": "One headless static shoulder design hypothesis; not production body/UV/rig/fullMia.",
+  "art_acceptance": "FAIL S10-AC1/AC2 confirmed by root/fresh reviewer; unselected failure checkpoint"
+}
