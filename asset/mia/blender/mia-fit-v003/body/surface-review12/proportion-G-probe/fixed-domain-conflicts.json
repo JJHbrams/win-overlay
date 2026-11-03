@@ -1,0 +1,132 @@
+{
+  "status": "RAM_PROPOSAL_UNSELECTED_DO_NOT_MESH",
+  "calibration_json_sha256": "ec9f77ac81b421930e484e237429932125c96b5011bb3d712ae31970a6dc1d2e",
+  "why_half_was_chosen": "Producer conservative partial-correction heuristic intended to avoid forcing uncertain illustrated pose. It was not a full-source residual objective or a justified acceptance rule; root explicitly rejected it as calibration completion.",
+  "no_new_candidate_or_solve": true,
+  "observation_trace_sigma_z_m": 0.003691741071428572,
+  "fixed_domain_conflicts": [
+    {
+      "boundary": "hard_lower_surface_plane",
+      "source_path": "front_right_skin",
+      "source_pixel": [
+        328,
+        238
+      ],
+      "x_world": 0.16428247767857146,
+      "source_world_z": 1.3547098214285713,
+      "source_upper_observation_interval_z": 1.3584015624999999,
+      "fixed_material_point_world": [
+        0.16428247767857146,
+        0.008000000000000007,
+        1.36
+      ],
+      "old_field_at_point": -0.0190241540772742,
+      "roof_lower_bound_z": 1.36,
+      "minimum_unavoidable_excess_over_trace_interval_m": 0.001598437500000216
+    },
+    {
+      "boundary": "chosen_sampling_halo_plane",
+      "source_path": "front_right_skin",
+      "source_pixel": [
+        323,
+        235
+      ],
+      "x_world": 0.155053125,
+      "source_world_z": 1.3602474330357142,
+      "source_upper_observation_interval_z": 1.3639391741071427,
+      "fixed_material_point_world": [
+        0.155053125,
+        0.008000000000000007,
+        1.3689655172413795
+      ],
+      "old_field_at_point": -0.025735744713097194,
+      "roof_lower_bound_z": 1.3689655172413795,
+      "minimum_unavoidable_excess_over_trace_interval_m": 0.005026343134236777
+    },
+    {
+      "boundary": "chosen_sampling_halo_plane",
+      "source_path": "front_right_skin",
+      "source_pixel": [
+        328,
+        238
+      ],
+      "x_world": 0.16428247767857146,
+      "source_world_z": 1.3547098214285713,
+      "source_upper_observation_interval_z": 1.3584015624999999,
+      "fixed_material_point_world": [
+        0.16428247767857146,
+        0.008000000000000007,
+        1.3689655172413795
+      ],
+      "old_field_at_point": -0.01727055023843146,
+      "roof_lower_bound_z": 1.3689655172413795,
+      "minimum_unavoidable_excess_over_trace_interval_m": 0.010563954741379611
+    },
+    {
+      "boundary": "chosen_sampling_halo_plane",
+      "source_path": "back_left_skin",
+      "source_pixel": [
+        840,
+        237
+      ],
+      "x_world": 0.17535770089285715,
+      "source_world_z": 1.3565556919642856,
+      "source_upper_observation_interval_z": 1.3602474330357142,
+      "fixed_material_point_world": [
+        0.17535770089285715,
+        0.008000000000000007,
+        1.3689655172413795
+      ],
+      "old_field_at_point": -0.006605706628297395,
+      "roof_lower_bound_z": 1.3689655172413795,
+      "minimum_unavoidable_excess_over_trace_interval_m": 0.008718084205665333
+    }
+  ],
+  "source_left_right": {
+    "maximum_front_left_right_same_absX_height_difference_px": 5.97999999999999,
+    "at_absX_m": 0.15514541852678576,
+    "two_intervals_overlap_if_difference_px_le": 4.0,
+    "trace_only_incompatible": true,
+    "limit": "Linear interpolation only inside observed runs; omitted strap-crossing intervals are not reconstructed hard landmarks. Pose/illustration may explain asymmetry; do not symmetrize reference or refit by view."
+  },
+  "actual_profile_pixel_check": {
+    "source_original_path": "C:\\Users\\antio\\.codex\\worktrees\\mia-body-head-v06\\win-overlay\\asset\\mia\\references\\body-foundation\\v06\\mia-body-visibility-guide-v06.png",
+    "edge_points_inclusive": [
+      [
+        195,
+        574,
+        615
+      ],
+      [
+        205,
+        576,
+        618
+      ],
+      [
+        215,
+        574,
+        623
+      ]
+    ],
+    "used_coarse_widths_px": [
+      37,
+      42,
+      51
+    ],
+    "edge_verified_widths_px": [
+      41,
+      42,
+      49
+    ],
+    "declared_two_edge_width_uncertainty_px": 4,
+    "meaning": "Original row RGB check localizes ink/skin/background. Coarse width inputs lie in the declared4px width interval; values are not calibrated AP anatomy or a source camera recovery."
+  },
+  "limits_not_yet_proven": {
+    "cap_trap_scale": "No full-source accumulated-silhouette solve attempted; homothety has not been proved insufficient.",
+    "RX_RY_gate": "Phi-prime lower bound is a limit of this selected profile gate, not an anatomical impossibility. Current shifts remain well within it.",
+    "headcut": "Original donor cutZ1.465 is mandatory. No proof that it blocks observed lower-neck intervals; a new neck collar must be designed and actually checked.",
+    "fixed_components": "Unchanged fan/wall/arm definitions can impose union competitor floors. Complete full-source feasibility has not been solved.",
+    "pose": "Trace2px is drawing read uncertainty, not a complete pose/camera interval. Frontyaw\u00b14/profile\u00b18/pitch\u00b16deg must be propagated without refitting registration."
+  },
+  "next_required_analysis": "Form a bounded interval residual objective on TRUE accumulated silhouettes and visible neck sections. Separate provably conflicting fixed-domain observations from feasible residuals; propagate pose/camera uncertainty; solve few cap/trap/RX/RY parameters only after root approves. No amplitude grid/mesh/GPU."
+}
