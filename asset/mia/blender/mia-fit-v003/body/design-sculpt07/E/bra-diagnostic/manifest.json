@@ -1,0 +1,82 @@
+{
+  "status": "Partial front-observed fixed3Dcoverage diagnostic; no garment/body acceptance",
+  "first15_checkpoint": "c5275f7",
+  "first15_manifest_sha256": "ec5b078e7ed4104a90410d834cb9f5c684e220206ec6ceb0f59bdb055b055ad1",
+  "first15_files_exact": true,
+  "D_protected_files_exact": true,
+  "actual_frames": 4,
+  "actual_images": [
+    {
+      "path": "D-bra-front.png",
+      "sha256": "2a5ca82507b4d93c9913d2d607aeddc1e444fac45c72125dcea66afe1b3ad1ec",
+      "view": "front",
+      "state": "D"
+    },
+    {
+      "path": "E-bra-front.png",
+      "sha256": "53344f6ef2f095c7bff7d5d30286186ee5a23eebd1c3a4f8dd6025e7509e5bf1",
+      "view": "front",
+      "state": "E"
+    },
+    {
+      "path": "D-bra-F2lowoblique.png",
+      "sha256": "a6fac8332e55bfcacf12f8154602bbef707a7cbd29287c0f0234cbf105bde62a",
+      "view": "F2lowoblique",
+      "state": "D"
+    },
+    {
+      "path": "E-bra-F2lowoblique.png",
+      "sha256": "41620e1d8f3ce3a961d6a89c0362563bbed60333c44157b842fd9a1ce04a2db6",
+      "view": "F2lowoblique",
+      "state": "E"
+    }
+  ],
+  "boards": [
+    {
+      "path": "source-D-E-bra-front.png",
+      "sha256": "c1b222f5570d2245e85847878618f62f2a0ec6a1adc054e5fbe11dc3b441cf19",
+      "source_image_crop_from": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\source-front.png",
+      "source_image_sha256": "be2efd69f3cc838ad5a6202f5f540bb5305db5b0910345966d95d86f04c43371"
+    },
+    {
+      "path": "source-D-E-bra-F2lowoblique.png",
+      "sha256": "5bf750e69e47d7bfbfb3c932ede8717011b18912b8e4fa0dff9bf9b2c956c4c7",
+      "source_image_crop_from": "C:\\Users\\antio\\.codex\\worktrees\\mia-v003-design-sculpt\\win-overlay\\asset\\mia\\blender\\mia-fit-v003\\body\\design-sculpt07\\E\\source-F2lowoblique.png",
+      "source_image_sha256": "e13276ec08ce483b9e89a884015a0126156d3e9f9bf1a5f0db11e657d39539db"
+    }
+  ],
+  "files": {
+    "compose_and_freeze.py": "2ab5383de07bf7ffa30850e8e73b40db0645eb12d77b89e5bef8e93ddd2be63c",
+    "coverage-report.json": "9b3cead8952bf77681e7b1b10a8413669ef3418ce22afa23ffde058bbb25e0e9",
+    "D-bra-F2lowoblique-pre-render.json": "ff0bef097f7b9eaa41dc655d73b3065253916c492e541898c0dac9eeb9175db9",
+    "D-bra-F2lowoblique.png": "a6fac8332e55bfcacf12f8154602bbef707a7cbd29287c0f0234cbf105bde62a",
+    "D-bra-front-pre-render.json": "490fc70cf59ff973cab656242b61861c3c196041869a92f02383e7f4d1ebf203",
+    "D-bra-front.png": "2a5ca82507b4d93c9913d2d607aeddc1e444fac45c72125dcea66afe1b3ad1ec",
+    "D-front-observed-coverage.npz": "94163c952288918fcd034da9297c9cd3b48e4cc23ed84069cbf350acd2038028",
+    "E-bra-F2lowoblique-pre-render.json": "db87d14a37000e4675babdf506f576170b899c2c52742f1909851acc609145d9",
+    "E-bra-F2lowoblique.png": "41620e1d8f3ce3a961d6a89c0362563bbed60333c44157b842fd9a1ce04a2db6",
+    "E-bra-front-pre-render.json": "16480007c7d8ee2f035ccbe4826a0905326cbf639badf3c0d19fe9975e3fbc9d",
+    "E-bra-front.png": "53344f6ef2f095c7bff7d5d30286186ee5a23eebd1c3a4f8dd6025e7509e5bf1",
+    "E-front-observed-coverage.npz": "d5f07b422b05b5062f322b830cd12859f0a2da1a8c7ef8a4748fa8600ab724cf",
+    "observed-front-polygon.png": "fbb5ef88fd985b558e0d9d6629e619bab60c0add61362960877112cb4eeff72d",
+    "prepare-matrix-assignment-failed.log": "c43a11a8caefc8398081b0a14a9586a15d22cd9ec60919f5bcd277898e0d3863",
+    "prepare.log": "45a485167c3b643f0bf095c9a605e9acdc0c5ed7f3dbbce787ce4f54a9c69c73",
+    "prepare_coverage.py": "35c7e0f9a716b03a94dab498c0727cb613ad48f52853de8687e6581f81f87f05",
+    "preservation.json": "42048dd5f24c1532bf09e8698b958721c03ce6d871a47119f3543c217e9b6fb0",
+    "README.md": "b167136035f7c710668a0828cf96eae74960dd1fc796b6c0a27cf1f52544760a",
+    "render-preparation.json": "ca8992b604f234a7e06359586f08dc33d3eee95a27ad19a093967a732995fb87",
+    "render-records.json": "1d5388336e31b5129466fc4a1cf2e850b1caac292d699cd031ec0928a156934e",
+    "render.log": "7ab4ba21045d3198d129914e83f2c041d3187b60ba3568c2b1e912e5fdf824d3",
+    "render_four.py": "59cc0d3ed74e8c53a1b29c791767488b8290a362a60d50ccfa5a8075a5d8fe72",
+    "source-D-E-bra-F2lowoblique.png": "5bf750e69e47d7bfbfb3c932ede8717011b18912b8e4fa0dff9bf9b2c956c4c7",
+    "source-D-E-bra-front.png": "c1b222f5570d2245e85847878618f62f2a0ec6a1adc054e5fbe11dc3b441cf19"
+  },
+  "limits": [
+    "Projection seating is garment placement, not an independent shape reconstruction or anatomical fit score.",
+    "Side connectors clip inside visible central cloth; they are not observed side seams.",
+    "Straps excluded: source P04/P05 show inner edges but no outer width or shoulder attachment.",
+    "F2 uses the same fixed front-observed attribute; side/underside truncation and hidden closure are UNCALIBRATED. No F2 paint or refit.",
+    "No final UV, garment thickness, cloth force or physics; no painted central cleft.",
+    "No change to legacy body support guides, numeric metrics or tolerances. Missed rays have no nearest-surface fallback."
+  ]
+}
