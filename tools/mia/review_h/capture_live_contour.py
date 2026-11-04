@@ -28,7 +28,7 @@ spec = importlib.util.spec_from_file_location('contour_capacity', ROOT/'asset/mi
 guard = importlib.util.module_from_spec(spec); spec.loader.exec_module(guard)
 assert not guard.inspect(64*1024**2)['violations']
 source = bpy.context.scene
-body = bpy.data.objects['MIA_Review12_H_LiveRepair']
+body = bpy.data.objects[globals().get('MIA_BODY_REVIEW_OBJECT', 'MIA_Review12_H_LiveRepair')]
 assert body.mode == 'OBJECT'
 digest = lambda a: hashlib.sha256(np.asarray(a, np.float32).tobytes()).hexdigest()
 coords = np.array([v.co[:] for v in body.data.vertices], np.float32)
@@ -84,16 +84,23 @@ try:
     window.scene = scene; bpy.context.view_layer.update()
     jobs = [('front', 0, 0), ('profile', 90, 0), ('back', 180, 0),
             ('oblique', 30, 0), ('opposite', -30, 0), ('high', 40, 25), ('low', -40, -25)]
+    selected_views = globals().get('MIA_BODY_REVIEW_VIEWS')
+    if selected_views is not None:
+        assert selected_views and set(selected_views) <= {row[0] for row in jobs}
+        jobs = [row for row in jobs if row[0] in selected_views]
     record = dict(scope='Actual live geometry; isolated gray object-material override; no native or ART promotion',
                   phase=label, world_sha256=expected, active_live_sha256=active_digest, native=bpy.data.filepath,
                   baseline_replay='Exact preserved actual pre-edit coordinates on temporary mesh copy' if private_mesh else None,
                   original_pose=fixture.pose(source), original_slots=original_slots,
                   source_reference='asset/mia/references/body-foundation/v06/mia-body-visibility-guide-v06.png',
                   source_camera_limit='Nominal source-view estimates; opposite/high/low diagnose continuity, not calibrated drawing cameras',
-                  hair=False, frames=[])
+                  hair=False, frames=[], review_object=body.name,
+                  diagnostic_pose=globals().get('MIA_DIAGNOSTIC_POSE'))
     out.mkdir(parents=True)
     for name, yaw, pitch in jobs:
-        target, scale, resolution = (fixture.FULL_TARGET, fixture.FULL_SCALE, fixture.FULL_RES)
+        target, scale, resolution = (globals().get('MIA_BODY_FULL_TARGET', fixture.FULL_TARGET),
+            globals().get('MIA_BODY_FULL_SCALE', fixture.FULL_SCALE),
+            globals().get('MIA_BODY_FULL_RES', fixture.FULL_RES))
         if name in ['high', 'low']:
             target, scale, resolution = (globals().get('MIA_BODY_DETAIL_TARGET', (0, -.015, 1.385)),
                 globals().get('MIA_BODY_DETAIL_SCALE', .46), (800, 800))

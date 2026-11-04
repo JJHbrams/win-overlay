@@ -1,0 +1,30 @@
+diff --git a/tools/mia/integrated_finish/arm_pose01.py b/tools/mia/integrated_finish/arm_pose01.py
+index dd06c5f..4541c61 100644
+--- a/tools/mia/integrated_finish/arm_pose01.py
++++ b/tools/mia/integrated_finish/arm_pose01.py
+@@ -31,6 +31,25 @@ def _sha(a: np.ndarray) -> str:
+     return hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest()
+ 
+ 
++def _from_to(a: np.ndarray, b: np.ndarray) -> np.ndarray:
++    """Proper rotation from a measured rest segment to an absolute target."""
++    a = np.asarray(a, float); a /= np.linalg.norm(a); b = np.asarray(b, float); b /= np.linalg.norm(b)
++    v = np.cross(a, b); c = float(a @ b); k = np.array(((0., -v[2], v[1]), (v[2], 0., -v[0]), (-v[1], v[0], 0.)))
++    if c < -.99999:  # deterministic perpendicular axis for the only singular case
++        axis = np.cross(a, (1., 0., 0.));
++        if np.linalg.norm(axis) < 1.e-6: axis = np.cross(a, (0., 1., 0.))
++        axis /= np.linalg.norm(axis); return 2*np.outer(axis, axis)-np.eye(3)
++    return np.eye(3) + k + k @ k / (1.+c)
++
++
++def _pose_targets(side: str, state: str) -> tuple[np.ndarray, np.ndarray]:
++    sign = 1. if side == "R" else -1.
++    if state == "work_A": return np.array((sign*np.sin(np.pi/4), 0., -np.cos(np.pi/4))), np.array((sign*np.sin(np.pi/4), 0., -np.cos(np.pi/4)))
++    if state == "T": return np.array((sign, 0., 0.)), np.array((sign, 0., 0.))
++    if state == "elbow_bend": return np.array((sign*np.sin(np.pi/4), 0., -np.cos(np.pi/4))), np.array((0., -1., 0.))
++    raise ValueError("arm_down has no posed target")
++
++
+ def _cache(root: Path) -> Path:
+     return Path(root) / CACHE_REL
+ 

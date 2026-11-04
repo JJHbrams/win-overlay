@@ -1,0 +1,221 @@
+"""Rib01 local lower-thorax/upper-oblique proposal; never mutates Blender.
+
+This deliberately edits only a measured, thorax-dominant lateral patch.  It is
+not a replacement torso, a cage scale, a waist shrink, or an art approval.
+"""
+from pathlib import Path
+import argparse
+import hashlib
+import heapq
+import json
+import runpy
+
+import numpy as np
+
+
+ROOT = Path(__file__).resolve().parents[3]
+BASE = "ba6537406312273401ad22367e34ba8226979ffb980babe5fd95a0c6f59ed829"
+Z_LO, Z_CORE_LO, Z_CORE_HI, Z_HI = 1.195, 1.220, 1.275, 1.300
+
+
+def sha(a):
+    return hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest()
+
+
+def smooth01(x):
+    x = np.clip(np.asarray(x, float), 0.0, 1.0)
+    return x * x * (3.0 - 2.0 * x)
+
+
+def band(z):
+    """C1 local handle: exact held lower/upper rings, no hidden global scale."""
+    return smooth01((z - Z_LO) / (Z_CORE_LO - Z_LO)) * (1.0 - smooth01((z - Z_CORE_HI) / (Z_HI - Z_CORE_HI)))
+
+
+def stats(a):
+    a = np.asarray(a, float)
+    return dict(min=float(a.min()), median=float(np.median(a)), p99=float(np.quantile(a, .99)), max=float(a.max()))
+
+
+def _atlas_regions(root, faces):
+    with np.load(root / '.mia-cache/body-h/shape/assembly/live-D/atlas/surface.npz') as atlas:
+        face_ids = atlas['meshfaceid'].astype(np.int32)
+        assert np.array_equal(faces[face_ids], atlas['triangles'])
+        region = np.full(len(faces), -1, np.int16)
+        region[face_ids] = atlas['face_region'].astype(np.int16)
+    return region
+
+
+def _frozen_fields(root, centroids):
+    field = runpy.run_path(str(root / 'asset/mia/blender/mia-fit-v003/body/shoulder11/field.py'))
+    parameters = json.loads((root / 'asset/mia/blender/mia-fit-v003/body/shoulder11/parameters.json').read_text(encoding='utf8'))
+    _, regions = field['make'](parameters)
+    return (field['evaluate'](regions['breast_pair'], centroids),
+            field['evaluate'](regions['curved_tapered_thorax_neck'], centroids))
+
+
+def _triangle_metrics(before, after, faces, changed):
+    affected = changed[faces].any(1)
+    a = before[faces[affected]].astype(float)
+    b = after[faces[affected]].astype(float)
+    n0 = np.cross(a[:, 1] - a[:, 0], a[:, 2] - a[:, 0])
+    n1 = np.cross(b[:, 1] - b[:, 0], b[:, 2] - b[:, 0])
+    area0, area1 = np.linalg.norm(n0, axis=1), np.linalg.norm(n1, axis=1)
+    valid = area0 > 1e-15
+    cosine = np.sum(n0[valid] * n1[valid], axis=1) / (area0[valid] * area1[valid])
+    assert (area1[valid] > 1e-15).all() and (cosine > 0.0).all()
+    return dict(affected=int(affected.sum()), preexisting_degenerate=int((~valid).sum()),
+                minimum_orientation_cos=float(cosine.min()), area_ratio=stats(area1[valid] / area0[valid]))
+
+
+def _interface_witness(before, after, faces, changed):
+    """Measure only the actual changed/fixed face interface, not an inferred box."""
+    edge = np.concatenate((faces[:, [0, 1]], faces[:, [1, 2]], faces[:, [2, 0]]))
+    unique_edges, inverse, count = np.unique(np.sort(edge, axis=1), axis=0, return_inverse=True, return_counts=True)
+    order = np.argsort(inverse, kind='stable')
+    owner = np.tile(np.arange(len(faces)), 3)[order]
+    starts = np.r_[0, np.cumsum(count[:-1])]
+    shared = np.flatnonzero(count == 2)
+    pairs = np.c_[owner[starts[shared]], owner[starts[shared] + 1]]
+    mask = changed[faces[pairs]].any((1, 2)) & ~changed[faces[pairs]].all((1, 2))
+    boundary = pairs[mask]
+    def normals(q):
+        tri = q[faces].astype(float); n = np.cross(tri[:, 1] - tri[:, 0], tri[:, 2] - tri[:, 0])
+        return n / np.linalg.norm(n, axis=1)[:, None]
+    a, b = normals(before), normals(after)
+    angle = lambda n: np.degrees(np.arctan2(np.linalg.norm(np.cross(n[boundary[:, 0]], n[boundary[:, 1]]), axis=1),
+                                              np.sum(n[boundary[:, 0]] * n[boundary[:, 1]], axis=1)))
+    old, new = angle(a), angle(b)
+    boundary_vertices = np.unique(unique_edges[shared][mask])
+    delta = np.linalg.norm(after[boundary_vertices].astype(float) - before[boundary_vertices].astype(float), axis=1)
+    return dict(interface_face_pairs=int(len(boundary)), dihedral_before_degrees=stats(old),
+                dihedral_after_degrees=stats(new), dihedral_delta_degrees=stats(new - old),
+                maximum_interface_vertex_move_m=float(delta.max()))
+
+
+def _interior_fade(ids, faces, coordinates, radius=.012):
+    """C2 geodesic fade from every actual patch boundary; no raw-box crease."""
+    vertex_count = len(coordinates)
+    inside = np.zeros(vertex_count, bool); inside[ids] = True
+    neighbors = [[] for _ in range(vertex_count)]
+    for a, b in np.concatenate((faces[:, [0, 1]], faces[:, [1, 2]], faces[:, [2, 0]])):
+        a, b = int(a), int(b)
+        length = float(np.linalg.norm(coordinates[a].astype(float) - coordinates[b].astype(float)))
+        neighbors[a].append((b, length)); neighbors[b].append((a, length))
+    distance = np.full(vertex_count, np.inf, float)
+    edge = [int(v) for v in ids if any(not inside[n] for n, _ in neighbors[int(v)])]
+    distance[edge] = 0.0; queue = [(0.0, v) for v in edge]; heapq.heapify(queue)
+    while queue:
+        d, v = heapq.heappop(queue)
+        if d != distance[v] or d >= radius:
+            continue
+        for n, length in neighbors[v]:
+            candidate = d + length
+            if inside[n] and candidate < distance[n] and candidate < radius:
+                distance[n] = candidate; heapq.heappush(queue, (candidate, n))
+    local = np.minimum(distance[ids], radius)
+    t = local / radius
+    c2 = t * t * t * (10.0 + t * (-15.0 + 6.0 * t))
+    return c2, local
+
+
+def prepare(root=ROOT):
+    root = Path(root).resolve()
+    out = root / '.mia-cache/body-h/live/rib01/proposal-v3'
+    assert not out.exists(), 'Do not overwrite a frozen proposal'
+    with np.load(root / '.mia-cache/body-h/live/rib01/current-geometry.npz') as source:
+        before = source['co'].astype(np.float32, copy=False)
+        faces = source['faces'].astype(np.int32, copy=False)
+    assert sha(before) == BASE, 'rib01 must start from the current waist02 candidate'
+
+    face_region = _atlas_regions(root, faces)
+    centroids = before[faces].mean(1).astype(float)
+    breast, thorax = _frozen_fields(root, centroids)
+
+    # The frozen field is only a seed.  Actual current topology, a measured
+    # z-window, lateral/depth bounds, and a breast-face vertex exclusion make
+    # the ownership decision explicit.  Region 6/7 arms are never admitted.
+    trunk = np.isin(face_region, (1, 2))
+    thorax_faces = (trunk & (centroids[:, 2] > Z_LO) & (centroids[:, 2] < Z_HI)
+                    & (np.abs(centroids[:, 0]) > .045) & (np.abs(centroids[:, 0]) < .155)
+                    & (centroids[:, 1] > -.045) & (centroids[:, 1] < .060)
+                    & (thorax < breast - .002))
+    breast_or_front_faces = (trunk & (centroids[:, 2] > 1.170) & (centroids[:, 2] < 1.335)
+                             & (breast <= thorax + .002))
+    proposed = np.unique(faces[thorax_faces])
+    breast_vertices = np.unique(faces[breast_or_front_faces])
+    ids = np.setdiff1d(proposed, breast_vertices, assume_unique=False).astype(np.int32)
+    assert len(ids) > 2500, 'local patch unexpectedly collapsed'
+    p = before[ids].astype(float)
+    assert (p[:, 2].min() < Z_LO + .003 and p[:, 2].max() > Z_HI - .003)
+
+    zband = band(p[:, 2])
+    lateral = (smooth01((np.abs(p[:, 0]) - .045) / .045)
+               * (1.0 - smooth01((np.abs(p[:, 0]) - .115) / .040)))
+    depth_band = smooth01((p[:, 1] + .045) / .035) * (1.0 - smooth01((p[:, 1] - .020) / .040))
+    boundary_fade, boundary_distance = _interior_fade(ids, faces, before)
+    # This is a small paired tangent adjustment, not a section scale: the
+    # lower-rib side plane moves inboard while its depth returns rearward,
+    # fading to exact held rings and to the protected breast/front boundary.
+    handle = zband * lateral * depth_band * boundary_fade
+    candidate = before.copy()
+    candidate[ids, 0] = (p[:, 0] - np.sign(p[:, 0]) * (.0032 * handle)).astype(np.float32)
+    candidate[ids, 1] = (p[:, 1] + .0020 * handle).astype(np.float32)
+
+    editable = ids[(p[:, 2] >= Z_CORE_LO) & (p[:, 2] <= Z_CORE_HI)].astype(np.int32)
+    transition = np.setdiff1d(ids, editable, assume_unique=False).astype(np.int32)
+    fixed = np.setdiff1d(np.arange(len(before), dtype=np.int32), ids, assume_unique=False)
+    with np.load(root / '.mia-cache/body-h/shape/assembly/live-D/geometry.npz') as geo:
+        head = np.unique(faces[geo['source_part'] == 1]).astype(np.int32)
+
+    guard = runpy.run_path(str(root / 'tools/mia/integrated_finish/scoped_mesh_edit.py'))
+    proof = guard['validate_delta'](
+        before, candidate, faces, editable, transition,
+        dict(head=head, breast_and_anterior_front=breast_vertices,
+             retained_upper_lats_shoulders_arms_pelvis_limbs=fixed),
+        expected_before_sha256=BASE)
+    changed = (before.view(np.uint32) != candidate.view(np.uint32)).any(1)
+    assert changed.any() and not (changed & ~np.isin(np.arange(len(before)), ids)).any()
+    disp = candidate.astype(float) - before.astype(float)
+    report = dict(
+        proof,
+        status='ONE_SCOPED_RIB_OBLIQUE_FORECAST_NOT_APPLIED',
+        domain=('Actual current triangles: atlas trunk regions 1/2 only; 1.195<Z<1.300; '
+                '0.045<abs(X)<0.155; -0.045<Y<0.060; frozen thorax field wins breast field by .002; '
+                'then any breast/front-owned vertex is explicitly fixed.'),
+        operation=('Paired local lower-rib side-plane handle: max 3.2mm inboard X plus 2.0mm rearward Y, '
+                   'C1-faded at held lower/upper rings. No global cage/waist scale, loft, topology, or smoothing.'),
+        rationale=('Reference boards show a broad lower cage ending abruptly above the waist. The safe response is '
+                   'a small side/back planar wrap at the lower-thorax/upper-oblique interface, not a breast, arm, '
+                   'or waist rewrite. Breast cores/front boundary, upper lats/shoulders, arms, head and pelvis remain fixed.'),
+        region_stats=dict(thorax_seed_faces=int(thorax_faces.sum()), breast_front_seed_faces=int(breast_or_front_faces.sum()),
+                          proposed_vertices=int(len(proposed)), breast_front_fixed_vertices=int(len(breast_vertices)),
+                          local_vertices=int(len(ids)), editable_vertices=int(len(editable)), transition_vertices=int(len(transition)),
+                          boundary_fade='12mm C2 geodesic distance from every actual selected-patch boundary',
+                          boundary_distance_m=stats(boundary_distance)),
+        displacement_m=dict(x=stats(disp[changed, 0]), y=stats(disp[changed, 1]), z=stats(disp[changed, 2]),
+                            magnitude=stats(np.linalg.norm(disp[changed], axis=1))),
+        triangles=_triangle_metrics(before, candidate, faces, changed),
+        interface_witness=_interface_witness(before, candidate, faces, changed),
+        fixed_coordinate_exact=True,
+        source='waist02 source boards: front/profile/back/oblique/high/low inspected before proposal; no crop/aspect inference.',
+        source_limit=('Those boards establish the visible abrupt lower-rib-to-waist transition but do not directly '\
+                      'identify a unique hidden side-plane depth. This conservative 3.2mm/2.0mm handle requires root mask '\
+                      'inspection and live multi-view review; forecast is not anatomy, collision, shading, or ART acceptance.'),
+        supersedes='proposal/ is retained as CPU-rejected v1: its rectangular-field boundary lacked a geodesic C2 falloff. proposal-v2 is an identical C2 geometry preview retained for audit; proposal-v3 adds the actual interface dihedral witness required before live review.',
+        ART=False)
+    out.mkdir(parents=True)
+    np.savez_compressed(out / 'proposal.npz', candidate=candidate, faces=faces, editable_ids=editable,
+                        transition_ids=transition, protected_head=head,
+                        protected_breast_front=breast_vertices, protected_retained=fixed)
+    (out / 'forecast.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf8')
+    assert sum(path.stat().st_size for path in out.iterdir()) < 10 * 1024 ** 2
+    print(json.dumps(dict(output=str(out), candidate_sha256=proof['candidate_sha256'],
+                          changed_vertices=proof['changed_vertices'], local_vertices=len(ids), ART=False)))
+    return report
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--root', type=Path, default=ROOT)
+    prepare(parser.parse_args().root)

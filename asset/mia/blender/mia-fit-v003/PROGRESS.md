@@ -619,3 +619,33 @@ CURRENT_STATE.latest_user_review preserves them through compaction. No T-pose
 mandate, fixed45degree angle or blind arm-only rotation was adopted. Next work
 needs a reversible derivative pose setup and local lower-thorax/interface edit
 with source arm-down comparison. Broader body/surface/rig ART remains OPEN.
+
+## User-requested handoff to Claude Code — 2026-11-04
+
+Production/research agents were interrupted at the user's explicit handoff.
+Authoritative instructions: `asset/mia/CLAUDE_CODE_HANDOFF.md`; source snapshots
+and verified file hashes: `asset/mia/handoff/20261104/manifest.json`.
+
+Live MCP handoff probe verifies bodyba65, no modifiers/keys/parent, the same21
+watched actors as before rib work, no scoped pending edit, no arm derivative
+namespace or temporary actors. Saved current25c638 and earlierab11/9c/0d62
+file hashes were rechecked. No rib candidate, A/T pose or new native was applied.
+
+Rib01V3 c236 is an unmerged, unselected forecast. Its actual selection was
+inspected then removed. Source-only7375 exists in an incomplete sparse worker
+with missing tracked files; do not mass-stage its deletions. Arm source3605
+and interrupted uncommitted from-to/target helper additions are preserved as
+nonexecutable text; known pose-space, direction, weighting and cleanup bugs
+remain, and A/T CPU forecast is REJECT. Do not call it a ready rig or run it.
+
+Latest user requires six unresolved corrections: arm axes/segment proportions/
+muscle volume; flared lower ribs and thorax-to-pelvis continuity; waist length;
+oversized-head complaint requiring actual ratio audit; sparse incompatible rear
+hair; sagittal S-line and glute volume. New quantitative head/waist/profile
+audit was interrupted and is incomplete. Body/hair/native stayed unchanged.
+Independent rearhair audit identifies18broad flattened generated locks against
+the finer original PIXAL mass; high polygon count/texture alone is insufficient.
+
+Canonical pre-handoff changes to H plan/trial and optional body capture object/
+frame/view controls are preserved with this handoff; their new posed-object
+path was not exercised. Overall Mia/body/surface/rig ART remains OPEN.

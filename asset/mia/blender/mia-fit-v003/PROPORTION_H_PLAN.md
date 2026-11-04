@@ -277,3 +277,39 @@ breast cores, shaped lats, pelvis, accepted face and other geometry outside
 each declared interface protected. Return to the source's lowered-arm pose for
 original-aspect comparisons. No new model/rig/native was installed in this
 follow-up; actual probe is `.mia-cache/body-h/live/rib-pose-audit/probe.json`.
+
+## R: lower thorax and reversible arm-pose refinement
+
+Latest user authorizes actual refinement using real artist practice. Start from
+bodyba65/native25c638. The previous waist-only boundary is explicitly re-scoped:
+the actual lower thorax/upper-oblique interface may include points above1.195,
+but breast cores, shaped upper lats/shoulders and all non-interface regions
+remain fixed. This is not release of the whole torso. Sourcepart/atlas labels
+are selection aids: current region6/7 contains foot/leg contamination, while
+region1/2 contains breasts. Use connected anatomy and inspect actual masks.
+
+Artist principles: Kaspar's public Fine Control text isolates a joined part
+with masks/Face Sets and compares retained versions; Clothing Shapes separates
+A-pose shaping from preliminary-rig A/T and joint tests. Proko's public notes
+explain front/side/back ribcage planes and a lower arch wrapping toward the
+back. Apply connected form/limited editing, not another global waist scale.
+Access remains public text only; no claim of full video viewing or timestamps.
+
+| ID | Criterion / user-visible outcome / intended runtime | Verification / evidence | Critical |
+|---|---|---|---|
+| R-AC1 | Source-like continuous lower-thorax-to-oblique form, avoiding a broad shelf or pinched waist attachment / live Blender static | Actual anatomical selection, one local proposal, immediate matte/wire; original-aspect source/baseline/candidate front/profile/back/oblique plus opposite/high/low and explicit residuals | yes |
+| R-AC2 | A reversible derivative working A, T, arm-down and elbow-bend state exposes shoulder/axilla/arm for review / live Blender derivative, not final rig | Actual evaluated four-state captures, explicit limb/interface/fixed IDs, preserved original body/actors/UV/material/native and exact source-pose return/cleanup; record observed deformation defects without promoting them | yes |
+| R-AC3 | Existing shaped anatomy outside each declared interface retained / actual live and CPU readback | Protected breast cores/lats/waist minimum/head/face/hair/pelvis/arm reach; exact outside IDs/UV/materials/topology; changed-face orientation/contact checks and actual neighboring-view regression review | yes |
+| R-AC4 | Deliberate keep/restore and reproducible bounded WIP / live plus saved/reopen | Scoped data dispatch, source-review validator, independent actual-image judgment, one consolidated native only if kept, fresh process correspondence; root-only heavy writes and existing2GiB capacity guard | yes |
+
+Root owns actual live MCP/GPU. Source-only workers own separate helper files in
+small source worktrees; no duplicate natives/assets. Pose derivative does not
+alter old MIA_V06_RIG or the static production body's rest state. Final maps,
+retopology/rig completion and event animation remain under existing M/FB gates.
+
+**Handoff update:** the user subsequently listed six integrated defects
+(arm axes/form, rib flare, waist length, head/body ratio, rearhair, sagittal
+S-line/glutes), then explicitly transferred work to Claude Code. R is an
+unfinished initial plan, not evidence of completed anatomy or pose setup.
+Read `asset/mia/CLAUDE_CODE_HANDOFF.md` and latest CURRENT_STATE handoff before
+resuming. No R proposal or new rig was installed; currentbody remains ba65.

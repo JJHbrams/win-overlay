@@ -1,0 +1,121 @@
+{
+  "created_local": "2026-11-04T23:16:36.961562+09:00",
+  "canonical": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay",
+  "branch": "codex/mia-rib-arm01",
+  "base_head": "e1f6260d574d25805f736f89b3a9d4534b6e90c6",
+  "model_modified_this_stage": false,
+  "code_snapshots": {
+    "rib": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\asset\\mia\\handoff\\20261104\\rib_oblique01.source-only.py.txt",
+      "exists": true,
+      "bytes": 12612,
+      "sha256": "6020d681805fa16dab2e18319d8109400b5b9ece9a7ecf2e9aedd58d2ee97ebe"
+    },
+    "arm": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\asset\\mia\\handoff\\20261104\\arm_pose01.interrupted.py.txt",
+      "exists": true,
+      "bytes": 24851,
+      "sha256": "4f07ee1e2342ed49b3a107646931a122b0956dfe562adaf6c7bd2c514660280b"
+    }
+  },
+  "workers": {
+    "rib": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-rib01-shape\\win-overlay",
+      "branch": "codex/mia-rib01-shape",
+      "head": "7375d73ebfbf62e86ddd353280f0b3ad1e9bdf06",
+      "status_counts": {
+        " D": 8152
+      },
+      "owned_source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-rib01-shape\\win-overlay\\tools\\mia\\integrated_finish\\rib_oblique01.py",
+        "exists": true,
+        "bytes": 12612,
+        "sha256": "6020d681805fa16dab2e18319d8109400b5b9ece9a7ecf2e9aedd58d2ee97ebe"
+      }
+    },
+    "arm": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-arm-pose01\\win-overlay",
+      "branch": "codex/mia-arm-pose01",
+      "head": "3605eec45d3ae30a737e0683d95e39843f76ac73",
+      "status_counts": {
+        " M": 1
+      },
+      "owned_source": {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-arm-pose01\\win-overlay\\tools\\mia\\integrated_finish\\arm_pose01.py",
+        "exists": true,
+        "bytes": 24851,
+        "sha256": "4f07ee1e2342ed49b3a107646931a122b0956dfe562adaf6c7bd2c514660280b"
+      }
+    }
+  },
+  "live_probe": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\rib01\\handoff-probe.json",
+    "exists": true,
+    "bytes": 599,
+    "sha256": "8ab7ca22360c262cb0ed822c710daca34254940aa1f0dcbaec3ebfb39cc8eda2"
+  },
+  "selected_evidence": {
+    "live-state.json": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\asset\\mia\\handoff\\20261104\\live-state.json",
+      "exists": true,
+      "bytes": 599,
+      "sha256": "8ab7ca22360c262cb0ed822c710daca34254940aa1f0dcbaec3ebfb39cc8eda2"
+    },
+    "rib01.unapplied-forecast.json": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\asset\\mia\\handoff\\20261104\\rib01.unapplied-forecast.json",
+      "exists": true,
+      "bytes": 5074,
+      "sha256": "4845d0e399e756ba97b18b8586b645c67c1af929c65d262f6bb2326fea796f62"
+    },
+    "arm-pose01.rejected-forecast.json": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\asset\\mia\\handoff\\20261104\\arm-pose01.rejected-forecast.json",
+      "exists": true,
+      "bytes": 1072,
+      "sha256": "38f3139de9f11d295261aba18e2f364702aff79c91231bcd42f8010f51a613d9"
+    }
+  },
+  "natives": {
+    "current_waist02": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_Waist02_Static_WIP.blend",
+      "exists": true,
+      "bytes": 286076473,
+      "sha256": "25c638a4406193dd0ff73efd3d253330bda7405a9c8c6ae83632fedaaa5725a8"
+    },
+    "before_waist_arm02": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_ArmLength02_Static_WIP.blend",
+      "exists": true,
+      "bytes": 286075317,
+      "sha256": "ab11a0d25abe88dfbbaaf04858e31a954243e715c69e7eec1744328751691eb3"
+    },
+    "before_arm_AP695": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_Resume_Static_WIP.blend",
+      "exists": true,
+      "bytes": 286404553,
+      "sha256": "9c953fb48bf3c55595ca69d28523197b43b924550d96b6ad91a0792f4fabedb7"
+    },
+    "live_filepath_older_replay": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\migration-to-C\\Mia_Current_STATIC_WIP.blend",
+      "exists": true,
+      "bytes": 277711083,
+      "sha256": "0d62eff09b4e95809a9f852d3e68654c1bb5a9e35fe70c065a939bc433e017ed"
+    }
+  },
+  "rib_v3": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\rib01\\proposal-v3\\proposal.npz",
+    "exists": true,
+    "bytes": 2591509,
+    "sha256": "83f3b2ca76a35cdaecaecedfb00598dfa92cb4df6f4c8fdd85ab6eba21a941a2"
+  },
+  "arm_selection": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\arm-pose01\\selection.npz",
+    "exists": true,
+    "bytes": 669756,
+    "sha256": "c27b905fee539014cec1a9cb2028029764a297fa6cef5d0e21211a7028c10a8f"
+  },
+  "arm_forecast": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\arm-pose01\\forecast.json",
+    "exists": true,
+    "bytes": 1072,
+    "sha256": "38f3139de9f11d295261aba18e2f364702aff79c91231bcd42f8010f51a613d9"
+  }
+}

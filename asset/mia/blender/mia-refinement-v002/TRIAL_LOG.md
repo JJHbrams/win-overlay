@@ -76,3 +76,30 @@ Central3mm and side1.8mm shallow collar depressions share a bounded overlapping 
 ### Collar01 actual outcome
 
 Official MCP direct sculpt changed5066points/max3.082mm with no topology/UV edit. Actual matched front/high plus profile reveal an isolated horizontal/oval depression and persistent cap/neckcone. Independent visual audit M3FAIL agrees with root: source shallow collar plane does not emerge from local well/ridge handles. Restored D69d4d4f0 exactly; no maps/native or repeated coefficients. First cleanup wrapper used unavailable MCP __file__ and failed before mutation; explicit source path fixed it, successful second call/restore receipt confirms actual D. Future direction must establish the continuous neck–acromion macroplane before separate shallow structures.
+
+## Rib/arm01: artist-guided local continuation from ba65
+
+User flags lower-rib continuity after waist02. Fresh actual high/low confirms
+a broad side wall turning abruptly toward the narrow waist; neutral gray shows
+this is not solely skin paint. Above1.195 central lower-wall coordinates still
+match oldD. The previous fixed chest/waist-only operation did not reshape this
+volume. Kaspar public mask/Face Set practice and Proko's public planar mass/
+wrapping lower arch support a locally softened side-plane adjustment, not a
+whole-torso carrier or carving a breast silhouette into a rib measurement.
+
+Rib01 V1 was rejected in CPU/source review before live use: z/lateral falloff
+did not soften the actual patch boundary. V2 uses12mm edge-length geodesic C2
+fade from every actual boundary. The candidate shifts the lower-rib side plane
+inboard/rearward, max3.62mm total, with3190changed points in3709explicit IDs.
+Actual atlas trunk ancestry plus frozen component dominance seed the patch;
+breast/front-owned vertices and all other points are fixed. Current actual
+orange selection and neighboring views must still decide if this domain is
+anatomically appropriate. Live source4/both obliques/high/low and exact keep/
+restore precede any acceptance. Numerical no-flip checks alone do not suffice.
+
+Arm diagnostic inspection also caught two pre-live selection errors: a naive
+atlas label included feet, and omitting actual14/15 joining collars stopped the
+hand-connected component below the elbow. Existing verified hand/nail IDs and
+the semantic collars are required before posing the whole arm. No bad pose
+fixture has been installed. Root will review the actual complete limb/root
+selection and evaluated A/T/arm-down/elbow states on a private derivative only.

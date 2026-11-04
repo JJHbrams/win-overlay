@@ -1,0 +1,113 @@
+{
+  "status": "ONE_SCOPED_RIB_OBLIQUE_FORECAST_NOT_APPLIED",
+  "before_sha256": "ba6537406312273401ad22367e34ba8226979ffb980babe5fd95a0c6f59ed829",
+  "candidate_sha256": "c236171b70701eb8cce16aeeabee07bab5d876da017bf7a972ed233ed68bd6aa",
+  "topology_sha256": "d007607c97dde677e43b5ba429fd964de4b16d8f4cd8192cca3bb35c34c5f21d",
+  "vertices": 137341,
+  "triangles": {
+    "affected": 6813,
+    "preexisting_degenerate": 0,
+    "minimum_orientation_cos": 0.9444762018990847,
+    "area_ratio": {
+      "min": 0.7658612957727091,
+      "median": 0.9870580746557559,
+      "p99": 1.4803949748417127,
+      "max": 1.9865384265454633
+    }
+  },
+  "editable_count": 1661,
+  "transition_count": 2048,
+  "changed_vertices": 3190,
+  "editable_ids_sha256": "4f348b660b685fe18317529e20482b01f5b8aee6049c707e7d9e5f4f056553a9",
+  "transition_ids_sha256": "0ea68a9d3be08e092672007701192aad7c1f7960c19c11870db1ef48d61f3749",
+  "protected_regions": {
+    "head": {
+      "count": 18948,
+      "ids_sha256": "8e11a238465503b01e750d0a9ad32fb07286103ee3c22d364c267f6878ce2bba",
+      "coordinates_sha256": "3b7705d2459e6e443baa6d31ca09b066460ee37317211e3717d624fc503d4061"
+    },
+    "breast_and_anterior_front": {
+      "count": 13719,
+      "ids_sha256": "eb3b13c38bd90f337087e009448204cac4928593e4ed7fb8461fd0389ea9f010",
+      "coordinates_sha256": "1be4de7db3de5932fa21a18bc409a08b815f337a2f673102f64c2662363a971a"
+    },
+    "retained_upper_lats_shoulders_arms_pelvis_limbs": {
+      "count": 133632,
+      "ids_sha256": "f17a57f1270f82357a30a6bdbc4146ebf209a8ee376b33d5f944ac02d31aa43c",
+      "coordinates_sha256": "e9e74a4a40ce589881c85df69953030735e6c3c5d8e2b262aff22ab78eae52a9"
+    }
+  },
+  "exact_outside_union": true,
+  "ART": false,
+  "domain": "Actual current triangles: atlas trunk regions 1/2 only; 1.195<Z<1.300; 0.045<abs(X)<0.155; -0.045<Y<0.060; frozen thorax field wins breast field by .002; then any breast/front-owned vertex is explicitly fixed.",
+  "operation": "Paired local lower-rib side-plane handle: max 3.2mm inboard X plus 2.0mm rearward Y, C1-faded at held lower/upper rings. No global cage/waist scale, loft, topology, or smoothing.",
+  "rationale": "Reference boards show a broad lower cage ending abruptly above the waist. The safe response is a small side/back planar wrap at the lower-thorax/upper-oblique interface, not a breast, arm, or waist rewrite. Breast cores/front boundary, upper lats/shoulders, arms, head and pelvis remain fixed.",
+  "region_stats": {
+    "thorax_seed_faces": 7135,
+    "breast_front_seed_faces": 26873,
+    "proposed_vertices": 3906,
+    "breast_front_fixed_vertices": 13719,
+    "local_vertices": 3709,
+    "editable_vertices": 1661,
+    "transition_vertices": 2048,
+    "boundary_fade": "12mm C2 geodesic distance from every actual selected-patch boundary",
+    "boundary_distance_m": {
+      "min": 0.0,
+      "median": 0.010608590504270037,
+      "p99": 0.012,
+      "max": 0.012
+    }
+  },
+  "displacement_m": {
+    "x": {
+      "min": -0.0030466988682746887,
+      "median": -1.30385160446167e-08,
+      "p99": 0.0028478763997554783,
+      "max": 0.003070048987865448
+    },
+    "y": {
+      "min": 3.725290298461914e-09,
+      "median": 0.0003306344151496887,
+      "p99": 0.0018397242389619354,
+      "max": 0.0019187796860933304
+    },
+    "z": {
+      "min": 0.0,
+      "median": 0.0,
+      "p99": 0.0,
+      "max": 0.0
+    },
+    "magnitude": {
+      "min": 5.268356063861754e-09,
+      "median": 0.0006238385032107046,
+      "p99": 0.003471185876329087,
+      "max": 0.0036203475346516223
+    }
+  },
+  "interface_witness": {
+    "interface_face_pairs": 1751,
+    "dihedral_before_degrees": {
+      "min": 0.0010617648121097546,
+      "median": 0.8161942751763341,
+      "p99": 11.591566057861227,
+      "max": 22.82669603214967
+    },
+    "dihedral_after_degrees": {
+      "min": 0.0009273655349729822,
+      "median": 0.8681624041342867,
+      "p99": 11.96190244685641,
+      "max": 22.836561109969022
+    },
+    "dihedral_delta_degrees": {
+      "min": -5.440324004263848,
+      "median": -0.0001934137859537638,
+      "p99": 6.154153043662117,
+      "max": 11.470769531133975
+    },
+    "maximum_interface_vertex_move_m": 0.0007759772703085083
+  },
+  "fixed_coordinate_exact": true,
+  "source": "waist02 source boards: front/profile/back/oblique/high/low inspected before proposal; no crop/aspect inference.",
+  "source_limit": "Those boards establish the visible abrupt lower-rib-to-waist transition but do not directly identify a unique hidden side-plane depth. This conservative 3.2mm/2.0mm handle requires root mask inspection and live multi-view review; forecast is not anatomy, collision, shading, or ART acceptance.",
+  "supersedes": "proposal/ is retained as CPU-rejected v1: its rectangular-field boundary lacked a geodesic C2 falloff. proposal-v2 is an identical C2 geometry preview retained for audit; proposal-v3 adds the actual interface dihedral witness required before live review."
+}

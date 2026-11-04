@@ -1,0 +1,393 @@
+"""Reversible derivative-only arm-pose diagnostic for the current static body.
+
+This is deliberately a small diagnostic fixture, not a production character
+rig.  It never edits the source object: :func:`install` duplicates its mesh,
+creates a private armature, and binds only the explicitly reviewed arm IDs.
+The preparation stage is CPU-only and leaves a compact review payload.  The
+shoulder interface is intentionally reported as *proposed*; it is not an
+anatomical or collision pass and must be inspected before ``install``.
+"""
+from __future__ import annotations
+
+from pathlib import Path
+import hashlib
+import heapq
+import json
+from typing import Any
+
+import numpy as np
+
+
+ROOT = Path(__file__).resolve().parents[3]
+CURRENT_SHA = "ba6537406312273401ad22367e34ba8226979ffb980babe5fd95a0c6f59ed829"
+BODY = "MIA_Review12_H_LiveRepair"
+CACHE_REL = Path(".mia-cache/body-h/live/arm-pose01")
+TIP_IDS = {"R": 42692, "L": 42572}
+NAMES = {"copy": "MIA_ArmPose01_Workcopy", "rig": "MIA_ArmPose01_DiagnosticRig"}
+POSES = {"arm_down": 0.0, "work_A": 45.0, "T": 90.0, "elbow_bend": 0.0}
+
+
+def _sha(a: np.ndarray) -> str:
+    return hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest()
+
+
+def _from_to(a: np.ndarray, b: np.ndarray) -> np.ndarray:
+    """Proper rotation from a measured rest segment to an absolute target."""
+    a = np.asarray(a, float); a /= np.linalg.norm(a); b = np.asarray(b, float); b /= np.linalg.norm(b)
+    v = np.cross(a, b); c = float(a @ b); k = np.array(((0., -v[2], v[1]), (v[2], 0., -v[0]), (-v[1], v[0], 0.)))
+    if c < -.99999:  # deterministic perpendicular axis for the only singular case
+        axis = np.cross(a, (1., 0., 0.));
+        if np.linalg.norm(axis) < 1.e-6: axis = np.cross(a, (0., 1., 0.))
+        axis /= np.linalg.norm(axis); return 2*np.outer(axis, axis)-np.eye(3)
+    return np.eye(3) + k + k @ k / (1.+c)
+
+
+def _pose_targets(side: str, state: str) -> tuple[np.ndarray, np.ndarray]:
+    sign = 1. if side == "R" else -1.
+    if state == "work_A": return np.array((sign*np.sin(np.pi/4), 0., -np.cos(np.pi/4))), np.array((sign*np.sin(np.pi/4), 0., -np.cos(np.pi/4)))
+    if state == "T": return np.array((sign, 0., 0.)), np.array((sign, 0., 0.))
+    if state == "elbow_bend": return np.array((sign*np.sin(np.pi/4), 0., -np.cos(np.pi/4))), np.array((0., -1., 0.))
+    raise ValueError("arm_down has no posed target")
+
+
+def _cache(root: Path) -> Path:
+    return Path(root) / CACHE_REL
+
+
+def _geometry(root: Path) -> tuple[np.ndarray, np.ndarray]:
+    """Load the current Waist02 geometry only; stale sources are rejected."""
+    path = Path(root) / ".mia-cache/body-h/live/waist02/proposal/proposal.npz"
+    with np.load(path) as z:
+        q = z["candidate"].astype(np.float32, copy=False)
+        f = z["faces"].astype(np.int32, copy=False)
+    if _sha(q) != CURRENT_SHA:
+        raise ValueError("arm-pose01 requires the current ba65 static body, not a historic proposal")
+    return q, f
+
+
+def _edges(faces: np.ndarray) -> np.ndarray:
+    pairs = np.sort(np.concatenate((faces[:, :2], faces[:, 1:], faces[:, [2, 0]])), axis=1)
+    return np.unique(pairs, axis=0)
+
+
+def _rings(seed: np.ndarray, edges: np.ndarray, count: int, steps: int) -> np.ndarray:
+    """Topology rings, used only to expose a review boundary, never a torso carrier."""
+    selected = np.zeros(count, bool); selected[seed] = True
+    for _ in range(steps):
+        e = edges[selected[edges].any(1)]
+        selected[e.ravel()] = True
+    return np.flatnonzero(selected).astype(np.int32)
+
+
+def _root_fade(core: np.ndarray, edges: np.ndarray, q: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    """C2 70-mm geodesic fade *inside* a reviewed arm component.
+
+    Boundary vertices adjacent to fixed torso are zero.  The shortest path is
+    accumulated from actual mesh edge lengths, so a few irregular triangles do
+    not become a constant-weight hinge.  Disconnected nails are full weight.
+    """
+    allowed = np.zeros(len(q), bool); allowed[core] = True
+    crossing = edges[allowed[edges].sum(1) == 1]
+    roots = np.unique(crossing[allowed[crossing]])
+    interface = np.unique(crossing[~allowed[crossing]])
+    dist = np.full(len(q), np.inf); heap: list[tuple[float, int]] = []
+    for i in roots.tolist(): dist[i] = 0.; heapq.heappush(heap, (0., i))
+    adjacent: dict[int, list[tuple[int, float]]] = {}
+    for a, b in edges[allowed[edges].all(1)].tolist():
+        length = float(np.linalg.norm(q[a].astype(float)-q[b].astype(float)))
+        adjacent.setdefault(a, []).append((b, length)); adjacent.setdefault(b, []).append((a, length))
+    while heap:
+        d, node = heapq.heappop(heap)
+        if d != dist[node]: continue
+        for nxt, length in adjacent.get(node, ()):
+            nd = d + length
+            if nd < dist[nxt]: dist[nxt] = nd; heapq.heappush(heap, (nd, nxt))
+    t = np.clip(dist[core] / .070, 0., 1.)
+    weight = (t*t*t*(10.+t*(-15.+6.*t))).astype(np.float32)
+    weight[~np.isfinite(dist[core])] = 1.0
+    return interface.astype(np.int32), weight
+
+
+def _seed_component(seed: int, allowed: np.ndarray, edges: np.ndarray) -> np.ndarray:
+    """Return exactly the allowed connected component containing a hand seed."""
+    if not allowed[seed]: raise ValueError("distal hand seed fell outside proposed arm selection")
+    selected = np.zeros(len(allowed), bool); selected[seed] = True
+    while True:
+        local = edges[allowed[edges].all(1) & selected[edges].any(1)]
+        grown = selected.copy(); grown[local.ravel()] = True
+        if np.array_equal(grown, selected): break
+        selected = grown
+    return np.flatnonzero(selected).astype(np.int32)
+
+
+def _atlas_regions(root: Path, faces: np.ndarray, count: int) -> np.ndarray:
+    """Map frozen atlas labels to this topology; labels alone are not ownership."""
+    path = Path(root) / ".mia-cache/body-h/shape/assembly/live-D/atlas/surface.npz"
+    with np.load(path) as z:
+        region, face_ids = z["face_region"], z["meshfaceid"]
+    if face_ids.max(initial=-1) >= len(faces):
+        raise ValueError("atlas face mapping cannot address current mesh")
+    labels = np.full(len(faces), -1, np.int16)
+    labels[face_ids] = region
+    out = np.full(count, -1, np.int16)
+    # 14/15 are the actual collar bridge strips; 6/7 alone stop below the
+    # shoulder and leave the hand component disconnected.
+    for label in (6, 7, 14, 15):
+        ids = np.unique(faces[labels == label])
+        out[ids] = label
+    return out
+
+
+def _distal_prior(root: Path, count: int) -> np.ndarray:
+    path = Path(root) / ".mia-cache/body-h/live/integrated01/arm-length02/proposal.npz"
+    with np.load(path) as z:
+        ids = np.unique(np.r_[z["editable_ids"], z["transition_ids"]]).astype(np.int32)
+    if ids.size == 0 or ids.max() >= count:
+        raise ValueError("historic distal proof IDs are not compatible with current topology")
+    return ids
+
+
+def _side_selection(q: np.ndarray, faces: np.ndarray, labels: np.ndarray, prior: np.ndarray, side: str) -> dict[str, np.ndarray]:
+    sign, side_labels, tip = (1, (6, 14), TIP_IDS["R"]) if side == "R" else (-1, (7, 15), TIP_IDS["L"])
+    # Atlas labels contain lower-body contamination.  The hand seed plus an
+    # upper-body/side gate removes that contamination before topology review.
+    semantic = np.isin(labels, side_labels) & (q[:, 0] * sign > .10) & (q[:, 2] > .82)
+    # ``arm_length02`` already separated the complete distal skin plus ten
+    # detached nail components.  Do not re-apply a height cut here: fingers
+    # and nails below the wrist plane must move with their hand proof.
+    distal = prior[q[prior, 0] * sign > .10]
+    if tip not in distal:
+        distal = np.unique(np.r_[distal, np.int32(tip)])
+    allowed = semantic.copy(); allowed[distal] = True
+    # Unlike the old broad carrier, the main skin selection is the actual
+    # component connected to the recorded distal hand seed.  Detached nails
+    # remain separate but are deliberately included as their own proof set.
+    connected = _seed_component(tip, allowed, _edges(faces))
+    detached = distal[~np.isin(distal, connected)]
+    core = np.unique(np.r_[connected, detached]).astype(np.int32)
+    # The adjacent outside ring is a review-only fixed torso boundary.  A C2
+    # 70-mm geodesic fade happens inside core; no breast/lat carrier is added.
+    interface, fade_weight = _root_fade(core, _edges(faces), q)
+    # Existing isolated nail components are retained via the distal proof.
+    return {"core": core, "interface": interface, "fade_weight": fade_weight, "distal": distal}
+
+
+def _station(root: Path, q: np.ndarray, ids: np.ndarray, side: str) -> dict[str, list[float]]:
+    """Use the retained measured elbow row and current-surface wrist sample.
+
+    Percentiles of a broad atlas label put the elbow at hand height.  The
+    shoulder proxy is a declared *working root*, while elbow/wrist are sampled
+    from the current static surface and existing distal transport evidence.
+    """
+    sign, row_name = (1, "armR") if side == "R" else (-1, "armL")
+    with np.load(root / ".mia-cache/migration-to-C/row-ownership.npz") as z: elbow_ids = z[row_name][12]
+    elbow = q[elbow_ids].astype(float).mean(0)
+    shoulder = np.array([sign * .146, .008, 1.361], float)
+    expected_wrist = np.array([sign * .294, .012, .895], float)
+    p = q[ids].astype(float); wrist = p[np.argmin(np.linalg.norm(p - expected_wrist, axis=1))]
+    return {"shoulder": shoulder.tolist(), "elbow": elbow.tolist(), "wrist": wrist.tolist(),
+            "basis": "shoulder working-root proxy; elbow=current row-ownership arm[12]; wrist=current nearest to verified distal transport constriction"}
+
+
+def inspect(root: Path | str = ROOT) -> dict[str, Any]:
+    """CPU-only source/ownership audit; no Blender import or scene mutation."""
+    root = Path(root); q, f = _geometry(root); labels = _atlas_regions(root, f, len(q)); prior = _distal_prior(root, len(q))
+    sides = {side: _side_selection(q, f, labels, prior, side) for side in ("R", "L")}
+    all_core = np.unique(np.r_[sides["R"]["core"], sides["L"]["core"]])
+    all_interface = np.unique(np.r_[sides["R"]["interface"], sides["L"]["interface"]])
+    # Interface remains protected until root explicitly promotes a reviewed set.
+    fixed = np.setdiff1d(np.arange(len(q), dtype=np.int32), all_core)
+    report: dict[str, Any] = {
+        "status": "REVIEW_REQUIRED", "source_sha256": _sha(q), "vertices": int(len(q)), "triangles": int(len(f)),
+        "core_ids": all_core, "interface_ids": all_interface, "core_weight": np.concatenate((sides["R"]["fade_weight"], sides["L"]["fade_weight"])), "fixed_ids": fixed,
+        "sides": {s: {"core_ids": v["core"], "interface_ids": v["interface"], "distal_ids": v["distal"],
+                      "core_weight": v["fade_weight"], "stations": _station(root, q, v["core"], s)} for s, v in sides.items()},
+        "limits": "Atlas region 6/7/14/15 is seed assistance only. A 70-mm C2 edge-length geodesic fade is inside selected arm core; adjacent interface is held fixed. This is not final weights, anatomy, collision, or an animation pass.",
+    }
+    return report
+
+
+def prepare(root: Path | str = ROOT) -> dict[str, Any]:
+    """Persist a compact review payload (<10MB) for a later explicit install."""
+    root = Path(root); audit = inspect(root); out = _cache(root); out.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(out / "selection.npz", source_sha256=np.array(audit["source_sha256"]),
+                        core_ids=audit["core_ids"], interface_ids=audit["interface_ids"], fixed_ids=audit["fixed_ids"],
+                        R_core=audit["sides"]["R"]["core_ids"], L_core=audit["sides"]["L"]["core_ids"],
+                        # Allows a later guarded torso-only promotion to prove
+                        # that this diagnostic's arm source did not drift.
+                        core_co=_geometry(root)[0][audit["core_ids"]], R_weight=audit["sides"]["R"]["core_weight"], L_weight=audit["sides"]["L"]["core_weight"])
+    serial = {k: v for k, v in audit.items() if k not in {"core_ids", "interface_ids", "core_weight", "fixed_ids"}}
+    for side in serial["sides"].values():
+        for key in ("core_ids", "interface_ids", "core_weight", "distal_ids"): side[key] = int(len(side[key]))
+    (out / "review.json").write_text(json.dumps(serial, indent=2) + "\n", encoding="utf8")
+    size = sum(p.stat().st_size for p in out.glob("*") if p.is_file())
+    if size > 10 * 1024 * 1024: raise RuntimeError("arm-pose01 review cache exceeded 10MB budget")
+    return {"status": "PREPARED_REVIEW_REQUIRED", "cache": str(out), "bytes": size, "source_sha256": audit["source_sha256"], "ART": False}
+
+
+def forecast(root: Path | str = ROOT) -> dict[str, Any]:
+    """CPU-only pose scope/orientation screen; it is not a rig acceptance test."""
+    root = Path(root); q, faces = _geometry(root); audit = inspect(root); output: dict[str, Any] = {}
+    for name, degrees in POSES.items():
+        candidate = q.copy().astype(np.float64)
+        for side, sign in (("R", 1), ("L", -1)):
+            ids = audit["sides"][side]["core_ids"]; weights = audit["sides"][side]["core_weight"]
+            s = np.asarray(audit["sides"][side]["stations"]["shoulder"], float)
+            theta = sign * np.deg2rad(degrees); c, sn = np.cos(theta), np.sin(theta)
+            # Rotation around world Y is only a deterministic screen matching
+            # the simple Blender diagnostic, not an anatomical shoulder model.
+            R = np.array(((c, 0., sn), (0., 1., 0.), (-sn, 0., c)))
+            p = q[ids].astype(float); moved = (p-s) @ R.T + s
+            candidate[ids] += (moved-p) * weights[:, None]
+        changed = np.linalg.norm(candidate-q, axis=1) > 1.e-9
+        fixed = np.setdiff1d(np.arange(len(q), dtype=np.int32), audit["core_ids"])
+        if changed[fixed].any(): raise RuntimeError("forecast moved protected fixed IDs")
+        active = changed[faces].any(1); a, b = q[faces[active]].astype(float), candidate[faces[active]]
+        n0 = np.cross(a[:, 1]-a[:, 0], a[:, 2]-a[:, 0]); n1 = np.cross(b[:, 1]-b[:, 0], b[:, 2]-b[:, 0])
+        cosine = np.sum(n0*n1, 1)/(np.linalg.norm(n0, axis=1)*np.linalg.norm(n1, axis=1))
+        worst = int(np.argmin(cosine)) if len(cosine) else -1
+        output[name] = {"changed_vertices": int(changed.sum()), "fixed_changed_vertices": 0,
+                        "max_displacement_m": float(np.linalg.norm(candidate-q, axis=1).max()),
+                        "affected_triangles": int(active.sum()), "min_orientation_cos": float(cosine.min()) if len(cosine) else 1.0,
+                        "worst_face": int(np.flatnonzero(active)[worst]) if worst >= 0 else None,
+                        "technical_scope_only": True}
+    (_cache(root) / "forecast.json").write_text(json.dumps(output, indent=2) + "\n", encoding="utf8")
+    rejected = any(v["min_orientation_cos"] <= 0.0 for v in output.values())
+    return {"status": "FORECAST_REJECT" if rejected else "FORECAST_SCOPE_SCREEN_ONLY", "poses": output, "ART": False,
+            "limits": "No self-contact, collar deformation, anatomy, collision or render review is implied."}
+
+
+def _read_prepared(root: Path) -> dict[str, Any]:
+    path = _cache(root) / "selection.npz"
+    with np.load(path) as z: return {key: z[key] for key in z.files}
+
+
+def _mesh_arrays(mesh: Any) -> tuple[np.ndarray, np.ndarray]:
+    q = np.empty((len(mesh.vertices), 3), np.float32); mesh.vertices.foreach_get("co", q.ravel())
+    f = np.empty((len(mesh.polygons), 3), np.int32); mesh.loops.foreach_get("vertex_index", f.ravel())
+    return q, f
+
+
+def install(root: Path | str = ROOT, object_name: str = BODY, *, reviewed_core_ids: np.ndarray | None = None,
+            reviewed_interface_ids: np.ndarray | None = None,
+            expected_source_sha256: str | None = None) -> dict[str, Any]:
+    """Create a private duplicate + fitted diagnostic armature after explicit review.
+
+    ``reviewed_core_ids`` is mandatory: the automatic semantic proposal is
+    deliberately not silently promoted to a deform mask.
+    """
+    import bpy  # deliberately local: prepare/inspect are safe outside Blender
+    root = Path(root); data = _read_prepared(root)
+    if reviewed_core_ids is None or reviewed_interface_ids is None:
+        raise ValueError("explicit reviewed_core_ids and reviewed_interface_ids are required before derivative installation")
+    core = np.unique(np.asarray(reviewed_core_ids, np.int32))
+    interface = np.unique(np.asarray(reviewed_interface_ids, np.int32))
+    proposed = data["core_ids"]
+    if not len(core) or np.setdiff1d(core, proposed).size: raise ValueError("reviewed IDs must be a nonempty subset of arm-pose01 proposed core")
+    if not len(interface) or np.setdiff1d(interface, data["interface_ids"]).size:
+        raise ValueError("reviewed interface must be a nonempty subset of arm-pose01 one-ring boundary")
+    source = bpy.data.objects.get(object_name)
+    if source is None or source.type != "MESH": raise ValueError("current static body object was not found")
+    if source.parent or source.modifiers or source.data.shape_keys: raise ValueError("source must remain the static unmodified body")
+    before, faces = _mesh_arrays(source.data)
+    actual_sha = _sha(before)
+    if expected_source_sha256 is not None and actual_sha != expected_source_sha256:
+        raise ValueError("actual source SHA differs from explicit install expectation")
+    if actual_sha != str(data["source_sha256"]):
+        # A guarded torso proposal may precede this work.  It is only safe to
+        # reuse the diagnostic selection if every selected arm coordinate is
+        # byte-identical; otherwise root must prepare/review again.
+        if "core_co" not in data or not np.array_equal(before[proposed], data["core_co"]):
+            raise ValueError("prepared arm coordinates changed; rebuild and review arm-pose01 selection")
+    if bpy.data.objects.get(NAMES["copy"]) or bpy.data.objects.get(NAMES["rig"]): raise ValueError("existing arm-pose01 diagnostic must be cleaned first")
+    copy = source.copy(); copy.data = source.data.copy(); copy.name = NAMES["copy"]; bpy.context.collection.objects.link(copy)
+    arm_data = bpy.data.armatures.new(NAMES["rig"]); rig = bpy.data.objects.new(NAMES["rig"], arm_data); bpy.context.collection.objects.link(rig)
+    bpy.context.view_layer.objects.active = rig; rig.select_set(True); bpy.ops.object.mode_set(mode="EDIT")
+    # Stations are fitted from the reviewed current selection, then split by side.
+    stations = {}; groups = {}
+    for side, sign in (("R", 1), ("L", -1)):
+        ids = core[before[core, 0] * sign > 0];
+        if len(ids) < 64: raise ValueError(f"reviewed core has no usable {side} arm")
+        st = _station(root, before, ids, side); stations[side] = st
+        s, e, w = (np.array(st[k]) for k in ("shoulder", "elbow", "wrist"))
+        up = arm_data.edit_bones.new("MIA_diag_upper." + side); up.head, up.tail = s, e
+        lo = arm_data.edit_bones.new("MIA_diag_lower." + side); lo.head, lo.tail, lo.parent, lo.use_connect = e, w, up, True
+        groups[side] = (ids, s, e, w)
+    bpy.ops.object.mode_set(mode="OBJECT"); rig.select_set(False)
+    # Manual envelope: core is full influence; a separately reviewed one-ring
+    # receives a reduced shoulder fade.  Everything else stays ungrouped/fixed.
+    # This exposes, rather than hides, any remaining collar/axilla crease.
+    for side, (ids, s, e, w) in groups.items():
+        sign = 1 if side == "R" else -1
+        blend_ids = interface[before[interface, 0] * sign > 0]
+        owned = np.unique(np.r_[ids, blend_ids]); p = before[owned].astype(float); axis = w - s; length = np.linalg.norm(axis); t = np.clip(((p-s) @ axis) / (length*length), 0., 1.)
+        weights = data["R_weight"] if side == "R" else data["L_weight"]
+        core_scale = dict(zip(data["R_core" if side == "R" else "L_core"].tolist(), weights.tolist()))
+        fade = np.asarray([core_scale.get(int(i), 0.0) for i in owned], float)
+        upper, lower = copy.vertex_groups.new(name="MIA_diag_upper."+side), copy.vertex_groups.new(name="MIA_diag_lower."+side)
+        for idx, value, scale in zip(owned.tolist(), t.tolist(), fade.tolist()):
+            upper.add([idx], scale*(1.0-value), "REPLACE"); lower.add([idx], scale*value, "REPLACE")
+    mod = copy.modifiers.new("MIA_ArmPose01_DerivativeOnly", "ARMATURE"); mod.object = rig
+    mod.use_deform_preserve_volume = True  # Blender dual-quaternion runtime; CPU screen remains LBS-only.
+    state = {"source": source.name, "source_mesh": source.data.name, "source_sha256": _sha(before), "copy": copy.name, "rig": rig.name,
+             "source_hide": bool(source.hide_viewport), "copy_mesh": copy.data.name, "stations": stations, "reviewed_ids": np.unique(np.r_[core, interface]).tolist(),
+             "fixed_ids_sha256": _sha(data["fixed_ids"]), "warning": "Derivative-only diagnostic. No torso/breast/lat interface deformation, collision or anatomy pass is implied."}
+    bpy.app.driver_namespace["MIA_ARMPOSE01"] = state
+    set_pose("arm_down")
+    return {"status": "DERIVATIVE_INSTALLED", "copy": copy.name, "rig": rig.name, "reviewed_vertices": int(len(core)), "ART": False, "warning": state["warning"]}
+
+
+def set_pose(state: str = "arm_down") -> dict[str, Any]:
+    """Set one deliberately simple diagnostic pose; values require visual review."""
+    import bpy, math
+    if state not in POSES: raise ValueError("state must be arm_down, work_A, T, or elbow_bend")
+    saved = bpy.app.driver_namespace.get("MIA_ARMPOSE01")
+    if not saved: raise ValueError("arm-pose01 derivative is not installed")
+    rig = bpy.data.objects[saved["rig"]]
+    for side, sign in (("R", 1), ("L", -1)):
+        upper, lower = rig.pose.bones["MIA_diag_upper."+side], rig.pose.bones["MIA_diag_lower."+side]
+        upper.rotation_mode = lower.rotation_mode = "XYZ"
+        upper.rotation_euler = (0., sign*math.radians(POSES[state]), 0.)
+        lower.rotation_euler = (math.radians(55.) if state == "elbow_bend" else 0., 0., 0.)
+    bpy.context.view_layer.update()
+    return {"status": "POSE_SET_REVIEW_REQUIRED", "state": state, "work_A_degrees": 45.0, "note": "45 degrees is a diagnostic sample, not a universal working-pose prescription", "ART": False}
+
+
+def evaluate(*, include_co: bool = True) -> dict[str, Any]:
+    """Return evaluated derivative coordinates and strict fixed-core scope proof."""
+    import bpy
+    saved = bpy.app.driver_namespace.get("MIA_ARMPOSE01")
+    if not saved: raise ValueError("arm-pose01 derivative is not installed")
+    source, copy = bpy.data.objects[saved["source"]], bpy.data.objects[saved["copy"]]
+    q, _ = _mesh_arrays(source.data)
+    if _sha(q) != saved["source_sha256"] or source.modifiers or source.parent: raise RuntimeError("production source changed; stop and restore manually")
+    if len(copy.modifiers) != 1 or copy.modifiers[0].object.name != saved["rig"]: raise RuntimeError("diagnostic ownership changed")
+    depsgraph = bpy.context.evaluated_depsgraph_get(); evaluated = copy.evaluated_get(depsgraph); mesh = evaluated.to_mesh()
+    try:
+        posed, posed_faces = _mesh_arrays(mesh)
+    finally:
+        evaluated.to_mesh_clear()
+    source_faces = _mesh_arrays(source.data)[1]
+    if not np.array_equal(posed_faces, source_faces): raise RuntimeError("diagnostic evaluation changed topology")
+    allowed = np.asarray(saved["reviewed_ids"], np.int32); changed = (posed.view(np.uint32) != q.view(np.uint32)).any(1)
+    fixed = np.setdiff1d(np.arange(len(q), dtype=np.int32), allowed, assume_unique=False)
+    illegal = np.flatnonzero(changed[fixed])
+    proof: dict[str, Any] = {"status": "DERIVATIVE_SCOPE_VALID_ONLY", "source_exact": True, "copy_only": True,
+        "same_topology": True, "changed_vertices": int(changed.sum()), "fixed_vertices": int(len(fixed)),
+        "fixed_changed_vertices": int(len(illegal)), "fixed_ids_sha256": _sha(fixed), "native_saved": False, "ART": False}
+    if illegal.size: raise RuntimeError("evaluated pose moved protected source IDs: " + str(fixed[illegal[:12]].tolist()))
+    if include_co: proof["co"] = posed
+    return proof
+
+
+def cleanup() -> dict[str, Any]:
+    """Delete only private diagnostic objects and restore source visibility/context flag."""
+    import bpy
+    saved = bpy.app.driver_namespace.get("MIA_ARMPOSE01")
+    if not saved: return {"status": "NOT_INSTALLED", "ART": False}
+    source = bpy.data.objects.get(saved["source"]); copy = bpy.data.objects.get(saved["copy"]); rig = bpy.data.objects.get(saved["rig"])
+    if copy: bpy.data.objects.remove(copy, do_unlink=True)
+    if rig: bpy.data.objects.remove(rig, do_unlink=True)
+    if source: source.hide_viewport = saved["source_hide"]
+    del bpy.app.driver_namespace["MIA_ARMPOSE01"]
+    return {"status": "DERIVATIVE_CLEANED_SOURCE_RETAINED", "native_saved": False, "ART": False}

@@ -73,3 +73,8 @@ asset/mia/blender/mia-face-finish-v29/**/*.exr filter=lfs diff=lfs merge=lfs -te
 # v002 replay manifests and actual evidence use byte-exact hashes across checkout.
 asset/mia/blender/mia-refinement-v002/** -text
 asset/mia/blender/mia-refinement-v002/**/*.exr filter=lfs diff=lfs merge=lfs -text
+
+# Preserve exact bytes of the Claude Code handoff source/evidence snapshots.
+asset/mia/handoff/20261104/** -text whitespace=cr-at-eol
+# Unified-diff context markers intentionally include otherwise blank spaces.
+asset/mia/handoff/20261104/arm_pose01.interrupted.patch.txt -whitespace
