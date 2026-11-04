@@ -5,6 +5,7 @@ outward displacement back to the unchanged hanging lock. No new meshes,
 widths, UVs, shaders, rigs, or whole-scene checkpoints. Run through live MCP.
 """
 from pathlib import Path
+from datetime import datetime, timezone
 import hashlib
 import importlib.util
 import json
@@ -25,7 +26,89 @@ def sha(array):
 
 
 def file_sha(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+    result = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        while block := stream.read(4*1024*1024): result.update(block)
+    return result.hexdigest()
+
+
+def canonical(value):
+    return json.dumps(value, sort_keys=True, separators=(',', ':'), allow_nan=False)
+
+
+def timestamp_receipt(kind):
+    stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+    path = OUT/(kind+'-'+stamp+'.json')
+    assert not path.exists()
+    return path
+
+
+def recipe_hashes():
+    return {name: file_sha(Path(__file__).with_name(name)) for name in
+            ('rear_root01.py', 'rear_root01_restore.py', 'lock_look01.py')}
+
+
+def validate_replay(recipe, binding, observed):
+    """Pure fail-closed replay checks; metadata are measured post-review."""
+    assert binding['selection'] == 'RETAINED_ROOT_EMERGENCE_WIP_ONLY'
+    assert binding['apply_sha256'] == observed['apply_sha256']
+    assert binding['delta_sha256'] == recipe['delta_sha256'] == observed['delta_sha256']
+    assert binding['source_recipes'] == observed['source_recipes'], 'Recipe source changed'
+    assert binding['before'] == recipe['before'] and binding['after'] == recipe['after']
+    assert observed['fingerprints'] == recipe['before'], 'Not the original pre-root assembly'
+    assert observed['actor_names'] == binding['actor_names']
+    assert canonical(observed['slots']) == canonical(binding['slots'])
+    assert observed['look_signature'] == binding['look_signature'], 'Retained look changed'
+    assert observed['native'] == binding['native'] and observed['native_sha256'] == binding['native_sha256']
+    assert observed['source_payload_sha256'] == recipe['source_payload_sha256']
+    assert observed['actual_payload_sha256'] == recipe['actual_payload_sha256']
+
+
+def retain():
+    """Explicit post-review binding while the applied state is still available."""
+    import bpy
+    assert bpy.context.mode == 'OBJECT'
+    assert globals().get('MIA_EDIT_PHASE', 'apply') == 'apply'
+    receipt = OUT/'retained.json'; assert not receipt.exists(), 'Immutable retention binding exists'
+    state = bpy.app.driver_namespace[KEY]
+    recipe = json.loads((OUT/'apply.json').read_text(encoding='utf8'))
+    h = helper(); fingerprint = h['fingerprint']
+    actors = [bpy.data.objects[name] for name in state['actor_names']]
+    actual = {ob.name:fingerprint(ob) for ob in actors}
+    assert actual == recipe['after'] == state['after_fingerprints']
+    assert state['before_fingerprints'] == recipe['before']
+    slots = {ob.name:h['slots'](ob) for ob in actors}
+    assert slots == state['before_slots']
+    look = bpy.app.driver_namespace['MIA_HairLockLook01']['material']
+    assert look == state['look']
+    signature = h['shader_signature'](look)
+    assert signature == state['look_signature']
+    assert file_sha(OUT/'delta.npz') == recipe['delta_sha256']
+    original = ROOT/'.mia-cache/face-live/curved-rear03'
+    assert file_sha(original/'curves.npz') == recipe['source_payload_sha256']
+    assert file_sha(original/'actual-emergence/geometry.npz') == recipe['actual_payload_sha256']
+    delta = np.load(OUT/'delta.npz')
+    for name, rec in state['records'].items():
+        for suffix, expected in [('ids', rec['ids']), ('before', rec['before'][rec['ids']]),
+                                 ('after', rec['after'][rec['ids']])]:
+            assert np.array_equal(delta[name+'_'+suffix], expected)
+    body = bpy.data.objects['MIA_Review12_H_LiveRepair']; before_body = fingerprint(body)
+    native = str(Path(bpy.data.filepath).resolve())
+    binding = dict(selection='RETAINED_ROOT_EMERGENCE_WIP_ONLY',
+        binding_scope='Measured after bounded root/source review; original apply receipt is unchanged',
+        apply_sha256=file_sha(OUT/'apply.json'), delta_sha256=recipe['delta_sha256'],
+        source_recipes=recipe_hashes(), actor_names=state['actor_names'],
+        before=recipe['before'], after=recipe['after'], slots=slots,
+        look_signature=signature, native=native, native_sha256=file_sha(native),
+        body_sha256_at_binding=before_body['coordinates'],
+        source_payload_sha256=recipe['source_payload_sha256'],
+        actual_payload_sha256=recipe['actual_payload_sha256'],
+        M2_complete=False, ART=False, native_saved=False)
+    assert fingerprint(body) == before_body and actual == {ob.name:fingerprint(ob) for ob in actors}
+    with receipt.open('x', encoding='utf8') as stream:
+        stream.write(json.dumps(binding, indent=2)+'\n')
+    print(json.dumps(dict(status=binding['selection'], receipt=str(receipt),
+                         apply_and_delta_bytes_preserved=True, native_saved=False, ART=False)))
 
 
 def coordinates(ob):
@@ -170,8 +253,24 @@ def overlap(actor_names, records, proposed, all_parts):
 def main():
     import bpy
     ns = bpy.app.driver_namespace
+    retaining, replay = (globals().get('MIA_REAR_ROOT01_RETAIN', False),
+                         globals().get('MIA_REAR_ROOT01_REPLAY', False))
+    assert isinstance(retaining, bool) and isinstance(replay, bool)
+    assert not (retaining and replay), 'Choose one explicit action'
+    if retaining:
+        retain(); return
     assert KEY not in ns and bpy.context.mode == 'OBJECT'
-    assert not (OUT/'apply.json').exists() and not (OUT/'delta.npz').exists(), 'Immutable trial exists'
+    recipe = binding = None
+    original_receipt = OUT/'apply.json'
+    if replay:
+        assert globals().get('MIA_EDIT_PHASE', 'apply') == 'apply'
+        recipe = json.loads(original_receipt.read_text(encoding='utf8'))
+        binding = json.loads((OUT/'retained.json').read_text(encoding='utf8'))
+        receipt = timestamp_receipt('replay')
+    else:
+        assert not original_receipt.exists() and not (OUT/'delta.npz').exists(), (
+            'Preserve immutable trial bytes; exact replay requires MIA_REAR_ROOT01_REPLAY=True')
+        receipt = original_receipt
     rear = ns['MIA_CurvedRear03Base']; assert rear['provisional_keep'] and len(rear['objects']) == 19
     assert 'MIA_HairLockLook01' in ns, 'Preserve the current retained look'
     original_dir = ROOT/'.mia-cache/face-live/curved-rear03'
@@ -190,6 +289,15 @@ def main():
     body_data, body_before = body.data, fingerprint(body)
     look = ns['MIA_HairLockLook01']['material']
     look_signature = h['shader_signature'](look)
+    if replay:
+        observed = dict(apply_sha256=file_sha(original_receipt), delta_sha256=file_sha(OUT/'delta.npz'),
+            source_recipes=recipe_hashes(), fingerprints=before_fingerprints,
+            actor_names=[ob.name for ob in actors], slots=before_slots, look_signature=look_signature,
+            native=str(Path(bpy.data.filepath).resolve()), native_sha256=file_sha(bpy.data.filepath),
+            source_payload_sha256=file_sha(original_dir/'curves.npz'),
+            actual_payload_sha256=file_sha(actual_dir/'geometry.npz'))
+        validate_replay(recipe, binding, observed)
+        saved_delta = np.load(OUT/'delta.npz')
     records, proposed = {}, {}
     for suffix in NAMES:
         name = PREFIX+suffix; ob = bpy.data.objects[name]
@@ -201,6 +309,10 @@ def main():
         faces = np.asarray([p.vertices[:] for p in ob.data.polygons], np.int32)
         assert np.array_equal(faces, actual[name+'_triangles'])
         after, ids, proof = candidate(before, original[suffix+'_world'], faces)
+        if replay:
+            assert sha(after) == recipe['after'][name]['coordinates'], 'Candidate recipe changed'
+            for key, expected in [('ids', ids), ('before', before[ids]), ('after', after[ids])]:
+                assert np.array_equal(saved_delta[name+'_'+key], expected), 'Delta mismatch: '+name+' '+key
         records[name] = dict(before=before, after=after, ids=ids, faces=faces, proof=proof)
         proposed[name] = after
     phase = globals().get('MIA_EDIT_PHASE', 'apply')
@@ -235,13 +347,18 @@ def main():
         assert body.data == body_data and fingerprint(body) == body_before
         assert before_slots == {ob.name:h['slots'](ob) for ob in actors}
         assert h['shader_signature'](look) == look_signature
+        if replay:
+            assert after_fingerprints == recipe['after'], 'Original after assembly not reproduced'
+            assert file_sha(original_receipt) == binding['apply_sha256']
+            assert file_sha(OUT/'delta.npz') == binding['delta_sha256']
         OUT.mkdir(parents=True, exist_ok=True)
-        delta = {}
-        for name, rec in records.items():
-            delta[name+'_ids'] = rec['ids']; delta[name+'_before'] = rec['before'][rec['ids']]
-            delta[name+'_after'] = rec['after'][rec['ids']]
-        np.savez_compressed(OUT/'delta.npz', **delta)
-        report = dict(status='APPLIED_UNSELECTED_ROOT_EMERGENCE_WIP', targets=support,
+        if not replay:
+            delta = {}
+            for name, rec in records.items():
+                delta[name+'_ids'] = rec['ids']; delta[name+'_before'] = rec['before'][rec['ids']]
+                delta[name+'_after'] = rec['after'][rec['ids']]
+            np.savez_compressed(OUT/'delta.npz', **delta)
+        report = dict(status='EXACT_REPLAY_ROOT_EMERGENCE_WIP' if replay else 'APPLIED_UNSELECTED_ROOT_EMERGENCE_WIP', targets=support,
             body_sha256=body_before['coordinates'], body_unchanged=True, other_14_hair_actors_exact=True,
             XZ_width_topology_UV_materials_and_authored_normal_inputs_held=True,
             affected_normals='Automatically derived normals legitimately update only with changed geometry',
@@ -256,11 +373,16 @@ def main():
                     'Back/oblique ray occlusion is diagnostic, actual paired source renders still required',
                     'Regular S rhythm, widths/tips, Main artifacts, final maps and rig remain unresolved'],
             native_saved=False, ART=False)
-        with (OUT/'apply.json').open('x', encoding='utf8') as stream:
+        if replay:
+            report['apply_sha256'] = binding['apply_sha256']
+            report['retention_sha256'] = file_sha(OUT/'retained.json')
+            report['immutable_original_apply_and_delta_held'] = True
+        with receipt.open('x', encoding='utf8') as stream:
             stream.write(json.dumps(report, indent=2)+'\n')
         ns[KEY] = dict(records=records, report=report, before_fingerprints=before_fingerprints,
                        after_fingerprints=after_fingerprints, before_slots=before_slots,
-                       actor_names=[ob.name for ob in actors], look=look, look_signature=look_signature)
+                       actor_names=[ob.name for ob in actors], look=look, look_signature=look_signature,
+                       replay_receipt=str(receipt) if replay else None)
     except Exception:
         for name, rec in records.items():
             ob = bpy.data.objects[name]; ob.data.vertices.foreach_set('co', rec['before'].ravel()); ob.data.update()
@@ -269,7 +391,7 @@ def main():
         raise
     print(json.dumps(dict(status=report['status'], actors=6,
         changed_vertices=sum(rec['proof']['changed_vertices'] for rec in records.values()),
-        body_sha256=body_before['coordinates'], report=str(OUT/'apply.json'), native_saved=False, ART=False)))
+        body_sha256=body_before['coordinates'], report=str(receipt), native_saved=False, ART=False)))
 
 
 if not globals().get('MIA_REAR_ROOT01_LIBRARY_ONLY', False): main()
