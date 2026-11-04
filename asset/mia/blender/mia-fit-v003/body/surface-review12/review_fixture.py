@@ -14,12 +14,12 @@ def setup(scene):
     for ob in hair_actors(scene):
         if 'MIA12_source_hair_hide_render' not in ob:ob['MIA12_source_hair_hide_render']=bool(ob.hide_render)
     for ob in scene.objects:
-        if ob.type=='LIGHT':ob.hide_render=True
+        if ob.type=='LIGHT':ob.hide_render=True;ob.hide_set(True)
     for name,pos,energy,size in [('Key',(-3,-4,4),650,3),('Fill',(3,-2,2.5),280,4),('Rim',(1,3,3.5),450,3)]:
         ob=bpy.data.objects.get(PREFIX+name)
         if ob is None:
             data=bpy.data.lights.new(PREFIX+name,'AREA');ob=bpy.data.objects.new(data.name,data);scene.collection.objects.link(ob)
-        ob.data.energy=energy;ob.data.shape='DISK';ob.data.size=size;ob.location=pos;ob.rotation_euler=(Vector((0,0,1))-ob.location).to_track_quat('-Z','Y').to_euler();ob.hide_render=False
+        ob.data.energy=energy;ob.data.shape='DISK';ob.data.size=size;ob.location=pos;ob.rotation_euler=(Vector((0,0,1))-ob.location).to_track_quat('-Z','Y').to_euler();ob.hide_render=False;ob.hide_set(False)
     world=bpy.data.worlds.get(PREFIX+'World') or bpy.data.worlds.new(PREFIX+'World');world.use_nodes=True;bg=next(n for n in world.node_tree.nodes if n.type=='BACKGROUND');bg.inputs['Color'].default_value=(.18,.18,.18,1);bg.inputs['Strength'].default_value=.2;scene.world=world
     cam=bpy.data.objects.get(PREFIX+'Camera')
     if cam is None:
@@ -35,6 +35,9 @@ def hair_actors(scene):
     out=[]
     for ob in scene.objects:
         if ob.type!='MESH':continue
+        # Actual Upper/LowerDentalCrowns are teeth, not hair crown actors.
+        # Do not hide expression geometry when borrowing a hair-OFF review.
+        if 'dental' in ob.name.lower():continue
         text=ob.name.lower()+' '+' '.join(m.name.lower() for m in ob.data.materials if m)
         if any(t in text for t in ['hair','braid','crown','gather','rootlining','rimflow']):out.append(ob)
     return out

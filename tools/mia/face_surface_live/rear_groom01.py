@@ -20,6 +20,10 @@ PREFIX = 'MIA_Hair_CurvedRear03Base_'
 CHECKPOINT_SHA = '9c953fb48bf3c55595ca69d28523197b43b924550d96b6ad91a0792f4fabedb7'
 NAMES = ('DeepCenter', 'LongCenter', 'MidLeftInner', 'MidRightInner',
          'CenterTurnLeft', 'CenterTurnRight')
+# Actual scene selection rejected these guides: new MidLeft self-contact and
+# MidRight/LongRight crossing. Keep the diagnosis reproducible, never install
+# this same recipe as a later "completed" groom after a context handoff.
+CURRENT_GUIDES_REJECTED = True
 # (existing ring, target world X, target world Y); all original Zs are held.
 # The under-layer loses matching left/right pulses; the middle layer crosses it.
 # Upper left short overlays upper right; middle left overlays the long centre.

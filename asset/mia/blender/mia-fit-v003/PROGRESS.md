@@ -446,3 +446,58 @@ Long lower tips can leave this head crop. This is not final whole-body FB64,
 two-material rendering, expression or animation approval. The old hairOFF
 preview deletion was rejected before execution (`blocked by policy`); those
 few-MB outputs remain, not counted as recovered space or retried elsewhere.
+
+M1 second3D edge-flow forecast also stopped before MCP: more front exposure and
+preserved -35gap, but +35still covered;48535 compressed5.22→0.531mm with88degree
+face turn and new upstream intersections against44375/46971/48544. The14roots
+own the brow window, not the whole forelock attachment. Both inert CPU failures
+are committed; do not repeat narrower coefficient/Yretreat variants or merge
+unshared upper points as seam duplicates. Shared-patch/local topology/parting
+design is still needed. The clean source-only fringe worktree was removed
+normally after all commits were merged/pushed.
+
+Read-only actual nape rays, filtered against current body, attribute9sampled
+visible geometric hits mostly to RemainingMain, with one frontBraidLane2;
+one behind-body hit is excluded. This is not an alpha/material/other-object
+complete visibility test or a mesh deletion mask. The heuristic hair classifier
+also included2DentalCrowns: corrected to exclude those actual teeth, then MCP
+verified working19 still included,32visible hair actors, unchanged geometry/
+slots/visibility. Historical34-actor receipts are retained with this limitation.
+
+## Six-lock path groom rejected at actual scene preflight
+
+Finite source-v22-inspired path/order guides preserved each32-point section by
+rigid tangent following, without width/depth scaling, root/join changes or UV/
+material changes. Pure ring translation first folded local faces; fixing a short
+curl's endpoint also compressed it, so two short curls instead followed rigid
+translated continuations. Final forecast had0flips,<=16.821mmXYZ/13.821mmdepth,
+section residual<=0.060micron. Those values did not establish good geometry.
+
+Actual MCP select658efac verified all6cached fingerprints, unique owners,
+no custom-normal storage, body695/native0d62 and actual evaluated contact
+surfaces. It returned `preview_ready=false`: BVH found increased neighboring
+and self contacts; the bounded conservative4000pair SAT was UNVERIFIED, not a
+PASS. Targeted exact cached/selected-geometry SAT separately proves new
+MidLeftInner self-contact3998/4254 (rings62–63/66–67) and MidRight1962 against
+unchangedLongRight1820. The first is guide58→held70 terminal curvature
+compression (radius3.448→2.670mm, offsetsection×curvature1.002 cusp); the
+second invades an existing neighbor lane while passing behind the short curl.
+No APPLY occurred, no selection/apply namespace was installed, no candidate
+native/render was created. These current guides are explicitly disabled for
+application; do not revive them after compaction. Design the actual neighbor
+lane envelope and terminal curl support together before another groom.
+
+All kept look/root/AP/pigment geometry remains unchanged in live0d62 and saved
+9c. Borrowed review was exited exactly, then current retained hair was
+intentionally shown in an ORTHO rendered viewport, head-centered20degrees,
+scene lights, camera0.1..10m/viewport0.01..10m. This is presentation only;
+mesh origins/coordinates/UV/materials held. M1..M6 and allFB outcomes stay OPEN.
+
+Actual rendered viewport initially overexposed the gray body while saved-camera
+PNGs remained correct. Combined pass and scene-light/world flags were confirmed;
+the actual cause was old source lights hidden only from render, still enabled
+in viewport. Live LIGHT visibility now matches each hide_render flag; no energy,
+position, material or geometry was changed. Actual MCP before/after screenshots
+show the gray body returning to the saved-camera tone. The shared fixture now
+hides old lights in viewport too and enables its three review lights there.
+See `match-viewport-lights-call.json` and `current-lit-screen-call-0.png`.

@@ -166,7 +166,7 @@ def select(root=ROOT):
     assert all(span['candidate']['projected_overlap_samples'] == 31 and
                span['candidate']['conservative_section_Y_gap_mm'][0] > 1.5 for span in spans)
     contacts = _contacts(root, physical, target_names, moved)
-    preview_ready = contacts['gate_passed'] and contacts['SAT']['status'] != 'FAIL'
+    preview_ready = not plan.get('CURRENT_GUIDES_REJECTED', False) and contacts['gate_passed'] and contacts['SAT']['status'] != 'FAIL'
     token = plan['sha'](np.frombuffer(guard['canonical'](dict(before=before, proofs=proofs, graphs=graphs, context=context)).encode(), np.uint8))
     report = dict(scope='Central-six finite path/order selection; not M2 ART', selection_sha256=token,
                   targets=target_names, body_sha256=BODY_SHA, shape_forecast=proofs,
@@ -187,7 +187,8 @@ def apply(selection_sha256, root=ROOT):
     root = Path(root).resolve(); state = bpy.app.driver_namespace[SELECT]
     assert KEY not in bpy.app.driver_namespace and state['root'] == str(root)
     assert state['token'] == selection_sha256 and bpy.context.mode == 'OBJECT'
-    _, guard = helpers(root)
+    plan, guard = helpers(root)
+    assert not plan.get('CURRENT_GUIDES_REJECTED', False), 'Current finite guide recipe was rejected; redesign before applying'
     assert guard['_snapshot'](root) == state['before'] and guard['materials_signature']() == state['graphs']
     assert _context(root, guard) == state['context'], 'Modifier/pose/frame/key context changed after selection'
     state['owned'] = {}; bpy.app.driver_namespace[KEY] = state

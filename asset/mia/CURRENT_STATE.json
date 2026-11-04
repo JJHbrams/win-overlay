@@ -680,7 +680,16 @@
       "metadata_limit": "Oldfronttargetstale; v2usesfreshactualMCPtarget withsamefrozenmatrix/decodedpixels. Oldreceiptheld.",
       "independent_diagnosis": "Browsalready partlyvisible; broadterracedclump/backings andeye-crossingtip. Complete screen-leftmodule14roots/741pts/951faces; old8rootterminalleft453outerfaces, explains shelf. Actualwholeassembly ownershipstillneeded before coherentwholemoduleedit.",
       "full_scene_probe": ".mia-cache/face-live/live/fringe-probe01/probe.json",
-      "probe_result": "390samples/34actors/all337hittrianglesRemainingMain;130multidepthclustersretained, notunambiguousowners. 14islandscentralwindowonly; obliqueotherMainblockersremain."
+      "probe_result": "390samples/34actors/all337hittrianglesRemainingMain;130multidepthclustersretained, notunambiguousowners. 14islandscentralwindowonly; obliqueotherMainblockersremain.",
+      "latest": "Two CPU-only whole-depth forecasts rejected before MCP/model mutation; accepted face/raw Main/RemainingMain unchanged. M1OPEN.",
+      "rejected_forecasts": [
+        "tools/mia/fringe_coherent_live/rejected_bend_forecast01.py",
+        "tools/mia/fringe_coherent_live/rejected_edge_flow_forecast01.py"
+      ],
+      "failure": "Whole-bank transverse bend hid -35brow and crossed outer backings. One-sided 3D edge-flow preserved near-view exposure but compressed48535 section5.22→0.531mm/88deg and crossed unowned upstream44375/46971/48544. PositiveJacobian was not enough.",
+      "ownership_limit": "14roots own the diagnostic brow window, not the full shared forelock attachment; broad48535/41036 are~32mm sheets, not thin individual strands. Do not auto-merge unshared points as UV-seam duplicates.",
+      "next": "Define actual shared upper patch/parting ownership, then source-directed local topology/flow revision. No uniformwidth/depthretreat replay or shader concealment of the failure.",
+      "probe_classifier_limit": "Historical34heuristic hairBVHs included2DentalCrowns, with no brow hits from teeth. Classifier corrected and actual32hair/working19/unchangedgeometry+visibility verified; old receipts retained."
     },
     "native_grab01_preflight": {
       "status": "PRELIVE_REJECTED_NOT_APPLIED",
@@ -776,6 +785,45 @@
       },
       "visibility": "Working hair ON/raw Main OFF; geometry/maps held. Earlier body-editing hairOFF review113a superseded by9c953fb4.",
       "superseded_preview_cleanup": "HairOFF orbit outputs deletion rejected before execution: blocked by policy. Left intact, not retried by another tool. Current head-hair-orbit is the correct preview."
-    }
+    },
+    "nape_diagnostic": {
+      "path": ".mia-cache/face-live/live/hair-resume01/nape-ownership-body-filtered.json",
+      "result": "9sampled rays have hair ahead of body/no body at that pixel: mostlyRemainingMain, onefrontBraidLane2. Onebehind-body hair hit excluded.",
+      "limit": "Geometric ray ownership only, not alpha/material/other-actor universal visibility or a deletion mask. No nape mesh changed."
+    },
+    "rear_groom01": {
+      "selection": "REJECTED_ACTUAL_PREFLIGHT_NOT_APPLIED",
+      "recipe": "tools/mia/face_surface_live/rear_groom01.py",
+      "live_helper": "tools/mia/face_surface_live/rear_groom01_live.py",
+      "actual_select": ".mia-cache/face-live/live/rear-groom01/select-20261104T042556659263Z.json",
+      "token": "658efac35b7c79e2566aaccabbcff19762830180da6e07afd3d90caa0eb79d2c",
+      "geometry_normals": "All6 actual no custom-normal storage;0flips/rigidsections forecast did not guarantee contact freedom.",
+      "actual_contacts": "BVH increased contacts and self-hits; full SAT budget4000 UNVERIFIED, not collisionPASS; preview_readyfalse, no selection/apply namespace.",
+      "targeted_SAT": "CPU exact meshes bound to selected live fingerprints: MidLeftInner3998/4254 rings62–63/66–67 newself; MidRight1962/LongRight1820 newneighbor crossing.",
+      "cause": "MidLeft guide58→held70 forces centreline radius3.448→2.670mm and innersection×curvature0.775→1.002 cusp. MidRight centre invades unchanged LongRight lane, not texture/normal damage.",
+      "max_forecast_XYZ_mm": 16.821,
+      "max_forecast_depth_mm": 13.821,
+      "retained_current": "All previously selected geometry/look/body unchanged, savedvisiblecopy9c valid. No newnative or candidate renders for failed guides.",
+      "next": "Design actual neighboring lane/section envelope and terminalcurl support together before another path groom; no isolated knot/delta multiplier search.",
+      "apply_disabled_for_current_guides": true,
+      "M2_complete": false
+    },
+    "live_presentation": {
+      "receipt": ".mia-cache/face-live/live/hair-resume01/present-retained-current-call.json",
+      "state": "Retained hair visible/rawMainhidden; borrowedreview absent. Head-centered20degree ORTHO rendered viewport with scene lights. Mesh origins/coordinates/UV/materials unchanged.",
+      "camera_clip_m": [
+        0.1,
+        10
+      ],
+      "viewport_clip_m": [
+        0.01,
+        10
+      ],
+      "native_live_base": "0d62eff0 unchanged; no final ART or animation approval",
+      "scene_light_viewport_proof": ".mia-cache/face-live/live/hair-resume01/match-viewport-lights-call.json",
+      "actual_viewport_screenshot": ".mia-cache/face-live/live/hair-resume01/current-lit-screen-call-0.png",
+      "lighting_correction": "Old source lights were renderhidden but viewportenabled, overexposingbody. Live viewportlightvisibility nowmatchesrenderflags; energies/positions/materials/geometryunchanged; sharedsetup corrected."
+    },
+    "independent_resume_audit": "Bounded retention/savedcopy/artifact/recovery accepted; M1/M2candidatefailsnotapplied; fullM1..M6/FB remainOPEN. Reviewer didnot independently resolve neworbitframes, so no newvisualARTapproval. Git finalization root-owned."
   }
 }
