@@ -237,3 +237,43 @@ slot names,114,500protected points and allY/Z match. ab11/pre-waist183,
 previous9c and original0d62 remain preserved. The source-review validator
 accepts evidence coverage only; actual keep is bounded WIP, not whole ART.
 See `integration/waist02-review.json` and `asset/mia/reviews/waist02/`.
+
+### User follow-up: lower thorax/ribs and neutral arm pose
+
+The user still finds the ribcage/lower-rib region unnatural and asks whether
+arm shaping needs a T/basic pose. This reopens the connected lower-thorax form;
+historical limited waist-contour acceptance is not approval of that anatomy.
+Actual live probe confirms bodyba65 unchanged,137341vertices, no modifiers,
+Shape Keys or parent. Existing MIA_V06_RIG deforms other actors but not this
+static assembly. The original4647vertex pose-space helper is incompatible.
+Do not toggle the old rig or Apply Pose as Rest Pose and claim this body moved.
+
+Read-only coordinate audit found central guide-wall points aboveZ1.195 remain
+exact versus both pre-waist183 and old live-D:7253points in1.195..1.24 and9543
+in1.24..1.30. This is a coordinate/ownership observation, not segmentation of
+all rib anatomy: sourcepart2 includes arms and outer sections include breasts.
+The narrower waist exposes the inherited lower-thorax mass/transition. Smooth
+derivatives and a clean contact test did not establish its anatomical quality.
+
+Production principles actually read on2026-11-04:
+
+- Julien Kaspar, Blender Studio, [Clothing Shapes](https://studio.blender.org/training/realistic-human-research/clothing-shapes/):
+  public body describes A-pose sculpt/model, preliminary rig after retopology,
+  then A-to-T transition and further rig/animation work. Shoulder raise/forward,
+  arm raise/forward and elbow bend are separate checks. No universal T-pose or
+  exact A-angle prescription follows. Public HTML read, no lesson video viewed.
+- Stan Prokopenko, [Anatomy of the Rib Cage](https://www.proko.com/course-lesson/anatomy-of-the-rib-cage):
+  public Lesson Notes describe the planar egg mass, front/side/back transitions
+  and curved lower thoracic arch wrapping toward the back. Use these to reason
+  about connected volume; do not copy gendered idealized angles as Mia limits.
+  Notes read, not video; no confirmed timestamps.
+
+Next: preserve current snapshot, establish a reversible derivative A-pose
+working state with fitting deformation/explicit shoulder-axilla-arm ownership,
+and inspect T/arm-down/elbow-bend states. This is an early modeling diagnostic,
+not final motion rigging. Then re-scope the lower-rib/upper-oblique interface
+and its front/side/back volumes rather than narrowing the waist again. Keep
+breast cores, shaped lats, pelvis, accepted face and other geometry outside
+each declared interface protected. Return to the source's lowered-arm pose for
+original-aspect comparisons. No new model/rig/native was installed in this
+follow-up; actual probe is `.mia-cache/body-h/live/rib-pose-audit/probe.json`.

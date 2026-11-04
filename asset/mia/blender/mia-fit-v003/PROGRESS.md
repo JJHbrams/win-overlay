@@ -596,3 +596,26 @@ not a new LFS model. Current broader Mia surfaces/rig/bodyART remain OPEN.
 Upperwaist width residual and sagittal depth/pose are not solved by an X-only
 edit. Review: `integration/waist02-review.json`; preview: `asset/mia/reviews/waist02/`.
 Wiki/activity tools remain unavailable; these are the actual local records.
+
+### Follow-up review: ribcage continuity and arm base pose
+
+Latest user rejects the naturalness of the lower-thorax/rib region and asks
+for a proper neutral arm-shaping pose. Current bodyba65 remains unchanged and
+recoverable; no new model, pose, rest-pose application or rig was installed.
+The new live probe verifies0modifiers/noShapeKeys/noParent on the static137341
+vertex assembly. Existing rig/4647vertex pose helper targets other meshes.
+Old rig controls cannot be used as proof that this body has been pose-tested.
+
+Waist02 changed onlyX below1.195; central guide-wall above stays exact even
+against oldD. The lower-thorax mass and connected rib-to-oblique form were not
+newly shaped. Historical waist-only silhouette approval must not override the
+latest user finding. Scope/preservation/contact success is not anatomy success.
+
+Kaspar's public Clothing Shapes workflow supports A-pose sculpting followed by
+preliminary rig and A/T transition tests; Proko's public ribcage Lesson Notes
+explain the planar mass and wrapping lower arch. Full videos were not viewed.
+Sources, limits and revised sequence are in the active H plan's user follow-up;
+CURRENT_STATE.latest_user_review preserves them through compaction. No T-pose
+mandate, fixed45degree angle or blind arm-only rotation was adopted. Next work
+needs a reversible derivative pose setup and local lower-thorax/interface edit
+with source arm-down comparison. Broader body/surface/rig ART remains OPEN.
