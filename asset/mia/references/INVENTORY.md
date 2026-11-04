@@ -65,4 +65,3 @@ Browse: [Concept](concept/README.md) | [Expressions](expressions/README.md) | [B
 | [mia-expression-style-confirmed-20261031.png](mia-expression-style-confirmed-20261031.png) | 1536 x 1024 | user_confirmed | `bb42eb0eb54bef2c571424c18c59cdda552184a65ed3e5ebd58c6a8708fb1f52` |
 | [mia-expressions-clean-16-v22.png](mia-expressions-clean-16-v22.png) | 1536 x 1024 | existing_approved_support | `047ba31c44ee9e5c68ac85579cfe1b209da6c95a02f574f679b8ba43fa88a40e` |
 | [received/mia-eye-lash-user-markup-20261102.png](received/mia-eye-lash-user-markup-20261102.png) | 2560 x 740 | user_annotation | `3dd3d4bcbf3539e7ed40c9517b63485bb3a244c62f23e59d7cdbeebf4e3e0974` |
-
