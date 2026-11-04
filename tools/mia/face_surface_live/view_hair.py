@@ -28,6 +28,9 @@ else:
     yaw, pitch = dict(back=(180,0), profile=(90,0), oblique=(35,0), high=(40,30), low=(-40,-25))[view]
     target = (0, .04, 1.49) if view == 'back' else (0, 0, 1.55)
     fixture.aim(scene, yaw, pitch, target, .53 if view == 'back' else .36, (768,768))
+# The historical front uses a frozen matrix instead of fixture.aim. Keep its
+# descriptive target current too; otherwise record() inherits a prior rear view.
+scene.camera['MIA12_target_world'] = list(target)
 for screen in bpy.data.screens:
     for area in screen.areas:
         if area.type != 'VIEW_3D': continue
