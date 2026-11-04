@@ -18,6 +18,9 @@ ROOT = Path(__file__).resolve().parents[3]
 KEY = 'MIA_ArmChain01'
 SELECT = KEY+'_Selection'
 BODY = 'MIA_Review12_H_LiveRepair'
+RETIRED_REASON = ('Arm-chain c9 is retired: actual matched views showed distortion of retained '
+                  'thorax/breast roots/lats and shoulder ledges. Use an explicitly scoped edit; '
+                  'do not replay or coefficient-retune this carrier. Existing restore remains usable.')
 
 
 def helpers(root):
@@ -134,6 +137,8 @@ def _remove_overlay(state):
 
 
 def select(root=ROOT):
+    raise RuntimeError(RETIRED_REASON)
+    # Kept below for forensic provenance of the failed recipe, never dispatched.
     import bpy
     root = Path(root).resolve()
     assert bpy.context.mode == 'OBJECT'
@@ -196,6 +201,8 @@ def select(root=ROOT):
 
 
 def apply(selection_sha256):
+    raise RuntimeError(RETIRED_REASON)
+    # Existing pending preview can still be reverted with restore().
     import bpy
     state = bpy.app.driver_namespace[SELECT]; root = Path(state['root'])
     assert bpy.context.mode == 'OBJECT' and KEY not in bpy.app.driver_namespace
@@ -293,6 +300,7 @@ def restore():
     helper = guard['_helpers'](root)
     proxy = SimpleNamespace(data=state['original'], matrix_world=body.matrix_world)
     assert helper['fingerprint'](proxy) == state['before'][BODY]['fingerprint']
+    assert body.data in (state['original'], state['owned']), 'Do not overwrite an unrelated later mesh binding'
     body.data = state['original']; state['restore_pending'] = True
     bpy.context.view_layer.update()
     assert guard['_snapshot'](root) == state['before']
