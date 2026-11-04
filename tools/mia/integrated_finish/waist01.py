@@ -1,8 +1,9 @@
-"""One source-guided, explicit-ID waist-width proposal; no Blender mutation.
+"""Waist02 upper-interface repair; source-only proposal, no Blender mutation.
 
 Retains existing sections and Y/Z. A smooth lateral cage correction narrows the
 natural waist and releases to exact held rib/hip boundaries. This is not a
 replacement torso, a loft, an anatomy pass, or an automatically approved edit.
+Waist01's C1-only upper return was rejected for a visible horizontal crease.
 """
 from pathlib import Path
 import argparse
@@ -13,8 +14,8 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[3]
 BASE = '183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709'
-CONTROL_Z = np.array([1.005, 1.04, 1.08, 1.12, 1.135, 1.155, 1.175, 1.195])
-CONTROL_DELTA = np.array([0., -.006, -.0095, -.0235, -.0239, -.020, -.010, 0.])
+CONTROL_Z = np.array([1.005, 1.04, 1.08, 1.125, 1.195])
+CONTROL_DELTA = np.array([0., -.006, -.0095, -.0238, 0.])
 
 
 def sha(a):
@@ -32,11 +33,18 @@ def tangents(x, y):
 
 
 def curve(z, x=CONTROL_Z, y=CONTROL_DELTA):
-    z = np.asarray(z, float); m = tangents(x, y)
-    i = np.clip(np.searchsorted(x, z, side='right')-1, 0, len(x)-2)
-    h = x[i+1]-x[i]; t = np.clip((z-x[i])/h, 0., 1.)
-    value = ((2*t**3-3*t**2+1)*y[i] + (t**3-2*t**2+t)*h*m[i]
-             + (-2*t**3+3*t**2)*y[i+1] + (t**3-t**2)*h*m[i+1])
+    z = np.asarray(z, float)
+    lower_x, lower_y = x[:-1], y[:-1]; m = tangents(lower_x, lower_y)
+    i = np.clip(np.searchsorted(lower_x, z, side='right')-1, 0, len(lower_x)-2)
+    h = lower_x[i+1]-lower_x[i]; t = np.clip((z-lower_x[i])/h, 0., 1.)
+    value = ((2*t**3-3*t**2+1)*lower_y[i] + (t**3-2*t**2+t)*h*m[i]
+             + (-2*t**3+3*t**2)*lower_y[i+1] + (t**3-t**2)*h*m[i+1])
+    # Upper return is one70mm clamped quintic, not the rejected last20mm
+    # cubic whose endpoint second derivative jumped from approximately-100
+    # to0 m^-1 at fixed tissue. Preserve position/tangent/curvature there.
+    u = np.clip((z-x[-2])/(x[-1]-x[-2]), 0., 1.)
+    smoother = u*u*u*(10.+u*(-15.+6.*u))
+    value = np.where(z >= x[-2], y[-2]*(1.-smoother), value)
     return np.where((z > x[0]) & (z < x[-1]), value, 0.)
 
 
@@ -79,7 +87,8 @@ def continuity(before, after, faces, affected):
 
 def prepare(root=ROOT):
     root = Path(root).resolve(); folder = root/'.mia-cache/body-h/live/waist01'
-    output = folder/'proposal'; assert not output.exists(), 'Do not overwrite a frozen proposal'
+    output = root/'.mia-cache/body-h/live/waist02/proposal'
+    assert not output.exists(), 'Do not overwrite a frozen proposal'
     with np.load(folder/'current-geometry.npz') as archive:
         q, faces = archive['co'], archive['faces'].astype(np.int32)
     assert sha(q) == BASE
@@ -125,16 +134,18 @@ def prepare(root=ROOT):
         domain='Actual E waist row IDs plus actual guidepart2 lower-wall IDs,1.005<Z<1.195; all complement fixed',
         operation='Positive X-only masked section-preserving cage correction; no new sections/topology/loft',
         controls=[dict(z=float(z), delta_radius=float(d)) for z, d in zip(CONTROL_Z, CONTROL_DELTA)],
-        endpoint_delta_tangents=tangents(CONTROL_Z, CONTROL_DELTA)[[0, -1]].tolist(),
+        endpoint_delta_tangents=[0., 0.], upper_endpoint_delta_second_derivative=0.,
+        repaired_interface='Same domain/fixedIDs; upper return begins atZ1.125 and reaches exact heldZ1.195 with zero first+second derivatives',
+        old_failure='Four witness vertices all correctly owned; C1 last20mm return had approximately-100m^-1 endpoint curvature',
         before_sections=old_sections, after_sections=after_sections,
         maximum_lateral_move_m=float(np.abs(candidate[:, 0]-q[:, 0]).max()), scale=stats(scale),
         minimum_x_jacobian=float(scale.min()), Y_Z_bit_exact=True, arm_reach_ids_exact=len(hand_ids),
         triangles=dict(affected=int(affected.sum()), minimum_orientation_cos=float(cosine.min()), area_ratio=stats(area1/area0)),
         continuity=continuity(q, candidate, faces, affected),
         source='Original v06+visibility waist contour widths:90–92pixels aroundZ1.12–1.14 at frozenMPP.001845870535714286; uncertain±3–5pixels/pose',
-        source_limit='Upper transition cannot exactly fit source while chest fixed; radius minimum target≈.086m. No depth or vertical proportion change.',
+        source_limit='Upper return is intentionally broader/less narrowed than rejectedwaist01 to preserve smooth fixed chest interface; upper source-width residual remains. Minimumtarget≈.086m. No depth/height change.',
         limits='Scope/strain only. Actual source/neutral/toon, collision and anatomy/ART require root live review.', ART=False)
-    output.mkdir()
+    output.mkdir(parents=True)
     np.savez_compressed(output/'proposal.npz', candidate=candidate, faces=faces, editable_ids=editable,
                         transition_ids=transition, protected_head=head, protected_retained=fixed)
     (output/'forecast.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf8')
