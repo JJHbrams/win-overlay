@@ -411,25 +411,89 @@ def apply(expected_body_sha256, root=ROOT):
         report['receipt'] = _receipt(root, 'apply', report)
         return report
     except BaseException:
-        target.data = old_data
-        for slot, (link, material) in zip(target.material_slots, original_slots):
-            slot.link = link; slot.material = material
-        _remove_owned(state)
-        bpy.app.driver_namespace.pop(KEY, None)
+        # Preserve recovery ownership even if rollback itself is interrupted.
+        bpy.app.driver_namespace[KEY] = state
+        _restore_binding(target, state)
         bpy.context.view_layer.update()
         assert _snapshot(root) == before
+        _remove_owned(state)
         assert materials_signature() == graphs
+        bpy.app.driver_namespace.pop(KEY, None)
         raise
 
 
+def _present(collection, value):
+    """Deleted Blender RNA references raise; they are not live cleanup owners."""
+    if value is None: return None
+    try: pointer = value.as_pointer()
+    except ReferenceError: return None
+    return next((item for item in collection if item.as_pointer() == pointer), None)
+
+
+def _restore_binding(target, state):
+    bpy = _bpy(); mesh = _present(bpy.data.meshes, state['owned_data'])
+    if mesh is not None and target.data == mesh:
+        # Release the owned OBJECT override BEFORE shrinking to two data slots.
+        # Otherwise Blender can retain its user outside visible material_slots.
+        index = len(state['original_slots'])
+        if len(target.material_slots) > index:
+            assert len(target.material_slots) == index+1
+            slot = target.material_slots[index]
+            if slot.link == 'OBJECT':
+                assert slot.material in (None, state['material'])
+                slot.material = None
+                slot.link = 'DATA'
+        target.data = state['original_data']
+    else:
+        assert target.data == state['original_data'], 'An unrelated mesh is active'
+    assert len(target.material_slots) == len(state['original_slots'])
+    for slot, (link, material) in zip(target.material_slots, state['original_slots']):
+        slot.link = link; slot.material = material
+    state['restore_phase'] = 'ORIGINAL_BINDING_RESTORED'
+
+
 def _remove_owned(state):
-    bpy = _bpy(); mesh, material = state['owned_data'], state['material']
-    if mesh is not None:
-        assert mesh.users == 0; bpy.data.meshes.remove(mesh)
+    """Preflight the complete owned reference chain, then delete resumably."""
+    bpy = _bpy()
+    mesh = _present(bpy.data.meshes, state['owned_data'])
+    material = _present(bpy.data.materials, state['material'])
+    images = [image for old in state['images'] if (image := _present(bpy.data.images, old)) is not None]
+    if mesh is not None: assert mesh.users == 0, 'Owned mesh still has a user'
+    phantom = False
     if material is not None:
-        assert material.users == 0; bpy.data.materials.remove(material)
-    for image in state['images']:
-        assert image.users == 0; bpy.data.images.remove(image)
+        expected = sum(m == material for m in mesh.materials) if mesh is not None else 0
+        assert not material.use_fake_user and not material.use_extra_user
+        if material.users != expected:
+            # Blender 5.2 actual lifecycle: shrinking an OBJECT-override slot
+            # can lose its pointer yet leave users=1 and user_map empty. Only
+            # this declared new material, after exact original restoration,
+            # may receive bounded unlink removal. No user_clear or source IDs.
+            assert mesh is None and expected == 0 and material.users == 1
+            assert state.get('restore_phase') == 'ORIGINAL_BINDING_RESTORED'
+            assert not bpy.data.user_map(subset={material}).get(material, set())
+            assert state['applied_graphs'][material.name]['pointer'] == material.as_pointer()
+            assert graph_signature(material.node_tree) == state['owned_graph']
+            assert _snapshot(state['root']) == state['before']
+            source = materials_signature()
+            assert {name:source[name] for name in state['original_graphs']} == state['original_graphs']
+            phantom = True
+    for image in images:
+        expected = sum(getattr(node, 'image', None) == image for node in material.node_tree.nodes) if material is not None else 0
+        assert not image.use_fake_user and not image.use_extra_user
+        assert image.users == expected, 'Owned image has an undeclared user'
+    # No delete happens until all expected refcounts have been checked.
+    if mesh is not None:
+        bpy.data.meshes.remove(mesh, do_unlink=False)
+    state['owned_data'] = None
+    if material is not None:
+        assert material.users == (1 if phantom else 0)
+        bpy.data.materials.remove(material, do_unlink=phantom)
+        state['owned_phantom_user_repaired'] = phantom
+    state['material'] = None
+    for image in images:
+        assert image.users == 0; bpy.data.images.remove(image, do_unlink=False)
+    state['images'] = []
+    state['restore_phase'] = 'OWNED_ASSETS_REMOVED'
 
 
 def restore(root=None):
@@ -439,10 +503,22 @@ def restore(root=None):
     root = Path(state['root'] if root is None else root).resolve()
     assert Path(state['root']) == root and bpy.context.mode == 'OBJECT'
     target = bpy.data.objects[TARGET]
-    assert target.data == state['owned_data'] and _snapshot(root) == state['after']
-    assert materials_signature() == state['applied_graphs'], 'Restore later material changes first'
+    mesh = _present(bpy.data.meshes, state['owned_data'])
+    material = _present(bpy.data.materials, state['material'])
+    if mesh is not None and target.data == mesh:
+        assert _snapshot(root) == state['after']
+        assert materials_signature() == state['applied_graphs'], 'Restore later material changes first'
+        assert _ownership(state) == state['owned_users'], 'Owned data gained a user; detach it before restore'
+    else:
+        # Resume legacy failure after original binding and possibly mesh deletion.
+        assert target.data == state['original_data'] and _snapshot(root) == state['before']
+        graphs = materials_signature()
+        assert {name:graphs[name] for name in state['original_graphs']} == state['original_graphs']
+        extra = set(graphs)-set(state['original_graphs'])
+        assert extra == ({material.name} if material is not None else set()), 'Unrelated material appeared'
+        if material is not None:
+            assert graph_signature(material.node_tree) == state['owned_graph'], 'Owned shader was edited'
     assert _modifiers(target) == state['modifiers'], 'Modifier changed since apply'
-    assert _ownership(state) == state['owned_users'], 'Owned data gained a user; detach it before restore'
     assert Path(bpy.data.filepath).resolve() == Path(state['native']) and file_sha(state['native']) == state['native_sha256']
     original = state['original_data']
     # Check the retained, currently unassigned mesh before switching pointers.
@@ -450,9 +526,7 @@ def restore(root=None):
     proxy = SimpleNamespace(data=original, matrix_world=target.matrix_world)
     assert helper['fingerprint'](proxy) == state['before'][TARGET]['fingerprint']
     assert _mesh_payload(original) == state['original_payload'], 'Retained original mesh was edited'
-    target.data = original
-    for slot, (link, material) in zip(target.material_slots, state['original_slots']):
-        slot.link = link; slot.material = material
+    _restore_binding(target, state)
     bpy.context.view_layer.update()
     assert _snapshot(root) == state['before']
     _remove_owned(state)
@@ -460,6 +534,7 @@ def restore(root=None):
     del bpy.app.driver_namespace[KEY]
     report = dict(status='RESTORED_ORIGINAL_REMAININGMAIN_DATA_AND_SLOTS', original_pointer_exact=True,
                   original_graphs_UV_geometry_normals_exact=True, body_sha256=state['body_sha256'],
+                  legacy_owned_phantom_user_repaired=state.get('owned_phantom_user_repaired', False),
                   native_saved=False, ART=False)
     report['receipt'] = _receipt(root, 'restore', report)
     return report
