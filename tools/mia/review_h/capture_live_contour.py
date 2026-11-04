@@ -7,6 +7,7 @@ from pathlib import Path
 import hashlib
 import importlib.util
 import json
+import re
 import sys
 
 import bpy
@@ -18,7 +19,10 @@ import review_fixture as fixture
 
 phase = globals().get('MIA_EDIT_PHASE', 'select')
 label = {'select': 'before', 'apply': 'after'}[phase]
-out = ROOT/'.mia-cache/body-h/live/neck-contour02'/(label+'-v2')
+trial = globals().get('MIA_BODY_REVIEW_ID', 'neck-contour02')
+state_key = globals().get('MIA_BODY_REVIEW_KEY', 'MIA_NeckContour02')
+assert re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*', trial)
+out = ROOT/'.mia-cache/body-h/live'/trial/(label+'-v2')
 assert not out.exists(), 'Do not overwrite a frozen review'
 spec = importlib.util.spec_from_file_location('contour_capacity', ROOT/'asset/mia/blender/mia-fit-v003/integration/workspace-storage-20261103/storage_guard.py')
 guard = importlib.util.module_from_spec(spec); spec.loader.exec_module(guard)
@@ -29,13 +33,14 @@ assert body.mode == 'OBJECT'
 digest = lambda a: hashlib.sha256(np.asarray(a, np.float32).tobytes()).hexdigest()
 coords = np.array([v.co[:] for v in body.data.vertices], np.float32)
 expected = ('69d4d4f0ea907da2474bc74f4b55312971d137f0911bdf9089fc02509a6bf25a'
-            if label == 'before' else bpy.app.driver_namespace['MIA_NeckContour02']['report']['candidate_sha256'])
+            if label == 'before' else bpy.app.driver_namespace[state_key]['report']['candidate_sha256'])
 active_digest = digest(coords)
 review_coords = coords
 if label == 'before' and active_digest != expected:
-    state = bpy.app.driver_namespace['MIA_NeckContour02']
+    state = bpy.app.driver_namespace[state_key]
     assert active_digest == state['report']['candidate_sha256']
-    review_coords = state['before']
+    review_coords = (state['before'] if 'before' in state else
+                     np.array([v.co[:] for v in state['before_mesh'].vertices], np.float32))
 assert digest(review_coords) == expected
 original_slots = [(slot.link, slot.material.name if slot.material else None) for slot in body.material_slots]
 scene = bpy.data.scenes.new('MIA_Contour02_TemporaryReview')
@@ -52,7 +57,8 @@ assert window is not None and window.scene == source
 try:
     actor = body.copy(); created.append(actor); scene.collection.objects.link(actor)
     if label == 'before' and active_digest != expected:
-        private_mesh = body.data.copy(); actor.data = private_mesh
+        state = bpy.app.driver_namespace[state_key]
+        private_mesh = state.get('before_mesh', body.data).copy(); actor.data = private_mesh
         private_mesh.vertices.foreach_set('co', review_coords.ravel()); private_mesh.update()
         assert digest(np.array([v.co[:] for v in private_mesh.vertices], np.float32)) == expected
     actor.hide_render = False; actor.hide_viewport = False

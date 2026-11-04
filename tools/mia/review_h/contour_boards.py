@@ -2,14 +2,23 @@
 from pathlib import Path
 import importlib.util
 import json
+import argparse
+import re
 
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT/'.mia-cache/body-h/live/neck-contour02'
+parser = argparse.ArgumentParser()
+parser.add_argument('--trial', default='neck-contour02')
+trial = parser.parse_args().trial
+assert re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*', trial)
+OUT = ROOT/'.mia-cache/body-h/live'/trial
 spec = importlib.util.spec_from_file_location('contour_common_boards', ROOT/'tools/mia/review_h/gray_boards.py')
 common = importlib.util.module_from_spec(spec); spec.loader.exec_module(common)
-before = json.loads((OUT/'before-v2/capture.json').read_text())
+baseline = OUT/'before-v2/capture.json'
+if not baseline.exists(): baseline = ROOT/'.mia-cache/body-h/live/neck-contour02/before-v2/capture.json'
+before = json.loads(baseline.read_text())
+assert before['world_sha256'] == '69d4d4f0ea907da2474bc74f4b55312971d137f0911bdf9089fc02509a6bf25a'
 after = json.loads((OUT/'after-v2/capture.json').read_text())
 rows = [{r['name']: r for r in record['frames']} for record in [before, after]]
 assert before['original_pose'] == after['original_pose']
@@ -21,7 +30,7 @@ for name in ['front', 'profile', 'back', 'oblique']:
     tiles = [common.label(common.source_panel(common.SOURCES[0], name), 'MAIN / original pixels'),
              common.label(common.source_panel(common.SOURCES[1], name), 'VISIBILITY / uncertain pose'),
              common.label(common.actual(first, matrix), 'D69d4 / gray body only'),
-             common.label(common.actual(second, matrix), 'Contour02 / unselected trial')]
+             common.label(common.actual(second, matrix), trial+' / unselected trial')]
     full = Image.new('RGB', (2000, 1064))
     detail = Image.new('RGB', (2000, 540))
     for i, tile in enumerate(tiles):
