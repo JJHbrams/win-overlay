@@ -8,6 +8,7 @@ import numpy as np
 
 
 def check(root, before, moved, max_pairs=4000, max_seconds=25):
+    started = time.monotonic()
     narrow = runpy.run_path(str(Path(root)/'asset/mia/blender/mia-fit-v003/body/posterior-continuity08/geometry.py'))
     intersects = narrow['triangle_intersects']
     a = np.asarray([(0,0,0),(.001,0,0),(0,.001,0)], float)
@@ -16,6 +17,12 @@ def check(root, before, moved, max_pairs=4000, max_seconds=25):
                     separated=np.asarray([(.0002,.0002,.001),(.0002,.0002,.002),(.0008,.0002,.0015)]))
     verified = {key:bool(intersects(a, value)) for key,value in witnesses.items()}
     assert verified == dict(crossing=True, coplanar=True, separated=False)
+    def expired(phase, changed_count=0):
+        return dict(status='UNVERIFIED', complete=False, tested_pairs=0, changed_faces=changed_count,
+                    new_intersection_witnesses=[], inherited_intersections_tested=0,
+                    controlled_witnesses=verified, stopped_phase=phase,
+                    method='Conservative AABB grid + existing triangle SAT including coplanar axes',
+                    limit='Time budget exhausted before complete check; preview only, never KEEP')
     points0, points1, faces, owner, local_face = [], [], [], [], []
     names = sorted(before); offset = 0
     for index, name in enumerate(names):
@@ -35,12 +42,20 @@ def check(root, before, moved, max_pairs=4000, max_seconds=25):
         return itertools.product(*(range(int(x), int(y)+1) for x,y in zip(first,last)))
     bins = {}
     for i in relevant:
-        for key in cells(i): bins.setdefault(key, []).append(int(i))
-    started = time.monotonic(); seen = set(); hits = []; inherited = 0; tested = 0; complete = True
+        if time.monotonic()-started >= max_seconds: return expired('grid', len(changed_faces))
+        for key in cells(i):
+            bins.setdefault(key, []).append(int(i))
+            if time.monotonic()-started >= max_seconds: return expired('grid cells', len(changed_faces))
+    seen = set(); hits = []; inherited = 0; tested = 0; complete = True
     for i in changed_faces:
+        if time.monotonic()-started >= max_seconds: complete = False; break
         candidates = set()
-        for key in cells(i): candidates.update(bins.get(key, ()))
+        for key in cells(i):
+            candidates.update(bins.get(key, ()))
+            if time.monotonic()-started >= max_seconds: complete = False; break
+        if not complete: break
         for j in sorted(candidates):
+            if time.monotonic()-started >= max_seconds: complete = False; break
             pair = (min(int(i), j), max(int(i), j))
             if i == j or pair in seen: continue
             seen.add(pair)

@@ -51,6 +51,22 @@ def _actual_geometry(ob):
     finally: evaluated.to_mesh_clear()
 
 
+def _context(root, guard):
+    """Bind evaluated contact inputs omitted by the raw-mesh fingerprint."""
+    import bpy
+    _, objects = guard['_watched'](root)
+    armatures = {}
+    for ob in bpy.data.objects:
+        if ob.type == 'ARMATURE':
+            armatures[ob.name] = dict(world=guard['digest'](np.asarray(ob.matrix_world, np.float32)),
+                bones={b.name:(guard['digest'](np.asarray(b.matrix_basis, np.float32)),
+                               guard['digest'](np.asarray(b.matrix, np.float32))) for b in ob.pose.bones})
+    return dict(frame=bpy.context.scene.frame_current, armatures=armatures,
+                modifiers={name:guard['_modifiers'](ob) for name,ob in objects.items()},
+                keys={name:[(k.name,k.value,bool(k.mute)) for k in ob.data.shape_keys.key_blocks]
+                      for name,ob in objects.items() if ob.data.shape_keys})
+
+
 def _intersection_count(tree_a, tree_b, faces=None):
     pairs = np.asarray(tree_a.overlap(tree_b), np.int32).reshape(-1, 2)
     if faces is not None and len(pairs):
@@ -123,7 +139,7 @@ def select(root=ROOT):
     current = json.loads((root/'asset/mia/CURRENT_STATE.json').read_text(encoding='utf8'))
     native = (root/current['active_live_checkpoint']['path']).resolve()
     assert Path(bpy.data.filepath).resolve() == native and plan['file_sha'](native) == NATIVE_SHA
-    before = guard['_snapshot'](root); graphs = guard['materials_signature']()
+    before = guard['_snapshot'](root); graphs = guard['materials_signature'](); context = _context(root, guard)
     assert before[BODY]['fingerprint']['coordinates'] == BODY_SHA
     target_names = [plan['PREFIX']+name for name in plan['NAMES']]
     _, objects = guard['_watched'](root)
@@ -151,7 +167,7 @@ def select(root=ROOT):
                span['candidate']['conservative_section_Y_gap_mm'][0] > 1.5 for span in spans)
     contacts = _contacts(root, physical, target_names, moved)
     preview_ready = contacts['gate_passed'] and contacts['SAT']['status'] != 'FAIL'
-    token = plan['sha'](np.frombuffer(guard['canonical'](dict(before=before, proofs=proofs, graphs=graphs)).encode(), np.uint8))
+    token = plan['sha'](np.frombuffer(guard['canonical'](dict(before=before, proofs=proofs, graphs=graphs, context=context)).encode(), np.uint8))
     report = dict(scope='Central-six finite path/order selection; not M2 ART', selection_sha256=token,
                   targets=target_names, body_sha256=BODY_SHA, shape_forecast=proofs,
                   normal_status=normal_status, order_spans=spans, contacts=contacts,
@@ -162,7 +178,7 @@ def select(root=ROOT):
     report['receipt'] = _receipt(root, 'select', report)
     if preview_ready:
         bpy.app.driver_namespace[SELECT] = dict(root=str(root), token=token, before=before, graphs=graphs,
-            originals=originals, payloads=payloads, moved=moved, report=report, native=str(native))
+            originals=originals, payloads=payloads, moved=moved, report=report, native=str(native), context=context)
     return report
 
 
@@ -173,6 +189,7 @@ def apply(selection_sha256, root=ROOT):
     assert state['token'] == selection_sha256 and bpy.context.mode == 'OBJECT'
     _, guard = helpers(root)
     assert guard['_snapshot'](root) == state['before'] and guard['materials_signature']() == state['graphs']
+    assert _context(root, guard) == state['context'], 'Modifier/pose/frame/key context changed after selection'
     state['owned'] = {}; bpy.app.driver_namespace[KEY] = state
     try:
         for name, out in state['moved'].items():
@@ -193,6 +210,7 @@ def apply(selection_sha256, root=ROOT):
                 assert {k:v for k,v in after[name]['fingerprint'].items() if k not in ('coordinates', 'corner_normals')} == {
                     k:v for k,v in old['fingerprint'].items() if k not in ('coordinates', 'corner_normals')}
         assert guard['materials_signature']() == state['graphs']
+        assert _context(root, guard) == state['context']
         state['after'] = after
         del bpy.app.driver_namespace[SELECT]
         report = dict(status='APPLIED_CENTRAL_SIX_GROOM_WIP', selection_sha256=selection_sha256,
@@ -218,6 +236,7 @@ def restore(root=None):
     assert state['root'] == str(root) and bpy.context.mode == 'OBJECT'
     _, guard = helpers(root)
     assert guard['_snapshot'](root) == state['after'] and guard['materials_signature']() == state['graphs']
+    assert _context(root, guard) == state['context'], 'Restore later modifier/pose/frame/key edits first'
     for name, mesh in state['owned'].items():
         assert bpy.data.objects[name].data == mesh and mesh.users == 1
         original = state['originals'][name]
