@@ -11,11 +11,21 @@ expected = state['after_mesh'] if state['after_mesh'] is not None else state['be
 assert body.mode == 'OBJECT' and body.data == expected
 expected_sha = state['report']['candidate_sha256'] if state['after_mesh'] is not None else helpers.BASE
 assert helpers.sha(helpers.xyz(body.data)) == expected_sha, 'Do not overwrite another edit'
-receipt = helpers.OUT/'restore.json'; assert not receipt.exists()
-helpers.restore_checkpoint(state); del ns[helpers.KEY]
+replay_id = state.get('replay_id')
+receipt = helpers.OUT/(f'restore-replay-{replay_id}-{helpers.utc_id()}.json' if replay_id else 'restore.json')
+assert not receipt.exists()
+evidence = helpers.original_evidence()
+# Review may have legitimately changed the camera/view or independent hair work.
+# Preserve those CURRENT properties exactly within this restore call, rather
+# than treating the old review camera or physical addresses as body binding.
+restore_state = dict(state)
+if state['after_mesh'] is not None:
+    restore_state.update(context=helpers.context_snapshot(), actors=helpers.actors(body))
+helpers.restore_checkpoint(restore_state); del ns[helpers.KEY]
+assert helpers.original_evidence() == evidence, 'Original apply/delta evidence must remain immutable'
 report = dict(status='Exact original D69d4 Mesh pointer restored', world_sha256=helpers.BASE,
               original_custom_normal_storage_UV_topology_groups_restored=True,
               only_owned_overlay_and_trial_mesh_removed=True, context_restored=True,
-              native_saved=False, art_accepted=False)
+              replay_id=replay_id, original_evidence_bytes_held=True, native_saved=False, art_accepted=False)
 receipt.write_text(json.dumps(report, indent=2)+'\n', encoding='utf8')
 print(json.dumps(report))
