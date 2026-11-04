@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 import sys
+import re
 import bpy
 import numpy as np
 
@@ -16,6 +17,12 @@ token=json.loads((ROOT/'.mia-cache/face-live/live/token.json').read_text())
 assert hashlib.sha256(coords.tobytes()).hexdigest() == token['body_sha256']
 ns = bpy.app.driver_namespace
 assert 'MIA_HairReviewState' not in ns
+tag = globals().get('MIA_HAIR_REVIEW_TAG', 'entry')
+assert re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*', tag)
+out = ROOT/'.mia-cache/face-live/live'
+out.mkdir(parents=True, exist_ok=True)
+receipt = out/(tag+'.json')
+assert not receipt.exists(), 'Use a fresh review tag; preserve historical entry receipts'
 scene = bpy.context.scene
 assert bpy.context.mode == 'OBJECT'
 cam = scene.camera
@@ -44,10 +51,9 @@ for ob in fixture.hair_actors(scene):
 for ob in bpy.context.selected_objects: ob.select_set(False)
 bpy.context.view_layer.update()
 ns['MIA_HairReviewState'] = state
-out = ROOT/'.mia-cache/face-live/live'
-out.mkdir(parents=True, exist_ok=True)
+state['review_tag'] = tag
 report = dict(scope='ACTUAL live hair diagnostic, no sculpture edit', active_hair=active_hair,
               body_sha256=state['body_sha256'], filepath=bpy.data.filepath,
               native_saved=False, geometry_modified=False, ART=False)
-(out/'entry.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf8')
+receipt.write_text(json.dumps(report, indent=2)+'\n', encoding='utf8')
 print(json.dumps(report))
