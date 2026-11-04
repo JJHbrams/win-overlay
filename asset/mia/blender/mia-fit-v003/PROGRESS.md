@@ -426,3 +426,23 @@ the historical selected R3b/migration base. It does not pick a record by newest
 date/version or infer approval. The actual C CLI shows695/113a and the existing
 pipeline16tests pass. Wiki/activity MCP tools are not exposed in this session;
 this local production journal is the performed record, not a claimed KG sync.
+
+The first saved review113a/first orbit preserved body-editing hairOFF visibility.
+The data was present but this was the wrong user-preview state. Corrected only
+review visibility to working hairON/raw MainOFF, saved to a temporary owned file,
+fresh-verified21fingerprints/images, then replaced the single generated review
+copy after both hashes were checked. Current native is9c953fb4,286,404,553bytes;
+113a is historical metadata, not another existing selected native. Original
+live0d62 and its exact editing visibility/geometry were restored. The final-path
+fresh reopen is `fresh-reopen-final.json`. The initial hairOFF24frame output is
+superseded; corrected saved-native head/hair orbit is separate and does not
+replace the still-required finalFB64/two-material/animation checks.
+
+Correct visible saved9c rendered24real head/crown camera angles at15degree
+steps, ORTHO/0.1..10m/neutral. Actual frames/hash/fixtures are in
+`production-resume-20261104/head-hair-orbit`; encoded preview is
+`head-hair-orbit.gif` (2,237,842bytes,f727661e), no generated/interpolated frames.
+Long lower tips can leave this head crop. This is not final whole-body FB64,
+two-material rendering, expression or animation approval. The old hairOFF
+preview deletion was rejected before execution (`blocked by policy`); those
+few-MB outputs remain, not counted as recovered space or retried elsewhere.

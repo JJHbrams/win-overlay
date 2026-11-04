@@ -749,10 +749,10 @@
     },
     "retained_static_copy": {
       "path": ".mia-cache/production-resume-20261104/Mia_Resume_Static_WIP.blend",
-      "sha256": "113a451a0e434433500dee7238abdc4c86ede0105cc4c101ad414acf5005b989",
-      "bytes": 286396567,
+      "sha256": "9c953fb48bf3c55595ca69d28523197b43b924550d96b6ad91a0792f4fabedb7",
+      "bytes": 286404553,
       "creation": ".mia-cache/production-resume-20261104/checkpoint.json",
-      "fresh_reopen": ".mia-cache/production-resume-20261104/fresh-reopen.json",
+      "fresh_reopen": ".mia-cache/production-resume-20261104/fresh-reopen-final.json",
       "live_graph_preservation": ".mia-cache/face-live/live/hair-resume01/post-save-graph-call.json",
       "body_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
       "included": [
@@ -764,7 +764,18 @@
       "meaning": "One reopen-verified static WIP review copy, not final modeling/maps/rig/ART. Original C0d62 remains live replay base, unchanged; these helper namespaces are not serialized in this copy.",
       "remaining": "M1..M6/FB open. Rejected transverse fringe is not included. Finalbody maps/underwear/continuousorbit not approved.",
       "fresh_reopen_verified": true,
-      "new_LFS_binary": false
+      "new_LFS_binary": false,
+      "neutral_head_orbit": {
+        "path": ".mia-cache/production-resume-20261104/head-hair-orbit.gif",
+        "sha256": "f727661eed3edd4eb66c60f589e4de9a2cd6dde9a60564c0568d79d3cfc6b450",
+        "bytes": 2237842,
+        "actual_frames": 24,
+        "capture": ".mia-cache/production-resume-20261104/head-hair-orbit/capture.json",
+        "camera": "ORTHO, neutral pose, 0.1..10m clip, head/crown centered",
+        "limits": "Neutral camera orbit preview; long lower tips may be outside the head crop. Not final two-material FB64 or character motion/rig approval."
+      },
+      "visibility": "Working hair ON/raw Main OFF; geometry/maps held. Earlier body-editing hairOFF review113a superseded by9c953fb4.",
+      "superseded_preview_cleanup": "HairOFF orbit outputs deletion rejected before execution: blocked by policy. Left intact, not retried by another tool. Current head-hair-orbit is the correct preview."
     }
   }
 }

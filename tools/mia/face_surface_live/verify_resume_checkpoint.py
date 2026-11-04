@@ -6,11 +6,13 @@ import runpy
 ROOT = Path(__file__).resolve().parents[3]
 
 
-def verify(root=ROOT):
+def verify(root=ROOT, manifest_name='checkpoint.json', report_name='fresh-reopen.json'):
     import bpy
     root = Path(root).resolve()
     folder = root/'.mia-cache/production-resume-20261104'
-    expected = json.loads((folder/'checkpoint.json').read_text(encoding='utf8'))
+    assert manifest_name in ('checkpoint.json','checkpoint-visible.json')
+    assert report_name in ('fresh-reopen.json','fresh-reopen-visible.json','fresh-reopen-final.json')
+    expected = json.loads((folder/manifest_name).read_text(encoding='utf8'))
     helper = runpy.run_path(str(root/'tools/mia/face_surface_live/lock_look01.py'),
         init_globals={'MIA_LOCK_LOOK01_LIBRARY_ONLY':True})
     assert Path(bpy.data.filepath).resolve()==Path(expected['path']).resolve()
@@ -34,7 +36,7 @@ def verify(root=ROOT):
         geometry_topology_UV_corner_normals_material_slots_visibility_exact=True,
         connected_pigment_images_size_space_packed_bytes_exact=True,
         render_verified=False,ART=False,native_saved=False)
-    (folder/'fresh-reopen.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
+    (folder/report_name).write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
     print(json.dumps(report))
 
 

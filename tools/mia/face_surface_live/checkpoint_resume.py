@@ -6,6 +6,7 @@ unchanged. Root must restore borrowed review state and check capacity first.
 from pathlib import Path
 import json
 import runpy
+import sys
 
 ROOT = Path(__file__).resolve().parents[3]
 
@@ -37,7 +38,25 @@ def save(root=ROOT):
         for n in pigment.node_tree.nodes if n.type=='TEX_IMAGE' and n.image}
     # Only the two reused maps are owned; other ancestor textures remain original.
     assert len([n for n in images if n.startswith('Recovered')]) == 2
-    bpy.ops.wm.save_as_mainfile(filepath=str(path),copy=True,compress=True,relative_remap=False)
+    # A body-editing scene may hide every hair actor. The review copy must
+    # expose the retained working replacement while preserving live visibility.
+    visibility = {ob.name:(ob.hide_get(),ob.hide_render) for ob in bpy.context.scene.objects}
+    sys.path.insert(0,str(root/'asset/mia/blender/mia-fit-v003/body/surface-review12'))
+    import review_fixture as fixture
+    try:
+        fixture.hair_visibility(bpy.context.scene,True)
+        for ob in fixture.hair_actors(bpy.context.scene):
+            if not ob.hide_render: ob.hide_set(False)
+        assert bpy.data.objects[helper['RAW']].hide_render
+        assert not bpy.data.objects[helper['TARGET']].hide_render
+        for ob in objects:
+            inventory[ob.name]['hide_render']=bool(ob.hide_render)
+            inventory[ob.name]['hidden']=bool(ob.hide_get())
+        bpy.ops.wm.save_as_mainfile(filepath=str(path),copy=True,compress=True,relative_remap=False)
+    finally:
+        for name,(hidden,render) in visibility.items():
+            bpy.data.objects[name].hide_set(hidden);bpy.data.objects[name].hide_render=render
+        bpy.context.view_layer.update()
     assert Path(bpy.data.filepath).resolve()==original_path
     assert helper['file_sha'](original_path)==helper['NATIVE_SHA']
     assert {ob.name:small['fingerprint'](ob) for ob in objects} == {
