@@ -6,9 +6,13 @@ actor, native, texture bake or rig is changed. Restore retains the old mesh.
 from pathlib import Path
 import hashlib
 import json
+import sys
 
 import bpy
 import numpy as np
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import diagnostic_weights as diagnostics
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT/'.mia-cache/body-h/shape/assembly/template03'
@@ -54,7 +58,13 @@ def main():
     assert body.mode == 'OBJECT' and np.allclose(np.asarray(body.matrix_world), np.eye(4), atol=1e-7)
     old = body.data
     assert digest(coordinates(old)) == BASE_SHA
-    assert not old.shape_keys and not body.modifiers and len(body.vertex_groups) == 0, 'Only known static body may be swapped'
+    assert not old.shape_keys and not body.modifiers, 'Only known static body may be swapped'
+    group_metadata = diagnostics.require_known(body)
+    old_deform = diagnostics.entries(old)
+    if len(old_deform):
+        assert old_deform['group'].min() >= 0 and old_deform['group'].max() < len(group_metadata['groups'])
+    old_deform_sha = diagnostics.digest(old_deform)
+    retained_deform = diagnostics.remap_retained(old_deform, d['baseline_vertex'], len(old.vertices))
     original_slots = [(slot.link, slot.material) for slot in body.material_slots]
     other_actors = actor_properties(body)
     old_uv_state = dict(active=old.uv_layers.active.name if old.uv_layers.active else None,
@@ -140,9 +150,16 @@ def main():
                      native_saved=False, art_accepted=False)
         namespace[KEY] = dict(before_mesh=old, after_mesh=mesh, body_object=body,
                               before_material_slots=original_slots, gray_material=gray,
+                              before_group_metadata=group_metadata, before_deform_sha256=old_deform_sha,
+                              after_expected_deform_sha256=diagnostics.digest(retained_deform),
                               report=proof, after_rows=dict(np.load(OUT/'rows.npz')))
         body.data = mesh
         for slot in body.material_slots: slot.link = 'DATA'
+        transfer = diagnostics.assign_to_fresh_mesh(body, retained_deform, group_metadata)
+        assert diagnostics.digest(diagnostics.entries(old)) == old_deform_sha, 'Old mesh deform weights changed'
+        proof['diagnostic_groups'] = dict(metadata=group_metadata, old_entries=len(old_deform),
+                                         old_deform_sha256=old_deform_sha, old_deform_weights_held=True,
+                                         retained_transfer=transfer, unknown_groups_allowed=False)
         bpy.context.view_layer.update(); installed = True
         assert digest(coordinates(body.data)) == report['candidate_sha256']
         assert actor_properties(body) == other_actors, 'Another actor property changed'
@@ -152,6 +169,11 @@ def main():
                               vertices=len(mesh.vertices), polygons=len(mesh.polygons), body_object=BODY,
                               exact_head_UV=True, exact_head_named_attributes=True,
                               actual_protected_normal_max_degrees=proof['actual_protected_head_max_angle_to_supplied_degrees'],
+                              diagnostic_group_names=[g['name'] for g in group_metadata['groups']],
+                              retained_diagnostic_entries=transfer['entries'],
+                              diagnostic_weight_batches=transfer['unique_weight_batches'],
+                              old_deform_sha256=old_deform_sha, retained_deform_sha256=transfer['sha256'],
+                              old_deform_weights_held=True,
                               all_other_actor_properties_held=True, native_saved=False)))
     except Exception:
         if installed or body.data == mesh:
@@ -159,6 +181,10 @@ def main():
             for slot, (link, material) in zip(body.material_slots, original_slots):
                 slot.link = link; slot.material = material
             bpy.context.view_layer.update()
+        if group_metadata['groups']:
+            body.vertex_groups.active_index = group_metadata['active_index']
+        assert diagnostics.metadata(body) == group_metadata
+        assert diagnostics.digest(diagnostics.entries(old)) == old_deform_sha
         namespace.pop(KEY, None)
         if mesh.users == 0: bpy.data.meshes.remove(mesh)
         if gray.users == 0: bpy.data.materials.remove(gray)
