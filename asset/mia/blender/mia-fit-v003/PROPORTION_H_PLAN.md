@@ -185,3 +185,55 @@ high/low, independent KEEP_WIP, complete discrete changed-face body-self test
 and saved/fresh reopened candidateab11a0d2. Body183 is now current; old9c/body695
 and original live0d62 stay preserved. Upperarm/elbow/girth, waist and rear-hair
 work remain separate OPEN tasks, not solved by this reach correction.
+
+## W: user-directed waist-only refinement, 2026-11-04
+
+Latest user: the upper/lower-body impression may only need the waistline fixed.
+Actual MCP body183/pending-none is verified; do not restart proportions or c9.
+Original-aspect v06/visibility front and back show a narrower natural waist;
+model halfwidth~.1095m atZ1.12..1.14 versus source~.082..086m (drawing/pose
+uncertainty retained). Lowerwaist nearZ1.08/1.04 suggests~.108/.126..130m.
+This is a frozen whole-height normalized comparison, not human measurements.
+
+Confirmed technique is the skill's Kaspar mask/Face Set local-control principle.
+One topology-bound waist ring/cage X-only correction on current183 is proposed:
+existing34x504waist rows plus lower guide-wall points1.005<Z<1.195; actual source
+part/row ownership distinguishes the trunk from arms. Blend into the held end
+rings; Y/Z, chest/breast/lats/axilla, head, pelvic core/glutes, legs and current
+arm reach stay exact. Sourceupperwaist cannot all match while the existing
+lower chest is held; residuals must be stated instead of unlocking other parts.
+
+| ID | Acceptance / user-visible outcome / runtime | Verification and evidence | Critical |
+|---|---|---|---|
+| W-AC1 | More source-like natural waist and continuous waist-to-hip contour / live Blender static | Actual same-camera source/baseline/candidate front/profile/back/oblique, opposite and waist-centered high/low; original aspect/SRT/pose uncertainty. | yes |
+| W-AC2 | Earlier shaped parts and arm reach preserved / live Blender | Explicit edit/interface/fixed IDs; exact outside coordinates plus Y/Z, UV/material/key/modifier/payload and scene readback. | yes |
+| W-AC3 | No new pinches, ring seams or contacts / actual surface and geometry | Immediate front/profile/back and adjacent-angle matte/wire review; actual affected-triangle and conservative contact check; numerical checks do not grant ART. | yes |
+| W-AC4 | Deliberate reversible decision and reproducible current WIP / live and saved/reopen | Actual selection first, scoped data job, keep/restore, existing reference-review validator and independent visual judgment; one consolidated checkpoint if retained. | yes |
+
+Raw diagnostic baseline: `.mia-cache/body-h/live/waist01-before/after-v2/`;
+actual probe/sections/source-stations: `.mia-cache/body-h/live/waist01/`.
+Root alone owns live/GPU. Source-only candidate worker gets no native copies.
+No new maps/rig or whole-character/ART approval is part of this waist edit.
+
+**W outcome:** waist01/body6da was actually applied and compared, then rejected
+by root and independent visual review for a new upper horizontal ring below
+the held chest. Exact body183 original pointer restored; no native was saved.
+Both witness faces were inside the correct selected domain. The short C1
+return had an endpoint curvature jump; the same domain's70mm quintic return
+in waist02 reduces that visible interface defect without unlocking chest/lats.
+
+Retained waist02/bodyba653740 as limited static WIP:22,809changed points inside
+the same22,841explicit IDs;114,500outside points and ALL Y/Z exact versus183.
+Actual source4/opposite/waist-highlow and current wire view were inspected.
+Root plus independent review find the waist silhouette closer and the rejected
+upper ring absent; mild natural-waist shading and upper source-width residuals
+remain explicit. Sagittal depth/height and fullbody proportions are not approved.
+
+Discrete changed-face body-self contact completes46,175faces/25,641pairs with
+no new or inherited contacts **within this waist scope**. Prior194distal
+contacts outside it are not cleared. One new286MB static copy25c638a4 was
+saved and separately fresh-reopened:21watched actor fingerprints/material
+slot names,114,500protected points and allY/Z match. ab11/pre-waist183,
+previous9c and original0d62 remain preserved. The source-review validator
+accepts evidence coverage only; actual keep is bounded WIP, not whole ART.
+See `integration/waist02-review.json` and `asset/mia/reviews/waist02/`.

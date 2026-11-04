@@ -23,6 +23,28 @@
 - R3 `855d6b10...` completed source20/expression41/critical12/orbit24, but failed its second intermediate BEFORE rendering because expected dentalhide0.25 was actually0. This is a real controller fault: generic property installer created PresetTotal with hardmax1. With P10=1/P12=1, actual SUMcurve evaluates2 but evaluated property clamps1, grin becomes1 and hide0; extra frame/depsgraph updates do not correct it. Do not weaken the test or count101. A new UI-range-only delta0..16 preservesSUM/all formulas and requires a fresh immutable R3b native. Shared fingerprint is extended to include authored IDproperty bounds; the old driver-only capture could miss this constraint. Old single-preset/static evidence is historical and not relabelled as R3b.
 # 2026-11-04 live D continuation
 
+## 2026-11-04 waist-only continuation from retained body183
+
+Original-aspect v06/visibility front and back show a narrower natural waist;
+the existing waist height is already close. One connected waist-wall selection
+excludes arms despite their shared source-part label. Actual front/back orange
+selection precedes the scoped data job. All Y/Z, retained chest/breasts/lats,
+shoulders/axilla, arms/head/pelvic core/glutes/legs, UV and materials are fixed.
+This follows the existing Kaspar local-mask principle, not a whole torso solve.
+
+Waist01 body6da improved front/back waist width, but actual high/low and rear
+views reveal a new horizontal pinch below the held chest. Root and independent
+visual review reject it despite scope/triangle checks and zero new contacts in
+the affected waist. Exact original body183 pointer restored through the live
+guard; no native saved. Witness faces186288/192869 are both inside the mask,
+so this is not missing ownership. A short C1 upper return has a curvature jump
+at its held endpoint. The next single hypothesis keeps the same domain and
+fixed neighbors, distributes the upper return from the natural minimum over
+70mm, and matches first/second derivatives at the held boundary. Upper-waist
+source residuals remain explicit. Actual source4, both obliques and waist high/
+low must show continuous anatomy before retention; lower errors cannot be
+hidden by editing chest/lat masses or by a softer material.
+
 H S-neck/flutes came from hard section-center constraints and quadratic neighbor extrapolation, not a reason to reshape the accepted face. Live radial neck correction, upper fairing, bounded lateral-cap fairing and area-preserving oval sections were inspected through official Blender Lab MCP. Outside masks, original head and E joins are held. Detailed receipts live in ignored `.mia-cache/body-h/live`; frozen D geometry81a9b03a is not a saved native or ART adoption.
 
 Independent actual profile/oblique/high review: cervical ruts gone, broad continuity improved; remaining cap/trap lobe with adjacent trough is a macroform problem. Do not repeat global Smooth. Next decision waits for matching D source4, then one localized lobe/trough reshape if confirmed. Protect outer acromion, open axillary walls, supported breast core and improved neck. Existing head-cut band first requires geometric tangent versus custom-normal diagnosis. Source v06/tied-hair/E2F2 roles and uniform aspect stay fixed. Actual verification must include all changed cap faces, not just generated collars; D technical audit passes that expanded test, without artistic approval.

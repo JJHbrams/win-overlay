@@ -1,0 +1,199 @@
+{
+  "status": "KEPT_LIMITED_WAIST_CONTOUR_WIP_NOT_BODY_ART_PASS",
+  "independent_acceptance": {
+    "reviewer": "Fresh read-only planner waist02_final_audit; direct local file/image review",
+    "W-AC1": "PASS: narrower, continuous front/back/oblique waist-to-hip contour; profile depth/posture unchanged",
+    "W-AC2": "PASS:114500fixed coordinates/allY-Z/21watched actors and slots verified",
+    "W-AC3": "PASS: no recurrence of rejected upper ring in actual high/low; scoped contact test has no new witnesses",
+    "W-AC4": "PASS: source evidence validator, saved native25c638/fresh reopen, scope-valid keep receipt",
+    "overall": "PASS limited static waist WIP; whole-body/MiaART remains open",
+    "residuals": "Upperwaist source width and profile-depth residuals remain; evidence validator art_acceptance=NOT_EVALUATED"
+  },
+  "before_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+  "body_sha256": "ba6537406312273401ad22367e34ba8226979ffb980babe5fd95a0c6f59ed829",
+  "proof": {
+    "status": "SCOPE_VALID_ONLY",
+    "before_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+    "candidate_sha256": "ba6537406312273401ad22367e34ba8226979ffb980babe5fd95a0c6f59ed829",
+    "topology_sha256": "d007607c97dde677e43b5ba429fd964de4b16d8f4cd8192cca3bb35c34c5f21d",
+    "vertices": 137341,
+    "triangles": 274324,
+    "editable_count": 15527,
+    "transition_count": 7314,
+    "changed_vertices": 22809,
+    "editable_ids_sha256": "e8668bb5a9c90debe7cee9f9f30ef7ee137aef27e6e05d5464db099365e82aed",
+    "transition_ids_sha256": "0d0e5724b74d6ebd5497a062c889e8750583b5e2e9877fd6567d07decfac3b21",
+    "protected_regions": {
+      "head": {
+        "count": 18948,
+        "ids_sha256": "8e11a238465503b01e750d0a9ad32fb07286103ee3c22d364c267f6878ce2bba",
+        "coordinates_sha256": "3b7705d2459e6e443baa6d31ca09b066460ee37317211e3717d624fc503d4061"
+      },
+      "chest_breasts_lats_pelvis_limbs_and_arm_reach": {
+        "count": 114500,
+        "ids_sha256": "30f7ad06b616c3397a8ae8fdaac78312ea047f21c3b95c19a304f757503aa959",
+        "coordinates_sha256": "1d38e2f8aa78cb528d9d33d43b87e3d1cb464e64108ab7ccad9a9be4ac5e7d6a"
+      }
+    },
+    "exact_outside_union": true,
+    "ART": false
+  },
+  "fresh_reopen": {
+    "Y_Z_bit_exact": true,
+    "status": "FRESH_REOPEN_STATIC_SCOPED_WIP_VERIFIED",
+    "baseline": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_ArmLength02_Static_WIP.blend",
+      "sha256": "ab11a0d25abe88dfbbaaf04858e31a954243e715c69e7eec1744328751691eb3"
+    },
+    "candidate": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_Waist02_Static_WIP.blend",
+      "sha256": "25c638a4406193dd0ff73efd3d253330bda7405a9c8c6ae83632fedaaa5725a8",
+      "bytes": 286076473
+    },
+    "actors_exact": 21,
+    "material_slot_names_exact": true,
+    "protected_vertices_exact": 114500,
+    "head_vertices_exact": 18948,
+    "body_sha256": "ba6537406312273401ad22367e34ba8226979ffb980babe5fd95a0c6f59ed829",
+    "live_not_reopened": true,
+    "ART": false,
+    "limits": "Fresh geometry/UV/normals/slots readback; not full anatomy, shader artistry, rig or animation acceptance"
+  },
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_Waist02_Static_WIP.blend",
+    "sha256": "25c638a4406193dd0ff73efd3d253330bda7405a9c8c6ae83632fedaaa5725a8",
+    "bytes": 286076473
+  },
+  "review": {
+    "decision": "keep_wip",
+    "reviewer": "Root plus independent read-only planner waist_visual_gate",
+    "evidence": [
+      {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\waist02\\reference-review.json",
+        "sha256": "1f32e9a309d9f86daa504b1c4d8bbb6e0a3c013564724cf441cdc5ce93c22842"
+      },
+      {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\waist02\\reference-review-validation.json",
+        "sha256": "0cc677ecca2524c571825803a29d8ddf5ce1c3517f91bba8a7ec8cbab5991adc"
+      },
+      {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\waist02\\contact.json",
+        "sha256": "446a5f8da2d3c8fd13d6b9e59442c58514972c91bf83afeb529ef712868bf2e2"
+      },
+      {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\waist02\\fresh-check.json",
+        "sha256": "c816816a61940c6550cdfbf2c1a2e56ead2452379516db7d1aa388773df2c9c4"
+      }
+    ],
+    "scope": "Waist lateral width/continuous contours only;114500outside points and ALL Y/Z exact. Shaped chest/breasts/lats/shoulders/axilla, arms/head/pelvic core/glutes/legs fixed.",
+    "observed": "Source-like narrower waist in front/back/obliques. Waist01 upper ring removed in actual high/low. No new discrete changed-waist self contacts. Saved/reopened native matches21watched actors.",
+    "unresolved": "Upperwaist source width residual and profile depth/posture unchanged; full proportions/maps/rig/deformation and broaderMia remain open. Naturalwaist shading transition remains visible; not full ART approval."
+  },
+  "contact": {
+    "status": "PASS",
+    "complete": true,
+    "tested_pairs": 25641,
+    "changed_faces": 46175,
+    "new_intersection_witnesses": [],
+    "inherited_intersections_tested": 0,
+    "controlled_witnesses": {
+      "crossing": true,
+      "coplanar": true,
+      "separated": false
+    },
+    "method": "Conservative AABB grid + existing triangle SAT including coplanar axes",
+    "limit": "Bounded discrete changed-face check; UNVERIFIED may preview, never KEEP; no ART/continuous-motion claim",
+    "elapsed_seconds": 25.59399999998277,
+    "baseline_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+    "candidate_sha256": "ba6537406312273401ad22367e34ba8226979ffb980babe5fd95a0c6f59ed829",
+    "scope": "Discrete changed-face body self-intersection only; hair and other separate objects excluded; no whole-character acceptance. Previous distal contacts outside the affected waist region are not rechecked or cleared.",
+    "stop_on_new_witnesses": 1,
+    "helper_source_unchanged": true,
+    "max_seconds": 90,
+    "max_pairs": 150000
+  },
+  "operation": {
+    "type": "X-only section-preserving local proportional cage",
+    "all_Y_Z_bit_exact": true,
+    "upper_return": "70mm clamped quintic to held1.195; no new topology or broader torso domain",
+    "minimum_halfwidth_m": 0.08561800459999158,
+    "maximum_lateral_move_m": 0.023798003792762756,
+    "upper_rejected_edge_angle": "Baseline1.00deg; rejected10.62deg; repaired2.14deg. Independent actual high/low no ring.",
+    "residual": "Upperwaist width remains broader than drawing at held lower chest. Naturalwaist shading transition visible; sagittal depth/height unchanged."
+  },
+  "rejected_waist01": {
+    "candidate_sha256": "6da079f9beedefa5f377bf6fb3310ef3876a099eba4ae97c0a0a37f2ce6c66a8",
+    "reason": "New upper horizontal crease/pinch in actual high/low/back despite no new scoped contacts",
+    "restore": {
+      "status": "RESTORED_EXACT_ORIGINAL_POINTER",
+      "before_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+      "native_saved": false,
+      "ART": false
+    },
+    "native_saved": false,
+    "actual_evidence": {
+      "path": ".mia-cache/body-h/live/waist01/source/records.json",
+      "sha256": "611e11ab1fe139414e7bd295fc78aae9010ec14afca22c5e1f948191ad7c80b7",
+      "bytes": 81228
+    }
+  },
+  "reference_review": {
+    "path": ".mia-cache/body-h/live/waist02/reference-review.json",
+    "sha256": "1f32e9a309d9f86daa504b1c4d8bbb6e0a3c013564724cf441cdc5ce93c22842",
+    "bytes": 80942
+  },
+  "reference_validation": {
+    "path": ".mia-cache/body-h/live/waist02/reference-review-validation.json",
+    "sha256": "0cc677ecca2524c571825803a29d8ddf5ce1c3517f91bba8a7ec8cbab5991adc",
+    "bytes": 5466
+  },
+  "actual_receipts": [
+    {
+      "path": ".mia-cache/body-h/live/waist01/selection-front-call-0.png",
+      "sha256": "e20b6951bf0bf1bc8a4274281d7d1f491036f09dca4a538d412254394374765b",
+      "bytes": 318825
+    },
+    {
+      "path": ".mia-cache/body-h/live/waist01/selection-back-clean-call-0.png",
+      "sha256": "810a92ece0e3284c16e3d5b02a975b0c5e1a57c225ead0883156a135f58fac09",
+      "bytes": 261642
+    },
+    {
+      "path": ".mia-cache/body-h/live/waist02/apply-call.json",
+      "sha256": "a7344580e8f1abe696f6d01aba4649981ec47fb47528f888df71bad1698becca",
+      "bytes": 4428
+    },
+    {
+      "path": ".mia-cache/body-h/live/waist02/capture-call.json",
+      "sha256": "5dd967bf4ed2c62a0e16b18f95225d6a73a00a4173b298ca99b88a5f169a07a8",
+      "bytes": 1281
+    },
+    {
+      "path": ".mia-cache/body-h/live/waist02/wire-screen-0.png",
+      "sha256": "a7da0d2b2cdcbf665a85bc83fee1a1968cf8a8b2bd19548b4332b85b145e7fbe",
+      "bytes": 273607
+    },
+    {
+      "path": ".mia-cache/body-h/live/waist02/keep-call.json",
+      "sha256": "fd7e3ad6826695220c46539203f066cef4748d5720fc630b41a3ea94c540e037",
+      "bytes": 678
+    }
+  ],
+  "preview": {
+    "path": "asset/mia/reviews/waist02/source-before-after.jpg",
+    "sha256": "d7bbd16fd5967e3c280fe737a3211e5ab25af8041b62a6aaa76bdce5442f1282",
+    "bytes": 193647
+  },
+  "baseline_native_preserved": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_ArmLength02_Static_WIP.blend",
+    "sha256": "ab11a0d25abe88dfbbaaf04858e31a954243e715c69e7eec1744328751691eb3"
+  },
+  "new_LFS_binary": false,
+  "ART": false,
+  "reproduction": "tools/mia/integrated_finish/waist01.py generates the one repaired waist02 proposal from preserved body183 and existing ownership; scoped job/selection/source records remain in ignored localcache. Git clone alone does not contain the new286MB native/raw review cache.",
+  "unresolved": [
+    "Upperwaist width residual/profile depth and full proportion judgment",
+    "Upperarm/elbow/girth and rearhair detail outside this waist edit",
+    "M1..M7/FB surface maps, expressions, rig, final animation remain open"
+  ]
+}

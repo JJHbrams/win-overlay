@@ -10,11 +10,13 @@ def main():
     parser.add_argument('--capture',required=True)
     parser.add_argument('--out',required=True)
     parser.add_argument('--label',default='ARM CHAIN01')
+    parser.add_argument('--baseline',type=Path,default=ROOT/'.mia-cache/body-h/live/integrated01-gray/after-v2/capture.json')
+    parser.add_argument('--before-label',default='BEFORE695')
     args=parser.parse_args()
     out=Path(args.out);assert not out.exists();out.mkdir(parents=True)
     spec=importlib.util.spec_from_file_location('mia_existing_source_boards',ROOT/'tools/mia/review_h/gray_boards.py')
     b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
-    base=json.loads((ROOT/'.mia-cache/body-h/live/integrated01-gray/after-v2/capture.json').read_text())
+    base=json.loads(args.baseline.read_text())
     candidate=json.loads(Path(args.capture).read_text())
     rows0={x['name']:x for x in base['frames']};rows1={x['name']:x for x in candidate['frames']}
     records=[]
@@ -28,11 +30,11 @@ def main():
             matrix,registration=b.registration(old,name)
             tiles=[b.label(b.source_panel(b.SOURCES[0],name),'BODY v06 / original pixels'),
                    b.label(b.source_panel(b.SOURCES[1],name),'Visibility / pose uncertainty'),
-                   b.label(b.actual(old,matrix),'BEFORE695 / actual gray'),
+                   b.label(b.actual(old,matrix),args.before_label+' / actual gray'),
                    b.label(b.actual(new,matrix),args.label+' / actual gray')]
             board=Image.new('RGB',(2000,1100),(230,236,240))
             for i,tile in enumerate(tiles):board.paste(tile,(500*i,0))
-            note='Same frozen uniform SRT. Source pose uncertainty retained. Actual head and lower body unchanged.'
+            note='Same frozen uniform SRT. Source pose uncertainty retained. Declared fixed neighboring parts require exact-coordinate verification.'
         else:
             registration=None
             images=[Image.open(row['path']).convert('RGB') for row in (old,new)]
@@ -40,7 +42,7 @@ def main():
             width,height=images[0].size
             board=Image.new('RGB',(width*2,height+64),(230,236,240))
             for i,im in enumerate(images):board.paste(im,(width*i,32))
-            note='BEFORE695 (left) / '+args.label+' (right); continuity diagnostic, no matched source panel.'
+            note=args.before_label+' (left) / '+args.label+' (right); continuity diagnostic, no matched source panel.'
         ImageDraw.Draw(board).text((10,board.height-27),note,font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',17),fill=(30,40,50))
         path=out/(name+'.png');board.save(path)
         records.append(dict(name=name,source=[b.art(p) for p in b.SOURCES] if registration else [],

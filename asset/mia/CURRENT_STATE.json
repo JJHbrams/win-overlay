@@ -11,7 +11,7 @@
     "runtime_verification": "integration/local-refinement-guard.json under blender/mia-fit-v003; actual protected-point rejection, unchanged scene/native, no-op pending-edit block and exact restore. Nonzero successful local anatomy remains unverified.",
     "existing_hooks": "SessionStart/PostCompact/Stop advisory only. No native PreToolUse denial or automatically trusted-runtime activation is claimed.",
     "enforcement_limit": "Scoped execution rejects out-of-domain deltas. Arbitrary raw bpy/MCP access can bypass that route; mandatory skill routing and actual visual judgment still apply.",
-    "production_example": "Scoped arm-length02 body183 retained: actual forearm-only selection, --mesh-edit-job,115650other points exact, source4+opposite/high/low, independent KEEP_WIP, contact check and fresh reopen; see production record. Method guard is not ART approval."
+    "production_example": "Scoped arm-length02 then waist02 retained with actual selections/data-only guard/source comparisons/contact/fresh reopen. Waist01 was rejected for an actual upper ring despite numerical success and restored exactly before repair. See production record; guard is not ART approval."
   },
   "status": "v002_refinement_active_v001_frozen_overall_art_open",
   "in_progress_v29": {
@@ -599,12 +599,12 @@
     "independent_review": "C continuity/accounting/source-path migration accepted within scope; allDobjects/11heads/status/inputSHAs independently checked. D full deletion incomplete; no ART judgment."
   },
   "production_resume_20261104": {
-    "body_status": "Scoped183 distal arm reach retained after actual source4/opposite/high/low, independent KEEP_WIP, discrete body-self contact and saved/fresh reopen;115650other vertices exact. AP695 torso remains shaped baseline. No whole body ART or final map approval.",
+    "body_status": "Waist02 ba65 retained after source4/opposite/waist-highlow, independent KEEP_WIP, scoped contact and saved/fresh reopen.114500outside points and ALL Y/Z exact vs183. Earlier thorax/breasts/lats/arm reach retained. No whole-body ART/maps approval.",
     "branch": "codex/mia-clavicle-resume",
     "canonical_worktree": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay",
     "scope": "Resume paused M1..M6/FB, starting M3 connected cervical/shoulder form before maps.",
     "live_probe": ".mia-cache/body-h/live/resume01/probe.json",
-    "live_geometry": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+    "live_geometry": "ba6537406312273401ad22367e34ba8226979ffb980babe5fd95a0c6f59ed829",
     "baseline_actual": ".mia-cache/body-h/live/neck-contour02/before/capture.json",
     "baseline_views": [
       "front",
@@ -617,8 +617,8 @@
     ],
     "prepared_operator_46408d5": "Rejected beforelive; superseded byactual lowerneck e203820 trial.",
     "support_audit": ".mia-cache/body-h/live/resume01/operator-support-audit.json",
-    "next": "Use local-refinement skill and explicit masks/IDs to diagnose upper-arm/girth and elbow-to-axilla relationship, then separately waist-pelvis contour and rear-hair details. Preserve kept hand reach and shaped thorax/breasts/lats; do not replay c9 carrier or silently unfix body parts. M1..M7/FB remain open.",
-    "protected": "Current operation:115650torso/breasts/lats/waist/head/lower/upperarm/elbow vertices exact; hand/nail shapes rigidly moved. Future part/interface domains require their own explicit selection and review. Original0d62/R3b/11 and previous9c preserved.",
+    "next": "Preserve kept local waist02 and arm-length02; do not replay rejected waist01 or c9 broad torso carrier. Further upperarm/girth/rearhair or upperwaist-interface edits need their own actual selections/source review. OverallM1..M7/FB stay open.",
+    "protected": "Last waist operation:114500chest/breasts/lats/shoulders/axilla/head/arms/pelvic-core/glutes/legs vertices exact; allY/Z exact. No UV/material/topology change. Original0d62/R3b/11, previous9c and pre-waistab11 preserved.",
     "capacity": "Cguard128MiB passed; onecurrentcheckpoint, smallsourceworker and ignoredreviewframes only.",
     "contour02_actual": "Appliedcandidatee7e0d8,10240vertices<=3.608mm; actual14validv2frames/source4; rootandindependentreviewFAILinsufficientimprovement. Restoredexact69d4 viaofficialMCP; no newnative/maps.",
     "review": ".mia-cache/body-h/live/neck-contour02/reference-review.json",
@@ -767,21 +767,22 @@
       ]
     },
     "retained_static_copy": {
-      "path": ".mia-cache/production-resume-20261104/Mia_ArmLength02_Static_WIP.blend",
-      "sha256": "ab11a0d25abe88dfbbaaf04858e31a954243e715c69e7eec1744328751691eb3",
-      "bytes": 286075317,
-      "body_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
-      "fresh_reopen": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\fresh-check.json",
-      "source_review": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\reference-review.json",
-      "compact_review": "blender/mia-fit-v003/integration/arm-length02-review.json",
+      "path": ".mia-cache/production-resume-20261104/Mia_Waist02_Static_WIP.blend",
+      "sha256": "25c638a4406193dd0ff73efd3d253330bda7405a9c8c6ae83632fedaaa5725a8",
+      "bytes": 286076473,
+      "body_sha256": "ba6537406312273401ad22367e34ba8226979ffb980babe5fd95a0c6f59ed829",
+      "fresh_reopen": ".mia-cache\\body-h\\live\\waist02\\fresh-check.json",
+      "source_review": ".mia-cache\\body-h\\live\\waist02\\reference-review.json",
+      "compact_review": "blender/mia-fit-v003/integration/waist02-review.json",
       "fresh_reopen_verified": true,
       "new_LFS_binary": false,
-      "meaning": "One scoped arm reach WIP; prior9c remains the pre-arm baseline. Native0d62 is the unchanged live replay base; no whole anatomy/maps/rig/ART approval.",
+      "meaning": "One scoped waist-contour WIP; priorab11/body183 remains pre-waist baseline. Live0d62 unchanged replay base. No whole anatomy/maps/rig/ART approval.",
       "included": [
         "Previous AP695/rear-root/18-lock look/static crown pigment retained",
-        "Scoped arm-length02 body183"
+        "Scoped arm-length02 body183 retained",
+        "Scoped waist02 lateral contour bodyba65"
       ],
-      "remaining": "Upperarm/elbow/girth, waist, rearhair and M1..M7/FB open; no final event animation approval"
+      "remaining": "Upperwaist residual/profile depth, upperarm/girth and rearhair/M1..M7/FB remain open"
     },
     "nape_diagnostic": {
       "path": ".mia-cache/face-live/live/hair-resume01/nape-ownership-body-filtered.json",
@@ -851,6 +852,23 @@
       },
       "visibility": "Working hair ON/raw Main OFF; geometry/maps held. Earlier body-editing hairOFF review113a superseded by9c953fb4.",
       "superseded_preview_cleanup": "HairOFF orbit outputs deletion rejected before execution: blocked by policy. Left intact, not retried by another tool. Current head-hair-orbit is the correct preview."
+    },
+    "baseline_before_waist02": {
+      "path": ".mia-cache/production-resume-20261104/Mia_ArmLength02_Static_WIP.blend",
+      "sha256": "ab11a0d25abe88dfbbaaf04858e31a954243e715c69e7eec1744328751691eb3",
+      "bytes": 286075317,
+      "body_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+      "fresh_reopen": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\fresh-check.json",
+      "source_review": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\reference-review.json",
+      "compact_review": "blender/mia-fit-v003/integration/arm-length02-review.json",
+      "fresh_reopen_verified": true,
+      "new_LFS_binary": false,
+      "meaning": "One scoped arm reach WIP; prior9c remains the pre-arm baseline. Native0d62 is the unchanged live replay base; no whole anatomy/maps/rig/ART approval.",
+      "included": [
+        "Previous AP695/rear-root/18-lock look/static crown pigment retained",
+        "Scoped arm-length02 body183"
+      ],
+      "remaining": "Upperarm/elbow/girth, waist, rearhair and M1..M7/FB open; no final event animation approval"
     }
   }
 }

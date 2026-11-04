@@ -563,3 +563,36 @@ previous9c/body695 native. Original live0d62 and previous9c are preserved. The
 source review package validates declared evidence coverage only. Full body,
 surfaces, rig and final animation remain OPEN. No new LFS binary or global
 settings/process changes. Compact evidence is `integration/arm-length02-review.json`.
+
+## Waist-only local continuation — 2026-11-04
+
+The user's latest waistline hypothesis is supported by original-aspect v06/
+visibility front/back: the old natural waist was too broad at roughly the
+correct height. No fullbody/torso rescale was performed. Actual connected
+waist selection is separated from arms even though they share sourcepart2;
+the old part label alone would have been unsafe. Actual front/back selection
+and source hashes bind the data-only scoped job before mutation.
+
+Waist01 narrowed the silhouette but introduced an upper horizontal pinch in
+actual low/high/back views. Root and independent review rejected it despite
+zero new scoped contacts. Exact body183 pointer restored and no native saved.
+The defect came from the short return's curvature jump, not mask omissions.
+One same-domain70mm quintic return repaired the upper transition; no chest,
+breast, lat, axilla, shoulder, arm, pelvic core or glute protection was released.
+
+Waist02/bodyba65 is retained as local static WIP after actual source4/both
+obliques/waist-highlow plus wire inspection, independent KEEP_WIP, complete
+changed-face body-self test and saved/fresh reopen.22,809vertices changed;
+114,500outside vertices and ALL Y/Z are exact. Topology/UV/materials held.
+Contacts46,175faces/25,641pairs:0new/0inherited within waist only; the prior194
+distal contacts are outside this test. The source review validator reports
+evidence_valid, ART=NOT_EVALUATED; independent image judgment remains separate.
+
+Saved one new286,076,473byte native25c638a4; fresh process matches21watched
+actor fingerprints/material slot names and protected geometry. Pre-waistab11,
+previous9c and original0d62 remain preserved. Native/raw review stays ignored
+localcache; Git contains source, compact records and one small selected preview,
+not a new LFS model. Current broader Mia surfaces/rig/bodyART remain OPEN.
+Upperwaist width residual and sagittal depth/pose are not solved by an X-only
+edit. Review: `integration/waist02-review.json`; preview: `asset/mia/reviews/waist02/`.
+Wiki/activity tools remain unavailable; these are the actual local records.

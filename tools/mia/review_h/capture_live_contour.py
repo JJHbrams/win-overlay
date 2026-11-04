@@ -95,7 +95,8 @@ try:
     for name, yaw, pitch in jobs:
         target, scale, resolution = (fixture.FULL_TARGET, fixture.FULL_SCALE, fixture.FULL_RES)
         if name in ['high', 'low']:
-            target, scale, resolution = ((0, -.015, 1.385), .46, (800, 800))
+            target, scale, resolution = (globals().get('MIA_BODY_DETAIL_TARGET', (0, -.015, 1.385)),
+                globals().get('MIA_BODY_DETAIL_SCALE', .46), (800, 800))
         fixture.aim(scene, yaw, pitch, target, scale, resolution)
         path = out/(name+'.png'); scene.render.filepath = str(path)
         actual = fixture.record(scene)
