@@ -5,14 +5,17 @@ actor, native, texture bake or rig is changed. Restore retains the old mesh.
 """
 from pathlib import Path
 import hashlib
+import importlib.util
 import json
-import sys
 
 import bpy
 import numpy as np
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-import diagnostic_weights as diagnostics
+# Load this revision directly: live Blender retains normal import caches between
+# failed trial calls, so an ordinary import could silently reuse the old helper.
+_spec = importlib.util.spec_from_file_location('mia_upper_template03_diagnostics', Path(__file__).with_name('diagnostic_weights.py'))
+diagnostics = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(diagnostics)
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT/'.mia-cache/body-h/shape/assembly/template03'
@@ -153,13 +156,20 @@ def main():
                               before_group_metadata=group_metadata, before_deform_sha256=old_deform_sha,
                               after_expected_deform_sha256=diagnostics.digest(retained_deform),
                               report=proof, after_rows=dict(np.load(OUT/'rows.npz')))
+        transfer = diagnostics.prepare_fresh_mesh(bpy, mesh, retained_deform, group_metadata)
+        assert diagnostics.metadata(body) == group_metadata, 'Original group definitions changed'
+        assert diagnostics.digest(diagnostics.entries(old)) == old_deform_sha, 'Old mesh deform weights changed'
         body.data = mesh
         for slot in body.material_slots: slot.link = 'DATA'
-        transfer = diagnostics.assign_to_fresh_mesh(body, retained_deform, group_metadata)
+        assert diagnostics.metadata(body) == group_metadata, 'Swapped candidate group metadata differs'
+        assert diagnostics.digest(diagnostics.entries(mesh)) == transfer['sha256'], 'Swapped candidate weights differ'
+        assert diagnostics.metadata_for_mesh(bpy, old) == group_metadata, 'Old mesh group definitions changed'
         assert diagnostics.digest(diagnostics.entries(old)) == old_deform_sha, 'Old mesh deform weights changed'
         proof['diagnostic_groups'] = dict(metadata=group_metadata, old_entries=len(old_deform),
                                          old_deform_sha256=old_deform_sha, old_deform_weights_held=True,
-                                         retained_transfer=transfer, unknown_groups_allowed=False)
+                                         retained_transfer=transfer, unknown_groups_allowed=False,
+                                         original_mesh_group_definitions_held=True,
+                                         candidate_definition_preparation='Exact copies on fresh Mesh via unlinked temporary Object')
         bpy.context.view_layer.update(); installed = True
         assert digest(coordinates(body.data)) == report['candidate_sha256']
         assert actor_properties(body) == other_actors, 'Another actor property changed'

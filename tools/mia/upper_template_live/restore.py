@@ -1,14 +1,15 @@
 """Restore the exact original D mesh pointer after template03 review."""
 from pathlib import Path
 import hashlib
+import importlib.util
 import json
-import sys
 
 import bpy
 import numpy as np
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-import diagnostic_weights as diagnostics
+_spec = importlib.util.spec_from_file_location('mia_upper_template03_diagnostics', Path(__file__).with_name('diagnostic_weights.py'))
+diagnostics = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(diagnostics)
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT/'.mia-cache/body-h/shape/assembly/template03'
@@ -27,6 +28,7 @@ assert digest(body.data) == state['report']['candidate_sha256'], 'Do not overwri
 assert diagnostics.metadata(body)['groups'] == state['before_group_metadata']['groups'], 'Group definitions changed during review'
 assert diagnostics.digest(diagnostics.entries(body.data)) == state['after_expected_deform_sha256'], 'Diagnostic weights changed during review'
 assert diagnostics.digest(diagnostics.entries(state['before_mesh'])) == state['before_deform_sha256'], 'Old mesh deform weights changed'
+assert diagnostics.metadata_for_mesh(bpy, state['before_mesh']) == state['before_group_metadata'], 'Old mesh group definitions changed'
 receipt = OUT/'live-restore.json'; assert not receipt.exists(), 'Immutable restore receipt exists'
 body.data = state['before_mesh']
 for slot, (link, material) in zip(body.material_slots, state['before_material_slots']):
