@@ -5,6 +5,8 @@ anatomy, or per-ring coordinate replacement. Original Mesh remains the exact
 checkpoint; only one in-RAM Mesh.copy on the same actor receives coordinates.
 """
 from pathlib import Path
+from datetime import datetime, timezone
+from uuid import uuid4
 import hashlib
 import importlib.util
 import json
@@ -19,6 +21,7 @@ BODY = 'MIA_Review12_H_LiveRepair'
 BASE = '69d4d4f0ea907da2474bc74f4b55312971d137f0911bdf9089fc02509a6bf25a'
 EXPECTED = '695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215'
 LOW, BACK, XCORE, XEND, OFFSET = 1.355, .005, .035, .13, .025
+RETAINED = OUT/'retained.json'
 _spec = importlib.util.spec_from_file_location('mia_ap_profile01_diagnostics', ROOT/'tools/mia/upper_template_live/diagnostic_weights.py')
 diag = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(diag)
 
@@ -100,6 +103,69 @@ def restore_context(saved):
     for k, value in saved['tool'].items(): setattr(bpy.context.tool_settings, k, value)
     for ob in bpy.context.view_layer.objects: ob.select_set(ob in saved['selected'])
     bpy.context.view_layer.objects.active = saved['active']
+
+
+def utc_id():
+    # Windows clocks can return the same microsecond twice; no receipt overwrite.
+    return datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')+'-'+uuid4().hex
+
+
+def file_sha(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def point_attribute_binding(mesh):
+    """Portable data, not selection/hide context or physical RNA addresses."""
+    result = {}
+    for attr in mesh.attributes:
+        if attr.domain != 'POINT' or attr.name in ('.select_vert', '.hide_vert'): continue
+        assert len(attr.data) == len(mesh.vertices), attr.name
+        props = attr.data[0].bl_rna.properties
+        key = next((k for k in ('value', 'vector', 'color') if k in props), None)
+        assert key is not None, ('Unsupported POINT attribute API', attr.name, attr.data_type)
+        prop = props[key]; width = max(1, int(getattr(prop, 'array_length', 0)))
+        if prop.type == 'STRING':
+            digest = hashlib.sha256(json.dumps([getattr(item, key) for item in attr.data], ensure_ascii=False).encode('utf8')).hexdigest()
+        else:
+            assert prop.type in ('FLOAT', 'INT', 'BOOLEAN'), (attr.name, prop.type)
+            dtype = np.float32 if prop.type == 'FLOAT' else (bool if prop.type == 'BOOLEAN' else np.int32)
+            digest = sha(read(attr.data, key, width, dtype))
+        result[attr.name] = dict(data_type=attr.data_type, property=key, width=width, sha256=digest)
+    return result
+
+
+def slot_binding(slots):
+    return [dict(link=link, material_name=material.name_full if material else None) for link, material in slots]
+
+
+def portable_binding(mesh, slots, matrix):
+    layers = uv(mesh)
+    return dict(coordinates_sha256=sha(xyz(mesh)), vertices=len(mesh.vertices), loops=len(mesh.loops),
+        polygons=len(mesh.polygons), topology=topology(mesh),
+        UV=dict(layers={k: sha(a) for k, a in layers['values'].items()}, active=layers['active'], render=layers['render']),
+        POINT_attributes=point_attribute_binding(mesh),
+        diagnostic_groups=diag.metadata_for_mesh(bpy, mesh), deform_sha256=diag.digest(diag.entries(mesh)),
+        corner_normal_readback_sha256=sha(normals(mesh)), has_custom_normals=bool(mesh.has_custom_normals),
+        material_slots=slot_binding(slots), object_matrix=np.asarray(matrix).tolist(),
+        context_excluded='Mesh selection/hide, camera, other-actor addresses and view context are freshly preserved within each call')
+
+
+def require_binding(actual, expected, label):
+    differences = sorted(k for k in actual.keys() | expected.keys() if actual.get(k) != expected.get(k))
+    assert not differences, (label, 'Portable body binding mismatch', differences)
+
+
+def source_binding():
+    paths = [Path(__file__).resolve(), Path(__file__).with_name('restore_profile01.py').resolve(),
+        ROOT/'.mia-cache/body-h/shape/assembly/live-D/geometry.npz',
+        ROOT/'.mia-cache/migration-to-C/row-ownership.npz',
+        ROOT/'asset/mia/blender/mia-fit-v003/body/surface-review12/head-attributes.json',
+        ROOT/'tools/mia/upper_template_live/diagnostic_weights.py']
+    return {p.relative_to(ROOT).as_posix(): file_sha(p) for p in paths}
+
+
+def original_evidence():
+    names = ('selection.json', 'apply.json', 'actual-delta.npz')
+    return {name: file_sha(OUT/name) for name in names}
 
 
 def critical(poly):
@@ -254,6 +320,21 @@ def restore_checkpoint(state):
     if state.get('after_mesh') is not None and state['after_mesh'].users == 0: bpy.data.meshes.remove(state['after_mesh'])
 
 
+def capture_state(body, before, after, changed, anchors, head, proof):
+    """Fresh within-call pointers/context; none of these addresses are portable."""
+    mesh = body.data; head_loops = np.flatnonzero(np.isin(read(mesh.loops, 'vertex_index', dtype=np.int32), head))
+    return dict(body_object=body, before_mesh=mesh, after_mesh=None, before=before, after=after,
+        changed=changed, anchors=anchors, head=head, head_loops=head_loops, head_normals=normals(mesh)[head_loops],
+        original_corner_normals_sha256=sha(normals(mesh)), topology=topology(mesh), uv=uv(mesh), flags=flags(mesh),
+        named_head_attributes=head_attributes(mesh, head), group_metadata=diag.require_known(body),
+        deform_sha256=diag.digest(diag.entries(mesh)), matrix=np.asarray(body.matrix_world).copy(),
+        before_material_slots=[(s.link, s.material) for s in body.material_slots],
+        actors=actors(body), context=context_snapshot(), overlay=None,
+        report=dict(proof, status='Support selection only; body original Mesh untouched', before_sha256=BASE,
+                    operation='ONE continuous C1 AP profile warp; not ARAP/native solver/physical tissue',
+                    namespace_key=KEY, native_saved=False, art_accepted=False))
+
+
 def select():
     ns = bpy.app.driver_namespace; assert KEY not in ns and 'MIA_HairReviewState' not in ns
     body = bpy.data.objects[BODY]; assert body.mode == 'OBJECT' and not body.hide_get()
@@ -264,17 +345,7 @@ def select():
     assert np.array_equal(read(body.data.loops, 'vertex_index', dtype=np.int32).reshape(-1, 3), faces)
     after, changed, anchors, head, proof = forecast(before, faces, rows, d['source_part'])
     OUT.mkdir(parents=True, exist_ok=True); assert not (OUT/'selection.json').exists()
-    mesh = body.data; head_loops = np.flatnonzero(np.isin(read(mesh.loops, 'vertex_index', dtype=np.int32), head))
-    state = dict(body_object=body, before_mesh=mesh, after_mesh=None, before=before, after=after,
-        changed=changed, anchors=anchors, head=head, head_loops=head_loops, head_normals=normals(mesh)[head_loops],
-        original_corner_normals_sha256=sha(normals(mesh)), topology=topology(mesh), uv=uv(mesh), flags=flags(mesh),
-        named_head_attributes=head_attributes(mesh, head), group_metadata=diag.require_known(body),
-        deform_sha256=diag.digest(diag.entries(mesh)), matrix=np.asarray(body.matrix_world).copy(),
-        before_material_slots=[(s.link, s.material) for s in body.material_slots],
-        actors=actors(body), context=context_snapshot(), overlay=None,
-        report=dict(proof, status='Support selection only; body original Mesh untouched', before_sha256=BASE,
-                    operation='ONE continuous C1 AP profile warp; not ARAP/native solver/physical tissue',
-                    namespace_key=KEY, native_saved=False, art_accepted=False))
+    state = capture_state(body, before, after, changed, anchors, head, proof); mesh = body.data
     ns[KEY] = state
     try:
         # Owned render-hidden wire overlay; no original-mesh attribute or flags edited.
@@ -298,7 +369,10 @@ def apply():
     ns = bpy.app.driver_namespace; state = ns[KEY]; body = state['body_object']
     assert body.mode == 'OBJECT' and body.data == state['before_mesh'] and sha(xyz(body.data)) == BASE
     assert 'MIA_HairReviewState' not in ns and state['after_mesh'] is None
-    assert not (OUT/'apply.json').exists() and not (OUT/'apply-failed.json').exists()
+    replay_id = state.get('replay_id')
+    receipt = OUT/(f'replay-{replay_id}.json' if replay_id else 'apply.json')
+    failed_receipt = OUT/(f'replay-{replay_id}-failed.json' if replay_id else 'apply-failed.json')
+    assert not receipt.exists() and not failed_receipt.exists()
     try:
         remove_overlay(state); restore_context(state['context'])
         assert actors(body) == state['actors']
@@ -324,8 +398,16 @@ def apply():
         assert actors(body) == state['actors'] and np.array_equal(np.asarray(body.matrix_world), state['matrix'])
         actual_flags = flags(mesh); assert all(np.array_equal(actual_flags[k], a) for k, a in state['flags'].items())
         ids = np.flatnonzero(state['changed']); delta = (actual.astype(float)-state['before'])[ids].astype(np.float32)
-        assert not (OUT/'actual-delta.npz').exists()
-        np.savez_compressed(OUT/'actual-delta.npz', vertex_ids=ids.astype(np.int32), delta=delta)
+        if replay_id:
+            recipe = state['retained_recipe']
+            slots = [(s.link, s.material) for s in body.material_slots]
+            require_binding(portable_binding(mesh, slots, body.matrix_world), recipe['after_body'], 'replay after')
+            assert sha(delta) == recipe['original_delta_values_sha256']
+            assert sha(ids.astype(np.int32)) == recipe['original_delta_ids_sha256']
+            assert original_evidence() == recipe['original_evidence_sha256'], 'Original evidence bytes changed'
+        else:
+            assert not (OUT/'actual-delta.npz').exists()
+            np.savez_compressed(OUT/'actual-delta.npz', vertex_ids=ids.astype(np.int32), delta=delta)
         state['report'].update(status='Actual live unselected C1 AP profile warp; source/collision/ART pending',
             candidate_sha256=sha(actual), actual_delta_sha256=sha(delta), actual_coordinate_readback_exact=True,
             original_mesh_pointer_retained=True, one_in_RAM_Mesh_copy_same_actor=True,
@@ -334,15 +416,70 @@ def apply():
             head_normal_readback_sha256=sha(current.astype(np.float32)), original_head_normal_sha256=sha(state['head_normals']),
             normal_meaning='Original input Mesh/custom-normal storage untouched; working body derived normals recomputed, no body packed-normal identity claim',
             selection_hide_context_restored=True, all_other_actor_properties_held=True)
-        (OUT/'apply.json').write_text(json.dumps(state['report'], indent=2)+'\n', encoding='utf8')
+        if replay_id:
+            state['report'].update(status='Retained bounded AP WIP replayed on freshly bound baseline; not M3/ART completion',
+                replay_id=replay_id, retained_recipe_sha256=state['retained_recipe_sha256'],
+                portable_before_after_bindings_exact=True, original_evidence_bytes_held=True,
+                other_actor_comparison='Fresh within this call; pointers/cameras not persisted as cross-session binding')
+        receipt.write_text(json.dumps(state['report'], indent=2)+'\n', encoding='utf8')
         print(json.dumps(state['report']))
     except Exception as error:
         restore_checkpoint(state); ns.pop(KEY, None)
-        (OUT/'apply-failed.json').write_text(json.dumps(dict(error=str(error), original_mesh_pointer_restored=True,
+        failed_receipt.write_text(json.dumps(dict(error=str(error), original_mesh_pointer_restored=True,
             world_sha256=BASE, native_saved=False), indent=2)+'\n', encoding='utf8')
         raise
 
 
+def retain():
+    """Explicit bounded review selection, portable body binding; no model edit."""
+    ns = bpy.app.driver_namespace; state = ns[KEY]; body = state['body_object']
+    assert body.mode == 'OBJECT' and body.data == state['after_mesh'] and state.get('overlay') is None
+    assert sha(xyz(body.data)) == EXPECTED and sha(xyz(state['before_mesh'])) == BASE
+    assert not RETAINED.exists(), 'Retained recipe is immutable; do not replace it implicitly'
+    evidence = original_evidence(); delta = np.load(OUT/'actual-delta.npz')
+    assert sha(delta['delta']) == state['report']['actual_delta_sha256']
+    assert np.array_equal(delta['vertex_ids'], np.flatnonzero(state['changed']).astype(np.int32))
+    after_slots = [(s.link, s.material) for s in body.material_slots]
+    recipe = dict(schema='mia-ap-profile01-portable-v1', retained_utc=utc_id(),
+        status='Explicitly retained bounded AP source-look improvement WIP; not M3/capleaf/clavicle/proportion/ART completion',
+        body_object_name=BODY, baseline_sha256=BASE, candidate_sha256=EXPECTED,
+        before_body=portable_binding(state['before_mesh'], state['before_material_slots'], state['matrix']),
+        after_body=portable_binding(body.data, after_slots, body.matrix_world),
+        source_files_sha256=source_binding(), original_evidence_sha256=evidence,
+        original_delta_values_sha256=sha(delta['delta']), original_delta_ids_sha256=sha(delta['vertex_ids']),
+        recipe_constants=dict(lower=LOW, posterior=BACK, core_half_width=XCORE, outer_half_width=XEND, offset=OFFSET),
+        geometry_scope='One already-reviewed C1 field, same16-row PCHIP/Hermite recipe; no parameter fitting or camera binding',
+        native_saved=False, art_accepted=False)
+    assert original_evidence() == evidence
+    RETAINED.write_text(json.dumps(recipe, indent=2)+'\n', encoding='utf8')
+    state['retained_recipe_path'] = str(RETAINED)
+    print(json.dumps(dict(status=recipe['status'], recipe=str(RETAINED), recipe_sha256=file_sha(RETAINED),
+                         candidate_sha256=EXPECTED, model_changed=False, original_evidence_bytes_held=True)))
+
+
+def replay():
+    """Recompute the retained field on fresh69; no borrowed old camera/context."""
+    ns = bpy.app.driver_namespace; assert KEY not in ns and 'MIA_HairReviewState' not in ns
+    recipe = json.loads(RETAINED.read_text(encoding='utf8'))
+    assert recipe['schema'] == 'mia-ap-profile01-portable-v1'
+    assert recipe['baseline_sha256'] == BASE and recipe['candidate_sha256'] == EXPECTED
+    assert source_binding() == recipe['source_files_sha256'], 'Recipe/source files changed; do not silently replay'
+    assert original_evidence() == recipe['original_evidence_sha256'], 'Original evidence bytes changed'
+    body = bpy.data.objects[BODY]; assert body.mode == 'OBJECT' and not body.hide_get()
+    assert not body.modifiers and not body.data.shape_keys and np.array_equal(np.asarray(body.matrix_world), np.eye(4))
+    before = xyz(body.data); assert sha(before) == BASE
+    slots = [(s.link, s.material) for s in body.material_slots]
+    require_binding(portable_binding(body.data, slots, body.matrix_world), recipe['before_body'], 'replay before')
+    d = np.load(ROOT/'.mia-cache/body-h/shape/assembly/live-D/geometry.npz')
+    assert np.array_equal(read(body.data.loops, 'vertex_index', dtype=np.int32).reshape(-1, 3), d['triangles'])
+    rows = dict(np.load(ROOT/'.mia-cache/migration-to-C/row-ownership.npz'))
+    after, changed, anchors, head, proof = forecast(before, d['triangles'], rows, d['source_part'])
+    state = capture_state(body, before, after, changed, anchors, head, proof)
+    state.update(replay_id=utc_id(), retained_recipe=recipe, retained_recipe_sha256=file_sha(RETAINED))
+    ns[KEY] = state
+    apply()
+
+
 if not globals().get('MIA_AP_PROFILE01_NO_MAIN', False):
-    phase = globals().get('MIA_AP_PROFILE01_PHASE', 'select'); assert phase in ('select', 'apply')
-    select() if phase == 'select' else apply()
+    phase = globals().get('MIA_AP_PROFILE01_PHASE', 'select'); assert phase in ('select', 'apply', 'retain', 'replay')
+    {'select': select, 'apply': apply, 'retain': retain, 'replay': replay}[phase]()
