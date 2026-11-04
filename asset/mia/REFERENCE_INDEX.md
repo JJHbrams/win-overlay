@@ -2,6 +2,8 @@
 
 원화의 역할과 확인 상태를 함께 표시한다. **사용자가 확인한 디자인**과 **생성된 수정 후보**는 구분하며, 어느 이미지도 그 자체로 3D 형상·UV·리깅의 검수 통과를 뜻하지 않는다.
 
+분류별 보기: [컨셉](references/concept/README.md) · [표정](references/expressions/README.md) · [바디](references/body-foundation/README.md) · [40장 전수 목록](references/INVENTORY.md). 원본은 이 저장소 안에 있으며 기존 경로를 유지한다.
+
 ## 현재 확인된 디자인과 선택 기준
 
 | 역할 | 이미지 | 상태 / 사용 범위 |

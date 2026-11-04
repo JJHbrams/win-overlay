@@ -4,6 +4,14 @@
 
 빠른 시각적 탐색은 [Mia 참조 인덱스](../REFERENCE_INDEX.md)를 사용한다.
 
+## 분류별 원화 모음
+
+| 컨셉·헤어·의상 | 얼굴·표정 | 바디·속옷·다각도 |
+|---|---|---|
+| [컨셉 원화 보기](concept/README.md) | [표정 원화 보기](expressions/README.md) | [바디 원화 보기](body-foundation/README.md) |
+
+40장 원본과 개별 crop의 전체 경로는 [전수 목록](INVENTORY.md)에 있다. **원본 파일은 모두 이 `references/` 아래에 보관**하며, 중복 복제나 임시 생성 경로에 의존하지 않는다. 역할별 폴더의 README에서 원본을 바로 열 수 있다. 이전 입력인 `inputs/`·`conditioning/`와 과거 바디 시안은 현재 기준과 분리해 표시한다.
+
 ## 역할별 기준
 
 | 역할 | 원화 / 상태 |
@@ -15,8 +23,8 @@
 | 기존 전신·표정 보조 원화 | [정면 v22](mia-canonical-source-v22.png), [16표정 v22](mia-expressions-clean-16-v22.png) — 보존. 새 첨부와 파일 바이트가 다르므로 덮어쓰지 않음 |
 | 사용자가 선택한 정면 본체형 | [원안에서 의상을 교체한 정면](body-foundation/anchors/mia-body-front-user-selected-20261031.png) — 골반·허벅지 라인을 유지한 추가 수정의 기준. 임의로 더 가늘게 만든 정면으로 바꾸지 않음 |
 | 최신 정면 수정 후보 | [종아리 폭 수정안](body-foundation/front-revisions/calf-v01/mia-body-front-calf-v01.png) — 선택된 정면에서 양쪽 종아리의 볼륨만 소폭 줄이도록 요청한 파생안. 정확한 감소율·픽셀 불변을 보증하지 않음 |
-| 최신 4뷰 체형 원화 후보 | [v06 메인 턴어라운드](body-foundation/v06/mia-body-turnaround-v06.png) — 선택 정면·종아리 수정과 정면 하단·외측 볼륨을 반영한 정면·좌측면·후면·사선 후보. 사용자 검토 전이며 정투영 도면이나 3D 승인본이 아님 |
-| 머리 가림 해제 보조 원화 | [v06 body visibility guide](body-foundation/v06/mia-body-visibility-guide-v06.png) — 목·어깨·등을 확인하려고 긴 머리를 임시로 숨긴 모델링 보조본. 메인 원화의 헤어 디자인을 바꾸지 않음 |
+| 현재 지정 4뷰 체형 기준 | [v06 메인 턴어라운드](body-foundation/v06/mia-body-turnaround-v06.png) / [사용자 재첨부](received/mia-body-v06-confirmed-20261102.png) — 2026-11-02 사용자가 바디 수정 기준으로 지정. 픽셀 동일한 두 원본의 출처를 보존한다. 정투영 도면이나 3D 승인본이 아님 |
+| 머리 가림 해제 보조 원화 | [v06 body visibility guide](body-foundation/v06/mia-body-visibility-guide-v06.png) — 2026-11-03 사용자가 승모근·어깨 비교 기준으로 재확인한 묶음머리 보조본. 메인 원화의 헤어 디자인을 바꾸지 않음 |
 | 기존 다각도 체형 검토 | [원안 파생 v03 4뷰](body-foundation/v03/mia-body-underwear-study-v03.png) — 긴 원래 헤어를 유지한 검토안. 이후 선택된 정면·종아리 수정과 아직 동기화되지 않음 |
 | 이전 체형 시안 | [v01](body-foundation/v01/mia-body-underwear-study-v01.png), [v02](body-foundation/v02/mia-body-underwear-study-v02.png) — 헤어 변경·독립적인 체형 해석에 대한 사용자 피드백으로 대체됨. 비교 기록으로 보존 |
 | 3D 생성 입력 | `inputs/` v30 A-pose — 승인 원화를 바탕으로 만든 파생 입력이며 디자인 마스터가 아님 |
@@ -31,7 +39,7 @@
 - v03: 원안의 얼굴·긴 웨이브·반묶음·왼쪽 땋은 머리를 유지하며 의상만 속옷으로 교체한 정면을 먼저 만들고, 이를 바탕으로 다각도를 파생했다. 머리카락에 가린 등은 그대로 가린다.
 - v05: 선택된 정면·종아리 수정본을 기준으로 4뷰를 새로 맞췄다. [메인](body-foundation/v05/mia-body-turnaround-v05.png)은 긴 헤어를 포함한 디자인 기준이고, [visibility guide](body-foundation/v05/mia-body-visibility-guide-v05.png)는 머리 가림을 해제해 본체 조형을 보는 보조 시트다. 입력·반복 이력은 [provenance](body-foundation/v05/provenance.json), 독립 검토와 한계는 [review](body-foundation/v05/review.ko.md)에 남겼다.
 - v05 프롬프트는 [초기 배치](body-foundation/v05/01-layout-prompt.txt), [사선 보정](body-foundation/v05/02-angle-prompt.txt), [종아리 일관성 보정](body-foundation/v05/03-calf-consistency-prompt.txt), [body visibility guide](body-foundation/v05/04-body-visibility-prompt.txt) 순으로 보존했다. 초기 배치·사선 보정 이미지는 iterations/에 남기며, 메인 시트의 최종 대체본으로 해석하지 않는다.
-- v06: v05의 정면 하단·외측 형태를 선택 정면에 조금 더 가깝게 복원한 후속 후보다. [메인](body-foundation/v06/mia-body-turnaround-v06.png)과 [visibility guide](body-foundation/v06/mia-body-visibility-guide-v06.png)의 입력·결과·한계는 [provenance](body-foundation/v06/provenance.json)와 [review](body-foundation/v06/review.ko.md)에 남겼다.
+- v06: v05에서 파생한 후 2026-11-02 사용자 지정 바디 기준이 되었다. [메인](body-foundation/v06/mia-body-turnaround-v06.png)과 [visibility guide](body-foundation/v06/mia-body-visibility-guide-v06.png)의 최초 입력·결과·한계는 [provenance](body-foundation/v06/provenance.json)와 [review](body-foundation/v06/review.ko.md)에 남겼다. 당시 review의 승인 대기 상태는 생성 시점 기록이며 이후 사용자 지정은 카탈로그와 기준 색인을 따른다.
 - v06 프롬프트는 [source volume restoration](body-foundation/v06/01-source-volume-restoration-prompt.txt), [guide sync](body-foundation/v06/02-guide-sync-prompt.txt) 순으로 보존했다. 변화는 국소적인 복원 후보이며 별도 v04 측면 볼륨 요청의 완료를 뜻하지 않는다.
 - 사용자는 v03 다각도에 사용한 추가 슬리밍 정면보다 **최초 원안 파생 정면**을 후속 수정 기준으로 선택했다. 이 선택본과 종아리 수정본은 별도 경로에 보존한다.
 - v04 측면 볼륨 조정은 이미지 생성 도구의 출력 안전필터에서 `sexual` 분류로 차단되어 **이미지가 없다**. [generation-status.json](body-foundation/v04/generation-status.json)과 프롬프트만 기록했다. 기존 다각도 이미지가 이 수정까지 완료한 결과라고 설명하지 않는다.

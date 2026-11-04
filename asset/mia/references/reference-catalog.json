@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "character": "Mia",
-  "updated_date": "2026-11-03",
+  "updated_date": "2026-11-04",
   "reference_selection": {
     "character_design": "MIA-DESIGN-MASTER-V22",
     "face_identity": "MIA-FACE-CONFIRMED-20261031",
@@ -232,7 +232,7 @@
     },
     {
       "id": "MIA-BODY-V06-VISIBILITY-GUIDE",
-      "status": "completed_requested_art_pending_user_review",
+      "status": "user_reaffirmed_shoulder_trapezius_reference_20261103",
       "role": "body_visibility_modeling_supplement",
       "path": "body-foundation/v06/mia-body-visibility-guide-v06.png",
       "sha256": "3cb29ca55df903ec5248e59ff10ac6c5b607e01bb4baf894d6bb41437e46614f",
@@ -242,7 +242,8 @@
       ],
       "mode": "RGB",
       "provenance": "body-foundation/v06/provenance.json",
-      "review": "body-foundation/v06/review.ko.md"
+      "review": "body-foundation/v06/review.ko.md",
+      "selection_note": "User explicitly requested tied-hair body reference for shoulder/trapezius comparison on 2026-11-03. Original provenance/review retain generation-time status. Not a final hairstyle or model approval."
     },
     {
       "id": "MIA-LEGACY-BODY_MV_CONDITION_BACK",
@@ -350,7 +351,7 @@
     },
     {
       "id": "MIA-BODY-V06-SUPPLEMENT-LOW-E2-F2-V01",
-      "status": "generated_correction_under_review",
+      "status": "pixel_equivalent_to_user_reaffirmed_upper_body_reference_20261103",
       "role": "auxiliary_views_and_pose_continuity_study",
       "path": "body-foundation/v06/supplements/low-pelvis-E2-F2-v01.png",
       "sha256": "3bb6613c58eac4502b6b92a50fc99674a5f49a3992728643d5746f158d49fcf6",
@@ -363,7 +364,8 @@
       "derived_from": "MIA-BODY-V06-USER-CONFIRMED-20261102",
       "prompt": "body-foundation/v06/supplements/low-pelvis-E2-F2-v01.prompt.txt",
       "limits": "Illustrated inference, not measured projections or model renders. Prompt angles are not calibrated camera evidence; G/H arms appear closer to horizontal than requested60degrees. v06 remains authority. E/F initial narrow-pelvis feedback applies to reference art only, not model hip widening.",
-      "provenance": "body-foundation/v06/supplements/low-pelvis-E2-F2-v01.provenance.json"
+      "provenance": "body-foundation/v06/supplements/low-pelvis-E2-F2-v01.provenance.json",
+      "selection_note": "Later user-reaffirmed upper-body/axillary role is represented by MIA-LOW-AXILLA-USER-REAFFIRMED-20261103. Whole-body authority remains v06."
     },
     {
       "id": "MIA-LOW-AXILLA-USER-REAFFIRMED-20261103",
@@ -379,5 +381,11 @@
       "provenance": "received/mia-low-view-axilla-reaffirmed-20261103.provenance.json"
     }
   ],
-  "reaffirmed_front_pixel_equal_to_old_canonical": false
+  "reaffirmed_front_pixel_equal_to_old_canonical": false,
+  "library_navigation": {
+    "concept": "concept/README.md",
+    "expressions": "expressions/README.md",
+    "body": "body-foundation/README.md",
+    "all_images": "INVENTORY.md"
+  }
 }
