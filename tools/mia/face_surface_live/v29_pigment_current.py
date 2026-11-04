@@ -296,12 +296,19 @@ def _mesh_payload(mesh):
               'INT8': ('value', 1, np.int32), 'BOOLEAN': ('value', 1, np.int32),
               'FLOAT_VECTOR': ('vector', 3, np.float32), 'FLOAT2': ('vector', 2, np.float32),
               'FLOAT_COLOR': ('color', 4, np.float32), 'BYTE_COLOR': ('color', 4, np.float32),
-              'INT32_2D': ('value', 2, np.int32), 'QUATERNION': ('value', 4, np.float32)}
+              'INT16_2D': ('value', 2, np.int32), 'INT32_2D': ('value', 2, np.int32),
+              'QUATERNION': ('value', 4, np.float32)}
     attrs = {}
     for attr in mesh.attributes:
         assert attr.data_type in fields, 'Unsupported attribute; inspect before copying: '+attr.name
         field, size, dtype = fields[attr.data_type]
         values = np.empty((len(attr.data), size), dtype); attr.data.foreach_get(field, values.ravel())
+        if attr.data_type == 'INT16_2D':
+            # Actual Blender 5.2 custom_normal RNA: Short2AttributeValue.value
+            # is INT[2]. Read integers into the standard RNA int buffer, range
+            # check, then hash their exact signed-short encoding, never vectors.
+            assert np.all((values >= -32768) & (values <= 32767)), attr.name
+            values = values.astype(np.int16)
         attrs[attr.name] = (attr.domain, attr.data_type, digest(values))
     keys = {}
     if mesh.shape_keys:
