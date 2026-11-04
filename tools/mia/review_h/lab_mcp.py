@@ -8,6 +8,7 @@ from pathlib import Path
 import argparse
 import asyncio
 import base64
+import hashlib
 from datetime import timedelta
 import json
 import os
@@ -38,6 +39,16 @@ async def run(args):
         assert args.command == 'call' and args.tool == 'execute_blender_code'
         assert not args.arguments
         arguments = code_arguments(args)
+    if args.mesh_edit_job:
+        assert args.command == 'call' and args.tool == 'execute_blender_code'
+        assert not args.arguments and not args.code_file
+        job = args.mesh_edit_job.resolve()
+        assert job.is_relative_to((ROOT/'.mia-cache').resolve())
+        job_sha = hashlib.sha256(job.read_bytes()).hexdigest()
+        # Hash binding is rechecked inside Blender immediately before any write.
+        arguments = {'code': 'import runpy,json\n'
+            +'mia_scoped_job = runpy.run_path('+repr(str(ROOT/'tools/mia/integrated_finish/mesh_edit_job.py'))+')\n'
+            +'print(json.dumps(mia_scoped_job["execute"]('+repr(str(ROOT))+','+repr(str(job))+','+repr(job_sha)+')))\n'}
     configured = tomllib.loads(Path('C:/Users/antio/.codex/config.toml').read_text(encoding='utf8'))['mcp_servers']['blender']
     expected = Path('C:/Users/antio/.codex/tools/blender-lab-mcp-venv/Scripts/python.exe')
     expected_args = ['-m', 'blmcp', '--transport', 'stdio']
@@ -94,6 +105,8 @@ def main():
     parser.add_argument('--tool')
     parser.add_argument('--arguments', type=Path)
     parser.add_argument('--code-file', type=Path)
+    parser.add_argument('--mesh-edit-job', type=Path,
+                        help='Data-only scoped coordinate edit; exact protected-ID validation before installation')
     parser.add_argument('--view', choices=['front', 'profile', 'back', 'oblique', 'high', 'low', 'mask_before', 'profile_after'])
     parser.add_argument('--phase', choices=['select', 'apply'])
     parser.add_argument('--report', type=Path, required=True)

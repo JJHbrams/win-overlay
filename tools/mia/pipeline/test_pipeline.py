@@ -148,6 +148,20 @@ class PipelineTest(unittest.TestCase):
         output.write_text('{}', encoding='utf-8')
         self.assertEqual(pipeline.advisory(self.root)['state'], 'RECEIPT_CHANGED')
 
+    def test_advisory_resolves_retired_drive_without_rewriting_history(self):
+        output = self.root / pipeline.CACHE / 'review.json'
+        report = self.inspect()
+        old = 'D:/MiaWorkCache/mia-reference-work/win-overlay/'
+        for item in report['watched_files']:
+            item['path'] = old + Path(item['path']).relative_to(self.root).as_posix()
+        pipeline.atomic_json(output, report)
+        pipeline.activate(self.root, output, report)
+        original = output.read_bytes()
+        self.assertEqual(pipeline.advisory(self.root)['state'], 'FRESH_BY_STAT_ONLY')
+        self.assertEqual(output.read_bytes(), original)
+        self.native.write_bytes(b'actually changed native')
+        self.assertEqual(pipeline.advisory(self.root)['state'], 'STALE')
+
     def test_invalid_or_external_activation_rejected(self):
         with self.assertRaises(ValueError):
             pipeline.activate(self.root, self.root / 'outside.json', {'evidence_integrity_valid': True})

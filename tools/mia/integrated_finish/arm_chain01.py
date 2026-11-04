@@ -1,8 +1,9 @@
-"""One source-interval arm-chain forecast; no Blender or import-time mutation.
+"""Retired arm-chain forecast, retained for diagnosis; no live application.
 
 This preserves transverse arm sections initially, changes longitudinal reach and
 orientation, and rigidly transports the complete distal hand including nails.
-It is a review candidate, not anatomical or source-likeness acceptance.
+Actual c9 source review rejected its thorax/breast/lat deformation. The live
+select/apply entry points are retired; do not reuse this as an editing recipe.
 """
 from pathlib import Path
 import argparse

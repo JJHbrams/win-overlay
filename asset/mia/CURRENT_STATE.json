@@ -3,6 +3,15 @@
   "updated": "2026-11-04",
   "canonical_worktree": "C:/Users/antio/.codex/worktrees/mia-current/win-overlay",
   "active_production_record": "production_resume_20261104",
+  "active_refinement_method": {
+    "guide": ".agents/skills/mia-reference-modeling/references/local-refinement.md",
+    "primary_practice": "Julien Kaspar / Blender Studio Fine Control on a Single Object; public HTML read, no video timestamp claim.",
+    "required": "Reviewed anatomical mask/IDs, fixed neighboring parts, scoped delta before installation, immediate source/actual comparison, one pending edit then keep/restore.",
+    "retired_trial": "arm-chain01 c9b199c7: reach improves but shaped thorax/breast/lat planes regress. Exact695dbbd8 original body pointer restored through live MCP; native unchanged.",
+    "runtime_verification": "integration/local-refinement-guard.json under blender/mia-fit-v003; actual protected-point rejection, unchanged scene/native, no-op pending-edit block and exact restore. Nonzero successful local anatomy remains unverified.",
+    "existing_hooks": "SessionStart/PostCompact/Stop advisory only. No native PreToolUse denial or automatically trusted-runtime activation is claimed.",
+    "enforcement_limit": "Scoped execution rejects out-of-domain deltas. Arbitrary raw bpy/MCP access can bypass that route; mandatory skill routing and actual visual judgment still apply."
+  },
   "status": "v002_refinement_active_v001_frozen_overall_art_open",
   "in_progress_v29": {
     "baseline_sha256": "f0dead17dba4f492c47652dab62c48a93bcd0100bc2586ca3ac315d41a977ee2",
@@ -607,7 +616,7 @@
     ],
     "prepared_operator_46408d5": "Rejected beforelive; superseded byactual lowerneck e203820 trial.",
     "support_audit": ".mia-cache/body-h/live/resume01/operator-support-audit.json",
-    "next": "Preserve AP695 + kept rear-root/look + static crown pigment; coherent whole-clump M1 pilot, then unresolved M3/M4/proportions. No final maps/rig promotion.",
+    "next": "User-steered method repair is verified: first use the mandatory local-refinement mask/Face Set and scoped-delta route for one arm-only edit, inspect immediately; review attachment/girth and waist separately. Retired c9 is not a starting mesh. Preserve AP695/kept rear-root/look/crown pigment and earlier shaped torso/lat masses. M1..M7/FB remain open; no final maps/rig promotion.",
     "protected": "Accepted face/head; uppercervical attachment; Ewaist/arms; supportedbreastroot/axillarypassage; originalnative0d62/R3b/11.",
     "capacity": "Cguard128MiB passed; onecurrentcheckpoint, smallsourceworker and ignoredreviewframes only.",
     "contour02_actual": "Appliedcandidatee7e0d8,10240vertices<=3.608mm; actual14validv2frames/source4; rootandindependentreviewFAILinsufficientimprovement. Restoredexact69d4 viaofficialMCP; no newnative/maps.",

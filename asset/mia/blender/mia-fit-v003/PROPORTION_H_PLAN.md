@@ -101,3 +101,68 @@ The next M3 design operation is one broad connected AP Grab on **existing D topo
 **AP Grab preflight hold:** the first specific proposal (110anterior lower2neck-row seeds,+25mmY,45mm connected SMOOTH) was rejected **before live application**. Although its predicted2214-point support protects anchors and their immediate neighbors, the influence retreats4.348mm over a row whose old front contour retreats only3.577mm. The predicted wall reverses fromY−36.14mm atZ1.41915 to−38.03mm at1.43061, creating a new S contour. A protection pass is not a shape pass. Do not run the worker's unfinished grab01 drafts or regard this as a kept native edit. Review a coherent wall operation/derivative bound before any next application; do not radius-search or silently release protected anatomy.
 
 **Current selected design:** AP-profile01 body695dbbd8, a continuous anterior-volume Y warp on intact D topology, is retained only as a source-checked AP improvement. Hard finite-width handle edits were rejected prelive for lateral strain; the continuous depth/lateral/profile warp avoids those boundaries and keeps all requested anchors. Actual seven-view/source4 review and conservative grid+SAT collision-v2 passed in scope; actual head normal change0. The first BVH-only collision packet is superseded after a coplanar witness failure. Exact RETAIN/restore/REPLAY has been executed. Original C0d62 native still contains D69d4; current695 exists through the explicit replay recipe, not a new saved native. M3clavicle plane, cap/posterior leaf, M4/M5/M6 and all FB outcomes remain OPEN. Do not roll back this kept improvement merely because the larger stage is unfinished; future edits need their own actual keep/restore loop.
+
+## Integrated finish — latest whole-character/arm request, 2026-11-04
+
+The user now explicitly requires overall craft, added rear-hair detail, upper/
+lower proportions and thorax–arm shape/proportions using the existing multiple
+reference views. This supplements all M1..M6 and FB criteria above. It does not
+reopen accepted facial feature sculpt or authorize a front-only fit.
+
+| ID | User-visible outcome / intended runtime | Verification / evidence | Critical |
+|---|---|---|---|
+| M7-A | Coherent head/shoulder/thorax/pelvis/leg proportions / Blender static | Same whole-height uniform SRT, actual front/profile/back/both obliques, source v06 and visibility guide; high/low for connected form. Record pose uncertainty and residuals. | yes |
+| M7-B | Connected thorax/breast-root/axilla/deltoid/upper-arm and credible arm reach / Blender static then diagnostic poses | Actual source/before/after, surface sections, changed-face contact checks, followed by temporary low arm elevation/reach tests; not final skinning approval. | yes |
+| M7-C | Source-like neck/shoulder/arm contour and elbow/wrist/hand placement / Blender static | Joint surface observation intervals across front/profile/back; actual combined surface and gray views, no image aspect warp. | yes |
+| M7-D | Detailed layered rear hair with stable all-around silhouette / Blender static target look | v22 back/profile/rear obliques/high/low, distinguish geometry/UV pigment/light. Paths, neighboring section envelopes, tips and early ink/look may change where source supports them; failed groom01 guides remain disabled. | yes |
+| M7-E | Accepted face/eyes/lashes/UV and unrelated retained work preserved / Blender live plus saved/reopen | Exact protected geometry/data outside each declared domain; proper new normals in changed areas; source/actual visual regression review, rollback, one consolidated checkpoint. | yes |
+
+Fresh actual695 whole-height/gray source4 diagnosis is in
+`.mia-cache/body-h/live/integrated01/`. The old frozen uniform scale remains
+supported by crown/sole observations within~2–3pixels. Current fingertip height
+is sourceY504.7 while the original source fingers end573–574. Actual geometric
+wrist is~(.2989,−.0268,1.000)m; source wrist surface observations support
+|X|.286..301,Y+.004..+.019,Z.878..908m. This is a three-view surface/pose guide,
+not recovered exact bones. Whole-hand tilt contributes but cannot alone explain
+the high wrist. Do not lengthen the entire arm from fingertip error alone.
+
+First candidate representation: one connected section-centre arm chain and
+broad shoulder/pectoral/lat transition. Actual S/E/W proxy centres are measured
+on the mesh, not copied from the old hidden rig. A finite target inside source
+uncertainty is S=(±.132,.051,1.330), E=(±.185,.039,1.100),
+W=(±.294,.012,.895)m; target hand direction is source-like while hand/nail shapes
+are rigidly transported. Source/asymmetric pose uncertainty remains explicit.
+The candidate must be forecast and actually selected before any live edit.
+
+The Earm rows Z1.077..1.195 are distal joining bands, not a prohibition on
+proximal-arm editing. For this whole-arm correction their **shape/continuity**
+is preserved, not their old world positions. Fingers have zero old limb-field
+weights and nails are disconnected components, so the old limb fields or just
+the largest skin component cannot select the whole hand. Preserve all hand/nail
+shapes/UV and face/head/medial AP correction. Lowerbody stays exact during this
+first isolated arm/girdle trial; later source-supported proportion corrections
+may include pelvis/legs rather than freezing them indefinitely. Any breast-root
+or axillary motion must be reported, not silently called protected.
+
+Read-only Wiki/activity tools are unavailable in this session; this existing
+plan and PROGRESS are the actual local record. Root owns live MCP/GPU, uses C
+and the existing capacity guard. Workers produce small source-only changes.
+
+**Integrated arm-chain01 outcome and method correction:** c9b199c7 was actually
+selected, applied and rendered in source4/both obliques/high/low. Reach improved,
+but the broad torso carrier distorted shaped outer breasts, thorax/shoulder
+and posterior lat planes. Root and independent visual review reject it. The
+153496-changed-face discrete SAT check found no new body self-intersections;
+that technical result does not contradict the visible failure. Exact original
+body pointer/695dbbd8 was restored; no native was saved or promoted.
+
+The root saw the broad orange selection and still approved it: this is an
+operation/domain judgment failure, not an MCP limitation or merely forgotten
+context. Object-level preservation excluded the whole body's coordinates and
+did not protect retained anatomical subparts. Current user requires actual
+professional local-edit practice to be bound to the skill/execution path before
+new modeling. See `references/local-refinement.md` in the Mia skill: mask/fix
+the torso, explicitly identify arm/interface IDs, reject outside movement,
+inspect one edit immediately, then keep/restore. Retire c9 live select/apply;
+do not substitute a broad ARAP carrier. No new shaping while this method repair
+is being validated. M1..M7/FB ART remain OPEN.

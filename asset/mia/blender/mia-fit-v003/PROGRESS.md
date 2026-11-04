@@ -501,3 +501,43 @@ position, material or geometry was changed. Actual MCP before/after screenshots
 show the gray body returning to the saved-camera tone. The shared fixture now
 hides old lights in viewport too and enables its three review lights there.
 See `match-viewport-lights-call.json` and `current-lit-screen-call-0.png`.
+
+## Local-refinement method repair — 2026-11-04
+
+Source-calibrated arm-chain01 c9 improved reach but the root approved an overly
+broad torso carrier despite its actual orange support covering prior anatomy.
+Actual source4/both obliques/high/low and independent visual review reject the
+outer breast/root, thorax, shoulder and posterior lat distortion. Exact body695
+original pointer restored; no native or replacement model promoted. A discrete
+body self-contact test found no NEW intersections, which did not make the form
+acceptable. The mistake was domain/representation judgment and inadequate
+intra-object part protection, not an MCP limitation or a proven compaction cause.
+
+Julien Kaspar's public Blender Studio `Fine Control on a Single Object` lesson
+directly demonstrates editing a joined arm while masking the nearby torso,
+Face Set/visibility isolation, local posing and retained-version comparison.
+Public HTML was read, not the full video; no timestamps are asserted. Additional
+Detailed Sculpting/Rain public text and official Face Set/Auto-Masking docs
+inform limits. Actual method, citations and Mia-specific application are in the
+existing skill's `references/local-refinement.md`, now routed from Mia AGENTS.
+
+New scoped data-only MCP route checks actual baseline/topology/explicit edit,
+transition and fixed IDs BEFORE copying/installing coordinates. Actual live test
+rejects a protected point0 change of approximately1e-7m; full actor/material/
+original-pointer/native checks remain exact. A no-op integration additionally
+exercised pending-edit blocking and exact restore. This is not a successful
+nonzero anatomy edit. Actual MCP dispatch also rejects stale baseline,
+topology and array-payload hashes; the live backend rejects stale job digests
+and selection/source evidence, with final scene/material/pointer/native held.
+Ten scope, four job-binding and17pipeline tests pass;
+skill validation passes and independent scenario review found no blocking flaw.
+
+Compact verification: `integration/local-refinement-guard.json`. c9 live
+select/apply are retired; restoration/private guard helpers remain. Existing
+SessionStart/PostCompact/Stop hooks remain advisory, with migrated watched paths
+fixed. No native PreToolUse denial, global hook/config/trust change or automatic
+hook firing is claimed. Raw bpy can bypass the cooperative route. Root must
+still verify semantic selections and actual surface/source quality. New shaping
+is paused for this user-requested method repair; retained body695/hair19 stay
+unchanged. Next production work is small arm-only/attachment refinement, then
+separately source-reviewed girth and waist, preserving shaped torso/lat masses.

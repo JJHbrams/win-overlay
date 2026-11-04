@@ -82,6 +82,21 @@ claim live review. Do not install/switch MCP or change origins as a shortcut.
 
 ## Small, visible edits
 
+For refinement of an already shaped part, first read
+[local refinement](references/local-refinement.md). Use its mask/Face Set,
+protected-region and immediate comparison procedure. An object named "body"
+is not one unconstrained editing domain. Connected anatomy does not authorize
+moving previously shaped thorax, breasts or lats while correcting an arm.
+
+Before any new coordinate write, bind the actual editable/transition/fixed
+vertex IDs to the current mesh and inspect that selection. Route coordinate
+deltas through `tools/mia/integrated_finish/scoped_mesh_edit.py`; an outside or
+protected change must be rejected before installation. Raw bpy access and an
+advisory hook do not enforce this by themselves. Native sculpt/edit operations
+must use the equivalent reviewed mask and the same scoped-delta check before
+their result is retained. Topology-changing work needs a separately declared
+local operation and transfer plan; do not bypass a failed stable-ID guard.
+
 Compare source / baseline / candidate at matched camera, pose, visibility and
 review lighting. Hide occluding hair temporarily for eye/axilla diagnosis and
 restore it. Use neutral geometry plus early target-look/color checks to avoid

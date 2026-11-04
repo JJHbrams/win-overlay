@@ -254,7 +254,7 @@ def advisory(root: Path) -> dict:
     receipt = read_json(receipt_path)
     changed = []
     for item in receipt.get('watched_files', []):
-        path = Path(item['path'])
+        path = resolve(root, item['path'])
         if not path.is_file():
             changed.append({'role': item['role'], 'path': str(path), 'reason': 'missing'})
             continue

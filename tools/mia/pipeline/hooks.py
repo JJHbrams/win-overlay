@@ -38,8 +38,11 @@ def respond(event: dict) -> dict:
         brief['execution_policy'] = (
             'Anatomical/fine shaping: live Blender MCP inspect-edit-image-review loop. '
             'Background: blockout candidates, reviewed deltas, checks, batch renders/bakes/export. '
-            'Read the skill execution-mode section; verify the actual scene at handoff. '
-            'Addon status alone is not live modeling; this advisory does not enforce tool use.')
+            'Before local finish read skill references/local-refinement.md: mask/fix retained '
+            'anatomical neighbors; explicit editable/interface IDs; scoped delta guard; '
+            'actual immediate comparison and keep/restore before another part. '
+            'Do not replay retired c9 torso carrier. Verify the actual scene at handoff. '
+            'This advisory itself does not enforce tool use or prevent raw bpy bypass.')
         brief['next'] = ('Read the current stage plan linked by CURRENT_STATE; preserve accepted work. '
                          'Plan index includes rejected history. Review actual source/baseline/candidate images.')
         message = 'For Mia work only, resume index (not art approval): ' + json.dumps(brief, ensure_ascii=False)

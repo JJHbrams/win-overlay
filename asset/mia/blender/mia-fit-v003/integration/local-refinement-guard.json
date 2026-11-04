@@ -1,0 +1,248 @@
+{
+  "schema": 1,
+  "verified_at": "2026-11-04T11:32:15.479141+00:00",
+  "request": "Professional local-refinement practice bound to the existing Mia skill and scoped MCP execution",
+  "actual_current_body_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
+  "native_changed": false,
+  "model_promoted": false,
+  "ART": false,
+  "method_source": {
+    "author": "Julien Kaspar / Blender Studio",
+    "url": "https://studio.blender.org/training/blender-fundamentals-45-lts/fine-control/",
+    "access": "Public HTML body read; no continuous video viewing or verified video timestamps",
+    "observed": "Mask torso when editing joined arm; Face Sets/visibility and local posing; compare retained versions",
+    "application_limit": "ID/hash enforcement is Mia automation, not a claimed artist practice"
+  },
+  "skill": ".agents/skills/mia-reference-modeling/SKILL.md",
+  "guide": ".agents/skills/mia-reference-modeling/references/local-refinement.md",
+  "runtime_route": "tools/mia/review_h/lab_mcp.py --mesh-edit-job -> mesh_edit_job.py -> scoped_mesh_edit.py",
+  "actual_runtime": {
+    "protected_delta_fixture": {
+      "purpose": "Intentional invalid proposal, never for retention",
+      "moved_protected_vertex": 0,
+      "actual_delta": [
+        1.0058283805847168e-07,
+        0.0,
+        0.0
+      ],
+      "expected_error": "Displacement outside explicit edit/transition IDs",
+      "body_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215"
+    },
+    "invalid_proposal_rejected_before_copy": true,
+    "rejected_scene_check": {
+      "status": "INVALID_PROPOSAL_DID_NOT_MUTATE_ACTUAL_SCENE",
+      "snapshot_materials_pointer_native_exact": true,
+      "body_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
+      "pending_edit": false,
+      "ART": false
+    },
+    "noop_pending_block_and_restore": {
+      "status": "PENDING_BLOCK_AND_NOOP_RESTORE_VERIFIED",
+      "blocked_second_edit": "One edit is pending: record_keep or restore before another edit",
+      "restoration": {
+        "status": "RESTORED_EXACT_ORIGINAL_POINTER",
+        "before_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
+        "native_saved": false,
+        "ART": false
+      },
+      "original_pointer_exact": true,
+      "native_unchanged": true,
+      "limit": "No-op runtime integration; no anatomy improvement or nonzero candidate acceptance",
+      "ART": false
+    },
+    "stale_actual_cli_dispatch_cases": [
+      {
+        "case": "baseline",
+        "status": "REJECTED_BEFORE_INSTALL",
+        "reason": "Stale baseline coordinate SHA",
+        "receipt": {
+          "path": ".mia-cache\\body-h\\live\\integrated01\\scoped-guard-test\\stale-baseline-call.json",
+          "sha256": "c2c322145d06d2e5ad283ec9cd477f94e2dd70bb2c70dd7d33f3b509cdff51ac",
+          "bytes": 3154
+        }
+      },
+      {
+        "case": "topology",
+        "status": "REJECTED_BEFORE_INSTALL",
+        "reason": "Stale/changed topology SHA",
+        "receipt": {
+          "path": ".mia-cache\\body-h\\live\\integrated01\\scoped-guard-test\\stale-topology-call.json",
+          "sha256": "b3e3da45a11fcdb9b5d3d15d150322a2516757b81c072624808e3cbac3580d06",
+          "bytes": 3152
+        }
+      },
+      {
+        "case": "payload",
+        "status": "REJECTED_BEFORE_INSTALL",
+        "reason": "arrays changed after review",
+        "receipt": {
+          "path": ".mia-cache\\body-h\\live\\integrated01\\scoped-guard-test\\stale-payload-call.json",
+          "sha256": "b786cda05ffa30ae44f333173721eb4b1afdd1a497809edccee797647dcb3c16",
+          "bytes": 2373
+        }
+      }
+    ],
+    "stale_job_and_evidence_actual_backend": {
+      "status": "STALE_JOB_AND_EVIDENCE_ACTUAL_MCP_BACKEND_REJECTED",
+      "cases": [
+        {
+          "case": "job changed after dispatch",
+          "status": "REJECTED_BEFORE_INSTALL",
+          "reason": "Scoped edit job changed after dispatch"
+        },
+        {
+          "case": "stale source/selection evidence",
+          "status": "REJECTED_BEFORE_INSTALL",
+          "reason": "Selection/source evidence missing, outside project, or stale"
+        }
+      ],
+      "body_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
+      "scene_materials_pointer_native_exact": true,
+      "native_sha256": "0d62eff09b4e95809a9f852d3e68654c1bb5a9e35fe70c065a939bc433e017ed",
+      "pending_edit": false,
+      "ART": false,
+      "limit": "Explicit stale-digest/evidence calls through same data bridge in live MCP; no shape changes"
+    },
+    "stale_backend_receipt": {
+      "path": ".mia-cache\\body-h\\live\\integrated01\\scoped-guard-test\\stale-binding-call.json",
+      "sha256": "1fe5b40a357d3531f0315416fbfe074f9d4191ca1ebb7be49b1e586c71b268b4",
+      "bytes": 1964
+    },
+    "receipts": [
+      {
+        "path": ".mia-cache\\body-h\\live\\integrated01\\scoped-guard-test\\before-call.json",
+        "sha256": "584661b713f37c999f91f030d0af1007bd229a883dc5bc6b7960c913562e153d",
+        "bytes": 632
+      },
+      {
+        "path": ".mia-cache\\body-h\\live\\integrated01\\scoped-guard-test\\rejected-call.json",
+        "sha256": "75c7959dbfd63c30721bf2db5e837bd87f017cd3b06cdf89e9f7cdef1b1111cf",
+        "bytes": 3172
+      },
+      {
+        "path": ".mia-cache\\body-h\\live\\integrated01\\scoped-guard-test\\after-call.json",
+        "sha256": "7e6459006a2eddc5939b8d9543dcbec0d7a21cc8354c401b874f97ba709557fb",
+        "bytes": 852
+      },
+      {
+        "path": ".mia-cache\\body-h\\live\\integrated01\\scoped-guard-test\\noop-call.json",
+        "sha256": "60e71cdd30643e045798538f1a13d818debde928f30c6ef2ca88536994401d0a",
+        "bytes": 3818
+      },
+      {
+        "path": ".mia-cache\\body-h\\live\\integrated01\\scoped-guard-test\\pending-restore-call.json",
+        "sha256": "3a4d708cb4d3bffb68ad50bd35524e7340790e8bde8e81db468e67bed1181394",
+        "bytes": 1456
+      }
+    ],
+    "limits": "No-op positive integration plus actual invalid proposal. No successful nonzero anatomy candidate or final animation approval."
+  },
+  "retired_candidate": {
+    "sha256": "c9b199c7a2b998c96521b0dae9fbf61b5784ffcb43807db9ade58d2f0cf7c59c",
+    "decision": "REJECTED_AND_EXACT_BASELINE_RESTORED",
+    "improved": "Hand reach/height",
+    "regressed": "Outer breast/root and thorax/lat planes; shoulder ledge/spike",
+    "source_views": [
+      {
+        "name": "front",
+        "board": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-chain01-source\\front.png",
+          "sha256": "69f43f644a1802e2a611990b9fbb9ebf838b023d738d35b804e5ca8bca9eacb1"
+        }
+      },
+      {
+        "name": "profile",
+        "board": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-chain01-source\\profile.png",
+          "sha256": "e82c7d816c83aa8bfc7722db8c66d07eef48b8a478ef5f67d8be0c3dd237b092"
+        }
+      },
+      {
+        "name": "back",
+        "board": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-chain01-source\\back.png",
+          "sha256": "93e72cbd6b2d2abaa432d0e6612c424c7117502919820c8fcc73f3eb180c84de"
+        }
+      },
+      {
+        "name": "oblique",
+        "board": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-chain01-source\\oblique.png",
+          "sha256": "1df85902789ab59fa96a32ad0812a54d04af08295b62e431c99c49044ee253a3"
+        }
+      },
+      {
+        "name": "opposite",
+        "board": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-chain01-source\\opposite.png",
+          "sha256": "c4174e1929306679e29047036c08f5b1bd0702d93d5dc710e577039991336221"
+        }
+      },
+      {
+        "name": "high",
+        "board": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-chain01-source\\high.png",
+          "sha256": "30526b10d694d33d1cc5d71f9dfb155e231b37fb5c5b47a8dfabc3c0e1c2fec3"
+        }
+      },
+      {
+        "name": "low",
+        "board": {
+          "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-chain01-source\\low.png",
+          "sha256": "b83f45c8985c4f33f6fe171442e4d200ba6db648d40184c5d5712f1f77ccbea1"
+        }
+      }
+    ],
+    "contact": {
+      "status": "PASS",
+      "complete": true,
+      "tested_pairs": 89513,
+      "changed_faces": 153496,
+      "new_intersection_witnesses": [],
+      "inherited_intersections_tested": 194,
+      "controlled_witnesses": {
+        "crossing": true,
+        "coplanar": true,
+        "separated": false
+      },
+      "method": "Conservative AABB grid + existing triangle SAT including coplanar axes",
+      "limit": "Bounded discrete changed-face check; UNVERIFIED may preview, never KEEP; no ART/continuous-motion claim",
+      "elapsed_seconds": 77.28099999995902,
+      "baseline_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
+      "candidate_sha256": "c9b199c7a2b998c96521b0dae9fbf61b5784ffcb43807db9ade58d2f0cf7c59c",
+      "scope": "Body self-intersection only; hair and other separate objects excluded; no whole-character acceptance.",
+      "stop_on_new_witnesses": 1,
+      "helper_source_unchanged": true
+    },
+    "restoration": {
+      "path": ".mia-cache\\body-h\\live\\integrated01\\restore-arm-chain01-call.json",
+      "sha256": "7ab90ca1aba310957b232a3345133c70b40bd7b6b21bbeb628a1a68d7ad7a236",
+      "bytes": 1184
+    },
+    "reference_package_validator": "Not run for promotion; rejected candidate is not selected or ART-approved"
+  },
+  "verification": {
+    "scope_tests": 10,
+    "job_bridge_tests": 4,
+    "pipeline_tests": 17,
+    "skill_frontmatter": "valid",
+    "behavior_review": "Independent read-only A arm correction/B tight attachment boundary/C material-only scenarios reviewed; no blocking flaw reported",
+    "independent_method_audit": "P1/P2/P3/P4/P5 PASS after additional stale-input runtime evidence. METHOD REPAIR only; no shape/source ART approval. CLI exercised baseline/topology/payload; explicit job-digest/evidence cases exercised the same bridge inside live MCP."
+  },
+  "hooks": {
+    "existing_events": [
+      "SessionStart",
+      "PostCompact",
+      "Stop"
+    ],
+    "advisory_only": true,
+    "native_pretool_denial_installed": false,
+    "automatic_trusted_runtime_verified": false,
+    "repaired": "Stop watched-file D-to-C path resolution; no global hook/config/trust change"
+  },
+  "limits": [
+    "Raw bpy/direct MCP can bypass the scoped route; mandatory skill routing is still required.",
+    "Semantic ID correctness and source likeness require actual selection and visual judgment.",
+    "M1..M7 and full-body/material/rig/animation acceptance remain open."
+  ]
+}

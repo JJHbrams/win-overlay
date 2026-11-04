@@ -10,6 +10,8 @@ Before any Mia model, reference, texture, rig, render, or status change, read:
 
 This also applies after context compaction or handoff. Do not infer approval from a version number, a previous summary saying "passed", saved files, successful rendering, mesh/key preservation, or a nominally completed subagent. The current state distinguishes technical checks from art acceptance.
 
+For edits to an already shaped part, apply the Mia skill's `references/local-refinement.md`: actual masks/Face Sets and fixed neighboring regions precede mutation. New coordinate deltas must use its scoped execution guard. The existing advisory hooks do not themselves block bulk edits.
+
 Use the existing references across matching views. The expression sheet is also a subtle-angle reference. Body/breast/pelvis issues remain open independently of face progress. Do not advance garments or final animation on an unaccepted anatomy base.
 
 Before promoting a candidate, run the reference-review package validator named in `REFERENCE_REVIEW_GATE.md`. Missing paired art, stale hashes, missing camera/light/pose records, or nonuniform registration are a hard evidence failure. A valid package is not an art PASS. Preserve the reviewer's residual differences and explicit per-view judgment through compaction.

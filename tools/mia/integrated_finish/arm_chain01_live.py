@@ -1,10 +1,9 @@
-"""Root-owned live preview of one source-derived two-chart arm correction.
+"""Retired c9 live trial: select/apply reject; restore remains available.
 
 Explicit API: select(root), apply(selection_sha256), restore(), cancel().
-Imports are inert. select makes only a render-hidden wire support overlay and
-stores bounded RAM state. apply makes one body Mesh.copy on the same actor;
-the exact original data pointer is retained. No native saves, texture/UV edits,
-rig changes, encoded-normal resets, renders, or model promotion occur here.
+Imports are inert. Historical code is retained to explain the rejected trial
+and restore interrupted old sessions. Private payload/context helpers are also
+reused by scoped_mesh_edit.py; do not remove them as unused trial code.
 """
 from pathlib import Path
 from datetime import datetime, timezone
