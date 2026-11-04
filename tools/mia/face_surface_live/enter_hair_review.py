@@ -14,8 +14,17 @@ import review_fixture as fixture
 body = bpy.data.objects['MIA_Review12_H_LiveRepair']
 coords = np.array([v.co[:] for v in body.data.vertices], np.float32)
 token=json.loads((ROOT/'.mia-cache/face-live/live/token.json').read_text())
-assert hashlib.sha256(coords.tobytes()).hexdigest() == token['body_sha256']
 ns = bpy.app.driver_namespace
+body_sha = hashlib.sha256(coords.tobytes()).hexdigest()
+if body_sha != token['body_sha256']:
+    # A retained live body correction is intentionally later than the saved
+    # migration checkpoint. Accept only that declared, actually installed WIP.
+    production = json.loads((ROOT/'asset/mia/CURRENT_STATE.json').read_text(encoding='utf8'))['production_resume_20261104']
+    selected = production['ap_profile01']
+    correction = ns[selected['namespace']]
+    assert selected['selection'] == 'KEEP_AP_IMPROVEMENT_WIP_ONLY'
+    assert body_sha == production['live_geometry'] == correction['report']['candidate_sha256']
+    assert body.data == correction['after_mesh']
 assert 'MIA_HairReviewState' not in ns
 tag = globals().get('MIA_HAIR_REVIEW_TAG', 'entry')
 assert re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*', tag)
@@ -26,8 +35,12 @@ assert not receipt.exists(), 'Use a fresh review tag; preserve historical entry 
 scene = bpy.context.scene
 assert bpy.context.mode == 'OBJECT'
 cam = scene.camera
-state = dict(body_sha256=hashlib.sha256(coords.tobytes()).hexdigest(),
+state = dict(body_sha256=body_sha,
              camera=cam, camera_matrix=cam.matrix_world.copy(), camera_scale=cam.data.ortho_scale,
+             camera_channels=dict(location=cam.location.copy(), scale=cam.scale.copy(),
+                                  rotation_mode=cam.rotation_mode, rotation_euler=cam.rotation_euler.copy(),
+                                  rotation_quaternion=cam.rotation_quaternion.copy(),
+                                  rotation_axis_angle=tuple(cam.rotation_axis_angle)),
              camera_target=list(cam.get('MIA12_target_world', [])),
              resolution=(scene.render.resolution_x, scene.render.resolution_y),
              objects={o.name: (o.hide_get(), o.hide_render, o.select_get()) for o in scene.objects},

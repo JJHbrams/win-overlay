@@ -25,7 +25,18 @@ if replacement:
         ob.hide_set(old_hidden);ob.hide_render=old_render;ob.select_set(False)
 bpy.context.view_layer.objects.active = state['active']
 scene = bpy.context.scene
-scene.camera = state['camera']; scene.camera.matrix_world = state['camera_matrix']
+scene.camera = state['camera']
+channels = state.get('camera_channels')
+if channels:
+    # Restore exact channels instead of decomposing a matrix again. Repeated
+    # camera-matrix roundtrips otherwise introduce one-ULP fixture drift.
+    scene.camera.rotation_mode = channels['rotation_mode']
+    rotation = ('rotation_quaternion' if channels['rotation_mode'] == 'QUATERNION' else
+                'rotation_axis_angle' if channels['rotation_mode'] == 'AXIS_ANGLE' else 'rotation_euler')
+    for name in ('location', 'scale', rotation):
+        setattr(scene.camera, name, channels[name])
+elif scene.camera.matrix_world != state['camera_matrix']:
+    scene.camera.matrix_world = state['camera_matrix']
 scene.camera.data.ortho_scale = state['camera_scale']
 scene.camera['MIA12_target_world'] = state['camera_target']
 scene.render.resolution_x, scene.render.resolution_y = state['resolution']
@@ -36,8 +47,11 @@ for s, shading, color, overlay, loc, rot, distance, perspective in state['viewpo
 for r,zoom,offset in state.get('camera_view',[]):
     r.view_camera_zoom=zoom;r.view_camera_offset=offset
 bpy.context.view_layer.update()
+if channels:
+    assert scene.camera.matrix_world == state['camera_matrix'], 'Borrowed camera channels did not restore exactly'
 bpy.app.driver_namespace['MIA_HairReviewStateFinished'] = state
 del bpy.app.driver_namespace['MIA_HairReviewState']
 print(json.dumps(dict(borrowed_state_restored=True, body_sha256=state['body_sha256'],
+                      camera_channels_restored_exactly=bool(channels),
                       retained_modular_replacement=bool(replacement),
                       native_saved=False, source_geometry_modified=False)))
