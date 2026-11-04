@@ -376,3 +376,38 @@ proxy must be rebound to the real changed foreground if that option is reused.
   contact before any final maps or native promotion.
 - Root-owned body/head/hair proportions and integration. No whole-hair ART,
   final animation or completed Mia claim follows from this track.
+
+## 2026-11-04 current crown pigment and coherent fringe pilot
+
+Actual target/pigment-only/constant-color isolation shows inherited crown flecks
+upstream of lighting. Four existing 4K images were disconnected, so their
+presence did not establish active texture resolution. A guarded adapter now
+uses the previously selected v29 static pigment only on RemainingMain's 4,999
+retained crown faces, with copied material/data and explicit UV7. Original six
+UVs, evaluated geometry/custom normals, raw Main, rear deletion mask, eighteen
+new locks and body695dbb stay unchanged. Actual five paired views plus an
+independent source-context review support retaining reduced flecks as color WIP.
+The broader pale highlight band, nape extraction debris, broad lower sheets,
+regular S locks, final maps and whole M2 remain unresolved. Expanded source-view
+and exact restore/reapply checks are required before the checkpoint is recorded.
+
+Actual Blender5.2 restore exposed a reference-count lifecycle defect: an OBJECT
+material override was lost when shrinking from three data slots to two, leaving
+one phantom user with no user_map owner. An isolated owned-data lifecycle probe
+reproduced this. The adapter now clears its exact owned OBJECT override before
+swapping back, preflights the complete owned reference chain before any removal,
+and can resume the measured partial restore. The one legacy phantom was removed
+only after original actor snapshots/graphs/slots and owned identity/graph were
+exact, user_map empty and fake/extra-user flags false. No user_clear or original
+ID removal. Actual restore-before4 succeeded; no native was saved.
+
+M1 diagnosis uses the full 14-component left-brow logical module, not the old
+eight-component terminal subset. Its 741 points/951 faces include multiple
+depth/backing owners. At the pilot brow interval, outer/fine/inner banks cover
+one another depending on camera yaw. The one proposed operation is a smooth
+clump bend, shared by colocated shells and anchored at actual global roots and
+lower hooks, to open a narrow source-derived gap. Root must inspect the actual
+selection before applying, then compare all-around source/baseline/candidate
+images and keep or restore. Accepted brows, eyelids, face, body, UV/material
+bindings and the rest of the hairstyle are protected. This is a neutral pilot;
+real expression deformation remains a separate required M1 test.

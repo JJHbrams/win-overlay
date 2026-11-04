@@ -367,3 +367,33 @@ Actual material-isolation01 rendered current target/pigment-only/constant Emissi
 The existing selected v29 **static pigment** recovery is a useful unintegrated asset:7Cfiles/allSHA and4999rawface/6UV correspondence verified; its actual older comparison improves slate crown sectors but retains frontal scuffs and lower geometry defects. Its helper targets hidden raw Main and must not be run directly. A bounded adapter for RemainingMain, preserving raw source/M2mask/new18locks and using copied data/material plus explicitUV7, is preparing. This is reuse of prior work, not new paint or an old normal/geometry replay. Current output remains original until that adapter passes actual review.
 
 Actual full-scene M1 probe also completed:390brow samples/34visible hair actors, all337unique hit triangles from RemainingMain. There are130multi-triangle depth clusters (129multiple roots/96multiple semantic labels), not a single unambiguous owner everywhere. The14-island module covers a useful central left-brow pilot window but not all oblique/inner blockers; no100% physical exposure claim. Source/detail-preserving coherent family re-spacing remains pending.
+
+## Current crown pigment retained; restore and reapply actually exercised
+
+RemainingMain-only adapter19382b7/6f604f7 reuses the selected v29 static pigment
+on4,999 retained faces. Its copied current material has two existing4K images
+and UV7; original sixUV, geometry/evaluated normals, deletion mask, raw Main,
+new18locks and body695 remain exact. Actual five close before/after views and
+expanded7pairs, plus source-context boards and +90profile supplement, show
+reduced crown speckling. Root and independent reviewer KEEP this bounded color
+improvement. The pale broad highlight strip is still unlike v22's finer broken
+strand highlights. Whole M2, groom/nape/lower sheets, final normal/specular/
+roughness maps and fresh moved-light response remain OPEN. No new paint or
+whole-hair4K finish claim. Opposite-oblique source is unavailable; its unmirrored
+board is context only. Uniformly fit source crops are not proportion alignment.
+The independent reviewer read the displayed source boards and earlier5pairs,
+not the expanded raw7 paths; root inspected the expanded source/raw context.
+The existing validator verifies file/fixture evidence, not ART.
+
+Actual restore initially returned the original data/slots but interrupted owned
+material cleanup: Blender5.2 shrank an OBJECT slot and left users1 with an empty
+user_map, fake/extra flags false. An isolated owned-data lifecycle reproduced
+this. Fix1aa9b27 clears the exact copied OBJECT override before the swap and
+preflights the whole owned reference chain before deletion. Legacy partial
+cleanup was completed only after original snapshots/graphs and copied identity/
+graph were exact. No original IDs, user_clear or blanket cleanup. A subsequent
+normal restore -> reapply actually passed without the phantom and with exact
+fingerprint/evaluated geometry/normals (`v29-roundtrip-call.json`). Current is
+again applied; original C0d62 native is untouched. Recover C0d62+runtime ->
+look -> rear-root -> AP695 -> explicit current pigment apply. No additional
+full native or new LFS binary was saved.

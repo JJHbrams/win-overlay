@@ -7,6 +7,7 @@ from pathlib import Path
 import hashlib
 import importlib.util
 import json
+import re
 import sys
 
 import bpy
@@ -15,7 +16,11 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[3]
 phase = globals().get('MIA_ROOT_REVIEW_PHASE', 'before')
 assert phase in ('before', 'after')
-out = ROOT/'.mia-cache/face-live/rear-root01'/phase
+tag = globals().get('MIA_ROOT_REVIEW_ID', 'rear-root01')
+preset = globals().get('MIA_HAIR_REVIEW_PRESET', 'rear')
+assert re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*', tag)
+assert preset in ('rear', 'appearance', 'hair-source', 'source-profile')
+out = ROOT/'.mia-cache/face-live'/tag/phase
 assert not out.exists(), 'Do not overwrite actual review evidence'
 assert 'MIA_HairReviewState' in bpy.app.driver_namespace
 parts = bpy.app.driver_namespace['MIA_CurvedRear03Base']['objects']
@@ -46,9 +51,9 @@ actors = {ob.name: dict(mesh=mesh_sha(ob), matrix=[list(row) for row in ob.matri
                        materials=[slot.material.name if slot.material else None for slot in ob.material_slots])
           for ob in parts}
 native = dict(path=bpy.data.filepath, sha256=fixture.sha(Path(bpy.data.filepath)))
-record = dict(phase=phase, native=native, body_sha256=body_sha, actors=actors,
+record = dict(phase=phase, preset=preset, native=native, body_sha256=body_sha, actors=actors,
               source='asset/mia/references/mia-clean-master-v22.png',
-              limit='Diagnostic rear angles, not recovered drawing cameras or final M2 ART approval', frames=[])
+              limit='Matched diagnostic angles, not recovered drawing cameras or final M2 ART approval', frames=[])
 out.mkdir(parents=True)
 try:
     scene.camera = camera
@@ -58,8 +63,20 @@ try:
     scene.render.image_settings.file_format = 'PNG'
     jobs = [('back', 180, 0), ('rear_left', 150, 0), ('rear_right', 210, 0),
             ('rear_high', 150, 25), ('rear_low', 210, -20)]
+    if preset == 'appearance':
+        jobs = [('front', 0, 0), ('back', 180, 0), ('oblique', 35, 0),
+                ('rear_high', 150, 25), ('rear_low', 210, -20)]
+    elif preset == 'hair-source':
+        jobs = [('front', 0, 0), ('profile', 90, 0), ('back', 180, 0),
+                ('left_oblique', -35, 0), ('right_oblique', 35, 0),
+                ('rear_high', 150, 25), ('rear_low', 210, -20)]
+    elif preset == 'source-profile':
+        jobs = [('profile', 90, 0)]
     for name, yaw, pitch in jobs:
-        fixture.aim(scene, yaw, pitch, (0, 0, 1.365), .78, (800, 800))
+        target, scale = ((0, 0, 1.55), .36) if name in ('front', 'oblique') else ((0, 0, 1.365), .78)
+        if preset in ('hair-source', 'source-profile'):
+            target, scale = (0, 0, 1.365), .78
+        fixture.aim(scene, yaw, pitch, target, scale, (800, 800))
         path = out/(name+'.png'); scene.render.filepath = str(path)
         actual = fixture.record(scene)
         bpy.ops.render.render(write_still=True)
