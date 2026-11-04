@@ -105,8 +105,13 @@ def inspect(expected_body_sha256=None,root=ROOT):
     assert len(pigment.inputs[0].links) == len(pigment.inputs[1].links) == 1
     assert pigment.inputs[0].links[0].from_node == nodes['LockLook01_SourcePalette']
     assert pigment.inputs[1].links[0].from_node == nodes['LockLook01_SoftToonLight']
-    assert nodes['LockLook01_ActualLight'].type == 'BSDF_DIFFUSE'
-    assert nodes['LockLook01_LightRGB'].type == 'SHADER_TO_RGB'
+    # Pin the RNA class used by lock_look01.build(), not its version-dependent
+    # short node.type enum. Also verify this node consumes the actual Diffuse.
+    assert nodes['LockLook01_ActualLight'].bl_idname == 'ShaderNodeBsdfDiffuse'
+    light_rgb = nodes['LockLook01_LightRGB']
+    assert light_rgb.bl_idname == 'ShaderNodeShaderToRGB'
+    assert len(light_rgb.inputs[0].links) == 1
+    assert light_rgb.inputs[0].links[0].from_node == nodes['LockLook01_ActualLight']
     body = _snapshot(root,guard)[BODY]['mesh']['coordinates']
     if expected_body_sha256 is not None: assert body == expected_body_sha256, 'Expected live body SHA changed'
     return dict(scope='ONE18-lock copied-material early pigment detail trial; not M2 geometry/ART',
