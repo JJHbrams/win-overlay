@@ -541,3 +541,25 @@ still verify semantic selections and actual surface/source quality. New shaping
 is paused for this user-requested method repair; retained body695/hair19 stay
 unchanged. Next production work is small arm-only/attachment refinement, then
 separately source-reviewed girth and waist, preserving shaped torso/lat masses.
+
+## First actual scoped edit after the method repair: arm-length02
+
+Retained body18340230 for distal arm reach only. Actual MCP front/profile
+selection shows forearms/hands/nails, not the torso. The data-only scoped route
+installed21677changed points;115650outside points, including shaped thorax,
+breasts/lats, shoulders/axilla, current upper arms/elbows, waist/head/lowerbody,
+remain exact. Distal hands and all ten nail components are rigidly transported.
+
+Actual source4/opposite/high/low review improves wrist/hand height without the
+c9 torso regressions. Independent recommendation is KEEP_WIP; upperarm/elbow
+position and girth remain visibly unfinished. Changed-face body-self contact
+check completes43642faces/29220pairs with0NEW contacts;194inherited remain.
+This excludes other meshes, motion and anatomical/source ART judgment.
+
+Saved one static review candidate ab11a0d2 and fresh-reopened it separately:
+21watched actor geometry/UV/normals and material slot names match actual live;
+115650protected and18948head vertices remain exact versus the freshly checked
+previous9c/body695 native. Original live0d62 and previous9c are preserved. The
+source review package validates declared evidence coverage only. Full body,
+surfaces, rig and final animation remain OPEN. No new LFS binary or global
+settings/process changes. Compact evidence is `integration/arm-length02-review.json`.

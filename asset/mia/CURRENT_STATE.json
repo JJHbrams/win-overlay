@@ -10,7 +10,8 @@
     "retired_trial": "arm-chain01 c9b199c7: reach improves but shaped thorax/breast/lat planes regress. Exact695dbbd8 original body pointer restored through live MCP; native unchanged.",
     "runtime_verification": "integration/local-refinement-guard.json under blender/mia-fit-v003; actual protected-point rejection, unchanged scene/native, no-op pending-edit block and exact restore. Nonzero successful local anatomy remains unverified.",
     "existing_hooks": "SessionStart/PostCompact/Stop advisory only. No native PreToolUse denial or automatically trusted-runtime activation is claimed.",
-    "enforcement_limit": "Scoped execution rejects out-of-domain deltas. Arbitrary raw bpy/MCP access can bypass that route; mandatory skill routing and actual visual judgment still apply."
+    "enforcement_limit": "Scoped execution rejects out-of-domain deltas. Arbitrary raw bpy/MCP access can bypass that route; mandatory skill routing and actual visual judgment still apply.",
+    "production_example": "Scoped arm-length02 body183 retained: actual forearm-only selection, --mesh-edit-job,115650other points exact, source4+opposite/high/low, independent KEEP_WIP, contact check and fresh reopen; see production record. Method guard is not ART approval."
   },
   "status": "v002_refinement_active_v001_frozen_overall_art_open",
   "in_progress_v29": {
@@ -598,12 +599,12 @@
     "independent_review": "C continuity/accounting/source-path migration accepted within scope; allDobjects/11heads/status/inputSHAs independently checked. D full deletion incomplete; no ART judgment."
   },
   "production_resume_20261104": {
-    "body_status": "AP695 retained as bounded anterior neck improvement; D69 remains the exact restore/replay baseline. M3clavicle/cap/leaf, M4supported chest/axilla, M5/M6proportions and all FB final outcomes remain OPEN. No whole-body ART or final-map approval.",
+    "body_status": "Scoped183 distal arm reach retained after actual source4/opposite/high/low, independent KEEP_WIP, discrete body-self contact and saved/fresh reopen;115650other vertices exact. AP695 torso remains shaped baseline. No whole body ART or final map approval.",
     "branch": "codex/mia-clavicle-resume",
     "canonical_worktree": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay",
     "scope": "Resume paused M1..M6/FB, starting M3 connected cervical/shoulder form before maps.",
     "live_probe": ".mia-cache/body-h/live/resume01/probe.json",
-    "live_geometry": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
+    "live_geometry": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
     "baseline_actual": ".mia-cache/body-h/live/neck-contour02/before/capture.json",
     "baseline_views": [
       "front",
@@ -616,8 +617,8 @@
     ],
     "prepared_operator_46408d5": "Rejected beforelive; superseded byactual lowerneck e203820 trial.",
     "support_audit": ".mia-cache/body-h/live/resume01/operator-support-audit.json",
-    "next": "User-steered method repair is verified: first use the mandatory local-refinement mask/Face Set and scoped-delta route for one arm-only edit, inspect immediately; review attachment/girth and waist separately. Retired c9 is not a starting mesh. Preserve AP695/kept rear-root/look/crown pigment and earlier shaped torso/lat masses. M1..M7/FB remain open; no final maps/rig promotion.",
-    "protected": "Accepted face/head; uppercervical attachment; Ewaist/arms; supportedbreastroot/axillarypassage; originalnative0d62/R3b/11.",
+    "next": "Use local-refinement skill and explicit masks/IDs to diagnose upper-arm/girth and elbow-to-axilla relationship, then separately waist-pelvis contour and rear-hair details. Preserve kept hand reach and shaped thorax/breasts/lats; do not replay c9 carrier or silently unfix body parts. M1..M7/FB remain open.",
+    "protected": "Current operation:115650torso/breasts/lats/waist/head/lower/upperarm/elbow vertices exact; hand/nail shapes rigidly moved. Future part/interface domains require their own explicit selection and review. Original0d62/R3b/11 and previous9c preserved.",
     "capacity": "Cguard128MiB passed; onecurrentcheckpoint, smallsourceworker and ignoredreviewframes only.",
     "contour02_actual": "Appliedcandidatee7e0d8,10240vertices<=3.608mm; actual14validv2frames/source4; rootandindependentreviewFAILinsufficientimprovement. Restoredexact69d4 viaofficialMCP; no newnative/maps.",
     "review": ".mia-cache/body-h/live/neck-contour02/reference-review.json",
@@ -766,34 +767,21 @@
       ]
     },
     "retained_static_copy": {
-      "path": ".mia-cache/production-resume-20261104/Mia_Resume_Static_WIP.blend",
-      "sha256": "9c953fb48bf3c55595ca69d28523197b43b924550d96b6ad91a0792f4fabedb7",
-      "bytes": 286404553,
-      "creation": ".mia-cache/production-resume-20261104/checkpoint.json",
-      "fresh_reopen": ".mia-cache/production-resume-20261104/fresh-reopen-final.json",
-      "live_graph_preservation": ".mia-cache/face-live/live/hair-resume01/post-save-graph-call.json",
-      "body_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
-      "included": [
-        "retained18locklook",
-        "retained6rearrootshape",
-        "APprofile695",
-        "boundedcrownpigment"
-      ],
-      "meaning": "One reopen-verified static WIP review copy, not final modeling/maps/rig/ART. Original C0d62 remains live replay base, unchanged; these helper namespaces are not serialized in this copy.",
-      "remaining": "M1..M6/FB open. Rejected transverse fringe is not included. Finalbody maps/underwear/continuousorbit not approved.",
+      "path": ".mia-cache/production-resume-20261104/Mia_ArmLength02_Static_WIP.blend",
+      "sha256": "ab11a0d25abe88dfbbaaf04858e31a954243e715c69e7eec1744328751691eb3",
+      "bytes": 286075317,
+      "body_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+      "fresh_reopen": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\fresh-check.json",
+      "source_review": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\reference-review.json",
+      "compact_review": "blender/mia-fit-v003/integration/arm-length02-review.json",
       "fresh_reopen_verified": true,
       "new_LFS_binary": false,
-      "neutral_head_orbit": {
-        "path": ".mia-cache/production-resume-20261104/head-hair-orbit.gif",
-        "sha256": "f727661eed3edd4eb66c60f589e4de9a2cd6dde9a60564c0568d79d3cfc6b450",
-        "bytes": 2237842,
-        "actual_frames": 24,
-        "capture": ".mia-cache/production-resume-20261104/head-hair-orbit/capture.json",
-        "camera": "ORTHO, neutral pose, 0.1..10m clip, head/crown centered",
-        "limits": "Neutral camera orbit preview; long lower tips may be outside the head crop. Not final two-material FB64 or character motion/rig approval."
-      },
-      "visibility": "Working hair ON/raw Main OFF; geometry/maps held. Earlier body-editing hairOFF review113a superseded by9c953fb4.",
-      "superseded_preview_cleanup": "HairOFF orbit outputs deletion rejected before execution: blocked by policy. Left intact, not retried by another tool. Current head-hair-orbit is the correct preview."
+      "meaning": "One scoped arm reach WIP; prior9c remains the pre-arm baseline. Native0d62 is the unchanged live replay base; no whole anatomy/maps/rig/ART approval.",
+      "included": [
+        "Previous AP695/rear-root/18-lock look/static crown pigment retained",
+        "Scoped arm-length02 body183"
+      ],
+      "remaining": "Upperarm/elbow/girth, waist, rearhair and M1..M7/FB open; no final event animation approval"
     },
     "nape_diagnostic": {
       "path": ".mia-cache/face-live/live/hair-resume01/nape-ownership-body-filtered.json",
@@ -833,6 +821,36 @@
       "actual_viewport_screenshot": ".mia-cache/face-live/live/hair-resume01/current-lit-screen-call-0.png",
       "lighting_correction": "Old source lights were renderhidden but viewportenabled, overexposingbody. Live viewportlightvisibility nowmatchesrenderflags; energies/positions/materials/geometryunchanged; sharedsetup corrected."
     },
-    "independent_resume_audit": "Bounded retention/savedcopy/artifact/recovery accepted; M1/M2candidatefailsnotapplied; fullM1..M6/FB remainOPEN. Reviewer didnot independently resolve neworbitframes, so no newvisualARTapproval. Git finalization root-owned."
+    "independent_resume_audit": "Bounded retention/savedcopy/artifact/recovery accepted; M1/M2candidatefailsnotapplied; fullM1..M6/FB remainOPEN. Reviewer didnot independently resolve neworbitframes, so no newvisualARTapproval. Git finalization root-owned.",
+    "baseline_before_arm_length02": {
+      "path": ".mia-cache/production-resume-20261104/Mia_Resume_Static_WIP.blend",
+      "sha256": "9c953fb48bf3c55595ca69d28523197b43b924550d96b6ad91a0792f4fabedb7",
+      "bytes": 286404553,
+      "creation": ".mia-cache/production-resume-20261104/checkpoint.json",
+      "fresh_reopen": ".mia-cache/production-resume-20261104/fresh-reopen-final.json",
+      "live_graph_preservation": ".mia-cache/face-live/live/hair-resume01/post-save-graph-call.json",
+      "body_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
+      "included": [
+        "retained18locklook",
+        "retained6rearrootshape",
+        "APprofile695",
+        "boundedcrownpigment"
+      ],
+      "meaning": "One reopen-verified static WIP review copy, not final modeling/maps/rig/ART. Original C0d62 remains live replay base, unchanged; these helper namespaces are not serialized in this copy.",
+      "remaining": "M1..M6/FB open. Rejected transverse fringe is not included. Finalbody maps/underwear/continuousorbit not approved.",
+      "fresh_reopen_verified": true,
+      "new_LFS_binary": false,
+      "neutral_head_orbit": {
+        "path": ".mia-cache/production-resume-20261104/head-hair-orbit.gif",
+        "sha256": "f727661eed3edd4eb66c60f589e4de9a2cd6dde9a60564c0568d79d3cfc6b450",
+        "bytes": 2237842,
+        "actual_frames": 24,
+        "capture": ".mia-cache/production-resume-20261104/head-hair-orbit/capture.json",
+        "camera": "ORTHO, neutral pose, 0.1..10m clip, head/crown centered",
+        "limits": "Neutral camera orbit preview; long lower tips may be outside the head crop. Not final two-material FB64 or character motion/rig approval."
+      },
+      "visibility": "Working hair ON/raw Main OFF; geometry/maps held. Earlier body-editing hairOFF review113a superseded by9c953fb4.",
+      "superseded_preview_cleanup": "HairOFF orbit outputs deletion rejected before execution: blocked by policy. Left intact, not retried by another tool. Current head-hair-orbit is the correct preview."
+    }
   }
 }

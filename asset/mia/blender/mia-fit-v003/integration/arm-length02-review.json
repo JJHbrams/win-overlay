@@ -1,0 +1,159 @@
+{
+  "status": "KEPT_LIMITED_ARM_REACH_WIP_NOT_BODY_ART_PASS",
+  "before_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
+  "body_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+  "proof": {
+    "status": "SCOPE_VALID_ONLY",
+    "before_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
+    "candidate_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+    "topology_sha256": "d007607c97dde677e43b5ba429fd964de4b16d8f4cd8192cca3bb35c34c5f21d",
+    "vertices": 137341,
+    "triangles": 274324,
+    "editable_count": 18500,
+    "transition_count": 3191,
+    "changed_vertices": 21677,
+    "editable_ids_sha256": "657282d70d58973bc7358f57258e41431c2e257257788f54e67b42cc3e60bc4c",
+    "transition_ids_sha256": "343c41af73a6e8d1a19ab35dcdc881ed24e4baaefd530119c63abc62199eb3c0",
+    "protected_regions": {
+      "head": {
+        "count": 18948,
+        "ids_sha256": "8e11a238465503b01e750d0a9ad32fb07286103ee3c22d364c267f6878ce2bba",
+        "coordinates_sha256": "3b7705d2459e6e443baa6d31ca09b066460ee37317211e3717d624fc503d4061"
+      },
+      "torso_breasts_lats_waist_upperarm_elbow_lowerbody": {
+        "count": 115650,
+        "ids_sha256": "ebb063028ea453e41236e8430a269c269608538bd03efe552949f3b468be6454",
+        "coordinates_sha256": "69a1fc1688baf46c0402d04c740e019b4fc3cd175152306d00f90e3408d25c34"
+      }
+    },
+    "exact_outside_union": true,
+    "ART": false
+  },
+  "fresh_reopen": {
+    "status": "FRESH_REOPEN_STATIC_SCOPED_WIP_VERIFIED",
+    "baseline": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_Resume_Static_WIP.blend",
+      "sha256": "9c953fb48bf3c55595ca69d28523197b43b924550d96b6ad91a0792f4fabedb7"
+    },
+    "candidate": {
+      "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_ArmLength02_Static_WIP.blend",
+      "sha256": "ab11a0d25abe88dfbbaaf04858e31a954243e715c69e7eec1744328751691eb3",
+      "bytes": 286075317
+    },
+    "actors_exact": 21,
+    "material_slot_names_exact": true,
+    "protected_vertices_exact": 115650,
+    "head_vertices_exact": 18948,
+    "body_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+    "live_not_reopened": true,
+    "ART": false,
+    "limits": "Fresh geometry/UV/normals/slots readback; not full anatomy, shader artistry, rig or animation acceptance"
+  },
+  "native": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_ArmLength02_Static_WIP.blend",
+    "sha256": "ab11a0d25abe88dfbbaaf04858e31a954243e715c69e7eec1744328751691eb3",
+    "bytes": 286075317
+  },
+  "scope": {
+    "decision": "keep_wip",
+    "reviewer": "Root plus independent read-only planner",
+    "evidence": [
+      {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-length02\\reference-review.json",
+        "sha256": "c096fba39ee84611d447a8a36b947b72cf817a22ad547ea3af764bfe9cdd8f05"
+      },
+      {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-length02\\reference-review-validation.json",
+        "sha256": "1389e1eaeb1c09b350d876b1236b1e607e560575897ae00396346839403067d4"
+      },
+      {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-length02\\contact.json",
+        "sha256": "c14053ad4fd816a57019a0d74679e0776b92a6df00547c029a2a3f7f87e11218"
+      },
+      {
+        "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\body-h\\live\\integrated01\\arm-length02\\fresh-check.json",
+        "sha256": "fc8edc6cb0a7138075b31712d5267eb65316a5bc2e9a848a2c4bf0a45fd4ccd7"
+      }
+    ],
+    "scope": "Arm length/position only; hands/nails rigid;115650other vertices exact",
+    "observed": "Reach closer to source in front/profile/back/obliques; no new visible seam or changed-body self contacts",
+    "unresolved": "Upper-arm/elbow position, girth, waist, hair and fullMia remain open; no ART/animation approval"
+  },
+  "contact": {
+    "status": "PASS",
+    "complete": true,
+    "tested_pairs": 29220,
+    "changed_faces": 43642,
+    "new_intersection_witnesses": [],
+    "inherited_intersections_tested": 194,
+    "controlled_witnesses": {
+      "crossing": true,
+      "coplanar": true,
+      "separated": false
+    },
+    "method": "Conservative AABB grid + existing triangle SAT including coplanar axes",
+    "limit": "Bounded discrete changed-face check; UNVERIFIED may preview, never KEEP; no ART/continuous-motion claim",
+    "elapsed_seconds": 36.81300000002375,
+    "baseline_sha256": "695dbbd825ce444fd04f0e390ccd64d31265d7cb14b027a08bf2ced82b4a7215",
+    "candidate_sha256": "183402301d4e38d46e63a9de64665dcf042491e6d0bbe3eb95f081b0fc4fb709",
+    "scope": "Discrete body self-intersection only; hair and other separate objects excluded; no whole-character acceptance.",
+    "stop_on_new_witnesses": 1,
+    "helper_source_unchanged": true,
+    "max_seconds": 90,
+    "max_pairs": 150000
+  },
+  "reference_review": {
+    "path": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\reference-review.json",
+    "sha256": "c096fba39ee84611d447a8a36b947b72cf817a22ad547ea3af764bfe9cdd8f05",
+    "bytes": 81111
+  },
+  "reference_validation": {
+    "path": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\reference-review-validation.json",
+    "sha256": "1389e1eaeb1c09b350d876b1236b1e607e560575897ae00396346839403067d4",
+    "bytes": 5640
+  },
+  "actual_receipts": [
+    {
+      "path": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\select-call.json",
+      "sha256": "165cbdeb103b37fcdeb89d48217a2d7312644e5b91e51249ca50f62df4304007",
+      "bytes": 822
+    },
+    {
+      "path": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\selection-front-call-0.png",
+      "sha256": "bb27c288ddc2f54feb4caf8e512888b89c7626fb14639c0af6ce9d2f398a36d5",
+      "bytes": 204377
+    },
+    {
+      "path": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\selection-profile-call-0.png",
+      "sha256": "48bf2425353187d90e32dfa4e2031fe43dd5706d43cd82c4d9c90340dbdc1b00",
+      "bytes": 160631
+    },
+    {
+      "path": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\apply-call.json",
+      "sha256": "80982d8f4a737ea49f71ad7a73e6c644cafc2a1309eeebe616ee806f6036061d",
+      "bytes": 4046
+    },
+    {
+      "path": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\capture-call.json",
+      "sha256": "a5dda80baf41d377c4651ea68dc0df268511883e4e23b5adff50e7ddaf1812fc",
+      "bytes": 1377
+    },
+    {
+      "path": ".mia-cache\\body-h\\live\\integrated01\\arm-length02\\keep-call.json",
+      "sha256": "290745793bfba9a696b471b106bcd8f26c84d3b55669b69a74aaa1d438106dc4",
+      "bytes": 678
+    }
+  ],
+  "before_native_preserved": {
+    "path": "C:\\Users\\antio\\.codex\\worktrees\\mia-current\\win-overlay\\.mia-cache\\production-resume-20261104\\Mia_Resume_Static_WIP.blend",
+    "sha256": "9c953fb48bf3c55595ca69d28523197b43b924550d96b6ad91a0792f4fabedb7"
+  },
+  "new_LFS_binary": false,
+  "ART": false,
+  "unresolved": [
+    "Upperarm/cap and elbow proportion/girth",
+    "Waist-pelvis contour",
+    "Rear-hair detail/shape",
+    "M1..M7 and all FB/surface/rig/final animation gates"
+  ]
+}

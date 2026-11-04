@@ -9,6 +9,7 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--capture',required=True)
     parser.add_argument('--out',required=True)
+    parser.add_argument('--label',default='ARM CHAIN01')
     args=parser.parse_args()
     out=Path(args.out);assert not out.exists();out.mkdir(parents=True)
     spec=importlib.util.spec_from_file_location('mia_existing_source_boards',ROOT/'tools/mia/review_h/gray_boards.py')
@@ -28,7 +29,7 @@ def main():
             tiles=[b.label(b.source_panel(b.SOURCES[0],name),'BODY v06 / original pixels'),
                    b.label(b.source_panel(b.SOURCES[1],name),'Visibility / pose uncertainty'),
                    b.label(b.actual(old,matrix),'BEFORE695 / actual gray'),
-                   b.label(b.actual(new,matrix),'ARM CHAIN01 / actual gray')]
+                   b.label(b.actual(new,matrix),args.label+' / actual gray')]
             board=Image.new('RGB',(2000,1100),(230,236,240))
             for i,tile in enumerate(tiles):board.paste(tile,(500*i,0))
             note='Same frozen uniform SRT. Source pose uncertainty retained. Actual head and lower body unchanged.'
@@ -39,7 +40,7 @@ def main():
             width,height=images[0].size
             board=Image.new('RGB',(width*2,height+64),(230,236,240))
             for i,im in enumerate(images):board.paste(im,(width*i,32))
-            note='BEFORE695 (left) / ARM CHAIN01 (right); continuity diagnostic, no matched source panel.'
+            note='BEFORE695 (left) / '+args.label+' (right); continuity diagnostic, no matched source panel.'
         ImageDraw.Draw(board).text((10,board.height-27),note,font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',17),fill=(30,40,50))
         path=out/(name+'.png');board.save(path)
         records.append(dict(name=name,source=[b.art(p) for p in b.SOURCES] if registration else [],

@@ -166,3 +166,22 @@ the torso, explicitly identify arm/interface IDs, reject outside movement,
 inspect one edit immediately, then keep/restore. Retire c9 live select/apply;
 do not substitute a broad ARAP carrier. No new shaping while this method repair
 is being validated. M1..M7/FB ART remain OPEN.
+
+**First scoped production trial after method repair: arm-length02.** Current695
+is the starting mesh; source v06 wrist observations remain the finite target.
+Use topology-connected distal arm/hand components and all ten detached nail
+components. Keep the actual current upper arms/elbow sections, shoulder/cap,
+axilla, thorax/breasts/lats, waist/head/lower body fixed. One C2 longitudinal
+proportional grab below the elbow transports wrist toward(±.294,.012,.895)m;
+distal hands/nails rotate rigidly. This is length/position only, not girth or
+shoulder correction and not reuse of c9 S/E targets. Candidate18340230 has21677
+changed points inside21691explicit IDs;115650outside points are exact. Native
+and UV/materials remain protected. Inspect actual forearm-only selection first,
+then scoped job install, immediate front/profile/oblique surface review and
+source4/neighbor angles. Do not keep from orientation or scope checks alone.
+
+**arm-length02 outcome:** retained bounded WIP after actual source4/opposite/
+high/low, independent KEEP_WIP, complete discrete changed-face body-self test
+and saved/fresh reopened candidateab11a0d2. Body183 is now current; old9c/body695
+and original live0d62 stay preserved. Upperarm/elbow/girth, waist and rear-hair
+work remain separate OPEN tasks, not solved by this reach correction.
