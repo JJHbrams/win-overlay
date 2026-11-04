@@ -4,6 +4,7 @@ This is a color/light diagnostic, not final paint/normal maps or grooming ART.
 Original materials and image atlases are read only. Run through live MCP.
 """
 from pathlib import Path
+from datetime import datetime, timezone
 import hashlib
 import json
 import math
@@ -143,11 +144,90 @@ def graph_readback(material):
                 links=[(link.from_node.name, link.from_socket.name, link.to_node.name, link.to_socket.name) for link in tree.links])
 
 
+def canonical(value):
+    return json.dumps(value, sort_keys=True, separators=(',', ':'))
+
+
+def shader_signature(material):
+    """Hash render semantics, not datablock names or node-editor placement."""
+    nodes = []
+    for node in sorted(material.node_tree.nodes, key=lambda item: item.name):
+        row = dict(name=node.name, kind=node.bl_idname, mute=node.mute, inputs=[])
+        for key in ['operation', 'use_clamp', 'uv_map', 'from_instancer', 'target', 'is_active_output']:
+            if hasattr(node, key): row[key] = getattr(node, key)
+        for index, socket in enumerate(node.inputs):
+            if not hasattr(socket, 'default_value'): continue
+            value = socket.default_value
+            if not isinstance(value, (str, int, float, bool, type(None))): value = list(value)
+            row['inputs'].append((index, socket.identifier, value))
+        if hasattr(node, 'color_ramp'):
+            ramp = node.color_ramp
+            row['ramp'] = dict(mode=ramp.color_mode, interpolation=ramp.interpolation,
+                               hue_interpolation=ramp.hue_interpolation,
+                               points=[(float(e.position), list(e.color)) for e in ramp.elements])
+        nodes.append(row)
+    semantics = dict(nodes=nodes,
+                     links=sorted((link.from_node.name, link.from_socket.identifier,
+                                   link.to_node.name, link.to_socket.identifier, link.is_muted)
+                                  for link in material.node_tree.links),
+                     use_nodes=material.use_nodes, viewport_color=list(material.diffuse_color))
+    for key in ['surface_render_method', 'use_backface_culling', 'use_transparency_overlap']:
+        if hasattr(material, key): semantics[key] = getattr(material, key)
+    return hashlib.sha256(canonical(semantics).encode()).hexdigest()
+
+
+def certify_recipe_graph(material, recipe, points, interpolation):
+    """Certify legacy unrecorded inputs against the unchanged builder, not RAM alone."""
+    assert canonical(graph_readback(material)) == canonical(recipe['shader']), 'Recorded graph fields changed'
+    name = MATERIAL+'_UnassignedReplayReference'
+    assert bpy.data.materials.get(name) is None
+    reference = bpy.data.materials.new(name)
+    try:
+        build(reference, points, interpolation)
+        signature = shader_signature(material)
+        assert signature == shader_signature(reference), 'Owned graph differs from the unchanged recipe builder'
+        return signature
+    finally:
+        assert reference.users == 0
+        bpy.data.materials.remove(reference)
+
+
+def timestamp_receipt(kind):
+    stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+    path = OUT/(kind+'-'+stamp+'.json')
+    assert not path.exists()
+    return path
+
+
+def validate_replay(recipe, binding, observed, recipe_sha):
+    """Fail closed on scene, binding, palette or ownership drift before assignment."""
+    if binding is not recipe:
+        assert binding['apply_receipt_sha256'] == recipe_sha, 'Legacy restore binding belongs to another recipe'
+    assert recipe['actors'] == 18 and recipe['targets'] == observed['targets']
+    assert recipe['body_sha256'] == observed['body_sha256']
+    assert recipe['source_native_sha256'] == observed['native_sha256']
+    assert recipe['fingerprints'] == observed['fingerprints'], 'Geometry/UV/normal/transform drift since accepted look'
+    for key in ['baseline_slots', 'actor_names', 'source_palette_sha256', 'source_palette_interpolation']:
+        assert canonical(binding[key]) == canonical(observed[key]), 'Replay binding differs: '+key
+    assert canonical(recipe['shader']['source_palette']) == canonical(observed['source_palette'])
+    assert binding['shader_signature'], 'Missing full shader recipe signature'
+
+
 def main():
     assert globals().get('MIA_EDIT_PHASE', 'apply') == 'apply'
     namespace = bpy.app.driver_namespace
     assert KEY not in namespace and bpy.context.scene.render.engine == 'BLENDER_EEVEE'
-    receipt = OUT/'apply.json'; assert not receipt.exists(), 'Preserve the immutable diagnostic receipt'
+    replay = globals().get('MIA_LOCK_LOOK01_REPLAY', False)
+    assert isinstance(replay, bool), 'Replay requires the explicit boolean True flag'
+    original_receipt = OUT/'apply.json'
+    recipe = binding = recipe_sha = None
+    if replay:
+        recipe = json.loads(original_receipt.read_text(encoding='utf8')); recipe_sha = file_sha(original_receipt)
+        binding = recipe if 'baseline_slots' in recipe and 'shader_signature' in recipe else json.loads((OUT/'restore.json').read_text(encoding='utf8'))
+        receipt = timestamp_receipt('replay')
+    else:
+        receipt = original_receipt
+        assert not receipt.exists(), 'Preserve the immutable diagnostic receipt; exact replay requires MIA_LOCK_LOOK01_REPLAY=True'
     current = json.loads((ROOT/'asset/mia/CURRENT_STATE.json').read_text(encoding='utf8'))['active_live_checkpoint']
     native = (ROOT/current['path']).resolve()
     assert Path(bpy.data.filepath).resolve() == native and file_sha(native) == current['sha256']
@@ -173,11 +253,20 @@ def main():
         previous[ob.name] = dict(link=slot.link, material=slot.material)
     points, interpolation = palette_points()
     palette_before = hashlib.sha256(json.dumps([points, interpolation]).encode()).hexdigest()
+    if replay:
+        validate_replay(recipe, binding, dict(targets=list(previous), body_sha256=BODY_SHA,
+                        native_sha256=current['sha256'], fingerprints=before, baseline_slots=before_slots,
+                        actor_names=[ob.name for ob in actors], source_palette_sha256=palette_before,
+                        source_palette_interpolation=interpolation, source_palette=points), recipe_sha)
     assert bpy.data.materials.get(MATERIAL) is None, 'Refuse to replace another look'
     material = None
     try:
         material = bpy.data.materials.new(MATERIAL)
         build(material, points, interpolation)
+        signature = shader_signature(material)
+        if replay:
+            assert canonical(graph_readback(material)) == canonical(recipe['shader']), 'Rebuilt recorded shader changed'
+            assert signature == binding['shader_signature'], 'Rebuilt full shader semantics changed'
         for ob in targets: ob.material_slots[0].material = material
         bpy.context.view_layer.update()
         assert before == {ob.name: fingerprint(ob) for ob in watched}
@@ -187,17 +276,29 @@ def main():
         assert all(ob.material_slots[0].material == material and ob.material_slots[0].link == previous[ob.name]['link'] for ob in targets)
         assert palette_before == hashlib.sha256(json.dumps(list(palette_points())).encode()).hexdigest()
         assert file_sha(native) == current['sha256']
+        if replay: assert file_sha(original_receipt) == recipe_sha, 'Immutable apply recipe changed during replay'
         state = dict(material=material, previous=previous, fingerprints=before, before_slots=before_slots,
                      body_sha256=BODY_SHA, native=str(native), native_sha256=current['sha256'],
-                     source_palette_sha256=palette_before, actor_names=[ob.name for ob in actors])
-        report = dict(scope='Actual live COLOR/LIGHT diagnostic only; no final maps, grooming, M2/ART approval',
+                     source_palette_sha256=palette_before, actor_names=[ob.name for ob in actors],
+                     replay=replay, apply_receipt_sha256=recipe_sha, shader_signature=signature)
+        report = dict(recipe_version=2, scope='Actual live COLOR/LIGHT diagnostic only; no final maps, grooming, M2/ART approval',
                       targets=list(previous), actors=len(targets), geometry_UV_normals_and_transforms_unchanged=True,
                       fingerprints=before, body_sha256=BODY_SHA, source_native_sha256=current['sha256'],
                       original_Main_and_RemainingMain_materials_unchanged=True, original_palette_unchanged=True,
+                      baseline_slots=before_slots, actor_names=state['actor_names'], shader_signature=signature,
+                      source_palette_sha256=palette_before, source_palette_interpolation=interpolation,
                       shader=graph_readback(material), native_saved=False, final_maps=False, ART=False)
+        if replay:
+            report = dict(status='EXACT_ACCEPTED_LOOK_REPLAY_NOT_NEW_CANDIDATE',
+                          apply_receipt=dict(path=str(original_receipt), sha256=recipe_sha),
+                          actors=18, body_sha256=BODY_SHA, source_native_sha256=current['sha256'],
+                          fingerprints_sha256=hashlib.sha256(canonical(before).encode()).hexdigest(),
+                          baseline_slots_sha256=hashlib.sha256(canonical(before_slots).encode()).hexdigest(),
+                          shader_signature=signature, exact_recipe_and_bindings=True,
+                          native_saved=False, final_maps=False, ART=False)
         OUT.mkdir(parents=True, exist_ok=True)
         rear['materials'].append(material); namespace[KEY] = state
-        receipt.write_text(json.dumps(report, indent=2)+'\n', encoding='utf8')
+        with receipt.open('x', encoding='utf8') as stream: stream.write(json.dumps(report, indent=2)+'\n')
     except Exception:
         for name, prior in previous.items():
             if bpy.data.objects[name].material_slots[0].material == material:
@@ -206,7 +307,7 @@ def main():
         if material is not None and material in rear['materials']: rear['materials'].remove(material)
         if material is not None and material.users == 0: bpy.data.materials.remove(material)
         raise
-    print(json.dumps(dict(status='APPLIED_LOOK_DIAGNOSTIC_NOT_ART', actors=18, material=material.name,
+    print(json.dumps(dict(status='EXACT_LOOK_REPLAY_NOT_ART' if replay else 'APPLIED_LOOK_DIAGNOSTIC_NOT_ART', actors=18, material=material.name,
                           geometry_UV_unchanged=True, body_sha256=BODY_SHA, receipt=str(receipt), native_saved=False)))
 
 
