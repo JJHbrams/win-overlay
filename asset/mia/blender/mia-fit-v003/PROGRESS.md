@@ -397,3 +397,25 @@ fingerprint/evaluated geometry/normals (`v29-roundtrip-call.json`). Current is
 again applied; original C0d62 native is untouched. Recover C0d62+runtime ->
 look -> rear-root -> AP695 -> explicit current pigment apply. No additional
 full native or new LFS binary was saved.
+
+After that replay-only gate, the four kept layers were coalesced into ONE
+compressed static WIP review copy, not one native per minor candidate:
+`.mia-cache/production-resume-20261104/Mia_Resume_Static_WIP.blend`, SHA113a451a,
+286,396,567bytes. Borrowed hair review was exited first; original live0d62,
+body695 and complete material/image graphs remained exact. A separate fresh
+Blender5.2.3 reopening verifies21actors' coordinates/topology/UV/corner normals,
+material slots/visibility and connected packed image sizes/spaces/bytes. No
+fresh native render/64frame orbit or ART approval is implied. The copy includes
+look/root/AP/pigment and excludes the rejected M1 forecast. Original0d62 remains
+the guarded replay base; Python namespaces are not saved in a blend. The copy
+and raw proof stay ignored; only source and compact status enter Git.
+
+The first full14-component M1 front-gap design was rejected in CPU preflight,
+before MCP apply: source-derived whole-bank transverse bend opened the front
+target but hid all formerly visible -35degree brow samples and introduced
+outer-backings intersection witnesses. Exact ray53643/root48535 plus deeper
+41036/48600 identifies inner-bank ownership. A uniform posterior depth offset
+would bury the deep backings in the head. Preserve this failure rather than
+amplitude-searching or calling one front gap a solution. Source-directed
+cross-section/flow reshaping, with the nasal edge held, is under diagnosis;
+current RemainingMain coordinates and accepted face remain unchanged.
