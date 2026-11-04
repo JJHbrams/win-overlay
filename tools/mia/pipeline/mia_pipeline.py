@@ -73,8 +73,16 @@ def context(root: Path) -> dict:
     paths = list(data.get('read_first', []))
     stage_plans = {key: value for key, value in progress.items()
                    if 'contract' in key or ('plan' in key and isinstance(value, str))}
+    # Explicit selection, not newest date/version inference. The migration
+    # checkpoint may be an older replay base while the current kept WIP differs.
+    resume_key = data.get('active_production_record')
+    resume = data.get(resume_key, {}) if isinstance(resume_key, str) else {}
     return {
         'canonical_worktree': data.get('canonical_worktree', str(root)),
+        'current_production': dict(record=resume_key, live_geometry=resume.get('live_geometry'),
+            retained_static_copy=resume.get('retained_static_copy'),
+            next=resume.get('next'), protected=resume.get('protected'),
+            limits='Partial retained WIP only; read active plan and actual source evidence. Migration native is the replay base, not necessarily the current installed shape.') if resume else None,
         'selected_static_wip': data.get('selected_static_wip', data.get('active_working_correction')),
         'active_live_checkpoint': data.get('active_live_checkpoint'),
         'character_complete': data.get('character_complete', False),
@@ -82,7 +90,7 @@ def context(root: Path) -> dict:
         'read_first': paths,
         'reference_roles': data.get('reference_roles', {}),
         'stage_plan_index': stage_plans,
-        'active_body_status': progress.get('review12_status', data.get('stage_status', {}).get('body_art')),
+        'active_body_status': resume.get('body_status') or progress.get('review12_status', data.get('stage_status', {}).get('body_art')),
         'face_status': data.get('stage_status', {}).get('face_head_art'),
         'skill': '.agents/skills/mia-reference-modeling/SKILL.md',
         'limits': 'Read current documents/images. The plan index includes history; do not choose an active plan '

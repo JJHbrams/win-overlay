@@ -419,3 +419,10 @@ would bury the deep backings in the head. Preserve this failure rather than
 amplitude-searching or calling one front gap a solution. Source-directed
 cross-section/flow reshaping, with the nasal edge held, is under diagnosis;
 current RemainingMain coordinates and accepted face remain unchanged.
+
+Resume context now follows the explicit `active_production_record` pointer and
+prints retained AP695/body status plus the reopen-verified review copy before
+the historical selected R3b/migration base. It does not pick a record by newest
+date/version or infer approval. The actual C CLI shows695/113a and the existing
+pipeline16tests pass. Wiki/activity MCP tools are not exposed in this session;
+this local production journal is the performed record, not a claimed KG sync.
