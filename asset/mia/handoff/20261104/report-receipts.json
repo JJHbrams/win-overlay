@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-04",
+  "handoff_document_commit": "c4cf541",
+  "target_claude_session": "7c59915f-756b-4e5e-9663-25183fe3d89b",
+  "claude_delivery": {
+    "attempted": true,
+    "acknowledged": false,
+    "exit_code": 1,
+    "terminal_reason": "api_error",
+    "error": "Failed to authenticate: OAuth session expired and could not be refreshed"
+  },
+  "model_changed_in_reporting_step": false,
+  "engram": {
+    "engram_summarize_session": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"status\": \"no_new_messages\",\n  \"session_id\": 1015\n}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    "engram_save_memory": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"status\": \"memory_saved\"\n}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    "kg_update_node": {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"status\": \"ok\",\n  \"node_id\": \"mia-character-rebuild\",\n  \"summary\": \"2026-11-04 Mia WIP handoff: canonical mia-current/win-overlay, Mia_Waist02_Static_WIP.blend; document/evidence c4cf541 pushed. Six anatomy/proportion/rear-hair issues OPEN; Rib01V3/arm_pose01 unapplied. Claude target resume blocked by expired OAuth; no acknowledgment, no ART PASS.\"\n}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    "kg_sync": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"status\": \"ok\",\n  \"synced\": 3,\n  \"skipped\": 0,\n  \"unchanged\": 99,\n  \"pruned\": [],\n  \"vault\": \"D:\\\\intel_engram\",\n  \"semantic\": {\n    \"status\": \"ok\",\n    \"nodes\": 107,\n    \"reembedded\": 1,\n    \"edges\": 169\n  }\n}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    "kg_lint": {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "⚠️ 총 **6건** 이슈\n\n### frontmatter 필드 누락 (1건)\n- `guides\\engram-manual\\overlay-event-api.md` — 누락: note_type, tags\n\n### _inbox 체류 노트 (5건)\n- `_inbox\\fallout4-tarkov-weapon-ui.md` — 정제 후 적절한 디렉토리로 이동 필요\n- `_inbox\\mia-mouth-combination-correctives.md` — 정제 후 적절한 디렉토리로 이동 필요\n- `_inbox\\mia-reference-mcp-review.md` — 정제 후 적절한 디렉토리로 이동 필요\n- `_inbox\\neogools-reference-modeling.md` — 정제 후 적절한 디렉토리로 이동 필요\n- `_inbox\\pixal3d-reference-to-animation.md` — 정제 후 적절한 디렉토리로 이동 필요"
+          }
+        ],
+        "structuredContent": {
+          "result": "⚠️ 총 **6건** 이슈\n\n### frontmatter 필드 누락 (1건)\n- `guides\\engram-manual\\overlay-event-api.md` — 누락: note_type, tags\n\n### _inbox 체류 노트 (5건)\n- `_inbox\\fallout4-tarkov-weapon-ui.md` — 정제 후 적절한 디렉토리로 이동 필요\n- `_inbox\\mia-mouth-combination-correctives.md` — 정제 후 적절한 디렉토리로 이동 필요\n- `_inbox\\mia-reference-mcp-review.md` — 정제 후 적절한 디렉토리로 이동 필요\n- `_inbox\\neogools-reference-modeling.md` — 정제 후 적절한 디렉토리로 이동 필요\n- `_inbox\\pixal3d-reference-to-animation.md` — 정제 후 적절한 디렉토리로 이동 필요"
+        },
+        "isError": false
+      }
+    }
+  },
+  "engram_save_message": "Not exposed by local MCP tools/list; not called. Episodic memory_saved confirmed separately."
+}
